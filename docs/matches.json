@@ -1007,7 +1007,7 @@
    "venue": "Γυμναστήριο Βαρδινογιάννειο Αθλητικό Κέντρο",
    "competition": "Volley League",
    "round": "1η αγωνιστική",
-   "score": "",
+   "score": "3-0",
    "tv": "",
    "url": "https://www.volleyleague.gr/index.php/season/2026-27/regular-season-results-statistics",
    "start": "2026-10-24T17:00:00+03:00",
@@ -1197,7 +1197,7 @@
    "score": "",
    "tv": "",
    "url": "https://www.epo.gr/el/competition/6/matches",
-   "start": "2026-11-01T15:00:00+02:00",
+   "start": "2026-11-01T14:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/modules/custom/competitions/images/blank-club-profile.png",
@@ -4061,15 +4061,15 @@
   }
  ],
  "updated": {
-  "football": "2026-10-26T11:55+02:00",
-  "football-women": "2026-10-26T11:55+02:00",
-  "basketball": "2026-10-26T11:55+02:00",
-  "basketball-women": "2026-10-26T11:55+02:00",
-  "volley": "2026-10-26T11:55+02:00",
-  "volley-women": "2026-10-26T11:55+02:00",
-  "handball": "2026-10-26T11:55+02:00",
-  "handball-women": "2026-10-26T11:55+02:00",
-  "waterpolo": "2026-10-26T11:55+02:00",
-  "waterpolo-women": "2026-10-26T11:55+02:00"
+  "football": "2026-10-26T18:48+02:00",
+  "football-women": "2026-10-26T18:48+02:00",
+  "basketball": "2026-10-26T18:48+02:00",
+  "basketball-women": "2026-10-26T18:48+02:00",
+  "volley": "2026-10-26T18:48+02:00",
+  "volley-women": "2026-10-26T18:48+02:00",
+  "handball": "2026-10-26T18:48+02:00",
+  "handball-women": "2026-10-26T18:48+02:00",
+  "waterpolo": "2026-10-26T18:48+02:00",
+  "waterpolo-women": "2026-10-26T18:48+02:00"
  }
 }

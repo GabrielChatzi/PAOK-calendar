@@ -857,157 +857,157 @@
    "rows": [
     {
      "pos": 1,
-     "team": "Α.Ο.Π.Κηφισιάς",
-     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl14424751662839.gif",
-     "paok": false,
-     "cells": [
-      "0",
-      "0",
-      "0",
-      "0-0",
-      "0"
-     ]
-    },
-    {
-     "pos": 2,
-     "team": "Πανιώνιος Betsson",
-     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl17603494571792.gif",
-     "paok": false,
-     "cells": [
-      "0",
-      "0",
-      "0",
-      "0-0",
-      "0"
-     ]
-    },
-    {
-     "pos": 3,
      "team": "Ο.Φ.Η.",
      "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl1568216313930.gif",
      "paok": false,
      "cells": [
+      "1",
+      "1",
       "0",
-      "0",
-      "0",
-      "0-0",
-      "0"
+      "3-0",
+      "3"
      ]
     },
     {
-     "pos": 4,
-     "team": "ΠΑΟΚ",
-     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
-     "paok": true,
-     "cells": [
-      "0",
-      "0",
-      "0",
-      "0-0",
-      "0"
-     ]
-    },
-    {
-     "pos": 5,
-     "team": "Α.Ο.Καλαμάτα 80 Affidea",
-     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl16909759871795.gif",
-     "paok": false,
-     "cells": [
-      "0",
-      "0",
-      "0",
-      "0-0",
-      "0"
-     ]
-    },
-    {
-     "pos": 6,
+     "pos": 2,
      "team": "Παναθηναϊκός Α.Ο.",
      "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl14110420042832.gif",
      "paok": false,
      "cells": [
+      "1",
+      "1",
       "0",
-      "0",
-      "0",
-      "0-0",
-      "0"
+      "3-0",
+      "3"
      ]
     },
     {
-     "pos": 7,
-     "team": "Ν.Ο.Π.Ε. Ρεθύμνου",
-     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl17901894601105.gif",
-     "paok": false,
-     "cells": [
-      "0",
-      "0",
-      "0",
-      "0-0",
-      "0"
-     ]
-    },
-    {
-     "pos": 8,
+     "pos": 3,
      "team": "Ολυμπιακός Σ.Φ.Π. ONEX",
      "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl166625673654.gif",
      "paok": false,
      "cells": [
+      "1",
+      "1",
       "0",
+      "3-0",
+      "3"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "Φλοίσβος Members Paron",
+     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl1718776924122.gif",
+     "paok": false,
+     "cells": [
+      "1",
+      "1",
       "0",
+      "3-0",
+      "3"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "Α.Ο.Φοίνικας Σύρου",
+     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl151506935980.gif",
+     "paok": false,
+     "cells": [
+      "1",
+      "1",
       "0",
-      "0-0",
+      "3-1",
+      "3"
+     ]
+    },
+    {
+     "pos": 6,
+     "team": "Πανιώνιος Betsson",
+     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl17603494571792.gif",
+     "paok": false,
+     "cells": [
+      "1",
+      "1",
+      "0",
+      "3-2",
+      "2"
+     ]
+    },
+    {
+     "pos": 7,
+     "team": "Α.Ο.Π.Κηφισιάς",
+     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl14424751662839.gif",
+     "paok": false,
+     "cells": [
+      "1",
+      "0",
+      "1",
+      "2-3",
+      "1"
+     ]
+    },
+    {
+     "pos": 8,
+     "team": "Α.Ο.Ν.Σ Μίλων",
+     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl1599421873423.gif",
+     "paok": false,
+     "cells": [
+      "1",
+      "0",
+      "1",
+      "1-3",
       "0"
      ]
     },
     {
      "pos": 9,
-     "team": "Α.Σ. Άρης",
-     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl13607973882903.gif",
-     "paok": false,
+     "team": "ΠΑΟΚ",
+     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+     "paok": true,
      "cells": [
+      "1",
       "0",
-      "0",
-      "0",
-      "0-0",
+      "1",
+      "0-3",
       "0"
      ]
     },
     {
      "pos": 10,
-     "team": "Φλοίσβος Members Paron",
-     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl1718776924122.gif",
+     "team": "Α.Ο.Καλαμάτα 80 Affidea",
+     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl16909759871795.gif",
      "paok": false,
      "cells": [
+      "1",
       "0",
-      "0",
-      "0",
-      "0-0",
+      "1",
+      "0-3",
       "0"
      ]
     },
     {
      "pos": 11,
-     "team": "Α.Ο.Φοίνικας Σύρου",
-     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl151506935980.gif",
+     "team": "Ν.Ο.Π.Ε. Ρεθύμνου",
+     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl17901894601105.gif",
      "paok": false,
      "cells": [
+      "1",
       "0",
-      "0",
-      "0",
-      "0-0",
+      "1",
+      "0-3",
       "0"
      ]
     },
     {
      "pos": 12,
-     "team": "Α.Ο.Ν.Σ Μίλων",
-     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl1599421873423.gif",
+     "team": "Α.Σ. Άρης",
+     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl13607973882903.gif",
      "paok": false,
      "cells": [
+      "1",
       "0",
-      "0",
-      "0",
-      "0-0",
+      "1",
+      "0-3",
       "0"
      ]
     }

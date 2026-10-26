@@ -9,4 +9,4 @@ for i in $(seq 1 40); do
   case "$s" in *completed*) echo "$s"; break;; esac; sleep 8
 done
 rm -rf /home/claude/probe2-data; mkdir -p /home/claude/probe2-data; cd /home/claude/probe2-data && git init -q
-git fetch -q https://github.com/GabrielChatzi/PAOK-calendar.git probe-data && git checkout -q FETCH_HEAD && cat probe-log.txt
+git fetch -q https://github.com/GabrielChatzi/PAOK-calendar.git probe-data && git checkout -q FETCH_HEAD && cat probe-log.txt; ls docs

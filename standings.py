@@ -96,7 +96,7 @@ def basketball() -> list[dict]:
     for texts, imgs in tables[0][1:]:
         if len(texts) < 7:
             continue
-        m = re.match(r"(\d+)\s+(.*)", texts[0])
+        m = re.match(r"(\d+)\s*(.*)", texts[0])
         if not m:
             continue
         rows.append((int(m.group(1)), basket_name(m.group(2)), imgs[0] if imgs else "",
@@ -232,34 +232,19 @@ def handball(women: bool) -> list[dict]:
             continue
         if not ("PREMIER" in cat_name or re.match(r"^[AΑ]1\b", cat_name)):
             continue
-        ids = [n[0] for n in nodes[:4]]
-        data = [("obj", i) for i in ids] + [("agper", "x"), ("category", "x"), ("diorg", "x"),
-                                             ("group", "x"), ("B1", "x")]
+        data = [("obj", n[0]) for n in nodes[:4]] + [("agper", "x"), ("category", "x"), ("diorg", "x"),
+                                                     ("group", "x"), ("B1", "x")]
         page = fetch(HANDBALL + "scorestatsres.asp", data=data, encoding="cp1253")
+        # Στήλες: α/α, Σωματείο, Βαθ., Αγ., Υπέρ, Κατά, Διαφ., εντός Ν-Ι-Η, εκτός Ν-Ι-Η, σύνολο Ν-Ι-Η, Μηδ.
+        rows = []
         for t in html_tables(page, HANDBALL):
-            header_idx = next((i for i, (texts, _) in enumerate(t)
-                               if any(plain(x) in ("ΟΜΑΔΑ", "ΟΜΑΔΕΣ") for x in texts)), None)
-            if header_idx is None:
-                continue
-            header = [plain(x) for x in t[header_idx][0]]
-            team_col = next(i for i, x in enumerate(header) if x in ("ΟΜΑΔΑ", "ΟΜΑΔΕΣ"))
-
-            def col(*names):
-                return next((i for i, x in enumerate(header) if any(n in x for n in names)), None)
-            c_pts, c_gp, c_w, c_d, c_l = col("ΒΑΘ"), col("ΑΓΩΝ", "ΑΓ"), col("ΝΙΚ"), col("ΙΣΟΠ"), col("ΗΤΤ")
-            c_gf, c_ga = col("ΥΠΕΡ"), col("ΚΑΤΑ")
-            rows = []
-            for texts, _ in t[header_idx + 1:]:
-                if len(texts) <= team_col or not texts[team_col]:
-                    continue
-                g = lambda c: texts[c] if c is not None and c < len(texts) else ""
-                goals = f"{g(c_gf)}-{g(c_ga)}" if c_gf is not None and c_ga is not None else ""
-                rows.append((len(rows) + 1, tidy_name(texts[team_col]), "",
-                             [g(c_gp), g(c_w), g(c_d), g(c_l), goals, g(c_pts)]))
-            if rows:
-                title = "Handball Premier" if "PREMIER" in cat_name else ("Α1 Γυναικών" if women else "Α1 Ανδρών")
-                out.append(table(title, HANDBALL + "scorestats.asp", ["Αγ", "Ν", "Ι", "Η", "Γκολ", "Β"], rows))
-                break
+            for texts, _ in t:
+                if len(texts) >= 16 and texts[0].isdigit() and texts[1]:
+                    rows.append((int(texts[0]), tidy_name(texts[1]), "",
+                                 [texts[3], texts[13], texts[14], texts[15], f"{texts[4]}-{texts[5]}", texts[2]]))
+        if rows:
+            title = "Handball Premier" if "PREMIER" in cat_name else ("Α1 Γυναικών" if women else "Α1 Ανδρών")
+            out.append(table(title, HANDBALL + "scorestats.asp", ["Αγ", "Ν", "Ι", "Η", "Γκολ", "Β"], rows))
         if out:
             break
     if not out:

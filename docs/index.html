@@ -192,6 +192,43 @@
   }
   .more[hidden] { display: none; }
 
+  /* Προβολή μήνα */
+  .view { margin-bottom: 12px; }
+  .month { margin-top: 18px; }
+  .month[hidden], .seg[hidden], #list[hidden] { display: none; }
+  .month-head {
+    display: grid; grid-template-columns: 44px 1fr 44px; align-items: center;
+    border-bottom: 2px solid var(--ink); padding-bottom: 6px;
+  }
+  .month-head h2 { margin: 0; text-align: center; font: 800 26px/1.1 var(--display); }
+  .month-head button {
+    width: 44px; height: 44px; border: 1.5px solid var(--ink); background: transparent;
+    font: 800 22px/1 var(--display); cursor: pointer;
+  }
+  .month-head button:disabled { opacity: .25; cursor: default; }
+  .grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); }
+  .wd { text-align: center; font-size: 13px; color: var(--muted); padding: 8px 0 4px; }
+  .cell {
+    min-height: 62px; padding: 4px 3px 5px; border: 0; border-bottom: 1px solid var(--rule);
+    background: transparent; text-align: left; cursor: pointer; display: flex; flex-direction: column; gap: 3px;
+  }
+  .cell.out { visibility: hidden; cursor: default; }
+  .cell .n { font: 600 16px/22px var(--display); width: 24px; text-align: center; }
+  .cell.today .n { background: var(--ink); color: var(--paper); }
+  .cell.sel { outline: 2px solid var(--ink); outline-offset: -2px; }
+  .cell.none { cursor: default; }
+  .cell.none .n { color: var(--muted); }
+  .mks { display: flex; flex-wrap: wrap; gap: 2px; font-size: 15px; line-height: 1; }
+  /* Κάθε αγώνας είναι ένα εικονίδιο· από κάτω ρίγες αν είναι εντός έδρας, απλή γραμμή αν είναι εκτός. */
+  .mk { display: inline-flex; flex-direction: column; align-items: center; gap: 2px; }
+  .mk::after { content: ""; width: 14px; height: 4px; border: 1px solid var(--ink); }
+  .mk.home::after {
+    border: 0; height: 4px;
+    background: repeating-linear-gradient(90deg, var(--ink) 0 2px, transparent 2px 4px);
+  }
+  .plus { font: 600 13px/1 var(--body); color: var(--muted); align-self: center; }
+  #day-list:empty { display: none; }
+
   /* Ημερολόγια */
   .subscribe { margin-top: 56px; }
   .subscribe h2 { font: 800 34px/1 var(--display); margin: 0 0 10px; }
@@ -234,6 +271,8 @@
   @media (min-width: 560px) {
     .seg-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
     .game { grid-template-columns: 70px 1fr auto; }
+    .cell { min-height: 78px; padding: 6px; }
+    .mks { font-size: 18px; }
   }
 </style>
 </head>
@@ -251,6 +290,11 @@
     <p class="next-when" id="next-when"></p>
     <p class="next-meta" id="next-meta"></p>
   </section>
+
+  <div class="seg view" id="view" role="group" aria-label="Προβολή">
+    <button type="button" data-v="list">Λίστα</button>
+    <button type="button" data-v="month">Μήνας</button>
+  </div>
 
   <div class="filters" role="group" aria-label="Φίλτρα">
     <div class="chips" id="sports" role="group" aria-label="Άθλημα"></div>
@@ -274,6 +318,16 @@
   </div>
 
   <div id="list" aria-live="polite"><p class="empty">Φόρτωση προγράμματος…</p></div>
+
+  <section class="month" id="month" hidden aria-label="Προβολή μήνα">
+    <div class="month-head">
+      <button type="button" id="prev-month" aria-label="Προηγούμενος μήνας">‹</button>
+      <h2 id="month-title"></h2>
+      <button type="button" id="next-month" aria-label="Επόμενος μήνας">›</button>
+    </div>
+    <div class="grid" id="month-grid"></div>
+    <div id="day-list" aria-live="polite"></div>
+  </section>
   <button type="button" class="more" id="more" hidden>Περισσότεροι αγώνες</button>
 
   <section class="subscribe" id="calendars">
@@ -298,19 +352,20 @@
   "use strict";
   var TZ = "Europe/Athens";
   var PAGE = 40;
-  var state = { sport: "all", gender: "all", when: "upcoming", venue: "all", shown: PAGE };
+  var state = { view: "list", sport: "all", gender: "all", when: "upcoming", venue: "all", shown: PAGE,
+                month: null, day: null };
   var data = null;
   var isAndroid = /android/i.test(navigator.userAgent);
 
   try {
     var saved = JSON.parse(localStorage.getItem("paok-filters") || "{}");
-    ["sport", "gender", "when", "venue"].forEach(function (k) { if (saved[k]) state[k] = saved[k]; });
+    ["view", "sport", "gender", "when", "venue"].forEach(function (k) { if (saved[k]) state[k] = saved[k]; });
   } catch (e) { /* χωρίς αποθήκευση, απλώς οι προεπιλογές */ }
 
   function save() {
     try {
       localStorage.setItem("paok-filters", JSON.stringify({
-        sport: state.sport, gender: state.gender, when: state.when, venue: state.venue
+        view: state.view, sport: state.sport, gender: state.gender, when: state.when, venue: state.venue
       }));
     } catch (e) {}
   }
@@ -361,13 +416,18 @@
 
   function sectionOf(m) { return data.sectionMap[m.section] || { name: m.section, emoji: "" }; }
 
-  function matchesFilter(m) {
+  function passesSection(m) {
     var s = sectionOf(m);
     if (state.sport !== "all" && s.sport !== state.sport) return false;
     if (state.gender === "men" && s.women) return false;
     if (state.gender === "women" && !s.women) return false;
     if (state.venue === "home" && !m.paokHome) return false;
     if (state.venue === "away" && m.paokHome) return false;
+    return true;
+  }
+
+  function matchesFilter(m) {
+    if (!passesSection(m)) return false;
     return state.when === "upcoming" ? isUpcoming(m) : !isUpcoming(m);
   }
 
@@ -394,6 +454,92 @@
     box.hidden = false;
   }
 
+  function gameHtml(m) {
+    var date = new Date(m.start), s = sectionOf(m), o = outcome(m);
+    var meta = [s.emoji + " " + s.name, m.competition, m.round].filter(Boolean).map(esc).join(", ");
+    if (m.venue) meta += "<br>" + esc(m.venue);
+    if (m.tv) meta += ", " + esc(m.tv);
+    return '<li class="game ' + (m.paokHome ? "home" : "away") + '">' +
+        '<div class="time' + (m.timeKnown ? "" : " tbc") + '">' + (m.timeKnown ? fmtTime.format(date) : "TBC") + "</div>" +
+        "<div>" +
+          '<div class="teams">' + teamsHtml(m) + "</div>" +
+          '<div class="meta">' + meta +
+            (m.url ? ' <a href="' + esc(m.url) + '" rel="noopener" target="_blank">Πηγή</a>' : "") +
+          "</div>" +
+        "</div>" +
+        '<div class="score">' + (m.score
+          ? esc(m.score.replace("-", "–")) + (o ? '<span class="res ' + o + '" title="' + OUTCOME_TITLE[o] + '">' + OUTCOME_LABEL[o] + "</span>" : "")
+          : "") + "</div>" +
+      "</li>";
+  }
+
+  // ---- Προβολή μήνα
+  var fmtMonth = new Intl.DateTimeFormat("el-GR", { month: "long", year: "numeric", timeZone: "UTC" });
+  var WEEKDAYS = ["Δευ", "Τρι", "Τετ", "Πεμ", "Παρ", "Σαβ", "Κυρ"];
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function monthKey(key) { return key.slice(0, 7); }
+  function addMonths(mk, n) {
+    var y = +mk.slice(0, 4), m = +mk.slice(5, 7) - 1 + n;
+    y += Math.floor(m / 12); m = ((m % 12) + 12) % 12;
+    return y + "-" + pad(m + 1);
+  }
+
+  function renderMonth() {
+    var todayKey = fmtKey.format(new Date());
+    var byDay = {};
+    data.matches.forEach(function (m) {
+      if (!passesSection(m)) return;
+      var k = fmtKey.format(new Date(m.start));
+      (byDay[k] = byDay[k] || []).push(m);
+    });
+    var allKeys = data.matches.map(function (m) { return fmtKey.format(new Date(m.start)); }).sort();
+    var first = monthKey(allKeys[0] || todayKey), last = monthKey(allKeys[allKeys.length - 1] || todayKey);
+    if (!state.month) state.month = monthKey(todayKey) < first ? first : monthKey(todayKey) > last ? last : monthKey(todayKey);
+    var mk = state.month, y = +mk.slice(0, 4), mo = +mk.slice(5, 7);
+
+    // Μία νέα επιλογή μήνα ή φίλτρου: προεπιλέγεται σήμερα ή η πρώτη μέρα με αγώνα.
+    if (!state.day || monthKey(state.day) !== mk || !byDay[state.day]) {
+      var days = Object.keys(byDay).filter(function (k) { return monthKey(k) === mk; }).sort();
+      var future = days.filter(function (k) { return k >= todayKey; });
+      state.day = byDay[todayKey] && monthKey(todayKey) === mk ? todayKey : (future[0] || days[0] || null);
+    }
+
+    document.getElementById("month-title").textContent = cap(fmtMonth.format(new Date(Date.UTC(y, mo - 1, 1))));
+    document.getElementById("prev-month").disabled = mk <= first;
+    document.getElementById("next-month").disabled = mk >= last;
+
+    var cells = WEEKDAYS.map(function (w) { return '<div class="wd" aria-hidden="true">' + w + "</div>"; });
+    var lead = (new Date(Date.UTC(y, mo - 1, 1)).getUTCDay() + 6) % 7;
+    var count = new Date(Date.UTC(y, mo, 0)).getUTCDate();
+    for (var i = 0; i < lead; i++) cells.push('<div class="cell out"></div>');
+    for (var d = 1; d <= count; d++) {
+      var key = y + "-" + pad(mo) + "-" + pad(d), list = byDay[key] || [];
+      var cls = "cell" + (key === todayKey ? " today" : "") + (key === state.day ? " sel" : "") + (list.length ? "" : " none");
+      var marks = list.slice(0, 3).map(function (m) {
+        var s = sectionOf(m);
+        return '<span class="mk ' + (m.paokHome ? "home" : "away") + '">' + s.emoji + "</span>";
+      }).join("") + (list.length > 3 ? '<span class="plus">+' + (list.length - 3) + "</span>" : "");
+      var label = d + " " + cap(fmtMonth.format(new Date(Date.UTC(y, mo - 1, 1)))) + ", " +
+        (list.length ? list.length + (list.length === 1 ? " αγώνας" : " αγώνες") : "χωρίς αγώνες");
+      cells.push('<button type="button" class="' + cls + '" data-day="' + key + '"' +
+        (list.length ? "" : " disabled") + ' aria-label="' + esc(label) + '"' +
+        (key === state.day ? ' aria-pressed="true"' : "") + '>' +
+        '<span class="n">' + d + '</span><span class="mks">' + marks + "</span></button>");
+    }
+    document.getElementById("month-grid").innerHTML = cells.join("");
+
+    var dayList = document.getElementById("day-list");
+    var sel = state.day && byDay[state.day];
+    if (!sel) {
+      dayList.innerHTML = '<p class="empty">Κανένας αγώνας αυτόν τον μήνα για αυτή την επιλογή. Πήγαινε σε άλλο μήνα ή άλλαξε φίλτρα.</p>';
+      return;
+    }
+    var dd = new Date(sel[0].start), rel = relative(dd);
+    dayList.innerHTML = '<h2 class="day">' + esc(cap(fmtDay.format(dd))) +
+      (rel && rel.indexOf("Σε ") !== 0 ? "<small>" + rel + "</small>" : "") + "</h2>" +
+      '<ol class="games">' + sel.map(gameHtml).join("") + "</ol>";
+  }
+
   function renderList() {
     var list = data.matches.filter(matchesFilter);
     if (state.when === "results") list = list.slice().reverse();
@@ -409,7 +555,7 @@
     var shown = list.slice(0, state.shown);
     var out = [], lastKey = null;
     shown.forEach(function (m) {
-      var date = new Date(m.start), key = fmtKey.format(date), s = sectionOf(m);
+      var date = new Date(m.start), key = fmtKey.format(date);
       if (key !== lastKey) {
         if (lastKey) out.push("</ol>");
         var rel = relative(date);
@@ -417,24 +563,7 @@
           (rel && rel.indexOf("Σε ") !== 0 ? "<small>" + rel + "</small>" : "") + "</h2><ol class=\"games\">");
         lastKey = key;
       }
-      var o = outcome(m);
-      var meta = [s.emoji + " " + s.name, m.competition, m.round].filter(Boolean).map(esc).join(", ");
-      if (m.venue) meta += "<br>" + esc(m.venue);
-      if (m.tv) meta += ", " + esc(m.tv);
-      out.push(
-        '<li class="game ' + (m.paokHome ? "home" : "away") + '">' +
-          '<div class="time' + (m.timeKnown ? "" : " tbc") + '">' + (m.timeKnown ? fmtTime.format(date) : "TBC") + "</div>" +
-          "<div>" +
-            '<div class="teams">' + teamsHtml(m) + "</div>" +
-            '<div class="meta">' + meta +
-              (m.url ? ' <a href="' + esc(m.url) + '" rel="noopener" target="_blank">Πηγή</a>' : "") +
-            "</div>" +
-          "</div>" +
-          '<div class="score">' + (m.score
-            ? esc(m.score.replace("-", "–")) + (o ? '<span class="res ' + o + '" title="' + OUTCOME_TITLE[o] + '">' + OUTCOME_LABEL[o] + "</span>" : "")
-            : "") + "</div>" +
-        "</li>"
-      );
+      out.push(gameHtml(m));
     });
     out.push("</ol>");
     root.innerHTML = out.join("");
@@ -456,7 +585,7 @@
   }
 
   function syncButtons() {
-    [["sports", "sport"], ["gender", "gender"], ["when", "when"], ["venue", "venue"]].forEach(function (p) {
+    [["view", "view"], ["sports", "sport"], ["gender", "gender"], ["when", "when"], ["venue", "venue"]].forEach(function (p) {
       document.querySelectorAll("#" + p[0] + " button").forEach(function (b) {
         b.setAttribute("aria-pressed", String(b.dataset.v === state[p[1]]));
       });
@@ -466,7 +595,16 @@
   function render() {
     syncButtons();
     renderNext();
-    renderList();
+    var month = state.view === "month";
+    document.getElementById("when").hidden = month;
+    document.getElementById("list").hidden = month;
+    document.getElementById("month").hidden = !month;
+    if (month) {
+      document.getElementById("more").hidden = true;
+      renderMonth();
+    } else {
+      renderList();
+    }
   }
 
   function bind(groupId, key) {
@@ -523,6 +661,19 @@
     }
   });
 
+  document.getElementById("month-grid").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-day]");
+    if (!b || b.disabled) return;
+    state.day = b.dataset.day;
+    renderMonth();
+  });
+  document.getElementById("prev-month").addEventListener("click", function () {
+    state.month = addMonths(state.month, -1); state.day = null; renderMonth();
+  });
+  document.getElementById("next-month").addEventListener("click", function () {
+    state.month = addMonths(state.month, 1); state.day = null; renderMonth();
+  });
+
   document.getElementById("more").addEventListener("click", function () {
     state.shown += PAGE;
     renderList();
@@ -535,6 +686,7 @@
       data.sectionMap = {};
       data.sections.forEach(function (s) { data.sectionMap[s.key] = s; });
       renderSports();
+      bind("view", "view");
       bind("sports", "sport");
       bind("gender", "gender");
       bind("when", "when");

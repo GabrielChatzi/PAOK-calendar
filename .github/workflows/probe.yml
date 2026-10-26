@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - run: python3 build_calendars.py > probe-log.txt 2>&1 || true
+      - run: python3 dbg.py > probe-log.txt 2>&1 || true
       - run: |
           mkdir -p /tmp/p && cp -r docs probe-log.txt /tmp/p/
           git config user.name github-actions; git config user.email actions@github.com

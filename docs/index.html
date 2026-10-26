@@ -566,13 +566,8 @@
     var body = prefs.view === "month"
       ? monthHtml(list, true)
       : listHtml(list.filter(function (m) { return prefs.when === "upcoming" ? isUpcoming(m) : !isUpcoming(m); }), prefs.when, true);
-    var nextPool = data.matches.filter(function (m) {
-      var s = sectionOf(m);
-      return (prefs.sport === "all" || s.sport === prefs.sport) &&
-        !(prefs.gender === "men" && s.women) && !(prefs.gender === "women" && !s.women);
-    });
     return '<p class="lede">Πρόγραμμα, αποτελέσματα και βαθμολογίες όλων των τμημάτων, σε μία σελίδα. Ενημερώνεται μόνο του κάθε δύο ώρες.</p>' +
-      nextHtml(nextPool) +
+      nextHtml(data.matches) +
       '<h2 class="section-title">Τμήματα</h2>' + tilesHtml() +
       '<h2 class="section-title">Όλοι οι αγώνες</h2>' +
       '<div class="controls">' + seg("view", [["list", "Λίστα"], ["month", "Μήνας"]], prefs.view) + chips +

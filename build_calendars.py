@@ -450,7 +450,8 @@ def without_stamp(text: str) -> str:
 
 
 def write_if_changed(path: Path, content: str) -> bool:
-    if path.exists() and without_stamp(path.read_text(encoding="utf-8")) == without_stamp(content):
+    old = path.read_bytes().decode("utf-8") if path.exists() else None  # χωρίς μετατροπή \r\n
+    if old is not None and without_stamp(old) == without_stamp(content):
         return False
     path.write_text(content, encoding="utf-8", newline="")
     return True

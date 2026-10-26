@@ -1,30 +1,38 @@
-# ΠΑΟΚ – Ημερολόγια αγώνων
+# Αγώνες ΠΑΟΚ
 
-Ημερολόγια iCal για τους αγώνες του ΠΑΟΚ σε **βόλεϊ**, **ποδόσφαιρο** και **μπάσκετ**, χωριστά για εντός και εκτός έδρας. Ενημερώνονται αυτόματα κάθε 6 ώρες.
+Πρόγραμμα, αποτελέσματα και ημερολόγια iCal για όλα τα τμήματα του ΠΑΟΚ. Ενημερώνονται αυτόματα κάθε 6 ώρες.
 
-## Συνδρομή από iPhone
+**Ιστοσελίδα:** https://gabrielchatzi.github.io/PAOK-calendar/
 
-Ρυθμίσεις → Ημερολόγιο → Λογαριασμοί → Προσθήκη λογαριασμού → Άλλο → **Προσθήκη ημερολογίου συνδρομής**, και επικόλληση του συνδέσμου:
+Από τη σελίδα μπορείς να φιλτράρεις ανά άθλημα, τμήμα (ανδρών, γυναικών) και έδρα, και να κάνεις συνδρομή στα ημερολόγια από iPhone ή Android.
 
-| Ημερολόγιο | Σύνδεσμος |
-|---|---|
-| 🏐 Βόλεϊ – Εντός | `webcal://raw.githubusercontent.com/GabrielChatzi/PAOK-calendar/main/docs/volley-home.ics` |
-| 🏐 Βόλεϊ – Εκτός | `webcal://raw.githubusercontent.com/GabrielChatzi/PAOK-calendar/main/docs/volley-away.ics` |
-| ⚽ Ποδόσφαιρο – Εντός | `webcal://raw.githubusercontent.com/GabrielChatzi/PAOK-calendar/main/docs/football-home.ics` |
-| ⚽ Ποδόσφαιρο – Εκτός | `webcal://raw.githubusercontent.com/GabrielChatzi/PAOK-calendar/main/docs/football-away.ics` |
-| 🏀 Μπάσκετ – Εντός | `webcal://raw.githubusercontent.com/GabrielChatzi/PAOK-calendar/main/docs/basketball-home.ics` |
-| 🏀 Μπάσκετ – Εκτός | `webcal://raw.githubusercontent.com/GabrielChatzi/PAOK-calendar/main/docs/basketball-away.ics` |
+## Τμήματα και πηγές
+
+| Τμήμα | Διοργανώσεις | Πηγή |
+|---|---|---|
+| ⚽ Ποδόσφαιρο | Super League, Ευρώπη, Κύπελλο Ελλάδας | ESPN, ΕΠΟ |
+| ⚽ Ποδόσφαιρο Γυναικών | Α' Εθνική, Κύπελλο | ΕΠΟ |
+| 🏀 Μπάσκετ | Basket League, EuroCup | esake.gr, Euroleague |
+| 🏀 Μπάσκετ Γυναικών | Women's Basketball League 1 | basket.gr |
+| 🏐 Βόλεϊ | Volley League, League Cup, Κύπελλο | volleyleague.gr, ΕΟΠΕ |
+| 🏐 Βόλεϊ Γυναικών | Volley League Γυναικών, Κύπελλο | ΕΟΠΕ (Data Project) |
+| 🤾 Χάντμπολ (ανδρών, γυναικών) | Handball Premier, Α1 Γυναικών, Κύπελλα | ΟΧΕ |
+| 🤽 Πόλο (ανδρών, γυναικών) | Water Polo League | waterpololeague.gr |
 
 Αγώνες χωρίς ορισμένη ώρα μπαίνουν στις 18:00 (ώρα Ελλάδας) με την ένδειξη «(ώρα TBC)».
 
-## Πηγές
+## Ημερολόγια
 
-- Βόλεϊ: [volleyleague.gr](https://www.volleyleague.gr/) (Volley League, League Cup)
-- Ποδόσφαιρο: ESPN (Super League, ευρωπαϊκές διοργανώσεις)
-- Μπάσκετ: [esake.gr](https://www.esake.gr/) (Basket League) και Euroleague (EuroCup)
+Κάθε τμήμα έχει δύο αρχεία στο `docs/`, `<τμήμα>-home.ics` και `<τμήμα>-away.ics`, π.χ. `football-women-away.ics`. Σύνδεσμος για συνδρομή:
+
+```
+https://gabrielchatzi.github.io/PAOK-calendar/<αρχείο>.ics
+```
+
+Οι παλιοί σύνδεσμοι `raw.githubusercontent.com/.../docs/<αρχείο>.ics` συνεχίζουν να δουλεύουν.
 
 ## Πώς δουλεύει
 
-Το [`build_calendars.py`](build_calendars.py) διαβάζει τις πηγές και γράφει τα `.ics` στο `docs/`. Το workflow [`update.yml`](.github/workflows/update.yml) το τρέχει κάθε 6 ώρες και αποθηκεύει μόνο όταν αλλάξει κάτι. Αν μια πηγή αποτύχει, τα αρχεία του αθλήματος μένουν ως είχαν και το workflow σημειώνεται αποτυχημένο.
+Το [`build_calendars.py`](build_calendars.py) διαβάζει τις πηγές και γράφει στο `docs/` τα `.ics` και το `matches.json`, που διαβάζει η σελίδα [`docs/index.html`](docs/index.html). Το workflow [`update.yml`](.github/workflows/update.yml) το τρέχει κάθε 6 ώρες και αποθηκεύει μόνο όταν αλλάξει κάτι. Αν μια πηγή αποτύχει, το τμήμα της μένει ως είχε και το workflow σημειώνεται αποτυχημένο.
 
-Χειροκίνητη ενημέρωση: Actions → «Ενημέρωση ημερολογίων» → Run workflow.
+Χειροκίνητη ενημέρωση: Actions → «Ενημέρωση ημερολογίων» → Run workflow. Για ένα μόνο τμήμα τοπικά: `python3 build_calendars.py handball-women`.

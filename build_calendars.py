@@ -16,6 +16,10 @@
   Χάντμπολ:            statistics.handball.org.gr (Handball Premier, Α1 Γυναικών, Κύπελλα)
   Πόλο:                waterpololeague.gr (ανδρών, γυναικών)
 
+Γράφει επίσης βαθμολογίες στο docs/standings.json (βλ. standings.py) και στέλνει
+ειδοποιήσεις ntfy για νέους αγώνες, αλλαγές ώρας και αποτελέσματα (βλ. notify.py),
+όταν υπάρχει η μεταβλητή περιβάλλοντος NTFY=1.
+
 Αν μια πηγή αποτύχει, τα αρχεία του τμήματος μένουν όπως ήταν και το script
 τερματίζει με σφάλμα, ώστε να φανεί στο GitHub Actions.
 Χρησιμοποιεί μόνο τη βασική βιβλιοθήκη της Python.
@@ -23,6 +27,7 @@
 from __future__ import annotations
 
 import collections
+import os
 import datetime as dt
 import hashlib
 import html
@@ -76,6 +81,8 @@ class Match:
     score: str = ""  # π.χ. "3-1", μόνο για αγώνες που έχουν γίνει
     tv: str = ""
     url: str = ""
+    home_logo: str = ""
+    away_logo: str = ""
 
     def start(self) -> dt.datetime:
         return dt.datetime.combine(self.day, self.time or DEFAULT_TIME, ATHENS)
@@ -85,17 +92,26 @@ class Match:
         d["start"] = self.start().isoformat()
         d["timeKnown"] = self.time is not None
         d["paokHome"] = d.pop("paok_home")
+        d["homeLogo"] = d.pop("home_logo")
+        d["awayLogo"] = d.pop("away_logo")
         del d["day"], d["time"]
         return d
 
 
 # ---------------------------------------------------------------- βοηθητικά
 
+_FETCHED: dict[tuple, str] = {}
+
+
 def fetch(url: str, data: list[tuple[str, str]] | None = None, encoding: str = "utf-8") -> str:
-    body = urllib.parse.urlencode(data).encode() if data is not None else None
-    req = urllib.request.Request(url, data=body, headers={"User-Agent": UA, "Accept-Language": "el,en"})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return r.read().decode(encoding, errors="replace")
+    """Κατεβάζει μια σελίδα· την ίδια σελίδα την κατεβάζει μία φορά ανά εκτέλεση."""
+    key = (url, tuple(data) if data is not None else None, encoding)
+    if key not in _FETCHED:
+        body = urllib.parse.urlencode(data).encode() if data is not None else None
+        req = urllib.request.Request(url, data=body, headers={"User-Agent": UA, "Accept-Language": "el,en"})
+        with urllib.request.urlopen(req, timeout=60) as r:
+            _FETCHED[key] = r.read().decode(encoding, errors="replace")
+    return _FETCHED[key]
 
 
 def season_start_year(today: dt.date | None = None) -> int:
@@ -134,6 +150,10 @@ def tidy_name(name: str) -> str:
     return PAOK if is_paok(name) else name
 
 
+def absolute(base: str, src: str) -> str:
+    return urllib.parse.urljoin(base, html.unescape(src)) if src else ""
+
+
 def short_hash(*parts: str) -> str:
     return hashlib.sha1("|".join(parts).encode()).hexdigest()[:12]
 
@@ -166,20 +186,23 @@ def parse_score(text: str) -> str:
 
 # ---------------------------------------------------------------- βόλεϊ
 
-def volley_matches() -> list[Match]:
+def volley_rows() -> tuple[str, list[dict]]:
+    """Όλοι οι αγώνες της σελίδας της Volley League (όχι μόνο του ΠΑΟΚ)."""
     y = season_start_year()
     season = f"{y}-{str(y + 1)[-2:]}"
     url = f"https://www.volleyleague.gr/index.php/season/{season}/regular-season-results-statistics"
     page = fetch(url)
 
     # Κάθε αγωνιστική ξεκινά με <h3>…</h3>· κάθε αγώνας είναι μια γραμμή με
-    # ημερομηνία, ώρα, γήπεδο, γηπεδούχο, σκορ, φιλοξενούμενο.
+    # ημερομηνία, ώρα, γήπεδο, γηπεδούχο, σήμα, σκορ, σήμα, φιλοξενούμενο.
     row = re.compile(
         r'>(\d{2}/\d{2}/\d{4})</div>\s*'
         r'<div[^>]*>([^<]*)</div>\s*'
         r'<div[^>]*>([^<]*)</div>\s*'
-        r'<div[^>]*>\s*<a[^>]*>([^<]*)</a>.*?'
+        r'<div[^>]*>\s*<a[^>]*>([^<]*)</a>\s*</div>\s*'
+        r'<div[^>]*>\s*<img src="([^"]*)".*?'
         r'<span class="team-class">([^<]*)</span>.*?'
+        r'<img src="([^"]*)".*?'
         r'<a[^>]*>([^<]*)</a>',
         re.S,
     )
@@ -194,12 +217,26 @@ def volley_matches() -> list[Match]:
             current = title
         return current
 
-    out = []
+    rows = []
     for m in row.finditer(page):
-        date_s, time_s, venue, home, score, away = (clean(g) for g in m.groups())
+        date_s, time_s, venue, home, home_logo, score, away_logo, away = (clean(g) for g in m.groups())
+        rows.append({
+            "date": date_s, "time": time_s, "venue": venue, "home": home, "away": away,
+            "home_logo": absolute(url, home_logo), "away_logo": absolute(url, away_logo),
+            "score": "" if score in ("0-0", "-", "") else parse_score(score),
+            "heading": heading_at(m.start()),
+        })
+    return url, rows
+
+
+def volley_matches() -> list[Match]:
+    url, rows = volley_rows()
+    season = re.search(r"season/([^/]+)/", url).group(1)
+    out = []
+    for r in rows:
+        home, away, head = r["home"], r["away"], r["heading"]
         if not (is_paok(home) or is_paok(away)):
             continue
-        head = heading_at(m.start())
         if "αγωνιστική" in head.lower():
             comp, rnd = "Volley League", re.sub(r"\s*-\s*Τέλος.*", "", head)
         else:
@@ -207,10 +244,10 @@ def volley_matches() -> list[Match]:
         out.append(Match(
             section="volley",
             uid=f"volley-{season}-{short_hash(comp, rnd, home, away)}",
-            day=dt.datetime.strptime(date_s, "%d/%m/%Y").date(), time=parse_time(time_s),
+            day=dt.datetime.strptime(r["date"], "%d/%m/%Y").date(), time=parse_time(r["time"]),
             home=tidy_name(home), away=tidy_name(away),
-            paok_home=is_paok(home), venue=venue, competition=comp, round=rnd,
-            score="" if score in ("0-0", "-", "") else parse_score(score), url=url,
+            paok_home=is_paok(home), venue=r["venue"], competition=comp, round=rnd,
+            score=r["score"], url=url, home_logo=r["home_logo"], away_logo=r["away_logo"],
         ))
     if not out:
         raise RuntimeError("Δεν βρέθηκαν αγώνες ΠΑΟΚ στο volleyleague.gr")
@@ -275,6 +312,11 @@ def _parse_dataproject(page: str, section: str, cid: str, comp: str) -> list[Mat
         key = (leg, match_ctrl)
         first_pos.setdefault(key, m.start())
         value = re.search(r'value="([^"]*)"', m.group(2))
+        if field.startswith("Logo_"):
+            logo = re.search(r'url\((?:&quot;|["\'])?([^"&)]+)', m.group(2))
+            if logo:
+                fields[key][field] = logo.group(1)
+            continue
         fields[key][field] = (value.group(1) if value else m.group(3)).strip()
 
     ids = [(m.start(), m.group(1)) for m in re.finditer(r"MatchStatistics\.aspx\?mID=(\d+)", page)]
@@ -304,6 +346,8 @@ def _parse_dataproject(page: str, section: str, cid: str, comp: str) -> list[Mat
             score=score,
             url=(f"{DATAPROJECT}MatchStatistics.aspx?mID={mid}&ID={cid}" if mid
                  else f"{DATAPROJECT}CompetitionMatches.aspx?ID={cid}"),
+            home_logo=f.get("Logo_Home", f.get("Logo_Home_sm", "")),
+            away_logo=f.get("Logo_Guest", f.get("Logo_Guest_sm", "")),
         ))
     return out
 
@@ -361,6 +405,8 @@ def football_matches() -> list[Match]:
         if "home" not in teams or "away" not in teams:
             continue
         name = lambda c: FOOTBALL_NAMES.get(c["team"]["displayName"], c["team"]["displayName"])
+        logo = lambda c: (c["team"].get("logo") or next(
+            (l.get("href") for l in c["team"].get("logos", []) if "dark" not in l.get("rel", [])), ""))
         start_utc = dt.datetime.fromisoformat(ev["date"].replace("Z", "+00:00"))
         local = start_utc.astimezone(ATHENS)
         time_known = ev.get("timeValid", comp.get("timeValid", True))
@@ -383,6 +429,7 @@ def football_matches() -> list[Match]:
             competition=COMPETITION_NAMES.get(league, league),
             round=notes[0].get("headline", "") if notes else "", score=score,
             url=f"https://www.espn.com/soccer/match/_/gameId/{ev_id}",
+            home_logo=logo(teams["home"]), away_logo=logo(teams["away"]),
         ))
     return out
 
@@ -433,6 +480,8 @@ def epo_matches(comp_id: int, section: str, required: bool) -> list[Match]:
             stadium = re.search(r"field--name-field-stadium\">(.*?)</p>", block, re.S)
             score = re.search(r"</div>\s*<h2>(.*?)</h2>", block, re.S)
             home, away = tidy_name(names[0]), tidy_name(names[1])
+            logos = [absolute(EPO, x) for x in re.findall(r'field--name-field-icon.*?<img[^>]+src="([^"]+)"', block, re.S)[:2]]
+            logos += [""] * (2 - len(logos))
             comp_name = clean(comp.group(1)) if comp else ""
             stage_name = clean(stage.group(1)) if stage else ""
             uid = f"{section}-epo{comp_id}-{short_hash(str(y), stage_name, home, away)}"
@@ -448,6 +497,7 @@ def epo_matches(comp_id: int, section: str, required: bool) -> list[Match]:
                 competition=re.sub(r"^Superbet\s+", "", comp_name), round=stage_name,
                 score=parse_score(clean(score.group(1))) if score else "",
                 url=f"{EPO}/el/competition/{comp_id}/matches",
+                home_logo=logos[0], away_logo=logos[1],
             ))
     if required and not out:
         raise RuntimeError(f"Δεν βρέθηκαν αγώνες ΠΑΟΚ στη διοργάνωση {comp_id} της ΕΠΟ")
@@ -504,6 +554,8 @@ def basket_league_matches() -> list[Match]:
             spans = [clean(x) for x in re.findall(r"<span>(.*?)</span>",
                      g.split("esake-program-game-final-score", 1)[-1], re.S)]
             gid = re.search(r"idgame=([0-9A-Fa-f]+)", g)
+            logos = [absolute("https://www.esake.gr/", x) for x in re.findall(
+                r'<img src="([^"]+)"', g.split("esake-program-game-final-score", 1)[-1])[:2]] + ["", ""]
             if len(spans) < 3 or not info:
                 continue
             home, score, away = spans[0], spans[1], spans[2]
@@ -523,6 +575,7 @@ def basket_league_matches() -> list[Match]:
                 tv=info[2] if len(info) > 2 else "",
                 url=(f"https://www.esake.gr/el/action/EsakegameView?idgame={gid.group(1)}&mode=3"
                      if gid else url),
+                home_logo=logos[0], away_logo=logos[1],
             ))
     if not out:
         raise RuntimeError("Δεν βρέθηκαν αγώνες ΠΑΟΚ στο esake.gr")
@@ -556,6 +609,8 @@ def eurocup_matches() -> list[Match]:
             venue=((g.get("venue") or {}).get("name") or "").title(),
             competition="EuroCup", round=rnd, score=score,
             url="https://www.eurocupbasketball.com/",
+            home_logo=(local.get("images") or {}).get("crest", ""),
+            away_logo=(road.get("images") or {}).get("crest", ""),
         ))
     if not out:
         raise RuntimeError(f"Δεν βρέθηκαν αγώνες ΠΑΟΚ στο EuroCup {season}")
@@ -571,6 +626,7 @@ def wbl1_matches() -> list[Match]:
         info = re.search(r'<div class="info">(.*?)</div>', block, re.S)
         clubs = [clean(c) for c in re.findall(r'<div class="club">(.*?)</div>', block, re.S)]
         points = [clean(p) for p in re.findall(r'<div class="points">(.*?)</div>', block, re.S)]
+        logos = re.findall(r'<div class="logo"><img[^>]+src="([^"]+)"', block) + ["", ""]
         if len(clubs) < 2 or not info or not (is_paok(clubs[0]) or is_paok(clubs[1])):
             continue
         text = clean(info.group(1))
@@ -589,6 +645,7 @@ def wbl1_matches() -> list[Match]:
             home=tidy_name(clubs[0]), away=tidy_name(clubs[1]), paok_home=is_paok(clubs[0]),
             venue=re.sub(r"^\s*Γήπεδο:\s*", "", venue).strip(),
             competition="Women's Basketball League 1", round=round_name, score=score, url=url,
+            home_logo=logos[0], away_logo=logos[1],
         ))
     if not out:
         raise RuntimeError("Δεν βρέθηκαν αγώνες ΠΑΟΚ στο basket.gr/wbl1")
@@ -677,6 +734,7 @@ def waterpolo_matches(section: str) -> list[Match]:
         names = [clean(n) for n in re.findall(r'font-heading text-xs">(.*?)</div>', block, re.S)]
         if len(names) < 2 or not (is_paok(names[0]) or is_paok(names[1])):
             continue
+        logos = re.findall(r'data-twic-src="([^"]+)"', block)[:2] + ["", ""]
         info = re.search(r"<!-- Quick Info -->(.*)", block, re.S)
         info_divs = [clean(d) for d in re.findall(r"<div[^>]*>([^<]*)</div>", info.group(1))] if info else []
         date_text = next((d for d in info_divs if re.search(r"\d{4}", d)), "")
@@ -692,6 +750,7 @@ def waterpolo_matches(section: str) -> list[Match]:
             home=tidy_name(names[0]), away=tidy_name(names[1]), paok_home=is_paok(names[0]),
             competition="Water Polo League" + (" Γυναικών" if women else ""),
             score=parse_score(clean(score.group(1))) if score else "", url=link,
+            home_logo=logos[0], away_logo=logos[1],
         ))
     if not out:
         raise RuntimeError(f"Δεν βρέθηκαν αγώνες ΠΑΟΚ στο {url}")
@@ -824,6 +883,7 @@ def main(only: list[str] | None = None) -> int:
     failures: list[str] = []
     all_matches: list[dict] = []
     updated: dict[str, str] = dict(previous.get("updated", {}))
+    refreshed: set[str] = set()
 
     for key, getters in SOURCES.items():
         if only and key not in only:
@@ -854,16 +914,47 @@ def main(only: list[str] | None = None) -> int:
             status[f"{key}-{side}"] = len(subset)
         all_matches += [m.to_json() for m in unique]
         updated[key] = dt.datetime.now(ATHENS).isoformat(timespec="minutes")
+        refreshed.add(key)
+
+    import notify
+    import standings
 
     all_matches.sort(key=lambda m: (m["start"], m["uid"]))
     data = {
         "sections": [{"key": k, **v} for k, v in SECTIONS.items()],
+        "ntfy": {"server": notify.NTFY_SERVER, "prefix": notify.TOPIC_PREFIX, "kinds": list(notify.KINDS)},
         "matches": all_matches,
         "updated": updated,
     }
-    # Η ώρα ενημέρωσης αλλάζει σε κάθε εκτέλεση· αποθηκεύουμε μόνο όταν αλλάξουν οι αγώνες.
-    write_if_changed(data_path, json.dumps(data, ensure_ascii=False, indent=1) + "\n",
-                     ignore=lambda s: json.dumps(json.loads(s).get("matches")))
+
+    def without_updated(text: str) -> str:
+        d = json.loads(text)
+        d.pop("updated", None)
+        return json.dumps(d, sort_keys=True)
+
+    # Η ώρα ενημέρωσης αλλάζει σε κάθε εκτέλεση· αποθηκεύουμε μόνο όταν αλλάξει κάτι άλλο.
+    write_if_changed(data_path, json.dumps(data, ensure_ascii=False, indent=1) + "\n", ignore=without_updated)
+
+    # Ειδοποιήσεις για νέους αγώνες, αλλαγές ώρας και αποτελέσματα.
+    notify.send_changes(previous.get("matches", []), all_matches, refreshed)
+
+    # Βαθμολογίες· αν μία αποτύχει, μένει η προηγούμενη.
+    st_path = OUT_DIR / "standings.json"
+    old_st = json.loads(st_path.read_text(encoding="utf-8")) if st_path.exists() else {}
+    new_st = dict(old_st)
+    for key, get in standings.STANDINGS.items():
+        if only and key not in only:
+            continue
+        try:
+            tables = get()
+            new_st[key] = tables
+            summary = ", ".join(f"{t['title']} ({len(t['rows'])} ομάδες)" for t in tables)
+            print(f"{key} / βαθμολογία: {summary}")
+        except Exception as e:
+            failures.append(f"{key} / βαθμολογία: {e}")
+            print(f"! {key} / βαθμολογία: {e}", file=sys.stderr)
+    write_if_changed(st_path, json.dumps(new_st, ensure_ascii=False, indent=1) + "\n",
+                     ignore=lambda s: json.dumps(json.loads(s), sort_keys=True))
 
     # Μία αλλαγή την εβδομάδα κρατά το repo «ενεργό», ώστε το GitHub να μην
     # απενεργοποιήσει το προγραμματισμένο workflow στις περιόδους χωρίς αγώνες.

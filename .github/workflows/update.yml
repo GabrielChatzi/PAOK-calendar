@@ -2,12 +2,12 @@ name: Ενημέρωση ημερολογίων
 
 on:
   schedule:
-    # Κάθε 6 ώρες (ώρα UTC)
-    - cron: "17 */6 * * *"
+    # Κάθε 2 ώρες (ώρα UTC), ώστε τα αποτελέσματα να φτάνουν γρήγορα
+    - cron: "17 */2 * * *"
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [build_calendars.py, .github/workflows/update.yml]
+    paths: [build_calendars.py, standings.py, notify.py, .github/workflows/update.yml]
 
 permissions:
   contents: write
@@ -29,6 +29,8 @@ jobs:
       - name: Δημιουργία ημερολογίων
         id: build
         continue-on-error: true
+        env:
+          NTFY: "1"
         run: python3 build_calendars.py
 
       - name: Αποθήκευση αλλαγών
@@ -41,6 +43,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs
           git commit -m "Ενημέρωση προγράμματος αγώνων"
+          git pull --rebase --quiet
           git push
 
       # Αν κάποια πηγή απέτυχε, το workflow σημειώνεται ως αποτυχημένο,

@@ -1,0 +1,35 @@
+name: Υπενθυμίσεις αγώνων
+
+on:
+  schedule:
+    # Κάθε 15 λεπτά· στέλνει ειδοποίηση ntfy για αγώνες που ξεκινούν μέσα στα επόμενα 75 λεπτά.
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: reminders
+  cancel-in-progress: false
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Ποιες υπενθυμίσεις έχουν ήδη σταλεί κρατιέται στην cache, όχι στο repo.
+      - uses: actions/cache/restore@v4
+        with:
+          path: .state
+          key: reminded-${{ github.run_id }}
+          restore-keys: reminded-
+
+      - name: Αποστολή υπενθυμίσεων
+        env:
+          NTFY: "1"
+        run: python3 notify.py reminders
+
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: .state
+          key: reminded-${{ github.run_id }}

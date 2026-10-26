@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Αγώνες ΠΑΟΚ</title>
-<meta name="description" content="Το πρόγραμμα και τα αποτελέσματα όλων των τμημάτων του ΠΑΟΚ, με ημερολόγια που ενημερώνονται μόνα τους.">
+<meta name="description" content="Πρόγραμμα, αποτελέσματα, βαθμολογίες και ειδοποιήσεις για όλα τα τμήματα του ΠΑΟΚ.">
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fff'/%3E%3Cpath d='M0 0h6v32H0zM11 0h5v32h-5zM21 0h5v32h-5z' fill='%23000'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,177 +34,151 @@
 
   * { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
-  body {
-    margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font: 16px/1.5 var(--body);
-  }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.5 var(--body); }
   a { color: inherit; }
   button { font: inherit; color: inherit; }
   :focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+  [hidden] { display: none !important; }
 
   /* Η ταυτότητα της σελίδας: οι ρίγες της φανέλας. */
-  .masthead {
-    background: var(--stripe);
-    padding: 56px 16px 0;
-  }
-  .masthead-inner {
-    max-width: 680px;
-    margin: 0 auto;
-  }
+  .masthead { background: var(--stripe); padding: 56px 16px 0; }
+  .masthead.compact { padding-top: 28px; }
+  .masthead-inner { max-width: 680px; margin: 0 auto; }
   .masthead h1 {
-    display: inline-block;
-    margin: 0;
-    padding: 10px 16px 6px;
+    display: inline-block; margin: 0; padding: 10px 16px 6px;
     background: var(--paper);
     font: 800 clamp(44px, 13vw, 76px)/0.9 var(--display);
     letter-spacing: -0.01em;
   }
+  .masthead.compact h1 { font-size: clamp(36px, 10vw, 56px); }
+  .masthead h1 a { text-decoration: none; }
 
   main { max-width: 680px; margin: 0 auto; padding: 0 16px 48px; }
-
   .lede { margin: 18px 0 28px; color: var(--muted); max-width: 52ch; }
+  h2.section-title { font: 800 34px/1 var(--display); margin: 44px 0 14px; }
+
+  /* Σήματα ομάδων */
+  .crest {
+    width: 22px; height: 22px; object-fit: contain; vertical-align: -4px; margin-right: 6px;
+    display: inline-block; flex: none;
+  }
+  .initials {
+    display: inline-grid; place-items: center; width: 22px; height: 22px; margin-right: 6px;
+    border: 1.5px solid var(--ink); border-radius: 50%;
+    font: 600 10px/1 var(--body); vertical-align: -4px; flex: none;
+  }
+  @media (prefers-color-scheme: dark) {
+    img.crest { background: #fff; border-radius: 3px; padding: 1px; }
+  }
 
   /* Επόμενος αγώνας */
-  .next {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 20px 20px 22px;
-    margin-bottom: 36px;
-  }
-  .next[hidden] { display: none; }
-  .next-label { font-size: 15px; opacity: .75; margin: 0 0 6px; }
-  .next-teams {
-    font: 800 clamp(34px, 9vw, 52px)/1 var(--display);
-    margin: 0 0 12px;
-    overflow-wrap: anywhere;
-  }
+  .next { background: var(--ink); color: var(--paper); padding: 20px 20px 22px; margin-bottom: 8px; }
+  .next-label { font-size: 15px; opacity: .75; margin: 0 0 8px; }
+  .next-teams { font: 800 clamp(30px, 8.5vw, 48px)/1.08 var(--display); margin: 0 0 12px; overflow-wrap: anywhere; }
+  .next-teams .crest, .next-teams .initials { width: 34px; height: 34px; vertical-align: -6px; }
+  .next-teams .initials { border-color: var(--paper); font-size: 13px; }
   .next-when { font: 600 22px/1.2 var(--display); margin: 0; }
   .next-meta { margin: 6px 0 0; opacity: .8; font-size: 15px; }
 
-  /* Φίλτρα */
-  .filters { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin-bottom: 8px; }
-  .filters > * { min-width: 0; }
-  .chips {
-    display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none;
-    margin: 0 -16px; padding: 2px 16px;
+  /* Τμήματα */
+  .tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .tile {
+    display: block; text-decoration: none; border: 1.5px solid var(--ink);
+    padding: 12px 12px 14px; position: relative; min-height: 112px;
   }
+  .tile:active { background: var(--ink); color: var(--paper); }
+  .tile-name { font: 800 20px/1.05 var(--display); display: block; padding-right: 30px; overflow-wrap: anywhere; }
+  .tile-emoji { position: absolute; top: 10px; right: 10px; font-size: 20px; }
+  .tile-next { display: block; font-size: 14px; margin-top: 8px; line-height: 1.35; }
+  .tile-pos { display: block; font-size: 13px; color: var(--muted); margin-top: 4px; }
+  .tile:active .tile-pos { color: inherit; }
+
+  /* Φίλτρα και επιλογές */
+  .controls { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin-bottom: 8px; }
+  .controls > * { min-width: 0; }
+  .chips { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 2px 16px; }
   .chips::-webkit-scrollbar { display: none; }
   .chip {
-    flex: none;
-    border: 1.5px solid var(--ink);
-    background: var(--paper);
-    padding: 7px 14px;
-    border-radius: 999px;
-    cursor: pointer;
-    font-weight: 500;
-    white-space: nowrap;
+    flex: none; border: 1.5px solid var(--ink); background: var(--paper);
+    padding: 7px 14px; border-radius: 999px; cursor: pointer; font-weight: 500; white-space: nowrap;
   }
   .chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
-  .seg {
-    display: flex;
-    border: 1.5px solid var(--ink);
-    width: 100%;
-  }
-  .seg button {
-    flex: 1;
-    border: 0;
-    background: transparent;
-    padding: 8px 6px;
-    cursor: pointer;
-    font-weight: 500;
-  }
+  .seg { display: flex; border: 1.5px solid var(--ink); width: 100%; }
+  .seg button { flex: 1; border: 0; background: transparent; padding: 8px 6px; cursor: pointer; font-weight: 500; }
   .seg button + button { border-left: 1.5px solid var(--ink); }
   .seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
-  .seg-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
-  .legend { margin: 14px 0 0; font-size: 14px; color: var(--muted); display: flex; gap: 18px; flex-wrap: wrap; }
+  .legend { margin: 4px 0 0; font-size: 14px; color: var(--muted); display: flex; gap: 18px; flex-wrap: wrap; }
   .legend span::before {
     content: ""; display: inline-block; width: 6px; height: 16px; margin-right: 7px; vertical-align: -3px;
     border: 1.5px solid var(--ink);
   }
-  .legend .l-home::before {
-    border: 0;
-    background: repeating-linear-gradient(180deg, var(--ink) 0 4px, transparent 4px 8px);
+  .legend .l-home::before { border: 0; background: repeating-linear-gradient(180deg, var(--ink) 0 4px, transparent 4px 8px); }
+
+  /* Καρτέλες σελίδας τμήματος */
+  .back { display: inline-block; margin: 18px 0 6px; font-weight: 500; text-underline-offset: 3px; }
+  .section-head { display: flex; align-items: center; gap: 12px; margin: 4px 0 18px; }
+  .section-head h2 { margin: 0; font: 800 clamp(36px, 10vw, 52px)/1 var(--display); }
+  .section-head span { font-size: 34px; }
+  .tabs {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+    border: 1.5px solid var(--ink); margin: 26px 0 14px;
+  }
+  .tabs a {
+    padding: 10px 6px; text-align: center; text-decoration: none; font-weight: 600;
+    border-right: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink);
+  }
+  .tabs a:nth-child(2n) { border-right: 0; }
+  .tabs a:nth-child(n+3) { border-bottom: 0; }
+  .tabs a[aria-current="page"] { background: var(--ink); color: var(--paper); }
+  @media (min-width: 560px) {
+    .tabs { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .tabs a, .tabs a:nth-child(2n) { border-right: 1.5px solid var(--ink); border-bottom: 0; }
+    .tabs a:last-child { border-right: 0; }
   }
 
   /* Λίστα αγώνων */
   .day {
-    position: sticky; top: 0; z-index: 1;
-    background: var(--paper);
-    margin: 0;
-    padding: 22px 0 6px;
-    border-bottom: 2px solid var(--ink);
+    position: sticky; top: 0; z-index: 1; background: var(--paper);
+    margin: 0; padding: 22px 0 6px; border-bottom: 2px solid var(--ink);
     font: 800 22px/1.1 var(--display);
   }
   .day small { font: 500 15px var(--body); color: var(--muted); margin-left: 8px; }
   ol.games { list-style: none; margin: 0; padding: 0; }
   .game {
-    display: grid;
-    grid-template-columns: 58px 1fr auto;
-    gap: 12px;
-    align-items: start;
-    padding: 12px 0 12px 14px;
-    border-bottom: 1px solid var(--rule);
-    position: relative;
+    display: grid; grid-template-columns: 58px 1fr auto; gap: 12px; align-items: start;
+    padding: 12px 0 12px 14px; border-bottom: 1px solid var(--rule); position: relative;
   }
-  /* Εντός έδρας: ρίγες στην άκρη. Εκτός: μονό λευκό/μαύρο περίγραμμα. */
+  /* Εντός έδρας: ρίγες στην άκρη. Εκτός: απλό περίγραμμα. */
   .game::before {
-    content: "";
-    position: absolute; left: 0; top: 12px; bottom: 12px; width: 6px;
+    content: ""; position: absolute; left: 0; top: 12px; bottom: 12px; width: 6px;
     border: 1.5px solid var(--ink);
   }
-  .game.home::before {
-    border: 0;
-    background: repeating-linear-gradient(180deg, var(--ink) 0 4px, transparent 4px 8px);
-  }
+  .game.home::before { border: 0; background: repeating-linear-gradient(180deg, var(--ink) 0 4px, transparent 4px 8px); }
   .time { font: 800 22px/1.2 var(--display); }
   .time.tbc { color: var(--muted); font-size: 18px; }
-  .teams { font: 600 20px/1.2 var(--display); overflow-wrap: anywhere; }
+  .teams { font: 600 20px/1.25 var(--display); overflow-wrap: anywhere; }
+  .teams .team { display: block; }
   .teams b { font-weight: 800; }
-  .meta { font-size: 14px; color: var(--muted); margin-top: 3px; }
+  .meta { font-size: 14px; color: var(--muted); margin-top: 4px; }
   .meta a { text-underline-offset: 2px; }
-  .score {
-    font: 800 22px/1.2 var(--display);
-    text-align: right;
-    white-space: nowrap;
-  }
+  .score { font: 800 22px/1.25 var(--display); text-align: right; white-space: nowrap; }
+  .score span.n { display: block; }
   .res {
-    display: inline-block;
-    min-width: 24px;
-    margin-left: 6px;
-    padding: 0 5px;
-    font: 600 15px/24px var(--body);
-    text-align: center;
-    border: 1.5px solid var(--ink);
-    vertical-align: 3px;
+    display: inline-block; min-width: 24px; margin-top: 4px; padding: 0 5px;
+    font: 600 15px/24px var(--body); text-align: center; border: 1.5px solid var(--ink);
   }
   .res.w { background: var(--ink); color: var(--paper); }
   .empty { padding: 28px 0; color: var(--muted); }
   .more {
-    margin: 20px 0 0;
-    width: 100%;
-    border: 1.5px solid var(--ink);
-    background: transparent;
-    padding: 12px;
-    font-weight: 600;
-    cursor: pointer;
+    margin: 20px 0 0; width: 100%; border: 1.5px solid var(--ink); background: transparent;
+    padding: 12px; font-weight: 600; cursor: pointer;
   }
-  .more[hidden] { display: none; }
 
-  /* Προβολή μήνα */
-  .view { margin-bottom: 12px; }
+  /* Μήνας */
   .month { margin-top: 18px; }
-  .month[hidden], .seg[hidden], #list[hidden] { display: none; }
-  .month-head {
-    display: grid; grid-template-columns: 44px 1fr 44px; align-items: center;
-    border-bottom: 2px solid var(--ink); padding-bottom: 6px;
-  }
-  .month-head h2 { margin: 0; text-align: center; font: 800 26px/1.1 var(--display); }
-  .month-head button {
-    width: 44px; height: 44px; border: 1.5px solid var(--ink); background: transparent;
-    font: 800 22px/1 var(--display); cursor: pointer;
-  }
+  .month-head { display: grid; grid-template-columns: 44px 1fr 44px; align-items: center; border-bottom: 2px solid var(--ink); padding-bottom: 6px; }
+  .month-head h3 { margin: 0; text-align: center; font: 800 26px/1.1 var(--display); }
+  .month-head button { width: 44px; height: 44px; border: 1.5px solid var(--ink); background: transparent; font: 800 22px/1 var(--display); cursor: pointer; }
   .month-head button:disabled { opacity: .25; cursor: default; }
   .grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); }
   .wd { text-align: center; font-size: 13px; color: var(--muted); padding: 8px 0 4px; }
@@ -219,57 +193,58 @@
   .cell.none { cursor: default; }
   .cell.none .n { color: var(--muted); }
   .mks { display: flex; flex-wrap: wrap; gap: 2px; font-size: 15px; line-height: 1; }
-  /* Κάθε αγώνας είναι ένα εικονίδιο· από κάτω ρίγες αν είναι εντός έδρας, απλή γραμμή αν είναι εκτός. */
   .mk { display: inline-flex; flex-direction: column; align-items: center; gap: 2px; }
   .mk::after { content: ""; width: 14px; height: 4px; border: 1px solid var(--ink); }
-  .mk.home::after {
-    border: 0; height: 4px;
-    background: repeating-linear-gradient(90deg, var(--ink) 0 2px, transparent 2px 4px);
-  }
+  .mk.home::after { border: 0; background: repeating-linear-gradient(90deg, var(--ink) 0 2px, transparent 2px 4px); }
   .plus { font: 600 13px/1 var(--body); color: var(--muted); align-self: center; }
-  #day-list:empty { display: none; }
 
-  /* Ημερολόγια */
-  .subscribe { margin-top: 56px; }
-  .subscribe h2 { font: 800 34px/1 var(--display); margin: 0 0 10px; }
-  .subscribe p { margin: 0 0 14px; max-width: 56ch; }
+  /* Βαθμολογία */
+  .standing { margin: 8px 0 30px; }
+  .standing h3 { font: 800 24px/1.1 var(--display); margin: 18px 0 8px; }
+  .table-wrap { overflow-x: auto; margin: 0 -16px; padding: 0 16px; }
+  table.st { width: 100%; border-collapse: collapse; font-size: 15px; }
+  table.st th { font-weight: 500; color: var(--muted); text-align: right; padding: 6px 6px; border-bottom: 2px solid var(--ink); white-space: nowrap; }
+  table.st th:nth-child(2) { text-align: left; }
+  table.st td { padding: 8px 6px; border-bottom: 1px solid var(--rule); text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  table.st td.pos { width: 28px; color: var(--muted); }
+  table.st td.team { text-align: left; white-space: normal; font-weight: 500; min-width: 140px; }
+  table.st td.pts { font-weight: 600; }
+  table.st tr.paok td { background: var(--ink); color: var(--paper); font-weight: 600; }
+  table.st tr.paok .initials { border-color: var(--paper); }
+  .source { font-size: 14px; color: var(--muted); }
+
+  /* Ακολούθησε: ημερολόγια και ειδοποιήσεις */
+  .follow h3 { font: 800 26px/1.1 var(--display); margin: 26px 0 8px; }
+  .follow p { margin: 0 0 12px; max-width: 58ch; }
   .help { color: var(--muted); font-size: 15px; }
-  .cal-list { list-style: none; margin: 18px 0 0; padding: 0; border-top: 2px solid var(--ink); }
-  .cal {
-    display: grid;
-    grid-template-columns: 1fr auto auto;
-    gap: 8px;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--rule);
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 4px; }
+  .btn {
+    display: inline-block; border: 1.5px solid var(--ink); padding: 9px 14px; background: transparent;
+    text-decoration: none; font-weight: 500; cursor: pointer; white-space: nowrap;
   }
-  .cal-name { font: 600 19px/1.2 var(--display); }
-  .cal a, .cal button {
-    display: inline-block;
-    border: 1.5px solid var(--ink);
-    padding: 7px 12px;
-    background: transparent;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 15px;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-  .cal a:active, .cal button:active { background: var(--ink); color: var(--paper); }
-  .toast {
-    position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom));
-    transform: translateX(-50%);
-    background: var(--ink); color: var(--paper);
-    padding: 10px 16px; font-weight: 500;
-    max-width: calc(100% - 32px);
-  }
-  .toast[hidden] { display: none; }
+  .btn.solid { background: var(--ink); color: var(--paper); }
+  .btn:active { background: var(--ink); color: var(--paper); }
+  ul.notify { list-style: none; margin: 14px 0 0; padding: 0; border-top: 2px solid var(--ink); }
+  ul.notify li { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+  ul.notify strong { font: 600 19px/1.2 var(--display); display: block; }
+  ul.notify small { color: var(--muted); font-size: 14px; display: block; }
+  ul.notify code { font-size: 12px; color: var(--muted); word-break: break-all; }
+  ol.steps { margin: 0 0 12px; padding-left: 22px; max-width: 58ch; }
+  ol.steps li { margin-bottom: 6px; }
 
+  .cal-list { list-style: none; margin: 14px 0 0; padding: 0; border-top: 2px solid var(--ink); }
+  .cal { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+  .cal-name { font: 600 19px/1.2 var(--display); text-decoration: none; }
+
+  .toast {
+    position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom)); transform: translateX(-50%);
+    background: var(--ink); color: var(--paper); padding: 10px 16px; font-weight: 500; max-width: calc(100% - 32px); z-index: 5;
+  }
   footer { margin-top: 48px; font-size: 14px; color: var(--muted); }
   footer p { margin: 0 0 8px; }
 
   @media (min-width: 560px) {
-    .seg-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+    .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .game { grid-template-columns: 70px 1fr auto; }
     .cell { min-height: 78px; padding: 6px; }
     .mks { font-size: 18px; }
@@ -277,73 +252,11 @@
 </style>
 </head>
 <body>
-<header class="masthead">
-  <div class="masthead-inner"><h1>Αγώνες ΠΑΟΚ</h1></div>
+<header class="masthead" id="masthead">
+  <div class="masthead-inner"><h1><a href="#/">Αγώνες ΠΑΟΚ</a></h1></div>
 </header>
 
-<main>
-  <p class="lede">Το πρόγραμμα και τα αποτελέσματα όλων των τμημάτων, σε μία σελίδα. Ενημερώνεται μόνο του κάθε έξι ώρες.</p>
-
-  <section class="next" id="next" hidden aria-live="polite">
-    <p class="next-label" id="next-label">Επόμενος αγώνας</p>
-    <p class="next-teams" id="next-teams"></p>
-    <p class="next-when" id="next-when"></p>
-    <p class="next-meta" id="next-meta"></p>
-  </section>
-
-  <div class="seg view" id="view" role="group" aria-label="Προβολή">
-    <button type="button" data-v="list">Λίστα</button>
-    <button type="button" data-v="month">Μήνας</button>
-  </div>
-
-  <div class="filters" role="group" aria-label="Φίλτρα">
-    <div class="chips" id="sports" role="group" aria-label="Άθλημα"></div>
-    <div class="seg" id="gender" role="group" aria-label="Τμήμα">
-      <button type="button" data-v="all">Όλα</button>
-      <button type="button" data-v="men">Ανδρών</button>
-      <button type="button" data-v="women">Γυναικών</button>
-    </div>
-    <div class="seg-row">
-      <div class="seg" id="when" role="group" aria-label="Επόμενοι ή αποτελέσματα">
-        <button type="button" data-v="upcoming">Επόμενοι</button>
-        <button type="button" data-v="results">Αποτελέσματα</button>
-      </div>
-      <div class="seg" id="venue" role="group" aria-label="Έδρα">
-        <button type="button" data-v="all">Όλοι</button>
-        <button type="button" data-v="home">Εντός</button>
-        <button type="button" data-v="away">Εκτός</button>
-      </div>
-    </div>
-    <p class="legend"><span class="l-home">Εντός έδρας</span><span class="l-away">Εκτός έδρας</span></p>
-  </div>
-
-  <div id="list" aria-live="polite"><p class="empty">Φόρτωση προγράμματος…</p></div>
-
-  <section class="month" id="month" hidden aria-label="Προβολή μήνα">
-    <div class="month-head">
-      <button type="button" id="prev-month" aria-label="Προηγούμενος μήνας">‹</button>
-      <h2 id="month-title"></h2>
-      <button type="button" id="next-month" aria-label="Επόμενος μήνας">›</button>
-    </div>
-    <div class="grid" id="month-grid"></div>
-    <div id="day-list" aria-live="polite"></div>
-  </section>
-  <button type="button" class="more" id="more" hidden>Περισσότεροι αγώνες</button>
-
-  <section class="subscribe" id="calendars">
-    <h2>Στο ημερολόγιό σου</h2>
-    <p>Κάθε τμήμα έχει δύο ημερολόγια, εντός και εκτός έδρας. Όταν αλλάζει μια ώρα ή ημερομηνία, αλλάζει και στο κινητό σου.</p>
-    <p class="help" id="help-ios">Στο iPhone πάτα «Εντός» ή «Εκτός» και μετά «Συνδρομή».</p>
-    <p class="help" id="help-android" hidden>Στο Android πάτα «Εντός» ή «Εκτός» για να αντιγράψεις τον σύνδεσμο. Μετά άνοιξε το calendar.google.com, πάτα + δίπλα στο «Άλλα ημερολόγια», διάλεξε «Από διεύθυνση URL» και επικόλλησέ τον.</p>
-    <ul class="cal-list" id="cal-list"></ul>
-  </section>
-
-  <footer>
-    <p id="updated"></p>
-    <p>Αγώνες χωρίς ορισμένη ώρα εμφανίζονται ως «ώρα TBC» και στα ημερολόγια μπαίνουν στις 18:00.</p>
-    <p>Πηγές: ESPN, ΕΠΟ, esake.gr, Euroleague, basket.gr, volleyleague.gr, ΕΟΠΕ, ΟΧΕ, Water Polo League.</p>
-  </footer>
-</main>
+<main id="app"><p class="empty">Φόρτωση προγράμματος…</p></main>
 
 <div class="toast" id="toast" role="status" hidden></div>
 
@@ -352,28 +265,33 @@
   "use strict";
   var TZ = "Europe/Athens";
   var PAGE = 40;
-  var state = { view: "list", sport: "all", gender: "all", when: "upcoming", venue: "all", shown: PAGE,
-                month: null, day: null };
-  var data = null;
+  var NTFY_IOS = "https://apps.apple.com/app/ntfy/id1625396347";
+  var NTFY_ANDROID = "https://play.google.com/store/apps/details?id=io.heckel.ntfy";
+  var KIND_INFO = {
+    pre: ["Πριν τον αγώνα", "Περίπου μία ώρα πριν ξεκινήσει"],
+    time: ["Αλλαγές προγράμματος", "Νέος αγώνας, ορισμός ή αλλαγή ώρας"],
+    result: ["Τελικό αποτέλεσμα", "Το σκορ μόλις ανακοινωθεί"]
+  };
   var isAndroid = /android/i.test(navigator.userAgent);
+  var data = null, standings = {};
 
+  // Επιλογές που θυμάται η σελίδα (ανά συσκευή).
+  var prefs = { view: "list", sport: "all", gender: "all", when: "upcoming", venue: "all" };
   try {
     var saved = JSON.parse(localStorage.getItem("paok-filters") || "{}");
-    ["view", "sport", "gender", "when", "venue"].forEach(function (k) { if (saved[k]) state[k] = saved[k]; });
-  } catch (e) { /* χωρίς αποθήκευση, απλώς οι προεπιλογές */ }
+    Object.keys(prefs).forEach(function (k) { if (saved[k]) prefs[k] = saved[k]; });
+  } catch (e) {}
+  function savePrefs() { try { localStorage.setItem("paok-filters", JSON.stringify(prefs)); } catch (e) {} }
 
-  function save() {
-    try {
-      localStorage.setItem("paok-filters", JSON.stringify({
-        view: state.view, sport: state.sport, gender: state.gender, when: state.when, venue: state.venue
-      }));
-    } catch (e) {}
-  }
+  // Κατάσταση που δεν αποθηκεύεται.
+  var ui = { shown: PAGE, month: null, day: null, secView: "list", secVenue: "all" };
 
   var fmtDay = new Intl.DateTimeFormat("el-GR", { timeZone: TZ, weekday: "long", day: "numeric", month: "long" });
   var fmtShort = new Intl.DateTimeFormat("el-GR", { timeZone: TZ, weekday: "short", day: "numeric", month: "short" });
   var fmtTime = new Intl.DateTimeFormat("el-GR", { timeZone: TZ, hour: "2-digit", minute: "2-digit", hour12: false });
   var fmtKey = new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit" });
+  var fmtMonth = new Intl.DateTimeFormat("el-GR", { month: "long", year: "numeric", timeZone: "UTC" });
+  var WEEKDAYS = ["Δευ", "Τρι", "Τετ", "Πεμ", "Παρ", "Σαβ", "Κυρ"];
 
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
@@ -381,6 +299,8 @@
     });
   }
   function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function $(id) { return document.getElementById(id); }
 
   function dayDiff(date) {
     var a = new Date(fmtKey.format(new Date()) + "T00:00:00");
@@ -394,12 +314,8 @@
     if (d > 1 && d < 7) return "Σε " + d + " μέρες";
     return "";
   }
-
-  // Ένας αγώνας θεωρείται «επόμενος» μέχρι 2 ώρες μετά την έναρξη, αν δεν έχει σκορ.
-  function isUpcoming(m) {
-    return !m.score && new Date(m.start).getTime() > Date.now() - 2 * 3600 * 1000;
-  }
-
+  // Ένας αγώνας είναι «επόμενος» μέχρι 2 ώρες μετά την έναρξη, αν δεν έχει σκορ.
+  function isUpcoming(m) { return !m.score && new Date(m.start).getTime() > Date.now() - 2 * 3600 * 1000; }
   function outcome(m) {
     var p = /^(\d+)-(\d+)$/.exec(m.score || "");
     if (!p) return "";
@@ -409,301 +325,382 @@
   var OUTCOME_LABEL = { w: "Ν", d: "Ι", l: "Η" };
   var OUTCOME_TITLE = { w: "Νίκη", d: "Ισοπαλία", l: "Ήττα" };
 
-  function teamsHtml(m) {
-    function t(name) { return name === "ΠΑΟΚ" ? "<b>ΠΑΟΚ</b>" : esc(name); }
-    return t(m.home) + " – " + t(m.away);
-  }
-
   function sectionOf(m) { return data.sectionMap[m.section] || { name: m.section, emoji: "" }; }
 
-  function passesSection(m) {
-    var s = sectionOf(m);
-    if (state.sport !== "all" && s.sport !== state.sport) return false;
-    if (state.gender === "men" && s.women) return false;
-    if (state.gender === "women" && !s.women) return false;
-    if (state.venue === "home" && !m.paokHome) return false;
-    if (state.venue === "away" && m.paokHome) return false;
-    return true;
+  // ---- Σήματα
+  var paokLogo = {};
+  function initials(name) {
+    var words = String(name).replace(/[."«»]/g, " ").split(/\s+/).filter(function (w) { return w.length > 1; });
+    return (words.length > 1 ? words[0][0] + words[1][0] : (words[0] || "?").slice(0, 2)).toUpperCase();
+  }
+  function crest(url, name, section) {
+    if (!url && name === "ΠΑΟΚ") url = paokLogo[section] || paokLogo._any;
+    var fallback = '<span class="initials" aria-hidden="true">' + esc(initials(name)) + "</span>";
+    if (!url) return fallback;
+    return '<img class="crest" src="' + esc(url) + '" alt="" loading="lazy" referrerpolicy="no-referrer" ' +
+      'onerror="this.outerHTML=this.dataset.f" data-f="' + esc(fallback) + '">';
+  }
+  function teamHtml(name, logo, section) {
+    return crest(logo, name, section) + (name === "ΠΑΟΚ" ? "<b>ΠΑΟΚ</b>" : esc(name));
   }
 
-  function matchesFilter(m) {
-    if (!passesSection(m)) return false;
-    return state.when === "upcoming" ? isUpcoming(m) : !isUpcoming(m);
-  }
-
-  function renderNext() {
-    var box = document.getElementById("next");
-    var list = data.matches.filter(function (m) {
-      var s = sectionOf(m);
-      if (state.sport !== "all" && s.sport !== state.sport) return false;
-      if (state.gender === "men" && s.women) return false;
-      if (state.gender === "women" && !s.women) return false;
-      return isUpcoming(m);
-    });
-    if (!list.length) { box.hidden = true; return; }
-    var m = list[0], s = sectionOf(m), date = new Date(m.start);
-    var rel = relative(date);
-    document.getElementById("next-label").textContent =
-      "Επόμενος αγώνας, " + s.emoji + " " + s.name;
-    document.getElementById("next-teams").innerHTML = teamsHtml(m);
-    document.getElementById("next-when").textContent =
-      (rel ? rel + ", " : "") + fmtShort.format(date) +
-      (m.timeKnown ? ", " + fmtTime.format(date) : ", ώρα TBC");
-    document.getElementById("next-meta").textContent =
-      [m.competition, m.venue].filter(Boolean).join(", ");
-    box.hidden = false;
-  }
-
-  function gameHtml(m) {
+  // ---- Λίστα αγώνων
+  function gameHtml(m, showSection) {
     var date = new Date(m.start), s = sectionOf(m), o = outcome(m);
-    var meta = [s.emoji + " " + s.name, m.competition, m.round].filter(Boolean).map(esc).join(", ");
+    var meta = [showSection ? s.emoji + " " + s.name : "", m.competition, m.round].filter(Boolean).map(esc).join(", ");
     if (m.venue) meta += "<br>" + esc(m.venue);
     if (m.tv) meta += ", " + esc(m.tv);
+    var parts = /^(\d+)-(\d+)$/.exec(m.score || "");
     return '<li class="game ' + (m.paokHome ? "home" : "away") + '">' +
-        '<div class="time' + (m.timeKnown ? "" : " tbc") + '">' + (m.timeKnown ? fmtTime.format(date) : "TBC") + "</div>" +
-        "<div>" +
-          '<div class="teams">' + teamsHtml(m) + "</div>" +
-          '<div class="meta">' + meta +
-            (m.url ? ' <a href="' + esc(m.url) + '" rel="noopener" target="_blank">Πηγή</a>' : "") +
-          "</div>" +
-        "</div>" +
-        '<div class="score">' + (m.score
-          ? esc(m.score.replace("-", "–")) + (o ? '<span class="res ' + o + '" title="' + OUTCOME_TITLE[o] + '">' + OUTCOME_LABEL[o] + "</span>" : "")
-          : "") + "</div>" +
-      "</li>";
+      '<div class="time' + (m.timeKnown ? "" : " tbc") + '">' + (m.timeKnown ? fmtTime.format(date) : "TBC") + "</div>" +
+      "<div>" +
+        '<div class="teams"><span class="team">' + teamHtml(m.home, m.homeLogo, m.section) + '</span>' +
+          '<span class="team">' + teamHtml(m.away, m.awayLogo, m.section) + "</span></div>" +
+        '<div class="meta">' + meta +
+          (m.url ? ' <a href="' + esc(m.url) + '" rel="noopener" target="_blank">Πηγή</a>' : "") + "</div>" +
+      "</div>" +
+      '<div class="score">' + (parts
+        ? '<span class="n">' + parts[1] + '</span><span class="n">' + parts[2] + "</span>" +
+          (o ? '<span class="res ' + o + '" title="' + OUTCOME_TITLE[o] + '">' + OUTCOME_LABEL[o] + "</span>" : "")
+        : "") + "</div>" +
+    "</li>";
   }
 
-  // ---- Προβολή μήνα
-  var fmtMonth = new Intl.DateTimeFormat("el-GR", { month: "long", year: "numeric", timeZone: "UTC" });
-  var WEEKDAYS = ["Δευ", "Τρι", "Τετ", "Πεμ", "Παρ", "Σαβ", "Κυρ"];
-  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function listHtml(list, mode, showSection) {
+    if (mode === "results") list = list.slice().reverse();
+    if (!list.length) {
+      return '<p class="empty">' + (mode === "upcoming"
+        ? "Δεν υπάρχουν προγραμματισμένοι αγώνες για αυτή την επιλογή. Δες τα αποτελέσματα ή άλλαξε φίλτρα."
+        : "Δεν υπάρχουν αποτελέσματα για αυτή την επιλογή ακόμα.") + "</p>";
+    }
+    var out = [], lastKey = null;
+    list.slice(0, ui.shown).forEach(function (m) {
+      var date = new Date(m.start), key = fmtKey.format(date);
+      if (key !== lastKey) {
+        if (lastKey) out.push("</ol>");
+        var rel = relative(date);
+        out.push('<h3 class="day">' + esc(cap(fmtDay.format(date))) +
+          (rel && rel.indexOf("Σε ") !== 0 ? "<small>" + rel + "</small>" : "") + '</h3><ol class="games">');
+        lastKey = key;
+      }
+      out.push(gameHtml(m, showSection));
+    });
+    out.push("</ol>");
+    if (list.length > ui.shown) out.push('<button type="button" class="more" data-act="more">Περισσότεροι αγώνες</button>');
+    return out.join("");
+  }
+
+  // ---- Μήνας
   function monthKey(key) { return key.slice(0, 7); }
   function addMonths(mk, n) {
     var y = +mk.slice(0, 4), m = +mk.slice(5, 7) - 1 + n;
     y += Math.floor(m / 12); m = ((m % 12) + 12) % 12;
     return y + "-" + pad(m + 1);
   }
-
-  function renderMonth() {
+  function monthHtml(list, showSection) {
     var todayKey = fmtKey.format(new Date());
     var byDay = {};
-    data.matches.forEach(function (m) {
-      if (!passesSection(m)) return;
+    list.forEach(function (m) {
       var k = fmtKey.format(new Date(m.start));
       (byDay[k] = byDay[k] || []).push(m);
     });
     var allKeys = data.matches.map(function (m) { return fmtKey.format(new Date(m.start)); }).sort();
     var first = monthKey(allKeys[0] || todayKey), last = monthKey(allKeys[allKeys.length - 1] || todayKey);
-    if (!state.month) state.month = monthKey(todayKey) < first ? first : monthKey(todayKey) > last ? last : monthKey(todayKey);
-    var mk = state.month, y = +mk.slice(0, 4), mo = +mk.slice(5, 7);
-
-    // Μία νέα επιλογή μήνα ή φίλτρου: προεπιλέγεται σήμερα ή η πρώτη μέρα με αγώνα.
-    if (!state.day || monthKey(state.day) !== mk || !byDay[state.day]) {
+    if (!ui.month) ui.month = monthKey(todayKey) < first ? first : monthKey(todayKey) > last ? last : monthKey(todayKey);
+    var mk = ui.month, y = +mk.slice(0, 4), mo = +mk.slice(5, 7);
+    if (!ui.day || monthKey(ui.day) !== mk || !byDay[ui.day]) {
       var days = Object.keys(byDay).filter(function (k) { return monthKey(k) === mk; }).sort();
       var future = days.filter(function (k) { return k >= todayKey; });
-      state.day = byDay[todayKey] && monthKey(todayKey) === mk ? todayKey : (future[0] || days[0] || null);
+      ui.day = byDay[todayKey] && monthKey(todayKey) === mk ? todayKey : (future[0] || days[0] || null);
     }
-
-    document.getElementById("month-title").textContent = cap(fmtMonth.format(new Date(Date.UTC(y, mo - 1, 1))));
-    document.getElementById("prev-month").disabled = mk <= first;
-    document.getElementById("next-month").disabled = mk >= last;
-
+    var title = cap(fmtMonth.format(new Date(Date.UTC(y, mo - 1, 1))));
     var cells = WEEKDAYS.map(function (w) { return '<div class="wd" aria-hidden="true">' + w + "</div>"; });
     var lead = (new Date(Date.UTC(y, mo - 1, 1)).getUTCDay() + 6) % 7;
     var count = new Date(Date.UTC(y, mo, 0)).getUTCDate();
     for (var i = 0; i < lead; i++) cells.push('<div class="cell out"></div>');
     for (var d = 1; d <= count; d++) {
-      var key = y + "-" + pad(mo) + "-" + pad(d), list = byDay[key] || [];
-      var cls = "cell" + (key === todayKey ? " today" : "") + (key === state.day ? " sel" : "") + (list.length ? "" : " none");
-      var marks = list.slice(0, 3).map(function (m) {
-        var s = sectionOf(m);
-        return '<span class="mk ' + (m.paokHome ? "home" : "away") + '">' + s.emoji + "</span>";
-      }).join("") + (list.length > 3 ? '<span class="plus">+' + (list.length - 3) + "</span>" : "");
-      var label = d + " " + cap(fmtMonth.format(new Date(Date.UTC(y, mo - 1, 1)))) + ", " +
-        (list.length ? list.length + (list.length === 1 ? " αγώνας" : " αγώνες") : "χωρίς αγώνες");
-      cells.push('<button type="button" class="' + cls + '" data-day="' + key + '"' +
-        (list.length ? "" : " disabled") + ' aria-label="' + esc(label) + '"' +
-        (key === state.day ? ' aria-pressed="true"' : "") + '>' +
+      var key = y + "-" + pad(mo) + "-" + pad(d), dayList = byDay[key] || [];
+      var cls = "cell" + (key === todayKey ? " today" : "") + (key === ui.day ? " sel" : "") + (dayList.length ? "" : " none");
+      var marks = dayList.slice(0, 3).map(function (m) {
+        return '<span class="mk ' + (m.paokHome ? "home" : "away") + '">' + sectionOf(m).emoji + "</span>";
+      }).join("") + (dayList.length > 3 ? '<span class="plus">+' + (dayList.length - 3) + "</span>" : "");
+      var label = d + " " + title + ", " + (dayList.length ? dayList.length + (dayList.length === 1 ? " αγώνας" : " αγώνες") : "χωρίς αγώνες");
+      cells.push('<button type="button" class="' + cls + '" data-day="' + key + '"' + (dayList.length ? "" : " disabled") +
+        ' aria-label="' + esc(label) + '"' + (key === ui.day ? ' aria-pressed="true"' : "") + ">" +
         '<span class="n">' + d + '</span><span class="mks">' + marks + "</span></button>");
     }
-    document.getElementById("month-grid").innerHTML = cells.join("");
-
-    var dayList = document.getElementById("day-list");
-    var sel = state.day && byDay[state.day];
+    var sel = ui.day && byDay[ui.day], below;
     if (!sel) {
-      dayList.innerHTML = '<p class="empty">Κανένας αγώνας αυτόν τον μήνα για αυτή την επιλογή. Πήγαινε σε άλλο μήνα ή άλλαξε φίλτρα.</p>';
-      return;
-    }
-    var dd = new Date(sel[0].start), rel = relative(dd);
-    dayList.innerHTML = '<h2 class="day">' + esc(cap(fmtDay.format(dd))) +
-      (rel && rel.indexOf("Σε ") !== 0 ? "<small>" + rel + "</small>" : "") + "</h2>" +
-      '<ol class="games">' + sel.map(gameHtml).join("") + "</ol>";
-  }
-
-  function renderList() {
-    var list = data.matches.filter(matchesFilter);
-    if (state.when === "results") list = list.slice().reverse();
-    var root = document.getElementById("list");
-    var more = document.getElementById("more");
-    if (!list.length) {
-      root.innerHTML = '<p class="empty">' + (state.when === "upcoming"
-        ? "Δεν υπάρχουν προγραμματισμένοι αγώνες για αυτή την επιλογή. Δοκίμασε άλλο άθλημα ή δες τα αποτελέσματα."
-        : "Δεν υπάρχουν αποτελέσματα για αυτή την επιλογή ακόμα.") + "</p>";
-      more.hidden = true;
-      return;
-    }
-    var shown = list.slice(0, state.shown);
-    var out = [], lastKey = null;
-    shown.forEach(function (m) {
-      var date = new Date(m.start), key = fmtKey.format(date);
-      if (key !== lastKey) {
-        if (lastKey) out.push("</ol>");
-        var rel = relative(date);
-        out.push('<h2 class="day">' + esc(cap(fmtDay.format(date))) +
-          (rel && rel.indexOf("Σε ") !== 0 ? "<small>" + rel + "</small>" : "") + "</h2><ol class=\"games\">");
-        lastKey = key;
-      }
-      out.push(gameHtml(m));
-    });
-    out.push("</ol>");
-    root.innerHTML = out.join("");
-    more.hidden = list.length <= state.shown;
-  }
-
-  function renderSports() {
-    var sports = [];
-    data.sections.forEach(function (s) {
-      if (sports.indexOf(s.sport) < 0) sports.push(s.sport);
-    });
-    var emojiFor = {};
-    data.sections.forEach(function (s) { emojiFor[s.sport] = s.emoji; });
-    var root = document.getElementById("sports");
-    root.innerHTML = '<button type="button" class="chip" data-v="all">Όλα τα αθλήματα</button>' +
-      sports.map(function (sp) {
-        return '<button type="button" class="chip" data-v="' + esc(sp) + '">' + emojiFor[sp] + " " + esc(sp) + "</button>";
-      }).join("");
-  }
-
-  function syncButtons() {
-    [["view", "view"], ["sports", "sport"], ["gender", "gender"], ["when", "when"], ["venue", "venue"]].forEach(function (p) {
-      document.querySelectorAll("#" + p[0] + " button").forEach(function (b) {
-        b.setAttribute("aria-pressed", String(b.dataset.v === state[p[1]]));
-      });
-    });
-  }
-
-  function render() {
-    syncButtons();
-    renderNext();
-    var month = state.view === "month";
-    document.getElementById("when").hidden = month;
-    document.getElementById("list").hidden = month;
-    document.getElementById("month").hidden = !month;
-    if (month) {
-      document.getElementById("more").hidden = true;
-      renderMonth();
+      below = '<p class="empty">Κανένας αγώνας αυτόν τον μήνα για αυτή την επιλογή. Πήγαινε σε άλλο μήνα ή άλλαξε φίλτρα.</p>';
     } else {
-      renderList();
+      var dd = new Date(sel[0].start), rel = relative(dd);
+      below = '<h3 class="day">' + esc(cap(fmtDay.format(dd))) + (rel && rel.indexOf("Σε ") !== 0 ? "<small>" + rel + "</small>" : "") +
+        '</h3><ol class="games">' + sel.map(function (m) { return gameHtml(m, showSection); }).join("") + "</ol>";
     }
+    return '<section class="month" aria-label="Προβολή μήνα"><div class="month-head">' +
+      '<button type="button" data-act="prev-month" aria-label="Προηγούμενος μήνας"' + (mk <= first ? " disabled" : "") + ">‹</button>" +
+      "<h3>" + esc(title) + "</h3>" +
+      '<button type="button" data-act="next-month" aria-label="Επόμενος μήνας"' + (mk >= last ? " disabled" : "") + ">›</button>" +
+      '</div><div class="grid">' + cells.join("") + "</div>" + below + "</section>";
   }
 
-  function bind(groupId, key) {
-    document.getElementById(groupId).addEventListener("click", function (e) {
-      var b = e.target.closest("button");
-      if (!b || !b.dataset.v) return;
-      state[key] = b.dataset.v;
-      state.shown = PAGE;
-      save();
-      render();
-    });
+  // ---- Επόμενος αγώνας
+  function nextHtml(list, label) {
+    var up = list.filter(isUpcoming);
+    if (!up.length) return "";
+    var m = up[0], s = sectionOf(m), date = new Date(m.start), rel = relative(date);
+    return '<section class="next" aria-label="Επόμενος αγώνας">' +
+      '<p class="next-label">' + esc(label || ("Επόμενος αγώνας, " + s.emoji + " " + s.name)) + "</p>" +
+      '<p class="next-teams">' + teamHtml(m.home, m.homeLogo, m.section) + "<br>" + teamHtml(m.away, m.awayLogo, m.section) + "</p>" +
+      '<p class="next-when">' + esc((rel ? rel + ", " : "") + fmtShort.format(date) + (m.timeKnown ? ", " + fmtTime.format(date) : ", ώρα TBC")) + "</p>" +
+      '<p class="next-meta">' + esc([m.competition, m.venue].filter(Boolean).join(", ")) + "</p></section>";
   }
 
-  function calBase() {
-    // Τα ημερολόγια βρίσκονται δίπλα σε αυτή τη σελίδα.
-    return location.host + location.pathname.replace(/[^/]*$/, "");
+  function seg(id, options, current) {
+    return '<div class="seg" data-seg="' + id + '" role="group">' + options.map(function (o) {
+      return '<button type="button" data-v="' + o[0] + '" aria-pressed="' + (o[0] === current) + '">' + o[1] + "</button>";
+    }).join("") + "</div>";
   }
+  var LEGEND = '<p class="legend"><span class="l-home">Εντός έδρας</span><span class="l-away">Εκτός έδρας</span></p>';
 
-  function renderCalendars() {
-    document.getElementById("help-ios").hidden = isAndroid;
-    document.getElementById("help-android").hidden = !isAndroid;
-    var base = calBase();
-    document.getElementById("cal-list").innerHTML = data.sections.map(function (s) {
-      function link(side, label) {
-        var file = s.key + "-" + side + ".ics";
-        if (isAndroid) {
-          return '<button type="button" data-copy="https://' + esc(base + file) + '">' + label + "</button>";
-        }
-        return '<a href="webcal://' + esc(base + file) + '">' + label + "</a>";
+  // ---- Βαθμολογία
+  function paokPosition(key) {
+    var tables = standings[key] || [];
+    for (var i = 0; i < tables.length; i++) {
+      for (var j = 0; j < tables[i].rows.length; j++) {
+        var r = tables[i].rows[j];
+        if (r.paok) return { pos: r.pos, title: tables[i].title, pts: r.cells[r.cells.length - 1], played: r.cells[0] };
       }
-      return '<li class="cal"><span class="cal-name">' + s.emoji + " " + esc(s.name) + "</span>" +
-        link("home", "Εντός") + link("away", "Εκτός") + "</li>";
+    }
+    return null;
+  }
+  function standingsHtml(key) {
+    var tables = standings[key] || [];
+    if (!tables.length) return '<p class="empty">Δεν υπάρχει βαθμολογία για αυτό το τμήμα ακόμα.</p>';
+    return tables.map(function (t) {
+      var head = "<tr><th>#</th><th>Ομάδα</th>" + t.columns.map(function (c) { return "<th>" + esc(c) + "</th>"; }).join("") + "</tr>";
+      var rows = t.rows.map(function (r) {
+        return '<tr class="' + (r.paok ? "paok" : "") + '"><td class="pos">' + esc(r.pos) + '</td><td class="team">' +
+          teamHtml(r.team, r.logo, key) + "</td>" +
+          r.cells.map(function (c, i) { return '<td class="' + (i === r.cells.length - 1 ? "pts" : "") + '">' + esc(c) + "</td>"; }).join("") + "</tr>";
+      }).join("");
+      return '<div class="standing"><h3>' + esc(t.title) + '</h3><div class="table-wrap"><table class="st">' +
+        "<thead>" + head + "</thead><tbody>" + rows + "</tbody></table></div>" +
+        '<p class="source"><a href="' + esc(t.url) + '" rel="noopener" target="_blank">Πηγή βαθμολογίας</a></p></div>';
     }).join("");
   }
 
+  // ---- Ημερολόγια και ειδοποιήσεις
+  function calBase() { return location.host + location.pathname.replace(/[^/]*$/, ""); }
+  function calButtons(key) {
+    var base = calBase();
+    return [["home", "Εντός"], ["away", "Εκτός"]].map(function (p) {
+      var file = key + "-" + p[0] + ".ics";
+      return isAndroid
+        ? '<button type="button" class="btn" data-copy="https://' + esc(base + file) + '" data-msg="Ο σύνδεσμος αντιγράφηκε. Επικόλλησέ τον στο Google Calendar.">' + p[1] + "</button>"
+        : '<a class="btn" href="webcal://' + esc(base + file) + '">' + p[1] + "</a>";
+    }).join("");
+  }
+  function topicOf(key, kind) { return data.ntfy.prefix + "-" + key + "-" + kind; }
+
+  function followHtml(key) {
+    var s = data.sectionMap[key];
+    var host = data.ntfy.server.replace(/^https?:\/\//, "");
+    var rows = data.ntfy.kinds.map(function (kind) {
+      var topic = topicOf(key, kind), info = KIND_INFO[kind];
+      var display = "ΠΑΟΚ " + s.name + ": " + info[0];
+      var btn = isAndroid
+        ? '<a class="btn solid" href="ntfy://' + host + "/" + topic + "?display=" + encodeURIComponent(display) + '">Ενεργοποίηση</a>'
+        : '<button type="button" class="btn solid" data-copy="' + esc(topic) + '" data-msg="Αντιγράφηκε. Στο ntfy πάτα + και επικόλλησέ το.">Αντιγραφή</button>';
+      return "<li><span><strong>" + info[0] + "</strong><small>" + info[1] + "</small><code>" + esc(topic) + "</code></span>" + btn + "</li>";
+    }).join("");
+    var steps = isAndroid
+      ? '<ol class="steps"><li>Εγκατάστησε το <a href="' + NTFY_ANDROID + '" rel="noopener" target="_blank">ntfy</a> (δωρεάν).</li>' +
+        "<li>Πάτα «Ενεργοποίηση» σε όσα θέλεις. Το ntfy ανοίγει και κάνει την εγγραφή.</li></ol>"
+      : '<ol class="steps"><li>Εγκατάστησε το <a href="' + NTFY_IOS + '" rel="noopener" target="_blank">ntfy</a> (δωρεάν) και επέτρεψε τις ειδοποιήσεις.</li>' +
+        "<li>Πάτα «Αντιγραφή» δίπλα σε αυτό που θέλεις.</li>" +
+        "<li>Στο ntfy πάτα +, επικόλλησε το όνομα και πάτα «Subscribe». Επανάλαβε για όσα θέλεις.</li></ol>";
+    return '<div class="follow"><h3>Ειδοποιήσεις στο κινητό</h3>' +
+      "<p>Διάλεξε τι θέλεις να μαθαίνεις για " + esc(s.name.toLowerCase()) + ". Κάθε επιλογή είναι ξεχωριστή συνδρομή, οπότε μπορείς να κρατήσεις μόνο όσες σε ενδιαφέρουν.</p>" +
+      steps + '<ul class="notify">' + rows + "</ul>" +
+      '<p class="help" style="margin-top:12px">Για να σταματήσεις, σβήσε τη συνδρομή μέσα στο ntfy.</p>' +
+      "<h3>Ημερολόγιο</h3><p>Οι αγώνες στο ημερολόγιο του κινητού, χωριστά εντός και εκτός έδρας. Ενημερώνονται μόνοι τους.</p>" +
+      '<p class="help">' + (isAndroid
+        ? "Πάτα για να αντιγράψεις τον σύνδεσμο, μετά στο calendar.google.com: + δίπλα στο «Άλλα ημερολόγια», «Από διεύθυνση URL»."
+        : "Πάτα «Εντός» ή «Εκτός» και μετά «Συνδρομή».") + "</p>" +
+      '<div class="actions">' + calButtons(key) + "</div></div>";
+  }
+
+  // ---- Αρχική
+  function passesHome(m) {
+    var s = sectionOf(m);
+    if (prefs.sport !== "all" && s.sport !== prefs.sport) return false;
+    if (prefs.gender === "men" && s.women) return false;
+    if (prefs.gender === "women" && !s.women) return false;
+    if (prefs.venue === "home" && !m.paokHome) return false;
+    if (prefs.venue === "away" && m.paokHome) return false;
+    return true;
+  }
+
+  function tilesHtml() {
+    return '<div class="tiles">' + data.sections.map(function (s) {
+      var up = data.matches.filter(function (m) { return m.section === s.key && isUpcoming(m); })[0];
+      var next = up
+        ? esc(fmtShort.format(new Date(up.start))) + ", " + (up.paokHome ? "με " + esc(up.away) + " (εντός)" : "με " + esc(up.home) + " (εκτός)")
+        : "Χωρίς προγραμματισμένους αγώνες";
+      var pos = paokPosition(s.key);
+      return '<a class="tile" href="#/' + s.key + '"><span class="tile-emoji" aria-hidden="true">' + s.emoji + "</span>" +
+        '<span class="tile-name">' + esc(s.name) + '</span><span class="tile-next">' + next + "</span>" +
+        (pos ? '<span class="tile-pos">' + pos.pos + "η θέση, " + esc(pos.title) + "</span>" : "") + "</a>";
+    }).join("") + "</div>";
+  }
+
+  function homeHtml() {
+    var sports = [], emojiFor = {};
+    data.sections.forEach(function (s) { if (sports.indexOf(s.sport) < 0) sports.push(s.sport); emojiFor[s.sport] = s.emoji; });
+    var chips = '<div class="chips" data-seg="sport" role="group" aria-label="Άθλημα">' +
+      [["all", "Όλα τα αθλήματα"]].concat(sports.map(function (sp) { return [sp, emojiFor[sp] + " " + sp]; })).map(function (o) {
+        return '<button type="button" class="chip" data-v="' + esc(o[0]) + '" aria-pressed="' + (o[0] === prefs.sport) + '">' + esc(o[1]) + "</button>";
+      }).join("") + "</div>";
+    var list = data.matches.filter(passesHome);
+    var body = prefs.view === "month"
+      ? monthHtml(list, true)
+      : listHtml(list.filter(function (m) { return prefs.when === "upcoming" ? isUpcoming(m) : !isUpcoming(m); }), prefs.when, true);
+    var nextPool = data.matches.filter(function (m) {
+      var s = sectionOf(m);
+      return (prefs.sport === "all" || s.sport === prefs.sport) &&
+        !(prefs.gender === "men" && s.women) && !(prefs.gender === "women" && !s.women);
+    });
+    return '<p class="lede">Πρόγραμμα, αποτελέσματα και βαθμολογίες όλων των τμημάτων, σε μία σελίδα. Ενημερώνεται μόνο του κάθε δύο ώρες.</p>' +
+      nextHtml(nextPool) +
+      '<h2 class="section-title">Τμήματα</h2>' + tilesHtml() +
+      '<h2 class="section-title">Όλοι οι αγώνες</h2>' +
+      '<div class="controls">' + seg("view", [["list", "Λίστα"], ["month", "Μήνας"]], prefs.view) + chips +
+        seg("gender", [["all", "Όλα"], ["men", "Ανδρών"], ["women", "Γυναικών"]], prefs.gender) +
+        (prefs.view === "month" ? "" : seg("when", [["upcoming", "Επόμενοι"], ["results", "Αποτελέσματα"]], prefs.when)) +
+        seg("venue", [["all", "Όλοι"], ["home", "Εντός"], ["away", "Εκτός"]], prefs.venue) + LEGEND + "</div>" +
+      body +
+      '<h2 class="section-title">Ειδοποιήσεις και ημερολόγια</h2>' +
+      '<p>Μπες σε ένα τμήμα και πάτα «Ακολούθησε» για να διαλέξεις ειδοποιήσεις (πριν τον αγώνα, αλλαγές ώρας, αποτελέσματα) ή να προσθέσεις τους αγώνες στο ημερολόγιό σου.</p>' +
+      '<ul class="cal-list">' + data.sections.map(function (s) {
+        return '<li class="cal"><a class="cal-name" href="#/' + s.key + '/follow">' + s.emoji + " " + esc(s.name) + "</a>" + calButtons(s.key) + "</li>";
+      }).join("") + "</ul>" + footerHtml();
+  }
+
+  // ---- Σελίδα τμήματος
+  var TABS = [["", "Πρόγραμμα"], ["results", "Αποτελέσματα"], ["standings", "Βαθμολογία"], ["follow", "Ακολούθησε"]];
+  function sectionHtml(key, tab) {
+    var s = data.sectionMap[key];
+    var all = data.matches.filter(function (m) { return m.section === key; });
+    var pos = paokPosition(key);
+    var tabs = '<nav class="tabs" aria-label="' + esc(s.name) + '">' + TABS.map(function (t) {
+      return '<a href="#/' + key + (t[0] ? "/" + t[0] : "") + '"' + (t[0] === tab ? ' aria-current="page"' : "") + ">" + t[1] + "</a>";
+    }).join("") + "</nav>";
+    var body;
+    if (tab === "standings") {
+      body = standingsHtml(key);
+    } else if (tab === "follow") {
+      body = followHtml(key);
+    } else {
+      var venueFiltered = all.filter(function (m) {
+        return ui.secVenue === "all" || (ui.secVenue === "home") === m.paokHome;
+      });
+      var controls = '<div class="controls">' + (tab === "results" ? "" : seg("secView", [["list", "Λίστα"], ["month", "Μήνας"]], ui.secView)) +
+        seg("secVenue", [["all", "Όλοι"], ["home", "Εντός"], ["away", "Εκτός"]], ui.secVenue) + LEGEND + "</div>";
+      if (tab === "results") {
+        body = controls + listHtml(venueFiltered.filter(function (m) { return !isUpcoming(m); }), "results", false);
+      } else if (ui.secView === "month") {
+        body = controls + monthHtml(venueFiltered, false);
+      } else {
+        body = controls + listHtml(venueFiltered.filter(isUpcoming), "upcoming", false);
+      }
+    }
+    return '<a class="back" href="#/">‹ Όλα τα τμήματα</a>' +
+      '<div class="section-head"><span aria-hidden="true">' + s.emoji + "</span><h2>" + esc(s.name) + "</h2></div>" +
+      (pos ? '<p class="lede" style="margin:0 0 16px">' + pos.pos + "η θέση στο " + esc(pos.title) + ", " + esc(pos.pts) + " βαθμοί σε " + esc(pos.played) + " αγώνες.</p>" : "") +
+      nextHtml(all, "Επόμενος αγώνας") + tabs + body + footerHtml();
+  }
+
+  function footerHtml() {
+    var times = Object.keys(data.updated || {}).map(function (k) { return data.updated[k]; }).sort();
+    var last = times.length ? new Date(times[times.length - 1]) : null;
+    return "<footer>" + (last ? "<p>Τελευταία αλλαγή στο πρόγραμμα: " + esc(fmtShort.format(last) + ", " + fmtTime.format(last)) + ".</p>" : "") +
+      "<p>Αγώνες χωρίς ορισμένη ώρα εμφανίζονται ως «TBC» και στα ημερολόγια μπαίνουν στις 18:00.</p>" +
+      "<p>Πηγές: ESPN, ΕΠΟ, esake.gr, Euroleague, basket.gr, volleyleague.gr, ΕΟΠΕ, ΟΧΕ, Water Polo League. Τα σήματα ανήκουν στις ομάδες.</p></footer>";
+  }
+
+  // ---- Δρομολόγηση
+  function route() {
+    var parts = location.hash.replace(/^#\/?/, "").split("/");
+    var key = parts[0], tab = parts[1] || "";
+    return data.sectionMap[key] ? { key: key, tab: tab } : { key: null, tab: "" };
+  }
+  var lastRoute = null;
+  function render() {
+    var r = route(), sig = r.key + "/" + r.tab;
+    if (sig !== lastRoute) {
+      if (lastRoute !== null) window.scrollTo(0, 0);
+      if (r.key !== (lastRoute || "").split("/")[0]) { ui.month = null; ui.day = null; ui.shown = PAGE; ui.secVenue = "all"; }
+      lastRoute = sig;
+    }
+    $("masthead").classList.toggle("compact", !!r.key);
+    document.title = r.key ? "ΠΑΟΚ " + data.sectionMap[r.key].name : "Αγώνες ΠΑΟΚ";
+    $("app").innerHTML = r.key ? sectionHtml(r.key, r.tab) : homeHtml();
+  }
+
+  // ---- Ενέργειες
   var toastTimer;
   function toast(msg) {
-    var t = document.getElementById("toast");
-    t.textContent = msg;
-    t.hidden = false;
+    var t = $("toast");
+    t.textContent = msg; t.hidden = false;
     clearTimeout(toastTimer);
     toastTimer = setTimeout(function () { t.hidden = true; }, 3500);
   }
-
-  document.getElementById("cal-list").addEventListener("click", function (e) {
-    var b = e.target.closest("button[data-copy]");
-    if (!b) return;
-    var url = b.dataset.copy;
-    function done() { toast("Ο σύνδεσμος αντιγράφηκε. Επικόλλησέ τον στο Google Calendar."); }
+  function copy(text, msg) {
+    function fallback() { prompt("Αντίγραψε:", text); }
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(url).then(done, function () { prompt("Αντίγραψε τον σύνδεσμο:", url); });
-    } else {
-      prompt("Αντίγραψε τον σύνδεσμο:", url);
-    }
-  });
+      navigator.clipboard.writeText(text).then(function () { toast(msg); }, fallback);
+    } else { fallback(); }
+  }
 
-  document.getElementById("month-grid").addEventListener("click", function (e) {
-    var b = e.target.closest("button[data-day]");
-    if (!b || b.disabled) return;
-    state.day = b.dataset.day;
-    renderMonth();
-  });
-  document.getElementById("prev-month").addEventListener("click", function () {
-    state.month = addMonths(state.month, -1); state.day = null; renderMonth();
-  });
-  document.getElementById("next-month").addEventListener("click", function () {
-    state.month = addMonths(state.month, 1); state.day = null; renderMonth();
-  });
-
-  document.getElementById("more").addEventListener("click", function () {
-    state.shown += PAGE;
-    renderList();
-  });
-
-  fetch("matches.json", { cache: "no-cache" })
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function (json) {
-      data = json;
-      data.sectionMap = {};
-      data.sections.forEach(function (s) { data.sectionMap[s.key] = s; });
-      renderSports();
-      bind("view", "view");
-      bind("sports", "sport");
-      bind("gender", "gender");
-      bind("when", "when");
-      bind("venue", "venue");
-      renderCalendars();
+  $("app").addEventListener("click", function (e) {
+    var b = e.target.closest("button");
+    if (!b) return;
+    var group = b.closest("[data-seg]");
+    if (group && b.dataset.v) {
+      var k = group.dataset.seg;
+      if (k === "secView" || k === "secVenue") { ui[k] = b.dataset.v; }
+      else { prefs[k] = b.dataset.v; savePrefs(); }
+      ui.shown = PAGE; ui.day = null;
       render();
-      var times = Object.keys(data.updated || {}).map(function (k) { return data.updated[k]; }).sort();
-      if (times.length) {
-        var last = new Date(times[times.length - 1]);
-        document.getElementById("updated").textContent =
-          "Τελευταία αλλαγή στο πρόγραμμα: " + fmtShort.format(last) + ", " + fmtTime.format(last) + ".";
-      }
-    })
-    .catch(function () {
-      document.getElementById("list").innerHTML =
-        '<p class="empty">Το πρόγραμμα δεν φόρτωσε. Έλεγξε τη σύνδεσή σου και ανανέωσε τη σελίδα.</p>';
+      return;
+    }
+    if (b.dataset.copy) { copy(b.dataset.copy, b.dataset.msg); return; }
+    if (b.dataset.day && !b.disabled) { ui.day = b.dataset.day; render(); return; }
+    var act = b.dataset.act;
+    if (act === "more") { ui.shown += PAGE; render(); }
+    if (act === "prev-month") { ui.month = addMonths(ui.month, -1); ui.day = null; render(); }
+    if (act === "next-month") { ui.month = addMonths(ui.month, 1); ui.day = null; render(); }
+  });
+  window.addEventListener("hashchange", render);
+
+  Promise.all([
+    fetch("matches.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }),
+    fetch("standings.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
+  ]).then(function (res) {
+    data = res[0]; standings = res[1] || {};
+    data.ntfy = data.ntfy || { server: "https://ntfy.sh", prefix: "paokcal-x7q3", kinds: ["pre", "time", "result"] };
+    data.sectionMap = {};
+    data.sections.forEach(function (s) { data.sectionMap[s.key] = s; });
+    data.matches.forEach(function (m) {
+      var logo = m.paokHome ? m.homeLogo : m.awayLogo;
+      if (logo && !paokLogo[m.section]) paokLogo[m.section] = logo;
+      if (logo && !paokLogo._any) paokLogo._any = logo;
     });
+    render();
+  }).catch(function () {
+    $("app").innerHTML = '<p class="empty">Το πρόγραμμα δεν φόρτωσε. Έλεγξε τη σύνδεσή σου και ανανέωσε τη σελίδα.</p>';
+  });
 })();
 </script>
 </body>

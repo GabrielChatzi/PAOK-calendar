@@ -1,0 +1,52 @@
+name: Ενημέρωση ημερολογίων
+
+on:
+  schedule:
+    # Κάθε 6 ώρες (ώρα UTC)
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [build_calendars.py, .github/workflows/update.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-calendars
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Δημιουργία ημερολογίων
+        id: build
+        continue-on-error: true
+        run: python3 build_calendars.py
+
+      - name: Αποθήκευση αλλαγών
+        run: |
+          if git diff --quiet -- docs && [ -z "$(git ls-files --others --exclude-standard docs)" ]; then
+            echo "Καμία αλλαγή."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git commit -m "Ενημέρωση προγράμματος αγώνων"
+          git push
+
+      # Αν κάποια πηγή απέτυχε, το workflow σημειώνεται ως αποτυχημένο,
+      # ώστε να έρθει ειδοποίηση από το GitHub.
+      - name: Έλεγχος πηγών
+        if: steps.build.outcome == 'failure'
+        run: |
+          echo "::error::Κάποια πηγή προγράμματος απέτυχε· τα αντίστοιχα ημερολόγια έμειναν ως είχαν."
+          exit 1

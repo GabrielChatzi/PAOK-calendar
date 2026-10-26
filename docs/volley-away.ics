@@ -1,0 +1,171 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Βόλεϊ – Εκτός έδρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:volley-2026-27-a3b82a15fd67@paok-calendar
+DTSTAMP:20261026T085441Z
+DTSTART;TZID=Europe/Athens:20261024T170000
+DTEND;TZID=Europe/Athens:20261024T190000
+SUMMARY:🏐 Ο.Φ.Η. – ΠΑΟΚ
+LOCATION:Γυμναστήριο Βαρδινογιάννειο Αθλητι
+ κό Κέντρο
+DESCRIPTION:Volley League – 1η αγωνιστική
+URL:https://www.volleyleague.gr/index.php/season/2026-27/regular-season-res
+ ults-statistics
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-2026-27-1d3233390ed2@paok-calendar
+DTSTAMP:20261026T085441Z
+DTSTART;TZID=Europe/Athens:20261108T193000
+DTEND;TZID=Europe/Athens:20261108T213000
+SUMMARY:🏐 Α.Ο.Καλαμάτα 80 Affidea – ΠΑΟΚ
+LOCATION:Γυμναστήριο Καλαμάτας
+DESCRIPTION:Volley League – 3η αγωνιστική
+URL:https://www.volleyleague.gr/index.php/season/2026-27/regular-season-res
+ ults-statistics
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-2026-27-2ba71508738b@paok-calendar
+DTSTAMP:20261026T085441Z
+DTSTART;TZID=Europe/Athens:20261121T160000
+DTEND;TZID=Europe/Athens:20261121T180000
+SUMMARY:🏐 Ν.Ο.Π.Ε. Ρεθύμνου – ΠΑΟΚ
+LOCATION:Γυμναστήριο «Μελίνα Μερκούρη» Ρέθυ
+ μνο
+DESCRIPTION:Volley League – 5η αγωνιστική
+URL:https://www.volleyleague.gr/index.php/season/2026-27/regular-season-res
+ ults-statistics
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-2026-27-88309016e843@paok-calendar
+DTSTAMP:20261026T085441Z
+DTSTART;TZID=Europe/Athens:20261205T180000
+DTEND;TZID=Europe/Athens:20261205T200000
+SUMMARY:🏐 Φλοίσβος Members Paron – ΠΑΟΚ (ώρα TBC)
+LOCATION:Γυμναστήριο «Σοφία Μπεφόν» Παλαιό Φ
+ άληρο
+DESCRIPTION:Volley League – 7η αγωνιστική\nΗ ώρα δεν έ
+ χει οριστεί ακόμα (προσωρινά 18:00). Θα ενημ
+ ερωθεί αυτόματα όταν ανακοινωθεί.
+URL:https://www.volleyleague.gr/index.php/season/2026-27/regular-season-res
+ ults-statistics
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-2026-27-f91eee2b5daf@paok-calendar
+DTSTAMP:20261026T085441Z
+DTSTART;TZID=Europe/Athens:20261219T180000
+DTEND;TZID=Europe/Athens:20261219T200000
+SUMMARY:🏐 Πανιώνιος Betsson – ΠΑΟΚ (ώρα TBC)
+LOCATION:Γυμναστήριο «Ανδρέας Βαρίκας»\, Νέα 
+ Σμύρνη
+DESCRIPTION:Volley League – 9η αγωνιστική\nΗ ώρα δεν έ
+ χει οριστεί ακόμα (προσωρινά 18:00). Θα ενημ
+ ερωθεί αυτόματα όταν ανακοινωθεί.
+URL:https://www.volleyleague.gr/index.php/season/2026-27/regular-season-res
+ ults-statistics
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-2026-27-0cebb561db2e@paok-calendar
+DTSTAMP:20261026T085441Z
+DTSTART;TZID=Europe/Athens:20261230T180000
+DTEND;TZID=Europe/Athens:20261230T200000
+SUMMARY:🏐 Α.Ο.Ν.Σ Μίλων – ΠΑΟΚ (ώρα TBC)
+LOCATION:Γυμναστήριο Μίλωνα «Κροίσος Πέρσης
+ »\, Νέα Σμύρνη
+DESCRIPTION:Volley League – 10η αγωνιστική\nΗ ώρα δεν 
+ έχει οριστεί ακόμα (προσωρινά 18:00). Θα ενη
+ μερωθεί αυτόματα όταν ανακοινωθεί.
+URL:https://www.volleyleague.gr/index.php/season/2026-27/regular-season-res
+ ults-statistics
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-2026-27-e4f5936ff170@paok-calendar
+DTSTAMP:20261026T085441Z
+DTSTART;TZID=Europe/Athens:20270117T180000
+DTEND;TZID=Europe/Athens:20270117T200000
+SUMMARY:🏐 Α.Ο.Π.Κηφισιάς – ΠΑΟΚ (ώρα TBC)
+LOCATION:Γυμναστήριο «Ζηρίνειο» Κηφισιάς
+DESCRIPTION:Volley League – 13η αγωνιστική\nΗ ώρα δεν 
+ έχει οριστεί ακόμα (προσωρινά 18:00). Θα ενη
+ μερωθεί αυτόματα όταν ανακοινωθεί.
+URL:https://www.volleyleague.gr/index.php/season/2026-27/regular-season-res
+ ults-statistics
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-2026-27-7fa852a0a814@paok-calendar
+DTSTAMP:20261026T085441Z
+DTSTART;TZID=Europe/Athens:20270131T180000
+DTEND;TZID=Europe/Athens:20270131T200000
+SUMMARY:🏐 Α.Σ. Άρης – ΠΑΟΚ (ώρα TBC)
+LOCATION:Γυμναστήριο Ε.Γ.Μίκρας
+DESCRIPTION:Volley League – 15η αγωνιστική\nΗ ώρα δεν 
+ έχει οριστεί ακόμα (προσωρινά 18:00). Θα ενη
+ μερωθεί αυτόματα όταν ανακοινωθεί.
+URL:https://www.volleyleague.gr/index.php/season/2026-27/regular-season-res
+ ults-statistics
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-2026-27-2cb890cd3467@paok-calendar
+DTSTAMP:20261026T085441Z
+DTSTART;TZID=Europe/Athens:20270213T180000
+DTEND;TZID=Europe/Athens:20270213T200000
+SUMMARY:🏐 Ολυμπιακός Σ.Φ.Π. ONEX – ΠΑΟΚ (ώρα TBC)
+LOCATION:Γυμναστήριο «Μελίνα Μερκούρη» Ρέντ
+ η
+DESCRIPTION:Volley League – 17η αγωνιστική\nΗ ώρα δεν 
+ έχει οριστεί ακόμα (προσωρινά 18:00). Θα ενη
+ μερωθεί αυτόματα όταν ανακοινωθεί.
+URL:https://www.volleyleague.gr/index.php/season/2026-27/regular-season-res
+ ults-statistics
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-2026-27-5743f2f35a95@paok-calendar
+DTSTAMP:20261026T085441Z
+DTSTART;TZID=Europe/Athens:20270227T180000
+DTEND;TZID=Europe/Athens:20270227T200000
+SUMMARY:🏐 Παναθηναϊκός Α.Ο. – ΠΑΟΚ (ώρα TBC)
+LOCATION:Γυμναστήριο Μετς
+DESCRIPTION:Volley League – 19η αγωνιστική\nΗ ώρα δεν 
+ έχει οριστεί ακόμα (προσωρινά 18:00). Θα ενη
+ μερωθεί αυτόματα όταν ανακοινωθεί.
+URL:https://www.volleyleague.gr/index.php/season/2026-27/regular-season-res
+ ults-statistics
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-2026-27-f952687f0172@paok-calendar
+DTSTAMP:20261026T085441Z
+DTSTART;TZID=Europe/Athens:20270327T180000
+DTEND;TZID=Europe/Athens:20270327T200000
+SUMMARY:🏐 Α.Ο.Φοίνικας Σύρου – ΠΑΟΚ (ώρα TBC)
+LOCATION:Γυμναστήριο Ερμούπολης Σύρου «Δ.Βικ
+ έλας»
+DESCRIPTION:Volley League – 22η αγωνιστική\nΗ ώρα δεν 
+ έχει οριστεί ακόμα (προσωρινά 18:00). Θα ενη
+ μερωθεί αυτόματα όταν ανακοινωθεί.
+URL:https://www.volleyleague.gr/index.php/season/2026-27/regular-season-res
+ ults-statistics
+END:VEVENT
+END:VCALENDAR

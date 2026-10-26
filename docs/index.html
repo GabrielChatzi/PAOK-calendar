@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ΠΑΟΚ Ημερολόγια</title>
+<style>
+  :root { --bg:#fff; --fg:#111; --muted:#666; --card:#f3f3f3; --line:#ddd; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#111; --fg:#f2f2f2; --muted:#9a9a9a; --card:#1d1d1d; --line:#333; } }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.45 -apple-system, system-ui, sans-serif; }
+  main { max-width:560px; margin:0 auto; padding:28px 16px 40px; }
+  h1 { font-size:26px; margin:0 0 4px; letter-spacing:-.01em; }
+  p.lead { color:var(--muted); margin:0 0 24px; }
+  section { margin:0 0 22px; }
+  h2 { font-size:15px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 8px; }
+  .row { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  a.btn { display:block; text-align:center; text-decoration:none; color:var(--fg); background:var(--card);
+          border:1px solid var(--line); border-radius:12px; padding:14px 10px; font-weight:600; }
+  a.btn:active { opacity:.7; }
+  small { display:block; color:var(--muted); font-weight:400; font-size:13px; margin-top:2px; }
+  footer { color:var(--muted); font-size:13px; border-top:1px solid var(--line); padding-top:14px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>ΠΑΟΚ – Ημερολόγια αγώνων</h1>
+  <p class="lead">Πάτα ένα κουμπί από το iPhone και διάλεξε «Συνδρομή». Τα ημερολόγια ενημερώνονται αυτόματα όταν αλλάζει το πρόγραμμα.</p>
+
+  <section>
+    <h2>🏐 Βόλεϊ</h2>
+    <div class="row">
+      <a class="btn" data-file="volley-home.ics">Εντός έδρας<small>Συνδρομή</small></a>
+      <a class="btn" data-file="volley-away.ics">Εκτός έδρας<small>Συνδρομή</small></a>
+    </div>
+  </section>
+  <section>
+    <h2>⚽ Ποδόσφαιρο</h2>
+    <div class="row">
+      <a class="btn" data-file="football-home.ics">Εντός έδρας<small>Συνδρομή</small></a>
+      <a class="btn" data-file="football-away.ics">Εκτός έδρας<small>Συνδρομή</small></a>
+    </div>
+  </section>
+  <section>
+    <h2>🏀 Μπάσκετ</h2>
+    <div class="row">
+      <a class="btn" data-file="basketball-home.ics">Εντός έδρας<small>Συνδρομή</small></a>
+      <a class="btn" data-file="basketball-away.ics">Εκτός έδρας<small>Συνδρομή</small></a>
+    </div>
+  </section>
+
+  <footer>Αγώνες χωρίς ορισμένη ώρα εμφανίζονται στις 18:00 με την ένδειξη «(ώρα TBC)».</footer>
+</main>
+<script>
+  // webcal:// ανοίγει απευθείας τη συνδρομή στο Ημερολόγιο της Apple.
+  var base = location.host + location.pathname.replace(/[^/]*$/, "");
+  document.querySelectorAll("a[data-file]").forEach(function (a) {
+    a.href = "webcal://" + base + a.dataset.file;
+  });
+</script>
+</body>
+</html>

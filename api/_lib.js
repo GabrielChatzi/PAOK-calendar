@@ -2,7 +2,7 @@
 //
 // Αποθήκευση: MongoDB (MONGODB_URI, βάση MONGODB_DB ή «paokalendar»). Συλλογές:
 //   settings   {_id: "vapid", publicKey, privateKey}: δημιουργούνται μία φορά, όταν χρειαστούν
-//   subs       {_id, endpoint, keys, topics, updated, lastTest}: μία εγγραφή ανά συσκευή
+//   subs       {_id, endpoint, keys, topics, updated}: μία εγγραφή ανά συσκευή
 import crypto from "node:crypto";
 import { MongoClient } from "mongodb";
 import webpush from "web-push";

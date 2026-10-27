@@ -752,7 +752,7 @@
       "<p>Διάλεξε τι θέλεις να μαθαίνεις για " + esc(s.name) + ". Έρχονται στο κινητό σου σαν κάθε άλλη ειδοποίηση, χωρίς λογαριασμό.</p>" +
       pushNoteHtml() +
       '<ul class="notify">' + rows + "</ul>" +
-      '<p class="help" style="margin-top:12px"><a href="#/notifications">Όλες οι ειδοποιήσεις σου</a> (όλα τα τμήματα, αγώνες που ακολουθείς, δοκιμή).</p>' +
+      '<p class="help" style="margin-top:12px"><a href="#/notifications">Όλες οι ειδοποιήσεις σου</a> (όλα τα τμήματα και οι αγώνες που ακολουθείς).</p>' +
       ntfyFollowHtml(key) +
       "<h3>Ημερολόγιο</h3><p>Οι αγώνες στο ημερολόγιο του κινητού, χωριστά εντός και εκτός έδρας. Ενημερώνονται μόνοι τους.</p>" +
       '<p class="help">' + (isAndroid
@@ -1019,7 +1019,6 @@
       toggleTopics(b.dataset.topics.split(" "), turnOn);
       return;
     }
-    if (b.dataset.act === "push-test") { testPush(); return; }
     if (b.dataset.act === "push-off") { disablePush(); return; }
     if (b.dataset.act === "share") {
       navigator.share({ title: document.title, url: location.href }).catch(function () {});
@@ -1224,23 +1223,6 @@
     toast("Οι ειδοποιήσεις απενεργοποιήθηκαν σε αυτή τη συσκευή.");
   }
 
-  function testPush() {
-    if (!push.sub) return;
-    var send = function () {
-      return fetch("/api/test", {
-        method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ subscription: push.sub.toJSON() })
-      });
-    };
-    send().then(function (r) {
-      if (r.status === 404) return syncPush().then(send);  // η συσκευή χάθηκε από τη βάση: ξανά
-      return r;
-    }).then(function (r) {
-      if (r.ok) toast("Στάλθηκε. Θα έρθει σε λίγα δευτερόλεπτα.");
-      else return r.json().then(function (d) { toast(d.error || "Η δοκιμή απέτυχε."); });
-    }).catch(function () { toast("Η δοκιμή απέτυχε. Έλεγξε τη σύνδεση."); });
-  }
-
   // Αγώνες που τελείωσαν πάνω από μία μέρα πριν δεν χρειάζονται πια ειδοποιήσεις.
   function cleanMatchTopics() {
     var keep = {};
@@ -1316,8 +1298,7 @@
       "<h3>Αγώνες που ακολουθείς</h3>" + matches +
       (st === "on"
         ? "<h3>Αυτή η συσκευή</h3>" +
-          '<div class="actions"><button type="button" class="btn solid" data-act="push-test">Δοκιμαστική ειδοποίηση</button>' +
-          '<button type="button" class="btn" data-act="push-off">Απενεργοποίηση όλων</button></div>' +
+          '<div class="actions"><button type="button" class="btn" data-act="push-off">Απενεργοποίηση όλων</button></div>' +
           '<p class="help">Οι επιλογές ισχύουν μόνο για αυτή τη συσκευή. Σε άλλο κινητό ή υπολογιστή διάλεξε ξανά.</p>'
         : "") +
       '<p class="help" style="margin-top:18px">Προτιμάς την εφαρμογή ntfy; Θα τη βρεις στην καρτέλα «Ακολούθησε» κάθε τμήματος.</p>' +

@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
-R=GabrielChatzi/PAOK-calendar
-echo "== reminders run"; gh run view 40531266407 -R $R --log | grep -vE "^\S+\s+\S+\s+[0-9T:.Z-]+ *$" | grep -E "push|Υπενθυμ|ειδοποίηση|!|Σε |live|Error|error" | cut -c1-400 | head -40
-echo "== live run"; gh run view 40531309855 -R $R --log | grep -E "push|ειδοποίηση|!|Error|error|Αγώνες|in |pre " | cut -c1-400 | head -60
+B=https://paokalendar.vercel.app
+for i in $(seq 1 20); do h=$(curl -sS -m 30 "$B/api/health"); case "$h" in *byService*) break;; esac; sleep 10; done
+echo "all: $h"
+for t in m:32aab779be:pre m:32aab779be:live s:basketball:pre s:basketball:live; do echo "$t: $(curl -sS -m 30 "$B/api/health?topic=$t")"; done

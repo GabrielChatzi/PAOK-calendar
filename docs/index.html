@@ -66,6 +66,12 @@
   main { padding-bottom: calc(48px + env(safe-area-inset-bottom)); }
 
   /* Εγκατάσταση ως εφαρμογή */
+  .moved {
+    background: var(--ink); color: var(--paper); padding: 14px 16px; margin: 18px 0 0;
+  }
+  .moved strong { display: block; font: 800 20px/1.15 var(--display); }
+  .moved p { margin: 4px 0 0; font-size: 15px; }
+  .moved a { font-weight: 600; text-underline-offset: 3px; }
   .install {
     display: grid; grid-template-columns: 52px 1fr auto; gap: 12px; align-items: center;
     border: 1.5px solid var(--ink); padding: 12px; margin: 0 0 24px;
@@ -658,6 +664,17 @@
       "<p>Πηγές: ESPN, ΕΠΟ, esake.gr, Euroleague, basket.gr, volleyleague.gr, ΕΟΠΕ, ΟΧΕ, Water Polo League. Τα σήματα ανήκουν στις ομάδες.</p></footer>";
   }
 
+  // ---- Νέα διεύθυνση: η παλιά σελίδα στο GitHub Pages δείχνει πού μετακόμισε.
+  // Τα ημερολόγια στην παλιά διεύθυνση συνεχίζουν να ενημερώνονται κανονικά.
+  var NEW_HOME = "https://paokalendar.vercel.app/";
+  function movedHtml() {
+    if (!/github\.io$/.test(location.hostname)) return "";
+    var target = NEW_HOME + location.hash;
+    return '<div class="moved" role="note"><strong>Το PAOKalendar μετακόμισε</strong>' +
+      '<p>Νέα διεύθυνση: <a href="' + esc(target) + '">paokalendar.vercel.app</a>. ' +
+      "Οι συνδρομές σε ημερολόγια που έκανες από εδώ συνεχίζουν να δουλεύουν.</p></div>";
+  }
+
   // ---- Εγκατάσταση ως εφαρμογή
   var installEvent = null;
   var isStandalone = window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
@@ -715,7 +732,7 @@
     }
     $("masthead").classList.toggle("compact", !!r.key);
     document.title = r.key ? data.sectionMap[r.key].name + " – PAOKalendar" : "PAOKalendar";
-    $("app").innerHTML = r.key ? sectionHtml(r.key, r.tab) : homeHtml();
+    $("app").innerHTML = movedHtml() + (r.key ? sectionHtml(r.key, r.tab) : homeHtml());
   }
 
   // ---- Ενέργειες

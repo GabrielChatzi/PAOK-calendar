@@ -25,7 +25,7 @@ from zoneinfo import ZoneInfo
 
 NTFY_SERVER = "https://ntfy.sh"
 TOPIC_PREFIX = "paokcal-x7q3"
-SITE = "https://gabrielchatzi.github.io/PAOK-calendar/"
+SITE = "https://paokalendar.vercel.app/"
 ATHENS = ZoneInfo("Europe/Athens")
 KINDS = ("pre", "time", "result")
 REMINDER_WINDOW = dt.timedelta(minutes=75)

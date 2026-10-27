@@ -4,7 +4,9 @@
 
 Ανεπίσημη σελίδα φιλάθλων· δεν συνδέεται με τον ΠΑΟΚ ή τις εταιρείες του. Τα σήματα των ομάδων ανήκουν στους κατόχους τους.
 
-**Ιστοσελίδα:** https://gabrielchatzi.github.io/PAOK-calendar/
+**Ιστοσελίδα:** https://paokalendar.vercel.app
+
+Η σελίδα δημοσιεύεται στο Vercel από τον φάκελο `docs/` (βλ. [`vercel.json`](vercel.json)) σε κάθε αλλαγή του `main`. Η παλιά διεύθυνση https://gabrielchatzi.github.io/PAOK-calendar/ (GitHub Pages) παραμένει ενεργή για τις υπάρχουσες συνδρομές και δείχνει μήνυμα για τη νέα διεύθυνση.
 
 Η αρχική δείχνει τον επόμενο αγώνα, τα τμήματα και όλους τους αγώνες (λίστα ή μήνας, με φίλτρα). Κάθε τμήμα έχει δική του σελίδα με πρόγραμμα, αποτελέσματα, βαθμολογία, ημερολόγια και ειδοποιήσεις.
 
@@ -37,10 +39,10 @@
 Κάθε τμήμα έχει δύο αρχεία στο `docs/`, `<τμήμα>-home.ics` και `<τμήμα>-away.ics`, π.χ. `football-women-away.ics`. Σύνδεσμος για συνδρομή:
 
 ```
-https://gabrielchatzi.github.io/PAOK-calendar/<αρχείο>.ics
+https://paokalendar.vercel.app/<αρχείο>.ics
 ```
 
-Οι παλιοί σύνδεσμοι `raw.githubusercontent.com/.../docs/<αρχείο>.ics` συνεχίζουν να δουλεύουν.
+Οι παλιοί σύνδεσμοι `gabrielchatzi.github.io/PAOK-calendar/<αρχείο>.ics` και `raw.githubusercontent.com/.../docs/<αρχείο>.ics` συνεχίζουν να δουλεύουν.
 
 ## Ειδοποιήσεις
 

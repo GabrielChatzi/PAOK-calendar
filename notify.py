@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Ειδοποιήσεις ntfy για τους αγώνες του ΠΑΟΚ.
+"""Ειδοποιήσεις για τους αγώνες του ΠΑΟΚ: μέσα στην εφαρμογή (web push) και μέσω ntfy.
+
+Web push: η εφαρμογή γράφει κάθε συσκευή σε θέματα s:<τμήμα>:<είδος> ή m:<αγώνας>:<είδος>
+και η αποστολή γίνεται από το /api/push της σελίδας (Vercel). Η ταυτότητα του GitHub Actions
+αποδεικνύεται με το OIDC token του GitHub (χρειάζεται «permissions: id-token: write»).
+
+ntfy (εναλλακτικά, για όσους το προτιμούν):
 
 Κάθε τμήμα έχει θέματα (topics) στο ntfy.sh, ώστε ο καθένας να διαλέγει τι θέλει:
     <PREFIX>-<τμήμα>-pre     υπενθύμιση περίπου μία ώρα πριν από τον αγώνα
@@ -15,7 +21,7 @@
 πρόγραμμα. Οι υπενθυμίσεις στέλνονται από αυτό το script (python3 notify.py reminders),
 που τρέχει κάθε 15 λεπτά και διαβάζει μόνο το docs/matches.json.
 
-Αποστολή γίνεται μόνο όταν υπάρχει η μεταβλητή περιβάλλοντος NTFY=1.
+Αποστολή γίνεται μόνο όταν υπάρχει η μεταβλητή περιβάλλοντος NTFY=1 (και για τα δύο κανάλια).
 """
 from __future__ import annotations
 
@@ -71,6 +77,42 @@ def teams(m: dict, with_score: bool = False) -> str:
     return f"{m['home']}{mid}{m['away']}"
 
 
+_oidc: dict = {}
+
+
+def _oidc_token() -> str | None:
+    """Token ταυτότητας του GitHub Actions για το /api/push (ισχύει λίγα λεπτά, κρατιέται 4)."""
+    url, req_token = os.environ.get("ACTIONS_ID_TOKEN_REQUEST_URL"), os.environ.get("ACTIONS_ID_TOKEN_REQUEST_TOKEN")
+    if not url or not req_token:
+        return None
+    if _oidc.get("token") and time.time() - _oidc["at"] < 240:
+        return _oidc["token"]
+    req = urllib.request.Request(url + "&audience=paokalendar", headers={"Authorization": f"Bearer {req_token}"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        _oidc.update(token=json.loads(r.read())["value"], at=time.time())
+    return _oidc["token"]
+
+
+def _push(topics: list[str], title: str, message: str, url: str, tag: str | None = None) -> None:
+    """Ειδοποίηση web push σε όσες συσκευές έχουν γραφτεί σε κάποιο από τα θέματα (μία φορά στην καθεμία)."""
+    if not enabled():
+        print(f"  (χωρίς αποστολή) push {','.join(topics)}: {title} | {message}")
+        return
+    try:
+        token = _oidc_token()
+        if not token:
+            print("  ! push: λείπει το OIDC token (permissions: id-token: write)", file=sys.stderr)
+            return
+        body = {"topics": topics, "title": title, "body": message, "url": url, "tag": tag}
+        req = urllib.request.Request(SITE + "api/push", data=json.dumps(body).encode(), method="POST",
+                                     headers={"Content-Type": "application/json", "Authorization": f"Bearer {token}"})
+        with urllib.request.urlopen(req, timeout=60) as r:
+            res = json.loads(r.read())
+        print(f"  push {','.join(topics)}: {title} → {res.get('sent', 0)}/{res.get('matched', 0)}")
+    except Exception as e:  # μια αποτυχημένη ειδοποίηση δεν σταματά την υπόλοιπη δουλειά
+        print(f"  ! push {','.join(topics)}: {e}", file=sys.stderr)
+
+
 def _post(topic_name: str, title: str, message: str, click: str, tags: list[str] | None = None) -> None:
     payload = {"topic": topic_name, "title": title, "message": message, "click": click}
     if tags:
@@ -95,12 +137,19 @@ def send(section: str, kind: str, title: str, message: str, match: dict | None =
 
     also_match_kinds: επιπλέον θέματα του αγώνα (π.χ. το τελικό από το live πηγαίνει και στο «result»).
     """
+    has_match = match is not None and bool(match.get("nt"))
+    kinds = ((kind,) if to_match else ()) + tuple(also_match_kinds) if has_match else ()
+    push_topics = [f"s:{section}:{kind}"] + [f"m:{match['nt']}:{k}" for k in kinds]
+    url = f"/#/m/{match['nt']}" if has_match else f"/#/{section}"
+    # Ίδιο tag για το ίδιο γεγονός: αν φτάσει δύο φορές, η δεύτερη αντικαθιστά την πρώτη.
+    tag = f"{match['nt']}-{kind}" if has_match and kind != "live" else None
+    _push(list(dict.fromkeys(push_topics)), title, message, url, tag)
+
     click = f"{SITE}#/{section}"
     _post(topic(section, kind), title, message, click, tags)
-    if match is None or not match.get("nt"):
+    if not has_match:
         return
     click = f"{SITE}#/m/{match['nt']}"
-    kinds = ((kind,) if to_match else ()) + tuple(also_match_kinds)
     if to_match:
         _post(match_topic(match), title, message, click, tags)
     for k in kinds:

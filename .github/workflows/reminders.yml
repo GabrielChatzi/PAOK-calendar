@@ -10,6 +10,7 @@ on:
 permissions:
   contents: read
   actions: write
+  id-token: write  # ταυτότητα για τις ειδοποιήσεις web push (/api/push)
 
 concurrency:
   group: reminders

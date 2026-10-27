@@ -11,6 +11,7 @@ on:
 
 permissions:
   contents: write
+  id-token: write  # ταυτότητα για τις ειδοποιήσεις web push (/api/push)
 
 concurrency:
   group: update-calendars

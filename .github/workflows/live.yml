@@ -5,6 +5,10 @@ name: Live αγώνων
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+  id-token: write  # ταυτότητα για τις ειδοποιήσεις web push (/api/push)
+
 concurrency:
   group: live
   cancel-in-progress: false

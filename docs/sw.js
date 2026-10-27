@@ -4,10 +4,11 @@
 // - Τα δεδομένα (matches.json, standings.json) έρχονται πρώτα από το δίκτυο, ώστε να είναι
 //   πάντα φρέσκα· χωρίς σύνδεση χρησιμοποιείται η τελευταία αποθηκευμένη έκδοση.
 // - Σήματα ομάδων και γραμματοσειρές κρατιούνται στη συσκευή μετά την πρώτη φορά.
-// - Τα .ics δεν περνούν από εδώ, ώστε οι συνδρομές ημερολογίου να βλέπουν πάντα την τρέχουσα έκδοση.
+// - Τα .ics και το /api/ δεν περνούν από εδώ (ημερολόγια και ειδοποιήσεις θέλουν πάντα το δίκτυο).
+// - Δείχνει τις ειδοποιήσεις web push και, όταν πατηθεί μία, ανοίγει τον αγώνα ή το τμήμα της.
 //
 // Αλλάζοντας το VERSION, οι συσκευές κατεβάζουν ξανά τη σελίδα.
-const VERSION = "v1";
+const VERSION = "v2";
 const SHELL = `paokalendar-shell-${VERSION}`;
 const DATA = "paokalendar-data";
 const ASSETS = "paokalendar-assets";
@@ -73,7 +74,7 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
 
   if (url.origin === self.location.origin) {
-    if (url.pathname.endsWith(".ics")) return;
+    if (url.pathname.endsWith(".ics") || url.pathname.startsWith("/api/")) return;
     if (url.pathname.endsWith(".json")) {
       event.respondWith(networkFirst(request, DATA));
       return;
@@ -90,4 +91,57 @@ self.addEventListener("fetch", (event) => {
       url.hostname === "fonts.googleapis.com") {
     event.respondWith(cacheFirst(request));
   }
+});
+
+// ---------------------------------------------------------------- ειδοποιήσεις
+
+self.addEventListener("push", (event) => {
+  let data = {};
+  try { data = event.data ? event.data.json() : {}; } catch { data = { body: event.data && event.data.text() }; }
+  const options = {
+    body: data.body || "",
+    icon: "icons/icon-192.png",
+    badge: "icons/badge-96.png",
+    data: { url: data.url || "./" },
+    lang: "el",
+  };
+  if (data.tag) {
+    options.tag = data.tag;
+    options.renotify = true;
+  }
+  event.waitUntil(self.registration.showNotification(data.title || "PAOKalendar", options));
+});
+
+self.addEventListener("notificationclick", (event) => {
+  event.notification.close();
+  const target = new URL((event.notification.data && event.notification.data.url) || "./", self.location.origin).href;
+  event.waitUntil((async () => {
+    const windows = await self.clients.matchAll({ type: "window", includeUncontrolled: true });
+    for (const w of windows) {
+      if (new URL(w.url).origin === self.location.origin && "focus" in w) {
+        await w.focus();
+        if ("navigate" in w) return w.navigate(target);
+        return w.postMessage({ type: "open", url: target });
+      }
+    }
+    return self.clients.openWindow(target);
+  })());
+});
+
+// Αν ο browser ανανεώσει τη συνδρομή, τη γράφουμε ξανά με τα ίδια θέματα.
+self.addEventListener("pushsubscriptionchange", (event) => {
+  event.waitUntil((async () => {
+    const res = await fetch("/api/vapid");
+    const { publicKey } = await res.json();
+    const key = Uint8Array.from(atob(publicKey.replace(/-/g, "+").replace(/_/g, "/")), (c) => c.charCodeAt(0));
+    const sub = await self.registration.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: key });
+    const cache = await caches.open(DATA);
+    const saved = await cache.match("push-topics");
+    const topics = saved ? await saved.json() : [];
+    await fetch("/api/subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ subscription: sub.toJSON(), topics }),
+    });
+  })());
 });

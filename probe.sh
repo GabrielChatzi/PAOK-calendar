@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
-sleep 40
-for i in 1 2 3 4 5 6 7 8; do
-  if curl -sS "https://paokalendar.vercel.app/" | grep -q 'function matchHtml'; then echo "LIVE: match page deployed"; exit 0; fi
-  sleep 20
+for t in paokcal-x7q3-m-32aab779be paokcal-x7q3-m-32aab779be-live paokcal-x7q3-m-32aab779be-pre paokcal-x7q3-basketball-pre paokcal-x7q3-basketball-live; do
+  echo "== $t"
+  curl -sS "https://ntfy.sh/$t/json?poll=1&since=24h"
 done
-echo "NOT YET"

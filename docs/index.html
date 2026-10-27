@@ -1557,7 +1557,7 @@
     var a = parseInt(h.ScoreA, 10) || 0, b = parseInt(h.ScoreB, 10) || 0, q = parseInt(h.Quarter, 10) || 0;
     var state = h.Live ? "in" : (a || b) ? "post" : "pre";
     var clock = String(h.RemainingPartialTime || "").trim();
-    var label = state === "post" ? "Τελικό" : q ? (q <= 4 ? q + "η περ." : "Παράτ.") + (clock ? " " + clock : "") : "Ξεκινά";
+    var label = state === "post" ? "Τελικό" : q ? (q <= 4 ? q + "η περ." : "Παράτ.") + (clock ? " " + clock : "") : state === "in" ? "Διάλειμμα" : "Ξεκινά";
     return { state: state, home: a, away: b, label: label, quarter: q };
   }
   function fetchLive(m) {
@@ -1574,7 +1574,8 @@
     if (L.src === "euroleague") {
       return fetch("https://live.euroleague.net/api/Header?gamecode=" + encodeURIComponent(L.code) +
         "&seasoncode=" + encodeURIComponent(L.season), { cache: "no-store" })
-        .then(function (r) { return r.json(); }).then(euroleagueState);
+        .then(function (r) { return r.text(); })
+        .then(function (t) { return euroleagueState(t.trim() ? JSON.parse(t) : {}); });  // κενό πριν από το τζάμπολ
     }
     return Promise.reject(new Error("χωρίς live"));
   }

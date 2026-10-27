@@ -28,16 +28,18 @@ IDLE_EXIT = dt.timedelta(minutes=20)
 UA = "Mozilla/5.0 (PAOKalendar live; +https://paokalendar.vercel.app)"
 
 
-def get_json(url: str) -> dict:
+def get_json(url: str) -> dict | None:
+    """JSON από μια πηγή· None αν η απάντηση είναι κενή (π.χ. το EuroCup πριν από το τζάμπολ)."""
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Cache-Control": "no-cache"})
     with urllib.request.urlopen(req, timeout=30) as r:
-        return json.loads(r.read().decode("utf-8"))
+        body = r.read().decode("utf-8-sig").strip()
+    return json.loads(body) if body else None
 
 
 def load_matches() -> list[dict]:
     """Τα δεδομένα από τη σελίδα (πάντα τα τελευταία)· αλλιώς από το repo."""
     try:
-        return get_json(notify.SITE + "matches.json?t=" + str(int(time.time())))["matches"]
+        return (get_json(notify.SITE + "matches.json?t=" + str(int(time.time()))) or {})["matches"]
     except Exception as e:
         print(f"  ! matches.json από τη σελίδα: {e}", file=sys.stderr)
         path = Path(__file__).resolve().parent / "docs" / "matches.json"
@@ -50,6 +52,8 @@ def espn_state(live: dict) -> dict:
     url = (f"https://site.api.espn.com/apis/site/v2/sports/soccer/{live['league']}"
            f"/summary?event={live['id']}")
     data = get_json(url)
+    if not data:
+        raise ValueError("κενή απάντηση")
     comp = data["header"]["competitions"][0]
     status = comp["status"]["type"]
     score = {c["homeAway"]: int(c.get("score") or 0) for c in comp["competitors"]}
@@ -78,12 +82,17 @@ def espn_state(live: dict) -> dict:
 
 
 def euroleague_state(live: dict) -> dict:
+    """Σκορ από το live.euroleague.net. Πριν από το τζάμπολ η απάντηση είναι κενή (= δεν ξεκίνησε).
+
+    «Quarter» είναι η τρέχουσα περίοδος· στα διαλείμματα γίνεται 0. Το «done» μετρά τις
+    περιόδους που έχουν τελειώσει, ώστε το τέλος περιόδου να βγαίνει σωστά και στα διαλείμματα.
+    """
     url = f"https://live.euroleague.net/api/Header?gamecode={live['code']}&seasoncode={live['season']}"
-    h = get_json(url)
+    h = get_json(url) or {}
 
     def num(x):
         try:
-            return int(str(x).strip())
+            return int(str(x or "").strip())
         except ValueError:
             return 0
     a, b = num(h.get("ScoreA")), num(h.get("ScoreB"))
@@ -94,8 +103,12 @@ def euroleague_state(live: dict) -> dict:
         state = "post"
     else:
         state = "pre"
-    return {"state": state, "home": a, "away": b, "quarter": quarter,
-            "detail": f"{quarter}η περίοδος {h.get('RemainingPartialTime', '').strip()}".strip()}
+    # Περίοδοι με σκορ (ScoreQuarterNA/B είναι αθροιστικά): όσες έχουν μη μηδενικό σκορ έχουν παιχτεί.
+    played = sum(1 for q in range(1, 5) if num(h.get(f"ScoreQuarter{q}A")) or num(h.get(f"ScoreQuarter{q}B")))
+    done = quarter - 1 if quarter >= 1 else played
+    clock = str(h.get("RemainingPartialTime") or "").strip()
+    detail = f"{quarter}η περίοδος {clock}".strip() if quarter >= 1 else ("Διάλειμμα" if state == "in" else "")
+    return {"state": state, "home": a, "away": b, "quarter": quarter, "done": max(done, 0), "detail": detail}
 
 
 SOURCES = {"espn": espn_state, "euroleague": euroleague_state}
@@ -135,10 +148,11 @@ def events(m: dict, old: dict | None, new: dict) -> list[tuple[str, str]]:
             out.append((title, " ".join(x for x in (g["clock"], g["text"]) if x)))
         if new.get("halftime") and not old.get("halftime"):
             out.append((f"{e} Ημίχρονο: {score_text(m, new)}", comp))
-    if m["live"]["src"] == "euroleague" and new["state"] == "in":
-        q_old, q_new = old.get("quarter", 0), new.get("quarter", 0)
-        if q_old >= 1 and q_new > q_old:
-            out.append((f"{e} Τέλος {ordinal_period(q_old)}: {score_text(m, new)}", comp))
+    if m["live"]["src"] == "euroleague" and new["state"] == "in" and old["state"] == "in":
+        d_old, d_new = old.get("done", 0), new.get("done", 0)
+        # Μετά την 4η, αν το σκορ δεν είναι ισόπαλο, έρχεται το «Τελικό» αντί για «Τέλος περιόδου».
+        if d_new > d_old and not (d_new >= 4 and new["home"] != new["away"]):
+            out.append((f"{e} Τέλος {ordinal_period(d_new)}: {score_text(m, new)}", comp))
     if old["state"] != "post" and new["state"] == "post":
         out.append((f"{e} Τελικό: {score_text(m, new)}", comp))
     return out

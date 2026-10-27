@@ -1,0 +1,27 @@
+name: Live αγώνων
+
+# Ξεκινά από το workflow των υπενθυμίσεων λίγο πριν από αγώνα με live (ποδόσφαιρο ESPN, EuroCup)
+# και τρέχει όσο υπάρχουν αγώνες σε εξέλιξη. Μπορεί να ξεκινήσει και χειροκίνητα.
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: live
+  cancel-in-progress: false
+
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Παρακολούθηση αγώνων
+        env:
+          NTFY: "1"
+          PYTHONUNBUFFERED: "1"
+        run: python3 live.py

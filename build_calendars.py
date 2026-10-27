@@ -53,9 +53,11 @@ UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
 # Τα κλειδιά είναι και ονόματα αρχείων (π.χ. football-home.ics) — μην τα αλλάξεις,
 # γιατί χαλάνε οι υπάρχουσες συνδρομές.
 SECTIONS = {
-    "football": {"emoji": "⚽", "name": "Ποδόσφαιρο", "sport": "Ποδόσφαιρο", "women": False},
+    "football": {"emoji": "⚽", "name": "Ποδόσφαιρο", "sport": "Ποδόσφαιρο", "women": False, "live": True,
+                 "liveNote": "Έναρξη, κάθε γκολ, ημίχρονο και τελικό (Super League και Ευρώπη)"},
     "football-women": {"emoji": "⚽", "name": "Ποδόσφαιρο Γυναικών", "sport": "Ποδόσφαιρο", "women": True},
-    "basketball": {"emoji": "🏀", "name": "Μπάσκετ", "sport": "Μπάσκετ", "women": False},
+    "basketball": {"emoji": "🏀", "name": "Μπάσκετ", "sport": "Μπάσκετ", "women": False, "live": True,
+                   "liveNote": "Έναρξη, τέλος κάθε περιόδου και τελικό (EuroCup)"},
     "basketball-women": {"emoji": "🏀", "name": "Μπάσκετ Γυναικών", "sport": "Μπάσκετ", "women": True},
     "volley": {"emoji": "🏐", "name": "Βόλεϊ", "sport": "Βόλεϊ", "women": False},
     "volley-women": {"emoji": "🏐", "name": "Βόλεϊ Γυναικών", "sport": "Βόλεϊ", "women": True},
@@ -83,6 +85,8 @@ class Match:
     url: str = ""
     home_logo: str = ""
     away_logo: str = ""
+    # Πού βρίσκεται το ζωντανό σκορ, αν υπάρχει (βλ. live.py και τη σελίδα).
+    live: dict | None = None
 
     def start(self) -> dt.datetime:
         return dt.datetime.combine(self.day, self.time or DEFAULT_TIME, ATHENS)
@@ -94,8 +98,16 @@ class Match:
         d["paokHome"] = d.pop("paok_home")
         d["homeLogo"] = d.pop("home_logo")
         d["awayLogo"] = d.pop("away_logo")
+        d["nt"] = match_topic_id(self.uid)
+        if not self.live:
+            del d["live"]
         del d["day"], d["time"]
         return d
+
+
+def match_topic_id(uid: str) -> str:
+    """Σύντομο, σταθερό αναγνωριστικό αγώνα για το θέμα ntfy του."""
+    return hashlib.sha1(uid.encode()).hexdigest()[:10]
 
 
 # ---------------------------------------------------------------- βοηθητικά
@@ -430,6 +442,7 @@ def football_matches() -> list[Match]:
             round=notes[0].get("headline", "") if notes else "", score=score,
             url=f"https://www.espn.com/soccer/match/_/gameId/{ev_id}",
             home_logo=logo(teams["home"]), away_logo=logo(teams["away"]),
+            live={"src": "espn", "league": league, "id": ev_id},
         ))
     return out
 
@@ -611,6 +624,7 @@ def eurocup_matches() -> list[Match]:
             url="https://www.eurocupbasketball.com/",
             home_logo=(local.get("images") or {}).get("crest", ""),
             away_logo=(road.get("images") or {}).get("crest", ""),
+            live={"src": "euroleague", "season": season, "code": g.get("gameCode")},
         ))
     if not out:
         raise RuntimeError(f"Δεν βρέθηκαν αγώνες ΠΑΟΚ στο EuroCup {season}")

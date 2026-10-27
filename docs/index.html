@@ -284,6 +284,49 @@
     position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom)); transform: translateX(-50%);
     background: var(--ink); color: var(--paper); padding: 10px 16px; font-weight: 500; max-width: calc(100% - 32px); z-index: 5;
   }
+  /* Live */
+  .live-badge {
+    display: inline-block; background: var(--ink); color: var(--paper);
+    font: 800 13px/1 var(--body); letter-spacing: .04em; padding: 4px 6px 3px;
+  }
+  .live-badge::before {
+    content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+    background: currentColor; margin-right: 5px; vertical-align: 1px;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .live-badge::before { animation: pulse 1.4s ease-in-out infinite; }
+    @keyframes pulse { 50% { opacity: .25; } }
+  }
+  .clock { display: block; font: 600 15px/1.3 var(--body); margin-top: 4px; }
+  .ongoing { display: block; font: 500 13px/1.2 var(--body); color: var(--muted); margin-top: 3px; }
+  .final-tag { display: block; font: 500 13px/1.2 var(--body); color: var(--muted); }
+  .next .live-badge { background: var(--paper); color: var(--ink); }
+  .next-teams .row { display: flex; justify-content: space-between; gap: 12px; }
+  .next-teams .sc { flex: none; }
+
+  /* Ειδοποίηση για έναν αγώνα */
+  .bell {
+    display: inline-grid; place-items: center; width: 38px; height: 38px; margin-top: 6px;
+    border: 1.5px solid var(--ink); background: transparent; cursor: pointer; padding: 0;
+  }
+  .bell svg { width: 18px; height: 18px; }
+  .bell.on { background: var(--ink); color: var(--paper); }
+  .next .bell { border-color: var(--paper); color: var(--paper); width: auto; height: auto; padding: 8px 12px; gap: 8px; grid-auto-flow: column; font-weight: 600; margin-top: 14px; }
+  .next .bell.on { background: var(--paper); color: var(--ink); }
+  dialog.sheet {
+    border: 1.5px solid var(--ink); background: var(--paper); color: var(--ink);
+    width: calc(100% - 32px); max-width: 520px; padding: 20px; margin: auto;
+  }
+  dialog.sheet::backdrop { background: rgba(0, 0, 0, .55); }
+  .sheet h2 { font: 800 26px/1.1 var(--display); margin: 0 36px 6px 0; }
+  .sheet .sheet-match { font: 600 19px/1.25 var(--display); margin: 0 0 2px; }
+  .sheet .sheet-when { color: var(--muted); margin: 0 0 14px; font-size: 15px; }
+  .sheet ul { margin: 6px 0 14px; padding-left: 20px; }
+  .sheet ul li { margin-bottom: 3px; }
+  .sheet .close { position: absolute; top: 12px; right: 12px; border: 0; background: transparent; font-size: 26px; line-height: 1; cursor: pointer; padding: 4px 8px; }
+  .sheet .actions { margin: 10px 0; }
+  .sheet .help { margin: 8px 0 0; }
+
   footer { margin-top: 48px; font-size: 14px; color: var(--muted); }
   footer p { margin: 0 0 8px; }
 
@@ -302,6 +345,7 @@
 
 <main id="app"><p class="empty">Φόρτωση προγράμματος…</p></main>
 
+<dialog class="sheet" id="sheet" aria-labelledby="sheet-title"></dialog>
 <div class="toast" id="toast" role="status" hidden></div>
 
 <script>
@@ -314,6 +358,7 @@
   var KIND_INFO = {
     pre: ["Πριν τον αγώνα", "Περίπου μία ώρα πριν ξεκινήσει"],
     time: ["Αλλαγές προγράμματος", "Νέος αγώνας, ορισμός ή αλλαγή ώρας"],
+    live: ["Live", "Έναρξη, γκολ ή περίοδοι, ημίχρονο και τελικό"],
     result: ["Τελικό αποτέλεσμα", "Το σκορ μόλις ανακοινωθεί"]
   };
   var isAndroid = /android/i.test(navigator.userAgent);
@@ -364,7 +409,16 @@
     return "";
   }
   // Ένας αγώνας είναι «επόμενος» μέχρι 2 ώρες μετά την έναρξη, αν δεν έχει σκορ.
-  function isUpcoming(m) { return !m.score && new Date(m.start).getTime() > Date.now() - 2 * 3600 * 1000; }
+  function isUpcoming(m) {
+    var ls = liveState[m.uid];
+    if (ls && ls.state === "in") return true;
+    return !m.score && new Date(m.start).getTime() > Date.now() - 2 * 3600 * 1000;
+  }
+  // Σε εξέλιξη χωρίς live σκορ: από την έναρξη έως 2,5 ώρες μετά, όσο δεν υπάρχει αποτέλεσμα.
+  function inProgress(m) {
+    var t = new Date(m.start).getTime(), now = Date.now();
+    return m.timeKnown && !m.score && now >= t && now <= t + 2.5 * 3600 * 1000;
+  }
   function outcome(m) {
     var p = /^(\d+)-(\d+)$/.exec(m.score || "");
     if (!p) return "";
@@ -394,24 +448,48 @@
   }
 
   // ---- Λίστα αγώνων
+  var BELL = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0-6 6v4l-2 3h16l-2-3V9a6 6 0 0 0-6-6zM9.5 19a2.5 2.5 0 0 0 5 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>';
+  var bells = {};
+  try { bells = JSON.parse(localStorage.getItem("paok-bells") || "{}") || {}; } catch (e) {}
+  function bellButton(m, withText) {
+    var on = !!bells[m.uid];
+    return '<button type="button" class="bell' + (on ? " on" : "") + '" data-bell="' + esc(m.uid) + '" aria-label="' +
+      (on ? "Ειδοποιήσεις ενεργές για αυτόν τον αγώνα" : "Ειδοποιήσεις μόνο για αυτόν τον αγώνα") + '">' + BELL +
+      (withText ? "<span>" + (on ? "Ειδοποιήσεις ενεργές" : "Ειδοποίηση για αυτό το ματς") + "</span>" : "") + "</button>";
+  }
+
   function gameHtml(m, showSection) {
     var date = new Date(m.start), s = sectionOf(m), o = outcome(m);
     var meta = [showSection ? s.emoji + " " + s.name : "", m.competition, m.round].filter(Boolean).map(esc).join(", ");
     if (m.venue) meta += "<br>" + esc(m.venue);
     if (m.tv) meta += ", " + esc(m.tv);
     var parts = /^(\d+)-(\d+)$/.exec(m.score || "");
-    return '<li class="game ' + (m.paokHome ? "home" : "away") + '">' +
-      '<div class="time' + (m.timeKnown ? "" : " tbc") + '">' + (m.timeKnown ? fmtTime.format(date) : "TBC") + "</div>" +
+    var ls = !m.score && liveState[m.uid];
+    var timeCell, scoreCell = "";
+    if (ls && ls.state === "in") {
+      timeCell = '<div class="time"><span class="live-badge">LIVE</span><span class="clock">' + esc(ls.label) + "</span></div>";
+      scoreCell = '<span class="n">' + ls.home + '</span><span class="n">' + ls.away + "</span>";
+    } else {
+      timeCell = '<div class="time' + (m.timeKnown ? "" : " tbc") + '">' + (m.timeKnown ? fmtTime.format(date) : "TBC") +
+        (!m.live && inProgress(m) ? '<span class="ongoing">Σε εξέλιξη</span>' : "") + "</div>";
+      if (parts || (ls && ls.state === "post")) {
+        var h = parts ? parts[1] : ls.home, a = parts ? parts[2] : ls.away;
+        if (!parts) o = outcome({ score: h + "-" + a, paokHome: m.paokHome });
+        scoreCell = (parts ? "" : '<span class="final-tag">Τελικό</span>') +
+          '<span class="n">' + h + '</span><span class="n">' + a + "</span>" +
+          (o ? '<span class="res ' + o + '" title="' + OUTCOME_TITLE[o] + '">' + OUTCOME_LABEL[o] + "</span>" : "");
+      }
+    }
+    if (!parts && isUpcoming(m) && !(ls && ls.state === "post")) scoreCell += bellButton(m);
+    var source = m.url ? ' <a href="' + esc(m.url) + '" rel="noopener" target="_blank">' +
+      (!m.live && inProgress(m) ? "Live στην πηγή" : "Πηγή") + "</a>" : "";
+    return '<li class="game ' + (m.paokHome ? "home" : "away") + '">' + timeCell +
       "<div>" +
         '<div class="teams"><span class="team">' + teamHtml(m.home, m.homeLogo, m.section) + '</span>' +
           '<span class="team">' + teamHtml(m.away, m.awayLogo, m.section) + "</span></div>" +
-        '<div class="meta">' + meta +
-          (m.url ? ' <a href="' + esc(m.url) + '" rel="noopener" target="_blank">Πηγή</a>' : "") + "</div>" +
+        '<div class="meta">' + meta + source + "</div>" +
       "</div>" +
-      '<div class="score">' + (parts
-        ? '<span class="n">' + parts[1] + '</span><span class="n">' + parts[2] + "</span>" +
-          (o ? '<span class="res ' + o + '" title="' + OUTCOME_TITLE[o] + '">' + OUTCOME_LABEL[o] + "</span>" : "")
-        : "") + "</div>" +
+      '<div class="score">' + scoreCell + "</div>" +
     "</li>";
   }
 
@@ -498,11 +576,24 @@
     var up = list.filter(isUpcoming);
     if (!up.length) return "";
     var m = up[0], s = sectionOf(m), date = new Date(m.start), rel = relative(date);
+    var ls = liveState[m.uid], isLive = ls && ls.state === "in";
+    if (isLive) {
+      return '<section class="next" aria-label="Αγώνας σε εξέλιξη">' +
+        '<p class="next-label"><span class="live-badge">LIVE</span> ' + esc(s.emoji + " " + s.name) + "</p>" +
+        '<p class="next-teams"><span class="row"><span>' + teamHtml(m.home, m.homeLogo, m.section) + '</span><span class="sc">' + ls.home + "</span></span>" +
+        '<span class="row"><span>' + teamHtml(m.away, m.awayLogo, m.section) + '</span><span class="sc">' + ls.away + "</span></span></p>" +
+        '<p class="next-when">' + esc(ls.label) + "</p>" +
+        '<p class="next-meta">' + esc([m.competition, m.venue].filter(Boolean).join(", ")) + "</p>" +
+        bellButton(m, true) + "</section>";
+    }
+    var ongoing = !m.live && inProgress(m);
     return '<section class="next" aria-label="Επόμενος αγώνας">' +
-      '<p class="next-label">' + esc(label || ("Επόμενος αγώνας, " + s.emoji + " " + s.name)) + "</p>" +
+      '<p class="next-label">' + esc(ongoing ? "Σε εξέλιξη, " + s.emoji + " " + s.name : (label || ("Επόμενος αγώνας, " + s.emoji + " " + s.name))) + "</p>" +
       '<p class="next-teams">' + teamHtml(m.home, m.homeLogo, m.section) + "<br>" + teamHtml(m.away, m.awayLogo, m.section) + "</p>" +
       '<p class="next-when">' + esc((rel ? rel + ", " : "") + fmtShort.format(date) + (m.timeKnown ? ", " + fmtTime.format(date) : ", ώρα TBC")) + "</p>" +
-      '<p class="next-meta">' + esc([m.competition, m.venue].filter(Boolean).join(", ")) + "</p></section>";
+      '<p class="next-meta">' + esc([m.competition, m.venue].filter(Boolean).join(", ")) +
+        (ongoing && m.url ? ' <a href="' + esc(m.url) + '" rel="noopener" target="_blank">Live στην πηγή</a>' : "") + "</p>" +
+      bellButton(m, true) + "</section>";
   }
 
   function seg(id, options, current) {
@@ -555,8 +646,9 @@
   function followHtml(key) {
     var s = data.sectionMap[key];
     var host = data.ntfy.server.replace(/^https?:\/\//, "");
-    var rows = data.ntfy.kinds.map(function (kind) {
+    var rows = data.ntfy.kinds.filter(function (kind) { return kind !== "live" || s.live; }).map(function (kind) {
       var topic = topicOf(key, kind), info = KIND_INFO[kind];
+      if (kind === "live" && s.liveNote) info = [info[0], s.liveNote];
       var display = "ΠΑΟΚ " + s.name + ": " + info[0];
       var btn = isAndroid
         ? '<a class="btn solid" href="ntfy://' + host + "/" + topic + "?display=" + encodeURIComponent(display) + '">Ενεργοποίηση</a>'
@@ -846,6 +938,7 @@
       render();
       return;
     }
+    if (b.dataset.bell) { openSheet(b.dataset.bell); return; }
     if (b.dataset.copy) { copy(b.dataset.copy, b.dataset.msg); return; }
     if (b.dataset.day && !b.disabled) { ui.day = b.dataset.day; render(); return; }
     var act = b.dataset.act;
@@ -867,6 +960,125 @@
   });
   window.addEventListener("hashchange", render);
 
+  // ---- Φύλλο «ειδοποιήσεις για αυτόν τον αγώνα»
+  function markBell(uid) {
+    bells[uid] = Date.now();
+    // Κρατάμε μόνο αγώνες που δεν έχουν ακόμα αποτέλεσμα.
+    Object.keys(bells).forEach(function (k) {
+      var m = data.matches.filter(function (x) { return x.uid === k; })[0];
+      if (!m || m.score) delete bells[k];
+    });
+    try { localStorage.setItem("paok-bells", JSON.stringify(bells)); } catch (e) {}
+    render();
+  }
+
+  function openSheet(uid) {
+    var m = data.matches.filter(function (x) { return x.uid === uid; })[0];
+    if (!m) return;
+    var s = sectionOf(m), date = new Date(m.start);
+    var topic = data.ntfy.prefix + "-m-" + m.nt;
+    var host = data.ntfy.server.replace(/^https?:\/\//, "");
+    var short = m.home + " – " + m.away;
+    var display = short + " " + fmtShort.format(date);
+    var gets = ["υπενθύμιση περίπου μία ώρα πριν", "αλλαγή ημέρας ή ώρας"];
+    if (m.live) gets.push(m.live.src === "espn" ? "live: έναρξη, κάθε γκολ, ημίχρονο" : "live: έναρξη και τέλος κάθε περιόδου");
+    gets.push("τελικό αποτέλεσμα");
+    var action = isAndroid
+      ? '<a class="btn solid" data-mark="' + esc(uid) + '" href="ntfy://' + host + "/" + esc(topic) + "?display=" + encodeURIComponent(display) + '">Ενεργοποίηση στο ntfy</a>'
+      : '<button type="button" class="btn solid" data-mark="' + esc(uid) + '" data-copy="' + esc(topic) +
+        '" data-msg="Αντιγράφηκε. Στο ntfy πάτα +, επικόλλησε και πάτα Subscribe.">Αντιγραφή ονόματος</button>';
+    var how = isAndroid
+      ? "Το ntfy ανοίγει και σε ρωτά αν θέλεις να εγγραφείς· πάτα «Subscribe»."
+      : "Μετά άνοιξε το ntfy, πάτα +, επικόλλησε το όνομα και πάτα «Subscribe».";
+    var store = isAndroid ? NTFY_ANDROID : NTFY_IOS;
+    var sheet = $("sheet");
+    sheet.innerHTML = '<button type="button" class="close" data-close aria-label="Κλείσιμο">×</button>' +
+      '<h2 id="sheet-title">Ειδοποιήσεις για αυτό το ματς</h2>' +
+      '<p class="sheet-match">' + esc(s.emoji + " " + short) + "</p>" +
+      '<p class="sheet-when">' + esc(fmtShort.format(date) + (m.timeKnown ? ", " + fmtTime.format(date) : ", ώρα TBC") + (m.competition ? ", " + m.competition : "")) + "</p>" +
+      "<p>Θα λαμβάνεις μόνο για αυτόν τον αγώνα:</p><ul>" + gets.map(function (g) { return "<li>" + esc(g) + "</li>"; }).join("") + "</ul>" +
+      '<div class="actions">' + action + "</div>" +
+      '<p class="help">' + how + "</p>" +
+      '<p class="help">Δεν έχεις το ntfy; <a href="' + store + '" rel="noopener" target="_blank">Κατέβασέ το δωρεάν</a>. ' +
+      "Μετά τον αγώνα μπορείς να σβήσεις τη συνδρομή μέσα στο ntfy.</p>" +
+      '<p class="help"><code>' + esc(topic) + "</code></p>";
+    if (sheet.showModal) sheet.showModal(); else sheet.setAttribute("open", "");
+  }
+
+  $("sheet").addEventListener("click", function (e) {
+    var sheet = $("sheet");
+    if (e.target === sheet || e.target.closest("[data-close]")) { sheet.close ? sheet.close() : sheet.removeAttribute("open"); return; }
+    var b = e.target.closest("[data-mark]");
+    if (!b) return;
+    if (b.dataset.copy) copy(b.dataset.copy, b.dataset.msg);
+    markBell(b.dataset.mark);
+  });
+
+  // ---- Live σκορ (ποδόσφαιρο μέσω ESPN, EuroCup μέσω Euroleague)
+  var liveState = {};
+  var LIVE_POLL = 30 * 1000;
+  function liveCandidate(m) {
+    if (!m.live || !m.timeKnown || m.score) return false;
+    var t = new Date(m.start).getTime(), now = Date.now();
+    var ls = liveState[m.uid];
+    if (ls && ls.state === "post") return false;
+    return now >= t - 10 * 60 * 1000 && now <= t + 3.5 * 3600 * 1000;
+  }
+  function espnState(d) {
+    var c = d.competitions ? d.competitions[0] : d.header.competitions[0];
+    var t = c.status.type, sc = {};
+    c.competitors.forEach(function (x) { sc[x.homeAway] = +(x.score && x.score.value != null ? x.score.value : x.score) || 0; });
+    var label = t.state === "post" ? "Τελικό" : t.name === "STATUS_HALFTIME" ? "Ημίχρονο" : (t.shortDetail || t.detail || "");
+    return { state: t.state, home: sc.home || 0, away: sc.away || 0, label: label };
+  }
+  function fetchLive(m) {
+    var L = m.live;
+    if (L.src === "espn") {
+      var base = "https://site.api.espn.com/apis/site/v2/sports/soccer/" + encodeURIComponent(L.league);
+      return fetch(base + "/scoreboard", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (d) {
+        var ev = (d.events || []).filter(function (e) { return String(e.id) === String(L.id); })[0];
+        if (ev) return espnState(ev);
+        return fetch(base + "/summary?event=" + encodeURIComponent(L.id), { cache: "no-store" })
+          .then(function (r) { return r.json(); }).then(espnState);
+      });
+    }
+    if (L.src === "euroleague") {
+      return fetch("https://live.euroleague.net/api/Header?gamecode=" + encodeURIComponent(L.code) +
+        "&seasoncode=" + encodeURIComponent(L.season), { cache: "no-store" })
+        .then(function (r) { return r.json(); }).then(function (h) {
+          var a = parseInt(h.ScoreA, 10) || 0, b = parseInt(h.ScoreB, 10) || 0, q = parseInt(h.Quarter, 10) || 0;
+          var state = h.Live ? "in" : (a || b) ? "post" : "pre";
+          var clock = String(h.RemainingPartialTime || "").trim();
+          var label = state === "post" ? "Τελικό" : q ? (q <= 4 ? q + "η περ." : "Παράτ.") + (clock ? " " + clock : "") : "Ξεκινά";
+          return { state: state, home: a, away: b, label: label };
+        });
+    }
+    return Promise.reject(new Error("χωρίς live"));
+  }
+  var liveTimer = null;
+  function pollLive() {
+    if (!data || document.visibilityState !== "visible") return;
+    var list = data.matches.filter(liveCandidate);
+    if (!list.length) return;
+    Promise.all(list.map(function (m) {
+      return fetchLive(m).then(function (st) { return [m.uid, st]; }, function () { return null; });
+    })).then(function (res) {
+      var changed = false;
+      res.forEach(function (r) {
+        if (!r) return;
+        var old = liveState[r[0]];
+        if (!old || old.state !== r[1].state || old.home !== r[1].home || old.away !== r[1].away || old.label !== r[1].label) changed = true;
+        liveState[r[0]] = r[1];
+      });
+      if (changed) render();
+    });
+  }
+  function startLive() {
+    pollLive();
+    if (!liveTimer) liveTimer = setInterval(pollLive, LIVE_POLL);
+  }
+  document.addEventListener("visibilitychange", function () { if (document.visibilityState === "visible") pollLive(); });
+
   var loadedAt = 0;
   function load() {
     return Promise.all([
@@ -886,6 +1098,7 @@
     });
     loadedAt = Date.now();
     render();
+    startLive();
   }
 
   load().catch(function () {

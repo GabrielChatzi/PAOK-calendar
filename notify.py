@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 """Ειδοποιήσεις ntfy για τους αγώνες του ΠΑΟΚ.
 
-Κάθε τμήμα έχει τρία θέματα (topics) στο ntfy.sh, ώστε ο καθένας να διαλέγει τι θέλει:
+Κάθε τμήμα έχει θέματα (topics) στο ntfy.sh, ώστε ο καθένας να διαλέγει τι θέλει:
     <PREFIX>-<τμήμα>-pre     υπενθύμιση περίπου μία ώρα πριν από τον αγώνα
     <PREFIX>-<τμήμα>-time    νέος αγώνας στο πρόγραμμα ή αλλαγή ημέρας/ώρας
+    <PREFIX>-<τμήμα>-live    έναρξη, γκολ/περίοδοι, τέλος (μόνο όπου υπάρχει live, βλ. live.py)
     <PREFIX>-<τμήμα>-result  τελικό αποτέλεσμα
+
+Επιπλέον, κάθε αγώνας έχει δικό του θέμα, <PREFIX>-m-<id>, για όποιον θέλει ειδοποιήσεις
+μόνο για ένα συγκεκριμένο ματς. Εκεί πηγαίνουν όλα τα παραπάνω για τον αγώνα αυτό.
 
 Οι αλλαγές και τα αποτελέσματα στέλνονται από το build_calendars.py όταν ενημερώνεται το
 πρόγραμμα. Οι υπενθυμίσεις στέλνονται από αυτό το script (python3 notify.py reminders),
@@ -27,8 +31,11 @@ NTFY_SERVER = "https://ntfy.sh"
 TOPIC_PREFIX = "paokcal-x7q3"
 SITE = "https://paokalendar.vercel.app/"
 ATHENS = ZoneInfo("Europe/Athens")
-KINDS = ("pre", "time", "result")
+KINDS = ("pre", "time", "live", "result")
 REMINDER_WINDOW = dt.timedelta(minutes=75)
+# Πόσο νωρίτερα ξεκινά η παρακολούθηση live, ώστε να «δει» τον αγώνα πριν αρχίσει.
+LIVE_LEAD = dt.timedelta(minutes=50)
+LIVE_SPAN = dt.timedelta(hours=3, minutes=30)
 MAX_PER_KIND = 8  # πάνω από τόσες ειδοποιήσεις μαζί μάλλον σημαίνει πρόβλημα στην πηγή
 
 EMOJI = {
@@ -42,6 +49,10 @@ MONTHS = ["Ιαν", "Φεβ", "Μαρ", "Απρ", "Μαΐ", "Ιουν", "Ιου�
 
 def topic(section: str, kind: str) -> str:
     return f"{TOPIC_PREFIX}-{section}-{kind}"
+
+
+def match_topic(m: dict) -> str:
+    return f"{TOPIC_PREFIX}-m-{m['nt']}"
 
 
 def enabled() -> bool:
@@ -59,33 +70,42 @@ def teams(m: dict, with_score: bool = False) -> str:
     return f"{m['home']}{mid}{m['away']}"
 
 
-def send(section: str, kind: str, title: str, message: str) -> None:
-    payload = {
-        "topic": topic(section, kind),
-        "title": title,
-        "message": message,
-        "click": f"{SITE}#/{section}",
-    }
+def _post(topic_name: str, title: str, message: str, click: str, tags: list[str] | None = None) -> None:
+    payload = {"topic": topic_name, "title": title, "message": message, "click": click}
+    if tags:
+        payload["tags"] = tags
     if not enabled():
-        print(f"  (χωρίς αποστολή) {payload['topic']}: {title} | {message}")
+        print(f"  (χωρίς αποστολή) {topic_name}: {title} | {message}")
         return
     req = urllib.request.Request(NTFY_SERVER, data=json.dumps(payload).encode(),
                                  headers={"Content-Type": "application/json"}, method="POST")
     try:
         with urllib.request.urlopen(req, timeout=30) as r:
             r.read()
-        print(f"  ειδοποίηση {payload['topic']}: {title}")
-    except Exception as e:  # μια αποτυχημένη ειδοποίηση δεν σταματά την ενημέρωση
-        print(f"  ! ntfy {payload['topic']}: {e}", file=sys.stderr)
-    time.sleep(1)  # ευγενικό ρυθμό προς το ntfy.sh
+        print(f"  ειδοποίηση {topic_name}: {title}")
+    except Exception as e:  # μια αποτυχημένη ειδοποίηση δεν σταματά την υπόλοιπη δουλειά
+        print(f"  ! ntfy {topic_name}: {e}", file=sys.stderr)
+    time.sleep(1)  # ευγενικός ρυθμός προς το ntfy.sh
 
 
-def changes(previous: list[dict], current: list[dict], sections: set[str]) -> list[tuple[str, str, str, str]]:
-    """Νέοι αγώνες, αλλαγές ημέρας/ώρας και νέα αποτελέσματα για τα τμήματα που ανανεώθηκαν."""
+def send(section: str, kind: str, title: str, message: str, match: dict | None = None,
+         to_match: bool = True, tags: list[str] | None = None) -> None:
+    """Στέλνει στο θέμα του τμήματος και, αν δοθεί αγώνας, και στο θέμα του αγώνα."""
+    click = f"{SITE}#/{section}"
+    _post(topic(section, kind), title, message, click, tags)
+    if match is not None and to_match and match.get("nt"):
+        _post(match_topic(match), title, message, click, tags)
+
+
+def changes(previous: list[dict], current: list[dict], sections: set[str]) -> list[tuple]:
+    """Νέοι αγώνες, αλλαγές ημέρας/ώρας και νέα αποτελέσματα για τα τμήματα που ανανεώθηκαν.
+
+    Επιστρέφει (τμήμα, είδος, τίτλος, κείμενο, αγώνας).
+    """
     now = dt.datetime.now(dt.timezone.utc)
     prev = {m["uid"]: m for m in previous}
     had = {m["section"] for m in previous}
-    events: list[tuple[str, str, str, str]] = []
+    events: list[tuple] = []
     for m in current:
         sec = m["section"]
         if sec not in sections or sec not in had:
@@ -97,15 +117,15 @@ def changes(previous: list[dict], current: list[dict], sections: set[str]) -> li
         if old is None:
             if start > now and not m.get("score"):
                 events.append((sec, "time", f"{emoji} Νέος αγώνας: {teams(m)}",
-                               f"{when_text(m)}" + (f". {details}" if details else "")))
+                               f"{when_text(m)}" + (f". {details}" if details else ""), m))
             continue
         if start > now and not m.get("score") and (
                 old["start"] != m["start"] or old.get("timeKnown") != m.get("timeKnown")):
             events.append((sec, "time", f"{emoji} Αλλαγή: {teams(m)}",
-                           f"Τώρα: {when_text(m)} (ήταν {when_text(old)})"))
+                           f"Τώρα: {when_text(m)} (ήταν {when_text(old)})", m))
         if m.get("score") and not old.get("score") and now - start < dt.timedelta(days=3):
             events.append((sec, "result", f"{emoji} Τελικό: {teams(m, with_score=True)}",
-                           m.get("competition", "") + (f", {m['round']}" if m.get("round") else "")))
+                           m.get("competition", "") + (f", {m['round']}" if m.get("round") else ""), m))
     # Προστασία: αν μια πηγή αλλάξει μορφή, δεν θέλουμε δεκάδες ειδοποιήσεις.
     counts: dict[tuple[str, str], int] = {}
     for sec, kind, *_ in events:
@@ -120,12 +140,25 @@ def changes(previous: list[dict], current: list[dict], sections: set[str]) -> li
 
 
 def send_changes(previous: list[dict], current: list[dict], sections: set[str]) -> None:
-    for sec, kind, title, message in changes(previous, current, sections):
-        send(sec, kind, title, message)
+    for sec, kind, title, message, m in changes(previous, current, sections):
+        # Για αγώνες με live, το τελικό στο θέμα του αγώνα το στέλνει ήδη το live.py.
+        to_match = not (kind == "result" and m.get("live"))
+        send(sec, kind, title, message, match=m, to_match=to_match)
+
+
+def live_window(m: dict, now: dt.datetime) -> bool:
+    """Αν ένας αγώνας με live πρέπει να παρακολουθείται τώρα."""
+    if not m.get("live") or not m.get("timeKnown") or m.get("score"):
+        return False
+    start = dt.datetime.fromisoformat(m["start"])
+    return start - LIVE_LEAD <= now <= start + LIVE_SPAN
 
 
 def reminders(matches_path: Path, state_path: Path) -> int:
-    """Υπενθύμιση για αγώνες που ξεκινούν μέσα στα επόμενα 75 λεπτά, μία φορά για τον καθένα."""
+    """Υπενθύμιση για αγώνες που ξεκινούν μέσα στα επόμενα 75 λεπτά, μία φορά για τον καθένα.
+
+    Γράφει επίσης live=1 στο GITHUB_OUTPUT όταν πρέπει να ξεκινήσει η παρακολούθηση live.
+    """
     data = json.loads(matches_path.read_text(encoding="utf-8"))
     state = json.loads(state_path.read_text(encoding="utf-8")) if state_path.exists() else {}
     now = dt.datetime.now(dt.timezone.utc)
@@ -142,7 +175,7 @@ def reminders(matches_path: Path, state_path: Path) -> int:
         sec = m["section"]
         details = ", ".join(x for x in (m.get("venue"), m.get("competition")) if x)
         send(sec, "pre", f"{EMOJI.get(sec, '')} Σε {mins} λεπτά: {teams(m)}",
-             f"Στις {local:%H:%M}" + (f", {details}" if details else ""))
+             f"Στις {local:%H:%M}" + (f", {details}" if details else ""), match=m)
         state[key] = now.isoformat(timespec="minutes")
         sent += 1
     # Κρατάμε μόνο τις τελευταίες 3 μέρες.
@@ -151,6 +184,14 @@ def reminders(matches_path: Path, state_path: Path) -> int:
     state_path.parent.mkdir(parents=True, exist_ok=True)
     state_path.write_text(json.dumps(state, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     print(f"Υπενθυμίσεις: {sent}")
+
+    live = [m for m in data.get("matches", []) if live_window(m, now)]
+    if live:
+        print("Αγώνες για live: " + ", ".join(teams(m) for m in live))
+    out = os.environ.get("GITHUB_OUTPUT")
+    if out:
+        with open(out, "a", encoding="utf-8") as f:
+            f.write(f"live={1 if live else 0}\n")
     return 0
 
 

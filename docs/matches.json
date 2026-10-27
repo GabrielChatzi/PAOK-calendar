@@ -5,7 +5,9 @@
    "emoji": "⚽",
    "name": "Ποδόσφαιρο",
    "sport": "Ποδόσφαιρο",
-   "women": false
+   "women": false,
+   "live": true,
+   "liveNote": "Έναρξη, κάθε γκολ, ημίχρονο και τελικό (Super League και Ευρώπη)"
   },
   {
    "key": "football-women",
@@ -19,7 +21,9 @@
    "emoji": "🏀",
    "name": "Μπάσκετ",
    "sport": "Μπάσκετ",
-   "women": false
+   "women": false,
+   "live": true,
+   "liveNote": "Έναρξη, τέλος κάθε περιόδου και τελικό (EuroCup)"
   },
   {
    "key": "basketball-women",
@@ -77,6 +81,7 @@
   "kinds": [
    "pre",
    "time",
+   "live",
    "result"
   ]
  },
@@ -92,11 +97,17 @@
    "score": "2-3",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896234",
+   "live": {
+    "src": "espn",
+    "league": "uefa.europa_qual",
+    "id": "401896234"
+   },
    "start": "2026-07-23T20:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/440.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "nt": "a86e124e1e"
   },
   {
    "section": "football",
@@ -109,11 +120,17 @@
    "score": "2-0",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896228",
+   "live": {
+    "src": "espn",
+    "league": "uefa.europa_qual",
+    "id": "401896228"
+   },
    "start": "2026-07-30T20:45:00+03:00",
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/440.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/440.png",
+   "nt": "ba447492f5"
   },
   {
    "section": "football",
@@ -126,11 +143,17 @@
    "score": "0-1",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401902942",
+   "live": {
+    "src": "espn",
+    "league": "uefa.europa_qual",
+    "id": "401902942"
+   },
    "start": "2026-08-06T20:45:00+03:00",
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/441.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/441.png",
+   "nt": "a55e610f0f"
   },
   {
    "section": "football",
@@ -143,11 +166,17 @@
    "score": "3-2",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401902941",
+   "live": {
+    "src": "espn",
+    "league": "uefa.europa_qual",
+    "id": "401902941"
+   },
    "start": "2026-08-13T21:30:00+03:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/441.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "nt": "042c135fbf"
   },
   {
    "section": "football",
@@ -160,11 +189,17 @@
    "score": "1-1",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401910987",
+   "live": {
+    "src": "espn",
+    "league": "uefa.europa.conf_qual",
+    "id": "401910987"
+   },
    "start": "2026-08-20T20:45:00+03:00",
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/620.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/620.png",
+   "nt": "5608ad030b"
   },
   {
    "section": "football",
@@ -177,11 +212,17 @@
    "score": "4-0",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896775",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896775"
+   },
    "start": "2026-08-23T21:00:00+03:00",
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/5276.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/5276.png",
+   "nt": "ee1ea80a0d"
   },
   {
    "section": "football",
@@ -194,11 +235,17 @@
    "score": "3-2",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401910983",
+   "live": {
+    "src": "espn",
+    "league": "uefa.europa.conf_qual",
+    "id": "401910983"
+   },
    "start": "2026-08-27T20:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/620.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "nt": "3a2fdc1bbe"
   },
   {
    "section": "football",
@@ -211,11 +258,17 @@
    "score": "1-2",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896772",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896772"
+   },
    "start": "2026-08-30T20:15:00+03:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/6790.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "nt": "3c51f0eb3d"
   },
   {
    "section": "football",
@@ -232,7 +285,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/dd68ef4637f836824756daa4d317879a.jpg?itok=N0R87cN-",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/b67b687eee657fe9bdee1d794daa3655.jpg?itok=xS8HOokl"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/b67b687eee657fe9bdee1d794daa3655.jpg?itok=xS8HOokl",
+   "nt": "df1bb48313"
   },
   {
    "section": "football",
@@ -245,11 +299,17 @@
    "score": "3-1",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896765",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896765"
+   },
    "start": "2026-09-06T21:30:00+03:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/443.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "nt": "6f9187f658"
   },
   {
    "section": "football",
@@ -262,11 +322,17 @@
    "score": "2-0",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896760",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896760"
+   },
    "start": "2026-09-13T21:00:00+03:00",
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/11553.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/11553.png",
+   "nt": "28faec1f56"
   },
   {
    "section": "football",
@@ -283,7 +349,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/67231a92b13106cd56ac4bced1a38442.jpg?itok=8rQEOtM4",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/dd68ef4637f836824756daa4d317879a.jpg?itok=N0R87cN-"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/dd68ef4637f836824756daa4d317879a.jpg?itok=N0R87cN-",
+   "nt": "2a32684733"
   },
   {
    "section": "football-women",
@@ -300,7 +367,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/0aa9875ddbc50bb6ac5064fc12a9039e.jpg?itok=aKr1Kf_z",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "nt": "017d634c99"
   },
   {
    "section": "football",
@@ -313,11 +381,17 @@
    "score": "1-3",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896755",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896755"
+   },
    "start": "2026-09-20T21:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/11431.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "nt": "e1cfab82aa"
   },
   {
    "section": "handball",
@@ -334,7 +408,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "91d0788062"
   },
   {
    "section": "waterpolo-women",
@@ -351,7 +426,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
-   "awayLogo": "https://koecdn.twic.pics/media/pekev-1789898708-1ZgUQCyK.jpeg"
+   "awayLogo": "https://koecdn.twic.pics/media/pekev-1789898708-1ZgUQCyK.jpeg",
+   "nt": "2b3f8b6845"
   },
   {
    "section": "waterpolo",
@@ -368,7 +444,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/logo-1u6opn9-1757681672-ImWgfrk6.jpg",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "nt": "5b77e96bfe"
   },
   {
    "section": "handball-women",
@@ -385,7 +462,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "32a0812b81"
   },
   {
    "section": "basketball",
@@ -402,7 +480,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/00000001/photo_new_160CD854.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "nt": "148afe4d7d"
   },
   {
    "section": "basketball",
@@ -419,7 +498,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/00000002/photo_new_7F6C9D90.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "nt": "7ea085b3ef"
   },
   {
    "section": "handball",
@@ -436,7 +516,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "c4f563d508"
   },
   {
    "section": "handball-women",
@@ -453,7 +534,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "7cc90b0bda"
   },
   {
    "section": "basketball",
@@ -466,11 +548,17 @@
    "score": "93-78",
    "tv": "",
    "url": "https://www.eurocupbasketball.com/",
+   "live": {
+    "src": "euroleague",
+    "season": "U2026",
+    "code": 14
+   },
    "start": "2026-09-30T19:30:00+03:00",
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
-   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/06792bed-0383-4de2-80b9-95ecca3fd973.png"
+   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/06792bed-0383-4de2-80b9-95ecca3fd973.png",
+   "nt": "99ebf968c5"
   },
   {
    "section": "handball",
@@ -487,7 +575,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "b1ca66e631"
   },
   {
    "section": "basketball",
@@ -504,7 +593,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/BB4B460F/photo_new_62684735.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "nt": "6d6af50cc5"
   },
   {
    "section": "waterpolo-women",
@@ -521,7 +611,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
-   "awayLogo": "https://koecdn.twic.pics/media/nov-logo-gr-1758978938-hWBXWQRE.png"
+   "awayLogo": "https://koecdn.twic.pics/media/nov-logo-gr-1758978938-hWBXWQRE.png",
+   "nt": "940b5e63b8"
   },
   {
    "section": "waterpolo",
@@ -538,7 +629,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
-   "awayLogo": "https://koecdn.twic.pics/media/panathinaikos-1757496876-53QTIGxK.jpg"
+   "awayLogo": "https://koecdn.twic.pics/media/panathinaikos-1757496876-53QTIGxK.jpg",
+   "nt": "cc17563833"
   },
   {
    "section": "basketball-women",
@@ -555,7 +647,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/club-teams/2/logo",
-   "awayLogo": "https://apps.basket.gr/clubs/2/logo"
+   "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "nt": "e1bcee36e0"
   },
   {
    "section": "football-women",
@@ -572,7 +665,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/3dba66ead9b4b634ee1c60c4c6be0fca.jpg?itok=jmYnWk68"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/3dba66ead9b4b634ee1c60c4c6be0fca.jpg?itok=jmYnWk68",
+   "nt": "82239017a0"
   },
   {
    "section": "handball",
@@ -589,7 +683,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "052aad4694"
   },
   {
    "section": "basketball",
@@ -602,11 +697,17 @@
    "score": "72-75",
    "tv": "",
    "url": "https://www.eurocupbasketball.com/",
+   "live": {
+    "src": "euroleague",
+    "season": "U2026",
+    "code": 32
+   },
    "start": "2026-10-06T20:30:00+03:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOJl/0024f0d4-55d9-4ed0-be41-68c0e90c41d5.png",
-   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png"
+   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
+   "nt": "45e776b9c0"
   },
   {
    "section": "handball-women",
@@ -623,7 +724,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "29dc30b535"
   },
   {
    "section": "waterpolo-women",
@@ -640,7 +742,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/327204416-876598936727395-7539238121809845951-n-1759145224-TwVlRdRx.jpg",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "nt": "9d1561d3da"
   },
   {
    "section": "basketball",
@@ -657,7 +760,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/3CA10C07/photo_new_6AE0FF13.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/3CA10C07/photo_new_6AE0FF13.png",
+   "nt": "2ab774f621"
   },
   {
    "section": "waterpolo",
@@ -674,7 +778,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/olimpiakos-1757496846-Q42PoPie.png",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "nt": "00a5b2026e"
   },
   {
    "section": "handball",
@@ -691,7 +796,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "db7ee5c250"
   },
   {
    "section": "basketball-women",
@@ -708,7 +814,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
-   "awayLogo": "https://apps.basket.gr/clubs/1/logo"
+   "awayLogo": "https://apps.basket.gr/clubs/1/logo",
+   "nt": "ba76d072fc"
   },
   {
    "section": "football",
@@ -721,11 +828,17 @@
    "score": "1-3",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896819",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896819"
+   },
    "start": "2026-10-12T18:00:00+03:00",
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/132429.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/132429.png",
+   "nt": "c133cdc096"
   },
   {
    "section": "basketball",
@@ -738,11 +851,17 @@
    "score": "95-86",
    "tv": "",
    "url": "https://www.eurocupbasketball.com/",
+   "live": {
+    "src": "euroleague",
+    "season": "U2026",
+    "code": 45
+   },
    "start": "2026-10-13T19:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://media-cdn.cortextech.io/ffcb6e37-31f4-48f6-91c2-a8c9a6f791a9.png",
-   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png"
+   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
+   "nt": "4420c82688"
   },
   {
    "section": "handball",
@@ -759,7 +878,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "8c22151e96"
   },
   {
    "section": "waterpolo-women",
@@ -776,7 +896,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
-   "awayLogo": "https://koecdn.twic.pics/media/anog-logo-1759229979-jK83ObmL.png"
+   "awayLogo": "https://koecdn.twic.pics/media/anog-logo-1759229979-jK83ObmL.png",
+   "nt": "181cce9b9a"
   },
   {
    "section": "basketball",
@@ -793,7 +914,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000A/photo_new_5DC7EFBA.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "nt": "3da2a7a269"
   },
   {
    "section": "waterpolo",
@@ -810,7 +932,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
-   "awayLogo": "https://koecdn.twic.pics/media/faliro-1757496864-n863Il8C.jpg"
+   "awayLogo": "https://koecdn.twic.pics/media/faliro-1757496864-n863Il8C.jpg",
+   "nt": "80622598a1"
   },
   {
    "section": "volley-women",
@@ -827,7 +950,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_118.jpg",
-   "awayLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_122.jpg"
+   "awayLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_122.jpg",
+   "nt": "db65cce8ad"
   },
   {
    "section": "football-women",
@@ -844,7 +968,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/19d71df6850c19084f7494c63a2cab42.jpg?itok=KtgTCCqg",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "nt": "a198bfe9da"
   },
   {
    "section": "basketball-women",
@@ -861,7 +986,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/clubs/802/logo",
-   "awayLogo": "https://apps.basket.gr/clubs/2/logo"
+   "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "nt": "df9fff0833"
   },
   {
    "section": "football",
@@ -874,11 +1000,17 @@
    "score": "2-1",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896816",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896816"
+   },
    "start": "2026-10-18T21:00:00+03:00",
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/2575.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/2575.png",
+   "nt": "b8dbf80909"
   },
   {
    "section": "handball-women",
@@ -895,7 +1027,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "28a2458ae4"
   },
   {
    "section": "waterpolo",
@@ -912,7 +1045,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/panionios-1757496931-xkJBSsvo.png",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "nt": "d95b5755ae"
   },
   {
    "section": "handball",
@@ -929,7 +1063,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "3357a85d46"
   },
   {
    "section": "waterpolo-women",
@@ -946,7 +1081,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/olimpiakos-1757496832-ZYWvvSWe.png",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "nt": "1f42bdd80a"
   },
   {
    "section": "basketball",
@@ -959,11 +1095,17 @@
    "score": "87-78",
    "tv": "",
    "url": "https://www.eurocupbasketball.com/",
+   "live": {
+    "src": "euroleague",
+    "season": "U2026",
+    "code": 64
+   },
    "start": "2026-10-21T20:00:00+03:00",
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
-   "awayLogo": "https://media-cdn.cortextech.io/5750bc8b-dd63-48e4-8586-10d4e5e2b4e2.png"
+   "awayLogo": "https://media-cdn.cortextech.io/5750bc8b-dd63-48e4-8586-10d4e5e2b4e2.png",
+   "nt": "31dd67f89a"
   },
   {
    "section": "volley-women",
@@ -980,7 +1122,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_111.jpg",
-   "awayLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_118.jpg"
+   "awayLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_118.jpg",
+   "nt": "cc9fe4a120"
   },
   {
    "section": "waterpolo-women",
@@ -997,7 +1140,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
-   "awayLogo": "https://koecdn.twic.pics/media/xanion-1757497102-pCIxwRHQ.jpg"
+   "awayLogo": "https://koecdn.twic.pics/media/xanion-1757497102-pCIxwRHQ.jpg",
+   "nt": "3f03a0c09f"
   },
   {
    "section": "volley",
@@ -1014,7 +1158,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl1568216313930.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "nt": "83c5c96432"
   },
   {
    "section": "basketball",
@@ -1031,7 +1176,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/00000010/photo_new_2BF3BBDA.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/00000010/photo_new_2BF3BBDA.png",
+   "nt": "363b9a55be"
   },
   {
    "section": "basketball-women",
@@ -1048,7 +1194,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
-   "awayLogo": "https://apps.basket.gr/clubs/7/logo"
+   "awayLogo": "https://apps.basket.gr/clubs/7/logo",
+   "nt": "dc3929fd5a"
   },
   {
    "section": "football-women",
@@ -1065,7 +1212,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/f43120ba1ac31aa09a5c4afec55ab75e.jpg?itok=0eed57w4"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/f43120ba1ac31aa09a5c4afec55ab75e.jpg?itok=0eed57w4",
+   "nt": "dea4b0a112"
   },
   {
    "section": "football",
@@ -1078,11 +1226,17 @@
    "score": "2-1",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896740",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896740"
+   },
    "start": "2026-10-25T20:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/1010.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "nt": "426beaeed8"
   },
   {
    "section": "basketball",
@@ -1095,11 +1249,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.eurocupbasketball.com/",
+   "live": {
+    "src": "euroleague",
+    "season": "U2026",
+    "code": 78
+   },
    "start": "2026-10-27T18:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://media-cdn.incrowdsports.com/1d3274d8-da86-4d21-9e97-6810ab88babe.png",
-   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png"
+   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
+   "nt": "32aab779be"
   },
   {
    "section": "football",
@@ -1116,7 +1276,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/dd68ef4637f836824756daa4d317879a.jpg?itok=N0R87cN-",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/99a5c1d901ca7907952dfaf8a0db7ddb.jpg?itok=VnfGHPUv"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/99a5c1d901ca7907952dfaf8a0db7ddb.jpg?itok=VnfGHPUv",
+   "nt": "198b59e786"
   },
   {
    "section": "handball-women",
@@ -1133,7 +1294,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "573de6cdb1"
   },
   {
    "section": "waterpolo",
@@ -1150,7 +1312,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
-   "awayLogo": "https://koecdn.twic.pics/media/shma-ethniku-ofpf-1758038638-0PxACujw.png"
+   "awayLogo": "https://koecdn.twic.pics/media/shma-ethniku-ofpf-1758038638-0PxACujw.png",
+   "nt": "55a732727f"
   },
   {
    "section": "basketball",
@@ -1167,7 +1330,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/00000011/photo_new_212846DF.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "nt": "0528a32db7"
   },
   {
    "section": "volley",
@@ -1184,7 +1348,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14424751662839.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14424751662839.gif",
+   "nt": "d3d69c179b"
   },
   {
    "section": "football-women",
@@ -1201,7 +1366,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/modules/custom/competitions/images/blank-club-profile.png",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "nt": "7a4e4374b2"
   },
   {
    "section": "basketball-women",
@@ -1218,7 +1384,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/clubs/659/logo",
-   "awayLogo": "https://apps.basket.gr/clubs/2/logo"
+   "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "nt": "ccd7eda058"
   },
   {
    "section": "football",
@@ -1231,11 +1398,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896734",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896734"
+   },
    "start": "2026-11-01T19:00:00+02:00",
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/8354.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/8354.png",
+   "nt": "23086ad1a5"
   },
   {
    "section": "basketball",
@@ -1248,11 +1421,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.eurocupbasketball.com/",
+   "live": {
+    "src": "euroleague",
+    "season": "U2026",
+    "code": 95
+   },
    "start": "2026-11-03T20:00:00+02:00",
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
-   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS1/1e9e0379-db30-4234-89b0-19576709c285.png"
+   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS1/1e9e0379-db30-4234-89b0-19576709c285.png",
+   "nt": "b79cb11881"
   },
   {
    "section": "basketball-women",
@@ -1269,7 +1448,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
-   "awayLogo": "https://apps.basket.gr/clubs/51/logo"
+   "awayLogo": "https://apps.basket.gr/clubs/51/logo",
+   "nt": "c4c824dbf5"
   },
   {
    "section": "football-women",
@@ -1286,7 +1466,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/d073e52756ee5f17232394ecaf0b0ec1.jpg?itok=QE7RdbHR",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "nt": "3824d71d44"
   },
   {
    "section": "waterpolo-women",
@@ -1303,7 +1484,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
-   "awayLogo": "https://koecdn.twic.pics/media/larisa-f-1789898479-XJuZR95A.png"
+   "awayLogo": "https://koecdn.twic.pics/media/larisa-f-1789898479-XJuZR95A.png",
+   "nt": "d91ae7811f"
   },
   {
    "section": "waterpolo",
@@ -1320,7 +1502,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
-   "awayLogo": "https://koecdn.twic.pics/media/nov-logo-gr-1758965899-UA7wQDNs.png"
+   "awayLogo": "https://koecdn.twic.pics/media/nov-logo-gr-1758965899-UA7wQDNs.png",
+   "nt": "5d4897863c"
   },
   {
    "section": "basketball",
@@ -1337,7 +1520,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/0041ADCB/photo_new_FE76D0B4.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/0041ADCB/photo_new_FE76D0B4.png",
+   "nt": "18c8911df6"
   },
   {
    "section": "volley",
@@ -1354,7 +1538,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl16909759871795.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "nt": "c9fcd47542"
   },
   {
    "section": "football",
@@ -1367,11 +1552,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896730",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896730"
+   },
    "start": "2026-11-08T21:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/435.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "nt": "890c2ee3db"
   },
   {
    "section": "handball-women",
@@ -1388,7 +1579,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "ff4f395b7e"
   },
   {
    "section": "basketball",
@@ -1401,11 +1593,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.eurocupbasketball.com/",
+   "live": {
+    "src": "euroleague",
+    "season": "U2026",
+    "code": 111
+   },
    "start": "2026-11-10T19:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/ba6e2d99-3ea9-4730-a0ce-830cccca4657.png",
-   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png"
+   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
+   "nt": "ce94f32735"
   },
   {
    "section": "volley",
@@ -1422,7 +1620,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl13607973882903.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl13607973882903.gif",
+   "nt": "ac6d6e1a13"
   },
   {
    "section": "handball-women",
@@ -1439,7 +1638,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "06ebdcafe5"
   },
   {
    "section": "waterpolo",
@@ -1456,7 +1656,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/xanion-1757572705-KVq2UMey.jpg",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "nt": "7cad84aba3"
   },
   {
    "section": "basketball",
@@ -1473,7 +1674,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/B742845D/photo_new_04E98281.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "nt": "520418b1b8"
   },
   {
    "section": "handball",
@@ -1490,7 +1692,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "77ac97955d"
   },
   {
    "section": "waterpolo-women",
@@ -1507,7 +1710,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/alimos-1757618338-HykYQxju.jpg",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "nt": "546e41e621"
   },
   {
    "section": "football-women",
@@ -1524,7 +1728,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/2a679000b33763417294af0f84aab5c2.jpg?itok=aqA59Zmn"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/2a679000b33763417294af0f84aab5c2.jpg?itok=aqA59Zmn",
+   "nt": "54b0fc5212"
   },
   {
    "section": "basketball",
@@ -1537,11 +1742,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.eurocupbasketball.com/",
+   "live": {
+    "src": "euroleague",
+    "season": "U2026",
+    "code": 126
+   },
    "start": "2026-11-18T21:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/06792bed-0383-4de2-80b9-95ecca3fd973.png",
-   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png"
+   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
+   "nt": "24b9baf5d8"
   },
   {
    "section": "handball-women",
@@ -1558,7 +1769,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "977ada4407"
   },
   {
    "section": "volley",
@@ -1575,7 +1787,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl17901894601105.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "nt": "0fe6eed454"
   },
   {
    "section": "waterpolo",
@@ -1592,7 +1805,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/glyfada-1757496556-dcU9OmwO.jpg",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "nt": "977f25899a"
   },
   {
    "section": "waterpolo-women",
@@ -1609,7 +1823,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
-   "awayLogo": "https://koecdn.twic.pics/media/ilioupoli-1757497079-gCdg0afz.png"
+   "awayLogo": "https://koecdn.twic.pics/media/ilioupoli-1757497079-gCdg0afz.png",
+   "nt": "c59590a861"
   },
   {
    "section": "basketball-women",
@@ -1626,7 +1841,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/clubs/349/logo",
-   "awayLogo": "https://apps.basket.gr/clubs/2/logo"
+   "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "nt": "975a41a728"
   },
   {
    "section": "basketball",
@@ -1643,7 +1859,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/00000005/photo_new_6A11CE7A.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/00000005/photo_new_6A11CE7A.png",
+   "nt": "590038467d"
   },
   {
    "section": "handball",
@@ -1660,7 +1877,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "3fc1fd56ea"
   },
   {
    "section": "football-women",
@@ -1677,7 +1895,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/b97ea823585e7a5a44d422f59974bac7.jpg?itok=IRlmFyow",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "nt": "62d1acc8d2"
   },
   {
    "section": "football",
@@ -1690,11 +1909,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896724",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896724"
+   },
    "start": "2026-11-22T19:30:00+02:00",
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/21969.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/21969.png",
+   "nt": "fa0f340773"
   },
   {
    "section": "waterpolo-women",
@@ -1711,7 +1936,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/shma-4-2-1-1-1-1758207317-I4sKrotf.png",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "nt": "35a1eab371"
   },
   {
    "section": "basketball-women",
@@ -1728,7 +1954,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
-   "awayLogo": "https://apps.basket.gr/clubs/82/logo"
+   "awayLogo": "https://apps.basket.gr/clubs/82/logo",
+   "nt": "66bfa222e6"
   },
   {
    "section": "waterpolo",
@@ -1745,7 +1972,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
-   "awayLogo": "https://koecdn.twic.pics/media/ilisiakos-1789898091-f0lvya6R.jpg"
+   "awayLogo": "https://koecdn.twic.pics/media/ilisiakos-1789898091-f0lvya6R.jpg",
+   "nt": "be955896f7"
   },
   {
    "section": "handball",
@@ -1762,7 +1990,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "b43486b6c7"
   },
   {
    "section": "volley",
@@ -1779,7 +2008,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl166625673654.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl166625673654.gif",
+   "nt": "45c30eb3bc"
   },
   {
    "section": "football",
@@ -1792,11 +2022,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896721",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896721"
+   },
    "start": "2026-11-29T21:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/887.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "nt": "888941a94d"
   },
   {
    "section": "waterpolo-women",
@@ -1813,7 +2049,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/panionios-1757496971-8NsrgxDo.png",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "nt": "c65960a302"
   },
   {
    "section": "football",
@@ -1830,7 +2067,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/889647d17809f7d7689211e38581fe5a.jpg?itok=FyonEAuV",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/dd68ef4637f836824756daa4d317879a.jpg?itok=N0R87cN-"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/dd68ef4637f836824756daa4d317879a.jpg?itok=N0R87cN-",
+   "nt": "2ad829a2ac"
   },
   {
    "section": "waterpolo",
@@ -1847,7 +2085,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/yno-logo-1762525447-m9yd11ip.jpg",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "nt": "1a53b67407"
   },
   {
    "section": "basketball",
@@ -1864,7 +2103,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/2A25C696/photo_new_4BF0C19C.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/2A25C696/photo_new_4BF0C19C.png",
+   "nt": "8e6dadc2a6"
   },
   {
    "section": "handball",
@@ -1881,7 +2121,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "dcd5b7da2e"
   },
   {
    "section": "volley",
@@ -1898,7 +2139,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl1718776924122.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "nt": "30f831d284"
   },
   {
    "section": "basketball-women",
@@ -1915,7 +2157,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/clubs/493/logo",
-   "awayLogo": "https://apps.basket.gr/clubs/2/logo"
+   "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "nt": "8c4af10469"
   },
   {
    "section": "football",
@@ -1928,11 +2171,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896714",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896714"
+   },
    "start": "2026-12-06T19:30:00+02:00",
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/20043.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/20043.png",
+   "nt": "aeb33d8fc2"
   },
   {
    "section": "basketball",
@@ -1945,11 +2194,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.eurocupbasketball.com/",
+   "live": {
+    "src": "euroleague",
+    "season": "U2026",
+    "code": 144
+   },
    "start": "2026-12-08T20:00:00+02:00",
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
-   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOJl/0024f0d4-55d9-4ed0-be41-68c0e90c41d5.png"
+   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOJl/0024f0d4-55d9-4ed0-be41-68c0e90c41d5.png",
+   "nt": "925c7f6965"
   },
   {
    "section": "handball",
@@ -1966,7 +2221,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "3d7269cb8e"
   },
   {
    "section": "basketball-women",
@@ -1983,7 +2239,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
-   "awayLogo": "https://apps.basket.gr/clubs/31/logo"
+   "awayLogo": "https://apps.basket.gr/clubs/31/logo",
+   "nt": "f5d2ff16c1"
   },
   {
    "section": "waterpolo",
@@ -2000,7 +2257,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
-   "awayLogo": "https://koecdn.twic.pics/media/apollon-1757488473-Yl0JuEC9.jpg"
+   "awayLogo": "https://koecdn.twic.pics/media/apollon-1757488473-Yl0JuEC9.jpg",
+   "nt": "0cc01bead3"
   },
   {
    "section": "volley",
@@ -2017,7 +2275,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14110420042832.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14110420042832.gif",
+   "nt": "e1ab3a1f35"
   },
   {
    "section": "basketball",
@@ -2034,7 +2293,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/00000002/photo_new_7F6C9D90.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "nt": "51546afb6d"
   },
   {
    "section": "football-women",
@@ -2051,7 +2311,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/d7aa6360e83232ec98861e11cdd6bc9f.jpg?itok=nLzgyfYH"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/d7aa6360e83232ec98861e11cdd6bc9f.jpg?itok=nLzgyfYH",
+   "nt": "4db3141ce1"
   },
   {
    "section": "football",
@@ -2064,11 +2325,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896709",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896709"
+   },
    "start": "2026-12-13T19:30:00+02:00",
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/443.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/443.png",
+   "nt": "d29f8e9840"
   },
   {
    "section": "basketball",
@@ -2081,11 +2348,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.eurocupbasketball.com/",
+   "live": {
+    "src": "euroleague",
+    "season": "U2026",
+    "code": 157
+   },
    "start": "2026-12-16T20:00:00+02:00",
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
-   "awayLogo": "https://media-cdn.cortextech.io/ffcb6e37-31f4-48f6-91c2-a8c9a6f791a9.png"
+   "awayLogo": "https://media-cdn.cortextech.io/ffcb6e37-31f4-48f6-91c2-a8c9a6f791a9.png",
+   "nt": "d1fb12de73"
   },
   {
    "section": "basketball-women",
@@ -2102,7 +2375,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/clubs/1776/logo",
-   "awayLogo": "https://apps.basket.gr/clubs/2/logo"
+   "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "nt": "4714450f60"
   },
   {
    "section": "waterpolo",
@@ -2119,7 +2393,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/peristeri3-1771358253-dRhtXJk1.png",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "nt": "f9efe83a6a"
   },
   {
    "section": "basketball",
@@ -2136,7 +2411,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000F/photo_new_FC6AF74E.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "nt": "7e73885876"
   },
   {
    "section": "handball-women",
@@ -2153,7 +2429,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "89312c584e"
   },
   {
    "section": "volley",
@@ -2170,7 +2447,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl17603494571792.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "nt": "ce5033089c"
   },
   {
    "section": "football",
@@ -2183,11 +2461,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896708",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896708"
+   },
    "start": "2026-12-19T19:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/8354.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "nt": "0db6ddc23a"
   },
   {
    "section": "football-women",
@@ -2204,7 +2488,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/37d919ce977355c09f73baf583cac5a1.jpg?itok=2RdeuFPP",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "nt": "1062c36618"
   },
   {
    "section": "waterpolo",
@@ -2221,7 +2506,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
-   "awayLogo": "https://koecdn.twic.pics/media/logo-1u6opn9-1757681672-ImWgfrk6.jpg"
+   "awayLogo": "https://koecdn.twic.pics/media/logo-1u6opn9-1757681672-ImWgfrk6.jpg",
+   "nt": "0e94f7e6dc"
   },
   {
    "section": "basketball",
@@ -2234,11 +2520,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.eurocupbasketball.com/",
+   "live": {
+    "src": "euroleague",
+    "season": "U2026",
+    "code": 176
+   },
    "start": "2026-12-23T20:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://media-cdn.cortextech.io/5750bc8b-dd63-48e4-8586-10d4e5e2b4e2.png",
-   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png"
+   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
+   "nt": "09cde28f5f"
   },
   {
    "section": "basketball",
@@ -2255,7 +2547,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/00000001/photo_new_160CD854.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/00000001/photo_new_160CD854.png",
+   "nt": "c424801b12"
   },
   {
    "section": "basketball",
@@ -2268,11 +2561,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.eurocupbasketball.com/",
+   "live": {
+    "src": "euroleague",
+    "season": "U2026",
+    "code": 190
+   },
    "start": "2026-12-29T20:30:00+02:00",
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
-   "awayLogo": "https://media-cdn.incrowdsports.com/1d3274d8-da86-4d21-9e97-6810ab88babe.png"
+   "awayLogo": "https://media-cdn.incrowdsports.com/1d3274d8-da86-4d21-9e97-6810ab88babe.png",
+   "nt": "25e0bb1263"
   },
   {
    "section": "volley",
@@ -2289,7 +2588,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl1599421873423.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "nt": "ae4a913929"
   },
   {
    "section": "basketball",
@@ -2306,7 +2606,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000D/photo_new_30338F54.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000D/photo_new_30338F54.png",
+   "nt": "65c924b3ff"
   },
   {
    "section": "basketball-women",
@@ -2323,7 +2624,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
-   "awayLogo": "https://apps.basket.gr/club-teams/2/logo"
+   "awayLogo": "https://apps.basket.gr/club-teams/2/logo",
+   "nt": "db1a35b470"
   },
   {
    "section": "volley",
@@ -2340,7 +2642,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl151506935980.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl151506935980.gif",
+   "nt": "750f6177ff"
   },
   {
    "section": "basketball",
@@ -2353,11 +2656,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.eurocupbasketball.com/",
+   "live": {
+    "src": "euroleague",
+    "season": "U2026",
+    "code": 207
+   },
    "start": "2027-01-06T21:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS1/1e9e0379-db30-4234-89b0-19576709c285.png",
-   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png"
+   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
+   "nt": "fd126df5f1"
   },
   {
    "section": "waterpolo-women",
@@ -2374,7 +2683,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/pekev-1789898708-1ZgUQCyK.jpeg",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "nt": "e70481be87"
   },
   {
    "section": "basketball",
@@ -2391,7 +2701,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/2A25C696/photo_new_4BF0C19C.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "nt": "a4b67c5a73"
   },
   {
    "section": "handball-women",
@@ -2408,7 +2719,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "8ee2ec0b6f"
   },
   {
    "section": "volley",
@@ -2425,7 +2737,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl1568216313930.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl1568216313930.gif",
+   "nt": "39a101501f"
   },
   {
    "section": "basketball-women",
@@ -2442,7 +2755,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/clubs/1/logo",
-   "awayLogo": "https://apps.basket.gr/clubs/2/logo"
+   "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "nt": "aeebec8764"
   },
   {
    "section": "football-women",
@@ -2459,7 +2773,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/fb84f8acc0b35a20cf5eddd3d801eaf8.jpg?itok=Lr8qTrJt"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/fb84f8acc0b35a20cf5eddd3d801eaf8.jpg?itok=Lr8qTrJt",
+   "nt": "244d18973b"
   },
   {
    "section": "football",
@@ -2472,11 +2787,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896701",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896701"
+   },
    "start": "2027-01-10T19:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/11553.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "nt": "89e585ad79"
   },
   {
    "section": "basketball",
@@ -2489,11 +2810,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.eurocupbasketball.com/",
+   "live": {
+    "src": "euroleague",
+    "season": "U2026",
+    "code": 223
+   },
    "start": "2027-01-13T19:30:00+02:00",
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
-   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/ba6e2d99-3ea9-4730-a0ce-830cccca4657.png"
+   "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/ba6e2d99-3ea9-4730-a0ce-830cccca4657.png",
+   "nt": "63a36241df"
   },
   {
    "section": "basketball-women",
@@ -2510,7 +2837,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
-   "awayLogo": "https://apps.basket.gr/clubs/802/logo"
+   "awayLogo": "https://apps.basket.gr/clubs/802/logo",
+   "nt": "6762cc08a4"
   },
   {
    "section": "waterpolo-women",
@@ -2527,7 +2855,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/nov-logo-gr-1758978938-hWBXWQRE.png",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "nt": "ce62e308b0"
   },
   {
    "section": "basketball",
@@ -2544,7 +2873,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/00000010/photo_new_2BF3BBDA.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "nt": "d534d6d458"
   },
   {
    "section": "football",
@@ -2557,11 +2887,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896694",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896694"
+   },
    "start": "2027-01-16T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/435.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/435.png",
+   "nt": "a4e84f37a6"
   },
   {
    "section": "football-women",
@@ -2578,7 +2914,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/0aa9875ddbc50bb6ac5064fc12a9039e.jpg?itok=aKr1Kf_z"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/0aa9875ddbc50bb6ac5064fc12a9039e.jpg?itok=aKr1Kf_z",
+   "nt": "afa3fa82a4"
   },
   {
    "section": "volley",
@@ -2595,7 +2932,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14424751662839.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "nt": "db80bc6290"
   },
   {
    "section": "basketball-women",
@@ -2612,7 +2950,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/clubs/7/logo",
-   "awayLogo": "https://apps.basket.gr/clubs/2/logo"
+   "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "nt": "23d9e638a4"
   },
   {
    "section": "basketball-women",
@@ -2629,7 +2968,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
-   "awayLogo": "https://apps.basket.gr/clubs/659/logo"
+   "awayLogo": "https://apps.basket.gr/clubs/659/logo",
+   "nt": "18302f77bc"
   },
   {
    "section": "waterpolo-women",
@@ -2646,7 +2986,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
-   "awayLogo": "https://koecdn.twic.pics/media/327204416-876598936727395-7539238121809845951-n-1759145224-TwVlRdRx.jpg"
+   "awayLogo": "https://koecdn.twic.pics/media/327204416-876598936727395-7539238121809845951-n-1759145224-TwVlRdRx.jpg",
+   "nt": "c5e20ae8a1"
   },
   {
    "section": "basketball",
@@ -2663,7 +3004,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/BB4B460F/photo_new_62684735.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/BB4B460F/photo_new_62684735.png",
+   "nt": "ea4bf474c9"
   },
   {
    "section": "football",
@@ -2676,11 +3018,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896795",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896795"
+   },
    "start": "2027-01-23T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/2575.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "nt": "95e7499b8f"
   },
   {
    "section": "handball-women",
@@ -2697,7 +3045,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "b55de54968"
   },
   {
    "section": "volley",
@@ -2714,7 +3063,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl16909759871795.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl16909759871795.gif",
+   "nt": "c7c902b89e"
   },
   {
    "section": "waterpolo",
@@ -2731,7 +3081,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/panathinaikos-1757496876-53QTIGxK.jpg",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "nt": "d6b36aeff6"
   },
   {
    "section": "football-women",
@@ -2748,7 +3099,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/3dba66ead9b4b634ee1c60c4c6be0fca.jpg?itok=jmYnWk68",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "nt": "65584f597c"
   },
   {
    "section": "waterpolo",
@@ -2765,7 +3117,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
-   "awayLogo": "https://koecdn.twic.pics/media/olimpiakos-1757496846-Q42PoPie.png"
+   "awayLogo": "https://koecdn.twic.pics/media/olimpiakos-1757496846-Q42PoPie.png",
+   "nt": "17d777c042"
   },
   {
    "section": "waterpolo-women",
@@ -2782,7 +3135,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/anog-logo-1759229979-jK83ObmL.png",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "nt": "6b540b1fd1"
   },
   {
    "section": "waterpolo",
@@ -2799,7 +3153,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/faliro-1757496864-n863Il8C.jpg",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "nt": "2a1d93da6e"
   },
   {
    "section": "basketball-women",
@@ -2816,7 +3171,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/clubs/51/logo",
-   "awayLogo": "https://apps.basket.gr/clubs/2/logo"
+   "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "nt": "c48e50d373"
   },
   {
    "section": "basketball",
@@ -2833,7 +3189,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/00000005/photo_new_6A11CE7A.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "nt": "69c0073c32"
   },
   {
    "section": "football",
@@ -2846,11 +3203,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896684",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896684"
+   },
    "start": "2027-01-30T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/11431.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/11431.png",
+   "nt": "681684b6ca"
   },
   {
    "section": "handball-women",
@@ -2867,7 +3230,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "cbccc8df46"
   },
   {
    "section": "football-women",
@@ -2884,7 +3248,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/19d71df6850c19084f7494c63a2cab42.jpg?itok=KtgTCCqg"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/19d71df6850c19084f7494c63a2cab42.jpg?itok=KtgTCCqg",
+   "nt": "cad1ca0b1e"
   },
   {
    "section": "volley",
@@ -2901,7 +3266,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl13607973882903.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "nt": "b2f465e194"
   },
   {
    "section": "basketball-women",
@@ -2918,7 +3284,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
-   "awayLogo": "https://apps.basket.gr/clubs/349/logo"
+   "awayLogo": "https://apps.basket.gr/clubs/349/logo",
+   "nt": "a5194bf014"
   },
   {
    "section": "waterpolo-women",
@@ -2935,7 +3302,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
-   "awayLogo": "https://koecdn.twic.pics/media/olimpiakos-1757496832-ZYWvvSWe.png"
+   "awayLogo": "https://koecdn.twic.pics/media/olimpiakos-1757496832-ZYWvvSWe.png",
+   "nt": "a6781cd3f9"
   },
   {
    "section": "waterpolo",
@@ -2952,7 +3320,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
-   "awayLogo": "https://koecdn.twic.pics/media/panionios-1757496931-xkJBSsvo.png"
+   "awayLogo": "https://koecdn.twic.pics/media/panionios-1757496931-xkJBSsvo.png",
+   "nt": "221bda7a1c"
   },
   {
    "section": "basketball",
@@ -2969,7 +3338,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000F/photo_new_FC6AF74E.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000F/photo_new_FC6AF74E.png",
+   "nt": "52d4182256"
   },
   {
    "section": "football",
@@ -2982,11 +3352,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896792",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896792"
+   },
    "start": "2027-02-06T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/132429.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "nt": "ba64ab54de"
   },
   {
    "section": "handball",
@@ -3003,7 +3379,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "df0cbd44a8"
   },
   {
    "section": "handball-women",
@@ -3020,7 +3397,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "4f8147bf19"
   },
   {
    "section": "volley",
@@ -3037,7 +3415,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl17901894601105.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl17901894601105.gif",
+   "nt": "21209e656c"
   },
   {
    "section": "football-women",
@@ -3054,7 +3433,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/f43120ba1ac31aa09a5c4afec55ab75e.jpg?itok=0eed57w4",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "nt": "c32ed7e196"
   },
   {
    "section": "waterpolo",
@@ -3071,7 +3451,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/shma-ethniku-ofpf-1758038638-0PxACujw.png",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "nt": "9df31b7dcd"
   },
   {
    "section": "football",
@@ -3084,11 +3465,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896674",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896674"
+   },
    "start": "2027-02-13T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/887.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/887.png",
+   "nt": "989c43d859"
   },
   {
    "section": "handball",
@@ -3105,7 +3492,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "cc9cac0054"
   },
   {
    "section": "handball-women",
@@ -3122,7 +3510,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "ebe4166800"
   },
   {
    "section": "volley",
@@ -3139,7 +3528,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl166625673654.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "nt": "661ce52913"
   },
   {
    "section": "football-women",
@@ -3156,7 +3546,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
-   "awayLogo": "https://www.epo.gr/modules/custom/competitions/images/blank-club-profile.png"
+   "awayLogo": "https://www.epo.gr/modules/custom/competitions/images/blank-club-profile.png",
+   "nt": "afc2b5222b"
   },
   {
    "section": "basketball",
@@ -3173,7 +3564,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/3CA10C07/photo_new_6AE0FF13.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "nt": "46814ec279"
   },
   {
    "section": "football",
@@ -3186,11 +3578,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896670",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896670"
+   },
    "start": "2027-02-20T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/21969.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "nt": "0dcdac16fc"
   },
   {
    "section": "handball",
@@ -3207,7 +3605,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "4050293cdf"
   },
   {
    "section": "handball-women",
@@ -3224,7 +3623,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "02f2ea9d76"
   },
   {
    "section": "volley",
@@ -3241,7 +3641,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl1718776924122.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl1718776924122.gif",
+   "nt": "5bdae05ff5"
   },
   {
    "section": "football-women",
@@ -3258,7 +3659,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/d073e52756ee5f17232394ecaf0b0ec1.jpg?itok=QE7RdbHR"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/d073e52756ee5f17232394ecaf0b0ec1.jpg?itok=QE7RdbHR",
+   "nt": "aca373f407"
   },
   {
    "section": "basketball-women",
@@ -3275,7 +3677,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/clubs/82/logo",
-   "awayLogo": "https://apps.basket.gr/clubs/2/logo"
+   "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "nt": "f7a6aa7dd8"
   },
   {
    "section": "basketball-women",
@@ -3292,7 +3695,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
-   "awayLogo": "https://apps.basket.gr/clubs/493/logo"
+   "awayLogo": "https://apps.basket.gr/clubs/493/logo",
+   "nt": "3c3fdeee37"
   },
   {
    "section": "football",
@@ -3305,11 +3709,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896664",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896664"
+   },
    "start": "2027-02-27T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/6790.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/6790.png",
+   "nt": "241688b9b3"
   },
   {
    "section": "handball",
@@ -3326,7 +3736,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "3f45a4e46f"
   },
   {
    "section": "volley",
@@ -3343,7 +3754,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14110420042832.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "nt": "29cfb38c0d"
   },
   {
    "section": "handball",
@@ -3360,7 +3772,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "7f23f3f6c6"
   },
   {
    "section": "basketball",
@@ -3377,7 +3790,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/00000011/photo_new_212846DF.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/00000011/photo_new_212846DF.png",
+   "nt": "6585599b6f"
   },
   {
    "section": "football",
@@ -3390,11 +3804,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896660",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896660"
+   },
    "start": "2027-03-06T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/20043.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "nt": "3dc502d90d"
   },
   {
    "section": "volley",
@@ -3411,7 +3831,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl17603494571792.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl17603494571792.gif",
+   "nt": "a370b12804"
   },
   {
    "section": "basketball-women",
@@ -3428,7 +3849,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/clubs/31/logo",
-   "awayLogo": "https://apps.basket.gr/clubs/2/logo"
+   "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "nt": "9de17b1236"
   },
   {
    "section": "waterpolo-women",
@@ -3445,7 +3867,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/xanion-1757497102-pCIxwRHQ.jpg",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "nt": "e644091329"
   },
   {
    "section": "waterpolo",
@@ -3462,7 +3885,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/nov-logo-gr-1758965899-UA7wQDNs.png",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "nt": "90f4abd94c"
   },
   {
    "section": "basketball-women",
@@ -3479,7 +3903,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
-   "awayLogo": "https://apps.basket.gr/clubs/1776/logo"
+   "awayLogo": "https://apps.basket.gr/clubs/1776/logo",
+   "nt": "721b62a46f"
   },
   {
    "section": "waterpolo",
@@ -3496,7 +3921,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
-   "awayLogo": "https://koecdn.twic.pics/media/xanion-1757572705-KVq2UMey.jpg"
+   "awayLogo": "https://koecdn.twic.pics/media/xanion-1757572705-KVq2UMey.jpg",
+   "nt": "5dc86ba800"
   },
   {
    "section": "waterpolo-women",
@@ -3513,7 +3939,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
-   "awayLogo": "https://koecdn.twic.pics/media/panionios-1757496971-8NsrgxDo.png"
+   "awayLogo": "https://koecdn.twic.pics/media/panionios-1757496971-8NsrgxDo.png",
+   "nt": "fe8a7a8f05"
   },
   {
    "section": "basketball",
@@ -3530,7 +3957,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000D/photo_new_30338F54.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "nt": "f58db96825"
   },
   {
    "section": "football",
@@ -3543,11 +3971,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896653",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896653"
+   },
    "start": "2027-03-13T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/1010.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/1010.png",
+   "nt": "4ed326a0c4"
   },
   {
    "section": "handball-women",
@@ -3564,7 +3998,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "8214c8e0e4"
   },
   {
    "section": "volley",
@@ -3581,7 +4016,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl1599421873423.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl1599421873423.gif",
+   "nt": "f38186d35e"
   },
   {
    "section": "football-women",
@@ -3598,7 +4034,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/2a679000b33763417294af0f84aab5c2.jpg?itok=aqA59Zmn",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "nt": "60f71a2e81"
   },
   {
    "section": "waterpolo",
@@ -3615,7 +4052,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
-   "awayLogo": "https://koecdn.twic.pics/media/glyfada-1757496556-dcU9OmwO.jpg"
+   "awayLogo": "https://koecdn.twic.pics/media/glyfada-1757496556-dcU9OmwO.jpg",
+   "nt": "020fb8efc0"
   },
   {
    "section": "waterpolo",
@@ -3632,7 +4070,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/ilisiakos-1789898091-f0lvya6R.jpg",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "nt": "1faa3e9509"
   },
   {
    "section": "football",
@@ -3645,11 +4084,17 @@
    "score": "",
    "tv": "",
    "url": "https://www.espn.com/soccer/match/_/gameId/401896629",
+   "live": {
+    "src": "espn",
+    "league": "gre.1",
+    "id": "401896629"
+   },
    "start": "2027-03-20T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/5276.png",
-   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+   "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "nt": "46d38302c4"
   },
   {
    "section": "handball",
@@ -3666,7 +4111,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "6768f81c01"
   },
   {
    "section": "handball-women",
@@ -3683,7 +4129,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "f302654c7d"
   },
   {
    "section": "football-women",
@@ -3700,7 +4147,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/b97ea823585e7a5a44d422f59974bac7.jpg?itok=IRlmFyow"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/b97ea823585e7a5a44d422f59974bac7.jpg?itok=IRlmFyow",
+   "nt": "e1ad5f5a93"
   },
   {
    "section": "basketball",
@@ -3717,7 +4165,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/00000002/photo_new_7F6C9D90.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/00000002/photo_new_7F6C9D90.png",
+   "nt": "39bd87ca0d"
   },
   {
    "section": "waterpolo-women",
@@ -3734,7 +4183,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/larisa-f-1789898479-XJuZR95A.png",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "nt": "369f5467c2"
   },
   {
    "section": "waterpolo",
@@ -3751,7 +4201,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
-   "awayLogo": "https://koecdn.twic.pics/media/yno-logo-1762525447-m9yd11ip.jpg"
+   "awayLogo": "https://koecdn.twic.pics/media/yno-logo-1762525447-m9yd11ip.jpg",
+   "nt": "6211fd961c"
   },
   {
    "section": "basketball",
@@ -3768,7 +4219,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/B742845D/photo_new_04E98281.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/B742845D/photo_new_04E98281.png",
+   "nt": "883fa87ab9"
   },
   {
    "section": "handball",
@@ -3785,7 +4237,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "2b4eaa274b"
   },
   {
    "section": "handball-women",
@@ -3802,7 +4255,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "a0b823b98a"
   },
   {
    "section": "volley",
@@ -3819,7 +4273,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl151506935980.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif"
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "nt": "f240cca114"
   },
   {
    "section": "football-women",
@@ -3836,7 +4291,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/d7aa6360e83232ec98861e11cdd6bc9f.jpg?itok=nLzgyfYH",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "nt": "c5ce69dd45"
   },
   {
    "section": "waterpolo-women",
@@ -3853,7 +4309,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
-   "awayLogo": "https://koecdn.twic.pics/media/alimos-1757618338-HykYQxju.jpg"
+   "awayLogo": "https://koecdn.twic.pics/media/alimos-1757618338-HykYQxju.jpg",
+   "nt": "17b796f1ac"
   },
   {
    "section": "basketball",
@@ -3870,7 +4327,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0041ADCB/photo_new_FE76D0B4.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "nt": "fab2a808d7"
   },
   {
    "section": "handball",
@@ -3887,7 +4345,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "8eaf59eeb7"
   },
   {
    "section": "waterpolo-women",
@@ -3904,7 +4363,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/ilioupoli-1757497079-gCdg0afz.png",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "nt": "30d3fcbea9"
   },
   {
    "section": "waterpolo",
@@ -3921,7 +4381,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/apollon-1757488473-Yl0JuEC9.jpg",
-   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png"
+   "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "nt": "5c25bb4749"
   },
   {
    "section": "football-women",
@@ -3938,7 +4399,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/37d919ce977355c09f73baf583cac5a1.jpg?itok=2RdeuFPP"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/37d919ce977355c09f73baf583cac5a1.jpg?itok=2RdeuFPP",
+   "nt": "7f0276bf1b"
   },
   {
    "section": "waterpolo-women",
@@ -3955,7 +4417,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
-   "awayLogo": "https://koecdn.twic.pics/media/shma-4-2-1-1-1-1758207317-I4sKrotf.png"
+   "awayLogo": "https://koecdn.twic.pics/media/shma-4-2-1-1-1-1758207317-I4sKrotf.png",
+   "nt": "a4db5c807d"
   },
   {
    "section": "waterpolo",
@@ -3972,7 +4435,8 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
-   "awayLogo": "https://koecdn.twic.pics/media/peristeri3-1771358253-dRhtXJk1.png"
+   "awayLogo": "https://koecdn.twic.pics/media/peristeri3-1771358253-dRhtXJk1.png",
+   "nt": "b347475a06"
   },
   {
    "section": "football-women",
@@ -3989,7 +4453,8 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/fb84f8acc0b35a20cf5eddd3d801eaf8.jpg?itok=Lr8qTrJt",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk"
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "nt": "669abf7273"
   },
   {
    "section": "basketball",
@@ -4006,7 +4471,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/00000001/photo_new_160CD854.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "nt": "bebdfc5372"
   },
   {
    "section": "basketball",
@@ -4023,7 +4489,8 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
-   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000A/photo_new_5DC7EFBA.png"
+   "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000A/photo_new_5DC7EFBA.png",
+   "nt": "fd196c5447"
   },
   {
    "section": "handball",
@@ -4040,7 +4507,8 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "5458cdfe42"
   },
   {
    "section": "handball",
@@ -4057,19 +4525,20 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": ""
+   "awayLogo": "",
+   "nt": "34cb6afeb2"
   }
  ],
  "updated": {
-  "football": "2026-10-26T18:48+02:00",
-  "football-women": "2026-10-26T18:48+02:00",
-  "basketball": "2026-10-26T18:48+02:00",
-  "basketball-women": "2026-10-26T18:48+02:00",
-  "volley": "2026-10-26T18:48+02:00",
-  "volley-women": "2026-10-26T18:48+02:00",
-  "handball": "2026-10-26T18:48+02:00",
-  "handball-women": "2026-10-26T18:48+02:00",
-  "waterpolo": "2026-10-26T18:48+02:00",
-  "waterpolo-women": "2026-10-26T18:48+02:00"
+  "football": "2026-10-27T12:25+02:00",
+  "football-women": "2026-10-27T12:25+02:00",
+  "basketball": "2026-10-27T12:25+02:00",
+  "basketball-women": "2026-10-27T12:25+02:00",
+  "volley": "2026-10-27T12:26+02:00",
+  "volley-women": "2026-10-27T12:26+02:00",
+  "handball": "2026-10-27T12:26+02:00",
+  "handball-women": "2026-10-27T12:26+02:00",
+  "waterpolo": "2026-10-27T12:26+02:00",
+  "waterpolo-women": "2026-10-27T12:26+02:00"
  }
 }

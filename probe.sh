@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
-B=https://paokalendar.vercel.app
-for i in $(seq 1 20); do h=$(curl -sS -m 30 "$B/api/health"); case "$h" in *byService*) break;; esac; sleep 10; done
-echo "all: $h"
-for t in m:32aab779be:pre m:32aab779be:live s:basketball:pre s:basketball:live; do echo "$t: $(curl -sS -m 30 "$B/api/health?topic=$t")"; done
+echo "== ntfy live topic"; curl -sS -m 30 "https://ntfy.sh/paokcal-x7q3-basketball-live/json?poll=1&since=3h" | cut -c1-300
+echo "== ntfy match live"; curl -sS -m 30 "https://ntfy.sh/paokcal-x7q3-m-32aab779be-live/json?poll=1&since=3h" | cut -c1-300
+echo "== header"; python3 - <<'PY'
+import json,urllib.request
+d=json.load(open("docs/../matches.json")) if False else None
+PY
+curl -sS -m 30 "https://paokalendar.vercel.app/matches.json" | python3 -c "
+import json,sys; d=json.load(sys.stdin)
+for m in d['matches']:
+  if m['nt']=='32aab779be': print(m)"

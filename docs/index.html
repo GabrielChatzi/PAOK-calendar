@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>PAOKalendar</title>
-<meta name="description" content="Πρόγραμμα, αποτελέσματα, βαθμολογίες και ειδοποιήσεις για όλα τα τμήματα του ΠΑΟΚ.">
+<meta name="description" content="Ανεπίσημη σελίδα φιλάθλων με πρόγραμμα, αποτελέσματα, βαθμολογίες και ειδοποιήσεις για όλα τα τμήματα του ΠΑΟΚ.">
 <meta name="theme-color" content="#000000">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="icons/favicon-48.png">
@@ -123,11 +123,11 @@
   /* Φίλτρα και επιλογές */
   .controls { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin-bottom: 8px; }
   .controls > * { min-width: 0; }
-  .chips { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 2px 16px; }
-  .chips::-webkit-scrollbar { display: none; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chips-hint { margin: -2px 0 0; font-size: 14px; color: var(--muted); }
   .chip {
     flex: none; border: 1.5px solid var(--ink); background: var(--paper);
-    padding: 7px 14px; border-radius: 999px; cursor: pointer; font-weight: 500; white-space: nowrap;
+    padding: 7px 14px; cursor: pointer; font-weight: 500; white-space: nowrap;
   }
   .chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
   .seg { display: flex; border: 1.5px solid var(--ink); width: 100%; }
@@ -303,10 +303,15 @@
   var data = null, standings = {};
 
   // Επιλογές που θυμάται η σελίδα (ανά συσκευή).
-  var prefs = { view: "list", sport: "all", gender: "all", when: "upcoming", venue: "all" };
+  var prefs = { view: "list", sports: [], gender: "all", when: "upcoming", venue: "all" };
   try {
     var saved = JSON.parse(localStorage.getItem("paok-filters") || "{}");
-    Object.keys(prefs).forEach(function (k) { if (saved[k]) prefs[k] = saved[k]; });
+    ["view", "gender", "when", "venue"].forEach(function (k) { if (typeof saved[k] === "string") prefs[k] = saved[k]; });
+    if (Array.isArray(saved.sports)) {
+      prefs.sports = saved.sports.filter(function (x) { return typeof x === "string"; });
+    } else if (typeof saved.sport === "string" && saved.sport !== "all") {
+      prefs.sports = [saved.sport];  // παλιά αποθήκευση με ένα άθλημα
+    }
   } catch (e) {}
   function savePrefs() { try { localStorage.setItem("paok-filters", JSON.stringify(prefs)); } catch (e) {} }
 
@@ -561,7 +566,7 @@
   // ---- Αρχική
   function passesHome(m) {
     var s = sectionOf(m);
-    if (prefs.sport !== "all" && s.sport !== prefs.sport) return false;
+    if (prefs.sports.length && prefs.sports.indexOf(s.sport) < 0) return false;
     if (prefs.gender === "men" && s.women) return false;
     if (prefs.gender === "women" && !s.women) return false;
     if (prefs.venue === "home" && !m.paokHome) return false;
@@ -585,15 +590,16 @@
   function homeHtml() {
     var sports = [], emojiFor = {};
     data.sections.forEach(function (s) { if (sports.indexOf(s.sport) < 0) sports.push(s.sport); emojiFor[s.sport] = s.emoji; });
-    var chips = '<div class="chips" data-seg="sport" role="group" aria-label="Άθλημα">' +
+    var chips = '<div class="chips" data-sports role="group" aria-label="Αθλήματα, μπορείς να διαλέξεις πολλά">' +
       [["all", "Όλα τα αθλήματα"]].concat(sports.map(function (sp) { return [sp, emojiFor[sp] + " " + sp]; })).map(function (o) {
-        return '<button type="button" class="chip" data-v="' + esc(o[0]) + '" aria-pressed="' + (o[0] === prefs.sport) + '">' + esc(o[1]) + "</button>";
-      }).join("") + "</div>";
+        var on = o[0] === "all" ? !prefs.sports.length : prefs.sports.indexOf(o[0]) >= 0;
+        return '<button type="button" class="chip" data-sport="' + esc(o[0]) + '" aria-pressed="' + on + '">' + esc(o[1]) + "</button>";
+      }).join("") + "</div>" + '<p class="chips-hint">Διάλεξε ένα ή περισσότερα αθλήματα.</p>';
     var list = data.matches.filter(passesHome);
     var body = prefs.view === "month"
       ? monthHtml(list, true)
       : listHtml(list.filter(function (m) { return prefs.when === "upcoming" ? isUpcoming(m) : !isUpcoming(m); }), prefs.when, true);
-    return '<p class="lede">Πρόγραμμα, αποτελέσματα και βαθμολογίες όλων των τμημάτων του ΠΑΟΚ, σε μία σελίδα. Ενημερώνεται μόνο του κάθε δύο ώρες.</p>' +
+    return '<p class="lede">Ανεπίσημη σελίδα φιλάθλων με πρόγραμμα, αποτελέσματα και βαθμολογίες όλων των τμημάτων του ΠΑΟΚ. Ενημερώνεται μόνη της κάθε δύο ώρες.</p>' +
       installHtml() +
       nextHtml(data.matches) +
       '<h2 class="section-title">Τμήματα</h2>' + tilesHtml() +
@@ -647,7 +653,7 @@
   function footerHtml() {
     var times = Object.keys(data.updated || {}).map(function (k) { return data.updated[k]; }).sort();
     var last = times.length ? new Date(times[times.length - 1]) : null;
-    return "<footer>" + (last ? "<p>Τελευταία αλλαγή στο πρόγραμμα: " + esc(fmtShort.format(last) + ", " + fmtTime.format(last)) + ".</p>" : "") +
+    return "<footer><p>Το PAOKalendar είναι ανεπίσημη σελίδα φιλάθλων και δεν συνδέεται με τον ΠΑΟΚ ή τις εταιρείες του.</p>" + (last ? "<p>Τελευταία αλλαγή στο πρόγραμμα: " + esc(fmtShort.format(last) + ", " + fmtTime.format(last)) + ".</p>" : "") +
       "<p>Αγώνες χωρίς ορισμένη ώρα εμφανίζονται ως «TBC» και στα ημερολόγια μπαίνουν στις 18:00.</p>" +
       "<p>Πηγές: ESPN, ΕΠΟ, esake.gr, Euroleague, basket.gr, volleyleague.gr, ΕΟΠΕ, ΟΧΕ, Water Polo League. Τα σήματα ανήκουν στις ομάδες.</p></footer>";
   }
@@ -730,6 +736,23 @@
   $("app").addEventListener("click", function (e) {
     var b = e.target.closest("button");
     if (!b) return;
+    if (b.dataset.sport) {
+      var sp = b.dataset.sport;
+      if (sp === "all") {
+        prefs.sports = [];
+      } else {
+        var i = prefs.sports.indexOf(sp);
+        if (i >= 0) prefs.sports.splice(i, 1); else prefs.sports.push(sp);
+        // Όλα επιλεγμένα είναι το ίδιο με «Όλα τα αθλήματα».
+        var total = {};
+        data.sections.forEach(function (s) { total[s.sport] = 1; });
+        if (prefs.sports.length >= Object.keys(total).length) prefs.sports = [];
+      }
+      savePrefs();
+      ui.shown = PAGE; ui.day = null;
+      render();
+      return;
+    }
     var group = b.closest("[data-seg]");
     if (group && b.dataset.v) {
       var k = group.dataset.seg;

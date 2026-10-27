@@ -4,6 +4,7 @@ on:
     branches: [probe]
 permissions:
   contents: write
+  actions: read
 jobs:
   probe:
     runs-on: ubuntu-latest
@@ -12,6 +13,8 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: ./probe.sh > probe-log.txt 2>&1 || true
+        env:
+          GH_TOKEN: ${{ github.token }}
       - run: |
           mkdir -p /tmp/p && cp -r docs probe-log.txt /tmp/p/
           git config user.name github-actions; git config user.email actions@github.com

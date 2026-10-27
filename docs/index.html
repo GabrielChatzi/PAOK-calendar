@@ -3,10 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Αγώνες ΠΑΟΚ</title>
+<title>PAOKalendar</title>
 <meta name="description" content="Πρόγραμμα, αποτελέσματα, βαθμολογίες και ειδοποιήσεις για όλα τα τμήματα του ΠΑΟΚ.">
 <meta name="theme-color" content="#000000">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fff'/%3E%3Cpath d='M0 0h6v32H0zM11 0h5v32h-5zM21 0h5v32h-5z' fill='%23000'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="icons/favicon-48.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="application-name" content="PAOKalendar">
+<meta name="apple-mobile-web-app-title" content="PAOKalendar">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@600;800&family=Fira+Sans:wght@400;500;600&display=swap&subset=greek" rel="stylesheet">
@@ -52,6 +60,25 @@
   }
   .masthead.compact h1 { font-size: clamp(36px, 10vw, 56px); }
   .masthead h1 a { text-decoration: none; }
+  .masthead h1 .light { font-weight: 600; color: var(--muted); }
+  .masthead { padding-top: calc(56px + env(safe-area-inset-top)); }
+  .masthead.compact { padding-top: calc(28px + env(safe-area-inset-top)); }
+  main { padding-bottom: calc(48px + env(safe-area-inset-bottom)); }
+
+  /* Εγκατάσταση ως εφαρμογή */
+  .install {
+    display: grid; grid-template-columns: 52px 1fr auto; gap: 12px; align-items: center;
+    border: 1.5px solid var(--ink); padding: 12px; margin: 0 0 24px;
+  }
+  .install img { width: 52px; height: 52px; border-radius: 12px; display: block; }
+  .install strong { display: block; font: 800 20px/1.1 var(--display); }
+  .install p { margin: 2px 0 0; font-size: 14px; color: var(--muted); }
+  .install .btn { padding: 8px 12px; }
+  .install-close {
+    border: 0; background: transparent; font-size: 22px; line-height: 1; padding: 4px 6px; cursor: pointer;
+    align-self: start;
+  }
+  .share-glyph { display: inline-block; vertical-align: -3px; }
 
   main { max-width: 680px; margin: 0 auto; padding: 0 16px 48px; }
   .lede { margin: 18px 0 28px; color: var(--muted); max-width: 52ch; }
@@ -87,8 +114,8 @@
     padding: 12px 12px 14px; position: relative; min-height: 112px;
   }
   .tile:active { background: var(--ink); color: var(--paper); }
-  .tile-name { font: 800 20px/1.05 var(--display); display: block; padding-right: 30px; overflow-wrap: anywhere; }
-  .tile-emoji { position: absolute; top: 10px; right: 10px; font-size: 20px; }
+  .tile-name { font: 800 20px/1.05 var(--display); display: block; hyphens: auto; }
+  .tile-emoji { display: block; font-size: 20px; line-height: 1; margin-bottom: 6px; }
   .tile-next { display: block; font-size: 14px; margin-top: 8px; line-height: 1.35; }
   .tile-pos { display: block; font-size: 13px; color: var(--muted); margin-top: 4px; }
   .tile:active .tile-pos { color: inherit; }
@@ -253,7 +280,7 @@
 </head>
 <body>
 <header class="masthead" id="masthead">
-  <div class="masthead-inner"><h1><a href="#/">Αγώνες ΠΑΟΚ</a></h1></div>
+  <div class="masthead-inner"><h1><a href="#/" aria-label="PAOKalendar, αρχική">PAOK<span class="light">alendar</span></a></h1></div>
 </header>
 
 <main id="app"><p class="empty">Φόρτωση προγράμματος…</p></main>
@@ -566,7 +593,8 @@
     var body = prefs.view === "month"
       ? monthHtml(list, true)
       : listHtml(list.filter(function (m) { return prefs.when === "upcoming" ? isUpcoming(m) : !isUpcoming(m); }), prefs.when, true);
-    return '<p class="lede">Πρόγραμμα, αποτελέσματα και βαθμολογίες όλων των τμημάτων, σε μία σελίδα. Ενημερώνεται μόνο του κάθε δύο ώρες.</p>' +
+    return '<p class="lede">Πρόγραμμα, αποτελέσματα και βαθμολογίες όλων των τμημάτων του ΠΑΟΚ, σε μία σελίδα. Ενημερώνεται μόνο του κάθε δύο ώρες.</p>' +
+      installHtml() +
       nextHtml(data.matches) +
       '<h2 class="section-title">Τμήματα</h2>' + tilesHtml() +
       '<h2 class="section-title">Όλοι οι αγώνες</h2>' +
@@ -624,6 +652,47 @@
       "<p>Πηγές: ESPN, ΕΠΟ, esake.gr, Euroleague, basket.gr, volleyleague.gr, ΕΟΠΕ, ΟΧΕ, Water Polo League. Τα σήματα ανήκουν στις ομάδες.</p></footer>";
   }
 
+  // ---- Εγκατάσταση ως εφαρμογή
+  var installEvent = null;
+  var isStandalone = window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+  var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  var installDismissed = false;
+  try { installDismissed = localStorage.getItem("paok-install-dismissed") === "1"; } catch (e) {}
+
+  var SHARE_ICON = '<svg class="share-glyph" width="16" height="18" viewBox="0 0 16 18" aria-hidden="true">' +
+    '<path d="M8 1v10M4.5 4.5 8 1l3.5 3.5M3 8H1.5v8.5h13V8H13" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>';
+
+  function installHtml() {
+    if (isStandalone || installDismissed) return "";
+    var text, action = "";
+    if (installEvent) {
+      text = "Βάλ' το στην αρχική οθόνη. Ανοίγει σε πλήρη οθόνη και δουλεύει και χωρίς σύνδεση.";
+      action = '<button type="button" class="btn solid" data-act="install">Εγκατάσταση</button>';
+    } else if (isIOS) {
+      text = "Στο Safari πάτα " + SHARE_ICON + " και μετά «Προσθήκη στην οθόνη Αφετηρίας».";
+    } else {
+      return "";
+    }
+    return '<div class="install" role="region" aria-label="Εγκατάσταση εφαρμογής">' +
+      '<img src="icons/apple-touch-icon.png" alt="">' +
+      "<div><strong>PAOKalendar στο κινητό</strong><p>" + text + "</p>" +
+      (action ? '<div style="margin-top:8px">' + action + "</div>" : "") + "</div>" +
+      '<button type="button" class="install-close" data-act="install-close" aria-label="Κλείσιμο">×</button></div>';
+  }
+
+  window.addEventListener("beforeinstallprompt", function (e) {
+    e.preventDefault();
+    installEvent = e;
+    if (data && !route().key) render();
+  });
+  window.addEventListener("appinstalled", function () {
+    installEvent = null;
+    isStandalone = true;
+    if (data) render();
+    toast("Το PAOKalendar μπήκε στην αρχική οθόνη.");
+  });
+
   // ---- Δρομολόγηση
   function route() {
     var parts = location.hash.replace(/^#\/?/, "").split("/");
@@ -639,7 +708,7 @@
       lastRoute = sig;
     }
     $("masthead").classList.toggle("compact", !!r.key);
-    document.title = r.key ? "ΠΑΟΚ " + data.sectionMap[r.key].name : "Αγώνες ΠΑΟΚ";
+    document.title = r.key ? data.sectionMap[r.key].name + " – PAOKalendar" : "PAOKalendar";
     $("app").innerHTML = r.key ? sectionHtml(r.key, r.tab) : homeHtml();
   }
 
@@ -673,16 +742,31 @@
     if (b.dataset.copy) { copy(b.dataset.copy, b.dataset.msg); return; }
     if (b.dataset.day && !b.disabled) { ui.day = b.dataset.day; render(); return; }
     var act = b.dataset.act;
+    if (act === "install" && installEvent) {
+      installEvent.prompt();
+      installEvent.userChoice.then(function () { installEvent = null; render(); });
+      return;
+    }
+    if (act === "install-close") {
+      installDismissed = true;
+      try { localStorage.setItem("paok-install-dismissed", "1"); } catch (e) {}
+      render();
+      return;
+    }
     if (act === "more") { ui.shown += PAGE; render(); }
     if (act === "prev-month") { ui.month = addMonths(ui.month, -1); ui.day = null; render(); }
     if (act === "next-month") { ui.month = addMonths(ui.month, 1); ui.day = null; render(); }
   });
   window.addEventListener("hashchange", render);
 
-  Promise.all([
-    fetch("matches.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }),
-    fetch("standings.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
-  ]).then(function (res) {
+  var loadedAt = 0;
+  function load() {
+    return Promise.all([
+      fetch("matches.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }),
+      fetch("standings.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
+    ]).then(apply);
+  }
+  function apply(res) {
     data = res[0]; standings = res[1] || {};
     data.ntfy = data.ntfy || { server: "https://ntfy.sh", prefix: "paokcal-x7q3", kinds: ["pre", "time", "result"] };
     data.sectionMap = {};
@@ -692,10 +776,27 @@
       if (logo && !paokLogo[m.section]) paokLogo[m.section] = logo;
       if (logo && !paokLogo._any) paokLogo._any = logo;
     });
+    loadedAt = Date.now();
     render();
-  }).catch(function () {
+  }
+
+  load().catch(function () {
     $("app").innerHTML = '<p class="empty">Το πρόγραμμα δεν φόρτωσε. Έλεγξε τη σύνδεσή σου και ανανέωσε τη σελίδα.</p>';
   });
+
+  // Όταν η εφαρμογή ξαναέρχεται στο προσκήνιο, φέρνει νέα δεδομένα αν έχουν περάσει 10 λεπτά.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "visible" && data && Date.now() - loadedAt > 10 * 60 * 1000) {
+      var y = window.scrollY;
+      load().then(function () { window.scrollTo(0, y); }).catch(function () {});
+    }
+  });
+
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("sw.js").catch(function () {});
+    });
+  }
 })();
 </script>
 </body>

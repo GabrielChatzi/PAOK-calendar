@@ -592,82 +592,82 @@
      "logo": "https://media-cdn.incrowdsports.com/1d3274d8-da86-4d21-9e97-6810ab88babe.png",
      "paok": false,
      "cells": [
+      "5",
       "4",
-      "3",
       "1",
-      "+55"
+      "+58"
      ]
     },
     {
      "pos": 2,
-     "team": "ΠΑΟΚ",
-     "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
-     "paok": true,
-     "cells": [
-      "4",
-      "3",
-      "1",
-      "+18"
-     ]
-    },
-    {
-     "pos": 3,
-     "team": "Lietkabelis",
-     "logo": "https://media-cdn.cortextech.io/ffcb6e37-31f4-48f6-91c2-a8c9a6f791a9.png",
-     "paok": false,
-     "cells": [
-      "4",
-      "3",
-      "1",
-      "+14"
-     ]
-    },
-    {
-     "pos": 4,
-     "team": "Manresa",
-     "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/06792bed-0383-4de2-80b9-95ecca3fd973.png",
-     "paok": false,
-     "cells": [
-      "4",
-      "2",
-      "2",
-      "+5"
-     ]
-    },
-    {
-     "pos": 5,
      "team": "Ulm",
      "logo": "https://media-cdn.cortextech.io/5750bc8b-dd63-48e4-8586-10d4e5e2b4e2.png",
      "paok": false,
      "cells": [
-      "4",
+      "5",
+      "3",
       "2",
+      "+20"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "Manresa",
+     "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/06792bed-0383-4de2-80b9-95ecca3fd973.png",
+     "paok": false,
+     "cells": [
+      "5",
+      "3",
       "2",
-      "+2"
+      "+16"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "ΠΑΟΚ",
+     "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
+     "paok": true,
+     "cells": [
+      "5",
+      "3",
+      "2",
+      "+15"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "Lietkabelis",
+     "logo": "https://media-cdn.cortextech.io/ffcb6e37-31f4-48f6-91c2-a8c9a6f791a9.png",
+     "paok": false,
+     "cells": [
+      "5",
+      "3",
+      "2",
+      "-4"
      ]
     },
     {
      "pos": 6,
-     "team": "Roma",
-     "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS1/1e9e0379-db30-4234-89b0-19576709c285.png",
-     "paok": false,
-     "cells": [
-      "4",
-      "2",
-      "2",
-      "-23"
-     ]
-    },
-    {
-     "pos": 7,
      "team": "Bosna",
      "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOJl/0024f0d4-55d9-4ed0-be41-68c0e90c41d5.png",
      "paok": false,
      "cells": [
-      "4",
-      "1",
+      "5",
+      "2",
       "3",
-      "-6"
+      "-1"
+     ]
+    },
+    {
+     "pos": 7,
+     "team": "Roma",
+     "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS1/1e9e0379-db30-4234-89b0-19576709c285.png",
+     "paok": false,
+     "cells": [
+      "5",
+      "2",
+      "3",
+      "-28"
      ]
     },
     {
@@ -676,10 +676,10 @@
      "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/ba6e2d99-3ea9-4730-a0ce-830cccca4657.png",
      "paok": false,
      "cells": [
-      "4",
+      "5",
       "0",
-      "4",
-      "-65"
+      "5",
+      "-76"
      ]
     }
    ]

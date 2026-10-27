@@ -112,7 +112,7 @@ def ordinal_period(q: int) -> str:
 
 
 def events(m: dict, old: dict | None, new: dict) -> list[tuple[str, str]]:
-    """(τίτλος, κείμενο) για ό,τι άλλαξε από την προηγούμενη ανάγνωση."""
+    """(τίτλος, κείμενο) για ό,τι άλλαξε από την προηγούμενη ανάγνωση. Το τελικό είναι πάντα τελευταίο."""
     if old is None:
         return []  # πρώτη ανάγνωση: μόνο σημείο αναφοράς
     e = notify.EMOJI.get(m["section"], "")
@@ -178,7 +178,10 @@ def main() -> int:
                 continue
             old = states.get(m["uid"])
             for title, message in events(m, old, new):
-                notify.send(m["section"], "live", title, message, match=m)
+                final = old is not None and old["state"] != "post" and new["state"] == "post" and "Τελικό" in title
+                # Το τελικό πηγαίνει και στο θέμα «result» του αγώνα.
+                notify.send(m["section"], "live", title, message, match=m,
+                            also_match_kinds=("result",) if final else ())
             if old is None or (old["state"], old["home"], old["away"]) != (new["state"], new["home"], new["away"]):
                 print(f"{now:%H:%M} {m['home']} – {m['away']}: {new['state']} {new['home']}-{new['away']} {new.get('detail', '')}")
             states[m["uid"]] = new

@@ -7,8 +7,9 @@
     <PREFIX>-<τμήμα>-live    έναρξη, γκολ/περίοδοι, τέλος (μόνο όπου υπάρχει live, βλ. live.py)
     <PREFIX>-<τμήμα>-result  τελικό αποτέλεσμα
 
-Επιπλέον, κάθε αγώνας έχει δικό του θέμα, <PREFIX>-m-<id>, για όποιον θέλει ειδοποιήσεις
-μόνο για ένα συγκεκριμένο ματς. Εκεί πηγαίνουν όλα τα παραπάνω για τον αγώνα αυτό.
+Επιπλέον, κάθε αγώνας έχει δικά του θέματα, για όποιον θέλει ειδοποιήσεις μόνο για ένα ματς:
+    <PREFIX>-m-<id>          όλα τα παραπάνω για τον αγώνα αυτό
+    <PREFIX>-m-<id>-<είδος>  μόνο ένα είδος (pre, time, live, result)
 
 Οι αλλαγές και τα αποτελέσματα στέλνονται από το build_calendars.py όταν ενημερώνεται το
 πρόγραμμα. Οι υπενθυμίσεις στέλνονται από αυτό το script (python3 notify.py reminders),
@@ -51,8 +52,8 @@ def topic(section: str, kind: str) -> str:
     return f"{TOPIC_PREFIX}-{section}-{kind}"
 
 
-def match_topic(m: dict) -> str:
-    return f"{TOPIC_PREFIX}-m-{m['nt']}"
+def match_topic(m: dict, kind: str | None = None) -> str:
+    return f"{TOPIC_PREFIX}-m-{m['nt']}" + (f"-{kind}" if kind else "")
 
 
 def enabled() -> bool:
@@ -89,12 +90,21 @@ def _post(topic_name: str, title: str, message: str, click: str, tags: list[str]
 
 
 def send(section: str, kind: str, title: str, message: str, match: dict | None = None,
-         to_match: bool = True, tags: list[str] | None = None) -> None:
-    """Στέλνει στο θέμα του τμήματος και, αν δοθεί αγώνας, και στο θέμα του αγώνα."""
+         to_match: bool = True, also_match_kinds: tuple[str, ...] = (), tags: list[str] | None = None) -> None:
+    """Στέλνει στο θέμα του τμήματος και, αν δοθεί αγώνας, και στα θέματα του αγώνα.
+
+    also_match_kinds: επιπλέον θέματα του αγώνα (π.χ. το τελικό από το live πηγαίνει και στο «result»).
+    """
     click = f"{SITE}#/{section}"
     _post(topic(section, kind), title, message, click, tags)
-    if match is not None and to_match and match.get("nt"):
+    if match is None or not match.get("nt"):
+        return
+    click = f"{SITE}#/m/{match['nt']}"
+    kinds = ((kind,) if to_match else ()) + tuple(also_match_kinds)
+    if to_match:
         _post(match_topic(match), title, message, click, tags)
+    for k in kinds:
+        _post(match_topic(match, k), title, message, click, tags)
 
 
 def changes(previous: list[dict], current: list[dict], sections: set[str]) -> list[tuple]:

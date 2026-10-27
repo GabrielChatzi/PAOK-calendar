@@ -84,8 +84,8 @@ def espn_state(live: dict) -> dict:
 def euroleague_state(live: dict) -> dict:
     """Σκορ από το live.euroleague.net. Πριν από το τζάμπολ η απάντηση είναι κενή (= δεν ξεκίνησε).
 
-    «Quarter» είναι η τρέχουσα περίοδος· στα διαλείμματα γίνεται 0. Το «done» μετρά τις
-    περιόδους που έχουν τελειώσει, ώστε το τέλος περιόδου να βγαίνει σωστά και στα διαλείμματα.
+    «Quarter» είναι η τρέχουσα περίοδος· στα διαλείμματα γίνεται 0. Ποια περίοδος τελείωσε
+    το βρίσκει η track_periods() από την τελευταία περίοδο που είδε.
     """
     url = f"https://live.euroleague.net/api/Header?gamecode={live['code']}&seasoncode={live['season']}"
     h = get_json(url) or {}
@@ -103,12 +103,26 @@ def euroleague_state(live: dict) -> dict:
         state = "post"
     else:
         state = "pre"
-    # Περίοδοι με σκορ (ScoreQuarterNA/B είναι αθροιστικά): όσες έχουν μη μηδενικό σκορ έχουν παιχτεί.
-    played = sum(1 for q in range(1, 5) if num(h.get(f"ScoreQuarter{q}A")) or num(h.get(f"ScoreQuarter{q}B")))
-    done = quarter - 1 if quarter >= 1 else played
     clock = str(h.get("RemainingPartialTime") or "").strip()
     detail = f"{quarter}η περίοδος {clock}".strip() if quarter >= 1 else ("Διάλειμμα" if state == "in" else "")
-    return {"state": state, "home": a, "away": b, "quarter": quarter, "done": max(done, 0), "detail": detail}
+    return {"state": state, "home": a, "away": b, "quarter": quarter, "detail": detail}
+
+
+def track_periods(old: dict | None, new: dict) -> None:
+    """Συμπληρώνει «seen» (τελευταία περίοδος σε εξέλιξη) και «done» (περίοδοι που τελείωσαν).
+
+    Στο διάλειμμα (περίοδος 0) τελείωσε η τελευταία που είδαμε. Αν η παρακολούθηση ξεκινήσει
+    μέσα σε διάλειμμα, δεν ξέρουμε ποια ήταν: done = None μέχρι να αρχίσει η επόμενη.
+    """
+    q = new.get("quarter", 0)
+    seen = q or (old or {}).get("seen", 0)
+    new["seen"] = seen
+    if q >= 1:
+        new["done"] = q - 1
+    elif new["state"] == "in":
+        new["done"] = seen or None
+    else:
+        new["done"] = (old or {}).get("done")
 
 
 SOURCES = {"espn": espn_state, "euroleague": euroleague_state}
@@ -149,10 +163,12 @@ def events(m: dict, old: dict | None, new: dict) -> list[tuple[str, str]]:
         if new.get("halftime") and not old.get("halftime"):
             out.append((f"{e} Ημίχρονο: {score_text(m, new)}", comp))
     if m["live"]["src"] == "euroleague" and new["state"] == "in" and old["state"] == "in":
-        d_old, d_new = old.get("done", 0), new.get("done", 0)
+        d_old, d_new = old.get("done"), new.get("done")
         # Μετά την 4η, αν το σκορ δεν είναι ισόπαλο, έρχεται το «Τελικό» αντί για «Τέλος περιόδου».
-        if d_new > d_old and not (d_new >= 4 and new["home"] != new["away"]):
-            out.append((f"{e} Τέλος {ordinal_period(d_new)}: {score_text(m, new)}", comp))
+        if d_old is not None and d_new is not None and d_new > d_old and not (d_new >= 4 and new["home"] != new["away"]):
+            what = ("Ημίχρονο" if d_new == 2 else "Ισοπαλία, πάμε παράταση" if d_new == 4
+                    else f"Τέλος {ordinal_period(d_new)}")
+            out.append((f"{e} {what}: {score_text(m, new)}", comp))
     if old["state"] != "post" and new["state"] == "post":
         out.append((f"{e} Τελικό: {score_text(m, new)}", comp))
     return out
@@ -191,6 +207,8 @@ def main() -> int:
                 print(f"  ! {m['home']} – {m['away']}: {e}", file=sys.stderr)
                 continue
             old = states.get(m["uid"])
+            if m["live"]["src"] == "euroleague":
+                track_periods(old, new)
             for title, message in events(m, old, new):
                 final = old is not None and old["state"] != "post" and new["state"] == "post" and "Τελικό" in title
                 # Το τελικό πηγαίνει και στο θέμα «result» του αγώνα.

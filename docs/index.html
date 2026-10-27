@@ -797,7 +797,7 @@
     var body = prefs.view === "month"
       ? monthHtml(list, true)
       : listHtml(list.filter(function (m) { return prefs.when === "upcoming" ? isUpcoming(m) : !isUpcoming(m); }), prefs.when, true);
-    return '<p class="lede">Ανεπίσημη σελίδα φιλάθλων με πρόγραμμα, αποτελέσματα και βαθμολογίες όλων των τμημάτων του ΠΑΟΚ. Ενημερώνεται μόνη της κάθε δύο ώρες.</p>' +
+    return '<p class="lede">Ανεπίσημη σελίδα φιλάθλων με πρόγραμμα, αποτελέσματα και βαθμολογίες όλων των τμημάτων του ΠΑΟΚ. Η εφαρμογή ενημερώνεται αυτόματα, κάθε 2 ώρες.</p>' +
       installHtml() +
       nextHtml(data.matches) +
       '<h2 class="section-title">Τμήματα</h2>' + tilesHtml() +
@@ -850,9 +850,7 @@
   }
 
   function footerHtml() {
-    var times = Object.keys(data.updated || {}).map(function (k) { return data.updated[k]; }).sort();
-    var last = times.length ? new Date(times[times.length - 1]) : null;
-    return "<footer><p>Το PAOKalendar είναι ανεπίσημη σελίδα φιλάθλων και δεν συνδέεται με τον ΠΑΟΚ ή τις εταιρείες του.</p>" + (last ? "<p>Τελευταία αλλαγή στο πρόγραμμα: " + esc(fmtShort.format(last) + ", " + fmtTime.format(last)) + ".</p>" : "") +
+    return "<footer><p>Το PAOKalendar είναι ανεπίσημη σελίδα φιλάθλων και δεν συνδέεται με τον ΠΑΟΚ ή τις εταιρείες του.</p>" +
       "<p>Αγώνες χωρίς ορισμένη ώρα εμφανίζονται ως «TBC» και στα ημερολόγια μπαίνουν στις 18:00.</p>" +
       "<p>Πηγές: ESPN, ΕΠΟ, esake.gr, Euroleague, basket.gr, volleyleague.gr, ΕΟΠΕ, ΟΧΕ, Water Polo League. Τα σήματα ανήκουν στις ομάδες.</p>" +
       '<p><a href="#/app">Το PAOKalendar ως εφαρμογή στο κινητό</a></p></footer>';

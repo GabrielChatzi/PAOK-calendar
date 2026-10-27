@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
-mkdir -p docs; touch docs/.keep
-sleep 30
-for i in 1 2 3 4 5 6; do
-  page=$(curl -sS "https://paokalendar.vercel.app/")
-  data=$(curl -sS "https://paokalendar.vercel.app/matches.json")
-  if echo "$page" | grep -q 'data-bell' && echo "$data" | grep -q '"nt"'; then echo "LIVE: new page and data"; exit 0; fi
-  sleep 20
-done
-echo "NOT YET"
+mkdir -p docs/p
+curl -sS -o docs/p/espn_summary.json "https://site.api.espn.com/apis/site/v2/sports/soccer/gre.1/summary?event=401896740"
+curl -sS -o docs/p/el_header.json "https://live.euroleague.net/api/Header?gamecode=64&seasoncode=U2026"
+ls -la docs/p

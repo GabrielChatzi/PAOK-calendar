@@ -1,0 +1,149 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Ποδόσφαιρο Γυναικών – Εκτός 
+ έδρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:football-women-epo6-6d39134a5aca@paok-calendar
+DTSTAMP:20261026T164807Z
+DTSTART;TZID=Europe/Athens:20260919T134500
+DTEND;TZID=Europe/Athens:20260919T154500
+SUMMARY:⚽ ΑΕΚ 0-1 ΠΑΟΚ
+LOCATION:ΔΗΜ.ΓΥΜΝΑΣΤΗΡΙΟ ΠΟΔ.ΑΓ.ΑΝΑΡΓΥΡΩΝ
+DESCRIPTION:Α' Εθνική Κατηγορία Γυναικών – 1η Φ
+ ΑΣΗ\nΤελικό σκορ: ΑΕΚ 0-1 ΠΑΟΚ
+URL:https://www.epo.gr/el/competition/6/matches
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-epo6-79471a7bb64c@paok-calendar
+DTSTAMP:20261026T164807Z
+DTSTART;TZID=Europe/Athens:20261018T160000
+DTEND;TZID=Europe/Athens:20261018T180000
+SUMMARY:⚽ ΒΟΛΟΣ ΝΠΣ 0-3 ΠΑΟΚ
+LOCATION:ΑΘΛΗΤΙΚΟ ΚΕΝΤΡΟ ΟΛΓΑ ΒΑΣΔΕΚΗ
+DESCRIPTION:Α' Εθνική Κατηγορία Γυναικών – 1η Φ
+ ΑΣΗ\nΤελικό σκορ: ΒΟΛΟΣ ΝΠΣ 0-3 ΠΑΟΚ
+URL:https://www.epo.gr/el/competition/6/matches
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-epo6-0c36e1ef3ec5@paok-calendar
+DTSTAMP:20261026T164807Z
+DTSTART;TZID=Europe/Athens:20261101T140000
+DTEND;TZID=Europe/Athens:20261101T160000
+SUMMARY:⚽ ΠΑΣ ΠΥΡΓΟΣ – ΠΑΟΚ
+LOCATION:ΔΗΜΟΤΙΚΟ ΣΤΑΔ. ΠΥΡΓΟΥ
+DESCRIPTION:Α' Εθνική Κατηγορία Γυναικών – 1η Φ
+ ΑΣΗ
+URL:https://www.epo.gr/el/competition/6/matches
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-epo6-ec21cf7bb958@paok-calendar
+DTSTAMP:20261026T164807Z
+DTSTART;TZID=Europe/Athens:20261107T150000
+DTEND;TZID=Europe/Athens:20261107T170000
+SUMMARY:⚽ ΟΔΥΣΣΕΑΣ ΜΟΣΧΑΤΟΥ WFC – ΠΑΟΚ
+LOCATION:ΔΗΜ.ΜΟΣΧΑΤΟΥ
+DESCRIPTION:Α' Εθνική Κατηγορία Γυναικών – 1η Φ
+ ΑΣΗ
+URL:https://www.epo.gr/el/competition/6/matches
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-epo6-3a828102f1cf@paok-calendar
+DTSTAMP:20261026T164807Z
+DTSTART;TZID=Europe/Athens:20261122T123000
+DTEND;TZID=Europe/Athens:20261122T143000
+SUMMARY:⚽ ΑΣΤΕΡΑΣ ΤΡΙΠΟΛΗΣ – ΠΑΟΚ
+LOCATION:ΓΗΠ. Θ. ΚΟΛΟΚΟΤΡΩΝΗΣ
+DESCRIPTION:Α' Εθνική Κατηγορία Γυναικών – 1η Φ
+ ΑΣΗ
+URL:https://www.epo.gr/el/competition/6/matches
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-epo6-d6b04a8619c1@paok-calendar
+DTSTAMP:20261026T164807Z
+DTSTART;TZID=Europe/Athens:20261220T150000
+DTEND;TZID=Europe/Athens:20261220T170000
+SUMMARY:⚽ ΑΟ ΡΕΑ – ΠΑΟΚ
+LOCATION:ΔΗΜΟΤΙΚΟ ΣΤΑΔΙΟ ΡΕΘΥΜΝΟΥ (ΣΟΧΩΡΑΣ)
+DESCRIPTION:Α' Εθνική Κατηγορία Γυναικών – 1η Φ
+ ΑΣΗ
+URL:https://www.epo.gr/el/competition/6/matches
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-epo6-60ed8b582507@paok-calendar
+DTSTAMP:20261026T164807Z
+DTSTART;TZID=Europe/Athens:20270124T150000
+DTEND;TZID=Europe/Athens:20270124T170000
+SUMMARY:⚽ ΑΟ ΑΓ.ΠΑΡΑΣΚΕΥΗΣ – ΠΑΟΚ
+LOCATION:ΔΗΜ.ΑΘΛ.ΚΕΝΤΡΟ ΑΓ.ΠΑΡΑΣΚΕΥΗΣ
+DESCRIPTION:Α' Εθνική Κατηγορία Γυναικών – 1η Φ
+ ΑΣΗ
+URL:https://www.epo.gr/el/competition/6/matches
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-epo6-efcdfad38ccb@paok-calendar
+DTSTAMP:20261026T164807Z
+DTSTART;TZID=Europe/Athens:20270207T150000
+DTEND;TZID=Europe/Athens:20270207T170000
+SUMMARY:⚽ ΚΗΦΙΣΙΑ – ΠΑΟΚ
+LOCATION:ΔΗΜΟΤΙΚΟ ΓΗΠΕΔΟ ΚΑΜΑΤΕΡΟΥ
+DESCRIPTION:Α' Εθνική Κατηγορία Γυναικών – 1η Φ
+ ΑΣΗ
+URL:https://www.epo.gr/el/competition/6/matches
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-epo6-8a7f5be037cd@paok-calendar
+DTSTAMP:20261026T164807Z
+DTSTART;TZID=Europe/Athens:20270314T150000
+DTEND;TZID=Europe/Athens:20270314T170000
+SUMMARY:⚽ ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ – ΠΑΟΚ
+LOCATION:Α.Κ.ΠΑΟ- Γ.ΚΑΛΑΦΑΤΗΣ
+DESCRIPTION:Α' Εθνική Κατηγορία Γυναικών – 1η Φ
+ ΑΣΗ
+URL:https://www.epo.gr/el/competition/6/matches
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-epo6-be0c5530aed5@paok-calendar
+DTSTAMP:20261026T164807Z
+DTSTART;TZID=Europe/Athens:20270328T150000
+DTEND;TZID=Europe/Athens:20270328T170000
+SUMMARY:⚽ ΟΦΗ – ΠΑΟΚ
+LOCATION:ΒΑΡΔΙΝΟΓΙΑΝΝΕΙΟ Α. Κ.
+DESCRIPTION:Α' Εθνική Κατηγορία Γυναικών – 1η Φ
+ ΑΣΗ
+URL:https://www.epo.gr/el/competition/6/matches
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-epo6-9099a5ce3acb@paok-calendar
+DTSTAMP:20261026T164807Z
+DTSTART;TZID=Europe/Athens:20270411T160000
+DTEND;TZID=Europe/Athens:20270411T180000
+SUMMARY:⚽ ΣΕΙΡΗΝΕΣ ΓΡΕΒΕΝΩΝ – ΠΑΟΚ
+LOCATION:ΓΗΠΕΔΟ ΕΠΣ ΓΡΕΒΕΝΩΝ
+DESCRIPTION:Α' Εθνική Κατηγορία Γυναικών – 1η Φ
+ ΑΣΗ
+URL:https://www.epo.gr/el/competition/6/matches
+END:VEVENT
+END:VCALENDAR

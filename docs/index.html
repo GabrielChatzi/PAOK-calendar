@@ -1492,15 +1492,20 @@
     }
     if (L.src === "euroleague") {
       return fetch("https://live.euroleague.net/api/Header?gamecode=" + encodeURIComponent(L.code) +
-        "&seasoncode=" + encodeURIComponent(L.season), { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (h) {
+        "&seasoncode=" + encodeURIComponent(L.season), { cache: "no-store" })
+        .then(function (r) { return r.text(); })
+        .then(function (t) { return t.trim() ? JSON.parse(t) : {}; })  // κενό πριν από το τζάμπολ
+        .then(function (h) {
         var st = euroleagueState(h);
-        var quarters = [], prevA = 0, prevB = 0;
+        // Πάντα οι 4 περίοδοι· όσες δεν έχουν παιχτεί μένουν κενές. Η πηγή δίνει αθροιστικά σκορ
+        // και στα διαλείμματα (περίοδος 0) έχει ήδη γεμίσει την επόμενη με το ίδιο σκορ.
+        var quarters = [], prevA = 0, prevB = 0, cur = st.quarter || 0;
         for (var q = 1; q <= 4; q++) {
           var ca = +h["ScoreQuarter" + q + "A"] || 0, cb = +h["ScoreQuarter" + q + "B"] || 0;
-          var reached = st.state === "post" || (st.quarter || 0) >= q;
-          if (!reached) break;
-          quarters.push({ label: q + "η", home: Math.max(0, ca - prevA), away: Math.max(0, cb - prevB) });
-          prevA = ca || prevA; prevB = cb || prevB;
+          var dA = Math.max(0, ca - prevA), dB = Math.max(0, cb - prevB);
+          var played = st.state === "post" || (cur ? q <= cur : st.state === "in" && (dA > 0 || dB > 0));
+          quarters.push({ label: q + "η", home: played ? dA : "", away: played ? dB : "" });
+          if (played) { prevA = Math.max(prevA, ca); prevB = Math.max(prevB, cb); }
         }
         var ota = +h.ScoreExtraTimeA || 0, otb = +h.ScoreExtraTimeB || 0;
         if (ota || otb) quarters.push({ label: "Παρ.", home: ota > prevA ? ota - prevA : ota, away: otb > prevB ? otb - prevB : otb });

@@ -72,6 +72,17 @@
   .moved strong { display: block; font: 800 20px/1.15 var(--display); }
   .moved p { margin: 4px 0 0; font-size: 15px; }
   .moved a { font-weight: 600; text-underline-offset: 3px; }
+  .explain { border: 1.5px solid var(--ink); padding: 14px 16px; margin: 6px 0 18px; }
+  .explain h4 { margin: 0 0 6px; font: 800 20px/1.15 var(--display); }
+  .explain p { margin: 0 0 8px; }
+  .explain p:last-child { margin-bottom: 0; }
+  .step-title { font: 800 20px/1.15 var(--display); margin: 22px 0 8px; }
+  .platform { margin: 0 0 22px; }
+  .platform h3 { font: 800 24px/1.1 var(--display); margin: 26px 0 8px; }
+  .platform.mine h3::after { content: "  (αυτή η συσκευή)"; font: 500 15px var(--body); color: var(--muted); }
+  ul.perks { margin: 0 0 8px; padding-left: 20px; max-width: 58ch; }
+  ul.perks li { margin-bottom: 4px; }
+  footer a { text-underline-offset: 2px; }
   .install {
     display: grid; grid-template-columns: 52px 1fr auto; gap: 12px; align-items: center;
     border: 1.5px solid var(--ink); padding: 12px; margin: 0 0 24px;
@@ -552,16 +563,25 @@
         : '<button type="button" class="btn solid" data-copy="' + esc(topic) + '" data-msg="Αντιγράφηκε. Στο ntfy πάτα + και επικόλλησέ το.">Αντιγραφή</button>';
       return "<li><span><strong>" + info[0] + "</strong><small>" + info[1] + "</small><code>" + esc(topic) + "</code></span>" + btn + "</li>";
     }).join("");
-    var steps = isAndroid
-      ? '<ol class="steps"><li>Εγκατάστησε το <a href="' + NTFY_ANDROID + '" rel="noopener" target="_blank">ntfy</a> (δωρεάν).</li>' +
-        "<li>Πάτα «Ενεργοποίηση» σε όσα θέλεις. Το ntfy ανοίγει και κάνει την εγγραφή.</li></ol>"
-      : '<ol class="steps"><li>Εγκατάστησε το <a href="' + NTFY_IOS + '" rel="noopener" target="_blank">ntfy</a> (δωρεάν) και επέτρεψε τις ειδοποιήσεις.</li>' +
-        "<li>Πάτα «Αντιγραφή» δίπλα σε αυτό που θέλεις.</li>" +
-        "<li>Στο ntfy πάτα +, επικόλλησε το όνομα και πάτα «Subscribe». Επανάλαβε για όσα θέλεις.</li></ol>";
+    var store = isAndroid
+      ? '<a class="btn solid" href="' + NTFY_ANDROID + '" rel="noopener" target="_blank">Κατέβασε το ntfy από το Google Play</a>'
+      : isIOS
+        ? '<a class="btn solid" href="' + NTFY_IOS + '" rel="noopener" target="_blank">Κατέβασε το ntfy από το App Store</a>'
+        : '<a class="btn" href="' + NTFY_IOS + '" rel="noopener" target="_blank">ntfy για iPhone</a>' +
+          '<a class="btn" href="' + NTFY_ANDROID + '" rel="noopener" target="_blank">ntfy για Android</a>';
+    var pick = isAndroid
+      ? "<p>Πάτα «Ενεργοποίηση» σε όσα θέλεις. Το ntfy ανοίγει και σε ρωτά αν θέλεις να εγγραφείς· πάτα «Subscribe».</p>"
+      : "<p>Πάτα «Αντιγραφή» σε αυτό που θέλεις. Μετά άνοιξε το ntfy, πάτα το +, επικόλλησε το όνομα και πάτα «Subscribe». Κάνε το ίδιο για κάθε επιλογή που θέλεις.</p>";
     return '<div class="follow"><h3>Ειδοποιήσεις στο κινητό</h3>' +
-      "<p>Διάλεξε τι θέλεις να μαθαίνεις για " + esc(s.name.toLowerCase()) + ". Κάθε επιλογή είναι ξεχωριστή συνδρομή, οπότε μπορείς να κρατήσεις μόνο όσες σε ενδιαφέρουν.</p>" +
-      steps + '<ul class="notify">' + rows + "</ul>" +
-      '<p class="help" style="margin-top:12px">Για να σταματήσεις, σβήσε τη συνδρομή μέσα στο ntfy.</p>' +
+      '<div class="explain"><h4>Τι είναι το ntfy;</h4>' +
+        "<p>Μια δωρεάν εφαρμογή που απλώς εμφανίζει ειδοποιήσεις στο κινητό σου. Δεν θέλει λογαριασμό, email ή κωδικό και δεν έχει διαφημίσεις.</p>" +
+        "<p>Τη χρησιμοποιούμε γιατί μια ιστοσελίδα δεν μπορεί από μόνη της να στείλει ειδοποιήσεις σε όλα τα κινητά. Θα λαμβάνεις μόνο ό,τι διαλέξεις εδώ.</p></div>" +
+      '<p class="step-title">1. Κατέβασε το ntfy</p>' +
+      '<div class="actions">' + store + "</div>" +
+      (isIOS ? '<p class="help">Όταν το ανοίξεις πρώτη φορά, πάτα «Allow» για να επιτρέψεις τις ειδοποιήσεις.</p>' : "") +
+      '<p class="step-title">2. Διάλεξε τι θέλεις να μαθαίνεις</p>' + pick +
+      '<ul class="notify">' + rows + "</ul>" +
+      '<p class="help" style="margin-top:12px">Για να σταματήσεις, σβήσε τη συνδρομή μέσα στο ntfy. Τίποτα άλλο δεν χρειάζεται.</p>' +
       "<h3>Ημερολόγιο</h3><p>Οι αγώνες στο ημερολόγιο του κινητού, χωριστά εντός και εκτός έδρας. Ενημερώνονται μόνοι τους.</p>" +
       '<p class="help">' + (isAndroid
         ? "Πάτα για να αντιγράψεις τον σύνδεσμο, μετά στο calendar.google.com: + δίπλα στο «Άλλα ημερολόγια», «Από διεύθυνση URL»."
@@ -616,7 +636,7 @@
         seg("venue", [["all", "Όλοι"], ["home", "Εντός"], ["away", "Εκτός"]], prefs.venue) + LEGEND + "</div>" +
       body +
       '<h2 class="section-title">Ειδοποιήσεις και ημερολόγια</h2>' +
-      '<p>Μπες σε ένα τμήμα και πάτα «Ακολούθησε» για να διαλέξεις ειδοποιήσεις (πριν τον αγώνα, αλλαγές ώρας, αποτελέσματα) ή να προσθέσεις τους αγώνες στο ημερολόγιό σου.</p>' +
+      '<p>Μπες σε ένα τμήμα και πάτα «Ακολούθησε» για να διαλέξεις ειδοποιήσεις (πριν τον αγώνα, αλλαγές ώρας, αποτελέσματα) ή να προσθέσεις τους αγώνες στο ημερολόγιό σου. Οι ειδοποιήσεις έρχονται μέσω της δωρεάν εφαρμογής ntfy, χωρίς λογαριασμό· εκεί θα βρεις οδηγίες βήμα βήμα.</p>' +
       '<ul class="cal-list">' + data.sections.map(function (s) {
         return '<li class="cal"><a class="cal-name" href="#/' + s.key + '/follow">' + s.emoji + " " + esc(s.name) + "</a>" + calButtons(s.key) + "</li>";
       }).join("") + "</ul>" + footerHtml();
@@ -661,7 +681,8 @@
     var last = times.length ? new Date(times[times.length - 1]) : null;
     return "<footer><p>Το PAOKalendar είναι ανεπίσημη σελίδα φιλάθλων και δεν συνδέεται με τον ΠΑΟΚ ή τις εταιρείες του.</p>" + (last ? "<p>Τελευταία αλλαγή στο πρόγραμμα: " + esc(fmtShort.format(last) + ", " + fmtTime.format(last)) + ".</p>" : "") +
       "<p>Αγώνες χωρίς ορισμένη ώρα εμφανίζονται ως «TBC» και στα ημερολόγια μπαίνουν στις 18:00.</p>" +
-      "<p>Πηγές: ESPN, ΕΠΟ, esake.gr, Euroleague, basket.gr, volleyleague.gr, ΕΟΠΕ, ΟΧΕ, Water Polo League. Τα σήματα ανήκουν στις ομάδες.</p></footer>";
+      "<p>Πηγές: ESPN, ΕΠΟ, esake.gr, Euroleague, basket.gr, volleyleague.gr, ΕΟΠΕ, ΟΧΕ, Water Polo League. Τα σήματα ανήκουν στις ομάδες.</p>" +
+      '<p><a href="#/app">Το PAOKalendar ως εφαρμογή στο κινητό</a></p></footer>';
   }
 
   // ---- Νέα διεύθυνση: η παλιά σελίδα στο GitHub Pages δείχνει πού μετακόμισε.
@@ -680,8 +701,13 @@
   var isStandalone = window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
   var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent) ||
     (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  // Το × κρύβει το μήνυμα για 14 μέρες· οι οδηγίες μένουν πάντα στο #/app.
+  var INSTALL_SNOOZE = 14 * 24 * 3600 * 1000;
   var installDismissed = false;
-  try { installDismissed = localStorage.getItem("paok-install-dismissed") === "1"; } catch (e) {}
+  try {
+    var until = +localStorage.getItem("paok-install-snooze-until") || 0;
+    installDismissed = until > Date.now();
+  } catch (e) {}
 
   var SHARE_ICON = '<svg class="share-glyph" width="16" height="18" viewBox="0 0 16 18" aria-hidden="true">' +
     '<path d="M8 1v10M4.5 4.5 8 1l3.5 3.5M3 8H1.5v8.5h13V8H13" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>';
@@ -694,20 +720,58 @@
       action = '<button type="button" class="btn solid" data-act="install">Εγκατάσταση</button>';
     } else if (isIOS) {
       text = "Στο Safari πάτα " + SHARE_ICON + " και μετά «Προσθήκη στην οθόνη Αφετηρίας».";
+    } else if (isAndroid) {
+      text = "Στο Chrome πάτα ⋮ πάνω δεξιά και μετά «Εγκατάσταση εφαρμογής» ή «Προσθήκη στην αρχική οθόνη».";
     } else {
       return "";
     }
     return '<div class="install" role="region" aria-label="Εγκατάσταση εφαρμογής">' +
       '<img src="icons/apple-touch-icon.png" alt="">' +
-      "<div><strong>PAOKalendar στο κινητό</strong><p>" + text + "</p>" +
+      "<div><strong>PAOKalendar στο κινητό</strong><p>" + text + ' <a href="#/app">Οδηγίες</a></p>' +
       (action ? '<div style="margin-top:8px">' + action + "</div>" : "") + "</div>" +
-      '<button type="button" class="install-close" data-act="install-close" aria-label="Κλείσιμο">×</button></div>';
+      '<button type="button" class="install-close" data-act="install-close" aria-label="Κλείσιμο για τώρα">×</button></div>';
+  }
+
+  // ---- Σελίδα με οδηγίες για την εφαρμογή
+  function appHtml() {
+    var installBtn = installEvent ? '<div class="actions"><button type="button" class="btn solid" data-act="install">Εγκατάσταση τώρα</button></div>' : "";
+    var platforms = [
+      { id: "ios", mine: isIOS, title: "iPhone", body:
+        '<ol class="steps"><li>Άνοιξε το <strong>paokalendar.vercel.app</strong> στο Safari.</li>' +
+        "<li>Πάτα το κουμπί Κοινοποίησης " + SHARE_ICON + " κάτω στη μέση της οθόνης.</li>" +
+        "<li>Κύλησε λίγο και πάτα «Προσθήκη στην οθόνη Αφετηρίας».</li>" +
+        "<li>Πάτα «Προσθήκη» πάνω δεξιά. Το εικονίδιο με τις ρίγες εμφανίζεται στην αρχική οθόνη.</li></ol>" },
+      { id: "android", mine: isAndroid, title: "Android", body:
+        (isAndroid ? installBtn : "") +
+        '<ol class="steps"><li>Άνοιξε το <strong>paokalendar.vercel.app</strong> στο Chrome.</li>' +
+        "<li>Πάτα ⋮ πάνω δεξιά.</li>" +
+        "<li>Πάτα «Εγκατάσταση εφαρμογής» ή «Προσθήκη στην αρχική οθόνη» και μετά «Εγκατάσταση».</li></ol>" },
+      { id: "desktop", mine: !isIOS && !isAndroid, title: "Υπολογιστής", body:
+        (!isIOS && !isAndroid ? installBtn : "") +
+        "<p>Στο Chrome ή στο Edge, πάτα το εικονίδιο εγκατάστασης στη δεξιά άκρη της γραμμής διευθύνσεων.</p>" }
+    ];
+    platforms.sort(function (a, b) { return (b.mine ? 1 : 0) - (a.mine ? 1 : 0); });
+    return '<a class="back" href="#/">‹ Αρχική</a>' +
+      '<div class="section-head"><h2>Η εφαρμογή στο κινητό</h2></div>' +
+      (isStandalone
+        ? '<div class="explain"><p>Το PAOKalendar είναι ήδη εγκατεστημένο σε αυτή τη συσκευή.</p></div>'
+        : "") +
+      "<p>Το PAOKalendar μπαίνει στην αρχική οθόνη σαν κανονική εφαρμογή, χωρίς App Store ή Google Play:</p>" +
+      '<ul class="perks"><li>Εικονίδιο με τις ρίγες στην αρχική οθόνη.</li>' +
+      "<li>Ανοίγει σε πλήρη οθόνη, χωρίς τη γραμμή του browser.</li>" +
+      "<li>Δουλεύει και χωρίς σύνδεση, με το πρόγραμμα από την τελευταία φορά.</li>" +
+      "<li>Πιάνει ελάχιστο χώρο και ενημερώνεται μόνο του.</li></ul>" +
+      platforms.map(function (p) {
+        return '<section class="platform' + (p.mine ? " mine" : "") + '"><h3>' + p.title + "</h3>" + p.body + "</section>";
+      }).join("") +
+      '<p class="help">Για τις ειδοποιήσεις αγώνων δες την καρτέλα «Ακολούθησε» σε κάθε τμήμα.</p>' +
+      footerHtml();
   }
 
   window.addEventListener("beforeinstallprompt", function (e) {
     e.preventDefault();
     installEvent = e;
-    if (data && !route().key) render();
+    if (data && !route().key) render();  // αρχική ή σελίδα οδηγιών
   });
   window.addEventListener("appinstalled", function () {
     installEvent = null;
@@ -720,19 +784,22 @@
   function route() {
     var parts = location.hash.replace(/^#\/?/, "").split("/");
     var key = parts[0], tab = parts[1] || "";
+    if (key === "app") return { key: null, tab: "", page: "app" };
     return data.sectionMap[key] ? { key: key, tab: tab } : { key: null, tab: "" };
   }
   var lastRoute = null;
   function render() {
-    var r = route(), sig = r.key + "/" + r.tab;
+    var r = route(), sig = (r.page || r.key) + "/" + r.tab;
     if (sig !== lastRoute) {
       if (lastRoute !== null) window.scrollTo(0, 0);
       if (r.key !== (lastRoute || "").split("/")[0]) { ui.month = null; ui.day = null; ui.shown = PAGE; ui.secVenue = "all"; }
       lastRoute = sig;
     }
-    $("masthead").classList.toggle("compact", !!r.key);
-    document.title = r.key ? data.sectionMap[r.key].name + " – PAOKalendar" : "PAOKalendar";
-    $("app").innerHTML = movedHtml() + (r.key ? sectionHtml(r.key, r.tab) : homeHtml());
+    $("masthead").classList.toggle("compact", !!(r.key || r.page));
+    document.title = r.page === "app" ? "Εφαρμογή – PAOKalendar"
+      : r.key ? data.sectionMap[r.key].name + " – PAOKalendar" : "PAOKalendar";
+    $("app").innerHTML = movedHtml() +
+      (r.page === "app" ? appHtml() : r.key ? sectionHtml(r.key, r.tab) : homeHtml());
   }
 
   // ---- Ενέργειες
@@ -789,8 +856,9 @@
     }
     if (act === "install-close") {
       installDismissed = true;
-      try { localStorage.setItem("paok-install-dismissed", "1"); } catch (e) {}
+      try { localStorage.setItem("paok-install-snooze-until", String(Date.now() + INSTALL_SNOOZE)); } catch (e) {}
       render();
+      toast("Οι οδηγίες υπάρχουν πάντα στο κάτω μέρος της σελίδας.");
       return;
     }
     if (act === "more") { ui.shown += PAGE; render(); }

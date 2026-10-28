@@ -11,10 +11,6 @@ const { chromium, devices } = require('playwright');
     }
     if (window.Notification) Object.defineProperty(Notification, 'permission', { get: () => 'granted' });
     try { localStorage.setItem('paok-install-snooze-until', String(Date.now() + 1e10)); } catch (e) {}
-    // Σήματα ομάδων → αρχικά (η εικόνα προώθησης δεν δείχνει σήματα συλλόγων).
-    new MutationObserver(() => {
-      document.querySelectorAll('img.crest').forEach(i => { i.outerHTML = i.dataset.f; });
-    }).observe(document.documentElement, { childList: true, subtree: true });
   });
   await ctx.route('**/api/**', r => r.fulfill({ json: { ok: true, publicKey: 'BAAA' } }));
   const p = await ctx.newPage();
@@ -33,6 +29,9 @@ const { chromium, devices } = require('playwright');
       await p.evaluate(([s, o]) => { const el = document.querySelector(s); if (el) window.scrollTo(0, el.getBoundingClientRect().top + window.scrollY - (o || 0)); }, [scrollSel, offset]);
       await p.waitForTimeout(800);
     }
+    // Σήματα ομάδων → αρχικά (η εικόνα προώθησης δεν δείχνει σήματα συλλόγων).
+    await p.evaluate(() => document.querySelectorAll('img.crest').forEach(i => { i.outerHTML = i.dataset.f; }));
+    await p.waitForTimeout(200);
     await p.screenshot({ path: 'docs/' + name + '.png' });
   };
   await shot('#/', 'p-home');

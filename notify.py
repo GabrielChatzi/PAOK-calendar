@@ -1,27 +1,20 @@
 #!/usr/bin/env python3
-"""Ειδοποιήσεις για τους αγώνες του ΠΑΟΚ: μέσα στην εφαρμογή (web push) και μέσω ntfy.
+"""Ειδοποιήσεις για τους αγώνες του ΠΑΟΚ μέσα στην εφαρμογή (web push).
 
-Web push: η εφαρμογή γράφει κάθε συσκευή σε θέματα s:<τμήμα>:<είδος> ή m:<αγώνας>:<είδος>
-και η αποστολή γίνεται από το /api/push της σελίδας (Vercel). Η ταυτότητα του GitHub Actions
+Η εφαρμογή γράφει κάθε συσκευή σε θέματα, ώστε ο καθένας να διαλέγει τι θέλει:
+    s:<τμήμα>:<είδος>    για όλους τους αγώνες ενός τμήματος
+    m:<αγώνας>:<είδος>   για έναν μόνο αγώνα
+Είδη: pre (υπενθύμιση περίπου μία ώρα πριν), time (νέος αγώνας ή αλλαγή ημέρας/ώρας),
+live (έναρξη, γκολ/περίοδοι, τέλος· βλ. live.py), result (τελικό αποτέλεσμα).
+
+Η αποστολή γίνεται από το /api/push της σελίδας (Vercel). Η ταυτότητα του GitHub Actions
 αποδεικνύεται με το OIDC token του GitHub (χρειάζεται «permissions: id-token: write»).
-
-ntfy (εναλλακτικά, για όσους το προτιμούν):
-
-Κάθε τμήμα έχει θέματα (topics) στο ntfy.sh, ώστε ο καθένας να διαλέγει τι θέλει:
-    <PREFIX>-<τμήμα>-pre     υπενθύμιση περίπου μία ώρα πριν από τον αγώνα
-    <PREFIX>-<τμήμα>-time    νέος αγώνας στο πρόγραμμα ή αλλαγή ημέρας/ώρας
-    <PREFIX>-<τμήμα>-live    έναρξη, γκολ/περίοδοι, τέλος (μόνο όπου υπάρχει live, βλ. live.py)
-    <PREFIX>-<τμήμα>-result  τελικό αποτέλεσμα
-
-Επιπλέον, κάθε αγώνας έχει δικά του θέματα, για όποιον θέλει ειδοποιήσεις μόνο για ένα ματς:
-    <PREFIX>-m-<id>          όλα τα παραπάνω για τον αγώνα αυτό
-    <PREFIX>-m-<id>-<είδος>  μόνο ένα είδος (pre, time, live, result)
 
 Οι αλλαγές και τα αποτελέσματα στέλνονται από το build_calendars.py όταν ενημερώνεται το
 πρόγραμμα. Οι υπενθυμίσεις στέλνονται από αυτό το script (python3 notify.py reminders),
 που τρέχει κάθε 15 λεπτά και διαβάζει μόνο το docs/matches.json.
 
-Αποστολή γίνεται μόνο όταν υπάρχει η μεταβλητή περιβάλλοντος NTFY=1 (και για τα δύο κανάλια).
+Αποστολή γίνεται μόνο όταν υπάρχει η μεταβλητή περιβάλλοντος PUSH=1.
 """
 from __future__ import annotations
 
@@ -34,8 +27,6 @@ import urllib.request
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-NTFY_SERVER = "https://ntfy.sh"
-TOPIC_PREFIX = "paokcal-x7q3"
 SITE = "https://paokalendar.vercel.app/"
 ATHENS = ZoneInfo("Europe/Athens")
 KINDS = ("pre", "time", "live", "result")
@@ -54,16 +45,8 @@ WEEKDAYS = ["Δευ", "Τρι", "Τετ", "Πεμ", "Παρ", "Σαβ", "Κυρ"
 MONTHS = ["Ιαν", "Φεβ", "Μαρ", "Απρ", "Μαΐ", "Ιουν", "Ιουλ", "Αυγ", "Σεπ", "Οκτ", "Νοε", "Δεκ"]
 
 
-def topic(section: str, kind: str) -> str:
-    return f"{TOPIC_PREFIX}-{section}-{kind}"
-
-
-def match_topic(m: dict, kind: str | None = None) -> str:
-    return f"{TOPIC_PREFIX}-m-{m['nt']}" + (f"-{kind}" if kind else "")
-
-
 def enabled() -> bool:
-    return os.environ.get("NTFY") == "1"
+    return os.environ.get("PUSH") == "1"
 
 
 def when_text(m: dict) -> str:
@@ -113,47 +96,20 @@ def _push(topics: list[str], title: str, message: str, url: str, tag: str | None
         print(f"  ! push {','.join(topics)}: {e}", file=sys.stderr)
 
 
-def _post(topic_name: str, title: str, message: str, click: str, tags: list[str] | None = None) -> None:
-    payload = {"topic": topic_name, "title": title, "message": message, "click": click}
-    if tags:
-        payload["tags"] = tags
-    if not enabled():
-        print(f"  (χωρίς αποστολή) {topic_name}: {title} | {message}")
-        return
-    req = urllib.request.Request(NTFY_SERVER, data=json.dumps(payload).encode(),
-                                 headers={"Content-Type": "application/json"}, method="POST")
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            r.read()
-        print(f"  ειδοποίηση {topic_name}: {title}")
-    except Exception as e:  # μια αποτυχημένη ειδοποίηση δεν σταματά την υπόλοιπη δουλειά
-        print(f"  ! ntfy {topic_name}: {e}", file=sys.stderr)
-    time.sleep(1)  # ευγενικός ρυθμός προς το ntfy.sh
-
-
 def send(section: str, kind: str, title: str, message: str, match: dict | None = None,
-         to_match: bool = True, also_match_kinds: tuple[str, ...] = (), tags: list[str] | None = None) -> None:
-    """Στέλνει στο θέμα του τμήματος και, αν δοθεί αγώνας, και στα θέματα του αγώνα.
+         to_match: bool = True, also_match_kinds: tuple[str, ...] = ()) -> None:
+    """Στέλνει σε όσους ακολουθούν το τμήμα και, αν δοθεί αγώνας, σε όσους ακολουθούν τον αγώνα.
 
-    also_match_kinds: επιπλέον θέματα του αγώνα (π.χ. το τελικό από το live πηγαίνει και στο «result»).
+    to_match: αν πηγαίνει και στο ίδιο είδος του αγώνα.
+    also_match_kinds: επιπλέον είδη του αγώνα (π.χ. το τελικό από το live πηγαίνει και στο «result»).
     """
     has_match = match is not None and bool(match.get("nt"))
     kinds = ((kind,) if to_match else ()) + tuple(also_match_kinds) if has_match else ()
-    push_topics = [f"s:{section}:{kind}"] + [f"m:{match['nt']}:{k}" for k in kinds]
+    topics = [f"s:{section}:{kind}"] + [f"m:{match['nt']}:{k}" for k in kinds]
     url = f"/#/m/{match['nt']}" if has_match else f"/#/{section}"
     # Ίδιο tag για το ίδιο γεγονός: αν φτάσει δύο φορές, η δεύτερη αντικαθιστά την πρώτη.
     tag = f"{match['nt']}-{kind}" if has_match and kind != "live" else None
-    _push(list(dict.fromkeys(push_topics)), title, message, url, tag)
-
-    click = f"{SITE}#/{section}"
-    _post(topic(section, kind), title, message, click, tags)
-    if not has_match:
-        return
-    click = f"{SITE}#/m/{match['nt']}"
-    if to_match:
-        _post(match_topic(match), title, message, click, tags)
-    for k in kinds:
-        _post(match_topic(match, k), title, message, click, tags)
+    _push(list(dict.fromkeys(topics)), title, message, url, tag)
 
 
 def changes(previous: list[dict], current: list[dict], sections: set[str]) -> list[tuple]:
@@ -200,7 +156,7 @@ def changes(previous: list[dict], current: list[dict], sections: set[str]) -> li
 
 def send_changes(previous: list[dict], current: list[dict], sections: set[str]) -> None:
     for sec, kind, title, message, m in changes(previous, current, sections):
-        # Για αγώνες με live, το τελικό στο θέμα του αγώνα το στέλνει ήδη το live.py.
+        # Για αγώνες με live, το τελικό σε όσους ακολουθούν τον αγώνα το στέλνει ήδη το live.py.
         to_match = not (kind == "result" and m.get("live"))
         send(sec, kind, title, message, match=m, to_match=to_match)
 

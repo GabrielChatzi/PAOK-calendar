@@ -17,8 +17,8 @@
   Πόλο:                waterpololeague.gr (ανδρών, γυναικών)
 
 Γράφει επίσης βαθμολογίες στο docs/standings.json (βλ. standings.py) και στέλνει
-ειδοποιήσεις ntfy για νέους αγώνες, αλλαγές ώρας και αποτελέσματα (βλ. notify.py),
-όταν υπάρχει η μεταβλητή περιβάλλοντος NTFY=1.
+ειδοποιήσεις για νέους αγώνες, αλλαγές ώρας και αποτελέσματα (βλ. notify.py),
+όταν υπάρχει η μεταβλητή περιβάλλοντος PUSH=1.
 
 Αν μια πηγή αποτύχει, τα αρχεία του τμήματος μένουν όπως ήταν και το script
 τερματίζει με σφάλμα, ώστε να φανεί στο GitHub Actions.
@@ -106,7 +106,7 @@ class Match:
 
 
 def match_topic_id(uid: str) -> str:
-    """Σύντομο, σταθερό αναγνωριστικό αγώνα για το θέμα ntfy του."""
+    """Σύντομο, σταθερό αναγνωριστικό αγώνα (για τη σελίδα του και τις ειδοποιήσεις του)."""
     return hashlib.sha1(uid.encode()).hexdigest()[:10]
 
 
@@ -936,7 +936,6 @@ def main(only: list[str] | None = None) -> int:
     all_matches.sort(key=lambda m: (m["start"], m["uid"]))
     data = {
         "sections": [{"key": k, **v} for k, v in SECTIONS.items()],
-        "ntfy": {"server": notify.NTFY_SERVER, "prefix": notify.TOPIC_PREFIX, "kinds": list(notify.KINDS)},
         "matches": all_matches,
         "updated": updated,
     }

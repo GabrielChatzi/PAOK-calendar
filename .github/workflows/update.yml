@@ -31,7 +31,7 @@ jobs:
         id: build
         continue-on-error: true
         env:
-          NTFY: "1"
+          PUSH: "1"
         run: python3 build_calendars.py
 
       - name: Αποθήκευση αλλαγών

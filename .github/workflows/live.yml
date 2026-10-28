@@ -26,6 +26,6 @@ jobs:
 
       - name: Παρακολούθηση αγώνων
         env:
-          NTFY: "1"
+          PUSH: "1"
           PYTHONUNBUFFERED: "1"
         run: python3 live.py

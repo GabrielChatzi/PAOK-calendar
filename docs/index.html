@@ -278,7 +278,6 @@
   ul.notify li { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--rule); }
   ul.notify strong { font: 600 19px/1.2 var(--display); display: block; }
   ul.notify small { color: var(--muted); font-size: 14px; display: block; }
-  ul.notify code { font-size: 12px; color: var(--muted); word-break: break-all; }
   ol.steps { margin: 0 0 12px; padding-left: 22px; max-width: 58ch; }
 
   /* Διακόπτες ειδοποιήσεων (τετράγωνοι, όπως όλη η σελίδα) */
@@ -296,10 +295,6 @@
   .push-note { margin: 4px 0 12px; }
   .push-on { display: flex; align-items: center; gap: 8px; font-weight: 600; margin: 4px 0 12px; }
   .push-on::before { content: ""; width: 10px; height: 10px; background: var(--ink); flex: none; }
-  details.alt { margin: 22px 0 0; border: 1.5px solid var(--rule); padding: 0 14px; }
-  details.alt[open] { padding-bottom: 14px; }
-  details.alt summary { cursor: pointer; padding: 12px 0; font-weight: 600; }
-  details.alt h3:first-of-type { margin-top: 6px; }
   .nsec { padding: 12px 0; border-bottom: 1px solid var(--rule); }
   .nsec-name { display: block; font: 600 20px/1.2 var(--display); text-decoration: none; margin-bottom: 8px; }
   .nsec .chip { padding: 7px 12px; }
@@ -416,8 +411,6 @@
   "use strict";
   var TZ = "Europe/Athens";
   var PAGE = 40;
-  var NTFY_IOS = "https://apps.apple.com/app/ntfy/id1625396347";
-  var NTFY_ANDROID = "https://play.google.com/store/apps/details?id=io.heckel.ntfy";
   var KIND_INFO = {
     pre: ["Πριν τον αγώνα", "Περίπου μία ώρα πριν ξεκινήσει"],
     time: ["Αλλαγές προγράμματος", "Νέος αγώνας, ορισμός ή αλλαγή ώρας"],
@@ -512,11 +505,10 @@
 
   // ---- Λίστα αγώνων
   var BELL = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0-6 6v4l-2 3h16l-2-3V9a6 6 0 0 0-6-6zM9.5 19a2.5 2.5 0 0 0 5 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>';
-  var bells = {};
-  try { bells = JSON.parse(localStorage.getItem("paok-bells") || "{}") || {}; } catch (e) {}
+  try { localStorage.removeItem("paok-bells"); } catch (e) {}  // παλιά σημάδια του ntfy
   function matchHref(m) { return "#/m/" + m.nt; }
   function bellButton(m, withText) {
-    var on = !!bells[m.uid] || matchFollowed(m);
+    var on = matchFollowed(m);
     return '<a class="bell' + (on ? " on" : "") + '" href="' + matchHref(m) + '/notify" aria-label="' +
       (on ? "Ειδοποιήσεις ενεργές για αυτόν τον αγώνα" : "Ειδοποιήσεις μόνο για αυτόν τον αγώνα") + '">' + BELL +
       (withText ? "<span>" + (on ? "Ειδοποιήσεις ενεργές" : "Ειδοποίηση για αυτό το ματς") + "</span>" : "") + "</a>";
@@ -705,39 +697,6 @@
         : '<a class="btn" href="webcal://' + esc(base + file) + '">' + p[1] + "</a>";
     }).join("");
   }
-  function topicOf(key, kind) { return data.ntfy.prefix + "-" + key + "-" + kind; }
-
-  // Οδηγίες για το ntfy (εναλλακτικός τρόπος ειδοποιήσεων, για όποιον τον προτιμά).
-  function ntfyFollowHtml(key) {
-    var s = data.sectionMap[key];
-    var host = data.ntfy.server.replace(/^https?:\/\//, "");
-    var rows = data.ntfy.kinds.filter(function (kind) { return kind !== "live" || s.live; }).map(function (kind) {
-      var topic = topicOf(key, kind), info = KIND_INFO[kind];
-      if (kind === "live" && s.liveNote) info = [info[0], s.liveNote];
-      var display = "ΠΑΟΚ " + s.name + ": " + info[0];
-      var btn = isAndroid
-        ? '<a class="btn solid" href="ntfy://' + host + "/" + topic + "?display=" + encodeURIComponent(display) + '">Ενεργοποίηση</a>'
-        : '<button type="button" class="btn solid" data-copy="' + esc(topic) + '" data-msg="Αντιγράφηκε. Στο ntfy πάτα + και επικόλλησέ το.">Αντιγραφή</button>';
-      return "<li><span><strong>" + info[0] + "</strong><small>" + info[1] + "</small><code>" + esc(topic) + "</code></span>" + btn + "</li>";
-    }).join("");
-    var store = isAndroid
-      ? '<a class="btn solid" href="' + NTFY_ANDROID + '" rel="noopener" target="_blank">Κατέβασε το ntfy από το Google Play</a>'
-      : isIOS
-        ? '<a class="btn solid" href="' + NTFY_IOS + '" rel="noopener" target="_blank">Κατέβασε το ntfy από το App Store</a>'
-        : '<a class="btn" href="' + NTFY_IOS + '" rel="noopener" target="_blank">ntfy για iPhone</a>' +
-          '<a class="btn" href="' + NTFY_ANDROID + '" rel="noopener" target="_blank">ntfy για Android</a>';
-    var pick = isAndroid
-      ? "<p>Πάτα «Ενεργοποίηση» σε όσα θέλεις. Το ntfy ανοίγει και σε ρωτά αν θέλεις να εγγραφείς· πάτα «Subscribe».</p>"
-      : "<p>Πάτα «Αντιγραφή» σε αυτό που θέλεις. Μετά άνοιξε το ntfy, πάτα το +, επικόλλησε το όνομα και πάτα «Subscribe». Κάνε το ίδιο για κάθε επιλογή που θέλεις.</p>";
-    return '<details class="alt"><summary>Εναλλακτικά: ειδοποιήσεις μέσω της εφαρμογής ntfy</summary>' +
-      "<p>Το ntfy είναι δωρεάν εφαρμογή που απλώς εμφανίζει ειδοποιήσεις, χωρίς λογαριασμό. Χρήσιμο αν δεν θέλεις να βάλεις το PAOKalendar στην αρχική οθόνη.</p>" +
-      '<p class="step-title">1. Κατέβασε το ntfy</p>' +
-      '<div class="actions">' + store + "</div>" +
-      '<p class="step-title">2. Διάλεξε τι θέλεις να μαθαίνεις</p>' + pick +
-      '<ul class="notify">' + rows + "</ul>" +
-      '<p class="help" style="margin-top:12px">Για να σταματήσεις, σβήσε τη συνδρομή μέσα στο ntfy.</p></details>';
-  }
-
   function sectionKinds(s) {
     return PUSH_KINDS.filter(function (k) { return k[0] !== "live" || s.live; });
   }
@@ -753,7 +712,6 @@
       pushNoteHtml() +
       '<ul class="notify">' + rows + "</ul>" +
       '<p class="help" style="margin-top:12px"><a href="#/notifications">Όλες οι ειδοποιήσεις σου</a> (όλα τα τμήματα και οι αγώνες που ακολουθείς).</p>' +
-      ntfyFollowHtml(key) +
       "<h3>Ημερολόγιο</h3><p>Οι αγώνες στο ημερολόγιο του κινητού, χωριστά εντός και εκτός έδρας. Ενημερώνονται μόνοι τους.</p>" +
       '<p class="help">' + (isAndroid
         ? "Πάτα για να αντιγράψεις τον σύνδεσμο, μετά στο calendar.google.com: + δίπλα στο «Άλλα ημερολόγια», «Από διεύθυνση URL»."
@@ -1004,12 +962,6 @@
   }
 
   $("app").addEventListener("click", function (e) {
-    var mark = e.target.closest("[data-mark]");
-    if (mark) {
-      if (mark.dataset.copy) copy(mark.dataset.copy, mark.dataset.msg);
-      markBell(mark.dataset.mark);
-      if (mark.tagName === "BUTTON") return;
-    }
     var b = e.target.closest("button");
     if (!b) return;
     if (b.dataset.topics) {
@@ -1069,18 +1021,6 @@
   });
   window.addEventListener("hashchange", render);
 
-  // ---- Φύλλο «ειδοποιήσεις για αυτόν τον αγώνα»
-  function markBell(uid) {
-    bells[uid] = Date.now();
-    // Κρατάμε μόνο αγώνες που δεν έχουν ακόμα αποτέλεσμα.
-    Object.keys(bells).forEach(function (k) {
-      var m = data.matches.filter(function (x) { return x.uid === k; })[0];
-      if (!m || m.score) delete bells[k];
-    });
-    try { localStorage.setItem("paok-bells", JSON.stringify(bells)); } catch (e) {}
-    setTimeout(render, 300);  // μετά, ώστε να προλάβει να ανοίξει το ntfy
-  }
-
   // ---- Ειδοποιήσεις μέσα στην εφαρμογή (web push)
   // Η συσκευή γράφεται σε θέματα «s:<τμήμα>:<είδος>» ή «m:<αγώνας>:<είδος>». Τα θέματα κρατιούνται
   // και τοπικά, ώστε η σελίδα να δείχνει αμέσως τι είναι ενεργό, και στέλνονται στο /api/subscribe.
@@ -1121,7 +1061,7 @@
         : "Επίτρεψέ τες από το εικονίδιο αριστερά από τη διεύθυνση της σελίδας.") + "</p></div>";
     return '<div class="explain"><p>Αυτός ο browser δεν υποστηρίζει ειδοποιήσεις. ' +
       (isIOS ? "Χρειάζεται iOS 16.4 ή νεότερο." : "Δοκίμασε Chrome, Edge, Firefox ή Safari.") +
-      " Εναλλακτικά, χρησιμοποίησε το ntfy (παρακάτω).</p></div>";
+      "</p></div>";
   }
 
   function switchRow(topics, title, desc) {
@@ -1299,7 +1239,6 @@
           '<div class="actions"><button type="button" class="btn" data-act="push-off">Απενεργοποίηση όλων</button></div>' +
           '<p class="help">Οι επιλογές ισχύουν μόνο για αυτή τη συσκευή. Σε άλλο κινητό ή υπολογιστή διάλεξε ξανά.</p>'
         : "") +
-      '<p class="help" style="margin-top:18px">Προτιμάς την εφαρμογή ntfy; Θα τη βρεις στην καρτέλα «Ακολούθησε» κάθε τμήματος.</p>' +
       "</div>" + footerHtml();
   }
 
@@ -1314,26 +1253,6 @@
     ["result", "Τελικό αποτέλεσμα", "Μόλις τελειώσει"]
   ];
 
-  function ntfyMatchHtml(m) {
-    var host = data.ntfy.server.replace(/^https?:\/\//, "");
-    var short = m.home + " – " + m.away;
-    var rows = MATCH_KINDS.filter(function (k) { return k[0] !== "live" || m.live; }).map(function (k) {
-      var topic = data.ntfy.prefix + "-m-" + m.nt + (k[0] === "all" ? "" : "-" + k[0]);
-      var display = short + (k[0] === "all" ? "" : ": " + k[1]);
-      var btn = isAndroid
-        ? '<a class="btn solid" data-mark="' + esc(m.uid) + '" href="ntfy://' + host + "/" + esc(topic) + "?display=" + encodeURIComponent(display) + '">Ενεργοποίηση</a>'
-        : '<button type="button" class="btn solid" data-mark="' + esc(m.uid) + '" data-copy="' + esc(topic) +
-          '" data-msg="Αντιγράφηκε. Στο ntfy πάτα +, επικόλλησε και πάτα Subscribe.">Αντιγραφή</button>';
-      return "<li><span><strong>" + k[1] + "</strong><code>" + esc(topic) + "</code></span>" + btn + "</li>";
-    }).join("");
-    var store = isAndroid ? NTFY_ANDROID : NTFY_IOS;
-    return '<details class="alt"><summary>Εναλλακτικά: μέσω της εφαρμογής ntfy</summary>' +
-      '<p>Με τη δωρεάν εφαρμογή ntfy (<a href="' + store + '" rel="noopener" target="_blank">κατέβασέ τη</a>), χωρίς λογαριασμό. ' +
-      (isAndroid ? "Πάτα «Ενεργοποίηση» και μετά «Subscribe» στο ntfy."
-        : "Πάτα «Αντιγραφή», άνοιξε το ntfy, πάτα +, επικόλλησε και πάτα «Subscribe».") + "</p>" +
-      '<ul class="notify">' + rows + "</ul></details>";
-  }
-
   function matchKinds(m) {
     return MATCH_KINDS.filter(function (k) { return k[0] !== "all" && (k[0] !== "live" || m.live); }).map(function (k) { return k[0]; });
   }
@@ -1346,8 +1265,7 @@
     return '<section id="match-notify"><h3>Ειδοποιήσεις για αυτό το ματς</h3>' +
       "<p>Διάλεξε τι θέλεις να μαθαίνεις μόνο για αυτόν τον αγώνα. Μετά το τελικό σβήνονται μόνες τους.</p>" +
       pushNoteHtml() +
-      '<ul class="notify">' + rows + "</ul>" +
-      ntfyMatchHtml(m) + "</section>";
+      '<ul class="notify">' + rows + "</ul></section>";
   }
 
   function timelineHtml(m, det) {
@@ -1617,7 +1535,6 @@
   }
   function apply(res) {
     data = res[0]; standings = res[1] || {};
-    data.ntfy = data.ntfy || { server: "https://ntfy.sh", prefix: "paokcal-x7q3", kinds: ["pre", "time", "result"] };
     data.sectionMap = {};
     data.sections.forEach(function (s) { data.sectionMap[s.key] = s; });
     data.matches.forEach(function (m) {

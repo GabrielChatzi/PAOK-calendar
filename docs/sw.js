@@ -4,11 +4,11 @@
 // - Τα δεδομένα (matches.json, standings.json) έρχονται πρώτα από το δίκτυο, ώστε να είναι
 //   πάντα φρέσκα· χωρίς σύνδεση χρησιμοποιείται η τελευταία αποθηκευμένη έκδοση.
 // - Σήματα ομάδων και γραμματοσειρές κρατιούνται στη συσκευή μετά την πρώτη φορά.
-// - Τα .ics και το /api/ δεν περνούν από εδώ (ημερολόγια και ειδοποιήσεις θέλουν πάντα το δίκτυο).
+// - Τα .ics, το /api/ και τα analytics (/_vercel/) δεν περνούν από εδώ (ημερολόγια και ειδοποιήσεις θέλουν πάντα το δίκτυο).
 // - Δείχνει τις ειδοποιήσεις web push και, όταν πατηθεί μία, ανοίγει τον αγώνα ή το τμήμα της.
 //
 // Αλλάζοντας το VERSION, οι συσκευές κατεβάζουν ξανά τη σελίδα.
-const VERSION = "v2";
+const VERSION = "v3";
 const SHELL = `paokalendar-shell-${VERSION}`;
 const DATA = "paokalendar-data";
 const ASSETS = "paokalendar-assets";
@@ -74,7 +74,7 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
 
   if (url.origin === self.location.origin) {
-    if (url.pathname.endsWith(".ics") || url.pathname.startsWith("/api/")) return;
+    if (url.pathname.endsWith(".ics") || url.pathname.startsWith("/api/") || url.pathname.startsWith("/_vercel/")) return;
     if (url.pathname.endsWith(".json")) {
       event.respondWith(networkFirst(request, DATA));
       return;

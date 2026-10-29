@@ -5,6 +5,7 @@
 //   πάντα φρέσκα· χωρίς σύνδεση χρησιμοποιείται η τελευταία αποθηκευμένη έκδοση.
 // - Σήματα ομάδων και γραμματοσειρές κρατιούνται στη συσκευή μετά την πρώτη φορά.
 // - Τα .ics, το /api/ και τα analytics (/_vercel/) δεν περνούν από εδώ (ημερολόγια και ειδοποιήσεις θέλουν πάντα το δίκτυο).
+// - Ούτε η ξεχωριστή σελίδα /metavivaseis/ (αλλιώς θα άνοιγε η αρχική στη θέση της).
 // - Δείχνει τις ειδοποιήσεις web push και, όταν πατηθεί μία, ανοίγει τον αγώνα ή το τμήμα της.
 //
 // Αλλάζοντας το VERSION, οι συσκευές κατεβάζουν ξανά τη σελίδα.
@@ -75,6 +76,8 @@ self.addEventListener("fetch", (event) => {
 
   if (url.origin === self.location.origin) {
     if (url.pathname.endsWith(".ics") || url.pathname.startsWith("/api/") || url.pathname.startsWith("/_vercel/")) return;
+    // Η σελίδα μεταβιβάσεων είναι ξεχωριστή: να μην τη σερβίρει η αρχική της εφαρμογής.
+    if (url.pathname.startsWith("/metavivaseis")) return;
     if (url.pathname.endsWith(".json")) {
       event.respondWith(networkFirst(request, DATA));
       return;

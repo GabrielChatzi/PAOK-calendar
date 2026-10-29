@@ -1019,8 +1019,10 @@ def cev_competitions() -> dict[str, str]:
 
 def cev_tidy(name: str) -> str:
     """«C.S. Arcada GALATI» → «C.S. Arcada Galati»."""
-    if is_paok(name):
-        return PAOK
+    return PAOK if is_paok(name) else cev_caps(name)
+
+
+def cev_caps(name: str) -> str:
     return " ".join(w.capitalize() if len(w) > 3 and w.isalpha() and w.isupper() else w for w in name.split())
 
 
@@ -1080,7 +1082,7 @@ def cev_matches(section: str) -> list[Match]:
                 out[mid] = Match(
                     section=section, uid=f"{section}-cev-{mid}", day=day, time=time,
                     home=cev_tidy(home), away=cev_tidy(away), paok_home=is_paok(home),
-                    venue=cev_tidy(spans.get("LB_Palasport", "")), competition=competition,
+                    venue=cev_caps(spans.get("LB_Palasport", "")), competition=competition,
                     round=", ".join(x for x in (round_name, CEV_LEGS.get(leg_name, "")) if x),
                     score=f"{sets[0]}-{sets[1]}" if done else "",
                     url=f"{CEV}MatchPage.aspx?mID={mid}&ID={comp_id}",

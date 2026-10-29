@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
-B=https://ea.microplustimingservices.com/EAWPClubs2027
-echo "== api_config"; curl -sSL -m 40 "$B/api_config.json"; echo
-echo "== runtime"; curl -sSL -m 40 "$B/assets/runtime-config.json"; echo
-echo "== sports_config"; curl -sSL -m 40 "$B/sports_config.json" | head -c 1500; echo
+A=https://ea.microplustimingservices.com/EAWPClubs2027/assets
+echo "== api_config"; curl -sSL -m 40 "$A/api_config.json"; echo
+echo "== sports_config"; curl -sSL -m 40 "$A/sports_config.json" | head -c 2500; echo

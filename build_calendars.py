@@ -305,7 +305,7 @@ def dataproject_matches(section: str) -> list[Match]:
     return out
 
 
-def _parse_dataproject(page: str, section: str, cid: str, comp: str) -> list[Match]:
+def _parse_dataproject(page: str, section: str, cid: str, comp: str, only_paok: bool = True) -> list[Match]:
     key_re = re.compile(r'_RADLIST_Legs_(ctrl\d+)_(?:RADLIST_Matches_(ctrl\d+)_)?([A-Za-z0-9_]+)"')
     fields: dict[tuple, dict] = collections.defaultdict(dict)
     first_pos: dict[tuple, int] = {}
@@ -338,7 +338,7 @@ def _parse_dataproject(page: str, section: str, cid: str, comp: str) -> list[Mat
     for key, f in fields.items():
         home = f.get("Label2") or f.get("Label6") or ""
         away = f.get("Label4") or f.get("Label7") or ""
-        if not (is_paok(home) or is_paok(away)):
+        if only_paok and not (is_paok(home) or is_paok(away)):
             continue
         when = f.get("LB_DataOra") or f.get("LBL_DataOra_Small") or ""
         dm = re.search(r"(\d{2})/(\d{2})/(\d{4})", when)

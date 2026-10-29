@@ -27,7 +27,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:handball-women-oxe-34739@paok-calendar
-DTSTAMP:20261029T192255Z
+DTSTAMP:20261029T223029Z
 DTSTART;TZID=Europe/Athens:20260930T150000
 DTEND;TZID=Europe/Athens:20260930T170000
 SUMMARY:🤾 ΠΑΟΚ 42-13 ΠΡΟΣΟΤΣΑΝΗ ΔΡΑΜΑΣ
@@ -37,7 +37,7 @@ URL:http://statistics.handball.org.gr/gr/sportevents.asp
 END:VEVENT
 BEGIN:VEVENT
 UID:handball-women-ehf-202712020902012@paok-calendar
-DTSTAMP:20261029T192255Z
+DTSTAMP:20261029T223029Z
 DTSTART;TZID=Europe/Athens:20261010T180000
 DTEND;TZID=Europe/Athens:20261010T200000
 SUMMARY:🤾 ΠΑΟΚ 21-29 Molde Elite
@@ -49,16 +49,17 @@ URL:http://www.eurohandball.com/en/matches/202712020902012/ACPAOK-MoldeElit
 END:VEVENT
 BEGIN:VEVENT
 UID:handball-women-oxe-34757@paok-calendar
-DTSTAMP:20261029T192255Z
+DTSTAMP:20261029T223029Z
 DTSTART;TZID=Europe/Athens:20261031T173000
 DTEND;TZID=Europe/Athens:20261031T193000
 SUMMARY:🤾 ΠΑΟΚ – ΑΘΗΝΑΙΚΟΣ Α.Σ.Β.
+LOCATION:Σπίτι του Χάντμπολ\, Μίκρα 3
 DESCRIPTION:Α1 Γυναικών – 5η Αγωνιστική
 URL:http://statistics.handball.org.gr/gr/sportevents.asp
 END:VEVENT
 BEGIN:VEVENT
 UID:handball-women-oxe-34766@paok-calendar
-DTSTAMP:20261029T192255Z
+DTSTAMP:20261029T223029Z
 DTSTART;TZID=Europe/Athens:20261114T153000
 DTEND;TZID=Europe/Athens:20261114T173000
 SUMMARY:🤾 ΠΑΟΚ – Γ.Α.Σ ΚΑΜΑΤΕΡΟΥ
@@ -67,7 +68,7 @@ URL:http://statistics.handball.org.gr/gr/sportevents.asp
 END:VEVENT
 BEGIN:VEVENT
 UID:handball-women-oxe-34775@paok-calendar
-DTSTAMP:20261029T192255Z
+DTSTAMP:20261029T223029Z
 DTSTART;TZID=Europe/Athens:20261219T180000
 DTEND;TZID=Europe/Athens:20261219T200000
 SUMMARY:🤾 ΠΑΟΚ – Ο.Φ. Ν. ΙΩΝΙΑΣ (ώρα TBC)
@@ -78,7 +79,7 @@ URL:http://statistics.handball.org.gr/gr/sportevents.asp
 END:VEVENT
 BEGIN:VEVENT
 UID:handball-women-oxe-34781@paok-calendar
-DTSTAMP:20261029T192255Z
+DTSTAMP:20261029T223029Z
 DTSTART;TZID=Europe/Athens:20270109T180000
 DTEND;TZID=Europe/Athens:20270109T200000
 SUMMARY:🤾 ΠΑΟΚ – ΑΝΑΓΕΝΝΗΣΗ ΑΡΤΑΣ (ώρα TBC)
@@ -89,7 +90,7 @@ URL:http://statistics.handball.org.gr/gr/sportevents.asp
 END:VEVENT
 BEGIN:VEVENT
 UID:handball-women-oxe-34792@paok-calendar
-DTSTAMP:20261029T192255Z
+DTSTAMP:20261029T223029Z
 DTSTART;TZID=Europe/Athens:20270130T180000
 DTEND;TZID=Europe/Athens:20270130T200000
 SUMMARY:🤾 ΠΑΟΚ – ΛΕΩΝΙΔΑΣ ΑΓ.ΑΝΑΡΓ. (ώρα TBC)
@@ -100,7 +101,7 @@ URL:http://statistics.handball.org.gr/gr/sportevents.asp
 END:VEVENT
 BEGIN:VEVENT
 UID:handball-women-oxe-34798@paok-calendar
-DTSTAMP:20261029T192255Z
+DTSTAMP:20261029T223029Z
 DTSTART;TZID=Europe/Athens:20270206T180000
 DTEND;TZID=Europe/Athens:20270206T200000
 SUMMARY:🤾 ΠΑΟΚ – Α.Ε.Κ. (ώρα TBC)
@@ -111,7 +112,7 @@ URL:http://statistics.handball.org.gr/gr/sportevents.asp
 END:VEVENT
 BEGIN:VEVENT
 UID:handball-women-oxe-34804@paok-calendar
-DTSTAMP:20261029T192255Z
+DTSTAMP:20261029T223029Z
 DTSTART;TZID=Europe/Athens:20270220T180000
 DTEND;TZID=Europe/Athens:20270220T200000
 SUMMARY:🤾 ΠΑΟΚ – Α.Ε.Π. ΠΑΝΟΡΑΜΑ (ώρα TBC)
@@ -122,7 +123,7 @@ URL:http://statistics.handball.org.gr/gr/sportevents.asp
 END:VEVENT
 BEGIN:VEVENT
 UID:handball-women-oxe-34815@paok-calendar
-DTSTAMP:20261029T192255Z
+DTSTAMP:20261029T223029Z
 DTSTART;TZID=Europe/Athens:20270320T180000
 DTEND;TZID=Europe/Athens:20270320T200000
 SUMMARY:🤾 ΠΑΟΚ – Α.Ε.Σ.Χ. ΠΥΛΑΙΑΣ (ώρα TBC)

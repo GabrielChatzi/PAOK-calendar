@@ -1023,7 +1023,8 @@ def cev_tidy(name: str) -> str:
 
 
 def cev_caps(name: str) -> str:
-    return " ".join(w.capitalize() if len(w) > 3 and w.isalpha() and w.isupper() else w for w in name.split())
+    return " ".join(w.capitalize() if len(w) > 3 and w.isalpha() and w.isupper() and w != "PAOK" else w
+                    for w in name.split())
 
 
 _CEV_TZ: dict[str, str] = {}

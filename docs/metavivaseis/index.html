@@ -239,7 +239,7 @@ async function api(action, { method = "GET", body, query = "" } = {}) {
   let data = {};
   try { data = await res.json(); } catch {}
   if (res.status === 401 && token) { setIdentity(null, null); }
-  if (!res.ok) throw new Error(data.error || "Κάτι πήγε στραβά.");
+  if (!res.ok) throw new Error((data.error || `Κάτι πήγε στραβά (HTTP ${res.status}).`) + (data.detail ? ` [${data.detail}]` : ""));
   return data;
 }
 const post = (action, body) => api(action, { method: "POST", body });

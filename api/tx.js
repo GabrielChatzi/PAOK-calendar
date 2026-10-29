@@ -18,19 +18,32 @@
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
-import { configured, getDb, readBody, send } from "./_lib.js";
+import { SITE, configured, getDb, readBody, send } from "./_lib.js";
 
 const SECTIONS = new Set(["football", "basketball"]);
 const MAX_OPEN_OFFERS_PER_MATCH = 4;
 const MAX_ACTIVE_REQUESTS_PER_MATCH = 3;
 const DAY = 24 * 3600 * 1000;
 
-// ---------- Αγώνες: από το docs/matches.json που συνοδεύει τη λειτουργία ----------
+// ---------- Αγώνες ----------
+// Από το docs/matches.json που συνοδεύει τη λειτουργία· αν δεν βρεθεί (π.χ. σε preview), από τη
+// δημόσια σελίδα. Κρατιούνται 10 λεπτά.
 let matchCache = null;
-function matches() {
+async function readMatches() {
+  const candidates = [
+    new URL("../docs/matches.json", import.meta.url),
+    path.join(process.cwd(), "docs", "matches.json"),
+  ];
+  for (const file of candidates) {
+    try { return JSON.parse(fs.readFileSync(file, "utf8")); } catch { /* επόμενο */ }
+  }
+  const res = await fetch(`${SITE}/matches.json`, { headers: { "Cache-Control": "no-cache" } });
+  if (!res.ok) throw new Error(`matches.json: HTTP ${res.status}`);
+  return res.json();
+}
+async function matches() {
   if (matchCache && Date.now() - matchCache.at < 10 * 60 * 1000) return matchCache.byId;
-  const file = path.join(process.cwd(), "docs", "matches.json");
-  const data = JSON.parse(fs.readFileSync(file, "utf8"));
+  const data = await readMatches();
   const byId = new Map();
   for (const m of data.matches || []) {
     if (m.nt && m.paokHome && SECTIONS.has(m.section)) byId.set(m.nt, m);
@@ -38,8 +51,8 @@ function matches() {
   matchCache = { at: Date.now(), byId };
   return byId;
 }
-function upcomingMatch(id) {
-  const m = matches().get(String(id || ""));
+async function upcomingMatch(id) {
+  const m = (await matches()).get(String(id || ""));
   if (!m) return null;
   // Δεκτός μέχρι να αρχίσει ο αγώνας.
   return new Date(m.start).getTime() > Date.now() ? m : null;
@@ -145,7 +158,7 @@ const actions = {
   // GET ?id=<αγώνας>: οι ανοιχτές θέσεις ενός αγώνα και τι έχω ζητήσει εγώ.
   async match(req, c) {
     const id = String(req.query?.id || "");
-    if (!matches().has(id)) fail(404, "Ο αγώνας δεν βρέθηκε.");
+    if (!(await matches()).has(id)) fail(404, "Ο αγώνας δεν βρέθηκε.");
     const me = await currentUser(req, c, { required: false });
     const offers = await c.offers.find({ matchId: id, status: "open" }).sort({ created: 1 }).toArray();
     const owners = offers.map((o) => o.ownerId);
@@ -221,7 +234,7 @@ const actions = {
   // POST {matchId, gate, row, seat, note, free}: δίνω τη θέση μου.
   async offer(req, c, body) {
     const me = await currentUser(req, c);
-    const m = upcomingMatch(body.matchId);
+    const m = await upcomingMatch(body.matchId);
     if (!m) fail(400, "Ο αγώνας δεν είναι επερχόμενος εντός έδρας ποδοσφαίρου ή μπάσκετ.");
     if (body.free !== true) fail(400, "Οι θέσεις δίνονται μόνο δωρεάν.");
     const gate = str(body.gate, 10, { required: true, label: "Θύρα" });
@@ -373,6 +386,7 @@ export default async function handler(req, res) {
   } catch (e) {
     if (e instanceof Fail) return send(res, e.status, { error: e.message });
     console.error("tx", a, e);
-    return send(res, 500, { error: "Κάτι πήγε στραβά. Δοκίμασε ξανά." });
+    // Μόνο ο κωδικός του σφάλματος (όχι το μήνυμα), για να φαίνεται τι έφταιξε στη δοκιμή.
+    return send(res, 500, { error: "Κάτι πήγε στραβά. Δοκίμασε ξανά.", detail: String(e?.code || e?.name || "unknown").slice(0, 40) });
   }
 }

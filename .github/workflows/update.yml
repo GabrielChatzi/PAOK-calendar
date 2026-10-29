@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [build_calendars.py, standings.py, notify.py, .github/workflows/update.yml]
+    paths: [build_calendars.py, standings.py, notify.py, club.py, manual.json, .github/workflows/update.yml]
 
 permissions:
   contents: write

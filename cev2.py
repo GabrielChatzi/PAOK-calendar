@@ -11,5 +11,5 @@ def get(i):
     m = re.search(r"Calendar Search Login (.{0,80}?) Men Women Home", txt)
     return i, (m.group(1) if m else txt[3000:3080]), "PAOK" in txt.upper()
 with cf.ThreadPoolExecutor(8) as ex:
-    for i, title, paok in ex.map(get, range(1795, 1905)):
-        if "2027" in title or "2026" in title or paok: print(i, title, "PAOK" if paok else "")
+    for i, title, paok in ex.map(get, range(1905, 2150)):
+        if "2027" in title or paok: print(i, title, "PAOK" if paok else "")

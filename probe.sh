@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
 UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130 Safari/537.36"
-curl -sSL -m 40 -A "$UA" "https://www-old.cev.eu/Competition-Area/CompetitionView.aspx?ID=1801" -o /tmp/o.html -w "%{http_code} %{url_effective}\n"; wc -c /tmp/o.html
-grep -oE '<title>[^<]*' /tmp/o.html; grep -oE 'CompetitionView\.aspx\?ID=[0-9]+[^"]*"[^>]*>[^<]*' /tmp/o.html | sort -u | head -30
-grep -oiE '.{0,120}(Galati|PAOK).{0,200}' /tmp/o.html | head
-for id in 1850 1880 1900 1920; do t=$(curl -sSL -m 30 -A "$UA" "https://www-old.cev.eu/Competition-Area/CompetitionView.aspx?ID=$id" | grep -oE '<title>[^<]*|<h1[^>]*>[^<]*' | head -2 | tr '\n' ' '); echo "$id $t"; done
+curl -sSL -m 40 -A "$UA" "https://www-old.cev.eu/Competition-Area/CompetitionView.aspx?ID=1801" -o docs/cevold.html
+curl -sSL -m 40 -A "$UA" "https://www-old.cev.eu/Competition-Area/CompetitionTeamDetails.aspx?TeamID=14088&ID=1801" -o docs/cevteam.html
+python3 - <<'PY'
+import re,html
+for f in ["docs/cevold.html","docs/cevteam.html"]:
+    t=open(f,encoding="utf-8",errors="replace").read()
+    txt=html.unescape(re.sub(r"<[^>]+>"," ",re.sub(r"<script.*?</script>|<style.*?</style>","",t,flags=re.S)))
+    txt=re.sub(r"\s+"," ",txt)
+    print("####",f,len(t)); print(txt[:2500])
+    i=txt.find("PAOK"); print("...PAOK:", txt[max(0,i-1500):i+1500] if i>=0 else "")
+PY

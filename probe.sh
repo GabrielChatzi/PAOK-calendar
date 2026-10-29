@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
-UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130 Safari/537.36"
-B="https://epssalas.gr/wp-json/sportspress/v2"
-curl -sS -m 30 -A "$UA" "$B/tables/23930?_fields=id,title,data,link" -o docs/table.json
-curl -sS -m 60 -A "$UA" "$B/events?leagues=56&seasons=227&per_page=100&page=1&_fields=id,date,link,title,teams,main_results,results,venues,status,day" -o docs/ev1.json
-curl -sS -m 60 -A "$UA" "$B/events?leagues=56&seasons=227&per_page=100&page=2&_fields=id,date,link,title,teams,main_results,results,venues,status,day" -o docs/ev2.json
-curl -sS -m 30 -A "$UA" "$B/teams?leagues=56&seasons=227&per_page=100&_fields=id,title,featured_media" -o docs/fteams.json
-curl -sS -m 30 -A "$UA" "$B/venues?per_page=100&_fields=id,name" -o docs/venues.json
+python3 build_calendars.py > build.log 2>&1; echo "exit $?"
+grep -E "^futsal|! |Νέος|futsal" build.log | cut -c1-200 | head -30
+python3 -c "
+import json; d=json.load(open('docs/matches.json'))
+for m in d['matches']:
+  if m['section']=='futsal': print(m['start'], m['timeKnown'], m['home'], '–', m['away'], m['score'], m['round'], bool(m['homeLogo']))
+s=json.load(open('docs/standings.json'))['futsal'][0]
+for r in s['rows']: print(r['pos'], r['team'], r['cells'])"
+echo "---- checks"; cat checks.md
+rm -rf docs; mkdir -p docs; touch docs/.keep

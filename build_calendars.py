@@ -15,6 +15,7 @@
   Βόλεϊ γυναικών:      Data Project της ΕΟΠΕ (Volley League Women, Κύπελλο), CEV
   Χάντμπολ:            statistics.handball.org.gr (Handball Premier, Α1 Γυναικών, Κύπελλα), EHF
   Πόλο:                waterpololeague.gr (ανδρών, γυναικών), European Aquatics (ευρωπαϊκά κύπελλα)
+  Ποδόσφαιρο σάλας:    epssalas.gr (Futsal Super League· οι ώρες συνήθως από την ΑΣ ΠΑΟΚ)
 
 Γράφει επίσης βαθμολογίες στο docs/standings.json (βλ. standings.py) και στέλνει
 ειδοποιήσεις για νέους αγώνες, αλλαγές ώρας και αποτελέσματα (βλ. notify.py),
@@ -66,6 +67,7 @@ SECTIONS = {
     "handball-women": {"emoji": "🤾", "name": "Χάντμπολ Γυναικών", "sport": "Χάντμπολ", "women": True},
     "waterpolo": {"emoji": "🤽", "name": "Πόλο", "sport": "Πόλο", "women": False},
     "waterpolo-women": {"emoji": "🤽", "name": "Πόλο Γυναικών", "sport": "Πόλο", "women": True},
+    "futsal": {"emoji": "🥅", "name": "Ποδόσφαιρο Σάλας", "sport": "Ποδόσφαιρο Σάλας", "women": False},
 }
 
 
@@ -1108,6 +1110,70 @@ def cev_matches(section: str) -> list[Match]:
     return list(out.values())
 
 
+# ---------------------------------------------------------------- ποδόσφαιρο σάλας
+
+# Η Futsal Super League (ΕΠΣ Σάλας) δημοσιεύει το πρόγραμμα με το WordPress/SportsPress, που
+# έχει δημόσιο API. Η πηγή δίνει μόνο την ημερομηνία κάθε αγωνιστικής, χωρίς ώρα· την ώρα (και
+# την πραγματική μέρα) τη συμπληρώνουν οι ανακοινώσεις της ΑΣ ΠΑΟΚ (club.py).
+EPS = "https://epssalas.gr/wp-json/sportspress/v2/"
+
+
+def eps_json(path: str):
+    return json.loads(fetch(EPS + path))
+
+
+def futsal_ids() -> tuple[int, int]:
+    """(διοργάνωση, σεζόν) της Futsal Super League για την τρέχουσα σεζόν."""
+    y = season_start_year()
+    leagues = eps_json("leagues?per_page=100&_fields=id,name")
+    league = next(l["id"] for l in leagues
+                  if "FUTSAL SUPER LEAGUE" in l["name"].upper() and "PLAY" not in l["name"].upper())
+    seasons = eps_json("seasons?per_page=100&_fields=id,name")
+    season = next(x["id"] for x in seasons if x["name"].replace(" ", "") in (f"{y}-{y + 1}", f"{y}-{(y + 1) % 100:02d}"))
+    return league, season
+
+
+def eps_name(text: str) -> str:
+    return clean(html.unescape(text)).rstrip("* ").strip()
+
+
+def futsal_matches() -> list[Match]:
+    league, season = futsal_ids()
+    teams = eps_json(f"teams?leagues={league}&seasons={season}&per_page=100&_fields=id,title,featured_media")
+    names = {t["id"]: eps_name(t["title"]["rendered"]) for t in teams}
+    media_ids = ",".join(str(t["featured_media"]) for t in teams if t.get("featured_media"))
+    media = {m["id"]: m.get("source_url", "") for m in (eps_json(f"media?include={media_ids}&per_page=100"
+                                                                 f"&_fields=id,source_url") if media_ids else [])}
+    logos = {t["id"]: media.get(t.get("featured_media"), "") for t in teams}
+    paok_id = next((i for i, n in names.items() if is_paok(n)), None)
+    if paok_id is None:
+        raise RuntimeError("Δεν βρέθηκε ο ΠΑΟΚ στη Futsal Super League")
+    events, page = [], 1
+    while page < 10:
+        batch = eps_json(f"events?leagues={league}&seasons={season}&per_page=100&page={page}"
+                         f"&_fields=id,date,link,title,teams,results")
+        events += batch
+        if len(batch) < 100:
+            break
+        page += 1
+    mine = sorted((e for e in events if paok_id in e["teams"] and len(e["teams"]) == 2), key=lambda e: e["date"])
+    out = []
+    for n, e in enumerate(mine, 1):
+        home_id, away_id = e["teams"]
+        start = dt.datetime.fromisoformat(e["date"])
+        goals = [(e["results"].get(str(t)) or {}).get("goals", "") if isinstance(e["results"].get(str(t)), dict) else ""
+                 for t in (home_id, away_id)]
+        out.append(Match(
+            section="futsal", uid=f"futsal-eps-{e['id']}", day=start.date(),
+            time=parse_time(start.strftime("%H:%M")),
+            home=tidy_name(names.get(home_id, "")), away=tidy_name(names.get(away_id, "")),
+            paok_home=home_id == paok_id, competition="Futsal Super League", round=f"{n}η αγωνιστική",
+            score=f"{goals[0]}-{goals[1]}" if all(str(g).isdigit() for g in goals) else "",
+            url=e["link"], home_logo=logos.get(home_id, ""), away_logo=logos.get(away_id, ""),
+        ))
+    return out
+
+
 # ---------------------------------------------------------------- iCal
 
 def ics_escape(s: str) -> str:
@@ -1270,6 +1336,7 @@ SOURCES: dict[str, list[tuple[str, Callable[[], list[Match]]]]] = {
                        ("EHF", lambda: ehf_matches("handball-women"))],
     "waterpolo": [("WPL", lambda: waterpolo_matches("waterpolo")),
                   ("European Aquatics", lambda: european_waterpolo_matches("waterpolo"))],
+    "futsal": [("Futsal Super League", futsal_matches)],
     "waterpolo-women": [("WPL", lambda: waterpolo_matches("waterpolo-women")),
                         ("European Aquatics", lambda: european_waterpolo_matches("waterpolo-women"))],
 }

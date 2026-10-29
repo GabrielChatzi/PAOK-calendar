@@ -36,6 +36,7 @@ PROGRAM_SECTIONS = {
     "ΒΟΛΕΪ ΓΥΝΑΙΚΩΝ": "volley-women", "ΒΟΛΕΙ ΓΥΝΑΙΚΩΝ": "volley-women",
     "ΧΑΝΤΜΠΟΛ ΑΝΔΡΩΝ": "handball", "ΧΑΝΤΜΠΟΛ ΓΥΝΑΙΚΩΝ": "handball-women",
     "ΠΟΛΟ ΑΝΔΡΩΝ": "waterpolo", "ΠΟΛΟ ΓΥΝΑΙΚΩΝ": "waterpolo-women",
+    "ΠΟΔΟΣΦΑΙΡΟ ΣΑΛΑΣ": "futsal",
 }
 WEEKDAYS = ["ΔΕΥΤΕΡΑ", "ΤΡΙΤΗ", "ΤΕΤΑΡΤΗ", "ΠΕΜΠΤΗ", "ΠΑΡΑΣΚΕΥΗ", "ΣΑΒΒΑΤΟ", "ΚΥΡΙΑΚΗ"]
 
@@ -206,13 +207,14 @@ def reconcile(section: str, official: list[Match], checks: list[str], label: str
     seen: set[str] = set()
     for e in latest.values():
         paok_home = is_paok(e["home"]) if e["kind"] == "program" else e["home_flag"]
-        candidates = [m for m in official + added if abs((m.day - e["day"]).days) <= 1
+        # Χωρίς ώρα, η επίσημη ημερομηνία είναι συνήθως της αγωνιστικής: ο αγώνας μπορεί να είναι λίγες μέρες μετά.
+        candidates = [m for m in official + added
+                      if abs((m.day - e["day"]).days) <= (3 if m.time is None else 1)
                       and (paok_home is None or m.paok_home == paok_home)]
         if candidates:
             m = min(candidates, key=lambda m: abs((m.day - e["day"]).days))
             if m.time is None:
-                if m.day == e["day"]:
-                    m.time = e["time"]  # η επίσημη πηγή δεν έχει ακόμα ώρα
+                m.day, m.time = e["day"], e["time"]  # η επίσημη πηγή δεν έχει ακόμα ώρα
             elif (m.day, m.time) != (e["day"], e["time"]) and m.uid not in seen:
                 seen.add(m.uid)
                 official_when = fmt(m.day, m.time)

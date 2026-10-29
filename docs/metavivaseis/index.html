@@ -1,0 +1,906 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Μεταβιβάσεις · PAOKalendar</title>
+<meta name="description" content="Δοκιμαστική έκδοση: κάτοχοι διαρκείας του ΠΑΟΚ δίνουν δωρεάν τη θέση τους σε αγώνες που δεν πάνε.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#000000">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Μεταβιβάσεις">
+<link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32.png">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@600;800&family=Fira+Sans:wght@400;500;600&display=swap&subset=greek" rel="stylesheet">
+<style>
+  :root {
+    --ink: #000;
+    --paper: #fff;
+    --surface: #f1f0ed;
+    --muted: #66655f;
+    --rule: #d9d8d3;
+    --ok: #17663a;
+    --ok-bg: #e3f1e8;
+    --warn: #7a4200;
+    --warn-bg: #fff1dd;
+    --danger: #a3261b;
+    --display: "Fira Sans Extra Condensed", "Arial Narrow", sans-serif;
+    --body: "Fira Sans", system-ui, sans-serif;
+    --stripe: repeating-linear-gradient(90deg, var(--ink) 0 14px, var(--paper) 14px 28px);
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #fff;
+      --paper: #000;
+      --surface: #161615;
+      --muted: #a3a29c;
+      --rule: #2c2c2a;
+      --ok: #7fd4a0;
+      --ok-bg: #0f2a1a;
+      --warn: #ffc97a;
+      --warn-bg: #2b1d08;
+      --danger: #ff8a7d;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-padding-bottom: 110px; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.5 var(--body); }
+  a { color: inherit; }
+  button, input, select, textarea { font: inherit; color: inherit; }
+  :focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+  [hidden] { display: none !important; }
+
+  .masthead { background: var(--stripe); padding: calc(28px + env(safe-area-inset-top)) 16px 0; }
+  .masthead-inner { max-width: 680px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; }
+  .masthead h1 {
+    display: inline-block; margin: 0; padding: 10px 14px 6px; background: var(--paper); min-width: 0;
+    font: 800 clamp(30px, 8vw, 56px)/0.9 var(--display); letter-spacing: -0.01em;
+  }
+  .masthead h1 a { text-decoration: none; }
+  .who {
+    flex: none; margin-bottom: 10px; min-height: 46px; padding: 0 12px; display: inline-flex; align-items: center; gap: 6px;
+    background: var(--paper); color: var(--ink); border: 2px solid var(--ink); font-weight: 600; cursor: pointer; max-width: 130px;
+  }
+  .who span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .who svg { width: 20px; height: 20px; flex: none; }
+
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 16px; }
+  main { padding-bottom: calc(120px + env(safe-area-inset-bottom)); }
+  body:has(#cta[hidden]) main { padding-bottom: calc(40px + env(safe-area-inset-bottom)); }
+  .test { background: var(--warn-bg); color: var(--warn); padding: 10px 16px; font-size: 14px; }
+  .test .wrap { padding: 0; }
+  .test strong { font-weight: 600; }
+
+  .tabs { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr) minmax(0, 1.25fr); border: 2px solid var(--ink); margin: 18px 0 16px; }
+  .tabs a { min-height: 46px; padding: 0 4px; display: flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none; font-weight: 600; font-size: 15px; white-space: nowrap; }
+  .tabs a + a { border-left: 2px solid var(--ink); }
+  .tabs a[aria-current="page"] { background: var(--ink); color: var(--paper); }
+  .badge { min-width: 22px; height: 22px; padding: 0 6px; border-radius: 11px; background: var(--danger); color: #fff; font-size: 13px; line-height: 22px; text-align: center; }
+  .tabs a[aria-current="page"] .badge { background: var(--paper); color: var(--ink); }
+
+  h2 { font: 800 26px/1.1 var(--display); margin: 24px 0 10px; }
+  h3 { font: 800 21px/1.15 var(--display); margin: 0; }
+  .label { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 22px 0 8px; }
+  .muted { color: var(--muted); }
+  .small { font-size: 14px; }
+
+  .info { display: flex; gap: 12px; align-items: flex-start; background: var(--surface); padding: 12px 14px; font-size: 15px; }
+  .info svg { width: 20px; height: 20px; flex: none; margin-top: 2px; }
+  .info.warn { background: var(--warn-bg); color: var(--warn); }
+  .info.ok { background: var(--ok-bg); color: var(--ok); }
+  .info p { margin: 0; }
+
+  .match {
+    display: grid; grid-template-columns: 56px 1fr auto; gap: 14px; align-items: center;
+    border: 1.5px solid var(--ink); padding: 12px; margin-bottom: 10px; text-decoration: none;
+  }
+  .date { background: var(--ink); color: var(--paper); text-align: center; padding: 6px 0; line-height: 1.1; }
+  .date .d { display: block; font: 800 26px/1 var(--display); }
+  .date .w, .date .m { display: block; font-size: 12px; font-weight: 600; text-transform: uppercase; }
+  .match strong { display: block; font: 800 21px/1.1 var(--display); }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  .chip { font-size: 13px; font-weight: 600; padding: 2px 9px; border-radius: 999px; background: var(--surface); }
+  .chip.ok { background: var(--ok-bg); color: var(--ok); }
+  .chip.warn { background: var(--warn-bg); color: var(--warn); }
+  .chev { width: 20px; height: 20px; color: var(--muted); }
+
+  .seat {
+    display: grid; grid-template-columns: 52px 1fr auto; gap: 12px; align-items: center;
+    border: 1.5px solid var(--rule); padding: 12px; margin-bottom: 10px;
+  }
+  .gate { width: 52px; height: 52px; display: grid; place-items: center; background: var(--ink); color: var(--paper); font: 800 20px/1 var(--display); }
+  .seat strong { display: block; font-weight: 600; }
+  .seat .note { font-size: 14px; margin-top: 4px; }
+
+  .btn {
+    min-height: 46px; padding: 0 18px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    border: 2px solid var(--ink); background: var(--paper); color: var(--ink); font-weight: 600; text-decoration: none; cursor: pointer;
+  }
+  .btn.solid { background: var(--ink); color: var(--paper); }
+  .btn.okb { border-color: var(--ok); color: var(--ok); background: var(--ok-bg); }
+  .btn.link { border-color: transparent; background: transparent; color: var(--danger); padding: 0 8px; }
+  .btn.block { display: flex; width: 100%; }
+  .btn[disabled] { opacity: 0.45; cursor: not-allowed; }
+  .btn svg { width: 18px; height: 18px; }
+
+  .cta { position: fixed; left: 0; right: 0; bottom: 0; background: var(--paper); border-top: 1.5px solid var(--rule); padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); }
+  .cta .wrap { padding: 0; }
+
+  form .field { margin-bottom: 14px; }
+  label { display: block; font-weight: 600; margin-bottom: 6px; }
+  input[type="text"], select, textarea {
+    width: 100%; min-height: 50px; padding: 10px 14px; border: 1.5px solid var(--ink); background: var(--paper); border-radius: 0;
+  }
+  textarea { resize: vertical; min-height: 70px; }
+  .row3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .row4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+  .row4 input[type="text"] { padding: 10px; }
+  .check { display: flex; gap: 12px; align-items: flex-start; font-weight: 400; margin: 6px 0 14px; }
+  .check input { width: 22px; height: 22px; margin: 1px 0 0; accent-color: var(--ink); flex: none; }
+
+  .card { border: 1.5px solid var(--ink); padding: 14px; margin-bottom: 14px; }
+  .card.done { border-color: var(--rule); }
+  .card-head { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; margin-bottom: 8px; }
+  .status { font-size: 13px; font-weight: 600; padding: 3px 10px; background: var(--ink); color: var(--paper); white-space: nowrap; }
+  .status.ok { background: var(--ok-bg); color: var(--ok); }
+  .status.warn { background: var(--warn-bg); color: var(--warn); }
+  .status.gray { background: var(--surface); color: var(--muted); }
+  .req { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; padding: 10px 0; border-top: 1px solid var(--rule); }
+  .steps { list-style: none; margin: 10px 0 0; padding: 0; }
+  .steps li { display: grid; grid-template-columns: 28px 1fr; gap: 12px; padding-bottom: 14px; position: relative; }
+  .steps li:not(:last-child)::before { content: ""; position: absolute; left: 13px; top: 30px; bottom: 2px; width: 2px; background: var(--rule); }
+  .steps li.did:not(:last-child)::before { background: var(--ink); }
+  .dot { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font-size: 13px; font-weight: 600; border: 2px solid var(--rule); color: var(--muted); background: var(--paper); position: relative; z-index: 1; }
+  .did .dot { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+  .now .dot { border-color: var(--ink); color: var(--ink); }
+  .dot svg { width: 14px; height: 14px; }
+  .steps strong { display: block; font-weight: 600; padding-top: 3px; }
+  .steps .todo strong { color: var(--muted); }
+  .afmbox { background: var(--surface); padding: 12px; margin-top: 8px; display: grid; gap: 10px; }
+  .afmbox .num { font: 600 22px/1 ui-monospace, "SF Mono", Menlo, monospace; letter-spacing: 0.08em; }
+  .afmbox .two { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .empty { border: 1.5px dashed var(--rule); padding: 18px; text-align: center; color: var(--muted); }
+
+  dialog { border: 2px solid var(--ink); padding: 20px; max-width: min(420px, calc(100vw - 32px)); background: var(--paper); color: var(--ink); }
+  dialog::backdrop { background: rgb(0 0 0 / 0.55); }
+  dialog h3 { margin-bottom: 8px; }
+  .toast { position: fixed; left: 16px; right: 16px; bottom: calc(90px + env(safe-area-inset-bottom)); max-width: 640px; margin: 0 auto; background: var(--ink); color: var(--paper); padding: 12px 16px; font-weight: 500; z-index: 10; }
+  .back { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; margin-top: 10px; text-decoration: none; font-weight: 600; }
+  .back svg { width: 18px; height: 18px; }
+  footer { margin-top: 32px; font-size: 14px; color: var(--muted); }
+  .seat .btn { padding: 0 14px; }
+  .prio { font-size: 13px; color: var(--warn); margin-top: 4px; }
+  .settings { border: 1.5px solid var(--ink); padding: 14px; margin-bottom: 14px; }
+  .settings h3 { margin-bottom: 4px; }
+  .settings p { margin: 0 0 10px; }
+  .inline { display: flex; gap: 8px; align-items: stretch; margin-top: 8px; }
+  .inline input[type="text"] { flex: 1; min-width: 0; }
+  .nudge { display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; border: 1.5px solid var(--ink); padding: 12px 14px; margin-top: 10px; }
+  .nudge p { margin: 0; flex: 1; min-width: 180px; font-size: 15px; }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <h1><a href="#/">Μεταβιβάσεις</a></h1>
+    <button class="who" id="who" type="button"></button>
+  </div>
+</header>
+<div class="test"><div class="wrap"><strong>Δοκιμαστική έκδοση.</strong> Για δοκιμή χωρίς αληθινή μεταβίβαση χρησιμοποίησε τον ΑΦΜ <strong>123456783</strong>.</div></div>
+<main class="wrap" id="view" aria-live="polite"></main>
+<div class="cta" id="cta" hidden><div class="wrap"><a class="btn solid block" id="cta-link" href="#/give"></a></div></div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<dialog id="nickdlg">
+  <form method="dialog" id="nickform">
+    <h3>Διάλεξε ψευδώνυμο</h3>
+    <p class="small muted" style="margin:0 0 14px">Αυτό βλέπουν οι άλλοι. Κρατιέται σε αυτή τη συσκευή· δεν ζητάμε email, κωδικό ή ΑΦΜ.</p>
+    <div class="field">
+      <label for="nick">Ψευδώνυμο</label>
+      <input type="text" id="nick" autocomplete="nickname" maxlength="20" placeholder="π.χ. toumba79" required>
+    </div>
+    <p class="small" id="nickerr" style="color:var(--danger);margin:0 0 10px" hidden></p>
+    <div class="actions">
+      <button class="btn solid" type="submit" value="ok">Συνέχεια</button>
+      <button class="btn" type="button" id="nickcancel">Άκυρο</button>
+    </div>
+  </form>
+</dialog>
+
+<script>
+"use strict";
+const API = "/api/tx";
+const TOKEN_KEY = "paok-tx-token";
+const NICK_KEY = "paok-tx-nick";
+const SPORT_KEY = "paok-tx-sport";
+const PUSH_KEY = "paok-tx-push";
+const WALLET = "https://wallet.gov.gr";
+const HOUR = 3600 * 1000;
+
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch { return null; } },
+  set(k, v) { try { v == null ? localStorage.removeItem(k) : localStorage.setItem(k, v); } catch {} },
+};
+let token = store.get(TOKEN_KEY);
+let nick = store.get(NICK_KEY);
+let matchesById = new Map();
+let summary = {};
+let mine = null;
+let demoMode = false;
+let cutoffHours = 6;
+let pushOn = false;
+
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+const ICON = {
+  user: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>',
+  info: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>',
+  lock: '<svg style="width:14px;height:14px;vertical-align:-2px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>',
+  check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>',
+  chev: '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>',
+  back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>',
+  ext: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>',
+  copy: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>',
+  swap: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 7h11l-3-3M17 17H6l3 3"/></svg>',
+  bell: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg>',
+};
+
+// ---------- Δεδομένα ----------
+async function api(action, { method = "GET", body, query = "" } = {}) {
+  const headers = { "Content-Type": "application/json" };
+  if (token) headers.Authorization = "Bearer " + token;
+  const res = await fetch(`${API}?a=${action}${query}`, { method, headers, body: body ? JSON.stringify(body) : undefined, cache: "no-store" });
+  let data = {};
+  try { data = await res.json(); } catch {}
+  if (res.status === 401 && token) { setIdentity(null, null); }
+  if (!res.ok) throw new Error((data.error || `Κάτι πήγε στραβά (HTTP ${res.status}).`) + (data.detail ? ` [${data.detail}]` : ""));
+  return data;
+}
+const post = (action, body) => api(action, { method: "POST", body });
+
+async function loadMatches() {
+  const res = await fetch("/matches.json", { cache: "no-cache" });
+  const data = await res.json();
+  matchesById = new Map((data.matches || []).filter((m) => m.nt).map((m) => [m.nt, m]));
+}
+const deadline = (m) => new Date(new Date(m.start).getTime() - cutoffHours * HOUR);
+const closed = (m) => !m || deadline(m).getTime() <= Date.now();
+// Εντός έδρας αγώνες που δεν έχουν αρχίσει (στη λίστα) / που δέχονται ακόμα θέσεις (στη φόρμα).
+function upcoming(section, { openOnly = false } = {}) {
+  const now = Date.now();
+  return [...matchesById.values()]
+    .filter((m) => m.paokHome && m.section === section && new Date(m.start).getTime() > now && (!openOnly || !closed(m)))
+    .sort((a, b) => a.start.localeCompare(b.start));
+}
+
+// ---------- Μορφοποίηση ----------
+const TZ = "Europe/Athens";
+const fmt = (d, o) => new Intl.DateTimeFormat("el-GR", { timeZone: TZ, ...o }).format(new Date(d));
+const HM = { hour: "2-digit", minute: "2-digit", hourCycle: "h23" };
+const sportName = (s) => (s === "basketball" ? "Μπάσκετ" : "Ποδόσφαιρο");
+const title = (m) => (m ? `${m.home} – ${m.away}` : "Αγώνας");
+const dayTime = (d) => `${fmt(d, { weekday: "short", day: "numeric", month: "numeric" })} ${fmt(d, HM)}`;
+const time = (d) => fmt(d, HM);
+function when(m) {
+  if (!m) return "";
+  const day = fmt(m.start, { weekday: "short", day: "numeric", month: "numeric" });
+  return m.timeKnown === false ? `${day} · ώρα δεν έχει οριστεί` : `${day} · ${fmt(m.start, HM)}`;
+}
+function seatText(o) {
+  return [`Θύρα ${o.gate}`, o.block && `Τμήμα ${o.block}`, o.row && `Σειρά ${o.row}`, o.seat && `Θέση ${o.seat}`].filter(Boolean).join(" · ");
+}
+const given = (n) => (n ? `${n} ${n === 1 ? "μεταβίβαση" : "μεταβιβάσεις"}` : "Νέο μέλος");
+const deadlineText = (m) => (m ? `έως ${dayTime(deadline(m))}` : "");
+
+// Στο Wallet η μεταβίβαση ισχύει για τον επόμενο αγώνα του διαρκείας. Ένας αγώνας «ανοίγει» για
+// μεταβίβαση όταν τελειώσει ο προηγούμενος εντός έδρας του τμήματος (≈3 ώρες μετά την έναρξη).
+const MATCH_LENGTH = 3 * HOUR;
+function nextFor(section) {
+  const now = Date.now();
+  return [...matchesById.values()]
+    .filter((m) => m.paokHome && m.section === section && new Date(m.start).getTime() + MATCH_LENGTH > now)
+    .sort((a, b) => a.start.localeCompare(b.start))[0] || null;
+}
+const isNext = (m) => Boolean(m && nextFor(m.section)?.nt === m.nt);
+const blocker = (m) => { const n = m && nextFor(m.section); return n && n.nt !== m.nt ? n : null; };
+const waitText = (m) => { const b = blocker(m); return b ? `μετά το ${title(b)} (${when(b)})` : "όταν έρθει η σειρά του αγώνα"; };
+const myPrefs = (section) => mine?.user?.prefs?.[section] || { gates: [], others: true, alerts: false };
+const gatesText = (gates) => gates.map((g) => `Θύρα ${g}`).join(", ");
+
+// ---------- Ταυτότητα ----------
+function setIdentity(t, n) {
+  token = t; nick = n;
+  store.set(TOKEN_KEY, t); store.set(NICK_KEY, n);
+  renderWho();
+}
+function renderWho() {
+  $("#who").innerHTML = ICON.user + `<span>${nick ? "@" + esc(nick) : "Είσοδος"}</span>`;
+  $("#who").setAttribute("aria-label", nick ? `Ρυθμίσεις (@${nick})` : "Διάλεξε ψευδώνυμο");
+}
+let nickResolve = null;
+function needNick() {
+  if (token) return Promise.resolve(true);
+  return new Promise((resolve) => {
+    nickResolve = resolve;
+    $("#nickerr").hidden = true;
+    $("#nickdlg").showModal();
+    $("#nick").focus();
+  });
+}
+$("#nickform").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const n = $("#nick").value.trim();
+  try {
+    const r = await post("register", { nick: n });
+    setIdentity(r.token, r.nick);
+    $("#nickdlg").close();
+    // Η ενέργεια που ζήτησε το ψευδώνυμο συνεχίζει μόνη της και ανανεώνει την οθόνη.
+    nickResolve?.(true); nickResolve = null;
+  } catch (err) {
+    $("#nickerr").textContent = err.message; $("#nickerr").hidden = false;
+  }
+});
+$("#nickcancel").addEventListener("click", () => { $("#nickdlg").close(); nickResolve?.(false); nickResolve = null; });
+$("#who").addEventListener("click", async () => {
+  if (!token) { if (await needNick()) render(); return; }
+  location.hash = "#/settings";
+});
+
+let toastTimer;
+function toast(msg) {
+  const t = $("#toast"); t.textContent = msg; t.hidden = false;
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => { t.hidden = true; }, 4000);
+}
+
+// ---------- Ειδοποιήσεις web push ----------
+const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
+const standalone = window.matchMedia?.("(display-mode: standalone)").matches || navigator.standalone === true;
+const pushSupported = () => "serviceWorker" in navigator && "PushManager" in window && "Notification" in window;
+function pushHelp() {
+  if (pushSupported()) return "";
+  if (isIOS && !standalone) return "Στο iPhone οι ειδοποιήσεις δουλεύουν μόνο από την οθόνη Αφετηρίας: πάτα Κοινοποίηση → «Προσθήκη στην οθόνη Αφετηρίας» και άνοιξε τις Μεταβιβάσεις από εκεί.";
+  return "Αυτός ο browser δεν υποστηρίζει ειδοποιήσεις.";
+}
+function b64ToBytes(b64) {
+  const s = atob(b64.replace(/-/g, "+").replace(/_/g, "/") + "===".slice((b64.length + 3) % 4));
+  return Uint8Array.from(s, (c) => c.charCodeAt(0));
+}
+async function registration() {
+  await navigator.serviceWorker.register("/sw.js");
+  return navigator.serviceWorker.ready;
+}
+async function enablePush() {
+  if (!pushSupported()) throw new Error(pushHelp());
+  const perm = await Notification.requestPermission();
+  if (perm !== "granted") throw new Error("Δεν δόθηκε άδεια για ειδοποιήσεις. Μπορείς να την αλλάξεις από τις ρυθμίσεις του browser.");
+  const reg = await registration();
+  const res = await fetch("/api/vapid");
+  if (!res.ok) throw new Error("Οι ειδοποιήσεις δεν είναι διαθέσιμες αυτή τη στιγμή.");
+  const { publicKey } = await res.json();
+  const sub = (await reg.pushManager.getSubscription())
+    || await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64ToBytes(publicKey) });
+  await post("pushsub", { subscription: sub.toJSON() });
+  store.set(PUSH_KEY, "1");
+  pushOn = true;
+}
+async function disablePush() {
+  // Η συνδρομή του browser μένει (μπορεί να τη χρησιμοποιεί και το PAOKalendar)· σβήνεται μόνο εδώ.
+  const reg = await navigator.serviceWorker.getRegistration("/");
+  const sub = await reg?.pushManager.getSubscription();
+  if (sub) await post("pushunsub", { endpoint: sub.endpoint });
+  store.set(PUSH_KEY, "0");
+  pushOn = false;
+}
+// Σε κάθε άνοιγμα, αν οι ειδοποιήσεις είναι ενεργές σε αυτή τη συσκευή, ξαναστέλνουμε τη συνδρομή.
+async function syncPush() {
+  if (!token || store.get(PUSH_KEY) !== "1" || !pushSupported() || Notification.permission !== "granted") { pushOn = false; return; }
+  try {
+    const reg = await registration();
+    const sub = await reg.pushManager.getSubscription();
+    if (!sub) { pushOn = false; return; }
+    await post("pushsub", { subscription: sub.toJSON() });
+    pushOn = true;
+  } catch { pushOn = false; }
+}
+async function ensurePush() {
+  if (pushOn) return true;
+  try { await enablePush(); toast("Οι ειδοποιήσεις ενεργοποιήθηκαν."); return true; }
+  catch (err) { toast(err.message); return false; }
+}
+
+// ---------- Κουμπιά με data-act: εκτελούν μια ενέργεια και ανανεώνουν ----------
+document.addEventListener("click", async (e) => {
+  const b = e.target.closest("[data-act]");
+  if (!b) return;
+  e.preventDefault();
+  const act = b.dataset.act;
+  if (b.dataset.confirm && !confirm(b.dataset.confirm)) return;
+  if (act === "copy") {
+    try { await navigator.clipboard.writeText(b.dataset.value); toast("Ο ΑΦΜ αντιγράφηκε."); } catch { toast("Δεν έγινε αντιγραφή· σημείωσέ τον."); }
+    return;
+  }
+  if (act === "reveal") {
+    const el = document.getElementById(b.dataset.target);
+    const shown = el.dataset.shown === "1";
+    el.textContent = shown ? "••• ••• •••" : el.dataset.value.replace(/(\d{3})(?=\d)/g, "$1 ");
+    el.dataset.shown = shown ? "0" : "1";
+    b.textContent = shown ? "Εμφάνιση" : "Απόκρυψη";
+    return;
+  }
+  if (act === "seed") {
+    b.disabled = true;
+    try { const r = await post("seed", {}); toast(r.created ? `Μπήκαν ${r.created} δοκιμαστικές θέσεις.` : "Υπάρχουν ήδη δοκιμαστικές θέσεις."); await render(); }
+    catch (err) { toast(err.message); b.disabled = false; }
+    return;
+  }
+  if (!(await needNick())) return;
+  if (act === "push-on" || act === "push-off") {
+    b.disabled = true;
+    try {
+      if (act === "push-on") { await enablePush(); toast("Οι ειδοποιήσεις ενεργοποιήθηκαν σε αυτή τη συσκευή."); }
+      else { await disablePush(); toast("Οι ειδοποιήσεις απενεργοποιήθηκαν σε αυτή τη συσκευή."); }
+    } catch (err) { toast(err.message); }
+    await render();
+    return;
+  }
+  const body = JSON.parse(b.dataset.body || "{}");
+  if (act === "afm") body.afm = document.getElementById(b.dataset.input).value.replace(/\s/g, "");
+  if (act === "wait" && body.on) {
+    // Χωρίς ειδοποιήσεις η λίστα αναμονής δεν έχει νόημα: πρώτα ενεργοποίηση.
+    if (!(await ensurePush())) return;
+  }
+  b.disabled = true;
+  try {
+    await post(act, body);
+    if (b.dataset.ok) toast(b.dataset.ok);
+    await render();
+  } catch (err) {
+    toast(err.message);
+    b.disabled = false;
+  }
+});
+
+// Φόρμες θυρών (στη σελίδα αγώνα και στις ρυθμίσεις).
+document.addEventListener("submit", async (e) => {
+  const f = e.target.closest("form[data-prefs]");
+  if (!f) return;
+  e.preventDefault();
+  if (!(await needNick())) return;
+  const section = f.dataset.prefs;
+  const current = myPrefs(section);
+  const gates = (f.elements.gates.value || "").split(/[,;/]+/).map((g) => g.trim()).filter(Boolean);
+  const body = {
+    section, gates,
+    others: f.elements.others ? f.elements.others.checked : current.others,
+    alerts: f.elements.alerts ? f.elements.alerts.checked : current.alerts,
+  };
+  const btn = f.querySelector("button[type=submit]");
+  btn.disabled = true;
+  try {
+    if (body.alerts && !pushOn && !(await ensurePush())) { btn.disabled = false; return; }
+    await post("prefs", body);
+    toast(gates.length ? `Αποθηκεύτηκε: ${gatesText(gates)}.` : "Αποθηκεύτηκε.");
+    await render();
+  } catch (err) { toast(err.message); btn.disabled = false; }
+});
+
+// ---------- Οθόνες ----------
+function cta(text, href) {
+  if (!text) { $("#cta").hidden = true; return; }
+  $("#cta-link").innerHTML = ICON.swap + esc(text);
+  $("#cta-link").href = href;
+  $("#cta").hidden = false;
+}
+function sportTab() { return store.get(SPORT_KEY) === "basketball" ? "basketball" : "football"; }
+
+function actionCount() {
+  if (!mine) return 0;
+  let n = 0;
+  for (const o of mine.offers) {
+    if (o.status === "open" && o.requests.length) n++;
+    if (o.status === "assigned" && o.afm && o.transferable) n++;
+  }
+  for (const r of mine.requests) {
+    if (r.status !== "chosen") continue;
+    if (r.offerStatus === "assigned" && !r.afmSent && r.transferable) n++;
+    if (r.offerStatus === "transferred") n++;
+  }
+  return n;
+}
+function tabs(active) {
+  const n = actionCount();
+  const t = (key, label, href) => `<a href="${href}"${active === key ? ' aria-current="page"' : ""}>${label}</a>`;
+  return `<nav class="tabs" aria-label="Ενότητες">
+    ${t("football", "Ποδόσφαιρο", "#/football")}
+    ${t("basketball", "Μπάσκετ", "#/basketball")}
+    ${t("mine", `Οι κινήσεις μου${n ? ` <span class="badge" aria-label="${n} εκκρεμότητες">${n}</span>` : ""}`, "#/mine")}
+  </nav>`;
+}
+const step = (state, n, head, body = "") =>
+  `<li class="${state}"><span class="dot">${state === "did" ? ICON.check : n}</span><div><strong>${head}</strong>${body}</div></li>`;
+const btnAct = (act, label, body, { cls = "btn solid", ok = "", confirm = "", disabled = false, aria = "" } = {}) =>
+  `<button class="${cls}" type="button" data-act="${act}" data-body='${esc(JSON.stringify(body))}'${ok ? ` data-ok="${esc(ok)}"` : ""}${confirm ? ` data-confirm="${esc(confirm)}"` : ""}${aria ? ` aria-label="${esc(aria)}"` : ""}${disabled ? " disabled" : ""}>${label}</button>`;
+
+// Φόρμα «η θύρα μου» για ένα τμήμα. full: και οι επιλογές ειδοποιήσεων.
+function prefsForm(section, { full = false } = {}) {
+  const p = myPrefs(section);
+  const id = `pf-${section}`;
+  return `<form data-prefs="${section}">
+    <label for="${id}">Η θύρα μου (${sportName(section).toLowerCase()})</label>
+    <div class="inline"><input type="text" id="${id}" name="gates" maxlength="23" value="${esc(p.gates.join(", "))}" placeholder="π.χ. 4  ·  έως 2, με κόμμα">
+      <button class="btn solid" type="submit">Αποθήκευση</button></div>
+    ${full ? `
+    <label class="check" style="margin-top:12px"><input type="checkbox" name="alerts"${p.alerts ? " checked" : ""}><span>Ειδοποίησέ με για κάθε νέα θέση στη θύρα μου, σε όλους τους αγώνες</span></label>
+    <label class="check"><input type="checkbox" name="others"${p.others ? " checked" : ""}><span>Ειδοποίησέ με και για θέσεις σε άλλες θύρες, όταν τελειώσει η προτεραιότητα</span></label>` : ""}
+  </form>`;
+}
+
+async function viewHome(section) {
+  store.set(SPORT_KEY, section);
+  const sum = await api("summary");
+  summary = sum.matches || {};
+  demoMode = Boolean(sum.demo);
+  cutoffHours = sum.cutoffHours || cutoffHours;
+  const list = upcoming(section);
+  const cards = list.map((m) => {
+    const s = summary[m.nt] || { offers: 0, seekers: 0 };
+    const shut = closed(m);
+    return `<a class="match" href="#/m/${m.nt}">
+      <span class="date"><span class="w">${esc(fmt(m.start, { weekday: "short" }))}</span><span class="d">${esc(fmt(m.start, { day: "numeric" }))}</span><span class="m">${esc(fmt(m.start, { month: "short" }))}</span></span>
+      <span>
+        <strong>${esc(title(m))}</strong>
+        <span class="small muted">${esc(m.competition || "")} · ${m.timeKnown === false ? "ώρα δεν έχει οριστεί" : esc(fmt(m.start, HM))}</span>
+        <span class="chips">
+          ${shut ? `<span class="chip">Έκλεισε η μεταβίβαση</span>` : isNext(m) ? `<span class="chip warn">Επόμενος · μεταβίβαση ${esc(deadlineText(m))}</span>` : ""}
+          ${!shut && s.offers ? `<span class="chip ok">${s.offers} ${s.offers === 1 ? "θέση" : "θέσεις"}</span>` : ""}
+          ${!shut && !s.offers ? `<span class="chip">Καμία θέση ακόμα</span>` : ""}
+          ${!shut && s.seekers ? `<span class="chip">${s.seekers} ψάχνουν</span>` : ""}
+        </span>
+      </span>
+      ${ICON.chev}
+    </a>`;
+  }).join("");
+  const p = myPrefs(section);
+  const nudges = token ? [
+    !p.gates.length ? `<div class="nudge"><p>Δήλωσε τη θύρα σου για να έχεις <strong>προτεραιότητα</strong> στις θέσεις της.</p><a class="btn" href="#/settings">Η θύρα μου</a></div>` : "",
+    !pushOn ? `<div class="nudge"><p>Ενεργοποίησε τις <strong>ειδοποιήσεις</strong> για να μαθαίνεις αμέσως για αιτήματα και νέες θέσεις.</p><a class="btn" href="#/settings">${ICON.bell} Ειδοποιήσεις</a></div>` : "",
+  ].join("") : "";
+  $("#view").innerHTML = `${tabs(section)}
+    <div class="info">${ICON.info}<p>Η μεταβίβαση γίνεται στο Gov.gr Wallet, ισχύει για τον <strong>επόμενο</strong> αγώνα του διαρκείας και γίνεται <strong>έως ${cutoffHours} ώρες πριν</strong> τη σέντρα. Θέση μπορείς να δώσεις και για μεταγενέστερο αγώνα.</p></div>
+    ${nudges}
+    ${demoMode ? `<div class="info warn" style="margin-top:10px;flex-wrap:wrap">${ICON.info}<p style="flex:1;min-width:200px">Δοκιμή: οι χρήστες <strong>demo_</strong> απαντούν αυτόματα, ώστε να δοκιμάσεις και μόνος σου.</p>
+      <button class="btn" type="button" data-act="seed">Βάλε δοκιμαστικές θέσεις</button></div>` : ""}
+    <p class="label">Επόμενοι εντός έδρας · ${sportName(section)}</p>
+    ${cards || `<p class="empty">Δεν υπάρχει προγραμματισμένος εντός έδρας αγώνας.</p>`}
+    <footer>Ανεπίσημη σελίδα φιλάθλων· δεν συνδέεται με τον ΠΑΟΚ ή το Gov.gr. <a href="/">PAOKalendar</a></footer>`;
+  cta(upcoming(section, { openOnly: true }).length ? "Δεν πάω — δώσε τη θέση σου" : "", "#/give");
+}
+
+function seatRow(o, shut) {
+  let btn = "";
+  const lockedUntil = o.priorityUntil && !o.myGate && !o.isMine ? o.priorityUntil : null;
+  if (o.isMine) btn = `<span class="status gray">Δική σου</span>`;
+  else if (o.myRequest?.status === "chosen") btn = `<a class="btn okb" href="#/mine">Σε επέλεξε</a>`;
+  else if (o.myRequest) btn = btnAct("cancel", `${ICON.check} Ζητήθηκε`, { requestId: o.myRequest.requestId }, { cls: "btn okb", confirm: "Ακύρωση του αιτήματος;", ok: "Το αίτημα ακυρώθηκε.", aria: "Ζητήθηκε· πάτα για ακύρωση" });
+  else if (lockedUntil) btn = `<button class="btn" type="button" disabled aria-label="Προτεραιότητα για τη Θύρα ${esc(o.gate)} ως τις ${esc(time(lockedUntil))}">Ως ${esc(time(lockedUntil))}</button>`;
+  else btn = btnAct("request", "Ζήτα", { offerId: o.id }, { ok: "Το αίτημα στάλθηκε. Θα σε ειδοποιήσουμε όταν απαντήσει." });
+  return `<div class="seat">
+    <span class="gate">Θ${esc(o.gate).slice(0, 3)}</span>
+    <span><strong>${esc(seatText(o))}</strong><span class="small muted">@${esc(o.owner)} · ${given(o.given)}</span>
+      ${o.note ? `<div class="note">${esc(o.note)}</div>` : ""}
+      ${o.priorityUntil && !o.isMine ? `<div class="prio">${o.myGate ? "Έχεις προτεραιότητα" : `Προτεραιότητα Θύρας ${esc(o.gate)}`} ως τις ${esc(time(o.priorityUntil))}</div>` : ""}</span>
+    ${shut ? "" : btn}
+  </div>`;
+}
+
+async function viewMatch(id) {
+  const m = matchesById.get(id);
+  if (!m) { $("#view").innerHTML = `<p class="empty">Ο αγώνας δεν βρέθηκε.</p>`; cta(); return; }
+  const data = await api("match", { query: `&id=${encodeURIComponent(id)}` });
+  const shut = closed(m);
+  const mineGate = data.offers.filter((o) => o.myGate);
+  const rest = data.offers.filter((o) => !o.myGate);
+  const p = data.prefs || myPrefs(m.section);
+  const waitBox = shut ? "" : data.waiting
+    ? `<div class="nudge"><p>${ICON.bell.replace("<svg", '<svg style="width:18px;height:18px;vertical-align:-3px"')} Θα σε ειδοποιήσουμε όταν βγει θέση${p.gates.length ? ` (πρώτα στη ${esc(gatesText(p.gates))})` : ""}.</p>${btnAct("wait", "Σταμάτα", { matchId: id, on: false }, { cls: "btn", ok: "Δεν θα παίρνεις ειδοποιήσεις για αυτόν τον αγώνα." })}</div>`
+    : `<div class="nudge"><p>Ψάχνεις θέση; Θα σε ειδοποιήσουμε μόλις κάποιος δώσει${p.gates.length ? `, πρώτα στη ${esc(gatesText(p.gates))}` : ""}.</p>${btnAct("wait", `${ICON.bell} Ειδοποίησέ με`, { matchId: id, on: true }, { ok: "Θα σε ειδοποιήσουμε όταν βγει θέση." })}</div>`;
+  const gateBox = shut || !token || p.gates.length ? "" : `<div class="settings" style="margin-top:10px">${prefsForm(m.section)}<p class="small muted" style="margin:8px 0 0">Όσοι είναι στην ίδια θύρα έχουν προτεραιότητα στις νέες θέσεις της.</p></div>`;
+  $("#view").innerHTML = `<a class="back" href="#/${m.section}">${ICON.back} ${sportName(m.section)}</a>
+    <p class="label" style="margin-top:8px">${esc(m.competition || sportName(m.section))}</p>
+    <h2 style="margin-top:0">${esc(title(m))}</h2>
+    <p class="muted" style="margin-top:-4px">${esc(when(m))} · ${esc(m.venue || "")}</p>
+    ${shut ? `<div class="info warn">${ICON.info}<p>Έκλεισε η μεταβίβαση για αυτόν τον αγώνα (γίνεται έως ${cutoffHours} ώρες πριν).</p></div>`
+      : `<div class="info">${ICON.info}<p>Μεταβίβαση ${esc(deadlineText(m))}.${blocker(m) ? ` Ανοίγει ${esc(waitText(m))}· τη θέση την κανονίζεις από τώρα.` : ""}</p></div>`}
+    ${waitBox}${gateBox}
+    ${mineGate.length ? `<p class="label">Στη θύρα σου (${mineGate.length})</p>${mineGate.map((o) => seatRow(o, shut)).join("")}` : ""}
+    <p class="label">${mineGate.length ? "Άλλες θύρες" : "Διαθέσιμες θέσεις"} (${rest.length})</p>
+    ${rest.map((o) => seatRow(o, shut)).join("") || `<p class="empty">${mineGate.length ? "Καμία θέση σε άλλη θύρα." : "Κανείς δεν έχει δώσει θέση ακόμα."}</p>`}`;
+  cta(shut ? "" : "Δεν πάω σε αυτό — δώσε τη θέση σου", `#/give/${id}`);
+}
+
+function viewGive(preselect) {
+  // Χωρίς συγκεκριμένο αγώνα, προεπιλογή ο επόμενος του τμήματος που κοίταζε ο χρήστης.
+  const selected = preselect || upcoming(sportTab(), { openOnly: true })[0]?.nt;
+  const opts = ["football", "basketball"].map((s) => {
+    const list = upcoming(s, { openOnly: true });
+    if (!list.length) return "";
+    return `<optgroup label="${sportName(s)}">${list.map((m) =>
+      `<option value="${m.nt}"${m.nt === selected ? " selected" : ""}>${esc(title(m))} · ${esc(when(m))}${isNext(m) ? " · επόμενος" : ""}</option>`).join("")}</optgroup>`;
+  }).join("");
+  $("#view").innerHTML = `<a class="back" href="${preselect ? `#/m/${preselect}` : "#/"}">${ICON.back} Πίσω</a>
+    <h2 style="margin-top:4px">Δώσε τη θέση σου</h2>
+    <div class="info warn" style="margin-bottom:16px">${ICON.info}<p>Το διαρκείας σου πρέπει να είναι στο Gov.gr Wallet. Η μεταβίβαση ισχύει για τον <strong>επόμενο</strong> αγώνα και γίνεται έως <strong>${cutoffHours} ώρες πριν</strong>· για μεταγενέστερο αγώνα θα σου πούμε πότε ανοίγει.</p></div>
+    <form id="giveform">
+      <div class="field"><label for="g-match">Αγώνας</label><select id="g-match" required>${opts}</select>
+        <p class="small muted" id="g-deadline" style="margin:6px 0 0"></p></div>
+      <div class="row3 field" id="g-seatrow">
+        <div><label for="g-gate">Θύρα</label><input type="text" id="g-gate" maxlength="10" required></div>
+        <div id="g-blockwrap" hidden><label for="g-block">Τμήμα</label><input type="text" id="g-block" maxlength="6" placeholder="Προαιρ."></div>
+        <div><label for="g-row">Σειρά</label><input type="text" id="g-row" maxlength="6" placeholder="Προαιρ."></div>
+        <div><label for="g-seat">Θέση</label><input type="text" id="g-seat" maxlength="6" placeholder="Προαιρ."></div>
+      </div>
+      <div class="field"><label for="g-note">Σημείωση <span class="muted" style="font-weight:400">(προαιρετικά)</span></label>
+        <textarea id="g-note" maxlength="140" placeholder="π.χ. Θα κάνω τη μεταβίβαση έως το Σάββατο"></textarea></div>
+      <label class="check"><input type="checkbox" id="g-free" required><span>Δίνω τη θέση <strong>δωρεάν</strong>, χωρίς να ζητήσω χρήματα ή αντάλλαγμα.</span></label>
+      <button class="btn solid block" type="submit">Δημοσίευση θέσης</button>
+      <p class="small muted" style="text-align:center">Τις πρώτες 2 ώρες τη ζητούν μόνο όσοι είναι στην ίδια θύρα· μετά όλοι. Μπορείς να την αποσύρεις όσο δεν έχεις κάνει τη μεταβίβαση.</p>
+    </form>`;
+  cta();
+  if (!opts) { $("#giveform").innerHTML = `<p class="empty">Δεν υπάρχει εντός έδρας αγώνας που να δέχεται ακόμα θέσεις.</p>`; return; }
+  // Στο μπάσκετ η θέση έχει και «Τμήμα»· κάτω από τον αγώνα η προθεσμία του.
+  const sync = () => {
+    const m = matchesById.get($("#g-match").value);
+    const basket = m?.section === "basketball";
+    $("#g-blockwrap").hidden = !basket;
+    $("#g-seatrow").className = (basket ? "row4" : "row3") + " field";
+    $("#g-deadline").textContent = m ? `Μεταβίβαση ${deadlineText(m)}${blocker(m) ? ` · ανοίγει ${waitText(m)}` : ""}.` : "";
+    const g = myPrefs(m?.section).gates[0];
+    if (g && !$("#g-gate").value) $("#g-gate").value = g;
+  };
+  $("#g-match").addEventListener("change", sync);
+  sync();
+  $("#giveform").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!(await needNick())) return;
+    const btn = e.target.querySelector("button[type=submit]");
+    btn.disabled = true;
+    try {
+      await post("offer", {
+        matchId: $("#g-match").value, gate: $("#g-gate").value,
+        block: $("#g-blockwrap").hidden ? "" : $("#g-block").value, row: $("#g-row").value,
+        seat: $("#g-seat").value, note: $("#g-note").value, free: $("#g-free").checked,
+      });
+      toast("Η θέση δημοσιεύτηκε. Θα σε ειδοποιήσουμε για κάθε αίτημα.");
+      location.hash = "#/mine";
+    } catch (err) { toast(err.message); btn.disabled = false; }
+  });
+}
+
+function offerCard(o) {
+  const m = matchesById.get(o.matchId);
+  const head = (status, cls = "") => `<div class="card-head"><div><h3>${esc(title(m))}</h3>
+    <div class="small muted">${esc(when(m))} · ${esc(seatText(o))}</div></div><span class="status ${cls}">${status}</span></div>`;
+  const withdraw = btnAct("withdraw", "Απόσυρση θέσης", { offerId: o.id }, { cls: "btn link", confirm: "Να αποσυρθεί η θέση;", ok: "Η θέση αποσύρθηκε." });
+
+  if (o.status === "open") {
+    const reqs = o.requests.map((r) => `<div class="req"><span><strong>@${esc(r.nick)}</strong>${r.sameGate ? ` <span class="chip ok">Θύρα ${esc(o.gate)}</span>` : ""}<br><span class="small muted">${given(r.given)}</span></span>
+      ${btnAct("choose", "Επιλογή", { requestId: r.id }, { confirm: `Να δοθεί η θέση στον @${r.nick};`, ok: o.transferable ? "Επέλεξες παραλήπτη. Περίμενε τον ΑΦΜ του." : "Επέλεξες παραλήπτη." })}</div>`).join("");
+    return `<div class="card">${head(o.requests.length ? `${o.requests.length} ${o.requests.length === 1 ? "αίτημα" : "αιτήματα"}` : "Ανοιχτή", o.requests.length ? "warn" : "gray")}
+      ${o.priorityUntil ? `<p class="prio" style="margin:0 0 8px">Ως τις ${esc(time(o.priorityUntil))} τη ζητούν μόνο όσοι είναι στη Θύρα ${esc(o.gate)}· μετά όλοι.</p>` : ""}
+      ${reqs || `<p class="small muted" style="margin:0">Κανένα αίτημα ακόμα. Θα σε ειδοποιήσουμε.</p>`}
+      <div class="actions">${withdraw}</div></div>`;
+  }
+  if (o.status === "assigned") {
+    const waiting = !o.transferable;
+    const afmBlock = o.afm
+      ? `<div class="afmbox"><div style="display:flex;justify-content:space-between;align-items:baseline"><span class="small muted">ΑΦΜ</span><span class="num" id="afm-${o.id}" data-value="${esc(o.afm)}">••• ••• •••</span></div>
+          <div class="two"><button class="btn" type="button" data-act="reveal" data-target="afm-${o.id}">Εμφάνιση</button>
+          <button class="btn solid" type="button" data-act="copy" data-value="${esc(o.afm)}">${ICON.copy} Αντιγραφή</button></div></div>`
+      : "";
+    return `<div class="card">${head(waiting ? "Κανονίστηκε" : "Σε εξέλιξη", waiting ? "ok" : "warn")}
+      <ol class="steps">
+        ${step("did", 1, `Επέλεξες τον @${esc(o.recipient)}`)}
+        ${waiting
+          ? step("now", 2, "Αναμονή για τη σειρά του αγώνα",
+              `<p class="small" style="margin:4px 0 0">Η μεταβίβαση ισχύει για τον επόμενο αγώνα του διαρκείας, οπότε ανοίγει ${esc(waitText(m))}. Τότε ο @${esc(o.recipient)} θα σου στείλει τον ΑΦΜ του.</p>`)
+          : step(o.afm ? "did" : "now", 2, o.afm ? "Ο παραλήπτης έστειλε τον ΑΦΜ του" : "Περιμένουμε τον ΑΦΜ του παραλήπτη", afmBlock)}
+        ${step(o.afm && !waiting ? "now" : "todo", 3, `Κάνε τη μεταβίβαση στο Gov.gr Wallet ${esc(deadlineText(m))}`,
+          o.afm && !waiting ? `<p class="small" style="margin:4px 0 8px">Εισιτήρια › το διαρκείας σου › [⋮] › Μεταβίβαση, και επικόλλησε τον ΑΦΜ.</p>
+            <a class="btn" href="${WALLET}" target="_blank" rel="noopener">Άνοιγμα Gov.gr Wallet ${ICON.ext}</a>` : "")}
+        ${step("todo", 4, "Αποδοχή από τον παραλήπτη")}
+      </ol>
+      <div class="actions">${btnAct("transferred", "Έκανα τη μεταβίβαση", { offerId: o.id }, { disabled: !o.afm || waiting, ok: "Ενημερώθηκε ο παραλήπτης." })}${withdraw}</div>
+      <p class="small muted" style="margin:10px 0 0">${ICON.lock} Ο ΑΦΜ τον βλέπεις μόνο εσύ και σβήνεται μόλις ο παραλήπτης επιβεβαιώσει.</p>
+    </div>`;
+  }
+  if (o.status === "transferred" || o.status === "received") {
+    const got = o.status === "received";
+    return `<div class="card">${head(got ? "Παραδόθηκε" : "Αναμονή αποδοχής", got ? "ok" : "warn")}
+      <ol class="steps">
+        ${step("did", 1, `Επέλεξες τον @${esc(o.recipient)}`)}
+        ${step("did", 2, "Ο παραλήπτης έστειλε τον ΑΦΜ του")}
+        ${step("did", 3, "Έκανες τη μεταβίβαση")}
+        ${step(got ? "did" : "now", 4, got ? `Ο @${esc(o.recipient)} το πήρε` : `Περιμένουμε τον @${esc(o.recipient)} να το αποδεχτεί`)}
+      </ol>
+      <p class="small muted" style="margin:4px 0 0">Η μεταβίβαση ισχύει μόνο για αυτόν τον αγώνα· μετά το εισιτήριο επιστρέφει σε σένα. Αν αλλάξουν τα σχέδια, κάνε ανάκληση στο Wallet.</p>
+    </div>`;
+  }
+  const label = { closed: "Ολοκληρώθηκε", expired: "Έληξε" }[o.status] || o.status;
+  return `<div class="card done">${head(label, "gray")}${o.recipient ? `<p class="small muted" style="margin:0">Δόθηκε στον @${esc(o.recipient)}.</p>` : ""}</div>`;
+}
+
+function requestCard(r) {
+  const m = matchesById.get(r.matchId);
+  const head = (status, cls = "") => `<div class="card-head"><div><h3>${esc(title(m))}</h3>
+    <div class="small muted">${esc(when(m))} · ${esc(seatText(r))} · από @${esc(r.owner)}</div></div><span class="status ${cls}">${status}</span></div>`;
+  if (r.status === "pending") {
+    return `<div class="card">${head("Αναμονή", "gray")}
+      <p class="small" style="margin:0">Περιμένεις να διαλέξει ο @${esc(r.owner)}. Θα σε ειδοποιήσουμε.</p>
+      <div class="actions">${btnAct("cancel", "Ακύρωση αιτήματος", { requestId: r.id }, { cls: "btn link", confirm: "Ακύρωση του αιτήματος;", ok: "Το αίτημα ακυρώθηκε." })}</div></div>`;
+  }
+  if (r.status === "chosen" && r.offerStatus === "assigned") {
+    const back = btnAct("backout", "Δεν μπορώ τελικά να πάω", { offerId: r.offerId }, { cls: "btn link", confirm: "Η θέση θα ξαναδοθεί σε άλλον. Συνέχεια;", ok: "Η θέση ξαναδόθηκε." });
+    if (!r.afmSent && !r.transferable) {
+      return `<div class="card">${head("Σε επέλεξε!", "ok")}
+        <p class="small" style="margin:0">Η θέση είναι δική σου. Η μεταβίβαση ισχύει για τον επόμενο αγώνα του διαρκείας, οπότε θα σου ζητήσουμε τον ΑΦΜ ${esc(waitText(m))}.</p>
+        <div class="actions">${back}</div></div>`;
+    }
+    if (!r.afmSent) {
+      return `<div class="card">${head("Σε επέλεξε!", "ok")}
+        <label for="afm-in-${r.id}" style="margin-top:6px">Ο ΑΦΜ σου <span class="muted" style="font-weight:400">· ${esc(deadlineText(m))}</span></label>
+        <input type="text" id="afm-in-${r.id}" inputmode="numeric" maxlength="11" autocomplete="off" placeholder="9 ψηφία">
+        <p class="small muted" style="margin:8px 0 0">${ICON.lock} Τον βλέπει μόνο ο @${esc(r.owner)}, για να κάνει τη μεταβίβαση, και σβήνεται μετά.</p>
+        <div class="actions"><button class="btn solid" type="button" data-act="afm" data-input="afm-in-${r.id}" data-body='${esc(JSON.stringify({ offerId: r.offerId }))}' data-ok="Ο ΑΦΜ στάλθηκε.">Αποστολή ΑΦΜ</button>${back}</div></div>`;
+    }
+    return `<div class="card">${head("Σε εξέλιξη", "warn")}
+      <ol class="steps">
+        ${step("did", 1, `Ο @${esc(r.owner)} σε επέλεξε`)}
+        ${step("did", 2, "Έστειλες τον ΑΦΜ σου")}
+        ${step("now", 3, `Περιμένεις τον @${esc(r.owner)} να κάνει τη μεταβίβαση`, `<p class="small muted" style="margin:4px 0 0">${esc(deadlineText(m))}</p>`)}
+        ${step("todo", 4, "Αποδοχή στο Gov.gr Wallet")}
+      </ol><div class="actions">${back}</div></div>`;
+  }
+  if (r.status === "chosen" && r.offerStatus === "transferred") {
+    return `<div class="card">${head("Έγινε η μεταβίβαση", "ok")}
+      <ol class="steps">
+        ${step("did", 1, `Ο @${esc(r.owner)} σε επέλεξε`)}
+        ${step("did", 2, "Έστειλες τον ΑΦΜ σου")}
+        ${step("did", 3, `Ο @${esc(r.owner)} έκανε τη μεταβίβαση`)}
+        ${step("now", 4, "Αποδέξου το εισιτήριο στο Gov.gr Wallet",
+          `<p class="small" style="margin:4px 0 8px">Θα σου έρθει email. Άνοιξε το Wallet και πάτα αποδοχή.</p><a class="btn" href="${WALLET}" target="_blank" rel="noopener">Άνοιγμα Gov.gr Wallet ${ICON.ext}</a>`)}
+      </ol>
+      <div class="actions">${btnAct("received", "Το πήρα — είναι στο Wallet μου", { offerId: r.offerId }, { ok: "Τέλεια! Καλή διασκέδαση στο γήπεδο." })}</div></div>`;
+  }
+  if (r.status === "chosen" && ["received", "closed"].includes(r.offerStatus)) {
+    return `<div class="card done">${head("Στο Wallet σου", "ok")}<p class="small" style="margin:0">Καλή διασκέδαση στο γήπεδο!</p></div>`;
+  }
+  if (r.status === "chosen") {
+    return `<div class="card done">${head("Έληξε", "gray")}<p class="small muted" style="margin:0">Η μεταβίβαση δεν ολοκληρώθηκε πριν την προθεσμία.</p></div>`;
+  }
+  return `<div class="card done">${head("Δόθηκε σε άλλον", "gray")}<p class="small muted" style="margin:0">Η θέση δόθηκε σε άλλον ή αποσύρθηκε.</p></div>`;
+}
+
+async function viewMine() {
+  if (!token) {
+    $("#view").innerHTML = `${tabs("mine")}<p class="empty">Διάλεξε ψευδώνυμο για να δίνεις και να ζητάς θέσεις.</p>
+      <button class="btn solid block" type="button" id="getnick">Διάλεξε ψευδώνυμο</button>`;
+    $("#getnick").addEventListener("click", async () => { if (await needNick()) render(); });
+    cta(); return;
+  }
+  const recent = (id) => { const m = matchesById.get(id); return !m || new Date(m.start).getTime() > Date.now() - 2 * 86400000; };
+  const offers = mine.offers.filter((o) => recent(o.matchId) || ["transferred", "received"].includes(o.status));
+  const reqs = mine.requests.filter((r) => r.status !== "cancelled" && recent(r.matchId));
+  const waits = (mine.waits || []).map((id) => matchesById.get(id)).filter((m) => m && !closed(m));
+  $("#view").innerHTML = `${tabs("mine")}
+    ${!pushOn ? `<div class="nudge" style="margin-bottom:6px"><p>Ενεργοποίησε τις ειδοποιήσεις για να μαθαίνεις αμέσως κάθε κίνηση.</p><a class="btn" href="#/settings">${ICON.bell} Ειδοποιήσεις</a></div>` : ""}
+    <p class="label">Δίνω</p>
+    ${offers.map(offerCard).join("") || `<p class="empty">Δεν έχεις δώσει θέση.</p>`}
+    <a class="btn block" href="#/give">${ICON.swap} Δεν πάω — δώσε τη θέση σου</a>
+    <p class="label">Ζητάω</p>
+    ${reqs.map(requestCard).join("") || `<p class="empty">Δεν έχεις ζητήσει θέση. Διάλεξε αγώνα από το <a href="#/football">ποδόσφαιρο</a> ή το <a href="#/basketball">μπάσκετ</a>.</p>`}
+    ${waits.length ? `<p class="label">Με ειδοποιείς για</p>${waits.map((m) => `<a class="match" href="#/m/${m.nt}" style="grid-template-columns:1fr auto"><span><strong>${esc(title(m))}</strong><span class="small muted">${esc(when(m))}</span></span>${ICON.chev}</a>`).join("")}` : ""}`;
+  cta();
+}
+
+function viewSettings() {
+  if (!token) { location.hash = "#/"; return; }
+  const help = pushHelp();
+  const devices = mine?.user?.devices || 0;
+  $("#view").innerHTML = `<a class="back" href="#/mine">${ICON.back} Οι κινήσεις μου</a>
+    <h2 style="margin-top:4px">Ρυθμίσεις</h2>
+    <div class="settings">
+      <h3>${ICON.bell.replace("<svg", '<svg style="width:20px;height:20px;vertical-align:-3px"')} Ειδοποιήσεις</h3>
+      <p class="small muted">Για αιτήματα, επιλογές, ΑΦΜ, μεταβίβαση, νέες θέσεις στη θύρα σου και υπενθύμιση πριν λήξει η προθεσμία.</p>
+      ${help ? `<div class="info warn">${ICON.info}<p>${esc(help)}</p></div>`
+        : pushOn ? `<p><strong>Ενεργές σε αυτή τη συσκευή.</strong>${devices > 1 ? ` <span class="muted">(${devices} συσκευές συνολικά)</span>` : ""}</p>${btnAct("push-off", "Απενεργοποίηση", {}, { cls: "btn" })}`
+        : `<p>Ανενεργές σε αυτή τη συσκευή.</p>${btnAct("push-on", `${ICON.bell} Ενεργοποίηση`, {})}`}
+    </div>
+    <div class="settings">
+      <h3>Οι θύρες μου</h3>
+      <p class="small muted">Όσοι είναι στην ίδια θύρα έχουν προτεραιότητα 2 ωρών στις νέες θέσεις της· μετά τις βλέπουν όλοι.</p>
+      ${prefsForm("football", { full: true })}
+      <div style="height:16px"></div>
+      ${prefsForm("basketball", { full: true })}
+    </div>
+    <div class="settings">
+      <h3>Λογαριασμός</h3>
+      <p>Ψευδώνυμο: <strong>@${esc(nick)}</strong> · κρατιέται σε αυτή τη συσκευή.</p>
+      <button class="btn" type="button" id="logout">Αποσύνδεση</button>
+    </div>`;
+  cta();
+  $("#logout").addEventListener("click", () => {
+    if (confirm(`Αποσύνδεση από @${nick} σε αυτή τη συσκευή; Χωρίς το κλειδί της δεν θα μπορείς να ξαναμπείς με το ίδιο ψευδώνυμο.`)) {
+      setIdentity(null, null); mine = null; pushOn = false; store.set(PUSH_KEY, null); location.hash = "#/";
+    }
+  });
+}
+
+// ---------- Δρομολόγηση ----------
+// Μία ανανέωση τη φορά· αν ζητηθεί άλλη στο μεταξύ, γίνεται αμέσως μετά με τα νέα δεδομένα.
+let rendering = null;
+let renderAgain = false;
+function render() {
+  if (rendering) { renderAgain = true; return rendering; }
+  rendering = renderOnce().finally(() => {
+    rendering = null;
+    if (renderAgain) { renderAgain = false; return render(); }
+  });
+  return rendering;
+}
+async function renderOnce() {
+  // Κρατάμε ό,τι γράφει ο χρήστης στα πεδία κατά την ανανέωση.
+  const keep = {};
+  document.querySelectorAll("#view input[id], #view textarea[id], #view select[id]").forEach((el) => {
+    keep[el.id] = el.type === "checkbox" ? el.checked : el.value;
+  });
+  const focused = document.activeElement?.id;
+  try {
+    if (token) { try { mine = await api("mine"); } catch { mine = null; } }
+    const parts = location.hash.replace(/^#\/?/, "").split("/");
+    if (parts[0] === "m" && parts[1]) await viewMatch(parts[1]);
+    else if (parts[0] === "give") viewGive(parts[1]);
+    else if (parts[0] === "mine") await viewMine();
+    else if (parts[0] === "settings") viewSettings();
+    else await viewHome(parts[0] === "basketball" || parts[0] === "football" ? parts[0] : sportTab());
+    for (const [id, v] of Object.entries(keep)) {
+      const el = document.getElementById(id);
+      if (el) el.type === "checkbox" ? (el.checked = v) : (el.value = v);
+    }
+    if (focused) document.getElementById(focused)?.focus();
+  } catch (err) {
+    $("#view").innerHTML = `<p class="empty">${esc(err.message)}</p>`;
+  }
+}
+
+let lastHash = location.hash;
+window.addEventListener("hashchange", () => {
+  if (location.hash.split("/")[1] !== lastHash.split("/")[1]) window.scrollTo(0, 0);
+  lastHash = location.hash;
+  render();
+});
+// Ανανέωση κάθε 15 δευτερόλεπτα όσο η σελίδα είναι ανοιχτή (όχι σε φόρμες ούτε με ανοιχτό διάλογο).
+setInterval(() => {
+  if (document.visibilityState !== "visible" || $("#nickdlg").open) return;
+  if (location.hash.startsWith("#/give") || location.hash.startsWith("#/settings")) return;
+  render();
+}, 15000);
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") render(); });
+// Μήνυμα από τον service worker (πάτημα ειδοποίησης σε ανοιχτό παράθυρο χωρίς navigate).
+navigator.serviceWorker?.addEventListener("message", (e) => {
+  if (e.data?.type === "open" && e.data.url) location.href = e.data.url;
+});
+
+renderWho();
+loadMatches()
+  .then(() => syncPush())
+  .then(render)
+  .catch(() => { $("#view").innerHTML = `<p class="empty">Δεν φορτώθηκε το πρόγραμμα. Δοκίμασε ξανά.</p>`; });
+</script>
+</body>
+</html>

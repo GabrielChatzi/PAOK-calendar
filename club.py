@@ -111,7 +111,7 @@ def program_entries(today: dt.date) -> list[dict]:
                 "time": dt.time(int(tm.group(1)), int(tm.group(2))), "home": home, "away": away,
                 "venue": lines[2], "round": comp.split(",", 1)[0].strip() if "," in comp else "",
                 "competition": comp.split(",", 1)[1].strip() if "," in comp else comp,
-                "link": post["link"], "id": f"p{post['id']}",
+                "link": post["link"], "id": f"p{post['id']}", "posted": post["modified"],
             })
     return out
 
@@ -123,6 +123,7 @@ def announcement_entries(today: dt.date) -> list[dict]:
     section_by_cat = {c["id"]: section_of(c["name"]) for c in cats}
     academy = {c["id"] for c in cats if "ΑΚΑΔΗΜ" in plain(c["name"])}
     posts = get_json("posts?per_page=50&_fields=id,date,title,content,link,categories")
+    nicknames = re.compile(r"^(?:Δικέφαλ|Ασπρόμαυρ|Τρεμπλούχ|Νταμπλούχ|Πρωταθλ)")
     out = []
     for post in posts:
         if academy & set(post["categories"]):
@@ -156,13 +157,14 @@ def announcement_entries(today: dt.date) -> list[dict]:
         else:
             o = re.search(r"(?:υποδ[εέ]χεται|υποδεχθεί|αντιμετωπ[ίι]ζει|αντιμετωπίσει|κόντρα στ(?:ον|ην|ο)|"
                           r"απέναντι στ(?:ον|ην|ο)|φιλοξενηθεί από τ(?:ον|ην|ο)|με τ(?:ον|ην|ο))\s+"
-                          r"((?:τ(?:ον|ην|ο)\s+)?[Α-ΩΆ-Ώ][^\s,.]*(?:\s+[Α-ΩΆ-Ώ][^\s,.]*){0,2})", text)
-            if o and not is_paok(o.group(1)):
+                          r"((?:τ(?:ον|ην|ο)\s+)?[Α-ΩΆ-Ώ][^\s,.!;«»]*(?:\s+[Α-ΩΆ-Ώ][^\s,.!;«»]*){0,2})",
+                          title + " " + text)
+            if o and not is_paok(o.group(1)) and not nicknames.match(o.group(1)):
                 opponent = nominative(o.group(1))
         out.append({
             "kind": "announcement", "section": section, "day": day,
             "time": dt.time(int(m.group(3)), int(m.group(4))), "home_flag": home, "opponent": opponent,
-            "title": title, "link": post["link"], "id": f"a{post['id']}",
+            "title": title, "link": post["link"], "id": f"a{post['id']}", "posted": post["date"],
         })
     return out
 
@@ -194,9 +196,13 @@ def reconcile(section: str, official: list[Match], checks: list[str], label: str
     """
     added: list[Match] = []
     today = dt.date.today()
-    for e in entries(today):
-        if e["section"] != section or e["day"] < today:
-            continue
+    # Για την ίδια μέρα μετρά η πιο πρόσφατη ανακοίνωση (μπορεί να άλλαξε η ώρα).
+    latest: dict = {}
+    for e in sorted(entries(today), key=lambda e: e["posted"]):
+        if e["section"] == section and e["day"] >= today:
+            latest[e["day"]] = e
+    seen: set[str] = set()
+    for e in latest.values():
         paok_home = is_paok(e["home"]) if e["kind"] == "program" else e["home_flag"]
         candidates = [m for m in official + added if abs((m.day - e["day"]).days) <= 1
                       and (paok_home is None or m.paok_home == paok_home)]
@@ -205,7 +211,8 @@ def reconcile(section: str, official: list[Match], checks: list[str], label: str
             if m.time is None:
                 if m.day == e["day"]:
                     m.time = e["time"]  # η επίσημη πηγή δεν έχει ακόμα ώρα
-            elif (m.day, m.time) != (e["day"], e["time"]):
+            elif (m.day, m.time) != (e["day"], e["time"]) and m.uid not in seen:
+                seen.add(m.uid)
                 checks.append(f"- **{label}** {m.home} – {m.away}: η επίσημη πηγή γράφει {fmt(m.day, m.time)}, "
                               f"η ΑΣ ΠΑΟΚ {fmt(e['day'], e['time'])} ([ανακοίνωση]({e['link']}))")
             continue

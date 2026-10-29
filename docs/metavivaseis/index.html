@@ -272,6 +272,21 @@ function seatText(o) {
 const started = (m) => m && new Date(m.start).getTime() <= Date.now();
 const given = (n) => (n ? `${n} ${n === 1 ? "μεταβίβαση" : "μεταβιβάσεις"}` : "Νέο μέλος");
 
+// Στο Wallet η μεταβίβαση ισχύει για τον επόμενο αγώνα του διαρκείας. Ένας αγώνας «ανοίγει» για
+// μεταβίβαση όταν τελειώσει ο προηγούμενος εντός έδρας του τμήματος (≈3 ώρες μετά την έναρξη).
+const MATCH_LENGTH = 3 * 3600 * 1000;
+function nextFor(section) {
+  const now = Date.now();
+  return [...matchesById.values()]
+    .filter((m) => m.paokHome && m.section === section && new Date(m.start).getTime() + MATCH_LENGTH > now)
+    .sort((a, b) => a.start.localeCompare(b.start))[0] || null;
+}
+const isNext = (m) => Boolean(m && nextFor(m.section)?.nt === m.nt);
+// Ο αγώνας που πρέπει να τελειώσει πριν ανοίξει η μεταβίβαση για τον m (ή null).
+const blocker = (m) => { const n = m && nextFor(m.section); return n && n.nt !== m.nt ? n : null; };
+const waitText = (m) => { const b = blocker(m); return b ? `μετά το ${title(b)} (${when(b)})` : "όταν έρθει η σειρά του αγώνα"; };
+let demoMode = false;
+
 // ---------- Ταυτότητα ----------
 function setIdentity(t, n) {
   token = t; nick = n;
@@ -326,6 +341,12 @@ document.addEventListener("click", async (e) => {
   e.preventDefault();
   const act = b.dataset.act;
   if (b.dataset.confirm && !confirm(b.dataset.confirm)) return;
+  if (act === "seed") {
+    b.disabled = true;
+    try { const r = await post("seed", {}); toast(r.created ? `Μπήκαν ${r.created} δοκιμαστικές θέσεις.` : "Υπάρχουν ήδη δοκιμαστικές θέσεις."); await render(); }
+    catch (err) { toast(err.message); b.disabled = false; }
+    return;
+  }
   if (act === "copy") {
     try { await navigator.clipboard.writeText(b.dataset.value); toast("Ο ΑΦΜ αντιγράφηκε."); } catch { toast("Δεν έγινε αντιγραφή· σημείωσέ τον."); }
     return;
@@ -368,14 +389,12 @@ function actionCount() {
   if (!mine) return 0;
   let n = 0;
   for (const o of mine.offers) {
-    const m = matchesById.get(o.matchId);
     if (o.status === "open" && o.requests.length) n++;
-    if (o.status === "assigned" && o.afm) n++;
-    if ((o.status === "received" || o.status === "transferred") && started(m)) n++;
+    if (o.status === "assigned" && o.afm && o.transferable) n++;
   }
   for (const r of mine.requests) {
     if (r.status !== "chosen") continue;
-    if (r.offerStatus === "assigned" && !r.afmSent) n++;
+    if (r.offerStatus === "assigned" && !r.afmSent && r.transferable) n++;
     if (r.offerStatus === "transferred") n++;
   }
   return n;
@@ -392,7 +411,9 @@ function tabs(active) {
 
 async function viewHome(section) {
   store.set(SPORT_KEY, section);
-  summary = (await api("summary")).matches || {};
+  const sum = await api("summary");
+  summary = sum.matches || {};
+  demoMode = Boolean(sum.demo);
   const list = upcoming(section);
   const cards = list.map((m) => {
     const s = summary[m.nt] || { offers: 0, seekers: 0 };
@@ -402,6 +423,7 @@ async function viewHome(section) {
         <strong>${esc(title(m))}</strong>
         <span class="small muted">${esc(m.competition || "")} · ${m.timeKnown === false ? "ώρα δεν έχει οριστεί" : esc(fmt(m.start, { hour: "2-digit", minute: "2-digit", hourCycle: "h23" }))}</span>
         <span class="chips">
+          ${isNext(m) ? `<span class="chip warn">Επόμενος</span>` : ""}
           ${s.offers ? `<span class="chip ok">${s.offers} ${s.offers === 1 ? "θέση" : "θέσεις"}</span>` : `<span class="chip">Καμία θέση ακόμα</span>`}
           ${s.seekers ? `<span class="chip">${s.seekers} ζητούν</span>` : ""}
         </span>
@@ -410,7 +432,9 @@ async function viewHome(section) {
     </a>`;
   }).join("");
   $("#view").innerHTML = `${tabs(section)}
-    <div class="info">${ICON.info}<p>Η μεταβίβαση γίνεται στο Gov.gr Wallet. Εδώ βρίσκεις ποιος δίνει θέση και ποιος ψάχνει, μόνο δωρεάν.</p></div>
+    <div class="info">${ICON.info}<p>Η μεταβίβαση γίνεται στο Gov.gr Wallet και ισχύει για τον <strong>επόμενο</strong> αγώνα του διαρκείας. Θέση μπορείς να δώσεις και για μεταγενέστερο αγώνα· η μεταβίβαση ανοίγει όταν τελειώσει ο προηγούμενος.</p></div>
+    ${demoMode ? `<div class="info warn" style="margin-top:10px;flex-wrap:wrap">${ICON.info}<p style="flex:1;min-width:200px">Δοκιμή: οι χρήστες <strong>demo_</strong> απαντούν αυτόματα, ώστε να δοκιμάσεις και μόνος σου.</p>
+      <button class="btn" type="button" data-act="seed">Βάλε δοκιμαστικές θέσεις</button></div>` : ""}
     <p class="label">Επόμενοι εντός έδρας · ${sportName(section)}</p>
     ${cards || `<p class="empty">Δεν υπάρχει προγραμματισμένος εντός έδρας αγώνας.</p>`}
     <footer>Ανεπίσημη σελίδα φιλάθλων· δεν συνδέεται με τον ΠΑΟΚ ή το Gov.gr. <a href="/">PAOKalendar</a></footer>`;
@@ -439,6 +463,7 @@ async function viewMatch(id) {
     <p class="label" style="margin-top:8px">${esc(m.competition || sportName(m.section))}</p>
     <h2 style="margin-top:0">${esc(title(m))}</h2>
     <p class="muted" style="margin-top:-4px">${esc(when(m))} · ${esc(m.venue || "")}</p>
+    ${!over && blocker(m) ? `<div class="info">${ICON.info}<p>Η μεταβίβαση στο Wallet για αυτόν τον αγώνα ανοίγει ${esc(waitText(m))}. Μπορείς όμως να κανονίσεις τη θέση από τώρα.</p></div>` : ""}
     <p class="label">Διαθέσιμες θέσεις (${offers.length})</p>
     ${rows || `<p class="empty">Κανείς δεν έχει δώσει θέση ακόμα. Ξαναδές πιο κοντά στον αγώνα.</p>`}
     ${over ? `<div class="info warn">${ICON.info}<p>Ο αγώνας έχει αρχίσει.</p></div>` : ""}`;
@@ -450,11 +475,11 @@ function viewGive(preselect) {
     const list = upcoming(s);
     if (!list.length) return "";
     return `<optgroup label="${sportName(s)}">${list.map((m) =>
-      `<option value="${m.nt}"${m.nt === preselect ? " selected" : ""}>${esc(title(m))} · ${esc(when(m))}</option>`).join("")}</optgroup>`;
+      `<option value="${m.nt}"${m.nt === preselect ? " selected" : ""}>${esc(title(m))} · ${esc(when(m))}${isNext(m) ? " · επόμενος" : ""}</option>`).join("")}</optgroup>`;
   }).join("");
   $("#view").innerHTML = `<a class="back" href="${preselect ? `#/m/${preselect}` : "#/"}">${ICON.back} Πίσω</a>
     <h2 style="margin-top:4px">Δώσε τη θέση σου</h2>
-    <div class="info warn" style="margin-bottom:16px">${ICON.info}<p>Το διαρκείας σου πρέπει να είναι ήδη στο Gov.gr Wallet· από εκεί θα κάνεις τη μεταβίβαση.</p></div>
+    <div class="info warn" style="margin-bottom:16px">${ICON.info}<p>Το διαρκείας σου πρέπει να είναι στο Gov.gr Wallet. Εκεί η μεταβίβαση ισχύει για τον <strong>επόμενο</strong> αγώνα, οπότε για μεταγενέστερο αγώνα θα την κάνεις αφού τελειώσει ο προηγούμενος· θα σου το δείχνουμε εδώ.</p></div>
     <form id="giveform">
       <div class="field"><label for="g-match">Αγώνας</label><select id="g-match" required>${opts}</select></div>
       <div class="row3 field">
@@ -493,7 +518,6 @@ const btnAct = (act, label, body, { cls = "btn solid", ok = "", confirm = "", di
 
 function offerCard(o) {
   const m = matchesById.get(o.matchId);
-  const over = started(m);
   const head = (status, cls = "") => `<div class="card-head"><div><h3>${esc(title(m))}</h3>
     <div class="small muted">${esc(when(m))} · ${esc(seatText(o))}</div></div><span class="status ${cls}">${status}</span></div>`;
   const withdraw = btnAct("withdraw", "Απόσυρση θέσης", { offerId: o.id }, { cls: "btn link", confirm: "Να αποσυρθεί η θέση;", ok: "Η θέση αποσύρθηκε." });
@@ -511,17 +535,20 @@ function offerCard(o) {
           <div class="two"><button class="btn" type="button" data-act="reveal" data-target="afm-${o.id}">Εμφάνιση</button>
           <button class="btn solid" type="button" data-act="copy" data-value="${esc(o.afm)}">${ICON.copy} Αντιγραφή</button></div></div>`
       : "";
-    return `<div class="card">${head("Σε εξέλιξη", "warn")}
+    const waiting = !o.transferable;
+    return `<div class="card">${head(waiting ? "Κανονίστηκε" : "Σε εξέλιξη", waiting ? "ok" : "warn")}
       <ol class="steps">
         ${step("did", 1, `Επέλεξες τον @${esc(o.recipient)}`)}
-        ${step(o.afm ? "did" : "now", 2, o.afm ? "Ο παραλήπτης έστειλε τον ΑΦΜ του" : "Περιμένουμε τον ΑΦΜ του παραλήπτη", afmBlock)}
-        ${step(o.afm ? "now" : "todo", 3, "Κάνε τη μεταβίβαση στο Gov.gr Wallet",
-          o.afm ? `<p class="small" style="margin:4px 0 8px">Εισιτήρια › το διαρκείας σου › [⋮] › Μεταβίβαση, και επικόλλησε τον ΑΦΜ.</p>
+        ${waiting
+          ? step("now", 2, "Αναμονή για τη σειρά του αγώνα",
+              `<p class="small" style="margin:4px 0 0">Στο Wallet η μεταβίβαση ισχύει για τον επόμενο αγώνα του διαρκείας, οπότε ανοίγει ${esc(waitText(m))}. Τότε ο @${esc(o.recipient)} θα σου στείλει τον ΑΦΜ του.</p>`)
+          : step(o.afm ? "did" : "now", 2, o.afm ? "Ο παραλήπτης έστειλε τον ΑΦΜ του" : "Περιμένουμε τον ΑΦΜ του παραλήπτη", afmBlock)}
+        ${step(o.afm && !waiting ? "now" : "todo", 3, "Κάνε τη μεταβίβαση στο Gov.gr Wallet",
+          o.afm && !waiting ? `<p class="small" style="margin:4px 0 8px">Εισιτήρια › το διαρκείας σου › [⋮] › Μεταβίβαση, και επικόλλησε τον ΑΦΜ.</p>
             <a class="btn" href="${WALLET}" target="_blank" rel="noopener">Άνοιγμα Gov.gr Wallet ${ICON.ext}</a>` : "")}
         ${step("todo", 4, "Αποδοχή από τον παραλήπτη")}
-        ${step("todo", 5, "Ανάκληση μετά τον αγώνα")}
       </ol>
-      <div class="actions">${btnAct("transferred", "Έκανα τη μεταβίβαση", { offerId: o.id }, { disabled: !o.afm, ok: "Ενημερώθηκε ο παραλήπτης." })}${withdraw}</div>
+      <div class="actions">${btnAct("transferred", "Έκανα τη μεταβίβαση", { offerId: o.id }, { disabled: !o.afm || waiting, ok: "Ενημερώθηκε ο παραλήπτης." })}${withdraw}</div>
       <p class="small muted" style="margin:10px 0 0">${ICON.lock.replace("<svg", '<svg style="width:14px;height:14px;vertical-align:-2px"')} Ο ΑΦΜ τον βλέπεις μόνο εσύ και σβήνεται μόλις ο παραλήπτης επιβεβαιώσει.</p>
     </div>`;
   }
@@ -533,10 +560,8 @@ function offerCard(o) {
         ${step("did", 2, "Ο παραλήπτης έστειλε τον ΑΦΜ του")}
         ${step("did", 3, "Έκανες τη μεταβίβαση")}
         ${step(got ? "did" : "now", 4, got ? `Ο @${esc(o.recipient)} το πήρε` : `Περιμένουμε τον @${esc(o.recipient)} να το αποδεχτεί`)}
-        ${step(over ? "now" : "todo", 5, "Ανάκληση μετά τον αγώνα",
-          over ? `<p class="small" style="margin:4px 0 0">Gov.gr Wallet › το διαρκείας σου › [⋮] › Ανάκληση.</p>` : `<p class="small muted" style="margin:4px 0 0">Θα σου θυμίσουμε εδώ μόλις τελειώσει ο αγώνας.</p>`)}
       </ol>
-      <div class="actions">${btnAct("revoked", "Έκανα ανάκληση", { offerId: o.id }, { cls: over ? "btn solid" : "btn", confirm: over ? "" : "Ο αγώνας δεν έχει γίνει ακόμα. Σίγουρα έκανες ανάκληση;", ok: "Η θέση έκλεισε. Ευχαριστούμε!" })}</div>
+      <p class="small muted" style="margin:4px 0 0">Η μεταβίβαση ισχύει μόνο για αυτόν τον αγώνα· μετά το εισιτήριο επιστρέφει σε σένα. Αν αλλάξουν τα σχέδια πριν τον αγώνα, κάνε ανάκληση στο Wallet.</p>
     </div>`;
   }
   const label = { closed: "Ολοκληρώθηκε", expired: "Έληξε χωρίς παραλήπτη" }[o.status] || o.status;
@@ -554,6 +579,11 @@ function requestCard(r) {
   }
   if (r.status === "chosen" && r.offerStatus === "assigned") {
     const back = btnAct("backout", "Δεν μπορώ τελικά να πάω", { offerId: r.offerId }, { cls: "btn link", confirm: "Η θέση θα ξαναδοθεί σε άλλον. Συνέχεια;", ok: "Η θέση ξαναδόθηκε." });
+    if (!r.afmSent && !r.transferable) {
+      return `<div class="card">${head("Σε επέλεξε!", "ok")}
+        <p class="small" style="margin:0">Η θέση είναι δική σου. Στο Wallet η μεταβίβαση ισχύει για τον επόμενο αγώνα του διαρκείας, οπότε θα σου ζητήσουμε τον ΑΦΜ ${esc(waitText(m))}.</p>
+        <div class="actions">${back}</div></div>`;
+    }
     if (!r.afmSent) {
       return `<div class="card">${head("Σε επέλεξε!", "ok")}
         <label for="afm-in-${r.id}" style="margin-top:6px">Ο ΑΦΜ σου</label>

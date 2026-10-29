@@ -213,6 +213,8 @@ def reconcile(section: str, official: list[Match], checks: list[str], label: str
                       and (paok_home is None or m.paok_home == paok_home)]
         if candidates:
             m = min(candidates, key=lambda m: abs((m.day - e["day"]).days))
+            if not m.venue and e.get("venue"):
+                m.venue = e["venue"]  # π.χ. η ΕΠΣ Σάλας δεν δίνει γήπεδο
             if m.time is None:
                 m.day, m.time = e["day"], e["time"]  # η επίσημη πηγή δεν έχει ακόμα ώρα
             elif (m.day, m.time) != (e["day"], e["time"]) and m.uid not in seen:

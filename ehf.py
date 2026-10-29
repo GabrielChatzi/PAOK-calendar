@@ -15,19 +15,22 @@ for sub in ("ehfcl", "ehfel", "ehfec"):
         if not comp: print(sub, g, "no comp"); continue
         q = f"contentId={cont.group(1)}&competitionId={comp.group(1)}"
         init = json.loads(get(f"{base}/umbraco/api/competitionmatchesapi/GetInitMatches?{q}"))
-        allm = list(init["matches"])
+        allm = {m["matchID"]: m for m in init["matches"]}
+        key = lambda m: m["venue"]["date"]["utc"]
         for fut in (False, True):
-            ms = init["matches"]
-            for _ in range(30):
-                if not ms: break
-                anchor = (ms[-1] if fut else ms[0])["matchID"]
+            for _ in range(40):
+                dated = sorted((m for m in allm.values() if not m["venue"]["date"]["utc"].startswith("9999")), key=key)
+                if not dated: break
+                anchor = (dated[-1] if fut else dated[0])["matchID"]
                 try:
                     ms = json.loads(get(f"{base}/umbraco/api/competitionmatchesapi/GetMatches?{q}&matchId={anchor}&futureMatches={'true' if fut else 'false'}"))["matches"]
                 except Exception as e:
                     print("   page err", fut, e); break
-                allm += ms
+                new = [m for m in ms if m["matchID"] not in allm]
+                if not new: break
+                allm.update({m["matchID"]: m for m in new})
+        allm = list(allm.values())
         print(f"## {sub} {g} {comp.group(1)} {cont.group(1)} total {len(allm)}")
-        allm = list({m['matchID']: m for m in allm}.values()); print('   unique', len(allm))
         if False and first and allm:
             m = allm[0]; first = False
             print(json.dumps({k: (v if k not in ("comp",) else {kk: v[kk] for kk in ("round","phase","group","name")}) for k, v in m.items()}, ensure_ascii=False)[:3500])

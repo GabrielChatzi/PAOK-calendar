@@ -26,8 +26,19 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+UID:football-women-espn-401916430@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20260923T160000
+DTEND;TZID=Europe/Athens:20260923T180000
+SUMMARY:⚽ ΠΑΟΚ 2-3 Spartak Myjava
+LOCATION:Makedonikos Stadium
+DESCRIPTION:Women's Europa Cup – 1ος αγώνας\nΤελικό σκο
+ ρ: ΠΑΟΚ 2-3 Spartak Myjava
+URL:https://www.espn.com/soccer/match/_/gameId/401916430
+END:VEVENT
+BEGIN:VEVENT
 UID:football-women-epo6-2751d5b1a075@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20261004T160000
 DTEND;TZID=Europe/Athens:20261004T180000
 SUMMARY:⚽ ΠΑΟΚ 2-0 ΑΟ ΑΓ.ΠΑΡΑΣΚΕΥΗΣ
@@ -38,7 +49,7 @@ URL:https://www.epo.gr/el/competition/6/matches
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-epo6-8a67c8de3fe2@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20261025T150000
 DTEND;TZID=Europe/Athens:20261025T170000
 SUMMARY:⚽ ΠΑΟΚ 5-1 ΚΗΦΙΣΙΑ
@@ -49,7 +60,7 @@ URL:https://www.epo.gr/el/competition/6/matches
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-epo6-1e904d956d6a@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20261115T123000
 DTEND;TZID=Europe/Athens:20261115T143000
 SUMMARY:⚽ ΠΑΟΚ – ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ
@@ -60,7 +71,7 @@ URL:https://www.epo.gr/el/competition/6/matches
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-epo6-691562f1a1ff@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20261213T150000
 DTEND;TZID=Europe/Athens:20261213T170000
 SUMMARY:⚽ ΠΑΟΚ – ΟΦΗ
@@ -71,7 +82,7 @@ URL:https://www.epo.gr/el/competition/6/matches
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-epo6-dd953198d0aa@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20270110T150000
 DTEND;TZID=Europe/Athens:20270110T170000
 SUMMARY:⚽ ΠΑΟΚ – ΣΕΙΡΗΝΕΣ ΓΡΕΒΕΝΩΝ
@@ -82,7 +93,7 @@ URL:https://www.epo.gr/el/competition/6/matches
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-epo6-c062fcf1aaa1@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20270117T150000
 DTEND;TZID=Europe/Athens:20270117T170000
 SUMMARY:⚽ ΠΑΟΚ – ΑΕΚ
@@ -93,7 +104,7 @@ URL:https://www.epo.gr/el/competition/6/matches
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-epo6-ab5caaae3532@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20270131T150000
 DTEND;TZID=Europe/Athens:20270131T170000
 SUMMARY:⚽ ΠΑΟΚ – ΒΟΛΟΣ ΝΠΣ
@@ -104,7 +115,7 @@ URL:https://www.epo.gr/el/competition/6/matches
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-epo6-b77fcdadd459@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20270214T150000
 DTEND;TZID=Europe/Athens:20270214T170000
 SUMMARY:⚽ ΠΑΟΚ – ΠΑΣ ΠΥΡΓΟΣ
@@ -115,7 +126,7 @@ URL:https://www.epo.gr/el/competition/6/matches
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-epo6-c5e9dd82f6b1@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20270221T150000
 DTEND;TZID=Europe/Athens:20270221T170000
 SUMMARY:⚽ ΠΑΟΚ – ΟΔΥΣΣΕΑΣ ΜΟΣΧΑΤΟΥ WFC
@@ -126,7 +137,7 @@ URL:https://www.epo.gr/el/competition/6/matches
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-epo6-2733b2c91cd4@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20270321T150000
 DTEND;TZID=Europe/Athens:20270321T170000
 SUMMARY:⚽ ΠΑΟΚ – ΑΣΤΕΡΑΣ ΤΡΙΠΟΛΗΣ
@@ -137,7 +148,7 @@ URL:https://www.epo.gr/el/competition/6/matches
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-epo6-68e4679a30ae@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20270404T160000
 DTEND;TZID=Europe/Athens:20270404T180000
 SUMMARY:⚽ ΠΑΟΚ – ΑΟ ΡΕΑ

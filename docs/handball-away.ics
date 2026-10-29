@@ -25,8 +25,20 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+UID:handball-ehf-202711020701029@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20260912T213000
+DTEND;TZID=Europe/Athens:20260912T233000
+SUMMARY:🤾 HB Dudelange 28-33 ΠΑΟΚ
+LOCATION:Centre Sportif René Hartmann\, Dudelange
+DESCRIPTION:EHF European Cup – 1ος γύρος\nΤελικό σκορ: H
+ B Dudelange 28-33 ΠΑΟΚ
+URL:http://www.eurohandball.com/en/matches/202711020701029/HBDudelange-ACPA
+ OK/
+END:VEVENT
+BEGIN:VEVENT
 UID:handball-oxe-34610@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20260928T190000
 DTEND;TZID=Europe/Athens:20260928T210000
 SUMMARY:🤾 Α.Ε.Κ. 28-24 ΠΑΟΚ
@@ -36,7 +48,7 @@ URL:http://statistics.handball.org.gr/gr/sportevents.asp
 END:VEVENT
 BEGIN:VEVENT
 UID:handball-oxe-34623@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20261005T170000
 DTEND;TZID=Europe/Athens:20261005T190000
 SUMMARY:🤾 Α.Σ.Ε ΔΟΥΚΑ 31-27 ΠΑΟΚ
@@ -46,7 +58,7 @@ URL:http://statistics.handball.org.gr/gr/sportevents.asp
 END:VEVENT
 BEGIN:VEVENT
 UID:handball-oxe-34636@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20261014T180000
 DTEND;TZID=Europe/Athens:20261014T200000
 SUMMARY:🤾 GMC ΔΡΑΜΑ 1986 21-30 ΠΑΟΚ
@@ -55,8 +67,32 @@ DESCRIPTION:Handball Premier – 6η Αγωνιστική\nΤελικό σ
 URL:http://statistics.handball.org.gr/gr/sportevents.asp
 END:VEVENT
 BEGIN:VEVENT
+UID:handball-ehf-202711020702028@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20261024T200000
+DTEND;TZID=Europe/Athens:20261024T220000
+SUMMARY:🤾 RK Borac m:tel 26-19 ΠΑΟΚ
+LOCATION:Sportska Dvorana "Borik"\, Banja Luka
+DESCRIPTION:EHF European Cup – 2ος γύρος\nΤελικό σκορ: R
+ K Borac m:tel 26-19 ΠΑΟΚ
+URL:http://www.eurohandball.com/en/matches/202711020702028/RKBoracmtel-ACPA
+ OK/
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-ehf-202711020703021@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20261121T180000
+DTEND;TZID=Europe/Athens:20261121T200000
+SUMMARY:🤾 AS SGS Ramhat Hashron – ΠΑΟΚ (ώρα TBC)
+DESCRIPTION:EHF European Cup – 3ος γύρος\nΗ ώρα δεν έχε
+ ι οριστεί ακόμα (προσωρινά 18:00). Θα ενημερ
+ ωθεί αυτόματα όταν ανακοινωθεί.
+URL:http://www.eurohandball.com/en/matches/202711020703021/ASSGSRamhatHashr
+ on-ACPAOK/
+END:VEVENT
+BEGIN:VEVENT
 UID:handball-oxe-34650@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20261121T180000
 DTEND;TZID=Europe/Athens:20261121T200000
 SUMMARY:🤾 ΑΘΗΝΑΙΚΟΣ Α.Σ.Β. – ΠΑΟΚ
@@ -65,7 +101,7 @@ URL:http://statistics.handball.org.gr/gr/sportevents.asp
 END:VEVENT
 BEGIN:VEVENT
 UID:handball-oxe-34663@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20261205T180000
 DTEND;TZID=Europe/Athens:20261205T200000
 SUMMARY:🤾 Γ.Α.Σ ΚΙΛΚΙΣ – ΠΑΟΚ
@@ -74,7 +110,7 @@ URL:http://statistics.handball.org.gr/gr/sportevents.asp
 END:VEVENT
 BEGIN:VEVENT
 UID:handball-oxe-34670@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20261209T180000
 DTEND;TZID=Europe/Athens:20261209T200000
 SUMMARY:🤾 ΙΩΝΙΚΟΣ AUTOVALUE – ΠΑΟΚ (ώρα TBC)
@@ -85,7 +121,7 @@ URL:http://statistics.handball.org.gr/gr/sportevents.asp
 END:VEVENT
 BEGIN:VEVENT
 UID:handball-oxe-34681@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20270213T180000
 DTEND;TZID=Europe/Athens:20270213T200000
 SUMMARY:🤾 Χ.Α.Ν.Θ – ΠΑΟΚ (ώρα TBC)
@@ -96,7 +132,7 @@ URL:http://statistics.handball.org.gr/gr/sportevents.asp
 END:VEVENT
 BEGIN:VEVENT
 UID:handball-oxe-34692@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20270227T180000
 DTEND;TZID=Europe/Athens:20270227T200000
 SUMMARY:🤾 Ε.Γ.Σ.Ν ΖΑΦΕΙΡΑΚΗΣ – ΠΑΟΚ (ώρα TBC)
@@ -107,7 +143,7 @@ URL:http://statistics.handball.org.gr/gr/sportevents.asp
 END:VEVENT
 BEGIN:VEVENT
 UID:handball-oxe-34709@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20270320T180000
 DTEND;TZID=Europe/Athens:20270320T200000
 SUMMARY:🤾 ΑΡΗΣ ΝΙΚΑΙΑΣ OLYMPIC DIAGNOSTIC – ΠΑΟΚ (ώρ
@@ -119,7 +155,7 @@ URL:http://statistics.handball.org.gr/gr/sportevents.asp
 END:VEVENT
 BEGIN:VEVENT
 UID:handball-oxe-34714@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20270327T180000
 DTEND;TZID=Europe/Athens:20270327T200000
 SUMMARY:🤾 ΔΙΟΜΗΔΗΣ ΑΡΓΟΥΣ – ΠΑΟΚ (ώρα TBC)
@@ -130,7 +166,7 @@ URL:http://statistics.handball.org.gr/gr/sportevents.asp
 END:VEVENT
 BEGIN:VEVENT
 UID:handball-oxe-34725@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T093059Z
 DTSTART;TZID=Europe/Athens:20270417T180000
 DTEND;TZID=Europe/Athens:20270417T200000
 SUMMARY:🤾 ΟΛΥΜΠΙΑΚΟΣ ΟΜΙΛΟΣ ΞΥΝΗ – ΠΑΟΚ (ώρ

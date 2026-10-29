@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
-sleep 40
-for i in 1 2 3; do curl -sS -m 30 -o /tmp/s -w "%{http_code} %{content_type} %{size_download}\n" https://paokalendar.vercel.app/_vercel/insights/script.js; head -c 120 /tmp/s; echo; sleep 15; done
-curl -sS -m 30 https://paokalendar.vercel.app/ | grep -c "_vercel/insights"
+U="https://europeanaquatics.org/sports/water-polo/club-competitions/schedule/"
+curl -sSL -m 40 -A "Mozilla/5.0" "$U" -o docs/sched.html; wc -c docs/sched.html
+grep -oE '(https?:)?//[^"'"'"' )]+' docs/sched.html | grep -iE "api|microplus|json|wp-json|schedule|calendar|\.js" | sort -u | head -60
+grep -oE '<iframe[^>]+' docs/sched.html | head

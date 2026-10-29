@@ -324,6 +324,20 @@ def waterpolo(women: bool) -> list[dict]:
     return [table(title, url, ["Αγ", "Ν", "Ι", "Η", "Γκολ", "Β"], rows)]
 
 
+def futsal() -> list[dict]:
+    from build_calendars import eps_json, eps_name, futsal_ids
+    league, season = futsal_ids()
+    tables = eps_json(f"tables?leagues={league}&seasons={season}&per_page=10&_fields=id,title,link,data")
+    if not tables:
+        raise RuntimeError("Δεν βρέθηκε βαθμολογία Futsal Super League")
+    t = tables[0]
+    rows = sorted((r for k, r in t["data"].items() if k != "0"), key=lambda r: int(r.get("pos") or 99))
+    return [table("Futsal Super League", t["link"], ["Αγ", "Ν", "Ι", "Η", "Γκολ", "Β"],
+                  [(int(r["pos"]), eps_name(r["name"]), "", [r.get("p", ""), r.get("w", ""), r.get("d", ""), r.get("l", ""),
+                                                  f'{r.get("f", "")}-{r.get("a", "")}', r.get("threenineone", "")])
+                   for r in rows])]
+
+
 STANDINGS = {
     "football": football,
     "football-women": football_women,
@@ -335,4 +349,5 @@ STANDINGS = {
     "handball-women": lambda: handball(True),
     "waterpolo": lambda: waterpolo(False),
     "waterpolo-women": lambda: waterpolo(True),
+    "futsal": futsal,
 }

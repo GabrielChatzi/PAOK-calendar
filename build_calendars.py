@@ -1188,6 +1188,36 @@ def write_if_changed(path: Path, content: str, ignore: Callable[[str], str] = wi
     return True
 
 
+# ---------------------------------------------------------------- χειροκίνητοι αγώνες
+
+MANUAL_PATH = Path(__file__).resolve().parent / "manual.json"
+
+
+def manual_matches(section: str, official: list[Match]) -> list[Match]:
+    """Αγώνες που ανακοινώθηκαν αλλά δεν έχουν μπει ακόμα στην επίσημη πηγή (manual.json).
+
+    Μόλις η πηγή δημοσιεύσει αγώνα του ΠΑΟΚ την ίδια μέρα (±1) με την ίδια έδρα, ο χειροκίνητος
+    αγνοείται, οπότε το manual.json δεν χρειάζεται καθάρισμα.
+    """
+    if not MANUAL_PATH.exists():
+        return []
+    out = []
+    for e in json.loads(MANUAL_PATH.read_text(encoding="utf-8")):
+        if e.get("section") != section:
+            continue
+        day = dt.date.fromisoformat(e["date"])
+        paok_home = is_paok(e["home"])
+        if any(abs((m.day - day).days) <= 1 and m.paok_home == paok_home for m in official):
+            continue
+        out.append(Match(
+            section=section, uid=f"{section}-manual-{short_hash(e['date'], e['home'], e['away'])}",
+            day=day, time=parse_time(e.get("time", "")), home=tidy_name(e["home"]), away=tidy_name(e["away"]),
+            paok_home=paok_home, venue=e.get("venue", ""), competition=e.get("competition", ""),
+            round=e.get("round", ""), url=e.get("url", ""),
+        ))
+    return out
+
+
 # ---------------------------------------------------------------- κύριο
 
 SOURCES: dict[str, list[tuple[str, Callable[[], list[Match]]]]] = {
@@ -1250,6 +1280,7 @@ def main(only: list[str] | None = None) -> int:
             all_matches += prev_by_section[key]
             continue
         unique = list({m.uid: m for m in matches}.values())
+        unique += manual_matches(key, unique)
         info = SECTIONS[key]
         for side, label, keep in (("home", "Εντός έδρας", True), ("away", "Εκτός έδρας", False)):
             subset = [m for m in unique if m.paok_home == keep]

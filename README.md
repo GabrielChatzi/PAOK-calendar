@@ -30,7 +30,7 @@
 | 🏐 Βόλεϊ | Volley League, League Cup, Κύπελλο | volleyleague.gr, ΕΟΠΕ |
 | 🏐 Βόλεϊ Γυναικών | Volley League Γυναικών, Κύπελλο | ΕΟΠΕ (Data Project) |
 | 🤾 Χάντμπολ (ανδρών, γυναικών) | Handball Premier, Α1 Γυναικών, Κύπελλα | ΟΧΕ |
-| 🤽 Πόλο (ανδρών, γυναικών) | Water Polo League | waterpololeague.gr |
+| 🤽 Πόλο (ανδρών, γυναικών) | Water Polo League, ευρωπαϊκά κύπελλα | waterpololeague.gr, European Aquatics |
 
 Αγώνες χωρίς ορισμένη ώρα μπαίνουν στις 18:00 (ώρα Ελλάδας) με την ένδειξη «(ώρα TBC)».
 

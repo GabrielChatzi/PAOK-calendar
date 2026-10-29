@@ -14,7 +14,7 @@
   Βόλεϊ:               volleyleague.gr (Volley League, League Cup), Data Project της ΕΟΠΕ (Κύπελλο)
   Βόλεϊ γυναικών:      Data Project της ΕΟΠΕ (Volley League Women, Κύπελλο)
   Χάντμπολ:            statistics.handball.org.gr (Handball Premier, Α1 Γυναικών, Κύπελλα)
-  Πόλο:                waterpololeague.gr (ανδρών, γυναικών)
+  Πόλο:                waterpololeague.gr (ανδρών, γυναικών), European Aquatics (ευρωπαϊκά κύπελλα)
 
 Γράφει επίσης βαθμολογίες στο docs/standings.json (βλ. standings.py) και στέλνει
 ειδοποιήσεις για νέους αγώνες, αλλαγές ώρας και αποτελέσματα (βλ. notify.py),
@@ -771,6 +771,90 @@ def waterpolo_matches(section: str) -> list[Match]:
     return out
 
 
+# Ευρωπαϊκά κύπελλα πόλο (European Aquatics). Το επίσημο πρόγραμμα στο europeanaquatics.org
+# διαβάζει τα δεδομένα από το API της Microplus, με ένα δημόσιο token που δίνει το ίδιο API.
+EA_API = "https://ea.microplustimingservices.com/api/wp"
+EA_SCHEDULE_PAGE = "https://europeanaquatics.org/sports/water-polo/club-competitions/schedule/"
+EA_ROUNDS = [("Qualification Round", "Προκριματικά"), ("Group Stage", "Φάση ομίλων"),
+             ("Quarterfinals", "Προημιτελικά"), ("Quarter-finals", "Προημιτελικά"),
+             ("Semifinals", "Ημιτελικά"), ("Semi-finals", "Ημιτελικά"), ("Final Four", "Final Four"),
+             ("Final", "Τελικός"), ("Group", "Όμιλος"), ("Gruppo", "Όμιλος")]
+EA_ABBREVIATIONS = {"AC", "AN", "AS", "ASC", "BVSC", "CC", "CN", "CSM", "GS", "HAVK", "OSC", "PVK", "RN",
+                    "SC", "SK", "SS", "UVSE", "VK", "VSK", "WPC", "ZVL", "ZF", "FTC", "KSZ"}
+_EA: dict[str, dict] = {}
+
+
+def ea_data() -> dict:
+    """Πρόγραμμα και διοργανώσεις της σεζόν (μία φορά ανά εκτέλεση, και για τα δύο τμήματα)."""
+    if not _EA:
+        code = f"EACLUB{(season_start_year() + 1) % 100:02d}"
+        headers = {"User-Agent": UA, "Origin": "https://ea.microplustimingservices.com"}
+
+        def get(url: str, token: str | None = None) -> dict:
+            h = dict(headers, **({"Authorization": f"Bearer {token}"} if token else {}))
+            with urllib.request.urlopen(urllib.request.Request(url, headers=h), timeout=60) as r:
+                return json.loads(r.read().decode("utf-8"))
+        token = get(f"{EA_API}/site/token")["data"]["token"]
+        _EA["schedule"] = get(f"{EA_API}/{code}/get/schedule/*/*/*/*/*", token)["Schedule"]
+        _EA["events"] = get(f"{EA_API}/{code}/get/events/*", token)["Events"]
+    return _EA
+
+
+def ea_team(name: str) -> str:
+    if is_paok(name.replace("AC ", "")):
+        return PAOK
+    # «POLAR BEARS EDE» → «Polar Bears Ede»· συντομογραφίες (CN, VK) και ονόματα με αριθμούς μένουν ως έχουν.
+    return " ".join(w if w in EA_ABBREVIATIONS or re.search(r"\d", w) else w.capitalize() for w in name.split())
+
+
+def ea_round(text: str) -> str:
+    text = re.sub(r"\s+", " ", text or "").strip()
+    for en, el in EA_ROUNDS:
+        text = text.replace(en, el)
+    return text.replace("Προκριματικά Όμιλος", "Προκριματικά, Όμιλος").replace("ομίλων Όμιλος", "ομίλων, Όμιλος")
+
+
+def european_waterpolo_matches(section: str) -> list[Match]:
+    """Αγώνες του ΠΑΟΚ στα ευρωπαϊκά κύπελλα (Champions League, Euro Cup, Conference Cup…).
+
+    Η ώρα στην πηγή είναι τοπική της πισίνας (με τη ζώνη της)· μετατρέπεται σε ώρα Ελλάδας.
+    Χωρίς ευρωπαϊκή συμμετοχή επιστρέφει κενή λίστα.
+    """
+    cat = "ASF" if SECTIONS[section]["women"] else "ASM"
+    data = ea_data()
+    names = {(e["GaraCatCode"], e["GaraCode"]): e["GaraDescrEng"] for e in data["events"]}
+    out = []
+    for x in data["schedule"]:
+        if x.get("OraCatCode") != cat:
+            continue
+        a, b = x.get("OraTeamNameA") or "", x.get("OraTeamNameB") or ""
+        if not (x.get("OraTeamCodeA") == "PAOK" or x.get("OraTeamCodeB") == "PAOK" or is_paok(a.replace("AC ", ""))
+                or is_paok(b.replace("AC ", ""))):
+            continue
+        day = dt.datetime.strptime(x["OraMatchDate"], "%d/%m/%Y").date()
+        local = parse_time(x.get("OraTime") or "") or parse_time((x.get("OraDescr") or "").split("-")[-1])
+        time = None
+        if local:
+            tz = re.match(r"([+-])(\d{2}):(\d{2})", x.get("TimeZone") or "+01:00")
+            offset = dt.timedelta(hours=int(tz.group(2)), minutes=int(tz.group(3))) * (1 if tz.group(1) == "+" else -1)
+            start = dt.datetime.combine(day, local, dt.timezone(offset)).astimezone(ATHENS)
+            day, time = start.date(), start.time()
+        home, away = ea_team(a), ea_team(b)
+        finished = x.get("OraStatus") == 2
+        out.append(Match(
+            section=section,
+            uid=f"{section}-ea-{x.get('OraCodPub')}-{cat}{x.get('OraGaraCode')}-{x.get('OraTurCode')}-"
+                f"{x.get('OraTeamCodeA')}-{x.get('OraTeamCodeB')}",
+            day=day, time=time, home=home, away=away, paok_home=home == PAOK,
+            venue=x.get("OraVenue") or "",
+            competition=names.get((cat, x.get("OraGaraCode")), "Ευρωπαϊκό κύπελλο"),
+            round=ea_round(x.get("OraMatchDescrEng") or ""),
+            score=f"{x['OraResA']}-{x['OraResB']}" if finished else "",
+            url=EA_SCHEDULE_PAGE,
+        ))
+    return out
+
+
 # ---------------------------------------------------------------- iCal
 
 def ics_escape(s: str) -> str:
@@ -878,8 +962,10 @@ SOURCES: dict[str, list[tuple[str, Callable[[], list[Match]]]]] = {
     "volley-women": [("ΕΟΠΕ", lambda: dataproject_matches("volley-women"))],
     "handball": [("ΟΧΕ", lambda: handball_matches("handball"))],
     "handball-women": [("ΟΧΕ", lambda: handball_matches("handball-women"))],
-    "waterpolo": [("WPL", lambda: waterpolo_matches("waterpolo"))],
-    "waterpolo-women": [("WPL", lambda: waterpolo_matches("waterpolo-women"))],
+    "waterpolo": [("WPL", lambda: waterpolo_matches("waterpolo")),
+                  ("European Aquatics", lambda: european_waterpolo_matches("waterpolo"))],
+    "waterpolo-women": [("WPL", lambda: waterpolo_matches("waterpolo-women")),
+                        ("European Aquatics", lambda: european_waterpolo_matches("waterpolo-women"))],
 }
 
 

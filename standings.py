@@ -4,6 +4,8 @@
     {"title", "url", "columns": [...], "rows": [{"pos", "team", "logo", "paok", "cells": [...]}]}
 Όπου υπάρχει επίσημη βαθμολογία τη διαβάζουμε από την πηγή· για το βόλεϊ ανδρών και το
 EuroCup την υπολογίζουμε από τα αποτελέσματα, γιατί δεν δημοσιεύεται σε αναγνώσιμη μορφή.
+Για το βόλεϊ γυναικών η πηγή δείχνει ακόμα βαθμούς με το παλιό σύστημα (3-2-1-0), οπότε
+οι βαθμοί και η σειρά υπολογίζονται με τον νέο κανονισμό (βλ. volley_women_order).
 """
 from __future__ import annotations
 
@@ -11,7 +13,7 @@ import json
 import re
 
 from build_calendars import (
-    DATAPROJECT, EPO, FOOTBALL_NAMES, HANDBALL, absolute, basket_name, clean, fetch,
+    DATAPROJECT, EPO, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
     is_paok, latin_title, plain, season_start_year, tidy_name, volley_rows,
 )
 
@@ -181,6 +183,42 @@ def volley() -> list[dict]:
     return [table("Volley League", url, ["Αγ", "Ν", "Η", "Σετ", "Β"], rows)]
 
 
+def num(x: str, default: float = 0.0) -> float:
+    try:
+        return float(str(x).replace(",", "."))
+    except ValueError:
+        return default
+
+
+def volley_women_order(teams: list[dict], results: list[tuple[str, str, int, int]]) -> list[dict]:
+    """Σειρά κατάταξης της Volley League Γυναικών (κανονισμός ΕΟΠΕ από τη σεζόν 2026-27).
+
+    Βαθμοί: 2 η νίκη, 1 η ήττα, 0 ο μηδενισμός (ανεξάρτητα από τα σετ).
+    Σε ισοβαθμία: 1) τα μεταξύ τους αποτελέσματα με βαθμούς κατά σετ (3-0/3-1: 3, 3-2: 2, 2-3: 1,
+    1-3/0-3: 0), 2) οι ίδιοι βαθμοί σε όλους τους αγώνες, 3) λόγος σετ, 4) λόγος πόντων.
+    teams: {"team", "points", "results_points", "set_ratio", "point_ratio", …}
+    results: (γηπεδούχος, φιλοξενούμενος, σετ γηπεδούχου, σετ φιλοξενούμενου)
+    """
+    def result_points(own: int, other: int) -> int:
+        return (3 if other <= 1 else 2) if own == 3 else (1 if own == 2 else 0)
+
+    by_points: dict[float, list[dict]] = {}
+    for t in teams:
+        by_points.setdefault(t["points"], []).append(t)
+    ordered = []
+    for pts in sorted(by_points, reverse=True):
+        group = by_points[pts]
+        names = {t["team"] for t in group}
+        h2h = {n: 0 for n in names}
+        for home, away, a, b in results:
+            if home in names and away in names and home != away:
+                h2h[home] += result_points(a, b)
+                h2h[away] += result_points(b, a)
+        ordered += sorted(group, key=lambda t: (-h2h[t["team"]], -t["results_points"],
+                                                -t["set_ratio"], -t["point_ratio"]))
+    return ordered
+
+
 def volley_women() -> list[dict]:
     y = season_start_year()
     season = f"{y}-{str(y + 1)[-2:]}"
@@ -195,21 +233,37 @@ def volley_women() -> list[dict]:
         for pid in pids[:1]:
             url = f"{DATAPROJECT}CompetitionStandings.aspx?ID={cid}&PID={pid}"
             page = fetch(url)
-            rows = []
+            teams = []
             parts = re.split(r'<tr class="RG_Standing_Main[^"]*"[^>]*>', page)[1:]
-            for i, part in enumerate(parts):
+            for part in parts:
                 part = part.split("</tbody>", 1)[0]
                 f: dict[str, str] = {}
-                for k, v in re.findall(r'<span id="([A-Za-z]+)"[^>]*>([^<]*)</span>', part):
+                for k, v in re.findall(r'<span id="([A-Za-z0-9]+)"[^>]*>([^<]*)</span>', part):
                     f.setdefault(k, v.strip())
                 if "TeamName" not in f:
                     continue
                 logo = re.search(r'id="TeamLogo"[^>]*url\((?:&quot;|["\'])?([^"&)]+)', part)
-                rows.append((i + 1, tidy_name(f["TeamName"]), logo.group(1) if logo else "", [
-                    f.get("MatchesPlayed", ""), f.get("WonMatches", ""), f.get("LostMatches", ""),
-                    f'{f.get("SetsWon", "")}-{f.get("SetsLost", "")}', f.get("Points", "")]))
-            if rows:
-                out.append(table("Volley League Γυναικών", url, ["Αγ", "Ν", "Η", "Σετ", "Β"], rows))
+                won, lost = int(num(f.get("WonMatches"))), int(num(f.get("LostMatches")))
+                forfeits = int(num(f.get("Penalty"), 0)) if f.get("Penalty", "-").strip("-").strip() else 0
+                teams.append({
+                    "team": tidy_name(f["TeamName"]), "logo": logo.group(1) if logo else "",
+                    "points": 2 * won + lost - forfeits, "results_points": num(f.get("Points")),
+                    "set_ratio": num(f.get("QuotSet")), "point_ratio": num(f.get("QuotPoints")),
+                    "cells": [f.get("MatchesPlayed", ""), str(won), str(lost),
+                              f'{f.get("SetsWon", "")}-{f.get("SetsLost", "")}'],
+                })
+            if not teams:
+                continue
+            # Αποτελέσματα της κανονικής περιόδου, για τα μεταξύ τους σε ισοβαθμία.
+            phase = fetch(f"{DATAPROJECT}CompetitionMatches.aspx?ID={cid}&PID={pid}")
+            results = []
+            for m in _parse_dataproject(phase, "volley-women", cid, "", only_paok=False):
+                if m.score:
+                    a, b = (int(x) for x in m.score.split("-"))
+                    results.append((m.home, m.away, a, b))
+            rows = [(i + 1, t["team"], t["logo"], t["cells"] + [f'{t["points"]:g}'])
+                    for i, t in enumerate(volley_women_order(teams, results))]
+            out.append(table("Volley League Γυναικών", url, ["Αγ", "Ν", "Η", "Σετ", "Β"], rows))
         if out:
             break
     if not out:

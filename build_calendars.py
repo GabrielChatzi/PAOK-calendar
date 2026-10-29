@@ -305,7 +305,7 @@ def dataproject_matches(section: str) -> list[Match]:
     return out
 
 
-def _parse_dataproject(page: str, section: str, cid: str, comp: str) -> list[Match]:
+def _parse_dataproject(page: str, section: str, cid: str, comp: str, only_paok: bool = True) -> list[Match]:
     key_re = re.compile(r'_RADLIST_Legs_(ctrl\d+)_(?:RADLIST_Matches_(ctrl\d+)_)?([A-Za-z0-9_]+)"')
     fields: dict[tuple, dict] = collections.defaultdict(dict)
     first_pos: dict[tuple, int] = {}
@@ -338,7 +338,7 @@ def _parse_dataproject(page: str, section: str, cid: str, comp: str) -> list[Mat
     for key, f in fields.items():
         home = f.get("Label2") or f.get("Label6") or ""
         away = f.get("Label4") or f.get("Label7") or ""
-        if not (is_paok(home) or is_paok(away)):
+        if only_paok and not (is_paok(home) or is_paok(away)):
             continue
         when = f.get("LB_DataOra") or f.get("LBL_DataOra_Small") or ""
         dm = re.search(r"(\d{2})/(\d{2})/(\d{4})", when)
@@ -412,6 +412,13 @@ def football_women_europe() -> list[Match]:
     return espn_matches("football-women", ESPN_WOMEN_TEAM_ID, ESPN_WOMEN_LEAGUES)
 
 
+def espn_round(text: str) -> str:
+    """«2nd Leg - Spartak Myjava win 4-3 on aggregate» → «2ος αγώνας, πρόκριση Spartak Myjava (4-3 συνολικά)»."""
+    text = re.sub(r"\b1st Leg\b", "1ος αγώνας", text)
+    text = re.sub(r"\b2nd Leg\b", "2ος αγώνας", text)
+    return re.sub(r"\s*-\s*(.+?) (?:win|advance) (\d+-\d+) on aggregate", r", πρόκριση \1 (\2 συνολικά)", text)
+
+
 def espn_matches(section: str, team_id: str, leagues: list[str]) -> list[Match]:
     base = "https://site.api.espn.com/apis/site/v2/sports/soccer"
     events: dict[str, tuple[str, dict]] = {}
@@ -455,7 +462,7 @@ def espn_matches(section: str, team_id: str, leagues: list[str]) -> list[Match]:
             paok_home=teams["home"]["team"]["id"] == team_id,
             venue=VENUE_NAMES.get(venue, venue),
             competition=COMPETITION_NAMES.get(league, league),
-            round=notes[0].get("headline", "") if notes else "", score=score,
+            round=espn_round(notes[0].get("headline", "") if notes else ""), score=score,
             url=f"https://www.espn.com/soccer/match/_/gameId/{ev_id}",
             home_logo=logo(teams["home"]), away_logo=logo(teams["away"]),
             live={"src": "espn", "league": league, "id": ev_id},
@@ -1012,9 +1019,12 @@ def cev_competitions() -> dict[str, str]:
 
 def cev_tidy(name: str) -> str:
     """«C.S. Arcada GALATI» → «C.S. Arcada Galati»."""
-    if is_paok(name):
-        return PAOK
-    return " ".join(w.capitalize() if len(w) > 3 and w.isupper() else w for w in name.split())
+    return PAOK if is_paok(name) else cev_caps(name)
+
+
+def cev_caps(name: str) -> str:
+    return " ".join(w.capitalize() if len(w) > 3 and w.isalpha() and w.isupper() and w != "PAOK" else w
+                    for w in name.split())
 
 
 _CEV_TZ: dict[str, str] = {}
@@ -1073,7 +1083,7 @@ def cev_matches(section: str) -> list[Match]:
                 out[mid] = Match(
                     section=section, uid=f"{section}-cev-{mid}", day=day, time=time,
                     home=cev_tidy(home), away=cev_tidy(away), paok_home=is_paok(home),
-                    venue=spans.get("LB_Palasport", "").replace("  ", " "), competition=competition,
+                    venue=cev_caps(spans.get("LB_Palasport", "")), competition=competition,
                     round=", ".join(x for x in (round_name, CEV_LEGS.get(leg_name, "")) if x),
                     score=f"{sets[0]}-{sets[1]}" if done else "",
                     url=f"{CEV}MatchPage.aspx?mID={mid}&ID={comp_id}",

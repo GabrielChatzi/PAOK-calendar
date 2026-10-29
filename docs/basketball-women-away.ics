@@ -1,0 +1,144 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Μπάσκετ Γυναικών – Εκτός έδρ
+ ας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:basketball-women-wbl1-828b93431f6d@paok-calendar
+DTSTAMP:20261026T092910Z
+DTSTART;TZID=Europe/Athens:20261004T143000
+DTEND;TZID=Europe/Athens:20261004T163000
+SUMMARY:🏀 ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ 91-52 ΠΑΟΚ
+LOCATION:ΚΓ ΠΑΥΛΟΣ ΓΙΑΝΝΑΚΟΠΟΥΛΟΣ
+DESCRIPTION:Women's Basketball League 1 – 1η Αγωνιστική\nΤε
+ λικό σκορ: ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ 91-52 ΠΑΟΚ
+URL:https://www.basket.gr/wbl1/schedule/
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-wbl1-020bef7b6700@paok-calendar
+DTSTAMP:20261026T092910Z
+DTSTART;TZID=Europe/Athens:20261018T190000
+DTEND;TZID=Europe/Athens:20261018T210000
+SUMMARY:🏀 ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ ΣΥΚΕΩΝ 75-64 ΠΑΟΚ
+LOCATION:Δ.Α.Κ. ΕΠΤΑΠΥΡΓΙΟΥ
+DESCRIPTION:Women's Basketball League 1 – 3η Αγωνιστική\nΤε
+ λικό σκορ: ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ ΣΥΚΕΩΝ 75-64 ΠΑΟ
+ Κ
+URL:https://www.basket.gr/wbl1/schedule/
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-wbl1-8cdba1a7ada9@paok-calendar
+DTSTAMP:20261026T092910Z
+DTSTART;TZID=Europe/Athens:20261101T160000
+DTEND;TZID=Europe/Athens:20261101T180000
+SUMMARY:🏀 ΑΕΟ ΠΡΩΤΕΑΣ ΒΟΥΛΑΣ – ΠΑΟΚ
+LOCATION:Γ. ΓΕΝΝΗΜΑΤΑΣ
+DESCRIPTION:Women's Basketball League 1 – 5η Αγωνιστική
+URL:https://www.basket.gr/wbl1/schedule/
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-wbl1-6e0b4994dcb4@paok-calendar
+DTSTAMP:20261026T092910Z
+DTSTART;TZID=Europe/Athens:20261121T170000
+DTEND;TZID=Europe/Athens:20261121T190000
+SUMMARY:🏀 ΠΑΣ ΓΙΑΝΝΙΝΑ – ΠΑΟΚ
+LOCATION:ΚΛΕΙΣΤΟ ΓΥΜΝΑΣΤΗΡΙΟ ΙΩΑΝΝΙΝΩΝ "ΣΙΔΕ
+ ΡΗΣ ΚΑΡΑΔΗΜΑΣ"
+DESCRIPTION:Women's Basketball League 1 – 7η Αγωνιστική
+URL:https://www.basket.gr/wbl1/schedule/
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-wbl1-43118afb4e68@paok-calendar
+DTSTAMP:20261026T092910Z
+DTSTART;TZID=Europe/Athens:20261206T130000
+DTEND;TZID=Europe/Athens:20261206T150000
+SUMMARY:🏀 ΑΟ ΑΜΥΝΤΑΣ – ΠΑΟΚ
+LOCATION:ΚΓ ΥΜΗΤΤΟΥ "ΑΓΓΕΛΟΣ ΖΟΥΠΑΣ"
+DESCRIPTION:Women's Basketball League 1 – 9η Αγωνιστική
+URL:https://www.basket.gr/wbl1/schedule/
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-wbl1-1aded62d3198@paok-calendar
+DTSTAMP:20261026T092910Z
+DTSTART;TZID=Europe/Athens:20261219T123000
+DTEND;TZID=Europe/Athens:20261219T143000
+SUMMARY:🏀 ΑΚ ΚΑΒΑΛΑΣ ΟΙ ΠΑΝΘΗΡΕΣ – ΠΑΟΚ
+LOCATION:Δ.Α.Κ. "ΑΛΕΞΑΝΔΡΑ ΔΗΜΟΓΛΟΥ"
+DESCRIPTION:Women's Basketball League 1 – 11η Αγωνιστική
+URL:https://www.basket.gr/wbl1/schedule/
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-wbl1-4830279546c9@paok-calendar
+DTSTAMP:20261026T092910Z
+DTSTART;TZID=Europe/Athens:20270110T130000
+DTEND;TZID=Europe/Athens:20270110T150000
+SUMMARY:🏀 ΑΣ ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ – ΠΑΟΚ
+LOCATION:ΑΛΕΞΑΝΔΡΕΙΟ ΑΘΛΗΤΙΚΟ ΜΕΛΑΘΡΟΝ ΘΕΣ/Κ
+ ΗΣ
+DESCRIPTION:Women's Basketball League 1 – 13η Αγωνιστική
+URL:https://www.basket.gr/wbl1/schedule/
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-wbl1-2ca699178087@paok-calendar
+DTSTAMP:20261026T092910Z
+DTSTART;TZID=Europe/Athens:20270120T150000
+DTEND;TZID=Europe/Athens:20270120T170000
+SUMMARY:🏀 ΟΛΥΜΠΙΑΚΟΣ ΣΦΠ – ΠΑΟΚ
+LOCATION:ΔΗΜΟΤΙΚΟ ΚΛΕΙΣΤΟ ΓΥΜΝΑΣΤΗΡΙΟ ΚΑΜΙΝ
+ ΙΩΝ
+DESCRIPTION:Women's Basketball League 1 – 15η Αγωνιστική
+URL:https://www.basket.gr/wbl1/schedule/
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-wbl1-34da1267bd2a@paok-calendar
+DTSTAMP:20261026T092910Z
+DTSTART;TZID=Europe/Athens:20270130T170000
+DTEND;TZID=Europe/Athens:20270130T190000
+SUMMARY:🏀 ΑΘΗΝΑΙΚΟΣ QUALCO – ΠΑΟΚ
+LOCATION:ΚΓ ΔΗΜΗΤΡΙΟΣ ΚΑΛΤΣΑΣ (ΕΡΓΑΝΗΣ)
+DESCRIPTION:Women's Basketball League 1 – 17η Αγωνιστική
+URL:https://www.basket.gr/wbl1/schedule/
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-wbl1-3e64e1eedd4e@paok-calendar
+DTSTAMP:20261026T092910Z
+DTSTART;TZID=Europe/Athens:20270221T170000
+DTEND;TZID=Europe/Athens:20270221T190000
+SUMMARY:🏀 ΠΑΝΣΕΡΡΑΙΚΟΣ FIBRAN – ΠΑΟΚ
+LOCATION:Δ.Α.Κ. ΚΟΙΛΑΔΑΣ
+DESCRIPTION:Women's Basketball League 1 – 19η Αγωνιστική
+URL:https://www.basket.gr/wbl1/schedule/
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-wbl1-ae6b06878cac@paok-calendar
+DTSTAMP:20261026T092910Z
+DTSTART;TZID=Europe/Athens:20270307T170000
+DTEND;TZID=Europe/Athens:20270307T190000
+SUMMARY:🏀 KRONOS BC PLASIS – ΠΑΟΚ
+LOCATION:Ν. ΚΛΕΙΣΤΟ ΑΓΙΟΥ ΔΗΜΗΤΡΙΟΥ
+DESCRIPTION:Women's Basketball League 1 – 21η Αγωνιστική
+URL:https://www.basket.gr/wbl1/schedule/
+END:VEVENT
+END:VCALENDAR

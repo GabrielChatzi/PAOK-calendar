@@ -1,0 +1,226 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Ποδόσφαιρο – Εκτός έδρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:football-espn-401896234@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20260723T200000
+DTEND;TZID=Europe/Athens:20260723T220000
+SUMMARY:⚽ Dynamo Kyiv 2-3 ΠΑΟΚ
+LOCATION:Arena Lublin
+DESCRIPTION:Europa League (προκριματικά) – 1ος αγώνας
+ \nΤελικό σκορ: Dynamo Kyiv 2-3 ΠΑΟΚ
+URL:https://www.espn.com/soccer/match/_/gameId/401896234
+END:VEVENT
+BEGIN:VEVENT
+UID:football-espn-401902941@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20260813T213000
+DTEND;TZID=Europe/Athens:20260813T233000
+SUMMARY:⚽ Anderlecht 3-2 ΠΑΟΚ
+LOCATION:Lotto Park
+DESCRIPTION:Europa League (προκριματικά) – 2ος αγώνας
+ \, πρόκριση Anderlecht (4-2 συνολικά)\nΤελικό σκο
+ ρ: Anderlecht 3-2 ΠΑΟΚ
+URL:https://www.espn.com/soccer/match/_/gameId/401902941
+END:VEVENT
+BEGIN:VEVENT
+UID:football-espn-401910983@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20260827T200000
+DTEND;TZID=Europe/Athens:20260827T220000
+SUMMARY:⚽ SK Brann 3-2 ΠΑΟΚ
+LOCATION:Brann Stadium
+DESCRIPTION:Conference League (προκριματικά) – 2ος αγών
+ ας\, πρόκριση SK Brann (4-3 συνολικά)\nΤελικό σκ
+ ορ: SK Brann 3-2 ΠΑΟΚ
+URL:https://www.espn.com/soccer/match/_/gameId/401910983
+END:VEVENT
+BEGIN:VEVENT
+UID:football-espn-401896772@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20260830T201500
+DTEND;TZID=Europe/Athens:20260830T221500
+SUMMARY:⚽ Ατρόμητος 1-2 ΠΑΟΚ
+LOCATION:Peristeri Stadium
+DESCRIPTION:Super League\nΤελικό σκορ: Ατρόμητος 1-2 Π
+ ΑΟΚ
+URL:https://www.espn.com/soccer/match/_/gameId/401896772
+END:VEVENT
+BEGIN:VEVENT
+UID:football-espn-401896765@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20260906T213000
+DTEND;TZID=Europe/Athens:20260906T233000
+SUMMARY:⚽ Παναθηναϊκός 3-1 ΠΑΟΚ
+LOCATION:Athens Olympic Stadium
+DESCRIPTION:Super League\nΤελικό σκορ: Παναθηναϊκός 3
+ -1 ΠΑΟΚ
+URL:https://www.espn.com/soccer/match/_/gameId/401896765
+END:VEVENT
+BEGIN:VEVENT
+UID:football-epo5-52a6f69151fc@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20260916T200000
+DTEND;TZID=Europe/Athens:20260916T220000
+SUMMARY:⚽ ΑΤΡΟΜΗΤΟΣ ΑΘ1923 0-1 ΠΑΟΚ
+LOCATION:ΔΗΜ. ΣΤΑΔΙΟ ΠΕΡΙΣΤΕΡΙΟΥ
+DESCRIPTION:Κύπελλο Ελλάδας – League Phase\nΤελικό σ
+ κορ: ΑΤΡΟΜΗΤΟΣ ΑΘ1923 0-1 ΠΑΟΚ
+URL:https://www.epo.gr/el/competition/5/matches
+END:VEVENT
+BEGIN:VEVENT
+UID:football-espn-401896755@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20260920T210000
+DTEND;TZID=Europe/Athens:20260920T230000
+SUMMARY:⚽ Παναιτωλικός 1-3 ΠΑΟΚ
+LOCATION:Panetolikos Stadium
+DESCRIPTION:Super League\nΤελικό σκορ: Παναιτωλικός 1
+ -3 ΠΑΟΚ
+URL:https://www.espn.com/soccer/match/_/gameId/401896755
+END:VEVENT
+BEGIN:VEVENT
+UID:football-espn-401896740@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20261025T200000
+DTEND;TZID=Europe/Athens:20261025T220000
+SUMMARY:⚽ ΟΦΗ 2-1 ΠΑΟΚ
+LOCATION:Pankritio Stadium
+DESCRIPTION:Super League\nΤελικό σκορ: ΟΦΗ 2-1 ΠΑΟΚ
+URL:https://www.espn.com/soccer/match/_/gameId/401896740
+END:VEVENT
+BEGIN:VEVENT
+UID:football-espn-401896730@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20261108T210000
+DTEND;TZID=Europe/Athens:20261108T230000
+SUMMARY:⚽ Ολυμπιακός – ΠΑΟΚ
+LOCATION:Georgios Karaiskakis Stadium
+DESCRIPTION:Super League
+URL:https://www.espn.com/soccer/match/_/gameId/401896730
+END:VEVENT
+BEGIN:VEVENT
+UID:football-espn-401896721@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20261129T210000
+DTEND;TZID=Europe/Athens:20261129T230000
+SUMMARY:⚽ ΑΕΚ – ΠΑΟΚ
+LOCATION:OPAP Arena
+DESCRIPTION:Super League
+URL:https://www.espn.com/soccer/match/_/gameId/401896721
+END:VEVENT
+BEGIN:VEVENT
+UID:football-epo5-2d457137e691@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20261202T180000
+DTEND;TZID=Europe/Athens:20261202T200000
+SUMMARY:⚽ ΠΣ ΚΑΛΑΜΑΤΑ 2019 – ΠΑΟΚ (ώρα TBC)
+DESCRIPTION:Κύπελλο Ελλάδας – League Phase\nΗ ώρα δε
+ ν έχει οριστεί ακόμα (προσωρινά 18:00). Θα ε
+ νημερωθεί αυτόματα όταν ανακοινωθεί.
+URL:https://www.epo.gr/el/competition/5/matches
+END:VEVENT
+BEGIN:VEVENT
+UID:football-espn-401896708@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20261219T193000
+DTEND;TZID=Europe/Athens:20261219T213000
+SUMMARY:⚽ Αστέρας Τρίπολης – ΠΑΟΚ
+LOCATION:Theodoros Kolokotronis Stadium
+DESCRIPTION:Super League
+URL:https://www.espn.com/soccer/match/_/gameId/401896708
+END:VEVENT
+BEGIN:VEVENT
+UID:football-espn-401896701@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20270110T193000
+DTEND;TZID=Europe/Athens:20270110T213000
+SUMMARY:⚽ Άρης – ΠΑΟΚ
+LOCATION:Kleánthis Vikelídis Stadium
+DESCRIPTION:Super League
+URL:https://www.espn.com/soccer/match/_/gameId/401896701
+END:VEVENT
+BEGIN:VEVENT
+UID:football-espn-401896795@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20270123T180000
+DTEND;TZID=Europe/Athens:20270123T200000
+SUMMARY:⚽ Ηρακλής – ΠΑΟΚ (ώρα TBC)
+LOCATION:Kaftanzoglio Ethniko Stadio
+DESCRIPTION:Super League\nΗ ώρα δεν έχει οριστεί ακόμ
+ α (προσωρινά 18:00). Θα ενημερωθεί αυτόματα 
+ όταν ανακοινωθεί.
+URL:https://www.espn.com/soccer/match/_/gameId/401896795
+END:VEVENT
+BEGIN:VEVENT
+UID:football-espn-401896792@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20270206T180000
+DTEND;TZID=Europe/Athens:20270206T200000
+SUMMARY:⚽ Καλαμάτα – ΠΑΟΚ (ώρα TBC)
+DESCRIPTION:Super League\nΗ ώρα δεν έχει οριστεί ακόμ
+ α (προσωρινά 18:00). Θα ενημερωθεί αυτόματα 
+ όταν ανακοινωθεί.
+URL:https://www.espn.com/soccer/match/_/gameId/401896792
+END:VEVENT
+BEGIN:VEVENT
+UID:football-espn-401896670@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20270220T180000
+DTEND;TZID=Europe/Athens:20270220T200000
+SUMMARY:⚽ Κηφισιά – ΠΑΟΚ (ώρα TBC)
+LOCATION:Apostolos Nikolaidis
+DESCRIPTION:Super League\nΗ ώρα δεν έχει οριστεί ακόμ
+ α (προσωρινά 18:00). Θα ενημερωθεί αυτόματα 
+ όταν ανακοινωθεί.
+URL:https://www.espn.com/soccer/match/_/gameId/401896670
+END:VEVENT
+BEGIN:VEVENT
+UID:football-espn-401896660@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20270306T180000
+DTEND;TZID=Europe/Athens:20270306T200000
+SUMMARY:⚽ Βόλος – ΠΑΟΚ (ώρα TBC)
+LOCATION:Panthessaliko Stadium
+DESCRIPTION:Super League\nΗ ώρα δεν έχει οριστεί ακόμ
+ α (προσωρινά 18:00). Θα ενημερωθεί αυτόματα 
+ όταν ανακοινωθεί.
+URL:https://www.espn.com/soccer/match/_/gameId/401896660
+END:VEVENT
+BEGIN:VEVENT
+UID:football-espn-401896629@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20270320T180000
+DTEND;TZID=Europe/Athens:20270320T200000
+SUMMARY:⚽ Λεβαδειακός – ΠΑΟΚ (ώρα TBC)
+LOCATION:Levadia Municipal Stadium
+DESCRIPTION:Super League\nΗ ώρα δεν έχει οριστεί ακόμ
+ α (προσωρινά 18:00). Θα ενημερωθεί αυτόματα 
+ όταν ανακοινωθεί.
+URL:https://www.espn.com/soccer/match/_/gameId/401896629
+END:VEVENT
+END:VCALENDAR

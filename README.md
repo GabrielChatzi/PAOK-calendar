@@ -24,13 +24,15 @@
 | Τμήμα | Διοργανώσεις | Πηγή |
 |---|---|---|
 | ⚽ Ποδόσφαιρο | Super League, Ευρώπη, Κύπελλο Ελλάδας | ESPN, ΕΠΟ |
-| ⚽ Ποδόσφαιρο Γυναικών | Α' Εθνική, Κύπελλο | ΕΠΟ |
+| ⚽ Ποδόσφαιρο Γυναικών | Α' Εθνική, Κύπελλο, UEFA | ΕΠΟ, ESPN |
 | 🏀 Μπάσκετ | Basket League, EuroCup | esake.gr, Euroleague |
 | 🏀 Μπάσκετ Γυναικών | Women's Basketball League 1 | basket.gr |
-| 🏐 Βόλεϊ | Volley League, League Cup, Κύπελλο | volleyleague.gr, ΕΟΠΕ |
-| 🏐 Βόλεϊ Γυναικών | Volley League Γυναικών, Κύπελλο | ΕΟΠΕ (Data Project) |
-| 🤾 Χάντμπολ (ανδρών, γυναικών) | Handball Premier, Α1 Γυναικών, Κύπελλα | ΟΧΕ |
+| 🏐 Βόλεϊ | Volley League, League Cup, Κύπελλο, CEV | volleyleague.gr, ΕΟΠΕ, CEV |
+| 🏐 Βόλεϊ Γυναικών | Volley League Γυναικών, Κύπελλο, CEV | ΕΟΠΕ (Data Project), CEV |
+| 🤾 Χάντμπολ (ανδρών, γυναικών) | Handball Premier, Α1 Γυναικών, Κύπελλα, EHF | ΟΧΕ, EHF |
 | 🤽 Πόλο (ανδρών, γυναικών) | Water Polo League, ευρωπαϊκά κύπελλα | waterpololeague.gr, European Aquatics |
+
+Οι ευρωπαϊκές διοργανώσεις (UEFA, CEV, EHF, European Aquatics) ελέγχονται σε κάθε ενημέρωση, ακόμα κι αν ο ΠΑΟΚ δεν έχει ακόμα αγώνες σε αυτές· μόλις οριστούν, εμφανίζονται μόνοι τους. Οι αριθμοί των διοργανώσεων της CEV για κάθε σεζόν βρίσκονται αυτόματα και κρατιούνται στο `docs/sources.json`.
 
 Αγώνες χωρίς ορισμένη ώρα μπαίνουν στις 18:00 (ώρα Ελλάδας) με την ένδειξη «(ώρα TBC)».
 

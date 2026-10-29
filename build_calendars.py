@@ -8,12 +8,12 @@
 
 Πηγές:
   Ποδόσφαιρο:          ESPN (Super League, Ευρώπη), ΕΠΟ (Κύπελλο Ελλάδας)
-  Ποδόσφαιρο γυναικών: ΕΠΟ (Α' Εθνική, Κύπελλο)
+  Ποδόσφαιρο γυναικών: ΕΠΟ (Α' Εθνική, Κύπελλο), ESPN (UEFA)
   Μπάσκετ:             esake.gr (Basket League), Euroleague API (EuroCup)
   Μπάσκετ γυναικών:    basket.gr (Women's Basketball League 1)
-  Βόλεϊ:               volleyleague.gr (Volley League, League Cup), Data Project της ΕΟΠΕ (Κύπελλο)
-  Βόλεϊ γυναικών:      Data Project της ΕΟΠΕ (Volley League Women, Κύπελλο)
-  Χάντμπολ:            statistics.handball.org.gr (Handball Premier, Α1 Γυναικών, Κύπελλα)
+  Βόλεϊ:               volleyleague.gr (Volley League, League Cup), Data Project της ΕΟΠΕ (Κύπελλο), CEV
+  Βόλεϊ γυναικών:      Data Project της ΕΟΠΕ (Volley League Women, Κύπελλο), CEV
+  Χάντμπολ:            statistics.handball.org.gr (Handball Premier, Α1 Γυναικών, Κύπελλα), EHF
   Πόλο:                waterpololeague.gr (ανδρών, γυναικών), European Aquatics (ευρωπαϊκά κύπελλα)
 
 Γράφει επίσης βαθμολογίες στο docs/standings.json (βλ. standings.py) και στέλνει
@@ -35,6 +35,7 @@ import json
 import re
 import sys
 import unicodedata
+import urllib.error
 import urllib.parse
 import urllib.request
 from dataclasses import asdict, dataclass
@@ -153,6 +154,7 @@ def greekish(text: str) -> str:
 
 def is_paok(name: str) -> bool:
     n = re.sub(r"[.\s]", "", plain(name))
+    n = re.sub(r"^AC(?=PAOK)", "", n)  # «A.C. PAOK» (ΑΣ ΠΑΟΚ) στις ευρωπαϊκές ομοσπονδίες
     return n.startswith("PAOK") or greekish(n).startswith("ΠΑΟΚ")
 
 
@@ -381,7 +383,11 @@ COMPETITION_NAMES = {
     "uefa.champions_qual": "Champions League (προκριματικά)",
     "uefa.europa_qual": "Europa League (προκριματικά)",
     "uefa.europa.conf_qual": "Conference League (προκριματικά)",
+    "uefa.wchampions": "Women's Champions League",
+    "uefa.w.europa": "Women's Europa Cup",
 }
+ESPN_WOMEN_TEAM_ID = "131834"  # PAOK γυναικών
+ESPN_WOMEN_LEAGUES = ["uefa.wchampions", "uefa.w.europa"]
 FOOTBALL_NAMES = {
     "PAOK": PAOK, "Olympiacos": "Ολυμπιακός", "AEK Athens": "ΑΕΚ",
     "Panathinaikos": "Παναθηναϊκός", "Aris": "Άρης", "Asteras Tripoli": "Αστέρας Τρίπολης",
@@ -395,20 +401,37 @@ VENUE_NAMES = {"Toumba Stadium": "Τούμπα"}
 
 
 def football_matches() -> list[Match]:
+    out = espn_matches("football", ESPN_TEAM_ID, ESPN_LEAGUES)
+    if not any(m.live and m.live["league"] == "gre.1" for m in out):
+        raise RuntimeError("Δεν βρέθηκαν αγώνες Super League στο ESPN")
+    return out
+
+
+def football_women_europe() -> list[Match]:
+    """Ευρωπαϊκές διοργανώσεις UEFA γυναικών (Women's Champions League, Women's Europa Cup)."""
+    return espn_matches("football-women", ESPN_WOMEN_TEAM_ID, ESPN_WOMEN_LEAGUES)
+
+
+def espn_round(text: str) -> str:
+    """«2nd Leg - Spartak Myjava win 4-3 on aggregate» → «2ος αγώνας, πρόκριση Spartak Myjava (4-3 συνολικά)»."""
+    text = re.sub(r"\b1st Leg\b", "1ος αγώνας", text)
+    text = re.sub(r"\b2nd Leg\b", "2ος αγώνας", text)
+    return re.sub(r"\s*-\s*(.+?) (?:win|advance) (\d+-\d+) on aggregate", r", πρόκριση \1 (\2 συνολικά)", text)
+
+
+def espn_matches(section: str, team_id: str, leagues: list[str]) -> list[Match]:
     base = "https://site.api.espn.com/apis/site/v2/sports/soccer"
     events: dict[str, tuple[str, dict]] = {}
-    for league in ESPN_LEAGUES:
+    for league in leagues:
         for suffix in ("?fixture=true", ""):
             try:
-                data = json.loads(fetch(f"{base}/{league}/teams/{ESPN_TEAM_ID}/schedule{suffix}"))
+                data = json.loads(fetch(f"{base}/{league}/teams/{team_id}/schedule{suffix}"))
             except Exception as e:  # ένα λάθος σε μία διοργάνωση δεν ακυρώνει τις άλλες
                 print(f"  ! ESPN {league}{suffix}: {e}", file=sys.stderr)
                 continue
             for ev in data.get("events", []):
                 slug = (ev.get("league") or {}).get("slug") or league
                 events.setdefault(ev["id"], (slug, ev))
-    if not any(lg == "gre.1" for lg, _ in events.values()):
-        raise RuntimeError("Δεν βρέθηκαν αγώνες Super League στο ESPN")
 
     out = []
     for ev_id, (league, ev) in events.items():
@@ -432,14 +455,14 @@ def football_matches() -> list[Match]:
         venue = (comp.get("venue") or {}).get("fullName", "")
         notes = comp.get("notes") or []
         out.append(Match(
-            section="football", uid=f"football-espn-{ev_id}",
+            section=section, uid=f"{section}-espn-{ev_id}",
             day=local.date(),
             time=dt.time(local.hour, local.minute) if time_known else None,
             home=name(teams["home"]), away=name(teams["away"]),
-            paok_home=teams["home"]["team"]["id"] == ESPN_TEAM_ID,
+            paok_home=teams["home"]["team"]["id"] == team_id,
             venue=VENUE_NAMES.get(venue, venue),
             competition=COMPETITION_NAMES.get(league, league),
-            round=notes[0].get("headline", "") if notes else "", score=score,
+            round=espn_round(notes[0].get("headline", "") if notes else ""), score=score,
             url=f"https://www.espn.com/soccer/match/_/gameId/{ev_id}",
             home_logo=logo(teams["home"]), away_logo=logo(teams["away"]),
             live={"src": "espn", "league": league, "id": ev_id},
@@ -855,6 +878,216 @@ def european_waterpolo_matches(section: str) -> list[Match]:
     return out
 
 
+# ---------------------------------------------------------------- χάντμπολ: EHF
+
+# Τα ευρωπαϊκά κύπελλα του χάντμπολ. Κάθε διοργάνωση έχει δικό της site· η λίστα αγώνων
+# έρχεται από το API του (λίγοι αγώνες ανά σελίδα, προς τα πίσω και προς τα μπρος).
+EHF_COMPETITIONS = [("ehfcl", "EHF Champions League"), ("ehfel", "EHF European League"),
+                    ("ehfec", "EHF European Cup")]
+EHF_ROUNDS = [(r"Qualification Round (\d+)", r"Προκριματικά, \1ος γύρος"), (r"^Round (\d+)$", r"\1ος γύρος"),
+              (r"Last 16", "Φάση των 16"), (r"Quarter-?finals?", "Προημιτελικά"), (r"Semi-?finals?", "Ημιτελικά"),
+              (r"Group Phase", "Όμιλοι"), (r"Main Round", "Κύρια φάση"), (r"Play-?offs?", "Play-off"),
+              (r"Final Four|EHF FINAL4|Finals", "Final Four")]
+
+
+def ehf_round(match: dict) -> str:
+    comp = match.get("comp") or {}
+    text = ((comp.get("round") or {}).get("name") or "").strip()
+    for pattern, greek in EHF_ROUNDS:
+        text = re.sub(pattern, greek, text)
+    group = ((comp.get("group") or {}).get("name") or "").strip()
+    return f"{text}, Όμιλος {group}" if group else text
+
+
+def ehf_matches(section: str) -> list[Match]:
+    """Αγώνες του ΠΑΟΚ στις διοργανώσεις της EHF όπου συμμετέχει (κοιτάζει τη λίστα συλλόγων)."""
+    gender = "women" if SECTIONS[section]["women"] else "men"
+    y = season_start_year()
+    season = f"{y}-{(y + 1) % 100:02d}"
+    out = []
+    for sub, name in EHF_COMPETITIONS:
+        base = f"https://{sub}.eurohandball.com"
+        clubs = fetch(f"{base}/{gender}/{season}/clubs/")
+        if "PAOK" not in plain(clean(clubs)):
+            continue
+        page = fetch(f"{base}/{gender}/{season}/matches/")
+        comp_id = re.search(r'data-competition-id="([^"]+)"', page)
+        content_id = re.search(r'data-currentcontentid="(\d+)"', page)
+        if not comp_id or not content_id:
+            raise RuntimeError(f"Δεν βρέθηκε η λίστα αγώνων στο {base}")
+        api = f"{base}/umbraco/api/competitionmatchesapi"
+        q = f"contentId={content_id.group(1)}&competitionId={comp_id.group(1)}"
+        first = json.loads(fetch(f"{api}/GetInitMatches?{q}"))["matches"]
+        found = {m["matchID"]: m for m in first}
+        # Η λίστα είναι από τον νεότερο στον παλαιότερο: προς τα μπρος από τον πρώτο, προς τα πίσω από τον τελευταίο.
+        for future in (True, False):
+            batch = first
+            for _ in range(100):
+                if not batch:
+                    break
+                anchor = (batch[0] if future else batch[-1])["matchID"]
+                try:
+                    batch = json.loads(fetch(f"{api}/GetMatches?{q}&matchId={anchor}"
+                                             f"&futureMatches={'true' if future else 'false'}"))["matches"]
+                except urllib.error.HTTPError:
+                    break  # τέλος της λίστας
+                batch = [m for m in batch if m["matchID"] not in found]
+                found.update({m["matchID"]: m for m in batch})
+        for m in found.values():
+            home_t, away_t = m["homeTeam"]["team"], (m.get("guestTeam") or {}).get("team") or {}
+            if not (is_paok(home_t.get("fullName", "")) or is_paok(away_t.get("fullName", ""))):
+                continue
+            date = m["venue"]["date"]
+            if not date.get("hasDate") or date["utc"].startswith("9999"):
+                continue
+            utc = dt.datetime.fromisoformat(date["utc"][:19] + "+00:00")
+            if date.get("hasTime"):
+                start = utc.astimezone(ATHENS)
+                day, time = start.date(), start.time()
+            else:
+                day, time = utc.date(), None
+            place = m["venue"].get("place") or {}
+            score = ""
+            if m.get("isFinished"):
+                score = f'{m["homeTeam"]["score"]["goals"]}-{m["guestTeam"]["score"]["goals"]}'
+            link = m.get("url") or ""
+            out.append(Match(
+                section=section, uid=f"{section}-ehf-{m['matchID']}", day=day, time=time,
+                home=tidy_name(home_t["fullName"]), away=tidy_name(away_t["fullName"]),
+                paok_home=is_paok(home_t["fullName"]),
+                venue=", ".join(x for x in (place.get("hallName"), place.get("cityName")) if x),
+                competition=name, round=ehf_round(m), score=score,
+                url=link if link.startswith("http") else base + link,
+                home_logo=home_t.get("logoSmall") or "", away_logo=away_t.get("logoSmall") or "",
+            ))
+    return out
+
+
+# ---------------------------------------------------------------- βόλεϊ: CEV
+
+# Το παλιό site της CEV (www-old.cev.eu) έχει ακόμα το πλήρες πρόγραμμα των κυπέλλων.
+# Κάθε διοργάνωση και σεζόν έχει αριθμό (ID)· βρίσκονται μία φορά ανά σεζόν και κρατιούνται
+# στο docs/sources.json.
+CEV = "https://www-old.cev.eu/Competition-Area/"
+CEV_COMPETITIONS = [("Champions League", "Champions League"), ("Volleyball Cup", "CEV Cup"),
+                    ("Challenge Cup", "Challenge Cup")]
+CEV_ROUNDS = {"32nd Finals": "Φάση των 64", "16th Finals": "Φάση των 32", "8th Finals": "Φάση των 16",
+              "4th Finals": "Προημιτελικά", "Play Off": "Play-off", "Semi Finals": "Ημιτελικά",
+              "Finals": "Τελικοί", "Final": "Τελικός"}
+CEV_LEGS = {"Home Matches": "1ος αγώνας", "Away Matches": "2ος αγώνας"}
+# Χώρα (κωδικός στη σημαία της ομάδας) → ζώνη ώρας. Οι υπόλοιπες χώρες είναι σε ώρα Κεντρικής Ευρώπης.
+COUNTRY_TZ = {
+    "GRE": "Europe/Athens", "CYP": "Asia/Nicosia", "ROU": "Europe/Bucharest", "BUL": "Europe/Sofia",
+    "TUR": "Europe/Istanbul", "UKR": "Europe/Kyiv", "MDA": "Europe/Chisinau", "FIN": "Europe/Helsinki",
+    "EST": "Europe/Tallinn", "LAT": "Europe/Riga", "LTU": "Europe/Vilnius", "ISR": "Asia/Jerusalem",
+    "POR": "Europe/Lisbon", "GBR": "Europe/London", "ENG": "Europe/London", "SCO": "Europe/London",
+    "IRL": "Europe/Dublin", "ISL": "Atlantic/Reykjavik", "FAR": "Atlantic/Faroe", "AZE": "Asia/Baku",
+    "GEO": "Asia/Tbilisi", "ARM": "Asia/Yerevan", "RUS": "Europe/Moscow", "BLR": "Europe/Minsk",
+}
+SOURCES_CACHE = Path(__file__).resolve().parent / "docs" / "sources.json"
+
+
+def cev_title(page: str) -> str:
+    text = re.sub(r"\s+", " ", clean(re.sub(r"<script.*?</script>|<style.*?</style>", "", page, flags=re.S)))
+    m = re.search(r"Calendar Search Login (.{5,90}?) Men Women Home", text)
+    return m.group(1).strip() if m else ""
+
+
+def cev_competitions() -> dict[str, str]:
+    """Αριθμοί των κυπέλλων της τρέχουσας σεζόν: {"1949": "CEV Volleyball Cup 2027 | Men", …}."""
+    year = str(season_start_year() + 1)  # η CEV ονομάζει τη σεζόν με το δεύτερο έτος
+    cache = json.loads(SOURCES_CACHE.read_text(encoding="utf-8")) if SOURCES_CACHE.exists() else {}
+    known = cache.setdefault("cev", {})
+    if year in known and len(known[year]) >= 6:
+        return known[year]
+    start = max([int(i) for comps in known.values() for i in comps] + [1900])
+    found, misses, i = dict(known.get(year, {})), 0, start
+    while misses < 120 and len(found) < 6 and i < start + 600:
+        i += 1
+        try:
+            title = cev_title(fetch(f"{CEV}CompetitionView.aspx?ID={i}"))
+        except Exception:
+            title = ""
+        if re.search(rf"(Champions League|Volleyball Cup|Challenge Cup)\D*{year} \| (Men|Women)$", title):
+            found[str(i)], misses = title, 0
+        else:
+            misses += 1
+    known[year] = found
+    SOURCES_CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    return found
+
+
+def cev_tidy(name: str) -> str:
+    """«C.S. Arcada GALATI» → «C.S. Arcada Galati»."""
+    if is_paok(name):
+        return PAOK
+    return " ".join(w.capitalize() if len(w) > 3 and w.isalpha() and w.isupper() else w for w in name.split())
+
+
+_CEV_TZ: dict[str, str] = {}
+
+
+def cev_team_tz(team_id: str, comp_id: str) -> ZoneInfo:
+    if team_id not in _CEV_TZ:
+        page = fetch(f"{CEV}CompetitionTeamDetails.aspx?TeamID={team_id}&ID={comp_id}")
+        flag = re.search(r"Flags_100/([A-Z]{3})_100", page)
+        _CEV_TZ[team_id] = COUNTRY_TZ.get(flag.group(1) if flag else "", "Europe/Paris")
+    return ZoneInfo(_CEV_TZ[team_id])
+
+
+def cev_matches(section: str) -> list[Match]:
+    gender = "Women" if SECTIONS[section]["women"] else "Men"
+    out: dict[str, Match] = {}
+    for comp_id, title in sorted(cev_competitions().items()):
+        if not title.endswith(f"| {gender}"):
+            continue
+        competition = next((g for k, g in CEV_COMPETITIONS if k in title), title)
+        first = fetch(f"{CEV}CompetitionView.aspx?ID={comp_id}")
+        participants = first[first.find("Participating Teams"):]
+        if "PAOK" not in plain(clean(participants)):
+            continue
+        # Κάθε φάση (προκριματικά, κύρια, τελική) είναι άλλη σελίδα με δικό της PID.
+        pids = sorted({int(x) for x in re.findall(r"MatchPage\.aspx\?mID=\d+&(?:amp;)?ID=\d+&(?:amp;)?CID=\d+&(?:amp;)?PID=(\d+)", first)})
+        pages = [first] + [fetch(f"{CEV}CompetitionView.aspx?ID={comp_id}&PID={pid}")
+                           for pid in range(min(pids or [0]) - 1, max(pids or [0]) + 4) if pids]
+        for page in pages:
+            tabs = re.findall(r'class="rtsLink RTB_Championship[^"]*"[^>]*><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">([^<]+)<', page)
+            views = re.findall(r'<div id="Content_Left_(\d+)" class="rmpView', page)
+            round_of = dict(zip(views, tabs))
+            legs = {(v, n): name.strip() for v, n, name in re.findall(
+                r'_Content_Left_(\d+)_userControl_RADLIST_Legs_ctrl(\d+)_LB_LegName"[^>]*>([^<]+)<', page)}
+            parts = re.split(r'<div id="ctl00_Content_Left_(\d+)_userControl_RADLIST_Legs_ctrl(\d+)_RADLIST_Matches_ctrl\d+_div_match"', page)
+            for view, leg_no, body in zip(parts[1::3], parts[2::3], parts[3::3]):
+                spans = {k: clean(v) for k, v in re.findall(r'<span id="[^"]*_(LB_[A-Za-z0-9]+|Label\d+)"[^>]*>(.*?)</span>', body, re.S)}
+                home, away = spans.get("Label2", ""), spans.get("Label4", "")
+                if not (is_paok(home) or is_paok(away)):
+                    continue
+                mid = re.search(r"MatchPage\.aspx\?mID=(\d+)", body).group(1)
+                when = re.search(r"(\d{2})/(\d{2})/(\d{4})(?:\s+(\d{1,2}):(\d{2}))?", spans.get("LB_DataOra", ""))
+                if not when:
+                    continue  # «Match not yet scheduled»
+                day = dt.date(int(when.group(3)), int(when.group(2)), int(when.group(1)))
+                time = None
+                if when.group(4):
+                    host = re.search(r"Teams_WebLogo_32_32\.aspx\?ID=(\d+)", body)
+                    tz = ATHENS if is_paok(home) or not host else cev_team_tz(host.group(1), comp_id)
+                    start = dt.datetime(day.year, day.month, day.day, int(when.group(4)), int(when.group(5)), tzinfo=tz).astimezone(ATHENS)
+                    day, time = start.date(), start.time()
+                sets = (spans.get("LB_SetCasa", "0"), spans.get("LB_SetOspiti", "0"))
+                done = sets != ("0", "0") and day < dt.date.today() + dt.timedelta(days=1)
+                leg_name = legs.get((view, leg_no)) or ""
+                round_name = CEV_ROUNDS.get(round_of.get(view, ""), round_of.get(view, ""))
+                out[mid] = Match(
+                    section=section, uid=f"{section}-cev-{mid}", day=day, time=time,
+                    home=cev_tidy(home), away=cev_tidy(away), paok_home=is_paok(home),
+                    venue=cev_tidy(spans.get("LB_Palasport", "")), competition=competition,
+                    round=", ".join(x for x in (round_name, CEV_LEGS.get(leg_name, "")) if x),
+                    score=f"{sets[0]}-{sets[1]}" if done else "",
+                    url=f"{CEV}MatchPage.aspx?mID={mid}&ID={comp_id}",
+                )
+    return list(out.values())
+
+
 # ---------------------------------------------------------------- iCal
 
 def ics_escape(s: str) -> str:
@@ -954,14 +1187,19 @@ SOURCES: dict[str, list[tuple[str, Callable[[], list[Match]]]]] = {
     "football": [("ESPN", football_matches),
                  ("ΕΠΟ Κύπελλο", lambda: epo_matches(5, "football", required=False))],
     "football-women": [("ΕΠΟ Α' Εθνική", lambda: epo_matches(6, "football-women", required=True)),
-                       ("ΕΠΟ Κύπελλο", lambda: epo_matches(38, "football-women", required=False))],
+                       ("ΕΠΟ Κύπελλο", lambda: epo_matches(38, "football-women", required=False)),
+                       ("UEFA (ESPN)", football_women_europe)],
     "basketball": [("Basket League", basket_league_matches), ("EuroCup", eurocup_matches)],
     "basketball-women": [("WBL1", wbl1_matches)],
     "volley": [("Volley League", volley_matches),
-               ("ΕΟΠΕ", lambda: dataproject_matches("volley"))],
-    "volley-women": [("ΕΟΠΕ", lambda: dataproject_matches("volley-women"))],
-    "handball": [("ΟΧΕ", lambda: handball_matches("handball"))],
-    "handball-women": [("ΟΧΕ", lambda: handball_matches("handball-women"))],
+               ("ΕΟΠΕ", lambda: dataproject_matches("volley")),
+               ("CEV", lambda: cev_matches("volley"))],
+    "volley-women": [("ΕΟΠΕ", lambda: dataproject_matches("volley-women")),
+                     ("CEV", lambda: cev_matches("volley-women"))],
+    "handball": [("ΟΧΕ", lambda: handball_matches("handball")),
+                 ("EHF", lambda: ehf_matches("handball"))],
+    "handball-women": [("ΟΧΕ", lambda: handball_matches("handball-women")),
+                       ("EHF", lambda: ehf_matches("handball-women"))],
     "waterpolo": [("WPL", lambda: waterpolo_matches("waterpolo")),
                   ("European Aquatics", lambda: european_waterpolo_matches("waterpolo"))],
     "waterpolo-women": [("WPL", lambda: waterpolo_matches("waterpolo-women")),

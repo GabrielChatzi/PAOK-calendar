@@ -44,7 +44,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs
           git commit -m "Ενημέρωση προγράμματος αγώνων"
-          git pull --rebase --quiet
+          # Αν στο μεταξύ αποθήκευσε κι άλλη εκτέλεση, κρατάμε τα αρχεία αυτής (είναι τα νεότερα).
+          git pull --rebase -X theirs --quiet
           git push
 
       # Αν κάποια πηγή απέτυχε, το workflow σημειώνεται ως αποτυχημένο,

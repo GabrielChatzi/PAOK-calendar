@@ -1650,6 +1650,24 @@
    "nt": "b79cb11881"
   },
   {
+   "section": "volley",
+   "uid": "volley-manual-bb7c90f1e55b",
+   "home": "ΠΑΟΚ",
+   "away": "Παναθηναϊκός",
+   "venue": "PAOK Sports Arena",
+   "competition": "Novibet League Cup Νίκος Σαμαράς",
+   "round": "Προημιτελικά",
+   "score": "",
+   "tv": "",
+   "url": "https://www.volleyleague.gr/index.php/league-cup",
+   "start": "2026-11-04T18:00:00+02:00",
+   "timeKnown": true,
+   "paokHome": true,
+   "homeLogo": "",
+   "awayLogo": "",
+   "nt": "8e16c84199"
+  },
+  {
    "section": "basketball-women",
    "uid": "basketball-women-wbl1-cbe61af88d80",
    "home": "ΠΑΟΚ",
@@ -4818,15 +4836,15 @@
   }
  ],
  "updated": {
-  "football": "2026-10-29T19:39+02:00",
-  "football-women": "2026-10-29T19:39+02:00",
-  "basketball": "2026-10-29T19:39+02:00",
+  "football": "2026-10-29T20:39+02:00",
+  "football-women": "2026-10-29T20:39+02:00",
+  "basketball": "2026-10-29T20:39+02:00",
   "basketball-women": "2026-10-29T19:39+02:00",
-  "volley": "2026-10-29T19:39+02:00",
-  "volley-women": "2026-10-29T19:39+02:00",
-  "handball": "2026-10-29T19:40+02:00",
-  "handball-women": "2026-10-29T19:40+02:00",
-  "waterpolo": "2026-10-29T19:40+02:00",
-  "waterpolo-women": "2026-10-29T19:40+02:00"
+  "volley": "2026-10-29T20:39+02:00",
+  "volley-women": "2026-10-29T20:39+02:00",
+  "handball": "2026-10-29T20:40+02:00",
+  "handball-women": "2026-10-29T20:40+02:00",
+  "waterpolo": "2026-10-29T20:40+02:00",
+  "waterpolo-women": "2026-10-29T20:40+02:00"
  }
 }

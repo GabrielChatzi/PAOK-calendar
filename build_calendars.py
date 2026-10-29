@@ -1218,6 +1218,24 @@ def manual_matches(section: str, official: list[Match]) -> list[Match]:
     return out
 
 
+def carry_uids(previous: list[dict], current: list[Match]) -> None:
+    """Όταν η επίσημη πηγή δημοσιεύσει έναν αγώνα που είχε μπει χειροκίνητα ή από την ΑΣ ΠΑΟΚ,
+    ο αγώνας κρατά το παλιό αναγνωριστικό: ίδιος σύνδεσμος, ίδιες ειδοποιήσεις, ίδια εγγραφή
+    στο ημερολόγιο, και καμία διπλή ειδοποίηση «νέος αγώνας»."""
+    temp = ("-manual-", "-acpaok-")
+    now = {m.uid for m in current}
+    before = {p["uid"] for p in previous}
+    orphans = [p for p in previous if any(t in p["uid"] for t in temp) and p["uid"] not in now]
+    for m in current:
+        if m.uid in before or any(t in m.uid for t in temp):
+            continue
+        for p in orphans:
+            if abs((dt.date.fromisoformat(p["start"][:10]) - m.day).days) <= 1 and p["paokHome"] == m.paok_home:
+                m.uid = p["uid"]
+                orphans.remove(p)
+                break
+
+
 # ---------------------------------------------------------------- κύριο
 
 SOURCES: dict[str, list[tuple[str, Callable[[], list[Match]]]]] = {
@@ -1256,6 +1274,7 @@ def main(only: list[str] | None = None) -> int:
         prev_by_section[m["section"]].append(m)
 
     failures: list[str] = []
+    checks: list[str] = []  # διαφορές με την ΑΣ ΠΑΟΚ, για το issue «Αγώνες προς έλεγχο»
     all_matches: list[dict] = []
     updated: dict[str, str] = dict(previous.get("updated", {}))
     refreshed: set[str] = set()
@@ -1281,6 +1300,12 @@ def main(only: list[str] | None = None) -> int:
             continue
         unique = list({m.uid: m for m in matches}.values())
         unique += manual_matches(key, unique)
+        try:
+            import club  # δεύτερη πηγή: ανακοινώσεις της ΑΣ ΠΑΟΚ
+            unique += club.reconcile(key, unique, checks, SECTIONS[key]["name"])
+        except Exception as e:
+            print(f"  ! ΑΣ ΠΑΟΚ / {key}: {e}", file=sys.stderr)
+        carry_uids(prev_by_section[key], unique)
         info = SECTIONS[key]
         for side, label, keep in (("home", "Εντός έδρας", True), ("away", "Εκτός έδρας", False)):
             subset = [m for m in unique if m.paok_home == keep]
@@ -1337,6 +1362,16 @@ def main(only: list[str] | None = None) -> int:
     status["checked_week"] = f"{iso[0]}-W{iso[1]:02d}"
     status_path.write_text(json.dumps(status, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
                            encoding="utf-8")
+
+    checks_path = Path(__file__).resolve().parent / "checks.md"
+    if checks:
+        checks_path.write_text(
+            "Διαφορές ανάμεσα στο πρόγραμμα των επίσημων πηγών και στις ανακοινώσεις της ΑΣ ΠΑΟΚ "
+            "(acpaok.gr). Η λίστα ενημερώνεται σε κάθε ενημέρωση του προγράμματος και το issue "
+            "κλείνει μόνο του όταν δεν μένει καμία διαφορά.\n\n" + "\n".join(checks) + "\n", encoding="utf-8")
+        print("\nΈλεγχοι:\n" + "\n".join(checks))
+    elif checks_path.exists():
+        checks_path.unlink()
 
     if failures:
         print("\nΑποτυχίες:\n  " + "\n  ".join(failures), file=sys.stderr)

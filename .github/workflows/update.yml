@@ -11,6 +11,7 @@ on:
 
 permissions:
   contents: write
+  issues: write  # issue «Αγώνες προς έλεγχο»
   id-token: write  # ταυτότητα για τις ειδοποιήσεις web push (/api/push)
 
 concurrency:
@@ -47,6 +48,28 @@ jobs:
           # Αν στο μεταξύ αποθήκευσε κι άλλη εκτέλεση, κρατάμε τα αρχεία αυτής (είναι τα νεότερα).
           git pull --rebase -X theirs --quiet
           git push
+
+      # Διαφορές με τις ανακοινώσεις της ΑΣ ΠΑΟΚ: ένα issue που ενημερώνεται (το GitHub στέλνει email).
+      - name: Αγώνες προς έλεγχο
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Αγώνες προς έλεγχο"
+          num=$(gh issue list --state open --search "in:title $title" --json number,title \
+                --jq "map(select(.title == \"$title\")) | .[0].number // empty")
+          if [ -s checks.md ]; then
+            hash=$(sha1sum checks.md | cut -c1-12)
+            printf '%s\n\n<!-- %s -->\n' "$(cat checks.md)" "$hash" > body.md
+            if [ -z "$num" ]; then
+              gh issue create --title "$title" --body-file body.md
+            elif ! gh issue view "$num" --json body --jq .body | grep -q "$hash"; then
+              gh issue edit "$num" --body-file body.md
+              gh issue comment "$num" --body "Η λίστα άλλαξε. Δες την ενημερωμένη περιγραφή του issue."
+            fi
+          elif [ -n "$num" ]; then
+            gh issue close "$num" --comment "Δεν υπάρχουν πλέον διαφορές. Κλείνει αυτόματα."
+          fi
 
       # Αν κάποια πηγή απέτυχε, το workflow σημειώνεται ως αποτυχημένο,
       # ώστε να έρθει ειδοποίηση από το GitHub.

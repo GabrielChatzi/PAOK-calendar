@@ -134,6 +134,8 @@
   }
   textarea { resize: vertical; min-height: 70px; }
   .row3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .row4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+  .row4 input[type="text"] { padding: 10px; }
   .check { display: flex; gap: 12px; align-items: flex-start; font-weight: 400; margin: 6px 0 14px; }
   .check input { width: 22px; height: 22px; margin: 1px 0 0; accent-color: var(--ink); flex: none; }
 
@@ -267,7 +269,7 @@ function when(m) {
   return m.timeKnown === false ? `${day} · ώρα δεν έχει οριστεί` : `${day} · ${fmt(m.start, { hour: "2-digit", minute: "2-digit", hourCycle: "h23" })}`;
 }
 function seatText(o) {
-  return [`Θύρα ${o.gate}`, o.row && `Σειρά ${o.row}`, o.seat && `Θέση ${o.seat}`].filter(Boolean).join(" · ");
+  return [`Θύρα ${o.gate}`, o.block && `Τμήμα ${o.block}`, o.row && `Σειρά ${o.row}`, o.seat && `Θέση ${o.seat}`].filter(Boolean).join(" · ");
 }
 const started = (m) => m && new Date(m.start).getTime() <= Date.now();
 const given = (n) => (n ? `${n} ${n === 1 ? "μεταβίβαση" : "μεταβιβάσεις"}` : "Νέο μέλος");
@@ -471,19 +473,22 @@ async function viewMatch(id) {
 }
 
 function viewGive(preselect) {
+  // Χωρίς συγκεκριμένο αγώνα, προεπιλογή ο επόμενος του τμήματος που κοίταζε ο χρήστης.
+  const selected = preselect || upcoming(sportTab())[0]?.nt;
   const opts = ["football", "basketball"].map((s) => {
     const list = upcoming(s);
     if (!list.length) return "";
     return `<optgroup label="${sportName(s)}">${list.map((m) =>
-      `<option value="${m.nt}"${m.nt === preselect ? " selected" : ""}>${esc(title(m))} · ${esc(when(m))}${isNext(m) ? " · επόμενος" : ""}</option>`).join("")}</optgroup>`;
+      `<option value="${m.nt}"${m.nt === selected ? " selected" : ""}>${esc(title(m))} · ${esc(when(m))}${isNext(m) ? " · επόμενος" : ""}</option>`).join("")}</optgroup>`;
   }).join("");
   $("#view").innerHTML = `<a class="back" href="${preselect ? `#/m/${preselect}` : "#/"}">${ICON.back} Πίσω</a>
     <h2 style="margin-top:4px">Δώσε τη θέση σου</h2>
     <div class="info warn" style="margin-bottom:16px">${ICON.info}<p>Το διαρκείας σου πρέπει να είναι στο Gov.gr Wallet. Εκεί η μεταβίβαση ισχύει για τον <strong>επόμενο</strong> αγώνα, οπότε για μεταγενέστερο αγώνα θα την κάνεις αφού τελειώσει ο προηγούμενος· θα σου το δείχνουμε εδώ.</p></div>
     <form id="giveform">
       <div class="field"><label for="g-match">Αγώνας</label><select id="g-match" required>${opts}</select></div>
-      <div class="row3 field">
+      <div class="row3 field" id="g-seatrow">
         <div><label for="g-gate">Θύρα</label><input type="text" id="g-gate" maxlength="10" required></div>
+        <div id="g-blockwrap" hidden><label for="g-block">Τμήμα</label><input type="text" id="g-block" maxlength="6" placeholder="Προαιρ."></div>
         <div><label for="g-row">Σειρά</label><input type="text" id="g-row" maxlength="6" placeholder="Προαιρ."></div>
         <div><label for="g-seat">Θέση</label><input type="text" id="g-seat" maxlength="6" placeholder="Προαιρ."></div>
       </div>
@@ -495,6 +500,14 @@ function viewGive(preselect) {
     </form>`;
   cta();
   if (!opts) { $("#giveform").innerHTML = `<p class="empty">Δεν υπάρχει επερχόμενος εντός έδρας αγώνας.</p>`; return; }
+  // Στο μπάσκετ η θέση έχει και «Τμήμα».
+  const syncSeatFields = () => {
+    const basket = matchesById.get($("#g-match").value)?.section === "basketball";
+    $("#g-blockwrap").hidden = !basket;
+    $("#g-seatrow").className = (basket ? "row4" : "row3") + " field";
+  };
+  $("#g-match").addEventListener("change", syncSeatFields);
+  syncSeatFields();
   $("#giveform").addEventListener("submit", async (e) => {
     e.preventDefault();
     if (!(await needNick())) return;
@@ -502,7 +515,8 @@ function viewGive(preselect) {
     btn.disabled = true;
     try {
       await post("offer", {
-        matchId: $("#g-match").value, gate: $("#g-gate").value, row: $("#g-row").value,
+        matchId: $("#g-match").value, gate: $("#g-gate").value,
+        block: $("#g-blockwrap").hidden ? "" : $("#g-block").value, row: $("#g-row").value,
         seat: $("#g-seat").value, note: $("#g-note").value, free: $("#g-free").checked,
       });
       toast("Η θέση δημοσιεύτηκε.");

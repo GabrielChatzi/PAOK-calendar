@@ -7,7 +7,7 @@
 //
 // Συλλογές MongoDB (ίδια βάση με τις ειδοποιήσεις):
 //   tx_users     {_id, nick, nickLower, tokenHash, created}
-//   tx_offers    {_id, matchId, section, matchStart, ownerId, gate, row, seat, note, status,
+//   tx_offers    {_id, matchId, section, matchStart, ownerId, gate, block, row, seat, note, status,
 //                 recipientId, requestId, afm, created, updated}
 //                status: open → assigned → transferred → received → closed (ή withdrawn / expired)
 //   tx_requests  {_id, offerId, matchId, userId, status, created, updated}
@@ -228,7 +228,8 @@ async function nicks(c, ids) {
   return Object.fromEntries(rows.map((u) => [u._id, u.nick]));
 }
 
-const seatOf = (o) => ({ gate: o.gate, row: o.row || "", seat: o.seat || "" });
+// block = «Τμήμα» (μόνο στο μπάσκετ: Θύρα · Τμήμα · Σειρά · Θέση).
+const seatOf = (o) => ({ gate: o.gate, block: o.block || "", row: o.row || "", seat: o.seat || "" });
 
 // ---------- Ενέργειες ----------
 const actions = {
@@ -262,7 +263,7 @@ const actions = {
     const targets = [...pick("football", 2), ...pick("basketball", 1)];
     const seats = {
       football: [{ gate: "4", row: "12", seat: "8" }, { gate: "1", row: "", seat: "" }, { gate: "7", row: "30", seat: "15" }],
-      basketball: [{ gate: "Β2", row: "6", seat: "11" }, { gate: "Δ1", row: "", seat: "" }],
+      basketball: [{ gate: "2", block: "Β", row: "6", seat: "11" }, { gate: "4", block: "Δ", row: "", seat: "" }],
     };
     let created = 0;
     for (const m of targets) {
@@ -361,13 +362,14 @@ const actions = {
     return { token, nick };
   },
 
-  // POST {matchId, gate, row, seat, note, free}: δίνω τη θέση μου.
+  // POST {matchId, gate, block, row, seat, note, free}: δίνω τη θέση μου (block μόνο στο μπάσκετ).
   async offer(req, c, body) {
     const me = await currentUser(req, c);
     const m = await upcomingMatch(body.matchId);
     if (!m) fail(400, "Ο αγώνας δεν είναι επερχόμενος εντός έδρας ποδοσφαίρου ή μπάσκετ.");
     if (body.free !== true) fail(400, "Οι θέσεις δίνονται μόνο δωρεάν.");
     const gate = str(body.gate, 10, { required: true, label: "Θύρα" });
+    const block = m.section === "basketball" ? str(body.block, 6, { label: "Τμήμα" }) : "";
     const row = str(body.row, 6, { label: "Σειρά" });
     const seat = str(body.seat, 6, { label: "Θέση" });
     const note = str(body.note, 140, { label: "Σημείωση" });
@@ -376,7 +378,7 @@ const actions = {
     const now = new Date();
     const doc = {
       _id: newId(), matchId: m.nt, section: m.section, matchStart: new Date(m.start), ownerId: me._id,
-      gate, row, seat, note, status: "open", created: now, updated: now,
+      gate, block, row, seat, note, status: "open", created: now, updated: now,
     };
     await c.offers.insertOne(doc);
     return { id: doc._id };

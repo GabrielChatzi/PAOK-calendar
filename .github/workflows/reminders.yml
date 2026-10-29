@@ -41,6 +41,13 @@ jobs:
           path: .state
           key: reminded-${{ github.run_id }}
 
+      # Μεταβιβάσεις διαρκείας: χρονικές ειδοποιήσεις (τέλος προτεραιότητας θύρας, άνοιγμα
+      # μεταβίβασης, υπενθύμιση προθεσμίας) και κλείσιμο θέσεων μετά την προθεσμία.
+      - name: Μεταβιβάσεις
+        if: always()
+        continue-on-error: true
+        run: curl -fsS -X POST "https://paokalendar.vercel.app/api/tx?a=tick" -H "Content-Type: application/json" -d "{}"
+
       - name: Έναρξη live
         if: steps.remind.outputs.live == '1'
         env:

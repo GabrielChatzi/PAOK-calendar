@@ -907,9 +907,13 @@ def ehf_matches(section: str) -> list[Match]:
     out = []
     for sub, name in EHF_COMPETITIONS:
         base = f"https://{sub}.eurohandball.com"
-        clubs = fetch(f"{base}/{gender}/{season}/clubs/")
-        if "PAOK" not in plain(clean(clubs)):
-            continue
+        try:
+            clubs = fetch(f"{base}/{gender}/{season}/clubs/")
+            if "PAOK" not in plain(clean(clubs)):
+                continue
+        except urllib.error.HTTPError as e:
+            # Η σελίδα συλλόγων πέφτει κάποιες φορές· τότε ψάχνουμε κατευθείαν στους αγώνες.
+            print(f"  ! {base} clubs: {e}", file=sys.stderr)
         page = fetch(f"{base}/{gender}/{season}/matches/")
         comp_id = re.search(r'data-competition-id="([^"]+)"', page)
         content_id = re.search(r'data-currentcontentid="(\d+)"', page)

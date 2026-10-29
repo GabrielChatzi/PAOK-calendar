@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:waterpolo-women-ne-patron-paok-domus-ergo-2026-10-10@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T085955Z
 DTSTART;TZID=Europe/Athens:20261010T140000
 DTEND;TZID=Europe/Athens:20261010T160000
 SUMMARY:🤽 ΝΕ ΠΑΤΡΩΝ 12-15 ΠΑΟΚ
@@ -36,7 +36,7 @@ URL:https://waterpololeague.gr/fixture/ne-patron-paok-domus-ergo-2026-10-10
 END:VEVENT
 BEGIN:VEVENT
 UID:waterpolo-women-olympiakos-sfp-paok-domus-ergo-2026-10-21@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T085955Z
 DTSTART;TZID=Europe/Athens:20261021T193000
 DTEND;TZID=Europe/Athens:20261021T213000
 SUMMARY:🤽 ΟΛΥΜΠΙΑΚΟΣ ΣΦΠ 18-11 ΠΑΟΚ
@@ -46,9 +46,42 @@ URL:https://waterpololeague.gr/fixture/olympiakos-sfp-paok-domus-ergo-2026-
  10-21
 END:VEVENT
 BEGIN:VEVENT
+UID:waterpolo-women-ea-EA27-ASF2-001-PBE-PAOK@paok-calendar
+DTSTAMP:20261029T085955Z
+DTSTART;TZID=Europe/Athens:20261030T200000
+DTEND;TZID=Europe/Athens:20261030T220000
+SUMMARY:🤽 Polar Bears Ede – ΠΑΟΚ
+LOCATION:Ede\, NED
+DESCRIPTION:Euro Cup – Προκριματικά\, Όμιλος C
+URL:https://europeanaquatics.org/sports/water-polo/club-competitions/schedu
+ le/
+END:VEVENT
+BEGIN:VEVENT
+UID:waterpolo-women-ea-EA27-ASF2-001-ZVL-PAOK@paok-calendar
+DTSTAMP:20261029T085955Z
+DTSTART;TZID=Europe/Athens:20261031T110000
+DTEND;TZID=Europe/Athens:20261031T130000
+SUMMARY:🤽 ZVL-1886 – ΠΑΟΚ
+LOCATION:Ede\, NED
+DESCRIPTION:Euro Cup – Προκριματικά\, Όμιλος C
+URL:https://europeanaquatics.org/sports/water-polo/club-competitions/schedu
+ le/
+END:VEVENT
+BEGIN:VEVENT
+UID:waterpolo-women-ea-EA27-ASF2-001-URA-PAOK@paok-calendar
+DTSTAMP:20261029T085955Z
+DTSTART;TZID=Europe/Athens:20261101T140000
+DTEND;TZID=Europe/Athens:20261101T160000
+SUMMARY:🤽 Dinamo Uralochka – ΠΑΟΚ
+LOCATION:Ede\, NED
+DESCRIPTION:Euro Cup – Προκριματικά\, Όμιλος C
+URL:https://europeanaquatics.org/sports/water-polo/club-competitions/schedu
+ le/
+END:VEVENT
+BEGIN:VEVENT
 UID:waterpolo-women-alimos-nas-betsson-paok-domus-ergo-2026-11-14@paok-cale
  ndar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T085955Z
 DTSTART;TZID=Europe/Athens:20261114T180000
 DTEND;TZID=Europe/Athens:20261114T200000
 SUMMARY:🤽 ΑΛΙΜΟΣ ΝΑΣ – ΠΑΟΚ
@@ -58,7 +91,7 @@ URL:https://waterpololeague.gr/fixture/alimos-nas-betsson-paok-domus-ergo-2
 END:VEVENT
 BEGIN:VEVENT
 UID:waterpolo-women-ethnikos-ofpf-paok-domus-ergo-2026-11-28@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T085955Z
 DTSTART;TZID=Europe/Athens:20261124T140000
 DTEND;TZID=Europe/Athens:20261124T160000
 SUMMARY:🤽 ΕΘΝΙΚΟΣ ΟΦΠΦ – ΠΑΟΚ
@@ -68,7 +101,7 @@ URL:https://waterpololeague.gr/fixture/ethnikos-ofpf-paok-domus-ergo-2026-1
 END:VEVENT
 BEGIN:VEVENT
 UID:waterpolo-women-panionios-gss-paok-domus-ergo-2026-11-04@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T085955Z
 DTSTART;TZID=Europe/Athens:20261202T153000
 DTEND;TZID=Europe/Athens:20261202T173000
 SUMMARY:🤽 ΠΑΝΙΩΝΙΟΣ ΓΣΣ – ΠΑΟΚ
@@ -78,7 +111,7 @@ URL:https://waterpololeague.gr/fixture/panionios-gss-paok-domus-ergo-2026-1
 END:VEVENT
 BEGIN:VEVENT
 UID:waterpolo-women-pek-paok-domus-ergo-2027-01-09@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T085955Z
 DTSTART;TZID=Europe/Athens:20270109T170000
 DTEND;TZID=Europe/Athens:20270109T190000
 SUMMARY:🤽 Π.Ε.Κ.Ε. ΒΡΟΝΤΑΔΟΥ – ΠΑΟΚ
@@ -87,7 +120,7 @@ URL:https://waterpololeague.gr/fixture/pek-paok-domus-ergo-2027-01-09
 END:VEVENT
 BEGIN:VEVENT
 UID:waterpolo-women-no-buliagmenhs-paok-domus-ergo-2027-01-16@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T085955Z
 DTSTART;TZID=Europe/Athens:20270116T160000
 DTEND;TZID=Europe/Athens:20270116T180000
 SUMMARY:🤽 ΝΟ ΒΟΥΛΙΑΓΜΕΝΗΣ – ΠΑΟΚ
@@ -98,7 +131,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:waterpolo-women-ano-glyfadas-irepair-paok-domus-ergo-2027-01-30@paok-ca
  lendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T085955Z
 DTSTART;TZID=Europe/Athens:20270130T150000
 DTEND;TZID=Europe/Athens:20270130T170000
 SUMMARY:🤽 ΑΝΟ ΓΛΥΦΑΔΑΣ – ΠΑΟΚ
@@ -108,7 +141,7 @@ URL:https://waterpololeague.gr/fixture/ano-glyfadas-irepair-paok-domus-ergo
 END:VEVENT
 BEGIN:VEVENT
 UID:waterpolo-women-no-xanion-paok-domus-ergo-2027-03-10@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T085955Z
 DTSTART;TZID=Europe/Athens:20270310T130000
 DTEND;TZID=Europe/Athens:20270310T150000
 SUMMARY:🤽 ΝΟ ΧΑΝΙΩΝ – ΠΑΟΚ
@@ -117,7 +150,7 @@ URL:https://waterpololeague.gr/fixture/no-xanion-paok-domus-ergo-2027-03-10
 END:VEVENT
 BEGIN:VEVENT
 UID:waterpolo-women-lar-paok-domus-ergo-2027-03-27@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T085955Z
 DTSTART;TZID=Europe/Athens:20270327T140000
 DTEND;TZID=Europe/Athens:20270327T160000
 SUMMARY:🤽 ΝΟ ΛΑΡΙΣΗΣ – ΠΑΟΚ
@@ -126,7 +159,7 @@ URL:https://waterpololeague.gr/fixture/lar-paok-domus-ergo-2027-03-27
 END:VEVENT
 BEGIN:VEVENT
 UID:waterpolo-women-gs-hliupolhs-paok-domus-ergo-2027-04-03@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261029T085955Z
 DTSTART;TZID=Europe/Athens:20270403T183000
 DTEND;TZID=Europe/Athens:20270403T203000
 SUMMARY:🤽 ΓΣ ΗΛΙΟΥΠΟΛΗΣ – ΠΑΟΚ

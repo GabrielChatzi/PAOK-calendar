@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
 B=https://ea.microplustimingservices.com/EAWPClubs2027
-curl -sSL -m 40 -A "Mozilla/5.0" "$B/crs-results.js" -o docs/crs.js; wc -c docs/crs.js
-grep -oE '"[^"]*(\.json|export|NU_|/api/|\.php)[^"]*"' docs/crs.js | sort -u | head -60
-grep -oE "'[^']*(\.json|export|\.php)[^']*'" docs/crs.js | sort -u | head -40
-curl -sS -m 30 -o /dev/null -w "index %{http_code}\n" "$B/"
-curl -sSL -m 30 "$B/" | head -c 1500
+cat docs/crs.js 2>/dev/null; curl -sSL -m 40 "$B/crs-results.js"; echo
+curl -sSL -m 40 "$B/" -o /tmp/idx.html
+grep -oE 'src="[^"]+\.js"' /tmp/idx.html
+for js in $(grep -oE 'src="[^"]+\.js"' /tmp/idx.html | sed 's/src="//;s/"//'); do
+  curl -sSL -m 60 "$B/$js" -o /tmp/main.js; echo "== $js $(wc -c </tmp/main.js)"
+  grep -oE '"[^"]{0,80}(\.json|export/|/data/|\.php|api/)[^"]{0,60}"' /tmp/main.js | sort -u | head -40
+  grep -oE '`[^`]{0,120}(\.json|export/|\.php)[^`]{0,60}`' /tmp/main.js | sort -u | head -40
+done

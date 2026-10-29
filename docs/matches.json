@@ -2080,24 +2080,6 @@
   },
   {
    "section": "handball",
-   "uid": "handball-ehf-202711020703021",
-   "home": "AS SGS Ramhat Hashron",
-   "away": "ΠΑΟΚ",
-   "venue": "",
-   "competition": "EHF European Cup",
-   "round": "3ος γύρος",
-   "score": "",
-   "tv": "",
-   "url": "http://www.eurohandball.com/en/matches/202711020703021/ASSGSRamhatHashron-ACPAOK/",
-   "start": "2026-11-21T18:00:00+02:00",
-   "timeKnown": false,
-   "paokHome": false,
-   "homeLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jYySlvKxvqlkbkmbiHnn7AYbHy0KsYw7YU0mItgp4Awkg",
-   "awayLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jYIxuywZ8hK-I-bG5Cf0w4xw-0QulLUNdHHrMKQU39rDQ",
-   "nt": "8bbddb8634"
-  },
-  {
-   "section": "handball",
    "uid": "handball-oxe-34650",
    "home": "ΑΘΗΝΑΙΚΟΣ Α.Σ.Β.",
    "away": "ΠΑΟΚ",
@@ -2174,6 +2156,24 @@
    "nt": "35a1eab371"
   },
   {
+   "section": "handball",
+   "uid": "handball-ehf-202711020703021",
+   "home": "AS SGS Ramhat Hashron",
+   "away": "ΠΑΟΚ",
+   "venue": "Mikra 3, Thessaloniki",
+   "competition": "EHF European Cup",
+   "round": "3ος γύρος",
+   "score": "",
+   "tv": "",
+   "url": "http://www.eurohandball.com/en/matches/202711020703021/ASSGSRamhatHashron-ACPAOK/",
+   "start": "2026-11-27T19:00:00+02:00",
+   "timeKnown": true,
+   "paokHome": false,
+   "homeLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jYySlvKxvqlkbkmbiHnn7AYbHy0KsYw7YU0mItgp4Awkg",
+   "awayLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jYIxuywZ8hK-I-bG5Cf0w4xw-0QulLUNdHHrMKQU39rDQ",
+   "nt": "8bbddb8634"
+  },
+  {
    "section": "basketball-women",
    "uid": "basketball-women-wbl1-dc243a622e1c",
    "home": "ΠΑΟΚ",
@@ -2211,24 +2211,6 @@
   },
   {
    "section": "handball",
-   "uid": "handball-ehf-202711020703022",
-   "home": "ΠΑΟΚ",
-   "away": "AS SGS Ramhat Hashron",
-   "venue": "",
-   "competition": "EHF European Cup",
-   "round": "3ος γύρος",
-   "score": "",
-   "tv": "",
-   "url": "http://www.eurohandball.com/en/matches/202711020703022/ACPAOK-ASSGSRamhatHashron/",
-   "start": "2026-11-28T18:00:00+02:00",
-   "timeKnown": false,
-   "paokHome": true,
-   "homeLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jYIxuywZ8hK-I-bG5Cf0w4xw-0QulLUNdHHrMKQU39rDQ",
-   "awayLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jYySlvKxvqlkbkmbiHnn7AYbHy0KsYw7YU0mItgp4Awkg",
-   "nt": "49345c8b00"
-  },
-  {
-   "section": "handball",
    "uid": "handball-oxe-34659",
    "home": "ΠΑΟΚ",
    "away": "ΟΛΥΜΠΙΑΚΟΣ ΟΜΙΛΟΣ ΞΥΝΗ",
@@ -2244,6 +2226,24 @@
    "homeLogo": "",
    "awayLogo": "",
    "nt": "b43486b6c7"
+  },
+  {
+   "section": "handball",
+   "uid": "handball-ehf-202711020703022",
+   "home": "ΠΑΟΚ",
+   "away": "AS SGS Ramhat Hashron",
+   "venue": "Mikra 3, Thessaloniki",
+   "competition": "EHF European Cup",
+   "round": "3ος γύρος",
+   "score": "",
+   "tv": "",
+   "url": "http://www.eurohandball.com/en/matches/202711020703022/ACPAOK-ASSGSRamhatHashron/",
+   "start": "2026-11-28T19:00:00+02:00",
+   "timeKnown": true,
+   "paokHome": true,
+   "homeLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jYIxuywZ8hK-I-bG5Cf0w4xw-0QulLUNdHHrMKQU39rDQ",
+   "awayLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jYySlvKxvqlkbkmbiHnn7AYbHy0KsYw7YU0mItgp4Awkg",
+   "nt": "49345c8b00"
   },
   {
    "section": "volley",
@@ -4818,15 +4818,15 @@
   }
  ],
  "updated": {
-  "football": "2026-10-29T14:08+02:00",
-  "football-women": "2026-10-29T14:09+02:00",
-  "basketball": "2026-10-29T14:09+02:00",
-  "basketball-women": "2026-10-29T14:09+02:00",
-  "volley": "2026-10-29T14:09+02:00",
-  "volley-women": "2026-10-29T14:09+02:00",
-  "handball": "2026-10-29T14:10+02:00",
-  "handball-women": "2026-10-29T14:10+02:00",
-  "waterpolo": "2026-10-29T14:10+02:00",
-  "waterpolo-women": "2026-10-29T14:10+02:00"
+  "football": "2026-10-29T19:39+02:00",
+  "football-women": "2026-10-29T19:39+02:00",
+  "basketball": "2026-10-29T19:39+02:00",
+  "basketball-women": "2026-10-29T19:39+02:00",
+  "volley": "2026-10-29T19:39+02:00",
+  "volley-women": "2026-10-29T19:39+02:00",
+  "handball": "2026-10-29T19:40+02:00",
+  "handball-women": "2026-10-29T19:40+02:00",
+  "waterpolo": "2026-10-29T19:40+02:00",
+  "waterpolo-women": "2026-10-29T19:40+02:00"
  }
 }

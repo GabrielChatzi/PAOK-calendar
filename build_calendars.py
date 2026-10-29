@@ -1142,8 +1142,13 @@ def futsal_matches() -> list[Match]:
     teams = eps_json(f"teams?leagues={league}&seasons={season}&per_page=100&_fields=id,title,featured_media")
     names = {t["id"]: eps_name(t["title"]["rendered"]) for t in teams}
     media_ids = ",".join(str(t["featured_media"]) for t in teams if t.get("featured_media"))
-    media = {m["id"]: m.get("source_url", "") for m in (eps_json(f"media?include={media_ids}&per_page=100"
-                                                                 f"&_fields=id,source_url") if media_ids else [])}
+    media = {}
+    if media_ids:
+        try:  # τα σήματα είναι στο κανονικό API του WordPress, όχι του SportsPress
+            media = {m["id"]: m.get("source_url", "") for m in json.loads(fetch(
+                EPS.replace("sportspress/v2/", "wp/v2/") + f"media?include={media_ids}&per_page=100&_fields=id,source_url"))}
+        except Exception as e:
+            print(f"  ! σήματα ΕΠΣ Σάλας: {e}", file=sys.stderr)
     logos = {t["id"]: media.get(t.get("featured_media"), "") for t in teams}
     paok_id = next((i for i, n in names.items() if is_paok(n)), None)
     if paok_id is None:

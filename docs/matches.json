@@ -73,6 +73,13 @@
    "name": "Πόλο Γυναικών",
    "sport": "Πόλο",
    "women": true
+  },
+  {
+   "key": "futsal",
+   "emoji": "🥅",
+   "name": "Ποδόσφαιρο Σάλας",
+   "sport": "Ποδόσφαιρο Σάλας",
+   "women": false
   }
  ],
  "matches": [
@@ -397,6 +404,24 @@
    "nt": "017d634c99"
   },
   {
+   "section": "futsal",
+   "uid": "futsal-eps-23941",
+   "home": "ΜΙΝΩΤΑΥΡΟΣ",
+   "away": "ΠΑΟΚ",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "1η αγωνιστική",
+   "score": "4-8",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/23941/",
+   "start": "2026-09-20T18:00:00+03:00",
+   "timeKnown": false,
+   "paokHome": false,
+   "homeLogo": "https://epssalas.gr/wp-content/uploads/2023/01/PNG-ΜΙΝΩΤΑΥΡΟΣ-league-table.png",
+   "awayLogo": "",
+   "nt": "94693d7791"
+  },
+  {
    "section": "football",
    "uid": "football-espn-401896755",
    "home": "Παναιτωλικός",
@@ -531,6 +556,24 @@
    "homeLogo": "https://www.esake.gr/dat/esaketeam/00000001/photo_new_160CD854.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
    "nt": "148afe4d7d"
+  },
+  {
+   "section": "futsal",
+   "uid": "futsal-eps-23955",
+   "home": "ΠΑΟΚ",
+   "away": "ΑΕΚ",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "2η αγωνιστική",
+   "score": "1-4",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/23955/",
+   "start": "2026-09-27T18:00:00+03:00",
+   "timeKnown": false,
+   "paokHome": true,
+   "homeLogo": "",
+   "awayLogo": "https://epssalas.gr/wp-content/uploads/2022/09/PNG-ΑΕΚ-1.png",
+   "nt": "05d6b9f6db"
   },
   {
    "section": "basketball",
@@ -759,6 +802,24 @@
    "nt": "82239017a0"
   },
   {
+   "section": "futsal",
+   "uid": "futsal-eps-23969",
+   "home": "ΤΡΑΧΩΝΕΣ ΑΛΙΜΟΥ",
+   "away": "ΠΑΟΚ",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "3η αγωνιστική",
+   "score": "4-7",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/23969/",
+   "start": "2026-10-04T18:00:00+03:00",
+   "timeKnown": false,
+   "paokHome": false,
+   "homeLogo": "https://epssalas.gr/wp-content/uploads/2023/01/PNG-ΤΡΑΧΩΝΕΣ-1-league-table.png",
+   "awayLogo": "",
+   "nt": "a90b42782a"
+  },
+  {
    "section": "handball",
    "uid": "handball-oxe-34623",
    "home": "Α.Σ.Ε ΔΟΥΚΑ",
@@ -926,6 +987,24 @@
    "nt": "ba76d072fc"
   },
   {
+   "section": "futsal",
+   "uid": "futsal-eps-23983",
+   "home": "ΠΑΟΚ",
+   "away": "ΑΘΗΝΑ ’90 ΣΑΛΑΣ",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "4η αγωνιστική",
+   "score": "",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/23983/",
+   "start": "2026-10-11T18:00:00+03:00",
+   "timeKnown": false,
+   "paokHome": true,
+   "homeLogo": "",
+   "awayLogo": "https://epssalas.gr/wp-content/uploads/2023/07/athina-90-2.png",
+   "nt": "43bea4b007"
+  },
+  {
    "section": "football",
    "uid": "football-espn-401896819",
    "home": "ΠΑΟΚ",
@@ -1078,6 +1157,24 @@
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/19d71df6850c19084f7494c63a2cab42.jpg?itok=KtgTCCqg",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
    "nt": "a198bfe9da"
+  },
+  {
+   "section": "futsal",
+   "uid": "futsal-eps-23997",
+   "home": "ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ",
+   "away": "ΠΑΟΚ",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "5η αγωνιστική",
+   "score": "2-8",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/23997/",
+   "start": "2026-10-18T18:00:00+03:00",
+   "timeKnown": false,
+   "paokHome": false,
+   "homeLogo": "https://epssalas.gr/wp-content/uploads/2023/01/PNG-ΠΑΟ-ΣΑΛΑΣ-league-table.png",
+   "awayLogo": "",
+   "nt": "fbeac0d75d"
   },
   {
    "section": "handball",
@@ -1360,6 +1457,24 @@
    "nt": "dea4b0a112"
   },
   {
+   "section": "futsal",
+   "uid": "futsal-eps-24011",
+   "home": "ΕΡΜΗΣ ΖΩΓΡΑΦΟΥ",
+   "away": "ΠΑΟΚ",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "6η αγωνιστική",
+   "score": "7-1",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/24011/",
+   "start": "2026-10-25T18:00:00+02:00",
+   "timeKnown": false,
+   "paokHome": false,
+   "homeLogo": "https://epssalas.gr/wp-content/uploads/2023/01/PNG-ΕΡΜΗΣ-ΖΩΓΡΑΦΟΥ-league-table.png",
+   "awayLogo": "",
+   "nt": "62f6343b9f"
+  },
+  {
    "section": "football",
    "uid": "football-espn-401896740",
    "home": "ΟΦΗ",
@@ -1548,6 +1663,24 @@
    "homeLogo": "https://www.epo.gr/modules/custom/competitions/images/blank-club-profile.png",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
    "nt": "7a4e4374b2"
+  },
+  {
+   "section": "futsal",
+   "uid": "futsal-eps-24023",
+   "home": "ΠΑΟΚ",
+   "away": "ΚΟΡΥΔΑΛΛΟΥ ΑΟΔ",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "7η αγωνιστική",
+   "score": "",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/24023/",
+   "start": "2026-11-01T14:00:00+02:00",
+   "timeKnown": true,
+   "paokHome": true,
+   "homeLogo": "",
+   "awayLogo": "https://epssalas.gr/wp-content/uploads/2020/10/PNG-ΚΟΡΥΔΑΛΛΟΣ2.png",
+   "nt": "ae35ce9f0c"
   },
   {
    "section": "waterpolo-women",
@@ -1758,6 +1891,24 @@
    "nt": "18c8911df6"
   },
   {
+   "section": "futsal",
+   "uid": "futsal-eps-24033",
+   "home": "ΣΑΛΑΜΙΝΑ ΓΣ",
+   "away": "ΠΑΟΚ",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "8η αγωνιστική",
+   "score": "",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/24033/",
+   "start": "2026-11-08T18:00:00+02:00",
+   "timeKnown": false,
+   "paokHome": false,
+   "homeLogo": "https://epssalas.gr/wp-content/uploads/2023/07/olympakos-salaminas.png",
+   "awayLogo": "",
+   "nt": "f76e9500ee"
+  },
+  {
    "section": "volley",
    "uid": "volley-2026-27-1d3233390ed2",
    "home": "Α.Ο.Καλαμάτα 80 Affidea",
@@ -1966,6 +2117,24 @@
    "nt": "54b0fc5212"
   },
   {
+   "section": "futsal",
+   "uid": "futsal-eps-24043",
+   "home": "ΠΑΟΚ",
+   "away": "ΑΕΛ",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "9η αγωνιστική",
+   "score": "",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/24043/",
+   "start": "2026-11-15T18:00:00+02:00",
+   "timeKnown": false,
+   "paokHome": true,
+   "homeLogo": "",
+   "awayLogo": "https://epssalas.gr/wp-content/uploads/2023/09/PNG-ΑΕΛ.png",
+   "nt": "a066365c5b"
+  },
+  {
    "section": "basketball",
    "uid": "basketball-eurocup-U2026_126",
    "home": "Manresa",
@@ -2133,6 +2302,24 @@
    "nt": "62d1acc8d2"
   },
   {
+   "section": "futsal",
+   "uid": "futsal-eps-24053",
+   "home": "ΔΟΥΚΑ ΑΣΕ",
+   "away": "ΠΑΟΚ",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "10η αγωνιστική",
+   "score": "",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/24053/",
+   "start": "2026-11-22T18:00:00+02:00",
+   "timeKnown": false,
+   "paokHome": false,
+   "homeLogo": "https://epssalas.gr/wp-content/uploads/2023/07/doukas.png",
+   "awayLogo": "",
+   "nt": "8a132e3b44"
+  },
+  {
    "section": "football",
    "uid": "football-espn-401896724",
    "home": "ΠΑΟΚ",
@@ -2282,6 +2469,24 @@
    "nt": "45c30eb3bc"
   },
   {
+   "section": "futsal",
+   "uid": "futsal-eps-24063",
+   "home": "ΠΑΟΚ",
+   "away": "ΠΥΡΓΟΣ FUTSAL",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "11η αγωνιστική",
+   "score": "",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/24063/",
+   "start": "2026-11-29T18:00:00+02:00",
+   "timeKnown": false,
+   "paokHome": true,
+   "homeLogo": "",
+   "awayLogo": "https://epssalas.gr/wp-content/uploads/2024/10/pyrgos.png",
+   "nt": "62418d0680"
+  },
+  {
    "section": "football",
    "uid": "football-espn-401896721",
    "home": "ΑΕΚ",
@@ -2429,6 +2634,24 @@
    "homeLogo": "https://apps.basket.gr/clubs/493/logo",
    "awayLogo": "https://apps.basket.gr/clubs/2/logo",
    "nt": "8c4af10469"
+  },
+  {
+   "section": "futsal",
+   "uid": "futsal-eps-24073",
+   "home": "ΠΑΟΚ",
+   "away": "ΜΙΝΩΤΑΥΡΟΣ",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "12η αγωνιστική",
+   "score": "",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/24073/",
+   "start": "2026-12-06T18:00:00+02:00",
+   "timeKnown": false,
+   "paokHome": true,
+   "homeLogo": "",
+   "awayLogo": "https://epssalas.gr/wp-content/uploads/2023/01/PNG-ΜΙΝΩΤΑΥΡΟΣ-league-table.png",
+   "nt": "b6c1f06a94"
   },
   {
    "section": "football",
@@ -2601,6 +2824,24 @@
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/d7aa6360e83232ec98861e11cdd6bc9f.jpg?itok=nLzgyfYH",
    "nt": "4db3141ce1"
+  },
+  {
+   "section": "futsal",
+   "uid": "futsal-eps-24087",
+   "home": "ΑΕΚ",
+   "away": "ΠΑΟΚ",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "13η αγωνιστική",
+   "score": "",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/24087/",
+   "start": "2026-12-13T18:00:00+02:00",
+   "timeKnown": false,
+   "paokHome": false,
+   "homeLogo": "https://epssalas.gr/wp-content/uploads/2022/09/PNG-ΑΕΚ-1.png",
+   "awayLogo": "",
+   "nt": "9b045ef8ec"
   },
   {
    "section": "football",
@@ -2780,6 +3021,24 @@
    "nt": "1062c36618"
   },
   {
+   "section": "futsal",
+   "uid": "futsal-eps-24101",
+   "home": "ΠΑΟΚ",
+   "away": "ΤΡΑΧΩΝΕΣ ΑΛΙΜΟΥ",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "14η αγωνιστική",
+   "score": "",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/24101/",
+   "start": "2026-12-20T18:00:00+02:00",
+   "timeKnown": false,
+   "paokHome": true,
+   "homeLogo": "",
+   "awayLogo": "https://epssalas.gr/wp-content/uploads/2023/01/PNG-ΤΡΑΧΩΝΕΣ-1-league-table.png",
+   "nt": "8aaa969c38"
+  },
+  {
    "section": "waterpolo",
    "uid": "waterpolo-paok-domus-ergo-no-xiu-aura-2026-12-23",
    "home": "ΠΑΟΚ",
@@ -2914,6 +3173,24 @@
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
    "awayLogo": "https://apps.basket.gr/club-teams/2/logo",
    "nt": "db1a35b470"
+  },
+  {
+   "section": "futsal",
+   "uid": "futsal-eps-24115",
+   "home": "ΑΘΗΝΑ ’90 ΣΑΛΑΣ",
+   "away": "ΠΑΟΚ",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "15η αγωνιστική",
+   "score": "",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/24115/",
+   "start": "2027-01-03T18:00:00+02:00",
+   "timeKnown": false,
+   "paokHome": false,
+   "homeLogo": "https://epssalas.gr/wp-content/uploads/2023/07/athina-90-2.png",
+   "awayLogo": "",
+   "nt": "a66142b3e0"
   },
   {
    "section": "volley",
@@ -3083,6 +3360,24 @@
    "nt": "244d18973b"
   },
   {
+   "section": "futsal",
+   "uid": "futsal-eps-24129",
+   "home": "ΠΑΟΚ",
+   "away": "ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "16η αγωνιστική",
+   "score": "",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/24129/",
+   "start": "2027-01-10T18:00:00+02:00",
+   "timeKnown": false,
+   "paokHome": true,
+   "homeLogo": "",
+   "awayLogo": "https://epssalas.gr/wp-content/uploads/2023/01/PNG-ΠΑΟ-ΣΑΛΑΣ-league-table.png",
+   "nt": "6df1335613"
+  },
+  {
    "section": "football",
    "uid": "football-espn-401896701",
    "home": "Άρης",
@@ -3222,6 +3517,24 @@
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/0aa9875ddbc50bb6ac5064fc12a9039e.jpg?itok=aKr1Kf_z",
    "nt": "afa3fa82a4"
+  },
+  {
+   "section": "futsal",
+   "uid": "futsal-eps-24143",
+   "home": "ΠΑΟΚ",
+   "away": "ΕΡΜΗΣ ΖΩΓΡΑΦΟΥ",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "17η αγωνιστική",
+   "score": "",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/24143/",
+   "start": "2027-01-17T18:00:00+02:00",
+   "timeKnown": false,
+   "paokHome": true,
+   "homeLogo": "",
+   "awayLogo": "https://epssalas.gr/wp-content/uploads/2023/01/PNG-ΕΡΜΗΣ-ΖΩΓΡΑΦΟΥ-league-table.png",
+   "nt": "322cf0ecc2"
   },
   {
    "section": "volley",
@@ -3409,6 +3722,24 @@
    "nt": "65584f597c"
   },
   {
+   "section": "futsal",
+   "uid": "futsal-eps-24155",
+   "home": "ΚΟΡΥΔΑΛΛΟΥ ΑΟΔ",
+   "away": "ΠΑΟΚ",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "18η αγωνιστική",
+   "score": "",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/24155/",
+   "start": "2027-01-24T18:00:00+02:00",
+   "timeKnown": false,
+   "paokHome": false,
+   "homeLogo": "https://epssalas.gr/wp-content/uploads/2020/10/PNG-ΚΟΡΥΔΑΛΛΟΣ2.png",
+   "awayLogo": "",
+   "nt": "a8df7bd956"
+  },
+  {
    "section": "waterpolo",
    "uid": "waterpolo-paok-domus-ergo-olympiakos-sfp-2027-01-27",
    "home": "ΠΑΟΚ",
@@ -3556,6 +3887,24 @@
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/19d71df6850c19084f7494c63a2cab42.jpg?itok=KtgTCCqg",
    "nt": "cad1ca0b1e"
+  },
+  {
+   "section": "futsal",
+   "uid": "futsal-eps-24165",
+   "home": "ΠΑΟΚ",
+   "away": "ΣΑΛΑΜΙΝΑ ΓΣ",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "19η αγωνιστική",
+   "score": "",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/24165/",
+   "start": "2027-01-31T18:00:00+02:00",
+   "timeKnown": false,
+   "paokHome": true,
+   "homeLogo": "",
+   "awayLogo": "https://epssalas.gr/wp-content/uploads/2023/07/olympakos-salaminas.png",
+   "nt": "2731b7f3ac"
   },
   {
    "section": "volley",
@@ -3743,6 +4092,24 @@
    "nt": "c32ed7e196"
   },
   {
+   "section": "futsal",
+   "uid": "futsal-eps-24175",
+   "home": "ΑΕΛ",
+   "away": "ΠΑΟΚ",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "20η αγωνιστική",
+   "score": "",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/24175/",
+   "start": "2027-02-07T18:00:00+02:00",
+   "timeKnown": false,
+   "paokHome": false,
+   "homeLogo": "https://epssalas.gr/wp-content/uploads/2023/09/PNG-ΑΕΛ.png",
+   "awayLogo": "",
+   "nt": "55ea5ff319"
+  },
+  {
    "section": "waterpolo",
    "uid": "waterpolo-ethnikos-ofpf-paok-domus-ergo-2027-02-13",
    "home": "ΕΘΝΙΚΟΣ ΟΦΠΦ",
@@ -3874,6 +4241,24 @@
    "nt": "46814ec279"
   },
   {
+   "section": "futsal",
+   "uid": "futsal-eps-24185",
+   "home": "ΠΑΟΚ",
+   "away": "ΔΟΥΚΑ ΑΣΕ",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "21η αγωνιστική",
+   "score": "",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/24185/",
+   "start": "2027-02-14T18:00:00+02:00",
+   "timeKnown": false,
+   "paokHome": true,
+   "homeLogo": "",
+   "awayLogo": "https://epssalas.gr/wp-content/uploads/2023/07/doukas.png",
+   "nt": "4e72a831b0"
+  },
+  {
    "section": "football",
    "uid": "football-espn-401896670",
    "home": "Κηφισιά",
@@ -3985,6 +4370,24 @@
    "homeLogo": "https://apps.basket.gr/clubs/82/logo",
    "awayLogo": "https://apps.basket.gr/clubs/2/logo",
    "nt": "f7a6aa7dd8"
+  },
+  {
+   "section": "futsal",
+   "uid": "futsal-eps-24195",
+   "home": "ΠΥΡΓΟΣ FUTSAL",
+   "away": "ΠΑΟΚ",
+   "venue": "",
+   "competition": "Futsal Super League",
+   "round": "22η αγωνιστική",
+   "score": "",
+   "tv": "",
+   "url": "https://epssalas.gr/sport-event/24195/",
+   "start": "2027-02-21T18:00:00+02:00",
+   "timeKnown": false,
+   "paokHome": false,
+   "homeLogo": "https://epssalas.gr/wp-content/uploads/2024/10/pyrgos.png",
+   "awayLogo": "",
+   "nt": "aa841bf2f4"
   },
   {
    "section": "basketball-women",
@@ -4836,15 +5239,16 @@
   }
  ],
  "updated": {
-  "football": "2026-10-29T21:23+02:00",
-  "football-women": "2026-10-29T21:23+02:00",
-  "basketball": "2026-10-29T21:23+02:00",
-  "basketball-women": "2026-10-29T21:23+02:00",
-  "volley": "2026-10-29T21:23+02:00",
-  "volley-women": "2026-10-29T21:23+02:00",
-  "handball": "2026-10-29T21:23+02:00",
-  "handball-women": "2026-10-29T21:24+02:00",
-  "waterpolo": "2026-10-29T21:24+02:00",
-  "waterpolo-women": "2026-10-29T21:24+02:00"
+  "football": "2026-10-30T00:27+02:00",
+  "football-women": "2026-10-30T00:27+02:00",
+  "basketball": "2026-10-30T00:27+02:00",
+  "basketball-women": "2026-10-30T00:27+02:00",
+  "volley": "2026-10-30T00:28+02:00",
+  "volley-women": "2026-10-30T00:28+02:00",
+  "handball": "2026-10-30T00:28+02:00",
+  "handball-women": "2026-10-30T00:29+02:00",
+  "waterpolo": "2026-10-30T00:29+02:00",
+  "waterpolo-women": "2026-10-30T00:29+02:00",
+  "futsal": "2026-10-30T00:29+02:00"
  }
 }

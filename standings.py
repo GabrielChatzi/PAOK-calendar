@@ -14,6 +14,7 @@ import re
 
 from build_calendars import (
     DATAPROJECT, EPO, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
+    fetch_until,
     is_paok, latin_title, plain, season_start_year, tidy_name, volley_rows,
 )
 
@@ -145,7 +146,7 @@ def eurocup() -> list[dict]:
 
 def basketball_women() -> list[dict]:
     url = "https://www.basket.gr/wbl1/standings/"
-    tables = html_tables(fetch(url), url)
+    tables = html_tables(fetch_until(url, lambda p: "<table" in p and "ΠΑΟΚ" in p), url)
     rows = []
     for texts, imgs in tables[0][1:]:
         if len(texts) < 8:

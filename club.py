@@ -192,7 +192,9 @@ def fmt(day: dt.date, time: dt.time | None) -> str:
 def reconcile(section: str, official: list[Match], checks: list[str], label: str) -> list[Match]:
     """Συμπληρώνει το πρόγραμμα ενός τμήματος από την ΑΣ ΠΑΟΚ. Επιστρέφει τους αγώνες που προστέθηκαν.
 
-    Αλλάζει επίσης την ώρα όσων επίσημων αγώνων δεν έχουν ακόμα ώρα.
+    Αλλάζει επίσης την ώρα των επίσημων αγώνων όταν η ΑΣ ΠΑΟΚ δίνει άλλη ώρα για την ίδια μέρα
+    (ή η επίσημη πηγή δεν έχει ακόμα ώρα): η πιο πρόσφατη ανακοίνωση του συλλόγου είναι συνήθως
+    πιο ενημερωμένη από τα site των ομοσπονδιών. Διαφορά στη μέρα μόνο καταγράφεται.
     """
     added: list[Match] = []
     today = dt.date.today()
@@ -213,8 +215,14 @@ def reconcile(section: str, official: list[Match], checks: list[str], label: str
                     m.time = e["time"]  # η επίσημη πηγή δεν έχει ακόμα ώρα
             elif (m.day, m.time) != (e["day"], e["time"]) and m.uid not in seen:
                 seen.add(m.uid)
-                checks.append(f"- **{label}** {m.home} – {m.away}: η επίσημη πηγή γράφει {fmt(m.day, m.time)}, "
-                              f"η ΑΣ ΠΑΟΚ {fmt(e['day'], e['time'])} ([ανακοίνωση]({e['link']}))")
+                official_when = fmt(m.day, m.time)
+                if m.day == e["day"]:
+                    m.time = e["time"]
+                    action = "κρατήθηκε η ώρα της ΑΣ ΠΑΟΚ"
+                else:
+                    action = "κρατήθηκε η μέρα της επίσημης πηγής"
+                checks.append(f"- **{label}** {m.home} – {m.away}: η επίσημη πηγή γράφει {official_when}, "
+                              f"η ΑΣ ΠΑΟΚ {fmt(e['day'], e['time'])} ([ανακοίνωση]({e['link']})) · {action}")
             continue
         if e["kind"] == "program":
             home, away = e["home"], e["away"]

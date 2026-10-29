@@ -127,6 +127,19 @@ def fetch(url: str, data: list[tuple[str, str]] | None = None, encoding: str = "
     return _FETCHED[key]
 
 
+def fetch_until(url: str, ok: Callable[[str], bool], tries: int = 3) -> str:
+    """Όπως το fetch, αλλά ξαναδοκιμάζει αν η σελίδα ήρθε ελλιπής (συμβαίνει στο basket.gr)."""
+    import time
+    page = fetch(url)
+    for _ in range(tries - 1):
+        if ok(page):
+            break
+        time.sleep(8)
+        _FETCHED.pop((url, None, "utf-8"), None)
+        page = fetch(url)
+    return page
+
+
 def season_start_year(today: dt.date | None = None) -> int:
     today = today or dt.date.today()
     return today.year if today.month >= 7 else today.year - 1
@@ -656,7 +669,7 @@ def eurocup_matches() -> list[Match]:
 
 def wbl1_matches() -> list[Match]:
     url = "https://www.basket.gr/wbl1/schedule/"
-    page = fetch(url)
+    page = fetch_until(url, lambda t: '<div class="page-schedule" ' in t and "ΠΑΟΚ" in t)
     out = []
     for block in page.split('<div class="page-schedule" ')[1:]:
         rnd = re.search(r'data-round="([^"]*)"', block)

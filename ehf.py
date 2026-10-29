@@ -21,10 +21,14 @@ for sub in ("ehfcl", "ehfel", "ehfec"):
             for _ in range(30):
                 if not ms: break
                 anchor = (ms[-1] if fut else ms[0])["matchID"]
-                ms = json.loads(get(f"{base}/umbraco/api/competitionmatchesapi/GetMatches?{q}&matchId={anchor}&futureMatches={'true' if fut else 'false'}"))["matches"]
+                try:
+                    ms = json.loads(get(f"{base}/umbraco/api/competitionmatchesapi/GetMatches?{q}&matchId={anchor}&futureMatches={'true' if fut else 'false'}"))["matches"]
+                except Exception as e:
+                    print("   page err", fut, e); break
                 allm += ms
         print(f"## {sub} {g} {comp.group(1)} {cont.group(1)} total {len(allm)}")
-        if first and allm:
+        allm = list({m['matchID']: m for m in allm}.values()); print('   unique', len(allm))
+        if False and first and allm:
             m = allm[0]; first = False
             print(json.dumps({k: (v if k not in ("comp",) else {kk: v[kk] for kk in ("round","phase","group","name")}) for k, v in m.items()}, ensure_ascii=False)[:3500])
         for m in allm:

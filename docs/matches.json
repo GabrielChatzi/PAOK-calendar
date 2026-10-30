@@ -506,7 +506,7 @@
   {
    "section": "waterpolo",
    "uid": "waterpolo-no-xiu-aura-paok-domus-ergo-2026-09-26",
-   "home": "ΝΟ ΧΙΟΥ",
+   "home": "ΝΟ ΧΙΟΥ ΑΥΡΑ",
    "away": "ΠΑΟΚ",
    "venue": "",
    "competition": "Water Polo League",
@@ -2063,24 +2063,6 @@
    "nt": "520418b1b8"
   },
   {
-   "section": "handball",
-   "uid": "handball-oxe-34648",
-   "home": "ΠΑΟΚ",
-   "away": "ΔΙΟΜΗΔΗΣ ΑΡΓΟΥΣ",
-   "venue": "",
-   "competition": "Handball Premier",
-   "round": "8η Αγωνιστική",
-   "score": "",
-   "tv": "",
-   "url": "http://statistics.handball.org.gr/gr/sportevents.asp",
-   "start": "2026-11-14T18:00:00+02:00",
-   "timeKnown": true,
-   "paokHome": true,
-   "homeLogo": "",
-   "awayLogo": "",
-   "nt": "77ac97955d"
-  },
-  {
    "section": "waterpolo-women",
    "uid": "waterpolo-women-alimos-nas-betsson-paok-domus-ergo-2026-11-14",
    "home": "ΑΛΙΜΟΣ ΝΑΣ",
@@ -2133,6 +2115,24 @@
    "homeLogo": "",
    "awayLogo": "https://epssalas.gr/wp-content/uploads/2023/09/PNG-ΑΕΛ.png",
    "nt": "a066365c5b"
+  },
+  {
+   "section": "handball",
+   "uid": "handball-oxe-34648",
+   "home": "ΠΑΟΚ",
+   "away": "ΔΙΟΜΗΔΗΣ ΑΡΓΟΥΣ",
+   "venue": "",
+   "competition": "Handball Premier",
+   "round": "8η Αγωνιστική",
+   "score": "",
+   "tv": "",
+   "url": "http://statistics.handball.org.gr/gr/sportevents.asp",
+   "start": "2026-11-16T17:00:00+02:00",
+   "timeKnown": true,
+   "paokHome": true,
+   "homeLogo": "",
+   "awayLogo": "",
+   "nt": "77ac97955d"
   },
   {
    "section": "basketball",
@@ -2910,7 +2910,7 @@
   {
    "section": "waterpolo",
    "uid": "waterpolo-gs-peristeriu-paok-domus-ergo-2026-12-19",
-   "home": "ΓΣ ΠΕΡΙΣΤΕΡΙΟΥ",
+   "home": "ΓΣ ΠΕΡΙΣΤΕΡΙΟΥ MEDITERRANEAN COLLEGE",
    "away": "ΠΑΟΚ",
    "venue": "",
    "competition": "Water Polo League",
@@ -3042,7 +3042,7 @@
    "section": "waterpolo",
    "uid": "waterpolo-paok-domus-ergo-no-xiu-aura-2026-12-23",
    "home": "ΠΑΟΚ",
-   "away": "ΝΟ ΧΙΟΥ",
+   "away": "ΝΟ ΧΙΟΥ ΑΥΡΑ",
    "venue": "",
    "competition": "Water Polo League",
    "round": "",
@@ -5133,7 +5133,7 @@
    "section": "waterpolo",
    "uid": "waterpolo-paok-domus-ergo-gs-peristeriu-2027-04-10",
    "home": "ΠΑΟΚ",
-   "away": "ΓΣ ΠΕΡΙΣΤΕΡΙΟΥ",
+   "away": "ΓΣ ΠΕΡΙΣΤΕΡΙΟΥ MEDITERRANEAN COLLEGE",
    "venue": "",
    "competition": "Water Polo League",
    "round": "",
@@ -5239,16 +5239,16 @@
   }
  ],
  "updated": {
-  "football": "2026-10-30T14:56+02:00",
-  "football-women": "2026-10-30T14:56+02:00",
-  "basketball": "2026-10-30T14:56+02:00",
-  "basketball-women": "2026-10-30T14:56+02:00",
-  "volley": "2026-10-30T14:56+02:00",
-  "volley-women": "2026-10-30T14:56+02:00",
-  "handball": "2026-10-30T14:57+02:00",
-  "handball-women": "2026-10-30T14:57+02:00",
-  "waterpolo": "2026-10-30T14:57+02:00",
-  "waterpolo-women": "2026-10-30T14:57+02:00",
-  "futsal": "2026-10-30T14:57+02:00"
+  "football": "2026-10-30T16:00+02:00",
+  "football-women": "2026-10-30T16:00+02:00",
+  "basketball": "2026-10-30T16:01+02:00",
+  "basketball-women": "2026-10-30T16:01+02:00",
+  "volley": "2026-10-30T16:01+02:00",
+  "volley-women": "2026-10-30T16:01+02:00",
+  "handball": "2026-10-30T16:01+02:00",
+  "handball-women": "2026-10-30T16:02+02:00",
+  "waterpolo": "2026-10-30T16:02+02:00",
+  "waterpolo-women": "2026-10-30T16:02+02:00",
+  "futsal": "2026-10-30T16:02+02:00"
  }
 }

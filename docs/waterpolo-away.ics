@@ -26,18 +26,18 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:waterpolo-no-xiu-aura-paok-domus-ergo-2026-09-26@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T140047Z
 DTSTART;TZID=Europe/Athens:20260926T170000
 DTEND;TZID=Europe/Athens:20260926T190000
-SUMMARY:🤽 ΝΟ ΧΙΟΥ 10-10 ΠΑΟΚ
-DESCRIPTION:Water Polo League\nΤελικό σκορ: ΝΟ ΧΙΟΥ 10-10 
- ΠΑΟΚ
+SUMMARY:🤽 ΝΟ ΧΙΟΥ ΑΥΡΑ 10-10 ΠΑΟΚ
+DESCRIPTION:Water Polo League\nΤελικό σκορ: ΝΟ ΧΙΟΥ ΑΥΡ
+ Α 10-10 ΠΑΟΚ
 URL:https://waterpololeague.gr/fixture/no-xiu-aura-paok-domus-ergo-2026-09-
  26
 END:VEVENT
 BEGIN:VEVENT
 UID:waterpolo-olympiakos-sfp-paok-domus-ergo-2026-10-10@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T140047Z
 DTSTART;TZID=Europe/Athens:20261010T160000
 DTEND;TZID=Europe/Athens:20261010T180000
 SUMMARY:🤽 ΟΛΥΜΠΙΑΚΟΣ ΣΦΠ 20-6 ΠΑΟΚ
@@ -48,7 +48,7 @@ URL:https://waterpololeague.gr/fixture/olympiakos-sfp-paok-domus-ergo-2026-
 END:VEVENT
 BEGIN:VEVENT
 UID:waterpolo-panionios-gss-paok-domus-ergo-2026-10-21@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T140047Z
 DTSTART;TZID=Europe/Athens:20261020T153000
 DTEND;TZID=Europe/Athens:20261020T173000
 SUMMARY:🤽 ΠΑΝΙΩΝΙΟΣ ΓΣΣ 7-11 ΠΑΟΚ
@@ -59,7 +59,7 @@ URL:https://waterpololeague.gr/fixture/panionios-gss-paok-domus-ergo-2026-1
 END:VEVENT
 BEGIN:VEVENT
 UID:waterpolo-no-xanion-paok-domus-ergo-2026-11-14@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T140047Z
 DTSTART;TZID=Europe/Athens:20261114T154500
 DTEND;TZID=Europe/Athens:20261114T174500
 SUMMARY:🤽 ΝΟ ΧΑΝΙΩΝ – ΠΑΟΚ
@@ -68,7 +68,7 @@ URL:https://waterpololeague.gr/fixture/no-xanion-paok-domus-ergo-2026-11-14
 END:VEVENT
 BEGIN:VEVENT
 UID:waterpolo-ano-glyfadas-paok-domus-ergo-2026-11-21@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T140047Z
 DTSTART;TZID=Europe/Athens:20261121T160000
 DTEND;TZID=Europe/Athens:20261121T180000
 SUMMARY:🤽 ΑΝΟ ΓΛΥΦΑΔΑΣ – ΠΑΟΚ
@@ -78,7 +78,7 @@ URL:https://waterpololeague.gr/fixture/ano-glyfadas-paok-domus-ergo-2026-11
 END:VEVENT
 BEGIN:VEVENT
 UID:waterpolo-ydraikos-no-paok-domus-ergo-2026-12-05@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T140047Z
 DTSTART;TZID=Europe/Athens:20261205T150000
 DTEND;TZID=Europe/Athens:20261205T170000
 SUMMARY:🤽 ΥΔΡΑΙΚΟΣ ΝΟ – ΠΑΟΚ
@@ -88,17 +88,17 @@ URL:https://waterpololeague.gr/fixture/ydraikos-no-paok-domus-ergo-2026-12-
 END:VEVENT
 BEGIN:VEVENT
 UID:waterpolo-gs-peristeriu-paok-domus-ergo-2026-12-19@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T140047Z
 DTSTART;TZID=Europe/Athens:20261219T160000
 DTEND;TZID=Europe/Athens:20261219T180000
-SUMMARY:🤽 ΓΣ ΠΕΡΙΣΤΕΡΙΟΥ – ΠΑΟΚ
+SUMMARY:🤽 ΓΣ ΠΕΡΙΣΤΕΡΙΟΥ MEDITERRANEAN COLLEGE – ΠΑΟΚ
 DESCRIPTION:Water Polo League
 URL:https://waterpololeague.gr/fixture/gs-peristeriu-paok-domus-ergo-2026-1
  2-19
 END:VEVENT
 BEGIN:VEVENT
 UID:waterpolo-panathhnaikos-ao-paok-domus-ergo-2027-01-23@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T140047Z
 DTSTART;TZID=Europe/Athens:20270123T210000
 DTEND;TZID=Europe/Athens:20270123T230000
 SUMMARY:🤽 ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ – ΠΑΟΚ
@@ -108,7 +108,7 @@ URL:https://waterpololeague.gr/fixture/panathhnaikos-ao-paok-domus-ergo-202
 END:VEVENT
 BEGIN:VEVENT
 UID:waterpolo-aop-falhru-paok-domus-ergo-2027-01-30@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T140047Z
 DTSTART;TZID=Europe/Athens:20270130T160000
 DTEND;TZID=Europe/Athens:20270130T180000
 SUMMARY:🤽 ΠΑΛΑΙΟ ΦΑΛΗΡΟ – ΠΑΟΚ
@@ -118,7 +118,7 @@ URL:https://waterpololeague.gr/fixture/aop-falhru-paok-domus-ergo-2027-01-3
 END:VEVENT
 BEGIN:VEVENT
 UID:waterpolo-ethnikos-ofpf-paok-domus-ergo-2027-02-13@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T140047Z
 DTSTART;TZID=Europe/Athens:20270213T140000
 DTEND;TZID=Europe/Athens:20270213T160000
 SUMMARY:🤽 ΕΘΝΙΚΟΣ ΟΦΠΦ – ΠΑΟΚ
@@ -128,7 +128,7 @@ URL:https://waterpololeague.gr/fixture/ethnikos-ofpf-paok-domus-ergo-2027-0
 END:VEVENT
 BEGIN:VEVENT
 UID:waterpolo-no-buliagmenhs-paok-domus-ergo-2027-03-10@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T140047Z
 DTSTART;TZID=Europe/Athens:20270310T180000
 DTEND;TZID=Europe/Athens:20270310T200000
 SUMMARY:🤽 ΝΟ ΒΟΥΛΙΑΓΜΕΝΗΣ – ΠΑΟΚ
@@ -138,7 +138,7 @@ URL:https://waterpololeague.gr/fixture/no-buliagmenhs-paok-domus-ergo-2027-
 END:VEVENT
 BEGIN:VEVENT
 UID:waterpolo-hly-paok-domus-ergo-2027-03-20@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T140047Z
 DTSTART;TZID=Europe/Athens:20270320T160000
 DTEND;TZID=Europe/Athens:20270320T180000
 SUMMARY:🤽 ΗΛΥΣΙΑΚΟΣ ΑΟ – ΠΑΟΚ
@@ -147,7 +147,7 @@ URL:https://waterpololeague.gr/fixture/hly-paok-domus-ergo-2027-03-20
 END:VEVENT
 BEGIN:VEVENT
 UID:waterpolo-gs-apollon-smyrnhs-paok-domus-ergo-2027-04-03@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T140047Z
 DTSTART;TZID=Europe/Athens:20270403T210000
 DTEND;TZID=Europe/Athens:20270403T230000
 SUMMARY:🤽 ΓΣ ΑΠΟΛΛΩΝ ΣΜ. – ΠΑΟΚ

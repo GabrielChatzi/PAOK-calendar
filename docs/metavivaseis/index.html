@@ -174,6 +174,10 @@
   .back svg { width: 18px; height: 18px; }
   footer { margin-top: 32px; font-size: 14px; color: var(--muted); }
   .seat .btn { padding: 0 14px; }
+  /* Ένδειξη φόρτωσης: λεπτή μπάρα πάνω και θάμπωμα, μόνο αν αργήσει πάνω από 150ms. */
+  #bar { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: var(--ink); z-index: 20; opacity: 0; }
+  body.loading #bar { opacity: 1; width: 80%; transition: width 2s cubic-bezier(.1,.7,.2,1) .15s, opacity 0s .15s; }
+  body.loading main { opacity: .55; transition: opacity .2s .15s; }
   .prio { font-size: 13px; color: var(--warn); margin-top: 4px; }
   .settings { border: 1.5px solid var(--ink); padding: 14px; margin-bottom: 14px; }
   .settings h3 { margin-bottom: 4px; }
@@ -185,6 +189,7 @@
 </style>
 </head>
 <body>
+<div id="bar" aria-hidden="true"></div>
 <header class="masthead">
   <div class="masthead-inner">
     <h1><a href="#/">Μεταβιβάσεις</a></h1>
@@ -234,6 +239,12 @@ let mine = null;
 let demoMode = false;
 let cutoffHours = 6;
 let pushOn = false;
+// Το «mine» ζητιέται μαζί με τα δεδομένα κάθε οθόνης, όχι πριν από αυτά.
+let mineReady = Promise.resolve();
+function refreshMine() {
+  mineReady = token ? api("mine").then((d) => { mine = d; }, () => { mine = null; }) : Promise.resolve().then(() => { mine = null; });
+  return mineReady;
+}
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -543,7 +554,7 @@ function prefsForm(section, { full = false } = {}) {
 
 async function viewHome(section) {
   store.set(SPORT_KEY, section);
-  const sum = await api("summary");
+  const [sum] = await Promise.all([api("summary"), mineReady]);
   summary = sum.matches || {};
   demoMode = Boolean(sum.demo);
   cutoffHours = sum.cutoffHours || cutoffHours;
@@ -602,7 +613,7 @@ function seatRow(o, shut) {
 async function viewMatch(id) {
   const m = matchesById.get(id);
   if (!m) { $("#view").innerHTML = `<p class="empty">Ο αγώνας δεν βρέθηκε.</p>`; cta(); return; }
-  const data = await api("match", { query: `&id=${encodeURIComponent(id)}` });
+  const [data] = await Promise.all([api("match", { query: `&id=${encodeURIComponent(id)}` }), mineReady]);
   const shut = closed(m);
   const mineGate = data.offers.filter((o) => o.myGate);
   const rest = data.offers.filter((o) => !o.myGate);
@@ -624,7 +635,8 @@ async function viewMatch(id) {
   cta(shut ? "" : "Δεν πάω σε αυτό — δώσε τη θέση σου", `#/give/${id}`);
 }
 
-function viewGive(preselect) {
+async function viewGive(preselect) {
+  await mineReady;
   // Χωρίς συγκεκριμένο αγώνα, προεπιλογή ο επόμενος του τμήματος που κοίταζε ο χρήστης.
   const selected = preselect || upcoming(sportTab(), { openOnly: true })[0]?.nt;
   const opts = ["football", "basketball"].map((s) => {
@@ -787,6 +799,7 @@ function requestCard(r) {
 }
 
 async function viewMine() {
+  await mineReady;
   if (!token) {
     $("#view").innerHTML = `${tabs("mine")}<p class="empty">Διάλεξε ψευδώνυμο για να δίνεις και να ζητάς θέσεις.</p>
       <button class="btn solid block" type="button" id="getnick">Διάλεξε ψευδώνυμο</button>`;
@@ -808,7 +821,8 @@ async function viewMine() {
   cta();
 }
 
-function viewSettings() {
+async function viewSettings() {
+  await mineReady;
   if (!token) { location.hash = "#/"; return; }
   const help = pushHelp();
   const devices = mine?.user?.devices || 0;
@@ -861,12 +875,12 @@ async function renderOnce() {
   });
   const focused = document.activeElement?.id;
   try {
-    if (token) { try { mine = await api("mine"); } catch { mine = null; } }
+    refreshMine();
     const parts = location.hash.replace(/^#\/?/, "").split("/");
     if (parts[0] === "m" && parts[1]) await viewMatch(parts[1]);
-    else if (parts[0] === "give") viewGive(parts[1]);
+    else if (parts[0] === "give") await viewGive(parts[1]);
     else if (parts[0] === "mine") await viewMine();
-    else if (parts[0] === "settings") viewSettings();
+    else if (parts[0] === "settings") await viewSettings();
     else await viewHome(parts[0] === "basketball" || parts[0] === "football" ? parts[0] : sportTab());
     for (const [id, v] of Object.entries(keep)) {
       const el = document.getElementById(id);
@@ -882,7 +896,8 @@ let lastHash = location.hash;
 window.addEventListener("hashchange", () => {
   if (location.hash.split("/")[1] !== lastHash.split("/")[1]) window.scrollTo(0, 0);
   lastHash = location.hash;
-  render();
+  document.body.classList.add("loading");
+  render().finally(() => document.body.classList.remove("loading"));
 });
 // Ανανέωση κάθε 15 δευτερόλεπτα όσο η σελίδα είναι ανοιχτή (όχι σε φόρμες ούτε με ανοιχτό διάλογο).
 setInterval(() => {
@@ -897,9 +912,13 @@ navigator.serviceWorker?.addEventListener("message", (e) => {
 });
 
 renderWho();
+// Πρώτα η σελίδα· ο έλεγχος ειδοποιήσεων γίνεται παράλληλα και ανανεώνει μόνο αν άλλαξε κάτι.
 loadMatches()
-  .then(() => syncPush())
-  .then(render)
+  .then(() => {
+    const before = pushOn;
+    syncPush().then(() => { if (pushOn !== before) render(); });
+    return render();
+  })
   .catch(() => { $("#view").innerHTML = `<p class="empty">Δεν φορτώθηκε το πρόγραμμα. Δοκίμασε ξανά.</p>`; });
 </script>
 </body>

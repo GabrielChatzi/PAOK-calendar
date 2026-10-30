@@ -293,14 +293,23 @@ async function timedNotifications(c) {
 
 // Κλείνει θέσεις μετά την προθεσμία, σβήνει ΑΦΜ, ολοκληρώνει όσες τελείωσαν, στέλνει χρονικές
 // ειδοποιήσεις και (στη δοκιμαστική φάση) κινεί τους demo χρήστες.
+// Τρέχει στο ?a=tick (κάθε 15') και, το πολύ μία φορά ανά MAINTENANCE_EVERY, μετά από ενέργειες.
+// ΟΧΙ στις απλές προβολές: κάθε ερώτημα στη βάση είναι ένα ταξίδι μετ' επιστροφής και οι σελίδες
+// άργούσαν. Οι προβολές φιλτράρουν μόνες τους ό,τι έχει λήξει.
+const MAINTENANCE_EVERY = 2 * 60 * 1000;
+let lastMaintenance = 0;
 async function housekeeping(c) {
+  lastMaintenance = Date.now();
   const now = new Date();
   const cutoff = new Date(now.getTime() + CUTOFF); // αγώνες που αρχίζουν πριν από αυτό έχουν κλείσει
   const ended = new Date(now.getTime() - MATCH_LENGTH);
+  // Παράλληλα μόνο ενημερώσεις σε ΔΙΑΦΟΡΕΤΙΚΑ έγγραφα (άλλες καταστάσεις)· ο ΑΦΜ των υπολοίπων μετά.
+  await Promise.all([
+    c.offers.updateMany({ matchStart: { $lt: cutoff }, status: { $in: ["open", "assigned"] } }, { $set: { status: "expired", updated: now }, $unset: { afm: "" } }),
+    c.offers.updateMany({ matchStart: { $lt: ended }, status: { $in: ["transferred", "received"] } }, { $set: { status: "closed", updated: now } }),
+    c.waits.deleteMany({ matchStart: { $lt: cutoff } }),
+  ]);
   await c.offers.updateMany({ matchStart: { $lt: cutoff }, afm: { $exists: true } }, { $unset: { afm: "" } });
-  await c.offers.updateMany({ matchStart: { $lt: cutoff }, status: { $in: ["open", "assigned"] } }, { $set: { status: "expired", updated: now } });
-  await c.offers.updateMany({ matchStart: { $lt: ended }, status: { $in: ["transferred", "received"] } }, { $set: { status: "closed", updated: now } });
-  await c.waits.deleteMany({ matchStart: { $lt: cutoff } });
   if (DEMO) await demoBots(c);
   await timedNotifications(c);
 }
@@ -407,6 +416,15 @@ async function nicks(c, ids) {
   return Object.fromEntries(rows.map((u) => [u._id, u]));
 }
 
+// Η κατάσταση μιας θέσης όπως είναι ΤΩΡΑ, ακόμα κι αν η συντήρηση δεν έχει τρέξει.
+function effective(o) {
+  const now = Date.now();
+  const start = new Date(o.matchStart).getTime();
+  if (["open", "assigned"].includes(o.status) && now >= start - CUTOFF) return { ...o, status: "expired", afm: undefined };
+  if (["transferred", "received"].includes(o.status) && now >= start + MATCH_LENGTH) return { ...o, status: "closed", afm: undefined };
+  return o;
+}
+
 // block = «Τμήμα» (μόνο στο μπάσκετ: Θύρα · Τμήμα · Σειρά · Θέση).
 const seatOf = (o) => ({ gate: o.gate, block: o.block || "", row: o.row || "", seat: o.seat || "" });
 const publicPrefs = (user) => ({ football: prefsOf(user, "football"), basketball: prefsOf(user, "basketball") });
@@ -415,13 +433,15 @@ const publicPrefs = (user) => ({ football: prefsOf(user, "football"), basketball
 const actions = {
   // GET: σύνοψη ανά αγώνα (ανοιχτές θέσεις, πόσοι ψάχνουν). Δημόσιο.
   async summary(req, c) {
-    const now = new Date();
-    const open = await c.offers.find({ status: "open", matchStart: { $gt: now } }, { projection: { matchId: 1 } }).toArray();
-    const reqs = await c.requests.find({ status: "pending" }, { projection: { matchId: 1, userId: 1 } }).toArray();
-    const waits = await c.waits.find({}, { projection: { matchId: 1, userId: 1 } }).toArray();
+    const open = new Date(Date.now() + CUTOFF); // μετά την προθεσμία μια θέση δεν μετράει
+    const [offers, reqs, waits] = await Promise.all([
+      c.offers.find({ status: "open", matchStart: { $gt: open } }, { projection: { matchId: 1 } }).toArray(),
+      c.requests.find({ status: "pending" }, { projection: { matchId: 1, userId: 1 } }).toArray(),
+      c.waits.find({ matchStart: { $gt: open } }, { projection: { matchId: 1, userId: 1 } }).toArray(),
+    ]);
     const out = {};
     const slot = (id) => (out[id] ??= { offers: 0, seekers: new Set() });
-    for (const o of open) slot(o.matchId).offers++;
+    for (const o of offers) slot(o.matchId).offers++;
     for (const r of [...reqs, ...waits]) slot(r.matchId).seekers.add(r.userId);
     for (const v of Object.values(out)) v.seekers = v.seekers.size;
     return { matches: out, demo: DEMO, cutoffHours: CUTOFF / HOUR };
@@ -466,24 +486,23 @@ const actions = {
   // GET ?id=<αγώνας>: οι ανοιχτές θέσεις ενός αγώνα, τι έχω ζητήσει και αν περιμένω.
   async match(req, c) {
     const id = String(req.query?.id || "");
-    const m = (await matches()).get(id);
+    const [all, me] = await Promise.all([matches(), currentUser(req, c, { required: false })]);
+    const m = all.get(id);
     if (!m) fail(404, "Ο αγώνας δεν βρέθηκε.");
-    const me = await currentUser(req, c, { required: false });
-    const offers = await c.offers.find({ matchId: id, status: "open" }).sort({ created: 1 }).toArray();
+    const isOpen = Date.now() < deadlineOf(m.start).getTime();
+    const [offers, rs, wait] = await Promise.all([
+      isOpen ? c.offers.find({ matchId: id, status: "open" }).sort({ created: 1 }).toArray() : [],
+      me ? c.requests.find({ matchId: id, userId: me._id, status: { $in: ["pending", "chosen"] } }).toArray() : [],
+      me ? c.waits.findOne({ _id: `${me._id}:${id}` }) : null,
+    ]);
     const owners = offers.map((o) => o.ownerId);
     const [people, given] = await Promise.all([nicks(c, owners), givenCounts(c, owners)]);
-    let mine = {};
-    let waiting = false;
-    if (me) {
-      const rs = await c.requests.find({ matchId: id, userId: me._id, status: { $in: ["pending", "chosen"] } }).toArray();
-      mine = Object.fromEntries(rs.map((r) => [r.offerId, { requestId: r._id, status: r.status }]));
-      waiting = Boolean(await c.waits.findOne({ _id: `${me._id}:${id}` }));
-    }
+    const mine = Object.fromEntries(rs.map((r) => [r.offerId, { requestId: r._id, status: r.status }]));
     const now = Date.now();
     return {
       deadline: deadlineOf(m.start),
       transferable: await transferable(id, m.section),
-      waiting,
+      waiting: Boolean(wait),
       prefs: me ? prefsOf(me, m.section) : null,
       offers: offers.map((o) => ({
         id: o._id, ...seatOf(o), note: o.note || "", created: o.created,
@@ -499,29 +518,36 @@ const actions = {
   // GET: όλα όσα με αφορούν, ως κάτοχο και ως παραλήπτη, και οι ρυθμίσεις μου.
   async mine(req, c) {
     const me = await currentUser(req, c);
-    const offers = await c.offers.find({ ownerId: me._id, status: { $nin: ["withdrawn"] } })
-      .sort({ matchStart: 1 }).limit(100).toArray();
-    const offerIds = offers.map((o) => o._id);
-    const reqsOnMine = await c.requests.find({ offerId: { $in: offerIds }, status: { $in: ["pending", "chosen"] } })
-      .sort({ created: 1 }).toArray();
-    const myReqs = await c.requests.find({ userId: me._id }).sort({ created: -1 }).limit(100).toArray();
-    const theirOffers = await c.offers.find({ _id: { $in: myReqs.map((r) => r.offerId) } }).toArray();
+    const [offersRaw, myReqs, waits, devices] = await Promise.all([
+      c.offers.find({ ownerId: me._id, status: { $nin: ["withdrawn"] } }).sort({ matchStart: 1 }).limit(100).toArray(),
+      c.requests.find({ userId: me._id }).sort({ created: -1 }).limit(100).toArray(),
+      c.waits.find({ userId: me._id }).toArray(),
+      c.push.countDocuments({ userId: me._id }),
+    ]);
+    const [reqsOnMine, theirRaw] = await Promise.all([
+      offersRaw.length ? c.requests.find({ offerId: { $in: offersRaw.map((o) => o._id) }, status: { $in: ["pending", "chosen"] } }).sort({ created: 1 }).toArray() : [],
+      myReqs.length ? c.offers.find({ _id: { $in: myReqs.map((r) => r.offerId) } }).toArray() : [],
+    ]);
+    // Η συντήρηση δεν τρέχει σε κάθε προβολή: η κατάσταση διορθώνεται εδώ με βάση την ώρα.
+    const offers = offersRaw.map(effective);
+    const theirOffers = theirRaw.map(effective);
     const offerById = Object.fromEntries(theirOffers.map((o) => [o._id, o]));
-    const waits = await c.waits.find({ userId: me._id }).toArray();
 
     const ids = [...reqsOnMine.map((r) => r.userId), ...offers.map((o) => o.recipientId), ...theirOffers.map((o) => o.ownerId)];
     const [people, given] = await Promise.all([nicks(c, ids), givenCounts(c, reqsOnMine.map((r) => r.userId))]);
     const canTransfer = {};
     for (const o of [...offers, ...theirOffers]) canTransfer[o._id] = await transferable(o.matchId, o.section);
+    const now = new Date();
 
     return {
-      user: { nick: me.nick, prefs: publicPrefs(me), devices: await c.push.countDocuments({ userId: me._id }) },
-      waits: waits.map((w) => w.matchId),
+      user: { nick: me.nick, prefs: publicPrefs(me), devices },
+      waits: waits.filter((w) => !w.matchStart || deadlineOf(w.matchStart) > now).map((w) => w.matchId),
       offers: offers.map((o) => ({
         id: o._id, matchId: o.matchId, ...seatOf(o), note: o.note || "", status: o.status,
         deadline: deadlineOf(o.matchStart),
         recipient: o.recipientId ? people[o.recipientId]?.nick || "—" : null,
-        afm: o.status === "assigned" ? o.afm || null : null, // μόνο στον κάτοχο, μόνο πριν τη μεταβίβαση
+        // ΑΦΜ μόνο στον κάτοχο, μόνο πριν τη μεταβίβαση και πριν την προθεσμία.
+        afm: o.status === "assigned" && canTransfer[o._id] ? o.afm || null : null,
         afmSent: Boolean(o.afm),
         transferable: canTransfer[o._id],
         priorityUntil: o.status === "open" && inPriority(o) ? o.priorityUntil : null,
@@ -759,6 +785,8 @@ const actions = {
 };
 
 const GET_ACTIONS = new Set(["summary", "match", "mine"]);
+// Ενέργειες που αλλάζουν θέσεις: μετά από αυτές απαντούν οι demo χρήστες (και η συντήρηση, αν έχει καιρό).
+const AFTER_ACTION = new Set(["seed", "offer", "withdraw", "request", "cancel", "choose", "afm", "transferred", "received", "backout"]);
 
 export default async function handler(req, res) {
   if (!configured()) return send(res, 503, { error: "Η βάση δεν έχει ρυθμιστεί." });
@@ -769,8 +797,13 @@ export default async function handler(req, res) {
   if (req.method !== (wantGet ? "GET" : "POST")) return send(res, 405, { error: wantGet ? "Μόνο GET." : "Μόνο POST." });
   try {
     const c = await cols();
-    await housekeeping(c);
+    if (a === "tick") await housekeeping(c);
     const out = await fn(req, c, wantGet ? {} : await readBody(req));
+    if (AFTER_ACTION.has(a)) {
+      // Μετά από ενέργεια: οι demo χρήστες απαντούν αμέσως· η συντήρηση το πολύ κάθε 2'.
+      if (Date.now() - lastMaintenance > MAINTENANCE_EVERY) await housekeeping(c);
+      else if (DEMO) await demoBots(c);
+    }
     return send(res, 200, out);
   } catch (e) {
     if (e instanceof Fail) return send(res, e.status, { error: e.message });

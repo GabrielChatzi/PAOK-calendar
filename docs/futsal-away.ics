@@ -27,7 +27,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:futsal-eps-23941@paok-calendar
-DTSTAMP:20261030T100044Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20260920T180000
 DTEND;TZID=Europe/Athens:20260920T200000
 SUMMARY:🥅 ΜΙΝΩΤΑΥΡΟΣ 4-8 ΠΑΟΚ (ώρα TBC)
@@ -39,7 +39,7 @@ URL:https://epssalas.gr/sport-event/23941/
 END:VEVENT
 BEGIN:VEVENT
 UID:futsal-eps-23969@paok-calendar
-DTSTAMP:20261030T100044Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20261004T180000
 DTEND;TZID=Europe/Athens:20261004T200000
 SUMMARY:🥅 ΤΡΑΧΩΝΕΣ ΑΛΙΜΟΥ 4-7 ΠΑΟΚ (ώρα TBC)
@@ -51,7 +51,7 @@ URL:https://epssalas.gr/sport-event/23969/
 END:VEVENT
 BEGIN:VEVENT
 UID:futsal-eps-23997@paok-calendar
-DTSTAMP:20261030T100044Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20261018T180000
 DTEND;TZID=Europe/Athens:20261018T200000
 SUMMARY:🥅 ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ 2-8 ΠΑΟΚ (ώρα TBC)
@@ -62,78 +62,90 @@ DESCRIPTION:Futsal Super League – 5η αγωνιστική\nΤελικό
 URL:https://epssalas.gr/sport-event/23997/
 END:VEVENT
 BEGIN:VEVENT
+UID:futsal-eps-24011@paok-calendar
+DTSTAMP:20261030T125555Z
+DTSTART;TZID=Europe/Athens:20261025T180000
+DTEND;TZID=Europe/Athens:20261025T200000
+SUMMARY:🥅 ΕΡΜΗΣ ΖΩΓΡΑΦΟΥ 7-1 ΠΑΟΚ (ώρα TBC)
+DESCRIPTION:Futsal Super League – 6η αγωνιστική\nΤελικό 
+ σκορ: ΕΡΜΗΣ ΖΩΓΡΑΦΟΥ 7-1 ΠΑΟΚ\nΗ ώρα δεν έχ
+ ει οριστεί ακόμα (προσωρινά 18:00). Θα ενημε
+ ρωθεί αυτόματα όταν ανακοινωθεί.
+URL:https://epssalas.gr/sport-event/24011/
+END:VEVENT
+BEGIN:VEVENT
 UID:futsal-eps-24033@paok-calendar
-DTSTAMP:20261030T100044Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20261108T180000
 DTEND;TZID=Europe/Athens:20261108T200000
 SUMMARY:🥅 ΣΑΛΑΜΙΝΑ ΓΣ – ΠΑΟΚ (ώρα TBC)
-DESCRIPTION:Futsal Super League – 7η αγωνιστική\nΗ ώρα δ
+DESCRIPTION:Futsal Super League – 8η αγωνιστική\nΗ ώρα δ
  εν έχει οριστεί ακόμα (προσωρινά 18:00). Θα 
  ενημερωθεί αυτόματα όταν ανακοινωθεί.
 URL:https://epssalas.gr/sport-event/24033/
 END:VEVENT
 BEGIN:VEVENT
 UID:futsal-eps-24053@paok-calendar
-DTSTAMP:20261030T100044Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20261122T180000
 DTEND;TZID=Europe/Athens:20261122T200000
 SUMMARY:🥅 ΔΟΥΚΑ ΑΣΕ – ΠΑΟΚ (ώρα TBC)
-DESCRIPTION:Futsal Super League – 9η αγωνιστική\nΗ ώρα δ
+DESCRIPTION:Futsal Super League – 10η αγωνιστική\nΗ ώρα δ
  εν έχει οριστεί ακόμα (προσωρινά 18:00). Θα 
  ενημερωθεί αυτόματα όταν ανακοινωθεί.
 URL:https://epssalas.gr/sport-event/24053/
 END:VEVENT
 BEGIN:VEVENT
 UID:futsal-eps-24087@paok-calendar
-DTSTAMP:20261030T100044Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20261213T180000
 DTEND;TZID=Europe/Athens:20261213T200000
 SUMMARY:🥅 ΑΕΚ – ΠΑΟΚ (ώρα TBC)
-DESCRIPTION:Futsal Super League – 12η αγωνιστική\nΗ ώρα δ
+DESCRIPTION:Futsal Super League – 13η αγωνιστική\nΗ ώρα δ
  εν έχει οριστεί ακόμα (προσωρινά 18:00). Θα 
  ενημερωθεί αυτόματα όταν ανακοινωθεί.
 URL:https://epssalas.gr/sport-event/24087/
 END:VEVENT
 BEGIN:VEVENT
 UID:futsal-eps-24115@paok-calendar
-DTSTAMP:20261030T100044Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20270103T180000
 DTEND;TZID=Europe/Athens:20270103T200000
 SUMMARY:🥅 ΑΘΗΝΑ ’90 ΣΑΛΑΣ – ΠΑΟΚ (ώρα TBC)
-DESCRIPTION:Futsal Super League – 14η αγωνιστική\nΗ ώρα δ
+DESCRIPTION:Futsal Super League – 15η αγωνιστική\nΗ ώρα δ
  εν έχει οριστεί ακόμα (προσωρινά 18:00). Θα 
  ενημερωθεί αυτόματα όταν ανακοινωθεί.
 URL:https://epssalas.gr/sport-event/24115/
 END:VEVENT
 BEGIN:VEVENT
 UID:futsal-eps-24155@paok-calendar
-DTSTAMP:20261030T100044Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20270124T180000
 DTEND;TZID=Europe/Athens:20270124T200000
 SUMMARY:🥅 ΚΟΡΥΔΑΛΛΟΥ ΑΟΔ – ΠΑΟΚ (ώρα TBC)
-DESCRIPTION:Futsal Super League – 17η αγωνιστική\nΗ ώρα δ
+DESCRIPTION:Futsal Super League – 18η αγωνιστική\nΗ ώρα δ
  εν έχει οριστεί ακόμα (προσωρινά 18:00). Θα 
  ενημερωθεί αυτόματα όταν ανακοινωθεί.
 URL:https://epssalas.gr/sport-event/24155/
 END:VEVENT
 BEGIN:VEVENT
 UID:futsal-eps-24175@paok-calendar
-DTSTAMP:20261030T100044Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20270207T180000
 DTEND;TZID=Europe/Athens:20270207T200000
 SUMMARY:🥅 ΑΕΛ – ΠΑΟΚ (ώρα TBC)
-DESCRIPTION:Futsal Super League – 19η αγωνιστική\nΗ ώρα δ
+DESCRIPTION:Futsal Super League – 20η αγωνιστική\nΗ ώρα δ
  εν έχει οριστεί ακόμα (προσωρινά 18:00). Θα 
  ενημερωθεί αυτόματα όταν ανακοινωθεί.
 URL:https://epssalas.gr/sport-event/24175/
 END:VEVENT
 BEGIN:VEVENT
 UID:futsal-eps-24195@paok-calendar
-DTSTAMP:20261030T100044Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20270221T180000
 DTEND;TZID=Europe/Athens:20270221T200000
 SUMMARY:🥅 ΠΥΡΓΟΣ FUTSAL – ΠΑΟΚ (ώρα TBC)
-DESCRIPTION:Futsal Super League – 21η αγωνιστική\nΗ ώρα δ
+DESCRIPTION:Futsal Super League – 22η αγωνιστική\nΗ ώρα δ
  εν έχει οριστεί ακόμα (προσωρινά 18:00). Θα 
  ενημερωθεί αυτόματα όταν ανακοινωθεί.
 URL:https://epssalas.gr/sport-event/24195/

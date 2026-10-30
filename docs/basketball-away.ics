@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:basketball-esake-43A0A50E@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20260926T210000
 DTEND;TZID=Europe/Athens:20260926T230000
 SUMMARY:🏀 Παναθηναϊκός 82-84 ΠΑΟΚ
@@ -38,7 +38,7 @@ URL:https://www.esake.gr/el/action/EsakegameView?idgame=43A0A50E&mode=3
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-esake-04920552@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20260927T200000
 DTEND;TZID=Europe/Athens:20260927T220000
 SUMMARY:🏀 Ολυμπιακός 101-96 ΠΑΟΚ
@@ -50,7 +50,7 @@ URL:https://www.esake.gr/el/action/EsakegameView?idgame=04920552&mode=3
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-esake-47FBE805@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20261003T150000
 DTEND;TZID=Europe/Athens:20261003T170000
 SUMMARY:🏀 Μύκονος 85-88 ΠΑΟΚ
@@ -61,7 +61,7 @@ URL:https://www.esake.gr/el/action/EsakegameView?idgame=47FBE805&mode=3
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-eurocup-U2026_32@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20261006T203000
 DTEND;TZID=Europe/Athens:20261006T223000
 SUMMARY:🏀 Bosna 72-75 ΠΑΟΚ
@@ -72,7 +72,7 @@ URL:https://www.eurocupbasketball.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-eurocup-U2026_45@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20261013T190000
 DTEND;TZID=Europe/Athens:20261013T210000
 SUMMARY:🏀 Lietkabelis 95-86 ΠΑΟΚ
@@ -83,7 +83,7 @@ URL:https://www.eurocupbasketball.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-esake-4A05E464@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20261017T160000
 DTEND;TZID=Europe/Athens:20261017T180000
 SUMMARY:🏀 Κολοσσός Ρόδου 84-88 ΠΑΟΚ
@@ -94,7 +94,7 @@ URL:https://www.esake.gr/el/action/EsakegameView?idgame=4A05E464&mode=3
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-eurocup-U2026_78@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20261027T180000
 DTEND;TZID=Europe/Athens:20261027T200000
 SUMMARY:🏀 Bahcesehir 84-81 ΠΑΟΚ
@@ -105,17 +105,18 @@ URL:https://www.eurocupbasketball.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-esake-29CD5AD8@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20261031T173000
 DTEND;TZID=Europe/Athens:20261031T193000
 SUMMARY:🏀 Ηρακλής – ΠΑΟΚ
 LOCATION:ΙΒΑΝΩΦΕΙΟ
-DESCRIPTION:Basket League – 5η Αγωνιστική\nTV: ΣΚΑΪ
+DESCRIPTION:Basket League – 5η Αγωνιστική\nTV: ΣΚΑΪ / SPOR
+ T FM TV 1
 URL:https://www.esake.gr/el/action/EsakegameView?idgame=29CD5AD8&mode=3
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-eurocup-U2026_111@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20261110T190000
 DTEND;TZID=Europe/Athens:20261110T210000
 SUMMARY:🏀 Balkan – ΠΑΟΚ
@@ -125,7 +126,7 @@ URL:https://www.eurocupbasketball.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-esake-81DA1041@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20261114T173000
 DTEND;TZID=Europe/Athens:20261114T193000
 SUMMARY:🏀 Καρδίτσα – ΠΑΟΚ
@@ -135,7 +136,7 @@ URL:https://www.esake.gr/el/action/EsakegameView?idgame=81DA1041&mode=3
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-eurocup-U2026_126@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20261118T213000
 DTEND;TZID=Europe/Athens:20261118T233000
 SUMMARY:🏀 Manresa – ΠΑΟΚ
@@ -145,7 +146,7 @@ URL:https://www.eurocupbasketball.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-esake-92DA3A6C@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20261213T130000
 DTEND;TZID=Europe/Athens:20261213T150000
 SUMMARY:🏀 Ολυμπιακός – ΠΑΟΚ
@@ -155,7 +156,7 @@ URL:https://www.esake.gr/el/action/EsakegameView?idgame=92DA3A6C&mode=3
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-esake-EE5EC285@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20261219T170000
 DTEND;TZID=Europe/Athens:20261219T190000
 SUMMARY:🏀 Μαρούσι – ΠΑΟΚ
@@ -165,7 +166,7 @@ URL:https://www.esake.gr/el/action/EsakegameView?idgame=EE5EC285&mode=3
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-eurocup-U2026_176@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20261223T200000
 DTEND;TZID=Europe/Athens:20261223T220000
 SUMMARY:🏀 Ulm – ΠΑΟΚ
@@ -175,7 +176,7 @@ URL:https://www.eurocupbasketball.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-eurocup-U2026_207@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20270106T210000
 DTEND;TZID=Europe/Athens:20270106T230000
 SUMMARY:🏀 Roma – ΠΑΟΚ
@@ -185,7 +186,7 @@ URL:https://www.eurocupbasketball.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-esake-5883A35D@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20270109T180000
 DTEND;TZID=Europe/Athens:20270109T200000
 SUMMARY:🏀 Προμηθέας Πάτρας – ΠΑΟΚ (ώρα TBC)
@@ -197,7 +198,7 @@ URL:https://www.esake.gr/el/action/EsakegameView?idgame=5883A35D&mode=3
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-esake-473E25A5@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20270116T180000
 DTEND;TZID=Europe/Athens:20270116T200000
 SUMMARY:🏀 ΑΕΚ – ΠΑΟΚ (ώρα TBC)
@@ -209,7 +210,7 @@ URL:https://www.esake.gr/el/action/EsakegameView?idgame=473E25A5&mode=3
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-esake-7F3505BF@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20270130T180000
 DTEND;TZID=Europe/Athens:20270130T200000
 SUMMARY:🏀 Άρης – ΠΑΟΚ (ώρα TBC)
@@ -221,7 +222,7 @@ URL:https://www.esake.gr/el/action/EsakegameView?idgame=7F3505BF&mode=3
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-esake-067EECBE@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20270214T180000
 DTEND;TZID=Europe/Athens:20270214T200000
 SUMMARY:🏀 Δόξα Λευκάδας – ΠΑΟΚ (ώρα TBC)
@@ -233,7 +234,7 @@ URL:https://www.esake.gr/el/action/EsakegameView?idgame=067EECBE&mode=3
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-esake-2FD55D90@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20270313T180000
 DTEND;TZID=Europe/Athens:20270313T200000
 SUMMARY:🏀 Περιστέρι – ΠΑΟΚ (ώρα TBC)
@@ -246,7 +247,7 @@ URL:https://www.esake.gr/el/action/EsakegameView?idgame=2FD55D90&mode=3
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-esake-48A3B4E2@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20270403T180000
 DTEND;TZID=Europe/Athens:20270403T200000
 SUMMARY:🏀 Vikos Falcons – ΠΑΟΚ (ώρα TBC)
@@ -258,7 +259,7 @@ URL:https://www.esake.gr/el/action/EsakegameView?idgame=48A3B4E2&mode=3
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-esake-F46C2903@paok-calendar
-DTSTAMP:20261027T221418Z
+DTSTAMP:20261030T125555Z
 DTSTART;TZID=Europe/Athens:20270411T180000
 DTEND;TZID=Europe/Athens:20270411T200000
 SUMMARY:🏀 Παναθηναϊκός – ΠΑΟΚ (ώρα TBC)

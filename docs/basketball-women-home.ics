@@ -27,7 +27,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:basketball-women-wbl1-f7ab58b49848@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T100044Z
 DTSTART;TZID=Europe/Athens:20261011T130000
 DTEND;TZID=Europe/Athens:20261011T150000
 SUMMARY:🏀 ΠΑΟΚ 70-68 ΑΣ ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ
@@ -38,7 +38,7 @@ URL:https://www.basket.gr/wbl1/schedule/
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-wbl1-2afa45fd86af@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T100044Z
 DTSTART;TZID=Europe/Athens:20261025T130000
 DTEND;TZID=Europe/Athens:20261025T150000
 SUMMARY:🏀 ΠΑΟΚ 69-65 ΟΛΥΜΠΙΑΚΟΣ ΣΦΠ
@@ -49,9 +49,9 @@ URL:https://www.basket.gr/wbl1/schedule/
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-wbl1-cbe61af88d80@paok-calendar
-DTSTAMP:20261026T092910Z
-DTSTART;TZID=Europe/Athens:20261107T130000
-DTEND;TZID=Europe/Athens:20261107T150000
+DTSTAMP:20261030T100044Z
+DTSTART;TZID=Europe/Athens:20261107T114500
+DTEND;TZID=Europe/Athens:20261107T134500
 SUMMARY:🏀 ΠΑΟΚ – ΑΘΗΝΑΙΚΟΣ QUALCO
 LOCATION:PAOK SPORTS ARENA (ΠΑΛΑΤΑΚΙ)
 DESCRIPTION:Women's Basketball League 1 – 6η Αγωνιστική
@@ -59,7 +59,7 @@ URL:https://www.basket.gr/wbl1/schedule/
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-wbl1-dc243a622e1c@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T100044Z
 DTSTART;TZID=Europe/Athens:20261128T130000
 DTEND;TZID=Europe/Athens:20261128T150000
 SUMMARY:🏀 ΠΑΟΚ – ΠΑΝΣΕΡΡΑΙΚΟΣ FIBRAN
@@ -69,7 +69,7 @@ URL:https://www.basket.gr/wbl1/schedule/
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-wbl1-b80234bd691a@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T100044Z
 DTSTART;TZID=Europe/Athens:20261212T130000
 DTEND;TZID=Europe/Athens:20261212T150000
 SUMMARY:🏀 ΠΑΟΚ – KRONOS BC PLASIS
@@ -79,7 +79,7 @@ URL:https://www.basket.gr/wbl1/schedule/
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-wbl1-93ef27a2c2d4@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T100044Z
 DTSTART;TZID=Europe/Athens:20270103T130000
 DTEND;TZID=Europe/Athens:20270103T150000
 SUMMARY:🏀 ΠΑΟΚ – ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ
@@ -89,7 +89,7 @@ URL:https://www.basket.gr/wbl1/schedule/
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-wbl1-953627e266cb@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T100044Z
 DTSTART;TZID=Europe/Athens:20270116T130000
 DTEND;TZID=Europe/Athens:20270116T150000
 SUMMARY:🏀 ΠΑΟΚ – ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ ΣΥΚΕΩΝ
@@ -99,7 +99,7 @@ URL:https://www.basket.gr/wbl1/schedule/
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-wbl1-f5df677c8385@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T100044Z
 DTSTART;TZID=Europe/Athens:20270123T130000
 DTEND;TZID=Europe/Athens:20270123T150000
 SUMMARY:🏀 ΠΑΟΚ – ΑΕΟ ΠΡΩΤΕΑΣ ΒΟΥΛΑΣ
@@ -109,7 +109,7 @@ URL:https://www.basket.gr/wbl1/schedule/
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-wbl1-9f413bce69fb@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T100044Z
 DTSTART;TZID=Europe/Athens:20270206T130000
 DTEND;TZID=Europe/Athens:20270206T150000
 SUMMARY:🏀 ΠΑΟΚ – ΠΑΣ ΓΙΑΝΝΙΝΑ
@@ -119,7 +119,7 @@ URL:https://www.basket.gr/wbl1/schedule/
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-wbl1-0eb9a65a3a46@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T100044Z
 DTSTART;TZID=Europe/Athens:20270227T130000
 DTEND;TZID=Europe/Athens:20270227T150000
 SUMMARY:🏀 ΠΑΟΚ – ΑΟ ΑΜΥΝΤΑΣ
@@ -129,7 +129,7 @@ URL:https://www.basket.gr/wbl1/schedule/
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-wbl1-93f31a274eee@paok-calendar
-DTSTAMP:20261026T092910Z
+DTSTAMP:20261030T100044Z
 DTSTART;TZID=Europe/Athens:20270313T130000
 DTEND;TZID=Europe/Athens:20270313T150000
 SUMMARY:🏀 ΠΑΟΚ – ΑΚ ΚΑΒΑΛΑΣ ΟΙ ΠΑΝΘΗΡΕΣ

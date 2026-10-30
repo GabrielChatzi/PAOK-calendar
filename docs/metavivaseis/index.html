@@ -48,6 +48,8 @@
   }
   * { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; scroll-padding-bottom: 110px; }
+  body { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; }
+  main { flex: 1 0 auto; width: 100%; }
   body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.5 var(--body); }
   a { color: inherit; }
   button, input, select, textarea { font: inherit; color: inherit; }
@@ -69,7 +71,7 @@
   .who svg { width: 20px; height: 20px; flex: none; }
 
   .wrap { max-width: 680px; margin: 0 auto; padding: 0 16px; }
-  main { padding-bottom: calc(120px + env(safe-area-inset-bottom)); }
+  main { padding-bottom: 24px; }
   body:has(#cta[hidden]) main { padding-bottom: calc(40px + env(safe-area-inset-bottom)); }
   .test { background: var(--warn-bg); color: var(--warn); padding: 10px 16px; font-size: 14px; }
   .test .wrap { padding: 0; }
@@ -127,7 +129,9 @@
   .btn[disabled] { opacity: 0.45; cursor: not-allowed; }
   .btn svg { width: 18px; height: 18px; }
 
-  .cta { position: fixed; left: 0; right: 0; bottom: 0; background: var(--paper); border-top: 1.5px solid var(--rule); padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); }
+  /* sticky, όχι fixed: μένει κάτω όσο κάνεις scroll, αλλά στο τέλος μπαίνει ΜΕΤΑ το περιεχόμενο
+     και δεν κρύβει ποτέ την τελευταία θέση. */
+  .cta { position: sticky; bottom: 0; z-index: 5; background: var(--paper); border-top: 1.5px solid var(--rule); padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); }
   .cta .wrap { padding: 0; }
 
   form .field { margin-bottom: 14px; }
@@ -590,7 +594,7 @@ async function viewHome(section) {
     <p class="label">Επόμενοι εντός έδρας · ${sportName(section)}</p>
     ${cards || `<p class="empty">Δεν υπάρχει προγραμματισμένος εντός έδρας αγώνας.</p>`}
     <footer>Ανεπίσημη σελίδα φιλάθλων· δεν συνδέεται με τον ΠΑΟΚ ή το Gov.gr. <a href="/">PAOKalendar</a></footer>`;
-  cta(upcoming(section, { openOnly: true }).length ? "Δεν πάω — δώσε τη θέση σου" : "", "#/give");
+  cta(upcoming(section, { openOnly: true }).length ? "Δεν πάω — δίνω τη θέση μου" : "", "#/give");
 }
 
 function seatRow(o, shut) {
@@ -628,11 +632,11 @@ async function viewMatch(id) {
     <p class="muted" style="margin-top:-4px">${esc(when(m))} · ${esc(m.venue || "")}</p>
     ${shut ? `<div class="info warn">${ICON.info}<p>Έκλεισε η μεταβίβαση για αυτόν τον αγώνα (γίνεται έως ${cutoffHours} ώρες πριν).</p></div>`
       : `<div class="info">${ICON.info}<p>Μεταβίβαση ${esc(deadlineText(m))}.${blocker(m) ? ` Ανοίγει ${esc(waitText(m))}· τη θέση την κανονίζεις από τώρα.` : ""}</p></div>`}
-    ${waitBox}${gateBox}
     ${mineGate.length ? `<p class="label">Στη θύρα σου (${mineGate.length})</p>${mineGate.map((o) => seatRow(o, shut)).join("")}` : ""}
     <p class="label">${mineGate.length ? "Άλλες θύρες" : "Διαθέσιμες θέσεις"} (${rest.length})</p>
-    ${rest.map((o) => seatRow(o, shut)).join("") || `<p class="empty">${mineGate.length ? "Καμία θέση σε άλλη θύρα." : "Κανείς δεν έχει δώσει θέση ακόμα."}</p>`}`;
-  cta(shut ? "" : "Δεν πάω σε αυτό — δώσε τη θέση σου", `#/give/${id}`);
+    ${rest.map((o) => seatRow(o, shut)).join("") || `<p class="empty">${mineGate.length ? "Καμία θέση σε άλλη θύρα." : "Κανείς δεν έχει δώσει θέση ακόμα."}</p>`}
+    <div style="margin-top:16px">${waitBox}${gateBox}</div>`;
+  cta(shut ? "" : "Δεν πάω — δίνω τη θέση μου", `#/give/${id}`);
 }
 
 async function viewGive(preselect) {
@@ -814,7 +818,7 @@ async function viewMine() {
     ${!pushOn ? `<div class="nudge" style="margin-bottom:6px"><p>Ενεργοποίησε τις ειδοποιήσεις για να μαθαίνεις αμέσως κάθε κίνηση.</p><a class="btn" href="#/settings">${ICON.bell} Ειδοποιήσεις</a></div>` : ""}
     <p class="label">Δίνω</p>
     ${offers.map(offerCard).join("") || `<p class="empty">Δεν έχεις δώσει θέση.</p>`}
-    <a class="btn block" href="#/give">${ICON.swap} Δεν πάω — δώσε τη θέση σου</a>
+    <a class="btn block" href="#/give">${ICON.swap} Δεν πάω — δίνω τη θέση μου</a>
     <p class="label">Ζητάω</p>
     ${reqs.map(requestCard).join("") || `<p class="empty">Δεν έχεις ζητήσει θέση. Διάλεξε αγώνα από το <a href="#/football">ποδόσφαιρο</a> ή το <a href="#/basketball">μπάσκετ</a>.</p>`}
     ${waits.length ? `<p class="label">Με ειδοποιείς για</p>${waits.map((m) => `<a class="match" href="#/m/${m.nt}" style="grid-template-columns:1fr auto"><span><strong>${esc(title(m))}</strong><span class="small muted">${esc(when(m))}</span></span>${ICON.chev}</a>`).join("")}` : ""}`;

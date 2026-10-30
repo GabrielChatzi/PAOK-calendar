@@ -192,6 +192,15 @@
   .controls { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin-bottom: 8px; }
   .controls > * { min-width: 0; }
   .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .filterbar { display: flex; align-items: center; gap: 6px 12px; flex-wrap: wrap; margin-bottom: 8px; }
+  .btn.filter-toggle { display: inline-flex; align-items: center; gap: 8px; }
+  .filter-toggle svg { width: 18px; height: 18px; flex: none; }
+  .filter-toggle[aria-expanded="true"] { background: var(--ink); color: var(--paper); }
+  .filter-count { background: var(--ink); color: var(--paper); font-size: 13px; line-height: 1; padding: 3px 6px; }
+  .filter-toggle[aria-expanded="true"] .filter-count { background: var(--paper); color: var(--ink); }
+  .filter-summary { flex: 1 1 160px; min-width: 0; font-size: 15px; color: var(--muted); }
+  .linkbtn { border: 0; background: none; padding: 0; color: var(--ink); cursor: pointer; font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
+  .controls.panel { border: 1.5px solid var(--ink); padding: 12px; margin-bottom: 10px; }
   .chips-hint { margin: -2px 0 0; font-size: 14px; color: var(--muted); }
   .chip {
     flex: none; border: 1.5px solid var(--ink); background: var(--paper);
@@ -857,6 +866,16 @@
         return '<button type="button" class="chip" data-sport="' + esc(o[0]) + '" aria-pressed="' + on + '">' + esc(o[1]) + "</button>";
       }).join("") + "</div>" + '<p class="chips-hint">Διάλεξε ένα ή περισσότερα αθλήματα.</p>';
     var list = data.matches.filter(passesHome);
+    var active = (prefs.sports.length ? 1 : 0) + (prefs.gender !== "all" ? 1 : 0) + (prefs.venue !== "all" ? 1 : 0);
+    var summary = [prefs.view === "month" ? "Μήνας" : prefs.when === "upcoming" ? "Επόμενοι" : "Αποτελέσματα",
+      prefs.sports.length ? prefs.sports.join(", ") : "Όλα τα αθλήματα"];
+    if (prefs.gender !== "all") summary.push(prefs.gender === "men" ? "Ανδρών" : "Γυναικών");
+    if (prefs.venue !== "all") summary.push(prefs.venue === "home" ? "Εντός" : "Εκτός");
+    var bar = '<div class="filterbar"><button type="button" class="btn filter-toggle" data-act="filters" aria-expanded="' + !!ui.filtersOpen + '" aria-controls="home-filters">' +
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8" fill="none" stroke="currentColor" stroke-width="2"/><rect x="14" y="4.5" width="4" height="5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="8" y="14.5" width="4" height="5" fill="none" stroke="currentColor" stroke-width="2"/></svg>' +
+      "Φίλτρα" + (active ? '<span class="filter-count" aria-label="' + active + ' ενεργά">' + active + "</span>" : "") + "</button>" +
+      '<span class="filter-summary">' + esc(summary.join(" · ")) +
+      (active ? ' <button type="button" class="linkbtn" data-act="filters-clear">Καθαρισμός</button>' : "") + "</span></div>";
     var body = prefs.view === "month"
       ? monthHtml(list, true)
       : listHtml(list.filter(function (m) { return prefs.when === "upcoming" ? isUpcoming(m) : !isUpcoming(m); }), prefs.when, true);
@@ -864,10 +883,13 @@
       installHtml() +
       nextHtml(data.matches) +
       '<h2 class="section-title">Όλοι οι αγώνες</h2>' +
-      '<div class="controls">' + seg("view", [["list", "Λίστα"], ["month", "Μήνας"]], prefs.view) + chips +
-        seg("gender", [["all", "Όλα"], ["men", "Ανδρών"], ["women", "Γυναικών"]], prefs.gender) +
-        (prefs.view === "month" ? "" : seg("when", [["upcoming", "Επόμενοι"], ["results", "Αποτελέσματα"]], prefs.when)) +
-        seg("venue", [["all", "Όλοι"], ["home", "Εντός"], ["away", "Εκτός"]], prefs.venue) + LEGEND + "</div>" +
+      bar +
+      (ui.filtersOpen
+        ? '<div class="controls panel" id="home-filters">' + seg("view", [["list", "Λίστα"], ["month", "Μήνας"]], prefs.view) +
+          (prefs.view === "month" ? "" : seg("when", [["upcoming", "Επόμενοι"], ["results", "Αποτελέσματα"]], prefs.when)) + chips +
+          seg("gender", [["all", "Όλα"], ["men", "Ανδρών"], ["women", "Γυναικών"]], prefs.gender) +
+          seg("venue", [["all", "Όλοι"], ["home", "Εντός"], ["away", "Εκτός"]], prefs.venue) + "</div>"
+        : "") + LEGEND +
       body +
       '<h2 class="section-title">Μην χάσεις αγώνα</h2>' +
       '<div class="shortcuts">' + PAGES.slice(1).map(function (p) {
@@ -1131,6 +1153,11 @@
     if (b.dataset.copy) { copy(b.dataset.copy, b.dataset.msg); return; }
     if (b.dataset.day && !b.disabled) { ui.day = b.dataset.day; render(); return; }
     var act = b.dataset.act;
+    if (act === "filters") { ui.filtersOpen = !ui.filtersOpen; render(); return; }
+    if (act === "filters-clear") {
+      prefs.sports = []; prefs.gender = "all"; prefs.venue = "all"; savePrefs();
+      ui.shown = PAGE; ui.day = null; render(); return;
+    }
     if (act === "install" && installEvent) {
       installEvent.prompt();
       installEvent.userChoice.then(function () { installEvent = null; render(); });

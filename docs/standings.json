@@ -1032,15 +1032,28 @@
      "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_120.jpg",
      "paok": false,
      "cells": [
-      "2",
-      "2",
+      "3",
+      "3",
       "0",
-      "6-1",
-      "4"
+      "9-3",
+      "6"
      ]
     },
     {
      "pos": 2,
+     "team": "OLYMPIACOS S.F.P.",
+     "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_117.jpg",
+     "paok": false,
+     "cells": [
+      "3",
+      "2",
+      "1",
+      "8-6",
+      "5"
+     ]
+    },
+    {
+     "pos": 3,
      "team": "PANATHINAIKOS A.O.",
      "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_119.jpg",
      "paok": false,
@@ -1053,7 +1066,7 @@
      ]
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "ΠΑΟΚ",
      "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_118.jpg",
      "paok": true,
@@ -1066,7 +1079,7 @@
      ]
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "A.O. MARKOPOULOU REVOIL",
      "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_112.jpg",
      "paok": false,
@@ -1075,19 +1088,6 @@
       "2",
       "0",
       "6-2",
-      "4"
-     ]
-    },
-    {
-     "pos": 5,
-     "team": "OLYMPIACOS S.F.P.",
-     "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_117.jpg",
-     "paok": false,
-     "cells": [
-      "2",
-      "2",
-      "0",
-      "6-3",
       "4"
      ]
     },

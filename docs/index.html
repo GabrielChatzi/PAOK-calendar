@@ -536,7 +536,7 @@
       scoreCell = '<span class="n">' + ls.home + '</span><span class="n">' + ls.away + "</span>";
     } else {
       timeCell = '<div class="time' + (m.timeKnown ? "" : " tbc") + '">' + (m.timeKnown ? fmtTime.format(date) : "TBC") +
-        (!m.live && inProgress(m) ? '<span class="ongoing">Σε εξέλιξη</span>' : "") + "</div>";
+        (!m.live && inProgress(m) && !ls ? '<span class="ongoing">Σε εξέλιξη</span>' : "") + "</div>";
       if (parts || (ls && ls.state === "post")) {
         var h = parts ? parts[1] : ls.home, a = parts ? parts[2] : ls.away;
         if (!parts) o = outcome({ score: h + "-" + a, paokHome: m.paokHome });
@@ -1309,7 +1309,7 @@
         return "<td>" + q[side] + "</td>";
       }).join("") + '<td class="pts">' + total + "</td></tr>";
     }
-    return "<h3>Σκορ ανά περίοδο</h3><div class=\"table-wrap\"><table class=\"st\"><thead><tr><th></th>" + head +
+    return "<h3>" + (det.periodTitle || "Σκορ ανά περίοδο") + "</h3><div class=\"table-wrap\"><table class=\"st\"><thead><tr><th></th>" + head +
       "<th>Σύνολο</th></tr></thead><tbody>" + row(m.home, "home", det.home) + row(m.away, "away", det.away) + "</tbody></table></div>" +
       (det.fouls ? '<p class="help">Φάουλ ' + det.fouls[0] + "–" + det.fouls[1] + ", time-out " + det.timeouts[0] + "–" + det.timeouts[1] + "</p>" : "");
   }
@@ -1325,7 +1325,7 @@
     var finalLive = !parts && ls && ls.state === "post";
     var hs = parts ? +parts[1] : ls && ls.state !== "pre" ? ls.home : null;
     var as = parts ? +parts[2] : ls && ls.state !== "pre" ? ls.away : null;
-    var ongoing = !m.live && inProgress(m);
+    var ongoing = !m.live && inProgress(m) && !(ls && ls.state !== "pre");
     var status;
     if (live) status = '<span class="live-badge">LIVE</span><span>' + esc(ls.label) + "</span>";
     else if (parts || finalLive) status = "<span>Τελικό</span>";
@@ -1348,17 +1348,19 @@
       '<p class="mh-when">' + esc(cap(fmtLong.format(date)) + (m.timeKnown ? ", " + fmtTime.format(date) : ", ώρα TBC") + (m.venue ? ", " + m.venue : "")) + "</p></section>";
 
     var actions = [];
-    if (ongoing && m.url) actions.push('<a class="btn solid" href="' + esc(m.url) + '" rel="noopener" target="_blank">Live στην πηγή</a>');
+    if (ongoing && !live && m.url) actions.push('<a class="btn solid" href="' + esc(m.url) + '" rel="noopener" target="_blank">Live στην πηγή</a>');
     if (isUpcoming(m) && !finalLive) actions.push('<a class="btn" href="' + matchHref(m) + '/notify">Ειδοποιήσεις</a>');
     if (navigator.share) actions.push('<button type="button" class="btn" data-act="share">Κοινοποίηση</button>');
 
     var body = "";
-    if (m.live && det) {
+    var hasLive = !!m.live || sofaSport(m);
+    if (hasLive && det) {
       body += timelineHtml(m, det) + quartersHtml(m, det) + statsHtml(m, det);
       if (!body && (live || liveCandidate(m))) body = '<p class="loading">Ο αγώνας δεν έχει ξεκινήσει ακόμα. Το σκορ θα ανανεώνεται εδώ μόλις αρχίσει.</p>';
-    } else if (m.live && (live || liveCandidate(m))) {
+      if (det.sofaUrl) body += '<p class="help source-note">Live από το <a href="' + esc(det.sofaUrl) + '" rel="noopener" target="_blank">Sofascore</a> (ανεπίσημη πηγή).</p>';
+    } else if (hasLive && (live || liveCandidate(m))) {
       body = '<p class="loading">Φόρτωση live…</p>';
-    } else if (!m.live && !parts && isUpcoming(m)) {
+    } else if (!hasLive && !parts && isUpcoming(m)) {
       body = '<p class="help">Για αυτόν τον αγώνα δεν υπάρχει live σκορ εδώ. Όταν ξεκινήσει, θα βρεις σύνδεσμο για τη ζωντανή σελίδα της πηγής.</p>';
     }
 
@@ -1383,7 +1385,7 @@
     ["wonCorners", "Κόρνερ"], ["foulsCommitted", "Φάουλ"], ["offsides", "Οφσάιντ"], ["saves", "Αποκρούσεις"]
   ];
   function fetchDetail(m) {
-    var L = m.live;
+    var L = m.live || {};
     if (L.src === "espn") {
       return fetch("https://site.api.espn.com/apis/site/v2/sports/soccer/" + encodeURIComponent(L.league) +
         "/summary?event=" + encodeURIComponent(L.id), { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (d) {
@@ -1444,12 +1446,13 @@
         };
       });
     }
+    if (sofaSport(m)) return sofaDetail(m);
     return Promise.reject(new Error("χωρίς live"));
   }
   var detailTimer = null;
   function pollDetail(m) {
     clearTimeout(detailTimer);
-    if (!m || !m.live) return;
+    if (!m || !(m.live || sofaSport(m))) return;
     var r = route();
     if (r.page !== "match" || r.nt !== m.nt) return;
     var active = liveCandidate(m) || (liveState[m.uid] && liveState[m.uid].state === "in");
@@ -1472,7 +1475,7 @@
   var liveState = {};
   var LIVE_POLL = 30 * 1000;
   function liveCandidate(m) {
-    if (!m.live || !m.timeKnown || m.score) return false;
+    if (!(m.live || sofaSport(m)) || !m.timeKnown || m.score) return false;
     var t = new Date(m.start).getTime(), now = Date.now();
     var ls = liveState[m.uid];
     if (ls && ls.state === "post") return false;
@@ -1493,7 +1496,7 @@
     return { state: state, home: a, away: b, label: label, quarter: q };
   }
   function fetchLive(m) {
-    var L = m.live;
+    var L = m.live || {};
     if (L.src === "espn") {
       var base = "https://site.api.espn.com/apis/site/v2/sports/soccer/" + encodeURIComponent(L.league);
       return fetch(base + "/scoreboard", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (d) {
@@ -1509,7 +1512,132 @@
         .then(function (r) { return r.text(); })
         .then(function (t) { return euroleagueState(t.trim() ? JSON.parse(t) : {}); });  // κενό πριν από το τζάμπολ
     }
+    if (sofaSport(m)) return sofaEvent(m).then(function (ev) { return sofaState(m, ev); });
     return Promise.reject(new Error("χωρίς live"));
+  }
+
+  // ---- Live από το Sofascore (ανεπίσημη, εφεδρική πηγή)
+  // Για αγώνες χωρίς επίσημη πηγή live (Κύπελλο, βόλεϊ, χάντμπολ, πόλο, σάλας, γυναικεία). Το API του
+  // Sofascore δεν δέχεται αιτήματα από servers, μόνο από browsers· γι' αυτό διαβάζεται από τη σελίδα.
+  // Αν δεν απαντήσει, η σελίδα δείχνει απλώς «Σε εξέλιξη» όπως πριν.
+  var SOFA = "https://api.sofascore.com/api/v1/";
+  var SOFA_SECTIONS = {
+    "football": ["football", "M"], "football-women": ["football", "F"], "basketball": ["basketball", "M"],
+    "basketball-women": ["basketball", "F"], "volley": ["volleyball", "M"], "volley-women": ["volleyball", "F"],
+    "handball": ["handball", "M"], "handball-women": ["handball", "F"], "waterpolo": ["waterpolo", "M"],
+    "waterpolo-women": ["waterpolo", "F"], "futsal": ["futsal", "M"]
+  };
+  function sofaSport(m) { return !m.live && SOFA_SECTIONS[m.section] ? SOFA_SECTIONS[m.section] : null; }
+  function sofaGet(path) {
+    return fetch(SOFA + path, { cache: "no-store" }).then(function (r) {
+      if (!r.ok) throw new Error("sofascore " + r.status);
+      return r.json();
+    });
+  }
+  var sofaTeams = null, sofaEvents = {}, sofaFail = {};
+  try { sofaTeams = JSON.parse(localStorage.getItem("paok-sofa-teams") || "null"); } catch (e) {}
+  // Οι ομάδες του ΠΑΟΚ στο Sofascore, ανά άθλημα και φύλο (μία αναζήτηση, κρατιέται 30 μέρες).
+  function sofaTeamIds(m) {
+    var want = sofaSport(m);
+    var fresh = sofaTeams && Date.now() - sofaTeams.at < 30 * 24 * 3600 * 1000;
+    var p = fresh ? Promise.resolve(sofaTeams) : sofaGet("search/all?q=PAOK&page=0").then(function (d) {
+      var list = (d.results || []).filter(function (r) { return r.type === "team"; }).map(function (r) {
+        var e = r.entity || {};
+        return { id: e.id, name: e.name || "", sport: (e.sport || {}).slug, gender: e.gender || "M",
+                 country: ((e.country || {}).alpha2 || "") };
+      }).filter(function (t) { return /PAOK|ΠΑΟΚ/i.test(t.name) && !/U\d\d|B$|II$/.test(t.name); });
+      sofaTeams = { at: Date.now(), list: list };
+      try { localStorage.setItem("paok-sofa-teams", JSON.stringify(sofaTeams)); } catch (e) {}
+      return sofaTeams;
+    });
+    return p.then(function (t) {
+      return t.list.filter(function (x) { return x.sport === want[0] && (x.gender || "M") === want[1]; })
+        .sort(function (a, b) { return (b.country === "GR") - (a.country === "GR"); }).map(function (x) { return x.id; });
+    });
+  }
+  // Ο αγώνας στο Sofascore: της ίδιας ομάδας, με ώρα έναρξης κοντά στη δική μας (±4 ώρες).
+  function sofaEvent(m) {
+    if (sofaEvents[m.uid]) return Promise.resolve(sofaEvents[m.uid]).then(function (id) { return sofaGet("event/" + id); }).then(function (d) { return d.event; });
+    if (sofaFail[m.uid] && Date.now() - sofaFail[m.uid] < 10 * 60 * 1000) return Promise.reject(new Error("sofascore: δεν βρέθηκε"));
+    var start = new Date(m.start).getTime() / 1000;
+    return sofaTeamIds(m).then(function (ids) {
+      var tries = [];
+      ids.slice(0, 3).forEach(function (id) { tries.push(sofaGet("team/" + id + "/events/next/0")); tries.push(sofaGet("team/" + id + "/events/last/0")); });
+      return Promise.all(tries.map(function (t) { return t.catch(function () { return { events: [] }; }); }));
+    }).then(function (lists) {
+      var best = null;
+      lists.forEach(function (l) {
+        (l.events || []).forEach(function (ev) {
+          var diff = Math.abs((ev.startTimestamp || 0) - start);
+          if (diff <= 4 * 3600 && (!best || diff < Math.abs(best.startTimestamp - start))) best = ev;
+        });
+      });
+      if (!best) { sofaFail[m.uid] = Date.now(); throw new Error("sofascore: δεν βρέθηκε"); }
+      sofaEvents[m.uid] = best.id;
+      return best;
+    });
+  }
+  // Αν το Sofascore έχει ανάποδα γηπεδούχο και φιλοξενούμενο από εμάς, γυρίζουμε τα σκορ.
+  function sofaFlip(m, ev) {
+    var home = String((ev.homeTeam || {}).name || "");
+    return /PAOK|ΠΑΟΚ/i.test(home) !== !!m.paokHome;
+  }
+  var SOFA_PERIODS = { volleyball: "σετ", basketball: "περίοδος", handball: "ημίχρονο", football: "ημίχρονο",
+                       futsal: "ημίχρονο", waterpolo: "περίοδος" };
+  function sofaLabel(m, ev) {
+    var st = ev.status || {}, d = String(st.description || "");
+    if (st.type === "finished") return "Τελικό";
+    if (/half ?time|pause|break/i.test(d)) return "Διάλειμμα";
+    var sport = sofaSport(m)[0];
+    if ((sport === "football" || sport === "futsal") && ev.time && ev.time.currentPeriodStartTimestamp) {
+      var min = Math.floor((Date.now() / 1000 - ev.time.currentPeriodStartTimestamp + (ev.time.initial || 0)) / 60) + 1;
+      var cap = (ev.time.initial || 0) / 60 + (ev.time.max || 0) / 60;
+      if (ev.time.max && min > cap) return cap + "+" + (min - cap) + "\u2032";
+      return min + "\u2032";
+    }
+    var n = /(\d+)(?:st|nd|rd|th)/i.exec(d);
+    if (n) return n[1] + (sport === "volleyball" ? "ο σετ" : /half/i.test(d) ? "ο ημίχρονο" : "η περ.");
+    if (/overtime|extra/i.test(d)) return "Παράταση";
+    return d;
+  }
+  function sofaState(m, ev) {
+    var st = ev.status || {}, flip = sofaFlip(m, ev);
+    var h = +((ev.homeScore || {}).current || 0), a = +((ev.awayScore || {}).current || 0);
+    if (flip) { var x = h; h = a; a = x; }
+    var state = st.type === "inprogress" ? "in" : st.type === "finished" ? "post" : "pre";
+    if (st.type === "postponed" || st.type === "canceled") state = "pre";
+    return { state: state, home: h, away: a, label: state === "pre" ? "Ξεκινά" : sofaLabel(m, ev), src: "sofascore" };
+  }
+  function sofaDetail(m) {
+    return sofaEvent(m).then(function (ev) {
+      var state = sofaState(m, ev), flip = sofaFlip(m, ev), sport = sofaSport(m)[0];
+      var hs = ev.homeScore || {}, as = ev.awayScore || {};
+      if (flip) { var x = hs; hs = as; as = x; }
+      var quarters = [];
+      for (var i = 1; i <= 7; i++) {
+        if (hs["period" + i] == null && as["period" + i] == null) continue;
+        quarters.push({ label: sport === "volleyball" ? i + "ο" : i + (sport === "football" || sport === "futsal" || sport === "handball" ? "ο" : "η"),
+                        home: hs["period" + i] != null ? hs["period" + i] : "", away: as["period" + i] != null ? as["period" + i] : "" });
+      }
+      if (hs.overtime != null || as.overtime != null) quarters.push({ label: "Παρ.", home: hs.overtime || 0, away: as.overtime || 0 });
+      if (sport === "football" || sport === "futsal") quarters = [];  // εκεί δείχνουμε γκολ και κάρτες
+      var det = { state: state, quarters: state.state === "pre" ? [] : quarters, home: state.home, away: state.away,
+                  periodTitle: "Σκορ ανά " + (SOFA_PERIODS[sport] || "περίοδο") + (sport === "volleyball" ? " (πόντοι)" : ""),
+                  sofaUrl: ev.slug && ev.customId ? "https://www.sofascore.com/" + sport + "/match/" + ev.slug + "/" + ev.customId : "https://www.sofascore.com/" };
+      if (sport !== "football" && sport !== "futsal" || state.state === "pre") return det;
+      // Γκολ και κάρτες για ποδόσφαιρο και σάλας.
+      return sofaGet("event/" + ev.id + "/incidents").then(function (d) {
+        det.events = (d.incidents || []).filter(function (x) { return x.incidentType === "goal" || x.incidentType === "card"; })
+          .reverse().map(function (x) {
+            var home = !!x.isHome !== flip;
+            var kind = x.incidentType === "goal" ? "goal" : /red/i.test(x.incidentClass || "") ? "red" : "yellow";
+            var note = x.incidentClass === "penalty" ? "(πέναλτι)" : x.incidentClass === "ownGoal" ? "(αυτογκόλ)" : "";
+            return { kind: kind, clock: (x.time != null ? x.time + (x.addedTime ? "+" + x.addedTime : "") + "\u2032" : ""),
+                     home: home, player: (x.player || {}).name || (x.playerName || ""), note: note };
+          });
+        return det;
+      }, function () { return det; });
+    });
   }
   var liveTimer = null;
   function pollLive() {

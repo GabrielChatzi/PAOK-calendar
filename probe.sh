@@ -1,11 +1,3 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
-python3 - <<'PY'
-import json, urllib.request
-def get(u,h={}):
-    with urllib.request.urlopen(urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0",**h}),timeout=30) as r: return json.loads(r.read())
-K="https://live.koe.org.gr/api-waterpolo/wp"
-t=get(K+"/token")["token"]
-print(json.dumps(get(K+"/KOE/get/resultsDBlikeJSON/ASM/65/A01/1/9175200/9175106",{"x-wp-token":t}),ensure_ascii=False))
-print(json.dumps(get("https://paokalendar.vercel.app/api/live?src=koe&cat=ASM&gara=65&tur=A01&gru=1&a=9175200&b=9175106")))
-PY
+gh api repos/GabrielChatzi/PAOK-calendar/actions/jobs/124567722836/logs | grep -E "ΕΘΝΙΚΟΣ|push|!|Αγώνες" | sed -E 's/^[0-9TZ:.-]+ //' | cut -c1-200 | tail -25

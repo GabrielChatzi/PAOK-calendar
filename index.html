@@ -1790,8 +1790,10 @@
     var c = d.competitions ? d.competitions[0] : d.header.competitions[0];
     var t = c.status.type, sc = {};
     c.competitors.forEach(function (x) { sc[x.homeAway] = +(x.score && x.score.value != null ? x.score.value : x.score) || 0; });
-    var label = t.state === "post" ? "Τελικό" : t.name === "STATUS_HALFTIME" ? "Ημίχρονο" : (t.shortDetail || t.detail || "");
-    return { state: t.state, home: sc.home || 0, away: sc.away || 0, label: label };
+    // Αναβολή/διακοπή: η ESPN τα δείχνει ως «post», αλλά δεν είναι τελικό.
+    var off = /POSTPONED|CANCELED|ABANDONED|SUSPENDED|FORFEIT/.test(t.name || "");
+    var label = off ? (t.description || t.shortDetail || "Αναβλήθηκε") : t.state === "post" ? "Τελικό" : t.name === "STATUS_HALFTIME" ? "Ημίχρονο" : (t.shortDetail || t.detail || "");
+    return { state: off ? "pre" : t.state, home: sc.home || 0, away: sc.away || 0, label: label };
   }
   function euroleagueState(h) {
     var a = parseInt(h.ScoreA, 10) || 0, b = parseInt(h.ScoreB, 10) || 0, q = parseInt(h.Quarter, 10) || 0;

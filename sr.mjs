@@ -1,0 +1,20 @@
+// SignalR 2 (ASP.NET) πάνω από long polling, για τη Data Project.
+const BASE = "https://dataprojectservicesignalr.azurewebsites.net/signalr";
+const HUB = "signalrlivehubfederations";
+const cd = encodeURIComponent(JSON.stringify([{ name: HUB }]));
+const UA = { "User-Agent": "Mozilla/5.0" };
+const page = await (await fetch("https://eope-web.dataproject.com/MainLiveScore.aspx", { headers: UA })).text();
+const list = (page.match(/id="HF_MatchesList" value="([^"]*)"/) || [])[1];
+console.log("HF_MatchesList:", list);
+const neg = await (await fetch(`${BASE}/negotiate?clientProtocol=2.1&connectionData=${cd}`, { headers: UA })).json();
+console.log("negotiate:", JSON.stringify(neg).slice(0, 200));
+const tok = encodeURIComponent(neg.ConnectionToken);
+const q = `transport=longPolling&clientProtocol=2.1&connectionToken=${tok}&connectionData=${cd}`;
+const c = await (await fetch(`${BASE}/connect?${q}`, { headers: UA })).text();
+console.log("connect:", c.slice(0, 200));
+const st = await (await fetch(`${BASE}/start?${q}`, { headers: UA })).text();
+console.log("start:", st);
+const body = "data=" + encodeURIComponent(JSON.stringify({ H: HUB, M: "getLiveScoreListData_From_ES", A: [list, "eope"], I: 0 }));
+const r = await (await fetch(`${BASE}/send?${q}`, { method: "POST", headers: { ...UA, "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8" }, body })).text();
+console.log("send:", r.slice(0, 3000));
+await fetch(`${BASE}/abort?${q}`, { method: "POST", headers: UA }).catch(() => {});

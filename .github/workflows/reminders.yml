@@ -29,6 +29,12 @@ jobs:
           key: reminded-${{ github.run_id }}
           restore-keys: reminded-
 
+      # Το πρόγραμμα από τον κλάδο data (εκεί το γράφει το update.yml).
+      - name: Τελευταίο πρόγραμμα
+        run: |
+          git fetch --depth=1 origin +refs/heads/data:refs/remotes/origin/data
+          git show origin/data:matches.json > docs/matches.json
+
       - name: Αποστολή υπενθυμίσεων
         id: remind
         env:

@@ -38,7 +38,7 @@ def get_json(url: str) -> dict | None:
     return json.loads(body) if body else None
 
 
-RAW = "https://raw.githubusercontent.com/GabrielChatzi/PAOK-calendar/main/docs/matches.json"
+RAW = "https://raw.githubusercontent.com/GabrielChatzi/PAOK-calendar/data/matches.json"
 
 
 def load_matches() -> list[dict]:

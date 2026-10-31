@@ -28,6 +28,15 @@ jobs:
         with:
           python-version: "3.12"
 
+      # Τα δεδομένα (πρόγραμμα, βαθμολογίες, ημερολόγια) ζουν στον κλάδο «data», όχι στον main, ώστε οι
+      # ενημερώσεις να μη φτιάχνουν νέα έκδοση της Vercel (όριο 100 την ημέρα). Ο builder ξεκινά από αυτά.
+      - name: Προηγούμενα δεδομένα
+        run: |
+          git fetch --depth=1 origin +refs/heads/data:refs/remotes/origin/data
+          for f in $(git ls-tree --name-only origin/data | grep -E '\.(json|ics)$'); do
+            git show "origin/data:$f" > "docs/$f"
+          done
+
       - name: Δημιουργία ημερολογίων
         id: build
         continue-on-error: true
@@ -35,19 +44,27 @@ jobs:
           PUSH: "1"
         run: python3 build_calendars.py
 
+      # Όλο το docs (σελίδα και δεδομένα) πηγαίνει στον κλάδο data: από εκεί τα διαβάζει η Vercel
+      # (api/data.js) και τα σερβίρει το GitHub Pages (παλιά διεύθυνση). Ο main δεν αλλάζει.
       - name: Αποθήκευση αλλαγών
         run: |
-          if git diff --quiet -- docs && [ -z "$(git ls-files --others --exclude-standard docs)" ]; then
-            echo "Καμία αλλαγή."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs
-          git commit -m "Ενημέρωση προγράμματος αγώνων"
-          # Αν στο μεταξύ αποθήκευσε κι άλλη εκτέλεση, κρατάμε τα αρχεία αυτής (είναι τα νεότερα).
-          git pull --rebase -X theirs --quiet
-          git push
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          save() {
+            rm -rf "$RUNNER_TEMP/data"
+            git fetch --depth=1 origin +refs/heads/data:refs/remotes/origin/data
+            git worktree prune
+            git worktree add --detach "$RUNNER_TEMP/data" origin/data
+            rsync -a --delete --exclude .git --exclude vercel.json --exclude .nojekyll --exclude README.md \
+              --exclude __pycache__ docs/ "$RUNNER_TEMP/data/"
+            cd "$RUNNER_TEMP/data"
+            git add -A
+            if git diff --cached --quiet; then echo "Καμία αλλαγή."; return 0; fi
+            git commit -qm "Ενημέρωση προγράμματος αγώνων"
+            git push origin HEAD:data
+          }
+          # Αν στο μεταξύ αποθήκευσε κι άλλη εκτέλεση, ξαναδοκιμάζουμε πάνω στη δική της (τα δικά μας είναι νεότερα).
+          (save) || (sleep 5; save)
 
       # Διαφορές με τις ανακοινώσεις της ΑΣ ΠΑΟΚ: ένα issue που ενημερώνεται (το GitHub στέλνει email).
       - name: Αγώνες προς έλεγχο

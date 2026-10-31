@@ -34,8 +34,6 @@
 // Στη δοκιμαστική φάση υπάρχουν χρήστες demo_* που απαντούν αυτόματα, ώστε η ροή να δοκιμάζεται
 // και από έναν άνθρωπο (?a=seed βάζει δοκιμαστικές θέσεις). Κλείνουν με TX_DEMO=0.
 import crypto from "node:crypto";
-import fs from "node:fs";
-import path from "node:path";
 import { SITE, configured, getDb, pushTo, readBody, send, subId, validSubscription, vapidKeys } from "./_lib.js";
 
 const SECTIONS = new Set(["football", "basketball"]);
@@ -64,20 +62,23 @@ const DEMO_USERS = [
 const DEMO_IDS = DEMO_USERS.map((u) => u._id);
 
 // ---------- Αγώνες ----------
-// Από το docs/matches.json που συνοδεύει τη λειτουργία· αν δεν βρεθεί (π.χ. σε preview), από τη
-// δημόσια σελίδα. Κρατιούνται 10 λεπτά.
+// Από τον κλάδο «data» του GitHub (εκεί τα γράφει το update.yml)· αλλιώς από τη δημόσια σελίδα.
+// Κρατιούνται 10 λεπτά.
 let matchCache = null;
 async function readMatches() {
-  const candidates = [
-    new URL("../docs/matches.json", import.meta.url),
-    path.join(process.cwd(), "docs", "matches.json"),
+  const urls = [
+    `https://raw.githubusercontent.com/GabrielChatzi/PAOK-calendar/data/matches.json?t=${Math.floor(Date.now() / 60000)}`,
+    `${SITE}/matches.json`,
   ];
-  for (const file of candidates) {
-    try { return JSON.parse(fs.readFileSync(file, "utf8")); } catch { /* επόμενο */ }
+  let last;
+  for (const url of urls) {
+    try {
+      const res = await fetch(url, { headers: { "Cache-Control": "no-cache" } });
+      if (res.ok) return await res.json();
+      last = new Error(`matches.json: HTTP ${res.status}`);
+    } catch (e) { last = e; }
   }
-  const res = await fetch(`${SITE}/matches.json`, { headers: { "Cache-Control": "no-cache" } });
-  if (!res.ok) throw new Error(`matches.json: HTTP ${res.status}`);
-  return res.json();
+  throw last;
 }
 async function matches() {
   if (matchCache && Date.now() - matchCache.at < 10 * 60 * 1000) return matchCache.byId;

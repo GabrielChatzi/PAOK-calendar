@@ -3,3 +3,10 @@ __pycache__/
 node_modules/
 checks.md
 body.md
+
+# Δεδομένα: ζουν στον κλάδο data (βλ. update.yml, api/data.js)
+docs/*.ics
+docs/matches.json
+docs/standings.json
+docs/status.json
+docs/sources.json

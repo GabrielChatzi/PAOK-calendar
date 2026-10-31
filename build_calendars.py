@@ -816,7 +816,8 @@ def waterpolo_matches(section: str) -> list[Match]:
         time_text = next((d for d in info_divs if re.fullmatch(r"\d{1,2}:\d{2}", d)), "")
         score = re.search(r'sm:block">\s*<div[^>]*>(.*?)</div>', block, re.S)
         day = dt.date(int(dm.group(3)), month, int(dm.group(1)))
-        score_text = parse_score(clean(score.group(1))) if score else ""
+        # Σε αγώνα σε εξέλιξη το ίδιο σημείο δείχνει «LIVE» και το τρέχον σκορ: δεν είναι τελικό.
+        score_text = parse_score(clean(score.group(1))) if score and "LIVE" not in score.group(0) else ""
         # Live μόνο για τους κοντινούς αγώνες (μία σελίδα ανά αγώνα).
         live = koe_live(link) if not score_text and -1 <= (day - dt.datetime.now(ATHENS).date()).days <= 10 else None
         out.append(Match(
@@ -1423,6 +1424,13 @@ def main(only: list[str] | None = None) -> int:
         except Exception as e:
             print(f"  ! ΑΣ ΠΑΟΚ / {key}: {e}", file=sys.stderr)
         carry_uids(prev_by_section[key], unique)
+        # Κανένα άθλημα δεν τελειώνει σε λιγότερο από 50 λεπτά: σκορ πιο νωρίς είναι το τρέχον
+        # ενός αγώνα σε εξέλιξη (κάποιες πηγές το δείχνουν στη θέση του τελικού), όχι αποτέλεσμα.
+        now = dt.datetime.now(ATHENS)
+        for m in unique:
+            if m.score and m.time and m.start() > now - dt.timedelta(minutes=50):
+                print(f"  σκορ αγώνα σε εξέλιξη, όχι τελικό: {m.home} – {m.away} {m.score}")
+                m.score = ""
         info = SECTIONS[key]
         for side, label, keep in (("home", "Εντός έδρας", True), ("away", "Εκτός έδρας", False)):
             subset = [m for m in unique if m.paok_home == keep]

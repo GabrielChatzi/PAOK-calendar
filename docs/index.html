@@ -1461,7 +1461,8 @@
   }
   function matchNotifyHtml(m) {
     var rows = MATCH_KINDS.filter(function (k) { return k[0] !== "live" || m.live; }).map(function (k) {
-      var desc = k[0] === "live" ? (m.live.src === "espn" ? "Έναρξη, κάθε γκολ, ημίχρονο" : "Έναρξη και τέλος κάθε περιόδου") : k[2];
+      var desc = k[0] === "live" ? (m.live.src === "espn" ? "Έναρξη, κάθε γκολ, ημίχρονο"
+        : m.live.src === "dp" ? "Έναρξη και τέλος κάθε σετ" : "Έναρξη και τέλος κάθε περιόδου") : k[2];
       var topics = (k[0] === "all" ? matchKinds(m) : [k[0]]).map(function (kind) { return "m:" + m.nt + ":" + kind; });
       return switchRow(topics, k[1], desc);
     }).join("");
@@ -1504,7 +1505,7 @@
       }).join("") + '<td class="pts">' + total + "</td></tr>";
     }
     return "<h3>" + (det.periodTitle || "Σκορ ανά περίοδο") + "</h3><div class=\"table-wrap\"><table class=\"st\"><thead><tr><th></th>" + head +
-      "<th>Σύνολο</th></tr></thead><tbody>" + row(m.home, "home", det.home) + row(m.away, "away", det.away) + "</tbody></table></div>" +
+      "<th>" + (det.totalLabel || "Σύνολο") + "</th></tr></thead><tbody>" + row(m.home, "home", det.home) + row(m.away, "away", det.away) + "</tbody></table></div>" +
       (det.fouls ? '<p class="help">Φάουλ ' + det.fouls[0] + "–" + det.fouls[1] + ", time-out " + det.timeouts[0] + "–" + det.timeouts[1] + "</p>" : "");
   }
 
@@ -1641,7 +1642,7 @@
         };
       });
     }
-    if (L.src === "koe" || L.src === "ea") return waterpoloDetail(m);
+    if (L.src === "koe" || L.src === "ea" || L.src === "dp") return waterpoloDetail(m);
     if (sofaSport(m)) return sofaDetail(m);
     return Promise.reject(new Error("χωρίς live"));
   }
@@ -1712,7 +1713,7 @@
         .then(function (r) { return r.text(); })
         .then(function (t) { return euroleagueState(t.trim() ? JSON.parse(t) : {}); });  // κενό πριν από το τζάμπολ
     }
-    if (L.src === "koe" || L.src === "ea") return waterpoloFetch(m).then(function (j) { return waterpoloState(j); });
+    if (L.src === "koe" || L.src === "ea" || L.src === "dp") return waterpoloFetch(m).then(function (j) { return waterpoloState(j, L.src); });
     if (sofaSport(m)) return sofaEvent(m).then(function (ev) { return sofaState(m, ev); });
     return Promise.reject(new Error("χωρίς live"));
   }
@@ -1720,7 +1721,7 @@
   // ---- Live πόλο: ΚΟΕ (ελληνικά πρωταθλήματα) και European Aquatics, μέσω του api/live.js
   function waterpoloFetch(m) {
     var L = m.live, q = [];
-    ["src", "code", "cat", "gara", "tur", "gru", "a", "b"].forEach(function (k) {
+    ["src", "code", "cat", "gara", "tur", "gru", "a", "b", "fed", "id", "day", "side"].forEach(function (k) {
       if (L[k] != null) q.push(k + "=" + encodeURIComponent(L[k]));
     });
     return fetch("/api/live?" + q.join("&")).then(function (r) {
@@ -1728,7 +1729,12 @@
       return r.json();
     });
   }
-  function waterpoloState(j) {
+  function waterpoloState(j, src) {
+    if (src === "dp") {
+      return { state: j.state, home: j.home || 0, away: j.away || 0, quarter: j.quarter || 0,
+               label: j.state === "post" ? "Τελικό" : j.state === "pre" ? "Ξεκινά"
+                 : j.quarter + "ο σετ" + (j.clock ? " " + j.clock.replace("-", "–") : "") };
+    }
     var label = j.state === "post" ? "Τελικό" : j.state === "pre" ? "Ξεκινά"
       : j.quarter ? (j.quarter <= 4 ? j.quarter + "η περ." : "Πέναλτι") + (j.clock ? " " + j.clock : "")
       : j.done ? "Διάλειμμα" : "Σε εξέλιξη";
@@ -1736,6 +1742,12 @@
   }
   function waterpoloDetail(m) {
     return waterpoloFetch(m).then(function (j) {
+      if (m.live.src === "dp") {
+        var vs = waterpoloState(j, "dp");
+        return { state: vs, home: vs.home, away: vs.away, periodTitle: "Πόντοι ανά σετ", totalLabel: "Σετ",
+                 quarters: (j.quarters || []).map(function (x, i) { return { label: i + 1 + "ο", home: x.home, away: x.away }; }),
+                 sourceNote: "Live από την Data Project (επίσημο σύστημα της ΕΟΠΕ)." };
+      }
       var st = waterpoloState(j), quarters = [];
       if (j.quarters && j.quarters.length) {
         // Πάντα οι 4 περίοδοι· όσες δεν έχουν παιχτεί μένουν κενές. Μετά την 4η, τα πέναλτι.

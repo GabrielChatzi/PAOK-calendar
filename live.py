@@ -136,12 +136,16 @@ def waterpolo_state(live: dict) -> dict:
     if st.get("state") not in ("pre", "in", "post"):
         raise ValueError(st.get("error") or "άγνωστη απάντηση")
     q = st.get("quarter") or 0
+    if live.get("src") == "dp":
+        st["detail"] = f"{q}ο σετ {st.get('clock') or ''}".strip() if st["state"] == "in" else ""
+        return st
     st["detail"] = (f"{q}η περίοδος {st.get('clock') or ''}".strip() if q else "Διάλειμμα") if st["state"] == "in" else ""
     return st
 
 
-SOURCES = {"espn": espn_state, "euroleague": euroleague_state, "koe": waterpolo_state, "ea": waterpolo_state}
-PERIOD_SOURCES = ("euroleague", "koe", "ea")
+SOURCES = {"espn": espn_state, "euroleague": euroleague_state, "koe": waterpolo_state, "ea": waterpolo_state,
+           "dp": waterpolo_state}
+PERIOD_SOURCES = ("euroleague", "koe", "ea", "dp")
 
 
 # ---------------------------------------------------------------- γεγονότα
@@ -178,7 +182,15 @@ def events(m: dict, old: dict | None, new: dict) -> list[tuple[str, str]]:
             out.append((title, " ".join(x for x in (g["clock"], g["text"]) if x)))
         if new.get("halftime") and not old.get("halftime"):
             out.append((f"{e} Ημίχρονο: {score_text(m, new)}", comp))
-    if m["live"]["src"] in PERIOD_SOURCES and new["state"] == "in" and old["state"] == "in":
+    if m["live"]["src"] == "dp" and new["state"] == "in" and old["state"] == "in":
+        # Βόλεϊ: τέλος κάθε σετ (όχι όταν τελειώνει ο αγώνας· τότε έρχεται το «Τελικό»).
+        d_old, d_new = old.get("done") or 0, new.get("done") or 0
+        sets = (new.get("quarters") or [])
+        if d_new > d_old:
+            pts = sets[d_new - 1] if len(sets) >= d_new else None
+            detail = f" ({pts['home']}–{pts['away']})" if pts else ""
+            out.append((f"{e} Τέλος {d_new}ου σετ{detail}: {m['home']} {new['home']}–{new['away']} {m['away']}", comp))
+    elif m["live"]["src"] in PERIOD_SOURCES and new["state"] == "in" and old["state"] == "in":
         d_old, d_new = old.get("done"), new.get("done")
         waterpolo = m["live"]["src"] != "euroleague"
         # Μετά την 4η, αν το σκορ δεν είναι ισόπαλο, έρχεται το «Τελικό» αντί για «Τέλος περιόδου».

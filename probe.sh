@@ -1,25 +1,23 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
 UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
-echo "=== apps.basket.gr iframe"
-curl -sSL -m 40 -A "$UA" -e https://www.basket.gr/livescore/ https://apps.basket.gr/iframe/livescores -o /tmp/a.html; wc -c < /tmp/a.html
-grep -oE '(src|href)="[^"]+"' /tmp/a.html | sort -u | head -15
-grep -oiE '.{0,60}(fetch\(|axios|\$\.(get|ajax)|api/|\.json|websocket|socket|pusher|fibalivestats|genius).{0,120}' /tmp/a.html | sort -u | head -15
+curl -sSL -m 40 -A "$UA" -e https://www.basket.gr/livescore/ "https://apps.basket.gr/iframe/livescores?date=31/10/2026" -o /tmp/a.html
 python3 - <<'PY'
 import re
 s=open('/tmp/a.html',encoding='utf-8',errors='replace').read()
+for m in re.finditer(r'\$\.ajax\(\{', s): print(s[m.start()-300:m.start()+700].replace("\n"," ")[:1000]); print("----")
+i=s.find('WOMEN'); i = i if i>0 else s.find('ΓΥΝΑΙΚ')
 t=re.sub(r"<script.*?</script>|<style.*?</style>","",s,flags=re.S); t=re.sub(r"<[^>]+>"," ",t); t=re.sub(r"\s+"," ",t)
-print(t[:900])
+j=t.find('ΠΑΟΚ'); print("PAOK ctx:", t[max(0,j-300):j+300])
+print(sorted(set(re.findall(r'data-[a-z-]+="[^"]{0,40}"', s)))[:30])
 PY
-echo "=== EHF match page"
-curl -sSL -m 40 -A "$UA" "https://www.eurohandball.com/en/matches/202712020703021/OFNIonias-ClubeJovemAlmeidaGarrett/" -o /tmp/e.html -w "%{http_code} %{url_effective}\n"
-grep -oE '/umbraco/api/[A-Za-z]+/[A-Za-z]+' /tmp/e.html | sort -u | head; grep -oE 'data-[a-z-]+="[^"]{0,60}"' /tmp/e.html | sort -u | grep -iE "match|api|live" | head -10
-python3 - <<'PY'
-import json, urllib.request
-UA="Mozilla/5.0"; base="https://ehfec.eurohandball.com"
-q="competitionId=HUvNPxVw-FYaDNYG5p1ZLw&roundId=&currentContentId=138879"
-d=json.loads(urllib.request.urlopen(urllib.request.Request(f"{base}/umbraco/api/competitionmatchesapi/GetInitMatches?{q}",headers={"User-Agent":UA}),timeout=40).read())["matches"]
-for m in d:
-    if m.get("isFinished"):
-        h=m["homeTeam"]; print({k:v for k,v in h.items() if k!="team"}); break
-PY
+echo "=== EHF GetMatchDetails"
+curl -sS -m 40 -A "$UA" "https://www.eurohandball.com/umbraco/api/matchdetailapi/GetMatchDetails?matchId=202712020703021" | python3 -c "
+import json,sys; d=json.load(sys.stdin); print(type(d).__name__, list(d.keys())[:40] if isinstance(d,dict) else '')
+def show(x,p=''):
+  if isinstance(x,dict):
+    for k,v in x.items():
+      if isinstance(v,(dict,list)): 
+        if p.count('.')<2: show(v,p+k+'.')
+      else: print(p+k, '=', str(v)[:60])
+show(d)" | head -60

@@ -2,11 +2,11 @@
 const BASE = "https://dataprojectservicesignalr.azurewebsites.net/signalr";
 const HUB = "signalrlivehubfederations";
 const cd = encodeURIComponent(JSON.stringify([{ name: HUB }]));
-const UA = { "User-Agent": "Mozilla/5.0" };
+const UA = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/130.0.0.0", Origin: "https://eope-web.dataproject.com", Referer: "https://eope-web.dataproject.com/" };
 const page = await (await fetch("https://eope-web.dataproject.com/MainLiveScore.aspx", { headers: UA })).text();
 const list = (page.match(/id="HF_MatchesList" value="([^"]*)"/) || [])[1];
 console.log("HF_MatchesList:", list);
-const neg = await (await fetch(`${BASE}/negotiate?clientProtocol=2.1&connectionData=${cd}`, { headers: UA })).json();
+const nr = await fetch(`${BASE}/negotiate?clientProtocol=2.1&connectionData=${cd}&_=${Date.now()}`, { headers: UA }); const nt = await nr.text(); console.log("neg status", nr.status, nt.slice(0,300)); const neg = JSON.parse(nt);
 console.log("negotiate:", JSON.stringify(neg).slice(0, 200));
 const tok = encodeURIComponent(neg.ConnectionToken);
 const q = `transport=longPolling&clientProtocol=2.1&connectionToken=${tok}&connectionData=${cd}`;

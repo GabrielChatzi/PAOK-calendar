@@ -2,6 +2,7 @@
 //   koe: πόλο, ελληνικά πρωταθλήματα (live.koe.org.gr, Microplus· το ίδιο δείχνει το waterpololeague.gr)
 //   ea:  πόλο, ευρωπαϊκά κύπελλα (European Aquatics, Microplus)
 //   dp:  βόλεϊ, Data Project (ΕΟΠΕ: eope-web, Volley League ανδρών: hvl-web), μέσω SignalR
+//   gs:  μπάσκετ, Genius Sports / FIBA LiveStats (Basket League, όπως το esake.gr)
 // Οι πηγές δεν δέχονται αιτήματα από browsers (CORS) ή δίνουν πολύ περισσότερα από έναν αγώνα,
 // γι' αυτό τις διαβάζουμε από εδώ. Η απάντηση κρατιέται 15'' στο CDN της Vercel, όσοι κι αν τη ζητούν.
 //
@@ -13,7 +14,7 @@
 const KOE = "https://live.koe.org.gr/api-waterpolo/wp";
 const EA = "https://ea.microplustimingservices.com/api/wp";
 const UA = "Mozilla/5.0 (PAOKalendar live; +https://paokalendar.vercel.app)";
-const ID = /^[A-Za-z0-9_-]{1,24}$/;  // και ημερομηνίες (2026-10-31)
+const ID = /^[A-Za-z0-9_-]{1,40}$/;  // και ημερομηνίες (2026-10-31)
 
 const tokens = {};  // ανά πηγή: { value, until }
 
@@ -138,6 +139,74 @@ async function dp(p) {
   };
 }
 
+// ---- Μπάσκετ: Genius Sports (FIBA LiveStats), όπως το esake.gr. Τον αγώνα της ημέρας τον βρίσκουμε
+// στο widget της διοργάνωσης (κοντινοί αγώνες με κωδικούς), τα στοιχεία από το data.json του αγώνα.
+const GS_WIDGET = "https://widget.wh.geniussports.com/widget//?";
+const GS_DATA = "https://fibalivestats.dcd.shared.geniussports.com/data/";
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const gsFound = {};  // «κλειδί|ημέρα» → κωδικός αγώνα
+
+async function gsMatches(key) {
+  const r = await fetch(GS_WIDGET + key, { headers: { "User-Agent": UA, Referer: "https://www.esake.gr/" } });
+  const js = await r.text();
+  const raw = (js.match(/var html = "([\s\S]*?)";\n/) || [])[1];
+  if (!raw) throw new Error("άγνωστη μορφή widget");
+  const html = JSON.parse(`"${raw}"`);
+  return [...html.matchAll(/<li class="spls_lsmatch[^"]*">([\s\S]*?)<\/li>/g)].map(([, li]) => ({
+    id: (li.match(/webcast\/\w+\/(\d+)/) || [])[1],
+    status: ((li.match(/spls_matchstatus">([^<]*)/) || [])[1] || "").trim(),
+    date: ((li.match(/spls_datefield">([^<]*)/) || [])[1] || "").trim(),
+    teams: [...li.matchAll(/teamname">([^<]*)/g)].map((x) => x[1].trim()),
+  })).filter((x) => x.id);
+}
+
+async function gs(p) {
+  const d = new Date(`${p.day}T12:00:00Z`);
+  const dayText = `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
+  const list = await gsMatches(p.key);
+  let id = gsFound[`${p.key}|${p.day}`];
+  let row = id && list.find((x) => x.id === id);
+  if (!row) {
+    // Οι αγώνες σε εξέλιξη δείχνουν περίοδο αντί για ημερομηνία· γι' αυτό μπαίνουν κι αυτοί.
+    const today = new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Athens" });
+    const cands = list.filter((x) => x.date === dayText || (p.day === today && /live/i.test(x.status)));
+    for (const c of cands) {
+      const j = await getJson(`${GS_DATA}${c.id}/data.json`).catch(() => null);
+      if (j && (PAOK.test(j.tm?.["1"]?.name || "") || PAOK.test(j.tm?.["2"]?.name || ""))) { row = c; break; }
+    }
+    if (!row) throw new Error("ο αγώνας δεν βρέθηκε στη Genius Sports");
+    gsFound[`${p.key}|${p.day}`] = row.id;
+  }
+  const j = (await getJson(`${GS_DATA}${row.id}/data.json`).catch(() => null)) || {};
+  const pbp = Array.isArray(j.pbp) ? j.pbp : [];  // τα πιο πρόσφατα πρώτα
+  const ended = pbp.some((a) => a.actionType === "game" && a.subType === "end");
+  let state = /final/i.test(row.status) || ended ? "post" : /live/i.test(row.status) || pbp.length ? "in" : "pre";
+  const flip = p.side && PAOK.test(j.tm?.["1"]?.name || "") !== (p.side === "h");
+  const A = flip ? "2" : "1", B = flip ? "1" : "2";
+  const period = num(j.period) || 0;
+  const periodEnded = pbp[0]?.actionType === "period" && pbp[0]?.subType === "end";
+  // Σκορ ανά περίοδο από το play-by-play: το τελευταίο σκορ κάθε περιόδου, μείον της προηγούμενης.
+  const last = {};
+  for (let i = pbp.length - 1; i >= 0; i--) {
+    const a = pbp[i], n = num(a.period);
+    if (n) last[n] = [num(a.s1) || 0, num(a.s2) || 0];
+  }
+  const quarters = [];
+  let prev = [0, 0];
+  for (let n = 1; n <= Math.max(4, period); n++) {
+    const cur = last[n];
+    quarters.push(cur ? { home: cur[A === "1" ? 0 : 1] - prev[A === "1" ? 0 : 1], away: cur[A === "1" ? 1 : 0] - prev[A === "1" ? 1 : 0] } : { home: "", away: "" });
+    if (cur) prev = cur;
+  }
+  return {
+    state, home: num(j.tm?.[A]?.score) ?? 0, away: num(j.tm?.[B]?.score) ?? 0,
+    quarter: state === "in" ? period : 0,
+    done: state === "post" ? period : periodEnded ? period : Math.max(0, period - 1),
+    clock: state === "in" && !periodEnded ? String(j.clock || "") : "",
+    quarters: state === "pre" ? [] : quarters,
+  };
+}
+
 async function ea(p) {
   if (!/^EACLUB\d\d$/.test(p.code || "")) throw new Error("λάθος κωδικός");
   const d = await getJson(`${EA}/${p.code}/get/schedule/*/*/*/*/*`, { Authorization: `Bearer ${await token("ea")}` });
@@ -155,15 +224,15 @@ async function ea(p) {
 export default async function handler(req, res) {
   const q = req.query || {};
   const p = {};
-  for (const k of ["src", "code", "cat", "gara", "tur", "gru", "a", "b", "fed", "id", "day", "side"]) {
+  for (const k of ["src", "code", "cat", "gara", "tur", "gru", "a", "b", "fed", "id", "day", "side", "key"]) {
     if (q[k] == null) continue;
     if (!ID.test(String(q[k]))) return res.status(400).json({ error: `λάθος ${k}` });
     p[k] = String(q[k]);
   }
   const need = p.src === "koe" ? ["cat", "gara", "tur", "gru", "a", "b"] : p.src === "ea" ? ["code", "cat", "gara", "tur", "a", "b"]
-    : p.src === "dp" ? ["fed", p.id ? "id" : "day"] : null;
+    : p.src === "dp" ? ["fed", p.id ? "id" : "day"] : p.src === "gs" ? ["key", "day"] : null;
   if (!need || need.some((k) => !p[k])) return res.status(400).json({ error: "λάθος αγώνας" });
-  const run = () => (p.src === "koe" ? koe(p) : p.src === "dp" ? dp(p) : ea(p));
+  const run = () => (p.src === "koe" ? koe(p) : p.src === "dp" ? dp(p) : p.src === "gs" ? gs(p) : ea(p));
   try {
     // Αν έληξε το token νωρίτερα από ό,τι περιμέναμε, παίρνουμε νέο και ξαναδοκιμάζουμε μία φορά.
     const out = await run().catch((e) => {

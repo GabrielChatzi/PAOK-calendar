@@ -59,7 +59,7 @@ SECTIONS = {
                  "liveNote": "Έναρξη, κάθε γκολ, ημίχρονο και τελικό (Super League και Ευρώπη)"},
     "football-women": {"emoji": "⚽", "name": "Ποδόσφαιρο Γυναικών", "sport": "Ποδόσφαιρο", "women": True},
     "basketball": {"emoji": "🏀", "name": "Μπάσκετ", "sport": "Μπάσκετ", "women": False, "live": True,
-                   "liveNote": "Έναρξη, τέλος κάθε περιόδου και τελικό (EuroCup)"},
+                   "liveNote": "Έναρξη, τέλος κάθε περιόδου και τελικό (Basket League και EuroCup)"},
     "basketball-women": {"emoji": "🏀", "name": "Μπάσκετ Γυναικών", "sport": "Μπάσκετ", "women": True},
     "volley": {"emoji": "🏐", "name": "Βόλεϊ", "sport": "Βόλεϊ", "women": False, "live": True,
                "liveNote": "Έναρξη, τέλος κάθε σετ και τελικό (πρωτάθλημα και κύπελλα Ελλάδας)"},
@@ -802,6 +802,19 @@ def volley_live(section: str, matches: list[Match]) -> None:
             m.live = {"src": "dp", "fed": "hvl", "day": m.day.isoformat(), "side": side}
 
 
+# Το widget της Genius Sports που έχει το esake.gr (Basket League)· από εκεί και το live.
+GS_BASKET_LEAGUE = "RFJIN037I07QV520B7WEXKV1GYNA31"
+
+
+def basket_league_live(matches: list[Match]) -> None:
+    """Live Basket League από τη Genius Sports (api/live.js βρίσκει τον αγώνα της ημέρας)."""
+    today = dt.datetime.now(ATHENS).date()
+    for m in matches:
+        if m.score or not m.time or m.live or "-esake-" not in m.uid or not -1 <= (m.day - today).days <= 10:
+            continue
+        m.live = {"src": "gs", "key": GS_BASKET_LEAGUE, "day": m.day.isoformat(), "side": "h" if m.paok_home else "a"}
+
+
 # Η συντομότερη διάρκεια ενός αγώνα ανά τμήμα (λεπτά από την έναρξη, με τα διαλείμματα). Νωρίτερα
 # δεν δεχόμαστε σκορ ως τελικό, όποια πηγή κι αν το δίνει (βλ. main).
 MIN_DURATION = {
@@ -1464,6 +1477,8 @@ def main(only: list[str] | None = None) -> int:
                 m.score = ""
         if key in ("volley", "volley-women"):
             volley_live(key, unique)
+        if key == "basketball":
+            basket_league_live(unique)
         info = SECTIONS[key]
         for side, label, keep in (("home", "Εντός έδρας", True), ("away", "Εκτός έδρας", False)):
             subset = [m for m in unique if m.paok_home == keep]

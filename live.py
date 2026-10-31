@@ -144,8 +144,8 @@ def waterpolo_state(live: dict) -> dict:
 
 
 SOURCES = {"espn": espn_state, "euroleague": euroleague_state, "koe": waterpolo_state, "ea": waterpolo_state,
-           "dp": waterpolo_state}
-PERIOD_SOURCES = ("euroleague", "koe", "ea", "dp")
+           "dp": waterpolo_state, "gs": waterpolo_state}
+PERIOD_SOURCES = ("euroleague", "koe", "ea", "dp", "gs")
 
 
 # ---------------------------------------------------------------- γεγονότα
@@ -192,7 +192,7 @@ def events(m: dict, old: dict | None, new: dict) -> list[tuple[str, str]]:
             out.append((f"{e} Τέλος {d_new}ου σετ{detail}: {m['home']} {new['home']}–{new['away']} {m['away']}", comp))
     elif m["live"]["src"] in PERIOD_SOURCES and new["state"] == "in" and old["state"] == "in":
         d_old, d_new = old.get("done"), new.get("done")
-        waterpolo = m["live"]["src"] != "euroleague"
+        waterpolo = m["live"]["src"] in ("koe", "ea")
         # Μετά την 4η, αν το σκορ δεν είναι ισόπαλο, έρχεται το «Τελικό» αντί για «Τέλος περιόδου».
         if d_old is not None and d_new is not None and d_new > d_old and not (d_new >= 4 and new["home"] != new["away"]):
             what = ("Ημίχρονο" if d_new == 2 else

@@ -184,7 +184,10 @@ async function gs(p) {
   const flip = p.side && PAOK.test(j.tm?.["1"]?.name || "") !== (p.side === "h");
   const A = flip ? "2" : "1", B = flip ? "1" : "2";
   const period = num(j.period) || 0;
-  const periodEnded = pbp[0]?.actionType === "period" && pbp[0]?.subType === "end";
+  // Η περίοδος τελείωσε μόνο αν η τελευταία ενέργεια είναι το τέλος *αυτής* της περιόδου: στην αρχή της
+  // επόμενης, το data.json δείχνει ήδη τη νέα περίοδο ενώ η τελευταία ενέργεια είναι ακόμα το τέλος της
+  // προηγούμενης (έτσι βγήκε «Τέλος 3ης» μόλις ξεκίνησε η 3η).
+  const periodEnded = pbp[0]?.actionType === "period" && pbp[0]?.subType === "end" && num(pbp[0]?.period) === period;
   // Σκορ ανά περίοδο από το play-by-play: το τελευταίο σκορ κάθε περιόδου, μείον της προηγούμενης.
   const last = {};
   for (let i = pbp.length - 1; i >= 0; i--) {

@@ -1373,7 +1373,7 @@
           "<p>Μέχρι να αποθηκευτούν, δεν θα έρχονται οι ειδοποιήσεις που διάλεξες. Η εφαρμογή ξαναδοκιμάζει μόνη της κάθε φορά που ανοίγει.</p>" +
           '<div class="actions"><button type="button" class="btn solid" data-act="push-retry">Δοκίμασε ξανά τώρα</button></div></div>'
         : '<p class="help">Έλεγχος με τον server…</p>';
-    return line + '<div class="actions"><button type="button" class="btn" data-act="push-test">Στείλε μου δοκιμαστική ειδοποίηση</button></div>';
+    return line;
   }
   function b64key(str) {
     var bin = atob(str.replace(/-/g, "+").replace(/_/g, "/")), out = new Uint8Array(bin.length);
@@ -1531,7 +1531,8 @@
       "<p>Διάλεξε για ποια τμήματα και τι θέλεις να μαθαίνεις. Οι ειδοποιήσεις έρχονται σε αυτή τη συσκευή, χωρίς λογαριασμό, και τις αλλάζεις όποτε θέλεις.</p>" +
       pushNoteHtml() + serverStatusHtml() +
       (isAdmin() && st === "on" ? "<h3>Διαχειριστής</h3>" + '<ul class="notify">' + switchRow(["s:ops:live"], "Ειδοποιήσεις λειτουργίας",
-        "Όταν κάτι σταματήσει να δουλεύει: έλεγχοι, live, αποθήκευση επιλογών, ανεβάσματα") + "</ul>" : "") +
+        "Όταν κάτι σταματήσει να δουλεύει: έλεγχοι, live, αποθήκευση επιλογών, ανεβάσματα") + "</ul>" +
+        '<div class="actions"><button type="button" class="btn" data-act="push-test">Στείλε μου δοκιμαστική ειδοποίηση</button></div>' : "") +
       '<ul class="kinds-legend">' + PUSH_KINDS.map(function (k) {
         return "<li><b>" + k[1] + ":</b> " + KIND_INFO[k[0]][1].charAt(0).toLowerCase() + KIND_INFO[k[0]][1].slice(1) +
           (k[0] === "live" ? " (ποδόσφαιρο, μπάσκετ, βόλεϊ και πόλο)" : "") + "</li>";

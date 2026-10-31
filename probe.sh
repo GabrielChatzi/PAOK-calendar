@@ -2,7 +2,16 @@
 mkdir -p docs; touch docs/.keep
 UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
 curl -sS -m 30 -A "$UA" "https://live.koe.org.gr/waterpolo/main.4211092d4684fb4c.js" -o /tmp/j.js
-echo "== json files"; grep -oE '"[^"]{0,60}\.json[^"]{0,20}"' /tmp/j.js | sort -u | head
-echo "== x-wp-token ctx"; grep -oE '.{0,700}nomeHeader\(\)\{return"x-wp-token"\}.{0,900}' /tmp/j.js | head -3
-echo "== competitionCode"; grep -oE '.{0,200}competitionCode=.{0,200}' /tmp/j.js | head -4
-for f in assets/config.json assets/apiconfig.json config.json apiconfig.json assets/config/config.json; do echo "-- $f"; curl -sS -m 20 -A "$UA" "https://live.koe.org.gr/waterpolo/$f" | head -c 400; echo; done
+python3 - <<'PY'
+import re
+s=open('/tmp/j.js',encoding='utf-8',errors='replace').read()
+def ctx(pat, n=3, w=500):
+    print("=====", pat)
+    for m in list(re.finditer(pat, s))[:n]:
+        print(s[max(0,m.start()-w):m.end()+w]); print("--")
+print(sorted(set(re.findall(r'"([^"]{0,60}\.json[^"]{0,20})"', s))))
+ctx(r'nomeHeader\(\)', 1, 1200)
+ctx(r'competitionCode\s*=', 3, 300)
+ctx(r'"/wp/', 3, 300)
+PY
+for f in assets/config.json config.json assets/api_config.json; do echo "-- $f"; curl -sS -m 20 -A "$UA" "https://live.koe.org.gr/waterpolo/$f" | head -c 300; echo; done

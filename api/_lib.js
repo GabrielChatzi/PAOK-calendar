@@ -60,7 +60,7 @@ export async function subs() {
 }
 
 export function subId(endpoint) {
-  return crypto.crypto.createHash("sha256").update(endpoint).digest("hex").slice(0, 32);
+  return crypto.createHash("sha256").update(endpoint).digest("hex").slice(0, 32);
 }
 
 export function validSubscription(sub) {

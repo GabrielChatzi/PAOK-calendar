@@ -33,6 +33,8 @@ export default async function handler(req, res) {
     body: String(body.body || "").slice(0, 300),
     url: String(body.url || "/").slice(0, 200),
     tag: body.tag ? String(body.tag).slice(0, 64) : undefined,
+    // quiet: αν υπάρχει ήδη ειδοποίηση με το ίδιο tag, την αντικαθιστά χωρίς νέο ήχο.
+    quiet: body.quiet ? true : undefined,
   };
 
   const col = await subs();

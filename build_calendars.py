@@ -254,7 +254,8 @@ def volley_rows() -> tuple[str, list[dict]]:
         rows.append({
             "date": date_s, "time": time_s, "venue": venue, "home": home, "away": away,
             "home_logo": absolute(url, home_logo), "away_logo": absolute(url, away_logo),
-            "score": "" if score in ("0-0", "-", "") else parse_score(score),
+            # Στο βόλεϊ τελικό είναι μόνο το σκορ με 3 σετ για κάποια ομάδα· αλλιώς ο αγώνας παίζεται.
+            "score": parse_score(score) if re.fullmatch(r"3-[0-2]|[0-2]-3", parse_score(score)) else "",
             "heading": heading_at(m.start()),
         })
     return url, rows
@@ -781,6 +782,15 @@ KOE_LIVE_RE = re.compile(r"live\.koe\.org\.gr/waterpolo/#/match-details/(?:resul
                          r"([A-Z0-9]+)/(\d+)/([A-Z0-9]+)/(\d+)/(\d+)/(\d+)")
 
 
+# Η συντομότερη διάρκεια ενός αγώνα ανά τμήμα (λεπτά από την έναρξη, με τα διαλείμματα). Νωρίτερα
+# δεν δεχόμαστε σκορ ως τελικό, όποια πηγή κι αν το δίνει (βλ. main).
+MIN_DURATION = {
+    "football": 105, "football-women": 105, "basketball": 95, "basketball-women": 90,
+    "volley": 60, "volley-women": 60, "handball": 80, "handball-women": 80,
+    "waterpolo": 55, "waterpolo-women": 55, "futsal": 70,
+}
+
+
 def koe_live(url: str) -> dict | None:
     try:
         m = KOE_LIVE_RE.search(fetch(url))
@@ -1123,7 +1133,7 @@ def cev_matches(section: str) -> list[Match]:
                     start = dt.datetime(day.year, day.month, day.day, int(when.group(4)), int(when.group(5)), tzinfo=tz).astimezone(ATHENS)
                     day, time = start.date(), start.time()
                 sets = (spans.get("LB_SetCasa", "0"), spans.get("LB_SetOspiti", "0"))
-                done = sets != ("0", "0") and day < dt.date.today() + dt.timedelta(days=1)
+                done = "3" in sets and day < dt.date.today() + dt.timedelta(days=1)  # 3 σετ = τέλος
                 leg_name = legs.get((view, leg_no)) or ""
                 round_name = CEV_ROUNDS.get(round_of.get(view, ""), round_of.get(view, ""))
                 out[mid] = Match(
@@ -1424,11 +1434,12 @@ def main(only: list[str] | None = None) -> int:
         except Exception as e:
             print(f"  ! ΑΣ ΠΑΟΚ / {key}: {e}", file=sys.stderr)
         carry_uids(prev_by_section[key], unique)
-        # Κανένα άθλημα δεν τελειώνει σε λιγότερο από 50 λεπτά: σκορ πιο νωρίς είναι το τρέχον
-        # ενός αγώνα σε εξέλιξη (κάποιες πηγές το δείχνουν στη θέση του τελικού), όχι αποτέλεσμα.
+        # Σκορ πριν από τη συντομότερη δυνατή διάρκεια του αθλήματος είναι το τρέχον ενός αγώνα σε
+        # εξέλιξη (κάποιες πηγές το δείχνουν στη θέση του τελικού), όχι αποτέλεσμα.
         now = dt.datetime.now(ATHENS)
+        shortest = dt.timedelta(minutes=MIN_DURATION.get(key, 60))
         for m in unique:
-            if m.score and m.time and m.start() > now - dt.timedelta(minutes=50):
+            if m.score and m.time and m.start() > now - shortest:
                 print(f"  σκορ αγώνα σε εξέλιξη, όχι τελικό: {m.home} – {m.away} {m.score}")
                 m.score = ""
         info = SECTIONS[key]

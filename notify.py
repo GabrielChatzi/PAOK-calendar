@@ -86,7 +86,8 @@ def _oidc_token() -> str | None:
     return _oidc["token"]
 
 
-def _push(topics: list[str], title: str, message: str, url: str, tag: str | None = None) -> None:
+def _push(topics: list[str], title: str, message: str, url: str, tag: str | None = None,
+          quiet: bool = False) -> None:
     """Ειδοποίηση web push σε όσες συσκευές έχουν γραφτεί σε κάποιο από τα θέματα (μία φορά στην καθεμία)."""
     if not enabled():
         print(f"  (χωρίς αποστολή) push {','.join(topics)}: {title} | {message}")
@@ -96,7 +97,7 @@ def _push(topics: list[str], title: str, message: str, url: str, tag: str | None
         if not token:
             print("  ! push: λείπει το OIDC token (permissions: id-token: write)", file=sys.stderr)
             return
-        body = {"topics": topics, "title": title, "body": message, "url": url, "tag": tag}
+        body = {"topics": topics, "title": title, "body": message, "url": url, "tag": tag, "quiet": quiet}
         req = urllib.request.Request(SITE + "api/push", data=json.dumps(body).encode(), method="POST",
                                      headers={"Content-Type": "application/json", "Authorization": f"Bearer {token}"})
         with urllib.request.urlopen(req, timeout=60) as r:
@@ -107,7 +108,7 @@ def _push(topics: list[str], title: str, message: str, url: str, tag: str | None
 
 
 def send(section: str, kind: str, title: str, message: str, match: dict | None = None,
-         to_match: bool = True, also_match_kinds: tuple[str, ...] = ()) -> None:
+         to_match: bool = True, also_match_kinds: tuple[str, ...] = (), tag: str | None = None) -> None:
     """Στέλνει σε όσους ακολουθούν το τμήμα και, αν δοθεί αγώνας, σε όσους ακολουθούν τον αγώνα.
 
     to_match: αν πηγαίνει και στο ίδιο είδος του αγώνα.
@@ -118,8 +119,10 @@ def send(section: str, kind: str, title: str, message: str, match: dict | None =
     topics = [f"s:{section}:{kind}"] + [f"m:{match['nt']}:{k}" for k in kinds]
     url = f"/#/m/{match['nt']}" if has_match else f"/#/{section}"
     # Ίδιο tag για το ίδιο γεγονός: αν φτάσει δύο φορές, η δεύτερη αντικαθιστά την πρώτη.
-    tag = f"{match['nt']}-{kind}" if has_match and kind != "live" else None
-    _push(list(dict.fromkeys(topics)), title, message, url, tag)
+    # Το τελικό μπορεί να έρθει και από το live.py και από την ενημέρωση (ίδιο tag «<αγώνας>-result»):
+    # η δεύτερη φορά αντικαθιστά την πρώτη χωρίς νέο ήχο.
+    tag = tag or (f"{match['nt']}-{kind}" if has_match and kind != "live" else None)
+    _push(list(dict.fromkeys(topics)), title, message, url, tag, quiet=kind == "result")
 
 
 def changes(previous: list[dict], current: list[dict], sections: set[str]) -> list[tuple]:
@@ -166,9 +169,9 @@ def changes(previous: list[dict], current: list[dict], sections: set[str]) -> li
 
 def send_changes(previous: list[dict], current: list[dict], sections: set[str]) -> None:
     for sec, kind, title, message, m in changes(previous, current, sections):
-        # Για αγώνες με live, το τελικό σε όσους ακολουθούν τον αγώνα το στέλνει ήδη το live.py.
-        to_match = not (kind == "result" and m.get("live"))
-        send(sec, kind, title, message, match=m, to_match=to_match)
+        # Το τελικό πηγαίνει πάντα και σε όσους ακολουθούν τον αγώνα, ακόμα κι αν το έστειλε ήδη το
+        # live.py (π.χ. αν δεν έτρεχε): με το ίδιο tag, η συσκευή κρατά μία ειδοποίηση.
+        send(sec, kind, title, message, match=m)
 
 
 def live_window(m: dict, now: dt.datetime) -> bool:

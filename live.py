@@ -231,7 +231,8 @@ def main() -> int:
                 final = old is not None and old["state"] != "post" and new["state"] == "post" and "Τελικό" in title
                 # Το τελικό πηγαίνει και στο θέμα «result» του αγώνα.
                 notify.send(m["section"], "live", title, message, match=m,
-                            also_match_kinds=("result",) if final else ())
+                            also_match_kinds=("result",) if final else (),
+                            tag=f"{m['nt']}-result" if final else None)
             if old is None or (old["state"], old["home"], old["away"]) != (new["state"], new["home"], new["away"]):
                 print(f"{now:%H:%M} {m['home']} – {m['away']}: {new['state']} {new['home']}-{new['away']} {new.get('detail', '')}")
             states[m["uid"]] = new

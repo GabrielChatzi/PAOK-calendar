@@ -110,7 +110,7 @@ self.addEventListener("push", (event) => {
   };
   if (data.tag) {
     options.tag = data.tag;
-    options.renotify = true;
+    options.renotify = !data.quiet;
   }
   event.waitUntil(self.registration.showNotification(data.title || "PAOKalendar", options));
 });

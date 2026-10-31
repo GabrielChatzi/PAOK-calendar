@@ -227,6 +227,10 @@ def main() -> int:
             old = states.get(m["uid"])
             if m["live"]["src"] == "euroleague":
                 track_periods(old, new)
+            # Το «Τελικό» μόνο αν το δούμε σε δύο συνεχόμενες αναγνώσεις: οι πηγές δείχνουν καμιά
+            # φορά για λίγο τέλος αγώνα σε διάλειμμα (π.χ. η ΚΟΕ μετά την 3η περίοδο).
+            if new["state"] == "post" and old and old["state"] != "post" and not old.get("post_seen"):
+                new = dict(old, post_seen=True)
             for title, message in events(m, old, new):
                 final = old is not None and old["state"] != "post" and new["state"] == "post" and "Τελικό" in title
                 # Το τελικό πηγαίνει και στο θέμα «result» του αγώνα.

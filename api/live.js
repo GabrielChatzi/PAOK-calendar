@@ -61,6 +61,13 @@ async function koe(p) {
   // q: 4 περίοδοι και τα πέναλτι, η καθεμία με σκορ (r1, r2), κατάσταση st (0/1/2) και χρόνο tg.
   const q = Array.isArray(j.q) ? j.q : [];
   const st = q.map((x) => String(x?.st ?? "0"));
+  // Στα διαλείμματα η ΚΟΕ σημειώνει μερικές φορές την επόμενη περίοδο «τελειωμένη» με 0–0 πριν
+  // καν αρχίσει. Τελειωμένη περίοδος 0–0 χωρίς καμία μετά της μετράμε ως μη παιγμένη.
+  for (let i = st.length - 1; i >= 0; i--) {
+    if (st[i] === "0") continue;
+    if (st[i] === "2" && num(q[i]?.r1) === 0 && num(q[i]?.r2) === 0) st[i] = "0";
+    break;
+  }
   const home = num(j.r1) ?? 0, away = num(j.r2) ?? 0;
   const running = st.indexOf("1");
   const done = st.slice(0, 4).filter((s) => s === "2").length;

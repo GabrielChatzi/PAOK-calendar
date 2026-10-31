@@ -46,7 +46,8 @@ jobs:
       - name: Μεταβιβάσεις
         if: always()
         continue-on-error: true
-        run: curl -fsS -X POST "https://paokalendar.vercel.app/api/tx?a=tick" -H "Content-Type: application/json" -d "{}"
+        run: |
+          curl -fsS -X POST "https://paokalendar.vercel.app/api/tx?a=tick" -H "Content-Type: application/json" -d "{}"
 
       # Όταν ένας αγώνας έχει (σχεδόν) τελειώσει και δεν έχουμε το αποτέλεσμα, ανανεώνουμε το
       # πρόγραμμα κάθε 15 λεπτά αντί για κάθε 2 ώρες, ώσπου να βγει (το πολύ 6 ώρες μετά την έναρξη).

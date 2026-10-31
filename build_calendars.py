@@ -59,10 +59,12 @@ SECTIONS = {
                  "liveNote": "Έναρξη, κάθε γκολ, ημίχρονο και τελικό (Super League και Ευρώπη)"},
     "football-women": {"emoji": "⚽", "name": "Ποδόσφαιρο Γυναικών", "sport": "Ποδόσφαιρο", "women": True},
     "basketball": {"emoji": "🏀", "name": "Μπάσκετ", "sport": "Μπάσκετ", "women": False, "live": True,
-                   "liveNote": "Έναρξη, τέλος κάθε περιόδου και τελικό (EuroCup)"},
+                   "liveNote": "Έναρξη, τέλος κάθε περιόδου και τελικό (Basket League και EuroCup)"},
     "basketball-women": {"emoji": "🏀", "name": "Μπάσκετ Γυναικών", "sport": "Μπάσκετ", "women": True},
-    "volley": {"emoji": "🏐", "name": "Βόλεϊ", "sport": "Βόλεϊ", "women": False},
-    "volley-women": {"emoji": "🏐", "name": "Βόλεϊ Γυναικών", "sport": "Βόλεϊ", "women": True},
+    "volley": {"emoji": "🏐", "name": "Βόλεϊ", "sport": "Βόλεϊ", "women": False, "live": True,
+               "liveNote": "Έναρξη, τέλος κάθε σετ και τελικό (πρωτάθλημα και κύπελλα Ελλάδας)"},
+    "volley-women": {"emoji": "🏐", "name": "Βόλεϊ Γυναικών", "sport": "Βόλεϊ", "women": True, "live": True,
+                     "liveNote": "Έναρξη, τέλος κάθε σετ και τελικό (πρωτάθλημα και κύπελλο Ελλάδας)"},
     "handball": {"emoji": "🤾", "name": "Χάντμπολ", "sport": "Χάντμπολ", "women": False},
     "handball-women": {"emoji": "🤾", "name": "Χάντμπολ Γυναικών", "sport": "Χάντμπολ", "women": True},
     "waterpolo": {"emoji": "🤽", "name": "Πόλο", "sport": "Πόλο", "women": False, "live": True,
@@ -254,7 +256,8 @@ def volley_rows() -> tuple[str, list[dict]]:
         rows.append({
             "date": date_s, "time": time_s, "venue": venue, "home": home, "away": away,
             "home_logo": absolute(url, home_logo), "away_logo": absolute(url, away_logo),
-            "score": "" if score in ("0-0", "-", "") else parse_score(score),
+            # Στο βόλεϊ τελικό είναι μόνο το σκορ με 3 σετ για κάποια ομάδα· αλλιώς ο αγώνας παίζεται.
+            "score": parse_score(score) if re.fullmatch(r"3-[0-2]|[0-2]-3", parse_score(score)) else "",
             "heading": heading_at(m.start()),
         })
     return url, rows
@@ -781,6 +784,46 @@ KOE_LIVE_RE = re.compile(r"live\.koe\.org\.gr/waterpolo/#/match-details/(?:resul
                          r"([A-Z0-9]+)/(\d+)/([A-Z0-9]+)/(\d+)/(\d+)/(\d+)")
 
 
+def volley_live(section: str, matches: list[Match]) -> None:
+    """Live βόλεϊ από τη Data Project (api/live.js) για τους ελληνικούς αγώνες που δεν έχουν παιχτεί.
+
+    Αγώνες της ΕΟΠΕ (eope-web) έχουν δικό τους κωδικό στο uid· για τους υπόλοιπους (Volley League
+    ανδρών, League Cup) η function βρίσκει τον αγώνα του ΠΑΟΚ εκείνης της μέρας στο hvl-web.
+    """
+    today = dt.datetime.now(ATHENS).date()
+    for m in matches:
+        if m.score or not m.time or m.live or "-cev-" in m.uid or not -1 <= (m.day - today).days <= 10:
+            continue
+        side = "h" if m.paok_home else "a"
+        dp_id = re.search(r"-dp\d+-(\d+)$", m.uid)
+        if dp_id:
+            m.live = {"src": "dp", "fed": "eope", "id": dp_id.group(1), "side": side}
+        elif section == "volley":
+            m.live = {"src": "dp", "fed": "hvl", "day": m.day.isoformat(), "side": side}
+
+
+# Το widget της Genius Sports που έχει το esake.gr (Basket League)· από εκεί και το live.
+GS_BASKET_LEAGUE = "RFJIN037I07QV520B7WEXKV1GYNA31"
+
+
+def basket_league_live(matches: list[Match]) -> None:
+    """Live Basket League από τη Genius Sports (api/live.js βρίσκει τον αγώνα της ημέρας)."""
+    today = dt.datetime.now(ATHENS).date()
+    for m in matches:
+        if m.score or not m.time or m.live or "-esake-" not in m.uid or not -1 <= (m.day - today).days <= 10:
+            continue
+        m.live = {"src": "gs", "key": GS_BASKET_LEAGUE, "day": m.day.isoformat(), "side": "h" if m.paok_home else "a"}
+
+
+# Η συντομότερη διάρκεια ενός αγώνα ανά τμήμα (λεπτά από την έναρξη, με τα διαλείμματα). Νωρίτερα
+# δεν δεχόμαστε σκορ ως τελικό, όποια πηγή κι αν το δίνει (βλ. main).
+MIN_DURATION = {
+    "football": 105, "football-women": 105, "basketball": 95, "basketball-women": 90,
+    "volley": 60, "volley-women": 60, "handball": 80, "handball-women": 80,
+    "waterpolo": 55, "waterpolo-women": 55, "futsal": 70,
+}
+
+
 def koe_live(url: str) -> dict | None:
     try:
         m = KOE_LIVE_RE.search(fetch(url))
@@ -816,7 +859,8 @@ def waterpolo_matches(section: str) -> list[Match]:
         time_text = next((d for d in info_divs if re.fullmatch(r"\d{1,2}:\d{2}", d)), "")
         score = re.search(r'sm:block">\s*<div[^>]*>(.*?)</div>', block, re.S)
         day = dt.date(int(dm.group(3)), month, int(dm.group(1)))
-        score_text = parse_score(clean(score.group(1))) if score else ""
+        # Σε αγώνα σε εξέλιξη το ίδιο σημείο δείχνει «LIVE» και το τρέχον σκορ: δεν είναι τελικό.
+        score_text = parse_score(clean(score.group(1))) if score and "LIVE" not in score.group(0) else ""
         # Live μόνο για τους κοντινούς αγώνες (μία σελίδα ανά αγώνα).
         live = koe_live(link) if not score_text and -1 <= (day - dt.datetime.now(ATHENS).date()).days <= 10 else None
         out.append(Match(
@@ -1122,7 +1166,7 @@ def cev_matches(section: str) -> list[Match]:
                     start = dt.datetime(day.year, day.month, day.day, int(when.group(4)), int(when.group(5)), tzinfo=tz).astimezone(ATHENS)
                     day, time = start.date(), start.time()
                 sets = (spans.get("LB_SetCasa", "0"), spans.get("LB_SetOspiti", "0"))
-                done = sets != ("0", "0") and day < dt.date.today() + dt.timedelta(days=1)
+                done = "3" in sets and day < dt.date.today() + dt.timedelta(days=1)  # 3 σετ = τέλος
                 leg_name = legs.get((view, leg_no)) or ""
                 round_name = CEV_ROUNDS.get(round_of.get(view, ""), round_of.get(view, ""))
                 out[mid] = Match(
@@ -1423,6 +1467,18 @@ def main(only: list[str] | None = None) -> int:
         except Exception as e:
             print(f"  ! ΑΣ ΠΑΟΚ / {key}: {e}", file=sys.stderr)
         carry_uids(prev_by_section[key], unique)
+        # Σκορ πριν από τη συντομότερη δυνατή διάρκεια του αθλήματος είναι το τρέχον ενός αγώνα σε
+        # εξέλιξη (κάποιες πηγές το δείχνουν στη θέση του τελικού), όχι αποτέλεσμα.
+        now = dt.datetime.now(ATHENS)
+        shortest = dt.timedelta(minutes=MIN_DURATION.get(key, 60))
+        for m in unique:
+            if m.score and m.time and m.start() > now - shortest:
+                print(f"  σκορ αγώνα σε εξέλιξη, όχι τελικό: {m.home} – {m.away} {m.score}")
+                m.score = ""
+        if key in ("volley", "volley-women"):
+            volley_live(key, unique)
+        if key == "basketball":
+            basket_league_live(unique)
         info = SECTIONS[key]
         for side, label, keep in (("home", "Εντός έδρας", True), ("away", "Εκτός έδρας", False)):
             subset = [m for m in unique if m.paok_home == keep]

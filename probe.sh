@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
-cat > /tmp/t.mjs <<'JS'
-import handler from "/home/runner/work/PAOK-calendar/PAOK-calendar/api/live.js";
-for (const q of [{ src: "gs", key: "RFJIN037I07QV520B7WEXKV1GYNA31", day: "2026-10-31", side: "a" }, { src: "gs", key: "RFJIN037I07QV520B7WEXKV1GYNA31", day: "2026-11-01", side: "h" }]) {
-  await new Promise((done) => handler({ query: q }, { setHeader() {}, status(c) { this.c = c; return this; }, json(o) { console.log(JSON.stringify(q), this.c, JSON.stringify(o)); done(); } }));
-}
-JS
-node /tmp/t.mjs
+python3 - <<'PY'
+import build_calendars as b, datetime as dt
+for name, fn in [("basket", b.basket_league_matches), ("volley", b.volley_matches),
+                 ("handball-women", lambda: b.handball_matches("handball-women")), ("wbl1", b.wbl1_matches)]:
+    try:
+        for m in fn():
+            if m.day == dt.date(2026, 10, 31): print(name, m.home, "-", m.away, repr(m.score), m.uid, m.url)
+    except Exception as e: print(name, "ERR", e)
+PY

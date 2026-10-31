@@ -30,7 +30,9 @@ from zoneinfo import ZoneInfo
 SITE = "https://paokalendar.vercel.app/"
 ATHENS = ZoneInfo("Europe/Athens")
 KINDS = ("pre", "time", "live", "result")
-REMINDER_WINDOW = dt.timedelta(minutes=75)
+# Η υπενθύμιση φεύγει στον πρώτο έλεγχο (κάθε 15 λεπτά) που απέχει το πολύ μία ώρα από την έναρξη·
+# 2 λεπτά περιθώριο για ελέγχους που τρέχουν λίγο νωρίτερα από το τέταρτο.
+REMINDER_WINDOW = dt.timedelta(minutes=62)
 # Πόσο νωρίτερα ξεκινά η παρακολούθηση live, ώστε να «δει» τον αγώνα πριν αρχίσει.
 LIVE_LEAD = dt.timedelta(minutes=50)
 LIVE_SPAN = dt.timedelta(hours=3, minutes=30)
@@ -187,7 +189,7 @@ def awaiting_result(m: dict, now: dt.datetime) -> bool:
 
 
 def reminders(matches_path: Path, state_path: Path) -> int:
-    """Υπενθύμιση για αγώνες που ξεκινούν μέσα στα επόμενα 75 λεπτά, μία φορά για τον καθένα.
+    """Υπενθύμιση για αγώνες που ξεκινούν μέσα στην επόμενη ώρα, μία φορά για τον καθένα.
 
     Γράφει επίσης live=1 στο GITHUB_OUTPUT όταν πρέπει να ξεκινήσει η παρακολούθηση live.
     """

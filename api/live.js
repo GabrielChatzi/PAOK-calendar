@@ -56,31 +56,30 @@ function pair(q) {
 }
 
 async function koe(p) {
-  const url = `${KOE}/KOE/get/resultsDBlikeJSON/${p.cat}/${p.gara}/${p.tur}/${p.gru}/${p.a}/${p.b}`;
-  const j = (await getJson(url, { "x-wp-token": await token("koe") })) || {};
+  const h = { "x-wp-token": await token("koe") };
+  const [j, sch] = await Promise.all([
+    getJson(`${KOE}/KOE/get/resultsDBlikeJSON/${p.cat}/${p.gara}/${p.tur}/${p.gru}/${p.a}/${p.b}`, h),
+    getJson(`${KOE}/KOE/get/schedulereferee/${p.cat}/${p.gara}/*/*/*`, h),
+  ]);
+  // Η κατάσταση του αγώνα (0/1/2) από το πρόγραμμα: είναι η μόνη αξιόπιστη. Στις περιόδους το st
+  // γίνεται 2 κάθε φορά που σταματά το ρολόι (time-out, διάλειμμα), όχι μόνο στο τέλος τους.
+  const x = (sch?.Schedule || []).find((o) => String(o.OraTurCode) === p.tur &&
+    String(o.OraTeamCodeA) === p.a && String(o.OraTeamCodeB) === p.b);
+  if (!x) throw new Error("ο αγώνας δεν βρέθηκε στο πρόγραμμα της ΚΟΕ");
+  const state = stateOf(x.OraStatus);
   // q: 4 περίοδοι και τα πέναλτι, η καθεμία με σκορ (r1, r2), κατάσταση st (0/1/2) και χρόνο tg.
-  const q = Array.isArray(j.q) ? j.q : [];
-  const st = q.map((x) => String(x?.st ?? "0"));
-  // Στα διαλείμματα η ΚΟΕ σημειώνει μερικές φορές την επόμενη περίοδο «τελειωμένη» με 0–0 πριν
-  // καν αρχίσει. Τελειωμένη περίοδος 0–0 χωρίς καμία μετά της μετράμε ως μη παιγμένη.
-  for (let i = st.length - 1; i >= 0; i--) {
-    if (st[i] === "0") continue;
-    if (st[i] === "2" && num(q[i]?.r1) === 0 && num(q[i]?.r2) === 0) st[i] = "0";
-    break;
-  }
-  const home = num(j.r1) ?? 0, away = num(j.r2) ?? 0;
-  const running = st.indexOf("1");
-  const done = st.slice(0, 4).filter((s) => s === "2").length;
-  const penalties = st[4] || "0";
-  let state = "in";
-  if (running < 0 && done === 0 && num(j.r1) == null) state = "pre";
-  // Τέλος: και οι 4 περίοδοι έληξαν, χωρίς ισοπαλία (ή με πέναλτι που τελείωσαν).
-  else if (running < 0 && done === 4 && (home !== away || penalties === "2")) state = "post";
+  const q = Array.isArray(j?.q) ? j.q : [];
+  const st = q.map((o) => String(o?.st ?? "0"));
+  let last = -1;  // η τελευταία περίοδος που έχει ξεκινήσει
+  st.forEach((s, i) => { if (s !== "0") last = i; });
   const blank = { home: "", away: "" };
-  const quarters = q.slice(0, penalties === "0" ? 4 : 5).map((x, i) => (st[i] === "0" ? blank : pair(x) || blank));
+  const quarters = q.slice(0, st[4] && st[4] !== "0" ? 5 : 4).map((o, i) => (st[i] === "0" ? blank : pair(o) || blank));
   return {
-    state, home, away, quarter: running >= 0 ? running + 1 : 0, done,
-    clock: running >= 0 ? String(q[running].tg || "") : "",
+    state, home: num(j?.r1) ?? num(x.OraResA) ?? 0, away: num(j?.r2) ?? num(x.OraResB) ?? 0,
+    quarter: state === "in" && last >= 0 ? last + 1 : 0,
+    // Τελειωμένες: όσες είναι πριν από την τελευταία που ξεκίνησε (στο τέλος, όλες).
+    done: state === "post" ? Math.min(4, last + 1) : Math.max(0, last),
+    clock: state === "in" && st[last] === "1" ? String(q[last].tg || "") : "",
     quarters: state === "pre" ? [] : quarters,
   };
 }

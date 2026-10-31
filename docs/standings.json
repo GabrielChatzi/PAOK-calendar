@@ -1864,6 +1864,20 @@
     },
     {
      "pos": 9,
+     "team": "ΑΝΟ ΓΛΥΦΑΔΑΣ",
+     "logo": "https://koecdn.twic.pics/media/anog-logo-1759229979-jK83ObmL.png",
+     "paok": false,
+     "cells": [
+      "7",
+      "2",
+      "0",
+      "5",
+      "63-116",
+      "6"
+     ]
+    },
+    {
+     "pos": 10,
      "team": "ΝΟ ΛΑΡΙΣΗΣ",
      "logo": "https://koecdn.twic.pics/media/larisa-f-1789898479-XJuZR95A.png",
      "paok": false,
@@ -1877,30 +1891,16 @@
      ]
     },
     {
-     "pos": 10,
-     "team": "ΑΝΟ ΓΛΥΦΑΔΑΣ",
-     "logo": "https://koecdn.twic.pics/media/anog-logo-1759229979-jK83ObmL.png",
-     "paok": false,
-     "cells": [
-      "6",
-      "1",
-      "0",
-      "5",
-      "53-109",
-      "3"
-     ]
-    },
-    {
      "pos": 11,
      "team": "Π.Ε.Κ.Ε. ΒΡΟΝΤΑΔΟΥ",
      "logo": "https://koecdn.twic.pics/media/pekev-1789898708-1ZgUQCyK.jpeg",
      "paok": false,
      "cells": [
-      "6",
+      "7",
       "0",
       "1",
-      "5",
-      "52-94",
+      "6",
+      "59-104",
       "1"
      ]
     },

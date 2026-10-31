@@ -5,8 +5,9 @@
 // όλη η σεζόν σε ένα αρχείο, γι' αυτό η σελίδα και το live.py παίρνουν από εδώ μόνο τον αγώνα που
 // θέλουν. Η απάντηση κρατιέται 15'' στο CDN της Vercel, όσοι κι αν τη ζητούν.
 //
-// Απάντηση: { state: "pre" | "in" | "post", home, away, quarter, done, quarters: [{ home, away }] }
-//   quarter: η περίοδος σε εξέλιξη (0 αν δεν ξέρουμε), done: πόσες περίοδοι τελείωσαν.
+// Απάντηση: { state: "pre" | "in" | "post", home, away, quarter, done, clock, quarters: [{ home, away }] }
+//   quarter: η περίοδος σε εξέλιξη (0 στα διαλείμματα), done: πόσες περίοδοι τελείωσαν,
+//   clock: ο χρόνος που απομένει στην περίοδο (μόνο ΚΟΕ).
 
 const KOE = "https://live.koe.org.gr/api-waterpolo/wp";
 const EA = "https://ea.microplustimingservices.com/api/wp";
@@ -57,14 +58,23 @@ function pair(q) {
 async function koe(p) {
   const url = `${KOE}/KOE/get/resultsDBlikeJSON/${p.cat}/${p.gara}/${p.tur}/${p.gru}/${p.a}/${p.b}`;
   const j = (await getJson(url, { "x-wp-token": await token("koe") })) || {};
-  const home = num(j.r1), away = num(j.r2);
-  const quarters = (Array.isArray(j.q) ? j.q : []).map(pair).filter(Boolean);
-  let state = stateOf(j.st);
-  if (state === "pre" && (home != null || away != null) && j.st == null) state = "in";
-  const quarter = num(j.p?.q ?? j.per ?? j.pe) || (state === "in" ? quarters.length || 1 : 0);
+  // q: 4 περίοδοι και τα πέναλτι, η καθεμία με σκορ (r1, r2), κατάσταση st (0/1/2) και χρόνο tg.
+  const q = Array.isArray(j.q) ? j.q : [];
+  const st = q.map((x) => String(x?.st ?? "0"));
+  const home = num(j.r1) ?? 0, away = num(j.r2) ?? 0;
+  const running = st.indexOf("1");
+  const done = st.slice(0, 4).filter((s) => s === "2").length;
+  const penalties = st[4] || "0";
+  let state = "in";
+  if (running < 0 && done === 0 && num(j.r1) == null) state = "pre";
+  // Τέλος: και οι 4 περίοδοι έληξαν, χωρίς ισοπαλία (ή με πέναλτι που τελείωσαν).
+  else if (running < 0 && done === 4 && (home !== away || penalties === "2")) state = "post";
+  const blank = { home: "", away: "" };
+  const quarters = q.slice(0, penalties === "0" ? 4 : 5).map((x, i) => (st[i] === "0" ? blank : pair(x) || blank));
   return {
-    state, home: home ?? 0, away: away ?? 0, quarter,
-    done: state === "post" ? quarters.length : Math.max(0, quarter - 1), quarters,
+    state, home, away, quarter: running >= 0 ? running + 1 : 0, done,
+    clock: running >= 0 ? String(q[running].tg || "") : "",
+    quarters: state === "pre" ? [] : quarters,
   };
 }
 

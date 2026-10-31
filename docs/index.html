@@ -1690,7 +1690,8 @@
   }
   function waterpoloState(j) {
     var label = j.state === "post" ? "Τελικό" : j.state === "pre" ? "Ξεκινά"
-      : j.quarter ? (j.quarter <= 4 ? j.quarter + "η περ." : "Πέναλτι") : "Σε εξέλιξη";
+      : j.quarter ? (j.quarter <= 4 ? j.quarter + "η περ." : "Πέναλτι") + (j.clock ? " " + j.clock : "")
+      : j.done ? "Διάλειμμα" : "Σε εξέλιξη";
     return { state: j.state, home: j.home || 0, away: j.away || 0, label: label, quarter: j.quarter || 0 };
   }
   function waterpoloDetail(m) {

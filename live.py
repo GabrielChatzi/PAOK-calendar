@@ -136,7 +136,7 @@ def waterpolo_state(live: dict) -> dict:
     if st.get("state") not in ("pre", "in", "post"):
         raise ValueError(st.get("error") or "άγνωστη απάντηση")
     q = st.get("quarter") or 0
-    st["detail"] = f"{q}η περίοδος" if st["state"] == "in" and q else ""
+    st["detail"] = (f"{q}η περίοδος {st.get('clock') or ''}".strip() if q else "Διάλειμμα") if st["state"] == "in" else ""
     return st
 
 

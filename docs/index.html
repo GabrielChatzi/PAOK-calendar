@@ -313,6 +313,10 @@
   table.st td.pos { width: 28px; color: var(--muted); }
   table.st td.team { text-align: left; white-space: normal; font-weight: 500; min-width: 140px; }
   table.st td.pts { font-weight: 600; }
+  /* Σκορ ανά περίοδο / σετ: στήλες ίδιου πλάτους, στο κέντρο */
+  table.st.qt th, table.st.qt td { text-align: center; width: 2.6em; padding-left: 2px; padding-right: 2px; }
+  table.st.qt th:first-child, table.st.qt td.team { text-align: left; width: auto; }
+  table.st.qt th:last-child, table.st.qt td.pts { width: 3.2em; text-align: right; padding-right: 6px; }
   table.st tr.paok td { background: var(--ink); color: var(--paper); font-weight: 600; }
   table.st tr.paok .initials { border-color: var(--paper); }
   .source { font-size: 14px; color: var(--muted); }
@@ -430,6 +434,9 @@
   .mh-name { font: 800 clamp(24px, 7vw, 34px)/1.05 var(--display); overflow-wrap: anywhere; }
   .mh-score { font: 800 clamp(34px, 10vw, 48px)/1 var(--display); font-variant-numeric: tabular-nums; }
   .mh-row.lose .mh-score, .mh-row.lose .mh-name { opacity: .55; }
+  .mh-row.vb { grid-template-columns: 44px 1fr auto auto; }
+  .mh-pts { font: 700 clamp(20px, 6vw, 28px)/1 var(--display); min-width: 1.9em; padding: 5px 6px; text-align: center;
+            border: 1.5px solid var(--paper); font-variant-numeric: tabular-nums; }
   .mh-when { margin: 14px 0 0; font-size: 15px; opacity: .8; }
   .match-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 8px; }
   .match h3 { font: 800 26px/1.1 var(--display); margin: 30px 0 10px; }
@@ -1501,10 +1508,10 @@
     var head = det.quarters.map(function (q) { return "<th>" + esc(q.label) + "</th>"; }).join("");
     function row(name, side, total) {
       return "<tr><td class=\"team\">" + esc(name) + "</td>" + det.quarters.map(function (q) {
-        return "<td>" + q[side] + "</td>";
+        return "<td>" + (q.win === side ? "<b>" + q[side] + "</b>" : q[side]) + "</td>";
       }).join("") + '<td class="pts">' + total + "</td></tr>";
     }
-    return "<h3>" + (det.periodTitle || "Σκορ ανά περίοδο") + "</h3><div class=\"table-wrap\"><table class=\"st\"><thead><tr><th></th>" + head +
+    return "<h3>" + (det.periodTitle || "Σκορ ανά περίοδο") + "</h3><div class=\"table-wrap\"><table class=\"st qt\"><thead><tr><th></th>" + head +
       "<th>" + (det.totalLabel || "Σύνολο") + "</th></tr></thead><tbody>" + row(m.home, "home", det.home) + row(m.away, "away", det.away) + "</tbody></table></div>" +
       (det.fouls ? '<p class="help">Φάουλ ' + det.fouls[0] + "–" + det.fouls[1] + ", time-out " + det.timeouts[0] + "–" + det.timeouts[1] + "</p>" : "");
   }
@@ -1522,7 +1529,7 @@
     var as = parts ? +parts[2] : ls && ls.state !== "pre" ? ls.away : null;
     var ongoing = phase(m);
     var status;
-    if (live) status = '<span class="live-badge">LIVE</span><span>' + esc(ls.label) + "</span>";
+    if (live) status = '<span class="live-badge">LIVE</span><span>' + esc(det && det.current ? det.currentLabel + " · πόντοι και σετ" : ls.label) + "</span>";
     else if (parts || finalLive) status = "<span>Τελικό</span>";
     else if (ongoing) status = "<span>" + PHASE_TEXT[ongoing] + "</span>";
     else {
@@ -1533,9 +1540,11 @@
     function teamRow(side) {
       var name = side === "home" ? m.home : m.away, logo = side === "home" ? m.homeLogo : m.awayLogo;
       var sc = side === "home" ? hs : as;
-      return '<div class="mh-row' + (lose === side ? " lose" : "") + '">' + crest(logo, name, m.section) +
+      var pts = live && det && det.current ? det.current[side] : null;  // βόλεϊ: πόντοι του τρέχοντος σετ
+      return '<div class="mh-row' + (lose === side ? " lose" : "") + (pts != null ? " vb" : "") + '">' + crest(logo, name, m.section) +
         '<span class="mh-name">' + (name === "ΠΑΟΚ" ? "ΠΑΟΚ" : esc(name)) + "</span>" +
-        '<span class="mh-score">' + (sc == null ? "" : sc) + "</span></div>";
+        (pts != null ? '<span class="mh-pts" aria-label="Πόντοι στο σετ">' + pts + "</span>" : "") +
+        '<span class="mh-score"' + (pts != null ? ' aria-label="Σετ"' : "") + ">" + (sc == null ? "" : sc) + "</span></div>";
     }
     var head = '<section class="match-head" aria-label="Αγώνας">' +
       '<p class="mh-comp">' + esc([s.emoji + " " + s.name, m.competition, m.round].filter(Boolean).join(", ")) + "</p>" +
@@ -1743,9 +1752,16 @@
   function waterpoloDetail(m) {
     return waterpoloFetch(m).then(function (j) {
       if (m.live.src === "dp") {
-        var vs = waterpoloState(j, "dp");
+        var vs = waterpoloState(j, "dp"), done = j.done || 0, sets = [];
+        // Πάντα 5 σετ, όπως στα σκορ του βόλεϊ· όσα δεν έχουν παιχτεί μένουν κενά, ο νικητής κάθε σετ με έντονα.
+        for (var i = 0; i < 5; i++) {
+          var x = (j.quarters || [])[i], played = x && (i < done || (vs.state === "in" && i === done));
+          sets.push({ label: String(i + 1), home: played ? x.home : "", away: played ? x.away : "",
+                      win: x && i < done ? (x.home > x.away ? "home" : "away") : "" });
+        }
+        var cur = vs.state === "in" ? (j.quarters || [])[done] : null;
         return { state: vs, home: vs.home, away: vs.away, periodTitle: "Πόντοι ανά σετ", totalLabel: "Σετ",
-                 quarters: (j.quarters || []).map(function (x, i) { return { label: i + 1 + "ο", home: x.home, away: x.away }; }),
+                 quarters: vs.state === "pre" ? [] : sets, current: cur, currentLabel: vs.quarter + "ο σετ",
                  sourceNote: "Live από την Data Project (επίσημο σύστημα της ΕΟΠΕ)." };
       }
       var st = waterpoloState(j, m.live.src), quarters = [];

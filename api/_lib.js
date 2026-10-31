@@ -60,7 +60,7 @@ export async function subs() {
 }
 
 export function subId(endpoint) {
-  return crypto.createHash("sha256").update(endpoint).digest("hex").slice(0, 32);
+  return crypto.crypto.createHash("sha256").update(endpoint).digest("hex").slice(0, 32);
 }
 
 export function validSubscription(sub) {
@@ -99,7 +99,10 @@ export async function pushTo(sub, payload, keys, ttl = 6 * 3600, retry = true) {
       {
         TTL: ttl,
         urgency: "high",
-        topic: payload.tag ? payload.tag.replace(/[^A-Za-z0-9_-]/g, "").slice(0, 32) : undefined,
+        // Topic: η υπηρεσία κρατά μόνο την τελευταία αναμονή με το ίδιο topic. Η Apple το θέλει έγκυρο
+        // base64url (μήκος όχι 4ν+1: το «<id>-result» απορριπτόταν με BadWebPushTopic), οπότε στέλνουμε
+        // ένα hash του tag σε 32 χαρακτήρες.
+        topic: payload.tag ? crypto.createHash("sha256").update(payload.tag).digest("base64url").slice(0, 32) : undefined,
         vapidDetails: { subject: SITE, publicKey: keys.publicKey, privateKey: keys.privateKey },
       },
     );

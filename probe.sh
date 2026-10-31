@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
 UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
-echo "=== signalr js"
-curl -sS -m 30 -A "$UA" "https://eope-web.dataproject.com/Scripts/LiveScoreListSignalR.js" -o /tmp/s.js; wc -c < /tmp/s.js
-grep -oE '(hub|server|client)\.[A-Za-z_]+|connection\.[A-Za-z_]+|\$\.connection\.[A-Za-z_]+|hubName[^,;]*|url *= *[^;]+' /tmp/s.js | sort | uniq -c | sort -rn | head -40
-head -c 2500 /tmp/s.js; echo
-echo "=== hubs"
-curl -sS -m 30 -A "$UA" "https://dataprojectservicesignalr.azurewebsites.net/signalr/hubs" | grep -oE "proxies\['[a-zA-Z]+'\]|proxies\['[a-zA-Z]+'\]\.server\.[a-zA-Z]+|[a-zA-Z]+: function \([^)]*\)" | head -40
-echo "=== genius widget"
-curl -sS -m 30 -A "$UA" "https://widget.wh.geniussports.com/widget//?RFJIN037I07QV520B7WEXKV1GYNA31" -o /tmp/w.js; wc -c < /tmp/w.js; grep -oE 'https?://[A-Za-z0-9./_-]+' /tmp/w.js | sort -u | head -30
+curl -sS -m 30 -A "$UA" "https://dataprojectservicesignalr.azurewebsites.net/signalr/hubs" -o /tmp/h.js
+python3 - <<'PY'
+import re
+s=open('/tmp/h.js').read()
+for hub in re.findall(r"proxies\['(\w+)'\] = this.createHubProxy\('(\w+)'\)", s): print("HUB", hub)
+i=s.find("proxies['signalRLiveHubFederations'].server")
+print(re.findall(r"(\w+): function \(([^)]*)\)", s[i:i+20000])[:40])
+PY
+echo "=== how list is requested"
+curl -sS -m 30 -A "$UA" "https://eope-web.dataproject.com/Scripts/LiveScoreListSignalR.js" | grep -nE "livescoreSRHub\.(server|client)\.\w+" | head -20
+for h in hvf-web eope-web; do echo "=== $h live page"; curl -sS -m 30 -A "$UA" "https://$h.dataproject.com/MainLiveScore.aspx" | python3 -c "
+import re,sys
+s=sys.stdin.read(); t=re.sub(r'<script.*?</script>|<style.*?</style>','',s,flags=re.S); t=re.sub(r'<[^>]+>',' ',t); t=re.sub(r'\s+',' ',t)
+i=t.find('LIVE SCORE Streaming'); print(t[i:i+700]); print(sorted(set(re.findall(r'ID=(\d+)&amp;cmpID', s))))"; done

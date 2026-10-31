@@ -10,10 +10,10 @@ lis=re.findall(r'<li class="spls_lsmatch[^"]*">(.*?)</li>', h, re.S)
 print(len(lis))
 txt=lambda x: re.sub(r'\s+',' ',re.sub(r'<[^>]+>',' | ',x))
 for li in lis:
-    if 'PAOK' in li.upper() or 'ΠΑΟΚ' in li: print(txt(li)); print(re.findall(r'webcast/(\w+)/(\d+)', li))
+    print(txt(li)[:200], re.findall(r'webcast/(\w+)/(\d+)', li))
 print("comps", re.findall(r'<ul id = "sp_comp_\d+"', h)[:10])
 print(txt(lis[0])[:500]); print(lis[0][:1500])
-m=[re.findall(r'webcast/\w+/(\d+)', li)[0] for li in lis if 'PAOK' in li.upper()]
+m=[re.findall(r'webcast/\w+/(\d+)', li)[0] for li in lis if 'Final' not in li]
 for mid in m[:2]:
     try:
         d=json.loads(urllib.request.urlopen(urllib.request.Request(f"https://fibalivestats.dcd.shared.geniussports.com/data/{mid}/data.json",headers={"User-Agent":UA}),timeout=30).read())

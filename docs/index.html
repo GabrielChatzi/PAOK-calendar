@@ -543,6 +543,7 @@
   function isUpcoming(m) {
     var ls = liveState[m.uid];
     if (ls && ls.state === "in") return true;
+    if (ls && ls.state === "post") return false;  // τελείωσε στο live, πριν έρθει το επίσημο σκορ
     return !m.score && new Date(m.start).getTime() > Date.now() - 2 * 3600 * 1000;
   }
   // Αγώνας χωρίς live σκορ που έχει ξεκινήσει: «Σε εξέλιξη» όσο κρατά περίπου ένας αγώνας του

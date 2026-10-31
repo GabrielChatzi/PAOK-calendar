@@ -86,8 +86,12 @@ export async function readBody(req) {
   return {};
 }
 
+// Τα σφάλματα της τελευταίας αποστολής, για να φαίνονται στα logs του GitHub (notify.py).
+export const lastErrors = [];
+
 // Στέλνει σε μία συσκευή. Επιστρέφει "ok", "gone" (η συνδρομή δεν ισχύει πια) ή "error".
-export async function pushTo(sub, payload, keys, ttl = 6 * 3600) {
+// Σε προσωρινό σφάλμα της υπηρεσίας (429, 5xx, δίκτυο) ξαναδοκιμάζει μία φορά μετά από 1''.
+export async function pushTo(sub, payload, keys, ttl = 6 * 3600, retry = true) {
   try {
     await webpush.sendNotification(
       { endpoint: sub.endpoint, keys: sub.keys },
@@ -102,7 +106,12 @@ export async function pushTo(sub, payload, keys, ttl = 6 * 3600) {
     return "ok";
   } catch (e) {
     if (e.statusCode === 404 || e.statusCode === 410) return "gone";
+    if (retry && (!e.statusCode || e.statusCode === 429 || e.statusCode >= 500)) {
+      await new Promise((r) => setTimeout(r, 1000));
+      return pushTo(sub, payload, keys, ttl, false);
+    }
     console.error("push", e.statusCode, e.body || e.message);
+    lastErrors.push(`${new URL(sub.endpoint).host} ${e.statusCode || ""} ${String(e.body || e.message).slice(0, 120)}`.trim());
     return "error";
   }
 }

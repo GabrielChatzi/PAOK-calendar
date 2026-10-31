@@ -3,7 +3,7 @@
 // Το καλεί μόνο το GitHub Actions του repo: η ταυτότητα ελέγχεται με το OIDC token του GitHub
 // (υπογεγραμμένο από το GitHub, χωρίς κοινό μυστικό), για το repo και το main.
 import { createRemoteJWKSet, jwtVerify } from "jose";
-import { TOPIC_RE, configured, pushTo, readBody, send, subs, vapidKeys } from "./_lib.js";
+import { TOPIC_RE, configured, lastErrors, pushTo, readBody, send, subs, vapidKeys } from "./_lib.js";
 
 const ISSUER = "https://token.actions.githubusercontent.com";
 const JWKS = createRemoteJWKSet(new URL(`${ISSUER}/.well-known/jwks`));
@@ -41,9 +41,11 @@ export default async function handler(req, res) {
   const targets = await col.find({ topics: { $in: [...wanted] } }, { projection: { endpoint: 1, keys: 1 } }).toArray();
   const keys = await vapidKeys();
   const ttl = [...wanted].some((t) => t.endsWith(":live")) ? 2 * 3600 : 12 * 3600;
+  lastErrors.length = 0;
   const results = await Promise.all(targets.map((s) => pushTo(s, payload, keys, ttl)));
   const gone = targets.filter((_, i) => results[i] === "gone").map((s) => s._id);
   if (gone.length) await col.deleteMany({ _id: { $in: gone } });
   const count = (x) => results.filter((r) => r === x).length;
-  return send(res, 200, { matched: targets.length, sent: count("ok"), removed: count("gone"), failed: count("error") });
+  return send(res, 200, { matched: targets.length, sent: count("ok"), removed: count("gone"), failed: count("error"),
+    errors: lastErrors.slice(0, 5) });
 }

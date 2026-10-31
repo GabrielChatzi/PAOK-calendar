@@ -103,6 +103,8 @@ def _push(topics: list[str], title: str, message: str, url: str, tag: str | None
         with urllib.request.urlopen(req, timeout=60) as r:
             res = json.loads(r.read())
         print(f"  push {','.join(topics)}: {title} → {res.get('sent', 0)}/{res.get('matched', 0)}")
+        for err in res.get("errors") or []:
+            print(f"    ! {err}", file=sys.stderr)
     except Exception as e:  # μια αποτυχημένη ειδοποίηση δεν σταματά την υπόλοιπη δουλειά
         print(f"  ! push {','.join(topics)}: {e}", file=sys.stderr)
 

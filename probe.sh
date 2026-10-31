@@ -4,7 +4,7 @@ cat > /tmp/t.mjs <<'JS'
 import handler from "/home/runner/work/PAOK-calendar/PAOK-calendar/api/live.js";
 const qs = [
   { src: "ehf", id: "202712020703021" },
-  { src: "ehf", id: "202712020703006" },
+  { src: "ehf", id: "202712020702020" },
   { src: "eok", day: "2026-10-31", side: "a", comp: "RISING" },
   { src: "eok", day: "2026-11-07", side: "h", comp: "WOMEN" },
 ];

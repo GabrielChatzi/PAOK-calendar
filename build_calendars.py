@@ -65,8 +65,10 @@ SECTIONS = {
     "volley-women": {"emoji": "🏐", "name": "Βόλεϊ Γυναικών", "sport": "Βόλεϊ", "women": True},
     "handball": {"emoji": "🤾", "name": "Χάντμπολ", "sport": "Χάντμπολ", "women": False},
     "handball-women": {"emoji": "🤾", "name": "Χάντμπολ Γυναικών", "sport": "Χάντμπολ", "women": True},
-    "waterpolo": {"emoji": "🤽", "name": "Πόλο", "sport": "Πόλο", "women": False},
-    "waterpolo-women": {"emoji": "🤽", "name": "Πόλο Γυναικών", "sport": "Πόλο", "women": True},
+    "waterpolo": {"emoji": "🤽", "name": "Πόλο", "sport": "Πόλο", "women": False, "live": True,
+                  "liveNote": "Έναρξη, τέλος κάθε περιόδου και τελικό"},
+    "waterpolo-women": {"emoji": "🤽", "name": "Πόλο Γυναικών", "sport": "Πόλο", "women": True, "live": True,
+                        "liveNote": "Έναρξη, τέλος κάθε περιόδου και τελικό"},
     "futsal": {"emoji": "🥅", "name": "Ποδόσφαιρο Σάλας", "sport": "Ποδόσφαιρο Σάλας", "women": False},
 }
 
@@ -773,6 +775,23 @@ def handball_matches(section: str) -> list[Match]:
 
 # ---------------------------------------------------------------- πόλο
 
+# Το waterpololeague.gr δείχνει το live της ΚΟΕ (σύστημα Microplus) σε κάθε σελίδα αγώνα. Από τον
+# σύνδεσμο κρατάμε τους κωδικούς του αγώνα, για το ζωντανό σκορ (api/live.js, live.py).
+KOE_LIVE_RE = re.compile(r"live\.koe\.org\.gr/waterpolo/#/match-details/(?:results|startlist|pbp)/"
+                         r"([A-Z0-9]+)/(\d+)/([A-Z0-9]+)/(\d+)/(\d+)/(\d+)")
+
+
+def koe_live(url: str) -> dict | None:
+    try:
+        m = KOE_LIVE_RE.search(fetch(url))
+    except Exception as e:
+        print(f"  ! live ΚΟΕ για {url}: {e}", file=sys.stderr)
+        return None
+    if not m:
+        return None
+    return dict(zip(("cat", "gara", "tur", "gru", "a", "b"), m.groups()), src="koe")
+
+
 def waterpolo_matches(section: str) -> list[Match]:
     women = SECTIONS[section]["women"]
     yy = season_start_year() % 100
@@ -796,13 +815,17 @@ def waterpolo_matches(section: str) -> list[Match]:
             continue
         time_text = next((d for d in info_divs if re.fullmatch(r"\d{1,2}:\d{2}", d)), "")
         score = re.search(r'sm:block">\s*<div[^>]*>(.*?)</div>', block, re.S)
+        day = dt.date(int(dm.group(3)), month, int(dm.group(1)))
+        score_text = parse_score(clean(score.group(1))) if score else ""
+        # Live μόνο για τους κοντινούς αγώνες (μία σελίδα ανά αγώνα).
+        live = koe_live(link) if not score_text and -1 <= (day - dt.datetime.now(ATHENS).date()).days <= 10 else None
         out.append(Match(
             section=section, uid=f"{section}-{link.rsplit('/', 1)[-1]}",
-            day=dt.date(int(dm.group(3)), month, int(dm.group(1))), time=parse_time(time_text),
+            day=day, time=parse_time(time_text),
             home=tidy_name(names[0]), away=tidy_name(names[1]), paok_home=is_paok(names[0]),
             competition="Water Polo League" + (" Γυναικών" if women else ""),
-            score=parse_score(clean(score.group(1))) if score else "", url=link,
-            home_logo=logos[0], away_logo=logos[1],
+            score=score_text, url=link,
+            home_logo=logos[0], away_logo=logos[1], live=live,
         ))
     if not out:
         raise RuntimeError(f"Δεν βρέθηκαν αγώνες ΠΑΟΚ στο {url}")
@@ -889,6 +912,9 @@ def european_waterpolo_matches(section: str) -> list[Match]:
             round=ea_round(x.get("OraMatchDescrEng") or ""),
             score=f"{x['OraResA']}-{x['OraResB']}" if finished else "",
             url=EA_SCHEDULE_PAGE,
+            live=None if finished else {"src": "ea", "code": f"EACLUB{(season_start_year() + 1) % 100:02d}", "cat": cat,
+                                        "gara": str(x.get("OraGaraCode")), "tur": str(x.get("OraTurCode")),
+                                        "a": x.get("OraTeamCodeA"), "b": x.get("OraTeamCodeB")},
         ))
     return out
 
@@ -1134,7 +1160,9 @@ def futsal_ids() -> tuple[int, int]:
 
 
 def eps_name(text: str) -> str:
-    return clean(html.unescape(text)).rstrip("* ").strip()
+    """Χωρίς αστερίσκους, και με ελληνικά γράμματα όπου έχουν γραφτεί λατινικά (π.χ. «ΠΑΝΑΘHΝΑΪΚΟΣ»)."""
+    words = clean(html.unescape(text)).replace("*", " ").split()
+    return " ".join(w.translate(_LOOKALIKE) if re.search(r"[Α-Ωά-ώΆ-Ώ]", w) else w for w in words)
 
 
 def futsal_matches() -> list[Match]:
@@ -1165,13 +1193,17 @@ def futsal_matches() -> list[Match]:
     out = []
     for n, e in enumerate(mine, 1):
         home_id, away_id = e["teams"]
+        # Τα ονόματα από τον τίτλο του αγώνα, που ακολουθεί τις αλλαγές ονομάτων· αλλιώς από τη λίστα ομάδων.
+        title = re.split(r"\s+vs\s+", html.unescape(e["title"]["rendered"]), maxsplit=1)
+        home_name, away_name = (eps_name(title[0]), eps_name(title[1])) if len(title) == 2 else (
+            names.get(home_id, ""), names.get(away_id, ""))
         start = dt.datetime.fromisoformat(e["date"])
         goals = [(e["results"].get(str(t)) or {}).get("goals", "") if isinstance(e["results"].get(str(t)), dict) else ""
                  for t in (home_id, away_id)]
         out.append(Match(
             section="futsal", uid=f"futsal-eps-{e['id']}", day=start.date(),
             time=parse_time(start.strftime("%H:%M")),
-            home=tidy_name(names.get(home_id, "")), away=tidy_name(names.get(away_id, "")),
+            home=tidy_name(home_name), away=tidy_name(away_name),
             paok_home=home_id == paok_id, competition="Futsal Super League", round=f"{n}η αγωνιστική",
             score=f"{goals[0]}-{goals[1]}" if all(str(g).isdigit() for g in goals) else "",
             url=e["link"], home_logo=logos.get(home_id, ""), away_logo=logos.get(away_id, ""),

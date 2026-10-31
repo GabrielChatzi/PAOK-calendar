@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
-UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/130.0.0.0"
-for u in http://statistics.handball.org.gr/gr/sportevents.asp http://statistics.handball.org.gr/ https://www.handball.org.gr/; do
-  echo "== $u"; curl -sSL -m 30 -A "$UA" "$u" | grep -oiE '.{0,80}(live|ζωντ|genius|livestats|dataproject|swiss|hbstats|scoreboard).{0,120}' | head -8
-done
+curl -sS -m 40 -w "  [%{http_code} %{time_total}s]" "https://paokalendar.vercel.app/api/live?src=gs&key=RFJIN037I07QV520B7WEXKV1GYNA31&day=2026-10-31&side=a"; echo
+curl -sS -m 20 "https://paokalendar.vercel.app/matches.json" | python3 -c "import json,sys; d=json.load(sys.stdin); print([m.get('live') for m in d['matches'] if m['uid']=='basketball-esake-29CD5AD8'])"

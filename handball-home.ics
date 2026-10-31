@@ -1,0 +1,176 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Χάντμπολ – Εντός έδρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:handball-ehf-202711020701030@paok-calendar
+DTSTAMP:20261030T140047Z
+DTSTART;TZID=Europe/Athens:20260913T200000
+DTEND;TZID=Europe/Athens:20260913T220000
+SUMMARY:🤾 ΠΑΟΚ 29-21 HB Dudelange
+LOCATION:Centre Sportif René Hartmann\, Dudelange
+DESCRIPTION:EHF European Cup – 1ος γύρος\nΤελικό σκορ: 
+ ΠΑΟΚ 29-21 HB Dudelange
+URL:http://www.eurohandball.com/en/matches/202711020701030/ACPAOK-HBDudelan
+ ge/
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-oxe-34604@paok-calendar
+DTSTAMP:20261030T140047Z
+DTSTART;TZID=Europe/Athens:20260923T180000
+DTEND;TZID=Europe/Athens:20260923T200000
+SUMMARY:🤾 ΠΑΟΚ – ΙΩΝΙΚΟΣ AUTOVALUE (ώρα TBC)
+DESCRIPTION:Handball Premier – 1η Αγωνιστική\nΗ ώρα δεν
+  έχει οριστεί ακόμα (προσωρινά 18:00). Θα εν
+ ημερωθεί αυτόματα όταν ανακοινωθεί.
+URL:http://statistics.handball.org.gr/gr/sportevents.asp
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-oxe-34615@paok-calendar
+DTSTAMP:20261030T140047Z
+DTSTART;TZID=Europe/Athens:20261001T150000
+DTEND;TZID=Europe/Athens:20261001T170000
+SUMMARY:🤾 ΠΑΟΚ 42-19 Χ.Α.Ν.Θ
+DESCRIPTION:Handball Premier – 3η Αγωνιστική\nΤελικό σ
+ κορ: ΠΑΟΚ 42-19 Χ.Α.Ν.Θ
+URL:http://statistics.handball.org.gr/gr/sportevents.asp
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-oxe-34626@paok-calendar
+DTSTAMP:20261030T140047Z
+DTSTART;TZID=Europe/Athens:20261010T180000
+DTEND;TZID=Europe/Athens:20261010T200000
+SUMMARY:🤾 ΠΑΟΚ 29-13 Ε.Γ.Σ.Ν ΖΑΦΕΙΡΑΚΗΣ
+DESCRIPTION:Handball Premier – 5η Αγωνιστική\nΤελικό σ
+ κορ: ΠΑΟΚ 29-13 Ε.Γ.Σ.Ν ΖΑΦΕΙΡΑΚΗΣ
+URL:http://statistics.handball.org.gr/gr/sportevents.asp
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-ehf-202711020702027@paok-calendar
+DTSTAMP:20261030T140047Z
+DTSTART;TZID=Europe/Athens:20261018T180000
+DTEND;TZID=Europe/Athens:20261018T200000
+SUMMARY:🤾 ΠΑΟΚ 38-19 RK Borac m:tel
+LOCATION:Mikra 3\, Thessaloniki
+DESCRIPTION:EHF European Cup – 2ος γύρος\nΤελικό σκορ: 
+ ΠΑΟΚ 38-19 RK Borac m:tel
+URL:http://www.eurohandball.com/en/matches/202711020702027/ACPAOK-RKBoracmt
+ el/
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-oxe-34643@paok-calendar
+DTSTAMP:20261030T140047Z
+DTSTART;TZID=Europe/Athens:20261021T150000
+DTEND;TZID=Europe/Athens:20261021T170000
+SUMMARY:🤾 ΠΑΟΚ 24-20 ΑΡΗΣ ΝΙΚΑΙΑΣ OLYMPIC DIAGNOSTIC
+DESCRIPTION:Handball Premier – 7η Αγωνιστική\nΤελικό σ
+ κορ: ΠΑΟΚ 24-20 ΑΡΗΣ ΝΙΚΑΙΑΣ OLYMPIC DIAGNOSTIC
+URL:http://statistics.handball.org.gr/gr/sportevents.asp
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-oxe-34648@paok-calendar
+DTSTAMP:20261030T140047Z
+DTSTART;TZID=Europe/Athens:20261116T170000
+DTEND;TZID=Europe/Athens:20261116T190000
+SUMMARY:🤾 ΠΑΟΚ – ΔΙΟΜΗΔΗΣ ΑΡΓΟΥΣ
+DESCRIPTION:Handball Premier – 8η Αγωνιστική
+URL:http://statistics.handball.org.gr/gr/sportevents.asp
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-oxe-34659@paok-calendar
+DTSTAMP:20261030T140047Z
+DTSTART;TZID=Europe/Athens:20261128T180000
+DTEND;TZID=Europe/Athens:20261128T200000
+SUMMARY:🤾 ΠΑΟΚ – ΟΛΥΜΠΙΑΚΟΣ ΟΜΙΛΟΣ ΞΥΝΗ
+DESCRIPTION:Handball Premier – 10η Αγωνιστική
+URL:http://statistics.handball.org.gr/gr/sportevents.asp
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-ehf-202711020703022@paok-calendar
+DTSTAMP:20261030T140047Z
+DTSTART;TZID=Europe/Athens:20261128T190000
+DTEND;TZID=Europe/Athens:20261128T210000
+SUMMARY:🤾 ΠΑΟΚ – AS SGS Ramhat Hashron
+LOCATION:Mikra 3\, Thessaloniki
+DESCRIPTION:EHF European Cup – 3ος γύρος
+URL:http://www.eurohandball.com/en/matches/202711020703022/ACPAOK-ASSGSRamh
+ atHashron/
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-oxe-34676@paok-calendar
+DTSTAMP:20261030T140047Z
+DTSTART;TZID=Europe/Athens:20270206T180000
+DTEND;TZID=Europe/Athens:20270206T200000
+SUMMARY:🤾 ΠΑΟΚ – Α.Ε.Κ. (ώρα TBC)
+DESCRIPTION:Handball Premier – 13η Αγωνιστική\nΗ ώρα δε
+ ν έχει οριστεί ακόμα (προσωρινά 18:00). Θα ε
+ νημερωθεί αυτόματα όταν ανακοινωθεί.
+URL:http://statistics.handball.org.gr/gr/sportevents.asp
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-oxe-34689@paok-calendar
+DTSTAMP:20261030T140047Z
+DTSTART;TZID=Europe/Athens:20270220T180000
+DTEND;TZID=Europe/Athens:20270220T200000
+SUMMARY:🤾 ΠΑΟΚ – Α.Σ.Ε ΔΟΥΚΑ (ώρα TBC)
+DESCRIPTION:Handball Premier – 15η Αγωνιστική\nΗ ώρα δε
+ ν έχει οριστεί ακόμα (προσωρινά 18:00). Θα ε
+ νημερωθεί αυτόματα όταν ανακοινωθεί.
+URL:http://statistics.handball.org.gr/gr/sportevents.asp
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-oxe-34702@paok-calendar
+DTSTAMP:20261030T140047Z
+DTSTART;TZID=Europe/Athens:20270303T180000
+DTEND;TZID=Europe/Athens:20270303T200000
+SUMMARY:🤾 ΠΑΟΚ – GMC ΔΡΑΜΑ 1986 (ώρα TBC)
+DESCRIPTION:Handball Premier – 17η Αγωνιστική\nΗ ώρα δε
+ ν έχει οριστεί ακόμα (προσωρινά 18:00). Θα ε
+ νημερωθεί αυτόματα όταν ανακοινωθεί.
+URL:http://statistics.handball.org.gr/gr/sportevents.asp
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-oxe-34716@paok-calendar
+DTSTAMP:20261030T140047Z
+DTSTART;TZID=Europe/Athens:20270403T180000
+DTEND;TZID=Europe/Athens:20270403T200000
+SUMMARY:🤾 ΠΑΟΚ – ΑΘΗΝΑΙΚΟΣ Α.Σ.Β. (ώρα TBC)
+DESCRIPTION:Handball Premier – 20η Αγωνιστική\nΗ ώρα δε
+ ν έχει οριστεί ακόμα (προσωρινά 18:00). Θα ε
+ νημερωθεί αυτόματα όταν ανακοινωθεί.
+URL:http://statistics.handball.org.gr/gr/sportevents.asp
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-oxe-34729@paok-calendar
+DTSTAMP:20261030T140047Z
+DTSTART;TZID=Europe/Athens:20270424T180000
+DTEND;TZID=Europe/Athens:20270424T200000
+SUMMARY:🤾 ΠΑΟΚ – Γ.Α.Σ ΚΙΛΚΙΣ (ώρα TBC)
+DESCRIPTION:Handball Premier – 22η Αγωνιστική\nΗ ώρα δε
+ ν έχει οριστεί ακόμα (προσωρινά 18:00). Θα ε
+ νημερωθεί αυτόματα όταν ανακοινωθεί.
+URL:http://statistics.handball.org.gr/gr/sportevents.asp
+END:VEVENT
+END:VCALENDAR

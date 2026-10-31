@@ -1,0 +1,132 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Χάντμπολ Γυναικών – Εκτός έδ
+ ρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:handball-women-oxe-34736@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20260926T180000
+DTEND;TZID=Europe/Athens:20260926T200000
+SUMMARY:🤾 ΑΝΑΓΕΝΝΗΣΗ ΑΡΤΑΣ 24-39 ΠΑΟΚ
+DESCRIPTION:Α1 Γυναικών – 1η Αγωνιστική\nΤελικό
+  σκορ: ΑΝΑΓΕΝΝΗΣΗ ΑΡΤΑΣ 24-39 ΠΑΟΚ
+URL:http://statistics.handball.org.gr/gr/sportevents.asp
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-women-ehf-202712020902011@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20261003T190000
+DTEND;TZID=Europe/Athens:20261003T210000
+SUMMARY:🤾 Molde Elite 27-24 ΠΑΟΚ
+LOCATION:Molde Arena\, Molde
+DESCRIPTION:EHF European League – Προκριματικά\, 2ος γύρ
+ ος\nΤελικό σκορ: Molde Elite 27-24 ΠΑΟΚ
+URL:http://www.eurohandball.com/en/matches/202712020902011/MoldeElite-ACPAO
+ K/
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-women-oxe-34747@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20261007T180000
+DTEND;TZID=Europe/Athens:20261007T200000
+SUMMARY:🤾 ΛΕΩΝΙΔΑΣ ΑΓ.ΑΝΑΡΓ. 10-33 ΠΑΟΚ
+DESCRIPTION:Α1 Γυναικών – 3η Αγωνιστική\nΤελικό
+  σκορ: ΛΕΩΝΙΔΑΣ ΑΓ.ΑΝΑΡΓ. 10-33 ΠΑΟΚ
+URL:http://statistics.handball.org.gr/gr/sportevents.asp
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-women-oxe-34753@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20261019T170000
+DTEND;TZID=Europe/Athens:20261019T190000
+SUMMARY:🤾 Α.Ε.Κ. 27-27 ΠΑΟΚ
+DESCRIPTION:Α1 Γυναικών – 4η Αγωνιστική\nΤελικό
+  σκορ: Α.Ε.Κ. 27-27 ΠΑΟΚ
+URL:http://statistics.handball.org.gr/gr/sportevents.asp
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-women-oxe-34759@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20261109T170000
+DTEND;TZID=Europe/Athens:20261109T190000
+SUMMARY:🤾 Α.Ε.Π. ΠΑΝΟΡΑΜΑ – ΠΑΟΚ
+DESCRIPTION:Α1 Γυναικών – 6η Αγωνιστική
+URL:http://statistics.handball.org.gr/gr/sportevents.asp
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-women-oxe-34770@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20261121T153000
+DTEND;TZID=Europe/Athens:20261121T173000
+SUMMARY:🤾 Α.Ε.Σ.Χ. ΠΥΛΑΙΑΣ – ΠΑΟΚ
+DESCRIPTION:Α1 Γυναικών – 8η Αγωνιστική
+URL:http://statistics.handball.org.gr/gr/sportevents.asp
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-women-oxe-34784@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20270123T180000
+DTEND;TZID=Europe/Athens:20270123T200000
+SUMMARY:🤾 ΠΡΟΣΟΤΣΑΝΗ ΔΡΑΜΑΣ – ΠΑΟΚ (ώρα TBC)
+DESCRIPTION:Α1 Γυναικών – 11η Αγωνιστική\nΗ ώρα 
+ δεν έχει οριστεί ακόμα (προσωρινά 18:00). Θα
+  ενημερωθεί αυτόματα όταν ανακοινωθεί.
+URL:http://statistics.handball.org.gr/gr/sportevents.asp
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-women-oxe-34802@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20270213T180000
+DTEND;TZID=Europe/Athens:20270213T200000
+SUMMARY:🤾 ΑΘΗΝΑΙΚΟΣ Α.Σ.Β. – ΠΑΟΚ (ώρα TBC)
+DESCRIPTION:Α1 Γυναικών – 14η Αγωνιστική\nΗ ώρα 
+ δεν έχει οριστεί ακόμα (προσωρινά 18:00). Θα
+  ενημερωθεί αυτόματα όταν ανακοινωθεί.
+URL:http://statistics.handball.org.gr/gr/sportevents.asp
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-women-oxe-34811@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20270313T180000
+DTEND;TZID=Europe/Athens:20270313T200000
+SUMMARY:🤾 Γ.Α.Σ ΚΑΜΑΤΕΡΟΥ – ΠΑΟΚ (ώρα TBC)
+DESCRIPTION:Α1 Γυναικών – 16η Αγωνιστική\nΗ ώρα 
+ δεν έχει οριστεί ακόμα (προσωρινά 18:00). Θα
+  ενημερωθεί αυτόματα όταν ανακοινωθεί.
+URL:http://statistics.handball.org.gr/gr/sportevents.asp
+END:VEVENT
+BEGIN:VEVENT
+UID:handball-women-oxe-34820@paok-calendar
+DTSTAMP:20261029T093059Z
+DTSTART;TZID=Europe/Athens:20270327T180000
+DTEND;TZID=Europe/Athens:20270327T200000
+SUMMARY:🤾 Ο.Φ. Ν. ΙΩΝΙΑΣ – ΠΑΟΚ (ώρα TBC)
+DESCRIPTION:Α1 Γυναικών – 18η Αγωνιστική\nΗ ώρα 
+ δεν έχει οριστεί ακόμα (προσωρινά 18:00). Θα
+  ενημερωθεί αυτόματα όταν ανακοινωθεί.
+URL:http://statistics.handball.org.gr/gr/sportevents.asp
+END:VEVENT
+END:VCALENDAR

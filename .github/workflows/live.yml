@@ -4,6 +4,9 @@ name: Live αγώνων
 # και τρέχει όσο υπάρχουν αγώνες σε εξέλιξη. Μπορεί να ξεκινήσει και χειροκίνητα.
 on:
   workflow_dispatch:
+  # Εφεδρικός δρόμος αν δεν το ξεκινήσουν τα reminders.yml / update.yml: χωρίς αγώνα κοντά τελειώνει αμέσως.
+  schedule:
+    - cron: "7,37 * * * *"
 
 permissions:
   contents: read

@@ -10,6 +10,7 @@ on:
 permissions:
   contents: read
   actions: write
+  issues: write  # issue «Πρόβλημα λειτουργίας» (watchdog.py)
   id-token: write  # ταυτότητα για τις ειδοποιήσεις web push (/api/push)
 
 concurrency:
@@ -84,3 +85,12 @@ jobs:
           else
             echo "Η παρακολούθηση live τρέχει ήδη."
           fi
+
+      # Τι έχει σταματήσει να δουλεύει (βλ. watchdog.py): ειδοποίηση στον διαχειριστή και issue.
+      - name: Έλεγχος υγείας
+        if: always()
+        continue-on-error: true
+        env:
+          PUSH: "1"
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 watchdog.py reminders

@@ -66,6 +66,11 @@
     background: var(--paper); color: var(--ink); border: 2px solid var(--ink); text-decoration: none;
   }
   .mast-bell svg { width: 22px; height: 22px; }
+  .mast-bell { position: relative; }
+  .mast-bell.warn::after {
+    content: "!"; position: absolute; top: -9px; right: -9px; width: 20px; height: 20px; display: grid; place-items: center;
+    background: var(--paper); color: var(--ink); border: 2px solid var(--ink); font: 800 14px/1 var(--body);
+  }
   .mast-actions { display: flex; gap: 8px; flex: none; }
   button.mast-bell { padding: 0; cursor: pointer; }
   .mast-bell.on { background: var(--ink); color: var(--paper); border-color: var(--paper); }
@@ -351,6 +356,8 @@
   @media (prefers-reduced-motion: no-preference) { .switch::after { transition: transform .15s; } }
   .switch:disabled, .chip:disabled { opacity: .35; cursor: not-allowed; }
   .push-note { margin: 4px 0 12px; }
+  .server-ok { margin: 0 0 8px; font-size: 15px; }
+  .server-err { border-width: 2px; }
   .push-on { display: flex; align-items: center; gap: 8px; font-weight: 600; margin: 4px 0 12px; }
   .push-on::before { content: ""; width: 10px; height: 10px; background: var(--ink); flex: none; }
   .nsec { padding: 12px 0; border-bottom: 1px solid var(--rule); }
@@ -1097,6 +1104,11 @@
     if (key === "app") return { key: null, tab: "", page: "app" };
     if (key === "notifications") return { key: null, tab: "", page: "notifications" };
     if (key === "calendars") return { key: null, tab: "", page: "calendars" };
+    if (key === "admin") {
+      // Μία φορά στο #/admin: εμφανίζει τις ειδοποιήσεις λειτουργίας στη σελίδα Ειδοποιήσεις.
+      try { localStorage.setItem("paok-admin", "1"); } catch (e) {}
+      return { key: null, tab: "", page: "notifications" };
+    }
     if (key === "m") return { key: null, tab: parts[2] || "", page: "match", nt: parts[1] || "" };
     return data.sectionMap[key] ? { key: key, tab: tab } : { key: null, tab: "" };
   }
@@ -1127,6 +1139,10 @@
     var mb = $("mast-bell");
     mb.classList.toggle("on", pushStatus() === "on" && push.topics.length > 0);
     if (r.page === "notifications") mb.setAttribute("aria-current", "page"); else mb.removeAttribute("aria-current");
+    if (r.page === "notifications" && push.ready) verifyPush();
+    // Θαυμαστικό στο καμπανάκι όταν οι επιλογές δεν έχουν αποθηκευτεί στον server.
+    mb.classList.toggle("warn", push.server === "error");
+    mb.setAttribute("aria-label", push.server === "error" ? "Ειδοποιήσεις: οι επιλογές δεν αποθηκεύτηκαν" : "Ειδοποιήσεις");
   }
 
   // ---- Ενέργειες
@@ -1153,6 +1169,8 @@
       return;
     }
     if (b.dataset.act === "push-off") { disablePush(); return; }
+    if (b.dataset.act === "push-test") { testPush(); return; }
+    if (b.dataset.act === "push-retry") { syncPush().then(function () { toast("Αποθηκεύτηκαν."); }, function () { toast("Πάλι δεν έγινε. Θα ξαναδοκιμάσει μόνη της."); }); return; }
     if (b.dataset.act === "share") {
       navigator.share({ title: document.title, url: location.href }).catch(function () {});
       return;
@@ -1215,7 +1233,7 @@
   var PUSH_KINDS = [["pre", "Πριν"], ["time", "Αλλαγές"], ["live", "Live"], ["result", "Τελικό"]];
   var pushOrigin = /(^|\.)vercel\.app$|^localhost$|^127\.0\.0\.1$/.test(location.hostname);
   var pushSupported = "serviceWorker" in navigator && "PushManager" in window && "Notification" in window;
-  var push = { reg: null, sub: null, key: null, busy: false, ready: false, topics: [] };
+  var push = { reg: null, sub: null, key: null, busy: false, ready: false, topics: [], server: "", serverAt: 0 };
   try { push.topics = JSON.parse(localStorage.getItem("paok-push-topics") || "[]") || []; } catch (e) {}
 
   function pushStatus() {
@@ -1225,6 +1243,7 @@
     if (Notification.permission === "denied") return "denied";
     return push.sub ? "on" : "off";
   }
+  function isAdmin() { try { return localStorage.getItem("paok-admin") === "1"; } catch (e) { return false; } }
   function hasTopic(t) { return !!push.sub && push.topics.indexOf(t) >= 0; }
   function matchFollowed(m) {
     var prefix = "m:" + m.nt + ":";
@@ -1270,18 +1289,76 @@
     }
   }
   function setDirty(v) { try { if (v) localStorage.setItem("paok-push-dirty", "1"); else localStorage.removeItem("paok-push-dirty"); } catch (e) {} }
+  // Η κατάσταση στον server: «ok» (ό,τι βλέπεις εδώ είναι αποθηκευμένο), «saving», «error».
+  // Τη δείχνει η σελίδα Ειδοποιήσεις, ώστε να φαίνεται αμέσως αν οι επιλογές δεν έφτασαν.
+  function setServer(state) {
+    push.server = state;
+    if (state === "ok") push.serverAt = Date.now();
+    if (data && (route().page === "notifications" || state === "error" || $("mast-bell").classList.contains("warn"))) render();
+  }
+  var TOPIC_OK = /^(s:[a-z-]{2,30}|m:[0-9a-f]{10}):(pre|time|live|result)$/;
+  function sameTopics(a, b) {
+    var x = a.filter(function (t) { return TOPIC_OK.test(t); }).slice().sort().join(" ");
+    return x === b.slice().sort().join(" ");
+  }
   function syncPush() {
     savePushTopics();
     if (!push.sub) return Promise.resolve();
     setDirty(true);
+    setServer("saving");
     return fetch("/api/subscribe", {
       method: "POST", headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ subscription: push.sub.toJSON(), topics: push.topics })
     }).then(function (r) {
       if (!r.ok) throw new Error("subscribe " + r.status);
+      return r.json();
+    }).then(function (d) {
+      if (d && d.saved && !sameTopics(push.topics, d.saved)) throw new Error("subscribe: άλλα θέματα αποθηκεύτηκαν");
       setDirty(false);
       try { localStorage.setItem("paok-push-synced", String(Date.now())); } catch (e) {}
-    });
+      setServer("ok");
+    }, function (e) { setServer("error"); throw e; });
+  }
+  // Έλεγχος ότι ο server έχει ακριβώς ό,τι δείχνει η συσκευή· αλλιώς ξαναστέλνει τις επιλογές.
+  var lastVerify = 0;
+  function verifyPush() {
+    if (!push.sub || Date.now() - lastVerify < 60 * 1000) return Promise.resolve();
+    lastVerify = Date.now();
+    return fetch("/api/subscribe", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ subscription: push.sub.toJSON(), action: "check" })
+    }).then(function (r) {
+      if (!r.ok) throw new Error("check " + r.status);
+      return r.json();
+    }).then(function (d) {
+      if (d.found && sameTopics(push.topics, d.topics || [])) { setDirty(false); setServer("ok"); return; }
+      return syncPush();
+    }).catch(function () { if (push.server !== "ok") setServer("error"); });
+  }
+  function testPush() {
+    if (!push.sub) return;
+    fetch("/api/subscribe", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ subscription: push.sub.toJSON(), action: "test" })
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (d) {
+        if (r.ok) toast("Στάλθηκε. Αν δεν έρθει σε λίγα δευτερόλεπτα, δες τις ρυθμίσεις ειδοποιήσεων του κινητού.");
+        else if (r.status === 404) { toast("Η συσκευή δεν ήταν γραμμένη· γράφεται τώρα, δοκίμασε ξανά σε λίγο."); syncPush().catch(function () {}); }
+        else toast(d.error || "Η δοκιμαστική δεν στάλθηκε. Δοκίμασε ξανά σε λίγο.");
+      });
+    }).catch(function () { toast("Δεν υπάρχει σύνδεση με τον server."); });
+  }
+  function serverStatusHtml() {
+    if (pushStatus() !== "on") return "";
+    var time = push.serverAt ? new Intl.DateTimeFormat("el-GR", { timeZone: TZ, hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).format(new Date(push.serverAt)) : "";
+    var line = push.server === "ok"
+      ? '<p class="server-ok">✓ Οι επιλογές σου είναι αποθηκευμένες στον server' + (time ? " (έλεγχος " + time + ")" : "") + ".</p>"
+      : push.server === "error"
+        ? '<div class="explain server-err"><h4>Οι επιλογές σου δεν αποθηκεύτηκαν στον server</h4>' +
+          "<p>Μέχρι να αποθηκευτούν, δεν θα έρχονται οι ειδοποιήσεις που διάλεξες. Η εφαρμογή ξαναδοκιμάζει μόνη της κάθε φορά που ανοίγει.</p>" +
+          '<div class="actions"><button type="button" class="btn solid" data-act="push-retry">Δοκίμασε ξανά τώρα</button></div></div>'
+        : '<p class="help">Έλεγχος με τον server…</p>';
+    return line + '<div class="actions"><button type="button" class="btn" data-act="push-test">Στείλε μου δοκιμαστική ειδοποίηση</button></div>';
   }
   function b64key(str) {
     var bin = atob(str.replace(/-/g, "+").replace(/_/g, "/")), out = new Uint8Array(bin.length);
@@ -1386,6 +1463,7 @@
       try { dirty = !!localStorage.getItem("paok-push-dirty"); last = +localStorage.getItem("paok-push-synced") || 0; } catch (e) {}
       var cleaned = data ? cleanMatchTopics() : false;
       if (renewed || dirty || cleaned || Date.now() - last > 12 * 3600 * 1000) return syncPush();
+      return verifyPush();
     }).catch(function () {});
   }
 
@@ -1436,10 +1514,10 @@
       '<div class="section-head"><h2>Ειδοποιήσεις</h2></div>' +
       '<div class="follow">' +
       "<p>Διάλεξε για ποια τμήματα και τι θέλεις να μαθαίνεις. Οι ειδοποιήσεις έρχονται σε αυτή τη συσκευή, χωρίς λογαριασμό, και τις αλλάζεις όποτε θέλεις.</p>" +
-      pushNoteHtml() +
+      pushNoteHtml() + serverStatusHtml() +
       '<ul class="kinds-legend">' + PUSH_KINDS.map(function (k) {
         return "<li><b>" + k[1] + ":</b> " + KIND_INFO[k[0]][1].charAt(0).toLowerCase() + KIND_INFO[k[0]][1].slice(1) +
-          (k[0] === "live" ? " (ποδόσφαιρο, μπάσκετ και πόλο)" : "") + "</li>";
+          (k[0] === "live" ? " (ποδόσφαιρο, μπάσκετ, βόλεϊ και πόλο)" : "") + "</li>";
       }).join("") + "</ul>" +
       "<h3>Όλα μαζί</h3>" + overall +
       "<h3>Ανά άθλημα</h3>" + sections +
@@ -1447,6 +1525,8 @@
       (st === "on"
         ? "<h3>Αυτή η συσκευή</h3>" +
           '<div class="actions"><button type="button" class="btn" data-act="push-off">Απενεργοποίηση όλων</button></div>' +
+          (isAdmin() ? '<ul class="notify">' + switchRow(["s:ops:live"], "Ειδοποιήσεις λειτουργίας",
+            "Όταν κάτι σταματήσει να δουλεύει: έλεγχοι, live, αποθήκευση επιλογών, ανεβάσματα (για τον διαχειριστή)") + "</ul>" : "") +
           '<p class="help">Οι επιλογές ισχύουν μόνο για αυτή τη συσκευή. Σε άλλο κινητό ή υπολογιστή διάλεξε ξανά.</p>'
         : "") +
       "</div>" + footerHtml();

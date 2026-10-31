@@ -11,7 +11,8 @@ on:
 
 permissions:
   contents: write
-  issues: write  # issue «Αγώνες προς έλεγχο»
+  issues: write  # issues «Αγώνες προς έλεγχο» και «Πρόβλημα λειτουργίας»
+  actions: write  # έναρξη του live.yml και έλεγχος των υπενθυμίσεων (watchdog.py)
   id-token: write  # ταυτότητα για τις ειδοποιήσεις web push (/api/push)
 
 concurrency:
@@ -87,6 +88,25 @@ jobs:
           elif [ -n "$num" ]; then
             gh issue close "$num" --comment "Δεν υπάρχουν πλέον διαφορές. Κλείνει αυτόματα."
           fi
+
+      # Δεύτερος δρόμος για την παρακολούθηση live, αν δεν την ξεκίνησε το reminders.yml.
+      - name: Έναρξη live
+        if: always()
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          need=$(python3 -c "import json,datetime as dt,notify; d=json.load(open('docs/matches.json')); n=dt.datetime.now(dt.timezone.utc); print(int(any(notify.live_window(m,n) for m in d['matches'])))")
+          running=$(gh run list --workflow live.yml --limit 5 --json status --jq '[.[] | select(.status != "completed")] | length')
+          if [ "$need" = "1" ] && [ "$running" = "0" ]; then gh workflow run live.yml --ref main; echo "Ξεκίνησε η παρακολούθηση live."; fi
+
+      - name: Έλεγχος υγείας
+        if: always()
+        continue-on-error: true
+        env:
+          PUSH: "1"
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 watchdog.py update
 
       # Αν κάποια πηγή απέτυχε, το workflow σημειώνεται ως αποτυχημένο,
       # ώστε να έρθει ειδοποίηση από το GitHub.

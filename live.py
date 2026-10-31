@@ -38,14 +38,19 @@ def get_json(url: str) -> dict | None:
     return json.loads(body) if body else None
 
 
+RAW = "https://raw.githubusercontent.com/GabrielChatzi/PAOK-calendar/main/docs/matches.json"
+
+
 def load_matches() -> list[dict]:
-    """Τα δεδομένα από τη σελίδα (πάντα τα τελευταία)· αλλιώς από το repo."""
-    try:
-        return (get_json(notify.SITE + "matches.json?t=" + str(int(time.time()))) or {})["matches"]
-    except Exception as e:
-        print(f"  ! matches.json από τη σελίδα: {e}", file=sys.stderr)
-        path = Path(__file__).resolve().parent / "docs" / "matches.json"
-        return json.loads(path.read_text(encoding="utf-8"))["matches"]
+    """Τα τελευταία δεδομένα από το GitHub (ενημερώνονται χωρίς νέα έκδοση της Vercel)· αλλιώς από τη
+    σελίδα ή το repo."""
+    for url in (RAW + "?t=" + str(int(time.time())), notify.SITE + "matches.json?t=" + str(int(time.time()))):
+        try:
+            return (get_json(url) or {})["matches"]
+        except Exception as e:
+            print(f"  ! matches.json από {url.split('?')[0]}: {e}", file=sys.stderr)
+    path = Path(__file__).resolve().parent / "docs" / "matches.json"
+    return json.loads(path.read_text(encoding="utf-8"))["matches"]
 
 
 # ---------------------------------------------------------------- πηγές

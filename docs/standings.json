@@ -698,14 +698,14 @@
    "rows": [
     {
      "pos": 1,
-     "team": "ΑΘΗΝΑΙΚΟΣ QUALCO",
-     "logo": "https://apps.basket.gr/clubs/51/logo",
+     "team": "ΟΛΥΜΠΙΑΚΟΣ ΣΦΠ",
+     "logo": "https://apps.basket.gr/clubs/7/logo",
      "paok": false,
      "cells": [
-      "4",
-      "4-0",
-      "146",
-      "8"
+      "5",
+      "4-1",
+      "106",
+      "9"
      ]
     },
     {
@@ -714,22 +714,22 @@
      "logo": "https://apps.basket.gr/club-teams/2/logo",
      "paok": false,
      "cells": [
-      "4",
-      "4-0",
-      "126",
-      "8"
+      "5",
+      "4-1",
+      "100",
+      "9"
      ]
     },
     {
      "pos": 3,
-     "team": "ΟΛΥΜΠΙΑΚΟΣ ΣΦΠ",
-     "logo": "https://apps.basket.gr/clubs/7/logo",
+     "team": "ΑΘΗΝΑΙΚΟΣ QUALCO",
+     "logo": "https://apps.basket.gr/clubs/51/logo",
      "paok": false,
      "cells": [
       "4",
-      "3-1",
-      "80",
-      "7"
+      "4-0",
+      "146",
+      "8"
      ]
     },
     {

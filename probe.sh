@@ -1,25 +1,25 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
 UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
-echo "=== basket.gr livescore"
-curl -sSL -m 40 -A "$UA" https://www.basket.gr/livescore/ -o /tmp/l.html; wc -c < /tmp/l.html
-grep -oiE '(src|data-[a-z-]+)="[^"]*(live|score|genius|api|json)[^"]*"' /tmp/l.html | sort -u | head -15
-grep -oiE '.{0,80}(fibalivestats|geniussports|widget\.wh|ajax|wp-json|admin-ajax).{0,120}' /tmp/l.html | sort -u | head -10
-echo "=== CEV live page"
-curl -sSL -m 30 -A "$UA" "https://www-old.cev.eu/MainLiveScore.aspx" -o /tmp/c.html -w "%{http_code}\n"; grep -oE 'id="HF_MatchesList" value="[^"]*"' /tmp/c.html; grep -oE 'src="[^"]*(signalr|LiveScore)[^"]*"' /tmp/c.html | head
-curl -sS -m 30 -A "$UA" "https://www-old.cev.eu/Scripts/LiveScoreListSignalR.js" | grep -n "cev" | head -5
-echo "=== EHF anchor + score fields"
+echo "=== apps.basket.gr iframe"
+curl -sSL -m 40 -A "$UA" -e https://www.basket.gr/livescore/ https://apps.basket.gr/iframe/livescores -o /tmp/a.html; wc -c < /tmp/a.html
+grep -oE '(src|href)="[^"]+"' /tmp/a.html | sort -u | head -15
+grep -oiE '.{0,60}(fetch\(|axios|\$\.(get|ajax)|api/|\.json|websocket|socket|pusher|fibalivestats|genius).{0,120}' /tmp/a.html | sort -u | head -15
 python3 - <<'PY'
-import json, urllib.request, re
+import re
+s=open('/tmp/a.html',encoding='utf-8',errors='replace').read()
+t=re.sub(r"<script.*?</script>|<style.*?</style>","",s,flags=re.S); t=re.sub(r"<[^>]+>"," ",t); t=re.sub(r"\s+"," ",t)
+print(t[:900])
+PY
+echo "=== EHF match page"
+curl -sSL -m 40 -A "$UA" "https://www.eurohandball.com/en/matches/202712020703021/OFNIonias-ClubeJovemAlmeidaGarrett/" -o /tmp/e.html -w "%{http_code} %{url_effective}\n"
+grep -oE '/umbraco/api/[A-Za-z]+/[A-Za-z]+' /tmp/e.html | sort -u | head; grep -oE 'data-[a-z-]+="[^"]{0,60}"' /tmp/e.html | sort -u | grep -iE "match|api|live" | head -10
+python3 - <<'PY'
+import json, urllib.request
 UA="Mozilla/5.0"; base="https://ehfec.eurohandball.com"
 q="competitionId=HUvNPxVw-FYaDNYG5p1ZLw&roundId=&currentContentId=138879"
-get=lambda u: json.loads(urllib.request.urlopen(urllib.request.Request(u,headers={"User-Agent":UA}),timeout=40).read())
-d=get(f"{base}/umbraco/api/competitionmatchesapi/GetInitMatches?{q}")["matches"]
-ids=[m["matchID"] for m in d]; print("init", ids[:6])
-fin=[m for m in d if m.get("isFinished")]
-m=fin[0] if fin else d[-1]
-print(json.dumps(m["homeTeam"], ensure_ascii=False)[:600])
-for fut in ("true","false"):
-    x=get(f"{base}/umbraco/api/competitionmatchesapi/GetMatches?{q}&matchId={ids[2]}&futureMatches={fut}")["matches"]
-    print(fut, [y["matchID"] for y in x][:6], ids[2] in [y["matchID"] for y in x])
+d=json.loads(urllib.request.urlopen(urllib.request.Request(f"{base}/umbraco/api/competitionmatchesapi/GetInitMatches?{q}",headers={"User-Agent":UA}),timeout=40).read())["matches"]
+for m in d:
+    if m.get("isFinished"):
+        h=m["homeTeam"]; print({k:v for k,v in h.items() if k!="team"}); break
 PY

@@ -3,6 +3,8 @@
 //   ea:  πόλο, ευρωπαϊκά κύπελλα (European Aquatics, Microplus)
 //   dp:  βόλεϊ, Data Project (ΕΟΠΕ: eope-web, Volley League ανδρών: hvl-web), μέσω SignalR
 //   gs:  μπάσκετ, Genius Sports / FIBA LiveStats (Basket League, όπως το esake.gr)
+//   eok: μπάσκετ γυναικών (και ό,τι οργανώνει η ΕΟΚ), livescore της ΕΟΚ στο apps.basket.gr
+//   ehf: χάντμπολ, ευρωπαϊκά κύπελλα (eurohandball.com)
 // Οι πηγές δεν δέχονται αιτήματα από browsers (CORS) ή δίνουν πολύ περισσότερα από έναν αγώνα,
 // γι' αυτό τις διαβάζουμε από εδώ. Η απάντηση κρατιέται 15'' στο CDN της Vercel, όσοι κι αν τη ζητούν.
 //
@@ -210,6 +212,57 @@ async function gs(p) {
   };
 }
 
+// ---- Χάντμπολ, ευρωπαϊκά (EHF): οι λεπτομέρειες αγώνα του eurohandball.com.
+async function ehf(p) {
+  const d = await getJson(`https://www.eurohandball.com/umbraco/api/matchdetailapi/GetMatchDetails?matchId=${p.id}`);
+  const det = d?.matchDetails?.details || {}, st = d?.matchDetails?.statistics || {};
+  const code = num(st.state ?? st.stateEnum);
+  const state = det.isFinished || code === 2 ? "post" : st.isLive || code === 1 ? "in" : "pre";
+  const home = num(st.homeStatistics?.totalGoals) ?? 0, away = num(st.guestStatistics?.totalGoals) ?? 0;
+  // Το σκορ ημιχρόνου («(14:16)») εμφανίζεται όταν τελειώσει το 1ο ημίχρονο.
+  const ht = /\((\d+)\s*:\s*(\d+)\)/.exec(det.scoreDetails || "");
+  const halves = ht ? [{ home: +ht[1], away: +ht[2] }, { home: home - ht[1], away: away - ht[2] }] : [];
+  return {
+    state, home, away, quarter: state === "in" ? (ht ? 2 : 1) : 0, done: state === "post" ? 2 : ht ? 1 : 0,
+    clock: "", quarters: state === "pre" ? [] : halves,
+  };
+}
+
+// ---- Μπάσκετ γυναικών και διοργανώσεις της ΕΟΚ: το livescore της ΕΟΚ (apps.basket.gr). Τον αγώνα
+// της ημέρας τον βρίσκουμε στη σελίδα της ημερομηνίας (κάρτα με τον ΠΑΟΚ μέσα στη διοργάνωση).
+// Το τέλος του αγώνα δεν δηλώνεται εδώ («stopped» σημαίνει και διάλειμμα): το τελικό έρχεται από
+// το επίσημο αποτέλεσμα της ενημέρωσης.
+const EOK = "https://apps.basket.gr/iframe/livescores";
+async function eok(p) {
+  const [y, mo, da] = p.day.split("-");
+  const r = await fetch(`${EOK}?date=${da}/${mo}/${y}`, { headers: { "User-Agent": UA, Referer: "https://www.basket.gr/livescore/" } });
+  const html = await r.text();
+  // Κάθε διοργάνωση έχει τίτλο και από κάτω τις κάρτες της.
+  const parts = html.split(/<div class="competition-name[^"]*">/).slice(1);
+  let card = null;
+  for (const part of parts) {
+    const comp = (part.split("</div>")[0] || "").replace(/\s+/g, " ").trim();
+    if (p.comp && !comp.toUpperCase().includes(p.comp.toUpperCase())) continue;
+    for (const c of part.split(/(?=<div id="match-card-)/).slice(1)) {
+      const names = [...c.matchAll(/match-card-score-first-column">\s*<span>([^<]*)<\/span>/g)].map((x) => x[1].trim());
+      if (names.length >= 2 && (PAOK.test(names[0]) || PAOK.test(names[1]))) { card = { id: (c.match(/match-card-(\d+)/) || [])[1], names }; break; }
+    }
+    if (card) break;
+  }
+  if (!card?.id) throw new Error("ο αγώνας δεν βρέθηκε στο livescore της ΕΟΚ");
+  const info = await getJson(`${EOK}/get-matches-info?match_ids=${card.id}`, { "X-Requested-With": "XMLHttpRequest", Referer: EOK });
+  const x = (info?.data || [])[0] || {};
+  const flip = p.side && PAOK.test(card.names[0]) !== (p.side === "h");
+  const h = num(x.home_team_result) ?? 0, g = num(x.visiting_team_result) ?? 0;
+  const per = num(String(x.current_period || "").replace(/\D/g, "")) || 0;
+  const started = !!x.has_livescore_started || ((h || g) > 0 && per > 0);
+  const clock = x.minute != null ? `${String(x.minute).padStart(2, "0")}:${String(x.second ?? "00").padStart(2, "0")}` : "";
+  return {
+    state: started ? "in" : "pre", home: flip ? g : h, away: flip ? h : g,
+    quarter: started ? per : 0, done: Math.max(0, per - 1), clock: started && x.has_livescore_started ? clock : "", quarters: [],
+  };
+}
+
 async function ea(p) {
   if (!/^EACLUB\d\d$/.test(p.code || "")) throw new Error("λάθος κωδικός");
   const d = await getJson(`${EA}/${p.code}/get/schedule/*/*/*/*/*`, { Authorization: `Bearer ${await token("ea")}` });
@@ -227,15 +280,17 @@ async function ea(p) {
 export default async function handler(req, res) {
   const q = req.query || {};
   const p = {};
-  for (const k of ["src", "code", "cat", "gara", "tur", "gru", "a", "b", "fed", "id", "day", "side", "key"]) {
+  for (const k of ["src", "code", "cat", "gara", "tur", "gru", "a", "b", "fed", "id", "day", "side", "key", "comp"]) {
     if (q[k] == null) continue;
     if (!ID.test(String(q[k]))) return res.status(400).json({ error: `λάθος ${k}` });
     p[k] = String(q[k]);
   }
   const need = p.src === "koe" ? ["cat", "gara", "tur", "gru", "a", "b"] : p.src === "ea" ? ["code", "cat", "gara", "tur", "a", "b"]
-    : p.src === "dp" ? ["fed", p.id ? "id" : "day"] : p.src === "gs" ? ["key", "day"] : null;
+    : p.src === "dp" ? ["fed", p.id ? "id" : "day"] : p.src === "gs" ? ["key", "day"] : p.src === "ehf" ? ["id"]
+    : p.src === "eok" ? ["day"] : null;
   if (!need || need.some((k) => !p[k])) return res.status(400).json({ error: "λάθος αγώνας" });
-  const run = () => (p.src === "koe" ? koe(p) : p.src === "dp" ? dp(p) : p.src === "gs" ? gs(p) : ea(p));
+  const SRC = { koe, dp, gs, ehf, eok, ea };
+  const run = () => SRC[p.src](p);
   try {
     // Αν έληξε το token νωρίτερα από ό,τι περιμέναμε, παίρνουμε νέο και ξαναδοκιμάζουμε μία φορά.
     const out = await run().catch((e) => {

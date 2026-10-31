@@ -145,6 +145,9 @@ def waterpolo_state(live: dict) -> dict:
     if live.get("src") == "dp":
         st["detail"] = f"{q}ο σετ {st.get('clock') or ''}".strip() if st["state"] == "in" else ""
         return st
+    if live.get("src") == "ehf":
+        st["detail"] = f"{q}ο ημίχρονο" if st["state"] == "in" and q else ""
+        return st
     st["detail"] = (f"{q}η περίοδος {st.get('clock') or ''}".strip() if q else "Διάλειμμα") if st["state"] == "in" else ""
     return st
 
@@ -197,15 +200,23 @@ def basketball_state(live: dict) -> dict:
             raise ValueError("ο αγώνας δεν βρέθηκε στη Genius Sports")
         _gs_found[key] = row["id"]
     j = data or get_json(f"{GS_DATA}{row['id']}/data.json") or {}
-    pbp = j.get("pbp") or []
+    return gs_state(j, row["status"], live.get("side"))
+
+
+def gs_state(j: dict, status: str, side: str | None) -> dict:
+    """Η κατάσταση από το data.json της Genius και την ένδειξη του widget (Live/Final/Upcoming)."""
+    import re
+    paok = re.compile(r"P\.?\s?A\.?\s?O\.?\s?K|Π\.?Α\.?Ο\.?Κ", re.I)
+    pbp = j.get("pbp") or []  # τα πιο πρόσφατα πρώτα
     tm = j.get("tm") or {}
     ended = any(a.get("actionType") == "game" and a.get("subType") == "end" for a in pbp)
-    status = row["status"].lower()
+    status = (status or "").lower()
     state = "post" if "final" in status or ended else "in" if "live" in status or pbp else "pre"
-    flip = bool(paok.search((tm.get("1") or {}).get("name") or "")) != (live.get("side") == "h")
+    flip = bool(paok.search((tm.get("1") or {}).get("name") or "")) != (side == "h")
     a, b = ("2", "1") if flip else ("1", "2")
     period = int(j.get("period") or 0)
     top = pbp[0] if pbp else {}
+    # Στην αρχή μιας περιόδου η τελευταία ενέργεια μπορεί να είναι ακόμα το τέλος της προηγούμενης.
     period_ended = top.get("actionType") == "period" and top.get("subType") == "end" and int(top.get("period") or 0) == period
     clock = str(j.get("clock") or "")
     return {
@@ -217,8 +228,8 @@ def basketball_state(live: dict) -> dict:
 
 
 SOURCES = {"espn": espn_state, "euroleague": euroleague_state, "koe": waterpolo_state, "ea": waterpolo_state,
-           "dp": waterpolo_state, "gs": basketball_state}
-PERIOD_SOURCES = ("euroleague", "koe", "ea", "dp", "gs")
+           "dp": waterpolo_state, "gs": basketball_state, "ehf": waterpolo_state, "eok": waterpolo_state}
+PERIOD_SOURCES = ("euroleague", "koe", "ea", "dp", "gs", "eok")
 
 
 # ---------------------------------------------------------------- γεγονότα
@@ -255,7 +266,11 @@ def events(m: dict, old: dict | None, new: dict) -> list[tuple[str, str]]:
             out.append((title, " ".join(x for x in (g["clock"], g["text"]) if x)))
         if new.get("halftime") and not old.get("halftime"):
             out.append((f"{e} Ημίχρονο: {score_text(m, new)}", comp))
-    if m["live"]["src"] == "dp" and new["state"] == "in" and old["state"] == "in":
+    if m["live"]["src"] == "ehf" and new["state"] == "in" and old["state"] == "in":
+        # Χάντμπολ: ημίχρονο όταν εμφανιστεί το σκορ ημιχρόνου.
+        if (new.get("done") or 0) >= 1 > (old.get("done") or 0):
+            out.append((f"{e} Ημίχρονο: {score_text(m, new)}", comp))
+    elif m["live"]["src"] == "dp" and new["state"] == "in" and old["state"] == "in":
         # Βόλεϊ: τέλος κάθε σετ (όχι όταν τελειώνει ο αγώνας· τότε έρχεται το «Τελικό»).
         d_old, d_new = old.get("done") or 0, new.get("done") or 0
         sets = (new.get("quarters") or [])
@@ -275,6 +290,14 @@ def events(m: dict, old: dict | None, new: dict) -> list[tuple[str, str]]:
     if old["state"] != "post" and new["state"] == "post":
         out.append((f"{e} Τελικό: {score_text(m, new)}", comp))
     return out
+
+
+def settle_final(old: dict | None, new: dict) -> dict:
+    """Το «Τελικό» μόνο αν το δούμε σε δύο συνεχόμενες αναγνώσεις: οι πηγές δείχνουν καμιά φορά για
+    λίγο τέλος αγώνα σε διάλειμμα. Στην πρώτη μένουμε στην παλιά κατάσταση, με σημάδι."""
+    if new["state"] == "post" and old and old["state"] != "post" and not old.get("post_seen"):
+        return dict(old, post_seen=True)
+    return new
 
 
 # ---------------------------------------------------------------- κύριο
@@ -322,10 +345,7 @@ def main() -> int:
             old = states.get(m["uid"])
             if m["live"]["src"] == "euroleague":
                 track_periods(old, new)
-            # Το «Τελικό» μόνο αν το δούμε σε δύο συνεχόμενες αναγνώσεις: οι πηγές δείχνουν καμιά
-            # φορά για λίγο τέλος αγώνα σε διάλειμμα (π.χ. η ΚΟΕ μετά την 3η περίοδο).
-            if new["state"] == "post" and old and old["state"] != "post" and not old.get("post_seen"):
-                new = dict(old, post_seen=True)
+            new = settle_final(old, new)
             for title, message in events(m, old, new):
                 final = old is not None and old["state"] != "post" and new["state"] == "post" and "Τελικό" in title
                 # Το τελικό πηγαίνει και στο θέμα «result» του αγώνα.

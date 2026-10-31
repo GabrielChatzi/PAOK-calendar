@@ -1,0 +1,58 @@
+name: Έλεγχοι
+
+# Τα tests για τα «δύσκολα» σημεία που βρήκαμε σε πραγματικούς αγώνες, σε κάθε αλλαγή του κώδικα.
+# Αν αποτύχουν, το GitHub στέλνει email (και φαίνεται ✗ δίπλα στο commit). Τοπικά: tests/run.sh
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Εξαρτήσεις
+        run: |
+          npm ci
+          pip install --quiet pyyaml
+
+      - name: Python (live.py, notify.py, build_calendars.py)
+        run: python3 -m unittest discover -v tests
+
+      - name: Functions της Vercel (api/)
+        run: node --test tests/*.test.mjs
+
+      - name: Σύνταξη σελίδας και workflows
+        run: |
+          python3 - <<'PY'
+          import re, glob, yaml
+          s = open("docs/index.html", encoding="utf-8").read()
+          open("/tmp/page.js", "w", encoding="utf-8").write(max(re.findall(r"<script>(.*?)</script>", s, re.S), key=len))
+          for f in glob.glob(".github/workflows/*.yml"):
+              yaml.safe_load(open(f, encoding="utf-8"))
+          PY
+          node --check /tmp/page.js
+          node --check docs/sw.js
+          for f in api/*.js; do node --check "$f"; done
+
+      - name: Η σελίδα ανοίγει χωρίς σφάλματα
+        run: |
+          git fetch --depth=1 origin +refs/heads/data:refs/remotes/origin/data
+          for f in matches.json standings.json status.json; do git show "origin/data:$f" > "docs/$f"; done
+          npm i --no-save playwright@1.48.2
+          npx playwright install --with-deps chromium
+          node tests/page-smoke.mjs

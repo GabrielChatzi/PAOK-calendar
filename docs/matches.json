@@ -65,14 +65,18 @@
    "emoji": "🤽",
    "name": "Πόλο",
    "sport": "Πόλο",
-   "women": false
+   "women": false,
+   "live": true,
+   "liveNote": "Έναρξη, τέλος κάθε περιόδου και τελικό"
   },
   {
    "key": "waterpolo-women",
    "emoji": "🤽",
    "name": "Πόλο Γυναικών",
    "sport": "Πόλο",
-   "women": true
+   "women": true,
+   "live": true,
+   "liveNote": "Έναρξη, τέλος κάθε περιόδου και τελικό"
   },
   {
    "key": "futsal",
@@ -1585,6 +1589,15 @@
    "score": "",
    "tv": "",
    "url": "https://waterpololeague.gr/fixture/paok-domus-ergo-ethnikos-ofpf-2026-10-31",
+   "live": {
+    "cat": "ASM",
+    "gara": "65",
+    "tur": "A01",
+    "gru": "1",
+    "a": "9175200",
+    "b": "9175106",
+    "src": "koe"
+   },
    "start": "2026-10-31T16:00:00+02:00",
    "timeKnown": true,
    "paokHome": true,
@@ -1693,6 +1706,15 @@
    "score": "",
    "tv": "",
    "url": "https://europeanaquatics.org/sports/water-polo/club-competitions/schedule/",
+   "live": {
+    "src": "ea",
+    "code": "EACLUB27",
+    "cat": "ASF",
+    "gara": "2",
+    "tur": "001",
+    "a": "URA",
+    "b": "PAOK"
+   },
    "start": "2026-11-01T14:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
@@ -1847,6 +1869,15 @@
    "score": "",
    "tv": "",
    "url": "https://waterpololeague.gr/fixture/paok-domus-ergo-lar-2026-11-07",
+   "live": {
+    "cat": "ASF",
+    "gara": "66",
+    "tur": "A01",
+    "gru": "1",
+    "a": "9176200",
+    "b": "9176356",
+    "src": "koe"
+   },
    "start": "2026-11-07T15:00:00+02:00",
    "timeKnown": true,
    "paokHome": true,
@@ -1865,6 +1896,15 @@
    "score": "",
    "tv": "",
    "url": "https://waterpololeague.gr/fixture/paok-domus-ergo-no-buliagmenhs-2026-11-07",
+   "live": {
+    "cat": "ASM",
+    "gara": "65",
+    "tur": "A01",
+    "gru": "1",
+    "a": "9175200",
+    "b": "9175108",
+    "src": "koe"
+   },
    "start": "2026-11-07T16:30:00+02:00",
    "timeKnown": true,
    "paokHome": true,
@@ -5239,16 +5279,16 @@
   }
  ],
  "updated": {
-  "football": "2026-10-31T14:00+02:00",
-  "football-women": "2026-10-31T14:00+02:00",
-  "basketball": "2026-10-31T14:00+02:00",
-  "basketball-women": "2026-10-31T14:00+02:00",
-  "volley": "2026-10-31T14:01+02:00",
-  "volley-women": "2026-10-31T14:01+02:00",
-  "handball": "2026-10-31T14:01+02:00",
-  "handball-women": "2026-10-31T14:02+02:00",
-  "waterpolo": "2026-10-31T14:02+02:00",
-  "waterpolo-women": "2026-10-31T14:02+02:00",
-  "futsal": "2026-10-31T14:02+02:00"
+  "football": "2026-10-31T14:48+02:00",
+  "football-women": "2026-10-31T14:48+02:00",
+  "basketball": "2026-10-31T14:48+02:00",
+  "basketball-women": "2026-10-31T14:48+02:00",
+  "volley": "2026-10-31T14:48+02:00",
+  "volley-women": "2026-10-31T14:48+02:00",
+  "handball": "2026-10-31T14:49+02:00",
+  "handball-women": "2026-10-31T14:49+02:00",
+  "waterpolo": "2026-10-31T14:49+02:00",
+  "waterpolo-women": "2026-10-31T14:49+02:00",
+  "futsal": "2026-10-31T14:49+02:00"
  }
 }

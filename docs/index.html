@@ -1622,6 +1622,8 @@
     if (document.visibilityState === "visible") {
       fetchDetail(m).then(function (det) {
         detail[m.uid] = det;
+        var prev = liveState[m.uid];
+        if (det.state && det.state.state === "post") det.state.postAt = prev && prev.state === "post" && prev.postAt || Date.now();
         liveState[m.uid] = det.state;
         var y = window.scrollY;
         render();
@@ -1638,7 +1640,9 @@
     if (!(m.live || sofaSport(m)) || !m.timeKnown || m.score) return false;
     var t = new Date(m.start).getTime(), now = Date.now();
     var ls = liveState[m.uid];
-    if (ls && ls.state === "post") return false;
+    // Μετά το «Τελικό» συνεχίζουμε για 10 λεπτά: οι πηγές δείχνουν καμιά φορά για λίγο τέλος σε
+    // διάλειμμα, και έτσι η σελίδα διορθώνεται μόνη της αντί να μείνει σε λάθος τελικό.
+    if (ls && ls.state === "post" && ls.postAt && now - ls.postAt > 10 * 60 * 1000) return false;
     return now >= t - 10 * 60 * 1000 && now <= t + 3.5 * 3600 * 1000;
   }
   function espnState(d) {
@@ -1845,6 +1849,7 @@
         if (!r) return;
         var old = liveState[r[0]];
         if (!old || old.state !== r[1].state || old.home !== r[1].home || old.away !== r[1].away || old.label !== r[1].label) changed = true;
+        if (r[1].state === "post") r[1].postAt = old && old.state === "post" && old.postAt || Date.now();
         liveState[r[0]] = r[1];
       });
       if (changed) render();

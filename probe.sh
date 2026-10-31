@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
-python3 - <<'PY'
-import build_calendars as b, datetime as dt
-for name, fn in [("basket", b.basket_league_matches), ("volley", b.volley_matches),
-                 ("handball-women", lambda: b.handball_matches("handball-women")), ("wbl1", b.wbl1_matches)]:
-    try:
-        for m in fn():
-            if m.day == dt.date(2026, 10, 31): print(name, m.home, "-", m.away, repr(m.score), m.uid, m.url)
-    except Exception as e: print(name, "ERR", e)
-PY
+UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/130.0.0.0"
+for u in http://statistics.handball.org.gr/gr/sportevents.asp http://statistics.handball.org.gr/ https://www.handball.org.gr/; do
+  echo "== $u"; curl -sSL -m 30 -A "$UA" "$u" | grep -oiE '.{0,80}(live|ζωντ|genius|livestats|dataproject|swiss|hbstats|scoreboard).{0,120}' | head -8
+done

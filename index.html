@@ -406,6 +406,7 @@
   }
   .clock { display: block; font: 600 15px/1.3 var(--body); margin-top: 4px; }
   .ongoing { display: block; font: 500 13px/1.2 var(--body); color: var(--muted); margin-top: 3px; }
+  .status-off { color: var(--ink); font-weight: 700; }
   .final-tag { display: block; font: 500 13px/1.2 var(--body); color: var(--muted); }
   .next .live-badge { background: var(--paper); color: var(--ink); }
   .next-teams .row { display: flex; justify-content: space-between; gap: 12px; }
@@ -568,8 +569,9 @@
     "waterpolo": 80, "waterpolo-women": 80, "futsal": 95
   };
   var PHASE_TEXT = { on: "Σε εξέλιξη", wait: "Αναμένεται το τελικό" };
+  var STATUS_TEXT = { postponed: "Αναβλήθηκε", cancelled: "Ματαιώθηκε", abandoned: "Διακόπηκε" };
   function phase(m) {
-    if (!m.timeKnown || m.score) return "";
+    if (!m.timeKnown || m.score || m.status) return "";
     var ls = liveState[m.uid];
     if (ls && ls.state !== "pre") return "";
     var t = new Date(m.start).getTime(), now = Date.now();
@@ -619,6 +621,7 @@
   function gameHtml(m, showSection) {
     var date = new Date(m.start), s = sectionOf(m), o = outcome(m);
     var meta = [showSection ? s.emoji + " " + s.name : "", m.competition, m.round].filter(Boolean).map(esc).join(", ");
+    if (m.note) meta += " · " + esc(m.note);
     if (m.venue) meta += "<br>" + esc(m.venue);
     if (m.tv) meta += ", " + esc(m.tv);
     var parts = /^(\d+)-(\d+)$/.exec(m.score || "");
@@ -629,7 +632,8 @@
       scoreCell = '<span class="n">' + ls.home + '</span><span class="n">' + ls.away + "</span>";
     } else {
       timeCell = '<div class="time' + (m.timeKnown ? "" : " tbc") + '">' + (m.timeKnown ? fmtTime.format(date) : "TBC") +
-        (phase(m) ? '<span class="ongoing">' + PHASE_TEXT[phase(m)] + "</span>" : "") + "</div>";
+        (m.status && !m.score ? '<span class="ongoing status-off">' + esc(STATUS_TEXT[m.status] || m.status) + "</span>"
+          : phase(m) ? '<span class="ongoing">' + PHASE_TEXT[phase(m)] + "</span>" : "") + "</div>";
       if (parts || (ls && ls.state === "post")) {
         var h = parts ? parts[1] : ls.home, a = parts ? parts[2] : ls.away;
         if (!parts) o = outcome({ score: h + "-" + a, paokHome: m.paokHome });
@@ -731,7 +735,7 @@
 
   // ---- Επόμενος αγώνας
   function nextHtml(list, label) {
-    var up = list.filter(isUpcoming);
+    var up = list.filter(function (m) { return isUpcoming(m) && !m.status; });
     if (!up.length) return "";
     var m = up[0], s = sectionOf(m), date = new Date(m.start), rel = relative(date);
     var ls = liveState[m.uid], isLive = ls && ls.state === "in";
@@ -920,7 +924,7 @@
       ? monthHtml(list, true)
       : listHtml(list.filter(function (m) { return prefs.when === "upcoming" ? isUpcoming(m) : !isUpcoming(m); }), prefs.when, true);
     return '<p class="lede">Ανεπίσημη σελίδα φιλάθλων με πρόγραμμα, αποτελέσματα και βαθμολογίες όλων των τμημάτων του ΠΑΟΚ. Η εφαρμογή ενημερώνεται αυτόματα, κάθε 2 ώρες και πιο συχνά την ώρα των αγώνων. Κάθε τμήμα έχει τη δική του σελίδα, στο μενού πάνω δεξιά.</p>' +
-      installHtml() +
+      installHtml() + lostHtml() +
       nextHtml(data.matches) +
       '<h2 class="section-title">Όλοι οι αγώνες</h2>' +
       bar +
@@ -1141,7 +1145,7 @@
     if (r.page === "notifications") mb.setAttribute("aria-current", "page"); else mb.removeAttribute("aria-current");
     if (r.page === "notifications" && push.ready) verifyPush();
     // Θαυμαστικό στο καμπανάκι όταν οι επιλογές δεν έχουν αποθηκευτεί στον server.
-    mb.classList.toggle("warn", push.server === "error");
+    mb.classList.toggle("warn", push.server === "error" || push.lost);
     mb.setAttribute("aria-label", push.server === "error" ? "Ειδοποιήσεις: οι επιλογές δεν αποθηκεύτηκαν" : "Ειδοποιήσεις");
   }
 
@@ -1170,6 +1174,7 @@
     }
     if (b.dataset.act === "push-off") { disablePush(); return; }
     if (b.dataset.act === "push-test") { testPush(); return; }
+    if (b.dataset.act === "push-restore") { restorePush(); return; }
     if (b.dataset.act === "push-retry") { syncPush().then(function () { toast("Αποθηκεύτηκαν."); }, function () { toast("Πάλι δεν έγινε. Θα ξαναδοκιμάσει μόνη της."); }); return; }
     if (b.dataset.act === "share") {
       navigator.share({ title: document.title, url: location.href }).catch(function () {});
@@ -1248,7 +1253,7 @@
   var PUSH_KINDS = [["pre", "Πριν"], ["time", "Αλλαγές"], ["live", "Live"], ["result", "Τελικό"]];
   var pushOrigin = /(^|\.)vercel\.app$|^localhost$|^127\.0\.0\.1$/.test(location.hostname);
   var pushSupported = "serviceWorker" in navigator && "PushManager" in window && "Notification" in window;
-  var push = { reg: null, sub: null, key: null, busy: false, ready: false, topics: [], server: "", serverAt: 0 };
+  var push = { reg: null, sub: null, key: null, busy: false, ready: false, topics: [], server: "", serverAt: 0, lost: false };
   try { push.topics = JSON.parse(localStorage.getItem("paok-push-topics") || "[]") || []; } catch (e) {}
 
   function pushStatus() {
@@ -1346,9 +1351,39 @@
       if (!r.ok) throw new Error("check " + r.status);
       return r.json();
     }).then(function (d) {
+      if (d.gone) return markLost();  // η υπηρεσία push απάντησε ότι η συνδρομή δεν ισχύει πια
       if (d.found && sameTopics(push.topics, d.topics || [])) { setDirty(false); setServer("ok"); return; }
       return syncPush();
     }).catch(function () { if (push.server !== "ok") setServer("error"); });
+  }
+  // Η συσκευή ακύρωσε τη συνδρομή (συμβαίνει στο iPhone, π.χ. μετά από επαναφορά ή αν η εφαρμογή δεν
+  // ανοιχτεί για καιρό). Οι επιλογές μένουν αποθηκευμένες· ζητάμε από τον χρήστη να τις ξαναενεργοποιήσει
+  // με ένα πάτημα (το iPhone δέχεται νέα συνδρομή μόνο μετά από πάτημα).
+  function markLost() {
+    var old = push.sub;
+    push.sub = null;
+    push.lost = true;
+    setServer("");
+    if (old) old.unsubscribe().catch(function () {});
+    if (data) render();
+  }
+  function restorePush() {
+    ensureSub().then(function () {
+      push.lost = false;
+      return syncPush();
+    }).then(function () {
+      toast("Οι ειδοποιήσεις ενεργοποιήθηκαν ξανά, με τις ίδιες επιλογές.");
+      render();
+    }).catch(function () {
+      toast(window.Notification && Notification.permission === "denied"
+        ? "Οι ειδοποιήσεις είναι μπλοκαρισμένες στις ρυθμίσεις του κινητού." : "Δεν έγινε. Δοκίμασε ξανά σε λίγο.");
+    });
+  }
+  function lostHtml() {
+    if (!push.lost) return "";
+    return '<div class="explain server-err"><h4>Οι ειδοποιήσεις σταμάτησαν σε αυτή τη συσκευή</h4>' +
+      "<p>Το κινητό ακύρωσε τη συνδρομή (συμβαίνει καμιά φορά στο iPhone). Οι επιλογές σου είναι κρατημένες· πάτα για να ξαναρχίσουν.</p>" +
+      '<div class="actions"><button type="button" class="btn solid" data-act="push-restore">Ενεργοποίηση ξανά</button></div></div>';
   }
   function testPush() {
     if (!push.sub) return;
@@ -1406,6 +1441,7 @@
     var first = !push.sub;
     push.busy = true;
     (on ? ensureSub() : Promise.resolve()).then(function () {
+      if (push.sub) push.lost = false;
       list.forEach(function (t) {
         var i = push.topics.indexOf(t);
         if (on && i < 0) push.topics.push(t);
@@ -1463,6 +1499,7 @@
     }).then(function (sub) {
       push.sub = sub;
       push.ready = true;
+      if (!sub && push.topics.length && Notification.permission === "granted") push.lost = true;
       if (data) render();
       return fetchKey().then(function (key) {
         if (!sub) return;
@@ -1529,7 +1566,7 @@
       '<div class="section-head"><h2>Ειδοποιήσεις</h2></div>' +
       '<div class="follow">' +
       "<p>Διάλεξε για ποια τμήματα και τι θέλεις να μαθαίνεις. Οι ειδοποιήσεις έρχονται σε αυτή τη συσκευή, χωρίς λογαριασμό, και τις αλλάζεις όποτε θέλεις.</p>" +
-      pushNoteHtml() + serverStatusHtml() +
+      lostHtml() + pushNoteHtml() + serverStatusHtml() +
       (isAdmin() && st === "on" ? "<h3>Διαχειριστής</h3>" + '<ul class="notify">' + switchRow(["s:ops:live"], "Ειδοποιήσεις λειτουργίας",
         "Όταν κάτι σταματήσει να δουλεύει: έλεγχοι, live, αποθήκευση επιλογών, ανεβάσματα") + "</ul>" +
         '<div class="actions"><button type="button" class="btn" data-act="push-test">Στείλε μου δοκιμαστική ειδοποίηση</button></div>' : "") +
@@ -1627,7 +1664,8 @@
     var ongoing = phase(m);
     var status;
     if (live) status = '<span class="live-badge">LIVE</span><span>' + esc(det && det.current ? det.currentLabel + " · πόντοι και σετ" : ls.label) + "</span>";
-    else if (parts || finalLive) status = "<span>Τελικό</span>";
+    else if (parts || finalLive) status = "<span>Τελικό" + (m.note ? " (" + esc(m.note) + ")" : "") + "</span>";
+    else if (m.status) status = "<span>" + esc(STATUS_TEXT[m.status] || m.status) + "</span>";
     else if (ongoing) status = "<span>" + PHASE_TEXT[ongoing] + "</span>";
     else {
       var rel = relative(date);
@@ -1668,6 +1706,7 @@
     var info = [["Ημερομηνία", cap(fmtLong.format(date))], ["Ώρα", m.timeKnown ? fmtTime.format(date) : "Δεν έχει οριστεί (TBC)"]];
     if (m.venue) info.push(["Γήπεδο", m.venue]);
     if (m.tv) info.push(["Τηλεόραση", m.tv]);
+    if (m.status) info.push(["Κατάσταση", (STATUS_TEXT[m.status] || m.status) + (m.note ? ": " + m.note : "")]);
     info.push(["Έδρα", m.paokHome ? "Εντός" : "Εκτός"]);
     if (m.competition) info.push(["Διοργάνωση", m.competition + (m.round ? ", " + m.round : "")]);
     var infoHtml = "<h3>Πληροφορίες</h3><dl class=\"info\">" + info.map(function (i) {
@@ -1837,14 +1876,15 @@
     });
   }
   function waterpoloState(j, src) {
+    if (j.off) return { state: "pre", home: 0, away: 0, quarter: 0, label: j.off };
     if (src === "ehf") {
       return { state: j.state, home: j.home || 0, away: j.away || 0, quarter: j.quarter || 0,
                label: j.state === "post" ? "Τελικό" : j.state === "pre" ? "Ξεκινά" : (j.quarter || 1) + "ο ημίχρονο" };
     }
     if (src === "dp") {
       return { state: j.state, home: j.home || 0, away: j.away || 0, quarter: j.quarter || 0,
-               label: j.state === "post" ? "Τελικό" : j.state === "pre" ? "Ξεκινά"
-                 : j.quarter + "ο σετ" + (j.clock ? " " + j.clock.replace("-", "–") : "") };
+               label: j.state === "post" ? "Τελικό" + (j.note ? " (" + j.note + ")" : "") : j.state === "pre" ? "Ξεκινά"
+                 : (j.quarter === 6 ? "Χρυσό σετ" : j.quarter + "ο σετ") + (j.clock ? " " + j.clock.replace("-", "–") : "") };
     }
     var label = j.state === "post" ? "Τελικό" : j.state === "pre" ? "Ξεκινά"
       : j.quarter ? (j.quarter <= 4 ? j.quarter + "η περ." : src === "gs" ? "Παράτ." : "Πέναλτι") + (j.clock ? " " + j.clock : "")
@@ -1861,9 +1901,11 @@
           sets.push({ label: String(i + 1), home: played ? x.home : "", away: played ? x.away : "",
                       win: x && i < done ? (x.home > x.away ? "home" : "away") : "" });
         }
-        var cur = vs.state === "in" ? (j.quarters || [])[done] : null;
+        if (j.golden) sets.push({ label: "ΧΣ", home: j.golden.home, away: j.golden.away,
+                                  win: vs.state === "post" ? (j.golden.home > j.golden.away ? "home" : "away") : "" });
+        var cur = vs.state === "in" ? (vs.quarter === 6 ? j.golden : (j.quarters || [])[done]) : null;
         return { state: vs, home: vs.home, away: vs.away, periodTitle: "Πόντοι ανά σετ", totalLabel: "Σετ",
-                 quarters: vs.state === "pre" ? [] : sets, current: cur, currentLabel: vs.quarter + "ο σετ",
+                 quarters: vs.state === "pre" ? [] : sets, current: cur, currentLabel: vs.quarter === 6 ? "Χρυσό σετ" : vs.quarter + "ο σετ",
                  sourceNote: "Live από την Data Project (επίσημο σύστημα της ΕΟΠΕ)." };
       }
       var st = waterpoloState(j, m.live.src), quarters = [];

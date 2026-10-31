@@ -154,8 +154,13 @@ def changes(previous: list[dict], current: list[dict], sections: set[str]) -> li
             events.append((sec, "time", f"{emoji} Αλλαγή: {teams(m)}",
                            f"Τώρα: {when_text(m)} (ήταν {when_text(old)})", m))
         if m.get("score") and not old.get("score") and now - start < dt.timedelta(days=3):
-            events.append((sec, "result", f"{emoji} Τελικό: {teams(m, with_score=True)}",
+            note = f" ({m['note']})" if m.get("note") else ""
+            events.append((sec, "result", f"{emoji} Τελικό: {teams(m, with_score=True)}{note}",
                            m.get("competition", "") + (f", {m['round']}" if m.get("round") else ""), m))
+        if m.get("status") and m.get("status") != old.get("status") and not m.get("score"):
+            what = STATUS_TEXT.get(m["status"], m["status"])
+            events.append((sec, "time", f"{emoji} {what}: {teams(m)}",
+                           (m.get("note") or when_text(m)) + (f". {details}" if details else ""), m))
     # Προστασία: αν μια πηγή αλλάξει μορφή, δεν θέλουμε δεκάδες ειδοποιήσεις.
     counts: dict[tuple[str, str], int] = {}
     for sec, kind, *_ in events:
@@ -176,9 +181,12 @@ def send_changes(previous: list[dict], current: list[dict], sections: set[str]) 
         send(sec, kind, title, message, match=m)
 
 
+STATUS_TEXT = {"postponed": "Αναβλήθηκε", "cancelled": "Ματαιώθηκε", "abandoned": "Διακόπηκε"}
+
+
 def live_window(m: dict, now: dt.datetime) -> bool:
     """Αν ένας αγώνας με live πρέπει να παρακολουθείται τώρα."""
-    if not m.get("live") or not m.get("timeKnown") or m.get("score"):
+    if not m.get("live") or not m.get("timeKnown") or m.get("score") or m.get("status") in ("postponed", "cancelled"):
         return False
     start = dt.datetime.fromisoformat(m["start"])
     return start - LIVE_LEAD <= now <= start + LIVE_SPAN
@@ -186,7 +194,7 @@ def live_window(m: dict, now: dt.datetime) -> bool:
 
 def awaiting_result(m: dict, now: dt.datetime) -> bool:
     """Αν ένας αγώνας πρέπει να έχει τελειώσει αλλά δεν έχουμε ακόμα το αποτέλεσμα."""
-    if not m.get("timeKnown") or m.get("score"):
+    if not m.get("timeKnown") or m.get("score") or m.get("status"):
         return False
     start = dt.datetime.fromisoformat(m["start"])
     end = start + dt.timedelta(minutes=DURATION.get(m["section"], 120) - 10)
@@ -203,7 +211,7 @@ def reminders(matches_path: Path, state_path: Path) -> int:
     now = dt.datetime.now(dt.timezone.utc)
     sent = 0
     for m in data.get("matches", []):
-        if not m.get("timeKnown") or m.get("score"):
+        if not m.get("timeKnown") or m.get("score") or m.get("status"):
             continue
         start = dt.datetime.fromisoformat(m["start"])
         key = f"{m['uid']}@{m['start']}"  # αν αλλάξει η ώρα, ξαναστέλνεται για τη νέα

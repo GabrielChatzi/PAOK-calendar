@@ -153,7 +153,8 @@ def waterpolo_state(live: dict) -> dict:
         raise ValueError(st.get("error") or "άγνωστη απάντηση")
     q = st.get("quarter") or 0
     if live.get("src") == "dp":
-        st["detail"] = f"{q}ο σετ {st.get('clock') or ''}".strip() if st["state"] == "in" else ""
+        name = "χρυσό σετ" if q == 6 else f"{q}ο σετ"
+        st["detail"] = f"{name} {st.get('clock') or ''}".strip() if st["state"] == "in" else ""
         return st
     if live.get("src") == "ehf":
         st["detail"] = f"{q}ο ημίχρονο" if st["state"] == "in" and q else ""
@@ -221,7 +222,9 @@ def gs_state(j: dict, status: str, side: str | None) -> dict:
     tm = j.get("tm") or {}
     ended = any(a.get("actionType") == "game" and a.get("subType") == "end" for a in pbp)
     status = (status or "").lower()
-    state = "post" if "final" in status or ended else "in" if "live" in status or pbp else "pre"
+    off = ("Αναβλήθηκε" if "postpon" in status else "Ματαιώθηκε" if "cancel" in status
+           else "Διακόπηκε" if "abandon" in status or "suspend" in status else "")
+    state = "pre" if off else "post" if "final" in status or ended else "in" if "live" in status or pbp else "pre"
     flip = bool(paok.search((tm.get("1") or {}).get("name") or "")) != (side == "h")
     a, b = ("2", "1") if flip else ("1", "2")
     period = int(j.get("period") or 0)
@@ -234,6 +237,7 @@ def gs_state(j: dict, status: str, side: str | None) -> dict:
         "quarter": period if state == "in" else 0,
         "done": period if state == "post" or period_ended else max(0, period - 1),
         "detail": f"{period}η περίοδος {'' if period_ended else clock}".strip() if state == "in" else "",
+        "off": off,
     }
 
 
@@ -262,6 +266,9 @@ def events(m: dict, old: dict | None, new: dict) -> list[tuple[str, str]]:
     if old["state"] == "pre" and new["state"] == "in":
         out.append((f"{e} Ξεκίνησε: {m['home']} – {m['away']}", comp))
     if new["state"] in ("in", "post") and m["live"]["src"] == "espn":
+        # Ακυρωμένο γκολ (VAR): το σκορ μειώθηκε.
+        if old["state"] in ("in", "post") and (new["home"] < old.get("home", 0) or new["away"] < old.get("away", 0)):
+            out.append((f"{e} Ακυρώθηκε γκολ: {score_text(m, new)}", "Μετά από έλεγχο (VAR)"))
         seen = {g["id"] for g in old.get("goals", [])}
         # Αν έρθουν πολλά γκολ μαζί, κάθε ειδοποίηση δείχνει το σκορ τη στιγμή εκείνου του γκολ.
         running = {"home": old.get("home", 0), "away": old.get("away", 0)}
@@ -301,7 +308,8 @@ def events(m: dict, old: dict | None, new: dict) -> list[tuple[str, str]]:
         out.append((f"{e} {new['off']}: {m['home']} – {m['away']}", comp))
     if old["state"] != "post" and new["state"] == "post":
         pens = new.get("pens")
-        extra = f" (πέναλτι {pens[0]}–{pens[1]})" if pens and (pens[0] or pens[1]) else ""
+        extra = (f" (πέναλτι {pens[0]}–{pens[1]})" if pens and (pens[0] or pens[1])
+                 else f" ({new['note']})" if new.get("note") else "")
         out.append((f"{e} Τελικό: {score_text(m, new)}{extra}", comp))
     return out
 
@@ -316,6 +324,41 @@ def settle_final(old: dict | None, new: dict) -> dict:
 
 # ---------------------------------------------------------------- κύριο
 
+# Η κατάσταση κάθε αγώνα σώζεται σε αρχείο (κρατιέται στην cache του live.yml), ώστε μια νέα εκτέλεση
+# (μετά το όριο χρόνου ή μια διακοπή) να συνεχίσει από εκεί που έμεινε: ό,τι άλλαξε στο μεταξύ
+# στέλνεται, χωρίς να ξαναστείλει τα παλιά.
+STATE_FILE = Path(__file__).resolve().parent / ".live" / "state.json"
+STATE_MAX_AGE = dt.timedelta(minutes=45)
+
+
+def load_states(now: dt.datetime) -> dict[str, dict]:
+    try:
+        saved = json.loads(STATE_FILE.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    return {uid: v["state"] for uid, v in saved.items()
+            if now - dt.datetime.fromisoformat(v["at"]) <= STATE_MAX_AGE}
+
+
+def save_states(states: dict[str, dict], now: dt.datetime) -> None:
+    try:
+        STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
+        STATE_FILE.write_text(json.dumps({uid: {"at": now.isoformat(), "state": s} for uid, s in states.items()},
+                                         ensure_ascii=False), encoding="utf-8")
+    except OSError as e:
+        print(f"  ! αποθήκευση κατάστασης: {e}", file=sys.stderr)
+
+
+def start_successor() -> None:
+    """Πριν από το όριο χρόνου του GitHub: νέα εκτέλεση, που ξεκινά μόλις τελειώσει αυτή."""
+    import subprocess
+    try:
+        subprocess.run(["gh", "workflow", "run", "live.yml", "--ref", "main"], check=True, timeout=60)
+        print("Ξεκίνησε η επόμενη εκτέλεση της παρακολούθησης.")
+    except Exception as e:
+        print(f"  ! επόμενη εκτέλεση: {e}", file=sys.stderr)
+
+
 def main() -> int:
     started = dt.datetime.now(dt.timezone.utc)
     upcoming = [m for m in load_matches() if m.get("live") and notify.live_window(m, started)]
@@ -323,15 +366,19 @@ def main() -> int:
     if not upcoming:
         # Ξεκίνησε από το πρόγραμμα του live.yml (εφεδρικός δρόμος) χωρίς αγώνα κοντά: τίποτα να κάνει.
         return 0
-    states: dict[str, dict] = {}
+    states: dict[str, dict] = load_states(started)
+    if states:
+        print(f"Συνέχεια από προηγούμενη εκτέλεση για {len(states)} αγώνες.")
     failures: dict[str, int] = {}
     idle_since: dt.datetime | None = None
     while True:
         now = dt.datetime.now(dt.timezone.utc)
+        matches = load_matches()
         if now - started > MAX_RUNTIME:
             print("Τέλος χρόνου εργασίας.")
+            if any(m.get("live") and (notify.live_window(m, now) or states.get(m["uid"], {}).get("state") == "in") for m in matches):
+                start_successor()
             break
-        matches = load_matches()
         watch = [m for m in matches if m.get("live") and (
             notify.live_window(m, now) or states.get(m["uid"], {}).get("state") == "in")]
         if not watch:
@@ -369,6 +416,7 @@ def main() -> int:
             if old is None or (old["state"], old["home"], old["away"]) != (new["state"], new["home"], new["away"]):
                 print(f"{now:%H:%M} {m['home']} – {m['away']}: {new['state']} {new['home']}-{new['away']} {new.get('detail', '')}")
             states[m["uid"]] = new
+        save_states(states, now)
         time.sleep(POLL_SECONDS)
     return 0
 

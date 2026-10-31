@@ -38,13 +38,15 @@ export default async function handler(req, res) {
   };
 
   const col = await subs();
-  const targets = await col.find({ topics: { $in: [...wanted] } }, { projection: { endpoint: 1, keys: 1 } }).toArray();
+  const targets = await col.find({ topics: { $in: [...wanted] }, gone: { $ne: true } }, { projection: { endpoint: 1, keys: 1 } }).toArray();
   const keys = await vapidKeys();
   const ttl = [...wanted].some((t) => t.endsWith(":live")) ? 2 * 3600 : 12 * 3600;
   lastErrors.length = 0;
   const results = await Promise.all(targets.map((s) => pushTo(s, payload, keys, ttl)));
   const gone = targets.filter((_, i) => results[i] === "gone").map((s) => s._id);
-  if (gone.length) await col.deleteMany({ _id: { $in: gone } });
+  // Συνδρομές που ακύρωσε η συσκευή (404/410): δεν σβήνονται, σημειώνονται, ώστε η εφαρμογή να το
+  // καταλάβει στον επόμενο έλεγχο και να ζητήσει να ξαναενεργοποιηθούν οι ειδοποιήσεις.
+  if (gone.length) await col.updateMany({ _id: { $in: gone } }, { $set: { gone: true, goneAt: new Date() } });
   const count = (x) => results.filter((r) => r === x).length;
   return send(res, 200, { matched: targets.length, sent: count("ok"), removed: count("gone"), failed: count("error"),
     errors: lastErrors.slice(0, 5) });

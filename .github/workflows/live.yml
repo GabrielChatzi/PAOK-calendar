@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: read
+  actions: write  # η επόμενη εκτέλεση πριν από το όριο χρόνου
   id-token: write  # ταυτότητα για τις ειδοποιήσεις web push (/api/push)
 
 concurrency:
@@ -27,8 +28,23 @@ jobs:
         with:
           python-version: "3.12"
 
+      # Η κατάσταση των αγώνων από την προηγούμενη εκτέλεση (βλ. STATE_FILE στο live.py).
+      - uses: actions/cache/restore@v4
+        with:
+          path: .live
+          key: live-state-${{ github.run_id }}
+          restore-keys: live-state-
+
       - name: Παρακολούθηση αγώνων
         env:
           PUSH: "1"
           PYTHONUNBUFFERED: "1"
+          GH_TOKEN: ${{ github.token }}
         run: python3 live.py
+
+      - uses: actions/cache/save@v4
+        if: always()
+        continue-on-error: true  # χωρίς αγώνα δεν γράφεται αρχείο
+        with:
+          path: .live
+          key: live-state-${{ github.run_id }}

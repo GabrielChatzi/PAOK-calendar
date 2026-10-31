@@ -60,6 +60,28 @@ test("Data Project: σετ, πόντοι και τρέχον σετ, με αλλ
   assert.deepEqual([body.state, body.home, body.away, body.quarter, body.clock], ["in", 2, 0, 3, "5-9"]);
 });
 
+test("Data Project: χρυσό σετ στο τελικό", async () => {
+  mockFetch([
+    [/negotiate/, { ConnectionToken: "x" }], [/\/connect\?/, "{}"], [/\/start\?/, "{}"], [/\/abort\?/, "{}"],
+    [/\/send\?/, { R: [{ ChampionshipMatchID: 9, HomeEmpty: "P.A.O.K.", GuestEmpty: "X", Status: 2, WonSetHome: 3, WonSetGuest: 1,
+      Set1Home: 25, Set1Guest: 20, Set2Home: 25, Set2Guest: 20, Set3Home: 20, Set3Guest: 25, Set4Home: 25, Set4Guest: 22,
+      GoldenSetPlayed: true, GoldenSetHome: 13, GoldenSetGuest: 15 }] }],
+  ]);
+  const { body } = await call(live, { src: "dp", fed: "eope", id: "9", side: "h" });
+  assert.deepEqual(body.golden, { home: 13, away: 15 });
+  assert.equal(body.note, "χρυσό σετ 13–15");
+});
+
+test("ΚΟΕ: αναβολή από το πρόγραμμα (MatReason)", async () => {
+  mockFetch([
+    [/\/token$/, { token: "t", expiresInSec: 900 }],
+    [/schedulereferee/, { Schedule: [{ OraTurCode: "A01", OraTeamCodeA: "1", OraTeamCodeB: "3", OraStatus: 0, MatReason: "P", MatReasonDescr: "Αναβολή" }] }],
+    [/resultsDBlikeJSON/, { r1: "", r2: "", q: [] }],
+  ]);
+  const { body } = await call(live, { ...KOE_Q, b: "3" });
+  assert.deepEqual([body.state, body.off], ["pre", "Αναβολή"]);
+});
+
 test("Genius: στην αρχή της 3ης, done = 2 (όχι «Τέλος 3ης»)", async () => {
   const widget = `var html = ${JSON.stringify('<li class="spls_lsmatch "><a href="http://www.fibalivestats.com/webcast/ESAKE/9/"><span class="spls_matchstatus">Live</span><span class="teamname">IRA</span><span class="teamname">PBC</span></a></li>')};\n`;
   mockFetch([

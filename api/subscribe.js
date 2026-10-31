@@ -23,8 +23,8 @@ export default async function handler(req, res) {
     if (req.method !== "POST") return send(res, 405, { error: "Μόνο POST ή DELETE." });
 
     if (body.action === "check") {
-      const doc = await col.findOne({ _id: id }, { projection: { topics: 1, updated: 1 } });
-      return send(res, 200, { ok: true, found: !!doc, topics: doc ? doc.topics || [] : [], updated: doc?.updated || null });
+      const doc = await col.findOne({ _id: id }, { projection: { topics: 1, updated: 1, gone: 1 } });
+      return send(res, 200, { ok: true, found: !!doc, gone: !!doc?.gone, topics: doc ? doc.topics || [] : [], updated: doc?.updated || null });
     }
 
     if (body.action === "test") {
@@ -39,7 +39,7 @@ export default async function handler(req, res) {
         body: "Οι ειδοποιήσεις του PAOKalendar φτάνουν σε αυτή τη συσκευή.",
         url: "/#/notifications", tag: "test",
       }, await vapidKeys(), 600);
-      if (result === "gone") await col.deleteOne({ _id: id });
+      if (result === "gone") await col.updateOne({ _id: id }, { $set: { gone: true, goneAt: new Date() } });
       return send(res, result === "ok" ? 200 : 502, { ok: result === "ok", result });
     }
 
@@ -52,6 +52,7 @@ export default async function handler(req, res) {
         keys: { p256dh: sub.keys.p256dh, auth: sub.keys.auth },
         topics,
         updated: new Date(),
+        gone: false,
       },
     }, { upsert: true });
     return send(res, 200, { ok: true, topics: topics.length, saved: topics });

@@ -98,6 +98,8 @@ class Match:
     away_logo: str = ""
     # Πού βρίσκεται το ζωντανό σκορ, αν υπάρχει (βλ. live.py και τη σελίδα).
     live: dict | None = None
+    status: str = ""  # "postponed" | "cancelled" | "abandoned": δεν θα γίνει / δεν ολοκληρώθηκε
+    note: str = ""    # π.χ. «πέναλτι 4–3», «μετά από παράταση», ή ο λόγος της αναβολής
 
     def start(self) -> dt.datetime:
         return dt.datetime.combine(self.day, self.time or DEFAULT_TIME, ATHENS)
@@ -110,8 +112,9 @@ class Match:
         d["homeLogo"] = d.pop("home_logo")
         d["awayLogo"] = d.pop("away_logo")
         d["nt"] = match_topic_id(self.uid)
-        if not self.live:
-            del d["live"]
+        for k in ("live", "status", "note"):
+            if not d[k]:
+                del d[k]
         del d["day"], d["time"]
         return d
 
@@ -476,6 +479,10 @@ def espn_matches(section: str, team_id: str, leagues: list[str]) -> list[Match]:
                 s = c.get("score")
                 return str(s.get("displayValue", s.get("value", ""))) if isinstance(s, dict) else str(s or "")
             score = f'{goals(teams["home"])}-{goals(teams["away"])}'
+        pens = [teams[s].get("shootoutScore") for s in ("home", "away")]
+        note = f"πέναλτι {pens[0]}–{pens[1]}" if score and None not in pens else ""
+        state_name = status.get("name") or ""
+        off = next((v for k, v in ESPN_OFF.items() if k in state_name), "")
         venue = (comp.get("venue") or {}).get("fullName", "")
         notes = comp.get("notes") or []
         out.append(Match(
@@ -490,9 +497,14 @@ def espn_matches(section: str, team_id: str, leagues: list[str]) -> list[Match]:
             url=f"https://www.espn.com/soccer/match/_/gameId/{ev_id}",
             home_logo=logo(teams["home"]), away_logo=logo(teams["away"]),
             live={"src": "espn", "league": league, "id": ev_id},
+            status="" if score else off, note=note,
         ))
     return out
 
+
+# Καταστάσεις της ESPN για αγώνες που δεν έγιναν ή δεν ολοκληρώθηκαν.
+ESPN_OFF = {"POSTPONED": "postponed", "CANCELED": "cancelled", "ABANDONED": "abandoned", "SUSPENDED": "abandoned"}
+STATUS_TEXT = {"postponed": "Αναβλήθηκε", "cancelled": "Ματαιώθηκε", "abandoned": "Διακόπηκε"}
 
 EPO = "https://www.epo.gr"
 
@@ -1069,9 +1081,14 @@ def ehf_matches(section: str) -> list[Match]:
             else:
                 day, time = utc.date(), None
             place = m["venue"].get("place") or {}
-            score = ""
+            score, note = "", ""
             if m.get("isFinished"):
-                score = f'{m["homeTeam"]["score"]["goals"]}-{m["guestTeam"]["score"]["goals"]}'
+                hs, gs = m["homeTeam"]["score"], m["guestTeam"]["score"]
+                score = f'{hs["goals"]}-{gs["goals"]}'
+                if hs.get("goalsPenaltyShotout") or gs.get("goalsPenaltyShotout"):
+                    note = f'πέναλτι {hs.get("goalsPenaltyShotout") or 0}–{gs.get("goalsPenaltyShotout") or 0}'
+                elif hs.get("goalsExtraTime1") or gs.get("goalsExtraTime1"):
+                    note = "μετά από παράταση"
             link = m.get("url") or ""
             out.append(Match(
                 section=section, uid=f"{section}-ehf-{m['matchID']}", day=day, time=time,
@@ -1081,6 +1098,7 @@ def ehf_matches(section: str) -> list[Match]:
                 competition=name, round=ehf_round(m), score=score,
                 url=link if link.startswith("http") else base + link,
                 home_logo=home_t.get("logoSmall") or "", away_logo=away_t.get("logoSmall") or "",
+                note=note,
             ))
     return out
 
@@ -1338,12 +1356,19 @@ def build_ics(cal_name: str, matches: list[Match], stamp: str) -> str:
         emoji = SECTIONS[m.section]["emoji"]
         middle = f" {m.score} " if m.score else " – "
         summary = f"{emoji} {m.home}{middle}{m.away}"
+        if m.status:
+            word = unicodedata.normalize("NFD", STATUS_TEXT.get(m.status, m.status).upper())
+            summary = f"{''.join(c for c in word if not unicodedata.combining(c))}: {summary}"  # ελληνικά κεφαλαία χωρίς τόνο
+        if m.note and m.score:
+            summary += f" ({m.note})"
         if m.time is None:
             summary += " (ώρα TBC)"
         desc = [x for x in (m.competition, m.round) if x]
         desc = [" – ".join(desc)] if desc else []
         if m.score:
-            desc.append(f"Τελικό σκορ: {m.home} {m.score} {m.away}")
+            desc.append(f"Τελικό σκορ: {m.home} {m.score} {m.away}" + (f" ({m.note})" if m.note else ""))
+        elif m.status:
+            desc.append(STATUS_TEXT.get(m.status, m.status) + (f": {m.note}" if m.note else ""))
         if m.tv:
             desc.append(f"TV: {m.tv}")
         if m.time is None:
@@ -1358,6 +1383,8 @@ def build_ics(cal_name: str, matches: list[Match], stamp: str) -> str:
             f"DTEND;TZID=Europe/Athens:{start + GAME_LENGTH:%Y%m%dT%H%M%S}",
             f"SUMMARY:{ics_escape(summary)}",
         ]
+        if m.status == "cancelled":
+            lines.append("STATUS:CANCELLED")
         if m.venue:
             lines.append(f"LOCATION:{ics_escape(m.venue)}")
         if desc:
@@ -1397,6 +1424,14 @@ def manual_matches(section: str, official: list[Match]) -> list[Match]:
     out = []
     for e in json.loads(MANUAL_PATH.read_text(encoding="utf-8")):
         if e.get("section") != section:
+            continue
+        if e.get("status"):
+            # Αναβολή/ματαίωση που ανακοινώθηκε (π.χ. από την ΑΣ ΠΑΟΚ) για αγώνα της επίσημης πηγής:
+            # σημειώνεται στον αγώνα της ίδιας μέρας, δεν προστίθεται νέος.
+            day = dt.date.fromisoformat(e["date"])
+            for m in official:
+                if m.day == day and not m.score and ("home" not in e or m.paok_home == is_paok(e["home"])):
+                    m.status, m.note = e["status"], e.get("reason", m.note)
             continue
         day = dt.date.fromisoformat(e["date"])
         paok_home = is_paok(e["home"])

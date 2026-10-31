@@ -70,7 +70,9 @@ async function koe(p) {
   const x = (sch?.Schedule || []).find((o) => String(o.OraTurCode) === p.tur &&
     String(o.OraTeamCodeA) === p.a && String(o.OraTeamCodeB) === p.b);
   if (!x) throw new Error("ο αγώνας δεν βρέθηκε στο πρόγραμμα της ΚΟΕ");
-  const state = stateOf(x.OraStatus);
+  // Αναβολή/διακοπή: η ΚΟΕ γράφει λόγο στο πρόγραμμα.
+  const off = x.MatReason ? String(x.MatReasonDescr || "Αναβλήθηκε") : "";
+  const state = off ? "pre" : stateOf(x.OraStatus);
   // q: 4 περίοδοι και τα πέναλτι, η καθεμία με σκορ (r1, r2), κατάσταση st (0/1/2) και χρόνο tg.
   const q = Array.isArray(j?.q) ? j.q : [];
   const st = q.map((o) => String(o?.st ?? "0"));
@@ -84,7 +86,7 @@ async function koe(p) {
     // Τελειωμένες: όσες είναι πριν από την τελευταία που ξεκίνησε (στο τέλος, όλες).
     done: state === "post" ? Math.min(4, last + 1) : Math.max(0, last),
     clock: state === "in" && st[last] === "1" ? String(q[last].tg || "") : "",
-    quarters: state === "pre" ? [] : quarters,
+    quarters: state === "pre" ? [] : quarters, off,
   };
 }
 
@@ -133,11 +135,16 @@ async function dp(p) {
     const a = num(x[`Set${i}${H}`]) || 0, b = num(x[`Set${i}${G}`]) || 0;
     if (i <= won || (state === "in" && i === won + 1) || a || b) sets.push({ home: a, away: b });
   }
-  const cur = state === "in" ? sets[won] : null;
+  // Χρυσό σετ (κύπελλα με δύο αγώνες): παίζεται μετά τον αγώνα, χωριστά από τα σετ.
+  const gh = num(x[`GoldenSet${H}`]) || 0, gg = num(x[`GoldenSet${G}`]) || 0;
+  const golden = x.GoldenSetPlayed || gh || gg ? { home: gh, away: gg } : null;
+  const inGolden = golden && state === "in" && (num(x[`WonSet${H}`]) >= 3 || num(x[`WonSet${G}`]) >= 3);
+  const cur = state === "in" ? (inGolden ? golden : sets[won]) : null;
   return {
     state, home: num(x[`WonSet${H}`]) || 0, away: num(x[`WonSet${G}`]) || 0,
-    quarter: state === "in" ? won + 1 : 0, done: won,
+    quarter: state === "in" ? (inGolden ? 6 : won + 1) : 0, done: won,
     clock: cur ? `${cur.home}-${cur.away}` : "", quarters: state === "pre" ? [] : sets.slice(0, state === "post" ? won : 5),
+    golden, note: golden && state === "post" ? `χρυσό σετ ${golden.home}–${golden.away}` : "",
   };
 }
 
@@ -182,7 +189,9 @@ async function gs(p) {
   const j = (await getJson(`${GS_DATA}${row.id}/data.json`).catch(() => null)) || {};
   const pbp = Array.isArray(j.pbp) ? j.pbp : [];  // τα πιο πρόσφατα πρώτα
   const ended = pbp.some((a) => a.actionType === "game" && a.subType === "end");
-  let state = /final/i.test(row.status) || ended ? "post" : /live/i.test(row.status) || pbp.length ? "in" : "pre";
+  const off = /postpon/i.test(row.status) ? "Αναβλήθηκε" : /cancel/i.test(row.status) ? "Ματαιώθηκε"
+    : /abandon|suspend/i.test(row.status) ? "Διακόπηκε" : "";
+  let state = off ? "pre" : /final/i.test(row.status) || ended ? "post" : /live/i.test(row.status) || pbp.length ? "in" : "pre";
   const flip = p.side && PAOK.test(j.tm?.["1"]?.name || "") !== (p.side === "h");
   const A = flip ? "2" : "1", B = flip ? "1" : "2";
   const period = num(j.period) || 0;
@@ -208,7 +217,7 @@ async function gs(p) {
     quarter: state === "in" ? period : 0,
     done: state === "post" ? period : periodEnded ? period : Math.max(0, period - 1),
     clock: state === "in" && !periodEnded ? String(j.clock || "") : "",
-    quarters: state === "pre" ? [] : quarters,
+    quarters: state === "pre" ? [] : quarters, off,
   };
 }
 

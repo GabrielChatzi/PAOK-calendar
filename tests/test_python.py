@@ -96,6 +96,19 @@ class Football(unittest.TestCase):
         self.assertEqual(new["state"], "pre")
         self.assertEqual(titles(m, dict(st("pre"), off=""), new), ["⚽ Αναβλήθηκε: ΠΑΟΚ – Εθνικός"])
 
+    def test_disallowed_goal(self):
+        m = dict(M, section="football", live={"src": "espn"})
+        old = st("in", 1, 0, goals=[{"id": "g1"}])
+        self.assertEqual(titles(m, old, st("in", 0, 0, goals=[])), ["⚽ Ακυρώθηκε γκολ: ΠΑΟΚ 0–0 Εθνικός"])
+
+    def test_state_survives_restart(self):
+        import tempfile, pathlib
+        now = dt.datetime(2026, 11, 1, 12, 0, tzinfo=UTC)
+        with tempfile.TemporaryDirectory() as d, mock.patch.object(live, "STATE_FILE", pathlib.Path(d) / "s.json"):
+            live.save_states({"u": st("in", 2, 1, done=2)}, now)
+            self.assertEqual(live.load_states(now + dt.timedelta(minutes=20))["u"]["done"], 2)
+            self.assertEqual(live.load_states(now + dt.timedelta(hours=2)), {})
+
     def test_final_after_penalties(self):
         m = dict(M, section="football", live={"src": "espn"})
         new = self.espn("STATUS_FINAL_PEN", "post", 1, 1, pens=(4, 3))
@@ -150,6 +163,38 @@ class Results(unittest.TestCase):
         with mock.patch.object(b, "fetch", return_value=block), mock.patch.object(b, "koe_live", return_value=None):
             ms = b.waterpolo_matches("waterpolo")
         self.assertEqual(ms[0].score, "")
+
+
+class Postponed(unittest.TestCase):
+    def test_status_change_notifies_and_stops_waiting(self):
+        old = dict(M, start="2099-01-01T16:00:00+02:00")
+        new = dict(old, status="postponed", note="Λόγω καιρού")
+        ev = notify.changes([old], [new], {"waterpolo"})
+        self.assertEqual([(e[1], e[2]) for e in ev], [("time", "🤽 Αναβλήθηκε: ΠΑΟΚ – Εθνικός")])
+        now = dt.datetime.fromisoformat("2099-01-01T17:30:00+02:00")
+        self.assertFalse(notify.awaiting_result(new, now))
+        self.assertFalse(notify.live_window(dict(new, live={"src": "koe"}), now))
+
+    def test_calendar_marks_postponed_and_note(self):
+        m = b.Match(section="football", uid="u", day=dt.date(2026, 11, 8), time=dt.time(20, 0), home="ΠΑΟΚ", away="Χ",
+                    paok_home=True, status="cancelled")
+        ics = b.build_ics("x", [m], "20261101T000000Z")
+        self.assertIn("ΜΑΤΑΙΩΘΗΚΕ: ", ics)
+        self.assertIn("STATUS:CANCELLED", ics)
+
+    def test_manual_status_marks_official_match(self):
+        import json, tempfile, pathlib
+        m = b.Match(section="volley", uid="u", day=dt.date(2026, 11, 8), time=dt.time(18, 0), home="ΠΑΟΚ", away="Χ", paok_home=True)
+        with tempfile.TemporaryDirectory() as d:
+            path = pathlib.Path(d) / "manual.json"
+            path.write_text(json.dumps([{"section": "volley", "date": "2026-11-08", "status": "postponed", "reason": "Ανακοίνωση ΕΣΑΠ"}]))
+            with mock.patch.object(b, "MANUAL_PATH", path):
+                self.assertEqual(b.manual_matches("volley", [m]), [])
+        self.assertEqual((m.status, m.note), ("postponed", "Ανακοίνωση ΕΣΑΠ"))
+
+    def test_genius_postponed(self):
+        s = live.gs_state({"period": 0, "tm": {}, "pbp": []}, "Postponed", "h")
+        self.assertEqual((s["state"], s["off"]), ("pre", "Αναβλήθηκε"))
 
 
 class Notify(unittest.TestCase):

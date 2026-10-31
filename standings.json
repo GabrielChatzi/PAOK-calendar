@@ -1119,6 +1119,19 @@
     },
     {
      "pos": 8,
+     "team": "A.S.P. THETIS",
+     "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_115.jpg",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "2",
+      "5-7",
+      "4"
+     ]
+    },
+    {
+     "pos": 9,
      "team": "Z.A.O.N.",
      "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_121.jpg",
      "paok": false,
@@ -1131,7 +1144,20 @@
      ]
     },
     {
-     "pos": 9,
+     "pos": 10,
+     "team": "A.S. ARIS",
+     "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_114.jpg",
+     "paok": false,
+     "cells": [
+      "3",
+      "0",
+      "3",
+      "4-9",
+      "3"
+     ]
+    },
+    {
+     "pos": 11,
      "team": "A.S. ELPIS",
      "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_122.jpg",
      "paok": false,
@@ -1144,35 +1170,9 @@
      ]
     },
     {
-     "pos": 10,
-     "team": "A.S. ARIS",
-     "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_114.jpg",
-     "paok": false,
-     "cells": [
-      "2",
-      "0",
-      "2",
-      "3-6",
-      "2"
-     ]
-    },
-    {
-     "pos": 11,
+     "pos": 12,
      "team": "O.F.A. APOLLONIOS",
      "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_116.jpg",
-     "paok": false,
-     "cells": [
-      "2",
-      "0",
-      "2",
-      "2-6",
-      "2"
-     ]
-    },
-    {
-     "pos": 12,
-     "team": "A.S.P. THETIS",
-     "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_115.jpg",
      "paok": false,
      "cells": [
       "2",

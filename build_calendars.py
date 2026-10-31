@@ -57,7 +57,8 @@ UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
 SECTIONS = {
     "football": {"emoji": "⚽", "name": "Ποδόσφαιρο", "sport": "Ποδόσφαιρο", "women": False, "live": True,
                  "liveNote": "Έναρξη, κάθε γκολ, ημίχρονο και τελικό (Super League και Ευρώπη)"},
-    "football-women": {"emoji": "⚽", "name": "Ποδόσφαιρο Γυναικών", "sport": "Ποδόσφαιρο", "women": True},
+    "football-women": {"emoji": "⚽", "name": "Ποδόσφαιρο Γυναικών", "sport": "Ποδόσφαιρο", "women": True, "live": True,
+                       "liveNote": "Έναρξη, κάθε γκολ, ημίχρονο και τελικό (ευρωπαϊκοί αγώνες)"},
     "basketball": {"emoji": "🏀", "name": "Μπάσκετ", "sport": "Μπάσκετ", "women": False, "live": True,
                    "liveNote": "Έναρξη, τέλος κάθε περιόδου και τελικό (Basket League και EuroCup)"},
     "basketball-women": {"emoji": "🏀", "name": "Μπάσκετ Γυναικών", "sport": "Μπάσκετ", "women": True},

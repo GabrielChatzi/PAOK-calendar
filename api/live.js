@@ -168,7 +168,8 @@ async function gs(p) {
   let row = id && list.find((x) => x.id === id);
   if (!row) {
     // Οι αγώνες σε εξέλιξη δείχνουν περίοδο αντί για ημερομηνία· γι' αυτό μπαίνουν κι αυτοί.
-    const cands = list.filter((x) => x.date === dayText || /live/i.test(x.status));
+    const today = new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Athens" });
+    const cands = list.filter((x) => x.date === dayText || (p.day === today && /live/i.test(x.status)));
     for (const c of cands) {
       const j = await getJson(`${GS_DATA}${c.id}/data.json`).catch(() => null);
       if (j && (PAOK.test(j.tm?.["1"]?.name || "") || PAOK.test(j.tm?.["2"]?.name || ""))) { row = c; break; }

@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
-gh api --allow-escape-sequences repos/GabrielChatzi/PAOK-calendar/actions/jobs/124594451066/logs | sed "s/\x1b\[[0-9;]*m//g" | grep -E "ΠΑΟΚ|push|!" | sed -E 's/^[0-9TZ:.-]+ //' | cut -c1-200 | tail -30
+echo "== watchdog reminders (DRY)"; DRY=1 GITHUB_TOKEN="$GH_TOKEN" GITHUB_REPOSITORY=GabrielChatzi/PAOK-calendar python3 watchdog.py reminders
+echo "== watchdog update (DRY)"; DRY=1 GITHUB_TOKEN="$GH_TOKEN" GITHUB_REPOSITORY=GabrielChatzi/PAOK-calendar python3 watchdog.py update
+echo "== live.py start"; timeout 70 python3 live.py; echo "exit $?"

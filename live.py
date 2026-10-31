@@ -24,7 +24,8 @@ from pathlib import Path
 
 import notify
 
-POLL_SECONDS = 60
+POLL_SECONDS = 20  # οι πηγές (και το CDN του api/live.js, 15'') αντέχουν· το τελικό φεύγει σε ~40''
+FAIL_ALERT = 15   # τόσες συνεχόμενες αποτυχίες μιας πηγής (~5') → ειδοποίηση λειτουργίας
 MAX_RUNTIME = dt.timedelta(hours=5, minutes=20)
 IDLE_EXIT = dt.timedelta(minutes=20)
 UA = "Mozilla/5.0 (PAOKalendar live; +https://paokalendar.vercel.app)"
@@ -282,7 +283,11 @@ def main() -> int:
     started = dt.datetime.now(dt.timezone.utc)
     upcoming = [m for m in load_matches() if m.get("live") and notify.live_window(m, started)]
     print("Αγώνες για παρακολούθηση: " + (", ".join(f"{m['home']} – {m['away']}" for m in upcoming) or "κανένας ακόμα"))
+    if not upcoming:
+        # Ξεκίνησε από το πρόγραμμα του live.yml (εφεδρικός δρόμος) χωρίς αγώνα κοντά: τίποτα να κάνει.
+        return 0
     states: dict[str, dict] = {}
+    failures: dict[str, int] = {}
     idle_since: dt.datetime | None = None
     while True:
         now = dt.datetime.now(dt.timezone.utc)
@@ -307,7 +312,13 @@ def main() -> int:
                 new = src(m["live"])
             except Exception as e:
                 print(f"  ! {m['home']} – {m['away']}: {e}", file=sys.stderr)
+                failures[m["uid"]] = failures.get(m["uid"], 0) + 1
+                if failures[m["uid"]] == FAIL_ALERT and dt.datetime.fromisoformat(m["start"]) <= now:
+                    notify._push(["s:ops:live"], "⚠️ PAOKalendar: δεν διαβάζεται το live",
+                                 f"{notify.teams(m)}: η πηγή ({m['live'].get('src')}) αποτυγχάνει εδώ και ~5 λεπτά: {e}",
+                                 "/#/notifications", tag=f"ops-live-{m['nt']}")
                 continue
+            failures[m["uid"]] = 0
             old = states.get(m["uid"])
             if m["live"]["src"] == "euroleague":
                 track_periods(old, new)

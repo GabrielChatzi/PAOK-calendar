@@ -351,7 +351,20 @@
   .push-on::before { content: ""; width: 10px; height: 10px; background: var(--ink); flex: none; }
   .nsec { padding: 12px 0; border-bottom: 1px solid var(--rule); }
   .nsec-name { display: block; font: 600 20px/1.2 var(--display); text-decoration: none; margin-bottom: 8px; }
-  .nsec .chip { padding: 7px 12px; }
+  .nsec .chip, .nsport .chip { padding: 7px 12px; }
+  .chip-all { font-weight: 700; }
+  /* Τα είδη ειδοποιήσεων σε μία γραμμή, σαν ενιαίο κουμπί με τμήματα */
+  .nchips { display: flex; border: 1.5px solid var(--ink); }
+  .nchips .chip { flex: 1 1 0; min-width: 0; border: 0; padding: 8px 2px; font-size: 15px; }
+  .nchips .chip + .chip { border-left: 1.5px solid var(--ink); }
+  .nchips .chip:disabled { opacity: 1; color: var(--muted); }
+  @media (max-width: 379px) { .nchips .chip { font-size: 13.5px; } }
+  .nsec-top { border-top: 2px solid var(--ink); }
+  .nsport { padding: 14px 0 6px; border-bottom: 2px solid var(--ink); }
+  .nsport > .nchips { margin-bottom: 10px; }
+  .nsport-name small { font: 400 14px var(--body); color: var(--muted); }
+  .nsec-sub { padding: 10px 0 10px 14px; border-bottom: 0; border-top: 1px solid var(--rule); }
+  .nsec-sub .nsec-name { font-size: 17px; margin-bottom: 6px; }
   .nmatch { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--rule); }
   .nmatch a { font: 600 19px/1.2 var(--display); text-decoration: none; }
   .nmatch small { display: block; color: var(--muted); font-size: 14px; }
@@ -1371,13 +1384,34 @@
   // ---- Σελίδα «Ειδοποιήσεις»
   function notificationsHtml() {
     var st = pushStatus(), usable = st === "on" || st === "off";
-    var sections = data.sections.map(function (s) {
-      return '<div class="nsec"><a class="nsec-name" href="#/' + s.key + '/follow">' + s.emoji + " " + esc(s.name) + "</a>" +
-        '<div class="chips" role="group" aria-label="' + esc(s.name) + '">' + sectionKinds(s).map(function (k) {
-          var t = "s:" + s.key + ":" + k[0];
-          return '<button type="button" class="chip" data-topics="' + t + '" aria-pressed="' + hasTopic(t) + '"' +
-            (usable ? "" : " disabled") + ">" + k[1] + "</button>";
-        }).join("") + "</div></div>";
+    // Ένα κουμπί για πολλά θέματα μαζί: πατημένο όταν είναι όλα ενεργά, και τα ανοίγει ή κλείνει όλα.
+    function topicsOf(list, kind) {
+      var out = [];
+      list.forEach(function (s) {
+        sectionKinds(s).forEach(function (k) { if (!kind || k[0] === kind) out.push("s:" + s.key + ":" + k[0]); });
+      });
+      return out;
+    }
+    function chip(topics, label, all, aria) {
+      return '<button type="button" class="chip' + (all ? " chip-all" : "") + '" data-topics="' + esc(topics.join(" ")) +
+        '" aria-pressed="' + topics.every(hasTopic) + '"' + (aria ? ' aria-label="' + esc(aria) + '"' : "") +
+        (usable && topics.length ? "" : " disabled") + ">" + esc(label) + "</button>";
+    }
+    function kindChips(list, name) {
+      return '<div class="nchips" role="group" aria-label="' + esc(name) + '">' + chip(topicsOf(list), "Όλα", true, name + ": όλα") +
+        PUSH_KINDS.filter(function (k) { return topicsOf(list, k[0]).length; }).map(function (k) {
+          return chip(topicsOf(list, k[0]), k[1], false, name + ": " + k[1]);
+        }).join("") + "</div>";
+    }
+    var overall = '<div class="nsec nsec-top"><span class="nsec-name">Όλα τα τμήματα</span>' + kindChips(data.sections, "Όλα τα τμήματα") + "</div>";
+    var sections = sportGroups().map(function (g) {
+      var list = [g.men, g.women].filter(Boolean);
+      var rows = list.length > 1 ? list.map(function (s) {
+        return '<div class="nsec nsec-sub"><a class="nsec-name" href="#/' + s.key + '/follow">' + (s.women ? "Γυναικών" : "Ανδρών") + "</a>" +
+          kindChips([s], s.name) + "</div>";
+      }).join("") : "";
+      return '<div class="nsport"><a class="nsec-name nsport-name" href="#/' + list[0].key + '/follow">' + g.emoji + " " + esc(g.sport) +
+        (list.length > 1 ? ' <small>ανδρών και γυναικών</small>' : "") + "</a>" + kindChips(list, g.sport) + rows + "</div>";
     }).join("");
     var followed = data.matches.filter(matchFollowed);
     var matches = followed.length
@@ -1399,7 +1433,8 @@
         return "<li><b>" + k[1] + ":</b> " + KIND_INFO[k[0]][1].charAt(0).toLowerCase() + KIND_INFO[k[0]][1].slice(1) +
           (k[0] === "live" ? " (ποδόσφαιρο, μπάσκετ και πόλο)" : "") + "</li>";
       }).join("") + "</ul>" +
-      "<h3>Τμήματα</h3>" + sections +
+      "<h3>Όλα μαζί</h3>" + overall +
+      "<h3>Ανά άθλημα</h3>" + sections +
       "<h3>Αγώνες που ακολουθείς</h3>" + matches +
       (st === "on"
         ? "<h3>Αυτή η συσκευή</h3>" +

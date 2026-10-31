@@ -1,0 +1,13 @@
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+sfo1::kllj4-1793466674777-b80aa3dcc040
+  [500]
+{"configured":true,"db":true,"subscribers":46,"topic":"s:volley:live","matching":0,"byService":{}}
+A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+sfo1::rf8hr-1793466675366-b053320ace11
+  [500]

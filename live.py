@@ -143,8 +143,75 @@ def waterpolo_state(live: dict) -> dict:
     return st
 
 
+GS_WIDGET = "https://widget.wh.geniussports.com/widget//?"
+GS_DATA = "https://fibalivestats.dcd.shared.geniussports.com/data/"
+_gs_found: dict[str, str] = {}
+
+
+def basketball_state(live: dict) -> dict:
+    """Basket League απευθείας από τη Genius Sports (ίδια λογική με το api/live.js, χωρίς τη Vercel).
+
+    Τον αγώνα της ημέρας τον βρίσκει στο widget του esake.gr· σκορ, περίοδο και τέλος περιόδου/αγώνα
+    από το data.json του αγώνα. Περίοδος τελειωμένη μόνο αν η τελευταία ενέργεια είναι το τέλος αυτής.
+    """
+    import re
+    paok = re.compile(r"P\.?\s?A\.?\s?O\.?\s?K|Π\.?Α\.?Ο\.?Κ", re.I)
+    req = urllib.request.Request(GS_WIDGET + live["key"], headers={"User-Agent": UA, "Referer": "https://www.esake.gr/"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        js = r.read().decode("utf-8")
+    raw = re.search(r'var html = "(.*?)";\n', js, re.S)
+    html = json.loads(f'"{raw.group(1)}"') if raw else ""
+    rows = []
+    for li in re.findall(r'<li class="spls_lsmatch[^"]*">(.*?)</li>', html, re.S):
+        mid = re.search(r"webcast/\w+/(\d+)", li)
+        status = re.search(r'spls_matchstatus">([^<]*)', li)
+        date = re.search(r'spls_datefield">([^<]*)', li)
+        if mid:
+            rows.append({"id": mid.group(1), "status": (status.group(1) if status else "").strip(),
+                         "date": (date.group(1) if date else "").strip()})
+    day = dt.date.fromisoformat(live["day"])
+    day_text = f"{day.day} {day:%b} {day.year}"
+    key = f"{live['key']}|{live['day']}"
+    row = next((x for x in rows if x["id"] == _gs_found.get(key)), None)
+    data = None
+    if not row:
+        today = dt.datetime.now(notify.ATHENS).date()
+        for c in rows:
+            if not (c["date"] == day_text or (day == today and "live" in c["status"].lower())):
+                continue
+            try:
+                j = get_json(f"{GS_DATA}{c['id']}/data.json")
+            except Exception:
+                continue
+            tm = (j or {}).get("tm") or {}
+            if any(paok.search((tm.get(t) or {}).get("name") or "") for t in ("1", "2")):
+                row, data = c, j
+                break
+        if not row:
+            raise ValueError("ο αγώνας δεν βρέθηκε στη Genius Sports")
+        _gs_found[key] = row["id"]
+    j = data or get_json(f"{GS_DATA}{row['id']}/data.json") or {}
+    pbp = j.get("pbp") or []
+    tm = j.get("tm") or {}
+    ended = any(a.get("actionType") == "game" and a.get("subType") == "end" for a in pbp)
+    status = row["status"].lower()
+    state = "post" if "final" in status or ended else "in" if "live" in status or pbp else "pre"
+    flip = bool(paok.search((tm.get("1") or {}).get("name") or "")) != (live.get("side") == "h")
+    a, b = ("2", "1") if flip else ("1", "2")
+    period = int(j.get("period") or 0)
+    top = pbp[0] if pbp else {}
+    period_ended = top.get("actionType") == "period" and top.get("subType") == "end" and int(top.get("period") or 0) == period
+    clock = str(j.get("clock") or "")
+    return {
+        "state": state, "home": int((tm.get(a) or {}).get("score") or 0), "away": int((tm.get(b) or {}).get("score") or 0),
+        "quarter": period if state == "in" else 0,
+        "done": period if state == "post" or period_ended else max(0, period - 1),
+        "detail": f"{period}η περίοδος {'' if period_ended else clock}".strip() if state == "in" else "",
+    }
+
+
 SOURCES = {"espn": espn_state, "euroleague": euroleague_state, "koe": waterpolo_state, "ea": waterpolo_state,
-           "dp": waterpolo_state, "gs": waterpolo_state}
+           "dp": waterpolo_state, "gs": basketball_state}
 PERIOD_SOURCES = ("euroleague", "koe", "ea", "dp", "gs")
 
 

@@ -420,6 +420,18 @@
     },
     {
      "pos": 2,
+     "team": "Καρδίτσα",
+     "logo": "https://www.esake.gr/dat/esaketeam/B742845D/photo_new_04E98281.png",
+     "paok": false,
+     "cells": [
+      "5",
+      "3-2",
+      "1",
+      "8"
+     ]
+    },
+    {
+     "pos": 3,
      "team": "Άρης",
      "logo": "https://www.esake.gr/dat/esaketeam/00000005/photo_new_6A11CE7A.png",
      "paok": false,
@@ -431,7 +443,7 @@
      ]
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "ΑΕΚ",
      "logo": "https://www.esake.gr/dat/esaketeam/00000010/photo_new_2BF3BBDA.png",
      "paok": false,
@@ -443,7 +455,19 @@
      ]
     },
     {
-     "pos": 4,
+     "pos": 5,
+     "team": "Κολοσσός Ρόδου",
+     "logo": "https://www.esake.gr/dat/esaketeam/0000000A/photo_new_5DC7EFBA.png",
+     "paok": false,
+     "cells": [
+      "5",
+      "2-3",
+      "-10",
+      "7"
+     ]
+    },
+    {
+     "pos": 6,
      "team": "Περιστέρι",
      "logo": "https://www.esake.gr/dat/esaketeam/0000000D/photo_new_30338F54.png",
      "paok": false,
@@ -455,7 +479,7 @@
      ]
     },
     {
-     "pos": 5,
+     "pos": 7,
      "team": "Παναθηναϊκός",
      "logo": "https://www.esake.gr/dat/esaketeam/00000001/photo_new_160CD854.png",
      "paok": false,
@@ -467,7 +491,7 @@
      ]
     },
     {
-     "pos": 6,
+     "pos": 8,
      "team": "Ολυμπιακός",
      "logo": "https://www.esake.gr/dat/esaketeam/00000002/photo_new_7F6C9D90.png",
      "paok": false,
@@ -479,7 +503,7 @@
      ]
     },
     {
-     "pos": 7,
+     "pos": 9,
      "team": "Vikos Falcons",
      "logo": "https://www.esake.gr/dat/esaketeam/0041ADCB/photo_new_FE76D0B4.png",
      "paok": false,
@@ -487,30 +511,6 @@
       "5",
       "1-4",
       "-50",
-      "6"
-     ]
-    },
-    {
-     "pos": 8,
-     "team": "Καρδίτσα",
-     "logo": "https://www.esake.gr/dat/esaketeam/B742845D/photo_new_04E98281.png",
-     "paok": false,
-     "cells": [
-      "4",
-      "2-2",
-      "-15",
-      "6"
-     ]
-    },
-    {
-     "pos": 9,
-     "team": "Κολοσσός Ρόδου",
-     "logo": "https://www.esake.gr/dat/esaketeam/0000000A/photo_new_5DC7EFBA.png",
-     "paok": false,
-     "cells": [
-      "4",
-      "2-2",
-      "6",
       "6"
      ]
     },
@@ -1562,7 +1562,7 @@
       "5",
       "0",
       "1",
-      "104-55",
+      "106-56",
       "15"
      ]
     },
@@ -1730,7 +1730,7 @@
       "0",
       "0",
       "6",
-      "46-113",
+      "47-115",
       "0"
      ]
     }

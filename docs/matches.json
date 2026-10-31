@@ -37,14 +37,18 @@
    "emoji": "🏐",
    "name": "Βόλεϊ",
    "sport": "Βόλεϊ",
-   "women": false
+   "women": false,
+   "live": true,
+   "liveNote": "Έναρξη, τέλος κάθε σετ και τελικό (πρωτάθλημα και κύπελλα Ελλάδας)"
   },
   {
    "key": "volley-women",
    "emoji": "🏐",
    "name": "Βόλεϊ Γυναικών",
    "sport": "Βόλεϊ",
-   "women": true
+   "women": true,
+   "live": true,
+   "liveNote": "Έναρξη, τέλος κάθε σετ και τελικό (πρωτάθλημα και κύπελλο Ελλάδας)"
   },
   {
    "key": "handball",
@@ -1643,6 +1647,12 @@
    "score": "",
    "tv": "",
    "url": "https://www.volleyleague.gr/index.php/season/2026-27/regular-season-results-statistics",
+   "live": {
+    "src": "dp",
+    "fed": "hvl",
+    "day": "2026-10-31",
+    "side": "h"
+   },
    "start": "2026-10-31T18:00:00+02:00",
    "timeKnown": true,
    "paokHome": true,
@@ -1765,6 +1775,12 @@
    "score": "",
    "tv": "",
    "url": "https://eope-web.dataproject.com/MatchStatistics.aspx?mID=756&ID=19",
+   "live": {
+    "src": "dp",
+    "fed": "eope",
+    "id": "756",
+    "side": "h"
+   },
    "start": "2026-11-01T19:00:00+02:00",
    "timeKnown": true,
    "paokHome": true,
@@ -1806,6 +1822,12 @@
    "score": "",
    "tv": "",
    "url": "https://www.volleyleague.gr/index.php/league-cup",
+   "live": {
+    "src": "dp",
+    "fed": "hvl",
+    "day": "2026-11-04",
+    "side": "h"
+   },
    "start": "2026-11-04T18:00:00+02:00",
    "timeKnown": true,
    "paokHome": true,
@@ -1950,6 +1972,12 @@
    "score": "",
    "tv": "",
    "url": "https://www.volleyleague.gr/index.php/season/2026-27/regular-season-results-statistics",
+   "live": {
+    "src": "dp",
+    "fed": "hvl",
+    "day": "2026-11-08",
+    "side": "a"
+   },
    "start": "2026-11-08T19:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
@@ -5270,16 +5298,16 @@
   }
  ],
  "updated": {
-  "football": "2026-10-31T18:00+02:00",
-  "football-women": "2026-10-31T18:00+02:00",
-  "basketball": "2026-10-31T18:00+02:00",
-  "basketball-women": "2026-10-31T18:01+02:00",
-  "volley": "2026-10-31T18:01+02:00",
-  "volley-women": "2026-10-31T18:01+02:00",
-  "handball": "2026-10-31T18:01+02:00",
-  "handball-women": "2026-10-31T18:02+02:00",
-  "waterpolo": "2026-10-31T18:02+02:00",
-  "waterpolo-women": "2026-10-31T18:02+02:00",
-  "futsal": "2026-10-31T18:02+02:00"
+  "football": "2026-10-31T18:08+02:00",
+  "football-women": "2026-10-31T18:08+02:00",
+  "basketball": "2026-10-31T18:08+02:00",
+  "basketball-women": "2026-10-31T18:08+02:00",
+  "volley": "2026-10-31T18:09+02:00",
+  "volley-women": "2026-10-31T18:09+02:00",
+  "handball": "2026-10-31T18:09+02:00",
+  "handball-women": "2026-10-31T18:10+02:00",
+  "waterpolo": "2026-10-31T18:10+02:00",
+  "waterpolo-women": "2026-10-31T18:10+02:00",
+  "futsal": "2026-10-31T18:10+02:00"
  }
 }

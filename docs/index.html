@@ -532,10 +532,22 @@
     if (ls && ls.state === "in") return true;
     return !m.score && new Date(m.start).getTime() > Date.now() - 2 * 3600 * 1000;
   }
-  // Σε εξέλιξη χωρίς live σκορ: από την έναρξη έως 2,5 ώρες μετά, όσο δεν υπάρχει αποτέλεσμα.
-  function inProgress(m) {
+  // Αγώνας χωρίς live σκορ που έχει ξεκινήσει: «Σε εξέλιξη» όσο κρατά περίπου ένας αγώνας του
+  // αθλήματος (λεπτά, με τα διαλείμματα) και μετά «Αναμένεται το τελικό» ώσπου να έρθει το αποτέλεσμα.
+  var DURATION = {
+    "football": 115, "football-women": 115, "basketball": 120, "basketball-women": 115,
+    "volley": 130, "volley-women": 130, "handball": 95, "handball-women": 95,
+    "waterpolo": 80, "waterpolo-women": 80, "futsal": 95
+  };
+  var PHASE_TEXT = { on: "Σε εξέλιξη", wait: "Αναμένεται το τελικό" };
+  function phase(m) {
+    if (!m.timeKnown || m.score) return "";
+    var ls = liveState[m.uid];
+    if (ls && ls.state !== "pre") return "";
     var t = new Date(m.start).getTime(), now = Date.now();
-    return m.timeKnown && !m.score && now >= t && now <= t + 2.5 * 3600 * 1000;
+    if (now < t) return "";
+    if (now <= t + (DURATION[m.section] || 120) * 60 * 1000) return "on";
+    return now <= t + 6 * 3600 * 1000 ? "wait" : "";
   }
   function outcome(m) {
     var p = /^(\d+)-(\d+)$/.exec(m.score || "");
@@ -589,7 +601,7 @@
       scoreCell = '<span class="n">' + ls.home + '</span><span class="n">' + ls.away + "</span>";
     } else {
       timeCell = '<div class="time' + (m.timeKnown ? "" : " tbc") + '">' + (m.timeKnown ? fmtTime.format(date) : "TBC") +
-        (!m.live && inProgress(m) && !ls ? '<span class="ongoing">Σε εξέλιξη</span>' : "") + "</div>";
+        (phase(m) ? '<span class="ongoing">' + PHASE_TEXT[phase(m)] + "</span>" : "") + "</div>";
       if (parts || (ls && ls.state === "post")) {
         var h = parts ? parts[1] : ls.home, a = parts ? parts[2] : ls.away;
         if (!parts) o = outcome({ score: h + "-" + a, paokHome: m.paokHome });
@@ -600,7 +612,7 @@
     }
     if (!parts && isUpcoming(m) && !(ls && ls.state === "post")) scoreCell += bellButton(m);
     var source = m.url ? ' <a href="' + esc(m.url) + '" rel="noopener" target="_blank">' +
-      (!m.live && inProgress(m) ? "Live στην πηγή" : "Πηγή") + "</a>" : "";
+      (phase(m) === "on" && !m.live ? "Live στην πηγή" : "Πηγή") + "</a>" : "";
     return '<li class="game ' + (m.paokHome ? "home" : "away") + '">' + timeCell +
       "<div>" +
         '<a class="game-link" href="' + matchHref(m) + '"><span class="teams"><span class="team">' + teamHtml(m.home, m.homeLogo, m.section) + '</span>' +
@@ -704,13 +716,13 @@
         '<p class="next-meta">' + esc([m.competition, m.venue].filter(Boolean).join(", ")) + "</p>" +
         bellButton(m, true) + "</section>";
     }
-    var ongoing = !m.live && inProgress(m);
+    var ongoing = phase(m);
     return '<section class="next" aria-label="Επόμενος αγώνας">' +
-      '<p class="next-label">' + esc(ongoing ? "Σε εξέλιξη, " + s.emoji + " " + s.name : (label || ("Επόμενος αγώνας, " + s.emoji + " " + s.name))) + "</p>" +
+      '<p class="next-label">' + esc(ongoing ? PHASE_TEXT[ongoing] + ", " + s.emoji + " " + s.name : (label || ("Επόμενος αγώνας, " + s.emoji + " " + s.name))) + "</p>" +
       '<a class="game-link" href="' + matchHref(m) + '"><span class="next-teams">' + teamHtml(m.home, m.homeLogo, m.section) + "<br>" + teamHtml(m.away, m.awayLogo, m.section) + "</span></a>" +
       '<p class="next-when">' + esc((rel ? rel + ", " : "") + fmtShort.format(date) + (m.timeKnown ? ", " + fmtTime.format(date) : ", ώρα TBC")) + "</p>" +
       '<p class="next-meta">' + esc([m.competition, m.venue].filter(Boolean).join(", ")) +
-        (ongoing && m.url ? ' <a href="' + esc(m.url) + '" rel="noopener" target="_blank">Live στην πηγή</a>' : "") + "</p>" +
+        (ongoing === "on" && m.url ? ' <a href="' + esc(m.url) + '" rel="noopener" target="_blank">Live στην πηγή</a>' : "") + "</p>" +
       bellButton(m, true) + "</section>";
   }
 
@@ -1385,7 +1397,7 @@
       pushNoteHtml() +
       '<ul class="kinds-legend">' + PUSH_KINDS.map(function (k) {
         return "<li><b>" + k[1] + ":</b> " + KIND_INFO[k[0]][1].charAt(0).toLowerCase() + KIND_INFO[k[0]][1].slice(1) +
-          (k[0] === "live" ? " (ποδόσφαιρο και μπάσκετ)" : "") + "</li>";
+          (k[0] === "live" ? " (ποδόσφαιρο, μπάσκετ και πόλο)" : "") + "</li>";
       }).join("") + "</ul>" +
       "<h3>Τμήματα</h3>" + sections +
       "<h3>Αγώνες που ακολουθείς</h3>" + matches +
@@ -1471,11 +1483,11 @@
     var finalLive = !parts && ls && ls.state === "post";
     var hs = parts ? +parts[1] : ls && ls.state !== "pre" ? ls.home : null;
     var as = parts ? +parts[2] : ls && ls.state !== "pre" ? ls.away : null;
-    var ongoing = !m.live && inProgress(m) && !(ls && ls.state !== "pre");
+    var ongoing = phase(m);
     var status;
     if (live) status = '<span class="live-badge">LIVE</span><span>' + esc(ls.label) + "</span>";
     else if (parts || finalLive) status = "<span>Τελικό</span>";
-    else if (ongoing) status = "<span>Σε εξέλιξη</span>";
+    else if (ongoing) status = "<span>" + PHASE_TEXT[ongoing] + "</span>";
     else {
       var rel = relative(date);
       status = "<span>" + esc((rel ? rel + ", " : "") + (m.timeKnown ? fmtTime.format(date) : "ώρα TBC")) + "</span>";
@@ -1494,7 +1506,7 @@
       '<p class="mh-when">' + esc(cap(fmtLong.format(date)) + (m.timeKnown ? ", " + fmtTime.format(date) : ", ώρα TBC") + (m.venue ? ", " + m.venue : "")) + "</p></section>";
 
     var actions = [];
-    if (ongoing && !live && m.url) actions.push('<a class="btn solid" href="' + esc(m.url) + '" rel="noopener" target="_blank">Live στην πηγή</a>');
+    if (ongoing === "on" && m.url) actions.push('<a class="btn solid" href="' + esc(m.url) + '" rel="noopener" target="_blank">Live στην πηγή</a>');
     if (isUpcoming(m) && !finalLive) actions.push('<a class="btn" href="' + matchHref(m) + '/notify">Ειδοποιήσεις</a>');
     if (navigator.share) actions.push('<button type="button" class="btn" data-act="share">Κοινοποίηση</button>');
 
@@ -1502,7 +1514,8 @@
     var hasLive = !!m.live || sofaSport(m);
     if (hasLive && det) {
       body += timelineHtml(m, det) + quartersHtml(m, det) + statsHtml(m, det);
-      if (!body && (live || liveCandidate(m))) body = '<p class="loading">Ο αγώνας δεν έχει ξεκινήσει ακόμα. Το σκορ θα ανανεώνεται εδώ μόλις αρχίσει.</p>';
+      if (!body && det.state && det.state.state === "pre" && liveCandidate(m)) body = '<p class="loading">Ο αγώνας δεν έχει ξεκινήσει ακόμα. Το σκορ θα ανανεώνεται εδώ μόλις αρχίσει.</p>';
+      if (det.sourceNote) body += '<p class="help source-note">' + esc(det.sourceNote) + "</p>";
       if (det.sofaUrl) body += '<p class="help source-note">Live από το <a href="' + esc(det.sofaUrl) + '" rel="noopener" target="_blank">Sofascore</a> (ανεπίσημη πηγή).</p>';
     } else if (hasLive && (live || liveCandidate(m))) {
       body = '<p class="loading">Φόρτωση live…</p>';
@@ -1592,6 +1605,7 @@
         };
       });
     }
+    if (L.src === "koe" || L.src === "ea") return waterpoloDetail(m);
     if (sofaSport(m)) return sofaDetail(m);
     return Promise.reject(new Error("χωρίς live"));
   }
@@ -1658,8 +1672,40 @@
         .then(function (r) { return r.text(); })
         .then(function (t) { return euroleagueState(t.trim() ? JSON.parse(t) : {}); });  // κενό πριν από το τζάμπολ
     }
+    if (L.src === "koe" || L.src === "ea") return waterpoloFetch(m).then(function (j) { return waterpoloState(j); });
     if (sofaSport(m)) return sofaEvent(m).then(function (ev) { return sofaState(m, ev); });
     return Promise.reject(new Error("χωρίς live"));
+  }
+
+  // ---- Live πόλο: ΚΟΕ (ελληνικά πρωταθλήματα) και European Aquatics, μέσω του api/live.js
+  function waterpoloFetch(m) {
+    var L = m.live, q = [];
+    ["src", "code", "cat", "gara", "tur", "gru", "a", "b"].forEach(function (k) {
+      if (L[k] != null) q.push(k + "=" + encodeURIComponent(L[k]));
+    });
+    return fetch("/api/live?" + q.join("&")).then(function (r) {
+      if (!r.ok) throw new Error("live " + r.status);
+      return r.json();
+    });
+  }
+  function waterpoloState(j) {
+    var label = j.state === "post" ? "Τελικό" : j.state === "pre" ? "Ξεκινά"
+      : j.quarter ? (j.quarter <= 4 ? j.quarter + "η περ." : "Πέναλτι") : "Σε εξέλιξη";
+    return { state: j.state, home: j.home || 0, away: j.away || 0, label: label, quarter: j.quarter || 0 };
+  }
+  function waterpoloDetail(m) {
+    return waterpoloFetch(m).then(function (j) {
+      var st = waterpoloState(j), quarters = [];
+      if (j.quarters && j.quarters.length) {
+        // Πάντα οι 4 περίοδοι· όσες δεν έχουν παιχτεί μένουν κενές. Μετά την 4η, τα πέναλτι.
+        for (var i = 0; i < Math.max(4, j.quarters.length); i++) {
+          var x = j.quarters[i];
+          quarters.push({ label: i < 4 ? i + 1 + "η" : "Πέν.", home: x ? x.home : "", away: x ? x.away : "" });
+        }
+      }
+      return { state: st, quarters: st.state === "pre" ? [] : quarters, home: st.home, away: st.away,
+               sourceNote: "Live από " + (m.live.src === "koe" ? "την ΚΟΕ (live.koe.org.gr)" : "την European Aquatics") + "." };
+    });
   }
 
   // ---- Live από το Sofascore (ανεπίσημη, εφεδρική πηγή)
@@ -1834,6 +1880,15 @@
   load().catch(function () {
     $("app").innerHTML = '<p class="empty">Το πρόγραμμα δεν φόρτωσε. Έλεγξε τη σύνδεσή σου και ανανέωσε τη σελίδα.</p>';
   });
+
+  // Όσο ένας αγώνας χωρίς live παίζεται ή περιμένουμε το τελικό του, η σελίδα ξαναδιαβάζει το
+  // πρόγραμμα κάθε 2 λεπτά, ώστε το αποτέλεσμα να φαίνεται μόλις το βρει η ενημέρωση.
+  setInterval(function () {
+    if (!data || document.visibilityState !== "visible" || Date.now() - loadedAt < 2 * 60 * 1000) return;
+    if (!data.matches.some(function (m) { return phase(m); })) return;
+    var y = window.scrollY;
+    load().then(function () { window.scrollTo(0, y); }).catch(function () {});
+  }, 30 * 1000);
 
   // Όταν η εφαρμογή ξαναέρχεται στο προσκήνιο, φέρνει νέα δεδομένα αν έχουν περάσει 10 λεπτά.
   document.addEventListener("visibilitychange", function () {

@@ -39,8 +39,16 @@ MAX_PER_KIND = 8  # πάνω από τόσες ειδοποιήσεις μαζί
 EMOJI = {
     "football": "⚽", "football-women": "⚽", "basketball": "🏀", "basketball-women": "🏀",
     "volley": "🏐", "volley-women": "🏐", "handball": "🤾", "handball-women": "🤾",
-    "waterpolo": "🤽", "waterpolo-women": "🤽",
+    "waterpolo": "🤽", "waterpolo-women": "🤽", "futsal": "🥅",
 }
+# Περίπου πόση ώρα κρατά ένας αγώνας ανά τμήμα (λεπτά), μαζί με τα διαλείμματα. Από εκεί και πέρα
+# περιμένουμε το τελικό αποτέλεσμα και ανανεώνουμε το πρόγραμμα πιο συχνά (βλ. reminders()).
+DURATION = {
+    "football": 115, "football-women": 115, "basketball": 120, "basketball-women": 115,
+    "volley": 130, "volley-women": 130, "handball": 95, "handball-women": 95,
+    "waterpolo": 80, "waterpolo-women": 80, "futsal": 95,
+}
+RESULT_WAIT = dt.timedelta(hours=6)
 WEEKDAYS = ["Δευ", "Τρι", "Τετ", "Πεμ", "Παρ", "Σαβ", "Κυρ"]
 MONTHS = ["Ιαν", "Φεβ", "Μαρ", "Απρ", "Μαΐ", "Ιουν", "Ιουλ", "Αυγ", "Σεπ", "Οκτ", "Νοε", "Δεκ"]
 
@@ -169,6 +177,15 @@ def live_window(m: dict, now: dt.datetime) -> bool:
     return start - LIVE_LEAD <= now <= start + LIVE_SPAN
 
 
+def awaiting_result(m: dict, now: dt.datetime) -> bool:
+    """Αν ένας αγώνας πρέπει να έχει τελειώσει αλλά δεν έχουμε ακόμα το αποτέλεσμα."""
+    if not m.get("timeKnown") or m.get("score"):
+        return False
+    start = dt.datetime.fromisoformat(m["start"])
+    end = start + dt.timedelta(minutes=DURATION.get(m["section"], 120) - 10)
+    return end <= now <= start + RESULT_WAIT
+
+
 def reminders(matches_path: Path, state_path: Path) -> int:
     """Υπενθύμιση για αγώνες που ξεκινούν μέσα στα επόμενα 75 λεπτά, μία φορά για τον καθένα.
 
@@ -203,10 +220,14 @@ def reminders(matches_path: Path, state_path: Path) -> int:
     live = [m for m in data.get("matches", []) if live_window(m, now)]
     if live:
         print("Αγώνες για live: " + ", ".join(teams(m) for m in live))
+    waiting = [m for m in data.get("matches", []) if awaiting_result(m, now)]
+    if waiting:
+        print("Αναμένεται αποτέλεσμα: " + ", ".join(teams(m) for m in waiting))
     out = os.environ.get("GITHUB_OUTPUT")
     if out:
         with open(out, "a", encoding="utf-8") as f:
             f.write(f"live={1 if live else 0}\n")
+            f.write(f"refresh={1 if waiting else 0}\n")
     return 0
 
 

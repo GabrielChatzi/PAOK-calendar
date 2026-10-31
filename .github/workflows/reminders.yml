@@ -48,6 +48,22 @@ jobs:
         continue-on-error: true
         run: curl -fsS -X POST "https://paokalendar.vercel.app/api/tx?a=tick" -H "Content-Type: application/json" -d "{}"
 
+      # Όταν ένας αγώνας έχει (σχεδόν) τελειώσει και δεν έχουμε το αποτέλεσμα, ανανεώνουμε το
+      # πρόγραμμα κάθε 15 λεπτά αντί για κάθε 2 ώρες, ώσπου να βγει (το πολύ 6 ώρες μετά την έναρξη).
+      - name: Ανανέωση αποτελεσμάτων
+        if: steps.remind.outputs.refresh == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          recent=$(gh run list --workflow update.yml --limit 5 --json status,createdAt \
+            --jq "[.[] | select(.status != \"completed\" or (.createdAt | fromdateiso8601) > (now - 600))] | length")
+          if [ "$recent" = "0" ]; then
+            gh workflow run update.yml --ref main
+            echo "Ξεκίνησε ανανέωση για αποτελέσματα."
+          else
+            echo "Η ανανέωση τρέχει ήδη ή έγινε πριν από λίγο."
+          fi
+
       - name: Έναρξη live
         if: steps.remind.outputs.live == '1'
         env:

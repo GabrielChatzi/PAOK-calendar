@@ -6,6 +6,7 @@
 Κάθε λεπτό διαβάζει το ζωντανό σκορ και στέλνει ειδοποίηση για:
     ποδόσφαιρο (ESPN):     έναρξη, κάθε γκολ, ημίχρονο, τελικό
     μπάσκετ EuroCup:       έναρξη, τέλος κάθε περιόδου, τελικό
+    πόλο (ΚΟΕ, European Aquatics μέσω api/live.js): έναρξη, τέλος κάθε περιόδου, τελικό
 
 Οι ειδοποιήσεις πηγαίνουν στο θέμα «live» του τμήματος και στο θέμα του αγώνα.
 Η πρώτη ανάγνωση κάθε αγώνα είναι μόνο σημείο αναφοράς: αν η εργασία ξεκινήσει στη μέση
@@ -17,6 +18,7 @@ import datetime as dt
 import json
 import sys
 import time
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -125,7 +127,21 @@ def track_periods(old: dict | None, new: dict) -> None:
         new["done"] = (old or {}).get("done")
 
 
-SOURCES = {"espn": espn_state, "euroleague": euroleague_state}
+def waterpolo_state(live: dict) -> dict:
+    """Πόλο από το api/live.js της σελίδας (ΚΟΕ ή European Aquatics, σύστημα Microplus).
+
+    Η απάντηση έχει ήδη «done» (περίοδοι που τελείωσαν) και «quarter» (η τρέχουσα).
+    """
+    st = get_json(notify.SITE + "api/live?" + urllib.parse.urlencode(live)) or {}
+    if st.get("state") not in ("pre", "in", "post"):
+        raise ValueError(st.get("error") or "άγνωστη απάντηση")
+    q = st.get("quarter") or 0
+    st["detail"] = f"{q}η περίοδος" if st["state"] == "in" and q else ""
+    return st
+
+
+SOURCES = {"espn": espn_state, "euroleague": euroleague_state, "koe": waterpolo_state, "ea": waterpolo_state}
+PERIOD_SOURCES = ("euroleague", "koe", "ea")
 
 
 # ---------------------------------------------------------------- γεγονότα
@@ -162,11 +178,13 @@ def events(m: dict, old: dict | None, new: dict) -> list[tuple[str, str]]:
             out.append((title, " ".join(x for x in (g["clock"], g["text"]) if x)))
         if new.get("halftime") and not old.get("halftime"):
             out.append((f"{e} Ημίχρονο: {score_text(m, new)}", comp))
-    if m["live"]["src"] == "euroleague" and new["state"] == "in" and old["state"] == "in":
+    if m["live"]["src"] in PERIOD_SOURCES and new["state"] == "in" and old["state"] == "in":
         d_old, d_new = old.get("done"), new.get("done")
+        waterpolo = m["live"]["src"] != "euroleague"
         # Μετά την 4η, αν το σκορ δεν είναι ισόπαλο, έρχεται το «Τελικό» αντί για «Τέλος περιόδου».
         if d_old is not None and d_new is not None and d_new > d_old and not (d_new >= 4 and new["home"] != new["away"]):
-            what = ("Ημίχρονο" if d_new == 2 else "Ισοπαλία, πάμε παράταση" if d_new == 4
+            what = ("Ημίχρονο" if d_new == 2 else
+                    ("Ισοπαλία, πάμε στα πέναλτι" if waterpolo else "Ισοπαλία, πάμε παράταση") if d_new == 4
                     else f"Τέλος {ordinal_period(d_new)}")
             out.append((f"{e} {what}: {score_text(m, new)}", comp))
     if old["state"] != "post" and new["state"] == "post":

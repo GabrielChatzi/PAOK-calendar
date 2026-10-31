@@ -4,6 +4,7 @@ UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Ge
 curl -sS -m 30 -A "$UA" -e "https://www.esake.gr/" "https://widget.wh.geniussports.com/widget//?RFJIN037I07QV520B7WEXKV1GYNA31" -o /tmp/w.js
 python3 - <<'PY'
 import re, json, urllib.request
+UA="Mozilla/5.0"
 s=open('/tmp/w.js',encoding='utf-8',errors='replace').read()
 h=json.loads('"'+re.search(r'var html = "(.*?)";\n', s, re.S).group(1)+'"')
 lis=re.findall(r'<li class="spls_lsmatch[^"]*">(.*?)</li>', h, re.S)
@@ -13,7 +14,7 @@ for li in lis:
     print(txt(li)[:200], re.findall(r'webcast/(\w+)/(\d+)', li))
 print("comps", re.findall(r'<ul id = "sp_comp_\d+"', h)[:10])
 print(txt(lis[0])[:500]); print(lis[0][:1500])
-m=[re.findall(r'webcast/\w+/(\d+)', li)[0] for li in lis if 'Final' not in li]
+m=[re.findall(r'webcast/\w+/(\d+)', li)[0] for li in lis if 'IRA' in li or 'FAL' in li]
 for mid in m[:2]:
     try:
         d=json.loads(urllib.request.urlopen(urllib.request.Request(f"https://fibalivestats.dcd.shared.geniussports.com/data/{mid}/data.json",headers={"User-Agent":UA}),timeout=30).read())

@@ -81,6 +81,27 @@ class LiveEvents(unittest.TestCase):
         self.assertFalse(back.get("post_seen"))
 
 
+class Football(unittest.TestCase):
+    def espn(self, name, state, home=0, away=0, pens=None):
+        comps = [{"homeAway": "home", "score": str(home), "team": {"id": "1"}}, {"homeAway": "away", "score": str(away), "team": {"id": "2"}}]
+        if pens:
+            comps[0]["shootoutScore"], comps[1]["shootoutScore"] = pens
+        data = {"header": {"competitions": [{"status": {"type": {"name": name, "state": state}}, "competitors": comps}]}, "keyEvents": []}
+        with mock.patch.object(live, "get_json", return_value=data):
+            return live.espn_state({"league": "gre.1", "id": "1"})
+
+    def test_postponed_is_not_final(self):
+        m = dict(M, section="football", live={"src": "espn"})
+        new = live.settle_final(st("pre"), self.espn("STATUS_POSTPONED", "post"))
+        self.assertEqual(new["state"], "pre")
+        self.assertEqual(titles(m, dict(st("pre"), off=""), new), ["⚽ Αναβλήθηκε: ΠΑΟΚ – Εθνικός"])
+
+    def test_final_after_penalties(self):
+        m = dict(M, section="football", live={"src": "espn"})
+        new = self.espn("STATUS_FINAL_PEN", "post", 1, 1, pens=(4, 3))
+        self.assertIn("(πέναλτι 4–3)", titles(m, st("in", 1, 1), new)[-1])
+
+
 class Genius(unittest.TestCase):
     def data(self, period, top, clock="08:36"):
         return {"period": period, "clock": clock, "tm": {"1": {"name": "Iraklis BC", "score": 31}, "2": {"name": "PAOK BC", "score": 34}},

@@ -80,13 +80,23 @@ def espn_state(live: dict) -> dict:
             "home": (e.get("team") or {}).get("id") == home_id,
             "text": (players[0] if players and players[0] else e.get("shortText", "")) + note,
         })
+    pens = {c["homeAway"]: c.get("shootoutScore") for c in comp["competitors"]}
+    name = status.get("name") or ""
+    # Αναβολή, διακοπή ή ματαίωση: η ESPN τα δείχνει ως «post» με σκορ 0–0 (δεν είναι «Τελικό»).
+    off = OFF_STATUS.get(name) or next((v for k, v in OFF_STATUS.items() if k in name), "")
     return {
-        "state": status.get("state", "pre"),  # pre / in / post
+        "state": "pre" if off else status.get("state", "pre"),  # pre / in / post
         "home": score.get("home", 0), "away": score.get("away", 0),
-        "halftime": status.get("name") == "STATUS_HALFTIME",
+        "halftime": name == "STATUS_HALFTIME",
         "detail": status.get("shortDetail") or status.get("detail") or "",
         "goals": goals,
+        "off": off,
+        "pens": [pens["home"], pens["away"]] if pens.get("home") is not None and pens.get("away") is not None else None,
     }
+
+
+OFF_STATUS = {"STATUS_POSTPONED": "Αναβλήθηκε", "STATUS_CANCELED": "Ματαιώθηκε", "STATUS_ABANDONED": "Διακόπηκε",
+              "STATUS_SUSPENDED": "Διακόπηκε", "STATUS_DELAYED": "Καθυστερεί η έναρξη", "STATUS_FORFEIT": "Χαρίστηκε"}
 
 
 def euroleague_state(live: dict) -> dict:
@@ -287,8 +297,12 @@ def events(m: dict, old: dict | None, new: dict) -> list[tuple[str, str]]:
                     ("Ισοπαλία, πάμε στα πέναλτι" if waterpolo else "Ισοπαλία, πάμε παράταση") if d_new == 4
                     else f"Τέλος {ordinal_period(d_new)}")
             out.append((f"{e} {what}: {score_text(m, new)}", comp))
+    if new.get("off") and new.get("off") != old.get("off"):
+        out.append((f"{e} {new['off']}: {m['home']} – {m['away']}", comp))
     if old["state"] != "post" and new["state"] == "post":
-        out.append((f"{e} Τελικό: {score_text(m, new)}", comp))
+        pens = new.get("pens")
+        extra = f" (πέναλτι {pens[0]}–{pens[1]})" if pens and (pens[0] or pens[1]) else ""
+        out.append((f"{e} Τελικό: {score_text(m, new)}{extra}", comp))
     return out
 
 

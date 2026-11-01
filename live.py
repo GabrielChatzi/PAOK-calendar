@@ -28,7 +28,8 @@ POLL_SECONDS = 20  # οι πηγές (και το CDN του api/live.js, 15'') 
 FAIL_ALERT = 15   # τόσες συνεχόμενες αποτυχίες μιας πηγής (~5') → ειδοποίηση λειτουργίας
 MAX_RUNTIME = dt.timedelta(hours=5, minutes=20)
 IDLE_EXIT = dt.timedelta(minutes=20)
-UA = "Mozilla/5.0 (PAOKalendar live; +https://paokalendar.vercel.app)"
+# Κοινό User-Agent browser: το ESPN απορρίπτει (403) όσα αναφέρουν το όνομα ή τη διεύθυνση της σελίδας.
+UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
 
 
 def get_json(url: str) -> dict | None:
@@ -370,6 +371,7 @@ def main() -> int:
     if states:
         print(f"Συνέχεια από προηγούμενη εκτέλεση για {len(states)} αγώνες.")
     failures: dict[str, int] = {}
+    alerted: set[str] = set()
     idle_since: dt.datetime | None = None
     while True:
         now = dt.datetime.now(dt.timezone.utc)
@@ -397,7 +399,11 @@ def main() -> int:
             except Exception as e:
                 print(f"  ! {m['home']} – {m['away']}: {e}", file=sys.stderr)
                 failures[m["uid"]] = failures.get(m["uid"], 0) + 1
-                if failures[m["uid"]] == FAIL_ALERT and dt.datetime.fromisoformat(m["start"]) <= now:
+                # Μία φορά ανά αγώνα, μόλις περάσει το όριο και έχει ξεκινήσει (οι αποτυχίες πριν την
+                # έναρξη μετράνε κι αυτές: με «==» η ειδοποίηση χανόταν αν το όριο είχε περάσει νωρίτερα).
+                if (failures[m["uid"]] >= FAIL_ALERT and m["uid"] not in alerted
+                        and dt.datetime.fromisoformat(m["start"]) <= now):
+                    alerted.add(m["uid"])
                     notify._push(["s:ops:live"], "⚠️ PAOKalendar: δεν διαβάζεται το live",
                                  f"{notify.teams(m)}: η πηγή ({m['live'].get('src')}) αποτυγχάνει εδώ και ~5 λεπτά: {e}",
                                  "/#/notifications", tag=f"ops-live-{m['nt']}")

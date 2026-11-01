@@ -114,6 +114,32 @@ test("ΕΟΚ: ποτέ «τελικό» από το livescore (το «stopped» 
   assert.deepEqual([body.home, body.away], [70, 60]);
 });
 
+const EA_Q = { src: "ea", code: "EACLUB27", cat: "ASF", gara: "2", tur: "001", gru: "3", a: "URA", b: "PAOK" };
+const eaRoutes = (status, periods) => [
+  [/site\/token$/, { data: { token: "t" } }],
+  [/get\/schedule\//, { Schedule: [{ OraCatCode: "ASF", OraGaraCode: "2", OraTurCode: "001", OraTeamCodeA: "URA",
+    OraTeamCodeB: "PAOK", OraResA: 0, OraResB: 0, OraStatus: status, OraPeriods: null }] }],
+  [/get\/results\/ASF\/2\/001\/3\/URA\/PAOK\?live=1/, { Results: [{ ResTeamCodeA: "URA", ResTeamCodeB: "PAOK",
+    ResTeamA: periods.reduce((t, p) => t + (p[0] ?? 0), 0), ResTeamB: periods.reduce((t, p) => t + (p[1] ?? 0), 0),
+    Periods: [0, 1, 2, 3, 4].map((i) => ({ PerNumber: i + 1, PerResA: periods[i]?.[0] ?? null, PerResB: periods[i]?.[1] ?? null,
+      PerStatus: periods[i]?.[2] ?? null, PerGameTime: periods[i]?.[3] ?? "" })) }] }],
+];
+
+test("European Aquatics: σε εξέλιξη από τις περιόδους, ακόμα κι αν το πρόγραμμα λέει «0»", async () => {
+  mockFetch(eaRoutes(0, [[7, 3, 2], [2, 1, 1, "04:12"]]));
+  const { body } = await call(live, EA_Q);
+  assert.deepEqual([body.state, body.home, body.away, body.quarter, body.done, body.clock], ["in", 9, 4, 2, 1, "04:12"]);
+  assert.deepEqual(body.quarters[0], { home: 7, away: 3 });
+});
+
+test("European Aquatics: πριν την έναρξη και τελικό από το πρόγραμμα", async () => {
+  mockFetch(eaRoutes(0, []));
+  assert.equal((await call(live, EA_Q)).body.state, "pre");
+  mockFetch(eaRoutes(2, [[7, 3, 2], [7, 4, 2], [5, 3, 2], [6, 5, 2]]));
+  const { body } = await call(live, EA_Q);
+  assert.deepEqual([body.state, body.home, body.away, body.done], ["post", 25, 15, 4]);
+});
+
 test("Λάθος παράμετροι απορρίπτονται", async () => {
   assert.equal((await call(live, { src: "koe", cat: "../x" })).status, 400);
   assert.equal((await call(live, { src: "nope" })).status, 400);

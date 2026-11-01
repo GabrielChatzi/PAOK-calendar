@@ -3,7 +3,7 @@
 // Το καλεί μόνο το GitHub Actions του repo: η ταυτότητα ελέγχεται με το OIDC token του GitHub
 // (υπογεγραμμένο από το GitHub, χωρίς κοινό μυστικό), για το repo και το main.
 import { createRemoteJWKSet, jwtVerify } from "jose";
-import { TOPIC_RE, configured, lastErrors, pushTo, readBody, send, subs, vapidKeys } from "./_lib.js";
+import { TOPIC_RE, configured, getDb, lastErrors, pushTo, readBody, send, subs, vapidKeys } from "./_lib.js";
 
 const ISSUER = "https://token.actions.githubusercontent.com";
 const JWKS = createRemoteJWKSet(new URL(`${ISSUER}/.well-known/jwks`));
@@ -38,7 +38,19 @@ export default async function handler(req, res) {
   };
 
   const col = await subs();
-  const targets = await col.find({ topics: { $in: [...wanted] }, gone: { $ne: true } }, { projection: { endpoint: 1, keys: 1 } }).toArray();
+  let targets = await col.find({ topics: { $in: [...wanted] }, gone: { $ne: true } }, { projection: { endpoint: 1, keys: 1 } }).toArray();
+  // once: κλειδί για ειδοποίηση που πρέπει να φτάσει μία φορά σε κάθε συσκευή, όποιος κι αν τη στείλει
+  // (π.χ. το τελικό έρχεται και από το live και από την ενημέρωση του προγράμματος, σε άλλα θέματα).
+  // Οι συσκευές που την πήραν ήδη παραλείπονται.
+  const once = body.once ? String(body.once).slice(0, 80) : "";
+  const sentCol = once ? (await getDb()).collection("sent") : null;
+  let skipped = 0;
+  if (sentCol) {
+    const prior = await sentCol.findOne({ _id: once }, { projection: { subs: 1 } });
+    const had = new Set(prior?.subs || []);
+    skipped = targets.filter((s) => had.has(s._id)).length;
+    targets = targets.filter((s) => !had.has(s._id));
+  }
   const keys = await vapidKeys();
   const ttl = [...wanted].some((t) => t.endsWith(":live")) ? 2 * 3600 : 12 * 3600;
   lastErrors.length = 0;
@@ -48,6 +60,10 @@ export default async function handler(req, res) {
   // καταλάβει στον επόμενο έλεγχο και να ζητήσει να ξαναενεργοποιηθούν οι ειδοποιήσεις.
   if (gone.length) await col.updateMany({ _id: { $in: gone } }, { $set: { gone: true, goneAt: new Date() } });
   const count = (x) => results.filter((r) => r === x).length;
+  const reached = targets.filter((_, i) => results[i] === "ok").map((s) => s._id);
+  if (sentCol && reached.length) {
+    await sentCol.updateOne({ _id: once }, { $addToSet: { subs: { $each: reached } }, $set: { at: new Date() } }, { upsert: true });
+  }
   return send(res, 200, { matched: targets.length, sent: count("ok"), removed: count("gone"), failed: count("error"),
-    errors: lastErrors.slice(0, 5) });
+    skipped, errors: lastErrors.slice(0, 5) });
 }

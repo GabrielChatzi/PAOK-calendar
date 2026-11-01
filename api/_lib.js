@@ -29,6 +29,8 @@ async function connect() {
   }).connect();
   const db = client.db(process.env.MONGODB_DB || "paokalendar");
   await db.collection("subs").createIndex({ topics: 1 });
+  // Ειδοποιήσεις που πρέπει να φύγουν μία φορά (βλ. api/push.js «once»): σβήνονται μόνες τους σε 3 μέρες.
+  await db.collection("sent").createIndex({ at: 1 }, { expireAfterSeconds: 3 * 86400 });
   return db;
 }
 export async function getDb() {

@@ -272,17 +272,39 @@ async function eok(p) {
   };
 }
 
+// European Aquatics: το πρόγραμμα δίνει την κατάσταση του αγώνα, τα «results» το σκορ ανά περίοδο
+// (όπως τα δείχνει η σελίδα της European Aquatics, που τα ζητά κάθε 10'' με ?live=1).
+// Στο πρόγραμμα η κατάσταση μπορεί να μείνει «0» ως το τέλος· αν έχει ξεκινήσει περίοδος, είναι σε εξέλιξη.
 async function ea(p) {
   if (!/^EACLUB\d\d$/.test(p.code || "")) throw new Error("λάθος κωδικός");
-  const d = await getJson(`${EA}/${p.code}/get/schedule/*/*/*/*/*`, { Authorization: `Bearer ${await token("ea")}` });
+  const h = { Authorization: `Bearer ${await token("ea")}` };
+  const base = `${EA}/${p.code}/get`;
+  const [d, r] = await Promise.all([
+    getJson(`${base}/schedule/*/*/*/*/*?live=1`, h),
+    p.gru ? getJson(`${base}/results/${p.cat}/${p.gara}/${p.tur}/${p.gru}/${p.a}/${p.b}?live=1`, h).catch(() => null) : null,
+  ]);
   const x = (d?.Schedule || []).find((o) => o.OraCatCode === p.cat && String(o.OraGaraCode) === p.gara &&
     String(o.OraTurCode) === p.tur && o.OraTeamCodeA === p.a && o.OraTeamCodeB === p.b);
   if (!x) throw new Error("ο αγώνας δεν βρέθηκε");
-  const state = stateOf(x.OraStatus);
-  const quarter = state === "in" ? num(x.OraPeriods) || 1 : 0;
+  const res = (r?.Results || []).find((o) => o.ResTeamCodeA === p.a && o.ResTeamCodeB === p.b) || null;
+  const per = Array.isArray(res?.Periods) ? res.Periods : [];
+  // PerStatus: null/0 δεν ξεκίνησε, 1 σε εξέλιξη, 2 σταμάτησε (τέλος ή διακοπή). Η 5η είναι τα πέναλτι.
+  const st = per.map((o) => String(o?.PerStatus ?? "0"));
+  let last = -1;
+  st.forEach((v, i) => { if (v !== "0") last = i; });
+  let state = stateOf(x.OraStatus);
+  if (state === "pre" && last >= 0) state = "in";
+  const blank = { home: "", away: "" };
+  const quarters = per.slice(0, st[4] && st[4] !== "0" ? 5 : 4)
+    .map((o, i) => (st[i] === "0" ? blank : { home: num(o.PerResA) ?? 0, away: num(o.PerResB) ?? 0 }));
+  const periods = num(x.OraPeriods);
+  const quarter = state !== "in" ? 0 : last >= 0 ? last + 1 : periods || 1;
   return {
-    state, home: num(x.OraResA) ?? 0, away: num(x.OraResB) ?? 0, quarter,
-    done: state === "post" ? num(x.OraPeriods) || 4 : Math.max(0, quarter - 1), quarters: [],
+    state, home: num(res?.ResTeamA) ?? num(x.OraResA) ?? 0, away: num(res?.ResTeamB) ?? num(x.OraResB) ?? 0, quarter,
+    // Τελειωμένες: όσες είναι πριν από την τελευταία που ξεκίνησε (στο τέλος, όλες), όπως στην ΚΟΕ.
+    done: state === "post" ? (last >= 0 ? Math.min(4, last + 1) : periods || 4) : Math.max(0, quarter - 1),
+    clock: state === "in" && last >= 0 && st[last] === "1" ? String(per[last].PerGameTime || "") : "",
+    quarters: state === "pre" ? [] : quarters,
   };
 }
 

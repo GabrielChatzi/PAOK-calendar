@@ -218,6 +218,50 @@ class Notify(unittest.TestCase):
         self.assertIn("m:abcdef0123:result", topics)
         self.assertEqual(sent[0][0][4], "abcdef0123-result")
         self.assertTrue(kw.get("quiet"))
+        # Μία φορά ανά συσκευή, όποιος κι αν το στείλει πρώτος (live ή ενημέρωση).
+        self.assertEqual(kw.get("once"), "abcdef0123-result")
+
+    def test_live_final_shares_once_key_with_result(self):
+        sent = []
+        m = dict(M, live={"src": "koe"})
+        with mock.patch.object(notify, "_push", lambda *a, **k: sent.append(k)):
+            notify.send("waterpolo", "live", "Τελικό", "x", match=m, also_match_kinds=("result",),
+                        tag="abcdef0123-result", once="abcdef0123-result")
+            notify.send("waterpolo", "live", "Ξεκίνησε", "x", match=m)
+        self.assertEqual(sent[0]["once"], "abcdef0123-result")
+        self.assertIsNone(sent[1]["once"])
+
+    def _reminders(self, matches, now):
+        import json, tempfile
+        from pathlib import Path
+        sent = []
+        with tempfile.TemporaryDirectory() as d:
+            mp, sp = Path(d) / "m.json", Path(d) / "s.json"
+            mp.write_text(json.dumps({"matches": matches}), encoding="utf-8")
+            fake = mock.Mock(wraps=dt.datetime)
+            fake.now.return_value = now
+            with mock.patch.object(notify, "_push", lambda topics, title, *a, **k: sent.append((topics, title))), \
+                    mock.patch.object(notify.dt, "datetime", fake), mock.patch.dict(os.environ, {"GITHUB_OUTPUT": ""}):
+                notify.reminders(mp, sp)
+                notify.reminders(mp, sp)  # δεύτερος έλεγχος: τίποτα ξανά
+        return sent
+
+    def test_kickoff_notice_only_without_live(self):
+        start = dt.datetime(2026, 11, 1, 12, 0, tzinfo=UTC)
+        no_live = dict(M, uid="a", nt="aaaaaaaaaa", section="futsal", start=start.isoformat(), live=None)
+        with_live = dict(M, uid="b", nt="bbbbbbbbbb", start=start.isoformat(), live={"src": "koe"})
+        sent = self._reminders([no_live, with_live], start + dt.timedelta(seconds=40))
+        self.assertEqual(len(sent), 1)
+        topics, title = sent[0]
+        self.assertTrue(title.startswith("🥅 Ξεκινά:"))
+        self.assertIn("s:futsal:pre", topics)
+        self.assertIn("m:aaaaaaaaaa:pre", topics)
+
+    def test_no_kickoff_notice_late_or_postponed(self):
+        start = dt.datetime(2026, 11, 1, 12, 0, tzinfo=UTC)
+        m = dict(M, section="futsal", start=start.isoformat(), live=None)
+        self.assertEqual(self._reminders([m], start + dt.timedelta(minutes=16)), [])
+        self.assertEqual(self._reminders([dict(m, status="postponed")], start + dt.timedelta(seconds=40)), [])
 
 
 if __name__ == "__main__":

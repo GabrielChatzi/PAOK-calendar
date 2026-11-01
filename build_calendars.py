@@ -1003,6 +1003,7 @@ def european_waterpolo_matches(section: str) -> list[Match]:
             url=EA_SCHEDULE_PAGE,
             live=None if finished else {"src": "ea", "code": f"EACLUB{(season_start_year() + 1) % 100:02d}", "cat": cat,
                                         "gara": str(x.get("OraGaraCode")), "tur": str(x.get("OraTurCode")),
+                                        "gru": str(x.get("OraGruCode") or ""),
                                         "a": x.get("OraTeamCodeA"), "b": x.get("OraTeamCodeB")},
         ))
     return out

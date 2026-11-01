@@ -43,6 +43,13 @@ WEEKDAYS = ["ΔΕΥΤΕΡΑ", "ΤΡΙΤΗ", "ΤΕΤΑΡΤΗ", "ΠΕΜΠΤΗ", "�
 _DATA: dict = {}
 
 
+def recent_posts() -> list[dict]:
+    """Οι τελευταίες 50 αναρτήσεις (μία φορά ανά εκτέλεση)."""
+    if "posts" not in _DATA:
+        _DATA["posts"] = get_json("posts?per_page=50&_fields=id,date,title,content,link,categories")
+    return _DATA["posts"]
+
+
 def section_of(label: str) -> str | None:
     return PROGRAM_SECTIONS.get(plain(label).strip())
 
@@ -123,7 +130,7 @@ def announcement_entries(today: dt.date) -> list[dict]:
     cats = get_json("categories?per_page=100&_fields=id,name")
     section_by_cat = {c["id"]: section_of(c["name"]) for c in cats}
     academy = {c["id"] for c in cats if "ΑΚΑΔΗΜ" in plain(c["name"])}
-    posts = get_json("posts?per_page=50&_fields=id,date,title,content,link,categories")
+    posts = recent_posts()
     nicknames = re.compile(r"^(?:Δικέφαλ|Ασπρόμαυρ|Τρεμπλούχ|Νταμπλούχ|Πρωταθλ)")
     out = []
     for post in posts:
@@ -248,3 +255,69 @@ def reconcile(section: str, official: list[Match], checks: list[str], label: str
         checks.append(f"- **{label}** {added[-1].home} – {added[-1].away}, {fmt(e['day'], e['time'])}: "
                       f"δεν υπάρχει ακόμα στην επίσημη πηγή· προστέθηκε από την ΑΣ ΠΑΟΚ ([ανακοίνωση]({e['link']}))")
     return added
+
+
+# ---------------------------------------------------------------- αποτελέσματα
+
+# Η ΑΣ ΠΑΟΚ ανεβάζει το αποτέλεσμα λίγα λεπτά μετά τη λήξη (π.χ. «Επιστροφή στις νίκες για τον ΠΑΟΚ
+# PayspotLabraki, νίκη με 7-3 επί του ΑΟΔ Κορυδαλλού!»), ενώ οι ομοσπονδίες καμιά φορά μετά από ώρες.
+# Το παίρνουμε μόνο όταν όλα είναι ξεκάθαρα: τμήμα, ανάρτηση την ίδια μέρα μετά την έναρξη, ένα σκορ
+# και ποιος κέρδισε (από τα ονόματα «Α – Β x-y» ή από λέξεις όπως νίκη/ήττα/ισοπαλία). Αλλιώς τίποτα.
+SCORE_RE = re.compile(r"(?<![\d/:.,])(\d{1,3})\s*[-–]\s*(\d{1,3})(?![\d/:.,])")
+WIN_RE = re.compile(r"νίκ[ηα]|νίκησ|επικρ[άα]τη|υπέταξ|θρίαμβ|διπλ[όο] |άλωσ|πέρασμα|προκρ[ίι]θ", re.I)
+LOSS_RE = re.compile(r"ήττα|ηττήθ|λύγισ|γονάτισ|έχασ|δεν τα κατάφερ|αποκλε[ίι]σ", re.I)
+DRAW_RE = re.compile(r"ισοπαλ|ισόπαλ", re.I)
+SKIP_RE = re.compile(r"μικτή ζώνη|δήλωσ|τηλεόραση|στην TV|εισιτήρι|live stream", re.I)
+RESULT_SECTIONS = {"football-women", "futsal", "basketball-women"}  # χωρίς τελικό από live
+
+
+def score_from_post(title: str, text: str, home: str, away: str, paok_home: bool) -> str | None:
+    """Το σκορ «γηπεδούχος-φιλοξενούμενος» από μια ανάρτηση, ή None αν δεν είναι ξεκάθαρο."""
+    if SKIP_RE.search(title):
+        return None
+    lead = title + " " + text[:600]
+    # «ΠΑΣ Πύργος – ΠΑΟΚ 0-5»: τα ονόματα πριν από το σκορ δίνουν τη σειρά.
+    named = re.search(r"([^\s–-][^–-]{1,40}?)\s*[–-]\s*([^\d–-][^–-]{1,40}?)\s+(\d{1,3})\s*[-–]\s*(\d{1,3})(?!\d)", lead)
+    if named and is_paok(named.group(1).strip().split(" ")[0]) != is_paok(named.group(2).strip().split(" ")[0]):
+        a, b = int(named.group(3)), int(named.group(4))
+        return f"{a}-{b}" if is_paok(named.group(1).strip().split(" ")[0]) == paok_home else f"{b}-{a}"
+    found = SCORE_RE.search(title) or SCORE_RE.search(text[:600])
+    if not found:
+        return None
+    a, b = int(found.group(1)), int(found.group(2))
+    win, loss, draw = bool(WIN_RE.search(lead)), bool(LOSS_RE.search(lead)), bool(DRAW_RE.search(lead))
+    if draw and a == b and not (win or loss):
+        paok, other = a, b
+    elif win and not loss and a != b:
+        paok, other = max(a, b), min(a, b)
+    elif loss and not win and a != b:
+        paok, other = min(a, b), max(a, b)
+    else:
+        return None
+    return f"{paok}-{other}" if paok_home else f"{other}-{paok}"
+
+
+def results(section: str, matches: list[Match], now: dt.datetime | None = None) -> None:
+    """Συμπληρώνει το σκορ αγώνων που έγιναν σήμερα/χθες και δεν έχουν ακόμα επίσημο αποτέλεσμα."""
+    if section not in RESULT_SECTIONS:
+        return
+    now = now or dt.datetime.now(ATHENS)
+    waiting = [m for m in matches if not m.score and not m.status and m.time
+               and m.start() < now and now - m.start() < dt.timedelta(days=2)]
+    if not waiting:
+        return
+    cats = get_json("categories?per_page=100&_fields=id,name")
+    section_by_cat = {c["id"]: section_of(c["name"]) for c in cats}
+    for m in waiting:
+        for post in sorted(recent_posts(), key=lambda p: p["date"]):
+            if {section_by_cat.get(c) for c in post["categories"]} - {None} != {section}:
+                continue
+            posted = dt.datetime.fromisoformat(post["date"]).replace(tzinfo=ATHENS)
+            if not (m.start() + dt.timedelta(minutes=30) <= posted <= m.start() + dt.timedelta(hours=30)):
+                continue
+            title = html.unescape(post["title"]["rendered"])
+            score = score_from_post(title, clean(post["content"]["rendered"]), m.home, m.away, m.paok_home)
+            if score:
+                print(f"  αποτέλεσμα από την ΑΣ ΠΑΟΚ: {m.home} – {m.away} {score} («{title}»)")
+                m.score, m.live = score, None
+                break

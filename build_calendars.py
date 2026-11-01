@@ -61,13 +61,16 @@ SECTIONS = {
                        "liveNote": "Έναρξη, κάθε γκολ, ημίχρονο και τελικό (ευρωπαϊκοί αγώνες)"},
     "basketball": {"emoji": "🏀", "name": "Μπάσκετ", "sport": "Μπάσκετ", "women": False, "live": True,
                    "liveNote": "Έναρξη, τέλος κάθε περιόδου και τελικό (Basket League και EuroCup)"},
-    "basketball-women": {"emoji": "🏀", "name": "Μπάσκετ Γυναικών", "sport": "Μπάσκετ", "women": True},
+    "basketball-women": {"emoji": "🏀", "name": "Μπάσκετ Γυναικών", "sport": "Μπάσκετ", "women": True, "live": True,
+                         "liveNote": "Έναρξη και τέλος κάθε περιόδου (το τελικό με το επίσημο αποτέλεσμα)"},
     "volley": {"emoji": "🏐", "name": "Βόλεϊ", "sport": "Βόλεϊ", "women": False, "live": True,
                "liveNote": "Έναρξη, τέλος κάθε σετ και τελικό (πρωτάθλημα και κύπελλα Ελλάδας)"},
     "volley-women": {"emoji": "🏐", "name": "Βόλεϊ Γυναικών", "sport": "Βόλεϊ", "women": True, "live": True,
                      "liveNote": "Έναρξη, τέλος κάθε σετ και τελικό (πρωτάθλημα και κύπελλο Ελλάδας)"},
-    "handball": {"emoji": "🤾", "name": "Χάντμπολ", "sport": "Χάντμπολ", "women": False},
-    "handball-women": {"emoji": "🤾", "name": "Χάντμπολ Γυναικών", "sport": "Χάντμπολ", "women": True},
+    "handball": {"emoji": "🤾", "name": "Χάντμπολ", "sport": "Χάντμπολ", "women": False, "live": True,
+                 "liveNote": "Έναρξη, ημίχρονο και τελικό (ευρωπαϊκοί αγώνες)"},
+    "handball-women": {"emoji": "🤾", "name": "Χάντμπολ Γυναικών", "sport": "Χάντμπολ", "women": True, "live": True,
+                       "liveNote": "Έναρξη, ημίχρονο και τελικό (ευρωπαϊκοί αγώνες)"},
     "waterpolo": {"emoji": "🤽", "name": "Πόλο", "sport": "Πόλο", "women": False, "live": True,
                   "liveNote": "Έναρξη, τέλος κάθε περιόδου και τελικό"},
     "waterpolo-women": {"emoji": "🤽", "name": "Πόλο Γυναικών", "sport": "Πόλο", "women": True, "live": True,
@@ -95,6 +98,8 @@ class Match:
     away_logo: str = ""
     # Πού βρίσκεται το ζωντανό σκορ, αν υπάρχει (βλ. live.py και τη σελίδα).
     live: dict | None = None
+    status: str = ""  # "postponed" | "cancelled" | "abandoned": δεν θα γίνει / δεν ολοκληρώθηκε
+    note: str = ""    # π.χ. «πέναλτι 4–3», «μετά από παράταση», ή ο λόγος της αναβολής
 
     def start(self) -> dt.datetime:
         return dt.datetime.combine(self.day, self.time or DEFAULT_TIME, ATHENS)
@@ -107,8 +112,9 @@ class Match:
         d["homeLogo"] = d.pop("home_logo")
         d["awayLogo"] = d.pop("away_logo")
         d["nt"] = match_topic_id(self.uid)
-        if not self.live:
-            del d["live"]
+        for k in ("live", "status", "note"):
+            if not d[k]:
+                del d[k]
         del d["day"], d["time"]
         return d
 
@@ -258,7 +264,7 @@ def volley_rows() -> tuple[str, list[dict]]:
             "date": date_s, "time": time_s, "venue": venue, "home": home, "away": away,
             "home_logo": absolute(url, home_logo), "away_logo": absolute(url, away_logo),
             # Στο βόλεϊ τελικό είναι μόνο το σκορ με 3 σετ για κάποια ομάδα· αλλιώς ο αγώνας παίζεται.
-            "score": parse_score(score) if re.fullmatch(r"3-[0-2]|[0-2]-3", parse_score(score)) else "",
+            "score": parse_score(score) if is_volley_final(parse_score(score)) else "",
             "heading": heading_at(m.start()),
         })
     return url, rows
@@ -473,6 +479,10 @@ def espn_matches(section: str, team_id: str, leagues: list[str]) -> list[Match]:
                 s = c.get("score")
                 return str(s.get("displayValue", s.get("value", ""))) if isinstance(s, dict) else str(s or "")
             score = f'{goals(teams["home"])}-{goals(teams["away"])}'
+        pens = [teams[s].get("shootoutScore") for s in ("home", "away")]
+        note = f"πέναλτι {pens[0]}–{pens[1]}" if score and None not in pens else ""
+        state_name = status.get("name") or ""
+        off = next((v for k, v in ESPN_OFF.items() if k in state_name), "")
         venue = (comp.get("venue") or {}).get("fullName", "")
         notes = comp.get("notes") or []
         out.append(Match(
@@ -487,9 +497,14 @@ def espn_matches(section: str, team_id: str, leagues: list[str]) -> list[Match]:
             url=f"https://www.espn.com/soccer/match/_/gameId/{ev_id}",
             home_logo=logo(teams["home"]), away_logo=logo(teams["away"]),
             live={"src": "espn", "league": league, "id": ev_id},
+            status="" if score else off, note=note,
         ))
     return out
 
+
+# Καταστάσεις της ESPN για αγώνες που δεν έγιναν ή δεν ολοκληρώθηκαν.
+ESPN_OFF = {"POSTPONED": "postponed", "CANCELED": "cancelled", "ABANDONED": "abandoned", "SUSPENDED": "abandoned"}
+STATUS_TEXT = {"postponed": "Αναβλήθηκε", "cancelled": "Ματαιώθηκε", "abandoned": "Διακόπηκε"}
 
 EPO = "https://www.epo.gr"
 
@@ -816,6 +831,20 @@ def basket_league_live(matches: list[Match]) -> None:
         m.live = {"src": "gs", "key": GS_BASKET_LEAGUE, "day": m.day.isoformat(), "side": "h" if m.paok_home else "a"}
 
 
+def other_live(section: str, matches: list[Match]) -> None:
+    """Live από api/live.js για: μπάσκετ γυναικών (livescore της ΕΟΚ) και ευρωπαϊκά χάντμπολ (EHF)."""
+    today = dt.datetime.now(ATHENS).date()
+    for m in matches:
+        if m.score or not m.time or m.live or not -1 <= (m.day - today).days <= 10:
+            continue
+        side = "h" if m.paok_home else "a"
+        ehf = re.search(r"-ehf-(\d+)$", m.uid)
+        if ehf:
+            m.live = {"src": "ehf", "id": ehf.group(1)}
+        elif section == "basketball-women" and "-wbl1-" in m.uid:
+            m.live = {"src": "eok", "day": m.day.isoformat(), "side": side, "comp": "WOMEN"}
+
+
 # Η συντομότερη διάρκεια ενός αγώνα ανά τμήμα (λεπτά από την έναρξη, με τα διαλείμματα). Νωρίτερα
 # δεν δεχόμαστε σκορ ως τελικό, όποια πηγή κι αν το δίνει (βλ. main).
 MIN_DURATION = {
@@ -823,6 +852,21 @@ MIN_DURATION = {
     "volley": 60, "volley-women": 60, "handball": 80, "handball-women": 80,
     "waterpolo": 55, "waterpolo-women": 55, "futsal": 70,
 }
+
+
+def is_volley_final(score: str) -> bool:
+    """Στο βόλεϊ τελικό είναι μόνο σκορ με 3 σετ για κάποια ομάδα· αλλιώς ο αγώνας παίζεται."""
+    return bool(re.fullmatch(r"3-[0-2]|[0-2]-3", score or ""))
+
+
+def drop_live_scores(section: str, matches: list[Match], now: dt.datetime) -> None:
+    """Σκορ πριν από τη συντομότερη δυνατή διάρκεια του αθλήματος είναι το τρέχον ενός αγώνα σε
+    εξέλιξη (κάποιες πηγές το δείχνουν στη θέση του τελικού), όχι αποτέλεσμα."""
+    shortest = dt.timedelta(minutes=MIN_DURATION.get(section, 60))
+    for m in matches:
+        if m.score and m.time and m.start() > now - shortest:
+            print(f"  σκορ αγώνα σε εξέλιξη, όχι τελικό: {m.home} – {m.away} {m.score}")
+            m.score = ""
 
 
 def koe_live(url: str) -> dict | None:
@@ -959,6 +1003,7 @@ def european_waterpolo_matches(section: str) -> list[Match]:
             url=EA_SCHEDULE_PAGE,
             live=None if finished else {"src": "ea", "code": f"EACLUB{(season_start_year() + 1) % 100:02d}", "cat": cat,
                                         "gara": str(x.get("OraGaraCode")), "tur": str(x.get("OraTurCode")),
+                                        "gru": str(x.get("OraGruCode") or ""),
                                         "a": x.get("OraTeamCodeA"), "b": x.get("OraTeamCodeB")},
         ))
     return out
@@ -1037,9 +1082,14 @@ def ehf_matches(section: str) -> list[Match]:
             else:
                 day, time = utc.date(), None
             place = m["venue"].get("place") or {}
-            score = ""
+            score, note = "", ""
             if m.get("isFinished"):
-                score = f'{m["homeTeam"]["score"]["goals"]}-{m["guestTeam"]["score"]["goals"]}'
+                hs, gs = m["homeTeam"]["score"], m["guestTeam"]["score"]
+                score = f'{hs["goals"]}-{gs["goals"]}'
+                if hs.get("goalsPenaltyShotout") or gs.get("goalsPenaltyShotout"):
+                    note = f'πέναλτι {hs.get("goalsPenaltyShotout") or 0}–{gs.get("goalsPenaltyShotout") or 0}'
+                elif hs.get("goalsExtraTime1") or gs.get("goalsExtraTime1"):
+                    note = "μετά από παράταση"
             link = m.get("url") or ""
             out.append(Match(
                 section=section, uid=f"{section}-ehf-{m['matchID']}", day=day, time=time,
@@ -1049,6 +1099,7 @@ def ehf_matches(section: str) -> list[Match]:
                 competition=name, round=ehf_round(m), score=score,
                 url=link if link.startswith("http") else base + link,
                 home_logo=home_t.get("logoSmall") or "", away_logo=away_t.get("logoSmall") or "",
+                note=note,
             ))
     return out
 
@@ -1167,7 +1218,7 @@ def cev_matches(section: str) -> list[Match]:
                     start = dt.datetime(day.year, day.month, day.day, int(when.group(4)), int(when.group(5)), tzinfo=tz).astimezone(ATHENS)
                     day, time = start.date(), start.time()
                 sets = (spans.get("LB_SetCasa", "0"), spans.get("LB_SetOspiti", "0"))
-                done = "3" in sets and day < dt.date.today() + dt.timedelta(days=1)  # 3 σετ = τέλος
+                done = is_volley_final(f"{sets[0]}-{sets[1]}") and day < dt.date.today() + dt.timedelta(days=1)
                 leg_name = legs.get((view, leg_no)) or ""
                 round_name = CEV_ROUNDS.get(round_of.get(view, ""), round_of.get(view, ""))
                 out[mid] = Match(
@@ -1306,12 +1357,19 @@ def build_ics(cal_name: str, matches: list[Match], stamp: str) -> str:
         emoji = SECTIONS[m.section]["emoji"]
         middle = f" {m.score} " if m.score else " – "
         summary = f"{emoji} {m.home}{middle}{m.away}"
+        if m.status:
+            word = unicodedata.normalize("NFD", STATUS_TEXT.get(m.status, m.status).upper())
+            summary = f"{''.join(c for c in word if not unicodedata.combining(c))}: {summary}"  # ελληνικά κεφαλαία χωρίς τόνο
+        if m.note and m.score:
+            summary += f" ({m.note})"
         if m.time is None:
             summary += " (ώρα TBC)"
         desc = [x for x in (m.competition, m.round) if x]
         desc = [" – ".join(desc)] if desc else []
         if m.score:
-            desc.append(f"Τελικό σκορ: {m.home} {m.score} {m.away}")
+            desc.append(f"Τελικό σκορ: {m.home} {m.score} {m.away}" + (f" ({m.note})" if m.note else ""))
+        elif m.status:
+            desc.append(STATUS_TEXT.get(m.status, m.status) + (f": {m.note}" if m.note else ""))
         if m.tv:
             desc.append(f"TV: {m.tv}")
         if m.time is None:
@@ -1326,6 +1384,8 @@ def build_ics(cal_name: str, matches: list[Match], stamp: str) -> str:
             f"DTEND;TZID=Europe/Athens:{start + GAME_LENGTH:%Y%m%dT%H%M%S}",
             f"SUMMARY:{ics_escape(summary)}",
         ]
+        if m.status == "cancelled":
+            lines.append("STATUS:CANCELLED")
         if m.venue:
             lines.append(f"LOCATION:{ics_escape(m.venue)}")
         if desc:
@@ -1366,6 +1426,14 @@ def manual_matches(section: str, official: list[Match]) -> list[Match]:
     for e in json.loads(MANUAL_PATH.read_text(encoding="utf-8")):
         if e.get("section") != section:
             continue
+        if e.get("status"):
+            # Αναβολή/ματαίωση που ανακοινώθηκε (π.χ. από την ΑΣ ΠΑΟΚ) για αγώνα της επίσημης πηγής:
+            # σημειώνεται στον αγώνα της ίδιας μέρας, δεν προστίθεται νέος.
+            day = dt.date.fromisoformat(e["date"])
+            for m in official:
+                if m.day == day and not m.score and ("home" not in e or m.paok_home == is_paok(e["home"])):
+                    m.status, m.note = e["status"], e.get("reason", m.note)
+            continue
         day = dt.date.fromisoformat(e["date"])
         paok_home = is_paok(e["home"])
         if any(abs((m.day - day).days) <= 1 and m.paok_home == paok_home for m in official):
@@ -1377,6 +1445,35 @@ def manual_matches(section: str, official: list[Match]) -> list[Match]:
             round=e.get("round", ""), url=e.get("url", ""),
         ))
     return out
+
+
+# ---------------------------------------------------------------- καταχωρίσεις του διαχειριστή
+
+ADMIN_URL = "https://paokalendar.vercel.app/api/admin"
+_ADMIN: dict = {}
+
+
+def admin_entries() -> dict[str, dict]:
+    """Ό,τι έγραψε ο διαχειριστής από τη σελίδα του αγώνα (api/admin.js), ανά αγώνα (nt)."""
+    if "entries" not in _ADMIN:
+        try:
+            _ADMIN["entries"] = {e["nt"]: e for e in json.loads(fetch(ADMIN_URL)).get("entries", [])}
+        except Exception as e:
+            print(f"  ! καταχωρίσεις διαχειριστή: {e}", file=sys.stderr)
+            _ADMIN["entries"] = {}
+    return _ADMIN["entries"]
+
+
+def apply_admin(section: str, matches: list[Match]) -> None:
+    """Το τελικό σκορ του διαχειριστή έχει προτεραιότητα από κάθε αυτόματη πηγή."""
+    entries = admin_entries()
+    for m in matches:
+        e = entries.get(match_topic_id(m.uid))
+        if not e or not e.get("final"):
+            continue
+        m.score = f"{int(e['home'])}-{int(e['away'])}"
+        m.note = str(e.get("note") or m.note)[:80]
+        m.live = None
 
 
 def carry_uids(previous: list[dict], current: list[Match]) -> None:
@@ -1468,18 +1565,19 @@ def main(only: list[str] | None = None) -> int:
         except Exception as e:
             print(f"  ! ΑΣ ΠΑΟΚ / {key}: {e}", file=sys.stderr)
         carry_uids(prev_by_section[key], unique)
-        # Σκορ πριν από τη συντομότερη δυνατή διάρκεια του αθλήματος είναι το τρέχον ενός αγώνα σε
-        # εξέλιξη (κάποιες πηγές το δείχνουν στη θέση του τελικού), όχι αποτέλεσμα.
-        now = dt.datetime.now(ATHENS)
-        shortest = dt.timedelta(minutes=MIN_DURATION.get(key, 60))
-        for m in unique:
-            if m.score and m.time and m.start() > now - shortest:
-                print(f"  σκορ αγώνα σε εξέλιξη, όχι τελικό: {m.home} – {m.away} {m.score}")
-                m.score = ""
+        drop_live_scores(key, unique, dt.datetime.now(ATHENS))
         if key in ("volley", "volley-women"):
             volley_live(key, unique)
         if key == "basketball":
             basket_league_live(unique)
+        other_live(key, unique)
+        try:
+            import club  # αποτέλεσμα από την ΑΣ ΠΑΟΚ, όπου η επίσημη πηγή αργεί
+            club.results(key, unique)
+        except Exception as e:
+            print(f"  ! ΑΣ ΠΑΟΚ, αποτελέσματα / {key}: {e}", file=sys.stderr)
+        # Ό,τι έγραψε ο διαχειριστής μετρά τελευταίο, πάνω από όλα.
+        apply_admin(key, unique)
         info = SECTIONS[key]
         for side, label, keep in (("home", "Εντός έδρας", True), ("away", "Εκτός έδρας", False)):
             subset = [m for m in unique if m.paok_home == keep]

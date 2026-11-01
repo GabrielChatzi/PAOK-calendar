@@ -4,7 +4,7 @@
 Η εφαρμογή γράφει κάθε συσκευή σε θέματα, ώστε ο καθένας να διαλέγει τι θέλει:
     s:<τμήμα>:<είδος>    για όλους τους αγώνες ενός τμήματος
     m:<αγώνας>:<είδος>   για έναν μόνο αγώνα
-Είδη: pre (υπενθύμιση περίπου μία ώρα πριν), time (νέος αγώνας ή αλλαγή ημέρας/ώρας),
+Είδη: pre (υπενθύμιση περίπου μία ώρα πριν· στους αγώνες χωρίς live και στην έναρξη), time (νέος αγώνας ή αλλαγή ημέρας/ώρας),
 live (έναρξη, γκολ/περίοδοι, τέλος· βλ. live.py), result (τελικό αποτέλεσμα).
 
 Η αποστολή γίνεται από το /api/push της σελίδας (Vercel). Η ταυτότητα του GitHub Actions
@@ -33,6 +33,9 @@ KINDS = ("pre", "time", "live", "result")
 # Η υπενθύμιση φεύγει στον πρώτο έλεγχο (κάθε 15 λεπτά) που απέχει το πολύ μία ώρα από την έναρξη·
 # 2 λεπτά περιθώριο για ελέγχους που τρέχουν λίγο νωρίτερα από το τέταρτο.
 REMINDER_WINDOW = dt.timedelta(minutes=62)
+# Ειδοποίηση έναρξης για αγώνες χωρίς live: στον έλεγχο που πέφτει από 3' πριν ως 15' μετά την ώρα.
+KICKOFF_EARLY = dt.timedelta(minutes=3)
+KICKOFF_LATE = dt.timedelta(minutes=15)
 # Πόσο νωρίτερα ξεκινά η παρακολούθηση live, ώστε να «δει» τον αγώνα πριν αρχίσει.
 LIVE_LEAD = dt.timedelta(minutes=50)
 LIVE_SPAN = dt.timedelta(hours=3, minutes=30)
@@ -87,8 +90,11 @@ def _oidc_token() -> str | None:
 
 
 def _push(topics: list[str], title: str, message: str, url: str, tag: str | None = None,
-          quiet: bool = False) -> None:
-    """Ειδοποίηση web push σε όσες συσκευές έχουν γραφτεί σε κάποιο από τα θέματα (μία φορά στην καθεμία)."""
+          quiet: bool = False, once: str | None = None) -> None:
+    """Ειδοποίηση web push σε όσες συσκευές έχουν γραφτεί σε κάποιο από τα θέματα (μία φορά στην καθεμία).
+
+    once: κλειδί· όποια συσκευή πήρε ήδη ειδοποίηση με το ίδιο κλειδί (από οποιαδήποτε αποστολή) παραλείπεται.
+    """
     if not enabled():
         print(f"  (χωρίς αποστολή) push {','.join(topics)}: {title} | {message}")
         return
@@ -97,12 +103,14 @@ def _push(topics: list[str], title: str, message: str, url: str, tag: str | None
         if not token:
             print("  ! push: λείπει το OIDC token (permissions: id-token: write)", file=sys.stderr)
             return
-        body = {"topics": topics, "title": title, "body": message, "url": url, "tag": tag, "quiet": quiet}
+        body = {"topics": topics, "title": title, "body": message, "url": url, "tag": tag, "quiet": quiet,
+                "once": once}
         req = urllib.request.Request(SITE + "api/push", data=json.dumps(body).encode(), method="POST",
                                      headers={"Content-Type": "application/json", "Authorization": f"Bearer {token}"})
         with urllib.request.urlopen(req, timeout=60) as r:
             res = json.loads(r.read())
-        print(f"  push {','.join(topics)}: {title} → {res.get('sent', 0)}/{res.get('matched', 0)}")
+        skipped = f" (ήδη το είχαν {res['skipped']})" if res.get("skipped") else ""
+        print(f"  push {','.join(topics)}: {title} → {res.get('sent', 0)}/{res.get('matched', 0)}{skipped}")
         for err in res.get("errors") or []:
             print(f"    ! {err}", file=sys.stderr)
     except Exception as e:  # μια αποτυχημένη ειδοποίηση δεν σταματά την υπόλοιπη δουλειά
@@ -110,7 +118,8 @@ def _push(topics: list[str], title: str, message: str, url: str, tag: str | None
 
 
 def send(section: str, kind: str, title: str, message: str, match: dict | None = None,
-         to_match: bool = True, also_match_kinds: tuple[str, ...] = (), tag: str | None = None) -> None:
+         to_match: bool = True, also_match_kinds: tuple[str, ...] = (), tag: str | None = None,
+         once: str | None = None) -> None:
     """Στέλνει σε όσους ακολουθούν το τμήμα και, αν δοθεί αγώνας, σε όσους ακολουθούν τον αγώνα.
 
     to_match: αν πηγαίνει και στο ίδιο είδος του αγώνα.
@@ -124,7 +133,11 @@ def send(section: str, kind: str, title: str, message: str, match: dict | None =
     # Το τελικό μπορεί να έρθει και από το live.py και από την ενημέρωση (ίδιο tag «<αγώνας>-result»):
     # η δεύτερη φορά αντικαθιστά την πρώτη χωρίς νέο ήχο.
     tag = tag or (f"{match['nt']}-{kind}" if has_match and kind != "live" else None)
-    _push(list(dict.fromkeys(topics)), title, message, url, tag, quiet=kind == "result")
+    # Το τελικό φτάνει μία φορά σε κάθε συσκευή, είτε το στείλει πρώτο το live.py είτε η ενημέρωση
+    # (το ίδιο tag δεν αρκεί: το iPhone δείχνει και τις δύο).
+    if kind == "result" and has_match:
+        once = once or f"{match['nt']}-result"
+    _push(list(dict.fromkeys(topics)), title, message, url, tag, quiet=kind == "result", once=once)
 
 
 def changes(previous: list[dict], current: list[dict], sections: set[str]) -> list[tuple]:
@@ -154,8 +167,13 @@ def changes(previous: list[dict], current: list[dict], sections: set[str]) -> li
             events.append((sec, "time", f"{emoji} Αλλαγή: {teams(m)}",
                            f"Τώρα: {when_text(m)} (ήταν {when_text(old)})", m))
         if m.get("score") and not old.get("score") and now - start < dt.timedelta(days=3):
-            events.append((sec, "result", f"{emoji} Τελικό: {teams(m, with_score=True)}",
+            note = f" ({m['note']})" if m.get("note") else ""
+            events.append((sec, "result", f"{emoji} Τελικό: {teams(m, with_score=True)}{note}",
                            m.get("competition", "") + (f", {m['round']}" if m.get("round") else ""), m))
+        if m.get("status") and m.get("status") != old.get("status") and not m.get("score"):
+            what = STATUS_TEXT.get(m["status"], m["status"])
+            events.append((sec, "time", f"{emoji} {what}: {teams(m)}",
+                           (m.get("note") or when_text(m)) + (f". {details}" if details else ""), m))
     # Προστασία: αν μια πηγή αλλάξει μορφή, δεν θέλουμε δεκάδες ειδοποιήσεις.
     counts: dict[tuple[str, str], int] = {}
     for sec, kind, *_ in events:
@@ -172,13 +190,16 @@ def changes(previous: list[dict], current: list[dict], sections: set[str]) -> li
 def send_changes(previous: list[dict], current: list[dict], sections: set[str]) -> None:
     for sec, kind, title, message, m in changes(previous, current, sections):
         # Το τελικό πηγαίνει πάντα και σε όσους ακολουθούν τον αγώνα, ακόμα κι αν το έστειλε ήδη το
-        # live.py (π.χ. αν δεν έτρεχε): με το ίδιο tag, η συσκευή κρατά μία ειδοποίηση.
+        # live.py (π.χ. αν δεν έτρεχε): όσες συσκευές το πήραν ήδη από το live παραλείπονται (once).
         send(sec, kind, title, message, match=m)
+
+
+STATUS_TEXT = {"postponed": "Αναβλήθηκε", "cancelled": "Ματαιώθηκε", "abandoned": "Διακόπηκε"}
 
 
 def live_window(m: dict, now: dt.datetime) -> bool:
     """Αν ένας αγώνας με live πρέπει να παρακολουθείται τώρα."""
-    if not m.get("live") or not m.get("timeKnown") or m.get("score"):
+    if not m.get("live") or not m.get("timeKnown") or m.get("score") or m.get("status") in ("postponed", "cancelled"):
         return False
     start = dt.datetime.fromisoformat(m["start"])
     return start - LIVE_LEAD <= now <= start + LIVE_SPAN
@@ -186,7 +207,7 @@ def live_window(m: dict, now: dt.datetime) -> bool:
 
 def awaiting_result(m: dict, now: dt.datetime) -> bool:
     """Αν ένας αγώνας πρέπει να έχει τελειώσει αλλά δεν έχουμε ακόμα το αποτέλεσμα."""
-    if not m.get("timeKnown") or m.get("score"):
+    if not m.get("timeKnown") or m.get("score") or m.get("status"):
         return False
     start = dt.datetime.fromisoformat(m["start"])
     end = start + dt.timedelta(minutes=DURATION.get(m["section"], 120) - 10)
@@ -203,7 +224,7 @@ def reminders(matches_path: Path, state_path: Path) -> int:
     now = dt.datetime.now(dt.timezone.utc)
     sent = 0
     for m in data.get("matches", []):
-        if not m.get("timeKnown") or m.get("score"):
+        if not m.get("timeKnown") or m.get("score") or m.get("status"):
             continue
         start = dt.datetime.fromisoformat(m["start"])
         key = f"{m['uid']}@{m['start']}"  # αν αλλάξει η ώρα, ξαναστέλνεται για τη νέα
@@ -215,6 +236,22 @@ def reminders(matches_path: Path, state_path: Path) -> int:
         details = ", ".join(x for x in (m.get("venue"), m.get("competition")) if x)
         send(sec, "pre", f"{EMOJI.get(sec, '')} Σε {mins} λεπτά: {teams(m)}",
              f"Στις {local:%H:%M}" + (f", {details}" if details else ""), match=m)
+        state[key] = now.isoformat(timespec="minutes")
+        sent += 1
+    # Αγώνες χωρίς live (π.χ. ποδόσφαιρο γυναικών, futsal): ειδοποίηση και στην ώρα έναρξης, σε όσους
+    # θέλουν την υπενθύμιση. Στους αγώνες με live το «Ξεκίνησε» έρχεται από το live.py, όταν ξεκινήσει.
+    for m in data.get("matches", []):
+        if m.get("live") or not m.get("timeKnown") or m.get("score") or m.get("status"):
+            continue
+        start = dt.datetime.fromisoformat(m["start"])
+        key = f"start:{m['uid']}@{m['start']}"
+        if not (start - KICKOFF_EARLY <= now < start + KICKOFF_LATE) or key in state:
+            continue
+        sec = m["section"]
+        details = ", ".join(x for x in (m.get("competition"), m.get("venue")) if x)
+        send(sec, "pre", f"{EMOJI.get(sec, '')} Ξεκινά: {teams(m)}",
+             (f"{details}. " if details else "") + "Δεν έχει ζωντανό σκορ· το τελικό θα έρθει μόλις ανακοινωθεί.",
+             match=m)
         state[key] = now.isoformat(timespec="minutes")
         sent += 1
     # Κρατάμε μόνο τις τελευταίες 3 μέρες.

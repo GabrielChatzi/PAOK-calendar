@@ -420,6 +420,30 @@
     },
     {
      "pos": 2,
+     "team": "Ολυμπιακός",
+     "logo": "https://www.esake.gr/dat/esaketeam/00000002/photo_new_7F6C9D90.png",
+     "paok": false,
+     "cells": [
+      "5",
+      "5-0",
+      "106",
+      "8"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "Περιστέρι",
+     "logo": "https://www.esake.gr/dat/esaketeam/0000000D/photo_new_30338F54.png",
+     "paok": false,
+     "cells": [
+      "5",
+      "3-2",
+      "-39",
+      "8"
+     ]
+    },
+    {
+     "pos": 4,
      "team": "Καρδίτσα",
      "logo": "https://www.esake.gr/dat/esaketeam/B742845D/photo_new_04E98281.png",
      "paok": false,
@@ -431,7 +455,7 @@
      ]
     },
     {
-     "pos": 3,
+     "pos": 5,
      "team": "Άρης",
      "logo": "https://www.esake.gr/dat/esaketeam/00000005/photo_new_6A11CE7A.png",
      "paok": false,
@@ -443,7 +467,7 @@
      ]
     },
     {
-     "pos": 4,
+     "pos": 6,
      "team": "Κολοσσός Ρόδου",
      "logo": "https://www.esake.gr/dat/esaketeam/0000000A/photo_new_5DC7EFBA.png",
      "paok": false,
@@ -455,7 +479,7 @@
      ]
     },
     {
-     "pos": 5,
+     "pos": 7,
      "team": "Δόξα Λευκάδας",
      "logo": "https://www.esake.gr/dat/esaketeam/3CA10C07/photo_new_6AE0FF13.png",
      "paok": false,
@@ -467,7 +491,7 @@
      ]
     },
     {
-     "pos": 6,
+     "pos": 8,
      "team": "ΑΕΚ",
      "logo": "https://www.esake.gr/dat/esaketeam/00000010/photo_new_2BF3BBDA.png",
      "paok": false,
@@ -476,30 +500,6 @@
       "2-3",
       "-18",
       "7"
-     ]
-    },
-    {
-     "pos": 7,
-     "team": "Περιστέρι",
-     "logo": "https://www.esake.gr/dat/esaketeam/0000000D/photo_new_30338F54.png",
-     "paok": false,
-     "cells": [
-      "4",
-      "3-1",
-      "-10",
-      "7"
-     ]
-    },
-    {
-     "pos": 8,
-     "team": "Ολυμπιακός",
-     "logo": "https://www.esake.gr/dat/esaketeam/00000002/photo_new_7F6C9D90.png",
-     "paok": false,
-     "cells": [
-      "4",
-      "4-0",
-      "77",
-      "6"
      ]
     },
     {
@@ -528,18 +528,6 @@
     },
     {
      "pos": 11,
-     "team": "Προμηθέας Πάτρας",
-     "logo": "https://www.esake.gr/dat/esaketeam/2A25C696/photo_new_4BF0C19C.png",
-     "paok": false,
-     "cells": [
-      "5",
-      "1-4",
-      "-81",
-      "6"
-     ]
-    },
-    {
-     "pos": 12,
      "team": "Μύκονος",
      "logo": "https://www.esake.gr/dat/esaketeam/BB4B460F/photo_new_62684735.png",
      "paok": false,
@@ -547,6 +535,18 @@
       "5",
       "1-4",
       "-35",
+      "6"
+     ]
+    },
+    {
+     "pos": 12,
+     "team": "Προμηθέας Πάτρας",
+     "logo": "https://www.esake.gr/dat/esaketeam/2A25C696/photo_new_4BF0C19C.png",
+     "paok": false,
+     "cells": [
+      "5",
+      "1-4",
+      "-81",
       "6"
      ]
     },
@@ -734,6 +734,18 @@
     },
     {
      "pos": 4,
+     "team": "ΠΑΝΣΕΡΡΑΙΚΟΣ FIBRAN",
+     "logo": "https://apps.basket.gr/clubs/82/logo",
+     "paok": false,
+     "cells": [
+      "5",
+      "2-3",
+      "-59",
+      "7"
+     ]
+    },
+    {
+     "pos": 5,
      "team": "KRONOS BC PLASIS",
      "logo": "https://apps.basket.gr/clubs/31/logo",
      "paok": false,
@@ -742,18 +754,6 @@
       "2-3",
       "-83",
       "7"
-     ]
-    },
-    {
-     "pos": 5,
-     "team": "ΠΑΝΣΕΡΡΑΙΚΟΣ FIBRAN",
-     "logo": "https://apps.basket.gr/clubs/82/logo",
-     "paok": false,
-     "cells": [
-      "4",
-      "2-2",
-      "-51",
-      "6"
      ]
     },
     {
@@ -770,18 +770,6 @@
     },
     {
      "pos": 7,
-     "team": "ΑΕΟ ΠΡΩΤΕΑΣ ΒΟΥΛΑΣ",
-     "logo": "https://apps.basket.gr/clubs/659/logo",
-     "paok": false,
-     "cells": [
-      "4",
-      "2-2",
-      "-5",
-      "6"
-     ]
-    },
-    {
-     "pos": 8,
      "team": "ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ ΣΥΚΕΩΝ",
      "logo": "https://apps.basket.gr/clubs/802/logo",
      "paok": false,
@@ -793,7 +781,31 @@
      ]
     },
     {
+     "pos": 8,
+     "team": "ΑΚ ΚΑΒΑΛΑΣ ΟΙ ΠΑΝΘΗΡΕΣ",
+     "logo": "https://apps.basket.gr/clubs/1776/logo",
+     "paok": false,
+     "cells": [
+      "5",
+      "1-4",
+      "-121",
+      "6"
+     ]
+    },
+    {
      "pos": 9,
+     "team": "ΑΕΟ ΠΡΩΤΕΑΣ ΒΟΥΛΑΣ",
+     "logo": "https://apps.basket.gr/clubs/659/logo",
+     "paok": false,
+     "cells": [
+      "4",
+      "2-2",
+      "-5",
+      "6"
+     ]
+    },
+    {
+     "pos": 10,
      "team": "ΠΑΟΚ",
      "logo": "https://apps.basket.gr/clubs/2/logo",
      "paok": true,
@@ -805,7 +817,7 @@
      ]
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "ΑΣ ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ",
      "logo": "https://apps.basket.gr/clubs/1/logo",
      "paok": false,
@@ -817,7 +829,7 @@
      ]
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "ΑΟ ΑΜΥΝΤΑΣ",
      "logo": "https://apps.basket.gr/clubs/493/logo",
      "paok": false,
@@ -825,18 +837,6 @@
       "4",
       "0-4",
       "-69",
-      "4"
-     ]
-    },
-    {
-     "pos": 12,
-     "team": "ΑΚ ΚΑΒΑΛΑΣ ΟΙ ΠΑΝΘΗΡΕΣ",
-     "logo": "https://apps.basket.gr/clubs/1776/logo",
-     "paok": false,
-     "cells": [
-      "4",
-      "0-4",
-      "-129",
       "4"
      ]
     }

@@ -1656,11 +1656,11 @@
      "logo": "https://koecdn.twic.pics/media/faliro-1757496864-n863Il8C.jpg",
      "paok": false,
      "cells": [
-      "5",
+      "6",
       "2",
       "1",
-      "2",
-      "64-67",
+      "3",
+      "76-88",
       "7"
      ]
     },
@@ -1680,6 +1680,20 @@
     },
     {
      "pos": 11,
+     "team": "ΓΣ ΠΕΡΙΣΤΕΡΙΟΥ MEDITERRANEAN COLLEGE",
+     "logo": "https://koecdn.twic.pics/media/peristeri3-1771358253-dRhtXJk1.png",
+     "paok": false,
+     "cells": [
+      "6",
+      "1",
+      "0",
+      "5",
+      "72-110",
+      "3"
+     ]
+    },
+    {
+     "pos": 12,
      "team": "ΑΝΟ ΓΛΥΦΑΔΑΣ",
      "logo": "https://koecdn.twic.pics/media/glyfada-1757496556-dcU9OmwO.jpg",
      "paok": false,
@@ -1693,7 +1707,7 @@
      ]
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "ΝΟ ΧΑΝΙΩΝ",
      "logo": "https://koecdn.twic.pics/media/xanion-1757572705-KVq2UMey.jpg",
      "paok": false,
@@ -1704,20 +1718,6 @@
       "4",
       "46-77",
       "1"
-     ]
-    },
-    {
-     "pos": 13,
-     "team": "ΓΣ ΠΕΡΙΣΤΕΡΙΟΥ MEDITERRANEAN COLLEGE",
-     "logo": "https://koecdn.twic.pics/media/peristeri3-1771358253-dRhtXJk1.png",
-     "paok": false,
-     "cells": [
-      "5",
-      "0",
-      "0",
-      "5",
-      "51-98",
-      "0"
      ]
     },
     {

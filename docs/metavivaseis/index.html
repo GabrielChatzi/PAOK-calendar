@@ -190,6 +190,15 @@
   .inline input[type="text"] { flex: 1; min-width: 0; }
   .nudge { display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; border: 1.5px solid var(--ink); padding: 12px 14px; margin-top: 10px; }
   .nudge p { margin: 0; flex: 1; min-width: 180px; font-size: 15px; }
+  .due { margin: 4px 0 0; font-size: 14px; font-weight: 600; color: var(--warn); }
+  .gatechoice { display: grid; gap: 8px; margin: 10px 0 12px; }
+  .radio { display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 6px 12px; border: 1.5px solid var(--rule); font-weight: 600; margin: 0; cursor: pointer; }
+  .radio:has(input[type=radio]:checked) { border-color: var(--ink); }
+  .radio input[type=radio] { width: 20px; height: 20px; margin: 0; accent-color: var(--ink); flex: none; }
+  .radio input[type=text] { flex: 1; min-width: 0; min-height: 40px; padding: 6px 10px; font-weight: 400; }
+  .radio input[type=text]:disabled { opacity: .4; }
+  .nudge.ok { border-color: var(--ok); }
+  .btn[disabled] { opacity: 0.45; cursor: not-allowed; }
 </style>
 </head>
 <body>
@@ -264,6 +273,7 @@ const ICON = {
   copy: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>',
   swap: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 7h11l-3-3M17 17H6l3 3"/></svg>',
   bell: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg>',
+  clock: '<svg style="width:15px;height:15px;vertical-align:-2px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
 };
 
 // ---------- Δεδομένα ----------
@@ -286,7 +296,6 @@ async function loadMatches() {
 }
 const deadline = (m) => new Date(new Date(m.start).getTime() - cutoffHours * HOUR);
 const closed = (m) => !m || deadline(m).getTime() <= Date.now();
-// Εντός έδρας αγώνες που δεν έχουν αρχίσει (στη λίστα) / που δέχονται ακόμα θέσεις (στη φόρμα).
 function upcoming(section, { openOnly = false } = {}) {
   const now = Date.now();
   return [...matchesById.values()]
@@ -301,7 +310,9 @@ const HM = { hour: "2-digit", minute: "2-digit", hourCycle: "h23" };
 const sportName = (s) => (s === "basketball" ? "Μπάσκετ" : "Ποδόσφαιρο");
 const title = (m) => (m ? `${m.home} – ${m.away}` : "Αγώνας");
 const dayTime = (d) => `${fmt(d, { weekday: "short", day: "numeric", month: "numeric" })} ${fmt(d, HM)}`;
-const time = (d) => fmt(d, HM);
+const sameDay = (a, b) => fmt(a, { day: "numeric", month: "numeric" }) === fmt(b, { day: "numeric", month: "numeric" });
+// «ως τις 14:30» σήμερα, αλλιώς «ως Δευ 2/11 14:30»
+const dueText = (d) => (d ? (sameDay(d, Date.now()) ? `ως τις ${fmt(d, HM)}` : `ως ${dayTime(d)}`) : "");
 function when(m) {
   if (!m) return "";
   const day = fmt(m.start, { weekday: "short", day: "numeric", month: "numeric" });
@@ -310,11 +321,11 @@ function when(m) {
 function seatText(o) {
   return [`Θύρα ${o.gate}`, o.block && `Τμήμα ${o.block}`, o.row && `Σειρά ${o.row}`, o.seat && `Θέση ${o.seat}`].filter(Boolean).join(" · ");
 }
-const given = (n) => (n ? `${n} ${n === 1 ? "μεταβίβαση" : "μεταβιβάσεις"}` : "Νέο μέλος");
+const given = (n) => (n ? `έχει δώσει ${n}` : "Νέο μέλος");
+const gateLabel = (g) => (g ? `Θύρα ${g}` : "Οποιαδήποτε θύρα");
 const deadlineText = (m) => (m ? `έως ${dayTime(deadline(m))}` : "");
 
-// Στο Wallet η μεταβίβαση ισχύει για τον επόμενο αγώνα του διαρκείας. Ένας αγώνας «ανοίγει» για
-// μεταβίβαση όταν τελειώσει ο προηγούμενος εντός έδρας του τμήματος (≈3 ώρες μετά την έναρξη).
+// Στο Wallet η μεταβίβαση ισχύει για τον επόμενο αγώνα του διαρκείας.
 const MATCH_LENGTH = 3 * HOUR;
 function nextFor(section) {
   const now = Date.now();
@@ -325,8 +336,7 @@ function nextFor(section) {
 const isNext = (m) => Boolean(m && nextFor(m.section)?.nt === m.nt);
 const blocker = (m) => { const n = m && nextFor(m.section); return n && n.nt !== m.nt ? n : null; };
 const waitText = (m) => { const b = blocker(m); return b ? `μετά το ${title(b)} (${when(b)})` : "όταν έρθει η σειρά του αγώνα"; };
-const myPrefs = (section) => mine?.user?.prefs?.[section] || { gates: [], others: true, alerts: false };
-const gatesText = (gates) => gates.map((g) => `Θύρα ${g}`).join(", ");
+const prefGate = (section) => mine?.user?.prefs?.[section] ?? null;
 
 // ---------- Ταυτότητα ----------
 function setIdentity(t, n) {
@@ -370,7 +380,7 @@ $("#who").addEventListener("click", async () => {
 let toastTimer;
 function toast(msg) {
   const t = $("#toast"); t.textContent = msg; t.hidden = false;
-  clearTimeout(toastTimer); toastTimer = setTimeout(() => { t.hidden = true; }, 4000);
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => { t.hidden = true; }, 4500);
 }
 
 // ---------- Ειδοποιήσεις web push ----------
@@ -412,7 +422,6 @@ async function disablePush() {
   store.set(PUSH_KEY, "0");
   pushOn = false;
 }
-// Σε κάθε άνοιγμα, αν οι ειδοποιήσεις είναι ενεργές σε αυτή τη συσκευή, ξαναστέλνουμε τη συνδρομή.
 async function syncPush() {
   if (!token || store.get(PUSH_KEY) !== "1" || !pushSupported() || Notification.permission !== "granted") { pushOn = false; return; }
   try {
@@ -423,10 +432,10 @@ async function syncPush() {
     pushOn = true;
   } catch { pushOn = false; }
 }
-async function ensurePush() {
-  if (pushOn) return true;
-  try { await enablePush(); toast("Οι ειδοποιήσεις ενεργοποιήθηκαν."); return true; }
-  catch (err) { toast(err.message); return false; }
+// Πριν μπει κάποιος σε λίστα ή δώσει θέση: οι ειδοποιήσεις είναι απαραίτητες (τα βήματα έχουν χρόνο).
+async function tryPush() {
+  if (pushOn) return;
+  try { await enablePush(); } catch (err) { toast(`${err.message} Θα πρέπει να ανοίγεις τη σελίδα για να βλέπεις τι έγινε.`); }
 }
 
 // ---------- Κουμπιά με data-act: εκτελούν μια ενέργεια και ανανεώνουν ----------
@@ -454,6 +463,11 @@ document.addEventListener("click", async (e) => {
     catch (err) { toast(err.message); b.disabled = false; }
     return;
   }
+  if (act === "showjoin") {
+    document.getElementById(b.dataset.target).hidden = false;
+    b.hidden = true;
+    return;
+  }
   if (!(await needNick())) return;
   if (act === "push-on" || act === "push-off") {
     b.disabled = true;
@@ -466,43 +480,57 @@ document.addEventListener("click", async (e) => {
   }
   const body = JSON.parse(b.dataset.body || "{}");
   if (act === "afm") body.afm = document.getElementById(b.dataset.input).value.replace(/\s/g, "");
-  if (act === "wait" && body.on) {
-    // Χωρίς ειδοποιήσεις η λίστα αναμονής δεν έχει νόημα: πρώτα ενεργοποίηση.
-    if (!(await ensurePush())) return;
-  }
+  if (act === "take" || act === "join") await tryPush();
   b.disabled = true;
   try {
-    await post(act, body);
-    if (b.dataset.ok) toast(b.dataset.ok);
-    await render();
+    const r = await post(act, body);
+    let ok = b.dataset.ok || "";
+    if (act === "take" && r.status === "assigned") ok = "Η θέση είναι δική σου! Δες τι ακολουθεί στις κινήσεις σου.";
+    if (act === "reclaim" && r.revoke) ok = "Κάνε τώρα ανάκληση στο Gov.gr Wallet. Ψάχνουμε άλλη θέση για τον παραλήπτη.";
+    if (ok) toast(ok);
+    if (act === "take" && r.status === "assigned") location.hash = "#/mine";
+    else await render();
   } catch (err) {
     toast(err.message);
     b.disabled = false;
+    await render();
   }
 });
 
-// Φόρμες θυρών (στη σελίδα αγώνα και στις ρυθμίσεις).
+// Φόρμες θύρας: «μπες στη λίστα» (data-join) και προεπιλογή στις ρυθμίσεις (data-prefs).
+function gateBody(f) {
+  const any = f.elements.kind.value === "any";
+  return any ? { any: true } : { gate: f.elements.gate.value };
+}
 document.addEventListener("submit", async (e) => {
-  const f = e.target.closest("form[data-prefs]");
+  const f = e.target.closest("form[data-join], form[data-prefs]");
   if (!f) return;
   e.preventDefault();
   if (!(await needNick())) return;
-  const section = f.dataset.prefs;
-  const current = myPrefs(section);
-  const gates = (f.elements.gates.value || "").split(/[,;/]+/).map((g) => g.trim()).filter(Boolean);
-  const body = {
-    section, gates,
-    others: f.elements.others ? f.elements.others.checked : current.others,
-    alerts: f.elements.alerts ? f.elements.alerts.checked : current.alerts,
-  };
+  const body = gateBody(f);
+  if (!body.any && !String(body.gate || "").trim()) { toast("Γράψε τη θύρα ή διάλεξε «Οποιαδήποτε θύρα»."); f.elements.gate.focus(); return; }
   const btn = f.querySelector("button[type=submit]");
   btn.disabled = true;
   try {
-    if (body.alerts && !pushOn && !(await ensurePush())) { btn.disabled = false; return; }
-    await post("prefs", body);
-    toast(gates.length ? `Αποθηκεύτηκε: ${gatesText(gates)}.` : "Αποθηκεύτηκε.");
+    if (f.dataset.join) {
+      await tryPush();
+      const r = await post("join", { matchId: f.dataset.join, ...body });
+      if (r.status === "assigned") { toast("Σου βρέθηκε θέση αμέσως! Δες τι ακολουθεί."); location.hash = "#/mine"; return; }
+      toast("Είσαι στη λίστα. Θα σε ειδοποιήσουμε μόλις βρεθεί θέση.");
+    } else {
+      await post("prefs", { section: f.dataset.prefs, ...body });
+      toast(`Αποθηκεύτηκε: ${gateLabel(body.any ? "" : body.gate.trim())}.`);
+    }
     await render();
   } catch (err) { toast(err.message); btn.disabled = false; }
+});
+// Το πεδίο θύρας ενεργό μόνο όταν είναι επιλεγμένη η «Θύρα».
+document.addEventListener("change", (e) => {
+  const f = e.target.closest("form[data-join], form[data-prefs]");
+  if (f && e.target.name === "kind") {
+    f.elements.gate.disabled = f.elements.kind.value === "any";
+    if (!f.elements.gate.disabled) f.elements.gate.focus();
+  }
 });
 
 // ---------- Οθόνες ----------
@@ -518,13 +546,13 @@ function actionCount() {
   if (!mine) return 0;
   let n = 0;
   for (const o of mine.offers) {
-    if (o.status === "open" && o.requests.length) n++;
-    if (o.status === "assigned" && o.afm && o.transferable) n++;
+    if (o.status === "assigned" && o.step === "transfer" && o.afm) n++;
+    if (o.canNotAccepted) n++;
   }
-  for (const r of mine.requests) {
-    if (r.status !== "chosen") continue;
-    if (r.offerStatus === "assigned" && !r.afmSent && r.transferable) n++;
-    if (r.offerStatus === "transferred") n++;
+  for (const c of mine.claims) {
+    if (c.offer?.step === "afm" && c.offer.status === "assigned") n++;
+    if (c.offer?.status === "transferred") n++;
+    if (c.alts?.length) n++;
   }
   return n;
 }
@@ -541,18 +569,18 @@ const step = (state, n, head, body = "") =>
   `<li class="${state}"><span class="dot">${state === "did" ? ICON.check : n}</span><div><strong>${head}</strong>${body}</div></li>`;
 const btnAct = (act, label, body, { cls = "btn solid", ok = "", confirm = "", disabled = false, aria = "" } = {}) =>
   `<button class="${cls}" type="button" data-act="${act}" data-body='${esc(JSON.stringify(body))}'${ok ? ` data-ok="${esc(ok)}"` : ""}${confirm ? ` data-confirm="${esc(confirm)}"` : ""}${aria ? ` aria-label="${esc(aria)}"` : ""}${disabled ? " disabled" : ""}>${label}</button>`;
+const dueLine = (d, text = "") => (d ? `<p class="due">${ICON.clock} ${text}${esc(dueText(d))}</p>` : "");
 
-// Φόρμα «η θύρα μου» για ένα τμήμα. full: και οι επιλογές ειδοποιήσεων.
-function prefsForm(section, { full = false } = {}) {
-  const p = myPrefs(section);
-  const id = `pf-${section}`;
-  return `<form data-prefs="${section}">
-    <label for="${id}">Η θύρα μου (${sportName(section).toLowerCase()})</label>
-    <div class="inline"><input type="text" id="${id}" name="gates" maxlength="23" value="${esc(p.gates.join(", "))}" placeholder="π.χ. 4  ·  έως 2, με κόμμα">
-      <button class="btn solid" type="submit">Αποθήκευση</button></div>
-    ${full ? `
-    <label class="check" style="margin-top:12px"><input type="checkbox" name="alerts"${p.alerts ? " checked" : ""}><span>Ειδοποίησέ με για κάθε νέα θέση στη θύρα μου, σε όλους τους αγώνες</span></label>
-    <label class="check"><input type="checkbox" name="others"${p.others ? " checked" : ""}><span>Ειδοποίησέ με και για θέσεις σε άλλες θύρες, όταν τελειώσει η προτεραιότητα</span></label>` : ""}
+// Επιλογή «μία θύρα ή οποιαδήποτε» (στη λίστα αγώνα και στις ρυθμίσεις).
+function gateForm({ attr, gate, id, button }) {
+  const any = gate === "";
+  return `<form ${attr} class="gateform">
+    <div class="gatechoice" role="radiogroup" aria-label="Θύρα">
+      <label class="radio"><input type="radio" name="kind" value="gate"${any ? "" : " checked"}><span>Θύρα</span>
+        <input type="text" name="gate" id="${id}" maxlength="10" inputmode="text" autocomplete="off" placeholder="π.χ. 4" value="${esc(gate || "")}" aria-label="Αριθμός θύρας"${any ? " disabled" : ""}></label>
+      <label class="radio"><input type="radio" name="kind" value="any"${any ? " checked" : ""}><span>Οποιαδήποτε θύρα</span></label>
+    </div>
+    <button class="btn solid block" type="submit">${button}</button>
   </form>`;
 }
 
@@ -562,32 +590,32 @@ async function viewHome(section) {
   summary = sum.matches || {};
   demoMode = Boolean(sum.demo);
   cutoffHours = sum.cutoffHours || cutoffHours;
+  const myClaims = Object.fromEntries((mine?.claims || []).map((c) => [c.matchId, c]));
   const list = upcoming(section);
   const cards = list.map((m) => {
     const s = summary[m.nt] || { offers: 0, seekers: 0 };
     const shut = closed(m);
+    const mc = myClaims[m.nt];
     return `<a class="match" href="#/m/${m.nt}">
       <span class="date"><span class="w">${esc(fmt(m.start, { weekday: "short" }))}</span><span class="d">${esc(fmt(m.start, { day: "numeric" }))}</span><span class="m">${esc(fmt(m.start, { month: "short" }))}</span></span>
       <span>
         <strong>${esc(title(m))}</strong>
         <span class="small muted">${esc(m.competition || "")} · ${m.timeKnown === false ? "ώρα δεν έχει οριστεί" : esc(fmt(m.start, HM))}</span>
         <span class="chips">
-          ${shut ? `<span class="chip">Έκλεισε η μεταβίβαση</span>` : isNext(m) ? `<span class="chip warn">Επόμενος · μεταβίβαση ${esc(deadlineText(m))}</span>` : ""}
-          ${!shut && s.offers ? `<span class="chip ok">${s.offers} ${s.offers === 1 ? "θέση" : "θέσεις"}</span>` : ""}
-          ${!shut && !s.offers ? `<span class="chip">Καμία θέση ακόμα</span>` : ""}
-          ${!shut && s.seekers ? `<span class="chip">${s.seekers} ψάχνουν</span>` : ""}
+          ${shut ? `<span class="chip">Έκλεισαν οι μεταβιβάσεις</span>` : isNext(m) ? `<span class="chip warn">Επόμενος · ${esc(deadlineText(m))}</span>` : ""}
+          ${mc?.status === "waiting" ? `<span class="chip ok">Είσαι στη λίστα</span>` : ""}
+          ${mc?.status === "assigned" || mc?.status === "done" ? `<span class="chip ok">Έχεις θέση</span>` : ""}
+          ${!shut && s.offers ? `<span class="chip ok">${s.offers} ${s.offers === 1 ? "ελεύθερη" : "ελεύθερες"}</span>` : ""}
+          ${!shut && s.seekers ? `<span class="chip">${s.seekers} στη λίστα</span>` : ""}
         </span>
       </span>
       ${ICON.chev}
     </a>`;
   }).join("");
-  const p = myPrefs(section);
-  const nudges = token ? [
-    !p.gates.length ? `<div class="nudge"><p>Δήλωσε τη θύρα σου για να έχεις <strong>προτεραιότητα</strong> στις θέσεις της.</p><a class="btn" href="#/settings">Η θύρα μου</a></div>` : "",
-    !pushOn ? `<div class="nudge"><p>Ενεργοποίησε τις <strong>ειδοποιήσεις</strong> για να μαθαίνεις αμέσως για αιτήματα και νέες θέσεις.</p><a class="btn" href="#/settings">${ICON.bell} Ειδοποιήσεις</a></div>` : "",
-  ].join("") : "";
+  const nudges = token && !pushOn
+    ? `<div class="nudge"><p>Ενεργοποίησε τις <strong>ειδοποιήσεις</strong>: όταν σου βρεθεί θέση, έχεις περιορισμένο χρόνο να απαντήσεις.</p><a class="btn" href="#/settings">${ICON.bell} Ειδοποιήσεις</a></div>` : "";
   $("#view").innerHTML = `${tabs(section)}
-    <div class="info">${ICON.info}<p>Η μεταβίβαση γίνεται στο Gov.gr Wallet, ισχύει για τον <strong>επόμενο</strong> αγώνα του διαρκείας και γίνεται <strong>έως ${cutoffHours} ώρες πριν</strong> τη σέντρα. Θέση μπορείς να δώσεις και για μεταγενέστερο αγώνα.</p></div>
+    <div class="info">${ICON.info}<p>Μπες στη <strong>λίστα</strong> ενός αγώνα για μία θύρα ή για οποιαδήποτε. Όποιος δηλώσει πρώτος παίρνει την επόμενη θέση που θα δοθεί. Η μεταβίβαση γίνεται στο Gov.gr Wallet, έως <strong>${cutoffHours} ώρες πριν</strong> τη σέντρα.</p></div>
     ${nudges}
     ${demoMode ? `<div class="info warn" style="margin-top:10px;flex-wrap:wrap">${ICON.info}<p style="flex:1;min-width:200px">Δοκιμή: οι χρήστες <strong>demo_</strong> απαντούν αυτόματα, ώστε να δοκιμάσεις και μόνος σου.</p>
       <button class="btn" type="button" data-act="seed">Βάλε δοκιμαστικές θέσεις</button></div>` : ""}
@@ -597,20 +625,15 @@ async function viewHome(section) {
   cta(upcoming(section, { openOnly: true }).length ? "Δεν πάω — δίνω τη θέση μου" : "", "#/give");
 }
 
-function seatRow(o, shut) {
+function seatRow(o, { canTake }) {
   let btn = "";
-  const lockedUntil = o.priorityUntil && !o.myGate && !o.isMine ? o.priorityUntil : null;
   if (o.isMine) btn = `<span class="status gray">Δική σου</span>`;
-  else if (o.myRequest?.status === "chosen") btn = `<a class="btn okb" href="#/mine">Σε επέλεξε</a>`;
-  else if (o.myRequest) btn = btnAct("cancel", `${ICON.check} Ζητήθηκε`, { requestId: o.myRequest.requestId }, { cls: "btn okb", confirm: "Ακύρωση του αιτήματος;", ok: "Το αίτημα ακυρώθηκε.", aria: "Ζητήθηκε· πάτα για ακύρωση" });
-  else if (lockedUntil) btn = `<button class="btn" type="button" disabled aria-label="Προτεραιότητα για τη Θύρα ${esc(o.gate)} ως τις ${esc(time(lockedUntil))}">Ως ${esc(time(lockedUntil))}</button>`;
-  else btn = btnAct("request", "Ζήτα", { offerId: o.id }, { ok: "Το αίτημα στάλθηκε. Θα σε ειδοποιήσουμε όταν απαντήσει." });
+  else if (canTake) btn = btnAct("take", "Τη θέλω", { offerId: o.id }, { aria: `Τη θέλω: ${seatText(o)}` });
   return `<div class="seat">
     <span class="gate">Θ${esc(o.gate).slice(0, 3)}</span>
     <span><strong>${esc(seatText(o))}</strong><span class="small muted">@${esc(o.owner)} · ${given(o.given)}</span>
-      ${o.note ? `<div class="note">${esc(o.note)}</div>` : ""}
-      ${o.priorityUntil && !o.isMine ? `<div class="prio">${o.myGate ? "Έχεις προτεραιότητα" : `Προτεραιότητα Θύρας ${esc(o.gate)}`} ως τις ${esc(time(o.priorityUntil))}</div>` : ""}</span>
-    ${shut ? "" : btn}
+      ${o.note ? `<div class="note">${esc(o.note)}</div>` : ""}</span>
+    ${btn}
   </div>`;
 }
 
@@ -619,29 +642,49 @@ async function viewMatch(id) {
   if (!m) { $("#view").innerHTML = `<p class="empty">Ο αγώνας δεν βρέθηκε.</p>`; cta(); return; }
   const [data] = await Promise.all([api("match", { query: `&id=${encodeURIComponent(id)}` }), mineReady]);
   const shut = closed(m);
-  const mineGate = data.offers.filter((o) => o.myGate);
-  const rest = data.offers.filter((o) => !o.myGate);
-  const p = data.prefs || myPrefs(m.section);
-  const waitBox = shut ? "" : data.waiting
-    ? `<div class="nudge"><p>${ICON.bell.replace("<svg", '<svg style="width:18px;height:18px;vertical-align:-3px"')} Θα σε ειδοποιήσουμε όταν βγει θέση${p.gates.length ? ` (πρώτα στη ${esc(gatesText(p.gates))})` : ""}.</p>${btnAct("wait", "Σταμάτα", { matchId: id, on: false }, { cls: "btn", ok: "Δεν θα παίρνεις ειδοποιήσεις για αυτόν τον αγώνα." })}</div>`
-    : `<div class="nudge"><p>Ψάχνεις θέση; Θα σε ειδοποιήσουμε μόλις κάποιος δώσει${p.gates.length ? `, πρώτα στη ${esc(gatesText(p.gates))}` : ""}.</p>${btnAct("wait", `${ICON.bell} Ειδοποίησέ με`, { matchId: id, on: true }, { ok: "Θα σε ειδοποιήσουμε όταν βγει θέση." })}</div>`;
-  const gateBox = shut || !token || p.gates.length ? "" : `<div class="settings" style="margin-top:10px">${prefsForm(m.section)}<p class="small muted" style="margin:8px 0 0">Όσοι είναι στην ίδια θύρα έχουν προτεραιότητα στις νέες θέσεις της.</p></div>`;
+  const cl = data.claim;
+  const hasSeat = cl && ["assigned", "done"].includes(cl.status);
+  const canTake = !shut && !hasSeat && !data.giving;
+  const pg = data.prefGate ?? prefGate(m.section);
+
+  let box = "";
+  if (shut) {
+    box = cl?.status === "expired" ? `<div class="nudge"><p>Δεν βρέθηκε θέση για αυτόν τον αγώνα.</p></div>` : "";
+  } else if (data.giving) {
+    box = `<div class="nudge"><p>Δίνεις θέση σε αυτόν τον αγώνα. Δες την πορεία της στις <a href="#/mine">κινήσεις σου</a>.</p></div>`;
+  } else if (hasSeat) {
+    box = `<div class="nudge ok"><p>${ICON.check.replace("<svg", '<svg style="width:18px;height:18px;vertical-align:-3px"')} Έχεις θέση για αυτόν τον αγώνα.</p><a class="btn solid" href="#/mine">Τι ακολουθεί</a></div>`;
+  } else if (cl?.status === "waiting") {
+    box = `<div class="settings">
+      <h3>Είσαι στη λίστα · ${esc(gateLabel(cl.gate))}</h3>
+      <p class="small">${cl.rescued ? "Ο κάτοχος της θέσης σου δεν ολοκλήρωσε. Είσαι <strong>πρώτος</strong> για την επόμενη θέση που θα βγει." : "Θα σε ειδοποιήσουμε μόλις βρεθεί θέση. Αν αλλάξεις θύρα, κρατάς τη σειρά σου."}</p>
+      <div class="actions"><button class="btn" type="button" data-act="showjoin" data-target="joinwrap">Αλλαγή θύρας</button>
+        ${btnAct("leave", "Βγες από τη λίστα", { matchId: id }, { cls: "btn link", confirm: "Να βγεις από τη λίστα; Αν ξαναμπείς, θα μπεις στο τέλος.", ok: "Βγήκες από τη λίστα." })}</div>
+      <div id="joinwrap" hidden style="margin-top:12px">${gateForm({ attr: `data-join="${id}"`, gate: cl.gate, id: "jg", button: "Αποθήκευση" })}</div>
+    </div>`;
+  } else {
+    const again = cl?.status === "timedout";
+    box = `<div class="settings">
+      <h3>${again ? "Θες ακόμα θέση;" : "Ψάχνεις θέση;"}</h3>
+      <p class="small muted">${again ? "Η προηγούμενη θέση πήγε στον επόμενο επειδή δεν στάλθηκε ο ΑΦΜ εγκαίρως. " : ""}Δήλωσε μία θύρα ή οποιαδήποτε. Όποιος δηλώσει πρώτος παίρνει την επόμενη θέση που θα δοθεί.</p>
+      ${gateForm({ attr: `data-join="${id}"`, gate: cl?.gate ?? pg ?? null, id: "jg", button: again ? "Ξαναμπές στη λίστα" : "Μπες στη λίστα" })}
+    </div>`;
+  }
+
   $("#view").innerHTML = `<a class="back" href="#/${m.section}">${ICON.back} ${sportName(m.section)}</a>
     <p class="label" style="margin-top:8px">${esc(m.competition || sportName(m.section))}</p>
     <h2 style="margin-top:0">${esc(title(m))}</h2>
     <p class="muted" style="margin-top:-4px">${esc(when(m))} · ${esc(m.venue || "")}</p>
-    ${shut ? `<div class="info warn">${ICON.info}<p>Έκλεισε η μεταβίβαση για αυτόν τον αγώνα (γίνεται έως ${cutoffHours} ώρες πριν).</p></div>`
-      : `<div class="info">${ICON.info}<p>Μεταβίβαση ${esc(deadlineText(m))}.${blocker(m) ? ` Ανοίγει ${esc(waitText(m))}· τη θέση την κανονίζεις από τώρα.` : ""}</p></div>`}
-    ${mineGate.length ? `<p class="label">Στη θύρα σου (${mineGate.length})</p>${mineGate.map((o) => seatRow(o, shut)).join("")}` : ""}
-    <p class="label">${mineGate.length ? "Άλλες θύρες" : "Διαθέσιμες θέσεις"} (${rest.length})</p>
-    ${rest.map((o) => seatRow(o, shut)).join("") || `<p class="empty">${mineGate.length ? "Καμία θέση σε άλλη θύρα." : "Κανείς δεν έχει δώσει θέση ακόμα."}</p>`}
-    <div style="margin-top:16px">${waitBox}${gateBox}</div>`;
+    ${shut ? `<div class="info warn">${ICON.info}<p>Έκλεισαν οι μεταβιβάσεις για αυτόν τον αγώνα (γίνονται έως ${cutoffHours} ώρες πριν).</p></div>`
+      : `<div class="info">${ICON.info}<p>Μεταβίβαση ${esc(deadlineText(m))}.${blocker(m) ? ` Ανοίγει ${esc(waitText(m))}· η θέση κανονίζεται από τώρα.` : ""}${data.seekers ? ` · ${data.seekers} στη λίστα.` : ""}</p></div>`}
+    ${box}
+    ${shut ? "" : `<p class="label">Ελεύθερες τώρα (${data.offers.length})</p>
+    ${data.offers.map((o) => seatRow(o, { canTake })).join("") || `<p class="empty">Καμία ελεύθερη θέση. Όποια δοθεί, πάει αυτόματα στον πρώτο της λίστας.</p>`}`}`;
   cta(shut ? "" : "Δεν πάω — δίνω τη θέση μου", `#/give/${id}`);
 }
 
 async function viewGive(preselect) {
   await mineReady;
-  // Χωρίς συγκεκριμένο αγώνα, προεπιλογή ο επόμενος του τμήματος που κοίταζε ο χρήστης.
   const selected = preselect || upcoming(sportTab(), { openOnly: true })[0]?.nt;
   const opts = ["football", "basketball"].map((s) => {
     const list = upcoming(s, { openOnly: true });
@@ -651,7 +694,7 @@ async function viewGive(preselect) {
   }).join("");
   $("#view").innerHTML = `<a class="back" href="${preselect ? `#/m/${preselect}` : "#/"}">${ICON.back} Πίσω</a>
     <h2 style="margin-top:4px">Δώσε τη θέση σου</h2>
-    <div class="info warn" style="margin-bottom:16px">${ICON.info}<p>Το διαρκείας σου πρέπει να είναι στο Gov.gr Wallet. Η μεταβίβαση ισχύει για τον <strong>επόμενο</strong> αγώνα και γίνεται έως <strong>${cutoffHours} ώρες πριν</strong>· για μεταγενέστερο αγώνα θα σου πούμε πότε ανοίγει.</p></div>
+    <div class="info warn" style="margin-bottom:16px">${ICON.info}<p>Το διαρκείας σου πρέπει να είναι στο Gov.gr Wallet. Η θέση δίνεται <strong>αυτόματα</strong> σε όποιον μπήκε πρώτος στη λίστα για αυτή τη θύρα ή για οποιαδήποτε. Θα σε ειδοποιήσουμε για κάθε βήμα.</p></div>
     <form id="giveform">
       <div class="field"><label for="g-match">Αγώνας</label><select id="g-match" required>${opts}</select>
         <p class="small muted" id="g-deadline" style="margin:6px 0 0"></p></div>
@@ -662,13 +705,21 @@ async function viewGive(preselect) {
         <div><label for="g-seat">Θέση</label><input type="text" id="g-seat" maxlength="6" placeholder="Προαιρ."></div>
       </div>
       <div class="field"><label for="g-note">Σημείωση <span class="muted" style="font-weight:400">(προαιρετικά)</span></label>
-        <textarea id="g-note" maxlength="140" placeholder="π.χ. Θα κάνω τη μεταβίβαση έως το Σάββατο"></textarea></div>
-      <label class="check"><input type="checkbox" id="g-free" required><span>Δίνω τη θέση <strong>δωρεάν</strong>, χωρίς να ζητήσω χρήματα ή αντάλλαγμα.</span></label>
-      <button class="btn solid block" type="submit">Δημοσίευση θέσης</button>
-      <p class="small muted" style="text-align:center">Τις πρώτες 2 ώρες τη ζητούν μόνο όσοι είναι στην ίδια θύρα· μετά όλοι. Μπορείς να την αποσύρεις όσο δεν έχεις κάνει τη μεταβίβαση.</p>
+        <textarea id="g-note" maxlength="140" placeholder="π.χ. Θα κάνω τη μεταβίβαση το πρωί"></textarea></div>
+      <label class="check"><input type="checkbox" id="g-free"><span>Δίνω τη θέση <strong>δωρεάν</strong>, χωρίς να ζητήσω χρήματα ή αντάλλαγμα.</span></label>
+      <button class="btn solid block" type="submit" id="g-submit" disabled>Δημοσίευση θέσης</button>
+      <p class="small muted" style="text-align:center" id="g-hint">Τσέκαρε ότι τη δίνεις δωρεάν για να συνεχίσεις.</p>
     </form>`;
   cta();
   if (!opts) { $("#giveform").innerHTML = `<p class="empty">Δεν υπάρχει εντός έδρας αγώνας που να δέχεται ακόμα θέσεις.</p>`; return; }
+  // Το κουμπί ενεργοποιείται ΜΟΝΟ όταν τσεκαριστεί το «δωρεάν».
+  const syncFree = () => {
+    const okFree = $("#g-free").checked;
+    $("#g-submit").disabled = !okFree;
+    $("#g-hint").textContent = okFree ? "Μπορείς να την πάρεις πίσω με «Τελικά θα πάω»." : "Τσέκαρε ότι τη δίνεις δωρεάν για να συνεχίσεις.";
+  };
+  $("#g-free").addEventListener("change", syncFree);
+  syncFree();
   // Στο μπάσκετ η θέση έχει και «Τμήμα»· κάτω από τον αγώνα η προθεσμία του.
   const sync = () => {
     const m = matchesById.get($("#g-match").value);
@@ -676,175 +727,199 @@ async function viewGive(preselect) {
     $("#g-blockwrap").hidden = !basket;
     $("#g-seatrow").className = (basket ? "row4" : "row3") + " field";
     $("#g-deadline").textContent = m ? `Μεταβίβαση ${deadlineText(m)}${blocker(m) ? ` · ανοίγει ${waitText(m)}` : ""}.` : "";
-    const g = myPrefs(m?.section).gates[0];
+    const g = prefGate(m?.section);
     if (g && !$("#g-gate").value) $("#g-gate").value = g;
   };
   $("#g-match").addEventListener("change", sync);
   sync();
   $("#giveform").addEventListener("submit", async (e) => {
     e.preventDefault();
+    if (!$("#g-free").checked) return;
     if (!(await needNick())) return;
-    const btn = e.target.querySelector("button[type=submit]");
+    await tryPush();
+    const btn = $("#g-submit");
     btn.disabled = true;
     try {
-      await post("offer", {
+      const r = await post("offer", {
         matchId: $("#g-match").value, gate: $("#g-gate").value,
         block: $("#g-blockwrap").hidden ? "" : $("#g-block").value, row: $("#g-row").value,
         seat: $("#g-seat").value, note: $("#g-note").value, free: $("#g-free").checked,
       });
-      toast("Η θέση δημοσιεύτηκε. Θα σε ειδοποιήσουμε για κάθε αίτημα.");
+      toast(r.assigned ? "Η θέση δόθηκε αμέσως στον πρώτο της λίστας!" : "Η θέση δημοσιεύτηκε. Θα δοθεί αυτόματα στον πρώτο που θα μπει στη λίστα.");
       location.hash = "#/mine";
     } catch (err) { toast(err.message); btn.disabled = false; }
   });
 }
 
+const reclaimBtn = (o, after) => btnAct("reclaim", "Τελικά θα πάω", { offerId: o.id }, {
+  cls: "btn link",
+  confirm: after
+    ? "Η μεταβίβαση έχει ήδη γίνει: θα πρέπει να κάνεις ανάκληση στο Gov.gr Wallet. Ο παραλήπτης θα μπει πρώτος στη λίστα για άλλη θέση. Συνέχεια;"
+    : o.recipient ? "Ο παραλήπτης θα μπει πρώτος στη λίστα για άλλη θέση. Συνέχεια;" : "Να αποσυρθεί η θέση;",
+  ok: o.recipient ? "Κράτησες τη θέση. Ψάχνουμε άλλη για τον παραλήπτη." : "Η θέση αποσύρθηκε.",
+});
+
 function offerCard(o) {
   const m = matchesById.get(o.matchId);
   const head = (status, cls = "") => `<div class="card-head"><div><h3>${esc(title(m))}</h3>
     <div class="small muted">${esc(when(m))} · ${esc(seatText(o))}</div></div><span class="status ${cls}">${status}</span></div>`;
-  const withdraw = btnAct("withdraw", "Απόσυρση θέσης", { offerId: o.id }, { cls: "btn link", confirm: "Να αποσυρθεί η θέση;", ok: "Η θέση αποσύρθηκε." });
 
   if (o.status === "open") {
-    const reqs = o.requests.map((r) => `<div class="req"><span><strong>@${esc(r.nick)}</strong>${r.sameGate ? ` <span class="chip ok">Θύρα ${esc(o.gate)}</span>` : ""}<br><span class="small muted">${given(r.given)}</span></span>
-      ${btnAct("choose", "Επιλογή", { requestId: r.id }, { confirm: `Να δοθεί η θέση στον @${r.nick};`, ok: o.transferable ? "Επέλεξες παραλήπτη. Περίμενε τον ΑΦΜ του." : "Επέλεξες παραλήπτη." })}</div>`).join("");
-    return `<div class="card">${head(o.requests.length ? `${o.requests.length} ${o.requests.length === 1 ? "αίτημα" : "αιτήματα"}` : "Ανοιχτή", o.requests.length ? "warn" : "gray")}
-      ${o.priorityUntil ? `<p class="prio" style="margin:0 0 8px">Ως τις ${esc(time(o.priorityUntil))} τη ζητούν μόνο όσοι είναι στη Θύρα ${esc(o.gate)}· μετά όλοι.</p>` : ""}
-      ${reqs || `<p class="small muted" style="margin:0">Κανένα αίτημα ακόμα. Θα σε ειδοποιήσουμε.</p>`}
-      <div class="actions">${withdraw}</div></div>`;
+    return `<div class="card">${head("Ψάχνουμε παραλήπτη", "gray")}
+      <p class="small" style="margin:0">Θα δοθεί αυτόματα στον πρώτο που θα μπει στη λίστα για τη Θύρα ${esc(o.gate)} ή για οποιαδήποτε. Θα σε ειδοποιήσουμε.</p>
+      <div class="actions">${reclaimBtn(o, false)}</div></div>`;
   }
   if (o.status === "assigned") {
-    const waiting = !o.transferable;
     const afmBlock = o.afm
       ? `<div class="afmbox"><div style="display:flex;justify-content:space-between;align-items:baseline"><span class="small muted">ΑΦΜ</span><span class="num" id="afm-${o.id}" data-value="${esc(o.afm)}">••• ••• •••</span></div>
           <div class="two"><button class="btn" type="button" data-act="reveal" data-target="afm-${o.id}">Εμφάνιση</button>
           <button class="btn solid" type="button" data-act="copy" data-value="${esc(o.afm)}">${ICON.copy} Αντιγραφή</button></div></div>`
       : "";
-    return `<div class="card">${head(waiting ? "Κανονίστηκε" : "Σε εξέλιξη", waiting ? "ok" : "warn")}
+    const s2 = o.step === "wait"
+      ? step("now", 2, "Αναμονή για τη σειρά του αγώνα", `<p class="small" style="margin:4px 0 0">Η μεταβίβαση ισχύει για τον επόμενο αγώνα του διαρκείας και ανοίγει ${esc(waitText(m))}.</p>`)
+      : o.step === "afm"
+        ? step("now", 2, `Περιμένουμε τον ΑΦΜ του @${esc(o.recipient)}`, dueLine(o.due))
+        : step("did", 2, `Ο @${esc(o.recipient)} έστειλε τον ΑΦΜ του`, afmBlock);
+    const lateBox = o.step === "transfer" && o.late
+      ? `<div class="info warn" style="margin:6px 0 0">${ICON.info}<p>${o.rescued
+          ? `Ψάχνουμε άλλη θέση για τον @${esc(o.recipient)}. Αν προλαβαίνεις, κάνε τη μεταβίβαση τώρα· αλλιώς η θέση σου θα πάει στον επόμενο μόλις του βρεθεί άλλη.`
+          : `Έληξε ο χρόνος. Έχεις άλλη 1 ώρα, ${esc(dueText(o.due))}.`}</p></div>` : "";
+    const s3 = step(o.step === "transfer" ? "now" : "todo", 3, "Κάνε τη μεταβίβαση στο Gov.gr Wallet",
+      o.step === "transfer" ? `${o.late ? "" : dueLine(o.due)}<p class="small" style="margin:4px 0 8px">Εισιτήρια › το διαρκείας σου › [⋮] › Μεταβίβαση, και επικόλλησε τον ΑΦΜ.</p>
+        <a class="btn" href="${WALLET}" target="_blank" rel="noopener">Άνοιγμα Gov.gr Wallet ${ICON.ext}</a>${lateBox}` : "");
+    return `<div class="card">${head(o.step === "wait" ? "Κανονίστηκε" : o.late ? "Αργεί!" : "Σε εξέλιξη", o.step === "wait" ? "ok" : "warn")}
       <ol class="steps">
-        ${step("did", 1, `Επέλεξες τον @${esc(o.recipient)}`)}
-        ${waiting
-          ? step("now", 2, "Αναμονή για τη σειρά του αγώνα",
-              `<p class="small" style="margin:4px 0 0">Η μεταβίβαση ισχύει για τον επόμενο αγώνα του διαρκείας, οπότε ανοίγει ${esc(waitText(m))}. Τότε ο @${esc(o.recipient)} θα σου στείλει τον ΑΦΜ του.</p>`)
-          : step(o.afm ? "did" : "now", 2, o.afm ? "Ο παραλήπτης έστειλε τον ΑΦΜ του" : "Περιμένουμε τον ΑΦΜ του παραλήπτη", afmBlock)}
-        ${step(o.afm && !waiting ? "now" : "todo", 3, `Κάνε τη μεταβίβαση στο Gov.gr Wallet ${esc(deadlineText(m))}`,
-          o.afm && !waiting ? `<p class="small" style="margin:4px 0 8px">Εισιτήρια › το διαρκείας σου › [⋮] › Μεταβίβαση, και επικόλλησε τον ΑΦΜ.</p>
-            <a class="btn" href="${WALLET}" target="_blank" rel="noopener">Άνοιγμα Gov.gr Wallet ${ICON.ext}</a>` : "")}
+        ${step("did", 1, `Βρέθηκε παραλήπτης: @${esc(o.recipient)}`)}
+        ${s2}${s3}
         ${step("todo", 4, "Αποδοχή από τον παραλήπτη")}
       </ol>
-      <div class="actions">${btnAct("transferred", "Έκανα τη μεταβίβαση", { offerId: o.id }, { disabled: !o.afm || waiting, ok: "Ενημερώθηκε ο παραλήπτης." })}${withdraw}</div>
-      <p class="small muted" style="margin:10px 0 0">${ICON.lock} Ο ΑΦΜ τον βλέπεις μόνο εσύ και σβήνεται μόλις ο παραλήπτης επιβεβαιώσει.</p>
+      <div class="actions">${o.step === "transfer" ? btnAct("transferred", "Έκανα τη μεταβίβαση", { offerId: o.id }, { ok: "Ενημερώθηκε ο παραλήπτης." }) : ""}${reclaimBtn(o, false)}</div>
+      ${o.afm ? `<p class="small muted" style="margin:10px 0 0">${ICON.lock} Ο ΑΦΜ τον βλέπεις μόνο εσύ και σβήνεται μόλις ολοκληρωθεί η μεταβίβαση.</p>` : ""}
     </div>`;
   }
   if (o.status === "transferred" || o.status === "received") {
     const got = o.status === "received";
     return `<div class="card">${head(got ? "Παραδόθηκε" : "Αναμονή αποδοχής", got ? "ok" : "warn")}
       <ol class="steps">
-        ${step("did", 1, `Επέλεξες τον @${esc(o.recipient)}`)}
+        ${step("did", 1, `Βρέθηκε παραλήπτης: @${esc(o.recipient)}`)}
         ${step("did", 2, "Ο παραλήπτης έστειλε τον ΑΦΜ του")}
         ${step("did", 3, "Έκανες τη μεταβίβαση")}
-        ${step(got ? "did" : "now", 4, got ? `Ο @${esc(o.recipient)} το πήρε` : `Περιμένουμε τον @${esc(o.recipient)} να το αποδεχτεί`)}
+        ${step(got ? "did" : "now", 4, got ? `Ο @${esc(o.recipient)} το πήρε` : `Περιμένουμε τον @${esc(o.recipient)} να το αποδεχτεί`, got ? "" : dueLine(o.due))}
       </ol>
-      <p class="small muted" style="margin:4px 0 0">Η μεταβίβαση ισχύει μόνο για αυτόν τον αγώνα· μετά το εισιτήριο επιστρέφει σε σένα. Αν αλλάξουν τα σχέδια, κάνε ανάκληση στο Wallet.</p>
+      ${o.canNotAccepted ? `<div class="info warn" style="margin:4px 0 0">${ICON.info}<p>Δεν έχει επιβεβαιώσει. Δες στο Wallet: αν <strong>δεν</strong> το αποδέχτηκε, κάνε ανάκληση και πάτα το κουμπί για να πάει η θέση στον επόμενο.</p></div>
+        <div class="actions">${btnAct("notaccepted", "Δεν το αποδέχτηκε", { offerId: o.id }, { confirm: "Έκανες ανάκληση στο Wallet; Η θέση θα πάει στον επόμενο της λίστας.", ok: "Η θέση πάει στον επόμενο." })}</div>` : ""}
+      <p class="small muted" style="margin:6px 0 0">Η μεταβίβαση ισχύει μόνο για αυτόν τον αγώνα· μετά το εισιτήριο επιστρέφει σε σένα.</p>
+      <div class="actions">${reclaimBtn(o, true)}</div>
     </div>`;
   }
-  const label = { closed: "Ολοκληρώθηκε", expired: "Έληξε" }[o.status] || o.status;
-  return `<div class="card done">${head(label, "gray")}${o.recipient ? `<p class="small muted" style="margin:0">Δόθηκε στον @${esc(o.recipient)}.</p>` : ""}</div>`;
+  const label = { closed: "Ολοκληρώθηκε", expired: "Έληξε", reclaimed: "Την κράτησες" }[o.status] || o.status;
+  return `<div class="card done">${head(label, "gray")}${o.recipient && o.status === "closed" ? `<p class="small muted" style="margin:0">Δόθηκε στον @${esc(o.recipient)}.</p>` : ""}</div>`;
 }
 
-function requestCard(r) {
-  const m = matchesById.get(r.matchId);
-  const head = (status, cls = "") => `<div class="card-head"><div><h3>${esc(title(m))}</h3>
-    <div class="small muted">${esc(when(m))} · ${esc(seatText(r))} · από @${esc(r.owner)}</div></div><span class="status ${cls}">${status}</span></div>`;
-  if (r.status === "pending") {
-    return `<div class="card">${head("Αναμονή", "gray")}
-      <p class="small" style="margin:0">Περιμένεις να διαλέξει ο @${esc(r.owner)}. Θα σε ειδοποιήσουμε.</p>
-      <div class="actions">${btnAct("cancel", "Ακύρωση αιτήματος", { requestId: r.id }, { cls: "btn link", confirm: "Ακύρωση του αιτήματος;", ok: "Το αίτημα ακυρώθηκε." })}</div></div>`;
+function claimCard(c) {
+  const m = matchesById.get(c.matchId);
+  const o = c.offer;
+  const head = (status, cls = "", sub = "") => `<div class="card-head"><div><h3>${esc(title(m))}</h3>
+    <div class="small muted">${esc(when(m))}${sub ? ` · ${sub}` : ""}</div></div><span class="status ${cls}">${status}</span></div>`;
+
+  if (c.status === "waiting") {
+    const alts = (c.alts || []).map((a) => `<div class="req"><span><strong>${esc(seatText(a))}</strong><br><span class="small muted">@${esc(a.owner)}</span></span>
+      ${btnAct("take", "Τη θέλω", { offerId: a.id })}</div>`).join("");
+    return `<div class="card">${head("Στη λίστα", "gray", esc(gateLabel(c.gate)))}
+      ${c.rescued ? `<p class="small" style="margin:0 0 6px"><strong>Είσαι πρώτος</strong> για την επόμενη θέση${c.lateOffer ? `· αν ο @${esc(c.lateOffer.owner)} κάνει τελικά τη μεταβίβαση, κρατάς εκείνη.` : "."}</p>`
+        : `<p class="small" style="margin:0">Θα σε ειδοποιήσουμε μόλις βρεθεί θέση.</p>`}
+      ${alts ? `<p class="label" style="margin:14px 0 4px">Ελεύθερες σε άλλη θύρα · όποιος προλάβει</p>${alts}` : ""}
+      <div class="actions"><a class="btn" href="#/m/${c.matchId}">Αλλαγή θύρας</a>
+        ${btnAct("leave", "Βγες από τη λίστα", { matchId: c.matchId }, { cls: "btn link", confirm: "Να βγεις από τη λίστα; Αν ξαναμπείς, θα μπεις στο τέλος.", ok: "Βγήκες από τη λίστα." })}</div></div>`;
   }
-  if (r.status === "chosen" && r.offerStatus === "assigned") {
-    const back = btnAct("backout", "Δεν μπορώ τελικά να πάω", { offerId: r.offerId }, { cls: "btn link", confirm: "Η θέση θα ξαναδοθεί σε άλλον. Συνέχεια;", ok: "Η θέση ξαναδόθηκε." });
-    if (!r.afmSent && !r.transferable) {
-      return `<div class="card">${head("Σε επέλεξε!", "ok")}
-        <p class="small" style="margin:0">Η θέση είναι δική σου. Η μεταβίβαση ισχύει για τον επόμενο αγώνα του διαρκείας, οπότε θα σου ζητήσουμε τον ΑΦΜ ${esc(waitText(m))}.</p>
+  if (c.status === "assigned" && o) {
+    const back = btnAct("backout", "Δεν μπορώ τελικά να πάω", { offerId: o.id }, { cls: "btn link", confirm: "Η θέση θα πάει στον επόμενο της λίστας. Συνέχεια;", ok: "Η θέση πάει στον επόμενο." });
+    const sub = `${esc(seatText(o))} · από @${esc(o.owner)}`;
+    if (o.status === "assigned" && o.step === "wait") {
+      return `<div class="card">${head("Σου βρέθηκε θέση!", "ok", sub)}
+        <p class="small" style="margin:0">Η μεταβίβαση ισχύει για τον επόμενο αγώνα του διαρκείας, οπότε ο ΑΦΜ θα ζητηθεί ${esc(waitText(m))}. Θα σε ειδοποιήσουμε.</p>
         <div class="actions">${back}</div></div>`;
     }
-    if (!r.afmSent) {
-      return `<div class="card">${head("Σε επέλεξε!", "ok")}
-        <label for="afm-in-${r.id}" style="margin-top:6px">Ο ΑΦΜ σου <span class="muted" style="font-weight:400">· ${esc(deadlineText(m))}</span></label>
-        <input type="text" id="afm-in-${r.id}" inputmode="numeric" maxlength="11" autocomplete="off" placeholder="9 ψηφία">
-        <p class="small muted" style="margin:8px 0 0">${ICON.lock} Τον βλέπει μόνο ο @${esc(r.owner)}, για να κάνει τη μεταβίβαση, και σβήνεται μετά.</p>
-        <div class="actions"><button class="btn solid" type="button" data-act="afm" data-input="afm-in-${r.id}" data-body='${esc(JSON.stringify({ offerId: r.offerId }))}' data-ok="Ο ΑΦΜ στάλθηκε.">Αποστολή ΑΦΜ</button>${back}</div></div>`;
+    if (o.status === "assigned" && o.step === "afm") {
+      return `<div class="card">${head("Σου βρέθηκε θέση!", "ok", sub)}
+        <label for="afm-in-${o.id}" style="margin-top:6px">Ο ΑΦΜ σου</label>
+        ${dueLine(o.due, "Στείλ' τον ")}
+        <input type="text" id="afm-in-${o.id}" inputmode="numeric" maxlength="11" autocomplete="off" placeholder="9 ψηφία">
+        <p class="small muted" style="margin:8px 0 0">${ICON.lock} Τον βλέπει μόνο ο @${esc(o.owner)}, για να κάνει τη μεταβίβαση, και σβήνεται μετά. Αν δεν σταλεί εγκαίρως, η θέση πάει στον επόμενο.</p>
+        <div class="actions"><button class="btn solid" type="button" data-act="afm" data-input="afm-in-${o.id}" data-body='${esc(JSON.stringify({ offerId: o.id }))}' data-ok="Ο ΑΦΜ στάλθηκε.">Αποστολή ΑΦΜ</button>${back}</div></div>`;
     }
-    return `<div class="card">${head("Σε εξέλιξη", "warn")}
-      <ol class="steps">
-        ${step("did", 1, `Ο @${esc(r.owner)} σε επέλεξε`)}
-        ${step("did", 2, "Έστειλες τον ΑΦΜ σου")}
-        ${step("now", 3, `Περιμένεις τον @${esc(r.owner)} να κάνει τη μεταβίβαση`, `<p class="small muted" style="margin:4px 0 0">${esc(deadlineText(m))}</p>`)}
-        ${step("todo", 4, "Αποδοχή στο Gov.gr Wallet")}
-      </ol><div class="actions">${back}</div></div>`;
+    if (o.status === "assigned" && o.step === "transfer") {
+      return `<div class="card">${head(o.late ? "Ο κάτοχος αργεί" : "Σε εξέλιξη", "warn", sub)}
+        <ol class="steps">
+          ${step("did", 1, "Σου βρέθηκε θέση")}
+          ${step("did", 2, "Έστειλες τον ΑΦΜ σου")}
+          ${step("now", 3, `Περιμένεις τον @${esc(o.owner)} να κάνει τη μεταβίβαση`, o.late ? `<p class="small" style="margin:4px 0 0">Έχει ${esc(dueText(o.due))}. Αλλιώς σου βρίσκουμε άλλη θέση.</p>` : dueLine(o.due))}
+          ${step("todo", 4, "Αποδοχή στο Gov.gr Wallet")}
+        </ol><div class="actions">${back}</div></div>`;
+    }
+    if (o.status === "transferred") {
+      return `<div class="card">${head("Έγινε η μεταβίβαση", "ok", sub)}
+        <ol class="steps">
+          ${step("did", 1, "Σου βρέθηκε θέση")}
+          ${step("did", 2, "Έστειλες τον ΑΦΜ σου")}
+          ${step("did", 3, `Ο @${esc(o.owner)} έκανε τη μεταβίβαση`)}
+          ${step("now", 4, "Αποδέξου το εισιτήριο στο Gov.gr Wallet",
+            `${dueLine(o.due)}<p class="small" style="margin:4px 0 8px">Θα σου έρθει email. Άνοιξε το Wallet και πάτα αποδοχή.</p><a class="btn" href="${WALLET}" target="_blank" rel="noopener">Άνοιγμα Gov.gr Wallet ${ICON.ext}</a>`)}
+        </ol>
+        <div class="actions">${btnAct("received", "Το πήρα — είναι στο Wallet μου", { offerId: o.id }, { ok: "Τέλεια! Καλή διασκέδαση στο γήπεδο." })}</div></div>`;
+    }
   }
-  if (r.status === "chosen" && r.offerStatus === "transferred") {
-    return `<div class="card">${head("Έγινε η μεταβίβαση", "ok")}
-      <ol class="steps">
-        ${step("did", 1, `Ο @${esc(r.owner)} σε επέλεξε`)}
-        ${step("did", 2, "Έστειλες τον ΑΦΜ σου")}
-        ${step("did", 3, `Ο @${esc(r.owner)} έκανε τη μεταβίβαση`)}
-        ${step("now", 4, "Αποδέξου το εισιτήριο στο Gov.gr Wallet",
-          `<p class="small" style="margin:4px 0 8px">Θα σου έρθει email. Άνοιξε το Wallet και πάτα αποδοχή.</p><a class="btn" href="${WALLET}" target="_blank" rel="noopener">Άνοιγμα Gov.gr Wallet ${ICON.ext}</a>`)}
-      </ol>
-      <div class="actions">${btnAct("received", "Το πήρα — είναι στο Wallet μου", { offerId: r.offerId }, { ok: "Τέλεια! Καλή διασκέδαση στο γήπεδο." })}</div></div>`;
+  if (c.status === "done") return `<div class="card done">${head("Στο Wallet σου", "ok", o ? esc(seatText(o)) : "")}<p class="small" style="margin:0">Καλή διασκέδαση στο γήπεδο!</p></div>`;
+  if (c.status === "timedout") {
+    return `<div class="card done">${head("Πήγε στον επόμενο", "gray")}<p class="small muted" style="margin:0">Η θέση δόθηκε στον επόμενο επειδή δεν απαντήθηκε εγκαίρως.</p>
+      ${closed(m) ? "" : `<div class="actions"><a class="btn" href="#/m/${c.matchId}">Ξαναμπές στη λίστα</a></div>`}</div>`;
   }
-  if (r.status === "chosen" && ["received", "closed"].includes(r.offerStatus)) {
-    return `<div class="card done">${head("Στο Wallet σου", "ok")}<p class="small" style="margin:0">Καλή διασκέδαση στο γήπεδο!</p></div>`;
-  }
-  if (r.status === "chosen") {
-    return `<div class="card done">${head("Έληξε", "gray")}<p class="small muted" style="margin:0">Η μεταβίβαση δεν ολοκληρώθηκε πριν την προθεσμία.</p></div>`;
-  }
-  return `<div class="card done">${head("Δόθηκε σε άλλον", "gray")}<p class="small muted" style="margin:0">Η θέση δόθηκε σε άλλον ή αποσύρθηκε.</p></div>`;
+  if (c.status === "expired") return `<div class="card done">${head("Δεν βρέθηκε θέση", "gray")}<p class="small muted" style="margin:0">Έκλεισαν οι μεταβιβάσεις για αυτόν τον αγώνα.</p></div>`;
+  return "";
 }
 
 async function viewMine() {
   await mineReady;
   if (!token) {
-    $("#view").innerHTML = `${tabs("mine")}<p class="empty">Διάλεξε ψευδώνυμο για να δίνεις και να ζητάς θέσεις.</p>
+    $("#view").innerHTML = `${tabs("mine")}<p class="empty">Διάλεξε ψευδώνυμο για να δίνεις θέσεις ή να μπαίνεις στη λίστα.</p>
       <button class="btn solid block" type="button" id="getnick">Διάλεξε ψευδώνυμο</button>`;
     $("#getnick").addEventListener("click", async () => { if (await needNick()) render(); });
     cta(); return;
   }
   const recent = (id) => { const m = matchesById.get(id); return !m || new Date(m.start).getTime() > Date.now() - 2 * 86400000; };
-  const offers = mine.offers.filter((o) => recent(o.matchId) || ["transferred", "received"].includes(o.status));
-  const reqs = mine.requests.filter((r) => r.status !== "cancelled" && recent(r.matchId));
-  const waits = (mine.waits || []).map((id) => matchesById.get(id)).filter((m) => m && !closed(m));
+  const offers = (mine?.offers || []).filter((o) => recent(o.matchId));
+  const claims = (mine?.claims || []).filter((c) => recent(c.matchId));
   $("#view").innerHTML = `${tabs("mine")}
-    ${!pushOn ? `<div class="nudge" style="margin-bottom:6px"><p>Ενεργοποίησε τις ειδοποιήσεις για να μαθαίνεις αμέσως κάθε κίνηση.</p><a class="btn" href="#/settings">${ICON.bell} Ειδοποιήσεις</a></div>` : ""}
+    ${!pushOn ? `<div class="nudge" style="margin-bottom:6px"><p>Ενεργοποίησε τις ειδοποιήσεις: κάθε βήμα έχει περιορισμένο χρόνο.</p><a class="btn" href="#/settings">${ICON.bell} Ειδοποιήσεις</a></div>` : ""}
+    <p class="label">Ψάχνω</p>
+    ${claims.map(claimCard).join("") || `<p class="empty">Δεν είσαι σε καμία λίστα. Διάλεξε αγώνα από το <a href="#/football">ποδόσφαιρο</a> ή το <a href="#/basketball">μπάσκετ</a>.</p>`}
     <p class="label">Δίνω</p>
     ${offers.map(offerCard).join("") || `<p class="empty">Δεν έχεις δώσει θέση.</p>`}
-    <a class="btn block" href="#/give">${ICON.swap} Δεν πάω — δίνω τη θέση μου</a>
-    <p class="label">Ζητάω</p>
-    ${reqs.map(requestCard).join("") || `<p class="empty">Δεν έχεις ζητήσει θέση. Διάλεξε αγώνα από το <a href="#/football">ποδόσφαιρο</a> ή το <a href="#/basketball">μπάσκετ</a>.</p>`}
-    ${waits.length ? `<p class="label">Με ειδοποιείς για</p>${waits.map((m) => `<a class="match" href="#/m/${m.nt}" style="grid-template-columns:1fr auto"><span><strong>${esc(title(m))}</strong><span class="small muted">${esc(when(m))}</span></span>${ICON.chev}</a>`).join("")}` : ""}`;
+    <a class="btn block" href="#/give">${ICON.swap} Δεν πάω — δίνω τη θέση μου</a>`;
   cta();
 }
 
 async function viewSettings() {
-  await mineReady;
   if (!token) { location.hash = "#/"; return; }
+  await mineReady;
   const help = pushHelp();
   const devices = mine?.user?.devices || 0;
   $("#view").innerHTML = `<a class="back" href="#/mine">${ICON.back} Οι κινήσεις μου</a>
     <h2 style="margin-top:4px">Ρυθμίσεις</h2>
     <div class="settings">
       <h3>${ICON.bell.replace("<svg", '<svg style="width:20px;height:20px;vertical-align:-3px"')} Ειδοποιήσεις</h3>
-      <p class="small muted">Για αιτήματα, επιλογές, ΑΦΜ, μεταβίβαση, νέες θέσεις στη θύρα σου και υπενθύμιση πριν λήξει η προθεσμία.</p>
+      <p class="small muted">Όταν σου βρεθεί θέση, για τον ΑΦΜ, τη μεταβίβαση, προθεσμίες που λήγουν και, την τελευταία μέρα, ελεύθερες θέσεις σε άλλη θύρα.</p>
       ${help ? `<div class="info warn">${ICON.info}<p>${esc(help)}</p></div>`
         : pushOn ? `<p><strong>Ενεργές σε αυτή τη συσκευή.</strong>${devices > 1 ? ` <span class="muted">(${devices} συσκευές συνολικά)</span>` : ""}</p>${btnAct("push-off", "Απενεργοποίηση", {}, { cls: "btn" })}`
         : `<p>Ανενεργές σε αυτή τη συσκευή.</p>${btnAct("push-on", `${ICON.bell} Ενεργοποίηση`, {})}`}
     </div>
     <div class="settings">
-      <h3>Οι θύρες μου</h3>
-      <p class="small muted">Όσοι είναι στην ίδια θύρα έχουν προτεραιότητα 2 ωρών στις νέες θέσεις της· μετά τις βλέπουν όλοι.</p>
-      ${prefsForm("football", { full: true })}
-      <div style="height:16px"></div>
-      ${prefsForm("basketball", { full: true })}
+      <h3>Η θύρα μου</h3>
+      <p class="small muted">Προτείνεται αυτόματα όταν μπαίνεις σε λίστα ή δίνεις θέση.</p>
+      <p class="label" style="margin-top:12px">Ποδόσφαιρο</p>
+      ${gateForm({ attr: 'data-prefs="football"', gate: prefGate("football"), id: "pf-football", button: "Αποθήκευση" })}
+      <p class="label" style="margin-top:18px">Μπάσκετ</p>
+      ${gateForm({ attr: 'data-prefs="basketball"', gate: prefGate("basketball"), id: "pf-basketball", button: "Αποθήκευση" })}
     </div>
     <div class="settings">
       <h3>Λογαριασμός</h3>
@@ -860,7 +935,6 @@ async function viewSettings() {
 }
 
 // ---------- Δρομολόγηση ----------
-// Μία ανανέωση τη φορά· αν ζητηθεί άλλη στο μεταξύ, γίνεται αμέσως μετά με τα νέα δεδομένα.
 let rendering = null;
 let renderAgain = false;
 function render() {
@@ -888,7 +962,10 @@ async function renderOnce() {
     else await viewHome(parts[0] === "basketball" || parts[0] === "football" ? parts[0] : sportTab());
     for (const [id, v] of Object.entries(keep)) {
       const el = document.getElementById(id);
-      if (el) el.type === "checkbox" ? (el.checked = v) : (el.value = v);
+      if (!el || el.disabled) continue;
+      el.type === "checkbox" ? (el.checked = v) : (el.value = v);
+      // π.χ. το «δωρεάν»: ό,τι εξαρτάται από το πεδίο ενημερώνεται ξανά.
+      el.dispatchEvent(new Event("change", { bubbles: true }));
     }
     if (focused) document.getElementById(focused)?.focus();
   } catch (err) {
@@ -907,10 +984,10 @@ window.addEventListener("hashchange", () => {
 setInterval(() => {
   if (document.visibilityState !== "visible" || $("#nickdlg").open) return;
   if (location.hash.startsWith("#/give") || location.hash.startsWith("#/settings")) return;
+  if (document.activeElement?.matches?.("#view input, #view textarea")) return;
   render();
 }, 15000);
 document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") render(); });
-// Μήνυμα από τον service worker (πάτημα ειδοποίησης σε ανοιχτό παράθυρο χωρίς navigate).
 navigator.serviceWorker?.addEventListener("message", (e) => {
   if (e.data?.type === "open" && e.data.url) location.href = e.data.url;
 });

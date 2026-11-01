@@ -4,6 +4,7 @@
   "type": "module",
   "description": "Λειτουργίες του PAOKalendar στο Vercel (ειδοποιήσεις web push). Η σελίδα είναι στατική, στο docs/.",
   "dependencies": {
+    "@vercel/functions": "3.10.0",
     "jose": "6.2.10",
     "mongodb": "7.7.0",
     "web-push": "3.6.7"

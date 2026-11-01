@@ -3,7 +3,17 @@ mkdir -p docs; touch docs/.keep
 UA="Mozilla/5.0"
 EA=https://ea.microplustimingservices.com/api/wp
 T=$(curl -sS -A "$UA" "$EA/site/token" | python3 -c "import json,sys; print(json.load(sys.stdin)['data']['token'])")
-curl -sSL -A "$UA" https://ea.microplustimingservices.com/EAWPClubs2027/assets/api_config.json | python3 -c "import json,sys; d=json.load(sys.stdin); print(json.dumps(d.get('API_AGG')), [k for k in d])"
-for path in "results/ASF/2/001/3/URA/PAOK?live=1" "results/ASF/2/001/3/URA/PAOK" "playbyplay/ASF/2/001/3/URA/PAOK?live=1" "schedule/*/*/*/*/*?live=1"; do
-  echo "== $path"; curl -sS -D /tmp/hd -A "$UA" -H "Authorization: Bearer $T" -w " [%{http_code}]" "$EA/EACLUB27/get/$path" > /tmp/b; grep -iE "cache|age|expires" /tmp/hd; head -c 3000 /tmp/b; echo
-done
+curl -sS -A "$UA" -H "Authorization: Bearer $T" "$EA/EACLUB27/get/playbyplay/ASF/2/001/3/URA/PAOK?live=1" > docs/pbp.json
+python3 - <<'PY'
+import json, collections
+ev=json.load(open('docs/pbp.json'))['Events']
+print(len(ev), 'events')
+c=collections.Counter((e['EveCode'], e['EveDescrEng']) for e in ev)
+for k,v in sorted(c.items()): print(v, k)
+print('--- non-player / period-ish events')
+for e in ev:
+    if not e.get('EvePlaCode') or e['EveCode'] in ('STP','ENP','SOP','EOP','END','STA','TO','TOA','TOB','EOG','BOP','FIN') :
+        print(e['EvePeriod'], e['EveGameTime'], e['EveUTCTime'], e['EveCode'], e['EveDescrEng'], e['EveTeamCode'], e['EveResA'], e['EveResB'])
+print('--- last 6')
+for e in ev[-6:]: print(e['EvePeriod'], e['EveGameTime'], e['EveUTCTime'], e['EveCode'], e['EveDescrEng'], e['EveResA'], e['EveResB'])
+PY

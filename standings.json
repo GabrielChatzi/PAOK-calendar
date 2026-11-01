@@ -1554,6 +1554,20 @@
     },
     {
      "pos": 2,
+     "team": "ΓΣ ΑΠΟΛΛΩΝ ΣΜ.",
+     "logo": "https://koecdn.twic.pics/media/apollon-1757488473-Yl0JuEC9.jpg",
+     "paok": false,
+     "cells": [
+      "6",
+      "5",
+      "0",
+      "1",
+      "108-84",
+      "15"
+     ]
+    },
+    {
+     "pos": 3,
      "team": "ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ",
      "logo": "https://koecdn.twic.pics/media/panathinaikos-1757496876-53QTIGxK.jpg",
      "paok": false,
@@ -1567,7 +1581,7 @@
      ]
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "ΝΟ ΒΟΥΛΙΑΓΜΕΝΗΣ",
      "logo": "https://koecdn.twic.pics/media/nov-logo-gr-1758965899-UA7wQDNs.png",
      "paok": false,
@@ -1581,30 +1595,16 @@
      ]
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "ΠΑΝΙΩΝΙΟΣ ΓΣΣ",
      "logo": "https://koecdn.twic.pics/media/panionios-1757496931-xkJBSsvo.png",
      "paok": false,
      "cells": [
-      "5",
+      "6",
       "4",
       "0",
-      "1",
-      "74-50",
-      "12"
-     ]
-    },
-    {
-     "pos": 5,
-     "team": "ΓΣ ΑΠΟΛΛΩΝ ΣΜ.",
-     "logo": "https://koecdn.twic.pics/media/apollon-1757488473-Yl0JuEC9.jpg",
-     "paok": false,
-     "cells": [
-      "5",
-      "4",
-      "0",
-      "1",
-      "98-75",
+      "2",
+      "83-60",
       "12"
      ]
     },

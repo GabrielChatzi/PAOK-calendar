@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
-cat > /tmp/t.mjs <<'JS'
-const live = (await import(process.cwd() + "/api/live.js")).default;
-const q = { src: "ea", code: "EACLUB27", cat: "ASF", gara: "2", tur: "001", gru: "3", a: "PBE", b: "ZVL" };
-for (const query of [q, { ...q, a: "URA", b: "PAOK" }]) {
-  await new Promise((r) => live({ query }, { setHeader() {}, status(c) { this.c = c; return this; },
-    json(o) { console.log(this.c, JSON.stringify(o)); r(); } }));
-}
-JS
-node /tmp/t.mjs
+curl -sS "https://site.api.espn.com/apis/site/v2/sports/soccer/gre.1/summary?event=401896734" | python3 -c "import json,sys; d=json.load(sys.stdin); c=d['header']['competitions'][0]; print(c['status']['type']['name'], c['status'].get('displayClock'), [(x['team']['displayName'], x.get('score')) for x in c['competitors']])"
+curl -sS "https://paokalendar.vercel.app/api/health?topic=s:football:live" ; echo
+curl -sS "https://paokalendar.vercel.app/api/health?topic=s:football:pre" ; echo

@@ -120,3 +120,38 @@ export async function pushTo(sub, payload, keys, ttl = 6 * 3600, retry = true) {
     return "error";
   }
 }
+
+// Αποστολή σε όσες συσκευές έχουν κάποιο από τα θέματα (μία φορά στην καθεμία). Την καλούν το
+// /api/push (GitHub Actions) και το /api/admin (καταχωρίσεις του διαχειριστή).
+//   once: κλειδί· όσες συσκευές πήραν ήδη ειδοποίηση με αυτό το κλειδί παραλείπονται.
+export async function deliver(topics, payload, opts = {}) {
+  const col = await subs();
+  let targets = await col.find({ topics: { $in: topics }, gone: { $ne: true } }, { projection: { endpoint: 1, keys: 1 } }).toArray();
+  // once: κλειδί για ειδοποίηση που πρέπει να φτάσει μία φορά σε κάθε συσκευή, όποιος κι αν τη στείλει
+  // (π.χ. το τελικό έρχεται και από το live και από την ενημέρωση του προγράμματος, σε άλλα θέματα).
+  // Οι συσκευές που την πήραν ήδη παραλείπονται.
+  const once = opts.once ? String(opts.once).slice(0, 80) : "";
+  const sentCol = once ? (await getDb()).collection("sent") : null;
+  let skipped = 0;
+  if (sentCol) {
+    const prior = await sentCol.findOne({ _id: once }, { projection: { subs: 1 } });
+    const had = new Set(prior?.subs || []);
+    skipped = targets.filter((s) => had.has(s._id)).length;
+    targets = targets.filter((s) => !had.has(s._id));
+  }
+  const keys = await vapidKeys();
+  const ttl = topics.some((t) => t.endsWith(":live")) ? 2 * 3600 : 12 * 3600;
+  lastErrors.length = 0;
+  const results = await Promise.all(targets.map((s) => pushTo(s, payload, keys, ttl)));
+  const gone = targets.filter((_, i) => results[i] === "gone").map((s) => s._id);
+  // Συνδρομές που ακύρωσε η συσκευή (404/410): δεν σβήνονται, σημειώνονται, ώστε η εφαρμογή να το
+  // καταλάβει στον επόμενο έλεγχο και να ζητήσει να ξαναενεργοποιηθούν οι ειδοποιήσεις.
+  if (gone.length) await col.updateMany({ _id: { $in: gone } }, { $set: { gone: true, goneAt: new Date() } });
+  const count = (x) => results.filter((r) => r === x).length;
+  const reached = targets.filter((_, i) => results[i] === "ok").map((s) => s._id);
+  if (sentCol && reached.length) {
+    await sentCol.updateOne({ _id: once }, { $addToSet: { subs: { $each: reached } }, $set: { at: new Date() } }, { upsert: true });
+  }
+  return { matched: targets.length, sent: count("ok"), removed: count("gone"), failed: count("error"),
+    skipped, errors: lastErrors.slice(0, 5) };
+}

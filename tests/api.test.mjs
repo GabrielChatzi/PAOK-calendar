@@ -7,6 +7,7 @@ process.env.MONGODB_URI = process.env.MONGODB_URI || "";
 const live = (await import("../api/live.js")).default;
 const data = (await import("../api/data.js")).default;
 const lib = await import("../api/_lib.js");
+const admin = await import("../api/admin.js");
 
 // Ψεύτικο fetch: η πρώτη διεύθυνση που ταιριάζει δίνει την απάντηση.
 function mockFetch(routes) {
@@ -138,6 +139,18 @@ test("European Aquatics: πριν την έναρξη και τελικό από
   mockFetch(eaRoutes(2, [[7, 3, 2], [7, 4, 2], [5, 3, 2], [6, 5, 2]]));
   const { body } = await call(live, EA_Q);
   assert.deepEqual([body.state, body.home, body.away, body.done], ["post", 25, 15, 4]);
+});
+
+test("Διαχειριστής: το τελικό με το ίδιο κλειδί με το αυτόματο, το σκορ με το ίδιο κλειδί με τα γκολ", () => {
+  const m = { nt: "abcdef0123", section: "futsal", home: "ΠΑΟΚ", away: "Κορυδαλλός", live: null, competition: "Futsal" };
+  const fin = admin.message(m, { home: 7, away: 3, final: true, note: "" });
+  assert.equal(fin.once, "abcdef0123-result");
+  assert.equal(fin.payload.title, "🥅 Τελικό: ΠΑΟΚ 7–3 Κορυδαλλός");
+  assert.ok(fin.topics.includes("m:abcdef0123:result") && fin.topics.includes("s:futsal:live"));
+  const now = admin.message(m, { home: 1, away: 0, final: false, note: "" });
+  assert.equal(now.once, admin.scoreKey("abcdef0123", 1, 0));
+  assert.ok(now.topics.includes("s:futsal:pre"));  // χωρίς live: και σε όσους θέλουν την υπενθύμιση
+  assert.ok(!admin.message({ ...m, live: { src: "espn" } }, { home: 1, away: 0 }).topics.includes("s:futsal:pre"));
 });
 
 test("Λάθος παράμετροι απορρίπτονται", async () => {

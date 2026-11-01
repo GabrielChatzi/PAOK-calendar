@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import re
 import sys
 import time
 import urllib.parse
@@ -316,6 +317,18 @@ def events(m: dict, old: dict | None, new: dict) -> list[tuple[str, str]]:
     return out
 
 
+def once_key(m: dict, title: str, final: bool) -> str | None:
+    """Κλειδί για ειδοποιήσεις που πρέπει να φτάσουν μία φορά σε κάθε συσκευή (βλ. api/push.js):
+    το τελικό και η έναρξη, και κάθε γκολ με το σκορ του, ώστε αν το έγραψε πρώτος ο διαχειριστής
+    (api/admin.js, ίδιο κλειδί) να μην ξαναέρθει."""
+    if final:
+        return f"{m['nt']}-result"
+    if "Ξεκίνησε" in title:
+        return f"{m['nt']}-start"
+    goal = re.search(r"ΓΚΟΛ.*?(\d+)–(\d+)", title)
+    return f"{m['nt']}-s{goal.group(1)}-{goal.group(2)}" if goal else None
+
+
 def settle_final(old: dict | None, new: dict) -> dict:
     """Το «Τελικό» μόνο αν το δούμε σε δύο συνεχόμενες αναγνώσεις: οι πηγές δείχνουν καμιά φορά για
     λίγο τέλος αγώνα σε διάλειμμα. Στην πρώτη μένουμε στην παλιά κατάσταση, με σημάδι."""
@@ -425,7 +438,7 @@ def main() -> int:
                 notify.send(m["section"], "live", title, message, match=m,
                             also_match_kinds=("result",) if final else (),
                             tag=f"{m['nt']}-result" if final else None,
-                            once=f"{m['nt']}-result" if final else f"{m['nt']}-start" if "Ξεκίνησε" in title else None)
+                            once=once_key(m, title, final))
             if old is None or (old["state"], old["home"], old["away"]) != (new["state"], new["home"], new["away"]):
                 print(f"{now:%H:%M} {m['home']} – {m['away']}: {new['state']} {new['home']}-{new['away']} {new.get('detail', '')}")
             states[m["uid"]] = new

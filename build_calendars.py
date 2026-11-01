@@ -1447,6 +1447,35 @@ def manual_matches(section: str, official: list[Match]) -> list[Match]:
     return out
 
 
+# ---------------------------------------------------------------- καταχωρίσεις του διαχειριστή
+
+ADMIN_URL = "https://paokalendar.vercel.app/api/admin"
+_ADMIN: dict = {}
+
+
+def admin_entries() -> dict[str, dict]:
+    """Ό,τι έγραψε ο διαχειριστής από τη σελίδα του αγώνα (api/admin.js), ανά αγώνα (nt)."""
+    if "entries" not in _ADMIN:
+        try:
+            _ADMIN["entries"] = {e["nt"]: e for e in json.loads(fetch(ADMIN_URL)).get("entries", [])}
+        except Exception as e:
+            print(f"  ! καταχωρίσεις διαχειριστή: {e}", file=sys.stderr)
+            _ADMIN["entries"] = {}
+    return _ADMIN["entries"]
+
+
+def apply_admin(section: str, matches: list[Match]) -> None:
+    """Το τελικό σκορ του διαχειριστή έχει προτεραιότητα από κάθε αυτόματη πηγή."""
+    entries = admin_entries()
+    for m in matches:
+        e = entries.get(match_topic_id(m.uid))
+        if not e or not e.get("final"):
+            continue
+        m.score = f"{int(e['home'])}-{int(e['away'])}"
+        m.note = str(e.get("note") or m.note)[:80]
+        m.live = None
+
+
 def carry_uids(previous: list[dict], current: list[Match]) -> None:
     """Όταν η επίσημη πηγή δημοσιεύσει έναν αγώνα που είχε μπει χειροκίνητα ή από την ΑΣ ΠΑΟΚ,
     ο αγώνας κρατά το παλιό αναγνωριστικό: ίδιος σύνδεσμος, ίδιες ειδοποιήσεις, ίδια εγγραφή
@@ -1542,6 +1571,13 @@ def main(only: list[str] | None = None) -> int:
         if key == "basketball":
             basket_league_live(unique)
         other_live(key, unique)
+        try:
+            import club  # αποτέλεσμα από την ΑΣ ΠΑΟΚ, όπου η επίσημη πηγή αργεί
+            club.results(key, unique)
+        except Exception as e:
+            print(f"  ! ΑΣ ΠΑΟΚ, αποτελέσματα / {key}: {e}", file=sys.stderr)
+        # Ό,τι έγραψε ο διαχειριστής μετρά τελευταίο, πάνω από όλα.
+        apply_admin(key, unique)
         info = SECTIONS[key]
         for side, label, keep in (("home", "Εντός έδρας", True), ("away", "Εκτός έδρας", False)):
             subset = [m for m in unique if m.paok_home == keep]

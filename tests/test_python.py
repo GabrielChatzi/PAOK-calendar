@@ -264,5 +264,80 @@ class Notify(unittest.TestCase):
         self.assertEqual(self._reminders([dict(m, status="postponed")], start + dt.timedelta(seconds=40)), [])
 
 
+class ClubResults(unittest.TestCase):
+    """Αποτελέσματα από τις αναρτήσεις της ΑΣ ΠΑΟΚ (πραγματικοί τίτλοι)."""
+
+    def score(self, title, text="", home="ΠΑΟΚ", away="Χ", paok_home=True):
+        import club
+        return club.score_from_post(title, text, home, away, paok_home)
+
+    def test_win_in_title(self):
+        t = "Επιστροφή στις νίκες για τον ΠΑΟΚ PayspotLabraki, νίκη με 7-3 επί του ΑΟΔ Κορυδαλλού!"
+        self.assertEqual(self.score(t, away="ΚΟΡΥΔΑΛΛΟΥ ΑΟΔ"), "7-3")
+
+    def test_win_away_from_text(self):
+        t = "Από πεντάρα σε πεντάρα οι Νταμπλούχες!"
+        text = "Νέα εύκολη νίκη για τον ΠΑΟΚ, που επικράτησε με 5-0 του ΠΑΣ Πύργος στη Βάρδα."
+        self.assertEqual(self.score(t, text, home="ΠΑΣ ΠΥΡΓΟΣ", away="ΠΑΟΚ", paok_home=False), "0-5")
+
+    def test_loss_away(self):
+        text = "Ο ΠΑΟΚ ηττήθηκε με 71-69 από την ΑΕΟ Πρωτέα Βούλας."
+        self.assertEqual(self.score("«Λύγισε» στην Βούλα…", text, home="ΠΡΩΤΕΑΣ", away="ΠΑΟΚ", paok_home=False), "71-69")
+
+    def test_score_at_end_of_sentence(self):
+        text = ("Για την 5η αγωνιστική της WBL 1, ο ΠΑΟΚ αντιμετώπισε εκτός έδρας τον Πρωτέα Βούλας, το απόγευμα "
+                "της Κυριακής 1 Νοεμβρίου, γνωρίζοντας την ήττα με 71-69. Οι «ασπρόμαυρες» πήραν προβάδισμα με 9-16, "
+                "κλείνοντας το πρώτο δεκάλεπτο στο 14-20.")
+        self.assertEqual(self.score("«Λύγισε» στην Βούλα…", text, home="ΠΡΩΤΕΑΣ", away="ΠΑΟΚ", paok_home=False), "71-69")
+
+    def test_youth_teams_ignored(self):
+        self.assertIsNone(self.score("Νίκη με 14-11 για τους Παίδες Πόλο του ΠΑΟΚ"))
+
+    def test_named_order(self):
+        self.assertEqual(self.score("ΠΑΣ Πύργος – ΠΑΟΚ 0-5", home="ΠΑΣ ΠΥΡΓΟΣ", away="ΠΑΟΚ", paok_home=False), "0-5")
+
+    def test_unclear_gives_nothing(self):
+        self.assertIsNone(self.score("Η μικτή ζώνη του ΠΑΣ Πύργος-ΠΑΟΚ", "νίκη με 5-0"))
+        self.assertIsNone(self.score("Συνεχίζει στο Conference Cup ο ΠΑΟΚ Infotrust!"))
+        self.assertIsNone(self.score("Το σκορ ήταν 3-2", "Αγώνας με ανατροπές."))  # δεν λέει ποιος κέρδισε
+        self.assertIsNone(self.score("ΠΑΟΚ - Κορυδαλλός (01/11, 14:00)"))
+
+    def test_results_only_posts_after_start(self):
+        import club
+        m = b.Match(section="futsal", uid="u", day=dt.date(2026, 11, 1), time=dt.time(14, 0), home="ΠΑΟΚ",
+                    away="ΚΟΡΥΔΑΛΛΟΥ ΑΟΔ", paok_home=True)
+        post = lambda date, title: {"date": date, "title": {"rendered": title}, "content": {"rendered": ""},
+                                    "categories": [7], "link": "x", "id": 1}
+        posts = [post("2026-11-01T13:00:00", "Νίκη με 9-1!"), post("2026-11-01T15:34:00", "νίκη με 7-3 επί του Κορυδαλλού")]
+        with mock.patch.dict(club._DATA, {"posts": posts}), \
+                mock.patch.object(club, "get_json", lambda path: [{"id": 7, "name": "Ποδόσφαιρο Σάλας"}]):
+            club.results("futsal", [m], now=dt.datetime(2026, 11, 1, 16, 0, tzinfo=b.ATHENS))
+        self.assertEqual(m.score, "7-3")
+
+
+class Admin(unittest.TestCase):
+    def test_admin_final_overrides(self):
+        m = b.Match(section="futsal", uid="u1", day=dt.date(2026, 11, 1), time=dt.time(14, 0), home="ΠΑΟΚ",
+                    away="Χ", paok_home=True, score="6-3", live={"src": "x"})
+        nt = b.match_topic_id("u1")
+        with mock.patch.dict(b._ADMIN, {"entries": {nt: {"nt": nt, "home": 7, "away": 3, "final": True, "note": ""}}}):
+            b.apply_admin("futsal", [m])
+        self.assertEqual((m.score, m.live), ("7-3", None))
+
+    def test_admin_live_entry_does_not_set_score(self):
+        m = b.Match(section="futsal", uid="u2", day=dt.date(2026, 11, 1), time=dt.time(14, 0), home="ΠΑΟΚ",
+                    away="Χ", paok_home=True)
+        nt = b.match_topic_id("u2")
+        with mock.patch.dict(b._ADMIN, {"entries": {nt: {"nt": nt, "home": 1, "away": 0, "final": False}}}):
+            b.apply_admin("futsal", [m])
+        self.assertEqual(m.score, "")
+
+    def test_goal_once_key_matches_admin(self):
+        m = dict(M, nt="abcdef0123")
+        self.assertEqual(live.once_key(m, "⚽ ΓΚΟΛ ΤΟΥ ΠΑΟΚ! ΠΑΟΚ 1–0 Εθνικός", False), "abcdef0123-s1-0")
+        self.assertEqual(live.once_key(m, "⚽ Τελικό: ΠΑΟΚ 1–0 Εθνικός", True), "abcdef0123-result")
+        self.assertIsNone(live.once_key(m, "⚽ Ημίχρονο: ΠΑΟΚ 1–0 Εθνικός", False))
+
+
 if __name__ == "__main__":
     unittest.main()

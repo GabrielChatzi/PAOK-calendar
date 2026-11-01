@@ -507,6 +507,8 @@
     live: ["Live", "Έναρξη, γκολ ή περίοδοι, ημίχρονο και τελικό"],
     result: ["Τελικό αποτέλεσμα", "Το σκορ μόλις ανακοινωθεί"]
   };
+  // Στα τμήματα χωρίς live, η υπενθύμιση έρχεται και στην ώρα έναρξης (notify.py).
+  var PRE_NO_LIVE = "Μία ώρα πριν και στην ώρα έναρξης";
   var isAndroid = /android/i.test(navigator.userAgent);
   var data = null, standings = {};
 
@@ -811,7 +813,8 @@
     var s = data.sectionMap[key];
     var rows = sectionKinds(s).map(function (k) {
       var info = KIND_INFO[k[0]];
-      return switchRow(["s:" + key + ":" + k[0]], info[0], k[0] === "live" && s.liveNote ? s.liveNote : info[1]);
+      var desc = k[0] === "live" && s.liveNote ? s.liveNote : k[0] === "pre" && !s.live ? PRE_NO_LIVE : info[1];
+      return switchRow(["s:" + key + ":" + k[0]], info[0], desc);
     }).join("");
     return '<div class="follow"><h3>Ειδοποιήσεις</h3>' +
       "<p>Διάλεξε τι θέλεις να μαθαίνεις για " + esc(s.name) + ". Έρχονται στο κινητό σου σαν κάθε άλλη ειδοποίηση, χωρίς λογαριασμό.</p>" +
@@ -1603,7 +1606,8 @@
   function matchNotifyHtml(m) {
     var rows = MATCH_KINDS.filter(function (k) { return k[0] !== "live" || m.live; }).map(function (k) {
       var desc = k[0] === "live" ? (m.live.src === "espn" ? "Έναρξη, κάθε γκολ, ημίχρονο"
-        : m.live.src === "dp" ? "Έναρξη και τέλος κάθε σετ" : "Έναρξη και τέλος κάθε περιόδου") : k[2];
+        : m.live.src === "dp" ? "Έναρξη και τέλος κάθε σετ" : "Έναρξη και τέλος κάθε περιόδου")
+        : k[0] === "pre" && !m.live ? PRE_NO_LIVE : k[2];
       var topics = (k[0] === "all" ? matchKinds(m) : [k[0]]).map(function (kind) { return "m:" + m.nt + ":" + kind; });
       return switchRow(topics, k[1], desc);
     }).join("");

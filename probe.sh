@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
-curl -sS "https://site.api.espn.com/apis/site/v2/sports/soccer/gre.1/summary?event=401896734" | python3 -c "import json,sys; d=json.load(sys.stdin); c=d['header']['competitions'][0]; print(c['status']['type']['name'], c['status'].get('displayClock'), [(x['team']['displayName'], x.get('score')) for x in c['competitors']])"
-curl -sS "https://paokalendar.vercel.app/api/health?topic=s:football:live" ; echo
-curl -sS "https://paokalendar.vercel.app/api/health?topic=s:football:pre" ; echo
+python3 - <<'PY'
+import urllib.request
+U="https://site.api.espn.com/apis/site/v2/sports/soccer/gre.1/summary?event=401896734"
+for name,h in [("live.py", {"User-Agent":"Mozilla/5.0 (PAOKalendar live; +https://paokalendar.vercel.app)","Cache-Control":"no-cache"}),
+               ("no cache-control", {"User-Agent":"Mozilla/5.0 (PAOKalendar live; +https://paokalendar.vercel.app)"}),
+               ("cache-control, plain UA", {"User-Agent":"Mozilla/5.0","Cache-Control":"no-cache"}),
+               ("plain UA", {"User-Agent":"Mozilla/5.0"}),
+               ("browser UA", {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36","Accept":"application/json"})]:
+    try:
+        with urllib.request.urlopen(urllib.request.Request(U,headers=h),timeout=20) as r: print(name, r.status)
+    except Exception as e: print(name, e)
+PY

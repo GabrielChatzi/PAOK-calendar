@@ -264,34 +264,42 @@ def reconcile(section: str, official: list[Match], checks: list[str], label: str
 # Το παίρνουμε μόνο όταν όλα είναι ξεκάθαρα: τμήμα, ανάρτηση την ίδια μέρα μετά την έναρξη, ένα σκορ
 # και ποιος κέρδισε (από τα ονόματα «Α – Β x-y» ή από λέξεις όπως νίκη/ήττα/ισοπαλία). Αλλιώς τίποτα.
 SCORE_RE = re.compile(r"(?<![\d/:.,])(\d{1,3})\s*[-–]\s*(\d{1,3})(?![\d/:.,])")
-WIN_RE = re.compile(r"νίκ[ηα]|νίκησ|επικρ[άα]τη|υπέταξ|θρίαμβ|διπλ[όο] |άλωσ|πέρασμα|προκρ[ίι]θ", re.I)
-LOSS_RE = re.compile(r"ήττα|ηττήθ|λύγισ|γονάτισ|έχασ|δεν τα κατάφερ|αποκλε[ίι]σ", re.I)
+WIN_RE = re.compile(r"νίκ[ηαε]|νικ[ηώ]|επικρ[άα]τ|υπέταξ|υποτάσσ|θρίαμβ|διπλ[όο]\b|άλωσ|κέρδισ|πανηγύρισ", re.I)
+LOSS_RE = re.compile(r"ήττα|ηττήθ|λύγισ|γονάτισ|έχασ|δεν τα κατάφερ|υποχώρησ", re.I)
 DRAW_RE = re.compile(r"ισοπαλ|ισόπαλ", re.I)
-SKIP_RE = re.compile(r"μικτή ζώνη|δήλωσ|τηλεόραση|στην TV|εισιτήρι|live stream", re.I)
+SKIP_RE = re.compile(r"μικτή ζώνη|δήλωσ|τηλεόραση|στην TV|εισιτήρι|live stream|\(\d{1,2}/\d{1,2}", re.I)
 RESULT_SECTIONS = {"football-women", "futsal", "basketball-women"}  # χωρίς τελικό από live
 
 
 def score_from_post(title: str, text: str, home: str, away: str, paok_home: bool) -> str | None:
-    """Το σκορ «γηπεδούχος-φιλοξενούμενος» από μια ανάρτηση, ή None αν δεν είναι ξεκάθαρο."""
+    """Το σκορ «γηπεδούχος-φιλοξενούμενος» από μια ανάρτηση, ή None αν δεν είναι ξεκάθαρο.
+
+    Παίρνουμε το πρώτο σκορ (πρώτα στον τίτλο, μετά στην αρχή του κειμένου) και κρίνουμε ποιος
+    κέρδισε μόνο από την πρόταση που το περιέχει (π.χ. «γνωρίζοντας την ήττα με 71-69»): πιο κάτω
+    το κείμενο έχει σκορ περιόδων και λέξεις για άλλους αγώνες.
+    """
     if SKIP_RE.search(title):
         return None
-    lead = title + " " + text[:600]
-    # «ΠΑΣ Πύργος – ΠΑΟΚ 0-5»: τα ονόματα πριν από το σκορ δίνουν τη σειρά.
-    named = re.search(r"([^\s–-][^–-]{1,40}?)\s*[–-]\s*([^\d–-][^–-]{1,40}?)\s+(\d{1,3})\s*[-–]\s*(\d{1,3})(?!\d)", lead)
-    if named and is_paok(named.group(1).strip().split(" ")[0]) != is_paok(named.group(2).strip().split(" ")[0]):
+    # Τίτλος «ΠΑΣ Πύργος – ΠΑΟΚ 0-5»: τα ονόματα δίνουν τη σειρά.
+    named = re.match(r"\s*([^\d–-]{2,40}?)\s+[–-]\s+([^\d–-]{2,40}?)\s+(\d{1,3})-(\d{1,3})\b", title)
+    if named and is_paok(named.group(1)) != is_paok(named.group(2)):
         a, b = int(named.group(3)), int(named.group(4))
-        return f"{a}-{b}" if is_paok(named.group(1).strip().split(" ")[0]) == paok_home else f"{b}-{a}"
-    found = SCORE_RE.search(title) or SCORE_RE.search(text[:600])
-    if not found:
+        return f"{a}-{b}" if is_paok(named.group(1)) == paok_home else f"{b}-{a}"
+    for where in (title, text[:700]):
+        found = SCORE_RE.search(where)
+        if found:
+            break
+    else:
         return None
     a, b = int(found.group(1)), int(found.group(2))
-    win, loss, draw = bool(WIN_RE.search(lead)), bool(LOSS_RE.search(lead)), bool(DRAW_RE.search(lead))
+    start = max(where.rfind(c, 0, found.start()) for c in ".!;") + 1
+    ends = [i for i in (where.find(c, found.end()) for c in ".!;") if i >= 0]
+    sentence = where[start:min(ends) if ends else len(where)]
+    win, loss, draw = bool(WIN_RE.search(sentence)), bool(LOSS_RE.search(sentence)), bool(DRAW_RE.search(sentence))
     if draw and a == b and not (win or loss):
         paok, other = a, b
-    elif win and not loss and a != b:
-        paok, other = max(a, b), min(a, b)
-    elif loss and not win and a != b:
-        paok, other = min(a, b), max(a, b)
+    elif win != loss and a != b:
+        paok, other = (max(a, b), min(a, b)) if win else (min(a, b), max(a, b))
     else:
         return None
     return f"{paok}-{other}" if paok_home else f"{other}-{paok}"

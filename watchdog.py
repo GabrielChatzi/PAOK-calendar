@@ -4,7 +4,7 @@
 Τρέχει μέσα στα workflows (python3 watchdog.py reminders | update) και ελέγχει:
     selftest   το /api/health?selftest=1 (εγγραφή συσκευής, βάση, κρυπτογράφηση ειδοποίησης)
     deploy     αν απέτυχε η τελευταία έκδοση της Vercel (π.χ. όριο εκδόσεων)
-    data       αν τα δεδομένα (κλάδος data) έχουν να ενημερωθούν πάνω από 3 ώρες      (reminders)
+    data       αν η ενημέρωση προγράμματος (update.yml) έχει να τρέξει πάνω από 3 ώρες (reminders)
     live:<id>  αγώνας με live σε εξέλιξη χωρίς να τρέχει η παρακολούθηση (live.yml)   (reminders)
     reminders  αν ο έλεγχος κάθε 15 λεπτά (reminders.yml) έχει να τρέξει πάνω από 40 λεπτά (update)
 
@@ -92,18 +92,17 @@ def load_matches() -> dict:
     return http_json(RAW + "?t=" + str(int(dt.datetime.now().timestamp())))
 
 
-def check_data(data: dict, now: dt.datetime) -> list[tuple[str, str]]:
-    stamps = []
-    for v in (data.get("updated") or {}).values():
-        try:
-            stamps.append(dt.datetime.fromisoformat(v))
-        except ValueError:
-            pass
-    if not stamps:
-        return [("data", "Δεν βρέθηκε ώρα ενημέρωσης στο matches.json του κλάδου data.")]
-    newest = max(stamps)
-    if now - newest > DATA_STALE:
-        return [("data", f"Το πρόγραμμα έχει να ενημερωθεί από {when(newest)}. Μάλλον δεν τρέχει το update.yml.")]
+def check_data(now: dt.datetime) -> list[tuple[str, str]]:
+    """Αν η ενημέρωση προγράμματος (update.yml) έχει να τρέξει ως το τέλος πάνω από 3 ώρες.
+
+    (Όχι από την ώρα αλλαγής των δεδομένων: τη νύχτα μπορεί να μην αλλάζει τίποτα για ώρες.)"""
+    runs = gh("actions/workflows/update.yml/runs?status=completed&per_page=1").get("workflow_runs", [])
+    if not runs:
+        return [("data", "Δεν βρέθηκε καμία εκτέλεση της ενημέρωσης προγράμματος.")]
+    last = dt.datetime.fromisoformat(runs[0]["created_at"].replace("Z", "+00:00"))
+    if now - last > DATA_STALE:
+        return [("data", f"Η ενημέρωση προγράμματος έχει να τρέξει από {when(last)}. "
+                         "Δες αν δουλεύει η δουλειά της στο cron-job.org.")]
     return []
 
 
@@ -141,7 +140,7 @@ def problems(mode: str) -> list[tuple[str, str]]:
     steps = [check_selftest, check_deploy]
     if mode == "reminders":
         data = load_matches()
-        steps += [lambda: check_data(data, now), lambda: check_live(data, now)]
+        steps += [lambda: check_data(now), lambda: check_live(data, now)]
     else:
         steps += [lambda: check_reminders(now)]
     for step in steps:

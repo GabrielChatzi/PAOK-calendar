@@ -1,16 +1,10 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
 UA="Mozilla/5.0"
-for site in https://ea.microplustimingservices.com https://live.koe.org.gr; do
-  echo "##### $site"
-  curl -sSL -A "$UA" "$site/" -o /tmp/h.html; echo "html bytes $(wc -c < /tmp/h.html)"; head -c 1500 /tmp/h.html; echo
-  for js in $(grep -oE '(src|href)="[^"]+\.js[^"]*"' /tmp/h.html | sed -E 's/^(src|href)="//; s/"$//'); do
-    case "$js" in http*) u=$js;; /*) u=$site$js;; *) u=$site/$js;; esac
-    echo "-- $u"; curl -sSL -A "$UA" "$u" | grep -oE '"/?get/[A-Za-z]+[^"]{0,60}"|`[^`]{0,40}/get/[A-Za-z]+[^`]{0,80}`|get/[A-Za-z]{4,}' | sort -u | head -40
-  done
-done
-EA=https://ea.microplustimingservices.com/api/wp
-T=$(curl -sS -A "$UA" "$EA/site/token" | python3 -c "import json,sys; print(json.load(sys.stdin)['data']['token'])")
-for path in "EA27/get/resultsDBlikeJSON/ASF/2/001/3/URA/PAOK" "EACLUB27/get/resultsDBlikeJSON/ASF/2/001/3/URA/PAOK/" ; do
-  echo "== $path"; curl -sS -A "$UA" -H "Authorization: Bearer $T" -w " [%{http_code}]" "$EA/$path" | head -c 600; echo
-done
+curl -sSL -A "$UA" https://live.koe.org.gr/main.8a93d7754480c5a57ba3.js -o /tmp/k.js; wc -c /tmp/k.js
+grep -oE '.{0,60}resultsDBlikeJSON.{0,120}' /tmp/k.js | head -5
+echo ---; grep -oE '"/get/[^"]{0,80}"|/get/"|"get/[^"]{0,60}"|\+"/get/[a-zA-Z]+' /tmp/k.js | sort -u | head -60
+echo ---; grep -oE '[a-zA-Z]+DBlikeJSON|get/[A-Za-z]+' /tmp/k.js | sort -u | head -80
+echo --- ea refs; grep -oE '.{0,40}microplustimingservices.{0,80}' /tmp/k.js | head
+curl -sSL -A "$UA" "https://europeanaquatics.org/sports/water-polo/club-competitions/schedule/" -o /tmp/e.html; wc -c /tmp/e.html
+grep -oiE '.{0,80}(microplus|livescore|live-results|results\.).{0,120}' /tmp/e.html | head -20

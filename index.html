@@ -337,6 +337,15 @@
   }
   .btn.solid { background: var(--ink); color: var(--paper); }
   .btn:active { background: var(--ink); color: var(--paper); }
+  .admin-box { border: 2px solid var(--ink); padding: 4px 14px 14px; margin: 18px 0; }
+  .admin-box h3 { font: 800 22px/1.1 var(--display); margin: 12px 0 6px; }
+  .adm-score { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0; }
+  .adm-field { display: flex; flex-direction: column; gap: 4px; font-size: 14px; color: var(--muted); }
+  .adm-field.wide { margin: 0 0 10px; }
+  .adm-field input { font: inherit; font-size: 18px; color: var(--ink); background: var(--paper); border: 1.5px solid var(--ink);
+    border-radius: 0; padding: 8px 10px; width: 100%; box-sizing: border-box; }
+  .adm-score input { font-size: 28px; font-weight: 700; text-align: center; }
+  button.linkish { background: none; border: 0; padding: 0; color: inherit; text-decoration: underline; cursor: pointer; font: inherit; }
   ul.notify { list-style: none; margin: 14px 0 0; padding: 0; border-top: 2px solid var(--ink); }
   ul.notify li { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--rule); }
   ul.notify strong { font: 600 19px/1.2 var(--display); display: block; }
@@ -1177,6 +1186,10 @@
     }
     if (b.dataset.act === "push-off") { disablePush(); return; }
     if (b.dataset.act === "push-test") { testPush(); return; }
+    if (b.dataset.act === "adm-live") { adminSend("score", false); return; }
+    if (b.dataset.act === "adm-final") { adminSend("score", true); return; }
+    if (b.dataset.act === "adm-clear") { adminSend("clear"); return; }
+    if (b.dataset.act === "adm-forget") { try { localStorage.removeItem("paok-admin-pass"); } catch (err) {} render(); return; }
     if (b.dataset.act === "push-restore") { restorePush(); return; }
     if (b.dataset.act === "push-retry") { syncPush().then(function () { toast("Αποθηκεύτηκαν."); }, function () { toast("Πάλι δεν έγινε. Θα ξαναδοκιμάσει μόνη της."); }); return; }
     if (b.dataset.act === "share") {
@@ -1719,7 +1732,69 @@
 
     return '<div class="match"><a class="back" href="#/' + m.section + '">‹ ' + esc(s.name) + "</a>" + head +
       (actions.length ? '<div class="match-actions">' + actions.join("") + "</div>" : "") +
-      body + (isUpcoming(m) && !finalLive ? matchNotifyHtml(m) : "") + infoHtml + "</div>" + footerHtml();
+      body + (isAdmin() ? adminMatchHtml(m) : "") + (isUpcoming(m) && !finalLive ? matchNotifyHtml(m) : "") + infoHtml + "</div>" + footerHtml();
+  }
+
+  // ---- Διαχειριστής: σκορ με ειδοποίηση (api/admin.js)
+  function adminPass() { try { return localStorage.getItem("paok-admin-pass") || ""; } catch (e) { return ""; } }
+  function adminMatchHtml(m) {
+    if (!pushOrigin) return "";
+    var e = adminEntries[m.nt];
+    var parts = /^(\d+)-(\d+)$/.exec(m.score || "");
+    var ls = liveState[m.uid];
+    var h = e ? e.home : parts ? +parts[1] : ls && ls.state !== "pre" ? ls.home : 0;
+    var a = e ? e.away : parts ? +parts[2] : ls && ls.state !== "pre" ? ls.away : 0;
+    function field(id, label, value) {
+      return '<label class="adm-field"><span>' + esc(label) + '</span><input id="' + id + '" type="number" inputmode="numeric" min="0" max="300" value="' + value + '"></label>';
+    }
+    var when = e ? new Intl.DateTimeFormat("el-GR", { timeZone: TZ, hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).format(new Date(e.at)) : "";
+    return '<section class="admin-box" data-nt="' + esc(m.nt) + '"><h3>Διαχειριστής</h3>' +
+      "<p class=\"help\">Ό,τι γράψεις εδώ φαίνεται αμέσως και στέλνει ειδοποίηση. Έχει προτεραιότητα από τις αυτόματες πηγές: " +
+      "όποιος πήρε την ειδοποίηση από εδώ δεν παίρνει ξανά την ίδια από το live ή την ενημέρωση.</p>" +
+      (e ? '<p class="server-ok">Τελευταία καταχώριση ' + when + ": " + e.home + "–" + e.away + (e.final ? " (τελικό)" : " (σε εξέλιξη)") + "</p>" : "") +
+      '<div class="adm-score">' + field("adm-h", m.home, h) + field("adm-a", m.away, a) + "</div>" +
+      '<label class="adm-field wide"><span>Σημείωση (προαιρετικά)</span><input id="adm-note" type="text" maxlength="80" placeholder="π.χ. 2ο ημίχρονο, μετά από παράταση" value="' + esc(e && e.note || "") + '"></label>' +
+      (adminPass() ? "" : '<label class="adm-field wide"><span>Κωδικός διαχειριστή</span><input id="adm-pass" type="password" autocomplete="current-password"></label>') +
+      '<div class="actions"><button type="button" class="btn" data-act="adm-live">Σκορ τώρα</button>' +
+      '<button type="button" class="btn solid" data-act="adm-final">Τελικό</button>' +
+      (e ? '<button type="button" class="btn" data-act="adm-clear">Σβήσιμο καταχώρισης</button>' : "") + "</div>" +
+      (adminPass() ? '<p class="help"><button type="button" class="linkish" data-act="adm-forget">Ξέχνα τον κωδικό σε αυτή τη συσκευή</button></p>' : "") +
+      "</section>";
+  }
+  function adminSend(action, final) {
+    var box = document.querySelector(".admin-box");
+    if (!box) return;
+    var nt = box.dataset.nt;
+    var passEl = $("adm-pass");
+    var pass = passEl ? passEl.value : adminPass();
+    if (!pass) { toast("Γράψε τον κωδικό διαχειριστή."); return; }
+    var body = { password: pass, action: action, nt: nt };
+    if (action === "score") {
+      body.home = parseInt($("adm-h").value, 10); body.away = parseInt($("adm-a").value, 10);
+      body.final = final; body.note = $("adm-note").value;
+      if (!(body.home >= 0 && body.away >= 0)) { toast("Γράψε το σκορ."); return; }
+      if (final && !window.confirm("Τελικό " + body.home + "–" + body.away + "; Θα σταλεί ειδοποίηση σε όλους.")) return;
+    }
+    if (action === "clear" && !window.confirm("Να σβηστεί η καταχώριση; Δεν στέλνεται ειδοποίηση.")) return;
+    fetch("/api/admin", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { return [r, d]; }); })
+      .then(function (x) {
+        var r = x[0], d = x[1];
+        if (r.status === 401) { try { localStorage.removeItem("paok-admin-pass"); } catch (e) {} toast("Λάθος κωδικός."); render(); return; }
+        if (!r.ok) { toast(d.error || "Δεν έγινε. Δοκίμασε ξανά."); return; }
+        try { localStorage.setItem("paok-admin-pass", pass); } catch (e) {}
+        if (action === "clear") {
+          delete adminEntries[nt];
+          toast("Σβήστηκε. Το σκορ θα έρθει ξανά από τις αυτόματες πηγές.");
+          load().catch(function () {});
+          return;
+        }
+        applyAdmin([d.entry]);
+        var p = d.push || {};
+        toast("Αποθηκεύτηκε. Ειδοποίηση σε " + (p.sent || 0) + " συσκευές" + (p.skipped ? " (" + p.skipped + " την είχαν ήδη)" : "") + ".");
+        render();
+      })
+      .catch(function () { toast("Δεν υπάρχει σύνδεση με τον server."); });
   }
 
   // ---- Λεπτομέρειες live για τη σελίδα αγώνα
@@ -1959,8 +2034,29 @@
   function load() {
     return Promise.all([
       fetch("matches.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }),
-      fetch("standings.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
+      fetch("standings.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }),
+      loadAdmin()
     ]).then(apply);
+  }
+  // Καταχωρίσεις του διαχειριστή (api/admin.js): το σκορ τους φαίνεται αμέσως, πριν από την ενημέρωση.
+  function loadAdmin() {
+    if (!pushOrigin) return Promise.resolve([]);
+    return fetch("/api/admin", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : {}; })
+      .then(function (d) { return d.entries || []; }).catch(function () { return []; });
+  }
+  var adminEntries = {};
+  function applyAdmin(entries) {
+    entries.forEach(function (e) { adminEntries[e.nt] = e; });
+    data.matches.forEach(function (m) {
+      var e = adminEntries[m.nt];
+      if (!e) return;
+      if (e.final) {
+        m.score = e.home + "-" + e.away;
+        if (e.note) m.note = e.note;
+      } else if (!m.score && (!liveState[m.uid] || liveState[m.uid].admin || liveState[m.uid].state === "pre")) {
+        liveState[m.uid] = { state: "in", home: e.home, away: e.away, label: e.note || "Σε εξέλιξη", admin: true };
+      }
+    });
   }
   function apply(res) {
     data = res[0]; standings = res[1] || {};
@@ -1971,6 +2067,7 @@
       if (logo && !paokLogo[m.section]) paokLogo[m.section] = logo;
       if (logo && !paokLogo._any) paokLogo._any = logo;
     });
+    applyAdmin(res[2] || []);
     loadedAt = Date.now();
     if (push.ready && push.sub && cleanMatchTopics()) syncPush().catch(function () {});
     render();

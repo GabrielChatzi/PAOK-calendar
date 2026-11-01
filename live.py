@@ -28,6 +28,7 @@ POLL_SECONDS = 20  # οι πηγές (και το CDN του api/live.js, 15'') 
 FAIL_ALERT = 15   # τόσες συνεχόμενες αποτυχίες μιας πηγής (~5') → ειδοποίηση λειτουργίας
 MAX_RUNTIME = dt.timedelta(hours=5, minutes=20)
 IDLE_EXIT = dt.timedelta(minutes=20)
+EARLY_START = dt.timedelta(minutes=5)
 # Κοινό User-Agent browser: το ESPN απορρίπτει (403) όσα αναφέρουν το όνομα ή τη διεύθυνση της σελίδας.
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
 
@@ -413,13 +414,18 @@ def main() -> int:
             if m["live"]["src"] == "euroleague":
                 track_periods(old, new)
             new = settle_final(old, new)
+            # Πριν από την ώρα του αγώνα, ένα «σε εξέλιξη» χωρίς σκορ είναι προθέρμανση (το Data Project
+            # το δείχνει ως και 20' νωρίτερα): μένουμε στο «δεν ξεκίνησε».
+            if (old and old["state"] == "pre" and new["state"] == "in" and not (new["home"] or new["away"])
+                    and now < dt.datetime.fromisoformat(m["start"]) - EARLY_START):
+                new = old
             for title, message in events(m, old, new):
                 final = old is not None and old["state"] != "post" and new["state"] == "post" and "Τελικό" in title
                 # Το τελικό πηγαίνει και στο θέμα «result» του αγώνα.
                 notify.send(m["section"], "live", title, message, match=m,
                             also_match_kinds=("result",) if final else (),
                             tag=f"{m['nt']}-result" if final else None,
-                            once=f"{m['nt']}-result" if final else None)
+                            once=f"{m['nt']}-result" if final else f"{m['nt']}-start" if "Ξεκίνησε" in title else None)
             if old is None or (old["state"], old["home"], old["away"]) != (new["state"], new["home"], new["away"]):
                 print(f"{now:%H:%M} {m['home']} – {m['away']}: {new['state']} {new['home']}-{new['away']} {new.get('detail', '')}")
             states[m["uid"]] = new

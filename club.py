@@ -263,7 +263,9 @@ def reconcile(section: str, official: list[Match], checks: list[str], label: str
 # PayspotLabraki, νίκη με 7-3 επί του ΑΟΔ Κορυδαλλού!»), ενώ οι ομοσπονδίες καμιά φορά μετά από ώρες.
 # Το παίρνουμε μόνο όταν όλα είναι ξεκάθαρα: τμήμα, ανάρτηση την ίδια μέρα μετά την έναρξη, ένα σκορ
 # και ποιος κέρδισε (από τα ονόματα «Α – Β x-y» ή από λέξεις όπως νίκη/ήττα/ισοπαλία). Αλλιώς τίποτα.
-SCORE_RE = re.compile(r"(?<![\d/:.,])(\d{1,3})\s*[-–]\s*(\d{1,3})(?![\d/:.,])")
+# Όχι ώρες (14:00), ημερομηνίες (01/11) ή δεκαδικοί· η τελεία στο τέλος της πρότασης επιτρέπεται.
+SCORE_RE = re.compile(r"(?<![\d/:])(?<!\d[.,])(\d{1,3})\s*[-–]\s*(\d{1,3})(?!\d|[/:.,]\d)")
+YOUTH_RE = re.compile(r"Παίδ|Παμπαίδ|Κορασ|Νεαν|Εφήβ|Ακαδημ|\bΚ-?\d{2}\b|\bU-?\d{2}\b", re.I)
 WIN_RE = re.compile(r"νίκ[ηαε]|νικ[ηώ]|επικρ[άα]τ|υπέταξ|υποτάσσ|θρίαμβ|διπλ[όο]\b|άλωσ|κέρδισ|πανηγύρισ", re.I)
 LOSS_RE = re.compile(r"ήττα|ηττήθ|λύγισ|γονάτισ|έχασ|δεν τα κατάφερ|υποχώρησ", re.I)
 DRAW_RE = re.compile(r"ισοπαλ|ισόπαλ", re.I)
@@ -278,7 +280,7 @@ def score_from_post(title: str, text: str, home: str, away: str, paok_home: bool
     κέρδισε μόνο από την πρόταση που το περιέχει (π.χ. «γνωρίζοντας την ήττα με 71-69»): πιο κάτω
     το κείμενο έχει σκορ περιόδων και λέξεις για άλλους αγώνες.
     """
-    if SKIP_RE.search(title):
+    if SKIP_RE.search(title) or YOUTH_RE.search(title):
         return None
     # Τίτλος «ΠΑΣ Πύργος – ΠΑΟΚ 0-5»: τα ονόματα δίνουν τη σειρά.
     named = re.match(r"\s*([^\d–-]{2,40}?)\s+[–-]\s+([^\d–-]{2,40}?)\s+(\d{1,3})-(\d{1,3})\b", title)
@@ -316,8 +318,11 @@ def results(section: str, matches: list[Match], now: dt.datetime | None = None) 
         return
     cats = get_json("categories?per_page=100&_fields=id,name")
     section_by_cat = {c["id"]: section_of(c["name"]) for c in cats}
+    youth = {c["id"] for c in cats if YOUTH_RE.search(c["name"])}
     for m in waiting:
         for post in sorted(recent_posts(), key=lambda p: p["date"]):
+            if youth & set(post["categories"]):
+                continue
             if {section_by_cat.get(c) for c in post["categories"]} - {None} != {section}:
                 continue
             posted = dt.datetime.fromisoformat(post["date"]).replace(tzinfo=ATHENS)

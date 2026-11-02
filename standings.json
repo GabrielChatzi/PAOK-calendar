@@ -268,6 +268,20 @@
     },
     {
      "pos": 4,
+     "team": "ΑΕΚ",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/0aa9875ddbc50bb6ac5064fc12a9039e.jpg?itok=oXlyb0hw",
+     "paok": false,
+     "cells": [
+      "5",
+      "3",
+      "1",
+      "1",
+      "10-2",
+      "10"
+     ]
+    },
+    {
+     "pos": 5,
      "team": "ΑΟ ΡΕΑ",
      "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/37d919ce977355c09f73baf583cac5a1.jpg?itok=JTQx6kLi",
      "paok": false,
@@ -277,20 +291,6 @@
       "1",
       "1",
       "6-3",
-      "7"
-     ]
-    },
-    {
-     "pos": 5,
-     "team": "ΑΕΚ",
-     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/0aa9875ddbc50bb6ac5064fc12a9039e.jpg?itok=oXlyb0hw",
-     "paok": false,
-     "cells": [
-      "4",
-      "2",
-      "1",
-      "1",
-      "5-2",
       "7"
      ]
     },
@@ -328,11 +328,11 @@
      "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/f43120ba1ac31aa09a5c4afec55ab75e.jpg?itok=SNdaav55",
      "paok": false,
      "cells": [
-      "4",
+      "5",
       "1",
       "1",
-      "2",
-      "4-13",
+      "3",
+      "4-18",
       "4"
      ]
     },
@@ -1940,16 +1940,30 @@
      "logo": "",
      "paok": false,
      "cells": [
+      "7",
       "6",
-      "5",
       "0",
       "1",
-      "37-14",
-      "15"
+      "46-15",
+      "18"
      ]
     },
     {
      "pos": 2,
+     "team": "ΠΥΡΓΟΣ FUTSAL",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "7",
+      "5",
+      "1",
+      "1",
+      "45-21",
+      "16"
+     ]
+    },
+    {
+     "pos": 3,
      "team": "ΔΟΥΚΑ ΑΣΕ",
      "logo": "",
      "paok": false,
@@ -1963,21 +1977,21 @@
      ]
     },
     {
-     "pos": 3,
-     "team": "ΠΥΡΓΟΣ FUTSAL",
+     "pos": 4,
+     "team": "ΠΑΟΚ",
      "logo": "",
-     "paok": false,
+     "paok": true,
      "cells": [
       "6",
       "4",
-      "1",
-      "1",
-      "36-19",
-      "13"
+      "0",
+      "2",
+      "32-24",
+      "12"
      ]
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "ΑΕΛ",
      "logo": "",
      "paok": false,
@@ -1991,64 +2005,50 @@
      ]
     },
     {
-     "pos": 5,
-     "team": "ΠΑΟΚ",
-     "logo": "",
-     "paok": true,
-     "cells": [
-      "5",
-      "3",
-      "0",
-      "2",
-      "25-21",
-      "9"
-     ]
-    },
-    {
      "pos": 6,
-     "team": "ΕΡΜΗΣ ΖΩΓΡΑΦΟΥ",
+     "team": "ΜΙΝΩΤΑΥΡΟΣ",
      "logo": "",
      "paok": false,
      "cells": [
-      "6",
+      "7",
       "2",
-      "1",
+      "2",
       "3",
-      "29-24",
-      "7"
+      "28-35",
+      "8"
      ]
     },
     {
      "pos": 7,
-     "team": "ΟΛΥΜΠΙΑΚΟΣ ΓΣΣ",
+     "team": "ΕΡΜΗΣ ΖΩΓΡΑΦΟΥ",
      "logo": "",
      "paok": false,
      "cells": [
-      "5",
+      "7",
       "2",
       "1",
-      "2",
-      "23-20",
+      "4",
+      "30-33",
       "7"
      ]
     },
     {
      "pos": 8,
-     "team": "ΑΘΗΝΑ '90 ΣΑΛΑΣ",
+     "team": "ΟΛΥΜΠΙΑΚΟΣ ΓΣΣ",
      "logo": "",
      "paok": false,
      "cells": [
-      "5",
+      "6",
+      "2",
       "1",
       "3",
-      "1",
-      "24-24",
-      "6"
+      "25-29",
+      "7"
      ]
     },
     {
      "pos": 9,
-     "team": "ΚΟΡΥΔΑΛΛΟΥ ΑΟΔ",
+     "team": "ΑΘΗΝΑ '90 ΣΑΛΑΣ",
      "logo": "",
      "paok": false,
      "cells": [
@@ -2056,22 +2056,22 @@
       "1",
       "3",
       "2",
-      "12-21",
+      "28-31",
       "6"
      ]
     },
     {
      "pos": 10,
-     "team": "ΜΙΝΩΤΑΥΡΟΣ",
+     "team": "ΚΟΡΥΔΑΛΛΟΥ ΑΟΔ",
      "logo": "",
      "paok": false,
      "cells": [
-      "6",
+      "7",
       "1",
-      "2",
       "3",
-      "21-31",
-      "5"
+      "3",
+      "15-28",
+      "6"
      ]
     },
     {

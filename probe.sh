@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
-S=https://paokalendar.vercel.app
-echo "GET: $(curl -sS $S/api/admin)"
-echo "POST: $(curl -sS -X POST -H 'Content-Type: application/json' -d '{"password":"x","action":"check"}' $S/api/admin)"
+npm i --silent playwright@1.48.2 >/dev/null 2>&1 && npx playwright install --with-deps chromium >/dev/null 2>&1
+node shots.mjs

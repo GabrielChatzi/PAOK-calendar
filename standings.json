@@ -830,10 +830,10 @@
      "logo": "https://media-cdn.incrowdsports.com/1d3274d8-da86-4d21-9e97-6810ab88babe.png",
      "paok": false,
      "cells": [
+      "6",
       "5",
-      "4",
       "1",
-      "+58"
+      "+72"
      ]
     },
     {
@@ -850,18 +850,6 @@
     },
     {
      "pos": 3,
-     "team": "Ulm",
-     "logo": "https://media-cdn.cortextech.io/5750bc8b-dd63-48e4-8586-10d4e5e2b4e2.png",
-     "paok": false,
-     "cells": [
-      "5",
-      "3",
-      "2",
-      "+20"
-     ]
-    },
-    {
-     "pos": 4,
      "team": "Manresa",
      "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/06792bed-0383-4de2-80b9-95ecca3fd973.png",
      "paok": false,
@@ -873,7 +861,7 @@
      ]
     },
     {
-     "pos": 5,
+     "pos": 4,
      "team": "Lietkabelis",
      "logo": "https://media-cdn.cortextech.io/ffcb6e37-31f4-48f6-91c2-a8c9a6f791a9.png",
      "paok": false,
@@ -882,6 +870,18 @@
       "3",
       "2",
       "-4"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "Ulm",
+     "logo": "https://media-cdn.cortextech.io/5750bc8b-dd63-48e4-8586-10d4e5e2b4e2.png",
+     "paok": false,
+     "cells": [
+      "6",
+      "3",
+      "3",
+      "+6"
      ]
     },
     {

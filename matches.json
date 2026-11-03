@@ -120,6 +120,7 @@
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/440.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "tvUrl": "",
    "nt": "a86e124e1e"
   },
   {
@@ -143,6 +144,7 @@
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/440.png",
+   "tvUrl": "",
    "nt": "ba447492f5"
   },
   {
@@ -166,6 +168,7 @@
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/441.png",
+   "tvUrl": "",
    "nt": "a55e610f0f"
   },
   {
@@ -189,6 +192,7 @@
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/441.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "tvUrl": "",
    "nt": "042c135fbf"
   },
   {
@@ -212,6 +216,7 @@
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/620.png",
+   "tvUrl": "",
    "nt": "5608ad030b"
   },
   {
@@ -235,6 +240,7 @@
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/5276.png",
+   "tvUrl": "",
    "nt": "ee1ea80a0d"
   },
   {
@@ -258,6 +264,7 @@
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/620.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "tvUrl": "",
    "nt": "3a2fdc1bbe"
   },
   {
@@ -281,6 +288,7 @@
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/6790.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "tvUrl": "",
    "nt": "3c51f0eb3d"
   },
   {
@@ -299,6 +307,7 @@
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/dd68ef4637f836824756daa4d317879a.jpg?itok=N0R87cN-",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/b67b687eee657fe9bdee1d794daa3655.jpg?itok=xS8HOokl",
+   "tvUrl": "",
    "nt": "df1bb48313"
   },
   {
@@ -322,6 +331,7 @@
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/443.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "tvUrl": "",
    "nt": "6f9187f658"
   },
   {
@@ -340,6 +350,7 @@
    "paokHome": false,
    "homeLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jae_eZZDKfzYMabebFCF4GkMEWk_Hbpzol9WH8vJH4n7Q",
    "awayLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jYIxuywZ8hK-I-bG5Cf0w4xw-0QulLUNdHHrMKQU39rDQ",
+   "tvUrl": "",
    "nt": "0c0401aa79"
   },
   {
@@ -358,6 +369,7 @@
    "paokHome": true,
    "homeLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jYIxuywZ8hK-I-bG5Cf0w4xw-0QulLUNdHHrMKQU39rDQ",
    "awayLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jae_eZZDKfzYMabebFCF4GkMEWk_Hbpzol9WH8vJH4n7Q",
+   "tvUrl": "",
    "nt": "e8a0e86a13"
   },
   {
@@ -381,6 +393,7 @@
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/11553.png",
+   "tvUrl": "",
    "nt": "28faec1f56"
   },
   {
@@ -399,6 +412,7 @@
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/67231a92b13106cd56ac4bced1a38442.jpg?itok=8rQEOtM4",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/dd68ef4637f836824756daa4d317879a.jpg?itok=N0R87cN-",
+   "tvUrl": "",
    "nt": "2a32684733"
   },
   {
@@ -417,6 +431,7 @@
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/0aa9875ddbc50bb6ac5064fc12a9039e.jpg?itok=aKr1Kf_z",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "tvUrl": "",
    "nt": "017d634c99"
   },
   {
@@ -435,6 +450,7 @@
    "paokHome": false,
    "homeLogo": "https://epssalas.gr/wp-content/uploads/2023/01/PNG-ΜΙΝΩΤΑΥΡΟΣ-league-table.png",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "94693d7791"
   },
   {
@@ -458,6 +474,7 @@
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/11431.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "tvUrl": "",
    "nt": "e1cfab82aa"
   },
   {
@@ -481,6 +498,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "a7df854f78"
   },
   {
@@ -499,6 +517,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "91d0788062"
   },
   {
@@ -517,6 +536,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
    "awayLogo": "https://koecdn.twic.pics/media/pekev-1789898708-1ZgUQCyK.jpeg",
+   "tvUrl": "",
    "nt": "2b3f8b6845"
   },
   {
@@ -535,6 +555,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/logo-1u6opn9-1757681672-ImWgfrk6.jpg",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "tvUrl": "",
    "nt": "5b77e96bfe"
   },
   {
@@ -553,6 +574,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "32a0812b81"
   },
   {
@@ -571,6 +593,7 @@
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/00000001/photo_new_160CD854.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "tvUrl": "",
    "nt": "148afe4d7d"
   },
   {
@@ -589,6 +612,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "https://epssalas.gr/wp-content/uploads/2022/09/PNG-ΑΕΚ-1.png",
+   "tvUrl": "",
    "nt": "05d6b9f6db"
   },
   {
@@ -607,6 +631,7 @@
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/00000002/photo_new_7F6C9D90.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "tvUrl": "",
    "nt": "7ea085b3ef"
   },
   {
@@ -625,6 +650,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "c4f563d508"
   },
   {
@@ -643,6 +669,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "7cc90b0bda"
   },
   {
@@ -666,6 +693,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "777e7398bd"
   },
   {
@@ -689,6 +717,7 @@
    "paokHome": true,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
    "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/06792bed-0383-4de2-80b9-95ecca3fd973.png",
+   "tvUrl": "",
    "nt": "99ebf968c5"
   },
   {
@@ -707,6 +736,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "b1ca66e631"
   },
   {
@@ -725,6 +755,7 @@
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/BB4B460F/photo_new_62684735.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "tvUrl": "",
    "nt": "6d6af50cc5"
   },
   {
@@ -743,6 +774,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
    "awayLogo": "https://koecdn.twic.pics/media/nov-logo-gr-1758978938-hWBXWQRE.png",
+   "tvUrl": "",
    "nt": "940b5e63b8"
   },
   {
@@ -761,6 +793,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
    "awayLogo": "https://koecdn.twic.pics/media/panathinaikos-1757496876-53QTIGxK.jpg",
+   "tvUrl": "",
    "nt": "cc17563833"
   },
   {
@@ -779,6 +812,7 @@
    "paokHome": false,
    "homeLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jYforv721_4rFgLMHeHTIwHvfrl1-sKxSLiqnCRc9S_jA",
    "awayLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jaESTQUDbh58BgzH2CFv97Ov9KpYGuSHWg1yzTle4_NrQ",
+   "tvUrl": "",
    "nt": "43f88450ab"
   },
   {
@@ -797,6 +831,7 @@
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/club-teams/2/logo",
    "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "tvUrl": "",
    "nt": "e1bcee36e0"
   },
   {
@@ -815,6 +850,7 @@
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/3dba66ead9b4b634ee1c60c4c6be0fca.jpg?itok=jmYnWk68",
+   "tvUrl": "",
    "nt": "82239017a0"
   },
   {
@@ -833,6 +869,7 @@
    "paokHome": false,
    "homeLogo": "https://epssalas.gr/wp-content/uploads/2023/01/PNG-ΤΡΑΧΩΝΕΣ-1-league-table.png",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "a90b42782a"
   },
   {
@@ -851,6 +888,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "052aad4694"
   },
   {
@@ -874,6 +912,7 @@
    "paokHome": false,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOJl/0024f0d4-55d9-4ed0-be41-68c0e90c41d5.png",
    "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
+   "tvUrl": "",
    "nt": "45e776b9c0"
   },
   {
@@ -892,6 +931,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "29dc30b535"
   },
   {
@@ -910,6 +950,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/327204416-876598936727395-7539238121809845951-n-1759145224-TwVlRdRx.jpg",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "tvUrl": "",
    "nt": "9d1561d3da"
   },
   {
@@ -928,6 +969,7 @@
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/3CA10C07/photo_new_6AE0FF13.png",
+   "tvUrl": "",
    "nt": "2ab774f621"
   },
   {
@@ -946,6 +988,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/olimpiakos-1757496846-Q42PoPie.png",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "tvUrl": "",
    "nt": "00a5b2026e"
   },
   {
@@ -964,6 +1007,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "db7ee5c250"
   },
   {
@@ -982,6 +1026,7 @@
    "paokHome": true,
    "homeLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jaESTQUDbh58BgzH2CFv97Ov9KpYGuSHWg1yzTle4_NrQ",
    "awayLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jYforv721_4rFgLMHeHTIwHvfrl1-sKxSLiqnCRc9S_jA",
+   "tvUrl": "",
    "nt": "0843c4e45c"
   },
   {
@@ -1000,6 +1045,7 @@
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
    "awayLogo": "https://apps.basket.gr/clubs/1/logo",
+   "tvUrl": "",
    "nt": "ba76d072fc"
   },
   {
@@ -1018,6 +1064,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "https://epssalas.gr/wp-content/uploads/2023/07/athina-90-2.png",
+   "tvUrl": "",
    "nt": "43bea4b007"
   },
   {
@@ -1041,6 +1088,7 @@
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/132429.png",
+   "tvUrl": "",
    "nt": "c133cdc096"
   },
   {
@@ -1064,6 +1112,7 @@
    "paokHome": false,
    "homeLogo": "https://media-cdn.cortextech.io/ffcb6e37-31f4-48f6-91c2-a8c9a6f791a9.png",
    "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
+   "tvUrl": "",
    "nt": "4420c82688"
   },
   {
@@ -1082,6 +1131,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "8c22151e96"
   },
   {
@@ -1100,6 +1150,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
    "awayLogo": "https://koecdn.twic.pics/media/anog-logo-1759229979-jK83ObmL.png",
+   "tvUrl": "",
    "nt": "181cce9b9a"
   },
   {
@@ -1118,6 +1169,7 @@
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000A/photo_new_5DC7EFBA.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "tvUrl": "",
    "nt": "3da2a7a269"
   },
   {
@@ -1136,6 +1188,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
    "awayLogo": "https://koecdn.twic.pics/media/faliro-1757496864-n863Il8C.jpg",
+   "tvUrl": "",
    "nt": "80622598a1"
   },
   {
@@ -1154,6 +1207,7 @@
    "paokHome": true,
    "homeLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_118.jpg",
    "awayLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_122.jpg",
+   "tvUrl": "",
    "nt": "db65cce8ad"
   },
   {
@@ -1172,6 +1226,7 @@
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/19d71df6850c19084f7494c63a2cab42.jpg?itok=KtgTCCqg",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "tvUrl": "",
    "nt": "a198bfe9da"
   },
   {
@@ -1190,6 +1245,7 @@
    "paokHome": false,
    "homeLogo": "https://epssalas.gr/wp-content/uploads/2023/01/PNG-ΠΑΟ-ΣΑΛΑΣ-league-table.png",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "fbeac0d75d"
   },
   {
@@ -1208,6 +1264,7 @@
    "paokHome": true,
    "homeLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jYIxuywZ8hK-I-bG5Cf0w4xw-0QulLUNdHHrMKQU39rDQ",
    "awayLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jYqCl0qTJpnekHT3SPUCsJ1VpgU7PnSEOm3Cbd-I4F6_w",
+   "tvUrl": "",
    "nt": "5cb089f513"
   },
   {
@@ -1226,6 +1283,7 @@
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/clubs/802/logo",
    "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "tvUrl": "",
    "nt": "df9fff0833"
   },
   {
@@ -1249,6 +1307,7 @@
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/2575.png",
+   "tvUrl": "",
    "nt": "b8dbf80909"
   },
   {
@@ -1267,6 +1326,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "28a2458ae4"
   },
   {
@@ -1285,6 +1345,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/panionios-1757496931-xkJBSsvo.png",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "tvUrl": "",
    "nt": "d95b5755ae"
   },
   {
@@ -1303,6 +1364,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "3357a85d46"
   },
   {
@@ -1321,6 +1383,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/olimpiakos-1757496832-ZYWvvSWe.png",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "tvUrl": "",
    "nt": "1f42bdd80a"
   },
   {
@@ -1344,6 +1407,7 @@
    "paokHome": true,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
    "awayLogo": "https://media-cdn.cortextech.io/5750bc8b-dd63-48e4-8586-10d4e5e2b4e2.png",
+   "tvUrl": "",
    "nt": "31dd67f89a"
   },
   {
@@ -1362,6 +1426,7 @@
    "paokHome": false,
    "homeLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_111.jpg",
    "awayLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_118.jpg",
+   "tvUrl": "",
    "nt": "cc9fe4a120"
   },
   {
@@ -1380,6 +1445,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
    "awayLogo": "https://koecdn.twic.pics/media/xanion-1757497102-pCIxwRHQ.jpg",
+   "tvUrl": "",
    "nt": "3f03a0c09f"
   },
   {
@@ -1398,6 +1464,7 @@
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl1568216313930.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "tvUrl": "",
    "nt": "83c5c96432"
   },
   {
@@ -1416,6 +1483,7 @@
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/00000010/photo_new_2BF3BBDA.png",
+   "tvUrl": "",
    "nt": "363b9a55be"
   },
   {
@@ -1434,6 +1502,7 @@
    "paokHome": false,
    "homeLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jYqCl0qTJpnekHT3SPUCsJ1VpgU7PnSEOm3Cbd-I4F6_w",
    "awayLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jYIxuywZ8hK-I-bG5Cf0w4xw-0QulLUNdHHrMKQU39rDQ",
+   "tvUrl": "",
    "nt": "8f442528b1"
   },
   {
@@ -1452,6 +1521,7 @@
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
    "awayLogo": "https://apps.basket.gr/clubs/7/logo",
+   "tvUrl": "",
    "nt": "dc3929fd5a"
   },
   {
@@ -1470,6 +1540,7 @@
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/f43120ba1ac31aa09a5c4afec55ab75e.jpg?itok=0eed57w4",
+   "tvUrl": "",
    "nt": "dea4b0a112"
   },
   {
@@ -1488,6 +1559,7 @@
    "paokHome": false,
    "homeLogo": "https://epssalas.gr/wp-content/uploads/2023/01/PNG-ΕΡΜΗΣ-ΖΩΓΡΑΦΟΥ-league-table.png",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "62f6343b9f"
   },
   {
@@ -1511,6 +1583,7 @@
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/1010.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "tvUrl": "",
    "nt": "426beaeed8"
   },
   {
@@ -1534,6 +1607,7 @@
    "paokHome": false,
    "homeLogo": "https://media-cdn.incrowdsports.com/1d3274d8-da86-4d21-9e97-6810ab88babe.png",
    "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
+   "tvUrl": "",
    "nt": "32aab779be"
   },
   {
@@ -1552,6 +1626,7 @@
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/dd68ef4637f836824756daa4d317879a.jpg?itok=N0R87cN-",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/99a5c1d901ca7907952dfaf8a0db7ddb.jpg?itok=VnfGHPUv",
+   "tvUrl": "",
    "nt": "198b59e786"
   },
   {
@@ -1570,6 +1645,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "12ab74dc4b"
   },
   {
@@ -1588,6 +1664,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "3cb9259aa9"
   },
   {
@@ -1606,6 +1683,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
    "awayLogo": "https://koecdn.twic.pics/media/shma-ethniku-ofpf-1758038638-0PxACujw.png",
+   "tvUrl": "",
    "nt": "55a732727f"
   },
   {
@@ -1624,6 +1702,7 @@
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/00000011/photo_new_212846DF.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "tvUrl": "",
    "nt": "0528a32db7"
   },
   {
@@ -1642,6 +1721,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "573de6cdb1"
   },
   {
@@ -1660,6 +1740,7 @@
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14424751662839.gif",
+   "tvUrl": "",
    "nt": "d3d69c179b"
   },
   {
@@ -1678,6 +1759,7 @@
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/modules/custom/competitions/images/blank-club-profile.png",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "tvUrl": "",
    "nt": "7a4e4374b2"
   },
   {
@@ -1696,6 +1778,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "a6f36100d0"
   },
   {
@@ -1714,6 +1797,7 @@
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/clubs/659/logo",
    "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "tvUrl": "",
    "nt": "ccd7eda058"
   },
   {
@@ -1732,6 +1816,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "https://epssalas.gr/wp-content/uploads/2020/10/PNG-ΚΟΡΥΔΑΛΛΟΣ2.png",
+   "tvUrl": "",
    "nt": "ae35ce9f0c"
   },
   {
@@ -1755,6 +1840,7 @@
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/8354.png",
+   "tvUrl": "",
    "nt": "23086ad1a5"
   },
   {
@@ -1773,6 +1859,7 @@
    "paokHome": true,
    "homeLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_118.jpg",
    "awayLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_121.jpg",
+   "tvUrl": "",
    "nt": "9f9ca78a96"
   },
   {
@@ -1784,7 +1871,7 @@
    "competition": "EuroCup",
    "round": "Round 6",
    "score": "",
-   "tv": "",
+   "tv": "Novasports Prime",
    "url": "https://www.eurocupbasketball.com/",
    "live": {
     "src": "euroleague",
@@ -1796,6 +1883,7 @@
    "paokHome": true,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
    "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS1/1e9e0379-db30-4234-89b0-19576709c285.png",
+   "tvUrl": "",
    "nt": "b79cb11881"
   },
   {
@@ -1820,6 +1908,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "8e16c84199"
   },
   {
@@ -1831,7 +1920,7 @@
    "competition": "Women's Basketball League 1",
    "round": "6η Αγωνιστική",
    "score": "",
-   "tv": "",
+   "tv": "ΕΟΚ TV",
    "url": "https://www.basket.gr/wbl1/schedule/",
    "live": {
     "src": "eok",
@@ -1844,6 +1933,7 @@
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
    "awayLogo": "https://apps.basket.gr/clubs/51/logo",
+   "tvUrl": "",
    "nt": "c4c824dbf5"
   },
   {
@@ -1855,13 +1945,14 @@
    "competition": "Α' Εθνική Κατηγορία Γυναικών",
    "round": "1η ΦΑΣΗ",
    "score": "",
-   "tv": "",
+   "tv": "YouTube",
    "url": "https://www.epo.gr/el/competition/6/matches",
    "start": "2026-11-07T15:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/d073e52756ee5f17232394ecaf0b0ec1.jpg?itok=QE7RdbHR",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "tvUrl": "",
    "nt": "3824d71d44"
   },
   {
@@ -1873,7 +1964,7 @@
    "competition": "Water Polo League Γυναικών",
    "round": "",
    "score": "",
-   "tv": "",
+   "tv": "ΚΟΕ TV",
    "url": "https://waterpololeague.gr/fixture/paok-domus-ergo-lar-2026-11-07",
    "live": {
     "cat": "ASF",
@@ -1889,6 +1980,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
    "awayLogo": "https://koecdn.twic.pics/media/larisa-f-1789898479-XJuZR95A.png",
+   "tvUrl": "",
    "nt": "d91ae7811f"
   },
   {
@@ -1900,7 +1992,7 @@
    "competition": "Water Polo League",
    "round": "",
    "score": "",
-   "tv": "",
+   "tv": "ΚΟΕ TV",
    "url": "https://waterpololeague.gr/fixture/paok-domus-ergo-no-buliagmenhs-2026-11-07",
    "live": {
     "cat": "ASM",
@@ -1916,6 +2008,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
    "awayLogo": "https://koecdn.twic.pics/media/nov-logo-gr-1758965899-UA7wQDNs.png",
+   "tvUrl": "",
    "nt": "5d4897863c"
   },
   {
@@ -1940,6 +2033,7 @@
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/0041ADCB/photo_new_FE76D0B4.png",
+   "tvUrl": "",
    "nt": "18c8911df6"
   },
   {
@@ -1951,13 +2045,14 @@
    "competition": "Volley League γυναικών",
    "round": "4η αγωνιστική",
    "score": "",
-   "tv": "",
+   "tv": "ΣΠΟΡ FM TV",
    "url": "https://acpaok.gr/%cf%8c%cf%80%ce%bf%cf%85-%ce%ba%ce%b1%ce%b9-%ce%b1%ce%bd-%cf%80%ce%b1%ce%af%ce%b6%ce%b5%ce%b9%cf%82-%cf%83-%ce%b1%ce%ba%ce%bf%ce%bb%ce%bf%cf%85%ce%b8%ce%ac%ce%bc%ce%b5-31-03-05-04/",
    "start": "2026-11-08T16:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "c45a0727f7"
   },
   {
@@ -1976,6 +2071,7 @@
    "paokHome": false,
    "homeLogo": "https://epssalas.gr/wp-content/uploads/2023/07/olympakos-salaminas.png",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "f76e9500ee"
   },
   {
@@ -1987,7 +2083,7 @@
    "competition": "Volley League",
    "round": "3η αγωνιστική",
    "score": "",
-   "tv": "",
+   "tv": "ΕΡΤ2 ΣΠΟΡ HD",
    "url": "https://www.volleyleague.gr/index.php/season/2026-27/regular-season-results-statistics",
    "live": {
     "src": "dp",
@@ -2000,6 +2096,7 @@
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl16909759871795.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "tvUrl": "",
    "nt": "c9fcd47542"
   },
   {
@@ -2023,6 +2120,7 @@
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/435.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "tvUrl": "",
    "nt": "890c2ee3db"
   },
   {
@@ -2034,13 +2132,14 @@
    "competition": "Α1 Γυναικών",
    "round": "6η Αγωνιστική",
    "score": "",
-   "tv": "",
+   "tv": "ΕΡΤ2 ΣΠΟΡ HD",
    "url": "http://statistics.handball.org.gr/gr/sportevents.asp",
    "start": "2026-11-09T17:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "ff4f395b7e"
   },
   {
@@ -2064,6 +2163,7 @@
    "paokHome": false,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/ba6e2d99-3ea9-4730-a0ce-830cccca4657.png",
    "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
+   "tvUrl": "",
    "nt": "ce94f32735"
   },
   {
@@ -2088,6 +2188,7 @@
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl13607973882903.gif",
+   "tvUrl": "",
    "nt": "ac6d6e1a13"
   },
   {
@@ -2106,6 +2207,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "06ebdcafe5"
   },
   {
@@ -2124,6 +2226,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/xanion-1757572705-KVq2UMey.jpg",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "tvUrl": "",
    "nt": "7cad84aba3"
   },
   {
@@ -2142,6 +2245,7 @@
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/B742845D/photo_new_04E98281.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "tvUrl": "",
    "nt": "520418b1b8"
   },
   {
@@ -2160,6 +2264,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/alimos-1757618338-HykYQxju.jpg",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "tvUrl": "",
    "nt": "546e41e621"
   },
   {
@@ -2178,6 +2283,7 @@
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/2a679000b33763417294af0f84aab5c2.jpg?itok=aqA59Zmn",
+   "tvUrl": "",
    "nt": "54b0fc5212"
   },
   {
@@ -2196,6 +2302,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "https://epssalas.gr/wp-content/uploads/2023/09/PNG-ΑΕΛ.png",
+   "tvUrl": "",
    "nt": "a066365c5b"
   },
   {
@@ -2214,6 +2321,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "77ac97955d"
   },
   {
@@ -2237,6 +2345,7 @@
    "paokHome": false,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/06792bed-0383-4de2-80b9-95ecca3fd973.png",
    "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
+   "tvUrl": "",
    "nt": "24b9baf5d8"
   },
   {
@@ -2255,6 +2364,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "977ada4407"
   },
   {
@@ -2273,6 +2383,7 @@
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl17901894601105.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "tvUrl": "",
    "nt": "0fe6eed454"
   },
   {
@@ -2291,6 +2402,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/glyfada-1757496556-dcU9OmwO.jpg",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "tvUrl": "",
    "nt": "977f25899a"
   },
   {
@@ -2309,6 +2421,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
    "awayLogo": "https://koecdn.twic.pics/media/ilioupoli-1757497079-gCdg0afz.png",
+   "tvUrl": "",
    "nt": "c59590a861"
   },
   {
@@ -2327,6 +2440,7 @@
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/clubs/349/logo",
    "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "tvUrl": "",
    "nt": "975a41a728"
   },
   {
@@ -2345,6 +2459,7 @@
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/00000005/photo_new_6A11CE7A.png",
+   "tvUrl": "",
    "nt": "590038467d"
   },
   {
@@ -2363,6 +2478,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "3fc1fd56ea"
   },
   {
@@ -2381,6 +2497,7 @@
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/b97ea823585e7a5a44d422f59974bac7.jpg?itok=IRlmFyow",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "tvUrl": "",
    "nt": "62d1acc8d2"
   },
   {
@@ -2399,6 +2516,7 @@
    "paokHome": false,
    "homeLogo": "https://epssalas.gr/wp-content/uploads/2023/07/doukas.png",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "8a132e3b44"
   },
   {
@@ -2422,6 +2540,7 @@
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/21969.png",
+   "tvUrl": "",
    "nt": "fa0f340773"
   },
   {
@@ -2440,6 +2559,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/shma-4-2-1-1-1-1758207317-I4sKrotf.png",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "tvUrl": "",
    "nt": "35a1eab371"
   },
   {
@@ -2458,6 +2578,7 @@
    "paokHome": false,
    "homeLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jYySlvKxvqlkbkmbiHnn7AYbHy0KsYw7YU0mItgp4Awkg",
    "awayLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jYIxuywZ8hK-I-bG5Cf0w4xw-0QulLUNdHHrMKQU39rDQ",
+   "tvUrl": "",
    "nt": "8bbddb8634"
   },
   {
@@ -2476,6 +2597,7 @@
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
    "awayLogo": "https://apps.basket.gr/clubs/82/logo",
+   "tvUrl": "",
    "nt": "66bfa222e6"
   },
   {
@@ -2494,6 +2616,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
    "awayLogo": "https://koecdn.twic.pics/media/ilisiakos-1789898091-f0lvya6R.jpg",
+   "tvUrl": "",
    "nt": "be955896f7"
   },
   {
@@ -2512,6 +2635,7 @@
    "paokHome": true,
    "homeLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jYIxuywZ8hK-I-bG5Cf0w4xw-0QulLUNdHHrMKQU39rDQ",
    "awayLogo": "https://res.ehf.eu/doxtore/TLCEQLGQDD/e1GDx4hAd4m3OP2MUjZsUblI3hAS2CVXmCLcWXth6jYySlvKxvqlkbkmbiHnn7AYbHy0KsYw7YU0mItgp4Awkg",
+   "tvUrl": "",
    "nt": "49345c8b00"
   },
   {
@@ -2530,6 +2654,7 @@
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl166625673654.gif",
+   "tvUrl": "",
    "nt": "45c30eb3bc"
   },
   {
@@ -2548,6 +2673,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "https://epssalas.gr/wp-content/uploads/2024/10/pyrgos.png",
+   "tvUrl": "",
    "nt": "62418d0680"
   },
   {
@@ -2571,6 +2697,7 @@
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/887.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "tvUrl": "",
    "nt": "888941a94d"
   },
   {
@@ -2589,6 +2716,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/panionios-1757496971-8NsrgxDo.png",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "tvUrl": "",
    "nt": "c65960a302"
   },
   {
@@ -2607,6 +2735,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "b43486b6c7"
   },
   {
@@ -2625,6 +2754,7 @@
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/889647d17809f7d7689211e38581fe5a.jpg?itok=FyonEAuV",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/dd68ef4637f836824756daa4d317879a.jpg?itok=N0R87cN-",
+   "tvUrl": "",
    "nt": "2ad829a2ac"
   },
   {
@@ -2643,6 +2773,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/yno-logo-1762525447-m9yd11ip.jpg",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "tvUrl": "",
    "nt": "1a53b67407"
   },
   {
@@ -2661,6 +2792,7 @@
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/2A25C696/photo_new_4BF0C19C.png",
+   "tvUrl": "",
    "nt": "8e6dadc2a6"
   },
   {
@@ -2679,6 +2811,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "dcd5b7da2e"
   },
   {
@@ -2697,6 +2830,7 @@
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl1718776924122.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "tvUrl": "",
    "nt": "30f831d284"
   },
   {
@@ -2715,6 +2849,7 @@
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/clubs/493/logo",
    "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "tvUrl": "",
    "nt": "8c4af10469"
   },
   {
@@ -2733,6 +2868,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "https://epssalas.gr/wp-content/uploads/2023/01/PNG-ΜΙΝΩΤΑΥΡΟΣ-league-table.png",
+   "tvUrl": "",
    "nt": "b6c1f06a94"
   },
   {
@@ -2756,6 +2892,7 @@
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/20043.png",
+   "tvUrl": "",
    "nt": "aeb33d8fc2"
   },
   {
@@ -2779,6 +2916,7 @@
    "paokHome": true,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
    "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOJl/0024f0d4-55d9-4ed0-be41-68c0e90c41d5.png",
+   "tvUrl": "",
    "nt": "925c7f6965"
   },
   {
@@ -2797,6 +2935,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "3d7269cb8e"
   },
   {
@@ -2815,6 +2954,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "e28a924760"
   },
   {
@@ -2833,6 +2973,7 @@
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
    "awayLogo": "https://apps.basket.gr/clubs/31/logo",
+   "tvUrl": "",
    "nt": "f5d2ff16c1"
   },
   {
@@ -2851,6 +2992,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
    "awayLogo": "https://koecdn.twic.pics/media/apollon-1757488473-Yl0JuEC9.jpg",
+   "tvUrl": "",
    "nt": "0cc01bead3"
   },
   {
@@ -2869,6 +3011,7 @@
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14110420042832.gif",
+   "tvUrl": "",
    "nt": "e1ab3a1f35"
   },
   {
@@ -2887,6 +3030,7 @@
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/00000002/photo_new_7F6C9D90.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "tvUrl": "",
    "nt": "51546afb6d"
   },
   {
@@ -2905,6 +3049,7 @@
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/d7aa6360e83232ec98861e11cdd6bc9f.jpg?itok=nLzgyfYH",
+   "tvUrl": "",
    "nt": "4db3141ce1"
   },
   {
@@ -2923,6 +3068,7 @@
    "paokHome": false,
    "homeLogo": "https://epssalas.gr/wp-content/uploads/2022/09/PNG-ΑΕΚ-1.png",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "9b045ef8ec"
   },
   {
@@ -2946,6 +3092,7 @@
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/443.png",
+   "tvUrl": "",
    "nt": "d29f8e9840"
   },
   {
@@ -2969,6 +3116,7 @@
    "paokHome": true,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
    "awayLogo": "https://media-cdn.cortextech.io/ffcb6e37-31f4-48f6-91c2-a8c9a6f791a9.png",
+   "tvUrl": "",
    "nt": "d1fb12de73"
   },
   {
@@ -2987,6 +3135,7 @@
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/clubs/1776/logo",
    "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "tvUrl": "",
    "nt": "4714450f60"
   },
   {
@@ -3005,6 +3154,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/peristeri3-1771358253-dRhtXJk1.png",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "tvUrl": "",
    "nt": "f9efe83a6a"
   },
   {
@@ -3023,6 +3173,7 @@
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000F/photo_new_FC6AF74E.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "tvUrl": "",
    "nt": "7e73885876"
   },
   {
@@ -3041,6 +3192,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "89312c584e"
   },
   {
@@ -3059,6 +3211,7 @@
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl17603494571792.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "tvUrl": "",
    "nt": "ce5033089c"
   },
   {
@@ -3082,6 +3235,7 @@
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/8354.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "tvUrl": "",
    "nt": "0db6ddc23a"
   },
   {
@@ -3100,6 +3254,7 @@
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/37d919ce977355c09f73baf583cac5a1.jpg?itok=2RdeuFPP",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "tvUrl": "",
    "nt": "1062c36618"
   },
   {
@@ -3118,6 +3273,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "https://epssalas.gr/wp-content/uploads/2023/01/PNG-ΤΡΑΧΩΝΕΣ-1-league-table.png",
+   "tvUrl": "",
    "nt": "8aaa969c38"
   },
   {
@@ -3136,6 +3292,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
    "awayLogo": "https://koecdn.twic.pics/media/logo-1u6opn9-1757681672-ImWgfrk6.jpg",
+   "tvUrl": "",
    "nt": "0e94f7e6dc"
   },
   {
@@ -3159,6 +3316,7 @@
    "paokHome": false,
    "homeLogo": "https://media-cdn.cortextech.io/5750bc8b-dd63-48e4-8586-10d4e5e2b4e2.png",
    "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
+   "tvUrl": "",
    "nt": "09cde28f5f"
   },
   {
@@ -3177,6 +3335,7 @@
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/00000001/photo_new_160CD854.png",
+   "tvUrl": "",
    "nt": "c424801b12"
   },
   {
@@ -3200,6 +3359,7 @@
    "paokHome": true,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
    "awayLogo": "https://media-cdn.incrowdsports.com/1d3274d8-da86-4d21-9e97-6810ab88babe.png",
+   "tvUrl": "",
    "nt": "25e0bb1263"
   },
   {
@@ -3218,6 +3378,7 @@
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl1599421873423.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "tvUrl": "",
    "nt": "ae4a913929"
   },
   {
@@ -3236,6 +3397,7 @@
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000D/photo_new_30338F54.png",
+   "tvUrl": "",
    "nt": "65c924b3ff"
   },
   {
@@ -3254,6 +3416,7 @@
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
    "awayLogo": "https://apps.basket.gr/club-teams/2/logo",
+   "tvUrl": "",
    "nt": "db1a35b470"
   },
   {
@@ -3272,6 +3435,7 @@
    "paokHome": false,
    "homeLogo": "https://epssalas.gr/wp-content/uploads/2023/07/athina-90-2.png",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "a66142b3e0"
   },
   {
@@ -3290,6 +3454,7 @@
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl151506935980.gif",
+   "tvUrl": "",
    "nt": "750f6177ff"
   },
   {
@@ -3308,6 +3473,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "769e2d7555"
   },
   {
@@ -3331,6 +3497,7 @@
    "paokHome": false,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS1/1e9e0379-db30-4234-89b0-19576709c285.png",
    "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
+   "tvUrl": "",
    "nt": "fd126df5f1"
   },
   {
@@ -3349,6 +3516,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/pekev-1789898708-1ZgUQCyK.jpeg",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "tvUrl": "",
    "nt": "e70481be87"
   },
   {
@@ -3367,6 +3535,7 @@
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/2A25C696/photo_new_4BF0C19C.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "tvUrl": "",
    "nt": "a4b67c5a73"
   },
   {
@@ -3385,6 +3554,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "8ee2ec0b6f"
   },
   {
@@ -3403,6 +3573,7 @@
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl1568216313930.gif",
+   "tvUrl": "",
    "nt": "39a101501f"
   },
   {
@@ -3421,6 +3592,7 @@
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/clubs/1/logo",
    "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "tvUrl": "",
    "nt": "aeebec8764"
   },
   {
@@ -3439,6 +3611,7 @@
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/fb84f8acc0b35a20cf5eddd3d801eaf8.jpg?itok=Lr8qTrJt",
+   "tvUrl": "",
    "nt": "244d18973b"
   },
   {
@@ -3457,6 +3630,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "https://epssalas.gr/wp-content/uploads/2023/01/PNG-ΠΑΟ-ΣΑΛΑΣ-league-table.png",
+   "tvUrl": "",
    "nt": "6df1335613"
   },
   {
@@ -3480,6 +3654,7 @@
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/11553.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "tvUrl": "",
    "nt": "89e585ad79"
   },
   {
@@ -3503,6 +3678,7 @@
    "paokHome": true,
    "homeLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
    "awayLogo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/ba6e2d99-3ea9-4730-a0ce-830cccca4657.png",
+   "tvUrl": "",
    "nt": "63a36241df"
   },
   {
@@ -3521,6 +3697,7 @@
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
    "awayLogo": "https://apps.basket.gr/clubs/802/logo",
+   "tvUrl": "",
    "nt": "6762cc08a4"
   },
   {
@@ -3539,6 +3716,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/nov-logo-gr-1758978938-hWBXWQRE.png",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "tvUrl": "",
    "nt": "ce62e308b0"
   },
   {
@@ -3557,6 +3735,7 @@
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/00000010/photo_new_2BF3BBDA.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "tvUrl": "",
    "nt": "d534d6d458"
   },
   {
@@ -3580,6 +3759,7 @@
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/435.png",
+   "tvUrl": "",
    "nt": "a4e84f37a6"
   },
   {
@@ -3598,6 +3778,7 @@
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/0aa9875ddbc50bb6ac5064fc12a9039e.jpg?itok=aKr1Kf_z",
+   "tvUrl": "",
    "nt": "afa3fa82a4"
   },
   {
@@ -3616,6 +3797,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "https://epssalas.gr/wp-content/uploads/2023/01/PNG-ΕΡΜΗΣ-ΖΩΓΡΑΦΟΥ-league-table.png",
+   "tvUrl": "",
    "nt": "322cf0ecc2"
   },
   {
@@ -3634,6 +3816,7 @@
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14424751662839.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "tvUrl": "",
    "nt": "db80bc6290"
   },
   {
@@ -3652,6 +3835,7 @@
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/clubs/7/logo",
    "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "tvUrl": "",
    "nt": "23d9e638a4"
   },
   {
@@ -3670,6 +3854,7 @@
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
    "awayLogo": "https://apps.basket.gr/clubs/659/logo",
+   "tvUrl": "",
    "nt": "18302f77bc"
   },
   {
@@ -3688,6 +3873,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
    "awayLogo": "https://koecdn.twic.pics/media/327204416-876598936727395-7539238121809845951-n-1759145224-TwVlRdRx.jpg",
+   "tvUrl": "",
    "nt": "c5e20ae8a1"
   },
   {
@@ -3706,6 +3892,7 @@
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/BB4B460F/photo_new_62684735.png",
+   "tvUrl": "",
    "nt": "ea4bf474c9"
   },
   {
@@ -3729,6 +3916,7 @@
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/2575.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "tvUrl": "",
    "nt": "95e7499b8f"
   },
   {
@@ -3747,6 +3935,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "b55de54968"
   },
   {
@@ -3765,6 +3954,7 @@
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl16909759871795.gif",
+   "tvUrl": "",
    "nt": "c7c902b89e"
   },
   {
@@ -3783,6 +3973,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/panathinaikos-1757496876-53QTIGxK.jpg",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "tvUrl": "",
    "nt": "d6b36aeff6"
   },
   {
@@ -3801,6 +3992,7 @@
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/3dba66ead9b4b634ee1c60c4c6be0fca.jpg?itok=jmYnWk68",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "tvUrl": "",
    "nt": "65584f597c"
   },
   {
@@ -3819,6 +4011,7 @@
    "paokHome": false,
    "homeLogo": "https://epssalas.gr/wp-content/uploads/2020/10/PNG-ΚΟΡΥΔΑΛΛΟΣ2.png",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "a8df7bd956"
   },
   {
@@ -3837,6 +4030,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
    "awayLogo": "https://koecdn.twic.pics/media/olimpiakos-1757496846-Q42PoPie.png",
+   "tvUrl": "",
    "nt": "17d777c042"
   },
   {
@@ -3855,6 +4049,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/anog-logo-1759229979-jK83ObmL.png",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "tvUrl": "",
    "nt": "6b540b1fd1"
   },
   {
@@ -3873,6 +4068,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/faliro-1757496864-n863Il8C.jpg",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "tvUrl": "",
    "nt": "2a1d93da6e"
   },
   {
@@ -3891,6 +4087,7 @@
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/clubs/51/logo",
    "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "tvUrl": "",
    "nt": "c48e50d373"
   },
   {
@@ -3909,6 +4106,7 @@
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/00000005/photo_new_6A11CE7A.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "tvUrl": "",
    "nt": "69c0073c32"
   },
   {
@@ -3932,6 +4130,7 @@
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/11431.png",
+   "tvUrl": "",
    "nt": "681684b6ca"
   },
   {
@@ -3950,6 +4149,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "cbccc8df46"
   },
   {
@@ -3968,6 +4168,7 @@
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/19d71df6850c19084f7494c63a2cab42.jpg?itok=KtgTCCqg",
+   "tvUrl": "",
    "nt": "cad1ca0b1e"
   },
   {
@@ -3986,6 +4187,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "https://epssalas.gr/wp-content/uploads/2023/07/olympakos-salaminas.png",
+   "tvUrl": "",
    "nt": "2731b7f3ac"
   },
   {
@@ -4004,6 +4206,7 @@
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl13607973882903.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "tvUrl": "",
    "nt": "b2f465e194"
   },
   {
@@ -4022,6 +4225,7 @@
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
    "awayLogo": "https://apps.basket.gr/clubs/349/logo",
+   "tvUrl": "",
    "nt": "a5194bf014"
   },
   {
@@ -4040,6 +4244,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
    "awayLogo": "https://koecdn.twic.pics/media/olimpiakos-1757496832-ZYWvvSWe.png",
+   "tvUrl": "",
    "nt": "a6781cd3f9"
   },
   {
@@ -4058,6 +4263,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
    "awayLogo": "https://koecdn.twic.pics/media/panionios-1757496931-xkJBSsvo.png",
+   "tvUrl": "",
    "nt": "221bda7a1c"
   },
   {
@@ -4076,6 +4282,7 @@
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000F/photo_new_FC6AF74E.png",
+   "tvUrl": "",
    "nt": "52d4182256"
   },
   {
@@ -4099,6 +4306,7 @@
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/132429.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "tvUrl": "",
    "nt": "ba64ab54de"
   },
   {
@@ -4117,6 +4325,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "df0cbd44a8"
   },
   {
@@ -4135,6 +4344,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "4f8147bf19"
   },
   {
@@ -4153,6 +4363,7 @@
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl17901894601105.gif",
+   "tvUrl": "",
    "nt": "21209e656c"
   },
   {
@@ -4171,6 +4382,7 @@
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/f43120ba1ac31aa09a5c4afec55ab75e.jpg?itok=0eed57w4",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "tvUrl": "",
    "nt": "c32ed7e196"
   },
   {
@@ -4189,6 +4401,7 @@
    "paokHome": false,
    "homeLogo": "https://epssalas.gr/wp-content/uploads/2023/09/PNG-ΑΕΛ.png",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "55ea5ff319"
   },
   {
@@ -4207,6 +4420,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/shma-ethniku-ofpf-1758038638-0PxACujw.png",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "tvUrl": "",
    "nt": "9df31b7dcd"
   },
   {
@@ -4230,6 +4444,7 @@
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/887.png",
+   "tvUrl": "",
    "nt": "989c43d859"
   },
   {
@@ -4248,6 +4463,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "cc9cac0054"
   },
   {
@@ -4266,6 +4482,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "ebe4166800"
   },
   {
@@ -4284,6 +4501,7 @@
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl166625673654.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "tvUrl": "",
    "nt": "661ce52913"
   },
   {
@@ -4302,6 +4520,7 @@
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
    "awayLogo": "https://www.epo.gr/modules/custom/competitions/images/blank-club-profile.png",
+   "tvUrl": "",
    "nt": "afc2b5222b"
   },
   {
@@ -4320,6 +4539,7 @@
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/3CA10C07/photo_new_6AE0FF13.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "tvUrl": "",
    "nt": "46814ec279"
   },
   {
@@ -4338,6 +4558,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "https://epssalas.gr/wp-content/uploads/2023/07/doukas.png",
+   "tvUrl": "",
    "nt": "4e72a831b0"
   },
   {
@@ -4361,6 +4582,7 @@
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/21969.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "tvUrl": "",
    "nt": "0dcdac16fc"
   },
   {
@@ -4379,6 +4601,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "4050293cdf"
   },
   {
@@ -4397,6 +4620,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "02f2ea9d76"
   },
   {
@@ -4415,6 +4639,7 @@
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl1718776924122.gif",
+   "tvUrl": "",
    "nt": "5bdae05ff5"
   },
   {
@@ -4433,6 +4658,7 @@
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/d073e52756ee5f17232394ecaf0b0ec1.jpg?itok=QE7RdbHR",
+   "tvUrl": "",
    "nt": "aca373f407"
   },
   {
@@ -4451,6 +4677,7 @@
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/clubs/82/logo",
    "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "tvUrl": "",
    "nt": "f7a6aa7dd8"
   },
   {
@@ -4469,6 +4696,7 @@
    "paokHome": false,
    "homeLogo": "https://epssalas.gr/wp-content/uploads/2024/10/pyrgos.png",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "aa841bf2f4"
   },
   {
@@ -4487,6 +4715,7 @@
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
    "awayLogo": "https://apps.basket.gr/clubs/493/logo",
+   "tvUrl": "",
    "nt": "3c3fdeee37"
   },
   {
@@ -4510,6 +4739,7 @@
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/6790.png",
+   "tvUrl": "",
    "nt": "241688b9b3"
   },
   {
@@ -4528,6 +4758,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "3f45a4e46f"
   },
   {
@@ -4546,6 +4777,7 @@
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14110420042832.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "tvUrl": "",
    "nt": "29cfb38c0d"
   },
   {
@@ -4564,6 +4796,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "7f23f3f6c6"
   },
   {
@@ -4582,6 +4815,7 @@
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/00000011/photo_new_212846DF.png",
+   "tvUrl": "",
    "nt": "6585599b6f"
   },
   {
@@ -4605,6 +4839,7 @@
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/20043.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "tvUrl": "",
    "nt": "3dc502d90d"
   },
   {
@@ -4623,6 +4858,7 @@
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl17603494571792.gif",
+   "tvUrl": "",
    "nt": "a370b12804"
   },
   {
@@ -4641,6 +4877,7 @@
    "paokHome": false,
    "homeLogo": "https://apps.basket.gr/clubs/31/logo",
    "awayLogo": "https://apps.basket.gr/clubs/2/logo",
+   "tvUrl": "",
    "nt": "9de17b1236"
   },
   {
@@ -4659,6 +4896,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/xanion-1757497102-pCIxwRHQ.jpg",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "tvUrl": "",
    "nt": "e644091329"
   },
   {
@@ -4677,6 +4915,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/nov-logo-gr-1758965899-UA7wQDNs.png",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "tvUrl": "",
    "nt": "90f4abd94c"
   },
   {
@@ -4695,6 +4934,7 @@
    "paokHome": true,
    "homeLogo": "https://apps.basket.gr/clubs/2/logo",
    "awayLogo": "https://apps.basket.gr/clubs/1776/logo",
+   "tvUrl": "",
    "nt": "721b62a46f"
   },
   {
@@ -4713,6 +4953,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
    "awayLogo": "https://koecdn.twic.pics/media/xanion-1757572705-KVq2UMey.jpg",
+   "tvUrl": "",
    "nt": "5dc86ba800"
   },
   {
@@ -4731,6 +4972,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
    "awayLogo": "https://koecdn.twic.pics/media/panionios-1757496971-8NsrgxDo.png",
+   "tvUrl": "",
    "nt": "fe8a7a8f05"
   },
   {
@@ -4749,6 +4991,7 @@
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000D/photo_new_30338F54.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "tvUrl": "",
    "nt": "f58db96825"
   },
   {
@@ -4772,6 +5015,7 @@
    "paokHome": true,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/1010.png",
+   "tvUrl": "",
    "nt": "4ed326a0c4"
   },
   {
@@ -4790,6 +5034,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "8214c8e0e4"
   },
   {
@@ -4808,6 +5053,7 @@
    "paokHome": true,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl1599421873423.gif",
+   "tvUrl": "",
    "nt": "f38186d35e"
   },
   {
@@ -4826,6 +5072,7 @@
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/2a679000b33763417294af0f84aab5c2.jpg?itok=aqA59Zmn",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "tvUrl": "",
    "nt": "60f71a2e81"
   },
   {
@@ -4844,6 +5091,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
    "awayLogo": "https://koecdn.twic.pics/media/glyfada-1757496556-dcU9OmwO.jpg",
+   "tvUrl": "",
    "nt": "020fb8efc0"
   },
   {
@@ -4862,6 +5110,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/ilisiakos-1789898091-f0lvya6R.jpg",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "tvUrl": "",
    "nt": "1faa3e9509"
   },
   {
@@ -4885,6 +5134,7 @@
    "paokHome": false,
    "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/5276.png",
    "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+   "tvUrl": "",
    "nt": "46d38302c4"
   },
   {
@@ -4903,6 +5153,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "6768f81c01"
   },
   {
@@ -4921,6 +5172,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "f302654c7d"
   },
   {
@@ -4939,6 +5191,7 @@
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/b97ea823585e7a5a44d422f59974bac7.jpg?itok=IRlmFyow",
+   "tvUrl": "",
    "nt": "e1ad5f5a93"
   },
   {
@@ -4957,6 +5210,7 @@
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/00000002/photo_new_7F6C9D90.png",
+   "tvUrl": "",
    "nt": "39bd87ca0d"
   },
   {
@@ -4975,6 +5229,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/larisa-f-1789898479-XJuZR95A.png",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "tvUrl": "",
    "nt": "369f5467c2"
   },
   {
@@ -4993,6 +5248,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
    "awayLogo": "https://koecdn.twic.pics/media/yno-logo-1762525447-m9yd11ip.jpg",
+   "tvUrl": "",
    "nt": "6211fd961c"
   },
   {
@@ -5011,6 +5267,7 @@
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/B742845D/photo_new_04E98281.png",
+   "tvUrl": "",
    "nt": "883fa87ab9"
   },
   {
@@ -5029,6 +5286,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "2b4eaa274b"
   },
   {
@@ -5047,6 +5305,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "a0b823b98a"
   },
   {
@@ -5065,6 +5324,7 @@
    "paokHome": false,
    "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl151506935980.gif",
    "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "tvUrl": "",
    "nt": "f240cca114"
   },
   {
@@ -5083,6 +5343,7 @@
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/d7aa6360e83232ec98861e11cdd6bc9f.jpg?itok=nLzgyfYH",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "tvUrl": "",
    "nt": "c5ce69dd45"
   },
   {
@@ -5101,6 +5362,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
    "awayLogo": "https://koecdn.twic.pics/media/alimos-1757618338-HykYQxju.jpg",
+   "tvUrl": "",
    "nt": "17b796f1ac"
   },
   {
@@ -5119,6 +5381,7 @@
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0041ADCB/photo_new_FE76D0B4.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "tvUrl": "",
    "nt": "fab2a808d7"
   },
   {
@@ -5137,6 +5400,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "8eaf59eeb7"
   },
   {
@@ -5155,6 +5419,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/ilioupoli-1757497079-gCdg0afz.png",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
+   "tvUrl": "",
    "nt": "30d3fcbea9"
   },
   {
@@ -5173,6 +5438,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/apollon-1757488473-Yl0JuEC9.jpg",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+   "tvUrl": "",
    "nt": "5c25bb4749"
   },
   {
@@ -5191,6 +5457,7 @@
    "paokHome": true,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/37d919ce977355c09f73baf583cac5a1.jpg?itok=2RdeuFPP",
+   "tvUrl": "",
    "nt": "7f0276bf1b"
   },
   {
@@ -5209,6 +5476,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
    "awayLogo": "https://koecdn.twic.pics/media/shma-4-2-1-1-1-1758207317-I4sKrotf.png",
+   "tvUrl": "",
    "nt": "a4db5c807d"
   },
   {
@@ -5227,6 +5495,7 @@
    "paokHome": true,
    "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
    "awayLogo": "https://koecdn.twic.pics/media/peristeri3-1771358253-dRhtXJk1.png",
+   "tvUrl": "",
    "nt": "b347475a06"
   },
   {
@@ -5245,6 +5514,7 @@
    "paokHome": false,
    "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/fb84f8acc0b35a20cf5eddd3d801eaf8.jpg?itok=Lr8qTrJt",
    "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "tvUrl": "",
    "nt": "669abf7273"
   },
   {
@@ -5263,6 +5533,7 @@
    "paokHome": false,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/00000001/photo_new_160CD854.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
+   "tvUrl": "",
    "nt": "bebdfc5372"
   },
   {
@@ -5281,6 +5552,7 @@
    "paokHome": true,
    "homeLogo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
    "awayLogo": "https://www.esake.gr/dat/esaketeam/0000000A/photo_new_5DC7EFBA.png",
+   "tvUrl": "",
    "nt": "fd196c5447"
   },
   {
@@ -5299,6 +5571,7 @@
    "paokHome": false,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "5458cdfe42"
   },
   {
@@ -5317,20 +5590,21 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
+   "tvUrl": "",
    "nt": "34cb6afeb2"
   }
  ],
  "updated": {
-  "football": "2026-11-03T00:00+02:00",
-  "football-women": "2026-11-03T00:00+02:00",
-  "basketball": "2026-11-03T00:01+02:00",
-  "basketball-women": "2026-11-03T00:01+02:00",
-  "volley": "2026-11-03T00:01+02:00",
-  "volley-women": "2026-11-03T00:01+02:00",
-  "handball": "2026-11-03T00:01+02:00",
-  "handball-women": "2026-11-03T00:02+02:00",
-  "waterpolo": "2026-11-03T00:02+02:00",
-  "waterpolo-women": "2026-11-03T00:02+02:00",
-  "futsal": "2026-11-03T00:02+02:00"
+  "football": "2026-11-03T11:44+02:00",
+  "football-women": "2026-11-03T11:44+02:00",
+  "basketball": "2026-11-03T11:44+02:00",
+  "basketball-women": "2026-11-03T11:44+02:00",
+  "volley": "2026-11-03T11:44+02:00",
+  "volley-women": "2026-11-03T11:44+02:00",
+  "handball": "2026-11-03T11:45+02:00",
+  "handball-women": "2026-11-03T11:45+02:00",
+  "waterpolo": "2026-11-03T11:45+02:00",
+  "waterpolo-women": "2026-11-03T11:45+02:00",
+  "futsal": "2026-11-03T11:45+02:00"
  }
 }

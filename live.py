@@ -29,7 +29,9 @@ POLL_SECONDS = 20  # οι πηγές (και το CDN του api/live.js, 15'') 
 FAIL_ALERT = 15   # τόσες συνεχόμενες αποτυχίες μιας πηγής (~5') → ειδοποίηση λειτουργίας
 MAX_RUNTIME = dt.timedelta(hours=5, minutes=20)
 IDLE_EXIT = dt.timedelta(minutes=20)
-EARLY_START = dt.timedelta(minutes=5)
+# Ένα «σε εξέλιξη» χωρίς σκορ πριν από την ώρα του αγώνα είναι προθέρμανση/παρουσίαση (Data Project ως
+# και 20' νωρίτερα, Euroleague λίγα λεπτά πριν το τζάμπολ): μετρά μόνο από την ώρα του αγώνα και μετά.
+EARLY_START = dt.timedelta(0)
 # Κοινό User-Agent browser: το ESPN απορρίπτει (403) όσα αναφέρουν το όνομα ή τη διεύθυνση της σελίδας.
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
 
@@ -118,7 +120,10 @@ def euroleague_state(live: dict) -> dict:
             return 0
     a, b = num(h.get("ScoreA")), num(h.get("ScoreB"))
     quarter = num(h.get("Quarter"))
-    if h.get("Live"):
+    clock0 = str(h.get("RemainingPartialTime") or "").strip()
+    if h.get("Live") and not (a or b) and (quarter < 1 or (quarter == 1 and clock0 in ("", "10:00"))):
+        state = "pre"  # «Live» λίγα λεπτά πριν από το τζάμπολ (παρουσίαση ομάδων), χωρίς ρολόι και σκορ
+    elif h.get("Live"):
         state = "in"
     elif a or b:
         state = "post"

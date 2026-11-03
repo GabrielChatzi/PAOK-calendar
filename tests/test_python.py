@@ -81,6 +81,21 @@ class LiveEvents(unittest.TestCase):
         self.assertFalse(back.get("post_seen"))
 
 
+class Euroleague(unittest.TestCase):
+    def state(self, h):
+        with mock.patch.object(live, "get_json", lambda url: h):
+            return live.euroleague_state({"code": 1, "season": "U2026"})["state"]
+
+    def test_live_flag_before_tipoff_is_not_start(self):
+        self.assertEqual(self.state({"Live": True, "ScoreA": "0", "ScoreB": "0", "Quarter": "0"}), "pre")
+        self.assertEqual(self.state({"Live": True, "ScoreA": "0", "ScoreB": "0", "Quarter": "1", "RemainingPartialTime": "10:00"}), "pre")
+
+    def test_started(self):
+        self.assertEqual(self.state({"Live": True, "ScoreA": "0", "ScoreB": "0", "Quarter": "1", "RemainingPartialTime": "09:41"}), "in")
+        self.assertEqual(self.state({"Live": True, "ScoreA": "2", "ScoreB": "0", "Quarter": "1"}), "in")
+        self.assertEqual(self.state({"Live": True, "ScoreA": "40", "ScoreB": "38", "Quarter": "0"}), "in")  # ημίχρονο
+
+
 class Football(unittest.TestCase):
     def espn(self, name, state, home=0, away=0, pens=None):
         comps = [{"homeAway": "home", "score": str(home), "team": {"id": "1"}}, {"homeAway": "away", "score": str(away), "team": {"id": "2"}}]

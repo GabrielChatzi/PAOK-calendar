@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
 python3 - <<'PY'
-import json, urllib.request, html, re
-def get(u):
-    return json.loads(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent":"Mozilla/5.0"}), timeout=30).read())
-posts = get("https://acpaok.gr/wp-json/wp/v2/posts?search=%CF%83%CF%84%CE%B7%CE%BD%20TV&per_page=10&_fields=date,title,content")
-for p in posts[:6]:
-    t = html.unescape(p["title"]["rendered"])
-    c = p["content"]["rendered"]
-    c = re.sub(r'<iframe[^>]*title="([^"]*)"[^>]*src="([^"]*)"[^>]*>', r' [VIDEO: \1 | \2] ', c)
-    c = re.sub(r'<a [^>]*href="([^"]*)"[^>]*>', r' [LINK \1] ', c)
-    c = html.unescape(re.sub(r"<[^>]+>", " ", c)); c = re.sub(r"\s+", " ", c)
-    print("=====", p["date"], t); print(c[:1400])
+import datetime as dt, club, build_calendars as b
+day=dt.date(2026,11,1); d2=dt.date(2026,10,31)
+M=lambda s,h,a,ph,d=day,t=(14,0): b.Match(section=s,uid=s+h,day=d,time=dt.time(*t),home=h,away=a,paok_home=ph)
+ms=[M("football-women","ΠΑΣ ΠΥΡΓΟΣ","ΠΑΟΚ",False), M("futsal","ΠΑΟΚ","ΚΟΡΥΔΑΛΛΟΥ ΑΟΔ",True),
+    M("basketball-women","ΑΕΟ ΠΡΩΤΕΑΣ ΒΟΥΛΑΣ","ΠΑΟΚ",False,t=(16,0)), M("volley-women","ΠΑΟΚ","Z.A.O.N.",True,t=(19,0)),
+    M("handball-women","ΠΑΟΚ","ΑΘΗΝΑΪΚΟΣ",True,d=d2,t=(17,30)), M("volley","ΠΑΟΚ","Α.Ο.Π.Κηφισιάς",True,d=d2,t=(18,0)),
+    M("waterpolo","ΠΑΟΚ","ΕΘΝΙΚΟΣ ΟΦΠΦ",True,d=d2,t=(16,0))]
+now=dt.datetime(2026,10,30,12,0,tzinfo=b.ATHENS)
+for m in ms:
+    club.tv(m.section,[m],now=now); print(m.section, "|", m.tv, "|", m.tv_url)
 PY

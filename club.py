@@ -24,7 +24,7 @@ import json
 import re
 import sys
 
-from build_calendars import ATHENS, Match, clean, fetch, greek_month, is_paok, plain, short_hash
+from build_calendars import ATHENS, Match, clean, fetch, greek_month, greekish, is_paok, plain, short_hash
 
 API = "https://acpaok.gr/wp-json/wp/v2/"
 
@@ -334,3 +334,80 @@ def results(section: str, matches: list[Match], now: dt.datetime | None = None) 
                 print(f"  αποτέλεσμα από την ΑΣ ΠΑΟΚ: {m.home} – {m.away} {score} («{title}»)")
                 m.score, m.live = score, None
                 break
+
+
+# ---------------------------------------------------------------- τηλεοπτική μετάδοση
+
+# Η ΑΣ ΠΑΟΚ γράφει το κανάλι στην ανακοίνωση του αγώνα («Η αναμέτρηση θα μεταδοθεί μέσω του ΕΟΚ TV»)
+# και ανεβάζει τη μέρα των αγώνων «Με τον ΠΑΟΚ και στην TV! (dd/mm)» με τα live streaming (YouTube):
+# είτε ενσωματωμένα βίντεο με τον αγώνα στον τίτλο, είτε «14:00, Πύργος-ΠΑΟΚ (Ποδόσφαιρο γυναικών)» και σύνδεσμο.
+CHANNEL_RE = re.compile(r"μεταδοθεί\s+(?:ζωντανά\s+)?(?:τηλεοπτικά\s+)?(?:μέσω|από)\s+(?:του\s+|της\s+|το\s+|την\s+)?"
+                        r"(?:καναλιού\s+|σταθμού\s+)?([^.;,(]{2,40}?)\s*(?:[.;,(]|$| και )")
+TV_POST_RE = re.compile(r"στην TV.*\((\d{1,2})/(\d{1,2})\)")
+YOUTUBE_RE = re.compile(r"youtube\.com/(?:embed/|watch\?v=)([\w-]{11})|youtu\.be/([\w-]{11})")
+SPORT_WORDS = {  # λέξεις στον τίτλο ενός βίντεο → άθλημα (για να μη μπερδευτούν αγώνες με ίδιο αντίπαλο)
+    "futsal": r"FUTSAL|ΣΑΛΑΣ", "basketball": r"BASKET|ΜΠΑΣΚΕΤ|WBL|EUROCUP", "volley": r"VOLLEY|ΒΟΛΕ",
+    "handball": r"HANDBALL|ΧΑΝΤΜΠΟΛ|HANDBAL", "waterpolo": r"WATER ?POLO|ΠΟΛΟ\b|WPL", "football": r"ΠΟΔΟΣΦΑΙΡΟ(?! ΣΑΛΑΣ)|FOOTBALL|WFL",
+}
+
+
+def team_words(name: str) -> list[str]:
+    """Οι λέξεις ενός ονόματος ομάδας που ξεχωρίζουν (πρώτα 5 γράμματα), σε κεφαλαία ελληνικά."""
+    words = re.findall(r"[A-ZΑ-Ω]{4,}", greekish(re.sub(r"[.\s]+(?=[A-ZΑ-Ω]\b)", "", plain(name))))
+    return [w[:5] for w in words if not w.startswith("ΠΑΟΚ")]
+
+
+def same_sport(section: str, text: str) -> bool:
+    t = plain(text)
+    sport = section.replace("-women", "")
+    other = [k for k, rx in SPORT_WORDS.items() if k != sport and re.search(rx, t)]
+    return not other or re.search(SPORT_WORDS.get(sport, "$^"), t) is not None
+
+
+def tv(section: str, matches: list[Match], now: dt.datetime | None = None) -> None:
+    """Κανάλι και σύνδεσμος μετάδοσης για τους αγώνες των επόμενων ημερών (όσο δεν τα έχει η επίσημη πηγή)."""
+    now = now or dt.datetime.now(ATHENS)
+    soon = [m for m in matches if not m.score and -1 <= (m.day - now.date()).days <= 10]
+    if not soon:
+        return
+    cats = get_json("categories?per_page=100&_fields=id,name")
+    section_by_cat = {c["id"]: section_of(c["name"]) for c in cats}
+    youth = {c["id"] for c in cats if YOUTH_RE.search(c["name"])}
+    for post in sorted(recent_posts(), key=lambda p: p["date"]):
+        title = html.unescape(post["title"]["rendered"])
+        raw = post["content"]["rendered"]
+        posted = dt.date.fromisoformat(post["date"][:10])
+        tvp = TV_POST_RE.search(title)
+        if tvp:
+            day = dt.date(posted.year, int(tvp.group(2)), int(tvp.group(1)))
+            # Κάθε βίντεο ή σύνδεσμος με το κείμενο που τον περιγράφει (τίτλος βίντεο ή η γραμμή πριν).
+            items = [(html.unescape(t), u) for t, u in re.findall(r'<iframe[^>]*title="([^"]*)"[^>]*src="([^"]*)"', raw)]
+            for para, url in re.findall(r"<p[^>]*>([^<]*\d{1,2}:\d{2}[^<]*)</p>\s*<p[^>]*>\s*<a[^>]*href=\"([^\"]+)\"", raw):
+                items.append((html.unescape(para), url))
+            for text, url in items:
+                y = YOUTUBE_RE.search(url)
+                link = f"https://www.youtube.com/watch?v={y.group(1) or y.group(2)}" if y else url
+                for m in soon:
+                    other = m.away if is_paok(m.home) else m.home
+                    words = team_words(other)
+                    if m.day == day and words and any(w in greekish(plain(text)) for w in words) and same_sport(m.section, text):
+                        if not m.tv_url:
+                            m.tv_url = link
+                            if not m.tv:
+                                m.tv = "AC PAOK TV" if "AC PAOK TV" in text.upper() else "YouTube"
+            continue
+        if youth & set(post["categories"]):
+            continue
+        if {section_by_cat.get(c) for c in post["categories"]} - {None} != {section}:
+            continue
+        when = re.search(r"\((\d{1,2})/(\d{1,2}),\s*\d{1,2}[:.]\d{2}\)", title)
+        ch = CHANNEL_RE.search(clean(raw))
+        if not when or not ch:
+            continue
+        day = dt.date(posted.year, int(when.group(2)), int(when.group(1)))
+        if day < posted - dt.timedelta(days=60):
+            day = day.replace(year=posted.year + 1)
+        channel = re.sub(r"\s+", " ", ch.group(1)).strip(" «»\"")
+        for m in soon:
+            if m.day == day and not m.tv:
+                m.tv = channel

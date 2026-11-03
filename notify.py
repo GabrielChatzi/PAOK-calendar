@@ -90,7 +90,7 @@ def _oidc_token() -> str | None:
 
 
 def _push(topics: list[str], title: str, message: str, url: str, tag: str | None = None,
-          quiet: bool = False, once: str | None = None) -> None:
+          quiet: bool = False, once: str | None = None, start: str | None = None) -> None:
     """Ειδοποίηση web push σε όσες συσκευές έχουν γραφτεί σε κάποιο από τα θέματα (μία φορά στην καθεμία).
 
     once: κλειδί· όποια συσκευή πήρε ήδη ειδοποίηση με το ίδιο κλειδί (από οποιαδήποτε αποστολή) παραλείπεται.
@@ -104,7 +104,7 @@ def _push(topics: list[str], title: str, message: str, url: str, tag: str | None
             print("  ! push: λείπει το OIDC token (permissions: id-token: write)", file=sys.stderr)
             return
         body = {"topics": topics, "title": title, "body": message, "url": url, "tag": tag, "quiet": quiet,
-                "once": once}
+                "once": once, "start": start}
         req = urllib.request.Request(SITE + "api/push", data=json.dumps(body).encode(), method="POST",
                                      headers={"Content-Type": "application/json", "Authorization": f"Bearer {token}"})
         with urllib.request.urlopen(req, timeout=60) as r:
@@ -137,7 +137,9 @@ def send(section: str, kind: str, title: str, message: str, match: dict | None =
     # (το ίδιο tag δεν αρκεί: το iPhone δείχνει και τις δύο).
     if kind == "result" and has_match:
         once = once or f"{match['nt']}-result"
-    _push(list(dict.fromkeys(topics)), title, message, url, tag, quiet=kind == "result", once=once)
+    # start: η ώρα του αγώνα, ώστε το κινητό να γράψει την ώρα στη δική του ζώνη (βλ. sw.js).
+    start = match.get("start") if has_match and match.get("timeKnown") else None
+    _push(list(dict.fromkeys(topics)), title, message, url, tag, quiet=kind == "result", once=once, start=start)
 
 
 def changes(previous: list[dict], current: list[dict], sections: set[str]) -> list[tuple]:
@@ -234,8 +236,9 @@ def reminders(matches_path: Path, state_path: Path) -> int:
         mins = max(1, round((start - now).total_seconds() / 60 / 5) * 5)
         sec = m["section"]
         details = ", ".join(x for x in (m.get("venue"), m.get("competition")) if x)
+        tv = f" · 📺 {m['tv']}" if m.get("tv") else ""
         send(sec, "pre", f"{EMOJI.get(sec, '')} Σε {mins} λεπτά: {teams(m)}",
-             f"Στις {local:%H:%M}" + (f", {details}" if details else ""), match=m)
+             f"Στις {local:%H:%M}" + (f", {details}" if details else "") + tv, match=m)
         state[key] = now.isoformat(timespec="minutes")
         sent += 1
     # Αγώνες χωρίς live (π.χ. ποδόσφαιρο γυναικών, futsal): ειδοποίηση και στην ώρα έναρξης, σε όσους

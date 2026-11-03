@@ -9,7 +9,7 @@
 // - Δείχνει τις ειδοποιήσεις web push και, όταν πατηθεί μία, ανοίγει τον αγώνα ή το τμήμα της.
 //
 // Αλλάζοντας το VERSION, οι συσκευές κατεβάζουν ξανά τη σελίδα.
-const VERSION = "v3";
+const VERSION = "v4";
 const SHELL = `paokalendar-shell-${VERSION}`;
 const DATA = "paokalendar-data";
 const ASSETS = "paokalendar-assets";
@@ -98,11 +98,27 @@ self.addEventListener("fetch", (event) => {
 
 // ---------------------------------------------------------------- ειδοποιήσεις
 
+// Όσοι είναι σε άλλη ζώνη ώρας: η ώρα του αγώνα στο κείμενο (ώρα Ελλάδας) γίνεται τοπική,
+// με την ώρα Ελλάδας σε παρένθεση, π.χ. «Στις 19:00 (20:00 ώρα Ελλάδας)».
+function localTimes(text, start) {
+  if (!start || !text) return text;
+  try {
+    const d = new Date(start);
+    if (isNaN(d)) return text;
+    const fmt = (tz) => new Intl.DateTimeFormat("el-GR", { timeZone: tz, hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).format(d);
+    const here = fmt(undefined), athens = fmt("Europe/Athens");
+    if (here === athens || !text.includes(athens)) return text;
+    return text.replace(athens, `${here} (${athens} ώρα Ελλάδας)`);
+  } catch {
+    return text;
+  }
+}
+
 self.addEventListener("push", (event) => {
   let data = {};
   try { data = event.data ? event.data.json() : {}; } catch { data = { body: event.data && event.data.text() }; }
   const options = {
-    body: data.body || "",
+    body: localTimes(data.body || "", data.start),
     icon: "icons/icon-192.png",
     badge: "icons/badge-96.png",
     data: { url: data.url || "./" },

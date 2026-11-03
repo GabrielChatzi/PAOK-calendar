@@ -337,6 +337,17 @@
   }
   .btn.solid { background: var(--ink); color: var(--paper); }
   .btn:active { background: var(--ink); color: var(--paper); }
+  .tv a { color: inherit; }
+  .cups h4 { font: 800 19px/1.2 var(--display); margin: 18px 0 6px; }
+  table.st.cup td { vertical-align: top; padding-top: 9px; padding-bottom: 9px; }
+  table.st.cup td.round { font-size: 14px; color: var(--muted); width: 28%; }
+  table.st.cup td.legs { font-size: 14px; white-space: nowrap; }
+  table.st.cup td.legs a { color: inherit; }
+  table.st.cup td.agg { text-align: right; font-weight: 700; white-space: nowrap; }
+  table.st.cup td.agg small { font-weight: 500; font-size: 13px; }
+  table.st.cup tr.win td.agg small { color: var(--ink); text-decoration: underline; }
+  table.st.cup tr.out td { color: var(--muted); }
+  .tz-note { font-size: 15px; color: var(--muted); border-left: 4px solid var(--ink); padding: 4px 0 4px 10px; margin: 0 0 14px; }
   .admin-box { border: 2px solid var(--ink); padding: 4px 14px 14px; margin: 18px 0; }
   .admin-box h3 { font: 800 22px/1.1 var(--display); margin: 12px 0 6px; }
   .adm-score { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0; }
@@ -508,7 +519,34 @@
 <script>
 (function () {
   "use strict";
-  var TZ = "Europe/Athens";
+  // Ώρα: όσοι είναι σε άλλη ζώνη ώρας βλέπουν τις ώρες στη δική τους (με την ώρα Ελλάδας στη σελίδα
+  // του αγώνα). Μπορούν να γυρίσουν στην ώρα Ελλάδας (αποθηκεύεται στη συσκευή).
+  var ATHENS = "Europe/Athens";
+  var deviceTz = (function () { try { return Intl.DateTimeFormat().resolvedOptions().timeZone || ATHENS; } catch (e) { return ATHENS; } })();
+  function offsetOf(tz, d) {
+    var p = new Intl.DateTimeFormat("en-US", { timeZone: tz, hourCycle: "h23", year: "numeric", month: "numeric", day: "numeric", hour: "numeric", minute: "numeric" }).formatToParts(d);
+    var v = {}; p.forEach(function (x) { v[x.type] = +x.value; });
+    return (Date.UTC(v.year, v.month - 1, v.day, v.hour, v.minute) - Math.floor(d.getTime() / 60000) * 60000) / 60000;
+  }
+  var abroad = false;
+  try { abroad = offsetOf(deviceTz, new Date()) !== offsetOf(ATHENS, new Date()); } catch (e) {}
+  var forceAthens = false;
+  try { forceAthens = localStorage.getItem("paok-tz") === "athens"; } catch (e) {}
+  var TZ = abroad && !forceAthens ? deviceTz : ATHENS;
+  var fmtAthensTime = new Intl.DateTimeFormat("el-GR", { timeZone: ATHENS, hour: "2-digit", minute: "2-digit", hour12: false });
+  function tzPlace(tz) {
+    try {
+      var n = new Intl.DateTimeFormat("el-GR", { timeZone: tz, timeZoneName: "long" }).formatToParts(new Date())
+        .filter(function (x) { return x.type === "timeZoneName"; })[0];
+      return n ? n.value : tz;
+    } catch (e) { return tz; }
+  }
+  function tzNoteHtml() {
+    if (!abroad) return "";
+    return '<p class="tz-note">' + (TZ === ATHENS
+      ? "Οι ώρες είναι σε ώρα Ελλάδας. <button type=\"button\" class=\"linkish\" data-act=\"tz-local\">Δείξε τες στην ώρα μου</button>"
+      : "Οι ώρες είναι στην ώρα σου (" + esc(tzPlace(TZ)) + "). <button type=\"button\" class=\"linkish\" data-act=\"tz-athens\">Ώρα Ελλάδας</button>") + "</p>";
+  }
   var PAGE = 40;
   var KIND_INFO = {
     pre: ["Πριν τον αγώνα", "Περίπου μία ώρα πριν ξεκινήσει"],
@@ -634,7 +672,9 @@
     var meta = [showSection ? s.emoji + " " + s.name : "", m.competition, m.round].filter(Boolean).map(esc).join(", ");
     if (m.note) meta += " · " + esc(m.note);
     if (m.venue) meta += "<br>" + esc(m.venue);
-    if (m.tv) meta += ", " + esc(m.tv);
+    if ((m.tv || m.tvUrl) && !m.score) meta += '<br><span class="tv">📺 ' + (m.tvUrl
+      ? '<a href="' + esc(m.tvUrl) + '" rel="noopener" target="_blank">' + esc(m.tv || "Live streaming") + "</a>"
+      : esc(m.tv)) + "</span>";
     var parts = /^(\d+)-(\d+)$/.exec(m.score || "");
     var ls = !m.score && liveState[m.uid];
     var timeCell, scoreCell = "";
@@ -787,9 +827,84 @@
     }
     return null;
   }
+  // ---- Κύπελλα: η πορεία του ΠΑΟΚ, από τους αγώνες του (όλα τα αθλήματα, χωρίς άλλη πηγή).
+  // Νοκ-άουτ: ένα ζευγάρι ανά αντίπαλο και φάση, με τους αγώνες και το σύνολο. Φάση ομίλων ή πρωταθλήματος:
+  // μία γραμμή με τον απολογισμό (η βαθμολογία της, όπου υπάρχει, είναι πιο πάνω).
+  var CUP_RE = /Κύπελλ|Cup|Europa|Conference|Champions|EHF|CEV|Euro/i;
+  var GROUP_RE = /League Phase|Φάση πρωταθλήματος|Round \d|Όμιλ|Group|αγωνιστική|Κανονική/i;
+  function seasonStart() {
+    var now = new Date(), y = now.getMonth() >= 6 ? now.getFullYear() : now.getFullYear() - 1;
+    return new Date(y, 6, 1).getTime();
+  }
+  function paokScore(m) {
+    var p = /^(\d+)-(\d+)$/.exec(m.score || "");
+    return p ? (m.paokHome ? [+p[1], +p[2]] : [+p[2], +p[1]]) : null;
+  }
+  function cupsHtml(key) {
+    var from = seasonStart();
+    var list = data.matches.filter(function (m) {
+      return m.section === key && CUP_RE.test(m.competition || "") && new Date(m.start).getTime() >= from;
+    });
+    if (!list.length) return "";
+    var comps = [];
+    list.forEach(function (m) { if (comps.indexOf(m.competition) < 0) comps.push(m.competition); });
+    return '<div class="standing cups"><h3>Κύπελλα και Ευρώπη</h3>' + comps.map(function (comp) {
+      var ms = list.filter(function (m) { return m.competition === comp; });
+      var rows = [], groups = {}, ties = {}, order = [];
+      ms.forEach(function (m) {
+        var round = m.round || "";
+        if (GROUP_RE.test(round)) {
+          var g = round.replace(/^Round \d+$/i, "Φάση ομίλων").replace(/League Phase/i, "Φάση πρωταθλήματος");
+          if (!groups[g]) { groups[g] = []; order.push(["g", g]); }
+          groups[g].push(m);
+          return;
+        }
+        var phase = round.replace(/,?\s*\d+ος αγώνας.*$/, "").trim();
+        var opp = m.paokHome ? m.away : m.home;
+        var k = phase + "|" + opp;
+        if (!ties[k]) { ties[k] = { phase: phase, opp: opp, logo: m.paokHome ? m.awayLogo : m.homeLogo, legs: [], note: "" }; order.push(["t", k]); }
+        ties[k].legs.push(m);
+        var adv = /πρόκριση ([^(]+?)\s*\(/.exec(round);
+        if (adv) ties[k].note = adv[1];
+      });
+      var n = 0;
+      order.forEach(function (o) {
+        if (o[0] === "g") {
+          var gm = groups[o[1]], c = { w: 0, d: 0, l: 0 }, played = 0;
+          gm.forEach(function (m) { var r = outcome(m); if (r) { c[r]++; played++; } });
+          var next = gm.filter(function (m) { return !m.score; })[0];
+          rows.push("<tr><td class=\"round\">" + esc(o[1]) + '</td><td colspan="2">' +
+            (played ? played + (played === 1 ? " αγώνας: " : " αγώνες: ") + [c.w ? c.w + "Ν" : "", c.d ? c.d + "Ι" : "", c.l ? c.l + "Η" : ""].filter(Boolean).join(" ") : "Δεν έχει ξεκινήσει") +
+            (next ? '<br><small>Επόμενος: <a href="' + matchHref(next) + '">' + esc(next.paokHome ? next.away : next.home) + ", " + esc(fmtShort.format(new Date(next.start))) + "</a></small>" : "") +
+            "</td><td></td></tr>");
+          return;
+        }
+        var t = ties[o[1]];
+        n++;
+        var legs = t.legs.map(function (m) {
+          var sc = paokScore(m);
+          return '<a href="' + matchHref(m) + '">' + (m.paokHome ? "εντός" : "εκτός") + " " + (sc ? sc[0] + "-" + sc[1] : esc(fmtShort.format(new Date(m.start)))) + "</a>";
+        }).join("<br>");
+        var scores = t.legs.map(paokScore), done = scores.every(Boolean);
+        var tot = done ? scores.reduce(function (a, b) { return [a[0] + b[0], a[1] + b[1]]; }, [0, 0]) : null;
+        var res = "";
+        if (t.note) res = isPaokName(t.note) ? "Πρόκριση" : "Αποκλεισμός";
+        else if (tot && tot[0] !== tot[1]) res = tot[0] > tot[1] ? "Πρόκριση" : "Αποκλεισμός";
+        var last = t.legs[t.legs.length - 1];
+        if (!res && tot && last.note) res = last.note;
+        rows.push('<tr class="' + (res === "Πρόκριση" ? "win" : res === "Αποκλεισμός" ? "out" : "") + '"><td class="round">' + esc(t.phase || "Γύρος " + n) + "</td>" +
+          '<td class="team">' + teamHtml(t.opp, t.logo, key) + "</td><td class=\"legs\">" + legs + "</td>" +
+          '<td class="agg">' + (tot && t.legs.length > 1 ? tot[0] + "-" + tot[1] + "<br>" : "") + (res ? "<small>" + esc(res) + "</small>" : "") + "</td></tr>");
+      });
+      return "<h4>" + esc(comp) + '</h4><div class="table-wrap"><table class="st cup"><tbody>' + rows.join("") + "</tbody></table></div>";
+    }).join("") + '<p class="source">Τα σκορ είναι από τη σκοπιά του ΠΑΟΚ (ΠΑΟΚ πρώτα).</p></div>';
+  }
+  function isPaokName(name) { return /^\s*(PAOK|ΠΑΟΚ)/i.test(name || ""); }
+
   function standingsHtml(key) {
     var tables = standings[key] || [];
-    if (!tables.length) return '<p class="empty">Δεν υπάρχει βαθμολογία για αυτό το τμήμα ακόμα.</p>';
+    var cups = cupsHtml(key);
+    if (!tables.length && !cups) return '<p class="empty">Δεν υπάρχει βαθμολογία για αυτό το τμήμα ακόμα.</p>';
     return tables.map(function (t) {
       var head = "<tr><th>#</th><th>Ομάδα</th>" + t.columns.map(function (c) { return "<th>" + esc(c) + "</th>"; }).join("") + "</tr>";
       var rows = t.rows.map(function (r) {
@@ -800,7 +915,7 @@
       return '<div class="standing"><h3>' + esc(t.title) + '</h3><div class="table-wrap"><table class="st">' +
         "<thead>" + head + "</thead><tbody>" + rows + "</tbody></table></div>" +
         '<p class="source"><a href="' + esc(t.url) + '" rel="noopener" target="_blank">Πηγή βαθμολογίας</a></p></div>';
-    }).join("");
+    }).join("") + cups;
   }
 
   // ---- Ημερολόγια και ειδοποιήσεις
@@ -935,7 +1050,7 @@
     var body = prefs.view === "month"
       ? monthHtml(list, true)
       : listHtml(list.filter(function (m) { return prefs.when === "upcoming" ? isUpcoming(m) : !isUpcoming(m); }), prefs.when, true);
-    return '<p class="lede">Ανεπίσημη σελίδα φιλάθλων με πρόγραμμα, αποτελέσματα και βαθμολογίες όλων των τμημάτων του ΠΑΟΚ. Η εφαρμογή ενημερώνεται αυτόματα, κάθε 2 ώρες και πιο συχνά την ώρα των αγώνων. Κάθε τμήμα έχει τη δική του σελίδα, στο μενού πάνω δεξιά.</p>' +
+    return '<p class="lede">Ανεπίσημη σελίδα φιλάθλων με πρόγραμμα, αποτελέσματα και βαθμολογίες όλων των τμημάτων του ΠΑΟΚ. Η εφαρμογή ενημερώνεται αυτόματα, κάθε 2 ώρες και πιο συχνά την ώρα των αγώνων. Κάθε τμήμα έχει τη δική του σελίδα, στο μενού πάνω δεξιά.</p>' + tzNoteHtml() +
       installHtml() + lostHtml() +
       nextHtml(data.matches) +
       '<h2 class="section-title">Όλοι οι αγώνες</h2>' +
@@ -1012,7 +1127,7 @@
 
   function footerHtml() {
     return "<footer><p>Το PAOKalendar είναι ανεπίσημη σελίδα φιλάθλων και δεν συνδέεται με τον ΠΑΟΚ ή τις εταιρείες του.</p>" +
-      "<p>Αγώνες χωρίς ορισμένη ώρα εμφανίζονται ως «TBC» και στα ημερολόγια μπαίνουν στις 18:00.</p>" +
+      "<p>Αγώνες χωρίς ορισμένη ώρα εμφανίζονται ως «TBC» και στα ημερολόγια μπαίνουν στις 18:00 ώρα Ελλάδας.</p>" +
       "<p>Πηγές: ESPN, ΕΠΟ, esake.gr, Euroleague, basket.gr, volleyleague.gr, ΕΟΠΕ, ΟΧΕ, Water Polo League, ΕΠΣ Σάλας, UEFA, CEV, EHF, European Aquatics, ΑΣ ΠΑΟΚ. Τα σήματα ανήκουν στις ομάδες.</p>" +
       '<p><a href="#/app">Το PAOKalendar ως εφαρμογή στο κινητό</a></p></footer>';
   }
@@ -1186,6 +1301,11 @@
     }
     if (b.dataset.act === "push-off") { disablePush(); return; }
     if (b.dataset.act === "push-test") { testPush(); return; }
+    if (b.dataset.act === "tz-athens" || b.dataset.act === "tz-local") {
+      try { if (b.dataset.act === "tz-athens") localStorage.setItem("paok-tz", "athens"); else localStorage.removeItem("paok-tz"); } catch (err) {}
+      location.reload();
+      return;
+    }
     if (b.dataset.act === "adm-live") { adminSend("score", false); return; }
     if (b.dataset.act === "adm-final") { adminSend("score", true); return; }
     if (b.dataset.act === "adm-clear") { adminSend("clear"); return; }
@@ -1701,9 +1821,10 @@
     var head = '<section class="match-head" aria-label="Αγώνας">' +
       '<p class="mh-comp">' + esc([s.emoji + " " + s.name, m.competition, m.round].filter(Boolean).join(", ")) + "</p>" +
       '<p class="mh-status">' + status + "</p>" + teamRow("home") + teamRow("away") +
-      '<p class="mh-when">' + esc(cap(fmtLong.format(date)) + (m.timeKnown ? ", " + fmtTime.format(date) : ", ώρα TBC") + (m.venue ? ", " + m.venue : "")) + "</p></section>";
+      '<p class="mh-when">' + esc(cap(fmtLong.format(date)) + (m.timeKnown ? ", " + fmtTime.format(date) + athensSuffix(date) : ", ώρα TBC") + (m.venue ? ", " + m.venue : "")) + "</p></section>";
 
     var actions = [];
+    if (m.tvUrl && !parts && (ongoing || isUpcoming(m))) actions.push('<a class="btn' + (ongoing === "on" ? " solid" : "") + '" href="' + esc(m.tvUrl) + '" rel="noopener" target="_blank">📺 ' + esc(ongoing === "on" ? "Δες τον αγώνα" : m.tv || "Μετάδοση") + "</a>");
     if (ongoing === "on" && m.url) actions.push('<a class="btn solid" href="' + esc(m.url) + '" rel="noopener" target="_blank">Live στην πηγή</a>');
     if (isUpcoming(m) && !finalLive) actions.push('<a class="btn" href="' + matchHref(m) + '/notify">Ειδοποιήσεις</a>');
     if (navigator.share) actions.push('<button type="button" class="btn" data-act="share">Κοινοποίηση</button>');
@@ -1720,19 +1841,23 @@
       body = '<p class="help">Για αυτόν τον αγώνα δεν υπάρχει live σκορ εδώ. Όταν ξεκινήσει, θα βρεις σύνδεσμο για τη ζωντανή σελίδα της πηγής.</p>';
     }
 
-    var info = [["Ημερομηνία", cap(fmtLong.format(date))], ["Ώρα", m.timeKnown ? fmtTime.format(date) : "Δεν έχει οριστεί (TBC)"]];
+    var info = [["Ημερομηνία", cap(fmtLong.format(date))], ["Ώρα", m.timeKnown ? fmtTime.format(date) + athensSuffix(date) : "Δεν έχει οριστεί (TBC)"]];
     if (m.venue) info.push(["Γήπεδο", m.venue]);
-    if (m.tv) info.push(["Τηλεόραση", m.tv]);
+    if (m.tv || m.tvUrl) info.push(["Τηλεόραση", m.tv || "Live streaming", m.tvUrl]);
     if (m.status) info.push(["Κατάσταση", (STATUS_TEXT[m.status] || m.status) + (m.note ? ": " + m.note : "")]);
     info.push(["Έδρα", m.paokHome ? "Εντός" : "Εκτός"]);
     if (m.competition) info.push(["Διοργάνωση", m.competition + (m.round ? ", " + m.round : "")]);
     var infoHtml = "<h3>Πληροφορίες</h3><dl class=\"info\">" + info.map(function (i) {
-      return "<dt>" + esc(i[0]) + "</dt><dd>" + esc(i[1]) + "</dd>";
+      return "<dt>" + esc(i[0]) + "</dt><dd>" + (i[2] ? '<a href="' + esc(i[2]) + '" rel="noopener" target="_blank">' + esc(i[1]) + " ↗</a>" : esc(i[1])) + "</dd>";
     }).join("") + (m.url ? '<dt>Πηγή</dt><dd><a href="' + esc(m.url) + '" rel="noopener" target="_blank">Άνοιγμα</a></dd>' : "") + "</dl>";
 
     return '<div class="match"><a class="back" href="#/' + m.section + '">‹ ' + esc(s.name) + "</a>" + head +
-      (actions.length ? '<div class="match-actions">' + actions.join("") + "</div>" : "") +
+      (actions.length ? '<div class="match-actions">' + actions.join("") + "</div>" : "") + tzNoteHtml() +
       body + (isAdmin() ? adminMatchHtml(m) : "") + (isUpcoming(m) && !finalLive ? matchNotifyHtml(m) : "") + infoHtml + "</div>" + footerHtml();
+  }
+
+  function athensSuffix(date) {
+    return TZ === ATHENS ? "" : " (" + fmtAthensTime.format(date) + " ώρα Ελλάδας)";
   }
 
   // ---- Διαχειριστής: σκορ με ειδοποίηση (api/admin.js)

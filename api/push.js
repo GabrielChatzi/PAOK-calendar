@@ -35,6 +35,8 @@ export default async function handler(req, res) {
     tag: body.tag ? String(body.tag).slice(0, 64) : undefined,
     // quiet: αν υπάρχει ήδη ειδοποίηση με το ίδιο tag, την αντικαθιστά χωρίς νέο ήχο.
     quiet: body.quiet ? true : undefined,
+    // Η ώρα έναρξης (ISO), για να γράψει το κινητό την ώρα στη δική του ζώνη (docs/sw.js).
+    start: typeof body.start === "string" && /^\d{4}-\d\d-\d\dT\d\d:\d\d/.test(body.start) ? body.start.slice(0, 32) : undefined,
   };
 
   const r = await deliver([...wanted], payload, { once: body.once });

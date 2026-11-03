@@ -315,6 +315,32 @@ class ClubResults(unittest.TestCase):
         self.assertEqual(m.score, "7-3")
 
 
+class TV(unittest.TestCase):
+    def test_channel_from_announcement(self):
+        import club
+        for text, want in [("Η αναμέτρηση θα μεταδοθεί μέσω του ΕΟΚ TV. Για το", "ΕΟΚ TV"),
+                           ("Το παιχνίδι θα μεταδοθεί μέσω του AC PAOK TV.", "AC PAOK TV"),
+                           ("Ο αγώνας θα μεταδοθεί ζωντανά από την ΕΡΤ Sports 2, ενώ", "ΕΡΤ Sports 2")]:
+            self.assertEqual(club.CHANNEL_RE.search(text).group(1), want)
+
+    def test_video_matches_opponent_and_sport(self):
+        import club
+        self.assertIn("ΚΟΡΥΔ", club.team_words("ΚΟΡΥΔΑΛΛΟΥ ΑΟΔ"))
+        self.assertEqual(club.team_words("Z.A.O.N."), ["ΖΑΟΝ"])
+        self.assertTrue(club.same_sport("futsal", "ΠΑΟΚ - Κορυδαλλού | FUTSAL SUPER LEAGUE"))
+        self.assertFalse(club.same_sport("volley-women", "Αllwyn WBL1 - ΠΡΩΤΕΑΣ ΒΟΥΛΑΣ- ΠΑΟΚ"))
+
+    def test_weekly_programme_channel(self):
+        import club
+        post = {"id": 1, "date": "2026-11-02T12:25:00", "modified": "2026-11-02T12:25:00", "link": "x",
+                "title": {"rendered": "Όπου και αν παίζεις σ’ ακολουθάμε (03/11-09/11)"},
+                "content": {"rendered": "<p>Τρίτη 3 Νοεμβρίου 2026</p><p>ΚΑΕ ΠΑΟΚ<br>6η αγωνιστική, EuroCup<br>"
+                                        "PAOK Sports Arena<br>20:00, ΠΑΟΚ-Ρόμα (Novasports Prime)</p>"}}
+        with mock.patch.object(club, "get_json", lambda path: [post]):
+            e = club.program_entries(dt.date(2026, 11, 2))
+        self.assertEqual((e[0]["section"], e[0]["channel"], e[0]["away"]), ("basketball", "Novasports Prime", "Ρόμα"))
+
+
 class Admin(unittest.TestCase):
     def test_admin_final_overrides(self):
         m = b.Match(section="futsal", uid="u1", day=dt.date(2026, 11, 1), time=dt.time(14, 0), home="ΠΑΟΚ",

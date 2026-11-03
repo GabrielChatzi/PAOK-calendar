@@ -93,6 +93,7 @@ class Match:
     round: str = ""
     score: str = ""  # π.χ. "3-1", μόνο για αγώνες που έχουν γίνει
     tv: str = ""
+    tv_url: str = ""  # σύνδεσμος της μετάδοσης (π.χ. YouTube), αν υπάρχει
     url: str = ""
     home_logo: str = ""
     away_logo: str = ""
@@ -111,6 +112,7 @@ class Match:
         d["paokHome"] = d.pop("paok_home")
         d["homeLogo"] = d.pop("home_logo")
         d["awayLogo"] = d.pop("away_logo")
+        d["tvUrl"] = d.pop("tv_url")
         d["nt"] = match_topic_id(self.uid)
         for k in ("live", "status", "note"):
             if not d[k]:
@@ -947,6 +949,7 @@ def ea_data() -> dict:
         token = get(f"{EA_API}/site/token")["data"]["token"]
         _EA["schedule"] = get(f"{EA_API}/{code}/get/schedule/*/*/*/*/*", token)["Schedule"]
         _EA["events"] = get(f"{EA_API}/{code}/get/events/*", token)["Events"]
+        _EA["get"] = lambda path: get(f"{EA_API}/{code}/get/{path}", token)  # για τις βαθμολογίες ομίλων
     return _EA
 
 
@@ -1370,8 +1373,8 @@ def build_ics(cal_name: str, matches: list[Match], stamp: str) -> str:
             desc.append(f"Τελικό σκορ: {m.home} {m.score} {m.away}" + (f" ({m.note})" if m.note else ""))
         elif m.status:
             desc.append(STATUS_TEXT.get(m.status, m.status) + (f": {m.note}" if m.note else ""))
-        if m.tv:
-            desc.append(f"TV: {m.tv}")
+        if m.tv or m.tv_url:
+            desc.append(f"TV: {m.tv or 'Live streaming'}" + (f" {m.tv_url}" if m.tv_url else ""))
         if m.time is None:
             desc.append("Η ώρα δεν έχει οριστεί ακόμα (προσωρινά 18:00). "
                         "Θα ενημερωθεί αυτόματα όταν ανακοινωθεί.")
@@ -1574,6 +1577,7 @@ def main(only: list[str] | None = None) -> int:
         try:
             import club  # αποτέλεσμα από την ΑΣ ΠΑΟΚ, όπου η επίσημη πηγή αργεί
             club.results(key, unique)
+            club.tv(key, unique)
         except Exception as e:
             print(f"  ! ΑΣ ΠΑΟΚ, αποτελέσματα / {key}: {e}", file=sys.stderr)
         # Ό,τι έγραψε ο διαχειριστής μετρά τελευταίο, πάνω από όλα.

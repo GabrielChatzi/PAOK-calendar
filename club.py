@@ -213,8 +213,13 @@ def reconcile(section: str, official: list[Match], checks: list[str], label: str
     for e in sorted(entries(today), key=lambda e: e["posted"]):
         if e["section"] == section and e["day"] >= today:
             latest[e["day"]] = e
+    # Το κανάλι από όποια ανάρτηση το γράφει (η πιο πρόσφατη ανακοίνωση συχνά δεν το έχει).
+    channels = {e["day"]: e["channel"] for e in sorted(entries(today), key=lambda e: e["posted"])
+                if e["section"] == section and e.get("channel")}
     seen: set[str] = set()
     for e in latest.values():
+        if channels.get(e["day"]) and not e.get("channel"):
+            e = dict(e, channel=channels[e["day"]])
         paok_home = is_paok(e["home"]) if e["kind"] == "program" else e["home_flag"]
         # Χωρίς ώρα, η επίσημη ημερομηνία είναι συνήθως της αγωνιστικής: ο αγώνας μπορεί να είναι λίγες μέρες μετά.
         candidates = [m for m in official + added

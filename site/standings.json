@@ -116,12 +116,12 @@
      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/132429.png",
      "paok": false,
      "cells": [
-      "8",
+      "9",
       "3",
-      "1",
+      "2",
       "4",
-      "13-17",
-      "10"
+      "14-18",
+      "11"
      ]
     },
     {
@@ -130,12 +130,12 @@
      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2575.png",
      "paok": false,
      "cells": [
-      "8",
+      "9",
       "2",
+      "4",
       "3",
-      "3",
-      "9-11",
-      "9"
+      "10-12",
+      "10"
      ]
     },
     {
@@ -186,12 +186,12 @@
      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6790.png",
      "paok": false,
      "cells": [
-      "7",
-      "0",
+      "8",
+      "1",
       "2",
       "5",
-      "6-12",
-      "2"
+      "9-12",
+      "5"
      ]
     },
     {
@@ -200,11 +200,249 @@
      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20043.png",
      "paok": false,
      "cells": [
-      "8",
+      "9",
       "0",
       "3",
-      "5",
-      "6-13",
+      "6",
+      "6-16",
+      "0"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Κύπελλο Ελλάδας – Φάση πρωταθλήματος",
+   "url": "https://www.epo.gr/el/competition/5/stage/1436/group/2102/matches",
+   "columns": [
+    "Αγ",
+    "Ν",
+    "Ι",
+    "Η",
+    "Γκολ",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "ΟΛΥΜΠΙΑΚΟΣ",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/40db11e90e764c148a78b1ae295e7043.jpg?itok=uobIihxJ",
+     "paok": false,
+     "cells": [
+      "3",
+      "3",
+      "0",
+      "0",
+      "9-2",
+      "9"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΠΑΝΑΘΗΝΑΙΚΟΣ",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/f9a2ae634082e642833fb048118b38f6.jpg?itok=ehl0weLL",
+     "paok": false,
+     "cells": [
+      "3",
+      "3",
+      "0",
+      "0",
+      "5-1",
+      "9"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "ΠΑΟΚ",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/dd68ef4637f836824756daa4d317879a.jpg?itok=zUIv-seY",
+     "paok": true,
+     "cells": [
+      "3",
+      "2",
+      "1",
+      "0",
+      "4-1",
+      "7"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "ΑΕΚ",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/99a5c1d901ca7907952dfaf8a0db7ddb.jpg?itok=AtN9kBp7",
+     "paok": false,
+     "cells": [
+      "3",
+      "2",
+      "0",
+      "1",
+      "11-4",
+      "6"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "ΑΤΡΟΜΗΤΟΣ ΑΘ1923",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/67231a92b13106cd56ac4bced1a38442.jpg?itok=oJHm2JoR",
+     "paok": false,
+     "cells": [
+      "3",
+      "2",
+      "0",
+      "1",
+      "4-2",
+      "6"
+     ]
+    },
+    {
+     "pos": 6,
+     "team": "ΠΣ ΚΑΛΑΜΑΤΑ 2019",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/889647d17809f7d7689211e38581fe5a.jpg?itok=AcQFiJ2b",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "2",
+      "0",
+      "5-3",
+      "5"
+     ]
+    },
+    {
+     "pos": 7,
+     "team": "ΟΦΗ 1925",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/b67b687eee657fe9bdee1d794daa3655.jpg?itok=PHmTacJt",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "1",
+      "1",
+      "3-1",
+      "4"
+     ]
+    },
+    {
+     "pos": 8,
+     "team": "ASTERAS AKTOR FC",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/f6048c5a425b8f42fe21f5d7e35055cf.jpg?itok=0_bCtljE",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "1",
+      "1",
+      "4-3",
+      "4"
+     ]
+    },
+    {
+     "pos": 9,
+     "team": "ΚΗΦΙΣΙΑ ΑΕ",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/3fd7473310ba86565cb1e3a00350f2f9.jpg?itok=zx0fPDNE",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "1",
+      "1",
+      "4-4",
+      "4"
+     ]
+    },
+    {
+     "pos": 10,
+     "team": "ΑΡΗΣ",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/bbd8b90079881037b874ee6a9994ccc7.jpg?itok=qKYGVW6T",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "1",
+      "1",
+      "3-3",
+      "4"
+     ]
+    },
+    {
+     "pos": 11,
+     "team": "ΑΕΛ-NOVIBET ΑΕ",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/d1958b6eb65b4ef5d9eee7bf509a1ab1.jpg?itok=fnV8wvAM",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "1",
+      "1",
+      "2-5",
+      "4"
+     ]
+    },
+    {
+     "pos": 12,
+     "team": "ΝΙΚΗ ΒΟΛΟΥ 1924",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/be5dc777f4b8994b8266883b9eafd39e.jpg?itok=kK1OWmzk",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "0",
+      "2",
+      "1-4",
+      "3"
+     ]
+    },
+    {
+     "pos": 13,
+     "team": "ΝΠΣ ΒΟΛΟΣ",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/07ab437210f275cc51fd74a8f6521b0d.jpg?itok=XFwbDKWt",
+     "paok": false,
+     "cells": [
+      "3",
+      "0",
+      "1",
+      "2",
+      "5-8",
+      "1"
+     ]
+    },
+    {
+     "pos": 14,
+     "team": "ΜΑΡΚΟ",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/45820eebcb4c4b793282ddccc96035fe.jpg?itok=s1c89ReV",
+     "paok": false,
+     "cells": [
+      "3",
+      "0",
+      "1",
+      "2",
+      "2-5",
+      "1"
+     ]
+    },
+    {
+     "pos": 15,
+     "team": "Ο ΝΕΣΤΟΣ ΧΡΥΣΟΥΠΟΛΗΣ",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/e47329b5fc74328bc33ff95f46f69819.jpg?itok=USeQ58_J",
+     "paok": false,
+     "cells": [
+      "3",
+      "0",
+      "0",
+      "3",
+      "0-7",
+      "0"
+     ]
+    },
+    {
+     "pos": 16,
+     "team": "ΠΑΝΣΕΡΡΑΙΚΟΣ 1946",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/00f5db0fe15fef5e993dd923a867e3ec.jpg?itok=rvpRCNf2",
+     "paok": false,
+     "cells": [
+      "3",
+      "0",
+      "0",
+      "3",
+      "1-10",
       "0"
      ]
     }
@@ -1209,7 +1447,7 @@
       "0",
       "0",
       "279-175",
-      "12"
+      "14"
      ]
     },
     {
@@ -1384,6 +1622,20 @@
    "rows": [
     {
      "pos": 1,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "5",
+      "4",
+      "1",
+      "0",
+      "176-96",
+      "9"
+     ]
+    },
+    {
+     "pos": 2,
      "team": "Ο.Φ. Ν. ΙΩΝΙΑΣ",
      "logo": "",
      "paok": false,
@@ -1394,20 +1646,6 @@
       "0",
       "123-62",
       "8"
-     ]
-    },
-    {
-     "pos": 2,
-     "team": "ΠΑΟΚ",
-     "logo": "",
-     "paok": true,
-     "cells": [
-      "4",
-      "3",
-      "1",
-      "0",
-      "141-74",
-      "7"
      ]
     },
     {
@@ -1430,54 +1668,54 @@
      "logo": "",
      "paok": false,
      "cells": [
-      "4",
-      "2",
+      "5",
+      "3",
       "1",
       "1",
-      "126-136",
-      "5"
+      "161-164",
+      "7"
      ]
     },
     {
      "pos": 5,
-     "team": "ΑΘΗΝΑΙΚΟΣ Α.Σ.Β.",
-     "logo": "",
-     "paok": false,
-     "cells": [
-      "4",
-      "2",
-      "0",
-      "2",
-      "112-95",
-      "4"
-     ]
-    },
-    {
-     "pos": 6,
      "team": "Α.Ε.Π. ΠΑΝΟΡΑΜΑ",
      "logo": "",
      "paok": false,
      "cells": [
-      "4",
-      "2",
+      "5",
+      "3",
       "0",
       "2",
-      "117-116",
-      "4"
+      "149-142",
+      "6"
      ]
     },
     {
-     "pos": 7,
+     "pos": 6,
      "team": "Γ.Α.Σ ΚΑΜΑΤΕΡΟΥ",
      "logo": "",
      "paok": false,
      "cells": [
-      "4",
-      "1",
+      "5",
+      "2",
       "1",
       "2",
-      "83-114",
-      "3"
+      "113-142",
+      "5"
+     ]
+    },
+    {
+     "pos": 7,
+     "team": "ΑΘΗΝΑΙΚΟΣ Α.Σ.Β.",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "5",
+      "2",
+      "0",
+      "3",
+      "134-130",
+      "4"
      ]
     },
     {
@@ -1486,11 +1724,11 @@
      "logo": "",
      "paok": false,
      "cells": [
-      "4",
+      "5",
       "1",
       "0",
-      "3",
-      "70-129",
+      "4",
+      "98-159",
       "2"
      ]
     },
@@ -1500,11 +1738,11 @@
      "logo": "",
      "paok": false,
      "cells": [
-      "4",
+      "5",
       "0",
       "0",
-      "4",
-      "70-110",
+      "5",
+      "98-145",
       "0"
      ]
     },
@@ -1514,11 +1752,11 @@
      "logo": "",
      "paok": false,
      "cells": [
-      "4",
+      "5",
       "0",
       "0",
-      "4",
-      "69-131",
+      "5",
+      "95-163",
       "0"
      ]
     }
@@ -1916,6 +2154,61 @@
       "6",
       "53-93",
       "0"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Euro Cup Γυναικών – Όμιλος C",
+   "url": "https://europeanaquatics.org/sports/water-polo/club-competitions/schedule/",
+   "columns": [
+    "Αγ",
+    "Γκολ",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Dinamo Uralochka",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "76-28",
+      "9"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "3",
+      "40-46",
+      "5"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "ZVL-1886",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "31-56",
+      "2"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "Polar Bears",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "25-42",
+      "2"
      ]
     }
    ]

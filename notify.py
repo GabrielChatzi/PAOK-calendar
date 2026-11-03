@@ -236,8 +236,9 @@ def reminders(matches_path: Path, state_path: Path) -> int:
         mins = max(1, round((start - now).total_seconds() / 60 / 5) * 5)
         sec = m["section"]
         details = ", ".join(x for x in (m.get("venue"), m.get("competition")) if x)
+        tv = f" · 📺 {m['tv']}" if m.get("tv") else ""
         send(sec, "pre", f"{EMOJI.get(sec, '')} Σε {mins} λεπτά: {teams(m)}",
-             f"Στις {local:%H:%M}" + (f", {details}" if details else ""), match=m)
+             f"Στις {local:%H:%M}" + (f", {details}" if details else "") + tv, match=m)
         state[key] = now.isoformat(timespec="minutes")
         sent += 1
     # Αγώνες χωρίς live (π.χ. ποδόσφαιρο γυναικών, futsal): ειδοποίηση και στην ώρα έναρξης, σε όσους

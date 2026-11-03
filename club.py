@@ -104,7 +104,8 @@ def program_entries(today: dt.date) -> list[dict]:
             tm = re.match(r"(\d{1,2})[:.](\d{2}),\s*(.+)", lines[-1])
             if not section or not tm:
                 continue
-            teams = re.sub(r"\s*\([^)]*\)\s*$", "", tm.group(3)).strip()  # χωρίς το κανάλι
+            ch = re.search(r"\(([^)]*)\)\s*$", tm.group(3))  # το κανάλι, π.χ. «(ΕΡΤ2 ΣΠΟΡ HD)»
+            teams = re.sub(r"\s*\([^)]*\)\s*$", "", tm.group(3)).strip()
             home = away = None
             for i in [i for i, ch in enumerate(teams) if ch in "-–"]:
                 left, right = teams[:i].strip(), teams[i + 1:].strip()
@@ -120,6 +121,7 @@ def program_entries(today: dt.date) -> list[dict]:
                 "venue": lines[2], "round": comp.split(",", 1)[0].strip() if "," in comp else "",
                 "competition": comp.split(",", 1)[1].strip() if "," in comp else comp,
                 "link": post["link"], "id": f"p{post['id']}", "posted": post["modified"],
+                "channel": ch.group(1).strip() if ch else "",
             })
     return out
 
@@ -220,6 +222,8 @@ def reconcile(section: str, official: list[Match], checks: list[str], label: str
                       and (paok_home is None or m.paok_home == paok_home)]
         if candidates:
             m = min(candidates, key=lambda m: abs((m.day - e["day"]).days))
+            if not m.tv and e.get("channel"):
+                m.tv = e["channel"]  # το κανάλι από το εβδομαδιαίο πρόγραμμα της ΑΣ ΠΑΟΚ
             if not m.venue and e.get("venue"):
                 m.venue = e["venue"]  # π.χ. η ΕΠΣ Σάλας δεν δίνει γήπεδο
             if m.time is None:
@@ -250,7 +254,7 @@ def reconcile(section: str, official: list[Match], checks: list[str], label: str
             day=start.date(), time=start.time(), home=home if not is_paok(home) else "ΠΑΟΚ",
             away=away if not is_paok(away) else "ΠΑΟΚ", paok_home=bool(paok_home),
             venue=e.get("venue", ""), competition=e.get("competition", ""), round=e.get("round", ""),
-            url=e["link"],
+            url=e["link"], tv=e.get("channel", ""),
         ))
         checks.append(f"- **{label}** {added[-1].home} – {added[-1].away}, {fmt(e['day'], e['time'])}: "
                       f"δεν υπάρχει ακόμα στην επίσημη πηγή· προστέθηκε από την ΑΣ ΠΑΟΚ ([ανακοίνωση]({e['link']}))")

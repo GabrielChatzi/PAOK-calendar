@@ -949,6 +949,7 @@ def ea_data() -> dict:
         token = get(f"{EA_API}/site/token")["data"]["token"]
         _EA["schedule"] = get(f"{EA_API}/{code}/get/schedule/*/*/*/*/*", token)["Schedule"]
         _EA["events"] = get(f"{EA_API}/{code}/get/events/*", token)["Events"]
+        _EA["get"] = lambda path: get(f"{EA_API}/{code}/get/{path}", token)  # για τις βαθμολογίες ομίλων
     return _EA
 
 

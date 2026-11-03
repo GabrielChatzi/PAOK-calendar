@@ -9,11 +9,12 @@ EuroCup την υπολογίζουμε από τα αποτελέσματα, γ
 """
 from __future__ import annotations
 
+import html
 import json
 import re
 
 from build_calendars import (
-    DATAPROJECT, EPO, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
+    DATAPROJECT, EPO, ea_data, ea_team, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
     fetch_until,
     is_paok, latin_title, plain, season_start_year, tidy_name, volley_rows,
 )
@@ -325,7 +326,7 @@ def waterpolo(women: bool) -> list[dict]:
 
 
 def futsal() -> list[dict]:
-    from build_calendars import eps_json, futsal_ids
+    from build_calendars import eps_json, eps_name, futsal_ids
     league, season = futsal_ids()
     tables = eps_json(f"tables?leagues={league}&seasons={season}&per_page=10&_fields=id,title,link,data")
     if not tables:
@@ -333,13 +334,82 @@ def futsal() -> list[dict]:
     t = tables[0]
     rows = sorted((r for k, r in t["data"].items() if k != "0"), key=lambda r: int(r.get("pos") or 99))
     return [table("Futsal Super League", t["link"], ["Αγ", "Ν", "Ι", "Η", "Γκολ", "Β"],
-                  [(int(r["pos"]), r["name"], "", [r.get("p", ""), r.get("w", ""), r.get("d", ""), r.get("l", ""),
+                  [(int(r["pos"]), eps_name(r["name"]), "", [r.get("p", ""), r.get("w", ""), r.get("d", ""), r.get("l", ""),
                                                   f'{r.get("f", "")}-{r.get("a", "")}', r.get("threenineone", "")])
                    for r in rows])]
 
 
+# ---------------------------------------------------------------- κύπελλα
+
+def epo_cup(comp_id: int, title: str) -> list[dict]:
+    """Η φάση πρωταθλήματος (League Phase) ενός κυπέλλου της ΕΠΟ, όσο υπάρχει στη σεζόν."""
+    page = fetch(f"{EPO}/el/competition/{comp_id}/matches")
+    stage = next((html.unescape(v) for v, label in re.findall(r'<option[^>]*value="([^"]*)"[^>]*>([^<]*)', page)
+                  if "/stage/" in v and re.search(r"League Phase|Φάση Πρωταθλήματος|Όμιλ", label, re.I)), None)
+    if not stage:
+        return []
+    url = EPO + stage
+    m = re.search(r'<table class="ranking-table">(.*?)</table>', fetch(url), re.S)
+    if not m:
+        return []
+    rows = []
+    for tr in re.findall(r"<tr>(.*?)</tr>", m.group(1), re.S):
+        cells = [clean(c) for c in re.findall(r"<td[^>]*>(.*?)</td>", tr, re.S)]
+        if len(cells) < 9:
+            continue
+        logo = re.search(r'<img[^>]+src="([^"]+)"', tr)
+        pos, team, pts, gp, w, d, l, gf, ga = cells[:9]
+        name = re.sub(r"^(?:ΠΑΕ|ΚΑΕ|ΠΑΕΕ|Π\.Α\.Ε\.)\s+", "", team)
+        rows.append((_num(pos), tidy_name(name), absolute(EPO, logo.group(1)) if logo else "",
+                     [gp, w, d, l, f"{gf}-{ga}", pts]))
+    return [table(title, url, ["Αγ", "Ν", "Ι", "Η", "Γκολ", "Β"], rows)] if rows else []
+
+
+def ea_groups(women: bool) -> list[dict]:
+    """Ο όμιλος του ΠΑΟΚ στα ευρωπαϊκά κύπελλα πόλο (European Aquatics), στην πιο πρόσφατη φάση ομίλων."""
+    data = ea_data()
+    cat = "ASF" if women else "ASM"
+    names = {}
+    groups = {}
+    for o in data["schedule"]:
+        if o.get("OraCatCode") != cat:
+            continue
+        for side in "AB":
+            names[o.get(f"OraTeamCode{side}")] = o.get(f"OraTeamNameBreve{side}") or o.get(f"OraTeamName{side}") or ""
+        if "PAOK" in (o.get("OraTeamCodeA"), o.get("OraTeamCodeB")) and o.get("OraGruCode"):
+            groups[(str(o["OraGaraCode"]), str(o["OraTurCode"]))] = (o["OraGruCode"], o.get("OraMatchDescrEng") or "")
+    events = {str(e["GaraCode"]): e.get("GaraDescrEng", "") for e in data["events"] if e.get("GaraCatCode") == cat}
+    out = []
+    for (gara, tur), (gru, descr) in sorted(groups.items(), key=lambda x: x[0][1], reverse=True)[:1]:
+        rank = data["get"](f"groupstandings/{cat}/{gara}/{tur}/{gru}").get("Rank", [])
+        if not rank:
+            continue
+        rows = [(r["RankPos"], ea_team(names.get(r["RankTeamCode"], r["RankTeamCode"])), "",
+                 [r["RankPlayed"], r["RankRTW"] + r["RankPSW"], r["RankRTL"] + r["RankPSL"],
+                  f'{r["RankGoalFor"]}-{r["RankGoalAgainst"]}', r["RankPoints"]]) for r in rank]
+        group = rank[0].get("RankGruDescr", "").replace("Group", "Όμιλος")
+        out.append(table(f'{events.get(gara, "Euro Cup")}{" Γυναικών" if women else ""} – {group}'.strip(" –"),
+                         "https://europeanaquatics.org/sports/water-polo/club-competitions/schedule/",
+                         ["Αγ", "Ν", "Η", "Γκολ", "Β"], rows))
+    return out
+
+
+def with_cups(league, *cups):
+    """Η βαθμολογία του πρωταθλήματος και, όπου υπάρχουν, των κυπέλλων (ένα κύπελλο που αποτυγχάνει δεν
+    χαλά το πρωτάθλημα)."""
+    def run() -> list[dict]:
+        out = league()
+        for cup in cups:
+            try:
+                out += cup()
+            except Exception as e:
+                print(f"  ! βαθμολογία κυπέλλου: {e}")
+        return out
+    return run
+
+
 STANDINGS = {
-    "football": football,
+    "football": with_cups(football, lambda: epo_cup(5, "Κύπελλο Ελλάδας – Φάση πρωταθλήματος")),
     "football-women": football_women,
     "basketball": basketball,
     "basketball-women": basketball_women,
@@ -347,7 +417,7 @@ STANDINGS = {
     "volley-women": volley_women,
     "handball": lambda: handball(False),
     "handball-women": lambda: handball(True),
-    "waterpolo": lambda: waterpolo(False),
-    "waterpolo-women": lambda: waterpolo(True),
+    "waterpolo": with_cups(lambda: waterpolo(False), lambda: ea_groups(False)),
+    "waterpolo-women": with_cups(lambda: waterpolo(True), lambda: ea_groups(True)),
     "futsal": futsal,
 }

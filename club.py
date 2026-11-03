@@ -41,6 +41,10 @@ PROGRAM_SECTIONS = {
 WEEKDAYS = ["ΔΕΥΤΕΡΑ", "ΤΡΙΤΗ", "ΤΕΤΑΡΤΗ", "ΠΕΜΠΤΗ", "ΠΑΡΑΣΚΕΥΗ", "ΣΑΒΒΑΤΟ", "ΚΥΡΙΑΚΗ"]
 
 _DATA: dict = {}
+# Φιλικοί αγώνες (και τουρνουά προετοιμασίας, «αποκαλυπτήρια»): μπαίνουν ως χωριστοί αγώνες και ποτέ
+# δεν «ενώνονται» με επίσημο αγώνα της ίδιας ή διπλανής μέρας.
+FRIENDLY_RE = re.compile(r"φιλικ|αποκαλυπτήρια|τουρνου[άα]|προετοιμασ", re.I)
+FRIENDLY = "Φιλικός αγώνας"
 
 
 def recent_posts() -> list[dict]:
@@ -60,7 +64,7 @@ def get_json(path: str):
 
 def nominative(name: str) -> str:
     """«τον Παναθηναϊκό» → «Παναθηναϊκός» (μόνο για τις συνηθισμένες καταλήξεις)."""
-    name = re.sub(r"^(?:τον|την|το|τους|τις|τα)\s+", "", name.strip())
+    name = re.sub(r"^(?:τον|την|το|τη|της|τους|τις|τα)\s+", "", name.strip())
     words = name.split()
     if words and re.search(r"[όο]$", words[0]) and len(words[0]) > 3:
         words[0] += "ς"
@@ -122,6 +126,7 @@ def program_entries(today: dt.date) -> list[dict]:
                 "competition": comp.split(",", 1)[1].strip() if "," in comp else comp,
                 "link": post["link"], "id": f"p{post['id']}", "posted": post["modified"],
                 "channel": ch.group(1).strip() if ch else "",
+                "friendly": bool(FRIENDLY_RE.search(comp)),
             })
     return out
 
@@ -166,13 +171,15 @@ def announcement_entries(today: dt.date) -> list[dict]:
             home = is_paok(t.group(1))
         else:
             o = re.search(r"(?:υποδ[εέ]χεται|υποδεχθεί|αντιμετωπ[ίι]ζει|αντιμετωπίσει|κόντρα στ(?:ον|ην|ο)|"
-                          r"απέναντι στ(?:ον|ην|ο)|φιλοξενηθεί από τ(?:ον|ην|ο)|με τ(?:ον|ην|ο))\s+"
+                          r"απέναντι στ(?:ον|ην|ο)|φιλοξενηθεί από τ(?:ον|ην|ο)|με τ(?:ον|ην|ο|η)|κόντρα στη)\s+"
                           r"((?:τ(?:ον|ην|ο)\s+)?[Α-ΩΆ-Ώ][^\s,.!;«»]*(?:\s+[Α-ΩΆ-Ώ][^\s,.!;«»]*){0,2})",
                           title + " " + text)
             if o and not is_paok(o.group(1)) and not nicknames.match(o.group(1)):
                 opponent = nominative(o.group(1))
+        first = re.split(r"(?<=[.!;])\s", text, 1)[0]
         out.append({
             "kind": "announcement", "section": section, "day": day,
+            "friendly": bool(FRIENDLY_RE.search(title + " " + first)),
             "time": dt.time(int(m.group(3)), int(m.group(4))), "home_flag": home, "opponent": opponent,
             "title": title, "link": post["link"], "id": f"a{post['id']}", "posted": post["date"],
         })
@@ -199,6 +206,27 @@ def fmt(day: dt.date, time: dt.time | None) -> str:
     return f"{day:%d/%m}" + (f" {time:%H:%M}" if time else " (ώρα TBC)")
 
 
+def friendly_match(section: str, e: dict, paok_home: bool | None, known: list[Match]) -> Match | None:
+    """Ένας φιλικός αγώνας από ανακοίνωση ή το εβδομαδιαίο πρόγραμμα (αν ξέρουμε αντίπαλο)."""
+    if e["kind"] == "program":
+        home, away = e["home"], e["away"]
+    elif e.get("opponent"):
+        home, away = ("ΠΑΟΚ", e["opponent"]) if paok_home is not False else (e["opponent"], "ΠΑΟΚ")
+    else:
+        return None
+    home = "ΠΑΟΚ" if is_paok(home) else home
+    away = "ΠΑΟΚ" if is_paok(away) else away
+    opponent = away if home == "ΠΑΟΚ" else home
+    uid = f"{section}-friendly-{short_hash(e['day'].isoformat(), plain(opponent)[:5])}"
+    if any(m.uid == uid for m in known):
+        return None
+    comp = e.get("competition") or ""
+    return Match(section=section, uid=uid, day=e["day"], time=e["time"], home=home, away=away,
+                 paok_home=home == "ΠΑΟΚ", venue=e.get("venue", ""),
+                 competition=comp if comp and not FRIENDLY_RE.fullmatch(comp) and "φιλικ" not in comp.lower() else FRIENDLY,
+                 url=e["link"], tv=e.get("channel", ""))
+
+
 def reconcile(section: str, official: list[Match], checks: list[str], label: str) -> list[Match]:
     """Συμπληρώνει το πρόγραμμα ενός τμήματος από την ΑΣ ΠΑΟΚ. Επιστρέφει τους αγώνες που προστέθηκαν.
 
@@ -212,10 +240,21 @@ def reconcile(section: str, official: list[Match], checks: list[str], label: str
     latest: dict = {}
     for e in sorted(entries(today), key=lambda e: e["posted"]):
         if e["section"] == section and e["day"] >= today:
-            latest[e["day"]] = e
+            latest[(e["day"], e.get("friendly", False))] = e
+    # Το κανάλι από όποια ανάρτηση το γράφει (η πιο πρόσφατη ανακοίνωση συχνά δεν το έχει).
+    channels = {(e["day"], e.get("friendly", False)): e["channel"] for e in sorted(entries(today), key=lambda e: e["posted"])
+                if e["section"] == section and e.get("channel")}
     seen: set[str] = set()
     for e in latest.values():
+        key = (e["day"], e.get("friendly", False))
+        if channels.get(key) and not e.get("channel"):
+            e = dict(e, channel=channels[key])
         paok_home = is_paok(e["home"]) if e["kind"] == "program" else e["home_flag"]
+        if e.get("friendly"):
+            friendly = friendly_match(section, e, paok_home, official + added)
+            if friendly:
+                added.append(friendly)
+            continue
         # Χωρίς ώρα, η επίσημη ημερομηνία είναι συνήθως της αγωνιστικής: ο αγώνας μπορεί να είναι λίγες μέρες μετά.
         candidates = [m for m in official + added
                       if abs((m.day - e["day"]).days) <= (3 if m.time is None else 1)
@@ -313,10 +352,9 @@ def score_from_post(title: str, text: str, home: str, away: str, paok_home: bool
 
 def results(section: str, matches: list[Match], now: dt.datetime | None = None) -> None:
     """Συμπληρώνει το σκορ αγώνων που έγιναν σήμερα/χθες και δεν έχουν ακόμα επίσημο αποτέλεσμα."""
-    if section not in RESULT_SECTIONS:
-        return
     now = now or dt.datetime.now(ATHENS)
     waiting = [m for m in matches if not m.score and not m.status and m.time
+               and (section in RESULT_SECTIONS or "-friendly-" in m.uid)
                and m.start() < now and now - m.start() < dt.timedelta(days=2)]
     if not waiting:
         return
@@ -333,7 +371,11 @@ def results(section: str, matches: list[Match], now: dt.datetime | None = None) 
             if not (m.start() + dt.timedelta(minutes=30) <= posted <= m.start() + dt.timedelta(hours=30)):
                 continue
             title = html.unescape(post["title"]["rendered"])
-            score = score_from_post(title, clean(post["content"]["rendered"]), m.home, m.away, m.paok_home)
+            text = clean(post["content"]["rendered"])
+            # Αποτέλεσμα φιλικού μόνο για φιλικό, και το ανάποδο.
+            if bool(FRIENDLY_RE.search(title + " " + text[:200])) != ("-friendly-" in m.uid):
+                continue
+            score = score_from_post(title, text, m.home, m.away, m.paok_home)
             if score:
                 print(f"  αποτέλεσμα από την ΑΣ ΠΑΟΚ: {m.home} – {m.away} {score} («{title}»)")
                 m.score, m.live = score, None

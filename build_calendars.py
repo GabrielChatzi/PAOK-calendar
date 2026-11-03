@@ -1479,6 +1479,26 @@ def apply_admin(section: str, matches: list[Match]) -> None:
         m.live = None
 
 
+def match_from_json(d: dict) -> Match:
+    start = dt.datetime.fromisoformat(d["start"]).astimezone(ATHENS)
+    return Match(section=d["section"], uid=d["uid"], day=start.date(), time=start.time() if d.get("timeKnown") else None,
+                 home=d["home"], away=d["away"], paok_home=d["paokHome"], venue=d.get("venue", ""),
+                 competition=d.get("competition", ""), round=d.get("round", ""), score=d.get("score", ""),
+                 tv=d.get("tv", ""), tv_url=d.get("tvUrl", ""), url=d.get("url", ""),
+                 home_logo=d.get("homeLogo", ""), away_logo=d.get("awayLogo", ""),
+                 status=d.get("status", ""), note=d.get("note", ""))
+
+
+def keep_friendlies(previous: list[dict], current: list[Match]) -> None:
+    """Οι φιλικοί αγώνες έρχονται μόνο από ανακοινώσεις, που δεν διαβάζονται μετά τη μέρα τους:
+    κρατάμε τους παλιούς από τα προηγούμενα δεδομένα (με το αποτέλεσμά τους), για όλη τη σεζόν."""
+    have = {m.uid for m in current}
+    cutoff = dt.date(season_start_year(), 6, 1)
+    for d in previous:
+        if "-friendly-" in d["uid"] and d["uid"] not in have and d["start"][:10] >= cutoff.isoformat():
+            current.append(match_from_json(d))
+
+
 def carry_uids(previous: list[dict], current: list[Match]) -> None:
     """Όταν η επίσημη πηγή δημοσιεύσει έναν αγώνα που είχε μπει χειροκίνητα ή από την ΑΣ ΠΑΟΚ,
     ο αγώνας κρατά το παλιό αναγνωριστικό: ίδιος σύνδεσμος, ίδιες ειδοποιήσεις, ίδια εγγραφή
@@ -1568,6 +1588,7 @@ def main(only: list[str] | None = None) -> int:
         except Exception as e:
             print(f"  ! ΑΣ ΠΑΟΚ / {key}: {e}", file=sys.stderr)
         carry_uids(prev_by_section[key], unique)
+        keep_friendlies(prev_by_section[key], unique)
         drop_live_scores(key, unique, dt.datetime.now(ATHENS))
         if key in ("volley", "volley-women"):
             volley_live(key, unique)

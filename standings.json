@@ -838,6 +838,18 @@
     },
     {
      "pos": 2,
+     "team": "ΠΑΟΚ",
+     "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
+     "paok": true,
+     "cells": [
+      "6",
+      "4",
+      "2",
+      "+17"
+     ]
+    },
+    {
+     "pos": 3,
      "team": "Ulm",
      "logo": "https://media-cdn.cortextech.io/5750bc8b-dd63-48e4-8586-10d4e5e2b4e2.png",
      "paok": false,
@@ -849,7 +861,7 @@
      ]
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Manresa",
      "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/06792bed-0383-4de2-80b9-95ecca3fd973.png",
      "paok": false,
@@ -858,18 +870,6 @@
       "3",
       "2",
       "+16"
-     ]
-    },
-    {
-     "pos": 4,
-     "team": "ΠΑΟΚ",
-     "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
-     "paok": true,
-     "cells": [
-      "5",
-      "3",
-      "2",
-      "+15"
      ]
     },
     {
@@ -902,10 +902,10 @@
      "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS1/1e9e0379-db30-4234-89b0-19576709c285.png",
      "paok": false,
      "cells": [
-      "5",
+      "6",
       "2",
-      "3",
-      "-28"
+      "4",
+      "-30"
      ]
     },
     {

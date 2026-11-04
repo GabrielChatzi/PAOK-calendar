@@ -1907,7 +1907,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14110420042832.gif",
    "tvUrl": "",
    "nt": "8e16c84199"
   },
@@ -2050,7 +2050,7 @@
    "start": "2026-11-08T16:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14110420042832.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "c45a0727f7"
@@ -5638,16 +5638,16 @@
   }
  ],
  "updated": {
-  "football": "2026-11-04T02:01+02:00",
-  "football-women": "2026-11-04T02:01+02:00",
-  "basketball": "2026-11-04T02:01+02:00",
-  "basketball-women": "2026-11-04T02:01+02:00",
-  "volley": "2026-11-04T02:01+02:00",
-  "volley-women": "2026-11-04T02:01+02:00",
-  "handball": "2026-11-04T02:02+02:00",
-  "handball-women": "2026-11-04T02:02+02:00",
-  "waterpolo": "2026-11-04T02:02+02:00",
-  "waterpolo-women": "2026-11-04T02:02+02:00",
-  "futsal": "2026-11-04T02:02+02:00"
+  "football": "2026-11-04T09:21+02:00",
+  "football-women": "2026-11-04T09:21+02:00",
+  "basketball": "2026-11-04T09:21+02:00",
+  "basketball-women": "2026-11-04T09:21+02:00",
+  "volley": "2026-11-04T09:21+02:00",
+  "volley-women": "2026-11-04T09:21+02:00",
+  "handball": "2026-11-04T09:22+02:00",
+  "handball-women": "2026-11-04T09:22+02:00",
+  "waterpolo": "2026-11-04T09:22+02:00",
+  "waterpolo-women": "2026-11-04T09:22+02:00",
+  "futsal": "2026-11-04T09:22+02:00"
  }
 }

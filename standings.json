@@ -2018,6 +2018,20 @@
     },
     {
      "pos": 3,
+     "team": "ΑΛΙΜΟΣ ΝΑΣ",
+     "logo": "https://koecdn.twic.pics/media/alimos-1757618338-HykYQxju.jpg",
+     "paok": false,
+     "cells": [
+      "7",
+      "5",
+      "0",
+      "2",
+      "119-74",
+      "15"
+     ]
+    },
+    {
+     "pos": 4,
      "team": "ΕΘΝΙΚΟΣ ΟΦΠΦ",
      "logo": "https://koecdn.twic.pics/media/shma-4-2-1-1-1-1758207317-I4sKrotf.png",
      "paok": false,
@@ -2031,7 +2045,7 @@
      ]
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "ΠΑΝΙΩΝΙΟΣ ΓΣΣ",
      "logo": "https://koecdn.twic.pics/media/panionios-1757496971-8NsrgxDo.png",
      "paok": false,
@@ -2042,20 +2056,6 @@
       "1",
       "85-59",
       "13"
-     ]
-    },
-    {
-     "pos": 5,
-     "team": "ΑΛΙΜΟΣ ΝΑΣ",
-     "logo": "https://koecdn.twic.pics/media/alimos-1757618338-HykYQxju.jpg",
-     "paok": false,
-     "cells": [
-      "6",
-      "4",
-      "0",
-      "2",
-      "96-70",
-      "12"
      ]
     },
     {
@@ -2148,11 +2148,11 @@
      "logo": "https://koecdn.twic.pics/media/ilioupoli-1757497079-gCdg0afz.png",
      "paok": false,
      "cells": [
-      "6",
+      "7",
       "0",
       "0",
-      "6",
-      "53-93",
+      "7",
+      "57-116",
       "0"
      ]
     }

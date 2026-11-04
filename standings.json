@@ -890,10 +890,10 @@
      "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOJl/0024f0d4-55d9-4ed0-be41-68c0e90c41d5.png",
      "paok": false,
      "cells": [
-      "5",
+      "6",
       "2",
-      "3",
-      "-1"
+      "4",
+      "-10"
      ]
     },
     {
@@ -914,10 +914,10 @@
      "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/ba6e2d99-3ea9-4730-a0ce-830cccca4657.png",
      "paok": false,
      "cells": [
+      "6",
+      "1",
       "5",
-      "0",
-      "5",
-      "-76"
+      "-67"
      ]
     }
    ]

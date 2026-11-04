@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:volley-women-dp19-745@paok-calendar
-DTSTAMP:20261103T203129Z
+DTSTAMP:20261104T120053Z
 DTSTART;TZID=Europe/Athens:20261023T190000
 DTEND;TZID=Europe/Athens:20261023T210000
 SUMMARY:🏐 A.E.K. 1-3 ΠΑΟΚ
@@ -37,15 +37,13 @@ URL:https://eope-web.dataproject.com/MatchStatistics.aspx?mID=745&ID=19
 END:VEVENT
 BEGIN:VEVENT
 UID:volley-women-acpaok-3b9803730c7d@paok-calendar
-DTSTAMP:20261103T203129Z
+DTSTAMP:20261104T120053Z
 DTSTART;TZID=Europe/Athens:20261108T160000
 DTEND;TZID=Europe/Athens:20261108T180000
-SUMMARY:🏐 Παναθηναϊκός – ΠΑΟΚ
-LOCATION:Κλειστό Γυμναστήριο ΜΕΤΣ
-DESCRIPTION:Volley League γυναικών – 4η αγωνιστική\nTV
+SUMMARY:🏐 PANATHINAIKOS A.O. – ΠΑΟΚ
+LOCATION:Mets Sports Hall
+DESCRIPTION:Volley League Γυναικών – 4η Αγωνιστική\nTV
  : ΣΠΟΡ FM TV
-URL:https://acpaok.gr/%cf%8c%cf%80%ce%bf%cf%85-%ce%ba%ce%b1%ce%b9-%ce%b1%ce
- %bd-%cf%80%ce%b1%ce%af%ce%b6%ce%b5%ce%b9%cf%82-%cf%83-%ce%b1%ce%ba%ce%bf%c
- e%bb%ce%bf%cf%85%ce%b8%ce%ac%ce%bc%ce%b5-31-03-05-04/
+URL:https://eope-web.dataproject.com/MatchStatistics.aspx?mID=762&ID=19
 END:VEVENT
 END:VCALENDAR

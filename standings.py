@@ -14,7 +14,7 @@ import json
 import re
 
 from build_calendars import (
-    DATAPROJECT, EPO, ea_data, ea_team, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
+    DATAPROJECT, EPO, ea_data, ea_team, oxe_logo, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
     fetch_until,
     is_paok, latin_title, plain, season_start_year, tidy_name, volley_rows,
 )
@@ -296,7 +296,7 @@ def handball(women: bool) -> list[dict]:
         for t in html_tables(page, HANDBALL):
             for texts, _ in t:
                 if len(texts) >= 16 and texts[0].isdigit() and texts[1]:
-                    rows.append((int(texts[0]), tidy_name(texts[1]), "",
+                    rows.append((int(texts[0]), tidy_name(texts[1]), oxe_logo(texts[1], women),
                                  [texts[3], texts[13], texts[14], texts[15], f"{texts[4]}-{texts[5]}", texts[2]]))
         if rows:
             title = "Handball Premier" if "PREMIER" in cat_name else ("Α1 Γυναικών" if women else "Α1 Ανδρών")

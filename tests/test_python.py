@@ -356,6 +356,19 @@ class TV(unittest.TestCase):
         self.assertEqual((e[0]["section"], e[0]["channel"], e[0]["away"]), ("basketball", "Novasports Prime", "Ρόμα"))
 
 
+class HandballLogos(unittest.TestCase):
+    def test_greek_names_match_latin_slugs(self):
+        logos = [(["DRAMA"], "drama.jpg"), (["GAS", "KILKIS"], "kilkis.jpg"), (["XANTH"], "xanth.jpg"),
+                 (["AEK"], "aek.jpg"), (["OLYMPIAKOS", "SFP", "KSYNI"], "olympiacos.png")]
+        with mock.patch.dict(b._OXE_LOGOS, {False: logos}):
+            self.assertEqual(b.oxe_logo("GMC ΔΡΑΜΑ 1986", False), "drama.jpg")
+            self.assertEqual(b.oxe_logo("Γ.Α.Σ ΚΙΛΚΙΣ", False), "kilkis.jpg")
+            self.assertEqual(b.oxe_logo("Χ.Α.Ν.Θ", False), "xanth.jpg")
+            self.assertEqual(b.oxe_logo("Α.Ε.Κ.", False), "aek.jpg")
+            self.assertEqual(b.oxe_logo("ΟΛΥΜΠΙΑΚΟΣ ΟΜΙΛΟΣ ΞΥΝΗ", False), "olympiacos.png")
+            self.assertEqual(b.oxe_logo("ΑΓΝΩΣΤΗ ΟΜΑΔΑ", False), "")
+
+
 class Admin(unittest.TestCase):
     def test_admin_final_overrides(self):
         m = b.Match(section="futsal", uid="u1", day=dt.date(2026, 11, 1), time=dt.time(14, 0), home="ΠΑΟΚ",

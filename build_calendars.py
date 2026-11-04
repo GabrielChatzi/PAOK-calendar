@@ -732,6 +732,49 @@ def wbl1_matches() -> list[Match]:
 HANDBALL = "http://statistics.handball.org.gr/gr/"
 
 
+# Σήματα: η ΟΧΕ δεν τα έχει στο statistics.handball.org.gr· τα δείχνει στη σελίδα κάθε πρωταθλήματος στο
+# handball.org.gr, μαζί με σύνδεσμο στη σελίδα της ομάδας (λατινικά: «ao-diomidis-argous»), από όπου τα
+# ταιριάζουμε με τα ελληνικά ονόματα του προγράμματος.
+OXE_SITE = "https://www.handball.org.gr"
+OXE_PAGES = {False: "/competitions/protathlimata/handball-premier", True: "/competitions/protathlimata/a1-gynaikon"}
+_GREEKLISH = [("ΟΥ", "OU"), ("ΑΙ", "AI"), ("ΕΙ", "EI"), ("ΟΙ", "OI"), ("Θ", "TH"), ("Ξ", "KS"), ("Ψ", "PS"),
+              ("Χ", "X"), ("Α", "A"), ("Β", "V"), ("Γ", "G"), ("Δ", "D"), ("Ε", "E"), ("Ζ", "Z"), ("Η", "I"),
+              ("Ι", "I"), ("Κ", "K"), ("Λ", "L"), ("Μ", "M"), ("Ν", "N"), ("Ο", "O"), ("Π", "P"), ("Ρ", "R"),
+              ("Σ", "S"), ("Τ", "T"), ("Υ", "Y"), ("Φ", "F"), ("Ω", "O")]
+_SLUG_SKIP = {"HONDA", "GMC", "OLYMPIC", "DIAGNOSTIC", "AUTOVALUE", "OMILOS"}
+
+
+def greeklish_words(name: str) -> list[str]:
+    text = re.sub(r"(?<=[Α-ΩA-Z])\.", "", plain(name))  # «Α.Ε.Κ.» → «ΑΕΚ», «Χ.Α.Ν.Θ» → «ΧΑΝΘ»
+    for g, l in _GREEKLISH:
+        text = text.replace(g, l)
+    return [w for w in re.findall(r"[A-Z]{3,}", text) if w not in _SLUG_SKIP]
+
+
+_OXE_LOGOS: dict[bool, list[tuple[list[str], str]]] = {}
+
+
+def oxe_logo(name: str, women: bool) -> str:
+    """Το σήμα μιας ομάδας χάντμπολ από το handball.org.gr, αν ταιριάζει ακριβώς με μία ομάδα."""
+    if women not in _OXE_LOGOS:
+        _OXE_LOGOS[women] = []
+        try:
+            page = fetch(OXE_SITE + OXE_PAGES[women])
+            for m in re.finditer(r'href="/a1-(?:wo)?men-roster/\d+-([a-z0-9-]+)"[^>]*>\s*(?:<[^>]+>\s*)*?<img[^>]+src="([^"]+)"', page):
+                words = [w for w in m.group(1).upper().split("-") if len(w) >= 3 and not w.isdigit() and w not in _SLUG_SKIP]
+                _OXE_LOGOS[women].append((words, OXE_SITE + m.group(2) if m.group(2).startswith("/") else m.group(2)))
+            if not _OXE_LOGOS[women]:  # η εικόνα πριν από τον σύνδεσμο
+                for m in re.finditer(r'<img[^>]+src="(/media/yootheme/cache/[^"]+)"[^>]*>\s*(?:<[^>]+>\s*)*?<a[^>]+href="/a1-(?:wo)?men-roster/\d+-([a-z0-9-]+)"', page):
+                    words = [w for w in m.group(2).upper().split("-") if len(w) >= 3 and not w.isdigit() and w not in _SLUG_SKIP]
+                    _OXE_LOGOS[women].append((words, OXE_SITE + m.group(1)))
+        except Exception as e:
+            print(f"  ! σήματα ΟΧΕ: {e}", file=sys.stderr)
+    mine = greeklish_words(name)
+    found = {logo for words, logo in _OXE_LOGOS[women]
+             if any(a[:5] == b[:5] if min(len(a), len(b)) >= 5 else a == b for a in mine for b in words)}
+    return found.pop() if len(found) == 1 else ""
+
+
 def handball_matches(section: str) -> list[Match]:
     women = SECTIONS[section]["women"]
     season_id = str(season_start_year() + 1)  # η ΟΧΕ αριθμεί τη σεζόν 2026-27 ως 2027
@@ -791,6 +834,9 @@ def handball_matches(section: str) -> list[Match]:
             ))
     if not out:
         raise RuntimeError("Δεν βρέθηκαν αγώνες ΠΑΟΚ στο χάντμπολ")
+    for m in out:
+        m.home_logo = m.home_logo or oxe_logo(m.home, women)
+        m.away_logo = m.away_logo or oxe_logo(m.away, women)
     return out
 
 
@@ -1479,6 +1525,36 @@ def apply_admin(section: str, matches: list[Match]) -> None:
         m.live = None
 
 
+GENERIC_WORDS = {"ΑΟ", "ΑΣ", "ΓΣ", "ΠΑΕ", "ΚΑΕ", "ΤΑΑ", "ΣΦΠ", "ΝΟ", "ΟΑ", "ΑΕ", "ΑΘ", "FC", "BC", "VC", "WFC", "ΓΑΣ"}
+
+
+def name_words(name: str) -> frozenset[str]:
+    """Οι λέξεις ενός ονόματος ομάδας, χωρίς τόνους, τελείες και γενικές συντομογραφίες (Α.Ο., ΠΑΕ…)."""
+    text = greekish(plain(re.sub(r"(?<=\b\w)\.(?=\w\.)|(?<=\b\w\.\w)\.", "", name)))
+    return frozenset(w[:6] for w in re.findall(r"[A-ZΑ-Ω0-9]+", text) if w not in GENERIC_WORDS and len(w) > 1)
+
+
+def fill_logos(matches: list[dict]) -> None:
+    """Σήμα για ομάδες που η πηγή του αγώνα δεν το δίνει (π.χ. ΕΟΠΕ, αγώνες από το manual.json), από άλλον
+    αγώνα της ίδιας ομάδας στο ίδιο άθλημα (ανδρών ή γυναικών). Μόνο αν το όνομα ταιριάζει σε ένα σήμα."""
+    sport = lambda sec: sec.replace("-women", "")
+    known: dict[str, list[tuple[frozenset, str]]] = {}
+    for m in matches:
+        for side in ("home", "away"):
+            if m.get(f"{side}Logo") and not is_paok(m[side]):
+                known.setdefault(sport(m["section"]), []).append((name_words(m[side]), m[f"{side}Logo"]))
+    for m in matches:
+        for side in ("home", "away"):
+            if m.get(f"{side}Logo") or is_paok(m[side]):
+                continue
+            words = name_words(m[side])
+            if not words:
+                continue
+            found = {logo for w, logo in known.get(sport(m["section"]), []) if words <= w or w <= words}
+            if len(found) == 1:
+                m[f"{side}Logo"] = found.pop()
+
+
 def match_from_json(d: dict) -> Match:
     start = dt.datetime.fromisoformat(d["start"]).astimezone(ATHENS)
     return Match(section=d["section"], uid=d["uid"], day=start.date(), time=start.time() if d.get("timeKnown") else None,
@@ -1617,6 +1693,7 @@ def main(only: list[str] | None = None) -> int:
     import notify
     import standings
 
+    fill_logos(all_matches)
     all_matches.sort(key=lambda m: (m["start"], m["uid"]))
     data = {
         "sections": [{"key": k, **v} for k, v in SECTIONS.items()],

@@ -1,18 +1,11 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
-UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
-for u in handball-premier a1-gynaikon; do
-curl -sSL -m 30 -A "$UA" "https://www.handball.org.gr/competitions/protathlimata/$u" -o /tmp/p.html
-echo "##### $u"
 python3 - <<'PY'
-import re, html
-p=open('/tmp/p.html',encoding='utf-8',errors='replace').read()
-for m in re.finditer(r'<img[^>]+src="([^"]+)"[^>]*>', p):
-    src=m.group(1)
-    if re.search(r'favicon|HANDBALL-PREMIER|oxe-|Handball-white|IHF|european|Mediter|eoe-|gga-|yfipoy|e-genius|logo(-mobile)?\.png', src): continue
-    before=html.unescape(re.sub(r'\s+',' ',re.sub(r'<[^>]+>',' ',p[max(0,m.start()-400):m.start()])))[-80:]
-    after=html.unescape(re.sub(r'\s+',' ',re.sub(r'<[^>]+>',' ',p[m.end():m.end()+500])))[:100]
-    href=re.findall(r'href="([^"]+)"', p[max(0,m.start()-300):m.start()])[-1:] 
-    print(src.split('/')[-1], '| before:', before.strip()[-50:], '| after:', after.strip()[:70], '|', href)
+import build_calendars as b
+men = ['ΠΑΟΚ','GMC ΔΡΑΜΑ 1986','Α.Ε.Κ.','Α.Σ.Ε ΔΟΥΚΑ','ΑΘΗΝΑΙΚΟΣ Α.Σ.Β.','ΑΡΗΣ ΝΙΚΑΙΑΣ OLYMPIC DIAGNOSTIC','Γ.Α.Σ ΚΙΛΚΙΣ','ΔΙΟΜΗΔΗΣ ΑΡΓΟΥΣ','Ε.Γ.Σ.Ν ΖΑΦΕΙΡΑΚΗΣ','ΙΩΝΙΚΟΣ AUTOVALUE','ΟΛΥΜΠΙΑΚΟΣ ΟΜΙΛΟΣ ΞΥΝΗ','Χ.Α.Ν.Θ']
+women = ['ΠΑΟΚ','Α.Ε.Κ.','Α.Ε.Π. ΠΑΝΟΡΑΜΑ','Α.Ε.Σ.Χ. ΠΥΛΑΙΑΣ','ΑΘΗΝΑΙΚΟΣ Α.Σ.Β.','ΑΝΑΓΕΝΝΗΣΗ ΑΡΤΑΣ','Γ.Α.Σ ΚΑΜΑΤΕΡΟΥ','ΛΕΩΝΙΔΑΣ ΑΓ.ΑΝΑΡΓ.','Ο.Φ. Ν. ΙΩΝΙΑΣ','ΠΡΟΣΟΤΣΑΝΗ ΔΡΑΜΑΣ']
+for w, names in ((False, men), (True, women)):
+    print("pairs found:", len(b._OXE_LOGOS.get(w, [])) if w in b._OXE_LOGOS else "-")
+    for n in names: print(("W " if w else "M ") + n, "->", b.oxe_logo(n, w).split("/")[-1] or "—")
+    print("slugs:", [x[0] for x in b._OXE_LOGOS[w]])
 PY
-done

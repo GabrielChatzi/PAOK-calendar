@@ -838,6 +838,18 @@
     },
     {
      "pos": 2,
+     "team": "Manresa",
+     "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/06792bed-0383-4de2-80b9-95ecca3fd973.png",
+     "paok": false,
+     "cells": [
+      "6",
+      "4",
+      "2",
+      "+30"
+     ]
+    },
+    {
+     "pos": 3,
      "team": "ΠΑΟΚ",
      "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjChWbHH/0506e7c4-ec4b-460a-bc59-b033ad9e336c.png",
      "paok": true,
@@ -849,31 +861,7 @@
      ]
     },
     {
-     "pos": 3,
-     "team": "Manresa",
-     "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCgOCpC/06792bed-0383-4de2-80b9-95ecca3fd973.png",
-     "paok": false,
-     "cells": [
-      "5",
-      "3",
-      "2",
-      "+16"
-     ]
-    },
-    {
      "pos": 4,
-     "team": "Lietkabelis",
-     "logo": "https://media-cdn.cortextech.io/ffcb6e37-31f4-48f6-91c2-a8c9a6f791a9.png",
-     "paok": false,
-     "cells": [
-      "5",
-      "3",
-      "2",
-      "-4"
-     ]
-    },
-    {
-     "pos": 5,
      "team": "Ulm",
      "logo": "https://media-cdn.cortextech.io/5750bc8b-dd63-48e4-8586-10d4e5e2b4e2.png",
      "paok": false,
@@ -882,6 +870,18 @@
       "3",
       "3",
       "+6"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "Lietkabelis",
+     "logo": "https://media-cdn.cortextech.io/ffcb6e37-31f4-48f6-91c2-a8c9a6f791a9.png",
+     "paok": false,
+     "cells": [
+      "6",
+      "3",
+      "3",
+      "-18"
      ]
     },
     {

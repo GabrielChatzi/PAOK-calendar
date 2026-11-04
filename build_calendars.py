@@ -1479,6 +1479,36 @@ def apply_admin(section: str, matches: list[Match]) -> None:
         m.live = None
 
 
+GENERIC_WORDS = {"ΑΟ", "ΑΣ", "ΓΣ", "ΠΑΕ", "ΚΑΕ", "ΤΑΑ", "ΣΦΠ", "ΝΟ", "ΟΑ", "ΑΕ", "ΑΘ", "FC", "BC", "VC", "WFC", "ΓΑΣ"}
+
+
+def name_words(name: str) -> frozenset[str]:
+    """Οι λέξεις ενός ονόματος ομάδας, χωρίς τόνους, τελείες και γενικές συντομογραφίες (Α.Ο., ΠΑΕ…)."""
+    text = greekish(plain(re.sub(r"(?<=\b\w)\.(?=\w\.)|(?<=\b\w\.\w)\.", "", name)))
+    return frozenset(w[:6] for w in re.findall(r"[A-ZΑ-Ω0-9]+", text) if w not in GENERIC_WORDS and len(w) > 1)
+
+
+def fill_logos(matches: list[dict]) -> None:
+    """Σήμα για ομάδες που η πηγή του αγώνα δεν το δίνει (π.χ. ΕΟΠΕ, αγώνες από το manual.json), από άλλον
+    αγώνα της ίδιας ομάδας στο ίδιο άθλημα (ανδρών ή γυναικών). Μόνο αν το όνομα ταιριάζει σε ένα σήμα."""
+    sport = lambda sec: sec.replace("-women", "")
+    known: dict[str, list[tuple[frozenset, str]]] = {}
+    for m in matches:
+        for side in ("home", "away"):
+            if m.get(f"{side}Logo") and not is_paok(m[side]):
+                known.setdefault(sport(m["section"]), []).append((name_words(m[side]), m[f"{side}Logo"]))
+    for m in matches:
+        for side in ("home", "away"):
+            if m.get(f"{side}Logo") or is_paok(m[side]):
+                continue
+            words = name_words(m[side])
+            if not words:
+                continue
+            found = {logo for w, logo in known.get(sport(m["section"]), []) if words <= w or w <= words}
+            if len(found) == 1:
+                m[f"{side}Logo"] = found.pop()
+
+
 def match_from_json(d: dict) -> Match:
     start = dt.datetime.fromisoformat(d["start"]).astimezone(ATHENS)
     return Match(section=d["section"], uid=d["uid"], day=start.date(), time=start.time() if d.get("timeKnown") else None,
@@ -1617,6 +1647,7 @@ def main(only: list[str] | None = None) -> int:
     import notify
     import standings
 
+    fill_logos(all_matches)
     all_matches.sort(key=lambda m: (m["start"], m["uid"]))
     data = {
         "sections": [{"key": k, **v} for k, v in SECTIONS.items()],

@@ -1866,11 +1866,11 @@
      "logo": "https://koecdn.twic.pics/media/yno-logo-1762525447-m9yd11ip.jpg",
      "paok": false,
      "cells": [
-      "5",
+      "6",
       "3",
       "0",
-      "2",
-      "52-53",
+      "3",
+      "67-69",
       "9"
      ]
     },
@@ -1904,6 +1904,20 @@
     },
     {
      "pos": 10,
+     "team": "ΝΟ ΧΑΝΙΩΝ",
+     "logo": "https://koecdn.twic.pics/media/xanion-1757572705-KVq2UMey.jpg",
+     "paok": false,
+     "cells": [
+      "6",
+      "1",
+      "1",
+      "4",
+      "62-92",
+      "4"
+     ]
+    },
+    {
+     "pos": 11,
      "team": "ΝΟ ΧΙΟΥ ΑΥΡΑ",
      "logo": "https://koecdn.twic.pics/media/logo-1u6opn9-1757681672-ImWgfrk6.jpg",
      "paok": false,
@@ -1917,7 +1931,7 @@
      ]
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "ΓΣ ΠΕΡΙΣΤΕΡΙΟΥ MEDITERRANEAN COLLEGE",
      "logo": "https://koecdn.twic.pics/media/peristeri3-1771358253-dRhtXJk1.png",
      "paok": false,
@@ -1931,7 +1945,7 @@
      ]
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "ΑΝΟ ΓΛΥΦΑΔΑΣ",
      "logo": "https://koecdn.twic.pics/media/glyfada-1757496556-dcU9OmwO.jpg",
      "paok": false,
@@ -1942,20 +1956,6 @@
       "4",
       "44-102",
       "2"
-     ]
-    },
-    {
-     "pos": 13,
-     "team": "ΝΟ ΧΑΝΙΩΝ",
-     "logo": "https://koecdn.twic.pics/media/xanion-1757572705-KVq2UMey.jpg",
-     "paok": false,
-     "cells": [
-      "5",
-      "0",
-      "1",
-      "4",
-      "46-77",
-      "1"
      ]
     },
     {
@@ -2018,6 +2018,20 @@
     },
     {
      "pos": 3,
+     "team": "ΕΘΝΙΚΟΣ ΟΦΠΦ",
+     "logo": "https://koecdn.twic.pics/media/shma-4-2-1-1-1-1758207317-I4sKrotf.png",
+     "paok": false,
+     "cells": [
+      "7",
+      "5",
+      "0",
+      "2",
+      "110-76",
+      "15"
+     ]
+    },
+    {
+     "pos": 4,
      "team": "ΠΑΝΙΩΝΙΟΣ ΓΣΣ",
      "logo": "https://koecdn.twic.pics/media/panionios-1757496971-8NsrgxDo.png",
      "paok": false,
@@ -2031,7 +2045,7 @@
      ]
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "ΑΛΙΜΟΣ ΝΑΣ",
      "logo": "https://koecdn.twic.pics/media/alimos-1757618338-HykYQxju.jpg",
      "paok": false,
@@ -2041,20 +2055,6 @@
       "0",
       "2",
       "96-70",
-      "12"
-     ]
-    },
-    {
-     "pos": 5,
-     "team": "ΕΘΝΙΚΟΣ ΟΦΠΦ",
-     "logo": "https://koecdn.twic.pics/media/shma-4-2-1-1-1-1758207317-I4sKrotf.png",
-     "paok": false,
-     "cells": [
-      "6",
-      "4",
-      "0",
-      "2",
-      "92-66",
       "12"
      ]
     },
@@ -2120,11 +2120,11 @@
      "logo": "https://koecdn.twic.pics/media/larisa-f-1789898479-XJuZR95A.png",
      "paok": false,
      "cells": [
-      "6",
+      "7",
       "1",
       "1",
-      "4",
-      "42-93",
+      "5",
+      "52-111",
       "4"
      ]
     },

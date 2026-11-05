@@ -50,7 +50,7 @@ const AWAY = '<svg viewBox="0 0 48 48" width="22" height="22"><path d="M44 21c0-
 function html(rows, story) {
   const n = rows.length;
   // Λιγότεροι αγώνες → μεγαλύτερα στοιχεία.
-  const k = story ? Math.min(1.25, 1 + (6 - n) * 0.06) : Math.min(1.15, 1 + (5 - n) * 0.05);
+  const k = story ? Math.min(1.25, 1 + (6 - n) * 0.06) : n > 5 ? 1 - (n - 5) * 0.2 : Math.min(1.15, 1 + (5 - n) * 0.05);
   const H = story ? 1920 : 1350;
   const top = story ? 250 : 60;
   return `<!doctype html><html><head><meta charset=utf-8><style>${FONTS}

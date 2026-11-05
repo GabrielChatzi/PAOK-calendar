@@ -1,0 +1,7 @@
+{"day":"Κυριακή","date":"01.11","file":"2026-11-01","matches":[
+ {"section":"Ποδόσφαιρο Γυναικών","opponent":"Πύργος","logo":"","home":false,"us":5,"them":0,"venue":"Βάρδα"},
+ {"section":"Πόλο Γυναικών","competition":"Euro Cup","opponent":"Dinamo Uralochka","logo":"","home":false,"us":15,"them":25,"venue":"Ede"},
+ {"section":"Μπάσκετ Γυναικών","opponent":"Πρωτέας Βούλας","logo":"../logos/protea-voulas-w.png","home":false,"us":69,"them":71,"venue":""},
+ {"section":"Φούτσαλ Ανδρών","opponent":"Κορυδαλλός","logo":"../logos/korydallos-futsal.png","home":true,"us":7,"them":3,"venue":""},
+ {"section":"Ποδόσφαιρο Ανδρών","opponent":"Αστέρας Τρίπολης","logo":"../logos/asteras-tripolis.png","home":true,"us":2,"them":1,"venue":"Τούμπα"},
+ {"section":"Βόλεϊ Γυναικών","opponent":"ΖΑΟΝ","logo":"../logos/zaon-volley-w.png","home":true,"us":3,"them":2,"venue":"Μίκρα"}]}

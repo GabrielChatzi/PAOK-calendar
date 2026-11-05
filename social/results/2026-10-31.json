@@ -1,0 +1,6 @@
+{"day":"Σάββατο","date":"31.10","file":"2026-10-31","matches":[
+ {"section":"Πόλο Γυναικών","competition":"Euro Cup","opponent":"ZVL-1886","logo":"","home":false,"us":16,"them":12,"venue":"Ede"},
+ {"section":"Πόλο Ανδρών","opponent":"Εθνικός","logo":"../logos/ethnikos-polo.png","home":true,"us":13,"them":11,"venue":"Ποσειδώνιο"},
+ {"section":"Μπάσκετ Ανδρών","opponent":"Ηρακλής","logo":"../logos/iraklis-basket.png","home":false,"us":63,"them":53,"venue":"Ιβανώφειο"},
+ {"section":"Χάντμπολ Γυναικών","opponent":"Αθηναϊκός","logo":"../logos/athinaikos-handball-w.jpg","home":true,"us":35,"them":22,"venue":""},
+ {"section":"Βόλεϊ Ανδρών","opponent":"Κηφισιά","logo":"../logos/kifisia-volley.gif","home":true,"us":3,"them":1,"venue":"PAOK Sports Arena"}]}

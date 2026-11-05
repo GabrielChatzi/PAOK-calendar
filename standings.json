@@ -1622,6 +1622,20 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Ο.Φ. Ν. ΙΩΝΙΑΣ",
+     "logo": "https://www.handball.org.gr/media/yootheme/cache/66/ofni-668f8f8c.jpg",
+     "paok": false,
+     "cells": [
+      "5",
+      "5",
+      "0",
+      "0",
+      "152-79",
+      "10"
+     ]
+    },
+    {
+     "pos": 2,
      "team": "ΠΑΟΚ",
      "logo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
      "paok": true,
@@ -1635,30 +1649,16 @@
      ]
     },
     {
-     "pos": 2,
-     "team": "Ο.Φ. Ν. ΙΩΝΙΑΣ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/66/ofni-668f8f8c.jpg",
-     "paok": false,
-     "cells": [
-      "4",
-      "4",
-      "0",
-      "0",
-      "123-62",
-      "8"
-     ]
-    },
-    {
      "pos": 3,
      "team": "Α.Ε.Κ.",
      "logo": "https://www.handball.org.gr/media/yootheme/cache/64/aek-gynaikes-64628104.png",
      "paok": false,
      "cells": [
-      "4",
+      "5",
       "3",
       "1",
-      "0",
-      "135-79",
+      "1",
+      "152-108",
       "7"
      ]
     },

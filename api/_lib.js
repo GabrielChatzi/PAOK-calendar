@@ -31,6 +31,8 @@ async function connect() {
   await db.collection("subs").createIndex({ topics: 1 });
   // Ειδοποιήσεις που πρέπει να φύγουν μία φορά (βλ. api/push.js «once»): σβήνονται μόνες τους σε 3 μέρες.
   await db.collection("sent").createIndex({ at: 1 }, { expireAfterSeconds: 3 * 86400 });
+  // Κωδικοί μεταφοράς στη νέα διεύθυνση (api/subscribe.js): ισχύουν 30 μέρες.
+  await db.collection("moves").createIndex({ at: 1 }, { expireAfterSeconds: 30 * 86400 });
   return db;
 }
 export async function getDb() {

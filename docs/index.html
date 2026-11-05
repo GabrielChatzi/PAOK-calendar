@@ -1214,36 +1214,134 @@
         : "Οι συνδρομές σε ημερολόγια που έκανες από εδώ συνεχίζουν να δουλεύουν.") + "</p></div>";
   }
 
-  // ---- Popup μετακόμισης: στην παλιά εγκατεστημένη εφαρμογή (κάθε φορά που ανοίγει) και στη νέα
-  // διεύθυνση μία φορά, όταν κάποιος έρχεται από την παλιά (?moved=1).
-  function showMovedPopup() {
-    var oldHost = /\.vercel\.app$|github\.io$/.test(location.hostname);
-    var arrived = /[?&]moved=1/.test(location.search);
-    if (!oldHost && !arrived) return;
-    if (arrived) {
-      try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) {}
-      try { if (localStorage.getItem("paok-moved-seen")) return; localStorage.setItem("paok-moved-seen", "1"); } catch (e) {}
-    }
-    var ios = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-    var steps = oldHost
-      ? "<ol class=\"steps\"><li>Πάτα «Άνοιξε το paokalendar.gr» πιο κάτω" + (ios ? " (ανοίγει στο Safari)" : "") + ".</li>" +
-        "<li>Βάλε την εφαρμογή ξανά στην αρχική οθόνη" + (ios ? ": Κοινοποίηση → «Προσθήκη στην οθόνη Αφετηρίας»" : " από το μενού του browser") + ".</li>" +
-        "<li>Άνοιξέ τη από το νέο εικονίδιο και ενεργοποίησε ξανά τις ειδοποιήσεις που θέλεις.</li>" +
-        "<li>Σβήσε αυτή την παλιά εφαρμογή από την αρχική οθόνη.</li></ol>" +
-        "<p class=\"help\">Μέχρι τότε όλα εδώ δουλεύουν κανονικά, και οι ειδοποιήσεις σου.</p>"
-      : "<p>Το PAOKalendar έχει πλέον τη δική του διεύθυνση: <strong>paokalendar.gr</strong>. Τα ημερολόγια που έχεις ήδη προσθέσει συνεχίζουν να ενημερώνονται.</p>" +
-        "<p>Αν είχες την εφαρμογή στην αρχική οθόνη, βάλ' τη ξανά από εδώ" + (ios ? " (Κοινοποίηση → «Προσθήκη στην οθόνη Αφετηρίας»)" : "") +
-        ", ενεργοποίησε ξανά τις ειδοποιήσεις και σβήσε την παλιά.</p>";
+  // ---- Μετακόμιση στο paokalendar.gr, όσο πιο απλά γίνεται:
+  // - Στην παλιά εγκατεστημένη εφαρμογή: popup με ένα κουμπί. Ο server κρατά τις επιλογές ειδοποιήσεων με
+  //   έναν κωδικό (api/subscribe.js «move-out») και το κουμπί ανοίγει το paokalendar.gr/?import=<κωδικός>.
+  // - Στο paokalendar.gr: ένα κουμπί «Μεταφορά ειδοποιήσεων» ενεργοποιεί τις ίδιες ειδοποιήσεις και σβήνει την
+  //   παλιά συνδρομή («move-in»), ώστε να μην έρχονται διπλές. Στο iPhone ο κωδικός περνά και στην εφαρμογή της
+  //   αρχικής οθόνης μέσω του manifest (api/manifest.js). Αν χαθεί, γράφεται και με το χέρι.
+  var MOVE_RE = /[?&]import=([A-Za-z0-9]{6})/;
+  function modal(html, onClick) {
+    var old = document.querySelector(".modal-back");
+    if (old) old.remove();
     var box = document.createElement("div");
     box.className = "modal-back";
-    box.innerHTML = '<div class="modal" role="dialog" aria-modal="true" aria-labelledby="moved-title">' +
-      '<h2 id="moved-title">Το PAOKalendar μετακόμισε</h2>' + steps +
-      '<div class="actions">' + (oldHost ? '<a class="btn solid" href="https://paokalendar.gr/' + location.hash + '" target="_blank" rel="noopener">Άνοιξε το paokalendar.gr</a>' : "") +
-      '<button type="button" class="btn" data-modal-close>' + (oldHost ? "Αργότερα" : "Εντάξει") + "</button></div></div>";
+    box.innerHTML = '<div class="modal" role="dialog" aria-modal="true">' + html + "</div>";
     box.addEventListener("click", function (e) {
-      if (e.target === box || e.target.hasAttribute("data-modal-close")) box.remove();
+      if (e.target === box || e.target.hasAttribute("data-modal-close")) { box.remove(); return; }
+      if (onClick) onClick(e, box);
     });
     document.body.appendChild(box);
+    return box;
+  }
+  function pendingMove() { try { return localStorage.getItem("paok-import") || ""; } catch (e) { return ""; } }
+  function startMoveFromUrl() {
+    var m = MOVE_RE.exec(location.search);
+    if (!m) return;
+    var code = m[1].toUpperCase();
+    try { if (localStorage.getItem("paok-import-done") !== code) localStorage.setItem("paok-import", code); } catch (e) {}
+    try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) {}
+  }
+  function useMoveManifest() {
+    var code = pendingMove(), link = document.querySelector('link[rel="manifest"]');
+    if (code && link) link.href = "/api/manifest?import=" + code;
+  }
+  function doMoveIn(code, box) {
+    var status = box && box.querySelector(".move-status");
+    if (status) status.textContent = "Μεταφορά…";
+    return ensureSub().then(function (sub) {
+      return fetch("/api/subscribe", { method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "move-in", code: code, subscription: sub.toJSON() }) });
+    }).then(function (r) { return r.json().then(function (d) { if (!r.ok) throw new Error(d.error || "move"); return d; }); })
+      .then(function (d) {
+        push.topics = d.topics || [];
+        savePushTopics(); setDirty(false);
+        try {
+          if (d.prefs && d.prefs.filters) localStorage.setItem("paok-filters", d.prefs.filters);
+          if (d.prefs && d.prefs.tz) localStorage.setItem("paok-tz", d.prefs.tz);
+          localStorage.setItem("paok-import-done", code); localStorage.removeItem("paok-import");
+        } catch (e) {}
+        if (box) box.remove();
+        toast("Έγινε! Οι " + push.topics.length + " ειδοποιήσεις σου μεταφέρθηκαν. Μπορείς να σβήσεις την παλιά εφαρμογή.");
+        render();
+      }).catch(function (e) {
+        if (status) status.textContent = window.Notification && Notification.permission === "denied"
+          ? "Δεν δόθηκε άδεια για ειδοποιήσεις. Επίτρεψέ τες στις ρυθμίσεις και ξαναδοκίμασε."
+          : (e && e.message && e.message !== "move" ? e.message : "Δεν έγινε. Δοκίμασε ξανά σε λίγο.");
+      });
+  }
+  function showMoveIn(code) {
+    var ios = isIOSDevice();
+    var installed = window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+    var needInstall = ios && !installed;
+    modal('<h2>Καλώς ήρθες στο paokalendar.gr</h2>' +
+      (needInstall
+        ? "<p>Για να μεταφέρεις τις ειδοποιήσεις σου:</p><ol class=\"steps\"><li>Πάτα Κοινοποίηση " + SHARE_ICON + " και «Προσθήκη στην οθόνη Αφετηρίας».</li>" +
+          "<li>Άνοιξε το PAOKalendar από το νέο εικονίδιο. Θα σου ζητήσει ένα πάτημα για να ολοκληρωθεί η μεταφορά.</li>" +
+          "<li>Σβήσε την παλιά εφαρμογή.</li></ol>"
+        : "<p>Πάτα το κουμπί για να ενεργοποιηθούν εδώ <strong>οι ίδιες ειδοποιήσεις</strong> που είχες. Η παλιά εφαρμογή θα σταματήσει να τις στέλνει, ώστε να μην έρχονται διπλές.</p>") +
+      '<p class="move-status help"></p><div class="actions">' +
+      (needInstall ? "" : '<button type="button" class="btn solid" data-move-in>Μεταφορά ειδοποιήσεων</button>') +
+      '<button type="button" class="btn" data-modal-close>' + (needInstall ? "Εντάξει" : "Αργότερα") + "</button></div>" +
+      '<p class="help">Κωδικός μεταφοράς: <strong>' + esc(code) + "</strong> (αν σου ζητηθεί)</p>",
+      function (e, box) { if (e.target.hasAttribute("data-move-in")) doMoveIn(code, box); });
+  }
+  function showMoveCodeEntry() {
+    modal("<h2>Μεταφορά από την παλιά εφαρμογή</h2><p>Γράψε τον κωδικό μεταφοράς που σου έδειξε η παλιά εφαρμογή.</p>" +
+      '<label class="adm-field wide"><span>Κωδικός</span><input id="move-code" maxlength="6" autocapitalize="characters" autocomplete="off"></label>' +
+      '<p class="move-status help"></p><div class="actions"><button type="button" class="btn solid" data-move-code>Μεταφορά</button>' +
+      '<button type="button" class="btn" data-modal-close>Άκυρο</button></div>',
+      function (e, box) {
+        if (!e.target.hasAttribute("data-move-code")) return;
+        var code = ($("move-code").value || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
+        if (code.length !== 6) { box.querySelector(".move-status").textContent = "Ο κωδικός έχει 6 χαρακτήρες."; return; }
+        doMoveIn(code, box);
+      });
+  }
+  function isIOSDevice() {
+    return /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  }
+  // Η παλιά εγκατεστημένη εφαρμογή: ένα κουμπί που παίρνει μαζί τις επιλογές.
+  function showMoveOut() {
+    var ios = isIOSDevice();
+    var box = modal("<h2>Το PAOKalendar μετακόμισε στο paokalendar.gr</h2>" +
+      "<p>Πάτα το κουμπί" + (ios ? ", βάλε τη νέα εφαρμογή στην αρχική οθόνη (Κοινοποίηση → «Προσθήκη στην οθόνη Αφετηρίας») και άνοιξέ τη" : "") +
+      ". Οι ειδοποιήσεις σου μεταφέρονται με ένα πάτημα, χωρίς να τις ξαναδιαλέξεις. Μετά σβήσε αυτή την εφαρμογή.</p>" +
+      '<div class="actions"><a class="btn solid" data-move-out href="https://paokalendar.gr/' + esc(location.hash) + '" target="_blank" rel="noopener">Άνοιξε το paokalendar.gr</a>' +
+      '<button type="button" class="btn" data-modal-close>Αργότερα</button></div>' +
+      '<p class="help move-code">Μέχρι τότε όλα εδώ δουλεύουν κανονικά, και οι ειδοποιήσεις σου.</p>');
+    // Ο κωδικός ετοιμάζεται αμέσως, ώστε το κουμπί να έχει ήδη τη σωστή διεύθυνση όταν πατηθεί.
+    if (!("serviceWorker" in navigator)) return;
+    navigator.serviceWorker.ready.then(function (reg) { return reg.pushManager.getSubscription(); }).then(function (sub) {
+      if (!sub) return;
+      var prefs = {};
+      try { prefs = { filters: localStorage.getItem("paok-filters") || "", tz: localStorage.getItem("paok-tz") || "" }; } catch (e) {}
+      return fetch("/api/subscribe", { method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "move-out", subscription: sub.toJSON(), prefs: prefs }) })
+        .then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+          if (!d || !d.code) return;
+          var a = box.querySelector("[data-move-out]");
+          if (a) a.href = "https://paokalendar.gr/?import=" + d.code + location.hash;
+          var note = box.querySelector(".move-code");
+          if (note) note.innerHTML = "Κωδικός μεταφοράς: <strong>" + esc(d.code) + "</strong> (αν σου ζητηθεί). Μέχρι τότε όλα εδώ δουλεύουν κανονικά.";
+        });
+    }).catch(function () {});
+  }
+  function showMovedPopup() {
+    var oldHost = /\.vercel\.app$|github\.io$/.test(location.hostname);
+    startMoveFromUrl();
+    useMoveManifest();
+    if (oldHost) { showMoveOut(); return; }
+    var code = pendingMove();
+    if (code) { showMoveIn(code); return; }
+    if (/[?&]moved=1/.test(location.search)) {
+      try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) {}
+      var seen = false;
+      try { seen = !!localStorage.getItem("paok-moved-seen"); localStorage.setItem("paok-moved-seen", "1"); } catch (e) {}
+      if (!seen) modal("<h2>Το PAOKalendar μετακόμισε</h2><p>Το PAOKalendar έχει πλέον τη δική του διεύθυνση: <strong>paokalendar.gr</strong>. " +
+        "Τα ημερολόγια που έχεις ήδη προσθέσει συνεχίζουν να ενημερώνονται.</p>" +
+        '<div class="actions"><button type="button" class="btn" data-modal-close>Εντάξει</button></div>');
+    }
   }
   showMovedPopup();
 
@@ -1406,6 +1504,7 @@
       return;
     }
     if (b.dataset.act === "push-off") { disablePush(); return; }
+    if (b.dataset.act === "move-code") { showMoveCodeEntry(); return; }
     if (b.dataset.act === "push-test") { testPush(); return; }
     if (b.dataset.act === "tz-athens" || b.dataset.act === "tz-local") {
       try { if (b.dataset.act === "tz-athens") localStorage.setItem("paok-tz", "athens"); else localStorage.removeItem("paok-tz"); } catch (err) {}
@@ -1822,6 +1921,7 @@
       (st === "on"
         ? "<h3>Αυτή η συσκευή</h3>" +
           '<div class="actions"><button type="button" class="btn" data-act="push-off">Απενεργοποίηση όλων</button></div>' +
+          '<div class="actions"><button type="button" class="btn" data-act="move-code">Μεταφορά από την παλιά εφαρμογή</button></div>' +
 
           '<p class="help">Οι επιλογές ισχύουν μόνο για αυτή τη συσκευή. Σε άλλο κινητό ή υπολογιστή διάλεξε ξανά.</p>'
         : "") +

@@ -9,7 +9,7 @@
 // - Δείχνει τις ειδοποιήσεις web push και, όταν πατηθεί μία, ανοίγει τον αγώνα ή το τμήμα της.
 //
 // Αλλάζοντας το VERSION, οι συσκευές κατεβάζουν ξανά τη σελίδα.
-const VERSION = "v5";
+const VERSION = "v6";
 const SHELL = `paokalendar-shell-${VERSION}`;
 const DATA = "paokalendar-data";
 const ASSETS = "paokalendar-assets";

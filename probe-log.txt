@@ -1,0 +1,8 @@
+ethnikos PNG image data, 1600 x 1851, 8-bit/color
+iraklis-b PNG image data, 483 x 657, 8-bit/color R
+athinaikos-hb JPEG image data, JFIF standard 1.01, res
+kifisia-v GIF image data, version 89a, 40 x 40
+protea PNG image data, 128 x 128, 8-bit/color R
+korydallos PNG image data, 1321 x 1318, 8-bit/color
+asteras PNG image data, 500 x 500, 8-bit/color R
+zaon PNG image data, 40 x 15, 8-bit/color RGB

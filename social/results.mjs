@@ -1,5 +1,6 @@
 // Εικόνες «Αποτελέσματα» για Instagram / Facebook: το ίδιο σχέδιο με το fixtures.mjs, αντεστραμμένο
-// (ανοιχτό φόντο, μαύρα γράμματα), με το σκορ (ΠΑΟΚ πρώτα) σε μαύρο κουτί δεξιά.
+// (ανοιχτό φόντο, μαύρα γράμματα). Το σκορ δεξιά, γηπεδούχος πρώτα: ο αριθμός του ΠΑΟΚ μαύρος,
+// του αντιπάλου αχνός γκρι.
 //
 //   node social/results.mjs social/results/2026-11-01.json [out-dir]
 //
@@ -82,9 +83,9 @@ body{display:flow-root;width:1080px;height:${H}px;color:#0b0b0b;font-family:F;ov
 .info b{color:#000;font-weight:800}.info s{display:inline-block;width:2px;height:${22 * k}px;background:#999;text-decoration:none}
 .ha{font-weight:700;font-size:${20 * k}px;letter-spacing:4px;color:#777;margin-top:4px;display:flex;align-items:center;gap:8px}
 .sc{margin-left:auto;text-align:center;flex:none}
-.box{background:#0b0b0b;color:#f3f2ee;font-family:S;font-weight:900;font-size:${64 * k}px;line-height:1;padding:${10 * k}px ${18 * k}px ${8 * k}px;width:${175 * k}px;letter-spacing:1px;white-space:nowrap}
+.box{font-family:S;font-weight:900;font-size:${84 * k}px;line-height:1;letter-spacing:1px;white-space:nowrap;color:#0b0b0b}
+.box i{font-style:normal;color:#b5b3ad}.box u{text-decoration:none;color:#b5b3ad;margin:0 ${6 * k}px}
 .res{font-weight:800;font-size:${18 * k}px;letter-spacing:5px;margin-top:6px}
-.L .box{background:transparent;color:#0b0b0b;box-shadow:inset 0 0 0 3px #0b0b0b}
 .foot{position:absolute;bottom:${story ? 210 : 44}px;left:0;right:0;text-align:center;font-weight:800;font-size:50px;letter-spacing:-1px;line-height:1}
 .foot em{font-style:normal;color:#77756f}
 </style></head><body><div class="st"></div><div class="glow"></div>
@@ -103,7 +104,7 @@ for (const m of spec.matches) {
 <div class="opp">${UP(m.opponent)}</div>
 <div class="info">${[UP(m.section), UP(m.competition)].filter(Boolean).join(" <s></s> ")}</div>
 <div class="ha">${m.home ? HOME : AWAY} ${m.home ? "ΕΝΤΟΣ" : "ΕΚΤΟΣ"}${m.venue ? ` · ${UP(m.venue)}` : ""}</div></div>
-<div class="sc"><div class="box">${m.us}–${m.them}</div><div class="res">${r[1]}</div></div></div>`);
+<div class="sc"><div class="box">${m.home ? `${m.us}<u>–</u><i>${m.them}</i>` : `<i>${m.them}</i><u>–</u>${m.us}`}</div></div></div>`);
 }
 fs.mkdirSync(outDir, { recursive: true });
 const browser = await chromium.launch();

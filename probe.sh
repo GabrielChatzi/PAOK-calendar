@@ -1,7 +1,3 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
-python3 -c "
-import standings
-for t in standings.volley_women():
-    print(t['title'])
-    for r in t['rows']: print(r['pos'], r['team'], r['cells'], bool(r['logo']))"
+for u in https://paokalendar.gr/ https://www.paokalendar.gr/ https://paokalendar.gr/api/health; do echo "$u -> $(curl -sS -o /dev/null -m 20 -w '%{http_code} -> %{redirect_url}' "$u")"; done

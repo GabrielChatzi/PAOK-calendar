@@ -1575,6 +1575,25 @@ def keep_friendlies(previous: list[dict], current: list[Match]) -> None:
             current.append(match_from_json(d))
 
 
+# Το ίδιο γήπεδο γράφεται αλλιώς σε κάθε πηγή: ένα όνομα για όλα.
+VENUE_ALIASES = [
+    (re.compile(r"(PAOK|ΠΑΟΚ)\s*(SPORTS?\s*ARENA|PALACE SPORT)|ΠΑΛΑΤΑΚΙ|Γυμναστήριο Πυλαίας", re.I), "PAOK Sports Arena"),
+    (re.compile(r"^(ΤΟΥΜΠΑ|Τούμπα|Toumba( Stadium)?)$", re.I), "Τούμπα"),
+    (re.compile(r"^ΑΛΕΞΑΝΔΡΕΙΟ", re.I), "Αλεξάνδρειο"),
+]
+CLOSED_RE = re.compile(r"ΚΕΚΛΕΙΣΜΕΝΩΝ ΤΩΝ ΘΥΡΩΝ|κεκλεισμένων των θυρών", re.I)
+
+
+def normalize_venue(venue: str) -> str:
+    v = (venue or "").strip()
+    closed = bool(CLOSED_RE.search(v))
+    for rx, name in VENUE_ALIASES:
+        if rx.search(v):
+            v = name
+            break
+    return v + (" (κεκλεισμένων των θυρών)" if closed and "κεκλεισμένων" not in v else "")
+
+
 def drop_shadow_friendlies(matches: list[Match]) -> list[Match]:
     """Μια ανακοίνωση της ΑΣ ΠΑΟΚ μπορεί να μοιάζει με φιλικό («προετοιμασία», «τουρνουά») ενώ είναι
     ο επίσημος αγώνας της μέρας. Ένα τμήμα δεν παίζει φιλικό την ίδια μέρα με επίσημο αγώνα: τότε
@@ -1680,6 +1699,8 @@ def main(only: list[str] | None = None) -> int:
         carry_uids(prev_by_section[key], unique)
         keep_friendlies(prev_by_section[key], unique)
         unique[:] = drop_shadow_friendlies(unique)
+        for m in unique:
+            m.venue = normalize_venue(m.venue)
         drop_live_scores(key, unique, dt.datetime.now(ATHENS))
         if key in ("volley", "volley-women"):
             volley_live(key, unique)

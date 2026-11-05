@@ -1,6 +1,6 @@
 // Εικόνες «Αποτελέσματα» για Instagram / Facebook: το ίδιο σχέδιο με το fixtures.mjs, αντεστραμμένο
-// (ανοιχτό φόντο, μαύρα γράμματα). Το σκορ δεξιά, γηπεδούχος πρώτα: ο νικητής μαύρος, ο χαμένος
-// αχνός γκρι, και μια γραμμή κάτω από τον αριθμό του ΠΑΟΚ.
+// (ανοιχτό φόντο, μαύρα γράμματα). Το σκορ δεξιά, γηπεδούχος πρώτα: ο αριθμός του ΠΑΟΚ μαύρος, του
+// αντιπάλου αχνός γκρι, και δίπλα καλλιγραφικό W / L / D.
 //
 //   node social/results.mjs social/results/2026-11-01.json [out-dir]
 //
@@ -82,9 +82,10 @@ body{display:flow-root;width:1080px;height:${H}px;color:#0b0b0b;font-family:F;ov
 .info{font-weight:700;font-size:${23 * k}px;letter-spacing:4px;margin-top:6px;display:flex;align-items:center;gap:12px;color:#333;white-space:nowrap}
 .info b{color:#000;font-weight:800}.info s{display:inline-block;width:2px;height:${22 * k}px;background:#999;text-decoration:none}
 .ha{font-weight:700;font-size:${20 * k}px;letter-spacing:4px;color:#777;margin-top:4px;display:flex;align-items:center;gap:8px}
-.sc{margin-left:auto;text-align:center;flex:none}
-.box{font-family:S;font-weight:900;font-size:${84 * k}px;line-height:1;letter-spacing:1px;white-space:nowrap;color:#0b0b0b}
-.box i{font-style:normal;color:#b5b3ad}.box b{font-weight:900;color:#0b0b0b}.box em{font-style:normal;position:relative}.box em:after{content:'';position:absolute;left:8%;right:8%;bottom:${2 * k}px;height:${5 * k}px;background:currentColor}.box u{text-decoration:none;color:#b5b3ad;margin:0 ${6 * k}px}
+.sc{margin-left:auto;flex:none;display:flex;align-items:center;gap:${14 * k}px}
+.wl{font-family:GV;font-size:${92 * k}px;line-height:1;width:${70 * k}px;text-align:center;margin-top:${10 * k}px}
+.box{font-family:S;font-weight:900;font-size:${84 * k}px;line-height:1;letter-spacing:1px;white-space:nowrap;color:#0b0b0b;text-align:right}
+.box i{font-style:normal;color:#b5b3ad}.box b{font-weight:900;color:#0b0b0b}.box u{text-decoration:none;color:#b5b3ad;margin:0 ${6 * k}px}
 .res{font-weight:800;font-size:${18 * k}px;letter-spacing:5px;margin-top:6px}
 .foot{position:absolute;bottom:${story ? 210 : 44}px;left:0;right:0;text-align:center;font-weight:800;font-size:50px;letter-spacing:-1px;line-height:1}
 .foot em{font-style:normal;color:#77756f}
@@ -104,7 +105,7 @@ for (const m of spec.matches) {
 <div class="opp">${UP(m.opponent)}</div>
 <div class="info">${[UP(m.section), UP(m.competition)].filter(Boolean).join(" <s></s> ")}</div>
 <div class="ha">${m.home ? HOME : AWAY} ${m.home ? "ΕΝΤΟΣ" : "ΕΚΤΟΣ"}${m.venue ? ` · ${UP(m.venue)}` : ""}</div></div>
-<div class="sc"><div class="box">${(() => { const win = m.us >= m.them, lose = m.us <= m.them; const us = `<em>${win ? `<b>${m.us}</b>` : `<i>${m.us}</i>`}</em>`, them = lose ? `<b>${m.them}</b>` : `<i>${m.them}</i>`; return m.home ? `${us}<u>–</u>${them}` : `${them}<u>–</u>${us}`; })()}</div></div></div>`);
+<div class="sc"><div class="box">${m.home ? `${m.us}<u>–</u><i>${m.them}</i>` : `<i>${m.them}</i><u>–</u>${m.us}`}</div><div class="wl">${r[0]}</div></div></div>`);
 }
 fs.mkdirSync(outDir, { recursive: true });
 const browser = await chromium.launch();

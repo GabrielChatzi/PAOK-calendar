@@ -22,6 +22,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
+import { MONO_CRESTS } from "./crests.mjs";
 
 const require = createRequire(import.meta.url);
 let chromium;
@@ -75,9 +76,9 @@ body{display:flow-root;width:1080px;height:${H}px;color:#0b0b0b;font-family:F;ov
 .mid{position:absolute;z-index:2;left:0;right:0;top:${top + 395}px;bottom:${(story ? 210 : 44) + 70}px;display:flex;align-items:center;justify-content:center}
 .list{width:880px;display:flex;flex-direction:column;gap:${(story ? 44 : 20) * k}px}
 .m{display:flex;align-items:center;gap:30px}
-.lg{width:${96 * k}px;height:${96 * k}px;flex:none;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 0 0 3px #f3f2ee,0 0 0 5px #0b0b0b}
+.lg{width:${96 * k}px;height:${96 * k}px;flex:none;display:flex;align-items:center;justify-content:center}.lg:has(.ini){border-radius:50%;border:3px solid #0b0b0b}
 .ini{font-family:S;font-weight:900;font-size:${34 * k}px}
-.lg img{width:75%;height:75%;object-fit:contain}
+.lg img{width:100%;height:100%;object-fit:contain}
 .opp{white-space:nowrap;font-family:S;font-weight:900;font-size:${76 * k}px;line-height:.9}
 .info{font-weight:700;font-size:${23 * k}px;letter-spacing:4px;margin-top:6px;display:flex;align-items:center;gap:12px;color:#333;white-space:nowrap}
 .info b{color:#000;font-weight:800}.info s{display:inline-block;width:2px;height:${22 * k}px;background:#999;text-decoration:none}
@@ -111,6 +112,7 @@ const browser = await chromium.launch();
 for (const story of [false, true]) {
   const page = await browser.newPage({ viewport: { width: 1080, height: story ? 1920 : 1350 } });
   await page.setContent(html(rows, story));
+  await page.evaluate(MONO_CRESTS, 11);
   await page.waitForTimeout(400);
   const out = path.join(outDir, `${spec.file || "apotelesmata"}-apotelesmata-${story ? "story" : "post"}.png`);
   await page.screenshot({ path: out });

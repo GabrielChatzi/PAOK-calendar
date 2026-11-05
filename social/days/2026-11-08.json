@@ -1,0 +1,4 @@
+{"day":"Κυριακή","date":"08.11","file":"2026-11-08","matches":[
+ {"time":"16:00","section":"Φούτσαλ Ανδρών","opponent":"Σαλαμίνα","logo":"../logos/salamina-futsal.png","venue":"Σαλαμίνα","tv":"EPS Salas","home":false},
+ {"time":"16:00","section":"Βόλεϊ Γυναικών","opponent":"Παναθηναϊκός","logo":"../logos/panathinaikos-volley-w.jpg","venue":"Γυμναστήριο Μετς","tv":"ΣΠΟΡ FM TV","home":false},
+ {"time":"21:00","section":"Ποδόσφαιρο Ανδρών","opponent":"Ολυμπιακός","logo":"../logos/olympiakos.png","venue":"Γ. Καραϊσκάκης","tv":"","home":false}]}

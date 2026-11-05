@@ -1,0 +1,6 @@
+{"day":"Σάββατο","date":"07.11","file":"2026-11-07","matches":[
+ {"time":"11:45","section":"Μπάσκετ Γυναικών","opponent":"Αθηναϊκός","logo":"../logos/athinaikos-w.png","venue":"PAOK Sports Arena","tv":"ΕΟΚ TV","home":true},
+ {"time":"15:00","section":"Ποδόσφαιρο Γυναικών","opponent":"Οδυσσέας Μοσχάτου","logo":"../logos/odysseas-moschatou-w.png","venue":"Μοσχάτο","tv":"YouTube","home":false},
+ {"time":"15:00","section":"Πόλο Γυναικών","opponent":"ΝΟ Λάρισας","logo":"../logos/no-larisas-w.png","venue":"Ποσειδώνιο","tv":"ΚΟΕ TV","home":true},
+ {"time":"16:30","section":"Πόλο Ανδρών","opponent":"Βουλιαγμένη","logo":"../logos/vouliagmeni.png","venue":"Ποσειδώνιο","tv":"ΚΟΕ TV","home":true},
+ {"time":"17:30","section":"Μπάσκετ Ανδρών","opponent":"Vikos Falcons","logo":"../logos/vikos-falcons.png","venue":"PAOK Sports Arena","tv":"ΣΚΑΪ","home":true}]}

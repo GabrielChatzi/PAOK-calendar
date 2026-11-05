@@ -29,7 +29,7 @@ for (const [file, title, sub, sub2, shots] of slides) {
   </style></head><body>
   <div class="card">${cover ? `<div class="big">PAOK<span>alendar</span></div><p>${sub}</p><p class="sub2">${sub2}</p>`
     : `<div class="brand">PAOK<span>alendar</span></div><h1>${title}</h1><p>${sub}</p>`}</div>
-  ${phones}<div class="url">paokalendar.vercel.app · ανεπίσημη σελίδα φιλάθλων</div></body></html>`);
+  ${phones}<div class="url">Ανεπίσημη σελίδα φιλάθλων</div></body></html>`);
   await p.evaluate(() => document.fonts.ready); await p.waitForTimeout(800);
   await p.screenshot({ path: `docs/ig/${file}.png` });
 }

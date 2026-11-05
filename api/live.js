@@ -15,7 +15,7 @@
 
 const KOE = "https://live.koe.org.gr/api-waterpolo/wp";
 const EA = "https://ea.microplustimingservices.com/api/wp";
-const UA = "Mozilla/5.0 (PAOKalendar live; +https://paokalendar.vercel.app)";
+const UA = "Mozilla/5.0 (PAOKalendar live; +https://paokalendar.gr)";
 const ID = /^[A-Za-z0-9_-]{1,40}$/;  // και ημερομηνίες (2026-10-31)
 
 const tokens = {};  // ανά πηγή: { value, until }

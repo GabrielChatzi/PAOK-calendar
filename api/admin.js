@@ -31,7 +31,7 @@ function passwordOk(given) {
 async function findMatch(nt) {
   const urls = [
     `https://raw.githubusercontent.com/GabrielChatzi/PAOK-calendar/data/matches.json?t=${Math.floor(Date.now() / 60000)}`,
-    "https://paokalendar.vercel.app/matches.json",
+    "https://paokalendar.gr/matches.json",
   ];
   for (const url of urls) {
     try {

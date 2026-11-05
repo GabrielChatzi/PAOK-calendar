@@ -25,7 +25,7 @@ async function selftest() {
     const keys = await vapidKeys();
     webpush.generateRequestDetails(sub, JSON.stringify({ title: "selftest", tag: "x-result" }), {
       TTL: 60, topic: "selftest",
-      vapidDetails: { subject: "https://paokalendar.vercel.app", publicKey: keys.publicKey, privateKey: keys.privateKey },
+      vapidDetails: { subject: "https://paokalendar.gr", publicKey: keys.publicKey, privateKey: keys.privateKey },
     });
   });
   return { ok: Object.values(checks).every((v) => v === "ok"), checks };

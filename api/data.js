@@ -15,7 +15,7 @@ export default async function handler(req, res) {
   try {
     // Το ?t= αλλάζει κάθε λεπτό, ώστε να μη μας δίνει το GitHub παλιό αντίγραφο (κρατά 5 λεπτά).
     const r = await fetch(`${RAW}${f}?t=${Math.floor(Date.now() / 60000)}`, {
-      headers: { "User-Agent": "PAOKalendar (+https://paokalendar.vercel.app)" },
+      headers: { "User-Agent": "PAOKalendar (+https://paokalendar.gr)" },
     });
     if (!r.ok) throw new Error(`GitHub ${r.status}`);
     const body = Buffer.from(await r.arrayBuffer());

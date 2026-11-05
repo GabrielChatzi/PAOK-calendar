@@ -1498,7 +1498,7 @@ def manual_matches(section: str, official: list[Match]) -> list[Match]:
 
 # ---------------------------------------------------------------- καταχωρίσεις του διαχειριστή
 
-ADMIN_URL = "https://paokalendar.vercel.app/api/admin"
+ADMIN_URL = "https://paokalendar.gr/api/admin"
 _ADMIN: dict = {}
 
 

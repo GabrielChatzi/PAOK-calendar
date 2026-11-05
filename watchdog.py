@@ -30,7 +30,7 @@ TOKEN = os.environ.get("GITHUB_TOKEN", "")
 DRY = os.environ.get("DRY") == "1"
 TITLE = "Πρόβλημα λειτουργίας"
 RAW = f"https://raw.githubusercontent.com/{REPO}/data/matches.json"
-UA = "PAOKalendar watchdog (+https://paokalendar.vercel.app)"
+UA = "PAOKalendar watchdog (+https://paokalendar.gr)"
 TOPIC = "s:ops:live"
 
 DATA_STALE = dt.timedelta(hours=3)

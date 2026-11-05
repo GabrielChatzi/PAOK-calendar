@@ -7,7 +7,7 @@ import crypto from "node:crypto";
 import { MongoClient } from "mongodb";
 import webpush from "web-push";
 
-export const SITE = "https://paokalendar.vercel.app";
+export const SITE = "https://paokalendar.gr";
 
 // Θέματα: s:<τμήμα>:<είδος> ή m:<αγώνας>:<είδος>
 export const TOPIC_RE = /^(s:[a-z-]{2,30}|m:[0-9a-f]{10}):(pre|time|live|result)$/;

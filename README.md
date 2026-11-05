@@ -4,7 +4,7 @@
 
 Ανεπίσημη σελίδα φιλάθλων· δεν συνδέεται με τον ΠΑΟΚ ή τις εταιρείες του. Τα σήματα των ομάδων ανήκουν στους κατόχους τους.
 
-**Ιστοσελίδα:** https://paokalendar.vercel.app
+**Ιστοσελίδα:** https://paokalendar.gr
 
 Η σελίδα δημοσιεύεται στο Vercel από τον φάκελο `docs/` (βλ. [`vercel.json`](vercel.json)) σε κάθε αλλαγή του `main`. Η παλιά διεύθυνση https://gabrielchatzi.github.io/PAOK-calendar/ (GitHub Pages) παραμένει ενεργή για τις υπάρχουσες συνδρομές και δείχνει μήνυμα για τη νέα διεύθυνση.
 
@@ -52,7 +52,7 @@
 Κάθε τμήμα έχει δύο αρχεία στο `docs/`, `<τμήμα>-home.ics` και `<τμήμα>-away.ics`, π.χ. `football-women-away.ics`. Σύνδεσμος για συνδρομή:
 
 ```
-https://paokalendar.vercel.app/<αρχείο>.ics
+https://paokalendar.gr/<αρχείο>.ics
 ```
 
 Οι παλιοί σύνδεσμοι `gabrielchatzi.github.io/PAOK-calendar/<αρχείο>.ics` και `raw.githubusercontent.com/.../docs/<αρχείο>.ics` συνεχίζουν να δουλεύουν.
@@ -76,7 +76,7 @@ https://paokalendar.vercel.app/<αρχείο>.ics
 - Το `/api/push` το καλεί μόνο το GitHub Actions αυτού του repo από το `main`: η ταυτότητα αποδεικνύεται με το OIDC token του GitHub (`permissions: id-token: write`), χωρίς κωδικό ή μυστικό.
 - Συσκευές που απεγκατέστησαν την εφαρμογή ή έκλεισαν τις ειδοποιήσεις σβήνονται αυτόματα στην επόμενη αποστολή.
 
-Ρύθμιση (μία φορά): Vercel → project → Storage → σύνδεση μιας βάσης MongoDB Atlas με το project, ώστε να υπάρχει το `MONGODB_URI`. Έλεγχος: https://paokalendar.vercel.app/api/health
+Ρύθμιση (μία φορά): Vercel → project → Storage → σύνδεση μιας βάσης MongoDB Atlas με το project, ώστε να υπάρχει το `MONGODB_URI`. Έλεγχος: https://paokalendar.gr/api/health
 
 ## Αποτελέσματα από την ΑΣ ΠΑΟΚ και καταχωρίσεις του διαχειριστή
 

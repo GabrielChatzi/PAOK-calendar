@@ -27,7 +27,7 @@ import urllib.request
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-SITE = "https://paokalendar.vercel.app/"
+SITE = "https://paokalendar.gr/"
 ATHENS = ZoneInfo("Europe/Athens")
 KINDS = ("pre", "time", "live", "result")
 # Η υπενθύμιση φεύγει στον πρώτο έλεγχο (κάθε 15 λεπτά) που απέχει το πολύ μία ώρα από την έναρξη·

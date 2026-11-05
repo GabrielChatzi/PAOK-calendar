@@ -69,8 +69,8 @@ body{display:flow-root;width:1080px;height:${H}px;color:#fff;font-family:F;overf
 .mid{position:absolute;z-index:2;left:0;right:0;top:${top + 395}px;bottom:${(story ? 210 : 44) + 70}px;display:flex;align-items:center;justify-content:center}
 .list{width:max-content;max-width:900px;display:flex;flex-direction:column;gap:${(story ? 44 : 20) * k}px}
 .m{display:flex;align-items:center;gap:30px}
-.lg{width:${96 * k}px;height:${96 * k}px;flex:none;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 0 0 3px #0b0b0b,0 0 0 5px #777}
-.lg img{width:75%;height:75%;object-fit:contain}
+.lg{width:${96 * k}px;height:${96 * k}px;flex:none;display:flex;align-items:center;justify-content:center}
+.lg img{width:100%;height:100%;object-fit:contain}
 .opp{white-space:nowrap;font-family:S;font-weight:900;font-size:${76 * k}px;line-height:.9}
 .info{font-weight:700;font-size:${23 * k}px;letter-spacing:4px;margin-top:6px;display:flex;align-items:center;gap:12px;color:#ddd;white-space:nowrap}
 .info b{color:#fff;font-weight:800}.info s{display:inline-block;width:2px;height:${22 * k}px;background:#888;text-decoration:none}
@@ -92,11 +92,41 @@ for (const m of spec.matches) {
 <div class="info">${[UP(m.section), `<b>${m.time}</b>`, UP(m.tv)].filter((x) => x && x !== "<b></b>").join(" <s></s> ")}</div>
 <div class="ha">${m.home ? HOME : AWAY} ${m.home ? "ΕΝΤΟΣ" : "ΕΚΤΟΣ"}${m.venue ? ` · ${UP(m.venue)}` : ""}</div></div></div>`);
 }
+// Σήματα σε λευκό σχέδιο, όπως στα επίσημα γραφικά (Κόμο, ακαδημία ΠΑΟΚ): ό,τι είναι σκούρο ή χρωματιστό
+// γίνεται λευκό, το λευκό φόντο διάφανο, και κόβεται το κενό γύρω από το σήμα.
+const WHITE_CRESTS = async () => {
+  await Promise.all([...document.querySelectorAll(".lg img")].map(async (img) => {
+    await img.decode().catch(() => {});
+    const w = img.naturalWidth, h = img.naturalHeight;
+    if (!w) return;
+    const c = document.createElement("canvas"); c.width = w; c.height = h;
+    const x = c.getContext("2d"); x.drawImage(img, 0, 0);
+    const d = x.getImageData(0, 0, w, h), p = d.data;
+    let x0 = w, y0 = h, x1 = -1, y1 = -1;
+    for (let i = 0; i < p.length; i += 4) {
+      const lum = (0.299 * p[i] + 0.587 * p[i + 1] + 0.114 * p[i + 2]) / 255;
+      const ink = Math.max(0, Math.min(1, (0.88 - lum) / 0.55)) * (p[i + 3] / 255);
+      p[i] = p[i + 1] = p[i + 2] = 255; p[i + 3] = Math.round(ink * 255);
+      if (p[i + 3] > 24) {
+        const px = (i / 4) % w, py = Math.floor(i / 4 / w);
+        if (px < x0) x0 = px; if (px > x1) x1 = px; if (py < y0) y0 = py; if (py > y1) y1 = py;
+      }
+    }
+    if (x1 < 0) return;
+    x.putImageData(d, 0, 0);
+    const t = document.createElement("canvas"); t.width = x1 - x0 + 1; t.height = y1 - y0 + 1;
+    t.getContext("2d").drawImage(c, x0, y0, t.width, t.height, 0, 0, t.width, t.height);
+    img.src = t.toDataURL();
+    await img.decode().catch(() => {});
+  }));
+};
+
 fs.mkdirSync(outDir, { recursive: true });
 const browser = await chromium.launch();
 for (const story of [false, true]) {
   const page = await browser.newPage({ viewport: { width: 1080, height: story ? 1920 : 1350 } });
   await page.setContent(html(rows, story));
+  await page.evaluate(WHITE_CRESTS);
   await page.waitForTimeout(400);
   const out = path.join(outDir, `${spec.file || "programma"}-${story ? "story" : "post"}.png`);
   await page.screenshot({ path: out });

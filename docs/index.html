@@ -1134,7 +1134,7 @@
 
   // Επικοινωνία και σελίδες στα social: συμπληρώνονται όταν υπάρχουν (κενό = δεν εμφανίζεται).
   var CONTACT_EMAIL = "";
-  var SOCIAL = [["Instagram", ""], ["Facebook", ""]];
+  var SOCIAL = [["Instagram", "https://www.instagram.com/paokalendar/"], ["Facebook", "https://www.facebook.com/share/1Dw5JGyP9X/"]];
   function socialLinks() {
     return SOCIAL.filter(function (x) { return x[1]; }).map(function (x) {
       return '<a href="' + esc(x[1]) + '" rel="noopener" target="_blank">' + x[0] + "</a>";

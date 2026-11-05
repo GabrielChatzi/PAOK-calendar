@@ -254,8 +254,6 @@ def volley_women() -> list[dict]:
                     "cells": [f.get("MatchesPlayed", ""), str(won), str(lost),
                               f'{f.get("SetsWon", "")}-{f.get("SetsLost", "")}'],
                 })
-            if not teams:
-                continue
             # Αποτελέσματα της κανονικής περιόδου, για τα μεταξύ τους σε ισοβαθμία.
             phase = fetch(f"{DATAPROJECT}CompetitionMatches.aspx?ID={cid}&PID={pid}")
             results = []
@@ -263,6 +261,25 @@ def volley_women() -> list[dict]:
                 if m.score:
                     a, b = (int(x) for x in m.score.split("-"))
                     results.append((m.home, m.away, a, b))
+            if not teams and results:
+                # Η πηγή δείχνει καμιά φορά τον πίνακα άδειο: τον υπολογίζουμε από τα αποτελέσματα
+                # (χωρίς λόγο πόντων, που δεν τον έχουμε· μετρά μόνο σε ισοβαθμία με ίδιο λόγο σετ).
+                logos = {plain(t): src for t, src in re.findall(r'<img[^>]+title="([^"]+)"[^>]+src="([^"]+TeamLogo[^"]+)"', page)}
+                acc: dict[str, dict] = {}
+                for h, a_, sh, sa in results:
+                    for team, mine, theirs in ((h, sh, sa), (a_, sa, sh)):
+                        t = acc.setdefault(team, {"p": 0, "w": 0, "l": 0, "sw": 0, "sl": 0})
+                        t["p"] += 1; t["sw"] += mine; t["sl"] += theirs
+                        t["w" if mine > theirs else "l"] += 1
+                for team, t in acc.items():
+                    logo = next((v for k, v in logos.items() if plain(team)[:6] in k or k[:6] in plain(team)), "")
+                    teams.append({
+                        "team": team, "logo": logo, "points": 2 * t["w"] + t["l"], "results_points": 0,
+                        "set_ratio": t["sw"] / t["sl"] if t["sl"] else 99.0, "point_ratio": 0.0,
+                        "cells": [str(t["p"]), str(t["w"]), str(t["l"]), f'{t["sw"]}-{t["sl"]}'],
+                    })
+            if not teams:
+                continue
             rows = [(i + 1, t["team"], t["logo"], t["cells"] + [f'{t["points"]:g}'])
                     for i, t in enumerate(volley_women_order(teams, results))]
             out.append(table("Volley League Γυναικών", url, ["Αγ", "Ν", "Η", "Σετ", "Β"], rows))

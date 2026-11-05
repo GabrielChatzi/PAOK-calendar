@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => {
 }).listen(0);
 const base = `http://localhost:${server.address().port}/`;
 
-const routes = ["#/", "#/football", "#/basketball/standings", "#/volley/results", "#/waterpolo-women/follow",
+const routes = ["#/", "#/privacy", "#/football", "#/basketball/standings", "#/volley/results", "#/waterpolo-women/follow",
   "#/notifications", "#/calendars", "#/app"];
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 390, height: 844 } });

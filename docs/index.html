@@ -349,6 +349,10 @@
   table.st.cup td.agg small { font-weight: 500; font-size: 13px; }
   table.st.cup tr.win td.agg small { color: var(--ink); text-decoration: underline; }
   table.st.cup tr.out td { color: var(--muted); }
+  .foot-links a { color: inherit; }
+  .privacy h3 { font: 800 22px/1.15 var(--display); margin: 22px 0 6px; }
+  ul.plain { margin: 0 0 12px; padding-left: 20px; max-width: 58ch; }
+  ul.plain li { margin: 4px 0; }
   .tz-note { font-size: 15px; color: var(--muted); border-left: 4px solid var(--ink); padding: 4px 0 4px 10px; margin: 0 0 14px; }
   .admin-box { border: 2px solid var(--ink); padding: 4px 14px 14px; margin: 18px 0; }
   .admin-box h3 { font: 800 22px/1.1 var(--display); margin: 12px 0 6px; }
@@ -978,7 +982,8 @@
     ["", "Αρχική", "Όλοι οι αγώνες, με φίλτρα"],
     ["notifications", "Ειδοποιήσεις", "Ανά τμήμα ή για έναν αγώνα"],
     ["calendars", "Ημερολόγια", "Οι αγώνες στο ημερολόγιο του κινητού"],
-    ["app", "Η εφαρμογή στο κινητό", "Εγκατάσταση στην αρχική οθόνη"]
+    ["app", "Η εφαρμογή στο κινητό", "Εγκατάσταση στην αρχική οθόνη"],
+    ["privacy", "Απόρρητο και cookies", "Τι κρατάμε και γιατί"]
   ];
   function menuHtml(r) {
     var match = r.page === "match" ? matchByNt(r.nt) : null;
@@ -1127,12 +1132,49 @@
       nextHtml(all, "Επόμενος αγώνας") + tabs + body + footerHtml();
   }
 
+  // Επικοινωνία και σελίδες στα social: συμπληρώνονται όταν υπάρχουν (κενό = δεν εμφανίζεται).
+  var CONTACT_EMAIL = "";
+  var SOCIAL = [["Instagram", ""], ["Facebook", ""]];
+  function socialLinks() {
+    return SOCIAL.filter(function (x) { return x[1]; }).map(function (x) {
+      return '<a href="' + esc(x[1]) + '" rel="noopener" target="_blank">' + x[0] + "</a>";
+    });
+  }
   function footerHtml() {
+    var links = ['<a href="#/privacy">Απόρρητο και cookies</a>', '<a href="#/app">Η εφαρμογή στο κινητό</a>'].concat(socialLinks());
     return "<footer><p>Το PAOKalendar είναι ανεπίσημη σελίδα φιλάθλων και δεν συνδέεται με τον ΠΑΟΚ ή τις εταιρείες του.</p>" +
       "<p>Αγώνες χωρίς ορισμένη ώρα εμφανίζονται ως «TBC» και στα ημερολόγια μπαίνουν στις 18:00 ώρα Ελλάδας.</p>" +
-      "<p>Πηγές: ESPN, ΕΠΟ, esake.gr, Euroleague, basket.gr, volleyleague.gr, ΕΟΠΕ, ΟΧΕ, Water Polo League, ΕΠΣ Σάλας, UEFA, CEV, EHF, European Aquatics, ΑΣ ΠΑΟΚ. Τα σήματα ανήκουν στις ομάδες.</p>" +
-      '<p><a href="#/app">Το PAOKalendar ως εφαρμογή στο κινητό</a></p></footer>';
+      "<p>Πηγές: ESPN, ΕΠΟ, esake.gr, Euroleague, basket.gr, volleyleague.gr, ΕΟΠΕ, ΟΧΕ, Water Polo League, ΕΠΣ Σάλας, UEFA, CEV, EHF, European Aquatics, ΑΣ ΠΑΟΚ. " +
+      "Τα προγράμματα, τα αποτελέσματα, οι βαθμολογίες και τα σήματα ανήκουν στις πηγές τους και στις ομάδες.</p>" +
+      '<p class="foot-links">' + links.join(" · ") + "</p>" +
+      "<p>© 2026 PAOKalendar</p></footer>";
   }
+
+  function privacyHtml() {
+    var contact = CONTACT_EMAIL
+      ? '<a href="mailto:' + esc(CONTACT_EMAIL) + '">' + esc(CONTACT_EMAIL) + "</a>"
+      : "μήνυμα στη σελίδα PAOKalendar στο Instagram ή στο Facebook";
+    function sec(title, body) { return "<h3>" + title + "</h3>" + body; }
+    return '<a class="back" href="#/">‹ Αρχική</a><div class="follow privacy"><div class="section-head"><h2>Απόρρητο και cookies</h2></div>' +
+      '<p class="help">Τελευταία ενημέρωση: 5 Νοεμβρίου 2026</p>' +
+      "<p>Το PAOKalendar είναι ανεπίσημη, μη εμπορική σελίδα φιλάθλων. Δεν έχει λογαριασμούς χρηστών, δεν ζητά όνομα ή email και δεν πουλά ούτε δίνει δεδομένα σε κανέναν.</p>" +
+      sec("Cookies", "<p>Η σελίδα <strong>δεν χρησιμοποιεί cookies</strong>, ούτε για διαφημίσεις ούτε για παρακολούθηση. Γι' αυτό δεν σου ζητά συναίνεση.</p>") +
+      sec("Τι κρατά η συσκευή σου", "<p>Στη μνήμη του browser σου (local storage), μόνο στη δική σου συσκευή: τα φίλτρα που διάλεξες, τις επιλογές ειδοποιήσεων, αν θέλεις ώρα Ελλάδας ή τη δική σου, και αν έκλεισες την πρόταση εγκατάστασης. Τα σβήνεις όποτε θέλεις, σβήνοντας τα δεδομένα της σελίδας από τις ρυθμίσεις του browser.</p>") +
+      sec("Ειδοποιήσεις", "<p>Αν ενεργοποιήσεις τις ειδοποιήσεις, αποθηκεύουμε τη «συνδρομή» της συσκευής σου (μια διεύθυνση που δίνει η Apple, η Google ή ο browser σου για να φτάνουν οι ειδοποιήσεις) και τι διάλεξες να μαθαίνεις (π.χ. «ποδόσφαιρο: τελικό»). Δεν περιέχει όνομα, τηλέφωνο ή email.</p>" +
+        "<p>Με το «Απενεργοποίηση όλων» στη σελίδα Ειδοποιήσεις η συνδρομή σβήνεται. Αν ακυρωθεί από τη συσκευή, σημειώνεται ως ανενεργή και δεν της στέλνεται τίποτα.</p>") +
+      sec("Μεταβιβάσεις διαρκείας (δοκιμαστικά)", "<p>Όποιος τη χρησιμοποιεί δίνει ένα ψευδώνυμο και τη θέση που δίνει ή ζητά. Ο ΑΦΜ που χρειάζεται για τη μεταβίβαση στο Gov.gr Wallet τον βλέπει μόνο ο κάτοχος της θέσης και <strong>σβήνεται</strong> μόλις ολοκληρωθεί ή ακυρωθεί η μεταβίβαση, ή κλείσει ο αγώνας.</p>") +
+      sec("Στατιστικά επισκέψεων", "<p>Μετράμε πόσες επισκέψεις έχει η σελίδα με το Vercel Web Analytics, χωρίς cookies και χωρίς να ξεχωρίζει ποιος είσαι: βλέπουμε μόνο συνολικούς αριθμούς (επισκέψεις, σελίδες, χώρα, τύπος συσκευής).</p>") +
+      sec("Ποιοι άλλοι εμπλέκονται", "<ul class=\"plain\">" +
+        "<li><strong>Vercel</strong>: φιλοξενία της σελίδας και των λειτουργιών της (ΗΠΑ).</li>" +
+        "<li><strong>MongoDB Atlas</strong>: η βάση με τις συνδρομές ειδοποιήσεων και τις μεταβιβάσεις.</li>" +
+        "<li><strong>GitHub</strong>: οι αυτόματες ενημερώσεις του προγράμματος (δεν βλέπει δεδομένα επισκεπτών).</li>" +
+        "<li><strong>Apple, Google, Mozilla, Microsoft</strong>: παραδίδουν τις ειδοποιήσεις στη συσκευή σου.</li>" +
+        "<li><strong>Google Fonts</strong> και τα <strong>site των πηγών</strong> (σήματα ομάδων, live σκορ από ESPN και Euroleague): ο browser σου τα φορτώνει απευθείας, οπότε βλέπουν τη διεύθυνση IP σου, όπως σε κάθε σελίδα που τα χρησιμοποιεί.</li></ul>") +
+      sec("Τα δικαιώματά σου", "<p>Μπορείς να ζητήσεις να μάθεις τι κρατάμε για εσένα ή να σβηστεί, με " + contact + ". Για τις ειδοποιήσεις αρκεί το «Απενεργοποίηση όλων».</p>") +
+      sec("Περιεχόμενο", "<p>Τα προγράμματα, τα αποτελέσματα, οι βαθμολογίες, τα κανάλια και τα σήματα ανήκουν στις πηγές τους (ομοσπονδίες, λίγκες, ESPN, ΑΣ ΠΑΟΚ) και στις ομάδες. Το PAOKalendar τα συγκεντρώνει για ενημέρωση των φιλάθλων και δεν συνδέεται με τον ΠΑΟΚ ή τις εταιρείες του.</p>") +
+      "</div>" + footerHtml();
+  }
+
 
   // ---- Νέα διεύθυνση: η παλιά σελίδα στο GitHub Pages δείχνει πού μετακόμισε.
   // Τα ημερολόγια στην παλιά διεύθυνση συνεχίζουν να ενημερώνονται κανονικά.
@@ -1237,6 +1279,7 @@
     if (key === "app") return { key: null, tab: "", page: "app" };
     if (key === "notifications") return { key: null, tab: "", page: "notifications" };
     if (key === "calendars") return { key: null, tab: "", page: "calendars" };
+    if (key === "privacy") return { key: null, tab: "", page: "privacy" };
     if (key === "admin") {
       // Μία φορά στο #/admin: εμφανίζει τις ειδοποιήσεις λειτουργίας στη σελίδα Ειδοποιήσεις.
       try { localStorage.setItem("paok-admin", "1"); } catch (e) {}
@@ -1259,11 +1302,12 @@
     document.title = r.page === "app" ? "Εφαρμογή – PAOKalendar"
       : r.page === "notifications" ? "Ειδοποιήσεις – PAOKalendar"
       : r.page === "calendars" ? "Ημερολόγια – PAOKalendar"
+      : r.page === "privacy" ? "Απόρρητο και cookies – PAOKalendar"
       : match ? match.home + " – " + match.away + " – PAOKalendar"
       : r.key ? data.sectionMap[r.key].name + " – PAOKalendar" : "PAOKalendar";
     $("app").innerHTML = movedHtml() +
       (r.page === "app" ? appHtml() : r.page === "notifications" ? notificationsHtml() : r.page === "calendars" ? calendarsHtml()
-        : r.page === "match" ? matchHtml(match) : r.key ? sectionHtml(r.key, r.tab) : homeHtml());
+        : r.page === "privacy" ? privacyHtml() : r.page === "match" ? matchHtml(match) : r.key ? sectionHtml(r.key, r.tab) : homeHtml());
     if (routeChanged && match && r.tab === "notify") {
       var target = $("match-notify");
       if (target) target.scrollIntoView();

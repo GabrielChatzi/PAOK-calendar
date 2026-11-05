@@ -1895,7 +1895,7 @@
    "competition": "Novibet League Cup Νίκος Σαμαράς",
    "round": "Προημιτελικά",
    "score": "",
-   "tv": "ΕΡΤ2 ΣΠΟΡ HD",
+   "tv": "",
    "url": "https://www.volleyleague.gr/index.php/league-cup",
    "live": {
     "src": "dp",
@@ -5638,16 +5638,16 @@
   }
  ],
  "updated": {
-  "football": "2026-11-04T18:00+02:00",
-  "football-women": "2026-11-04T18:00+02:00",
-  "basketball": "2026-11-04T18:00+02:00",
-  "basketball-women": "2026-11-04T18:01+02:00",
-  "volley": "2026-11-04T18:01+02:00",
-  "volley-women": "2026-11-04T18:01+02:00",
-  "handball": "2026-11-04T18:01+02:00",
-  "handball-women": "2026-11-04T18:02+02:00",
-  "waterpolo": "2026-11-04T18:02+02:00",
-  "waterpolo-women": "2026-11-04T18:02+02:00",
-  "futsal": "2026-11-04T18:02+02:00"
+  "football": "2026-11-05T02:00+02:00",
+  "football-women": "2026-11-05T02:01+02:00",
+  "basketball": "2026-11-05T02:01+02:00",
+  "basketball-women": "2026-11-05T02:01+02:00",
+  "volley": "2026-11-05T02:01+02:00",
+  "volley-women": "2026-11-05T02:01+02:00",
+  "handball": "2026-11-05T02:02+02:00",
+  "handball-women": "2026-11-05T02:02+02:00",
+  "waterpolo": "2026-11-05T02:02+02:00",
+  "waterpolo-women": "2026-11-05T02:03+02:00",
+  "futsal": "2026-11-05T02:03+02:00"
  }
 }

@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 mkdir -p docs; touch docs/.keep
-for s in 1.1.1.1 8.8.8.8 dns1.papaki.gr; do echo "== A @$s: $(dig +short A paokalendar.gr @$s | tr '\n' ' ')"; done
-echo "== NS (gr registry): $(dig +short NS paokalendar.gr @grdns-a.ics.forth.gr | tr '\n' ' ')"
-echo "== MX: $(dig +short MX paokalendar.gr @1.1.1.1 | tr '\n' ' ')"
-whois paokalendar.gr 2>/dev/null | head -15
+for u in https://paokalendar.gr/ https://paokalendar.gr/api/health https://paokalendar.gr/matches.json https://www.paokalendar.gr/ https://paokalendar.gr/football-home.ics; do
+  echo "$u -> $(curl -sS -o /dev/null -m 20 -w '%{http_code} %{content_type} %{redirect_url}' "$u")"; done
+echo "MX: $(dig +short MX paokalendar.gr @8.8.8.8)"

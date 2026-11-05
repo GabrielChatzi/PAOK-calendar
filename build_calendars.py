@@ -1575,6 +1575,20 @@ def keep_friendlies(previous: list[dict], current: list[Match]) -> None:
             current.append(match_from_json(d))
 
 
+def drop_shadow_friendlies(matches: list[Match]) -> list[Match]:
+    """Μια ανακοίνωση της ΑΣ ΠΑΟΚ μπορεί να μοιάζει με φιλικό («προετοιμασία», «τουρνουά») ενώ είναι
+    ο επίσημος αγώνας της μέρας. Ένα τμήμα δεν παίζει φιλικό την ίδια μέρα με επίσημο αγώνα: τότε
+    το «φιλικό» είναι διπλό και φεύγει."""
+    official_days = {m.day for m in matches if "-friendly-" not in m.uid}
+    out = []
+    for m in matches:
+        if "-friendly-" in m.uid and m.day in official_days:
+            print(f"  διπλό φιλικό (ίδια μέρα με επίσημο): {m.home} – {m.away} {m.day}")
+            continue
+        out.append(m)
+    return out
+
+
 def carry_uids(previous: list[dict], current: list[Match]) -> None:
     """Όταν η επίσημη πηγή δημοσιεύσει έναν αγώνα που είχε μπει χειροκίνητα ή από την ΑΣ ΠΑΟΚ,
     ο αγώνας κρατά το παλιό αναγνωριστικό: ίδιος σύνδεσμος, ίδιες ειδοποιήσεις, ίδια εγγραφή
@@ -1665,6 +1679,7 @@ def main(only: list[str] | None = None) -> int:
             print(f"  ! ΑΣ ΠΑΟΚ / {key}: {e}", file=sys.stderr)
         carry_uids(prev_by_section[key], unique)
         keep_friendlies(prev_by_section[key], unique)
+        unique[:] = drop_shadow_friendlies(unique)
         drop_live_scores(key, unique, dt.datetime.now(ATHENS))
         if key in ("volley", "volley-women"):
             volley_live(key, unique)

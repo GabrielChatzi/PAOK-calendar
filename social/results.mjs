@@ -104,7 +104,7 @@ for (const m of spec.matches) {
 <div class="opp">${UP(m.opponent)}</div>
 <div class="info">${[UP(m.section), UP(m.competition)].filter(Boolean).join(" <s></s> ")}</div>
 <div class="ha">${m.home ? HOME : AWAY} ${m.home ? "ΕΝΤΟΣ" : "ΕΚΤΟΣ"}${m.venue ? ` · ${UP(m.venue)}` : ""}</div></div>
-<div class="sc"><div class="box">${(() => { const win = m.us >= m.them, lose = m.us <= m.them; const us = `<em>${win ? `<b>${m.us}</b>` : `<i>${m.us}</i>`}</em>`, them = lose ? `<b>${m.them}</b>` : `<i>${m.them}</i>`; return m.home ? `${us}<u>–</u>${them}` : `${them}<u>–</u>${us}`; })()}</div></div></div>`);
+<div class="sc"><div class="box">${(() => { const win = m.us > m.them, lose = m.us < m.them; const us = `<em>${win ? `<b>${m.us}</b>` : `<i>${m.us}</i>`}</em>`, them = lose ? `<b>${m.them}</b>` : `<i>${m.them}</i>`; return m.home ? `${us}<u>–</u>${them}` : `${them}<u>–</u>${us}`; })()}</div></div></div>`);
 }
 fs.mkdirSync(outDir, { recursive: true });
 const browser = await chromium.launch();

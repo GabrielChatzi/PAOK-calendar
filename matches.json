@@ -1956,6 +1956,25 @@
    "nt": "3824d71d44"
   },
   {
+   "section": "football-women",
+   "uid": "football-women-friendly-6d76b58d6b02",
+   "home": "ΠΑΟΚ",
+   "away": "Οδυσσέα Μοσχάτου",
+   "venue": "",
+   "competition": "Φιλικός αγώνας",
+   "round": "",
+   "score": "",
+   "tv": "",
+   "url": "https://acpaok.gr/%cf%80%ce%b1%ce%bd%ce%ad%cf%84%ce%bf%ce%b9%ce%bc%ce%b5%cf%82-%ce%b3%ce%b9%ce%b1-%ce%bd%ce%ad%ce%bf-%ce%b4%ce%b9%cf%80%ce%bb%cf%8c-%ce%bf%ce%b9-%ce%bd%cf%84%ce%b1%ce%bc%cf%80%ce%bb%ce%bf%cf%8d/",
+   "start": "2026-11-07T15:00:00+02:00",
+   "timeKnown": true,
+   "paokHome": true,
+   "homeLogo": "",
+   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/d073e52756ee5f17232394ecaf0b0ec1.jpg?itok=QE7RdbHR",
+   "tvUrl": "",
+   "nt": "82b60568f7"
+  },
+  {
    "section": "waterpolo-women",
    "uid": "waterpolo-women-paok-domus-ergo-lar-2026-11-07",
    "home": "ΠΑΟΚ",
@@ -2075,31 +2094,6 @@
    "nt": "c45a0727f7"
   },
   {
-   "section": "volley",
-   "uid": "volley-2026-27-1d3233390ed2",
-   "home": "Α.Ο.Καλαμάτα 80 Affidea",
-   "away": "ΠΑΟΚ",
-   "venue": "Γυμναστήριο Καλαμάτας",
-   "competition": "Volley League",
-   "round": "3η αγωνιστική",
-   "score": "",
-   "tv": "ΕΡΤ2 ΣΠΟΡ HD",
-   "url": "https://www.volleyleague.gr/index.php/season/2026-27/regular-season-results-statistics",
-   "live": {
-    "src": "dp",
-    "fed": "hvl",
-    "day": "2026-11-08",
-    "side": "a"
-   },
-   "start": "2026-11-08T19:30:00+02:00",
-   "timeKnown": true,
-   "paokHome": false,
-   "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl16909759871795.gif",
-   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
-   "tvUrl": "",
-   "nt": "c9fcd47542"
-  },
-  {
    "section": "football",
    "uid": "football-espn-401896730",
    "home": "Ολυμπιακός",
@@ -2125,6 +2119,25 @@
   },
   {
    "section": "handball-women",
+   "uid": "handball-women-friendly-6e1fe755bf47",
+   "home": "ΠΑΟΚ",
+   "away": "Πανόραμα",
+   "venue": "",
+   "competition": "Φιλικός αγώνας",
+   "round": "",
+   "score": "",
+   "tv": "",
+   "url": "https://acpaok.gr/%ce%bc%ce%b5-%cf%84%ce%bf-%ce%bc%cf%85%ce%b1%ce%bb%cf%8c-%cf%83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%cf%8c%cf%81%ce%b1%ce%bc%ce%b1-09-11-1700/",
+   "start": "2026-11-09T17:00:00+02:00",
+   "timeKnown": true,
+   "paokHome": true,
+   "homeLogo": "",
+   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/84/panorama-new-84c6b388.jpg",
+   "tvUrl": "",
+   "nt": "caa407d2e9"
+  },
+  {
+   "section": "handball-women",
    "uid": "handball-women-oxe-34759",
    "home": "Α.Ε.Π. ΠΑΝΟΡΑΜΑ",
    "away": "ΠΑΟΚ",
@@ -2141,6 +2154,31 @@
    "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
    "tvUrl": "",
    "nt": "ff4f395b7e"
+  },
+  {
+   "section": "volley",
+   "uid": "volley-2026-27-1d3233390ed2",
+   "home": "Α.Ο.Καλαμάτα 80 Affidea",
+   "away": "ΠΑΟΚ",
+   "venue": "Γυμναστήριο Καλαμάτας",
+   "competition": "Volley League",
+   "round": "3η αγωνιστική",
+   "score": "",
+   "tv": "ΕΡΤ2 ΣΠΟΡ HD",
+   "url": "https://www.volleyleague.gr/index.php/season/2026-27/regular-season-results-statistics",
+   "live": {
+    "src": "dp",
+    "fed": "hvl",
+    "day": "2026-11-09",
+    "side": "a"
+   },
+   "start": "2026-11-09T19:30:00+02:00",
+   "timeKnown": true,
+   "paokHome": false,
+   "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl16909759871795.gif",
+   "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+   "tvUrl": "",
+   "nt": "c9fcd47542"
   },
   {
    "section": "basketball",
@@ -5638,16 +5676,16 @@
   }
  ],
  "updated": {
-  "football": "2026-11-05T02:00+02:00",
-  "football-women": "2026-11-05T02:01+02:00",
-  "basketball": "2026-11-05T02:01+02:00",
-  "basketball-women": "2026-11-05T02:01+02:00",
-  "volley": "2026-11-05T02:01+02:00",
-  "volley-women": "2026-11-05T02:01+02:00",
-  "handball": "2026-11-05T02:02+02:00",
-  "handball-women": "2026-11-05T02:02+02:00",
-  "waterpolo": "2026-11-05T02:02+02:00",
-  "waterpolo-women": "2026-11-05T02:03+02:00",
-  "futsal": "2026-11-05T02:03+02:00"
+  "football": "2026-11-05T16:00+02:00",
+  "football-women": "2026-11-05T16:00+02:00",
+  "basketball": "2026-11-05T16:01+02:00",
+  "basketball-women": "2026-11-05T16:01+02:00",
+  "volley": "2026-11-05T16:01+02:00",
+  "volley-women": "2026-11-05T16:01+02:00",
+  "handball": "2026-11-05T16:01+02:00",
+  "handball-women": "2026-11-05T16:02+02:00",
+  "waterpolo": "2026-11-05T16:02+02:00",
+  "waterpolo-women": "2026-11-05T16:02+02:00",
+  "futsal": "2026-11-05T16:02+02:00"
  }
 }

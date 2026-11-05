@@ -16,9 +16,9 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <script>
-  // Vercel Web Analytics (μόνο στο paokalendar.vercel.app· χωρίς cookies).
+  // Vercel Web Analytics (μόνο στις διευθύνσεις της Vercel· χωρίς cookies).
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  if (/\.vercel\.app$/.test(location.hostname)) {
+  if (/(^|\.)paokalendar\.gr$|\.vercel\.app$/.test(location.hostname)) {
     var vaScript = document.createElement("script");
     vaScript.defer = true; vaScript.src = "/_vercel/insights/script.js";
     document.head.appendChild(vaScript);
@@ -1138,7 +1138,7 @@
   }
 
   // Επικοινωνία και σελίδες στα social: συμπληρώνονται όταν υπάρχουν (κενό = δεν εμφανίζεται).
-  var CONTACT_EMAIL = "";
+  var CONTACT_EMAIL = "info@paokalendar.gr";
   var SOCIAL = [["Instagram", "https://www.instagram.com/paokalendar/"], ["Facebook", "https://www.facebook.com/share/1Dw5JGyP9X/"]];
   // Μονόχρωμα εικονίδια (ακολουθούν το χρώμα του κειμένου).
   var SOCIAL_ICONS = {
@@ -1152,7 +1152,8 @@
     });
   }
   function footerHtml() {
-    var links = ['<a href="#/privacy">Απόρρητο και cookies</a>', '<a href="#/app">Η εφαρμογή στο κινητό</a>'];
+    var links = ['<a href="#/privacy">Απόρρητο και cookies</a>', '<a href="#/app">Η εφαρμογή στο κινητό</a>']
+      .concat(CONTACT_EMAIL ? ['<a href="mailto:' + esc(CONTACT_EMAIL) + '">' + esc(CONTACT_EMAIL) + "</a>"] : []);
     var social = socialLinks();
     return "<footer><p>Το PAOKalendar είναι ανεπίσημη σελίδα φιλάθλων και δεν συνδέεται με τον ΠΑΟΚ ή τις εταιρείες του.</p>" +
       "<p>Αγώνες χωρίς ορισμένη ώρα εμφανίζονται ως «TBC» και στα ημερολόγια μπαίνουν στις 18:00 ώρα Ελλάδας.</p>" +
@@ -1188,15 +1189,18 @@
   }
 
 
-  // ---- Νέα διεύθυνση: η παλιά σελίδα στο GitHub Pages δείχνει πού μετακόμισε.
-  // Τα ημερολόγια στην παλιά διεύθυνση συνεχίζουν να ενημερώνονται κανονικά.
-  var NEW_HOME = "https://paokalendar.vercel.app/";
+  // ---- Νέα διεύθυνση (paokalendar.gr): οι παλιές (GitHub Pages, paokalendar.vercel.app) δείχνουν πού
+  // μετακόμισε. Στο vercel.app όλα συνεχίζουν να δουλεύουν (ειδοποιήσεις, ημερολόγια, εγκατεστημένη εφαρμογή).
+  var NEW_HOME = "https://paokalendar.gr/";
   function movedHtml() {
-    if (!/github\.io$/.test(location.hostname)) return "";
+    var oldPages = /github\.io$/.test(location.hostname), oldVercel = /\.vercel\.app$/.test(location.hostname);
+    if (!oldPages && !oldVercel) return "";
     var target = NEW_HOME + location.hash;
-    return '<div class="moved" role="note"><strong>Το PAOKalendar μετακόμισε</strong>' +
-      '<p>Νέα διεύθυνση: <a href="' + esc(target) + '">paokalendar.vercel.app</a>. ' +
-      "Οι συνδρομές σε ημερολόγια που έκανες από εδώ συνεχίζουν να δουλεύουν.</p></div>";
+    return '<div class="moved" role="note"><strong>Νέα διεύθυνση: paokalendar.gr</strong>' +
+      '<p><a href="' + esc(target) + '">Άνοιξε το PAOKalendar στο paokalendar.gr</a>. ' +
+      (oldVercel
+        ? "Εδώ συνεχίζουν να δουλεύουν όλα, και οι ειδοποιήσεις σου. Αν έχεις την εφαρμογή στην αρχική οθόνη, βάλ' τη ξανά από τη νέα διεύθυνση και ενεργοποίησε εκεί τις ειδοποιήσεις· μετά σβήσε την παλιά."
+        : "Οι συνδρομές σε ημερολόγια που έκανες από εδώ συνεχίζουν να δουλεύουν.") + "</p></div>";
   }
 
   // ---- Εγκατάσταση ως εφαρμογή
@@ -1240,13 +1244,13 @@
     var installBtn = installEvent ? '<div class="actions"><button type="button" class="btn solid" data-act="install">Εγκατάσταση τώρα</button></div>' : "";
     var platforms = [
       { id: "ios", mine: isIOS, title: "iPhone", body:
-        '<ol class="steps"><li>Άνοιξε το <strong>paokalendar.vercel.app</strong> στο Safari.</li>' +
+        '<ol class="steps"><li>Άνοιξε το <strong>paokalendar.gr</strong> στο Safari.</li>' +
         "<li>Πάτα το κουμπί Κοινοποίησης " + SHARE_ICON + " κάτω στη μέση της οθόνης.</li>" +
         "<li>Κύλησε λίγο και πάτα «Προσθήκη στην οθόνη Αφετηρίας».</li>" +
         "<li>Πάτα «Προσθήκη» πάνω δεξιά. Το εικονίδιο με τις ρίγες εμφανίζεται στην αρχική οθόνη.</li></ol>" },
       { id: "android", mine: isAndroid, title: "Android", body:
         (isAndroid ? installBtn : "") +
-        '<ol class="steps"><li>Άνοιξε το <strong>paokalendar.vercel.app</strong> στο Chrome.</li>' +
+        '<ol class="steps"><li>Άνοιξε το <strong>paokalendar.gr</strong> στο Chrome.</li>' +
         "<li>Πάτα ⋮ πάνω δεξιά.</li>" +
         "<li>Πάτα «Εγκατάσταση εφαρμογής» ή «Προσθήκη στην αρχική οθόνη» και μετά «Εγκατάσταση».</li></ol>" },
       { id: "desktop", mine: !isIOS && !isAndroid, title: "Υπολογιστής", body:
@@ -1445,7 +1449,7 @@
   // Η συσκευή γράφεται σε θέματα «s:<τμήμα>:<είδος>» ή «m:<αγώνας>:<είδος>». Τα θέματα κρατιούνται
   // και τοπικά, ώστε η σελίδα να δείχνει αμέσως τι είναι ενεργό, και στέλνονται στο /api/subscribe.
   var PUSH_KINDS = [["pre", "Πριν"], ["time", "Αλλαγές"], ["live", "Live"], ["result", "Τελικό"]];
-  var pushOrigin = /(^|\.)vercel\.app$|^localhost$|^127\.0\.0\.1$/.test(location.hostname);
+  var pushOrigin = /(^|\.)paokalendar\.gr$|(^|\.)vercel\.app$|^localhost$|^127\.0\.0\.1$/.test(location.hostname);
   var pushSupported = "serviceWorker" in navigator && "PushManager" in window && "Notification" in window;
   var push = { reg: null, sub: null, key: null, busy: false, ready: false, topics: [], server: "", serverAt: 0, lost: false };
   try { push.topics = JSON.parse(localStorage.getItem("paok-push-topics") || "[]") || []; } catch (e) {}
@@ -1471,7 +1475,7 @@
       (isIOS ? "το iPhone θα σε ρωτήσει αν επιτρέπεις γνωστοποιήσεις· πάτα «Να επιτρέπεται»."
         : "ο browser θα σε ρωτήσει αν επιτρέπεις ειδοποιήσεις· πάτα «Να επιτρέπεται» (Allow).") + "</p>";
     if (st === "moved") return '<div class="explain"><p>Οι ειδοποιήσεις δουλεύουν στη νέα διεύθυνση: ' +
-      '<a href="' + NEW_HOME + location.hash + '">paokalendar.vercel.app</a>.</p></div>';
+      '<a href="' + NEW_HOME + location.hash + '">paokalendar.gr</a>.</p></div>';
     if (st === "ios-install") return '<div class="explain"><h4>Πρώτα βάλε την εφαρμογή στην αρχική οθόνη</h4>' +
       "<p>Στο iPhone οι ειδοποιήσεις δουλεύουν μόνο όταν το PAOKalendar ανοίγει από το εικονίδιό του στην αρχική οθόνη (iOS 16.4 ή νεότερο).</p>" +
       "<p>Στο Safari πάτα " + SHARE_ICON + " και «Προσθήκη στην οθόνη Αφετηρίας». Άνοιξε την εφαρμογή από το εικονίδιο και έλα ξανά εδώ.</p>" +

@@ -16,6 +16,13 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <script>
+  // Παλιές διευθύνσεις: όποιος μπαίνει από browser πηγαίνει αμέσως στο paokalendar.gr (ίδια σελίδα).
+  // Η εγκατεστημένη παλιά εφαρμογή μένει εδώ (για να συνεχίσουν οι ειδοποιήσεις της) και δείχνει οδηγίες.
+  (function () {
+    var old = /\.vercel\.app$|github\.io$/.test(location.hostname);
+    var installed = window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+    if (old && !installed) location.replace("https://paokalendar.gr/?moved=1" + location.hash);
+  })();
   // Vercel Web Analytics (μόνο στις διευθύνσεις της Vercel· χωρίς cookies).
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   if (/(^|\.)paokalendar\.gr$|\.vercel\.app$/.test(location.hostname)) {
@@ -358,6 +365,10 @@
   .privacy h3 { font: 800 22px/1.15 var(--display); margin: 22px 0 6px; }
   ul.plain { margin: 0 0 12px; padding-left: 20px; max-width: 58ch; }
   ul.plain li { margin: 4px 0; }
+  .modal-back { position: fixed; inset: 0; background: rgba(0,0,0,.55); display: flex; align-items: center; justify-content: center; z-index: 50; padding: 16px; }
+  .modal { background: var(--paper); color: var(--ink); border: 3px solid var(--ink); max-width: 440px; width: 100%; padding: 20px 20px 16px; max-height: 90vh; overflow: auto; }
+  .modal h2 { font: 800 30px/1.05 var(--display); margin: 0 0 12px; }
+  .modal p { margin: 0 0 10px; }
   .tz-note { font-size: 15px; color: var(--muted); border-left: 4px solid var(--ink); padding: 4px 0 4px 10px; margin: 0 0 14px; }
   .admin-box { border: 2px solid var(--ink); padding: 4px 14px 14px; margin: 18px 0; }
   .admin-box h3 { font: 800 22px/1.1 var(--display); margin: 12px 0 6px; }
@@ -1202,6 +1213,39 @@
         ? "Εδώ συνεχίζουν να δουλεύουν όλα, και οι ειδοποιήσεις σου. Αν έχεις την εφαρμογή στην αρχική οθόνη, βάλ' τη ξανά από τη νέα διεύθυνση και ενεργοποίησε εκεί τις ειδοποιήσεις· μετά σβήσε την παλιά."
         : "Οι συνδρομές σε ημερολόγια που έκανες από εδώ συνεχίζουν να δουλεύουν.") + "</p></div>";
   }
+
+  // ---- Popup μετακόμισης: στην παλιά εγκατεστημένη εφαρμογή (κάθε φορά που ανοίγει) και στη νέα
+  // διεύθυνση μία φορά, όταν κάποιος έρχεται από την παλιά (?moved=1).
+  function showMovedPopup() {
+    var oldHost = /\.vercel\.app$|github\.io$/.test(location.hostname);
+    var arrived = /[?&]moved=1/.test(location.search);
+    if (!oldHost && !arrived) return;
+    if (arrived) {
+      try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) {}
+      try { if (localStorage.getItem("paok-moved-seen")) return; localStorage.setItem("paok-moved-seen", "1"); } catch (e) {}
+    }
+    var ios = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    var steps = oldHost
+      ? "<ol class=\"steps\"><li>Πάτα «Άνοιξε το paokalendar.gr» πιο κάτω" + (ios ? " (ανοίγει στο Safari)" : "") + ".</li>" +
+        "<li>Βάλε την εφαρμογή ξανά στην αρχική οθόνη" + (ios ? ": Κοινοποίηση → «Προσθήκη στην οθόνη Αφετηρίας»" : " από το μενού του browser") + ".</li>" +
+        "<li>Άνοιξέ τη από το νέο εικονίδιο και ενεργοποίησε ξανά τις ειδοποιήσεις που θέλεις.</li>" +
+        "<li>Σβήσε αυτή την παλιά εφαρμογή από την αρχική οθόνη.</li></ol>" +
+        "<p class=\"help\">Μέχρι τότε όλα εδώ δουλεύουν κανονικά, και οι ειδοποιήσεις σου.</p>"
+      : "<p>Το PAOKalendar έχει πλέον τη δική του διεύθυνση: <strong>paokalendar.gr</strong>. Τα ημερολόγια που έχεις ήδη προσθέσει συνεχίζουν να ενημερώνονται.</p>" +
+        "<p>Αν είχες την εφαρμογή στην αρχική οθόνη, βάλ' τη ξανά από εδώ" + (ios ? " (Κοινοποίηση → «Προσθήκη στην οθόνη Αφετηρίας»)" : "") +
+        ", ενεργοποίησε ξανά τις ειδοποιήσεις και σβήσε την παλιά.</p>";
+    var box = document.createElement("div");
+    box.className = "modal-back";
+    box.innerHTML = '<div class="modal" role="dialog" aria-modal="true" aria-labelledby="moved-title">' +
+      '<h2 id="moved-title">Το PAOKalendar μετακόμισε</h2>' + steps +
+      '<div class="actions">' + (oldHost ? '<a class="btn solid" href="https://paokalendar.gr/' + location.hash + '" target="_blank" rel="noopener">Άνοιξε το paokalendar.gr</a>' : "") +
+      '<button type="button" class="btn" data-modal-close>' + (oldHost ? "Αργότερα" : "Εντάξει") + "</button></div></div>";
+    box.addEventListener("click", function (e) {
+      if (e.target === box || e.target.hasAttribute("data-modal-close")) box.remove();
+    });
+    document.body.appendChild(box);
+  }
+  showMovedPopup();
 
   // ---- Εγκατάσταση ως εφαρμογή
   var installEvent = null;

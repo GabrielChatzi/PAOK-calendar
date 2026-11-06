@@ -20,17 +20,18 @@
 // Το "logo" είναι διαδρομή σε σχέση με το JSON ή URL (κατεβαίνει αν υπάρχει δίκτυο).
 import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { createRequire } from "node:module";
 import { MONO_CRESTS } from "./crests.mjs";
 
-const require = createRequire(import.meta.url);
-let chromium;
-try { ({ chromium } = require("playwright")); } catch { ({ chromium } = await import("/opt/npm-tools/node_modules/playwright/index.mjs")); }
+// Το Playwright φορτώνεται μόνο όταν χρειάζεται (τα tests του πλάνου τρέχουν και χωρίς αυτό).
+export async function chromium() {
+  try { return createRequire(import.meta.url)("playwright").chromium; } catch {
+    return (await import("/opt/npm-tools/node_modules/playwright/index.mjs")).chromium;
+  }
+}
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
-const [specPath, outDir = path.dirname(specPath)] = process.argv.slice(2);
-const spec = JSON.parse(fs.readFileSync(specPath, "utf8"));
 
 const font = (fam, w, file) =>
   `@font-face{font-family:${fam};font-weight:${w};src:url(data:font/woff2;base64,${fs.readFileSync(path.join(HERE, "fonts", file)).toString("base64")})}`;
@@ -40,13 +41,13 @@ const FONTS = ["greek", "latin"].flatMap((s) => [
   font("S", 900, `sofia-sans-extra-condensed-${s}-900-normal.woff2`),
 ]).join("") + font("GV", 400, "great-vibes-latin-400-normal.woff2");
 
-async function logo(src) {
+async function logo(src, base) {
   if (!src) return "";
   let buf;
   if (/^https?:/.test(src)) {
     const r = await fetch(src, { headers: { "User-Agent": "Mozilla/5.0" } });
     buf = Buffer.from(await r.arrayBuffer());
-  } else buf = fs.readFileSync(path.resolve(path.dirname(specPath), src));
+  } else buf = fs.readFileSync(path.resolve(base, src));
   const t = buf[0] === 0x89 ? "png" : buf[0] === 0x47 ? "gif" : buf[0] === 0x3c ? "svg+xml" : buf[0] === 0x52 ? "webp" : "jpeg";
   return `data:image/${t};base64,${buf.toString("base64")}`;
 }
@@ -54,7 +55,7 @@ const UP = (t) => String(t || "").normalize("NFD").replace(/\p{M}/gu, "").toUppe
 const HOME = '<svg viewBox="0 0 48 48" width="22" height="22"><path d="M4 22c0-4 9-7 20-7s20 3 20 7v12c0 4-9 7-20 7S4 38 4 34z" fill="none" stroke="currentColor" stroke-width="4"/><ellipse cx="24" cy="23" rx="12" ry="3.5" fill="currentColor"/><path d="M8 6v12M40 6v12" stroke="currentColor" stroke-width="3"/><rect x="5" y="4" width="6" height="4" fill="currentColor"/><rect x="37" y="4" width="6" height="4" fill="currentColor"/></svg>';
 const AWAY = '<svg viewBox="0 0 48 48" width="22" height="22"><path d="M44 21c0-2-2-3-4-3H30L19 4h-5l6 14H10l-4-5H2l3 11-3 11h4l4-5h10l-6 14h5l11-14h10c2 0 4-1 4-3z" fill="currentColor"/></svg>';
 
-function html(rows, story) {
+function html(spec, rows, story) {
   const n = rows.length;
   // Λιγότεροι αγώνες → μεγαλύτερα στοιχεία.
   const k = story ? Math.min(1.25, 1 + (6 - n) * 0.06) : n > 5 ? 1 - (n - 5) * 0.2 : Math.min(1.15, 1 + (5 - n) * 0.05);
@@ -69,7 +70,7 @@ body{display:flow-root;width:1080px;height:${H}px;color:#0b0b0b;font-family:F;ov
 .head,.orn,.list,.foot{position:relative;z-index:2}
 .head{text-align:center;padding-top:${top}px;height:${top + 360}px}
 .kick{font-weight:700;font-size:24px;letter-spacing:10px;color:#555}
-.day{font-family:S;font-weight:900;font-size:330px;line-height:.78;letter-spacing:-6px;transform:scaleX(.68);margin-top:20px;color:transparent;background:linear-gradient(#0b0b0b 35%,rgba(0,0,0,.10) 78%);-webkit-background-clip:text;background-clip:text;white-space:nowrap}
+.day{font-family:S;font-weight:900;font-size:${Math.min(330, Math.round(330 * 7.4 / [...spec.day].length))}px;line-height:.78;letter-spacing:-6px;transform:scaleX(.68);margin-top:20px;color:transparent;background:linear-gradient(#0b0b0b 35%,rgba(0,0,0,.10) 78%);-webkit-background-clip:text;background-clip:text;white-space:nowrap}
 .date{position:absolute;left:0;right:0;top:${top + 205}px;font-family:GV;font-size:170px;line-height:1;color:#0b0b0b;text-shadow:0 6px 24px rgba(243,242,238,.95),0 0 40px rgba(243,242,238,.95)}
 .orn{display:flex;align-items:center;justify-content:center;gap:16px;margin:0 auto;width:640px;color:#777}
 .orn i{flex:1;height:1px;background:linear-gradient(90deg,transparent,#777)}.orn i:last-child{background:linear-gradient(270deg,transparent,#777)}
@@ -96,26 +97,39 @@ body{display:flow-root;width:1080px;height:${H}px;color:#0b0b0b;font-family:F;ov
 <div class="foot"><b>PAOK</b><em>alendar</em></div><div class="grain"></div></body></html>`;
 }
 
-const rows = [];
-for (const m of spec.matches) {
-  const src = await logo(m.logo).catch(() => "");
-  const ini = UP(m.opponent).split(/\s+/).map((w) => w[0]).join("").slice(0, 3);
-  const r = m.us > m.them ? ["W", "ΝΙΚΗ"] : m.us < m.them ? ["L", "ΗΤΤΑ"] : ["D", "ΙΣΟΠΑΛΙΑ"];
-  rows.push(`<div class="m ${r[0]}"><div class="lg">${src ? `<img src="${src}">` : `<span class="ini">${ini}</span>`}</div><div>
-<div class="opp">${UP(m.opponent)}</div>
-<div class="info">${[UP(m.section), UP(m.competition)].filter(Boolean).join(" <s></s> ")}</div>
-<div class="ha">${m.home ? HOME : AWAY} ${m.home ? "ΕΝΤΟΣ" : "ΕΚΤΟΣ"}${m.venue ? ` · ${UP(m.venue)}` : ""}</div></div>
-<div class="sc"><div class="box">${(() => { const win = m.us > m.them, lose = m.us < m.them; const us0 = win ? `<b>${m.us}</b>` : `<i>${m.us}</i>`, us = win || lose ? `<em>${us0}</em>` : us0, them = lose ? `<b>${m.them}</b>` : `<i>${m.them}</i>`; return m.home ? `${us}<u>–</u>${them}` : `${them}<u>–</u>${us}`; })()}</div></div></div>`);
+// Βγάζει τις εικόνες ενός JSON (βλ. πάνω). base: ο φάκελος για τα σχετικά "logo".
+export async function render(spec, outDir, { browser, base = outDir, kinds = ["post", "story"] } = {}) {
+  const rows = [];
+  for (const m of spec.matches) {
+    const src = await logo(m.logo, base).catch(() => "");
+    const ini = UP(m.opponent).split(/\s+/).map((w) => w[0]).join("").slice(0, 3);
+    const r = m.us > m.them ? ["W", "ΝΙΚΗ"] : m.us < m.them ? ["L", "ΗΤΤΑ"] : ["D", "ΙΣΟΠΑΛΙΑ"];
+    rows.push(`<div class="m ${r[0]}"><div class="lg">${src ? `<img src="${src}">` : `<span class="ini">${ini}</span>`}</div><div>
+  <div class="opp">${UP(m.opponent)}</div>
+  <div class="info">${[UP(m.section), UP(m.competition)].filter(Boolean).join(" <s></s> ")}</div>
+  <div class="ha">${m.home ? HOME : AWAY} ${m.home ? "ΕΝΤΟΣ" : "ΕΚΤΟΣ"}${m.venue ? ` · ${UP(m.venue)}` : ""}</div></div>
+  <div class="sc"><div class="box">${(() => { const win = m.us > m.them, lose = m.us < m.them; const us0 = win ? `<b>${m.us}</b>` : `<i>${m.us}</i>`, us = win || lose ? `<em>${us0}</em>` : us0, them = lose ? `<b>${m.them}</b>` : `<i>${m.them}</i>`; return m.home ? `${us}<u>–</u>${them}` : `${them}<u>–</u>${us}`; })()}</div></div></div>`);
+  }
+  fs.mkdirSync(outDir, { recursive: true });
+  const own = !browser;
+  if (own) browser = await (await chromium()).launch();
+  const files = [];
+  for (const story of kinds.map((k) => k === "story")) {
+    const page = await browser.newPage({ viewport: { width: 1080, height: story ? 1920 : 1350 } });
+    await page.setContent(html(spec, rows, story));
+    await page.evaluate(MONO_CRESTS, 11);
+    await page.waitForTimeout(400);
+    const out = path.join(outDir, `${spec.file || "apotelesmata"}-apotelesmata-${story ? "story" : "post"}.png`);
+    await page.screenshot({ path: out });
+    await page.close();
+    files.push(out);
+  }
+  if (own) await browser.close();
+  return files;
 }
-fs.mkdirSync(outDir, { recursive: true });
-const browser = await chromium.launch();
-for (const story of [false, true]) {
-  const page = await browser.newPage({ viewport: { width: 1080, height: story ? 1920 : 1350 } });
-  await page.setContent(html(rows, story));
-  await page.evaluate(MONO_CRESTS, 11);
-  await page.waitForTimeout(400);
-  const out = path.join(outDir, `${spec.file || "apotelesmata"}-apotelesmata-${story ? "story" : "post"}.png`);
-  await page.screenshot({ path: out });
-  console.log(out);
+
+if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
+  const [specPath, outDir = path.dirname(specPath)] = process.argv.slice(2);
+  const spec = JSON.parse(fs.readFileSync(specPath, "utf8"));
+  for (const f of await render(spec, outDir, { base: path.dirname(specPath) })) console.log(f);
 }
-await browser.close();

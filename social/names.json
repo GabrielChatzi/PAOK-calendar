@@ -1,0 +1,141 @@
+{
+ "_": "Διορθώσεις για τις εικόνες των social (social/week.mjs). teams: «τμήμα:όνομα από την πηγή» → όνομα στην εικόνα και σήμα από το social/logos (χωρίς σήμα: αυτό της πηγής). venues / tv: το ίδιο για γήπεδα και κανάλια.",
+ "teams": {
+  "basketball-women:ΑΕΟ ΠΡΩΤΕΑΣ ΒΟΥΛΑΣ": {
+   "name": "Πρωτέας Βούλας",
+   "logo": "protea-voulas-w.png"
+  },
+  "basketball-women:ΑΘΗΝΑΙΚΟΣ QUALCO": {
+   "name": "Αθηναϊκός",
+   "logo": "athinaikos-w.png"
+  },
+  "basketball-women:ΠΑΣ ΓΙΑΝΝΙΝΑ": {
+   "name": "ΠΑΣ Γιάννινα"
+  },
+  "basketball:Vikos Falcons": {
+   "name": "Vikos Falcons",
+   "logo": "vikos-falcons.png"
+  },
+  "basketball:Ηρακλής": {
+   "name": "Ηρακλής",
+   "logo": "iraklis-basket.png"
+  },
+  "football-women:ΑΣΤΕΡΑΣ ΤΡΙΠΟΛΗΣ": {
+   "name": "Αστέρας Τρίπολης"
+  },
+  "football-women:ΟΔΥΣΣΕΑΣ ΜΟΣΧΑΤΟΥ WFC": {
+   "name": "Οδυσσέας Μοσχάτου",
+   "logo": "odysseas-moschatou-w.png"
+  },
+  "football-women:ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ": {
+   "name": "Παναθηναϊκός"
+  },
+  "football-women:ΠΑΣ ΠΥΡΓΟΣ": {
+   "name": "Πύργος"
+  },
+  "football:Αστέρας Τρίπολης": {
+   "name": "Αστέρας Τρίπολης",
+   "logo": "asteras-tripolis.png"
+  },
+  "football:Ολυμπιακός": {
+   "name": "Ολυμπιακός",
+   "logo": "olympiakos.png"
+  },
+  "futsal:ΔΟΥΚΑ ΑΣΕ": {
+   "name": "Δούκας"
+  },
+  "futsal:ΚΟΡΥΔΑΛΛΟΥ ΑΟΔ": {
+   "name": "Κορυδαλλός",
+   "logo": "korydallos-futsal.png"
+  },
+  "futsal:ΣΑΛΑΜΙΝΑ ΓΣ": {
+   "name": "Σαλαμίνα",
+   "logo": "salamina-futsal.png"
+  },
+  "handball-women:Α.Ε.Π. ΠΑΝΟΡΑΜΑ": {
+   "name": "Πανόραμα",
+   "logo": "panorama-handball-w.jpg"
+  },
+  "handball-women:Α.Ε.Σ.Χ. ΠΥΛΑΙΑΣ": {
+   "name": "Πυλαία"
+  },
+  "handball-women:ΑΘΗΝΑΙΚΟΣ Α.Σ.Β.": {
+   "name": "Αθηναϊκός",
+   "logo": "athinaikos-handball-w.jpg"
+  },
+  "handball-women:Γ.Α.Σ ΚΑΜΑΤΕΡΟΥ": {
+   "name": "Καματερό"
+  },
+  "handball:ΔΙΟΜΗΔΗΣ ΑΡΓΟΥΣ": {
+   "name": "Διομήδης Άργους"
+  },
+  "volley-women:PANATHINAIKOS A.O.": {
+   "name": "Παναθηναϊκός",
+   "logo": "panathinaikos-volley-w.jpg"
+  },
+  "volley-women:Z.A.O.N.": {
+   "name": "ΖΑΟΝ",
+   "logo": "zaon-volley-w.png"
+  },
+  "volley:Α.Ο.Καλαμάτα 80 Affidea": {
+   "name": "Καλαμάτα 80",
+   "logo": "kalamata-80-volley.jpg"
+  },
+  "volley:Α.Ο.Π.Κηφισιάς": {
+   "name": "Κηφισιά",
+   "logo": "kifisia-volley.gif"
+  },
+  "volley:Α.Σ. Άρης": {
+   "name": "Άρης"
+  },
+  "volley:Ν.Ο.Π.Ε. Ρεθύμνου": {
+   "name": "Ρέθυμνο"
+  },
+  "waterpolo-women:Dinamo Uralochka": {
+   "name": "Dinamo Uralochka"
+  },
+  "waterpolo-women:ZVL-1886": {
+   "name": "ZVL-1886"
+  },
+  "waterpolo-women:ΑΛΙΜΟΣ ΝΑΣ": {
+   "name": "Άλιμος"
+  },
+  "waterpolo-women:ΓΣ ΗΛΙΟΥΠΟΛΗΣ": {
+   "name": "Ηλιούπολη"
+  },
+  "waterpolo-women:ΝΟ ΛΑΡΙΣΗΣ": {
+   "name": "ΝΟ Λάρισας",
+   "logo": "no-larisas-w.png"
+  },
+  "waterpolo:ΑΝΟ ΓΛΥΦΑΔΑΣ": {
+   "name": "Γλυφάδα"
+  },
+  "waterpolo:ΕΘΝΙΚΟΣ ΟΦΠΦ": {
+   "name": "Εθνικός",
+   "logo": "ethnikos-polo.png"
+  },
+  "waterpolo:ΝΟ ΒΟΥΛΙΑΓΜΕΝΗΣ": {
+   "name": "Βουλιαγμένη",
+   "logo": "vouliagmeni.png"
+  },
+  "waterpolo:ΝΟ ΧΑΝΙΩΝ": {
+   "name": "ΝΟ Χανίων"
+  }
+ },
+ "venues": {
+  "Ede, NED": "Ede",
+  "Georgios Karaiskakis Stadium": "Γ. Καραϊσκάκης",
+  "Mets Sports Hall": "Γυμναστήριο Μετς",
+  "Mikra": "Μίκρα",
+  "ΔΗΜ.ΜΟΣΧΑΤΟΥ": "Μοσχάτο",
+  "ΔΗΜΟΤΙΚΟ ΣΤΑΔΙΟ ΒΑΡΔΑΣ \"ΓΡΗΓΟΡΙΟΣ ΚΑΛΑΚΟΣ": "Βάρδα",
+  "ΙΒΑΝΩΦΕΙΟ": "Ιβανώφειο",
+  "Κλειστό Γυμναστήριο Σαλαμίνας": "Σαλαμίνα",
+  "Ποσειδώνιο Κολυμβητήριο": "Ποσειδώνιο"
+ },
+ "tv": {
+  "EPS SALAS": "EPS Salas",
+  "ΕΡΤ2 ΣΠΟΡ HD": "ΕΡΤ2 Σπορ",
+  "ΣΚΑΪ / SPORT FM TV 1": "ΣΚΑΪ"
+ }
+}

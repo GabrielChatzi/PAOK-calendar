@@ -1,0 +1,60 @@
+name: Social
+
+# Το πλάνο των social για τις επόμενες 7 μέρες, με τις εικόνες (social/week.mjs), στον κλάδο «social»:
+# https://github.com/GabrielChatzi/PAOK-calendar/tree/social
+# Τρέχει μετά από κάθε ενημέρωση του προγράμματος, οπότε ακολουθεί αλλαγές ωρών και φέρνει τα
+# αποτελέσματα λίγο μετά τους αγώνες. Ο κλάδος κρατά μόνο την τελευταία έκδοση (χωρίς ιστορικό).
+on:
+  workflow_run:
+    workflows: ["Ενημέρωση ημερολογίων"]
+    types: [completed]
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [social/**, .github/workflows/social.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social
+  cancel-in-progress: true
+
+jobs:
+  social:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Playwright
+        run: |
+          npm i --no-save playwright@1.48.2
+          npx playwright install --with-deps chromium
+
+      - name: Δεδομένα και προηγούμενες εικόνες
+        run: |
+          git fetch --depth=1 origin +refs/heads/data:refs/remotes/origin/data
+          git show origin/data:matches.json > "$RUNNER_TEMP/matches.json"
+          mkdir -p "$RUNNER_TEMP/prev"
+          if git fetch --depth=1 origin +refs/heads/social:refs/remotes/origin/social 2>/dev/null; then
+            git archive origin/social | tar -x -C "$RUNNER_TEMP/prev"
+          fi
+
+      - name: Πλάνο και εικόνες
+        run: node social/week.mjs --matches "$RUNNER_TEMP/matches.json" --out "$RUNNER_TEMP/out" --prev "$RUNNER_TEMP/prev"
+
+      - name: Αποθήκευση στον κλάδο social
+        run: |
+          if diff -rq "$RUNNER_TEMP/prev" "$RUNNER_TEMP/out" >/dev/null 2>&1; then echo "Καμία αλλαγή."; exit 0; fi
+          cd "$RUNNER_TEMP/out"
+          git init -q -b social
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -qm "Πλάνο social"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" social

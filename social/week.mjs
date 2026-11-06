@@ -25,6 +25,7 @@ import { render as renderResults } from "./results.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const TZ = "Europe/Athens";
+const RAW = "https://raw.githubusercontent.com/GabrielChatzi/PAOK-calendar/social";
 const DATA_URL = "https://raw.githubusercontent.com/GabrielChatzi/PAOK-calendar/data/matches.json";
 
 export const LABEL = {
@@ -262,7 +263,7 @@ const TYPE = { post: "📸 Post", story: "⭕ Story", reel: "🎬 Reel" };
 export function readme(p) {
   const lines = [`# Social: ${ddmm(p.today)} – ${ddmm(p.to)}`, "",
     "Φτιάχνεται μόνο του μετά από κάθε ενημέρωση του προγράμματος (social.yml), οπότε δείχνει πάντα τις τελευταίες ώρες και αλλαγές. " +
-    "Πάτα μια εικόνα για να την ανοίξεις και κράτα το δάχτυλο πάνω της για αποθήκευση.", ""];
+    "Στο iPhone (Safari): πάτα μια εικόνα, κράτα το δάχτυλο πάνω της → «Προσθήκη στις Φωτογραφίες».", ""];
   let cur = "";
   for (const it of p.items) {
     if (it.day !== cur) {
@@ -276,7 +277,8 @@ export function readme(p) {
       lines.push(it.images?.length ? `Λείπει ακόμα το σκορ: ${it.missing.join(", ")}. Θα μπει μόλις έρθει.` :
         "Οι εικόνες θα βγουν μόλις έρθουν τα σκορ.", "");
     }
-    if (it.images?.length) lines.push(it.images.map((f) => `<img src="img/${f}" width="${it.type === "story" ? 160 : 216}">`).join(" "), "");
+    // Το πάτημα ανοίγει σκέτη την εικόνα (raw), όπου στο iPhone κρατάς πατημένο → «Προσθήκη στις Φωτογραφίες».
+    if (it.images?.length) lines.push(it.images.map((f) => `<a href="${RAW}/img/${f}"><img src="img/${f}" width="${it.type === "story" ? 160 : 216}"></a>`).join(" "), "");
     if (it.caption) lines.push("```", it.caption, "```", "");
   }
   return lines.join("\n");

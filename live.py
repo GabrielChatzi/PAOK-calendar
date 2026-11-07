@@ -4,7 +4,7 @@
 Τρέχει ως μία μακριά εργασία στο GitHub Actions (workflow live.yml), που ξεκινά λίγο πριν
 από έναν αγώνα με live και τελειώνει όταν δεν μένει κανένας αγώνας να παρακολουθήσει.
 Κάθε λεπτό διαβάζει το ζωντανό σκορ και στέλνει ειδοποίηση για:
-    ποδόσφαιρο (ESPN):     έναρξη, κάθε γκολ, ημίχρονο, τελικό
+    ποδόσφαιρο (ESPN):     έναρξη, κάθε γκολ, ημίχρονο, έναρξη 2ου ημιχρόνου, τελικό
     μπάσκετ EuroCup:       έναρξη, τέλος κάθε περιόδου, τελικό
     πόλο (ΚΟΕ, European Aquatics μέσω api/live.js): έναρξη, τέλος κάθε περιόδου, τελικό
 
@@ -291,6 +291,8 @@ def events(m: dict, old: dict | None, new: dict) -> list[tuple[str, str]]:
             out.append((title, " ".join(x for x in (g["clock"], g["text"]) if x)))
         if new.get("halftime") and not old.get("halftime"):
             out.append((f"{e} Ημίχρονο: {score_text(m, new)}", comp))
+        if old.get("halftime") and not new.get("halftime") and new["state"] == "in":
+            out.append((f"{e} Ξεκίνησε το 2ο ημίχρονο: {score_text(m, new)}", comp))
     if m["live"]["src"] == "ehf" and new["state"] == "in" and old["state"] == "in":
         # Χάντμπολ: ημίχρονο όταν εμφανιστεί το σκορ ημιχρόνου.
         if (new.get("done") or 0) >= 1 > (old.get("done") or 0):
@@ -324,12 +326,14 @@ def events(m: dict, old: dict | None, new: dict) -> list[tuple[str, str]]:
 
 def once_key(m: dict, title: str, final: bool) -> str | None:
     """Κλειδί για ειδοποιήσεις που πρέπει να φτάσουν μία φορά σε κάθε συσκευή (βλ. api/push.js):
-    το τελικό, η έναρξη, κάθε γκολ (και ακυρωμένο γκολ) με το σκορ του, το ημίχρονο και το τέλος κάθε
+    το τελικό, η έναρξη (και του 2ου ημιχρόνου), κάθε γκολ (και ακυρωμένο γκολ) με το σκορ του, το ημίχρονο και το τέλος κάθε
     περιόδου ή σετ, ώστε αν το έστειλε πρώτος ο διαχειριστής (api/admin.js, ίδια κλειδιά) να μην ξαναέρθει.
     Το τέλος της παράτασης δεν έχει κλειδί: μπορεί να είναι παραπάνω από μία."""
     if final:
         return f"{m['nt']}-result"
     nt = m["nt"]
+    if "2ο ημίχρονο" in title:  # πριν από το «Ξεκίνησε» του αγώνα
+        return f"{nt}-h2"
     if "Ξεκίνησε" in title:
         return f"{nt}-start"
     if "Ημίχρονο" in title:

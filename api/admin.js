@@ -54,10 +54,11 @@ export function scoreKey(nt, home, away) {
 //   goal        ΓΚΟΛ (ΤΟΥ ΠΑΟΚ)! με το νέο σκορ· side: ποιος σκόραρε, minute, scorer
 //   disallowed  Ακυρώθηκε γκολ, με το σκορ μετά την ακύρωση
 //   half        Ημίχρονο
+//   second      Ξεκίνησε το 2ο ημίχρονο
 //   period      τέλος περιόδου ή σετ (period: 1–5, set: πόντοι του σετ στο βόλεϊ)
 //   score       ελεύθερο σκορ τώρα, με σημείωση
 //   final       Τελικό
-export const EVENTS = ["start", "goal", "disallowed", "half", "period", "score", "final"];
+export const EVENTS = ["start", "goal", "disallowed", "half", "second", "period", "score", "final"];
 
 const sport = (section) => String(section || "").replace(/-women$/, "");
 
@@ -113,6 +114,7 @@ export function message(m, e) {
     return live(`Ακυρώθηκε γκολ: ${score}`, e.note || comp, `${m.nt}-x${e.home}-${e.away}`, "Ακυρώθηκε γκολ");
   }
   if (event === "half") return live(`Ημίχρονο: ${score}`, comp, `${m.nt}-ht`, "Ημίχρονο");
+  if (event === "second") return live(`Ξεκίνησε το 2ο ημίχρονο: ${score}`, comp, `${m.nt}-h2`, "2ο ημίχρονο");
   if (event === "period") {
     const what = periodLabel(m.section, e.period);
     const volley = sport(m.section) === "volley";

@@ -168,6 +168,9 @@ test("Διαχειριστής: γεγονότα με τους τίτλους κ
   const half = ev({ event: "half", home: 1, away: 1 });
   assert.equal(half.payload.title, "⚽ Ημίχρονο: ΟΔΥΣΣΕΑΣ 1–1 ΠΑΟΚ");
   assert.equal(half.once, "abcdef0123-ht");
+  const second = ev({ event: "second", home: 0, away: 2 });
+  assert.equal(second.payload.title, "⚽ Ξεκίνησε το 2ο ημίχρονο: ΟΔΥΣΣΕΑΣ 0–2 ΠΑΟΚ");
+  assert.equal(second.once, "abcdef0123-h2");
   assert.equal(ev({ event: "start", home: 0, away: 0 }).payload.title, "⚽ Ξεκίνησε: ΟΔΥΣΣΕΑΣ – ΠΑΟΚ");
   assert.equal(ev({ event: "disallowed", side: "away", home: 1, away: 1 }).once, "abcdef0123-x1-1");
   assert.ok(admin.parseEvent({ event: "goal", home: 1, away: 0 }).error);  // χωρίς ομάδα

@@ -111,6 +111,14 @@ class Football(unittest.TestCase):
         self.assertEqual(new["state"], "pre")
         self.assertEqual(titles(m, dict(st("pre"), off=""), new), ["⚽ Αναβλήθηκε: ΠΑΟΚ – Εθνικός"])
 
+    def test_second_half_start(self):
+        m = dict(M, section="football", live={"src": "espn"})
+        old = st("in", 0, 2, goals=[], halftime=True)
+        self.assertEqual(titles(m, old, st("in", 0, 2, goals=[], halftime=False)),
+                         ["⚽ Ξεκίνησε το 2ο ημίχρονο: ΠΑΟΚ 0–2 Εθνικός"])
+        self.assertEqual(titles(m, old, st("in", 0, 2, goals=[], halftime=True)), [])
+        self.assertEqual(live.once_key(m, "⚽ Ξεκίνησε το 2ο ημίχρονο: ΠΑΟΚ 0–2 Εθνικός", False), "abcdef0123-h2")
+
     def test_disallowed_goal(self):
         m = dict(M, section="football", live={"src": "espn"})
         old = st("in", 1, 0, goals=[{"id": "g1"}])

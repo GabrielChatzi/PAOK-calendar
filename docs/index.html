@@ -1964,7 +1964,7 @@
   }
   function matchNotifyHtml(m) {
     var rows = MATCH_KINDS.filter(function (k) { return k[0] !== "live" || m.live; }).map(function (k) {
-      var desc = k[0] === "live" ? (m.live.src === "espn" ? "Έναρξη, κάθε γκολ, ημίχρονο"
+      var desc = k[0] === "live" ? (m.live.src === "espn" ? "Έναρξη, κάθε γκολ, ημίχρονο, 2ο ημίχρονο"
         : m.live.src === "dp" ? "Έναρξη και τέλος κάθε σετ" : "Έναρξη και τέλος κάθε περιόδου")
         : k[0] === "pre" && !m.live ? PRE_NO_LIVE : k[2];
       var topics = (k[0] === "all" ? matchKinds(m) : [k[0]]).map(function (kind) { return "m:" + m.nt + ":" + kind; });
@@ -2097,7 +2097,7 @@
     var list = [];
     if (goals) list.push(["goal", "Γκολ"]);
     list.push(["start", "Ξεκίνησε"]);
-    if (s === "football" || s === "futsal" || s === "handball") list.push(["half", "Ημίχρονο"]);
+    if (s === "football" || s === "futsal" || s === "handball") list.push(["half", "Ημίχρονο"], ["second", "Ξεκίνησε το 2ο ημίχρονο"]);
     if (s === "waterpolo" || s === "basketball") {
       list.push(["p1", "Τέλος 1ης περιόδου"], ["half", "Ημίχρονο"], ["p3", "Τέλος 3ης περιόδου"],
         ["p4", s === "waterpolo" ? "Ισοπαλία, πάμε στα πέναλτι" : "Ισοπαλία, πάμε παράταση"]);

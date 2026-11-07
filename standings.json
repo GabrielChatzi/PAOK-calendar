@@ -1848,6 +1848,20 @@
     },
     {
      "pos": 6,
+     "team": "ΥΔΡΑΙΚΟΣ ΝΟ",
+     "logo": "https://koecdn.twic.pics/media/yno-logo-1762525447-m9yd11ip.jpg",
+     "paok": false,
+     "cells": [
+      "7",
+      "4",
+      "0",
+      "3",
+      "81-74",
+      "12"
+     ]
+    },
+    {
+     "pos": 7,
      "team": "ΠΑΟΚ",
      "logo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
      "paok": true,
@@ -1858,20 +1872,6 @@
       "3",
       "80-94",
       "10"
-     ]
-    },
-    {
-     "pos": 7,
-     "team": "ΥΔΡΑΙΚΟΣ ΝΟ",
-     "logo": "https://koecdn.twic.pics/media/yno-logo-1762525447-m9yd11ip.jpg",
-     "paok": false,
-     "cells": [
-      "6",
-      "3",
-      "0",
-      "3",
-      "67-69",
-      "9"
      ]
     },
     {
@@ -1950,11 +1950,11 @@
      "logo": "https://koecdn.twic.pics/media/glyfada-1757496556-dcU9OmwO.jpg",
      "paok": false,
      "cells": [
-      "6",
+      "7",
       "0",
       "2",
-      "4",
-      "44-102",
+      "5",
+      "49-116",
       "2"
      ]
     },

@@ -658,6 +658,30 @@
     },
     {
      "pos": 2,
+     "team": "Κολοσσός Ρόδου",
+     "logo": "https://www.esake.gr/dat/esaketeam/0000000A/photo_new_5DC7EFBA.png",
+     "paok": false,
+     "cells": [
+      "6",
+      "3-3",
+      "-7",
+      "9"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "Περιστέρι",
+     "logo": "https://www.esake.gr/dat/esaketeam/0000000D/photo_new_30338F54.png",
+     "paok": false,
+     "cells": [
+      "6",
+      "3-3",
+      "-42",
+      "9"
+     ]
+    },
+    {
+     "pos": 4,
      "team": "Άρης",
      "logo": "https://www.esake.gr/dat/esaketeam/00000005/photo_new_6A11CE7A.png",
      "paok": false,
@@ -669,7 +693,7 @@
      ]
     },
     {
-     "pos": 3,
+     "pos": 5,
      "team": "Ολυμπιακός",
      "logo": "https://www.esake.gr/dat/esaketeam/00000002/photo_new_7F6C9D90.png",
      "paok": false,
@@ -681,19 +705,7 @@
      ]
     },
     {
-     "pos": 4,
-     "team": "Περιστέρι",
-     "logo": "https://www.esake.gr/dat/esaketeam/0000000D/photo_new_30338F54.png",
-     "paok": false,
-     "cells": [
-      "5",
-      "3-2",
-      "-39",
-      "8"
-     ]
-    },
-    {
-     "pos": 5,
+     "pos": 6,
      "team": "Καρδίτσα",
      "logo": "https://www.esake.gr/dat/esaketeam/B742845D/photo_new_04E98281.png",
      "paok": false,
@@ -705,31 +717,7 @@
      ]
     },
     {
-     "pos": 6,
-     "team": "Κολοσσός Ρόδου",
-     "logo": "https://www.esake.gr/dat/esaketeam/0000000A/photo_new_5DC7EFBA.png",
-     "paok": false,
-     "cells": [
-      "5",
-      "2-3",
-      "-10",
-      "7"
-     ]
-    },
-    {
      "pos": 7,
-     "team": "Δόξα Λευκάδας",
-     "logo": "https://www.esake.gr/dat/esaketeam/3CA10C07/photo_new_6AE0FF13.png",
-     "paok": false,
-     "cells": [
-      "5",
-      "2-3",
-      "-8",
-      "7"
-     ]
-    },
-    {
-     "pos": 8,
      "team": "Παναθηναϊκός",
      "logo": "https://www.esake.gr/dat/esaketeam/00000001/photo_new_160CD854.png",
      "paok": false,
@@ -737,6 +725,18 @@
       "5",
       "4-1",
       "78",
+      "7"
+     ]
+    },
+    {
+     "pos": 8,
+     "team": "Δόξα Λευκάδας",
+     "logo": "https://www.esake.gr/dat/esaketeam/3CA10C07/photo_new_6AE0FF13.png",
+     "paok": false,
+     "cells": [
+      "5",
+      "2-3",
+      "-8",
       "7"
      ]
     },
@@ -1856,7 +1856,7 @@
       "4",
       "0",
       "3",
-      "81-74",
+      "83-77",
       "12"
      ]
     },
@@ -1954,7 +1954,7 @@
       "0",
       "2",
       "5",
-      "49-116",
+      "52-118",
       "2"
      ]
     },

@@ -1,0 +1,176 @@
+{
+ "today": "2026-11-07",
+ "from": "2026-11-07",
+ "to": "2026-11-13",
+ "items": [
+  {
+   "type": "story",
+   "what": "today",
+   "day": "2026-11-07",
+   "time": "09:00",
+   "title": "Σήμερα παίζει",
+   "note": "Sticker «Σύνδεσμος» → paokalendar.gr",
+   "images": [
+    "2026-11-07-story.png"
+   ]
+  },
+  {
+   "type": "story",
+   "what": "dayResults",
+   "day": "2026-11-07",
+   "time": "20:00",
+   "title": "Αποτελέσματα ημέρας",
+   "missing": [
+    "ΠΑΟΚ – Vikos Falcons"
+   ],
+   "images": [
+    "2026-11-07-apotelesmata-story.png"
+   ]
+  },
+  {
+   "type": "story",
+   "what": "today",
+   "day": "2026-11-08",
+   "time": "09:00",
+   "title": "Σήμερα παίζει",
+   "note": "Sticker «Σύνδεσμος» → paokalendar.gr",
+   "images": [
+    "2026-11-08-story.png"
+   ]
+  },
+  {
+   "type": "story",
+   "what": "dayResults",
+   "day": "2026-11-08",
+   "time": "23:30",
+   "title": "Αποτελέσματα ημέρας",
+   "missing": [
+    "ΣΑΛΑΜΙΝΑ ΓΣ – ΠΑΟΚ",
+    "PANATHINAIKOS A.O. – ΠΑΟΚ",
+    "Ολυμπιακός – ΠΑΟΚ"
+   ],
+   "images": []
+  },
+  {
+   "type": "story",
+   "what": "today",
+   "day": "2026-11-09",
+   "time": "09:00",
+   "title": "Σήμερα παίζει",
+   "note": "Sticker «Σύνδεσμος» → paokalendar.gr",
+   "images": [
+    "2026-11-09-story.png"
+   ]
+  },
+  {
+   "type": "post",
+   "what": "schedule",
+   "day": "2026-11-09",
+   "time": "22:00",
+   "title": "Πρόγραμμα της εβδομάδας",
+   "caption": "Η εβδομάδα του ΠΑΟΚ σε όλα τα τμήματα 🖤🤍\n2 αγώνες σε 2 αθλήματα, από Τρίτη ως Παρασκευή, με το Balkan–ΠΑΟΚ την Τρίτη στις 19:00.\n\nΏρες, κανάλια και ειδοποιήσεις για κάθε αγώνα: paokalendar.gr (link στο bio)\n\n#ΠΑΟΚ #PAOK #PAOKalendar",
+   "images": [
+    "2026-11-10-post.png",
+    "2026-11-13-post.png"
+   ]
+  },
+  {
+   "type": "story",
+   "what": "dayResults",
+   "day": "2026-11-09",
+   "time": "22:00",
+   "title": "Αποτελέσματα ημέρας",
+   "missing": [
+    "Α.Ε.Π. ΠΑΝΟΡΑΜΑ – ΠΑΟΚ",
+    "Α.Ο.Καλαμάτα 80 Affidea – ΠΑΟΚ"
+   ],
+   "images": []
+  },
+  {
+   "type": "post",
+   "what": "results",
+   "day": "2026-11-10",
+   "time": "09:00",
+   "title": "Αποτελέσματα του Σαββατοκύριακου",
+   "caption": "Τα αποτελέσματα του Σαββατοκύριακου 🖤🤍\n2 νίκες, 2 ήττες σε 4 αγώνες.\n\nΌλα τα σκορ και οι βαθμολογίες: paokalendar.gr (link στο bio)\n\n#ΠΑΟΚ #PAOK #PAOKalendar",
+   "missing": [
+    "ΠΑΟΚ – Vikos Falcons",
+    "ΣΑΛΑΜΙΝΑ ΓΣ – ΠΑΟΚ",
+    "PANATHINAIKOS A.O. – ΠΑΟΚ",
+    "Ολυμπιακός – ΠΑΟΚ",
+    "Α.Ε.Π. ΠΑΝΟΡΑΜΑ – ΠΑΟΚ",
+    "Α.Ο.Καλαμάτα 80 Affidea – ΠΑΟΚ"
+   ],
+   "images": [
+    "2026-11-07-apotelesmata-post.png"
+   ]
+  },
+  {
+   "type": "story",
+   "what": "today",
+   "day": "2026-11-10",
+   "time": "09:00",
+   "title": "Σήμερα παίζει",
+   "note": "Sticker «Σύνδεσμος» → paokalendar.gr",
+   "images": [
+    "2026-11-10-story.png"
+   ]
+  },
+  {
+   "type": "story",
+   "what": "dayResults",
+   "day": "2026-11-10",
+   "time": "21:30",
+   "title": "Αποτελέσματα ημέρας",
+   "missing": [
+    "Balkan – ΠΑΟΚ"
+   ],
+   "images": []
+  },
+  {
+   "type": "reel",
+   "what": "reel",
+   "day": "2026-11-11",
+   "time": "20:00",
+   "title": "Πώς βάζεις ειδοποίηση για έναν αγώνα",
+   "how": "Εγγραφή οθόνης: άνοιγμα εφαρμογής → αγώνας → «Ειδοποιήσεις» → «1 ώρα πριν» και «Live».",
+   "caption": "Μάθε για κάθε γκολ πριν το δεις στην τηλεόραση ⚽🔔\nΣε 10'' από το κινητό σου, χωρίς λογαριασμό.\n\nΔωρεάν στο paokalendar.gr (link στο bio)\n\n#ΠΑΟΚ #PAOK #PAOKalendar",
+   "images": []
+  },
+  {
+   "type": "story",
+   "what": "today",
+   "day": "2026-11-13",
+   "time": "09:00",
+   "title": "Σήμερα παίζει",
+   "note": "Sticker «Σύνδεσμος» → paokalendar.gr",
+   "images": [
+    "2026-11-13-story.png"
+   ]
+  },
+  {
+   "type": "post",
+   "what": "schedule",
+   "day": "2026-11-13",
+   "time": "21:00",
+   "title": "Πρόγραμμα του Σαββατοκύριακου",
+   "caption": "Το Σαββατοκύριακο του ΠΑΟΚ σε όλα τα τμήματα 🖤🤍\n8 αγώνες σε 5 αθλήματα, από Σάββατο ως Δευτέρα, με το ΠΑΟΚ–Παρτιζάν το Σάββατο στις 16:45.\n\nΏρες, κανάλια και ειδοποιήσεις για κάθε αγώνα: paokalendar.gr (link στο bio)\n\n#ΠΑΟΚ #PAOK #PAOKalendar",
+   "images": [
+    "2026-11-14-post.png",
+    "2026-11-15-post.png",
+    "2026-11-16-post.png"
+   ]
+  },
+  {
+   "type": "story",
+   "what": "dayResults",
+   "day": "2026-11-13",
+   "time": "21:00",
+   "title": "Αποτελέσματα ημέρας",
+   "missing": [
+    "ΠΑΟΚ – Α.Σ. Άρης"
+   ],
+   "images": []
+  }
+ ]
+}

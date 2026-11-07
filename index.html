@@ -388,6 +388,13 @@
   .adm-field input { font: inherit; font-size: 18px; color: var(--ink); background: var(--paper); border: 1.5px solid var(--ink);
     border-radius: 0; padding: 8px 10px; width: 100%; box-sizing: border-box; }
   .adm-score input { font-size: 28px; font-weight: 700; text-align: center; }
+  .adm-score .adm-field { justify-content: flex-end; }
+  .adm-score input[type="text"] { font-size: 18px; font-weight: 400; text-align: left; padding: 12px 10px; }
+  .adm-label { font-size: 14px; color: var(--muted); margin: 12px 0 6px; }
+  .adm-events, .adm-sides { display: flex; flex-wrap: wrap; gap: 8px; }
+  .adm-events .btn { padding: 8px 12px; }
+  .adm-sides .btn { flex: 1 1 40%; padding: 12px 10px; font-weight: 700; }
+  .adm-change { font-size: 17px; margin: 0 0 12px; }
   button.linkish { background: none; border: 0; padding: 0; color: inherit; text-decoration: underline; cursor: pointer; font: inherit; }
   ul.notify { list-style: none; margin: 14px 0 0; padding: 0; border-top: 2px solid var(--ink); }
   ul.notify li { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--rule); }
@@ -1505,6 +1512,9 @@
     } else { fallback(); }
   }
 
+  $("app").addEventListener("input", function (e) {
+    if (e.target.id && e.target.id.indexOf("adm-") === 0) admInput(e.target);
+  });
   $("app").addEventListener("click", function (e) {
     var b = e.target.closest("button");
     if (!b) return;
@@ -1521,8 +1531,8 @@
       location.reload();
       return;
     }
-    if (b.dataset.act === "adm-live") { adminSend("score", false); return; }
-    if (b.dataset.act === "adm-final") { adminSend("score", true); return; }
+    if (b.dataset.act === "adm-ev" || b.dataset.act === "adm-side") { adminClick(b); return; }
+    if (b.dataset.act === "adm-send") { adminSend("score"); return; }
     if (b.dataset.act === "adm-clear") { adminSend("clear"); return; }
     if (b.dataset.act === "adm-forget") { try { localStorage.removeItem("paok-admin-pass"); } catch (err) {} render(); return; }
     if (b.dataset.act === "push-restore") { restorePush(); return; }
@@ -1954,7 +1964,7 @@
   }
   function matchNotifyHtml(m) {
     var rows = MATCH_KINDS.filter(function (k) { return k[0] !== "live" || m.live; }).map(function (k) {
-      var desc = k[0] === "live" ? (m.live.src === "espn" ? "Έναρξη, κάθε γκολ, ημίχρονο"
+      var desc = k[0] === "live" ? (m.live.src === "espn" ? "Έναρξη, κάθε γκολ, ημίχρονο, 2ο ημίχρονο"
         : m.live.src === "dp" ? "Έναρξη και τέλος κάθε σετ" : "Έναρξη και τέλος κάθε περιόδου")
         : k[0] === "pre" && !m.live ? PRE_NO_LIVE : k[2];
       var topics = (k[0] === "all" ? matchKinds(m) : [k[0]]).map(function (kind) { return "m:" + m.nt + ":" + kind; });
@@ -2076,66 +2086,188 @@
     return TZ === ATHENS ? "" : " (" + fmtAthensTime.format(date) + " ώρα Ελλάδας)";
   }
 
-  // ---- Διαχειριστής: σκορ με ειδοποίηση (api/admin.js)
+  // ---- Διαχειριστής: γεγονότα με ειδοποίηση (api/admin.js), στη μορφή των αυτόματων
+  // Η φόρμα κρατά την κατάστασή της εδώ (ανά αγώνα), ώστε να μη χάνεται όταν ξαναζωγραφίζεται η σελίδα.
+  var admForm = {};
   function adminPass() { try { return localStorage.getItem("paok-admin-pass") || ""; } catch (e) { return ""; } }
-  function adminMatchHtml(m) {
-    if (!pushOrigin) return "";
+  function admSport(m) { return m.section.replace(/-women$/, ""); }
+  function admEvents(m) {
+    var s = admSport(m);
+    var goals = ["football", "futsal", "handball", "waterpolo"].indexOf(s) >= 0;
+    var list = [];
+    if (goals) list.push(["goal", "Γκολ"]);
+    list.push(["start", "Ξεκίνησε"]);
+    if (s === "football" || s === "futsal" || s === "handball") list.push(["half", "Ημίχρονο"], ["second", "Ξεκίνησε το 2ο ημίχρονο"]);
+    if (s === "waterpolo" || s === "basketball") {
+      list.push(["p1", "Τέλος 1ης περιόδου"], ["half", "Ημίχρονο"], ["p3", "Τέλος 3ης περιόδου"],
+        ["p4", s === "waterpolo" ? "Ισοπαλία, πάμε στα πέναλτι" : "Ισοπαλία, πάμε παράταση"]);
+    }
+    if (s === "basketball") list.push(["p5", "Τέλος παράτασης"]);
+    if (s === "volley") list.push(["p1", "Τέλος 1ου σετ"], ["p2", "Τέλος 2ου σετ"], ["p3", "Τέλος 3ου σετ"], ["p4", "Τέλος 4ου σετ"]);
+    if (goals) list.push(["disallowed", "Ακυρώθηκε γκολ"]);
+    list.push(["score", "Σκορ με σημείωση"], ["final", "Τελικό"]);
+    return list;
+  }
+  // Το σκορ τώρα: του διαχειριστή, αλλιώς του προγράμματος ή του live.
+  function admBase(m) {
     var e = adminEntries[m.nt];
     var parts = /^(\d+)-(\d+)$/.exec(m.score || "");
     var ls = liveState[m.uid];
-    var h = e ? e.home : parts ? +parts[1] : ls && ls.state !== "pre" ? ls.home : 0;
-    var a = e ? e.away : parts ? +parts[2] : ls && ls.state !== "pre" ? ls.away : 0;
-    function field(id, label, value) {
-      return '<label class="adm-field"><span>' + esc(label) + '</span><input id="' + id + '" type="number" inputmode="numeric" min="0" max="300" value="' + value + '"></label>';
+    return {
+      home: e ? e.home : parts ? +parts[1] : ls && ls.state !== "pre" ? ls.home : 0,
+      away: e ? e.away : parts ? +parts[2] : ls && ls.state !== "pre" ? ls.away : 0
+    };
+  }
+  function admState(m) {
+    var f = admForm[m.nt];
+    if (!f || !admEvents(m).some(function (x) { return x[0] === f.ev; })) {
+      f = admForm[m.nt] = { ev: admEvents(m)[0][0], side: "", minute: "", scorer: "", note: "", h: null, a: null, sh: "", sa: "" };
+    }
+    return f;
+  }
+  // Το σκορ της φόρμας: ό,τι έγραψε ο διαχειριστής, αλλιώς το τωρινό ±1 για το γκολ της ομάδας που διάλεξε.
+  function admScore(m) {
+    var f = admState(m), b = admBase(m);
+    var h = b.home, a = b.away;
+    var d = f.ev === "goal" ? 1 : f.ev === "disallowed" ? -1 : 0;
+    if (f.side === "home") h = Math.max(0, h + d);
+    if (f.side === "away") a = Math.max(0, a + d);
+    if (f.ev === "start") { h = 0; a = 0; }
+    return { home: f.h != null ? f.h : h, away: f.a != null ? f.a : a, base: b };
+  }
+  function adminMatchHtml(m) {
+    if (!pushOrigin) return "";
+    var e = adminEntries[m.nt];
+    var f = admState(m), sc = admScore(m);
+    var sideEv = f.ev === "goal" || f.ev === "disallowed";
+    function field(id, label, value, attrs) {
+      return '<label class="adm-field"><span>' + esc(label) + '</span><input id="' + id + '" ' + (attrs || 'type="number" inputmode="numeric" min="0" max="300"') +
+        ' value="' + esc(value) + '"></label>';
+    }
+    function wide(id, label, value, ph, max) {
+      return '<label class="adm-field wide"><span>' + esc(label) + '</span><input id="' + id + '" type="text" maxlength="' + max + '" placeholder="' + esc(ph) + '" value="' + esc(value) + '"></label>';
     }
     var when = e ? new Intl.DateTimeFormat("el-GR", { timeZone: TZ, hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).format(new Date(e.at)) : "";
+    var chips = admEvents(m).map(function (x) {
+      return '<button type="button" class="btn' + (x[0] === f.ev ? " solid" : "") + '" data-act="adm-ev" data-ev="' + x[0] + '" aria-pressed="' + (x[0] === f.ev) + '">' + esc(x[1]) + "</button>";
+    }).join("");
+    var sides = sideEv ? '<p class="adm-label">' + (f.ev === "goal" ? "Ποιος σκόραρε;" : "Ποιανού γκολ ακυρώθηκε;") + "</p>" +
+      '<div class="adm-sides">' + ["home", "away"].map(function (s) {
+        return '<button type="button" class="btn' + (f.side === s ? " solid" : "") + '" data-act="adm-side" data-side="' + s + '" aria-pressed="' + (f.side === s) + '">' + esc(m[s]) + "</button>";
+      }).join("") + "</div>" : "";
+    var changed = sc.home !== sc.base.home || sc.away !== sc.base.away;
+    var extra = "";
+    if (f.ev === "goal") {
+      extra = '<div class="adm-score">' + field("adm-min", "Λεπτό (προαιρετικά)", f.minute, 'type="text" inputmode="numeric" maxlength="10" placeholder="π.χ. 23 ή 45+2"') +
+        field("adm-scorer", "Σκόρερ (προαιρετικά)", f.scorer, 'type="text" maxlength="40"') + "</div>";
+    } else if (admSport(m) === "volley" && /^p\d$/.test(f.ev)) {
+      extra = '<p class="adm-label">Πόντοι του σετ (προαιρετικά)</p><div class="adm-score">' +
+        field("adm-sh", m.home, f.sh, 'type="number" inputmode="numeric" min="0" max="99"') + field("adm-sa", m.away, f.sa, 'type="number" inputmode="numeric" min="0" max="99"') + "</div>";
+    }
+    if (f.ev === "score" || f.ev === "final" || f.ev === "disallowed") {
+      extra += wide("adm-note", "Σημείωση (προαιρετικά)", f.note,
+        f.ev === "final" ? "π.χ. πέναλτι 4–3, μετά από παράταση" : f.ev === "disallowed" ? "π.χ. οφσάιντ" : "π.χ. 2ο ημίχρονο", 80);
+    }
     return '<section class="admin-box" data-nt="' + esc(m.nt) + '"><h3>Διαχειριστής</h3>' +
-      "<p class=\"help\">Ό,τι γράψεις εδώ φαίνεται αμέσως και στέλνει ειδοποίηση. Έχει προτεραιότητα από τις αυτόματες πηγές: " +
-      "όποιος πήρε την ειδοποίηση από εδώ δεν παίρνει ξανά την ίδια από το live ή την ενημέρωση.</p>" +
-      (e ? '<p class="server-ok">Τελευταία καταχώριση ' + when + ": " + e.home + "–" + e.away + (e.final ? " (τελικό)" : " (σε εξέλιξη)") + "</p>" : "") +
-      '<div class="adm-score">' + field("adm-h", m.home, h) + field("adm-a", m.away, a) + "</div>" +
-      '<label class="adm-field wide"><span>Σημείωση (προαιρετικά)</span><input id="adm-note" type="text" maxlength="80" placeholder="π.χ. 2ο ημίχρονο, μετά από παράταση" value="' + esc(e && e.note || "") + '"></label>' +
+      "<p class=\"help\">Στέλνει ειδοποίηση στη μορφή των αυτόματων και το σκορ φαίνεται αμέσως. Όποιος πάρει κάτι από εδώ " +
+      "δεν το ξαναπαίρνει από το live.</p>" +
+      (e ? '<p class="server-ok">Τελευταία καταχώριση ' + when + ": " + e.home + "–" + e.away + " (" + esc(e.label || (e.final ? "τελικό" : "σε εξέλιξη")) + ")</p>" : "") +
+      '<p class="adm-label">Τι έγινε;</p><div class="adm-events">' + chips + "</div>" + sides +
+      '<div class="adm-score">' + field("adm-h", m.home, sc.home) + field("adm-a", m.away, sc.away) + "</div>" +
+      '<p class="adm-change">' + (changed ? "Σκορ: " + sc.base.home + "–" + sc.base.away + " → <strong>" + sc.home + "–" + sc.away + "</strong>" : "Σκορ: " + sc.home + "–" + sc.away + " (χωρίς αλλαγή)") + "</p>" +
+      extra +
       (adminPass() ? "" : '<label class="adm-field wide"><span>Κωδικός διαχειριστή</span><input id="adm-pass" type="password" autocomplete="current-password"></label>') +
-      '<div class="actions"><button type="button" class="btn" data-act="adm-live">Σκορ τώρα</button>' +
-      '<button type="button" class="btn solid" data-act="adm-final">Τελικό</button>' +
+      '<div class="actions"><button type="button" class="btn solid" data-act="adm-send">Αποστολή</button>' +
       (e ? '<button type="button" class="btn" data-act="adm-clear">Σβήσιμο καταχώρισης</button>' : "") + "</div>" +
       (adminPass() ? '<p class="help"><button type="button" class="linkish" data-act="adm-forget">Ξέχνα τον κωδικό σε αυτή τη συσκευή</button></p>' : "") +
       "</section>";
   }
-  function adminSend(action, final) {
+  // Ξαναζωγραφίζει μόνο τη φόρμα (για τις επιλογές), ώστε να μη χαθεί το σημείο της σελίδας.
+  function admRefresh() {
+    var box = document.querySelector(".admin-box");
+    var m = box && matchByNt(box.dataset.nt);
+    if (!m) return;
+    var pass = $("adm-pass") ? $("adm-pass").value : "";
+    box.outerHTML = adminMatchHtml(m);
+    if (pass && $("adm-pass")) $("adm-pass").value = pass;
+  }
+  function admInput(el) {
+    var box = el.closest(".admin-box");
+    var m = box && matchByNt(box.dataset.nt);
+    if (!m) return;
+    var f = admState(m);
+    var v = el.value;
+    if (el.id === "adm-h" || el.id === "adm-a") {
+      var sc = admScore(m);
+      f.h = el.id === "adm-h" ? parseInt(v, 10) : sc.home;
+      f.a = el.id === "adm-a" ? parseInt(v, 10) : sc.away;
+      if (!(f.h >= 0)) f.h = 0;
+      if (!(f.a >= 0)) f.a = 0;
+      var b = admBase(m), ch = box.querySelector(".adm-change");
+      if (ch) ch.innerHTML = f.h !== b.home || f.a !== b.away ? "Σκορ: " + b.home + "–" + b.away + " → <strong>" + f.h + "–" + f.a + "</strong>" : "Σκορ: " + f.h + "–" + f.a + " (χωρίς αλλαγή)";
+    } else if (el.id === "adm-min") f.minute = v;
+    else if (el.id === "adm-scorer") f.scorer = v;
+    else if (el.id === "adm-note") f.note = v;
+    else if (el.id === "adm-sh") f.sh = v;
+    else if (el.id === "adm-sa") f.sa = v;
+  }
+  function adminClick(b) {
+    var box = b.closest(".admin-box");
+    var m = box && matchByNt(box.dataset.nt);
+    if (!m) return;
+    var f = admState(m);
+    if (b.dataset.act === "adm-ev") { f.ev = b.dataset.ev; f.side = ""; f.h = null; f.a = null; }
+    if (b.dataset.act === "adm-side") { f.side = b.dataset.side; f.h = null; f.a = null; }
+    admRefresh();
+  }
+  function adminPost(body) {
+    return fetch("/api/admin", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { return { r: r, d: d }; }); });
+  }
+  function adminFail(x) {
+    if (x.r.status === 401) { try { localStorage.removeItem("paok-admin-pass"); } catch (e) {} toast("Λάθος κωδικός."); render(); return true; }
+    if (!x.r.ok) { toast(x.d.error || "Δεν έγινε. Δοκίμασε ξανά."); return true; }
+    return false;
+  }
+  function adminSend(action) {
     var box = document.querySelector(".admin-box");
     if (!box) return;
-    var nt = box.dataset.nt;
+    var nt = box.dataset.nt, m = matchByNt(nt);
     var passEl = $("adm-pass");
     var pass = passEl ? passEl.value : adminPass();
     if (!pass) { toast("Γράψε τον κωδικό διαχειριστή."); return; }
-    var body = { password: pass, action: action, nt: nt };
-    if (action === "score") {
-      body.home = parseInt($("adm-h").value, 10); body.away = parseInt($("adm-a").value, 10);
-      body.final = final; body.note = $("adm-note").value;
-      if (!(body.home >= 0 && body.away >= 0)) { toast("Γράψε το σκορ."); return; }
-      if (final && !window.confirm("Τελικό " + body.home + "–" + body.away + "; Θα σταλεί ειδοποίηση σε όλους.")) return;
+    if (action === "clear") {
+      if (!window.confirm("Να σβηστεί η καταχώριση; Δεν στέλνεται ειδοποίηση.")) return;
+      adminPost({ password: pass, action: "clear", nt: nt }).then(function (x) {
+        if (adminFail(x)) return;
+        delete adminEntries[nt]; delete admForm[nt];
+        toast("Σβήστηκε. Το σκορ θα έρθει ξανά από τις αυτόματες πηγές.");
+        load().catch(function () {});
+      }).catch(function () { toast("Δεν υπάρχει σύνδεση με τον server."); });
+      return;
     }
-    if (action === "clear" && !window.confirm("Να σβηστεί η καταχώριση; Δεν στέλνεται ειδοποίηση.")) return;
-    fetch("/api/admin", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) })
-      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { return [r, d]; }); })
-      .then(function (x) {
-        var r = x[0], d = x[1];
-        if (r.status === 401) { try { localStorage.removeItem("paok-admin-pass"); } catch (e) {} toast("Λάθος κωδικός."); render(); return; }
-        if (!r.ok) { toast(d.error || "Δεν έγινε. Δοκίμασε ξανά."); return; }
+    var f = admState(m), sc = admScore(m);
+    if ((f.ev === "goal" || f.ev === "disallowed") && !f.side) { toast("Διάλεξε ομάδα."); return; }
+    var period = /^p(\d)$/.exec(f.ev);
+    var body = { password: pass, action: "score", nt: nt, home: sc.home, away: sc.away,
+      event: period ? "period" : f.ev, side: f.side, minute: f.minute, scorer: f.scorer, note: f.note };
+    if (period) body.period = +period[1];
+    if (f.sh !== "" && f.sa !== "") body.set = { home: parseInt(f.sh, 10), away: parseInt(f.sa, 10) };
+    // Πρώτα η προεπισκόπηση από τον server, ακριβώς όπως θα φτάσει, και μετά η αποστολή.
+    adminPost(Object.assign({ dry: true }, body)).then(function (x) {
+      if (adminFail(x)) return;
+      var p = x.d.preview || {};
+      if (!window.confirm("Θα σταλεί σε όλους:\n\n" + p.title + "\n" + (p.body || ""))) return;
+      return adminPost(body).then(function (y) {
+        if (adminFail(y)) return;
         try { localStorage.setItem("paok-admin-pass", pass); } catch (e) {}
-        if (action === "clear") {
-          delete adminEntries[nt];
-          toast("Σβήστηκε. Το σκορ θα έρθει ξανά από τις αυτόματες πηγές.");
-          load().catch(function () {});
-          return;
-        }
-        applyAdmin([d.entry]);
-        var p = d.push || {};
-        toast("Αποθηκεύτηκε. Ειδοποίηση σε " + (p.sent || 0) + " συσκευές" + (p.skipped ? " (" + p.skipped + " την είχαν ήδη)" : "") + ".");
+        applyAdmin([y.d.entry]);
+        admForm[nt] = { ev: f.ev === "start" ? admEvents(m)[0][0] : f.ev, side: "", minute: "", scorer: "", note: "", h: null, a: null, sh: "", sa: "" };
+        var r = y.d.push || {};
+        toast("Στάλθηκε σε " + (r.sent || 0) + " συσκευές" + (r.skipped ? " (" + r.skipped + " την είχαν ήδη)" : "") + ".");
         render();
-      })
-      .catch(function () { toast("Δεν υπάρχει σύνδεση με τον server."); });
+      });
+    }).catch(function () { toast("Δεν υπάρχει σύνδεση με τον server."); });
   }
 
   // ---- Λεπτομέρειες live για τη σελίδα αγώνα
@@ -2395,7 +2527,7 @@
         m.score = e.home + "-" + e.away;
         if (e.note) m.note = e.note;
       } else if (!m.score && (!liveState[m.uid] || liveState[m.uid].admin || liveState[m.uid].state === "pre")) {
-        liveState[m.uid] = { state: "in", home: e.home, away: e.away, label: e.note || "Σε εξέλιξη", admin: true };
+        liveState[m.uid] = { state: "in", home: e.home, away: e.away, label: e.label || e.note || "Σε εξέλιξη", admin: true };
       }
     });
   }

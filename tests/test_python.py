@@ -390,7 +390,12 @@ class Admin(unittest.TestCase):
         m = dict(M, nt="abcdef0123")
         self.assertEqual(live.once_key(m, "⚽ ΓΚΟΛ ΤΟΥ ΠΑΟΚ! ΠΑΟΚ 1–0 Εθνικός", False), "abcdef0123-s1-0")
         self.assertEqual(live.once_key(m, "⚽ Τελικό: ΠΑΟΚ 1–0 Εθνικός", True), "abcdef0123-result")
-        self.assertIsNone(live.once_key(m, "⚽ Ημίχρονο: ΠΑΟΚ 1–0 Εθνικός", False))
+        self.assertEqual(live.once_key(m, "⚽ Ημίχρονο: ΠΑΟΚ 1–0 Εθνικός", False), "abcdef0123-ht")
+        self.assertEqual(live.once_key(m, "🤽 Τέλος 3ης περιόδου: ΠΑΟΚ 9–6 Ολυμπιακός", False), "abcdef0123-p3")
+        self.assertEqual(live.once_key(m, "🤽 Ισοπαλία, πάμε στα πέναλτι: ΠΑΟΚ 9–9 Ολυμπιακός", False), "abcdef0123-p4")
+        self.assertEqual(live.once_key(m, "🏐 Τέλος 2ου σετ (25–21): ΠΑΟΚ 2–0 Ολυμπιακός", False), "abcdef0123-set2")
+        self.assertEqual(live.once_key(m, "⚽ Ακυρώθηκε γκολ: ΠΑΟΚ 0–0 Εθνικός", False), "abcdef0123-x0-0")
+        self.assertIsNone(live.once_key(m, "🏀 Τέλος παράτασης: ΠΑΟΚ 90–90 Άρης", False))
 
 
 if __name__ == "__main__":

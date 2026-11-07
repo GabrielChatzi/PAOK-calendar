@@ -324,14 +324,26 @@ def events(m: dict, old: dict | None, new: dict) -> list[tuple[str, str]]:
 
 def once_key(m: dict, title: str, final: bool) -> str | None:
     """Κλειδί για ειδοποιήσεις που πρέπει να φτάσουν μία φορά σε κάθε συσκευή (βλ. api/push.js):
-    το τελικό και η έναρξη, και κάθε γκολ με το σκορ του, ώστε αν το έγραψε πρώτος ο διαχειριστής
-    (api/admin.js, ίδιο κλειδί) να μην ξαναέρθει."""
+    το τελικό, η έναρξη, κάθε γκολ (και ακυρωμένο γκολ) με το σκορ του, το ημίχρονο και το τέλος κάθε
+    περιόδου ή σετ, ώστε αν το έστειλε πρώτος ο διαχειριστής (api/admin.js, ίδια κλειδιά) να μην ξαναέρθει.
+    Το τέλος της παράτασης δεν έχει κλειδί: μπορεί να είναι παραπάνω από μία."""
     if final:
         return f"{m['nt']}-result"
+    nt = m["nt"]
     if "Ξεκίνησε" in title:
-        return f"{m['nt']}-start"
+        return f"{nt}-start"
+    if "Ημίχρονο" in title:
+        return f"{nt}-ht"
+    if "πάμε" in title:  # «Ισοπαλία, πάμε παράταση/στα πέναλτι»: το τέλος της 4ης
+        return f"{nt}-p4"
+    period = re.search(r"Τέλος (\d)(ης περιόδου|ου σετ)", title)
+    if period:
+        return f"{nt}-{'set' if 'σετ' in period.group(2) else 'p'}{period.group(1)}"
+    off = re.search(r"Ακυρώθηκε γκολ.*?(\d+)–(\d+)", title)
+    if off:
+        return f"{nt}-x{off.group(1)}-{off.group(2)}"
     goal = re.search(r"ΓΚΟΛ.*?(\d+)–(\d+)", title)
-    return f"{m['nt']}-s{goal.group(1)}-{goal.group(2)}" if goal else None
+    return f"{nt}-s{goal.group(1)}-{goal.group(2)}" if goal else None
 
 
 def settle_final(old: dict | None, new: dict) -> dict:

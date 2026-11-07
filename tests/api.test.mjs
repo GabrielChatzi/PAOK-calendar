@@ -153,6 +153,39 @@ test("Διαχειριστής: το τελικό με το ίδιο κλειδ�
   assert.ok(!admin.message({ ...m, live: { src: "espn" } }, { home: 1, away: 0 }).topics.includes("s:futsal:pre"));
 });
 
+test("Διαχειριστής: γεγονότα με τους τίτλους και τα κλειδιά του live.py", () => {
+  const m = { nt: "abcdef0123", section: "football-women", home: "ΟΔΥΣΣΕΑΣ", away: "ΠΑΟΚ", paokHome: false,
+    live: null, competition: "Α' Εθνική Γυναικών" };
+  const ev = (body) => admin.message(m, admin.parseEvent(body));
+  const goal = ev({ event: "goal", side: "away", home: 0, away: 1, minute: "23", scorer: "Παπαδοπούλου" });
+  assert.equal(goal.payload.title, "⚽ ΓΚΟΛ ΤΟΥ ΠΑΟΚ! ΟΔΥΣΣΕΑΣ 0–1 ΠΑΟΚ");
+  assert.equal(goal.payload.body, "23' Παπαδοπούλου");
+  assert.equal(goal.once, "abcdef0123-s0-1");
+  assert.equal(goal.payload.tag, undefined);
+  const theirs = ev({ event: "goal", side: "home", home: 1, away: 1 });
+  assert.equal(theirs.payload.title, "⚽ ΓΚΟΛ! ΟΔΥΣΣΕΑΣ 1–1 ΠΑΟΚ");
+  assert.equal(theirs.payload.body, "Α' Εθνική Γυναικών");
+  const half = ev({ event: "half", home: 1, away: 1 });
+  assert.equal(half.payload.title, "⚽ Ημίχρονο: ΟΔΥΣΣΕΑΣ 1–1 ΠΑΟΚ");
+  assert.equal(half.once, "abcdef0123-ht");
+  assert.equal(ev({ event: "start", home: 0, away: 0 }).payload.title, "⚽ Ξεκίνησε: ΟΔΥΣΣΕΑΣ – ΠΑΟΚ");
+  assert.equal(ev({ event: "disallowed", side: "away", home: 1, away: 1 }).once, "abcdef0123-x1-1");
+  assert.ok(admin.parseEvent({ event: "goal", home: 1, away: 0 }).error);  // χωρίς ομάδα
+  const wp = { ...m, section: "waterpolo-women", home: "ΠΑΟΚ", away: "ΝΟ ΛΑΡΙΣΗΣ", paokHome: true, live: { src: "koe" } };
+  const p = (n, h, a) => admin.message(wp, admin.parseEvent({ event: "period", period: n, home: h, away: a }));
+  assert.equal(p(2, 7, 4).payload.title, "🤽 Ημίχρονο: ΠΑΟΚ 7–4 ΝΟ ΛΑΡΙΣΗΣ");
+  assert.equal(p(2, 7, 4).once, "abcdef0123-ht");
+  assert.equal(p(3, 9, 6).payload.title, "🤽 Τέλος 3ης περιόδου: ΠΑΟΚ 9–6 ΝΟ ΛΑΡΙΣΗΣ");
+  assert.equal(p(4, 9, 9).payload.title, "🤽 Ισοπαλία, πάμε στα πέναλτι: ΠΑΟΚ 9–9 ΝΟ ΛΑΡΙΣΗΣ");
+  assert.deepEqual(p(3, 9, 6).topics, ["s:waterpolo-women:live", "m:abcdef0123:live"]);
+  const vb = { ...wp, section: "volley-women" };
+  const set = admin.message(vb, admin.parseEvent({ event: "period", period: 2, home: 2, away: 0, set: { home: 25, away: 21 } }));
+  assert.equal(set.payload.title, "🏐 Τέλος 2ου σετ (25–21): ΠΑΟΚ 2–0 ΝΟ ΛΑΡΙΣΗΣ");
+  assert.equal(set.once, "abcdef0123-set2");
+  // Χωρίς event (παλιά μορφή): όπως πριν.
+  assert.equal(admin.message(m, admin.parseEvent({ home: 2, away: 1, final: true })).payload.title, "⚽ Τελικό: ΟΔΥΣΣΕΑΣ 2–1 ΠΑΟΚ");
+});
+
 test("Λάθος παράμετροι απορρίπτονται", async () => {
   assert.equal((await call(live, { src: "koe", cat: "../x" })).status, 400);
   assert.equal((await call(live, { src: "nope" })).status, 400);

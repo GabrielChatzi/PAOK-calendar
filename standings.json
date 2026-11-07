@@ -2157,6 +2157,61 @@
      ]
     }
    ]
+  },
+  {
+   "title": "Euro Cup Γυναικών – Όμιλος C",
+   "url": "https://europeanaquatics.org/sports/water-polo/club-competitions/schedule/",
+   "columns": [
+    "Αγ",
+    "Γκολ",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Dinamo Uralochka",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "76-28",
+      "9"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "3",
+      "40-46",
+      "5"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "ZVL-1886",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "31-56",
+      "2"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "Polar Bears",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "25-42",
+      "2"
+     ]
+    }
+   ]
   }
  ],
  "futsal": [

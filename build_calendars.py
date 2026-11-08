@@ -334,7 +334,31 @@ def dataproject_matches(section: str) -> list[Match]:
     return out
 
 
+# Η ΕΟΠΕ (Data Project) γράφει τις ομάδες των γυναικών με λατινικά («PANATHINAIKOS A.O.»). Τα ελληνικά τους
+# ονόματα, όπως στο πρόγραμμα της Volley League Γυναικών· ταιριάζουν με τα λατινικά λέξη προς λέξη.
+VOLLEY_WOMEN_NAMES = [
+    "Παναθηναϊκός Α.Ο.", "Ολυμπιακός Σ.Φ.Π.", "Α.Ε.Κ.", "Α.Σ. Άρης", "Ζ.Α.Ο.Ν.", "Α.Σ. Ελπίς", "Α.Σ.Π. Θέτις",
+    "Πανιώνιος", "Ο.Φ.Α. Απολλώνιος", "Α.Ο. Μαρκοπούλου", "Α.Ο. Θήρας",
+]
+
+
+def latin_words(name: str) -> list[str]:
+    text = re.sub(r"(?<=[A-Z])\.", "", plain(name))  # «A.E.K.» → «AEK»
+    return [w for w in re.findall(r"[A-Z]{3,}", text) if w not in _SLUG_SKIP]
+
+
+def volley_women_name(name: str) -> str:
+    """Το ελληνικό όνομα μιας ομάδας της ΕΟΠΕ, αν ταιριάζει ακριβώς με μία· αλλιώς το όνομα όπως είναι."""
+    if is_paok(name) or re.search(r"[Α-Ωα-ω]", name):
+        return tidy_name(name)
+    mine = latin_words(name)
+    same = lambda a, b: a[:5] == b[:5] if min(len(a), len(b)) >= 5 else a == b
+    found = {g for g in VOLLEY_WOMEN_NAMES if any(same(a, b) for a in mine for b in greeklish_words(g))}
+    return found.pop() if len(found) == 1 else cev_caps(name)
+
+
 def _parse_dataproject(page: str, section: str, cid: str, comp: str, only_paok: bool = True) -> list[Match]:
+    team = volley_women_name if section == "volley-women" else tidy_name
     key_re = re.compile(r'_RADLIST_Legs_(ctrl\d+)_(?:RADLIST_Matches_(ctrl\d+)_)?([A-Za-z0-9_]+)"')
     fields: dict[tuple, dict] = collections.defaultdict(dict)
     first_pos: dict[tuple, int] = {}
@@ -383,7 +407,7 @@ def _parse_dataproject(page: str, section: str, cid: str, comp: str, only_paok: 
             uid=f"{section}-dp{cid}-{mid or short_hash(home, away, leg)}",
             day=dt.date(int(dm.group(3)), int(dm.group(2)), int(dm.group(1))),
             time=parse_time(when.split("-", 1)[-1] if "-" in when else when),
-            home=tidy_name(home), away=tidy_name(away), paok_home=is_paok(home),
+            home=team(home), away=team(away), paok_home=is_paok(home),
             venue=f.get("LB_Palasport", ""), competition=comp,
             round=f"{rnd_m.group(1)}η Αγωνιστική" if rnd_m else leg.title(),
             score=score,

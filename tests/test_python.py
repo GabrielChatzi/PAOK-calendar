@@ -406,5 +406,16 @@ class Admin(unittest.TestCase):
         self.assertIsNone(live.once_key(m, "🏀 Τέλος παράτασης: ΠΑΟΚ 90–90 Άρης", False))
 
 
+class VolleyWomenNames(unittest.TestCase):
+    def test_latin_names_become_greek(self):
+        import build_calendars as b
+        self.assertEqual(b.volley_women_name("PANATHINAIKOS A.O."), "Παναθηναϊκός Α.Ο.")
+        self.assertEqual(b.volley_women_name("OLYMPIACOS S.F.P."), "Ολυμπιακός Σ.Φ.Π.")
+        self.assertEqual(b.volley_women_name("Z.A.O.N."), "Ζ.Α.Ο.Ν.")
+        self.assertEqual(b.volley_women_name("A.S. ELPIS"), "Α.Σ. Ελπίς")
+        self.assertEqual(b.volley_women_name("P.A.O.K. F&U"), "ΠΑΟΚ")
+        self.assertEqual(b.volley_women_name("UNKNOWN CLUB ATHENS"), "Unknown Club Athens")  # άγνωστη: όπως είναι
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -153,7 +153,8 @@ export function message(m, e) {
     return live(e.title || score, e.body || comp, undefined, "Σε εξέλιξη");
   }
   // Σκορ τώρα· στο βόλεϊ μαζί με τους πόντους του σετ που παίζεται.
-  if (volley && e.set) {
+  // (όχι όταν μια ομάδα έφτασε τα 3 σετ: ο αγώνας τελείωσε, δεν υπάρχει επόμενο σετ)
+  if (volley && e.set && Math.max(e.home, e.away) < 3) {
     const n = e.period || e.home + e.away + 1;
     return live(`${score} (${e.set.home}–${e.set.away} στο ${n}ο σετ)`, e.note || comp,
       `${scoreKey(m.nt, e.home, e.away)}-p${n}-${e.set.home}-${e.set.away}`, `${n}ο σετ ${e.set.home}–${e.set.away}`);

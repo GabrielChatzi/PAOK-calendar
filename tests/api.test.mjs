@@ -202,6 +202,8 @@ test("Διαχειριστής: γεγονότα ανά άθλημα και ελ
   assert.equal(pts.payload.title, "🏐 ΠΑΟΚ 1–0 ΑΡΗΣ (15–12 στο 2ο σετ)");
   assert.equal(pts.once, "abcdef0123-s1-0-p2-15-12");
   assert.notEqual(ev("volley-women", { event: "score", home: 1, away: 0, set: { home: 16, away: 12 } }).once, pts.once);
+  // Με 3 σετ ο αγώνας τελείωσε: κανένα «4ο σετ».
+  assert.equal(t("volley-women", { event: "score", home: 3, away: 0, set: { home: 0, away: 0 } }), "🏐 ΠΑΟΚ 3–0 ΑΡΗΣ");
   assert.equal(t("volley", { event: "pstart", period: 5, home: 2, away: 2 }), "🏐 Ξεκίνησε το τάι-μπρέικ: ΠΑΟΚ 2–2 ΑΡΗΣ");
   const red = ev("football", { event: "red", side: "away", minute: "60", scorer: "Παπαδόπουλος", home: 1, away: 0 });
   assert.equal(red.payload.title, "🟥 Κόκκινη κάρτα (ΑΡΗΣ): ΠΑΟΚ 1–0 ΑΡΗΣ");

@@ -478,6 +478,20 @@
     },
     {
      "pos": 2,
+     "team": "ΑΕΚ",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/0aa9875ddbc50bb6ac5064fc12a9039e.jpg?itok=oXlyb0hw",
+     "paok": false,
+     "cells": [
+      "6",
+      "4",
+      "1",
+      "1",
+      "14-2",
+      "13"
+     ]
+    },
+    {
+     "pos": 3,
      "team": "ΑΣΤΕΡΑΣ ΤΡΙΠΟΛΗΣ",
      "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/b97ea823585e7a5a44d422f59974bac7.jpg?itok=50LQsRme",
      "paok": false,
@@ -491,7 +505,7 @@
      ]
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ",
      "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/2a679000b33763417294af0f84aab5c2.jpg?itok=xfpo0UxO",
      "paok": false,
@@ -502,20 +516,6 @@
       "0",
       "14-0",
       "12"
-     ]
-    },
-    {
-     "pos": 4,
-     "team": "ΑΕΚ",
-     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/0aa9875ddbc50bb6ac5064fc12a9039e.jpg?itok=oXlyb0hw",
-     "paok": false,
-     "cells": [
-      "5",
-      "3",
-      "1",
-      "1",
-      "10-2",
-      "10"
      ]
     },
     {
@@ -594,11 +594,11 @@
      "logo": "https://www.epo.gr/modules/custom/competitions/images/blank-club-profile.png",
      "paok": false,
      "cells": [
-      "4",
+      "5",
       "1",
       "0",
-      "3",
-      "2-12",
+      "4",
+      "2-16",
       "3"
      ]
     },
@@ -682,6 +682,18 @@
     },
     {
      "pos": 4,
+     "team": "Παναθηναϊκός",
+     "logo": "https://www.esake.gr/dat/esaketeam/00000001/photo_new_160CD854.png",
+     "paok": false,
+     "cells": [
+      "6",
+      "5-1",
+      "87",
+      "9"
+     ]
+    },
+    {
+     "pos": 5,
      "team": "Κολοσσός Ρόδου",
      "logo": "https://www.esake.gr/dat/esaketeam/0000000A/photo_new_5DC7EFBA.png",
      "paok": false,
@@ -693,7 +705,7 @@
      ]
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Περιστέρι",
      "logo": "https://www.esake.gr/dat/esaketeam/0000000D/photo_new_30338F54.png",
      "paok": false,
@@ -705,7 +717,7 @@
      ]
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Ολυμπιακός",
      "logo": "https://www.esake.gr/dat/esaketeam/00000002/photo_new_7F6C9D90.png",
      "paok": false,
@@ -717,7 +729,7 @@
      ]
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Δόξα Λευκάδας",
      "logo": "https://www.esake.gr/dat/esaketeam/3CA10C07/photo_new_6AE0FF13.png",
      "paok": false,
@@ -729,7 +741,7 @@
      ]
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Ηρακλής",
      "logo": "https://www.esake.gr/dat/esaketeam/00000011/photo_new_212846DF.png",
      "paok": false,
@@ -741,43 +753,19 @@
      ]
     },
     {
-     "pos": 9,
-     "team": "Παναθηναϊκός",
-     "logo": "https://www.esake.gr/dat/esaketeam/00000001/photo_new_160CD854.png",
-     "paok": false,
-     "cells": [
-      "5",
-      "4-1",
-      "78",
-      "7"
-     ]
-    },
-    {
      "pos": 10,
      "team": "ΑΕΚ",
      "logo": "https://www.esake.gr/dat/esaketeam/00000010/photo_new_2BF3BBDA.png",
      "paok": false,
      "cells": [
-      "5",
-      "2-3",
-      "-18",
-      "7"
+      "6",
+      "2-4",
+      "-27",
+      "8"
      ]
     },
     {
      "pos": 11,
-     "team": "Vikos Falcons",
-     "logo": "https://www.esake.gr/dat/esaketeam/0041ADCB/photo_new_FE76D0B4.png",
-     "paok": false,
-     "cells": [
-      "6",
-      "1-5",
-      "-76",
-      "7"
-     ]
-    },
-    {
-     "pos": 12,
      "team": "Μύκονος",
      "logo": "https://www.esake.gr/dat/esaketeam/BB4B460F/photo_new_62684735.png",
      "paok": false,
@@ -785,6 +773,18 @@
       "6",
       "1-5",
       "-66",
+      "7"
+     ]
+    },
+    {
+     "pos": 12,
+     "team": "Vikos Falcons",
+     "logo": "https://www.esake.gr/dat/esaketeam/0041ADCB/photo_new_FE76D0B4.png",
+     "paok": false,
+     "cells": [
+      "6",
+      "1-5",
+      "-76",
       "7"
      ]
     },
@@ -1266,8 +1266,8 @@
    "rows": [
     {
      "pos": 1,
-     "team": "PANIONIOS BETSSON",
-     "logo": "https://images.dataproject.com/eope/TeamLogo/100/40/TeamLogo_120.jpg",
+     "team": "Πανιώνιος",
+     "logo": "",
      "paok": false,
      "cells": [
       "4",
@@ -1279,8 +1279,8 @@
     },
     {
      "pos": 2,
-     "team": "OLYMPIACOS S.F.P.",
-     "logo": "https://images.dataproject.com/eope/TeamLogo/100/40/TeamLogo_117.jpg",
+     "team": "Ολυμπιακός Σ.Φ.Π.",
+     "logo": "",
      "paok": false,
      "cells": [
       "4",
@@ -1292,8 +1292,8 @@
     },
     {
      "pos": 3,
-     "team": "PANATHINAIKOS A.O.",
-     "logo": "https://images.dataproject.com/eope/TeamLogo/100/40/TeamLogo_119.jpg",
+     "team": "Παναθηναϊκός Α.Ο.",
+     "logo": "",
      "paok": false,
      "cells": [
       "3",
@@ -1305,8 +1305,8 @@
     },
     {
      "pos": 4,
-     "team": "A.E.K.",
-     "logo": "https://images.dataproject.com/eope/TeamLogo/100/40/TeamLogo_111.jpg",
+     "team": "Α.Ε.Κ.",
+     "logo": "",
      "paok": false,
      "cells": [
       "4",
@@ -1331,8 +1331,8 @@
     },
     {
      "pos": 6,
-     "team": "Z.A.O.N.",
-     "logo": "https://images.dataproject.com/eope/TeamLogo/100/40/TeamLogo_121.jpg",
+     "team": "Ζ.Α.Ο.Ν.",
+     "logo": "",
      "paok": false,
      "cells": [
       "4",
@@ -1344,8 +1344,8 @@
     },
     {
      "pos": 7,
-     "team": "A.O. THIRAS",
-     "logo": "https://images.dataproject.com/eope/TeamLogo/100/40/TeamLogo_113.jpg",
+     "team": "Α.Ο. Θήρας",
+     "logo": "",
      "paok": false,
      "cells": [
       "4",
@@ -1357,8 +1357,8 @@
     },
     {
      "pos": 8,
-     "team": "A.S.P. THETIS",
-     "logo": "https://images.dataproject.com/eope/TeamLogo/100/40/TeamLogo_115.jpg",
+     "team": "Α.Σ.Π. Θέτις",
+     "logo": "",
      "paok": false,
      "cells": [
       "4",
@@ -1370,8 +1370,8 @@
     },
     {
      "pos": 9,
-     "team": "A.O. MARKOPOULOU REVOIL",
-     "logo": "https://images.dataproject.com/eope/TeamLogo/100/40/TeamLogo_112.jpg",
+     "team": "Α.Ο. Μαρκοπούλου",
+     "logo": "",
      "paok": false,
      "cells": [
       "4",
@@ -1383,8 +1383,8 @@
     },
     {
      "pos": 10,
-     "team": "A.S. ELPIS",
-     "logo": "https://images.dataproject.com/eope/TeamLogo/100/40/TeamLogo_122.jpg",
+     "team": "Α.Σ. Ελπίς",
+     "logo": "",
      "paok": false,
      "cells": [
       "4",
@@ -1396,8 +1396,8 @@
     },
     {
      "pos": 11,
-     "team": "A.S. ARIS",
-     "logo": "https://images.dataproject.com/eope/TeamLogo/100/40/TeamLogo_114.jpg",
+     "team": "Α.Σ. Άρης",
+     "logo": "",
      "paok": false,
      "cells": [
       "4",
@@ -1409,8 +1409,8 @@
     },
     {
      "pos": 12,
-     "team": "O.F.A. APOLLONIOS",
-     "logo": "https://images.dataproject.com/eope/TeamLogo/100/40/TeamLogo_116.jpg",
+     "team": "Ο.Φ.Α. Απολλώνιος",
+     "logo": "",
      "paok": false,
      "cells": [
       "4",

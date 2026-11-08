@@ -26,24 +26,24 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:volley-women-dp19-739@paok-calendar
-DTSTAMP:20261101T194534Z
+DTSTAMP:20261108T145953Z
 DTSTART;TZID=Europe/Athens:20261017T190000
 DTEND;TZID=Europe/Athens:20261017T210000
-SUMMARY:🏐 ΠΑΟΚ 3-1 A.S. ELPIS
+SUMMARY:🏐 ΠΑΟΚ 3-1 Α.Σ. Ελπίς
 LOCATION:Mikra
 DESCRIPTION:Volley League Γυναικών – 1η Αγωνιστική\nΤ
- ελικό σκορ: ΠΑΟΚ 3-1 A.S. ELPIS
+ ελικό σκορ: ΠΑΟΚ 3-1 Α.Σ. Ελπίς
 URL:https://eope-web.dataproject.com/MatchStatistics.aspx?mID=739&ID=19
 END:VEVENT
 BEGIN:VEVENT
 UID:volley-women-dp19-756@paok-calendar
-DTSTAMP:20261101T194534Z
+DTSTAMP:20261108T145953Z
 DTSTART;TZID=Europe/Athens:20261101T190000
 DTEND;TZID=Europe/Athens:20261101T210000
-SUMMARY:🏐 ΠΑΟΚ 3-2 Z.A.O.N.
+SUMMARY:🏐 ΠΑΟΚ 3-2 Ζ.Α.Ο.Ν.
 LOCATION:Mikra
 DESCRIPTION:Volley League Γυναικών – 3η Αγωνιστική\nΤ
- ελικό σκορ: ΠΑΟΚ 3-2 Z.A.O.N.
+ ελικό σκορ: ΠΑΟΚ 3-2 Ζ.Α.Ο.Ν.
 URL:https://eope-web.dataproject.com/MatchStatistics.aspx?mID=756&ID=19
 END:VEVENT
 END:VCALENDAR

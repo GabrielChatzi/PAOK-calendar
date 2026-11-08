@@ -26,21 +26,21 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:volley-women-dp19-745@paok-calendar
-DTSTAMP:20261104T120053Z
+DTSTAMP:20261108T145953Z
 DTSTART;TZID=Europe/Athens:20261023T190000
 DTEND;TZID=Europe/Athens:20261023T210000
-SUMMARY:🏐 A.E.K. 1-3 ΠΑΟΚ
+SUMMARY:🏐 Α.Ε.Κ. 1-3 ΠΑΟΚ
 LOCATION:Olympic Village Indoor Hall
 DESCRIPTION:Volley League Γυναικών – 2η Αγωνιστική\nΤ
- ελικό σκορ: A.E.K. 1-3 ΠΑΟΚ
+ ελικό σκορ: Α.Ε.Κ. 1-3 ΠΑΟΚ
 URL:https://eope-web.dataproject.com/MatchStatistics.aspx?mID=745&ID=19
 END:VEVENT
 BEGIN:VEVENT
 UID:volley-women-acpaok-3b9803730c7d@paok-calendar
-DTSTAMP:20261104T120053Z
+DTSTAMP:20261108T145953Z
 DTSTART;TZID=Europe/Athens:20261108T160000
 DTEND;TZID=Europe/Athens:20261108T180000
-SUMMARY:🏐 PANATHINAIKOS A.O. – ΠΑΟΚ
+SUMMARY:🏐 Παναθηναϊκός Α.Ο. – ΠΑΟΚ
 LOCATION:Mets Sports Hall
 DESCRIPTION:Volley League Γυναικών – 4η Αγωνιστική\nTV
  : ΣΠΟΡ FM TV

@@ -2,12 +2,9 @@ name: Social
 
 # Το πλάνο των social για τις επόμενες 7 μέρες, με τις εικόνες (social/week.mjs), στον κλάδο «social»:
 # https://github.com/GabrielChatzi/PAOK-calendar/tree/social
-# Τρέχει μετά από κάθε ενημέρωση του προγράμματος, οπότε ακολουθεί αλλαγές ωρών και φέρνει τα
+# Το ξεκινά το update.yml στο τέλος κάθε ενημέρωσης του προγράμματος, οπότε ακολουθεί αλλαγές ωρών και φέρνει τα
 # αποτελέσματα λίγο μετά τους αγώνες. Ο κλάδος κρατά μόνο την τελευταία έκδοση (χωρίς ιστορικό).
 on:
-  workflow_run:
-    workflows: ["Ενημέρωση ημερολογίων"]
-    types: [completed]
   workflow_dispatch:
   push:
     branches: [main]

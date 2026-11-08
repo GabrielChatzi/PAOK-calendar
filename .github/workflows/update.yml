@@ -100,6 +100,15 @@ jobs:
           running=$(gh run list --workflow live.yml --limit 5 --json status --jq '[.[] | select(.status != "completed")] | length')
           if [ "$need" = "1" ] && [ "$running" = "0" ]; then gh workflow run live.yml --ref main; echo "Ξεκίνησε η παρακολούθηση live."; fi
 
+      # Το social.yml ξεκινά από εδώ και όχι μόνο με workflow_run: όταν την ενημέρωση την ξεκινά το
+      # reminders.yml (github-actions[bot]), το GitHub δεν βγάζει workflow_run και τα σκορ δεν έφταναν.
+      - name: Πλάνο social
+        if: always()
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run social.yml --ref main
+
       - name: Έλεγχος υγείας
         if: always()
         continue-on-error: true

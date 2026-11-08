@@ -492,6 +492,20 @@
     },
     {
      "pos": 3,
+     "team": "ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/2a679000b33763417294af0f84aab5c2.jpg?itok=xfpo0UxO",
+     "paok": false,
+     "cells": [
+      "5",
+      "5",
+      "0",
+      "0",
+      "16-0",
+      "15"
+     ]
+    },
+    {
+     "pos": 4,
      "team": "ΑΕΚ",
      "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/0aa9875ddbc50bb6ac5064fc12a9039e.jpg?itok=oXlyb0hw",
      "paok": false,
@@ -502,20 +516,6 @@
       "1",
       "14-2",
       "13"
-     ]
-    },
-    {
-     "pos": 4,
-     "team": "ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ",
-     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/2a679000b33763417294af0f84aab5c2.jpg?itok=xfpo0UxO",
-     "paok": false,
-     "cells": [
-      "4",
-      "4",
-      "0",
-      "0",
-      "14-0",
-      "12"
      ]
     },
     {
@@ -538,11 +538,11 @@
      "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/37d919ce977355c09f73baf583cac5a1.jpg?itok=JTQx6kLi",
      "paok": false,
      "cells": [
-      "4",
+      "5",
       "2",
       "1",
-      "1",
-      "6-3",
+      "2",
+      "6-5",
       "7"
      ]
     },

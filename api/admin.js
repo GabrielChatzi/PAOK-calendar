@@ -4,8 +4,9 @@
 //                                                   τις διαβάζουν η σελίδα και το build_calendars.py)
 //   POST {password, action: "check"}                έλεγχος κωδικού
 //   POST {password, action: "score", nt, home, away, event, side, points, minute, scorer, period, set, note,
-//         title, body, dry}
+//         title, body, dry, silent}
 //                                                   αποθήκευση και ειδοποίηση (dry: μόνο προεπισκόπηση·
+//                                                   silent: μόνο αποθήκευση, χωρίς ειδοποίηση·
 //                                                   event: βλ. EVENTS· χωρίς event, final → τελικό, αλλιώς σκορ)
 //   POST {password, action: "clear", nt}            σβήσιμο (χωρίς ειδοποίηση)
 //
@@ -236,8 +237,10 @@ export default async function handler(req, res) {
     label: msg.label, at: new Date() };
   await col.updateOne({ _id: nt }, {
     $set: entry,
-    $push: { history: { $each: [{ home, away, final: entry.final, event: ev.event, title: msg.payload.title, at: entry.at }], $slice: -30 } },
+    $push: { history: { $each: [{ home, away, final: entry.final, event: ev.event, title: body.silent ? null : msg.payload.title, at: entry.at }], $slice: -30 } },
   }, { upsert: true });
+  // Μόνο ενημέρωση: το σκορ φαίνεται στη σελίδα, χωρίς ειδοποίηση.
+  if (body.silent) return send(res, 200, { ok: true, entry, push: null });
   const r = await deliver(msg.topics, msg.payload, { once: msg.once });
   return send(res, 200, { ok: true, entry, push: r });
 }

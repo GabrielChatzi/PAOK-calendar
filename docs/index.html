@@ -1533,6 +1533,7 @@
     }
     if (/^adm-(ev|side|pts|per)$/.test(b.dataset.act)) { adminClick(b); return; }
     if (b.dataset.act === "adm-send") { adminSend("score"); return; }
+    if (b.dataset.act === "adm-silent") { adminSend("score", true); return; }
     if (b.dataset.act === "adm-clear") { adminSend("clear"); return; }
     if (b.dataset.act === "adm-forget") { try { localStorage.removeItem("paok-admin-pass"); } catch (err) {} render(); return; }
     if (b.dataset.act === "push-restore") { restorePush(); return; }
@@ -2173,8 +2174,8 @@
     }
     var when = e ? new Intl.DateTimeFormat("el-GR", { timeZone: TZ, hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).format(new Date(e.at)) : "";
     var html = '<section class="admin-box" data-nt="' + esc(m.nt) + '"><h3>Διαχειριστής</h3>' +
-      "<p class=\"help\">Στέλνει ειδοποίηση στη μορφή των αυτόματων και το σκορ φαίνεται αμέσως. Πριν φύγει, βλέπεις " +
-      "ακριβώς τι θα φτάσει. Όποιος πάρει κάτι από εδώ δεν το ξαναπαίρνει από το live.</p>" +
+      "<p class=\"help\">Το σκορ φαίνεται αμέσως στη σελίδα. Με «Αποστολή ειδοποίησης» φεύγει και ειδοποίηση στη μορφή των " +
+      "αυτόματων, που πριν φύγει τη βλέπεις όπως θα φτάσει. Με «Μόνο ενημέρωση σκορ» δεν στέλνεται τίποτα. Όποιος πάρει κάτι από εδώ δεν το ξαναπαίρνει από το live.</p>" +
       (e ? '<p class="server-ok">Τελευταία καταχώριση ' + when + ": " + e.home + "–" + e.away + " (" + esc(e.label || (e.final ? "τελικό" : "σε εξέλιξη")) + ")</p>" : "") +
       '<p class="adm-label">Τι έγινε;</p>' + chips("adm-events", "adm-ev", "ev", admEvents(m), f.ev);
     if (f.ev === "goal" || f.ev === "disallowed" || f.ev === "red") {
@@ -2209,7 +2210,8 @@
     }
     return html +
       (adminPass() ? "" : '<label class="adm-field wide"><span>Κωδικός διαχειριστή</span><input id="adm-pass" type="password" autocomplete="current-password"></label>') +
-      '<div class="actions"><button type="button" class="btn solid" data-act="adm-send">Αποστολή</button>' +
+      '<div class="actions"><button type="button" class="btn solid" data-act="adm-send">Αποστολή ειδοποίησης</button>' +
+      '<button type="button" class="btn" data-act="adm-silent">Μόνο ενημέρωση σκορ</button>' +
       (e ? '<button type="button" class="btn" data-act="adm-clear">Σβήσιμο καταχώρισης</button>' : "") + "</div>" +
       (adminPass() ? '<p class="help"><button type="button" class="linkish" data-act="adm-forget">Ξέχνα τον κωδικό σε αυτή τη συσκευή</button></p>' : "") +
       "</section>";
@@ -2266,7 +2268,7 @@
     if (!x.r.ok) { toast(x.d.error || "Δεν έγινε. Δοκίμασε ξανά."); return true; }
     return false;
   }
-  function adminSend(action) {
+  function adminSend(action, silent) {
     var box = document.querySelector(".admin-box");
     if (!box) return;
     var nt = box.dataset.nt, m = matchByNt(nt);
@@ -2293,10 +2295,12 @@
     if (f.ev === "pstart" || f.ev === "period") body.period = f.period;
     if (volley && f.sh !== "" && f.sa !== "") body.set = { home: parseInt(f.sh, 10), away: parseInt(f.sa, 10) };
     // Πρώτα η προεπισκόπηση από τον server, ακριβώς όπως θα φτάσει, και μετά η αποστολή.
-    adminPost(Object.assign({ dry: true }, body)).then(function (x) {
-      if (adminFail(x)) return;
-      var p = x.d.preview || {};
-      if (!window.confirm("Θα σταλεί σε όλους:\n\n" + p.title + "\n" + (p.body || ""))) return;
+    // Η απλή ενημέρωση σκορ δεν στέλνει τίποτα, οπότε πάει κατευθείαν.
+    if (silent) body.silent = true;
+    (silent ? Promise.resolve(null) : adminPost(Object.assign({ dry: true }, body))).then(function (x) {
+      if (x && adminFail(x)) return;
+      var p = x && x.d.preview || {};
+      if (x && !window.confirm("Θα σταλεί σε όλους:\n\n" + p.title + "\n" + (p.body || ""))) return;
       return adminPost(body).then(function (y) {
         if (adminFail(y)) return;
         try { localStorage.setItem("paok-admin-pass", pass); } catch (e) {}
@@ -2305,8 +2309,11 @@
         var again = ["goal", "score", "red", "custom", "disallowed"].indexOf(f.ev) >= 0;
         admForm[nt] = admNew(m, again ? f.ev : null);
         if (again && f.ev === "goal") admForm[nt].points = f.points;
+        // Στο βόλεϊ οι πόντοι μένουν, ώστε η επόμενη ενημέρωση να είναι απλώς αλλαγή τους.
+        if (f.ev === "score" && volley) { admForm[nt].sh = f.sh; admForm[nt].sa = f.sa; }
         var r = y.d.push || {};
-        toast("Στάλθηκε σε " + (r.sent || 0) + " συσκευές" + (r.skipped ? " (" + r.skipped + " την είχαν ήδη)" : "") + ".");
+        if (silent) toast("Το σκορ ενημερώθηκε, χωρίς ειδοποίηση.");
+        else toast("Στάλθηκε σε " + (r.sent || 0) + " συσκευές" + (r.skipped ? " (" + r.skipped + " την είχαν ήδη)" : "") + ".");
         render();
       });
     }).catch(function () { toast("Δεν υπάρχει σύνδεση με τον server."); });

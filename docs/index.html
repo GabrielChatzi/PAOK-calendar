@@ -390,6 +390,9 @@
   .adm-score input { font-size: 28px; font-weight: 700; text-align: center; }
   .adm-score .adm-field { justify-content: flex-end; }
   .adm-score input[type="text"] { font-size: 18px; font-weight: 400; text-align: left; padding: 12px 10px; }
+  .adm-steps { display: flex; gap: 6px; margin-top: 6px; }
+  .adm-steps .btn { flex: 1 1 0; padding: 10px 0; font-size: 17px; font-weight: 700; min-width: 0; }
+  .adm-steps .btn.minus { color: var(--muted); font-weight: 400; }
   .adm-label { font-size: 14px; color: var(--muted); margin: 12px 0 6px; }
   .adm-events, .adm-sides { display: flex; flex-wrap: wrap; gap: 8px; }
   .adm-events .btn { padding: 8px 12px; }
@@ -1531,7 +1534,7 @@
       location.reload();
       return;
     }
-    if (/^adm-(ev|side|pts|per)$/.test(b.dataset.act)) { adminClick(b); return; }
+    if (/^adm-(ev|side|pts|per|step)$/.test(b.dataset.act)) { adminClick(b); return; }
     if (b.dataset.act === "adm-send") { adminSend("score"); return; }
     if (b.dataset.act === "adm-silent") { adminSend("score", true); return; }
     if (b.dataset.act === "adm-clear") { adminSend("clear"); return; }
@@ -2138,7 +2141,11 @@
   }
   function admState(m) {
     var f = admForm[m.nt];
-    if (!f || !admEvents(m).some(function (x) { return x[0] === f.ev; })) f = admForm[m.nt] = admNew(m);
+    if (!f || !admEvents(m).some(function (x) { return x[0] === f.ev; })) {
+      f = admForm[m.nt] = admNew(m);
+      var e = adminEntries[m.nt];
+      if (e && e.set && e.event === "score") { f.sh = String(e.set.home); f.sa = String(e.set.away); }
+    }
     return f;
   }
   // Το σκορ της φόρμας: ό,τι έγραψε ο διαχειριστής, αλλιώς το τωρινό ± το γκολ/καλάθι της ομάδας που διάλεξε.
@@ -2160,8 +2167,13 @@
     var e = adminEntries[m.nt];
     var f = admState(m), sc = admScore(m), s = admSport(m);
     var volley = s === "volley";
-    function num(id, label, value, max) {
-      return '<label class="adm-field"><span>' + esc(label) + '</span><input id="' + id + '" type="number" inputmode="numeric" min="0" max="' + (max || 300) + '" value="' + esc(value) + '"></label>';
+    // Πεδίο σκορ με κουμπιά: −1/+1, και στο μπάσκετ +2/+3 (field: h, a, sh, sa).
+    function num(id, label, value, max, field) {
+      var steps = field ? (s === "basketball" && (field === "h" || field === "a") ? [-1, 1, 2, 3] : [-1, 1]) : [];
+      return '<div class="adm-field"><label for="' + id + '">' + esc(label) + '</label><input id="' + id + '" type="number" inputmode="numeric" min="0" max="' + (max || 300) + '" value="' + esc(value) + '">' +
+        (steps.length ? '<div class="adm-steps">' + steps.map(function (d) {
+          return '<button type="button" class="btn' + (d < 0 ? " minus" : "") + '" data-act="adm-step" data-field="' + field + '" data-d="' + d + '" aria-label="' + esc(label) + " " + (d > 0 ? "+" : "−") + Math.abs(d) + '">' + (d > 0 ? "+" + d : "−1") + "</button>";
+        }).join("") + "</div>" : "") + "</div>";
     }
     function txt(id, label, value, ph, max, wide) {
       return '<label class="adm-field' + (wide ? " wide" : "") + '"><span>' + esc(label) + '</span><input id="' + id + '" type="text" maxlength="' + max + '" placeholder="' + esc(ph || "") + '" value="' + esc(value) + '"></label>';
@@ -2189,11 +2201,11 @@
       html += '<p class="adm-label">' + (volley ? "Ποιο σετ;" : "Ποια περίοδος;") + "</p>" + chips("adm-events", "adm-per", "per", admPeriods(m, f.ev), f.period);
     }
     html += (volley ? '<p class="adm-label">Σετ</p>' : "") +
-      '<div class="adm-score">' + num("adm-h", m.home, sc.home) + num("adm-a", m.away, sc.away) + "</div>" +
+      '<div class="adm-score">' + num("adm-h", m.home, sc.home, 300, "h") + num("adm-a", m.away, sc.away, 300, "a") + "</div>" +
       '<p class="adm-change">' + admChangeHtml(sc.base, sc.home, sc.away) + "</p>";
     if (volley && (f.ev === "score" || f.ev === "period")) {
       html += '<p class="adm-label">' + (f.ev === "score" ? 'Πόντοι στο σετ που παίζεται (<span id="adm-setno">' + (sc.home + sc.away + 1) + "</span>ο)" : "Πόντοι του σετ (προαιρετικά)") + "</p>" +
-        '<div class="adm-score">' + num("adm-sh", m.home, f.sh, 99) + num("adm-sa", m.away, f.sa, 99) + "</div>";
+        '<div class="adm-score">' + num("adm-sh", m.home, f.sh, 99, "sh") + num("adm-sa", m.away, f.sa, 99, "sa") + "</div>";
     }
     if (f.ev === "goal" || f.ev === "red") {
       html += '<div class="adm-score">' + txt("adm-min", s === "basketball" ? "Χρόνος (προαιρετικά)" : "Λεπτό (προαιρετικά)", f.minute, s === "basketball" ? "π.χ. 3η, 5:20" : "π.χ. 23 ή 45+2", 10) +
@@ -2257,7 +2269,23 @@
     if (act === "adm-side") { f.side = b.dataset.side; f.h = null; f.a = null; }
     if (act === "adm-pts") { f.points = +b.dataset.pts; f.h = null; f.a = null; }
     if (act === "adm-per") f.period = +b.dataset.per;
+    if (act === "adm-step") admStep(m, f, b.dataset.field, +b.dataset.d);
     admRefresh();
+  }
+  // +/− στο σκορ. Στο «Γκολ/Καλάθι», το πρώτο + διαλέγει και ποιος σκόραρε (και πόσους πόντους),
+  // ώστε ο τίτλος να βγει σωστός· μετά τα κουμπιά απλώς προσθέτουν ή διορθώνουν.
+  function admStep(m, f, field, d) {
+    var cur = admScore(m), side = field === "h" ? "home" : "away";
+    if (field === "sh" || field === "sa") {
+      var key = field === "sh" ? "sh" : "sa";
+      f[key] = String(Math.max(0, (parseInt(f[key], 10) || 0) + d));
+      return;
+    }
+    if (f.ev === "goal" && d > 0 && !f.side) { f.side = side; f.points = d; f.h = null; f.a = null; return; }
+    f.h = Math.max(0, cur.home + (field === "h" ? d : 0));
+    f.a = Math.max(0, cur.away + (field === "a" ? d : 0));
+    // Στο βόλεϊ, όταν κερδίζεται σετ, οι πόντοι ξεκινούν από την αρχή.
+    if (admSport(m) === "volley" && d > 0) { f.sh = "0"; f.sa = "0"; }
   }
   function adminPost(body) {
     return fetch("/api/admin", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) })
@@ -2286,11 +2314,14 @@
       return;
     }
     var f = admState(m), sc = admScore(m);
-    if ((f.ev === "goal" || f.ev === "disallowed" || f.ev === "red") && !f.side) { toast("Διάλεξε ομάδα."); return; }
+    var ev = f.ev;
+    // Απλή ενημέρωση (π.χ. διόρθωση με −1) χωρίς ομάδα: γράφεται ως σκορ.
+    if (silent && !f.side && (ev === "goal" || ev === "disallowed" || ev === "red")) ev = "score";
+    if ((ev === "goal" || ev === "disallowed" || ev === "red") && !f.side) { toast("Διάλεξε ομάδα."); return; }
     if ((f.ev === "pstart" || f.ev === "period") && !f.period) { toast(admSport(m) === "volley" ? "Διάλεξε σετ." : "Διάλεξε περίοδο."); return; }
     var volley = admSport(m) === "volley";
     if (volley && f.ev === "score" && (f.sh === "" || f.sa === "")) { toast("Γράψε τους πόντους του σετ."); return; }
-    var body = { password: pass, action: "score", nt: nt, home: sc.home, away: sc.away, event: f.ev, side: f.side,
+    var body = { password: pass, action: "score", nt: nt, home: sc.home, away: sc.away, event: ev, side: f.side,
       points: f.points, minute: f.minute, scorer: f.scorer, note: f.note, title: f.title, body: f.body };
     if (f.ev === "pstart" || f.ev === "period") body.period = f.period;
     if (volley && f.sh !== "" && f.sa !== "") body.set = { home: parseInt(f.sh, 10), away: parseInt(f.sa, 10) };

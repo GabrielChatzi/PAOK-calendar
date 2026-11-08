@@ -233,7 +233,7 @@ export default async function handler(req, res) {
   // Προεπισκόπηση: ό,τι θα σταλεί, χωρίς αποθήκευση ή αποστολή.
   if (body.dry) return send(res, 200, { ok: true, preview: { title: msg.payload.title, body: msg.payload.body } });
 
-  const entry = { nt, section: m.section, home, away, final: ev.final, note: ev.note, event: ev.event,
+  const entry = { nt, section: m.section, home, away, final: ev.final, note: ev.note, event: ev.event, set: ev.set || null,
     label: msg.label, at: new Date() };
   await col.updateOne({ _id: nt }, {
     $set: entry,

@@ -1820,6 +1820,20 @@
     },
     {
      "pos": 4,
+     "team": "ΓΣ ΑΠΟΛΛΩΝ ΣΜ.",
+     "logo": "https://koecdn.twic.pics/media/apollon-1757488473-Yl0JuEC9.jpg",
+     "paok": false,
+     "cells": [
+      "7",
+      "5",
+      "0",
+      "2",
+      "129-103",
+      "15"
+     ]
+    },
+    {
+     "pos": 5,
      "team": "ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ",
      "logo": "https://koecdn.twic.pics/media/panathinaikos-1757496876-53QTIGxK.jpg",
      "paok": false,
@@ -1830,20 +1844,6 @@
       "2",
       "133-77",
       "15"
-     ]
-    },
-    {
-     "pos": 5,
-     "team": "ΓΣ ΑΠΟΛΛΩΝ ΣΜ.",
-     "logo": "https://koecdn.twic.pics/media/apollon-1757488473-Yl0JuEC9.jpg",
-     "paok": false,
-     "cells": [
-      "6",
-      "4",
-      "0",
-      "2",
-      "109-87",
-      "12"
      ]
     },
     {
@@ -1880,11 +1880,11 @@
      "logo": "https://koecdn.twic.pics/media/shma-ethniku-ofpf-1758038638-0PxACujw.png",
      "paok": false,
      "cells": [
-      "6",
+      "7",
       "3",
       "0",
-      "3",
-      "71-64",
+      "4",
+      "87-84",
       "9"
      ]
     },

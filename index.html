@@ -598,6 +598,8 @@
   };
   // Στα τμήματα χωρίς live, η υπενθύμιση έρχεται και στην ώρα έναρξης (notify.py).
   var PRE_NO_LIVE = "Μία ώρα πριν και στην ώρα έναρξης";
+  // Στα τμήματα χωρίς αυτόματο live, τα γεγονότα τα στέλνει ο διαχειριστής (api/admin.js).
+  var LIVE_ADMIN = "Σκορ και γεγονότα του αγώνα (γκολ, πόντοι, περίοδοι), όταν τα στέλνει το PAOKalendar";
   var isAndroid = /android/i.test(navigator.userAgent);
   var data = null, standings = {};
 
@@ -972,14 +974,15 @@
     }).join("");
   }
   function sectionKinds(s) {
-    return PUSH_KINDS.filter(function (k) { return k[0] !== "live" || s.live; });
+    return PUSH_KINDS;
   }
 
   function followHtml(key) {
     var s = data.sectionMap[key];
     var rows = sectionKinds(s).map(function (k) {
       var info = KIND_INFO[k[0]];
-      var desc = k[0] === "live" && s.liveNote ? s.liveNote : k[0] === "pre" && !s.live ? PRE_NO_LIVE : info[1];
+      var desc = k[0] === "live" ? (s.live ? (s.liveNote || info[1]) + ". Και ό,τι στέλνει το PAOKalendar στους υπόλοιπους αγώνες" : LIVE_ADMIN)
+        : k[0] === "pre" && !s.live ? PRE_NO_LIVE : info[1];
       return switchRow(["s:" + key + ":" + k[0]], info[0], desc);
     }).join("");
     return '<div class="follow"><h3>Ειδοποιήσεις</h3>' +
@@ -1964,11 +1967,11 @@
   ];
 
   function matchKinds(m) {
-    return MATCH_KINDS.filter(function (k) { return k[0] !== "all" && (k[0] !== "live" || m.live); }).map(function (k) { return k[0]; });
+    return MATCH_KINDS.filter(function (k) { return k[0] !== "all"; }).map(function (k) { return k[0]; });
   }
   function matchNotifyHtml(m) {
-    var rows = MATCH_KINDS.filter(function (k) { return k[0] !== "live" || m.live; }).map(function (k) {
-      var desc = k[0] === "live" ? (m.live.src === "espn" ? "Έναρξη, κάθε γκολ, ημίχρονο, 2ο ημίχρονο"
+    var rows = MATCH_KINDS.map(function (k) {
+      var desc = k[0] === "live" ? (!m.live ? LIVE_ADMIN : m.live.src === "espn" ? "Έναρξη, κάθε γκολ, ημίχρονο, 2ο ημίχρονο"
         : m.live.src === "dp" ? "Έναρξη και τέλος κάθε σετ" : "Έναρξη και τέλος κάθε περιόδου")
         : k[0] === "pre" && !m.live ? PRE_NO_LIVE : k[2];
       var topics = (k[0] === "all" ? matchKinds(m) : [k[0]]).map(function (kind) { return "m:" + m.nt + ":" + kind; });
@@ -2145,6 +2148,8 @@
       f = admForm[m.nt] = admNew(m);
       var e = adminEntries[m.nt];
       if (e && e.set && e.event === "score") { f.sh = String(e.set.home); f.sa = String(e.set.away); }
+      var b = admBase(m);
+      if (admSport(m) === "volley" && Math.max(b.home, b.away) >= 3) { f.ev = "final"; f.sh = ""; f.sa = ""; }
     }
     return f;
   }
@@ -2252,6 +2257,7 @@
     if (!(f.a >= 0)) f.a = 0;
     var ch = box.querySelector(".adm-change");
     if (ch) ch.innerHTML = admChangeHtml(admBase(m), f.h, f.a);
+    if (admVolleyEnd(m, f)) { admRefresh(); return; }
     if ($("adm-setno")) $("adm-setno").textContent = f.h + f.a + 1;
   }
   function adminClick(b) {
@@ -2284,8 +2290,18 @@
     if (f.ev === "goal" && d > 0 && !f.side) { f.side = side; f.points = d; f.h = null; f.a = null; return; }
     f.h = Math.max(0, cur.home + (field === "h" ? d : 0));
     f.a = Math.max(0, cur.away + (field === "a" ? d : 0));
-    // Στο βόλεϊ, όταν κερδίζεται σετ, οι πόντοι ξεκινούν από την αρχή.
-    if (admSport(m) === "volley" && d > 0) { f.sh = "0"; f.sa = "0"; }
+    // Στο βόλεϊ, όταν κερδίζεται σετ, οι πόντοι ξεκινούν από την αρχή· με 3 σετ ο αγώνας τελείωσε.
+    if (admSport(m) === "volley" && d > 0) { f.sh = "0"; f.sa = "0"; admVolleyEnd(m, f); }
+  }
+  // Βόλεϊ: όταν μια ομάδα φτάσει τα 3 σετ, η φόρμα πάει στο «Τελικό» (δεν υπάρχει επόμενο σετ).
+  function admVolleyEnd(m, f) {
+    var sc = admScore(m);
+    if (admSport(m) === "volley" && Math.max(sc.home, sc.away) >= 3 && f.ev !== "final" && f.ev !== "custom") {
+      var h = sc.home, a = sc.away;
+      f.ev = "final"; f.sh = ""; f.sa = ""; f.side = ""; f.period = 0; f.h = h; f.a = a;
+      return true;
+    }
+    return false;
   }
   function adminPost(body) {
     return fetch("/api/admin", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) })

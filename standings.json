@@ -1266,6 +1266,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Παναθηναϊκός Α.Ο.",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "4",
+      "0",
+      "12-2",
+      "8"
+     ]
+    },
+    {
+     "pos": 2,
      "team": "Πανιώνιος",
      "logo": "",
      "paok": false,
@@ -1278,7 +1291,7 @@
      ]
     },
     {
-     "pos": 2,
+     "pos": 3,
      "team": "Ολυμπιακός Σ.Φ.Π.",
      "logo": "",
      "paok": false,
@@ -1291,20 +1304,20 @@
      ]
     },
     {
-     "pos": 3,
-     "team": "Παναθηναϊκός Α.Ο.",
-     "logo": "",
-     "paok": false,
+     "pos": 4,
+     "team": "ΠΑΟΚ",
+     "logo": "https://images.dataproject.com/eope/TeamLogo/100/40/TeamLogo_118.jpg",
+     "paok": true,
      "cells": [
+      "4",
       "3",
-      "3",
-      "0",
-      "9-2",
-      "6"
+      "1",
+      "9-7",
+      "7"
      ]
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "Α.Ε.Κ.",
      "logo": "",
      "paok": false,
@@ -1313,19 +1326,6 @@
       "2",
       "2",
       "8-7",
-      "6"
-     ]
-    },
-    {
-     "pos": 5,
-     "team": "ΠΑΟΚ",
-     "logo": "https://images.dataproject.com/eope/TeamLogo/100/40/TeamLogo_118.jpg",
-     "paok": true,
-     "cells": [
-      "3",
-      "3",
-      "0",
-      "9-4",
       "6"
      ]
     },

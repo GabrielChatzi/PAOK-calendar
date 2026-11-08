@@ -3,7 +3,8 @@
 //   GET                                             οι καταχωρίσεις των τελευταίων ημερών (δημόσιες:
 //                                                   τις διαβάζουν η σελίδα και το build_calendars.py)
 //   POST {password, action: "check"}                έλεγχος κωδικού
-//   POST {password, action: "score", nt, home, away, event, side, minute, scorer, period, set, note, dry}
+//   POST {password, action: "score", nt, home, away, event, side, points, minute, scorer, period, set, note,
+//         title, body, dry}
 //                                                   αποθήκευση και ειδοποίηση (dry: μόνο προεπισκόπηση·
 //                                                   event: βλ. EVENTS· χωρίς event, final → τελικό, αλλιώς σκορ)
 //   POST {password, action: "clear", nt}            σβήσιμο (χωρίς ειδοποίηση)
@@ -51,14 +52,20 @@ export function scoreKey(nt, home, away) {
 // Τα γεγονότα της φόρμας, με τους ίδιους τίτλους και τα ίδια κλειδιά «once» με το live.py
 // (once_key), ώστε όποια συσκευή πήρε κάτι από εδώ να μην το ξαναπάρει από το live, και ανάποδα.
 //   start       Ξεκίνησε
-//   goal        ΓΚΟΛ (ΤΟΥ ΠΑΟΚ)! με το νέο σκορ· side: ποιος σκόραρε, minute, scorer
+//   goal        ΓΚΟΛ (ΤΟΥ ΠΑΟΚ)! με το νέο σκορ· side: ποιος σκόραρε, minute, scorer·
+//               στο μπάσκετ points 1–3: ΒΟΛΗ / ΚΑΛΑΘΙ / ΤΡΙΠΟΝΤΟ
 //   disallowed  Ακυρώθηκε γκολ, με το σκορ μετά την ακύρωση
+//   red         Κόκκινη κάρτα· side, minute, scorer (ο παίκτης ή η παίκτρια)
 //   half        Ημίχρονο
 //   second      Ξεκίνησε το 2ο ημίχρονο
+//   et, pens    Πάμε παράταση / Πάμε στα πέναλτι
+//   pstart      αρχή περιόδου ή σετ (period: 1–5)
 //   period      τέλος περιόδου ή σετ (period: 1–5, set: πόντοι του σετ στο βόλεϊ)
-//   score       ελεύθερο σκορ τώρα, με σημείωση
+//   score       σκορ τώρα, με σημείωση· στο βόλεϊ και με τους πόντους του σετ (set, period)
 //   final       Τελικό
-export const EVENTS = ["start", "goal", "disallowed", "half", "second", "period", "score", "final"];
+//   custom      ελεύθερη: title και body όπως τα γράφει ο διαχειριστής (κενός τίτλος → το σκορ)
+export const EVENTS = ["start", "goal", "disallowed", "red", "half", "second", "et", "pens", "pstart", "period",
+  "score", "final", "custom"];
 
 const sport = (section) => String(section || "").replace(/-women$/, "");
 
@@ -69,6 +76,12 @@ export function periodLabel(section, n) {
   if (n === 2) return "Ημίχρονο";
   if (n === 4) return s === "waterpolo" ? "Ισοπαλία, πάμε στα πέναλτι" : "Ισοπαλία, πάμε παράταση";
   return n <= 4 ? `Τέλος ${n}ης περιόδου` : "Τέλος παράτασης";
+}
+
+// Ο τίτλος για την αρχή της περιόδου ή του σετ n.
+export function periodStartLabel(section, n) {
+  if (sport(section) === "volley") return n >= 5 ? "Ξεκίνησε το τάι-μπρέικ" : `Ξεκίνησε το ${n}ο σετ`;
+  return n >= 5 ? "Ξεκίνησε η παράταση" : `Ξεκίνησε η ${n}η περίοδος`;
 }
 
 function paokScored(m, side) {
@@ -90,6 +103,7 @@ export function message(m, e) {
   const url = `/#/m/${m.nt}`;
   const topics = (kinds) => kinds.flatMap((k) => [`s:${m.section}:${k}`, `m:${m.nt}:${k}`]);
   const event = e.event || (e.final ? "final" : "score");
+  const volley = sport(m.section) === "volley";
   if (event === "final") {
     return {
       topics: topics(["result", "live"]), once: `${m.nt}-result`, label: "Τελικό",
@@ -103,24 +117,45 @@ export function message(m, e) {
     topics: topics(m.live ? ["live"] : ["live", "pre"]), once, label,
     payload: { title: `${emoji} ${title}`, body, url },
   });
+  const who = [minuteText(e.minute), e.scorer].filter(Boolean).join(" ");
   if (event === "start") return live(`Ξεκίνησε: ${m.home} – ${m.away}`, comp, `${m.nt}-start`, "Ξεκίνησε");
   if (event === "goal") {
-    const minute = minuteText(e.minute);
-    return live(`ΓΚΟΛ${paokScored(m, e.side) ? " ΤΟΥ ΠΑΟΚ" : ""}! ${score}`,
-      [minute, e.scorer].filter(Boolean).join(" ") || comp, scoreKey(m.nt, e.home, e.away),
-      ["Γκολ", minute].filter(Boolean).join(" "));
+    const word = sport(m.section) !== "basketball" ? "ΓΚΟΛ"
+      : e.points === 3 ? "ΤΡΙΠΟΝΤΟ" : e.points === 1 ? "ΒΟΛΗ" : "ΚΑΛΑΘΙ";
+    const label = word === "ΓΚΟΛ" ? "Γκολ" : word === "ΤΡΙΠΟΝΤΟ" ? "Τρίποντο" : word === "ΒΟΛΗ" ? "Βολή" : "Καλάθι";
+    return live(`${word}${paokScored(m, e.side) ? " ΤΟΥ ΠΑΟΚ" : ""}! ${score}`, who || comp,
+      scoreKey(m.nt, e.home, e.away), [label, minuteText(e.minute)].filter(Boolean).join(" "));
   }
   if (event === "disallowed") {
     return live(`Ακυρώθηκε γκολ: ${score}`, e.note || comp, `${m.nt}-x${e.home}-${e.away}`, "Ακυρώθηκε γκολ");
   }
+  if (event === "red") {
+    const r = live(`Κόκκινη κάρτα (${m[e.side]}): ${score}`, who || comp, undefined, "Κόκκινη κάρτα");
+    r.payload.title = `🟥 ${r.payload.title.replace(`${emoji} `, "")}`;  // η κάρτα στη θέση του emoji του αθλήματος
+    return r;
+  }
   if (event === "half") return live(`Ημίχρονο: ${score}`, comp, `${m.nt}-ht`, "Ημίχρονο");
   if (event === "second") return live(`Ξεκίνησε το 2ο ημίχρονο: ${score}`, comp, `${m.nt}-h2`, "2ο ημίχρονο");
+  if (event === "et") return live(`Πάμε παράταση: ${score}`, comp, `${m.nt}-et`, "Παράταση");
+  if (event === "pens") return live(`Πάμε στα πέναλτι: ${score}`, comp, `${m.nt}-pens`, "Πέναλτι");
+  if (event === "pstart") {
+    const what = periodStartLabel(m.section, e.period);
+    return live(`${what}: ${score}`, comp, `${m.nt}-ps${e.period}`, what.replace(/^Ξεκίνησε (η |το )?/, ""));
+  }
   if (event === "period") {
     const what = periodLabel(m.section, e.period);
-    const volley = sport(m.section) === "volley";
     const pts = volley && e.set ? ` (${e.set.home}–${e.set.away})` : "";
     const once = what === "Ημίχρονο" ? `${m.nt}-ht` : `${m.nt}-${volley ? "set" : "p"}${e.period}`;
     return live(`${what}${pts}: ${score}`, comp, once, what);
+  }
+  if (event === "custom") {
+    return live(e.title || score, e.body || comp, undefined, "Σε εξέλιξη");
+  }
+  // Σκορ τώρα· στο βόλεϊ μαζί με τους πόντους του σετ που παίζεται.
+  if (volley && e.set) {
+    const n = e.period || e.home + e.away + 1;
+    return live(`${score} (${e.set.home}–${e.set.away} στο ${n}ο σετ)`, e.note || comp,
+      `${scoreKey(m.nt, e.home, e.away)}-p${n}-${e.set.home}-${e.set.away}`, `${n}ο σετ ${e.set.home}–${e.set.away}`);
   }
   return live(score, e.note || "Σκορ τώρα", scoreKey(m.nt, e.home, e.away), e.note || "Σε εξέλιξη");
 }
@@ -134,17 +169,20 @@ export function parseEvent(body) {
   }
   const text = (x, n) => String(x ?? "").trim().slice(0, n);
   const e = { event, home, away, final: event === "final", note: text(body.note, 80) };
-  if (event === "goal" || event === "disallowed") {
+  if (["goal", "disallowed", "red"].includes(event)) {
     if (body.side !== "home" && body.side !== "away") return { error: "Διάλεξε ομάδα." };
     e.side = body.side;
   }
-  if (event === "goal") { e.minute = text(body.minute, 10); e.scorer = text(body.scorer, 40); }
-  if (event === "period") {
+  if (event === "goal" || event === "red") { e.minute = text(body.minute, 10); e.scorer = text(body.scorer, 40); }
+  if (event === "goal") e.points = [1, 2, 3].includes(Number(body.points)) ? Number(body.points) : 1;
+  if (event === "custom") { e.title = text(body.title, 100); e.body = text(body.body, 140); }
+  if (body.period != null && body.period !== "") {
     e.period = Number(body.period);
     if (!Number.isInteger(e.period) || e.period < 1 || e.period > 5) return { error: "Διάλεξε περίοδο." };
-    const sh = Number(body.set?.home), sa = Number(body.set?.away);
-    if (body.set && [sh, sa].every((x) => Number.isInteger(x) && x >= 0 && x <= 99)) e.set = { home: sh, away: sa };
   }
+  if ((event === "period" || event === "pstart") && !e.period) return { error: "Διάλεξε περίοδο." };
+  const sh = Number(body.set?.home), sa = Number(body.set?.away);
+  if (body.set && [sh, sa].every((x) => Number.isInteger(x) && x >= 0 && x <= 99)) e.set = { home: sh, away: sa };
   return e;
 }
 

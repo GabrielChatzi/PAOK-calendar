@@ -189,6 +189,33 @@ test("Διαχειριστής: γεγονότα με τους τίτλους κ
   assert.equal(admin.message(m, admin.parseEvent({ home: 2, away: 1, final: true })).payload.title, "⚽ Τελικό: ΟΔΥΣΣΕΑΣ 2–1 ΠΑΟΚ");
 });
 
+test("Διαχειριστής: γεγονότα ανά άθλημα και ελεύθερη ειδοποίηση", () => {
+  const base = { nt: "abcdef0123", home: "ΠΑΟΚ", away: "ΑΡΗΣ", paokHome: true, live: null, competition: "Comp" };
+  const ev = (section, body) => admin.message({ ...base, section }, admin.parseEvent(body));
+  const t = (section, body) => ev(section, body).payload.title;
+  assert.equal(t("basketball", { event: "goal", side: "home", points: 3, home: 45, away: 40 }), "🏀 ΤΡΙΠΟΝΤΟ ΤΟΥ ΠΑΟΚ! ΠΑΟΚ 45–40 ΑΡΗΣ");
+  assert.equal(t("basketball", { event: "goal", side: "away", points: 2, home: 45, away: 42 }), "🏀 ΚΑΛΑΘΙ! ΠΑΟΚ 45–42 ΑΡΗΣ");
+  assert.equal(t("basketball", { event: "goal", side: "home", points: 1, home: 46, away: 42 }), "🏀 ΒΟΛΗ ΤΟΥ ΠΑΟΚ! ΠΑΟΚ 46–42 ΑΡΗΣ");
+  assert.equal(t("basketball", { event: "pstart", period: 3, home: 40, away: 38 }), "🏀 Ξεκίνησε η 3η περίοδος: ΠΑΟΚ 40–38 ΑΡΗΣ");
+  assert.equal(t("basketball", { event: "pstart", period: 5, home: 80, away: 80 }), "🏀 Ξεκίνησε η παράταση: ΠΑΟΚ 80–80 ΑΡΗΣ");
+  const pts = ev("volley-women", { event: "score", home: 1, away: 0, set: { home: 15, away: 12 } });
+  assert.equal(pts.payload.title, "🏐 ΠΑΟΚ 1–0 ΑΡΗΣ (15–12 στο 2ο σετ)");
+  assert.equal(pts.once, "abcdef0123-s1-0-p2-15-12");
+  assert.notEqual(ev("volley-women", { event: "score", home: 1, away: 0, set: { home: 16, away: 12 } }).once, pts.once);
+  assert.equal(t("volley", { event: "pstart", period: 5, home: 2, away: 2 }), "🏐 Ξεκίνησε το τάι-μπρέικ: ΠΑΟΚ 2–2 ΑΡΗΣ");
+  const red = ev("football", { event: "red", side: "away", minute: "60", scorer: "Παπαδόπουλος", home: 1, away: 0 });
+  assert.equal(red.payload.title, "🟥 Κόκκινη κάρτα (ΑΡΗΣ): ΠΑΟΚ 1–0 ΑΡΗΣ");
+  assert.equal(red.payload.body, "60' Παπαδόπουλος");
+  assert.equal(t("football", { event: "pens", home: 1, away: 1 }), "⚽ Πάμε στα πέναλτι: ΠΑΟΚ 1–1 ΑΡΗΣ");
+  const custom = ev("handball", { event: "custom", title: "Time out ΠΑΟΚ", body: "", home: 10, away: 9 });
+  assert.equal(custom.payload.title, "🤾 Time out ΠΑΟΚ");
+  assert.equal(custom.payload.body, "Comp");
+  assert.equal(custom.once, undefined);
+  assert.equal(t("handball", { event: "custom", home: 10, away: 9 }), "🤾 ΠΑΟΚ 10–9 ΑΡΗΣ");
+  assert.ok(admin.parseEvent({ event: "pstart", home: 0, away: 0 }).error);
+  assert.ok(admin.parseEvent({ event: "red", home: 0, away: 0 }).error);
+});
+
 test("Λάθος παράμετροι απορρίπτονται", async () => {
   assert.equal((await call(live, { src: "koe", cat: "../x" })).status, 400);
   assert.equal((await call(live, { src: "nope" })).status, 400);

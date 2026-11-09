@@ -931,6 +931,38 @@ def is_volley_final(score: str) -> bool:
     return bool(re.fullmatch(r"3-[0-2]|[0-2]-3", score or ""))
 
 
+def live_results(section: str, matches: list[Match], now: dt.datetime | None = None) -> None:
+    """Το τελικό σκορ από την πηγή live (api/live.js κ.λπ.), όταν η επίσημη σελίδα αργεί να το βάλει.
+
+    Π.χ. η Volley League ενημερώνει τη σελίδα αποτελεσμάτων ώρες μετά τον αγώνα, ενώ η Data Project
+    έχει το τελικό αμέσως. Μόνο για αγώνες που ξεκίνησαν πριν από τη συντομότερη διάρκεια του αθλήματος
+    και μέσα στις τελευταίες 12 ώρες, και μόνο αν η πηγή λέει «τέλος» (στο βόλεϊ και 3 σετ).
+    """
+    import live
+    now = now or dt.datetime.now(ATHENS)
+    shortest = dt.timedelta(minutes=MIN_DURATION.get(section, 60))
+    for m in matches:
+        if m.score or m.status or not m.live or not m.time:
+            continue
+        if not (m.start() + shortest <= now <= m.start() + dt.timedelta(hours=12)):
+            continue
+        get = live.SOURCES.get(m.live.get("src"))
+        if not get:
+            continue
+        try:
+            st = get(m.live)
+        except Exception as e:
+            print(f"  ! τελικό από live για {m.home} – {m.away}: {e}", file=sys.stderr)
+            continue
+        if st.get("state") != "post":
+            continue
+        score = f"{st['home']}-{st['away']}"
+        if section in ("volley", "volley-women") and not is_volley_final(score):
+            continue
+        print(f"  τελικό από live: {m.home} – {m.away} {score}")
+        m.score, m.live = score, None
+
+
 def drop_live_scores(section: str, matches: list[Match], now: dt.datetime) -> None:
     """Σκορ πριν από τη συντομότερη δυνατή διάρκεια του αθλήματος είναι το τρέχον ενός αγώνα σε
     εξέλιξη (κάποιες πηγές το δείχνουν στη θέση του τελικού), όχι αποτέλεσμα."""
@@ -1731,6 +1763,7 @@ def main(only: list[str] | None = None) -> int:
         if key == "basketball":
             basket_league_live(unique)
         other_live(key, unique)
+        live_results(key, unique)
         try:
             import club  # αποτέλεσμα από την ΑΣ ΠΑΟΚ, όπου η επίσημη πηγή αργεί
             club.results(key, unique)

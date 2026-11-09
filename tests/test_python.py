@@ -419,3 +419,31 @@ class VolleyWomenNames(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class LiveResults(unittest.TestCase):
+    """Το τελικό από την πηγή live όταν η επίσημη σελίδα αργεί (Καλαμάτα–ΠΑΟΚ, 9/11)."""
+
+    def match(self):
+        return b.Match(section="volley", uid="u", day=dt.date(2026, 11, 9), time=dt.time(19, 30),
+                       home="Καλαμάτα", away="ΠΑΟΚ", paok_home=False,
+                       live={"src": "dp", "fed": "hvl", "day": "2026-11-09", "side": "a"})
+
+    def run_with(self, st, now):
+        m = self.match()
+        with mock.patch.dict(live.SOURCES, {"dp": lambda _: st}):
+            b.live_results("volley", [m], now)
+        return m
+
+    def test_final(self):
+        m = self.run_with({"state": "post", "home": 1, "away": 3}, dt.datetime(2026, 11, 9, 22, 0, tzinfo=b.ATHENS))
+        self.assertEqual((m.score, m.live), ("1-3", None))
+
+    def test_not_final(self):
+        now = dt.datetime(2026, 11, 9, 22, 0, tzinfo=b.ATHENS)
+        self.assertEqual(self.run_with({"state": "in", "home": 1, "away": 2}, now).score, "")
+        self.assertEqual(self.run_with({"state": "post", "home": 1, "away": 2}, now).score, "")
+
+    def test_too_early(self):
+        m = self.run_with({"state": "post", "home": 0, "away": 3}, dt.datetime(2026, 11, 9, 20, 0, tzinfo=b.ATHENS))
+        self.assertEqual(m.score, "")

@@ -42,6 +42,17 @@ jobs:
           PUSH: "1"
         run: python3 notify.py reminders
 
+      # Υπενθυμίσεις στον διαχειριστή για τα social (βλ. social_remind.py), από το plan.json του κλάδου social.
+      - name: Υπενθυμίσεις social
+        if: always()
+        continue-on-error: true
+        env:
+          PUSH: "1"
+        run: |
+          git fetch --depth=1 origin +refs/heads/social:refs/remotes/origin/social
+          git show origin/social:plan.json > /tmp/plan.json
+          python3 social_remind.py /tmp/plan.json .state/social.json
+
       - uses: actions/cache/save@v4
         if: always()
         with:

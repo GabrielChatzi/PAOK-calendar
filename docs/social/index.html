@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#111">
+<title>Social · PAOKalendar</title>
+<style>
+  :root { color-scheme: light dark; --bg: #f4f3f0; --card: #fff; --fg: #111; --muted: #777; --line: #e2e0dc; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0e0e0e; --card: #1a1a1a; --fg: #f2f2f2; --muted: #9a9a9a; --line: #2a2a2a; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         padding: max(16px, env(safe-area-inset-top)) 16px 40px; }
+  main { max-width: 640px; margin: 0 auto; }
+  h1 { font-size: 22px; margin: 4px 0 2px; }
+  .sub { color: var(--muted); font-size: 14px; margin-bottom: 18px; }
+  h2 { font-size: 15px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 26px 0 10px; }
+  .item { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px; margin-bottom: 12px; scroll-margin-top: 12px; }
+  .item.now { outline: 2px solid var(--fg); }
+  .item.past { opacity: .55; }
+  .head { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+  .time { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .type { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: 2px 7px; border-radius: 6px; background: var(--fg); color: var(--bg); }
+  .title { font-weight: 600; }
+  .wait { color: var(--muted); font-size: 14px; margin-top: 8px; }
+  .imgs { display: flex; gap: 8px; overflow-x: auto; margin-top: 12px; scroll-snap-type: x mandatory; }
+  .imgs a { flex: 0 0 auto; scroll-snap-align: start; }
+  .imgs img { display: block; height: 260px; width: auto; border-radius: 8px; border: 1px solid var(--line); background: #ddd; }
+  .cap { white-space: pre-wrap; background: var(--bg); border-radius: 10px; padding: 10px 12px; margin-top: 12px; font-size: 15px; }
+  .note { font-size: 14px; margin-top: 10px; }
+  .actions { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+  button, .btn { appearance: none; border: 1px solid var(--fg); background: var(--fg); color: var(--bg); border-radius: 10px;
+                 padding: 9px 14px; font: inherit; font-weight: 600; font-size: 14px; text-decoration: none; cursor: pointer; }
+  .btn.alt { background: transparent; color: var(--fg); }
+  .err { color: #c0392b; }
+  .hint { color: var(--muted); font-size: 13px; margin-top: 6px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Social</h1>
+  <div class="sub" id="sub">Φόρτωση…</div>
+  <div id="list"></div>
+</main>
+<script>
+(function () {
+  "use strict";
+  var REPO = "GabrielChatzi/PAOK-calendar";
+  var TYPE = { post: "Post", story: "Story", reel: "Reel" };
+  var DAYS = ["Κυριακή", "Δευτέρα", "Τρίτη", "Τετάρτη", "Πέμπτη", "Παρασκευή", "Σάββατο"];
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function athensNow() {
+    var p = {};
+    new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Athens", year: "numeric", month: "2-digit", day: "2-digit",
+      hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).formatToParts(new Date())
+      .forEach(function (x) { p[x.type] = x.value; });
+    return { day: p.year + "-" + p.month + "-" + p.day, time: p.hour + ":" + p.minute };
+  }
+  function dayLabel(d) {
+    var dt = new Date(d + "T12:00:00Z");
+    return DAYS[dt.getUTCDay()] + " " + d.slice(8, 10) + "/" + d.slice(5, 7);
+  }
+  function key(it) { return it.day + "-" + it.time.replace(":", "") + "-" + it.what; }
+
+  async function load() {
+    // Συγκεκριμένο commit του κλάδου social: οι εικόνες δεν αλλάζουν ποτέ στο ίδιο URL (σωστή cache).
+    var ref = "social";
+    try {
+      var c = await fetch("https://api.github.com/repos/" + REPO + "/commits/social", { headers: { Accept: "application/vnd.github.sha" } });
+      if (c.ok) ref = (await c.text()).trim();
+    } catch (e) {}
+    var raw = "https://raw.githubusercontent.com/" + REPO + "/" + ref + "/";
+    var res = await fetch(raw + "plan.json" + (ref === "social" ? "?t=" + Date.now() : ""), { cache: "no-store" });
+    if (!res.ok) throw new Error("plan.json: " + res.status);
+    return { plan: await res.json(), raw: raw };
+  }
+
+  function render(data) {
+    var now = athensNow(), focus = location.hash.slice(1);
+    var items = data.plan.items.filter(function (it) { return it.day >= now.day; });
+    document.getElementById("sub").textContent = "Τι ανεβάζεις και πότε, " + dayLabel(data.plan.from) + " – " + dayLabel(data.plan.to) +
+      ". Κράτα πατημένη μια εικόνα για αποθήκευση.";
+    var html = "", last = "";
+    items.forEach(function (it, i) {
+      if (it.day !== last) { html += "<h2>" + (it.day === now.day ? "Σήμερα · " : "") + esc(dayLabel(it.day)) + "</h2>"; last = it.day; }
+      var past = it.day === now.day && it.time < now.time && key(it) !== focus;
+      var ready = it.type === "reel" || (it.images.length && !(it.missing || []).length);
+      html += '<div class="item' + (key(it) === focus ? " now" : "") + (past ? " past" : "") + '" id="' + esc(key(it)) + '">' +
+        '<div class="head"><span class="time">' + esc(it.time) + '</span><span class="type">' + esc(TYPE[it.type] || it.type) +
+        '</span><span class="title">' + esc(it.title) + "</span></div>";
+      if (it.images.length) {
+        html += '<div class="imgs">' + it.images.map(function (f) {
+          var u = data.raw + "img/" + encodeURIComponent(f);
+          return '<a href="' + u + '" target="_blank" rel="noopener"><img loading="lazy" src="' + u + '" alt="' + esc(f) + '"></a>';
+        }).join("") + "</div>";
+      }
+      if ((it.missing || []).length) {
+        html += '<div class="wait">Περιμένει σκορ: ' + esc(it.missing.join(", ")) +
+          (it.images.length ? " (οι εικόνες θα ανανεωθούν)" : "") + "</div>";
+      } else if (!ready) {
+        html += '<div class="wait">Οι εικόνες δεν είναι ακόμα έτοιμες.</div>';
+      }
+      if (it.how) html += '<div class="note"><b>Πώς:</b> ' + esc(it.how) + "</div>";
+      if (it.note) html += '<div class="note">' + esc(it.note) + "</div>";
+      if (it.caption) {
+        html += '<div class="cap">' + esc(it.caption) + '</div><div class="actions">' +
+          '<button type="button" data-copy="' + i + '">Αντιγραφή λεζάντας</button>' +
+          (it.images.length && navigator.canShare ? '<button type="button" class="btn alt" data-share="' + i + '">Κοινοποίηση εικόνων</button>' : "") +
+          "</div>";
+      } else if (it.images.length && navigator.canShare) {
+        html += '<div class="actions"><button type="button" class="btn alt" data-share="' + i + '">Κοινοποίηση εικόνων</button></div>';
+      }
+      html += "</div>";
+    });
+    document.getElementById("list").innerHTML = html || "<p>Δεν υπάρχει τίποτα προγραμματισμένο.</p>";
+
+    document.getElementById("list").addEventListener("click", async function (e) {
+      var b = e.target.closest("button");
+      if (!b) return;
+      if (b.dataset.copy) {
+        var it = items[+b.dataset.copy];
+        try { await navigator.clipboard.writeText(it.caption); b.textContent = "Αντιγράφηκε ✓"; }
+        catch (err) { b.textContent = "Δεν έγινε αντιγραφή"; }
+        setTimeout(function () { b.textContent = "Αντιγραφή λεζάντας"; }, 2000);
+      }
+      if (b.dataset.share) {
+        var it2 = items[+b.dataset.share];
+        try {
+          b.disabled = true;
+          var files = await Promise.all(it2.images.map(async function (f) {
+            var r = await fetch(data.raw + "img/" + encodeURIComponent(f));
+            return new File([await r.blob()], f, { type: "image/png" });
+          }));
+          if (it2.caption) { try { await navigator.clipboard.writeText(it2.caption); } catch (err) {} }
+          await navigator.share({ files: files });
+        } catch (err) {} finally { b.disabled = false; }
+      }
+    });
+    if (focus) { var el = document.getElementById(focus); if (el) el.scrollIntoView(); }
+  }
+
+  load().then(render).catch(function (e) {
+    document.getElementById("sub").innerHTML = '<span class="err">Δεν φορτώθηκε το πλάνο (' + esc(e.message) + ").</span>";
+  });
+})();
+</script>
+</body>
+</html>

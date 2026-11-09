@@ -1936,7 +1936,8 @@
       "<p>Διάλεξε για ποια τμήματα και τι θέλεις να μαθαίνεις. Οι ειδοποιήσεις έρχονται σε αυτή τη συσκευή, χωρίς λογαριασμό, και τις αλλάζεις όποτε θέλεις.</p>" +
       lostHtml() + pushNoteHtml() + serverStatusHtml() +
       (isAdmin() && st === "on" ? "<h3>Διαχειριστής</h3>" + '<ul class="notify">' + switchRow(["s:ops:live"], "Ειδοποιήσεις λειτουργίας",
-        "Όταν κάτι σταματήσει να δουλεύει: έλεγχοι, live, αποθήκευση επιλογών, ανεβάσματα") + "</ul>" +
+        "Όταν κάτι σταματήσει να δουλεύει: έλεγχοι, live, αποθήκευση επιλογών, ανεβάσματα") +
+        switchRow(["s:ops:pre"], "Υπενθυμίσεις social", "Πότε και τι να ανεβάσεις στο Instagram και στο Facebook, με εικόνες και λεζάντα") + "</ul>" +
         '<div class="actions"><button type="button" class="btn" data-act="push-test">Στείλε μου δοκιμαστική ειδοποίηση</button></div>' : "") +
       '<ul class="kinds-legend">' + PUSH_KINDS.map(function (k) {
         return "<li><b>" + k[1] + ":</b> " + KIND_INFO[k[0]][1].charAt(0).toLowerCase() + KIND_INFO[k[0]][1].slice(1) +

@@ -447,3 +447,31 @@ class LiveResults(unittest.TestCase):
     def test_too_early(self):
         m = self.run_with({"state": "post", "home": 0, "away": 3}, dt.datetime(2026, 11, 9, 20, 0, tzinfo=b.ATHENS))
         self.assertEqual(m.score, "")
+
+
+class SocialRemind(unittest.TestCase):
+    ITEMS = [
+        {"type": "post", "what": "results", "day": "2026-11-10", "time": "09:00", "title": "Αποτελέσματα",
+         "caption": "x", "missing": [], "images": ["a.png", "b.png"]},
+        {"type": "story", "what": "dayResults", "day": "2026-11-10", "time": "21:30", "title": "Αποτελέσματα ημέρας",
+         "missing": ["Balkan – ΠΑΟΚ"], "images": []},
+    ]
+
+    def due(self, t, sent=None):
+        import social_remind
+        now = dt.datetime.fromisoformat(t).replace(tzinfo=b.ATHENS)
+        return [i["what"] for i in social_remind.due(self.ITEMS, sent or {}, now)]
+
+    def test_on_time_once(self):
+        self.assertEqual(self.due("2026-11-10T08:56"), ["results"])
+        self.assertEqual(self.due("2026-11-10T08:50"), [])
+        self.assertEqual(self.due("2026-11-10T15:00"), [])
+        self.assertEqual(self.due("2026-11-10T09:10", {"2026-11-10-0900-results": "x"}), [])
+
+    def test_waits_for_scores(self):
+        self.assertEqual(self.due("2026-11-10T21:30"), [])
+        self.ITEMS[1].update(missing=[], images=["s.png"])
+        try:
+            self.assertEqual(self.due("2026-11-10T23:40"), ["dayResults"])
+        finally:
+            self.ITEMS[1].update(missing=["Balkan – ΠΑΟΚ"], images=[])

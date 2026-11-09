@@ -9,7 +9,7 @@
 // - Δείχνει τις ειδοποιήσεις web push και, όταν πατηθεί μία, ανοίγει τον αγώνα ή το τμήμα της.
 //
 // Αλλάζοντας το VERSION, οι συσκευές κατεβάζουν ξανά τη σελίδα.
-const VERSION = "v6";
+const VERSION = "v7";
 const SHELL = `paokalendar-shell-${VERSION}`;
 const DATA = "paokalendar-data";
 const ASSETS = "paokalendar-assets";
@@ -78,6 +78,7 @@ self.addEventListener("fetch", (event) => {
     if (url.pathname.endsWith(".ics") || url.pathname.startsWith("/api/") || url.pathname.startsWith("/_vercel/")) return;
     // Η σελίδα μεταβιβάσεων είναι ξεχωριστή: να μην τη σερβίρει η αρχική της εφαρμογής.
     if (url.pathname.startsWith("/metavivaseis")) return;
+    if (url.pathname.startsWith("/social")) return;  // σελίδα του διαχειριστή για τα social
     if (url.pathname.endsWith(".json")) {
       event.respondWith(networkFirst(request, DATA));
       return;

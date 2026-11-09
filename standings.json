@@ -1654,12 +1654,12 @@
      "logo": "https://www.handball.org.gr/media/yootheme/cache/64/aek-gynaikes-64628104.png",
      "paok": false,
      "cells": [
-      "5",
-      "3",
+      "6",
+      "4",
       "1",
       "1",
-      "152-108",
-      "7"
+      "187-123",
+      "9"
      ]
     },
     {
@@ -1678,6 +1678,20 @@
     },
     {
      "pos": 5,
+     "team": "Γ.Α.Σ ΚΑΜΑΤΕΡΟΥ",
+     "logo": "https://www.handball.org.gr/media/yootheme/cache/a5/kamatero-new-a54e5da0.jpg",
+     "paok": false,
+     "cells": [
+      "6",
+      "3",
+      "1",
+      "2",
+      "139-165",
+      "7"
+     ]
+    },
+    {
+     "pos": 6,
      "team": "Α.Ε.Π. ΠΑΝΟΡΑΜΑ",
      "logo": "https://www.handball.org.gr/media/yootheme/cache/84/panorama-new-84c6b388.jpg",
      "paok": false,
@@ -1691,59 +1705,45 @@
      ]
     },
     {
-     "pos": 6,
-     "team": "Γ.Α.Σ ΚΑΜΑΤΕΡΟΥ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/a5/kamatero-new-a54e5da0.jpg",
-     "paok": false,
-     "cells": [
-      "5",
-      "2",
-      "1",
-      "2",
-      "113-142",
-      "5"
-     ]
-    },
-    {
      "pos": 7,
      "team": "ΑΘΗΝΑΙΚΟΣ Α.Σ.Β.",
      "logo": "https://www.handball.org.gr/media/yootheme/cache/c0/athinaikos-logo-c0953da2.jpg",
      "paok": false,
      "cells": [
-      "5",
+      "6",
       "2",
       "0",
-      "3",
-      "134-130",
+      "4",
+      "149-165",
       "4"
      ]
     },
     {
      "pos": 8,
-     "team": "ΠΡΟΣΟΤΣΑΝΗ ΔΡΑΜΑΣ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/b3/aop-logo-b3377348.jpg",
+     "team": "Α.Ε.Σ.Χ. ΠΥΛΑΙΑΣ",
+     "logo": "https://www.handball.org.gr/media/yootheme/cache/05/pylaia-05554759.jpg",
      "paok": false,
      "cells": [
-      "5",
+      "6",
       "1",
       "0",
-      "4",
-      "98-159",
+      "5",
+      "122-165",
       "2"
      ]
     },
     {
      "pos": 9,
-     "team": "Α.Ε.Σ.Χ. ΠΥΛΑΙΑΣ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/05/pylaia-05554759.jpg",
+     "team": "ΠΡΟΣΟΤΣΑΝΗ ΔΡΑΜΑΣ",
+     "logo": "https://www.handball.org.gr/media/yootheme/cache/b3/aop-logo-b3377348.jpg",
      "paok": false,
      "cells": [
-      "5",
+      "6",
+      "1",
       "0",
-      "0",
       "5",
-      "98-145",
-      "0"
+      "118-183",
+      "2"
      ]
     },
     {
@@ -1752,11 +1752,11 @@
      "logo": "https://www.handball.org.gr/media/yootheme/cache/8b/agioi-anargyroi-logo-8b3031f9.jpg",
      "paok": false,
      "cells": [
-      "5",
+      "6",
       "0",
       "0",
-      "5",
-      "95-163",
+      "6",
+      "118-189",
       "0"
      ]
     }

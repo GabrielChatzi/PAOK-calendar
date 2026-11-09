@@ -83,13 +83,14 @@
 
   function render(data) {
     var now = athensNow(), focus = location.hash.slice(1);
-    var items = data.plan.items.filter(function (it) { return it.day >= now.day; });
+    var yesterday = new Date(Date.parse(now.day + "T12:00:00Z") - 864e5).toISOString().slice(0, 10);
+    var items = data.plan.items.filter(function (it) { return it.day >= yesterday; });  // και ό,τι έμεινε από χθες
     document.getElementById("sub").textContent = "Τι ανεβάζεις και πότε, " + dayLabel(data.plan.from) + " – " + dayLabel(data.plan.to) +
       ". Κράτα πατημένη μια εικόνα για αποθήκευση.";
     var html = "", last = "";
     items.forEach(function (it, i) {
       if (it.day !== last) { html += "<h2>" + (it.day === now.day ? "Σήμερα · " : "") + esc(dayLabel(it.day)) + "</h2>"; last = it.day; }
-      var past = it.day === now.day && it.time < now.time && key(it) !== focus;
+      var past = (it.day < now.day || (it.day === now.day && it.time < now.time)) && key(it) !== focus;
       var ready = it.type === "reel" || (it.images.length && !(it.missing || []).length);
       html += '<div class="item' + (key(it) === focus ? " now" : "") + (past ? " past" : "") + '" id="' + esc(key(it)) + '">' +
         '<div class="head"><span class="time">' + esc(it.time) + '</span><span class="type">' + esc(TYPE[it.type] || it.type) +

@@ -133,7 +133,9 @@ export function blockKey(day) {
 }
 
 export function plan(matches, today, { names = { teams: {}, venues: {}, tv: {} } } = {}) {
-  const from = today, to = addDays(today, 6);
+  // Και η χθεσινή μέρα: ό,τι δεν πρόλαβε να ανέβει (π.χ. το πρόγραμμα της Δευτέρας στις 22:00) κρατά τις
+  // εικόνες του ως την επόμενη μέρα, αντί να σβηστούν τα μεσάνυχτα.
+  const from = addDays(today, -1), to = addDays(today, 6);
   const byDay = new Map();
   for (const m of matches) {
     const { day } = local(new Date(m.start));

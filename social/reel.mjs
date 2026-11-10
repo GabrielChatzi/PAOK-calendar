@@ -133,28 +133,26 @@ const icon = fs.readFileSync(path.join(DOCS, "icons", "icon-192.png"));
 
 const scrollTo = Math.max(0, notifyTop - 150);
 const T = (t) => t;  // δευτερόλεπτα μέσα στη σκηνή
+// Πιο αργός ρυθμός: κάθε οθόνη μένει ~1″ πριν το πάτημα, ώστε να φαίνεται τι γίνεται (~21″ συνολικά).
+const H0 = HOMESCREEN ? 1.4 : 0;   // πόσο κρατά η αρχική οθόνη του κινητού
 const scenes = [
-  { name: "1-hook", dur: 2.6, lock: true, caption: ["Μάθε για το γκολ", "πριν το δεις στην TV"],
-    zoom: [[0, 1, 540, 1060], [2.6, 1.06, 540, 900]] },
-  { name: "2-choose", dur: HOMESCREEN ? 4.2 : 3.4, caption: ["1", "Διάλεξε αγώνα"],
-    screens: [...(HOMESCREEN ? [{ t: 0, src: "homescreen" }] : []),
-      ...[{ t: 0, src: "home" }, { t: 0.95, src: "menu" }, { t: 1.75, src: "section", y0: 0, y1: sectionScroll, ys: 1.8, ye: 2.6 }]
-        .map((x) => ({ ...x, t: x.t + (HOMESCREEN ? 0.8 : 0), ys: x.ys && x.ys + (HOMESCREEN ? 0.8 : 0), ye: x.ye && x.ye + (HOMESCREEN ? 0.8 : 0) }))],
-    taps: [...(HOMESCREEN ? [{ t: 0.55, x: ICON_AT[0] / DSF, y: ICON_AT[1] / DSF }] : []),
-      ...[{ t: 0.7, ...menuBtn }, { t: 1.5, ...sectionLink }, { t: 2.95, x: matchLink.x, y: matchLink.y - sectionScroll }]
-        .map((x) => ({ ...x, t: x.t + (HOMESCREEN ? 0.8 : 0) }))],
-    zoom: [[0, 1, 540, 1060]] },
-  { name: "3-notify", dur: 2.0, caption: ["2", "Πάτα «Ειδοποιήσεις»"],
-    screens: [{ t: 0, src: "matchOff", y0: 0, y1: scrollTo, ys: 0.5, ye: 1.5 }],
-    zoom: [[0, 1, 540, 1060]] },
-  { name: "4-live", dur: 3.4, caption: ["3", "Live σε κάθε γκολ"],
-    screens: [{ t: 0, src: "matchOff", y0: scrollTo, y1: scrollTo }, { t: 1.0, src: "matchPre", y0: scrollTo, y1: scrollTo, fade: 0 },
-      { t: 2.05, src: "matchLive", y0: scrollTo, y1: scrollTo, fade: 0 }],
-    taps: [{ t: 0.85, x: sw["Πριν τον αγώνα"].x, y: sw["Πριν τον αγώνα"].y - scrollTo },
-      { t: 1.9, x: sw["Live"].x, y: sw["Live"].y - scrollTo }],
+  { name: "1-hook", dur: 3.2, lock: true, caption: ["Μάθε για το γκολ", "πριν το δεις στην TV"],
+    zoom: [[0, 1], [3.2, 1.06]] },
+  { name: "2-choose", dur: H0 + 5.2, caption: ["1", "Διάλεξε αγώνα"],
+    screens: [...(HOMESCREEN ? [{ t: 0, src: "homescreen" }] : []), { t: H0, src: "home" }, { t: H0 + 1.25, src: "menu" },
+      { t: H0 + 2.5, src: "section", y0: 0, y1: sectionScroll, ys: H0 + 2.9, ye: H0 + 4.2 }],
+    taps: [...(HOMESCREEN ? [{ t: 1.1, x: ICON_AT[0] / DSF, y: ICON_AT[1] / DSF }] : []), { t: H0 + 0.95, ...menuBtn },
+      { t: H0 + 2.2, ...sectionLink }, { t: H0 + 4.85, x: matchLink.x, y: matchLink.y - sectionScroll }] },
+  { name: "3-notify", dur: 3.0, caption: ["2", "Πάτα «Ειδοποιήσεις»"],
+    screens: [{ t: 0, src: "matchOff", y0: 0, y1: scrollTo, ys: 0.8, ye: 2.3 }] },
+  { name: "4-live", dur: 4.6, caption: ["3", "Live σε κάθε γκολ"],
+    screens: [{ t: 0, src: "matchOff", y0: scrollTo, y1: scrollTo }, { t: 1.65, src: "matchPre", y0: scrollTo, y1: scrollTo, fade: 0 },
+      { t: 3.15, src: "matchLive", y0: scrollTo, y1: scrollTo, fade: 0 }],
+    taps: [{ t: 1.5, x: sw["Πριν τον αγώνα"].x, y: sw["Πριν τον αγώνα"].y - scrollTo },
+      { t: 3.0, x: sw["Live"].x, y: sw["Live"].y - scrollTo }],
     zoomOn: { x: 220, y: (sw["Πριν τον αγώνα"].y + sw["Live"].y) / 2 - scrollTo },
-    zoom: [[0, 1], [0.6, 1.42], [3.4, 1.48]] },
-  { name: "5-end", dur: 2.8, end: true },
+    zoom: [[0, 1], [0.8, 1.42], [4.6, 1.5]] },
+  { name: "5-end", dur: 3.5, end: true },
 ];
 
 const css = `${FONTS}
@@ -186,6 +184,8 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#0a0a0a}
 #notif .h{display:flex;justify-content:space-between;font:700 30px F;color:#555}
 #notif .t{font:800 42px/1.1 F;margin-top:6px;color:#000}
 #notif .b{font:700 34px/1.15 F;color:#333;margin-top:2px}
+#example{position:absolute;left:0;right:0;top:calc(var(--ny,560px) + 186px);text-align:center;font:700 26px F;color:rgba(255,255,255,.85);
+  text-shadow:0 1px 6px rgba(0,0,0,.9)}
 #end{position:absolute;inset:0;display:none;text-align:center;color:#fff}
 #end img{width:300px;height:300px;border-radius:66px;margin-top:470px;box-shadow:0 0 0 4px #fff}
 #end .name{font:900 170px/1 S;margin-top:70px;letter-spacing:-2px}
@@ -201,7 +201,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><style>${css}</st
   <img id="a"><img id="b">
   <div id="lock"><div class="st"></div><div class="date"></div><div class="clock"></div>
     <div id="notif"><img src="${uri(icon, "image/png")}"><div style="flex:1"><div class="h"><span>PAOKalendar</span><span>τώρα</span></div>
-    <div class="t">ΓΚΟΛ ΤΟΥ ΠΑΟΚ!</div><div class="b"></div></div></div></div>
+    <div class="t">ΓΚΟΛ ΤΟΥ ΠΑΟΚ!</div><div class="b"></div></div></div><div id="example">Παράδειγμα ειδοποίησης</div></div>
   <div id="island"></div><div class="tap" id="tap"></div>
 </div></div></div>
 <div id="end"><img src="${uri(icon, "image/png")}"><div class="name">PAOK<span>alendar</span></div>
@@ -222,7 +222,7 @@ await stage.evaluate(({ IMGS, clockTime, dateText, scoreLine, DSF, lock }) => {
   if (lock) {
     const l = document.getElementById("lock");
     l.classList.add("own"); l.style.backgroundImage = `url(${lock})`;
-    document.getElementById("notif").style.setProperty("--ny", "365px");
+    l.style.setProperty("--ny", "365px");
   }
   document.querySelector("#lock .clock").textContent = clockTime;
   document.querySelector("#lock .date").textContent = dateText.replace(/^./, (c) => c.toUpperCase());
@@ -256,6 +256,7 @@ await stage.evaluate(({ IMGS, clockTime, dateText, scoreLine, DSF, lock }) => {
       const n = ease((t - 0.35) / 0.45);
       const notif = document.getElementById("notif");
       notif.style.transform = `translateY(${(1 - n) * -260}px) scale(${0.9 + 0.1 * n})`; notif.style.opacity = n;
+      document.getElementById("example").style.opacity = ease((t - 0.9) / 0.4);
     }
     // Οθόνες της εφαρμογής, με κύλιση.
     const a = document.getElementById("a"), b = document.getElementById("b");
@@ -292,7 +293,7 @@ await stage.evaluate(({ IMGS, clockTime, dateText, scoreLine, DSF, lock }) => {
     if (z.length === 1) s = z[0][1];
     const cx = sc.zoomOn ? SX + sc.zoomOn.x * K : 540, cy = sc.zoomOn ? SY + sc.zoomOn.y * K : 1180;
     const tx = 540 - cx * s, ty = (sc.zoomOn ? 1250 : 1180) - cy * s;
-    const k = sc.zoomOn ? ease(t / 0.6) : 0;
+    const k = sc.zoomOn ? ease(t / 0.8) : 0;
     const st = document.getElementById("stage");
     if (sc.zoomOn) st.style.transform = `translate(${tx * k}px,${ty * k + (1 - k) * 0}px) scale(${1 + (s - 1) * k})`;
     else st.style.transform = `translate(${540 - 540 * s}px,${1060 - 1060 * s}px) scale(${s})`;
@@ -320,8 +321,7 @@ if (only) {
       await stage.evaluate(([sc, t]) => frame(sc, t), [sc, f / FPS]);
       const jpg = await stage.screenshot({ type: "jpeg", quality: 92 });
       if (!ff.stdin.write(jpg)) await new Promise((r) => ff.stdin.once("drain", r));
-      if (sc.name === "4-live" && f === Math.round(2.6 * FPS)) fs.writeFileSync(path.join(OUT, "cover.jpg"), jpg);
-    }
+          }
     ff.stdin.end();
     const code = await new Promise((r) => ff.on("close", r));
     if (code !== 0) throw new Error(`ffmpeg ${sc.name}: ${code}`);
@@ -330,7 +330,7 @@ if (only) {
     console.log(sc.name, n, "καρέ");
   }
   // Εξώφυλλο: η ειδοποίηση στην κλειδωμένη οθόνη.
-  await stage.evaluate(([sc]) => frame(sc, 2.2), [scenes[0]]);
+  await stage.evaluate(([sc]) => frame(sc, 2.6), [scenes[0]]);
   fs.writeFileSync(path.join(OUT, "cover.jpg"), await stage.screenshot({ type: "jpeg", quality: 92 }));
   fs.writeFileSync(path.join(OUT, "list.txt"), files.map((f) => `file '${f}'`).join("\n"));
   execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", path.join(OUT, "list.txt"), "-c", "copy",

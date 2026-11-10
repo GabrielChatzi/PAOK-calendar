@@ -79,7 +79,8 @@ console.log("Αγώνας:", match.home, "–", match.away, match.start);
 
 async function capture() {
   const match = pick();
-  const page = await browser.newPage({ viewport: { width: 440, height: 956 }, deviceScaleFactor: DSF, isMobile: true, hasTouch: true });
+  const page = await browser.newPage({ viewport: { width: 440, height: 956 }, deviceScaleFactor: DSF, isMobile: true, hasTouch: true,
+  timezoneId: "Europe/Athens", locale: "el-GR" });
   await page.route(/\/api\/|_vercel/, (r) => r.abort());
   const shot = async (opts = {}) => page.screenshot({ type: "jpeg", quality: 92, ...opts });
   const box = async (sel) => { const b = await page.locator(sel).first().boundingBox(); return b && { x: b.x + b.width / 2, y: b.y + b.height / 2 }; };

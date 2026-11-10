@@ -123,7 +123,7 @@ def euroleague_state(live: dict) -> dict:
     clock0 = str(h.get("RemainingPartialTime") or "").strip()
     if h.get("Live") and not (a or b) and (quarter < 1 or (quarter == 1 and clock0 in ("", "10:00"))):
         state = "pre"  # «Live» λίγα λεπτά πριν από το τζάμπολ (παρουσίαση ομάδων), χωρίς ρολόι και σκορ
-    elif h.get("Live"):
+    elif h.get("Live") and not euroleague_ended(h, a, b, quarter, clock0):
         state = "in"
     elif a or b:
         state = "post"
@@ -132,6 +132,17 @@ def euroleague_state(live: dict) -> dict:
     clock = str(h.get("RemainingPartialTime") or "").strip()
     detail = f"{quarter}η περίοδος {clock}".strip() if quarter >= 1 else ("Διάλειμμα" if state == "in" else "")
     return {"state": state, "home": a, "away": b, "quarter": quarter, "detail": detail}
+
+
+def euroleague_ended(h: dict, a: int, b: int, quarter: int, clock: str) -> bool:
+    """Τέλος αγώνα όσο η Euroleague δείχνει ακόμα «Live» (στο Balkan–ΠΑΟΚ έμεινε έτσι πάνω από μία ώρα):
+    χωρίς τρέχουσα περίοδο, ρολόι 00:00, χρόνος αγώνα 40:00 ή τέλος παράτασης (45:00, 50:00…) και όχι
+    ισοπαλία (τότε ακολουθεί παράταση). Στα διαλείμματα ο χρόνος είναι 10:00/20:00/30:00."""
+    m = re.fullmatch(r"(\d+):(\d\d)", str(h.get("GameTime") or "").strip())
+    if not m or quarter or clock not in ("00:00", "0:00", ""):
+        return False
+    mins, secs = int(m.group(1)), int(m.group(2))
+    return secs == 0 and mins >= 40 and (mins - 40) % 5 == 0 and a != b
 
 
 def track_periods(old: dict | None, new: dict) -> None:

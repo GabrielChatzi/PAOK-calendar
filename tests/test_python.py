@@ -95,6 +95,15 @@ class Euroleague(unittest.TestCase):
         self.assertEqual(self.state({"Live": True, "ScoreA": "2", "ScoreB": "0", "Quarter": "1"}), "in")
         self.assertEqual(self.state({"Live": True, "ScoreA": "40", "ScoreB": "38", "Quarter": "0"}), "in")  # ημίχρονο
 
+    def test_final_while_still_live(self):
+        # Balkan–ΠΑΟΚ 56-79, 10/11/2026: «Live» και Quarter "" για πάνω από μία ώρα μετά το τέλος.
+        end = {"Live": True, "ScoreA": "56", "ScoreB": "79", "Quarter": "", "GameTime": "40:00", "RemainingPartialTime": "00:00"}
+        self.assertEqual(self.state(end), "post")
+        self.assertEqual(self.state(dict(end, GameTime="30:00")), "in")                          # διάλειμμα 3ης-4ης
+        self.assertEqual(self.state(dict(end, ScoreA="79")), "in")                               # ισοπαλία: παράταση
+        self.assertEqual(self.state(dict(end, ScoreA="85", ScoreB="83", GameTime="45:00")), "post")  # μετά την παράταση
+        self.assertEqual(self.state(dict(end, Quarter="4", RemainingPartialTime="00:12", GameTime="39:48")), "in")
+
 
 class Football(unittest.TestCase):
     def espn(self, name, state, home=0, away=0, pens=None):

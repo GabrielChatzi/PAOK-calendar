@@ -525,6 +525,9 @@
   .stats-head { display: grid; grid-template-columns: 1fr 1fr; font-weight: 600; border-bottom: 2px solid var(--ink); padding-bottom: 6px; }
   .stats-head span:last-child { text-align: right; }
   h4.box-team { margin: 18px 0 4px; font-size: 16px; }
+  /* Χωρίς το περιθώριο του .table-wrap: η στήλη του ονόματος κολλά στην άκρη και δεν φαίνεται τίποτα αριστερά της. */
+  .table-wrap.box-wrap { margin: 0; padding: 0; }
+  table.st.box td.name, table.st.box th:first-child { box-shadow: 1px 0 0 var(--rule); }
   table.st.box th, table.st.box td { padding-left: 5px; padding-right: 5px; }
   table.st.box th:nth-child(2) { text-align: right; }
   table.st.box th:first-child, table.st.box td.name { text-align: left; position: sticky; left: 0; background: var(--paper); }
@@ -2040,7 +2043,7 @@
           esc(r.name) + (r.mark ? " " + r.mark : "") + "</td>" + cells(r) + "</tr>";
       }).join("");
       var tot = t[1].tot ? '<tr class="tot"><td class="name">Σύνολο</td>' + cells(t[1].tot) + "</tr>" : "";
-      return '<h4 class="box-team">' + esc(t[0]) + '</h4><div class="table-wrap"><table class="st box"><thead>' + head + "</thead><tbody>" + rows + tot + "</tbody></table></div>";
+      return '<h4 class="box-team">' + esc(t[0]) + '</h4><div class="table-wrap box-wrap"><table class="st box"><thead>' + head + "</thead><tbody>" + rows + tot + "</tbody></table></div>";
     }).join("") + (b.legend ? '<p class="help box-legend">' + esc(b.legend) + "</p>" : "");
   }
 

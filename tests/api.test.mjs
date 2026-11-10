@@ -87,13 +87,14 @@ test("Genius: στην αρχή της 3ης, done = 2 (όχι «Τέλος 3η�
   const widget = `var html = ${JSON.stringify('<li class="spls_lsmatch "><a href="http://www.fibalivestats.com/webcast/ESAKE/9/"><span class="spls_matchstatus">Live</span><span class="teamname">IRA</span><span class="teamname">PBC</span></a></li>')};\n`;
   mockFetch([
     [/widget/, widget],
-    [/data\/9\/data\.json/, { period: 3, clock: "09:50", tm: { 1: { name: "Iraklis BC", score: 31 }, 2: { name: "PAOK BC", score: 36 } },
+    [/data\/9\/data\.json/, { period: 3, clock: "09:50", tm: { 1: { name: "Iraklis BC", score: 31, fouls: 1 }, 2: { name: "PAOK BC", score: 36, fouls: 3 } },
       pbp: [{ actionType: "period", subType: "end", period: 2, s1: "31", s2: "36" }] }],
   ]);
   const today = new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Athens" });
   const { body } = await call(live, { src: "gs", key: "K", day: today, side: "a" });
   assert.equal(body.state, "in");
   assert.equal(body.done, 2);
+  assert.deepEqual(body.fouls, [1, 3]);  // ομαδικά φάουλ της περιόδου, γηπεδούχος πρώτος
 });
 
 test("Genius: στατιστικά παικτών και ομάδας (box), χωρίς όσους δεν αγωνίστηκαν", async () => {

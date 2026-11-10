@@ -308,6 +308,8 @@ async function gs(p) {
     clock: state === "in" && !periodEnded ? String(j.clock || "") : "",
     quarters: state === "pre" ? [] : quarters, off,
     box: state === "pre" ? null : { home: gsTeam(j.tm?.[A]), away: gsTeam(j.tm?.[B]) },
+    // Ομαδικά φάουλ της περιόδου σε εξέλιξη (tm.fouls· τα συνολικά είναι στο box).
+    fouls: state === "in" ? [num(j.tm?.[A]?.fouls) ?? 0, num(j.tm?.[B]?.fouls) ?? 0] : null,
   };
 }
 

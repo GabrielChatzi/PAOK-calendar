@@ -1,0 +1,66 @@
+{
+ "menuBtn": {
+  "x": 401,
+  "y": 80.421875
+ },
+ "sectionLink": {
+  "x": 163.5,
+  "y": 160.25
+ },
+ "sectionScroll": 769,
+ "matchLink": {
+  "x": 190,
+  "y": 1127.65625
+ },
+ "notifyTop": 481,
+ "notifyBtn": {
+  "x": 78.5,
+  "y": 429
+ },
+ "sw": {
+  "Όλα για αυτό το ματς": {
+   "x": 397,
+   "y": 625.484375
+  },
+  "Πριν τον αγώνα": {
+   "x": 397,
+   "y": 694.28125
+  },
+  "Αλλαγή ημέρας ή ώρας": {
+   "x": 397,
+   "y": 763.078125
+  },
+  "Live": {
+   "x": 397,
+   "y": 831.875
+  },
+  "Τελικό αποτέλεσμα": {
+   "x": 397,
+   "y": 900.671875
+  }
+ },
+ "match": {
+  "section": "football",
+  "uid": "football-espn-401896724",
+  "home": "ΠΑΟΚ",
+  "away": "Κηφισιά",
+  "venue": "Τούμπα",
+  "competition": "Super League",
+  "round": "",
+  "score": "",
+  "tv": "",
+  "url": "https://www.espn.com/soccer/match/_/gameId/401896724",
+  "live": {
+   "src": "espn",
+   "league": "gre.1",
+   "id": "401896724"
+  },
+  "start": "2026-11-22T19:30:00+02:00",
+  "timeKnown": true,
+  "paokHome": true,
+  "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+  "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/21969.png",
+  "tvUrl": "",
+  "nt": "fa0f340773"
+ }
+}

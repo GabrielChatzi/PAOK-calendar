@@ -238,7 +238,7 @@ await stage.evaluate(({ IMGS, clockTime, dateText, scoreLine, goalTitle, DSF, lo
   if (lock) {
     const l = document.getElementById("lock");
     l.classList.add("own"); l.style.backgroundImage = `url(${lock})`;
-    l.style.setProperty("--ny", "365px");
+    l.style.setProperty("--ny", "392px");
   }
   document.querySelector("#lock .clock").textContent = clockTime;
   document.querySelector("#lock .date").textContent = dateText.replace(/^./, (c) => c.toUpperCase());

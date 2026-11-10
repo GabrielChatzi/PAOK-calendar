@@ -20,12 +20,20 @@ import { chromium } from "./fixtures.mjs";
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const DOCS = path.join(HERE, "..", "docs");
 const W = 1080, H = 1920, FPS = 30, DSF = 3;
-const args = Object.fromEntries(process.argv.slice(2).join(" ").split("--").filter(Boolean).map((a) => a.trim().split(/\s+/)));
+// --όνομα τιμή (η τιμή μπορεί να έχει κενά: --date "Κυρ 8 Νοε").
+const args = {};
+for (let i = 2; i < process.argv.length; i++) {
+  const a = process.argv[i];
+  if (a.startsWith("--")) args[a.slice(2)] = process.argv[i + 1] && !process.argv[i + 1].startsWith("--") ? process.argv[++i] : true;
+}
 const OUT = path.resolve(args.out || "out/reel");
 // Προαιρετικά: στιγμιότυπα της κλειδωμένης και της αρχικής οθόνης ενός iPhone (1320×2868), με το
 // εικονίδιο του PAOKalendar. --icon x,y: το κέντρο του εικονιδίου σε px της αρχικής οθόνης.
 const LOCK = args.lock && fs.readFileSync(args.lock), HOMESCREEN = args.home && fs.readFileSync(args.home);
-const ICON_AT = (args.icon || "1010,1470").split(",").map(Number);
+const ICON_AT = (args.icon || "1125,1637").split(",").map(Number);
+// Η ειδοποίηση και η ώρα στο κινητό (π.χ. από πραγματικό γκολ): --goal "Ολυμπιακός 1–1 ΠΑΟΚ"
+// --goal-body "71' Ζίβκοβιτς" --clock 22:31 --date "Κυρ 8 Νοε". Χωρίς αυτά: ένα 1–0 στον αγώνα του Reel.
+const GOAL = args.goal, GOAL_BODY = args["goal-body"] || "", CLOCK = args.clock, DATE = args.date;
 fs.mkdirSync(OUT, { recursive: true });
 
 const font = (fam, file, w) =>
@@ -103,7 +111,8 @@ async function capture() {
   const sectionTop = await shot({ fullPage: true });
   const matchLink = await page.evaluate((nt) => {
     const r = document.querySelector(`a[href="#/m/${nt}"]`).getBoundingClientRect();
-    return { x: r.left + r.width / 2, y: r.top + window.scrollY + r.height / 2 };
+    const name = document.querySelector(`a[href="#/m/${nt}"] .teams, a[href="#/m/${nt}"] strong`)?.getBoundingClientRect() || r;
+  return { x: name.left + Math.min(name.width, 160) / 2 + 10, y: r.top + window.scrollY + r.height / 2 };
   }, match.nt);
 
   await page.goto(base + "#/m/" + match.nt); await settle();
@@ -174,7 +183,11 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#0a0a0a}
 .tap{position:absolute;width:120px;height:120px;margin:-60px 0 0 -60px;border-radius:50%;border:8px solid rgba(255,255,255,.95);
   background:rgba(0,0,0,.28);box-shadow:0 0 0 4px rgba(0,0,0,.35);z-index:4}
 #lock{position:absolute;inset:0;background:linear-gradient(180deg,#1b1b1b,#050505) center/cover;display:none}
-#lock.own .st,#lock.own .date,#lock.own .clock{display:none}
+#lock.own .st{display:none}
+#lock.own .date{top:134px;font:600 33px Inter,F;color:rgba(255,255,255,.92)}
+#lock.own .clock{top:168px;font:700 200px/1 "Inter Display",Inter,F;letter-spacing:-6px;color:rgba(214,220,226,.74);
+  text-shadow:0 2px 18px rgba(0,0,0,.25)}
+#sbtime{position:absolute;left:56px;top:28px;width:100px;text-align:center;font:600 27px Inter,F;color:#fff;display:none;z-index:2}
 #lock .st{position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 38px,transparent 38px 76px)}
 #lock .date{position:absolute;top:170px;width:100%;text-align:center;color:#ddd;font:700 40px F}
 #lock .clock{position:absolute;top:210px;width:100%;text-align:center;color:#fff;font:800 230px/1 F;letter-spacing:-4px}
@@ -201,8 +214,8 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><style>${css}</st
   <img id="a"><img id="b">
   <div id="lock"><div class="st"></div><div class="date"></div><div class="clock"></div>
     <div id="notif"><img src="${uri(icon, "image/png")}"><div style="flex:1"><div class="h"><span>PAOKalendar</span><span>τώρα</span></div>
-    <div class="t">ΓΚΟΛ ΤΟΥ ΠΑΟΚ!</div><div class="b"></div></div></div><div id="example">Παράδειγμα ειδοποίησης</div></div>
-  <div id="island"></div><div class="tap" id="tap"></div>
+    <div class="t">ΓΚΟΛ ΤΟΥ ΠΑΟΚ!</div><div class="b"></div></div></div></div>
+  <div id="sbtime"></div><div id="island"></div><div class="tap" id="tap"></div>
 </div></div></div>
 <div id="end"><img src="${uri(icon, "image/png")}"><div class="name">PAOK<span>alendar</span></div>
   <div class="sub">ΟΛΑ ΤΑ ΤΜΗΜΑΤΑ, ΑΝΔΡΩΝ ΚΑΙ ΓΥΝΑΙΚΩΝ</div><div class="url">paokalendar.gr</div>
@@ -213,11 +226,14 @@ const IMGS = { homescreen: HOMESCREEN ? uri(HOMESCREEN, "image/png") : "", home:
 const clockTime = new Intl.DateTimeFormat("el-GR", { timeZone: "Europe/Athens", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })
   .format(new Date(new Date(match.start).getTime() + 23 * 60000));
 const dateText = new Intl.DateTimeFormat("el-GR", { timeZone: "Europe/Athens", weekday: "long", day: "numeric", month: "long" }).format(new Date(match.start));
-const scoreLine = match.paokHome ? `ΠΑΟΚ 1–0 ${opponent}` : `${opponent} 0–1 ΠΑΟΚ`;
+const scoreLine = GOAL ? GOAL_BODY : match.paokHome ? `ΠΑΟΚ 1–0 ${opponent}` : `${opponent} 0–1 ΠΑΟΚ`;
+const goalTitle = GOAL ? `ΓΚΟΛ ΤΟΥ ΠΑΟΚ! ${GOAL}` : "ΓΚΟΛ ΤΟΥ ΠΑΟΚ!";
 
 const stage = await browser.newPage({ viewport: { width: W, height: H } });
 await stage.setContent(html);
-await stage.evaluate(({ IMGS, clockTime, dateText, scoreLine, DSF, lock }) => {
+await stage.evaluate(({ IMGS, clockTime, dateText, scoreLine, goalTitle, DSF, lock }) => {
+  document.querySelector("#notif .t").textContent = goalTitle;
+  document.getElementById("sbtime").textContent = clockTime;
   window.IMGS = IMGS; window.DSF = DSF;
   if (lock) {
     const l = document.getElementById("lock");
@@ -256,7 +272,7 @@ await stage.evaluate(({ IMGS, clockTime, dateText, scoreLine, DSF, lock }) => {
       const n = ease((t - 0.35) / 0.45);
       const notif = document.getElementById("notif");
       notif.style.transform = `translateY(${(1 - n) * -260}px) scale(${0.9 + 0.1 * n})`; notif.style.opacity = n;
-      document.getElementById("example").style.opacity = ease((t - 0.9) / 0.4);
+
     }
     // Οθόνες της εφαρμογής, με κύλιση.
     const a = document.getElementById("a"), b = document.getElementById("b");
@@ -272,6 +288,7 @@ await stage.evaluate(({ IMGS, clockTime, dateText, scoreLine, DSF, lock }) => {
       return y;
     };
     const cur = list[i], prev = list[i - 1];
+    document.getElementById("sbtime").style.display = cur && cur.src === "homescreen" ? "block" : "none";
     const fade = cur && prev && cur.fade !== 0 ? Math.min(1, (t - cur.t) / 0.15) : 1;
     place(b, fade < 1 ? prev : null);
     const y = place(a, cur);
@@ -298,7 +315,7 @@ await stage.evaluate(({ IMGS, clockTime, dateText, scoreLine, DSF, lock }) => {
     if (sc.zoomOn) st.style.transform = `translate(${tx * k}px,${ty * k + (1 - k) * 0}px) scale(${1 + (s - 1) * k})`;
     else st.style.transform = `translate(${540 - 540 * s}px,${1060 - 1060 * s}px) scale(${s})`;
   };
-}, { IMGS, clockTime, dateText, scoreLine, DSF, lock: LOCK ? uri(LOCK, "image/png") : "" });
+}, { IMGS, clockTime: CLOCK || clockTime, dateText: DATE || dateText, scoreLine, goalTitle, DSF, lock: LOCK ? uri(LOCK, "image/png") : "" });
 await stage.evaluate(() => document.fonts.ready);
 
 // ---------------------------------------------------------------- 3. καρέ → βίντεο

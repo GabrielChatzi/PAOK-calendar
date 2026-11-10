@@ -218,7 +218,29 @@ async function gs(p) {
     done: state === "post" ? period : periodEnded ? period : Math.max(0, period - 1),
     clock: state === "in" && !periodEnded ? String(j.clock || "") : "",
     quarters: state === "pre" ? [] : quarters, off,
+    box: state === "pre" ? null : { home: gsTeam(j.tm?.[A]), away: gsTeam(j.tm?.[B]) },
   };
+}
+
+// Στατιστικά παικτών και ομάδας από το data.json της Genius (πεδία s…, και tot_s… για την ομάδα),
+// στην κοινή μορφή που δείχνει η σελίδα αγώνα. Όσοι δεν αγωνίστηκαν (χωρίς λεπτά) μένουν έξω.
+const GS_KEYS = { pts: "Points", m2: "TwoPointersMade", a2: "TwoPointersAttempted", m3: "ThreePointersMade",
+  a3: "ThreePointersAttempted", mf: "FreeThrowsMade", af: "FreeThrowsAttempted", reb: "ReboundsTotal", ast: "Assists",
+  stl: "Steals", tov: "Turnovers", blk: "Blocks", pf: "FoulsPersonal" };
+export function gsTeam(t) {
+  if (!t || typeof t !== "object") return null;
+  const players = Object.values(t.pl || {}).map((p) => {
+    const row = { no: String(p.shirtNumber ?? ""), starter: !!num(p.starter),
+      name: [p.firstName ? p.firstName.trim()[0] + "." : "", p.familyName || ""].join(" ").trim() || p.scoreboardName || p.name || "",
+      min: String(p.sMinutes || "").replace(/^(\d+:\d+)(:\d+)?$/, "$1") };
+    for (const [k, f] of Object.entries(GS_KEYS)) row[k] = num(p["s" + f]) ?? 0;
+    return row;
+  }).filter((r) => r.name && r.min && !/^0?0:00$/.test(r.min));
+  const tot = {};
+  for (const [k, f] of Object.entries(GS_KEYS)) {
+    tot[k] = num(t["tot_s" + f]) ?? players.reduce((n, r) => n + r[k], 0);
+  }
+  return { players, tot };
 }
 
 // ---- Χάντμπολ, ευρωπαϊκά (EHF): οι λεπτομέρειες αγώνα του eurohandball.com.

@@ -96,6 +96,27 @@ test("Genius: στην αρχή της 3ης, done = 2 (όχι «Τέλος 3η�
   assert.equal(body.done, 2);
 });
 
+test("Genius: στατιστικά παικτών και ομάδας (box), χωρίς όσους δεν αγωνίστηκαν", async () => {
+  const widget = `var html = ${JSON.stringify('<li class="spls_lsmatch "><a href="http://www.fibalivestats.com/webcast/ESAKE/9/"><span class="spls_matchstatus">Final</span><span class="spls_datefield">8 Nov 2026</span><span class="teamname">PBC</span><span class="teamname">ARI</span></a></li>')};\n`;
+  const pl = (o) => ({ firstName: "Nikos", familyName: "Papas", shirtNumber: 7, starter: 1, sMinutes: "25:13", sPoints: 18,
+    sTwoPointersMade: 3, sTwoPointersAttempted: 6, sThreePointersMade: 3, sThreePointersAttempted: 5, sFreeThrowsMade: 3,
+    sFreeThrowsAttempted: 4, sReboundsTotal: 5, sAssists: 4, sSteals: 1, sTurnovers: 2, sBlocks: 0, sFoulsPersonal: 3, ...o });
+  mockFetch([
+    [/widget/, widget],
+    [/data\/9\/data\.json/, { period: 4, tm: {
+      1: { name: "PAOK BC", score: 80, tot_sPoints: 80, tot_sTwoPointersMade: 20, tot_sTwoPointersAttempted: 40,
+        pl: { 1: pl(), 2: pl({ familyName: "Bench", starter: 0, sMinutes: "0:00", sPoints: 0 }) } },
+      2: { name: "Aris", score: 70, pl: { 1: pl({ familyName: "Other", sPoints: 9 }) } } },
+      pbp: [{ actionType: "game", subType: "end", period: 4, s1: "80", s2: "70" }] }],
+  ]);
+  const { body } = await call(live, { src: "gs", key: "K", day: "2026-11-08", side: "h" });
+  assert.equal(body.state, "post");
+  assert.deepEqual(body.box.home.players.map((p) => [p.name, p.no, p.starter, p.min, p.pts, p.m3]), [["N. Papas", "7", true, "25:13", 18, 3]]);
+  assert.equal(body.box.home.tot.pts, 80);       // από τα tot_s… της ομάδας
+  assert.equal(body.box.home.tot.m2, 20);
+  assert.equal(body.box.away.tot.pts, 9);        // χωρίς tot_s…: άθροισμα των παικτών
+});
+
 test("EHF: ημίχρονο από το σκορ ημιχρόνου, τέλος από isFinished", async () => {
   mockFetch([[/GetMatchDetails/, { matchDetails: { details: { isFinished: true, scoreDetails: "(14:16)" },
     statistics: { state: 2, homeStatistics: { totalGoals: 23 }, guestStatistics: { totalGoals: 33 } } } }]]);

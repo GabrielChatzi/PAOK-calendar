@@ -524,6 +524,16 @@
   .bar i { display: block; height: 6px; background: var(--ink); }
   .stats-head { display: grid; grid-template-columns: 1fr 1fr; font-weight: 600; border-bottom: 2px solid var(--ink); padding-bottom: 6px; }
   .stats-head span:last-child { text-align: right; }
+  h4.box-team { margin: 18px 0 4px; font-size: 16px; }
+  table.st.box th, table.st.box td { padding-left: 5px; padding-right: 5px; }
+  table.st.box th:nth-child(2) { text-align: right; }
+  table.st.box th:first-child, table.st.box td.name { text-align: left; position: sticky; left: 0; background: var(--paper); }
+  table.st.box td.name { min-width: 120px; max-width: 170px; white-space: normal; line-height: 1.25; }
+  table.st.box td.name small { color: var(--muted); margin-right: 4px; font-variant-numeric: tabular-nums; }
+  table.st.box tr.starter td.name { font-weight: 600; }
+  table.st.box td.hi { font-weight: 700; }
+  table.st.box tr.tot td { font-weight: 600; border-top: 2px solid var(--ink); }
+  .box-legend { margin-top: 6px; }
   dl.info { display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; margin: 0; border-top: 2px solid var(--ink); padding-top: 10px; }
   dl.info dt { color: var(--muted); }
   dl.info dd { margin: 0; }
@@ -2002,12 +2012,100 @@
     return "<h3>Στατιστικά</h3>" +
       '<div class="stats-head"><span>' + esc(m.home) + "</span><span>" + esc(m.away) + "</span></div>" +
       det.stats.map(function (st) {
-        var h = parseFloat(st.home) || 0, a = parseFloat(st.away) || 0, tot = h + a;
+        var h = st.bar ? st.bar[0] : parseFloat(st.home) || 0, a = st.bar ? st.bar[1] : parseFloat(st.away) || 0, tot = h + a;
         var hp = tot ? Math.round(h / tot * 100) : 50;
         return '<div class="stat"><div class="stat-top"><span>' + esc(st.home) + "</span><span>" + esc(st.label) +
           "</span><span>" + esc(st.away) + '</span></div><div class="bar" style="grid-template-columns:' + hp + "fr " + (100 - hp) +
           'fr"><i></i><span></span></div></div>';
       }).join("");
+  }
+
+  // Στατιστικά παικτών: ένας πίνακας ανά ομάδα. det.box = { cols: [[κλειδί, τίτλος, εξήγηση]], legend,
+  // home/away: { players: [{ no, name, starter, … }], tot } } (tot: η γραμμή «Σύνολο», αν υπάρχει).
+  function boxHtml(m, det) {
+    var b = det.box;
+    if (!b || !b.cols) return "";  // χωρίς στήλες: μόνο τα ονόματα (συνθέσεις)
+    var teams = [[m.home, b.home], [m.away, b.away]].filter(function (t) { return t[1] && t[1].players && t[1].players.length; });
+    if (!teams.length) return "";
+    var head = "<tr><th></th>" + b.cols.map(function (c) { return '<th title="' + esc(c[2] || c[1]) + '">' + esc(c[1]) + "</th>"; }).join("") + "</tr>";
+    function cells(r) {
+      return b.cols.map(function (c) {
+        var v = r[c[0]];
+        return "<td" + (c[3] && r.hi === c[0] ? ' class="hi"' : "") + ">" + (v == null || v === "" ? "–" : esc(String(v))) + "</td>";
+      }).join("");
+    }
+    return "<h3>" + esc(b.title || "Παίκτες") + "</h3>" + teams.map(function (t) {
+      var rows = t[1].players.map(function (r) {
+        return '<tr class="' + (r.starter ? "starter" : "") + '"><td class="name">' + (r.no !== "" && r.no != null ? "<small>" + esc(r.no) + "</small>" : "") +
+          esc(r.name) + (r.mark ? " " + r.mark : "") + "</td>" + cells(r) + "</tr>";
+      }).join("");
+      var tot = t[1].tot ? '<tr class="tot"><td class="name">Σύνολο</td>' + cells(t[1].tot) + "</tr>" : "";
+      return '<h4 class="box-team">' + esc(t[0]) + '</h4><div class="table-wrap"><table class="st box"><thead>' + head + "</thead><tbody>" + rows + tot + "</tbody></table></div>";
+    }).join("") + (b.legend ? '<p class="help box-legend">' + esc(b.legend) + "</p>" : "");
+  }
+
+  // Μπάσκετ (Euroleague και Genius Sports, κοινή μορφή): στατιστικά ομάδας και πίνακας παικτών.
+  // Γραμμή παίκτη/ομάδας: { pts, m2, a2, m3, a3, mf, af, reb, ast, stl, tov, blk, pf, pir? }.
+  function pct(md, at) { return at ? Math.round(md / at * 100) : 0; }
+  function basketBox(home, away, withPir) {
+    if (!home || !away) return { stats: [], box: null };
+    var H = home.tot, A = away.tot;
+    var stats = [["m2", "a2", "Δίποντα"], ["m3", "a3", "Τρίποντα"], ["mf", "af", "Βολές"]].map(function (x) {
+      return { label: x[2], home: H[x[0]] + "/" + H[x[1]] + " · " + pct(H[x[0]], H[x[1]]) + "%",
+               away: A[x[0]] + "/" + A[x[1]] + " · " + pct(A[x[0]], A[x[1]]) + "%", bar: [H[x[0]], A[x[0]]] };
+    }).concat([["reb", "Ριμπάουντ"], ["ast", "Ασίστ"], ["stl", "Κλεψίματα"], ["tov", "Λάθη"], ["blk", "Κοψίματα"], ["pf", "Φάουλ"]].map(function (x) {
+      return { label: x[1], home: String(H[x[0]]), away: String(A[x[0]]) };
+    }));
+    function row(r) {
+      return { no: r.no, name: r.name, starter: r.starter, min: r.min, pts: r.pts, s2: r.m2 + "/" + r.a2, s3: r.m3 + "/" + r.a3,
+               ft: r.mf + "/" + r.af, reb: r.reb, ast: r.ast, stl: r.stl, tov: r.tov, blk: r.blk, pf: r.pf, pir: r.pir };
+    }
+    function team(t) {
+      var players = t.players.map(row), top = Math.max.apply(null, players.map(function (r) { return r.pts; }).concat([1]));
+      players.forEach(function (r) { if (r.pts === top) r.hi = "pts"; });
+      var tot = row(t.tot);
+      tot.min = "";
+      return { players: players, tot: tot };
+    }
+    var cols = [["min", "Λεπ", "Λεπτά"], ["pts", "Π", "Πόντοι", true], ["s2", "2Π", "Δίποντα εύστοχα/προσπάθειες"],
+      ["s3", "3Π", "Τρίποντα εύστοχα/προσπάθειες"], ["ft", "Βολ", "Βολές εύστοχες/προσπάθειες"], ["reb", "Ριμ", "Ριμπάουντ"],
+      ["ast", "Ασ", "Ασίστ"], ["stl", "Κλ", "Κλεψίματα"], ["tov", "Λαθ", "Λάθη"], ["blk", "Κοψ", "Κοψίματα"], ["pf", "Φ", "Φάουλ"]];
+    if (withPir) cols.push(["pir", "PIR", "Δείκτης αξιολόγησης"]);
+    return { stats: stats, box: { cols: cols, home: team(home), away: team(away),
+      legend: "Λεπ λεπτά · Π πόντοι · 2Π/3Π/Βολ εύστοχα/προσπάθειες · Ριμ ριμπάουντ · Ασ ασίστ · Κλ κλεψίματα · Λαθ λάθη · Κοψ κοψίματα · Φ φάουλ" +
+        (withPir ? " · PIR αξιολόγηση" : "") + ". Με έντονα όσοι ξεκίνησαν." } };
+  }
+
+  // Euroleague: «ΕΠΩΝΥΜΟ, ΟΝΟΜΑ» → «Ο. Επώνυμο».
+  function elName(s) {
+    function cap(w) { return w.toLowerCase().replace(/(^|[\s'-])(\S)/g, function (x, a, c) { return a + c.toUpperCase(); }); }
+    var p = String(s || "").split(",");
+    return p.length > 1 ? (p[1].trim() ? p[1].trim()[0].toUpperCase() + ". " : "") + cap(p[0].trim()) : cap(p[0].trim());
+  }
+  function elTeam(t) {
+    if (!t) return null;
+    function n(x) { return +x || 0; }
+    function line(p) {
+      return { pts: n(p.Points), m2: n(p.FieldGoalsMade2), a2: n(p.FieldGoalsAttempted2), m3: n(p.FieldGoalsMade3),
+        a3: n(p.FieldGoalsAttempted3), mf: n(p.FreeThrowsMade), af: n(p.FreeThrowsAttempted), reb: n(p.TotalRebounds),
+        ast: n(p.Assistances), stl: n(p.Steals), tov: n(p.Turnovers), blk: n(p.BlocksFavour), pf: n(p.FoulsCommited), pir: n(p.Valuation) };
+    }
+    var players = (t.PlayersStats || []).filter(function (p) {
+      return p.Minutes && !/DNP/i.test(p.Minutes) && !/^0?0:00$/.test(String(p.Minutes).trim());
+    }).map(function (p) {
+      var r = line(p);
+      r.no = String(p.Dorsal == null ? "" : p.Dorsal).trim(); r.name = elName(p.Player); r.starter = !!+p.IsStarter;
+      r.min = String(p.Minutes).trim();
+      return r;
+    });
+    var tot = t.totr ? line(t.totr) : null;
+    if (!tot) {
+      tot = {};
+      ["pts", "m2", "a2", "m3", "a3", "mf", "af", "reb", "ast", "stl", "tov", "blk", "pf", "pir"].forEach(function (k) {
+        tot[k] = players.reduce(function (s, r) { return s + r[k]; }, 0);
+      });
+    }
+    return { players: players, tot: tot };
   }
 
   function quartersHtml(m, det) {
@@ -2068,7 +2166,7 @@
     var body = "";
     var hasLive = !!m.live;
     if (hasLive && det) {
-      body += timelineHtml(m, det) + quartersHtml(m, det) + statsHtml(m, det);
+      body += timelineHtml(m, det) + quartersHtml(m, det) + statsHtml(m, det) + boxHtml(m, det);
       if (!body && det.state && det.state.state === "pre" && liveCandidate(m)) body = '<p class="loading">Ο αγώνας δεν έχει ξεκινήσει ακόμα. Το σκορ θα ανανεώνεται εδώ μόλις αρχίσει.</p>';
       if (det.sourceNote) body += '<p class="help source-note">' + esc(det.sourceNote) + "</p>";
     } else if (hasLive && (live || liveCandidate(m))) {
@@ -2373,8 +2471,35 @@
   var detail = {};
   var ESPN_STATS = [
     ["possessionPct", "Κατοχή (%)"], ["totalShots", "Σουτ"], ["shotsOnTarget", "Στην εστία"],
-    ["wonCorners", "Κόρνερ"], ["foulsCommitted", "Φάουλ"], ["offsides", "Οφσάιντ"], ["saves", "Αποκρούσεις"]
+    ["wonCorners", "Κόρνερ"], ["foulsCommitted", "Φάουλ"], ["offsides", "Οφσάιντ"], ["saves", "Αποκρούσεις"],
+    ["yellowCards", "Κίτρινες κάρτες"], ["redCards", "Κόκκινες κάρτες"]
   ];
+  // Παίκτες από τις συνθέσεις του ESPN (rosters): όσοι ξεκίνησαν ή μπήκαν αλλαγή, με όσα στατιστικά δίνει.
+  var ESPN_PLAYER = [["totalGoals", "Γ", "Γκολ", true], ["goalAssists", "Ασ", "Ασίστ"], ["totalShots", "Σ", "Σουτ"],
+    ["shotsOnTarget", "Ε", "Σουτ στην εστία"], ["foulsCommitted", "Φ", "Φάουλ"], ["saves", "Απ", "Αποκρούσεις"]];
+  function espnBox(d, homeId) {
+    var teams = {}, seen = {};
+    (d.rosters || []).forEach(function (t) {
+      var side = t.homeAway || (t.team && String(t.team.id) === homeId ? "home" : "away");
+      var players = (t.roster || []).filter(function (p) {
+        var sub = p.subbedIn;
+        return p.starter || sub === true || (sub && typeof sub === "object" && sub.didSub);
+      }).map(function (p) {
+        var st = {};
+        (p.stats || []).forEach(function (x) { st[x.name] = x.value != null ? +x.value : parseFloat(x.displayValue); });
+        var r = { no: p.jersey || "", name: (p.athlete || {}).displayName || "", starter: !!p.starter,
+                  mark: (st.redCards > 0 ? "🟥" : st.yellowCards > 0 ? "🟨" : "") };
+        ESPN_PLAYER.forEach(function (c) { if (st[c[0]] != null && !isNaN(st[c[0]])) { r[c[0]] = st[c[0]]; seen[c[0]] = true; } });
+        if (r.totalGoals > 0) r.hi = "totalGoals";
+        return r;
+      });
+      teams[side] = { players: players };
+    });
+    if (!teams.home && !teams.away) return null;
+    var cols = ESPN_PLAYER.filter(function (c) { return seen[c[0]]; });
+    return { title: "Συνθέσεις", cols: cols, home: teams.home, away: teams.away,
+             legend: seen.totalGoals ? "Γ γκολ · Ασ ασίστ · Σ σουτ · Ε στην εστία · Φ φάουλ · Απ αποκρούσεις. Με έντονα η αρχική ενδεκάδα." : "Με έντονα η αρχική ενδεκάδα." };
+  }
   function fetchDetail(m) {
     var L = m.live || {};
     if (L.src === "espn") {
@@ -2406,8 +2531,9 @@
         var stats = ESPN_STATS.filter(function (x) {
           return byId[homeId] && byId[awayId] && byId[homeId][x[0]] != null && byId[awayId][x[0]] != null;
         }).map(function (x) { return { label: x[1], home: byId[homeId][x[0]], away: byId[awayId][x[0]] }; });
+        var box = st.state === "pre" ? null : espnBox(d, homeId);
         if (st.state === "pre") stats = [];
-        return { state: st, events: events, stats: stats };
+        return { state: st, events: events, stats: stats, box: box };
       });
     }
     if (L.src === "euroleague") {
@@ -2430,11 +2556,23 @@
         var ota = +h.ScoreExtraTimeA || 0, otb = +h.ScoreExtraTimeB || 0;
         if (ota || otb) quarters.push({ label: "Παρ.", home: ota > prevA ? ota - prevA : ota, away: otb > prevB ? otb - prevB : otb });
         if (st.state === "pre") quarters = [];
-        return {
+        var det = {
           state: st, quarters: quarters, home: st.home, away: st.away,
           fouls: st.state !== "pre" ? [h.FoultsA || 0, h.FoultsB || 0] : null,
           timeouts: [h.TimeoutsA || 0, h.TimeoutsB || 0]
         };
+        if (st.state === "pre") return det;
+        // Το boxscore (Stats: πρώτα η ομάδα A, όπως το ScoreA = γηπεδούχος). Αν αποτύχει, μένουν το σκορ και οι περίοδοι.
+        return fetch("https://live.euroleague.net/api/Boxscore?gamecode=" + encodeURIComponent(L.code) +
+          "&seasoncode=" + encodeURIComponent(L.season), { cache: "no-store" })
+          .then(function (r) { return r.text(); })
+          .then(function (t) {
+            var b = t.trim() ? JSON.parse(t) : {}, s = b.Stats || [];
+            var bb = basketBox(elTeam(s[0]), elTeam(s[1]), true);
+            det.stats = bb.stats; det.box = bb.box;
+            return det;
+          }, function () { return det; })
+          .catch(function () { return det; });
       });
     }
     if (API_LIVE.indexOf(L.src) >= 0) return waterpoloDetail(m);
@@ -2568,7 +2706,9 @@
           quarters.push({ label: i < n ? i + 1 + (halves ? "ο" : "η") : m.live.src === "gs" ? "Παρ." : "Πέν.", home: x ? x.home : "", away: x ? x.away : "" });
         }
       }
+      var bb = m.live.src === "gs" && j.box ? basketBox(j.box.home, j.box.away, false) : { stats: [], box: null };
       return { state: st, quarters: st.state === "pre" ? [] : quarters, home: st.home, away: st.away,
+               stats: st.state === "pre" ? [] : bb.stats, box: st.state === "pre" ? null : bb.box,
                periodTitle: m.live.src === "ehf" ? "Σκορ ανά ημίχρονο" : undefined,
                sourceNote: "Live από " + ({ koe: "την ΚΟΕ (live.koe.org.gr)", gs: "τη Genius Sports (επίσημα στατιστικά της Basket League)",
                  eok: "το livescore της ΕΟΚ (basket.gr)", ehf: "την EHF (eurohandball.com)" }[m.live.src] || "την European Aquatics") + "." };

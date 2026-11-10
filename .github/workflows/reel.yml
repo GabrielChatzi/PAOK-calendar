@@ -1,0 +1,41 @@
+name: Reel
+
+# Λήψεις της εφαρμογής για το Reel (social/reel.mjs --capture), στον κλάδο «reel-shots». Τις τραβάμε
+# εδώ γιατί εδώ φορτώνουν τα σήματα και οι γραμματοσειρές. Το μοντάζ γίνεται μετά με --from.
+on:
+  workflow_dispatch:
+    inputs:
+      nt:
+        description: "Αγώνας (nt). Κενό: ο επόμενος αγώνας ποδοσφαίρου με live."
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  shots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Playwright
+        run: |
+          npm i --no-save playwright@1.48.2
+          npx playwright install --with-deps chromium
+      - name: Δεδομένα
+        run: |
+          git fetch --depth=1 origin +refs/heads/data:refs/remotes/origin/data
+          for f in matches.json standings.json status.json; do git show "origin/data:$f" > "docs/$f"; done
+      - name: Λήψεις
+        run: node social/reel.mjs --capture "$RUNNER_TEMP/shots" ${{ inputs.nt && format('--nt {0}', inputs.nt) || '' }}
+      - name: Αποθήκευση στον κλάδο reel-shots
+        run: |
+          cd "$RUNNER_TEMP/shots"
+          git init -q -b reel-shots
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -qm "Λήψεις για το Reel"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" reel-shots

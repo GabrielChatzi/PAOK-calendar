@@ -2663,8 +2663,12 @@
   }
   function euroleagueState(h) {
     var a = parseInt(h.ScoreA, 10) || 0, b = parseInt(h.ScoreB, 10) || 0, q = parseInt(h.Quarter, 10) || 0;
-    var state = h.Live ? "in" : (a || b) ? "post" : "pre";
     var clock = String(h.RemainingPartialTime || "").trim();
+    // Τέλος ενώ η Euroleague γράφει ακόμα «Live» (ίδιος κανόνας με το live.py): χωρίς περίοδο, ρολόι 00:00,
+    // χρόνος αγώνα 40:00 ή τέλος παράτασης, όχι ισοπαλία.
+    var gt = /^(\d+):(\d\d)$/.exec(String(h.GameTime || "").trim());
+    var ended = !!gt && !q && /^(0?0:00)?$/.test(clock) && +gt[2] === 0 && +gt[1] >= 40 && (+gt[1] - 40) % 5 === 0 && a !== b;
+    var state = h.Live && !ended ? "in" : (a || b) ? "post" : "pre";
     var label = state === "post" ? "Τελικό" : q ? (q <= 4 ? q + "η περ." : "Παράτ.") + (clock ? " " + clock : "") : state === "in" ? "Διάλειμμα" : "Ξεκινά";
     return { state: state, home: a, away: b, label: label, quarter: q };
   }

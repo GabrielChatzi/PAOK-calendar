@@ -94,7 +94,7 @@ if (args.from) {
     await browser.close(); server.close(); process.exit(0);
   }
 }
-const { home, menu, sectionTop, matchOff, matchPre, matchLive, menuBtn, sectionLink, sectionScroll, matchLink, notifyTop, sw, match } = shots;
+const { home, menu, sectionTop, matchOff, matchPre, matchLive, menuBtn, sectionLink, sectionScroll, matchLink, notifyTop, notifyBtn, sw, match } = shots;
 const opponent = match.paokHome ? match.away : match.home;
 console.log("Αγώνας:", match.home, "–", match.away, match.start);
 
@@ -136,6 +136,10 @@ async function capture() {
     s.querySelectorAll(".switch").forEach((b) => { b.disabled = false; b.style.transition = "none"; });
   });
   const notifyTop = await page.evaluate(() => document.querySelector("#match-notify").getBoundingClientRect().top + scrollY);
+  const notifyBtn = await page.evaluate(() => {
+    const r = document.querySelector('a.btn[href$="/notify"]').getBoundingClientRect();
+    return { x: r.left + r.width / 2, y: r.top + scrollY + r.height / 2 };
+  });
   const sw = await page.evaluate(() => Object.fromEntries([...document.querySelectorAll("#match-notify .switch")].map((b) => {
     const r = b.getBoundingClientRect(); return [b.getAttribute("aria-label"), { x: r.left + r.width / 2, y: r.top + scrollY + r.height / 2 }];
   })));
@@ -146,7 +150,7 @@ async function capture() {
   const matchPre = await shot({ fullPage: true });
   await setOn(["Πριν τον αγώνα", "Live"]);
   const matchLive = await shot({ fullPage: true });
-  return { home, menu, sectionTop, matchOff, matchPre, matchLive, menuBtn, sectionLink, sectionScroll, matchLink, notifyTop, sw, match };
+  return { home, menu, sectionTop, matchOff, matchPre, matchLive, menuBtn, sectionLink, sectionScroll, matchLink, notifyTop, notifyBtn, sw, match };
 }
 const icon = fs.readFileSync(path.join(DOCS, "icons", "icon-192.png"));
 
@@ -167,14 +171,15 @@ const scenes = [
       { t: H0 + 2.5, src: "section", y0: 0, y1: sectionScroll, ys: H0 + 2.9, ye: H0 + 4.2 }],
     taps: [...(HOMESCREEN ? [{ t: 1.1, x: ICON_AT[0] / DSF, y: ICON_AT[1] / DSF }] : []), { t: H0 + 0.95, ...menuBtn },
       { t: H0 + 2.2, ...sectionLink }, { t: H0 + 4.85, x: matchLink.x, y: matchLink.y - sectionScroll }] },
-  { name: "3-notify", dur: 3.0, caption: ["2", "Πάτα «Ειδοποιήσεις»"],
-    screens: [{ t: 0, src: "matchOff", y0: 0, y1: scrollTo, ys: 0.8, ye: 2.3 }] },
-  { name: "4-live", dur: 4.6, caption: ["3", NOTIFS ? "Ειδοποίηση σε κάθε σκορ" : "Live σε κάθε γκολ"],
-    screens: [{ t: 0, src: "matchOff", y0: scrollTo, y1: scrollTo }, { t: 1.65, src: "matchPre", y0: scrollTo, y1: scrollTo, fade: 0 },
-      { t: 3.15, src: "matchLive", y0: scrollTo, y1: scrollTo, fade: 0 }],
-    taps: [{ t: 1.5, x: sw["Πριν τον αγώνα"].x, y: sw["Πριν τον αγώνα"].y - scrollTo },
-      { t: 3.0, x: sw["Live"].x, y: sw["Live"].y - scrollTo }],
-    zoomOn: { x: 220, y: (sw["Πριν τον αγώνα"].y + sw["Live"].y) / 2 - scrollTo },
+  { name: "3-notify", dur: 3.4, caption: ["2", "Πάτα «Ειδοποιήσεις»"],
+    screens: [{ t: 0, src: "matchOff", y0: 0, y1: scrollTo, ys: 1.35, ye: 2.5 }],
+    taps: notifyBtn ? [{ t: 1.0, ...notifyBtn }] : [] },
+  // Οι διακόπτες γλιστρούν πάνω στην εικόνα (Live και Τελικό: ό,τι φέρνει γκολ, σετ και τελικά).
+  { name: "4-live", dur: 4.6, caption: ["3", "Άνοιξε Live και Τελικό"],
+    screens: [{ t: 0, src: "matchOff", y0: scrollTo, y1: scrollTo }],
+    toggles: [{ t: 1.55, x: sw["Live"].x, y: sw["Live"].y - scrollTo }, { t: 3.05, x: sw["Τελικό αποτέλεσμα"].x, y: sw["Τελικό αποτέλεσμα"].y - scrollTo }],
+    taps: [{ t: 1.5, x: sw["Live"].x, y: sw["Live"].y - scrollTo }, { t: 3.0, x: sw["Τελικό αποτέλεσμα"].x, y: sw["Τελικό αποτέλεσμα"].y - scrollTo }],
+    zoomOn: { x: 220, y: (sw["Live"].y + sw["Τελικό αποτέλεσμα"].y) / 2 - scrollTo },
     zoom: [[0, 1], [0.8, 1.42], [4.6, 1.5]] },
   { name: "5-end", dur: 3.5, end: true },
 ];
@@ -195,6 +200,8 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#0a0a0a}
 #screen{position:absolute;left:18px;top:18px;width:700px;height:1521px;border-radius:80px;overflow:hidden;background:#fff}
 #screen > img{position:absolute;left:0;top:0;width:700px}
 #island{position:absolute;left:50%;top:30px;width:200px;height:56px;margin-left:-100px;border-radius:30px;background:#000;z-index:3}
+.ov{position:absolute;box-sizing:border-box;border:${1.5 * 700 / 440}px solid #111;z-index:3;display:none}
+.ov i{position:absolute;top:${3 * 700 / 440}px;left:${3 * 700 / 440}px;width:${21 * 700 / 440}px;height:${21 * 700 / 440}px}
 .tap{position:absolute;width:120px;height:120px;margin:-60px 0 0 -60px;border-radius:50%;border:8px solid rgba(255,255,255,.95);
   background:rgba(0,0,0,.28);box-shadow:0 0 0 4px rgba(0,0,0,.35);z-index:4}
 #lock{position:absolute;inset:0;background:linear-gradient(180deg,#1b1b1b,#050505) center/cover;display:none}
@@ -238,7 +245,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><style>${css}</st
   <div id="lock"><div class="st"></div><div class="date"></div><div class="clock"></div>
     <div id="notif"><img src="${uri(icon, "image/png")}"><div style="flex:1"><div class="h"><span>PAOKalendar</span><span>τώρα</span></div>
     <div class="t">ΓΚΟΛ ΤΟΥ ΠΑΟΚ!</div><div class="b"></div></div></div><div id="stack"></div></div>
-  <div id="sbtime"></div><div id="island"></div><div class="tap" id="tap"></div>
+  <div class="ov" id="ov0"><i></i></div><div class="ov" id="ov1"><i></i></div><div id="sbtime"></div><div id="island"></div><div class="tap" id="tap"></div>
 </div></div></div>
 <div id="end"><img src="${uri(icon, "image/png")}"><div class="name">PAOK<span>alendar</span></div>
   <div class="sub">${NOTIFS ? "Ο ΠΑΟΚ, ΤΗ ΣΤΙΓΜΗ ΠΟΥ ΣΥΜΒΑΙΝΕΙ" : "ΟΛΑ ΤΑ ΤΜΗΜΑΤΑ, ΑΝΔΡΩΝ ΚΑΙ ΓΥΝΑΙΚΩΝ"}</div><div class="url">paokalendar.gr</div>
@@ -356,6 +363,19 @@ await stage.evaluate(({ emoji, notifs, IMGS, clockTime, dateText, scoreLine, goa
     place(b, fade < 1 ? prev : null);
     const y = place(a, cur);
     a.style.opacity = fade;
+    // Διακόπτες που ανοίγουν (ζωγραφισμένοι πάνω στην εικόνα, με το ίδιο σχήμα με της εφαρμογής).
+    [0, 1].forEach((i) => {
+      const o = document.getElementById("ov" + i), tg = (sc.toggles || [])[i];
+      if (!tg) { o.style.display = "none"; return; }
+      const k = ease((t - tg.t) / 0.22);
+      o.style.display = "block";
+      o.style.left = (tg.x - 27) * K + "px"; o.style.top = (tg.y - 16) * K + "px";
+      o.style.width = 54 * K + "px"; o.style.height = 32 * K + "px";
+      o.style.background = k > 0.5 ? "#111" : "#fff";
+      const knob = o.querySelector("i");
+      knob.style.background = k > 0.5 ? "#fff" : "#111";
+      knob.style.transform = `translateX(${22 * K * k}px)`;
+    });
     // Πάτημα: κύκλος που μικραίνει πάνω στο σημείο και μετά σβήνει.
     const tap = document.getElementById("tap");
     const tp = (sc.taps || []).filter((p) => t >= p.t - 0.25 && t <= p.t + 0.35).pop();

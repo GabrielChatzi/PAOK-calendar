@@ -87,6 +87,49 @@ async function koe(p) {
     done: state === "post" ? Math.min(4, last + 1) : Math.max(0, last),
     clock: state === "in" && st[last] === "1" ? String(q[last].tg || "") : "",
     quarters: state === "pre" ? [] : quarters, off,
+    detail: p.box && state !== "pre"
+      ? koeBox(await getJson(`${KOE}/KOE/get/startlistDBlikeJSON/${p.cat}/${p.gara}/${p.tur}/${p.gru}/${p.a}/${p.b}`, h).catch(() => null))
+      : null,
+  };
+}
+
+// ---- Στατιστικά παικτών (μόνο για τη σελίδα αγώνα, με ?box=1), έτοιμα για τη σελίδα:
+//   { stats: [{ label, home, away, bar? }], box: { title?, cols: [[κλειδί, τίτλος, εξήγηση, έντονο?]], legend,
+//     home: { players: [{ no, name, starter, hi?, …}], tot }, away } }
+function teamBar(label, h, a, fmt = (x) => String(x)) {
+  return { label, home: fmt(h), away: fmt(a) };
+}
+const pc = (m, a) => (a ? Math.round((m / a) * 100) : 0);
+function markTop(players, key) {
+  const top = Math.max(1, ...players.map((r) => (typeof r[key] === "number" ? r[key] : 0)));
+  for (const r of players) if (r[key] === top) r.hi = key;
+  return players;
+}
+
+// Πόλο ΚΟΕ: το startlist του αγώνα (Microplus). Ανά παίκτη s_m = [γκολ, πέναλτι «ε/π», φάουλ (αποβολές), …].
+export function koeBox(d) {
+  if (!d || !Array.isArray(d.s1_s)) return null;
+  const n = (x) => num(x) ?? 0;
+  const pen = (x) => { const m = /^(\d+)\/(\d+)$/.exec(String(x || "")); return m ? [+m[1], +m[2]] : [0, 0]; };
+  const team = (list) => {
+    const players = (list || []).map((p) => {
+      const sm = p.s_m || p.s || [];
+      return { no: String(p.nn ?? ""), name: String(p.cognNome || `${p.c || ""} ${p.n || ""}`).replace(",", "").trim(),
+        goals: n(sm[0]), pen: sm[1] || "", pf: n(sm[2]), out: !!p.isout, mark: p.isout ? "(3Φ)" : "" };
+    });
+    const pens = players.map((r) => pen(r.pen));
+    const tot = { goals: players.reduce((s, r) => s + r.goals, 0), pen: `${pens.reduce((s, x) => s + x[0], 0)}/${pens.reduce((s, x) => s + x[1], 0)}`,
+      pf: players.reduce((s, r) => s + r.pf, 0) };
+    return { players: markTop(players, "goals"), tot };
+  };
+  const home = team(d.s1_s), away = team(d.s2_s);
+  if (!home.players.length && !away.players.length) return null;
+  const ph = pen(home.tot.pen), pa = pen(away.tot.pen);
+  return {
+    stats: [{ label: "Πέναλτι", home: home.tot.pen, away: away.tot.pen, bar: [ph[0], pa[0]] },
+      teamBar("Αποβολές", home.tot.pf, away.tot.pf)],
+    box: { cols: [["goals", "Γκολ", "Γκολ", true], ["pen", "Πέν", "Πέναλτι εύστοχα/προσπάθειες"], ["pf", "Αποβ", "Αποβολές (προσωπικά φάουλ)"]],
+      home, away, legend: "Πέν πέναλτι εύστοχα/προσπάθειες · Αποβ αποβολές · (3Φ) αποβλήθηκε οριστικά με 3 φάουλ." },
   };
 }
 
@@ -145,6 +188,52 @@ async function dp(p) {
     quarter: state === "in" ? (inGolden ? 6 : won + 1) : 0, done: won,
     clock: cur ? `${cur.home}-${cur.away}` : "", quarters: state === "pre" ? [] : sets.slice(0, state === "post" ? won : 5),
     golden, note: golden && state === "post" ? `χρυσό σετ ${golden.home}–${golden.away}` : "",
+    detail: p.box && state !== "pre" ? await dpBox(p.fed, x.ChampionshipMatchID, flip) : null,
+  };
+}
+
+// Βόλεϊ: η σελίδα στατιστικών του αγώνα (DataVolley) στο site της Data Project. Πρώτα οι γηπεδούχοι της
+// Data Project, μετά οι φιλοξενούμενοι· κάθε πίνακας τελειώνει με τη γραμμή TOTALS.
+async function dpBox(fed, mid, flip) {
+  if (!mid) return null;
+  try {
+    const r = await fetch(`https://${fed}-web.dataproject.com/MatchStatistics.aspx?mID=${encodeURIComponent(mid)}`, { headers: { "User-Agent": UA } });
+    return r.ok ? dpParse(await r.text(), flip) : null;
+  } catch { return null; }
+}
+export function dpParse(html, flip) {
+  const coach = [...html.matchAll(/\(Coach:/g)].map((m) => m.index);
+  if (coach.length < 2) return null;
+  const blocks = [html.slice(coach[0], coach[1]), html.slice(coach[1], coach[2] ?? coach[1] + 400000)];
+  const v = (x) => { const t = String(x ?? "").trim(); return t === "" || t === "-" || t === "." ? 0 : num(t) ?? 0; };
+  const team = (b) => {
+    const rows = b.split(/<tr class="(?:rg(?:Alt)?Row|rgFooter|Tabellino_Row_Totals)[^"]*"/).slice(1).map((row) => {
+      const f = {};
+      for (const [, k, val] of row.matchAll(/<span id="(\w+)"[^>]*>([^<]*)<\/span>/g)) if (!(k in f)) f[k] = val.trim();
+      return f;
+    }).filter((f) => f.PlayerName);
+    const line = (f) => ({ pts: v(f.PointsTot), att: `${v(f.SpikeWin)}/${v(f.SpikeTot)}`, attW: v(f.SpikeWin), attT: v(f.SpikeTot),
+      blk: v(f.BlockWin), ace: v(f.ServeAce), se: v(f.ServeErr), rec: f.RecPos && f.RecPos !== "-" ? f.RecPos : "", recT: v(f.RecTot) });
+    const tot = rows.find((f) => /^TOTALS?$/i.test(f.PlayerName));
+    const players = rows.filter((f) => f !== tot && [1, 2, 3, 4, 5].some((i) => (f[`Set${i}`] || "") !== "")).map((f) => ({
+      no: f.PlayerNumber || "", name: f.PlayerName.replace(/\s+/g, " "), ...line(f),
+      starter: [1, 2, 3, 4, 5].some((i) => /^\d$/.test(f[`Set${i}`] || "")),
+    }));
+    return { players: markTop(players, "pts"), tot: tot ? line(tot) : null };
+  };
+  let home = team(blocks[0]), away = team(blocks[1]);
+  if (flip) [home, away] = [away, home];
+  if (!home.players.length && !away.players.length) return null;
+  const H = home.tot, A = away.tot;
+  return {
+    stats: H && A ? [
+      { label: "Επίθεση", home: `${H.att} · ${pc(H.attW, H.attT)}%`, away: `${A.att} · ${pc(A.attW, A.attT)}%`, bar: [H.attW, A.attW] },
+      teamBar("Μπλοκ (πόντοι)", H.blk, A.blk), teamBar("Άσοι", H.ace, A.ace), teamBar("Λάθη σερβίς", H.se, A.se),
+      ...(H.rec && A.rec ? [{ label: "Υποδοχή θετική", home: H.rec, away: A.rec, bar: [parseFloat(H.rec) || 0, parseFloat(A.rec) || 0] }] : []),
+    ] : [],
+    box: { cols: [["pts", "Π", "Πόντοι", true], ["att", "Επ", "Επιθέσεις κερδισμένες/σύνολο"], ["blk", "Μπλ", "Πόντοι από μπλοκ"],
+      ["ace", "Άσ", "Άσοι"], ["se", "ΛΣ", "Λάθη σερβίς"], ["rec", "Υπ+", "Θετική υποδοχή"]],
+      home, away, legend: "Π πόντοι · Επ επιθέσεις κερδισμένες/σύνολο · Μπλ μπλοκ · Άσ άσοι · ΛΣ λάθη σερβίς · Υπ+ θετική υποδοχή. Με έντονα όσοι ξεκίνησαν." },
   };
 }
 
@@ -256,7 +345,37 @@ async function ehf(p) {
   return {
     state, home, away, quarter: state === "in" ? (ht ? 2 : 1) : 0, done: state === "post" ? 2 : ht ? 1 : 0,
     clock: "", quarters: state === "pre" ? [] : halves,
+    detail: p.box && state !== "pre" ? ehfBox(d.matchDetails) : null,
   };
+}
+
+// Χάντμπολ EHF: παίκτες (details.homeTeam/guestTeam.players[].score) και στατιστικά ομάδας (statistics).
+export function ehfBox(md) {
+  const det = md?.details || {}, S = md?.statistics || {};
+  const n = (x) => num(x) ?? 0;
+  const team = (t) => {
+    const players = (t?.players || []).filter((p) => p.isPlayer !== false && !p.isTeamOfficial).map((p) => {
+      const s = p.score || {}, per = p.person || {};
+      const gk = !!p.isGoalkeeper;
+      return { no: String(p.shirtNumber ?? ""), name: `${per.firstName ? per.firstName.trim()[0] + ". " : ""}${per.lastName || ""}`.trim(),
+        goals: n(s.goals), sh: `${n(s.goals)}/${n(s.shots)}`, shots: n(s.shots),
+        sv: gk ? `${n(s.goalkeeperSaves)}/${n(s.goalkeeperRecievedShots)}` : "", two: n(s.twoMinPenaltiesCount) || "",
+        mark: n(s.redCardsCount) ? "🟥" : n(s.warningsCount) ? "🟨" : "", played: p.playingState === "P" || n(s.shots) || n(s.goalkeeperRecievedShots) };
+    }).filter((r) => r.name && r.played);
+    return { players: markTop(players, "goals") };
+  };
+  const home = team(det.homeTeam), away = team(det.guestTeam);
+  if (!home.players.length && !away.players.length) return null;
+  const H = S.homeStatistics || {}, A = S.guestStatistics || {};
+  const stats = S.homeStatistics && S.guestStatistics ? [
+    { label: "Σουτ", home: `${n(H.totalGoals)}/${n(H.totalShots)} · ${pc(n(H.totalGoals), n(H.totalShots))}%`,
+      away: `${n(A.totalGoals)}/${n(A.totalShots)} · ${pc(n(A.totalGoals), n(A.totalShots))}%`, bar: [n(H.totalGoals), n(A.totalGoals)] },
+    { label: "Πέναλτι (7μ)", home: `${n(H.goals7meters)}/${n(H.shots7meters)}`, away: `${n(A.goals7meters)}/${n(A.shots7meters)}`, bar: [n(H.goals7meters), n(A.goals7meters)] },
+    teamBar("Τεχνικά λάθη", n(H.technicalFaults), n(A.technicalFaults)), teamBar("Δίλεπτα", n(H.suspensions2minutes), n(A.suspensions2minutes)),
+    teamBar("Κίτρινες κάρτες", n(H.warnings), n(A.warnings)), teamBar("Αποκλεισμοί", n(H.disqualifications), n(A.disqualifications)),
+  ] : [];
+  return { stats, box: { cols: [["goals", "Γκολ", "Γκολ", true], ["sh", "Σουτ", "Γκολ/σουτ"], ["sv", "Απόκ", "Αποκρούσεις/σουτ (τερματοφύλακες)"], ["two", "2'", "Δίλεπτα"]],
+    home, away, legend: "Σουτ γκολ/σουτ · Απόκ αποκρούσεις/σουτ που δέχτηκε · 2' δίλεπτα." } };
 }
 
 // ---- Μπάσκετ γυναικών και διοργανώσεις της ΕΟΚ: το livescore της ΕΟΚ (apps.basket.gr). Τον αγώνα
@@ -333,7 +452,7 @@ async function ea(p) {
 export default async function handler(req, res) {
   const q = req.query || {};
   const p = {};
-  for (const k of ["src", "code", "cat", "gara", "tur", "gru", "a", "b", "fed", "id", "day", "side", "key", "comp"]) {
+  for (const k of ["src", "code", "cat", "gara", "tur", "gru", "a", "b", "fed", "id", "day", "side", "key", "comp", "box"]) {
     if (q[k] == null) continue;
     if (!ID.test(String(q[k]))) return res.status(400).json({ error: `λάθος ${k}` });
     p[k] = String(q[k]);

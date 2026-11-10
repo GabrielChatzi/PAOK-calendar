@@ -261,3 +261,45 @@ test("validSubscription: μόνο υπηρεσίες push", () => {
   assert.ok(lib.validSubscription({ endpoint: "https://web.push.apple.com/abc", keys }));
   assert.ok(!lib.validSubscription({ endpoint: "https://evil.example.com/abc", keys }));
 });
+
+// ---- Στατιστικά παικτών (?box=1), στη μορφή που είδαμε σε πραγματικούς αγώνες (Νοέμβριος 2026)
+const { koeBox, dpParse, ehfBox } = await import("../api/live.js");
+
+test("ΚΟΕ: γκολ, πέναλτι και αποβολές από το startlist, με σύνολα", () => {
+  const pl = (nn, name, sm, isout = 0) => ({ nn, cognNome: name, s_m: sm, isout });
+  const d = { s1_s: [pl("2", "ΠΡΟΣΙΝΙΚΛΗΣ, Π.", ["", "", "3", "1", ""], 1), pl("9", "DELIC, M.", ["2", "1/1", "", "", ""])],
+    s2_s: [pl("7", "ΑΛΛΟΣ, Α.", ["3", "0/1", "1", "", ""])] };
+  const b = koeBox(d);
+  assert.deepEqual(b.box.home.players.map((r) => [r.name, r.goals, r.pen, r.pf, r.mark]),
+    [["ΠΡΟΣΙΝΙΚΛΗΣ Π.", 0, "", 3, "(3Φ)"], ["DELIC M.", 2, "1/1", 0, ""]]);
+  assert.deepEqual(b.box.home.tot, { goals: 2, pen: "1/1", pf: 3 });
+  assert.deepEqual(b.stats[0], { label: "Πέναλτι", home: "1/1", away: "0/1", bar: [1, 0] });
+});
+
+test("Data Project: πίνακες DataVolley, γηπεδούχοι πρώτοι, TOTALS και όσοι μπήκαν", () => {
+  const row = (cls, f) => `<tr class="${cls}" id="x">` + Object.entries(f).map(([k, v]) => `<td><span id="${k}">${v}</span></td>`).join("") + "</tr>";
+  const P = (no, name, set1, pts) => row("rgRow", { PlayerNumber: no, PlayerName: name, Set1: set1, Set2: "", PointsTot: pts,
+    ServeAce: "1", ServeErr: "-", SpikeTot: "10", SpikeWin: "5", BlockWin: "-", RecPos: "40%" });
+  const T = (pts) => row("Tabellino_Row_Totals", { PlayerNumber: "", PlayerName: "TOTALS", PointsTot: pts, ServeAce: "3", ServeErr: "5",
+    SpikeTot: "80", SpikeWin: "36", BlockWin: "6", RecPos: "45%" });
+  const html = "<h3>OTHER (Coach: A)</h3><table>" + P("2", "WHITE Monet", "3", "7") + P("6", "GKREKA Sofia", "*", "1") +
+    P("8", "BENCH Anna", "", "") + T("40") + "</table><h3>P.A.O.K. (Coach: B)</h3><table>" + P("3", "ANDERSON Akasha", "1", "8") + T("50") + "</table>(Coach: C)";
+  const b = dpParse(html, true);  // ο ΠΑΟΚ είναι γηπεδούχος σε εμάς, φιλοξενούμενος στη Data Project
+  assert.deepEqual(b.box.home.players.map((r) => [r.name, r.pts, r.starter]), [["ANDERSON Akasha", 8, true]]);
+  assert.deepEqual(b.box.away.players.map((r) => [r.name, r.starter]), [["WHITE Monet", true], ["GKREKA Sofia", false]]);
+  assert.equal(b.box.away.tot.pts, 40);
+  assert.equal(b.stats[0].away, "36/80 · 45%");
+});
+
+test("EHF: παίκτες από τα details, στατιστικά ομάδας από τα statistics", () => {
+  const pl = (no, first, last, score, o = {}) => ({ shirtNumber: no, isPlayer: true, playingState: "P", person: { firstName: first, lastName: last }, score, ...o });
+  const md = { details: {
+    homeTeam: { players: [pl("9", "Nikola", "Trivunovic", { goals: 1, shots: 7, twoMinPenaltiesCount: 2, warningsCount: 1 })] },
+    guestTeam: { players: [pl("1", "Petros", "Gk", { goalkeeperSaves: 10, goalkeeperRecievedShots: 36 }, { isGoalkeeper: true }),
+      pl("5", "X", "Official", {}, { isTeamOfficial: true })] } },
+    statistics: { homeStatistics: { totalGoals: 26, totalShots: 46 }, guestStatistics: { totalGoals: 19, totalShots: 45 } } };
+  const b = ehfBox(md);
+  assert.deepEqual(b.box.home.players.map((r) => [r.name, r.goals, r.sh, r.two, r.mark]), [["N. Trivunovic", 1, "1/7", 2, "🟨"]]);
+  assert.deepEqual(b.box.away.players.map((r) => [r.name, r.sv]), [["P. Gk", "10/36"]]);
+  assert.equal(b.stats[0].home, "26/46 · 57%");
+});

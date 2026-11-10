@@ -2657,8 +2657,8 @@
   // ---- Live μέσω του api/live.js: πόλο (ΚΟΕ, European Aquatics), βόλεϊ (Data Project), μπάσκετ
   // (Genius Sports, ΕΟΚ), χάντμπολ (EHF)
   var API_LIVE = ["koe", "ea", "dp", "gs", "ehf", "eok"];
-  function waterpoloFetch(m) {
-    var L = m.live, q = [];
+  function waterpoloFetch(m, box) {
+    var L = m.live, q = box ? ["box=1"] : [];
     ["src", "code", "cat", "gara", "tur", "gru", "a", "b", "fed", "id", "day", "side", "key", "comp"].forEach(function (k) {
       if (L[k] != null) q.push(k + "=" + encodeURIComponent(L[k]));
     });
@@ -2684,7 +2684,8 @@
     return { state: j.state, home: j.home || 0, away: j.away || 0, label: label, quarter: j.quarter || 0 };
   }
   function waterpoloDetail(m) {
-    return waterpoloFetch(m).then(function (j) {
+    return waterpoloFetch(m, true).then(function (j) {
+      var dt = j.detail || {};  // στατιστικά ομάδας και παικτών (πόλο ΚΟΕ, βόλεϊ, χάντμπολ EHF)
       if (m.live.src === "dp") {
         var vs = waterpoloState(j, "dp"), done = j.done || 0, sets = [];
         // Πάντα 5 σετ, όπως στα σκορ του βόλεϊ· όσα δεν έχουν παιχτεί μένουν κενά, ο νικητής κάθε σετ με έντονα.
@@ -2697,7 +2698,7 @@
                                   win: vs.state === "post" ? (j.golden.home > j.golden.away ? "home" : "away") : "" });
         var cur = vs.state === "in" ? (vs.quarter === 6 ? j.golden : (j.quarters || [])[done]) : null;
         return { state: vs, home: vs.home, away: vs.away, periodTitle: "Πόντοι ανά σετ", totalLabel: "Σετ",
-                 quarters: vs.state === "pre" ? [] : sets, current: cur, currentLabel: vs.quarter === 6 ? "Χρυσό σετ" : vs.quarter + "ο σετ",
+                 quarters: vs.state === "pre" ? [] : sets, current: cur, stats: dt.stats || [], box: dt.box || null, currentLabel: vs.quarter === 6 ? "Χρυσό σετ" : vs.quarter + "ο σετ",
                  sourceNote: "Live από την Data Project (επίσημο σύστημα της ΕΟΠΕ)." };
       }
       var st = waterpoloState(j, m.live.src), quarters = [];
@@ -2709,7 +2710,7 @@
           quarters.push({ label: i < n ? i + 1 + (halves ? "ο" : "η") : m.live.src === "gs" ? "Παρ." : "Πέν.", home: x ? x.home : "", away: x ? x.away : "" });
         }
       }
-      var bb = m.live.src === "gs" && j.box ? basketBox(j.box.home, j.box.away, false) : { stats: [], box: null };
+      var bb = m.live.src === "gs" && j.box ? basketBox(j.box.home, j.box.away, false) : { stats: dt.stats || [], box: dt.box || null };
       return { state: st, quarters: st.state === "pre" ? [] : quarters, home: st.home, away: st.away,
                stats: st.state === "pre" ? [] : bb.stats, box: st.state === "pre" ? null : bb.box,
                periodTitle: m.live.src === "ehf" ? "Σκορ ανά ημίχρονο" : undefined,

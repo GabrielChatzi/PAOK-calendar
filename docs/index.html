@@ -214,6 +214,7 @@
   .controls { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin-bottom: 8px; }
   .controls > * { min-width: 0; }
   .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .when-bar { margin-bottom: 10px; }
   .filterbar { display: flex; align-items: center; gap: 6px 12px; flex-wrap: wrap; margin-bottom: 8px; }
   .btn.filter-toggle { display: inline-flex; align-items: center; gap: 8px; }
   .filter-toggle svg { width: 18px; height: 18px; flex: none; }
@@ -1097,8 +1098,9 @@
       }).join("") + "</div>" + '<p class="chips-hint">Διάλεξε ένα ή περισσότερα αθλήματα.</p>';
     var list = data.matches.filter(passesHome);
     var active = (prefs.sports.length ? 1 : 0) + (prefs.gender !== "all" ? 1 : 0) + (prefs.venue !== "all" ? 1 : 0);
-    var summary = [prefs.view === "month" ? "Μήνας" : prefs.when === "upcoming" ? "Επόμενοι" : "Αποτελέσματα",
-      prefs.sports.length ? prefs.sports.join(", ") : "Όλα τα αθλήματα"];
+    // Το «Επόμενοι / Αποτελέσματα» μένει πάντα έξω από τα φίλτρα· στην περίληψη μόνο η προβολή «Μήνας».
+    var summary = (prefs.view === "month" ? ["Μήνας"] : []).concat([
+      prefs.sports.length ? prefs.sports.join(", ") : "Όλα τα αθλήματα"]);
     if (prefs.gender !== "all") summary.push(prefs.gender === "men" ? "Ανδρών" : "Γυναικών");
     if (prefs.venue !== "all") summary.push(prefs.venue === "home" ? "Εντός" : "Εκτός");
     var bar = '<div class="filterbar"><button type="button" class="btn filter-toggle" data-act="filters" aria-expanded="' + !!ui.filtersOpen + '" aria-controls="home-filters">' +
@@ -1113,10 +1115,11 @@
       installHtml() + lostHtml() +
       nextHtml(data.matches) +
       '<h2 class="section-title">Όλοι οι αγώνες</h2>' +
+      (prefs.view === "month" ? "" : '<div class="when-bar">' + seg("when", [["upcoming", "Επόμενοι"], ["results", "Αποτελέσματα"]], prefs.when) + "</div>") +
       bar +
       (ui.filtersOpen
         ? '<div class="controls panel" id="home-filters">' + seg("view", [["list", "Λίστα"], ["month", "Μήνας"]], prefs.view) +
-          (prefs.view === "month" ? "" : seg("when", [["upcoming", "Επόμενοι"], ["results", "Αποτελέσματα"]], prefs.when)) + chips +
+          chips +
           seg("gender", [["all", "Όλα"], ["men", "Ανδρών"], ["women", "Γυναικών"]], prefs.gender) +
           seg("venue", [["all", "Όλοι"], ["home", "Εντός"], ["away", "Εκτός"]], prefs.venue) + "</div>"
         : "") + LEGEND +

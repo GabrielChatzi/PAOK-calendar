@@ -29,6 +29,15 @@
           "value": "application/manifest+json"
         }
       ]
+    },
+    {
+      "source": "/metavivaseis/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     }
   ],
   "rewrites": [

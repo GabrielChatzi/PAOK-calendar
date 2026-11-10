@@ -1935,7 +1935,9 @@
       '<div class="follow">' +
       "<p>Διάλεξε για ποια τμήματα και τι θέλεις να μαθαίνεις. Οι ειδοποιήσεις έρχονται σε αυτή τη συσκευή, χωρίς λογαριασμό, και τις αλλάζεις όποτε θέλεις.</p>" +
       lostHtml() + pushNoteHtml() + serverStatusHtml() +
-      (isAdmin() && st === "on" ? "<h3>Διαχειριστής</h3>" + '<ul class="notify">' + switchRow(["s:ops:live"], "Ειδοποιήσεις λειτουργίας",
+      (isAdmin() ? "<h3>Διαχειριστής</h3>" +
+        '<div class="actions"><a class="btn" href="/social/">📸 Social: τι ανεβάζω και πότε</a></div>' : "") +
+      (isAdmin() && st === "on" ? '<ul class="notify">' + switchRow(["s:ops:live"], "Ειδοποιήσεις λειτουργίας",
         "Όταν κάτι σταματήσει να δουλεύει: έλεγχοι, live, αποθήκευση επιλογών, ανεβάσματα") +
         switchRow(["s:ops:pre"], "Υπενθυμίσεις social", "Πότε και τι να ανεβάσεις στο Instagram και στο Facebook, με εικόνες και λεζάντα") + "</ul>" +
         '<div class="actions"><button type="button" class="btn" data-act="push-test">Στείλε μου δοκιμαστική ειδοποίηση</button></div>' : "") +

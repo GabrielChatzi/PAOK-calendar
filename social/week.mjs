@@ -233,7 +233,7 @@ export function plan(matches, today, { names = { teams: {}, venues: {}, tv: {} }
 
 function scheduleCaption(b, all, byDay, names) {
   const sports = new Set(all.map((m) => m.section.replace("-women", "")));
-  const head = b.kind === "weekend" ? "Το Σαββατοκύριακο του ΠΑΟΚ σε όλα τα τμήματα ⚫⚪" : "Η εβδομάδα του ΠΑΟΚ σε όλα τα τμήματα ⚫⚪";
+  const head = b.kind === "weekend" ? "Το Σαββατοκύριακο του ΠΑΟΚ σε όλα τα τμήματα ⚪️⚫️" : "Η εβδομάδα του ΠΑΟΚ σε όλα τα τμήματα ⚪️⚫️";
   const span = b.days.length > 1 ? `από ${DAYS_ACC[weekday(b.days[0])].replace(/^(την|τη|το) /, "")} ως ${DAYS_ACC[weekday(b.days.at(-1))].replace(/^(την|τη|το) /, "")}` : DAYS_ACC[weekday(b.days[0])];
   const n = all.length;
   let line = `${n} ${n === 1 ? "αγώνας" : "αγώνες"}${sports.size > 1 ? ` σε ${sports.size} αθλήματα` : ""}, ${span}`;
@@ -251,7 +251,7 @@ function resultsCaption(b, done, names) {
   const rows = done.map((m) => row(m, names));
   const w = rows.filter((r) => r.us > r.them).length, l = rows.filter((r) => r.us < r.them).length;
   const d = rows.length - w - l;
-  const head = b.kind === "weekend" ? "Τα αποτελέσματα του Σαββατοκύριακου ⚫⚪" : "Τα αποτελέσματα της εβδομάδας ⚫⚪";
+  const head = b.kind === "weekend" ? "Τα αποτελέσματα του Σαββατοκύριακου ⚪️⚫️" : "Τα αποτελέσματα της εβδομάδας ⚪️⚫️";
   const parts = [w && `${w} ${w === 1 ? "νίκη" : "νίκες"}`, l && `${l} ${l === 1 ? "ήττα" : "ήττες"}`,
     d && `${d} ${d === 1 ? "ισοπαλία" : "ισοπαλίες"}`].filter(Boolean);
   return `${head}\n${parts.join(", ")} σε ${rows.length} ${rows.length === 1 ? "αγώνα" : "αγώνες"}.\n\n` +

@@ -126,7 +126,7 @@ async function capture() {
   return { home, menu, sectionTop, matchOff, matchPre, matchLive, menuBtn, sectionLink, sectionScroll, matchLink, notifyTop, sw, match };
 }
 const icon = fs.readFileSync(path.join(DOCS, "icons", "icon-192.png"));
-await page.close();
+
 
 // ---------------------------------------------------------------- 2. οι σκηνές
 

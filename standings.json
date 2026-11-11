@@ -2074,30 +2074,30 @@
     },
     {
      "pos": 7,
-     "team": "ΝΕ ΠΑΤΡΩΝ",
-     "logo": "https://koecdn.twic.pics/media/327204416-876598936727395-7539238121809845951-n-1759145224-TwVlRdRx.jpg",
-     "paok": false,
-     "cells": [
-      "7",
-      "3",
-      "0",
-      "4",
-      "96-112",
-      "9"
-     ]
-    },
-    {
-     "pos": 8,
      "team": "ΝΟ ΧΑΝΙΩΝ",
      "logo": "https://koecdn.twic.pics/media/xanion-1757497102-pCIxwRHQ.jpg",
      "paok": false,
      "cells": [
-      "7",
-      "2",
+      "8",
+      "3",
       "1",
       "4",
-      "75-104",
-      "7"
+      "89-113",
+      "10"
+     ]
+    },
+    {
+     "pos": 8,
+     "team": "ΝΕ ΠΑΤΡΩΝ",
+     "logo": "https://koecdn.twic.pics/media/327204416-876598936727395-7539238121809845951-n-1759145224-TwVlRdRx.jpg",
+     "paok": false,
+     "cells": [
+      "8",
+      "3",
+      "0",
+      "5",
+      "105-126",
+      "9"
      ]
     },
     {

@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:volley-women-dp19-739@paok-calendar
-DTSTAMP:20261109T120046Z
+DTSTAMP:20261111T100046Z
 DTSTART;TZID=Europe/Athens:20261017T190000
 DTEND;TZID=Europe/Athens:20261017T210000
 SUMMARY:🏐 ΠΑΟΚ 3-1 Α.Σ. Ελπίς
@@ -37,7 +37,7 @@ URL:https://eope-web.dataproject.com/MatchStatistics.aspx?mID=739&ID=19
 END:VEVENT
 BEGIN:VEVENT
 UID:volley-women-dp19-756@paok-calendar
-DTSTAMP:20261109T120046Z
+DTSTAMP:20261111T100046Z
 DTSTART;TZID=Europe/Athens:20261101T190000
 DTEND;TZID=Europe/Athens:20261101T210000
 SUMMARY:🏐 ΠΑΟΚ 3-2 Ζ.Α.Ο.Ν.
@@ -48,15 +48,23 @@ URL:https://eope-web.dataproject.com/MatchStatistics.aspx?mID=756&ID=19
 END:VEVENT
 BEGIN:VEVENT
 UID:volley-women-acpaok-ea8ee8259c82@paok-calendar
-DTSTAMP:20261109T120046Z
+DTSTAMP:20261111T100046Z
 DTSTART;TZID=Europe/Athens:20261114T190000
 DTEND;TZID=Europe/Athens:20261114T210000
-SUMMARY:🏐 ΠΑΟΚ – Απολλώνιος
-LOCATION:Μίκρα 1
-DESCRIPTION:Volley League γυναικών – 5η αγωνιστική\nTV
+SUMMARY:🏐 ΠΑΟΚ – Ο.Φ.Α. Απολλώνιος
+LOCATION:Mikra
+DESCRIPTION:Volley League Γυναικών – 5η Αγωνιστική\nTV
  : AC PAOK TV
-URL:https://acpaok.gr/%cf%8c%cf%80%ce%bf%cf%85-%ce%ba%ce%b1%ce%b9-%ce%b1%ce
- %bd-%cf%80%ce%b1%ce%af%ce%b6%ce%b5%ce%b9%cf%82-%cf%83-%ce%b1%ce%ba%ce%bf%c
- e%bb%ce%bf%cf%85%ce%b8%ce%ac%ce%bc%ce%b5-31-03-05-04/
+URL:https://eope-web.dataproject.com/MatchStatistics.aspx?mID=765&ID=19
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-women-dp19-772@paok-calendar
+DTSTAMP:20261111T100046Z
+DTSTART;TZID=Europe/Athens:20261118T190000
+DTEND;TZID=Europe/Athens:20261118T210000
+SUMMARY:🏐 ΠΑΟΚ – Α.Ο. Μαρκοπούλου
+LOCATION:Mikra
+DESCRIPTION:Volley League Γυναικών – 6η Αγωνιστική
+URL:https://eope-web.dataproject.com/MatchStatistics.aspx?mID=772&ID=19
 END:VEVENT
 END:VCALENDAR

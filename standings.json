@@ -866,14 +866,26 @@
      "logo": "https://media-cdn.cortextech.io/5750bc8b-dd63-48e4-8586-10d4e5e2b4e2.png",
      "paok": false,
      "cells": [
-      "6",
+      "7",
       "3",
-      "3",
-      "+6"
+      "4",
+      "+1"
      ]
     },
     {
      "pos": 5,
+     "team": "Roma",
+     "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS1/1e9e0379-db30-4234-89b0-19576709c285.png",
+     "paok": false,
+     "cells": [
+      "7",
+      "3",
+      "4",
+      "-25"
+     ]
+    },
+    {
+     "pos": 6,
      "team": "Lietkabelis",
      "logo": "https://media-cdn.cortextech.io/ffcb6e37-31f4-48f6-91c2-a8c9a6f791a9.png",
      "paok": false,
@@ -882,18 +894,6 @@
       "3",
       "4",
       "-56"
-     ]
-    },
-    {
-     "pos": 6,
-     "team": "Roma",
-     "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS1/1e9e0379-db30-4234-89b0-19576709c285.png",
-     "paok": false,
-     "cells": [
-      "6",
-      "2",
-      "4",
-      "-30"
      ]
     },
     {

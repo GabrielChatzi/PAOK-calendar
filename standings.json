@@ -1622,6 +1622,20 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Ο.Φ. Ν. ΙΩΝΙΑΣ",
+     "logo": "https://www.handball.org.gr/media/yootheme/cache/66/ofni-668f8f8c.jpg",
+     "paok": false,
+     "cells": [
+      "6",
+      "6",
+      "0",
+      "0",
+      "185-108",
+      "12"
+     ]
+    },
+    {
+     "pos": 2,
      "team": "ΠΑΟΚ",
      "logo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
      "paok": true,
@@ -1632,20 +1646,6 @@
       "0",
       "210-117",
       "11"
-     ]
-    },
-    {
-     "pos": 2,
-     "team": "Ο.Φ. Ν. ΙΩΝΙΑΣ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/66/ofni-668f8f8c.jpg",
-     "paok": false,
-     "cells": [
-      "5",
-      "5",
-      "0",
-      "0",
-      "152-79",
-      "10"
      ]
     },
     {
@@ -1668,11 +1668,11 @@
      "logo": "https://www.handball.org.gr/media/yootheme/cache/21/Anagennisi_artas-new-21615fd1.jpg",
      "paok": false,
      "cells": [
-      "5",
+      "6",
       "3",
       "1",
-      "1",
-      "161-164",
+      "2",
+      "190-197",
       "7"
      ]
     },

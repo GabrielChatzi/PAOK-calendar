@@ -157,11 +157,14 @@ self.addEventListener("pushsubscriptionchange", (event) => {
     const sub = await self.registration.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: key });
     const cache = await caches.open(DATA);
     const saved = await cache.match("push-topics");
-    const topics = saved ? await saved.json() : [];
+    let topics = null;
+    try { topics = saved ? await saved.json() : null; } catch { topics = null; }
+    // Χωρίς τοπικό αντίγραφο, ο server παίρνει τα θέματα της παλιάς συνδρομής (oldEndpoint).
+    const oldEndpoint = event.oldSubscription && event.oldSubscription.endpoint;
     await fetch("/api/subscribe", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ subscription: sub.toJSON(), topics }),
+      body: JSON.stringify({ subscription: sub.toJSON(), ...(Array.isArray(topics) && topics.length ? { topics } : {}), oldEndpoint }),
     });
   })());
 });

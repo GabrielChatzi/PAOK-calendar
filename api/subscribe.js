@@ -1,5 +1,6 @@
 // Η συνδρομή μιας συσκευής για ειδοποιήσεις:
 //   POST {subscription, topics}            αποθηκεύει τα θέματα που διάλεξε (απαντά με όσα κράτησε)
+//   POST {subscription, oldEndpoint}       (χωρίς topics) νέα συνδρομή με τα θέματα της παλιάς
 //   POST {subscription, action: "check"}   τι έχει αποθηκευτεί για αυτή τη συσκευή (για έλεγχο από τη σελίδα)
 //   POST {subscription, action: "test"}    στέλνει μία δοκιμαστική ειδοποίηση μόνο σε αυτή τη συσκευή
 //   DELETE {subscription}                  τη σβήνει
@@ -75,9 +76,17 @@ export default async function handler(req, res) {
       return send(res, result === "ok" ? 200 : 502, { ok: result === "ok", result });
     }
 
-    const topics = Array.isArray(body.topics)
+    let topics = Array.isArray(body.topics)
       ? [...new Set(body.topics.filter((t) => typeof t === "string" && TOPIC_RE.test(t)))].slice(0, 400)
       : [];
+    // Ανανέωση συνδρομής από το service worker χωρίς θέματα: κρατά τα θέματα της παλιάς συνδρομής
+    // (ή όσα έχει ήδη αυτή), ώστε να μη μείνει η συσκευή χωρίς ειδοποιήσεις.
+    const oldId = typeof body.oldEndpoint === "string" && body.oldEndpoint ? subId(body.oldEndpoint) : "";
+    if (!Array.isArray(body.topics)) {
+      const prev = (oldId && oldId !== id && await col.findOne({ _id: oldId }, { projection: { topics: 1 } }))
+        || await col.findOne({ _id: id }, { projection: { topics: 1 } });
+      topics = prev?.topics || [];
+    }
     await col.updateOne({ _id: id }, {
       $set: {
         endpoint: sub.endpoint,
@@ -87,6 +96,7 @@ export default async function handler(req, res) {
         gone: false,
       },
     }, { upsert: true });
+    if (oldId && oldId !== id) await col.deleteOne({ _id: oldId });
     return send(res, 200, { ok: true, topics: topics.length, saved: topics });
   } catch (e) {
     console.error("subscribe", e);

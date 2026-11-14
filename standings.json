@@ -706,18 +706,6 @@
     },
     {
      "pos": 6,
-     "team": "Ηρακλής",
-     "logo": "https://www.esake.gr/dat/esaketeam/00000011/photo_new_212846DF.png",
-     "paok": false,
-     "cells": [
-      "7",
-      "3-4",
-      "26",
-      "10"
-     ]
-    },
-    {
-     "pos": 7,
      "team": "Παναθηναϊκός",
      "logo": "https://www.esake.gr/dat/esaketeam/00000001/photo_new_160CD854.png",
      "paok": false,
@@ -729,7 +717,7 @@
      ]
     },
     {
-     "pos": 8,
+     "pos": 7,
      "team": "Κολοσσός Ρόδου",
      "logo": "https://www.esake.gr/dat/esaketeam/0000000A/photo_new_5DC7EFBA.png",
      "paok": false,
@@ -741,7 +729,7 @@
      ]
     },
     {
-     "pos": 9,
+     "pos": 8,
      "team": "Περιστέρι",
      "logo": "https://www.esake.gr/dat/esaketeam/0000000D/photo_new_30338F54.png",
      "paok": false,
@@ -753,7 +741,7 @@
      ]
     },
     {
-     "pos": 10,
+     "pos": 9,
      "team": "ΑΕΚ",
      "logo": "https://www.esake.gr/dat/esaketeam/00000010/photo_new_2BF3BBDA.png",
      "paok": false,
@@ -765,15 +753,27 @@
      ]
     },
     {
-     "pos": 11,
-     "team": "Προμηθέας Πάτρας",
-     "logo": "https://www.esake.gr/dat/esaketeam/2A25C696/photo_new_4BF0C19C.png",
+     "pos": 10,
+     "team": "Ηρακλής",
+     "logo": "https://www.esake.gr/dat/esaketeam/00000011/photo_new_212846DF.png",
      "paok": false,
      "cells": [
-      "7",
-      "1-6",
-      "-105",
+      "6",
+      "2-4",
+      "19",
       "8"
+     ]
+    },
+    {
+     "pos": 11,
+     "team": "Μαρούσι",
+     "logo": "https://www.esake.gr/dat/esaketeam/0000000F/photo_new_FC6AF74E.png",
+     "paok": false,
+     "cells": [
+      "6",
+      "1-5",
+      "-34",
+      "7"
      ]
     },
     {
@@ -790,13 +790,13 @@
     },
     {
      "pos": 13,
-     "team": "Μαρούσι",
-     "logo": "https://www.esake.gr/dat/esaketeam/0000000F/photo_new_FC6AF74E.png",
+     "team": "Προμηθέας Πάτρας",
+     "logo": "https://www.esake.gr/dat/esaketeam/2A25C696/photo_new_4BF0C19C.png",
      "paok": false,
      "cells": [
       "6",
       "1-5",
-      "-34",
+      "-98",
       "7"
      ]
     },
@@ -1814,7 +1814,7 @@
       "6",
       "0",
       "2",
-      "156-85",
+      "157-86",
       "18"
      ]
     },
@@ -1912,7 +1912,7 @@
       "2",
       "1",
       "5",
-      "94-124",
+      "95-125",
       "7"
      ]
     },

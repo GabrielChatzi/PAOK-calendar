@@ -1543,7 +1543,13 @@ def manual_matches(section: str, official: list[Match]) -> list[Match]:
             continue
         day = dt.date.fromisoformat(e["date"])
         paok_home = is_paok(e["home"])
-        if any(abs((m.day - day).days) <= 1 and m.paok_home == paok_home for m in official):
+        same = [m for m in official if abs((m.day - day).days) <= 1 and m.paok_home == paok_home]
+        if same:
+            # "fix_time": η ώρα της καταχώρισης διορθώνει λάθος ώρα της πηγής (π.χ. το ESPN μία ώρα αργότερα).
+            if e.get("fix_time") and e.get("time"):
+                for m in same:
+                    if m.day == day:
+                        m.time = parse_time(e["time"])
             continue
         out.append(Match(
             section=section, uid=f"{section}-manual-{short_hash(e['date'], e['home'], e['away'])}",

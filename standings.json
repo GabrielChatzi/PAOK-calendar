@@ -650,14 +650,26 @@
      "logo": "https://www.esake.gr/dat/esaketeam/0000000C/photo_new_13BEDD3A.png",
      "paok": true,
      "cells": [
-      "6",
-      "6-0",
-      "59",
-      "12"
+      "7",
+      "7-0",
+      "64",
+      "14"
      ]
     },
     {
      "pos": 2,
+     "team": "Καρδίτσα",
+     "logo": "https://www.esake.gr/dat/esaketeam/B742845D/photo_new_04E98281.png",
+     "paok": false,
+     "cells": [
+      "7",
+      "4-3",
+      "13",
+      "11"
+     ]
+    },
+    {
+     "pos": 3,
      "team": "Άρης",
      "logo": "https://www.esake.gr/dat/esaketeam/00000005/photo_new_6A11CE7A.png",
      "paok": false,
@@ -669,7 +681,7 @@
      ]
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Ολυμπιακός",
      "logo": "https://www.esake.gr/dat/esaketeam/00000002/photo_new_7F6C9D90.png",
      "paok": false,
@@ -677,18 +689,6 @@
       "6",
       "6-0",
       "108",
-      "10"
-     ]
-    },
-    {
-     "pos": 4,
-     "team": "Καρδίτσα",
-     "logo": "https://www.esake.gr/dat/esaketeam/B742845D/photo_new_04E98281.png",
-     "paok": false,
-     "cells": [
-      "6",
-      "4-2",
-      "18",
       "10"
      ]
     },
@@ -706,6 +706,18 @@
     },
     {
      "pos": 6,
+     "team": "Ηρακλής",
+     "logo": "https://www.esake.gr/dat/esaketeam/00000011/photo_new_212846DF.png",
+     "paok": false,
+     "cells": [
+      "7",
+      "3-4",
+      "26",
+      "10"
+     ]
+    },
+    {
+     "pos": 7,
      "team": "Παναθηναϊκός",
      "logo": "https://www.esake.gr/dat/esaketeam/00000001/photo_new_160CD854.png",
      "paok": false,
@@ -717,7 +729,7 @@
      ]
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "Κολοσσός Ρόδου",
      "logo": "https://www.esake.gr/dat/esaketeam/0000000A/photo_new_5DC7EFBA.png",
      "paok": false,
@@ -729,7 +741,7 @@
      ]
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Περιστέρι",
      "logo": "https://www.esake.gr/dat/esaketeam/0000000D/photo_new_30338F54.png",
      "paok": false,
@@ -741,7 +753,7 @@
      ]
     },
     {
-     "pos": 9,
+     "pos": 10,
      "team": "ΑΕΚ",
      "logo": "https://www.esake.gr/dat/esaketeam/00000010/photo_new_2BF3BBDA.png",
      "paok": false,
@@ -753,27 +765,15 @@
      ]
     },
     {
-     "pos": 10,
-     "team": "Ηρακλής",
-     "logo": "https://www.esake.gr/dat/esaketeam/00000011/photo_new_212846DF.png",
-     "paok": false,
-     "cells": [
-      "6",
-      "2-4",
-      "19",
-      "8"
-     ]
-    },
-    {
      "pos": 11,
-     "team": "Μαρούσι",
-     "logo": "https://www.esake.gr/dat/esaketeam/0000000F/photo_new_FC6AF74E.png",
+     "team": "Προμηθέας Πάτρας",
+     "logo": "https://www.esake.gr/dat/esaketeam/2A25C696/photo_new_4BF0C19C.png",
      "paok": false,
      "cells": [
-      "6",
-      "1-5",
-      "-34",
-      "7"
+      "7",
+      "1-6",
+      "-105",
+      "8"
      ]
     },
     {
@@ -790,13 +790,13 @@
     },
     {
      "pos": 13,
-     "team": "Προμηθέας Πάτρας",
-     "logo": "https://www.esake.gr/dat/esaketeam/2A25C696/photo_new_4BF0C19C.png",
+     "team": "Μαρούσι",
+     "logo": "https://www.esake.gr/dat/esaketeam/0000000F/photo_new_FC6AF74E.png",
      "paok": false,
      "cells": [
       "6",
       "1-5",
-      "-98",
+      "-34",
       "7"
      ]
     },
@@ -1292,6 +1292,19 @@
     },
     {
      "pos": 3,
+     "team": "Ζ.Α.Ο.Ν.",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "5",
+      "3",
+      "2",
+      "11-9",
+      "8"
+     ]
+    },
+    {
+     "pos": 4,
      "team": "Ολυμπιακός Σ.Φ.Π.",
      "logo": "",
      "paok": false,
@@ -1304,7 +1317,20 @@
      ]
     },
     {
-     "pos": 4,
+     "pos": 5,
+     "team": "Α.Ο. Θήρας",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "5",
+      "2",
+      "3",
+      "9-12",
+      "7"
+     ]
+    },
+    {
+     "pos": 6,
      "team": "ΠΑΟΚ",
      "logo": "https://images.dataproject.com/eope/TeamLogo/100/40/TeamLogo_118.jpg",
      "paok": true,
@@ -1317,7 +1343,7 @@
      ]
     },
     {
-     "pos": 5,
+     "pos": 7,
      "team": "Α.Ε.Κ.",
      "logo": "",
      "paok": false,
@@ -1326,32 +1352,6 @@
       "2",
       "2",
       "8-7",
-      "6"
-     ]
-    },
-    {
-     "pos": 6,
-     "team": "Ζ.Α.Ο.Ν.",
-     "logo": "",
-     "paok": false,
-     "cells": [
-      "4",
-      "2",
-      "2",
-      "8-9",
-      "6"
-     ]
-    },
-    {
-     "pos": 7,
-     "team": "Α.Ο. Θήρας",
-     "logo": "",
-     "paok": false,
-     "cells": [
-      "4",
-      "2",
-      "2",
-      "9-9",
       "6"
      ]
     },
@@ -1806,6 +1806,20 @@
     },
     {
      "pos": 3,
+     "team": "ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ",
+     "logo": "https://koecdn.twic.pics/media/panathinaikos-1757496876-53QTIGxK.jpg",
+     "paok": false,
+     "cells": [
+      "8",
+      "6",
+      "0",
+      "2",
+      "156-85",
+      "18"
+     ]
+    },
+    {
+     "pos": 4,
      "team": "ΝΟ ΒΟΥΛΙΑΓΜΕΝΗΣ",
      "logo": "https://koecdn.twic.pics/media/nov-logo-gr-1758965899-UA7wQDNs.png",
      "paok": false,
@@ -1819,7 +1833,7 @@
      ]
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "ΓΣ ΑΠΟΛΛΩΝ ΣΜ.",
      "logo": "https://koecdn.twic.pics/media/apollon-1757488473-Yl0JuEC9.jpg",
      "paok": false,
@@ -1829,20 +1843,6 @@
       "0",
       "2",
       "129-103",
-      "15"
-     ]
-    },
-    {
-     "pos": 5,
-     "team": "ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ",
-     "logo": "https://koecdn.twic.pics/media/panathinaikos-1757496876-53QTIGxK.jpg",
-     "paok": false,
-     "cells": [
-      "7",
-      "5",
-      "0",
-      "2",
-      "133-77",
       "15"
      ]
     },
@@ -1908,11 +1908,11 @@
      "logo": "https://koecdn.twic.pics/media/faliro-1757496864-n863Il8C.jpg",
      "paok": false,
      "cells": [
-      "7",
+      "8",
       "2",
       "1",
-      "4",
-      "86-101",
+      "5",
+      "94-124",
       "7"
      ]
     },

@@ -1639,7 +1639,10 @@
   var pushOrigin = /(^|\.)paokalendar\.gr$|(^|\.)vercel\.app$|^localhost$|^127\.0\.0\.1$/.test(location.hostname);
   var pushSupported = "serviceWorker" in navigator && "PushManager" in window && "Notification" in window;
   var push = { reg: null, sub: null, key: null, busy: false, ready: false, topics: [], server: "", serverAt: 0, lost: false };
-  try { push.topics = JSON.parse(localStorage.getItem("paok-push-topics") || "[]") || []; } catch (e) {}
+  // hadTopics: υπάρχει τοπικό αντίγραφο των επιλογών. Αν λείπει (το iPhone μπορεί να σβήσει τα δεδομένα
+  // της εφαρμογής κρατώντας τη συνδρομή), οι επιλογές παίρνονται από τον server αντί να σβηστούν εκεί.
+  var hadTopics = false;
+  try { hadTopics = localStorage.getItem("paok-push-topics") !== null; push.topics = JSON.parse(localStorage.getItem("paok-push-topics") || "[]") || []; } catch (e) {}
 
   function pushStatus() {
     if (!pushOrigin) return "moved";
@@ -1896,12 +1899,39 @@
       });
     }).then(function (renewed) {
       if (!push.sub) return;
+      if (!hadTopics) return adoptServerTopics(renewed);
       var dirty = false, last = 0;
       try { dirty = !!localStorage.getItem("paok-push-dirty"); last = +localStorage.getItem("paok-push-synced") || 0; } catch (e) {}
       var cleaned = data ? cleanMatchTopics() : false;
       if (renewed || dirty || cleaned || Date.now() - last > 12 * 3600 * 1000) return syncPush();
       return verifyPush();
     }).catch(function () {});
+  }
+
+  // Η συσκευή δεν έχει τοπικές επιλογές αλλά έχει συνδρομή: κρατάμε ό,τι έχει ο server για αυτή
+  // (ή για την παλιά της συνδρομή, αν μόλις ανανεώθηκε), χωρίς να του στείλουμε κενή λίστα.
+  function adoptServerTopics(renewed) {
+    return fetch("/api/subscribe", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ subscription: push.sub.toJSON(), action: "check" })
+    }).then(function (r) {
+      if (!r.ok) throw new Error("check " + r.status);
+      return r.json();
+    }).then(function (d) {
+      if (d.gone) return markLost();
+      if (d.found) {
+        push.topics = d.topics || [];
+        hadTopics = true;
+        savePushTopics(); setDirty(false);
+        try { localStorage.setItem("paok-push-synced", String(Date.now())); } catch (e) {}
+        setServer("ok");
+        if (data) render();
+        return;
+      }
+      // Ο server δεν ξέρει αυτή τη συσκευή: δεν υπάρχει τίποτα να κρατηθεί.
+      hadTopics = true;
+      if (renewed) return syncPush();
+    }).catch(function () { setServer("error"); });
   }
 
   // ---- Σελίδα «Ειδοποιήσεις»

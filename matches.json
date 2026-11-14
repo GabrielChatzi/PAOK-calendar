@@ -2256,24 +2256,15 @@
    "venue": "",
    "competition": "Water Polo League Γυναικών",
    "round": "",
-   "score": "",
+   "score": "11-12",
    "tv": "KOE TV",
    "url": "https://waterpololeague.gr/fixture/alimos-nas-betsson-paok-domus-ergo-2026-11-14",
-   "live": {
-    "cat": "ASF",
-    "gara": "66",
-    "tur": "A01",
-    "gru": "1",
-    "a": "91761069",
-    "b": "9176200",
-    "src": "koe"
-   },
    "start": "2026-11-14T18:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/alimos-1757618338-HykYQxju.jpg",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
-   "tvUrl": "https://www.youtube.com/watch?v=x_ap7fznfrU",
+   "tvUrl": "",
    "nt": "546e41e621"
   },
   {
@@ -5693,16 +5684,16 @@
   }
  ],
  "updated": {
-  "football": "2026-11-14T18:45+02:00",
-  "football-women": "2026-11-14T18:45+02:00",
-  "basketball": "2026-11-14T18:45+02:00",
-  "basketball-women": "2026-11-14T18:45+02:00",
-  "volley": "2026-11-14T18:46+02:00",
-  "volley-women": "2026-11-14T18:46+02:00",
-  "handball": "2026-11-14T18:47+02:00",
-  "handball-women": "2026-11-14T18:47+02:00",
-  "waterpolo": "2026-11-14T18:47+02:00",
-  "waterpolo-women": "2026-11-14T18:47+02:00",
-  "futsal": "2026-11-14T18:47+02:00"
+  "football": "2026-11-14T19:01+02:00",
+  "football-women": "2026-11-14T19:01+02:00",
+  "basketball": "2026-11-14T19:01+02:00",
+  "basketball-women": "2026-11-14T19:01+02:00",
+  "volley": "2026-11-14T19:01+02:00",
+  "volley-women": "2026-11-14T19:01+02:00",
+  "handball": "2026-11-14T19:02+02:00",
+  "handball-women": "2026-11-14T19:02+02:00",
+  "waterpolo": "2026-11-14T19:02+02:00",
+  "waterpolo-women": "2026-11-14T19:03+02:00",
+  "futsal": "2026-11-14T19:03+02:00"
  }
 }

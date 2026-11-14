@@ -2032,29 +2032,29 @@
     },
     {
      "pos": 4,
-     "team": "ΑΛΙΜΟΣ ΝΑΣ",
-     "logo": "https://koecdn.twic.pics/media/alimos-1757618338-HykYQxju.jpg",
-     "paok": false,
-     "cells": [
-      "8",
-      "5",
-      "0",
-      "3",
-      "130-85",
-      "15"
-     ]
-    },
-    {
-     "pos": 5,
      "team": "ΠΑΟΚ",
      "logo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
      "paok": true,
      "cells": [
-      "7",
-      "5",
+      "8",
+      "6",
       "0",
       "2",
-      "106-89",
+      "118-100",
+      "18"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "ΑΛΙΜΟΣ ΝΑΣ",
+     "logo": "https://koecdn.twic.pics/media/alimos-1757618338-HykYQxju.jpg",
+     "paok": false,
+     "cells": [
+      "9",
+      "5",
+      "0",
+      "4",
+      "141-97",
       "15"
      ]
     },

@@ -93,7 +93,7 @@ export async function render(spec, outDir, { browser, base = outDir, kinds = ["p
     const src = await logo(m.logo, base).catch(() => "");
     rows.push(`<div class="m"><div class="lg">${src ? `<img src="${src}">` : ""}</div><div>
   <div class="opp">${UP(m.opponent)}</div>
-  <div class="info">${[UP(m.section), `<b>${m.time}</b>`, UP(m.tv)].filter((x) => x && x !== "<b></b>").join(" <s></s> ")}</div>
+  <div class="info">${[m.when && `<b>${UP(m.when)}</b>`, UP(m.section), `<b>${m.time}</b>`, UP(m.tv)].filter((x) => x && x !== "<b></b>").join(" <s></s> ")}</div>
   <div class="ha">${m.home ? HOME : AWAY} ${m.home ? "ΕΝΤΟΣ" : "ΕΚΤΟΣ"}${m.venue ? ` · ${UP(m.venue)}` : ""}</div></div></div>`);
   }
   fs.mkdirSync(outDir, { recursive: true });

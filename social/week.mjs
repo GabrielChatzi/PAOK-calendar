@@ -175,6 +175,19 @@ export function plan(matches, today, { names = { teams: {}, venues: {}, tv: {} }
       file: `${day}${chunks.length > 1 ? `-${i + 1}` : ""}`, matches }));
   };
 
+  // Λίγοι αγώνες σε πολλές μέρες: μία κάρτα για όλο το μπλοκ (με τη μέρα σε κάθε αγώνα), αντί για
+  // κάρτες με έναν αγώνα η καθεμία.
+  const COMBINE_UP_TO = 4;
+  const blockCards = (kind, b, pick) => {
+    const per = b.days.map((d) => [d, pick(byDay.get(d))]).filter(([, l]) => l.length);
+    const total = per.reduce((n, [, l]) => n + l.length, 0);
+    if (per.length < 2 || total > COMBINE_UP_TO) return per.flatMap(([d, l]) => card(kind, d, l));
+    const first = per[0][0], last = per.at(-1)[0];
+    const matches = per.flatMap(([d, l]) => l.map((m) => ({ ...row(m, names), when: `${DAYS[weekday(d)].slice(0, 3)} ${ddmm(d)}` })));
+    const date = first.slice(5, 7) === last.slice(5, 7) ? `${first.slice(8, 10)}–${ddmm(last)}` : `${ddmm(first)}–${ddmm(last)}`;
+    return [{ kind, day: b.kind === "weekend" ? "Σαββατοκύριακο" : "Εβδομάδα", date, file: `${first}_${last}`, matches }];
+  };
+
   for (const b of blocks.values()) {
     const first = b.days[0], last = b.days.at(-1);
     const all = b.days.flatMap((d) => byDay.get(d));
@@ -184,7 +197,7 @@ export function plan(matches, today, { names = { teams: {}, venues: {}, tv: {} }
     if (pday >= from && pday <= to) {
       const end = dayEnd(pday);
       items.push({ type: "post", what: "schedule", day: pday, time: hhmm(Math.max(19 * 60, end ? roundUp(end + 20) : 0)),
-        title: `Πρόγραμμα ${label}`, cards: b.days.flatMap((d) => card("fixtures", d, byDay.get(d))),
+        title: `Πρόγραμμα ${label}`, cards: blockCards("fixtures", b, (l) => l),
         caption: scheduleCaption(b, all, byDay, names) });
     }
     // Αποτελέσματα: το πρωί μετά.
@@ -193,7 +206,7 @@ export function plan(matches, today, { names = { teams: {}, venues: {}, tv: {} }
       const done = all.filter((m) => /^\d+-\d+$/.test(m.score || ""));
       const missing = all.filter((m) => !done.includes(m));
       items.push({ type: "post", what: "results", day: rday, time: "09:00", title: `Αποτελέσματα ${label}`,
-        cards: b.days.flatMap((d) => { const l = byDay.get(d).filter((m) => done.includes(m)); return l.length ? card("results", d, l) : []; }),
+        cards: blockCards("results", b, (l) => l.filter((m) => done.includes(m))),
         caption: done.length ? resultsCaption(b, done, names) : "",
         missing: missing.map((m) => `${m.home} – ${m.away}`) });
     }

@@ -106,7 +106,7 @@ export async function render(spec, outDir, { browser, base = outDir, kinds = ["p
     const r = m.us > m.them ? ["W", "ΝΙΚΗ"] : m.us < m.them ? ["L", "ΗΤΤΑ"] : ["D", "ΙΣΟΠΑΛΙΑ"];
     rows.push(`<div class="m ${r[0]}"><div class="lg">${src ? `<img src="${src}">` : `<span class="ini">${ini}</span>`}</div><div>
   <div class="opp">${UP(m.opponent)}</div>
-  <div class="info">${[UP(m.section), UP(m.competition)].filter(Boolean).join(" <s></s> ")}</div>
+  <div class="info">${[m.when && `<b>${UP(m.when)}</b>`, UP(m.section), UP(m.competition)].filter(Boolean).join(" <s></s> ")}</div>
   <div class="ha">${m.home ? HOME : AWAY} ${m.home ? "ΕΝΤΟΣ" : "ΕΚΤΟΣ"}${m.venue ? ` · ${UP(m.venue)}` : ""}</div></div>
   <div class="sc"><div class="box">${(() => { const win = m.us > m.them, lose = m.us < m.them; const us0 = win ? `<b>${m.us}</b>` : `<i>${m.us}</i>`, us = win || lose ? `<em>${us0}</em>` : us0, them = lose ? `<b>${m.them}</b>` : `<i>${m.them}</i>`; return m.home ? `${us}<u>–</u>${them}` : `${them}<u>–</u>${us}`; })()}</div></div></div>`);
   }

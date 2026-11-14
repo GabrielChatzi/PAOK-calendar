@@ -29,13 +29,14 @@ test("Πρόγραμμα το βράδυ πριν, αποτελέσματα το
   // Σαββατοκύριακο (Σάββατο–Δευτέρα): πρόγραμμα Παρασκευή 19:00, αποτελέσματα Τρίτη 09:00.
   const sched = find(p, "schedule", "2026-11-06");
   assert.equal(sched.time, "19:00");
-  assert.deepEqual(sched.cards.map((c) => c.file), ["2026-11-07", "2026-11-08", "2026-11-09"]);
+  assert.deepEqual(sched.cards.map((c) => c.file), ["2026-11-07_2026-11-09"]);  // 3 αγώνες: μία κάρτα
   assert.match(sched.caption, /3 αγώνες σε 3 αθλήματα, από Σάββατο ως Δευτέρα, με το Ολυμπιακός–ΠΑΟΚ την Κυριακή στις 21:00/);
   assert.equal(find(p, "results", "2026-11-10").time, "09:00");
   // Μεσοβδόμαδο: πρόγραμμα Δευτέρα βράδυ, μετά το βόλεϊ της Δευτέρας (19:30 + ~2 ώρες).
   const mid = find(p, "schedule", "2026-11-09");
   assert.equal(mid.time, "22:00");
-  assert.deepEqual(mid.cards.map((c) => c.file), ["2026-11-10", "2026-11-13"]);
+  assert.deepEqual(mid.cards.map((c) => c.file), ["2026-11-10_2026-11-13"]);  // 2 αγώνες: μία κάρτα
+  assert.deepEqual(mid.cards[0].matches.map((m) => m.when), ["Τρί 10.11", "Παρ 13.11"]);
   // Κάθε post έχει μόνο ένα είδος καρτών.
   for (const it of p.items.filter((i) => i.type === "post")) {
     assert.equal(new Set(it.cards.map((c) => c.kind)).size <= 1, true, it.title);

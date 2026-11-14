@@ -1590,6 +1590,19 @@ def apply_live_finals(section: str, matches: list[Match]) -> None:
             m.periods = [[int(a), int(b)] for a, b in e["periods"]]
 
 
+def carry_scores(section: str, previous: list[dict], current: list[Match], now: dt.datetime) -> None:
+    """Ένα τελικό σκορ δεν χάνεται αν η πηγή πάψει να το δείχνει (π.χ. η σελίδα του βόλεϊ περνά στην
+    επόμενη αγωνιστική μετά τα μεσάνυχτα): κρατιέται από την προηγούμενη ενημέρωση."""
+    shortest = dt.timedelta(minutes=MIN_DURATION.get(section, 60))
+    before = {p["uid"]: p for p in previous}
+    for m in current:
+        p = before.get(m.uid)
+        if p and p.get("score") and not m.score and not m.status and m.start() <= now - shortest:
+            print(f"  σκορ από την προηγούμενη ενημέρωση: {m.home} – {m.away} {p['score']}")
+            m.score = p["score"]
+            m.note = m.note or p.get("note", "")
+
+
 def carry_periods(previous: list[dict], current: list[Match]) -> None:
     """Τα σετ/περίοδοι μένουν από την προηγούμενη ενημέρωση (το live τα δίνει μόνο μία φορά)."""
     before = {p["uid"]: p for p in previous}
@@ -1783,6 +1796,7 @@ def main(only: list[str] | None = None) -> int:
         except Exception as e:
             print(f"  ! ΑΣ ΠΑΟΚ / {key}: {e}", file=sys.stderr)
         carry_uids(prev_by_section[key], unique)
+        carry_scores(key, prev_by_section[key], unique, dt.datetime.now(ATHENS))
         carry_periods(prev_by_section[key], unique)
         keep_friendlies(prev_by_section[key], unique)
         unique[:] = drop_shadow_friendlies(unique)

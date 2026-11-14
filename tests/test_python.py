@@ -417,6 +417,17 @@ class Admin(unittest.TestCase):
         b.carry_periods([a.to_json()], [later])
         self.assertEqual(later.periods, a.periods)
 
+    def test_score_kept_when_source_drops_it(self):
+        prev = b.Match(section="volley", uid="v4", day=dt.date(2026, 11, 13), time=dt.time(18, 30), home="ΠΑΟΚ",
+                       away="Άρης", paok_home=True, score="3-1").to_json()
+        now = b.Match(section="volley", uid="v4", day=dt.date(2026, 11, 13), time=dt.time(18, 30), home="ΠΑΟΚ",
+                      away="Άρης", paok_home=True)
+        future = b.Match(section="volley", uid="v5", day=dt.date(2026, 11, 20), time=dt.time(18, 30), home="ΠΑΟΚ",
+                         away="Χ", paok_home=True)
+        b.carry_scores("volley", [prev, dict(prev, uid="v5", score="1-0")], [now, future],
+                       dt.datetime(2026, 11, 14, 2, 0, tzinfo=b.ATHENS))
+        self.assertEqual((now.score, future.score), ("3-1", ""))
+
     def test_admin_live_entry_does_not_set_score(self):
         m = b.Match(section="futsal", uid="u2", day=dt.date(2026, 11, 1), time=dt.time(14, 0), home="ΠΑΟΚ",
                     away="Χ", paok_home=True)

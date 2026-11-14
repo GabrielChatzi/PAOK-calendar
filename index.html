@@ -2221,6 +2221,17 @@
       body = '<p class="help">Για αυτόν τον αγώνα δεν υπάρχει live σκορ εδώ. Όταν ξεκινήσει, θα βρεις σύνδεσμο για τη ζωντανή σελίδα της πηγής.</p>';
     }
 
+    // Σετ/περίοδοι από το τελικό του live: μένουν στη σελίδα και μετά τον αγώνα.
+    if (m.periods && m.periods.length && m.score && body.indexOf('class="st qt"') < 0) {
+      var volley = /^volley/.test(m.section), sc = m.score.split("-");
+      body = quartersHtml(m, {
+        quarters: m.periods.map(function (q, i) {
+          return { label: (i + 1) + (volley ? "ο" : "η"), home: q[0], away: q[1], win: q[0] > q[1] ? "home" : q[1] > q[0] ? "away" : "" };
+        }),
+        home: sc[0], away: sc[1], periodTitle: volley ? "Σκορ ανά σετ" : "Σκορ ανά περίοδο", totalLabel: volley ? "Σετ" : "Σύνολο",
+      }) + body;
+    }
+
     var info = [["Ημερομηνία", cap(fmtLong.format(date))], ["Ώρα", m.timeKnown ? fmtTime.format(date) + athensSuffix(date) : "Δεν έχει οριστεί (TBC)"]];
     if (m.venue) info.push(["Γήπεδο", m.venue]);
     if (m.tv || m.tvUrl) info.push(["Τηλεόραση", m.tv || "Live streaming", m.tvUrl]);

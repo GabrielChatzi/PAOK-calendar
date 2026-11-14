@@ -515,8 +515,8 @@
    "start": "2026-09-23T18:00:00+03:00",
    "timeKnown": false,
    "paokHome": true,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/5a/ionikos-logo-2026-5a6732d4.jpg",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "91d0788062"
   },
@@ -648,8 +648,8 @@
    "start": "2026-09-28T19:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/8c/aek-2025-8c1dd556.jpg",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "c4f563d508"
   },
@@ -734,8 +734,8 @@
    "start": "2026-10-01T15:00:00+03:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/7e/xanth-logo-2026-7e1830b5.jpg",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "b1ca66e631"
   },
@@ -886,8 +886,8 @@
    "start": "2026-10-05T17:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/55/doukas-logo-01-2026-557a8e2a.jpg",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "052aad4694"
   },
@@ -1005,8 +1005,8 @@
    "start": "2026-10-10T18:00:00+03:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/99/zafeirakis-9957f5d2.jpg",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "db7ee5c250"
   },
@@ -1129,8 +1129,8 @@
    "start": "2026-10-14T18:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/e6/drama-logo-2026-e6ffcb6b.jpg",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "8c22151e96"
   },
@@ -1324,7 +1324,7 @@
    "start": "2026-10-19T17:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/8c/aek-2025-8c1dd556.jpg",
+   "homeLogo": "",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "28a2458ae4"
@@ -1362,8 +1362,8 @@
    "start": "2026-10-21T15:00:00+03:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/cb/aris-nikaias-2026-cbde8756.jpg",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "3357a85d46"
   },
@@ -1720,7 +1720,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/73/athinaikos-732c45d8.jpg",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "573de6cdb1"
   },
@@ -2159,7 +2159,7 @@
    "paokHome": true,
    "homeLogo": "",
    "awayLogo": "",
-   "tvUrl": "",
+   "tvUrl": "https://www.youtube.com/watch?v=OSUR-2AZVi8",
    "nt": "06ebdcafe5"
   },
   {
@@ -2187,7 +2187,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/xanion-1757572705-KVq2UMey.jpg",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
-   "tvUrl": "",
+   "tvUrl": "https://www.youtube.com/watch?v=kNexXkmxoBk",
    "nt": "7cad84aba3"
   },
   {
@@ -2264,7 +2264,7 @@
    "paokHome": false,
    "homeLogo": "https://koecdn.twic.pics/media/alimos-1757618338-HykYQxju.jpg",
    "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
-   "tvUrl": "",
+   "tvUrl": "https://www.youtube.com/watch?v=x_ap7fznfrU",
    "nt": "546e41e621"
   },
   {
@@ -2283,7 +2283,7 @@
    "paokHome": true,
    "homeLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_118.jpg",
    "awayLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_116.jpg",
-   "tvUrl": "",
+   "tvUrl": "https://www.youtube.com/watch?v=6vYvhHf7VZ8",
    "nt": "368d0d2e0f"
   },
   {
@@ -2291,7 +2291,7 @@
    "uid": "futsal-eps-24043",
    "home": "ΠΑΟΚ",
    "away": "ΑΕΛ",
-   "venue": "Μίκρα 3",
+   "venue": "",
    "competition": "Futsal Super League",
    "round": "9η αγωνιστική",
    "score": "",
@@ -2338,8 +2338,8 @@
    "start": "2026-11-16T17:00:00+02:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/d9/diomidis-01-d9660914.jpg",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "77ac97955d"
   },
@@ -2531,8 +2531,8 @@
    "start": "2026-11-21T18:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/73/athinaikos-732c45d8.jpg",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "3fc1fd56ea"
   },
@@ -2822,8 +2822,8 @@
    "start": "2026-12-02T17:00:00+02:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/39/OlympiacosSFP_800-3978538c.png",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "b43486b6c7"
   },
@@ -2898,8 +2898,8 @@
    "start": "2026-12-05T18:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/1d/kilkis_logo-1d38b7c5.jpg",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "dcd5b7da2e"
   },
@@ -3022,8 +3022,8 @@
    "start": "2026-12-09T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/5a/ionikos-logo-2026-5a6732d4.jpg",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "3d7269cb8e"
   },
@@ -4412,8 +4412,8 @@
    "start": "2027-02-06T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": true,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/8c/aek-2025-8c1dd556.jpg",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "df0cbd44a8"
   },
@@ -4432,7 +4432,7 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/8c/aek-2025-8c1dd556.jpg",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "4f8147bf19"
   },
@@ -4550,8 +4550,8 @@
    "start": "2027-02-13T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/7e/xanth-logo-2026-7e1830b5.jpg",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "cc9cac0054"
   },
@@ -4569,7 +4569,7 @@
    "start": "2027-02-13T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/73/athinaikos-732c45d8.jpg",
+   "homeLogo": "",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "ebe4166800"
@@ -4688,8 +4688,8 @@
    "start": "2027-02-20T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": true,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/55/doukas-logo-01-2026-557a8e2a.jpg",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "4050293cdf"
   },
@@ -4845,8 +4845,8 @@
    "start": "2027-02-27T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/99/zafeirakis-9957f5d2.jpg",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "3f45a4e46f"
   },
@@ -4883,8 +4883,8 @@
    "start": "2027-03-03T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": true,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/e6/drama-logo-2026-e6ffcb6b.jpg",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "7f23f3f6c6"
   },
@@ -5240,8 +5240,8 @@
    "start": "2027-03-20T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/cb/aris-nikaias-2026-cbde8756.jpg",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "6768f81c01"
   },
@@ -5373,8 +5373,8 @@
    "start": "2027-03-27T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/d9/diomidis-01-d9660914.jpg",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "2b4eaa274b"
   },
@@ -5487,8 +5487,8 @@
    "start": "2027-04-03T18:00:00+03:00",
    "timeKnown": false,
    "paokHome": true,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/73/athinaikos-732c45d8.jpg",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "8eaf59eeb7"
   },
@@ -5658,8 +5658,8 @@
    "start": "2027-04-17T18:00:00+03:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/39/OlympiacosSFP_800-3978538c.png",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "5458cdfe42"
   },
@@ -5677,23 +5677,23 @@
    "start": "2027-04-24T18:00:00+03:00",
    "timeKnown": false,
    "paokHome": true,
-   "homeLogo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
-   "awayLogo": "https://www.handball.org.gr/media/yootheme/cache/1d/kilkis_logo-1d38b7c5.jpg",
+   "homeLogo": "",
+   "awayLogo": "",
    "tvUrl": "",
    "nt": "34cb6afeb2"
   }
  ],
  "updated": {
-  "football": "2026-11-14T12:01+02:00",
-  "football-women": "2026-11-14T12:01+02:00",
-  "basketball": "2026-11-14T12:01+02:00",
-  "basketball-women": "2026-11-14T12:01+02:00",
-  "volley": "2026-11-14T12:01+02:00",
-  "volley-women": "2026-11-14T12:01+02:00",
-  "handball": "2026-11-14T12:03+02:00",
-  "handball-women": "2026-11-14T12:05+02:00",
-  "waterpolo": "2026-11-14T12:05+02:00",
-  "waterpolo-women": "2026-11-14T12:05+02:00",
-  "futsal": "2026-11-14T12:05+02:00"
+  "football": "2026-11-14T14:00+02:00",
+  "football-women": "2026-11-14T14:00+02:00",
+  "basketball": "2026-11-14T14:01+02:00",
+  "basketball-women": "2026-11-14T14:01+02:00",
+  "volley": "2026-11-14T14:01+02:00",
+  "volley-women": "2026-11-14T14:01+02:00",
+  "handball": "2026-11-14T14:03+02:00",
+  "handball-women": "2026-11-14T14:04+02:00",
+  "waterpolo": "2026-11-14T14:05+02:00",
+  "waterpolo-women": "2026-11-14T14:05+02:00",
+  "futsal": "2026-11-14T14:05+02:00"
  }
 }

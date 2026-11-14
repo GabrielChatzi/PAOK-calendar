@@ -1623,7 +1623,7 @@
     {
      "pos": 1,
      "team": "Ο.Φ. Ν. ΙΩΝΙΑΣ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/66/ofni-668f8f8c.jpg",
+     "logo": "",
      "paok": false,
      "cells": [
       "6",
@@ -1637,7 +1637,7 @@
     {
      "pos": 2,
      "team": "ΠΑΟΚ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
+     "logo": "",
      "paok": true,
      "cells": [
       "6",
@@ -1651,7 +1651,7 @@
     {
      "pos": 3,
      "team": "Α.Ε.Κ.",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/64/aek-gynaikes-64628104.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "6",
@@ -1665,7 +1665,7 @@
     {
      "pos": 4,
      "team": "ΑΝΑΓΕΝΝΗΣΗ ΑΡΤΑΣ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/21/Anagennisi_artas-new-21615fd1.jpg",
+     "logo": "",
      "paok": false,
      "cells": [
       "6",
@@ -1679,7 +1679,7 @@
     {
      "pos": 5,
      "team": "Γ.Α.Σ ΚΑΜΑΤΕΡΟΥ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/a5/kamatero-new-a54e5da0.jpg",
+     "logo": "",
      "paok": false,
      "cells": [
       "6",
@@ -1693,7 +1693,7 @@
     {
      "pos": 6,
      "team": "Α.Ε.Π. ΠΑΝΟΡΑΜΑ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/84/panorama-new-84c6b388.jpg",
+     "logo": "",
      "paok": false,
      "cells": [
       "6",
@@ -1707,7 +1707,7 @@
     {
      "pos": 7,
      "team": "ΑΘΗΝΑΙΚΟΣ Α.Σ.Β.",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/c0/athinaikos-logo-c0953da2.jpg",
+     "logo": "",
      "paok": false,
      "cells": [
       "6",
@@ -1721,7 +1721,7 @@
     {
      "pos": 8,
      "team": "Α.Ε.Σ.Χ. ΠΥΛΑΙΑΣ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/05/pylaia-05554759.jpg",
+     "logo": "",
      "paok": false,
      "cells": [
       "6",
@@ -1735,7 +1735,7 @@
     {
      "pos": 9,
      "team": "ΠΡΟΣΟΤΣΑΝΗ ΔΡΑΜΑΣ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/b3/aop-logo-b3377348.jpg",
+     "logo": "",
      "paok": false,
      "cells": [
       "6",
@@ -1749,7 +1749,7 @@
     {
      "pos": 10,
      "team": "ΛΕΩΝΙΔΑΣ ΑΓ.ΑΝΑΡΓ.",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/8b/agioi-anargyroi-logo-8b3031f9.jpg",
+     "logo": "",
      "paok": false,
      "cells": [
       "6",
@@ -2078,12 +2078,12 @@
      "logo": "https://koecdn.twic.pics/media/xanion-1757497102-pCIxwRHQ.jpg",
      "paok": false,
      "cells": [
-      "8",
-      "3",
+      "9",
+      "4",
       "1",
       "4",
-      "89-113",
-      "10"
+      "97-120",
+      "13"
      ]
     },
     {
@@ -2106,11 +2106,11 @@
      "logo": "https://koecdn.twic.pics/media/anog-logo-1759229979-jK83ObmL.png",
      "paok": false,
      "cells": [
-      "8",
+      "9",
       "2",
       "0",
-      "6",
-      "72-136",
+      "7",
+      "79-144",
       "6"
      ]
     },

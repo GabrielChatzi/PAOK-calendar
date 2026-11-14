@@ -395,6 +395,16 @@ class Admin(unittest.TestCase):
             b.apply_admin("futsal", [m])
         self.assertEqual((m.score, m.live), ("7-3", None))
 
+    def test_live_final_fills_missing_score_only(self):
+        a = b.Match(section="volley", uid="v1", day=dt.date(2026, 11, 13), time=dt.time(18, 30), home="ΠΑΟΚ",
+                    away="Άρης", paok_home=True)
+        c = b.Match(section="volley", uid="v2", day=dt.date(2026, 11, 13), time=dt.time(18, 30), home="ΠΑΟΚ",
+                    away="Χ", paok_home=True, score="3-0")
+        live = {b.match_topic_id("v1"): {"home": 3, "away": 1}, b.match_topic_id("v2"): {"home": 3, "away": 2}}
+        with mock.patch.dict(b._ADMIN, {"entries": {}, "live": live}):
+            b.apply_live_finals("volley", [a, c])
+        self.assertEqual((a.score, c.score), ("3-1", "3-0"))
+
     def test_admin_live_entry_does_not_set_score(self):
         m = b.Match(section="futsal", uid="u2", day=dt.date(2026, 11, 1), time=dt.time(14, 0), home="ΠΑΟΚ",
                     away="Χ", paok_home=True)

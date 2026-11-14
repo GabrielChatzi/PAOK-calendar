@@ -3,7 +3,7 @@
 // Το καλεί μόνο το GitHub Actions του repo: η ταυτότητα ελέγχεται με το OIDC token του GitHub
 // (υπογεγραμμένο από το GitHub, χωρίς κοινό μυστικό), για το repo και το main.
 import { createRemoteJWKSet, jwtVerify } from "jose";
-import { TOPIC_RE, configured, deliver, readBody, send } from "./_lib.js";
+import { TOPIC_RE, configured, deliver, getDb, readBody, send } from "./_lib.js";
 
 const ISSUER = "https://token.actions.githubusercontent.com";
 const JWKS = createRemoteJWKSet(new URL(`${ISSUER}/.well-known/jwks`));
@@ -26,6 +26,13 @@ export default async function handler(req, res) {
   if (!(await authorized(req))) return send(res, 401, { error: "Μη εξουσιοδοτημένο." });
 
   const body = await readBody(req);
+  // Το τελικό από το live.py: κρατιέται ώστε το πρόγραμμα (και οι εικόνες των social) να το έχουν
+  // αμέσως, πριν το φέρει η επίσημη πηγή (βλ. apply_live_finals στο build_calendars.py).
+  const fin = body.result;
+  if (fin && /^[0-9a-f]{10}$/.test(String(fin.nt)) && [fin.home, fin.away].every((x) => Number.isInteger(x) && x >= 0 && x <= 300)) {
+    await (await getDb()).collection("livefinals").updateOne({ _id: fin.nt },
+      { $set: { nt: fin.nt, home: fin.home, away: fin.away, at: new Date() } }, { upsert: true });
+  }
   const wanted = new Set((body.topics || []).filter((t) => typeof t === "string" && TOPIC_RE.test(t)));
   if (!wanted.size || !body.title) return send(res, 400, { error: "Λείπουν θέματα ή τίτλος." });
   const payload = {

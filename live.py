@@ -396,6 +396,17 @@ def save_states(states: dict[str, dict], now: dt.datetime) -> None:
         print(f"  ! αποθήκευση κατάστασης: {e}", file=sys.stderr)
 
 
+def rebuild() -> None:
+    """Μετά από ένα τελικό: νέα ενημέρωση του προγράμματος (παίρνει το σκορ από το api/push.js), και
+    μετά από αυτή ξαναβγαίνουν οι εικόνες των social (social.yml)."""
+    import subprocess
+    try:
+        subprocess.run(["gh", "workflow", "run", "update.yml", "--ref", "main"], check=True, timeout=60)
+        print("  Ξεκίνησε ενημέρωση του προγράμματος μετά το τελικό.")
+    except Exception as e:
+        print(f"  ! ενημέρωση μετά το τελικό: {e}", file=sys.stderr)
+
+
 def start_successor() -> None:
     """Πριν από το όριο χρόνου του GitHub: νέα εκτέλεση, που ξεκινά μόλις τελειώσει αυτή."""
     import subprocess
@@ -470,7 +481,10 @@ def main() -> int:
                 notify.send(m["section"], "live", title, message, match=m,
                             also_match_kinds=("result",) if final else (),
                             tag=f"{m['nt']}-result" if final else None,
-                            once=once_key(m, title, final))
+                            once=once_key(m, title, final),
+                            result={"nt": m["nt"], "home": int(new["home"]), "away": int(new["away"])} if final else None)
+                if final:
+                    rebuild()
             if old is None or (old["state"], old["home"], old["away"]) != (new["state"], new["home"], new["away"]):
                 print(f"{now:%H:%M} {m['home']} – {m['away']}: {new['state']} {new['home']}-{new['away']} {new.get('detail', '')}")
             states[m["uid"]] = new

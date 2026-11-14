@@ -90,7 +90,7 @@ def _oidc_token() -> str | None:
 
 
 def _push(topics: list[str], title: str, message: str, url: str, tag: str | None = None,
-          quiet: bool = False, once: str | None = None, start: str | None = None) -> None:
+          quiet: bool = False, once: str | None = None, start: str | None = None, result: dict | None = None) -> None:
     """Ειδοποίηση web push σε όσες συσκευές έχουν γραφτεί σε κάποιο από τα θέματα (μία φορά στην καθεμία).
 
     once: κλειδί· όποια συσκευή πήρε ήδη ειδοποίηση με το ίδιο κλειδί (από οποιαδήποτε αποστολή) παραλείπεται.
@@ -104,7 +104,7 @@ def _push(topics: list[str], title: str, message: str, url: str, tag: str | None
             print("  ! push: λείπει το OIDC token (permissions: id-token: write)", file=sys.stderr)
             return
         body = {"topics": topics, "title": title, "body": message, "url": url, "tag": tag, "quiet": quiet,
-                "once": once, "start": start}
+                "once": once, "start": start, "result": result}
         req = urllib.request.Request(SITE + "api/push", data=json.dumps(body).encode(), method="POST",
                                      headers={"Content-Type": "application/json", "Authorization": f"Bearer {token}"})
         with urllib.request.urlopen(req, timeout=60) as r:
@@ -119,7 +119,7 @@ def _push(topics: list[str], title: str, message: str, url: str, tag: str | None
 
 def send(section: str, kind: str, title: str, message: str, match: dict | None = None,
          to_match: bool = True, also_match_kinds: tuple[str, ...] = (), tag: str | None = None,
-         once: str | None = None) -> None:
+         once: str | None = None, result: dict | None = None) -> None:
     """Στέλνει σε όσους ακολουθούν το τμήμα και, αν δοθεί αγώνας, σε όσους ακολουθούν τον αγώνα.
 
     to_match: αν πηγαίνει και στο ίδιο είδος του αγώνα.
@@ -139,7 +139,8 @@ def send(section: str, kind: str, title: str, message: str, match: dict | None =
         once = once or f"{match['nt']}-result"
     # start: η ώρα του αγώνα, ώστε το κινητό να γράψει την ώρα στη δική του ζώνη (βλ. sw.js).
     start = match.get("start") if has_match and match.get("timeKnown") else None
-    _push(list(dict.fromkeys(topics)), title, message, url, tag, quiet=kind == "result", once=once, start=start)
+    _push(list(dict.fromkeys(topics)), title, message, url, tag, quiet=kind == "result", once=once, start=start,
+          result=result)
 
 
 def changes(previous: list[dict], current: list[dict], sections: set[str]) -> list[tuple]:

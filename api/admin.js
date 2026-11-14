@@ -195,8 +195,10 @@ export default async function handler(req, res) {
   if (req.method === "GET") {
     const since = new Date(Date.now() - KEEP_DAYS * 86400 * 1000);
     const entries = await col.find({ at: { $gte: since } }, { projection: { _id: 0, history: 0 } }).toArray();
+    // Τελικά που έστειλε το live.py (api/push.js), για αγώνες χωρίς ακόμα επίσημο σκορ.
+    const live = await (await getDb()).collection("livefinals").find({ at: { $gte: since } }, { projection: { _id: 0 } }).toArray();
     res.setHeader("Cache-Control", "public, s-maxage=15");
-    return res.status(200).json({ entries });
+    return res.status(200).json({ entries, live });
   }
   if (req.method !== "POST") return send(res, 405, { error: "Μόνο GET ή POST." });
 

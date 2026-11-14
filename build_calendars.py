@@ -1562,11 +1562,25 @@ def admin_entries() -> dict[str, dict]:
     """Ό,τι έγραψε ο διαχειριστής από τη σελίδα του αγώνα (api/admin.js), ανά αγώνα (nt)."""
     if "entries" not in _ADMIN:
         try:
-            _ADMIN["entries"] = {e["nt"]: e for e in json.loads(fetch(ADMIN_URL)).get("entries", [])}
+            got = json.loads(fetch(ADMIN_URL))
+            _ADMIN["entries"] = {e["nt"]: e for e in got.get("entries", [])}
+            _ADMIN["live"] = {e["nt"]: e for e in got.get("live", [])}
         except Exception as e:
             print(f"  ! καταχωρίσεις διαχειριστή: {e}", file=sys.stderr)
             _ADMIN["entries"] = {}
+            _ADMIN["live"] = {}
     return _ADMIN["entries"]
+
+
+def apply_live_finals(section: str, matches: list[Match]) -> None:
+    """Το τελικό που έστειλε το live.py, για αγώνες χωρίς ακόμα σκορ από την επίσημη πηγή: έτσι το
+    πρόγραμμα και οι εικόνες αποτελεσμάτων το έχουν λίγα λεπτά μετά τη λήξη."""
+    admin_entries()
+    live = _ADMIN.get("live", {})
+    for m in matches:
+        e = live.get(match_topic_id(m.uid))
+        if e and not m.score and not m.status:
+            m.score = f"{int(e['home'])}-{int(e['away'])}"
 
 
 def apply_admin(section: str, matches: list[Match]) -> None:
@@ -1771,6 +1785,7 @@ def main(only: list[str] | None = None) -> int:
         except Exception as e:
             print(f"  ! ΑΣ ΠΑΟΚ, αποτελέσματα / {key}: {e}", file=sys.stderr)
         # Ό,τι έγραψε ο διαχειριστής μετρά τελευταίο, πάνω από όλα.
+        apply_live_finals(key, unique)
         apply_admin(key, unique)
         info = SECTIONS[key]
         for side, label, keep in (("home", "Εντός έδρας", True), ("away", "Εκτός έδρας", False)):

@@ -2046,6 +2046,20 @@
     },
     {
      "pos": 5,
+     "team": "ΠΑΝΙΩΝΙΟΣ ΓΣΣ",
+     "logo": "https://koecdn.twic.pics/media/panionios-1757496971-8NsrgxDo.png",
+     "paok": false,
+     "cells": [
+      "8",
+      "5",
+      "1",
+      "2",
+      "101-86",
+      "16"
+     ]
+    },
+    {
+     "pos": 6,
      "team": "ΑΛΙΜΟΣ ΝΑΣ",
      "logo": "https://koecdn.twic.pics/media/alimos-1757618338-HykYQxju.jpg",
      "paok": false,
@@ -2056,20 +2070,6 @@
       "4",
       "141-97",
       "15"
-     ]
-    },
-    {
-     "pos": 6,
-     "team": "ΠΑΝΙΩΝΙΟΣ ΓΣΣ",
-     "logo": "https://koecdn.twic.pics/media/panionios-1757496971-8NsrgxDo.png",
-     "paok": false,
-     "cells": [
-      "7",
-      "4",
-      "1",
-      "2",
-      "91-77",
-      "13"
      ]
     },
     {
@@ -2092,11 +2092,11 @@
      "logo": "https://koecdn.twic.pics/media/327204416-876598936727395-7539238121809845951-n-1759145224-TwVlRdRx.jpg",
      "paok": false,
      "cells": [
-      "8",
+      "9",
       "3",
       "0",
-      "5",
-      "105-126",
+      "6",
+      "114-136",
       "9"
      ]
     },

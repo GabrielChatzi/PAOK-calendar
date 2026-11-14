@@ -31,7 +31,9 @@ export default async function handler(req, res) {
   const fin = body.result;
   if (fin && /^[0-9a-f]{10}$/.test(String(fin.nt)) && [fin.home, fin.away].every((x) => Number.isInteger(x) && x >= 0 && x <= 300)) {
     await (await getDb()).collection("livefinals").updateOne({ _id: fin.nt },
-      { $set: { nt: fin.nt, home: fin.home, away: fin.away, at: new Date() } }, { upsert: true });
+      { $set: { nt: fin.nt, home: fin.home, away: fin.away, at: new Date(),
+        periods: Array.isArray(fin.periods) ? fin.periods.slice(0, 12).filter((q) => Array.isArray(q) && q.length === 2
+          && q.every((x) => Number.isInteger(x) && x >= 0 && x <= 300)) : [] } }, { upsert: true });
   }
   const wanted = new Set((body.topics || []).filter((t) => typeof t === "string" && TOPIC_RE.test(t)));
   if (!wanted.size || !body.title) return send(res, 400, { error: "Λείπουν θέματα ή τίτλος." });

@@ -396,6 +396,17 @@ def save_states(states: dict[str, dict], now: dt.datetime) -> None:
         print(f"  ! αποθήκευση κατάστασης: {e}", file=sys.stderr)
 
 
+def final_result(m: dict, new: dict) -> dict:
+    """Το τελικό για το api/push.js: σκορ και, αν υπάρχουν, τα επιμέρους (σετ, περίοδοι), ώστε να
+    μένουν στη σελίδα του αγώνα και μετά το live."""
+    out = {"nt": m["nt"], "home": int(new["home"]), "away": int(new["away"])}
+    periods = [[int(q["home"]), int(q["away"])] for q in (new.get("quarters") or [])
+               if isinstance(q, dict) and str(q.get("home", "")).isdigit() and str(q.get("away", "")).isdigit()]
+    if periods:
+        out["periods"] = periods
+    return out
+
+
 def rebuild() -> None:
     """Μετά από ένα τελικό: νέα ενημέρωση του προγράμματος (παίρνει το σκορ από το api/push.js), και
     μετά από αυτή ξαναβγαίνουν οι εικόνες των social (social.yml)."""
@@ -482,7 +493,7 @@ def main() -> int:
                             also_match_kinds=("result",) if final else (),
                             tag=f"{m['nt']}-result" if final else None,
                             once=once_key(m, title, final),
-                            result={"nt": m["nt"], "home": int(new["home"]), "away": int(new["away"])} if final else None)
+                            result=final_result(m, new) if final else None)
                 if final:
                     rebuild()
             if old is None or (old["state"], old["home"], old["away"]) != (new["state"], new["home"], new["away"]):

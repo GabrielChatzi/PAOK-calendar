@@ -101,6 +101,8 @@ class Match:
     live: dict | None = None
     status: str = ""  # "postponed" | "cancelled" | "abandoned": δεν θα γίνει / δεν ολοκληρώθηκε
     note: str = ""    # π.χ. «πέναλτι 4–3», «μετά από παράταση», ή ο λόγος της αναβολής
+    # Σκορ ανά σετ/περίοδο ([γηπεδούχος, φιλοξενούμενος]), από το τελικό του live: μένει μετά τον αγώνα.
+    periods: list | None = None
 
     def start(self) -> dt.datetime:
         return dt.datetime.combine(self.day, self.time or DEFAULT_TIME, ATHENS)
@@ -114,7 +116,7 @@ class Match:
         d["awayLogo"] = d.pop("away_logo")
         d["tvUrl"] = d.pop("tv_url")
         d["nt"] = match_topic_id(self.uid)
-        for k in ("live", "status", "note"):
+        for k in ("live", "status", "note", "periods"):
             if not d[k]:
                 del d[k]
         del d["day"], d["time"]
@@ -1579,8 +1581,22 @@ def apply_live_finals(section: str, matches: list[Match]) -> None:
     live = _ADMIN.get("live", {})
     for m in matches:
         e = live.get(match_topic_id(m.uid))
-        if e and not m.score and not m.status:
-            m.score = f"{int(e['home'])}-{int(e['away'])}"
+        if not e or m.status:
+            continue
+        final = f"{int(e['home'])}-{int(e['away'])}"
+        if not m.score:
+            m.score = final
+        if e.get("periods") and m.score == final and not m.periods:
+            m.periods = [[int(a), int(b)] for a, b in e["periods"]]
+
+
+def carry_periods(previous: list[dict], current: list[Match]) -> None:
+    """Τα σετ/περίοδοι μένουν από την προηγούμενη ενημέρωση (το live τα δίνει μόνο μία φορά)."""
+    before = {p["uid"]: p for p in previous}
+    for m in current:
+        p = before.get(m.uid)
+        if p and p.get("periods") and not m.periods and m.score and p.get("score") == m.score:
+            m.periods = p["periods"]
 
 
 def apply_admin(section: str, matches: list[Match]) -> None:
@@ -1767,6 +1783,7 @@ def main(only: list[str] | None = None) -> int:
         except Exception as e:
             print(f"  ! ΑΣ ΠΑΟΚ / {key}: {e}", file=sys.stderr)
         carry_uids(prev_by_section[key], unique)
+        carry_periods(prev_by_section[key], unique)
         keep_friendlies(prev_by_section[key], unique)
         unique[:] = drop_shadow_friendlies(unique)
         for m in unique:

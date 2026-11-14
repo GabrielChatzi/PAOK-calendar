@@ -405,6 +405,18 @@ class Admin(unittest.TestCase):
             b.apply_live_finals("volley", [a, c])
         self.assertEqual((a.score, c.score), ("3-1", "3-0"))
 
+    def test_live_final_periods_kept(self):
+        a = b.Match(section="volley", uid="v3", day=dt.date(2026, 11, 13), time=dt.time(18, 30), home="ΠΑΟΚ",
+                    away="Άρης", paok_home=True)
+        live = {b.match_topic_id("v3"): {"home": 3, "away": 1, "periods": [[25, 21], [23, 25], [25, 19], [25, 22]]}}
+        with mock.patch.dict(b._ADMIN, {"entries": {}, "live": live}):
+            b.apply_live_finals("volley", [a])
+        self.assertEqual(a.periods[1], [23, 25])
+        later = b.Match(section="volley", uid="v3", day=a.day, time=a.time, home="ΠΑΟΚ", away="Άρης",
+                        paok_home=True, score="3-1")
+        b.carry_periods([a.to_json()], [later])
+        self.assertEqual(later.periods, a.periods)
+
     def test_admin_live_entry_does_not_set_score(self):
         m = b.Match(section="futsal", uid="u2", day=dt.date(2026, 11, 1), time=dt.time(14, 0), home="ΠΑΟΚ",
                     away="Χ", paok_home=True)

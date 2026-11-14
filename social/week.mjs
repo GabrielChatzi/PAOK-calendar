@@ -114,6 +114,11 @@ export function row(m, names) {
   };
   // Η διοργάνωση φαίνεται μόνο όταν δεν είναι το πρωτάθλημα (Ευρώπη, κύπελλο, φιλικό).
   if (/Euro|Cup|Κύπελλ|Champions|Conference|EHF|CEV|Φιλικ/i.test(m.competition)) r.competition = m.competition;
+  // Βόλεϊ: τα σετ κάτω από τον αντίπαλο στις εικόνες αποτελεσμάτων (π.χ. «25-21 · 23-25 · 25-19 · 25-22»).
+  if (m.periods?.length && /^volley/.test(m.section) && m.score) {
+    const sets = m.periods.map(([h, a]) => (m.paokHome ? `${h}-${a}` : `${a}-${h}`)).join(" · ");
+    r.competition = r.competition ? `${r.competition} · ${sets}` : sets;
+  }
   const s = /^(\d+)-(\d+)$/.exec(m.score || "");
   if (s) {
     const [h, a] = [+s[1], +s[2]];

@@ -1439,7 +1439,7 @@
     {
      "pos": 1,
      "team": "ΟΛΥΜΠΙΑΚΟΣ ΟΜΙΛΟΣ ΞΥΝΗ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/39/OlympiacosSFP_800-3978538c.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -1453,7 +1453,7 @@
     {
      "pos": 2,
      "team": "Α.Ε.Κ.",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/8c/aek-2025-8c1dd556.jpg",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -1467,7 +1467,7 @@
     {
      "pos": 3,
      "team": "ΔΙΟΜΗΔΗΣ ΑΡΓΟΥΣ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/d9/diomidis-01-d9660914.jpg",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -1481,7 +1481,7 @@
     {
      "pos": 4,
      "team": "ΠΑΟΚ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
+     "logo": "",
      "paok": true,
      "cells": [
       "6",
@@ -1495,7 +1495,7 @@
     {
      "pos": 5,
      "team": "ΙΩΝΙΚΟΣ AUTOVALUE",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/5a/ionikos-logo-2026-5a6732d4.jpg",
+     "logo": "",
      "paok": false,
      "cells": [
       "6",
@@ -1509,7 +1509,7 @@
     {
      "pos": 6,
      "team": "GMC ΔΡΑΜΑ 1986",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/e6/drama-logo-2026-e6ffcb6b.jpg",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -1523,7 +1523,7 @@
     {
      "pos": 7,
      "team": "Ε.Γ.Σ.Ν ΖΑΦΕΙΡΑΚΗΣ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/99/zafeirakis-9957f5d2.jpg",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -1537,7 +1537,7 @@
     {
      "pos": 8,
      "team": "Α.Σ.Ε ΔΟΥΚΑ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/55/doukas-logo-01-2026-557a8e2a.jpg",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -1551,7 +1551,7 @@
     {
      "pos": 9,
      "team": "Γ.Α.Σ ΚΙΛΚΙΣ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/1d/kilkis_logo-1d38b7c5.jpg",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -1565,7 +1565,7 @@
     {
      "pos": 10,
      "team": "ΑΡΗΣ ΝΙΚΑΙΑΣ OLYMPIC DIAG",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/cb/aris-nikaias-2026-cbde8756.jpg",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -1579,7 +1579,7 @@
     {
      "pos": 11,
      "team": "ΑΘΗΝΑΙΚΟΣ Α.Σ.Β.",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/73/athinaikos-732c45d8.jpg",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -1593,7 +1593,7 @@
     {
      "pos": 12,
      "team": "Χ.Α.Ν.Θ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/7e/xanth-logo-2026-7e1830b5.jpg",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",

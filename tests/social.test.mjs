@@ -36,7 +36,7 @@ test("Πρόγραμμα το βράδυ πριν, αποτελέσματα το
   const mid = find(p, "schedule", "2026-11-09");
   assert.equal(mid.time, "22:00");
   assert.deepEqual(mid.cards.map((c) => c.file), ["2026-11-10_2026-11-13"]);  // 2 αγώνες: μία κάρτα
-  assert.deepEqual(mid.cards[0].matches.map((m) => m.when), ["Τρί 10.11", "Παρ 13.11"]);
+  assert.deepEqual(mid.cards[0].sections.map((x) => `${x.day} ${x.date}`), ["Τρίτη 10.11", "Παρασκευή 13.11"]);
   // Κάθε post έχει μόνο ένα είδος καρτών.
   for (const it of p.items.filter((i) => i.type === "post")) {
     assert.equal(new Set(it.cards.map((c) => c.kind)).size <= 1, true, it.title);

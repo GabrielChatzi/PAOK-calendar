@@ -56,7 +56,10 @@ const HOME = '<svg viewBox="0 0 48 48" width="22" height="22"><path d="M4 22c0-4
 const AWAY = '<svg viewBox="0 0 48 48" width="22" height="22"><path d="M44 21c0-2-2-3-4-3H30L19 4h-5l6 14H10l-4-5H2l3 11-3 11h4l4-5h10l-6 14h5l11-14h10c2 0 4-1 4-3z" fill="currentColor"/></svg>';
 
 function html(spec, rows, story) {
-  const n = rows.length;
+  // Πολλές μέρες σε μία εικόνα (spec.sections): η καθεμία με τον δικό της τίτλο, η μία κάτω από την άλλη.
+  const secs = spec.sections || null;
+  const n = secs ? rows.flat().length + secs.length * 0.9 : rows.length;
+  const sz = secs ? Math.round((story ? 330 : 260) * Math.min(1, 2 / secs.length)) : 0;
   // Λιγότεροι αγώνες → μεγαλύτερα στοιχεία.
   const k = story ? Math.min(1.25, 1 + (6 - n) * 0.06) : n > 5 ? 1 - (n - 5) * 0.2 : Math.min(1.15, 1 + (5 - n) * 0.05);
   const H = story ? 1920 : 1350;
@@ -88,19 +91,27 @@ body{display:flow-root;width:1080px;height:${H}px;color:#0b0b0b;font-family:F;ov
 .box{font-family:S;font-weight:900;font-size:${84 * k}px;line-height:1;letter-spacing:1px;white-space:nowrap;color:#0b0b0b;text-align:right}
 .box i{font-style:normal;color:#b5b3ad}.box b{font-weight:900;color:#0b0b0b}.box em{font-style:normal;position:relative}.box em:after{content:'';position:absolute;left:8%;right:8%;bottom:${2 * k}px;height:${5 * k}px;background:currentColor}.box u{text-decoration:none;color:#b5b3ad;margin:0 ${6 * k}px}
 .res{font-weight:800;font-size:${18 * k}px;letter-spacing:5px;margin-top:6px}
+.ktop{position:absolute;z-index:2;left:0;right:0;top:${top}px;text-align:center}
+.secs{position:absolute;z-index:2;left:0;right:0;top:${top + 60}px;bottom:${(story ? 210 : 44) + 70}px;display:flex;flex-direction:column;justify-content:space-evenly;align-items:center}
+.sec{display:flex;flex-direction:column;align-items:center}
+.sec .head{position:relative;padding:0;height:auto;width:1080px}
+.sec .day{font-size:${secs ? Math.min(sz, Math.round(sz * 7.4 / Math.max(...secs.map((x) => [...x.day].length)))) : 0}px;margin-top:0}
+.sec .date{top:${Math.round(sz * 0.42)}px;font-size:${Math.round(sz * 0.5)}px}
+.sec .list{margin-top:${Math.round(sz * 0.42)}px}
 .foot{position:absolute;bottom:${story ? 210 : 44}px;left:0;right:0;text-align:center;font-weight:800;font-size:50px;letter-spacing:-1px;line-height:1}
 .foot em{font-style:normal;color:#77756f}
 </style></head><body><div class="st"></div><div class="glow"></div>
-<div class="head"><div class="kick">ΑΠΟΤΕΛΕΣΜΑΤΑ</div><div class="day">${UP(spec.day)}</div><div class="date">${spec.date}</div></div>
+${secs ? `<div class="ktop kick">ΑΠΟΤΕΛΕΣΜΑΤΑ</div><div class="secs">${secs.map((x, i) => `<div class="sec"><div class="head"><div class="day">${UP(x.day)}</div><div class="date">${x.date}</div></div>` +
+  `<div class="list">${rows[i].join("")}</div></div>`).join("")}</div>` :
+`<div class="head"><div class="kick">ΑΠΟΤΕΛΕΣΜΑΤΑ</div><div class="day">${UP(spec.day)}</div><div class="date">${spec.date}</div></div>
 <div class="orn"><i></i><span>✦</span><i></i></div>
-<div class="mid"><div class="list">${rows.join("")}</div></div>
+<div class="mid"><div class="list">${rows.join("")}</div></div>`}
 <div class="foot"><b>PAOK</b><em>alendar</em></div><div class="grain"></div></body></html>`;
 }
 
 // Βγάζει τις εικόνες ενός JSON (βλ. πάνω). base: ο φάκελος για τα σχετικά "logo".
 export async function render(spec, outDir, { browser, base = outDir, kinds = ["post", "story"] } = {}) {
-  const rows = [];
-  for (const m of spec.matches) {
+  const rowsOf = async (matches) => { const rows = []; for (const m of matches) {
     const src = await logo(m.logo, base).catch(() => "");
     const ini = UP(m.opponent).split(/\s+/).map((w) => w[0]).join("").slice(0, 3);
     const r = m.us > m.them ? ["W", "ΝΙΚΗ"] : m.us < m.them ? ["L", "ΗΤΤΑ"] : ["D", "ΙΣΟΠΑΛΙΑ"];
@@ -109,7 +120,8 @@ export async function render(spec, outDir, { browser, base = outDir, kinds = ["p
   <div class="info">${[m.when && `<b>${UP(m.when)}</b>`, UP(m.section), UP(m.competition)].filter(Boolean).join(" <s></s> ")}</div>
   <div class="ha">${m.home ? HOME : AWAY} ${m.home ? "ΕΝΤΟΣ" : "ΕΚΤΟΣ"}${m.venue ? ` · ${UP(m.venue)}` : ""}</div></div>
   <div class="sc"><div class="box">${(() => { const win = m.us > m.them, lose = m.us < m.them; const us0 = win ? `<b>${m.us}</b>` : `<i>${m.us}</i>`, us = win || lose ? `<em>${us0}</em>` : us0, them = lose ? `<b>${m.them}</b>` : `<i>${m.them}</i>`; return m.home ? `${us}<u>–</u>${them}` : `${them}<u>–</u>${us}`; })()}</div></div></div>`);
-  }
+  } return rows; };
+  const rows = spec.sections ? await Promise.all(spec.sections.map((x) => rowsOf(x.matches))) : await rowsOf(spec.matches);
   fs.mkdirSync(outDir, { recursive: true });
   const own = !browser;
   if (own) browser = await (await chromium()).launch();

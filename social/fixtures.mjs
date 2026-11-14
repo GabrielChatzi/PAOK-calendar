@@ -50,7 +50,10 @@ const HOME = '<svg viewBox="0 0 48 48" width="22" height="22"><path d="M4 22c0-4
 const AWAY = '<svg viewBox="0 0 48 48" width="22" height="22"><path d="M44 21c0-2-2-3-4-3H30L19 4h-5l6 14H10l-4-5H2l3 11-3 11h4l4-5h10l-6 14h5l11-14h10c2 0 4-1 4-3z" fill="currentColor"/></svg>';
 
 function html(spec, rows, story) {
-  const n = rows.length;
+  // Πολλές μέρες σε μία εικόνα (spec.sections): η καθεμία με τον δικό της τίτλο, η μία κάτω από την άλλη.
+  const secs = spec.sections || null;
+  const n = secs ? rows.flat().length + secs.length * 0.9 : rows.length;
+  const sz = secs ? Math.round((story ? 330 : 260) * Math.min(1, 2 / secs.length)) : 0;
   // Λιγότεροι αγώνες → μεγαλύτερα στοιχεία.
   const k = story ? Math.min(1.25, 1 + (6 - n) * 0.06) : n > 5 ? 1 - (n - 5) * 0.2 : Math.min(1.15, 1 + (5 - n) * 0.05);
   const H = story ? 1920 : 1350;
@@ -77,25 +80,34 @@ body{display:flow-root;width:1080px;height:${H}px;color:#fff;font-family:F;overf
 .info{font-weight:700;font-size:${23 * k}px;letter-spacing:4px;margin-top:6px;display:flex;align-items:center;gap:12px;color:#ddd;white-space:nowrap}
 .info b{color:#fff;font-weight:800}.info s{display:inline-block;width:2px;height:${22 * k}px;background:#888;text-decoration:none}
 .ha{font-weight:700;font-size:${20 * k}px;letter-spacing:4px;color:#999;margin-top:4px;display:flex;align-items:center;gap:8px}
+.ktop{position:absolute;z-index:2;left:0;right:0;top:${top}px;text-align:center}
+.secs{position:absolute;z-index:2;left:0;right:0;top:${top + 60}px;bottom:${(story ? 210 : 44) + 70}px;display:flex;flex-direction:column;justify-content:space-evenly;align-items:center}
+.sec{display:flex;flex-direction:column;align-items:center}
+.sec .head{position:relative;padding:0;height:auto;width:1080px}
+.sec .day{font-size:${secs ? Math.min(sz, Math.round(sz * 7.4 / Math.max(...secs.map((x) => [...x.day].length)))) : 0}px;margin-top:0}
+.sec .date{top:${Math.round(sz * 0.42)}px;font-size:${Math.round(sz * 0.5)}px}
+.sec .list{margin-top:${Math.round(sz * 0.42)}px}
 .foot{position:absolute;bottom:${story ? 210 : 44}px;left:0;right:0;text-align:center;font-weight:800;font-size:50px;letter-spacing:-1px;line-height:1}
 .foot em{font-style:normal;color:#8a8a84}
 </style></head><body><div class="st"></div><div class="glow"></div>
-<div class="head"><div class="kick">ΠΡΟΓΡΑΜΜΑ ΑΓΩΝΩΝ</div><div class="day">${UP(spec.day)}</div><div class="date">${spec.date}</div></div>
+${secs ? `<div class="ktop kick">ΠΡΟΓΡΑΜΜΑ ΑΓΩΝΩΝ</div><div class="secs">${secs.map((x, i) => `<div class="sec"><div class="head"><div class="day">${UP(x.day)}</div><div class="date">${x.date}</div></div>` +
+  `<div class="list">${rows[i].join("")}</div></div>`).join("")}</div>` :
+`<div class="head"><div class="kick">ΠΡΟΓΡΑΜΜΑ ΑΓΩΝΩΝ</div><div class="day">${UP(spec.day)}</div><div class="date">${spec.date}</div></div>
 <div class="orn"><i></i><span>✦</span><i></i></div>
-<div class="mid"><div class="list">${rows.join("")}</div></div>
+<div class="mid"><div class="list">${rows.join("")}</div></div>`}
 <div class="foot"><b>PAOK</b><em>alendar</em></div><div class="grain"></div></body></html>`;
 }
 
 // Βγάζει τις εικόνες ενός JSON (βλ. πάνω). base: ο φάκελος για τα σχετικά "logo".
 export async function render(spec, outDir, { browser, base = outDir, kinds = ["post", "story"] } = {}) {
-  const rows = [];
-  for (const m of spec.matches) {
+  const rowsOf = async (matches) => { const rows = []; for (const m of matches) {
     const src = await logo(m.logo, base).catch(() => "");
     rows.push(`<div class="m"><div class="lg">${src ? `<img src="${src}">` : ""}</div><div>
   <div class="opp">${UP(m.opponent)}</div>
   <div class="info">${[m.when && `<b>${UP(m.when)}</b>`, UP(m.section), `<b>${m.time}</b>`, UP(m.tv)].filter((x) => x && x !== "<b></b>").join(" <s></s> ")}</div>
   <div class="ha">${m.home ? HOME : AWAY} ${m.home ? "ΕΝΤΟΣ" : "ΕΚΤΟΣ"}${m.venue ? ` · ${UP(m.venue)}` : ""}</div></div></div>`);
-  }
+  } return rows; };
+  const rows = spec.sections ? await Promise.all(spec.sections.map((x) => rowsOf(x.matches))) : await rowsOf(spec.matches);
   fs.mkdirSync(outDir, { recursive: true });
   const own = !browser;
   if (own) browser = await (await chromium()).launch();

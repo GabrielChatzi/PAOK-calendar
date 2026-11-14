@@ -182,10 +182,11 @@ export function plan(matches, today, { names = { teams: {}, venues: {}, tv: {} }
     const per = b.days.map((d) => [d, pick(byDay.get(d))]).filter(([, l]) => l.length);
     const total = per.reduce((n, [, l]) => n + l.length, 0);
     if (per.length < 2 || total > COMBINE_UP_TO) return per.flatMap(([d, l]) => card(kind, d, l));
+    // Οι μέρες η μία κάτω από την άλλη, η καθεμία με τον τίτλο της (όπως στις κάρτες μίας μέρας).
     const first = per[0][0], last = per.at(-1)[0];
-    const matches = per.flatMap(([d, l]) => l.map((m) => ({ ...row(m, names), when: `${DAYS[weekday(d)].slice(0, 3)} ${ddmm(d)}` })));
-    const date = first.slice(5, 7) === last.slice(5, 7) ? `${first.slice(8, 10)}–${ddmm(last)}` : `${ddmm(first)}–${ddmm(last)}`;
-    return [{ kind, day: b.kind === "weekend" ? "Σαββατοκύριακο" : "Εβδομάδα", date, file: `${first}_${last}`, matches }];
+    const sections = per.map(([d, l]) => ({ day: DAYS[weekday(d)], date: ddmm(d), matches: l.map((m) => row(m, names)) }));
+    return [{ kind, day: sections[0].day, date: sections[0].date, file: `${first}_${last}`, sections,
+      matches: sections.flatMap((x) => x.matches) }];
   };
 
   for (const b of blocks.values()) {
@@ -327,7 +328,7 @@ async function main() {
     it.images = [];
     for (const c of it.cards) {
       const kind = c.story ? "story" : "post";
-      const spec = { day: c.day, date: c.date, file: c.file, matches: c.matches };
+      const spec = { day: c.day, date: c.date, file: c.file, matches: c.matches, ...(c.sections && { sections: c.sections }) };
       const name = `${c.file}-${c.kind === "results" ? "apotelesmata-" : ""}${kind}.png`;
       const json = JSON.stringify(spec);
       const hash = crypto.createHash("sha1").update(json + fs.readFileSync(path.join(HERE, `${c.kind}.mjs`))).digest("hex").slice(0, 10);

@@ -562,6 +562,20 @@
     },
     {
      "pos": 8,
+     "team": "ΣΕΙΡΗΝΕΣ ΓΡΕΒΕΝΩΝ",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/fb84f8acc0b35a20cf5eddd3d801eaf8.jpg?itok=DIJr-APp",
+     "paok": false,
+     "cells": [
+      "7",
+      "2",
+      "1",
+      "4",
+      "6-15",
+      "7"
+     ]
+    },
+    {
+     "pos": 9,
      "team": "ΚΗΦΙΣΙΑ",
      "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/f43120ba1ac31aa09a5c4afec55ab75e.jpg?itok=SNdaav55",
      "paok": false,
@@ -572,20 +586,6 @@
       "3",
       "5-19",
       "5"
-     ]
-    },
-    {
-     "pos": 9,
-     "team": "ΣΕΙΡΗΝΕΣ ΓΡΕΒΕΝΩΝ",
-     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/fb84f8acc0b35a20cf5eddd3d801eaf8.jpg?itok=DIJr-APp",
-     "paok": false,
-     "cells": [
-      "6",
-      "1",
-      "1",
-      "4",
-      "5-15",
-      "4"
      ]
     },
     {
@@ -604,20 +604,6 @@
     },
     {
      "pos": 11,
-     "team": "ΟΦΗ",
-     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/d7aa6360e83232ec98861e11cdd6bc9f.jpg?itok=vcMePgaJ",
-     "paok": false,
-     "cells": [
-      "6",
-      "0",
-      "1",
-      "5",
-      "2-15",
-      "1"
-     ]
-    },
-    {
-     "pos": 12,
      "team": "ΟΔΥΣΣΕΑΣ ΜΟΣΧΑΤΟΥ WFC",
      "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/d073e52756ee5f17232394ecaf0b0ec1.jpg?itok=nBEwX0il",
      "paok": false,
@@ -627,6 +613,20 @@
       "1",
       "5",
       "1-14",
+      "1"
+     ]
+    },
+    {
+     "pos": 12,
+     "team": "ΟΦΗ",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/d7aa6360e83232ec98861e11cdd6bc9f.jpg?itok=vcMePgaJ",
+     "paok": false,
+     "cells": [
+      "7",
+      "0",
+      "1",
+      "6",
+      "2-16",
       "1"
      ]
     }

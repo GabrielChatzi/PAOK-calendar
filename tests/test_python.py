@@ -322,6 +322,15 @@ class ClubResults(unittest.TestCase):
                 "κλείνοντας το πρώτο δεκάλεπτο στο 14-20.")
         self.assertEqual(self.score("«Λύγισε» στην Βούλα…", text, home="ΠΡΩΤΕΑΣ", away="ΠΑΟΚ", paok_home=False), "71-69")
 
+    def test_score_in_title_winner_from_text(self):
+        t = "Συνεχίζει ακάθεκτος ο ΠΑΟΚ PayspotLabraki, 6-3 την ΑΕΛ στην Μίκρα!"
+        text = ("Συνέχεια στο εντυπωσιακό αήττητο σερί του έδωσε ο ΠΑΟΚ PayspotLabraki, o oποίος επικράτησε με 6-3 "
+                "της ΑΕΛ στο Κλειστό Γυμναστήριο Μίκρας, στα πλαίσια της 9ης αγωνιστικής της Futsal Superleague.")
+        self.assertEqual(self.score(t, text, away="ΑΕΛ"), "6-3")
+        self.assertEqual(self.score(t, text, home="ΑΕΛ", away="ΠΑΟΚ", paok_home=False), "3-6")
+        # Άλλο σκορ στο κείμενο από αυτό του τίτλου: τίποτα.
+        self.assertIsNone(self.score(t, "Ο ΠΑΟΚ επικράτησε με 4-1 στο ημίχρονο."))
+
     def test_youth_teams_ignored(self):
         self.assertIsNone(self.score("Νίκη με 14-11 για τους Παίδες Πόλο του ΠΑΟΚ"))
 

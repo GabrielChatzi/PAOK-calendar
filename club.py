@@ -316,6 +316,20 @@ SKIP_RE = re.compile(r"μικτή ζώνη|δήλωσ|τηλεόραση|στη�
 RESULT_SECTIONS = {"football-women", "futsal", "basketball-women"}  # χωρίς τελικό από live
 
 
+def _verdict(where: str, found: re.Match) -> tuple[int, int] | None:
+    """(ΠΑΟΚ, αντίπαλος) από την πρόταση με το σκορ, ή None αν δεν λέει ποιος κέρδισε."""
+    a, b = int(found.group(1)), int(found.group(2))
+    start = max(where.rfind(c, 0, found.start()) for c in ".!;") + 1
+    ends = [i for i in (where.find(c, found.end()) for c in ".!;") if i >= 0]
+    sentence = where[start:min(ends) if ends else len(where)]
+    win, loss, draw = bool(WIN_RE.search(sentence)), bool(LOSS_RE.search(sentence)), bool(DRAW_RE.search(sentence))
+    if draw and a == b and not (win or loss):
+        return a, b
+    if win != loss and a != b:
+        return (max(a, b), min(a, b)) if win else (min(a, b), max(a, b))
+    return None
+
+
 def score_from_post(title: str, text: str, home: str, away: str, paok_home: bool) -> str | None:
     """Το σκορ «γηπεδούχος-φιλοξενούμενος» από μια ανάρτηση, ή None αν δεν είναι ξεκάθαρο.
 
@@ -330,21 +344,20 @@ def score_from_post(title: str, text: str, home: str, away: str, paok_home: bool
     if named and is_paok(named.group(1)) != is_paok(named.group(2)):
         a, b = int(named.group(3)), int(named.group(4))
         return f"{a}-{b}" if is_paok(named.group(1)) == paok_home else f"{b}-{a}"
+    # Τίτλος με σκορ αλλά χωρίς λέξη για το ποιος κέρδισε («Συνεχίζει ακάθεκτος ο ΠΑΟΚ, 6-3 την ΑΕΛ!»):
+    # κρίνουμε από την πρόταση του κειμένου με το ίδιο σκορ («επικράτησε με 6-3 της ΑΕΛ»).
+    in_title = SCORE_RE.search(title)
+    pair = sorted(in_title.groups()) if in_title else None
     for where in (title, text[:700]):
         found = SCORE_RE.search(where)
-        if found:
+        if where is not title and pair:
+            found = next((f for f in SCORE_RE.finditer(where) if sorted(f.groups()) == pair), None)
+        if not found:
+            continue
+        verdict = _verdict(where, found)
+        if verdict:
+            paok, other = verdict
             break
-    else:
-        return None
-    a, b = int(found.group(1)), int(found.group(2))
-    start = max(where.rfind(c, 0, found.start()) for c in ".!;") + 1
-    ends = [i for i in (where.find(c, found.end()) for c in ".!;") if i >= 0]
-    sentence = where[start:min(ends) if ends else len(where)]
-    win, loss, draw = bool(WIN_RE.search(sentence)), bool(LOSS_RE.search(sentence)), bool(DRAW_RE.search(sentence))
-    if draw and a == b and not (win or loss):
-        paok, other = a, b
-    elif win != loss and a != b:
-        paok, other = (max(a, b), min(a, b)) if win else (min(a, b), max(a, b))
     else:
         return None
     return f"{paok}-{other}" if paok_home else f"{other}-{paok}"

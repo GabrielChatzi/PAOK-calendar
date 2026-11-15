@@ -538,12 +538,12 @@
      "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/3dba66ead9b4b634ee1c60c4c6be0fca.jpg?itok=nLd-y_95",
      "paok": false,
      "cells": [
-      "6",
-      "2",
+      "7",
+      "3",
       "1",
       "3",
-      "5-6",
-      "7"
+      "7-7",
+      "10"
      ]
     },
     {
@@ -594,11 +594,11 @@
      "logo": "https://www.epo.gr/modules/custom/competitions/images/blank-club-profile.png",
      "paok": false,
      "cells": [
-      "5",
+      "6",
       "1",
       "0",
-      "4",
-      "2-16",
+      "5",
+      "3-18",
       "3"
      ]
     },
@@ -766,18 +766,6 @@
     },
     {
      "pos": 11,
-     "team": "Μαρούσι",
-     "logo": "https://www.esake.gr/dat/esaketeam/0000000F/photo_new_FC6AF74E.png",
-     "paok": false,
-     "cells": [
-      "7",
-      "2-5",
-      "-23",
-      "9"
-     ]
-    },
-    {
-     "pos": 12,
      "team": "Μύκονος",
      "logo": "https://www.esake.gr/dat/esaketeam/BB4B460F/photo_new_62684735.png",
      "paok": false,
@@ -789,19 +777,7 @@
      ]
     },
     {
-     "pos": 13,
-     "team": "Vikos Falcons",
-     "logo": "https://www.esake.gr/dat/esaketeam/0041ADCB/photo_new_FE76D0B4.png",
-     "paok": false,
-     "cells": [
-      "7",
-      "1-6",
-      "-87",
-      "8"
-     ]
-    },
-    {
-     "pos": 14,
+     "pos": 12,
      "team": "Προμηθέας Πάτρας",
      "logo": "https://www.esake.gr/dat/esaketeam/2A25C696/photo_new_4BF0C19C.png",
      "paok": false,
@@ -810,6 +786,30 @@
       "1-6",
       "-105",
       "8"
+     ]
+    },
+    {
+     "pos": 13,
+     "team": "Μαρούσι",
+     "logo": "https://www.esake.gr/dat/esaketeam/0000000F/photo_new_FC6AF74E.png",
+     "paok": false,
+     "cells": [
+      "6",
+      "1-5",
+      "-34",
+      "7"
+     ]
+    },
+    {
+     "pos": 14,
+     "team": "Vikos Falcons",
+     "logo": "https://www.esake.gr/dat/esaketeam/0041ADCB/photo_new_FE76D0B4.png",
+     "paok": false,
+     "cells": [
+      "6",
+      "1-5",
+      "-76",
+      "7"
      ]
     }
    ]
@@ -1095,32 +1095,58 @@
    "rows": [
     {
      "pos": 1,
-     "team": "Παναθηναϊκός Α.Ο.",
-     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl14110420042832.gif",
-     "paok": false,
-     "cells": [
-      "3",
-      "3",
-      "0",
-      "9-0",
-      "9"
-     ]
-    },
-    {
-     "pos": 2,
      "team": "Φλοίσβος Members Paron",
      "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl1718776924122.gif",
      "paok": false,
      "cells": [
-      "3",
-      "3",
+      "4",
+      "4",
       "0",
-      "9-1",
-      "9"
+      "12-2",
+      "12"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "Παναθηναϊκός Α.Ο.",
+     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl14110420042832.gif",
+     "paok": false,
+     "cells": [
+      "4",
+      "4",
+      "0",
+      "12-2",
+      "11"
      ]
     },
     {
      "pos": 3,
+     "team": "Ο.Φ.Η.",
+     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl1568216313930.gif",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "1",
+      "9-3",
+      "9"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "ΠΑΟΚ",
+     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
+     "paok": true,
+     "cells": [
+      "4",
+      "3",
+      "1",
+      "9-6",
+      "9"
+     ]
+    },
+    {
+     "pos": 5,
      "team": "Πανιώνιος Betsson",
      "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl17603494571792.gif",
      "paok": false,
@@ -1133,33 +1159,20 @@
      ]
     },
     {
-     "pos": 4,
-     "team": "Ο.Φ.Η.",
-     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl1568216313930.gif",
-     "paok": false,
-     "cells": [
-      "3",
-      "2",
-      "1",
-      "6-3",
-      "6"
-     ]
-    },
-    {
-     "pos": 5,
+     "pos": 6,
      "team": "Ολυμπιακός Σ.Φ.Π. ONEX",
      "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl166625673654.gif",
      "paok": false,
      "cells": [
-      "3",
+      "4",
       "2",
-      "1",
-      "6-3",
-      "6"
+      "2",
+      "8-6",
+      "7"
      ]
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "Α.Ο.Φοίνικας Σύρου",
      "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl151506935980.gif",
      "paok": false,
@@ -1172,28 +1185,15 @@
      ]
     },
     {
-     "pos": 7,
-     "team": "ΠΑΟΚ",
-     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
-     "paok": true,
-     "cells": [
-      "3",
-      "2",
-      "1",
-      "6-5",
-      "6"
-     ]
-    },
-    {
      "pos": 8,
      "team": "Α.Ο.Π.Κηφισιάς",
      "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl14424751662839.gif",
      "paok": false,
      "cells": [
-      "3",
+      "4",
       "1",
-      "2",
-      "6-7",
+      "3",
+      "6-10",
       "4"
      ]
     },
@@ -1229,10 +1229,10 @@
      "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl1599421873423.gif",
      "paok": false,
      "cells": [
-      "3",
+      "4",
       "0",
-      "3",
-      "1-9",
+      "4",
+      "2-12",
       "0"
      ]
     },
@@ -1242,10 +1242,10 @@
      "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl13607973882903.gif",
      "paok": false,
      "cells": [
-      "3",
+      "4",
       "0",
-      "3",
-      "0-9",
+      "4",
+      "1-12",
       "0"
      ]
     }

@@ -468,12 +468,12 @@
      "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=gfyX-2TL",
      "paok": true,
      "cells": [
-      "6",
-      "6",
+      "7",
+      "7",
       "0",
       "0",
-      "18-1",
-      "18"
+      "21-2",
+      "21"
      ]
     },
     {
@@ -496,11 +496,11 @@
      "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/2a679000b33763417294af0f84aab5c2.jpg?itok=xfpo0UxO",
      "paok": false,
      "cells": [
-      "5",
+      "6",
       "5",
       "0",
-      "0",
-      "16-0",
+      "1",
+      "17-3",
       "15"
      ]
     },
@@ -766,6 +766,18 @@
     },
     {
      "pos": 11,
+     "team": "Μαρούσι",
+     "logo": "https://www.esake.gr/dat/esaketeam/0000000F/photo_new_FC6AF74E.png",
+     "paok": false,
+     "cells": [
+      "7",
+      "2-5",
+      "-23",
+      "9"
+     ]
+    },
+    {
+     "pos": 12,
      "team": "Μύκονος",
      "logo": "https://www.esake.gr/dat/esaketeam/BB4B460F/photo_new_62684735.png",
      "paok": false,
@@ -777,7 +789,19 @@
      ]
     },
     {
-     "pos": 12,
+     "pos": 13,
+     "team": "Vikos Falcons",
+     "logo": "https://www.esake.gr/dat/esaketeam/0041ADCB/photo_new_FE76D0B4.png",
+     "paok": false,
+     "cells": [
+      "7",
+      "1-6",
+      "-87",
+      "8"
+     ]
+    },
+    {
+     "pos": 14,
      "team": "Προμηθέας Πάτρας",
      "logo": "https://www.esake.gr/dat/esaketeam/2A25C696/photo_new_4BF0C19C.png",
      "paok": false,
@@ -786,30 +810,6 @@
       "1-6",
       "-105",
       "8"
-     ]
-    },
-    {
-     "pos": 13,
-     "team": "Μαρούσι",
-     "logo": "https://www.esake.gr/dat/esaketeam/0000000F/photo_new_FC6AF74E.png",
-     "paok": false,
-     "cells": [
-      "6",
-      "1-5",
-      "-34",
-      "7"
-     ]
-    },
-    {
-     "pos": 14,
-     "team": "Vikos Falcons",
-     "logo": "https://www.esake.gr/dat/esaketeam/0041ADCB/photo_new_FE76D0B4.png",
-     "paok": false,
-     "cells": [
-      "6",
-      "1-5",
-      "-76",
-      "7"
      ]
     }
    ]
@@ -1266,6 +1266,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Παναθηναϊκός Α.Ο.",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "5",
+      "5",
+      "0",
+      "15-2",
+      "10"
+     ]
+    },
+    {
+     "pos": 2,
      "team": "Πανιώνιος",
      "logo": "",
      "paok": false,
@@ -1278,7 +1291,7 @@
      ]
     },
     {
-     "pos": 2,
+     "pos": 3,
      "team": "Ολυμπιακός Σ.Φ.Π.",
      "logo": "",
      "paok": false,
@@ -1291,7 +1304,7 @@
      ]
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "ΠΑΟΚ",
      "logo": "https://images.dataproject.com/eope/TeamLogo/100/40/TeamLogo_118.jpg",
      "paok": true,
@@ -1301,19 +1314,6 @@
       "1",
       "12-7",
       "9"
-     ]
-    },
-    {
-     "pos": 4,
-     "team": "Παναθηναϊκός Α.Ο.",
-     "logo": "",
-     "paok": false,
-     "cells": [
-      "4",
-      "4",
-      "0",
-      "12-2",
-      "8"
      ]
     },
     {
@@ -1374,11 +1374,11 @@
      "logo": "",
      "paok": false,
      "cells": [
-      "4",
+      "5",
       "2",
-      "2",
-      "7-8",
-      "6"
+      "3",
+      "7-11",
+      "7"
      ]
     },
     {

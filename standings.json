@@ -658,13 +658,13 @@
     },
     {
      "pos": 2,
-     "team": "Καρδίτσα",
-     "logo": "https://www.esake.gr/dat/esaketeam/B742845D/photo_new_04E98281.png",
+     "team": "Παναθηναϊκός",
+     "logo": "https://www.esake.gr/dat/esaketeam/00000001/photo_new_160CD854.png",
      "paok": false,
      "cells": [
       "7",
-      "4-3",
-      "13",
+      "6-1",
+      "92",
       "11"
      ]
     },
@@ -682,6 +682,30 @@
     },
     {
      "pos": 4,
+     "team": "Καρδίτσα",
+     "logo": "https://www.esake.gr/dat/esaketeam/B742845D/photo_new_04E98281.png",
+     "paok": false,
+     "cells": [
+      "7",
+      "4-3",
+      "13",
+      "11"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "Περιστέρι",
+     "logo": "https://www.esake.gr/dat/esaketeam/0000000D/photo_new_30338F54.png",
+     "paok": false,
+     "cells": [
+      "7",
+      "4-3",
+      "-25",
+      "11"
+     ]
+    },
+    {
+     "pos": 6,
      "team": "Ολυμπιακός",
      "logo": "https://www.esake.gr/dat/esaketeam/00000002/photo_new_7F6C9D90.png",
      "paok": false,
@@ -693,7 +717,19 @@
      ]
     },
     {
-     "pos": 5,
+     "pos": 7,
+     "team": "Κολοσσός Ρόδου",
+     "logo": "https://www.esake.gr/dat/esaketeam/0000000A/photo_new_5DC7EFBA.png",
+     "paok": false,
+     "cells": [
+      "7",
+      "3-4",
+      "-12",
+      "10"
+     ]
+    },
+    {
+     "pos": 8,
      "team": "Δόξα Λευκάδας",
      "logo": "https://www.esake.gr/dat/esaketeam/3CA10C07/photo_new_6AE0FF13.png",
      "paok": false,
@@ -705,7 +741,7 @@
      ]
     },
     {
-     "pos": 6,
+     "pos": 9,
      "team": "Ηρακλής",
      "logo": "https://www.esake.gr/dat/esaketeam/00000011/photo_new_212846DF.png",
      "paok": false,
@@ -714,42 +750,6 @@
       "3-4",
       "26",
       "10"
-     ]
-    },
-    {
-     "pos": 7,
-     "team": "Παναθηναϊκός",
-     "logo": "https://www.esake.gr/dat/esaketeam/00000001/photo_new_160CD854.png",
-     "paok": false,
-     "cells": [
-      "6",
-      "5-1",
-      "87",
-      "9"
-     ]
-    },
-    {
-     "pos": 8,
-     "team": "Κολοσσός Ρόδου",
-     "logo": "https://www.esake.gr/dat/esaketeam/0000000A/photo_new_5DC7EFBA.png",
-     "paok": false,
-     "cells": [
-      "6",
-      "3-3",
-      "-7",
-      "9"
-     ]
-    },
-    {
-     "pos": 9,
-     "team": "Περιστέρι",
-     "logo": "https://www.esake.gr/dat/esaketeam/0000000D/photo_new_30338F54.png",
-     "paok": false,
-     "cells": [
-      "6",
-      "3-3",
-      "-42",
-      "9"
      ]
     },
     {
@@ -766,6 +766,18 @@
     },
     {
      "pos": 11,
+     "team": "Μύκονος",
+     "logo": "https://www.esake.gr/dat/esaketeam/BB4B460F/photo_new_62684735.png",
+     "paok": false,
+     "cells": [
+      "7",
+      "1-6",
+      "-83",
+      "8"
+     ]
+    },
+    {
+     "pos": 12,
      "team": "Προμηθέας Πάτρας",
      "logo": "https://www.esake.gr/dat/esaketeam/2A25C696/photo_new_4BF0C19C.png",
      "paok": false,
@@ -774,18 +786,6 @@
       "1-6",
       "-105",
       "8"
-     ]
-    },
-    {
-     "pos": 12,
-     "team": "Μύκονος",
-     "logo": "https://www.esake.gr/dat/esaketeam/BB4B460F/photo_new_62684735.png",
-     "paok": false,
-     "cells": [
-      "6",
-      "1-5",
-      "-66",
-      "7"
      ]
     },
     {

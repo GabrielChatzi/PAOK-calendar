@@ -1806,16 +1806,16 @@
     },
     {
      "pos": 3,
-     "team": "ΓΣ ΑΠΟΛΛΩΝ ΣΜ.",
-     "logo": "https://koecdn.twic.pics/media/apollon-1757488473-Yl0JuEC9.jpg",
+     "team": "ΝΟ ΒΟΥΛΙΑΓΜΕΝΗΣ",
+     "logo": "https://koecdn.twic.pics/media/nov-logo-gr-1758965899-UA7wQDNs.png",
      "paok": false,
      "cells": [
       "8",
       "6",
-      "0",
-      "2",
-      "145-118",
-      "18"
+      "1",
+      "1",
+      "138-87",
+      "19"
      ]
     },
     {
@@ -1834,16 +1834,16 @@
     },
     {
      "pos": 5,
-     "team": "ΝΟ ΒΟΥΛΙΑΓΜΕΝΗΣ",
-     "logo": "https://koecdn.twic.pics/media/nov-logo-gr-1758965899-UA7wQDNs.png",
+     "team": "ΓΣ ΑΠΟΛΛΩΝ ΣΜ.",
+     "logo": "https://koecdn.twic.pics/media/apollon-1757488473-Yl0JuEC9.jpg",
      "paok": false,
      "cells": [
       "8",
-      "6",
-      "0",
+      "5",
+      "1",
       "2",
-      "137-87",
-      "18"
+      "145-119",
+      "16"
      ]
     },
     {

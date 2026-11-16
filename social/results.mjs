@@ -83,7 +83,8 @@ body{display:flow-root;width:1080px;height:${H}px;color:#0b0b0b;font-family:F;ov
 .lg{width:${96 * k}px;height:${96 * k}px;flex:none;display:flex;align-items:center;justify-content:center}.lg:has(.ini){border-radius:50%;border:3px solid #0b0b0b}
 .ini{font-family:S;font-weight:900;font-size:${34 * k}px}
 .lg img{width:100%;height:100%;object-fit:contain}
-.opp{white-space:nowrap;font-family:S;font-weight:900;font-size:${76 * k}px;line-height:.9}
+.tx{flex:1;min-width:0}
+.opp{text-wrap:balance;font-family:S;font-weight:900;font-size:${76 * k}px;line-height:.9}
 .info{font-weight:700;font-size:${23 * k}px;letter-spacing:4px;margin-top:6px;display:flex;align-items:center;gap:12px;color:#333;white-space:nowrap}
 .info b{color:#000;font-weight:800}.info s{display:inline-block;width:2px;height:${22 * k}px;background:#999;text-decoration:none}
 .ha{font-weight:700;font-size:${20 * k}px;letter-spacing:4px;color:#777;margin-top:4px;display:flex;align-items:center;gap:8px}
@@ -115,7 +116,7 @@ export async function render(spec, outDir, { browser, base = outDir, kinds = ["p
     const src = await logo(m.logo, base).catch(() => "");
     const ini = UP(m.opponent).split(/\s+/).map((w) => w[0]).join("").slice(0, 3);
     const r = m.us > m.them ? ["W", "ΝΙΚΗ"] : m.us < m.them ? ["L", "ΗΤΤΑ"] : ["D", "ΙΣΟΠΑΛΙΑ"];
-    rows.push(`<div class="m ${r[0]}"><div class="lg">${src ? `<img src="${src}">` : `<span class="ini">${ini}</span>`}</div><div>
+    rows.push(`<div class="m ${r[0]}"><div class="lg">${src ? `<img src="${src}">` : `<span class="ini">${ini}</span>`}</div><div class="tx">
   <div class="opp">${UP(m.opponent)}</div>
   <div class="info">${[m.when && `<b>${UP(m.when)}</b>`, UP(m.section), UP(m.competition)].filter(Boolean).join(" <s></s> ")}</div>
   <div class="ha">${m.home ? HOME : AWAY} ${m.home ? "ΕΝΤΟΣ" : "ΕΚΤΟΣ"}${m.venue ? ` · ${UP(m.venue)}` : ""}</div></div>

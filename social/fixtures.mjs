@@ -76,7 +76,8 @@ body{display:flow-root;width:1080px;height:${H}px;color:#fff;font-family:F;overf
 .m{display:flex;align-items:center;gap:30px}
 .lg{width:${96 * k}px;height:${96 * k}px;flex:none;display:flex;align-items:center;justify-content:center}
 .lg img{width:100%;height:100%;object-fit:contain}
-.opp{white-space:nowrap;font-family:S;font-weight:900;font-size:${76 * k}px;line-height:.9}
+.tx{flex:1;min-width:0}
+.opp{text-wrap:balance;font-family:S;font-weight:900;font-size:${76 * k}px;line-height:.9}
 .info{font-weight:700;font-size:${23 * k}px;letter-spacing:4px;margin-top:6px;display:flex;align-items:center;gap:12px;color:#ddd;white-space:nowrap}
 .info b{color:#fff;font-weight:800}.info s{display:inline-block;width:2px;height:${22 * k}px;background:#888;text-decoration:none}
 .ha{font-weight:700;font-size:${20 * k}px;letter-spacing:4px;color:#999;margin-top:4px;display:flex;align-items:center;gap:8px}
@@ -102,7 +103,7 @@ ${secs ? `<div class="ktop kick">ΠΡΟΓΡΑΜΜΑ ΑΓΩΝΩΝ</div><div class
 export async function render(spec, outDir, { browser, base = outDir, kinds = ["post", "story"] } = {}) {
   const rowsOf = async (matches) => { const rows = []; for (const m of matches) {
     const src = await logo(m.logo, base).catch(() => "");
-    rows.push(`<div class="m"><div class="lg">${src ? `<img src="${src}">` : ""}</div><div>
+    rows.push(`<div class="m"><div class="lg">${src ? `<img src="${src}">` : ""}</div><div class="tx">
   <div class="opp">${UP(m.opponent)}</div>
   <div class="info">${[m.when && `<b>${UP(m.when)}</b>`, UP(m.section), `<b>${m.time}</b>`, UP(m.tv)].filter((x) => x && x !== "<b></b>").join(" <s></s> ")}</div>
   <div class="ha">${m.home ? HOME : AWAY} ${m.home ? "ΕΝΤΟΣ" : "ΕΚΤΟΣ"}${m.venue ? ` · ${UP(m.venue)}` : ""}</div></div></div>`);

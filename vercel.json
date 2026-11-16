@@ -46,6 +46,14 @@
       "destination": "/api/data?f=:name.json"
     },
     {
+      "source": "/paok.ics",
+      "destination": "/api/cal?t=all&v=all"
+    },
+    {
+      "source": "/cal.ics",
+      "destination": "/api/cal"
+    },
+    {
       "source": "/:name.ics",
       "destination": "/api/data?f=:name.ics"
     }

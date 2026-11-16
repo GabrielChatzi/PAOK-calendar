@@ -304,3 +304,52 @@ test("EHF: παίκτες από τα details, στατιστικά ομάδας
   assert.deepEqual(b.box.away.players.map((r) => [r.name, r.sv]), [["P. Gk", "10/36"]]);
   assert.equal(b.stats[0].home, "26/46 · 57%");
 });
+
+// ---- Ημερολόγιο με όποια τμήματα διαλέξει κανείς (api/cal.js)
+const cal = await import("../api/cal.js");
+const icsFile = (name, events) => ["BEGIN:VCALENDAR", "VERSION:2.0", `X-WR-CALNAME:${name}`, "X-WR-TIMEZONE:Europe/Athens",
+  "BEGIN:VTIMEZONE", "TZID:Europe/Athens", "END:VTIMEZONE",
+  ...events.flatMap(([uid, start]) => ["BEGIN:VEVENT", `UID:${uid}@paok-calendar`, `DTSTART;TZID=Europe/Athens:${start}`, "SUMMARY:⚽ ΠΑΟΚ – Χ", "END:VEVENT"]),
+  "END:VCALENDAR", ""].join("\r\n");
+
+test("api/cal: τα τμήματα είναι ίδια με το SECTIONS του build_calendars.py", async () => {
+  const fs = await import("node:fs");
+  const py = fs.readFileSync(new URL("../build_calendars.py", import.meta.url), "utf8");
+  const block = py.slice(py.indexOf("SECTIONS = {"), py.indexOf("\n}\n", py.indexOf("SECTIONS = {")));
+  const fromPy = [...block.matchAll(/^    "([a-z-]+)": \{"emoji": "[^"]+", "name": "([^"]+)", "sport": "([^"]+)"/gm)].map((m) => [m[1], m[2], m[3]]);
+  assert.deepEqual(cal.SECTIONS, fromPy);
+});
+
+test("api/cal: ενώνει τα αρχεία με σειρά ώρας και δικό του όνομα", async () => {
+  const seen = [];
+  globalThis.fetch = async (url) => {
+    seen.push(String(url).replace(/^.*\/data\//, "").replace(/\?.*$/, ""));
+    const f = seen.at(-1);
+    const ev = { "football-home.ics": [["a", "20261122T193000"]], "football-away.ics": [["b", "20261129T210000"]],
+      "futsal-home.ics": [["c", "20261129T180000"]], "futsal-away.ics": [["d", "20261122T180000"]] }[f] || [];
+    return { ok: true, status: 200, text: async () => icsFile("ΠΑΟΚ Ποδόσφαιρο – Εντός έδρας", ev) };
+  };
+  const r = await call(cal.default, { t: "futsal,football,nope,football" });
+  assert.equal(r.status, 200);
+  assert.deepEqual(seen, ["football-home.ics", "football-away.ics", "futsal-home.ics", "futsal-away.ics"]);
+  assert.deepEqual([...r.body.matchAll(/^UID:(\w)/gm)].map((m) => m[1]), ["d", "a", "c", "b"]);
+  assert.match(r.body.replace(/\r\n /g, ""), /^X-WR-CALNAME:ΠΑΟΚ – Ποδόσφαιρο · Ποδόσφαιρο Σάλας\r$/m);
+  assert.equal((r.body.match(/BEGIN:VTIMEZONE/g) || []).length, 1);
+  assert.match(r.body, /END:VEVENT\r\nEND:VCALENDAR\r\n$/);
+
+  seen.length = 0;
+  const h = await call(cal.default, { t: "all", v: "home" });
+  assert.equal(seen.length, 11);
+  assert.ok(seen.every((f) => f.endsWith("-home.ics")));
+  assert.match(h.body.replace(/\r\n /g, ""), /X-WR-CALNAME:ΠΑΟΚ – Όλα τα τμήματα – Εντός έδρας/);
+  assert.equal((await call(cal.default, { t: "../x" })).status, 404);
+  assert.equal((await call(cal.default, {})).status, 404);
+});
+
+test("api/cal: όνομα και γραμμές ως 75 bytes", () => {
+  assert.equal(cal.calName(["football", "football-women", "basketball-women"], "away"),
+    "ΠΑΟΚ – Ποδόσφαιρο Ανδρών & Γυναικών · Μπάσκετ Γυναικών – Εκτός έδρας");
+  const long = cal.fold("X-WR-CALNAME:" + "Ποδόσφαιρο ".repeat(12));
+  assert.ok(long.split("\r\n").every((l) => Buffer.byteLength(l) <= 75));
+  assert.equal(long.replace(/\r\n /g, ""), "X-WR-CALNAME:" + "Ποδόσφαιρο ".repeat(12));
+});

@@ -447,9 +447,15 @@
   .kinds-legend b { color: var(--ink); font-weight: 600; }
   ol.steps li { margin-bottom: 6px; }
 
-  .cal-list { list-style: none; margin: 14px 0 0; padding: 0; border-top: 2px solid var(--ink); }
-  .cal { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--rule); }
-  .cal-name { font: 600 19px/1.2 var(--display); text-decoration: none; }
+  .calall { border: 2px solid var(--ink); padding: 4px 14px 6px; margin: 14px 0 22px; }
+  .calall h3 { margin-top: 10px; }
+  .calpick { border-top: 2px solid var(--ink); margin: 10px 0 12px; }
+  .calsport { display: flex; align-items: center; justify-content: space-between; gap: 8px 12px; flex-wrap: wrap; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+  .calsport-name { font: 600 19px/1.2 var(--display); }
+  .calsport .chip { padding: 7px 12px; }
+  .calsport-all .chip { font-weight: 700; }
+  .calsum { margin: 12px 0 4px; font-size: 15px; color: var(--muted); }
+  .btn:disabled { opacity: .35; cursor: not-allowed; }
 
   .toast {
     position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom)); transform: translateX(-50%);
@@ -633,6 +639,10 @@
 
   // Κατάσταση που δεν αποθηκεύεται.
   var ui = { shown: PAGE, month: null, day: null, secView: "list", secVenue: "all" };
+  // Η επιλογή στο «Φτιάξε το δικό σου ημερολόγιο» (σελίδα Ημερολόγια): τμήματα και έδρα.
+  var calSel = { keys: [], venue: "all" };
+  try { var cs = JSON.parse(localStorage.getItem("paok-cal") || "null"); if (cs && Array.isArray(cs.keys)) calSel = { keys: cs.keys, venue: cs.venue || "all" }; } catch (e) {}
+  function saveCalSel() { try { localStorage.setItem("paok-cal", JSON.stringify(calSel)); } catch (e) {} }
 
   var fmtDay = new Intl.DateTimeFormat("el-GR", { timeZone: TZ, weekday: "long", day: "numeric", month: "long" });
   var fmtShort = new Intl.DateTimeFormat("el-GR", { timeZone: TZ, weekday: "short", day: "numeric", month: "short" });
@@ -741,7 +751,7 @@
       timeCell = '<div class="time"><span class="live-badge">LIVE</span><span class="clock">' + esc(ls.label) + "</span></div>";
       scoreCell = '<span class="n">' + ls.home + '</span><span class="n">' + ls.away + "</span>";
     } else {
-      timeCell = '<div class="time' + (m.timeKnown ? "" : " tbc") + '">' + (m.timeKnown ? fmtTime.format(date) : "TBC") +
+      timeCell = '<div class="time' + (m.timeKnown ? "" : " tbc") + '">' + (m.timeKnown ? fmtTime.format(date) : "--:--") +
         (m.status && !m.score ? '<span class="ongoing status-off">' + esc(STATUS_TEXT[m.status] || m.status) + "</span>"
           : phase(m) ? '<span class="ongoing">' + PHASE_TEXT[phase(m)] + "</span>" : "") + "</div>";
       if (parts || (ls && ls.state === "post")) {
@@ -862,7 +872,7 @@
     return '<section class="next" aria-label="Επόμενος αγώνας">' +
       '<p class="next-label">' + esc(ongoing ? PHASE_TEXT[ongoing] + ", " + s.emoji + " " + s.name : (label || ("Επόμενος αγώνας, " + s.emoji + " " + s.name))) + "</p>" +
       '<a class="game-link" href="' + matchHref(m) + '"><span class="next-teams">' + teamHtml(m.home, m.homeLogo, m.section) + "<br>" + teamHtml(m.away, m.awayLogo, m.section) + "</span></a>" +
-      '<p class="next-when">' + esc((rel ? rel + ", " : "") + fmtShort.format(date) + (m.timeKnown ? ", " + fmtTime.format(date) : ", ώρα TBC")) + "</p>" +
+      '<p class="next-when">' + esc((rel ? rel + ", " : "") + fmtShort.format(date) + (m.timeKnown ? ", " + fmtTime.format(date) : ", η ώρα αναμένεται")) + "</p>" +
       '<p class="next-meta">' + esc([m.competition, m.venue].filter(Boolean).join(", ")) +
         (ongoing === "on" && m.url ? ' <a href="' + esc(m.url) + '" rel="noopener" target="_blank">Live στην πηγή</a>' : "") + "</p>" +
       bellButton(m, true) + "</section>";
@@ -979,14 +989,23 @@
 
   // ---- Ημερολόγια και ειδοποιήσεις
   function calBase() { return location.host + location.pathname.replace(/[^/]*$/, ""); }
+  // Κουμπί συνδρομής: στο iPhone/υπολογιστή ανοίγει την εφαρμογή ημερολογίου (webcal://), στο Android
+  // αντιγράφει τον σύνδεσμο για το Google Calendar.
+  function calLink(file, label, cls) {
+    var url = calBase() + file;
+    return isAndroid
+      ? '<button type="button" class="btn' + (cls ? " " + cls : "") + '" data-copy="https://' + esc(url) + '" data-msg="Ο σύνδεσμος αντιγράφηκε. Επικόλλησέ τον στο Google Calendar.">' + label + "</button>"
+      : '<a class="btn' + (cls ? " " + cls : "") + '" href="webcal://' + esc(url) + '">' + label + "</a>";
+  }
+  // Ένα ημερολόγιο για όσα τμήματα διάλεξε κανείς (api/cal.js). Όλα μαζί: /paok.ics.
+  function calFile(keys, venue) {
+    var all = keys.length === data.sections.length;
+    if (all && venue === "all") return "paok.ics";
+    var t = all ? "all" : data.sections.map(function (s) { return s.key; }).filter(function (k) { return keys.indexOf(k) >= 0; }).join(",");
+    return "cal.ics?t=" + t + (venue === "all" ? "" : "&v=" + venue);
+  }
   function calButtons(key) {
-    var base = calBase();
-    return [["home", "Εντός"], ["away", "Εκτός"]].map(function (p) {
-      var file = key + "-" + p[0] + ".ics";
-      return isAndroid
-        ? '<button type="button" class="btn" data-copy="https://' + esc(base + file) + '" data-msg="Ο σύνδεσμος αντιγράφηκε. Επικόλλησέ τον στο Google Calendar.">' + p[1] + "</button>"
-        : '<a class="btn" href="webcal://' + esc(base + file) + '">' + p[1] + "</a>";
-    }).join("");
+    return calLink(calFile([key], "all"), "Όλοι") + calLink(key + "-home.ics", "Εντός") + calLink(key + "-away.ics", "Εκτός");
   }
   function sectionKinds(s) {
     return PUSH_KINDS;
@@ -1005,11 +1024,12 @@
       pushNoteHtml() +
       '<ul class="notify">' + rows + "</ul>" +
       '<p class="help" style="margin-top:12px"><a href="#/notifications">Όλες οι ειδοποιήσεις σου</a> (όλα τα τμήματα και οι αγώνες που ακολουθείς).</p>' +
-      "<h3>Ημερολόγιο</h3><p>Οι αγώνες στο ημερολόγιο του κινητού, χωριστά εντός και εκτός έδρας. Ενημερώνονται μόνοι τους.</p>" +
+      "<h3>Ημερολόγιο</h3><p>Οι αγώνες στο ημερολόγιο του κινητού, όλοι ή χωριστά εντός και εκτός έδρας. Ενημερώνονται μόνοι τους.</p>" +
       '<p class="help">' + (isAndroid
         ? "Πάτα για να αντιγράψεις τον σύνδεσμο, μετά στο calendar.google.com: + δίπλα στο «Άλλα ημερολόγια», «Από διεύθυνση URL»."
-        : "Πάτα «Εντός» ή «Εκτός» και μετά «Συνδρομή».") + "</p>" +
-      '<div class="actions">' + calButtons(key) + "</div></div>";
+        : "Πάτα «Όλοι», «Εντός» ή «Εκτός» και μετά «Συνδρομή».") + "</p>" +
+      '<div class="actions">' + calButtons(key) + "</div>" +
+      '<p class="help"><a href="#/calendars">Περισσότερα τμήματα σε ένα ημερολόγιο</a></p></div>';
   }
 
   // ---- Αρχική
@@ -1131,17 +1151,44 @@
       }).join("") + "</div>" + footerHtml();
   }
 
-  // ---- Ημερολόγια όλων των τμημάτων
+  // ---- Ημερολόγια: «Όλος ο ΠΑΟΚ» με ένα πάτημα, ή όποια τμήματα θέλει κανείς σε μία συνδρομή
   function calendarsHtml() {
+    var keys = calSel.keys.filter(function (k) { return data.sectionMap[k]; });
+    var help = isAndroid
+      ? "Πάτα για να αντιγράψεις τον σύνδεσμο, μετά στο calendar.google.com: + δίπλα στο «Άλλα ημερολόγια», «Από διεύθυνση URL»."
+      : "Πάτα το κουμπί και μετά «Συνδρομή».";
+    function chip(list, label, aria) {
+      var on = list.every(function (s) { return keys.indexOf(s.key) >= 0; });
+      return '<button type="button" class="chip" data-cal="' + esc(list.map(function (s) { return s.key; }).join(" ")) +
+        '" aria-pressed="' + on + '"' + (aria ? ' aria-label="' + esc(aria) + '"' : "") + ">" + esc(label) + "</button>";
+    }
+    var groups = sportGroups().map(function (g) {
+      var list = [g.men, g.women].filter(Boolean);
+      return '<div class="calsport"><span class="calsport-name">' + g.emoji + " " + esc(g.sport) + "</span>" +
+        '<div class="chips">' + list.map(function (s) {
+          return chip([s], s.women ? "Γυναικών" : "Ανδρών", s.name);
+        }).join("") + "</div></div>";
+    }).join("");
+    var picked = data.sections.filter(function (s) { return keys.indexOf(s.key) >= 0; });
+    var summary = !picked.length ? "Δεν έχεις διαλέξει τμήμα ακόμα."
+      : picked.length === data.sections.length ? "Όλα τα τμήματα"
+      : picked.map(function (s) { return s.emoji + " " + s.name; }).join(" · ");
+    if (picked.length && calSel.venue !== "all") summary += " · " + (calSel.venue === "home" ? "εντός έδρας" : "εκτός έδρας");
     return '<a class="back" href="#/">‹ Αρχική</a>' +
       '<div class="section-head"><h2>Ημερολόγια</h2></div>' +
-      '<div class="follow"><p>Οι αγώνες μπαίνουν στο ημερολόγιο του κινητού σου και ενημερώνονται μόνοι τους, με αλλαγές ώρας και αποτελέσματα. Κάθε τμήμα έχει δύο ημερολόγια, ένα για τους εντός και ένα για τους εκτός έδρας αγώνες.</p>' +
-      '<p class="help">' + (isAndroid
-        ? "Πάτα για να αντιγράψεις τον σύνδεσμο, μετά στο calendar.google.com: + δίπλα στο «Άλλα ημερολόγια», «Από διεύθυνση URL»."
-        : "Πάτα «Εντός» ή «Εκτός» και μετά «Συνδρομή».") + "</p></div>" +
-      '<ul class="cal-list">' + data.sections.map(function (s) {
-        return '<li class="cal"><a class="cal-name" href="#/' + s.key + '">' + s.emoji + " " + esc(s.name) + "</a>" + calButtons(s.key) + "</li>";
-      }).join("") + "</ul>" + footerHtml();
+      '<div class="follow"><p>Οι αγώνες μπαίνουν στο ημερολόγιο του κινητού σου, δίπλα στα δικά σου ραντεβού, και ενημερώνονται μόνοι τους, με αλλαγές ώρας και αποτελέσματα.</p>' +
+      '<div class="calall"><h3>Όλος ο ΠΑΟΚ</h3><p>Όλοι οι αγώνες όλων των τμημάτων, ανδρών και γυναικών, σε ένα ημερολόγιο.</p>' +
+      '<div class="actions">' + calLink("paok.ics", "Πρόσθεσε στο ημερολόγιο", "solid") + "</div>" +
+      '<p class="help">' + help + "</p></div>" +
+      "<h3>Φτιάξε το δικό σου</h3><p>Διάλεξε τμήματα και έδρα. Όσα κι αν διαλέξεις, είναι μία συνδρομή.</p>" +
+      '<div class="calpick">' + '<div class="calsport calsport-all">' + chip(data.sections, "Όλα τα τμήματα") + "</div>" + groups + "</div>" +
+      seg("calVenue", [["all", "Όλοι"], ["home", "Εντός"], ["away", "Εκτός"]], calSel.venue) +
+      '<p class="calsum">' + esc(summary) + "</p>" +
+      '<div class="actions">' + (picked.length
+        ? calLink(calFile(keys, calSel.venue), "Πρόσθεσε στο ημερολόγιο", "solid")
+        : '<button type="button" class="btn solid" disabled>Πρόσθεσε στο ημερολόγιο</button>') + "</div>" +
+      '<p class="help">' + help + " Για να αλλάξεις αργότερα τα τμήματα, σβήσε το παλιό ημερολόγιο από τις ρυθμίσεις του κινητού και κάνε νέα συνδρομή. Η επιλογή σου μένει αποθηκευμένη εδώ.</p></div>" +
+      footerHtml();
   }
 
   // Σύνδεσμος προς το άλλο τμήμα του ίδιου αθλήματος (Ανδρών / Γυναικών).
@@ -1207,7 +1254,7 @@
       .concat(CONTACT_EMAIL ? ['<a href="mailto:' + esc(CONTACT_EMAIL) + '">' + esc(CONTACT_EMAIL) + "</a>"] : []);
     var social = socialLinks();
     return "<footer><p>Το PAOKalendar είναι ανεπίσημη σελίδα φιλάθλων και δεν συνδέεται με τον ΠΑΟΚ ή τις εταιρείες του.</p>" +
-      "<p>Αγώνες χωρίς ορισμένη ώρα εμφανίζονται ως «TBC» και στα ημερολόγια μπαίνουν στις 18:00 ώρα Ελλάδας.</p>" +
+      "<p>Αγώνες χωρίς ανακοινωμένη ώρα εμφανίζονται ως «--:--» και στα ημερολόγια μπαίνουν προσωρινά στις 18:00 ώρα Ελλάδας, με την ένδειξη «ώρα αναμένεται».</p>" +
       "<p>Πηγές: ESPN, ΕΠΟ, esake.gr, Euroleague, basket.gr, volleyleague.gr, ΕΟΠΕ, ΟΧΕ, Water Polo League, ΕΠΣ Σάλας, UEFA, CEV, EHF, European Aquatics, ΑΣ ΠΑΟΚ. " +
       "Τα προγράμματα, τα αποτελέσματα, οι βαθμολογίες και τα σήματα ανήκουν στις πηγές τους και στις ομάδες.</p>" +
       (social.length ? '<p class="foot-social">' + social.join("") + "</p>" : "") +
@@ -1582,7 +1629,15 @@
       render();
       return;
     }
+    if (b.dataset.cal) {
+      var ks = b.dataset.cal.split(" "), on = b.getAttribute("aria-pressed") === "true";
+      calSel.keys = calSel.keys.filter(function (k) { return ks.indexOf(k) < 0; });
+      if (!on) calSel.keys = calSel.keys.concat(ks);
+      saveCalSel(); render();
+      return;
+    }
     var group = b.closest("[data-seg]");
+    if (group && b.dataset.v && group.dataset.seg === "calVenue") { calSel.venue = b.dataset.v; saveCalSel(); render(); return; }
     if (group && b.dataset.v) {
       var k = group.dataset.seg;
       if (k === "secView" || k === "secVenue") { ui[k] = b.dataset.v; }
@@ -2186,7 +2241,7 @@
     else if (ongoing) status = "<span>" + PHASE_TEXT[ongoing] + "</span>";
     else {
       var rel = relative(date);
-      status = "<span>" + esc((rel ? rel + ", " : "") + (m.timeKnown ? fmtTime.format(date) : "ώρα TBC")) + "</span>";
+      status = "<span>" + esc((rel ? rel + ", " : "") + (m.timeKnown ? fmtTime.format(date) : "ώρα αναμένεται")) + "</span>";
     }
     var lose = hs != null && as != null && !live ? (hs > as ? "away" : as > hs ? "home" : "") : "";
     function teamRow(side) {
@@ -2201,7 +2256,7 @@
     var head = '<section class="match-head" aria-label="Αγώνας">' +
       '<p class="mh-comp">' + esc([s.emoji + " " + s.name, m.competition, m.round].filter(Boolean).join(", ")) + "</p>" +
       '<p class="mh-status">' + status + "</p>" + teamRow("home") + teamRow("away") +
-      '<p class="mh-when">' + esc(cap(fmtLong.format(date)) + (m.timeKnown ? ", " + fmtTime.format(date) + athensSuffix(date) : ", ώρα TBC") + (m.venue ? ", " + m.venue : "")) + "</p></section>";
+      '<p class="mh-when">' + esc(cap(fmtLong.format(date)) + (m.timeKnown ? ", " + fmtTime.format(date) + athensSuffix(date) : ", η ώρα αναμένεται") + (m.venue ? ", " + m.venue : "")) + "</p></section>";
 
     var actions = [];
     if (m.tvUrl && !parts && (ongoing || isUpcoming(m))) actions.push('<a class="btn' + (ongoing === "on" ? " solid" : "") + '" href="' + esc(m.tvUrl) + '" rel="noopener" target="_blank">📺 ' + esc(ongoing === "on" ? "Δες τον αγώνα" : m.tv || "Μετάδοση") + "</a>");
@@ -2232,7 +2287,7 @@
       }) + body;
     }
 
-    var info = [["Ημερομηνία", cap(fmtLong.format(date))], ["Ώρα", m.timeKnown ? fmtTime.format(date) + athensSuffix(date) : "Δεν έχει οριστεί (TBC)"]];
+    var info = [["Ημερομηνία", cap(fmtLong.format(date))], ["Ώρα", m.timeKnown ? fmtTime.format(date) + athensSuffix(date) : "Δεν έχει ανακοινωθεί ακόμα"]];
     if (m.venue) info.push(["Γήπεδο", m.venue]);
     if (m.tv || m.tvUrl) info.push(["Τηλεόραση", m.tv || "Live streaming", m.tvUrl]);
     if (m.status) info.push(["Κατάσταση", (STATUS_TEXT[m.status] || m.status) + (m.note ? ": " + m.note : "")]);

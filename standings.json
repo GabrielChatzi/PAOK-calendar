@@ -1442,12 +1442,12 @@
      "logo": "https://www.handball.org.gr/media/yootheme/cache/39/OlympiacosSFP_800-3978538c.png",
      "paok": false,
      "cells": [
-      "7",
-      "7",
+      "8",
+      "8",
       "0",
       "0",
-      "279-175",
-      "14"
+      "316-197",
+      "16"
      ]
     },
     {
@@ -1456,16 +1456,30 @@
      "logo": "https://www.handball.org.gr/media/yootheme/cache/8c/aek-2025-8c1dd556.jpg",
      "paok": false,
      "cells": [
+      "8",
       "7",
-      "6",
       "0",
       "1",
-      "218-182",
-      "12"
+      "256-208",
+      "14"
      ]
     },
     {
      "pos": 3,
+     "team": "ΙΩΝΙΚΟΣ AUTOVALUE",
+     "logo": "https://www.handball.org.gr/media/yootheme/cache/5a/ionikos-logo-2026-5a6732d4.jpg",
+     "paok": false,
+     "cells": [
+      "7",
+      "5",
+      "0",
+      "2",
+      "195-173",
+      "10"
+     ]
+    },
+    {
+     "pos": 4,
      "team": "ΔΙΟΜΗΔΗΣ ΑΡΓΟΥΣ",
      "logo": "https://www.handball.org.gr/media/yootheme/cache/d9/diomidis-01-d9660914.jpg",
      "paok": false,
@@ -1479,7 +1493,21 @@
      ]
     },
     {
-     "pos": 4,
+     "pos": 5,
+     "team": "GMC ΔΡΑΜΑ 1986",
+     "logo": "https://www.handball.org.gr/media/yootheme/cache/e6/drama-logo-2026-e6ffcb6b.jpg",
+     "paok": false,
+     "cells": [
+      "8",
+      "4",
+      "1",
+      "3",
+      "239-240",
+      "9"
+     ]
+    },
+    {
+     "pos": 6,
      "team": "ΠΑΟΚ",
      "logo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
      "paok": true,
@@ -1493,59 +1521,31 @@
      ]
     },
     {
-     "pos": 5,
-     "team": "ΙΩΝΙΚΟΣ AUTOVALUE",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/5a/ionikos-logo-2026-5a6732d4.jpg",
-     "paok": false,
-     "cells": [
-      "6",
-      "4",
-      "0",
-      "2",
-      "161-153",
-      "8"
-     ]
-    },
-    {
-     "pos": 6,
-     "team": "GMC ΔΡΑΜΑ 1986",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/e6/drama-logo-2026-e6ffcb6b.jpg",
-     "paok": false,
-     "cells": [
-      "7",
-      "3",
-      "1",
-      "3",
-      "198-207",
-      "7"
-     ]
-    },
-    {
      "pos": 7,
-     "team": "Ε.Γ.Σ.Ν ΖΑΦΕΙΡΑΚΗΣ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/99/zafeirakis-9957f5d2.jpg",
+     "team": "Α.Σ.Ε ΔΟΥΚΑ",
+     "logo": "https://www.handball.org.gr/media/yootheme/cache/55/doukas-logo-01-2026-557a8e2a.jpg",
      "paok": false,
      "cells": [
-      "7",
+      "8",
       "3",
       "1",
-      "3",
-      "204-218",
+      "4",
+      "243-254",
       "7"
      ]
     },
     {
      "pos": 8,
-     "team": "Α.Σ.Ε ΔΟΥΚΑ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/55/doukas-logo-01-2026-557a8e2a.jpg",
+     "team": "Ε.Γ.Σ.Ν ΖΑΦΕΙΡΑΚΗΣ",
+     "logo": "https://www.handball.org.gr/media/yootheme/cache/99/zafeirakis-9957f5d2.jpg",
      "paok": false,
      "cells": [
-      "7",
+      "8",
       "3",
-      "0",
+      "1",
       "4",
-      "212-223",
-      "6"
+      "226-255",
+      "7"
      ]
     },
     {
@@ -1554,12 +1554,12 @@
      "logo": "https://www.handball.org.gr/media/yootheme/cache/1d/kilkis_logo-1d38b7c5.jpg",
      "paok": false,
      "cells": [
-      "7",
+      "8",
       "2",
-      "1",
+      "2",
       "4",
-      "203-223",
-      "5"
+      "234-254",
+      "6"
      ]
     },
     {
@@ -1568,11 +1568,11 @@
      "logo": "https://www.handball.org.gr/media/yootheme/cache/cb/aris-nikaias-2026-cbde8756.jpg",
      "paok": false,
      "cells": [
-      "7",
+      "8",
       "1",
       "1",
-      "5",
-      "168-202",
+      "6",
+      "194-240",
       "3"
      ]
     },
@@ -1582,11 +1582,11 @@
      "logo": "https://www.handball.org.gr/media/yootheme/cache/73/athinaikos-732c45d8.jpg",
      "paok": false,
      "cells": [
-      "7",
+      "8",
       "1",
       "0",
-      "6",
-      "195-244",
+      "7",
+      "228-285",
       "2"
      ]
     },
@@ -1596,11 +1596,11 @@
      "logo": "https://www.handball.org.gr/media/yootheme/cache/7e/xanth-logo-2026-7e1830b5.jpg",
      "paok": false,
      "cells": [
-      "7",
+      "8",
       "0",
       "0",
-      "7",
-      "200-276",
+      "8",
+      "220-310",
       "0"
      ]
     }
@@ -1622,6 +1622,20 @@
    "rows": [
     {
      "pos": 1,
+     "team": "ΠΑΟΚ",
+     "logo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
+     "paok": true,
+     "cells": [
+      "7",
+      "6",
+      "1",
+      "0",
+      "244-139",
+      "13"
+     ]
+    },
+    {
+     "pos": 2,
      "team": "Ο.Φ. Ν. ΙΩΝΙΑΣ",
      "logo": "https://www.handball.org.gr/media/yootheme/cache/66/ofni-668f8f8c.jpg",
      "paok": false,
@@ -1632,20 +1646,6 @@
       "0",
       "185-108",
       "12"
-     ]
-    },
-    {
-     "pos": 2,
-     "team": "ΠΑΟΚ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/2a/PAOK-01-2a789158.jpg",
-     "paok": true,
-     "cells": [
-      "6",
-      "5",
-      "1",
-      "0",
-      "210-117",
-      "11"
      ]
     },
     {
@@ -1664,6 +1664,20 @@
     },
     {
      "pos": 4,
+     "team": "Α.Ε.Π. ΠΑΝΟΡΑΜΑ",
+     "logo": "https://www.handball.org.gr/media/yootheme/cache/84/panorama-new-84c6b388.jpg",
+     "paok": false,
+     "cells": [
+      "7",
+      "4",
+      "0",
+      "3",
+      "202-203",
+      "8"
+     ]
+    },
+    {
+     "pos": 5,
      "team": "ΑΝΑΓΕΝΝΗΣΗ ΑΡΤΑΣ",
      "logo": "https://www.handball.org.gr/media/yootheme/cache/21/Anagennisi_artas-new-21615fd1.jpg",
      "paok": false,
@@ -1677,31 +1691,17 @@
      ]
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Γ.Α.Σ ΚΑΜΑΤΕΡΟΥ",
      "logo": "https://www.handball.org.gr/media/yootheme/cache/a5/kamatero-new-a54e5da0.jpg",
      "paok": false,
      "cells": [
-      "6",
+      "7",
       "3",
       "1",
-      "2",
-      "139-165",
+      "3",
+      "161-199",
       "7"
-     ]
-    },
-    {
-     "pos": 6,
-     "team": "Α.Ε.Π. ΠΑΝΟΡΑΜΑ",
-     "logo": "https://www.handball.org.gr/media/yootheme/cache/84/panorama-new-84c6b388.jpg",
-     "paok": false,
-     "cells": [
-      "6",
-      "3",
-      "0",
-      "3",
-      "170-176",
-      "6"
      ]
     },
     {
@@ -1710,11 +1710,11 @@
      "logo": "https://www.handball.org.gr/media/yootheme/cache/c0/athinaikos-logo-c0953da2.jpg",
      "paok": false,
      "cells": [
-      "6",
+      "7",
       "2",
       "0",
-      "4",
-      "149-165",
+      "5",
+      "176-197",
       "4"
      ]
     },
@@ -1724,12 +1724,12 @@
      "logo": "https://www.handball.org.gr/media/yootheme/cache/05/pylaia-05554759.jpg",
      "paok": false,
      "cells": [
-      "6",
-      "1",
+      "7",
+      "2",
       "0",
       "5",
-      "122-165",
-      "2"
+      "153-188",
+      "4"
      ]
     },
     {
@@ -1752,11 +1752,11 @@
      "logo": "https://www.handball.org.gr/media/yootheme/cache/8b/agioi-anargyroi-logo-8b3031f9.jpg",
      "paok": false,
      "cells": [
-      "6",
+      "7",
       "0",
       "0",
-      "6",
-      "118-189",
+      "7",
+      "141-220",
       "0"
      ]
     }

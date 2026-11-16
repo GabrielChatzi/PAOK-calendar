@@ -1,0 +1,6 @@
+paok.ics 200 text/calendar; charset=utf-8 public, max-age=0 | ΠΑΟΚ – Όλα τα τμήματα | 277 αγώνες | VTIMEZONE x 1 | crlf True | 22/11: ['⚽ ΑΣΤΕΡΑΣ ΤΡΙΠΟΛΗΣ – ΠΑΟΚ\r', '🥅 ΔΟΥΚΑ ΑΣΕ – ΠΑΟΚ (ώρα TBC)\r', '⚽ ΠΑΟΚ – Κηφισιά\r']
+cal.ics?t=football,basketball-women&v=home 200 text/calendar; charset=utf-8 public, max-age=0 | ΠΑΟΚ – Ποδόσφαιρο · Μπάσκετ Γυναικών – Εντός έδρας | 30 αγώνες | VTIMEZONE x 1 | crlf True | 22/11: ['⚽ ΠΑΟΚ – Κηφισιά\r']
+cal.ics?t=futsal 200 text/calendar; charset=utf-8 public, max-age=0 | ΠΑΟΚ – Ποδόσφαιρο Σάλας | 22 αγώνες | VTIMEZONE x 1 | crlf True | 22/11: ['🥅 ΔΟΥΚΑ ΑΣΕ – ΠΑΟΚ (ώρα TBC)\r']
+cal.ics?t=all&v=away 200 text/calendar; charset=utf-8 public, max-age=0 | ΠΑΟΚ – Όλα τα τμήματα – Εκτός έδρας | 139 αγώνες | VTIMEZONE x 1 | crlf True | 22/11: ['⚽ ΑΣΤΕΡΑΣ ΤΡΙΠΟΛΗΣ – ΠΑΟΚ\r', '🥅 ΔΟΥΚΑ ΑΣΕ – ΠΑΟΚ (ώρα TBC)\r']
+cal.ics?t=nope ERR HTTP Error 404: Not Found
+football-home.ics 200 text/calendar; charset=utf-8 public, max-age=0 | ΠΑΟΚ Ποδόσφαιρο – Εντός έδρας | 19 αγώνες | VTIMEZONE x 1 | crlf True | 22/11: ['⚽ ΠΑΟΚ – Κηφισιά\r']

@@ -1,4 +1,5 @@
 import urllib.request, re
+import os; os.makedirs("docs/probe", exist_ok=True)
 UA = "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 Mobile/15E148"
 for u in ("paok.ics", "cal.ics?t=football,basketball-women&v=home", "cal.ics?t=futsal", "cal.ics?t=all&v=away", "cal.ics?t=nope", "football-home.ics"):
     try:

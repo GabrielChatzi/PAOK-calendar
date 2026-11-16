@@ -751,7 +751,7 @@
       timeCell = '<div class="time"><span class="live-badge">LIVE</span><span class="clock">' + esc(ls.label) + "</span></div>";
       scoreCell = '<span class="n">' + ls.home + '</span><span class="n">' + ls.away + "</span>";
     } else {
-      timeCell = '<div class="time' + (m.timeKnown ? "" : " tbc") + '">' + (m.timeKnown ? fmtTime.format(date) : "TBC") +
+      timeCell = '<div class="time' + (m.timeKnown ? "" : " tbc") + '">' + (m.timeKnown ? fmtTime.format(date) : "--:--") +
         (m.status && !m.score ? '<span class="ongoing status-off">' + esc(STATUS_TEXT[m.status] || m.status) + "</span>"
           : phase(m) ? '<span class="ongoing">' + PHASE_TEXT[phase(m)] + "</span>" : "") + "</div>";
       if (parts || (ls && ls.state === "post")) {
@@ -872,7 +872,7 @@
     return '<section class="next" aria-label="Επόμενος αγώνας">' +
       '<p class="next-label">' + esc(ongoing ? PHASE_TEXT[ongoing] + ", " + s.emoji + " " + s.name : (label || ("Επόμενος αγώνας, " + s.emoji + " " + s.name))) + "</p>" +
       '<a class="game-link" href="' + matchHref(m) + '"><span class="next-teams">' + teamHtml(m.home, m.homeLogo, m.section) + "<br>" + teamHtml(m.away, m.awayLogo, m.section) + "</span></a>" +
-      '<p class="next-when">' + esc((rel ? rel + ", " : "") + fmtShort.format(date) + (m.timeKnown ? ", " + fmtTime.format(date) : ", ώρα TBC")) + "</p>" +
+      '<p class="next-when">' + esc((rel ? rel + ", " : "") + fmtShort.format(date) + (m.timeKnown ? ", " + fmtTime.format(date) : ", η ώρα αναμένεται")) + "</p>" +
       '<p class="next-meta">' + esc([m.competition, m.venue].filter(Boolean).join(", ")) +
         (ongoing === "on" && m.url ? ' <a href="' + esc(m.url) + '" rel="noopener" target="_blank">Live στην πηγή</a>' : "") + "</p>" +
       bellButton(m, true) + "</section>";
@@ -1254,7 +1254,7 @@
       .concat(CONTACT_EMAIL ? ['<a href="mailto:' + esc(CONTACT_EMAIL) + '">' + esc(CONTACT_EMAIL) + "</a>"] : []);
     var social = socialLinks();
     return "<footer><p>Το PAOKalendar είναι ανεπίσημη σελίδα φιλάθλων και δεν συνδέεται με τον ΠΑΟΚ ή τις εταιρείες του.</p>" +
-      "<p>Αγώνες χωρίς ορισμένη ώρα εμφανίζονται ως «TBC» και στα ημερολόγια μπαίνουν στις 18:00 ώρα Ελλάδας.</p>" +
+      "<p>Αγώνες χωρίς ανακοινωμένη ώρα εμφανίζονται ως «--:--» και στα ημερολόγια μπαίνουν προσωρινά στις 18:00 ώρα Ελλάδας, με την ένδειξη «ώρα αναμένεται».</p>" +
       "<p>Πηγές: ESPN, ΕΠΟ, esake.gr, Euroleague, basket.gr, volleyleague.gr, ΕΟΠΕ, ΟΧΕ, Water Polo League, ΕΠΣ Σάλας, UEFA, CEV, EHF, European Aquatics, ΑΣ ΠΑΟΚ. " +
       "Τα προγράμματα, τα αποτελέσματα, οι βαθμολογίες και τα σήματα ανήκουν στις πηγές τους και στις ομάδες.</p>" +
       (social.length ? '<p class="foot-social">' + social.join("") + "</p>" : "") +
@@ -2241,7 +2241,7 @@
     else if (ongoing) status = "<span>" + PHASE_TEXT[ongoing] + "</span>";
     else {
       var rel = relative(date);
-      status = "<span>" + esc((rel ? rel + ", " : "") + (m.timeKnown ? fmtTime.format(date) : "ώρα TBC")) + "</span>";
+      status = "<span>" + esc((rel ? rel + ", " : "") + (m.timeKnown ? fmtTime.format(date) : "ώρα αναμένεται")) + "</span>";
     }
     var lose = hs != null && as != null && !live ? (hs > as ? "away" : as > hs ? "home" : "") : "";
     function teamRow(side) {
@@ -2256,7 +2256,7 @@
     var head = '<section class="match-head" aria-label="Αγώνας">' +
       '<p class="mh-comp">' + esc([s.emoji + " " + s.name, m.competition, m.round].filter(Boolean).join(", ")) + "</p>" +
       '<p class="mh-status">' + status + "</p>" + teamRow("home") + teamRow("away") +
-      '<p class="mh-when">' + esc(cap(fmtLong.format(date)) + (m.timeKnown ? ", " + fmtTime.format(date) + athensSuffix(date) : ", ώρα TBC") + (m.venue ? ", " + m.venue : "")) + "</p></section>";
+      '<p class="mh-when">' + esc(cap(fmtLong.format(date)) + (m.timeKnown ? ", " + fmtTime.format(date) + athensSuffix(date) : ", η ώρα αναμένεται") + (m.venue ? ", " + m.venue : "")) + "</p></section>";
 
     var actions = [];
     if (m.tvUrl && !parts && (ongoing || isUpcoming(m))) actions.push('<a class="btn' + (ongoing === "on" ? " solid" : "") + '" href="' + esc(m.tvUrl) + '" rel="noopener" target="_blank">📺 ' + esc(ongoing === "on" ? "Δες τον αγώνα" : m.tv || "Μετάδοση") + "</a>");
@@ -2287,7 +2287,7 @@
       }) + body;
     }
 
-    var info = [["Ημερομηνία", cap(fmtLong.format(date))], ["Ώρα", m.timeKnown ? fmtTime.format(date) + athensSuffix(date) : "Δεν έχει οριστεί (TBC)"]];
+    var info = [["Ημερομηνία", cap(fmtLong.format(date))], ["Ώρα", m.timeKnown ? fmtTime.format(date) + athensSuffix(date) : "Δεν έχει ανακοινωθεί ακόμα"]];
     if (m.venue) info.push(["Γήπεδο", m.venue]);
     if (m.tv || m.tvUrl) info.push(["Τηλεόραση", m.tv || "Live streaming", m.tvUrl]);
     if (m.status) info.push(["Κατάσταση", (STATUS_TEXT[m.status] || m.status) + (m.note ? ": " + m.note : "")]);

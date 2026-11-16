@@ -65,7 +65,7 @@ def enabled() -> bool:
 def when_text(m: dict) -> str:
     d = dt.datetime.fromisoformat(m["start"]).astimezone(ATHENS)
     day = f"{WEEKDAYS[d.weekday()]} {d.day} {MONTHS[d.month - 1]}"
-    return f"{day}, {d:%H:%M}" if m.get("timeKnown") else f"{day}, ώρα TBC"
+    return f"{day}, {d:%H:%M}" if m.get("timeKnown") else f"{day}, η ώρα αναμένεται"
 
 
 def teams(m: dict, with_score: bool = False) -> str:

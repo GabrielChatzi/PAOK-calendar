@@ -4,7 +4,7 @@
 Για κάθε τμήμα γράφει δύο ημερολόγια στο docs/ (εντός και εκτός έδρας) και όλους
 τους αγώνες στο docs/matches.json, που διαβάζει η σελίδα docs/index.html.
 Όπου η ώρα ενός αγώνα δεν έχει οριστεί ακόμα, ο αγώνας μπαίνει στις 18:00 (ώρα Ελλάδας)
-με την ένδειξη «(ώρα TBC)».
+με την ένδειξη «(ώρα αναμένεται)».
 
 Πηγές:
   Ποδόσφαιρο:          ESPN (Super League, Ευρώπη), ΕΠΟ (Κύπελλο Ελλάδας)
@@ -1470,7 +1470,7 @@ def build_ics(cal_name: str, matches: list[Match], stamp: str) -> str:
         if m.note and m.score:
             summary += f" ({m.note})"
         if m.time is None:
-            summary += " (ώρα TBC)"
+            summary += " (ώρα αναμένεται)"
         desc = [x for x in (m.competition, m.round) if x]
         desc = [" – ".join(desc)] if desc else []
         if m.score:

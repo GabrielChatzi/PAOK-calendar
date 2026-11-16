@@ -203,7 +203,7 @@ def entries(today: dt.date | None = None) -> list[dict]:
 
 
 def fmt(day: dt.date, time: dt.time | None) -> str:
-    return f"{day:%d/%m}" + (f" {time:%H:%M}" if time else " (ώρα TBC)")
+    return f"{day:%d/%m}" + (f" {time:%H:%M}" if time else " (ώρα αναμένεται)")
 
 
 def friendly_match(section: str, e: dict, paok_home: bool | None, known: list[Match]) -> Match | None:

@@ -98,6 +98,16 @@ class Academy(unittest.TestCase):
             self.assertTrue(b.SECTIONS[key]["academy"])
             self.assertIn(key, b.SOURCES)
 
+    def test_manual_score(self):
+        import json, tempfile, pathlib
+        with tempfile.TemporaryDirectory() as d:
+            path = pathlib.Path(d) / "manual.json"
+            path.write_text(json.dumps([{"section": "football-u17", "date": "2026-11-22", "time": "15:00",
+                                         "home": "Κηφισιά", "away": "ΠΑΟΚ", "score": "0-2"}]), encoding="utf-8")
+            with mock.patch.object(b, "MANUAL_PATH", path):
+                (m,) = b.manual_matches("football-u17", [])
+        self.assertEqual((m.score, m.paok_home, m.time), ("0-2", False, dt.time(15, 0)))
+
 
 if __name__ == "__main__":
     unittest.main()

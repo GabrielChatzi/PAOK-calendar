@@ -1722,6 +1722,7 @@ def manual_matches(section: str, official: list[Match]) -> list[Match]:
             day=day, time=parse_time(e.get("time", "")), home=tidy_name(e["home"]), away=tidy_name(e["away"]),
             paok_home=paok_home, venue=e.get("venue", ""), competition=e.get("competition", ""),
             round=e.get("round", ""), url=e.get("url", ""),
+            score=parse_score(e.get("score", "")),  # π.χ. "2-1" (γηπεδούχος-φιλοξενούμενος), για αγώνα που έγινε
         ))
     return out
 
@@ -1960,6 +1961,12 @@ def main(only: list[str] | None = None) -> int:
                 if key not in ACADEMY:
                     failures.append(f"{key} / {label}: {e}")
                 print(f"! {key} / {label}: {e}", file=sys.stderr)
+        if not ok and key in ACADEMY:
+            # Ακαδημίες: όταν το paokfc.gr δεν απαντά, κρατάμε τους προηγούμενους αγώνες αλλά
+            # περνάμε κανονικά τις χειροκίνητες καταχωρίσεις (manual.json) και του διαχειριστή.
+            print(f"  {key}: οι προηγούμενοι αγώνες, μαζί με τις χειροκίνητες καταχωρίσεις.", file=sys.stderr)
+            matches = [match_from_json(p) for p in prev_by_section[key] if "-manual-" not in p["uid"]]
+            ok = True
         if not ok:
             print(f"  Τα αρχεία για {key} μένουν ως είχαν.", file=sys.stderr)
             all_matches += prev_by_section[key]

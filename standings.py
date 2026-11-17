@@ -448,6 +448,10 @@ def paokfc_table(section: str) -> list[dict]:
         rows.append((int(pos), name, logo, [played, w, d, l, f"{gf}-{ga}", pts]))
     if not rows:
         raise RuntimeError("άδειος πίνακας")
+    # Η πηγή μερικές φορές αριθμεί λάθος (π.χ. η Super League 2 ξεκινούσε από το 5) ενώ η σειρά
+    # είναι σωστή: τότε μετράει η σειρά.
+    if [r[0] for r in rows] != list(range(1, len(rows) + 1)):
+        rows = [(i + 1, *r[1:]) for i, r in enumerate(rows)]
     return [table(title, url, ["Αγ", "Ν", "Ι", "Η", "Γκολ", "Β"], rows)]
 
 

@@ -108,6 +108,20 @@ class Academy(unittest.TestCase):
                 (m,) = b.manual_matches("football-u17", [])
         self.assertEqual((m.score, m.paok_home, m.time), ("0-2", False, dt.time(15, 0)))
 
+    def test_custom_matches(self):
+        c = {"section": "football-u15", "uid": "football-u15-custom-a1b2c3d4e5f6", "start": "2026-11-30T12:30:00+02:00",
+             "timeKnown": True, "home": "Ηρακλής", "away": "ΠΑΟΚ", "paokHome": False, "competition": "Super League Κ15",
+             "score": "0-3"}
+        official = b.Match(section="football-u15", uid="x", day=dt.date(2026, 11, 29), time=None, home="Ηρακλής",
+                           away="ΠΑΟΚ", paok_home=False)
+        with mock.patch.dict(b._ADMIN, {"entries": {}, "live": {}, "custom": [c]}):
+            (m,) = b.custom_matches("football-u15", [])
+            self.assertEqual((m.day, m.time, m.score, m.home), (dt.date(2026, 11, 30), dt.time(12, 30), "0-3", "Ηρακλής"))
+            self.assertEqual(m.to_json()["nt"], b.match_topic_id(c["uid"]))
+            # Η πηγή έχει ήδη τον αγώνα (μέρα ±1, ίδια έδρα): μετρά εκείνος, χωρίς διπλό.
+            self.assertEqual(b.custom_matches("football-u15", [official]), [])
+            self.assertEqual(b.custom_matches("football-u17", []), [])
+
 
 if __name__ == "__main__":
     unittest.main()

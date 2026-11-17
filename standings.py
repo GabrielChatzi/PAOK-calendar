@@ -12,6 +12,7 @@ from __future__ import annotations
 import html
 import json
 import re
+from pathlib import Path
 
 from build_calendars import (
     ACADEMY, PAOKFC, PAOKFC_TEAMS, paokfc_fetch, paokfc_links, paokfc_matches, paokfc_name, DATAPROJECT, EPO, ea_data, ea_team, oxe_logo, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
@@ -414,6 +415,38 @@ def ea_groups(women: bool) -> list[dict]:
 
 # ---------------------------------------------------------------- Β' ομάδα και ακαδημίες
 
+ACADEMY_STANDINGS = Path(__file__).resolve().parent / "academy_standings.json"
+
+
+def manual_table(section: str) -> list[dict]:
+    """Βαθμολογία που πέρασε ο διαχειριστής στο academy_standings.json (όταν η πηγή δεν απαντά):
+    {"football-u19": {"title": "Super League Κ19", "updated": "2026-11-17",
+                      "rows": [["Παναθηναϊκός", 9, 8, 0, 1, 29, 6, 24], ...]}}
+    Κάθε γραμμή: ομάδα, αγώνες, νίκες, ισοπαλίες, ήττες, γκολ υπέρ, γκολ κατά, βαθμοί, με τη σειρά της βαθμολογίας."""
+    if not ACADEMY_STANDINGS.exists():
+        return []
+    t = json.loads(ACADEMY_STANDINGS.read_text(encoding="utf-8")).get(section)
+    if not t:
+        return []
+    rows = [(i + 1, PAOK_NAME if is_paok(r[0]) else r[0], "", [r[1], r[2], r[3], r[4], f"{r[5]}-{r[6]}", r[7]])
+            for i, r in enumerate(t["rows"])]
+    title = t.get("title") or "Βαθμολογία"
+    return [table(title + (f" (ενημέρωση {t['updated']})" if t.get("updated") else ""), t.get("url", ""),
+                  ["Αγ", "Ν", "Ι", "Η", "Γκολ", "Β"], rows)]
+
+
+def academy_table(section: str) -> list[dict]:
+    """Από το paokfc.gr· αν δεν απαντά, η χειροκίνητη (αν υπάρχει)."""
+    try:
+        return paokfc_table(section)
+    except Exception as e:
+        manual = manual_table(section)
+        if manual:
+            print(f"  {section}: χειροκίνητη βαθμολογία ({e})")
+            return manual
+        raise
+
+
 def paokfc_table(section: str) -> list[dict]:
     """Η βαθμολογία της ομάδας στο paokfc.gr. Η σελίδα έχει τον πίνακα της ομάδας πρώτο και μετά
     μικρούς πίνακες της πρώτης ομάδας (και όλα δύο φορές): κρατάμε μόνο τον πρώτο."""
@@ -481,5 +514,5 @@ STANDINGS = {
     "waterpolo": with_cups(lambda: waterpolo(False), lambda: ea_groups(False)),
     "waterpolo-women": with_cups(lambda: waterpolo(True), lambda: ea_groups(True)),
     "futsal": futsal,
-    **{key: (lambda key=key: paokfc_table(key)) for key in ACADEMY},
+    **{key: (lambda key=key: academy_table(key)) for key in ACADEMY},
 }

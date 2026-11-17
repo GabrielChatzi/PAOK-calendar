@@ -353,3 +353,17 @@ test("api/cal: όνομα και γραμμές ως 75 bytes", () => {
   assert.ok(long.split("\r\n").every((l) => Buffer.byteLength(l) <= 75));
   assert.equal(long.replace(/\r\n /g, ""), "X-WR-CALNAME:" + "Ποδόσφαιρο ".repeat(12));
 });
+
+test("api/admin: αγώνας της φόρμας «Νέος αγώνας»", async () => {
+  const a = await import("../api/admin.js");
+  assert.equal(a.athensIso("2026-11-21", "12:00"), "2026-11-21T12:00:00+02:00");
+  assert.equal(a.athensIso("2027-04-11", "15:00"), "2027-04-11T15:00:00+03:00");
+  const c = a.parseCustom({ section: "football-u19", date: "2026-11-21", time: "", paokHome: false, opponent: "ΑΕΚ", us: "2", them: "1" });
+  assert.equal(c.error, undefined);
+  const m = a.customToMatch({ _id: c.id, ...c });
+  assert.deepEqual([m.home, m.away, m.score, m.timeKnown, m.start], ["ΑΕΚ", "ΠΑΟΚ", "1-2", false, "2026-11-21T18:00:00+02:00"]);
+  assert.match(m.nt, /^[0-9a-f]{10}$/);
+  assert.ok(a.parseCustom({ section: "football-u19", date: "2026-11-21", opponent: "" }).error);
+  assert.ok(a.parseCustom({ section: "football-u19", date: "2026-11-21", opponent: "Χ", us: 1 }).error);
+  assert.ok(a.parseCustom({ section: "football-u19", date: "2026-11-21", time: "25:00", opponent: "Χ" }).error);
+});

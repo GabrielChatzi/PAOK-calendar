@@ -191,7 +191,17 @@
     text-decoration: none; font-weight: 500; font-size: 15px;
   }
   .menu-gender a[aria-current="page"], .menu-gender a:active { background: var(--ink); color: var(--paper); }
-  .menu-academy { grid-template-columns: 1.5fr 1fr 1fr 1fr; margin-top: 10px; }
+  .menu-academy { grid-template-columns: repeat(auto-fit, minmax(68px, 1fr)); }
+  .area-band { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin: 0 0 14px; padding: 8px 12px;
+    background: var(--ink); color: var(--paper); font-size: 13px; }
+  .area-band a { color: inherit; text-decoration: none; }
+  .area-band strong { font: 800 18px/1 var(--display); letter-spacing: .04em; text-transform: uppercase; }
+  .area-band span { opacity: .75; }
+  .area-sport { font: 600 20px/1.2 var(--display); margin: 18px 0 8px; }
+  .cm-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
+  .cm-form input, .cm-form select { width: 100%; min-width: 0; box-sizing: border-box; }
+  .menu-academy a { font-size: 14px; padding-left: 2px; padding-right: 2px; }
+  .cm-form select { font: inherit; font-size: 18px; color: var(--ink); background: var(--paper); border: 1.5px solid var(--ink); padding: 10px; border-radius: 0; }
   .menu-academy a { white-space: nowrap; padding-left: 4px; padding-right: 4px; }
   .menu-admin { font-weight: 400; letter-spacing: 0; text-transform: none; margin-left: 4px; }
   .menu-links { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--ink); }
@@ -1063,6 +1073,7 @@
     ["privacy", "Απόρρητο και cookies", "Τι κρατάμε και γιατί"]
   ];
   function menuHtml(r) {
+    if (inAcademyArea(r)) return academyMenuHtml(r);
     var match = r.page === "match" ? matchByNt(r.nt) : null;
     var current = r.key || (match && match.section);
     function link(s, label, sport) {
@@ -1077,11 +1088,7 @@
       }).join("") + "</ul></nav>" +
       (isAdmin() && data.academy.length
         ? '<nav aria-label="Ακαδημίες"><h3>Ακαδημίες <small class="menu-admin">διαχειριστής</small></h3><ul class="menu-links">' +
-          '<li><a href="#/academies"' + (r.page === "academies" ? ' aria-current="page"' : "") + ">Β' ομάδα και ακαδημίες<small>" +
-          esc(data.academy.map(function (s) { return s.name; }).join(", ")) + "</small></a></li></ul>" +
-          '<span class="menu-gender menu-academy">' + data.academy.map(function (s) {
-            return '<a href="#/' + s.key + '"' + (current === s.key ? ' aria-current="page"' : "") + ">" + esc(s.short || s.name) + "</a>";
-          }).join("") + "</span></nav>"
+          '<li><a href="#/academies">Ακαδημίες ›<small>Β\' ομάδα και τμήματα υποδομής, με δικό τους μενού</small></a></li></ul></nav>'
         : "") +
       '<nav aria-label="Σελίδες"><h3>Σελίδες</h3><ul class="menu-links">' + PAGES.map(function (p) {
         var here = p[0] ? r.page === p[0] : !r.key && !r.page;
@@ -1212,32 +1219,175 @@
   }
 
   // ---- Β' ομάδα και ακαδημίες (μόνο διαχειριστής, μέχρι να ανοίξει για όλους)
+  // Ο «χώρος» των ακαδημιών: η σελίδα #/academies, οι σελίδες των ομάδων και οι αγώνες τους.
+  function inAcademyArea(r) {
+    if (!data || !isAdmin()) return false;
+    if (r.page === "academies") return true;
+    if (r.key) return isAcademy(r.key);
+    if (r.page === "match") { var m = matchByNt(r.nt); return !!(m && isAcademy(m.section)); }
+    return false;
+  }
+  function academyBandHtml() {
+    return '<p class="area-band"><a href="#/academies"><strong>Ακαδημίες</strong></a><span>Β\' ομάδα και τμήματα υποδομής · ορατό μόνο στον διαχειριστή</span></p>';
+  }
+  // Οι ομάδες των ακαδημιών ανά άθλημα, με τη σειρά του SECTIONS.
+  function academyGroups() {
+    var groups = [], by = {};
+    data.academy.forEach(function (s) {
+      if (!by[s.sport]) { by[s.sport] = { sport: s.sport, emoji: s.emoji, teams: [] }; groups.push(by[s.sport]); }
+      by[s.sport].teams.push(s);
+    });
+    return groups;
+  }
+  function teamTitle(s) { return s.name.indexOf("ΠΑΟΚ") === 0 ? s.name : "ΠΑΟΚ " + s.name; }
+  var ACADEMY_PAGES = [
+    ["academies", "Αρχική ακαδημιών", "Όλοι οι αγώνες των ομάδων"],
+    ["academies/results", "Αποτελέσματα", "Όλες οι ομάδες"],
+    ["academies/new", "Νέος αγώνας", "Πρόσθεσε αγώνα ή αποτέλεσμα"]
+  ];
+  function academyMenuHtml(r) {
+    var match = r.page === "match" ? matchByNt(r.nt) : null;
+    var current = r.key || (match && match.section);
+    var here = r.page === "academies" ? "academies" + (r.tab ? "/" + r.tab : "") : "";
+    return '<div class="menu-top"><strong>Ακαδημίες</strong>' +
+      '<button type="button" class="menu-close" data-close aria-label="Κλείσιμο μενού">✕</button></div>' +
+      '<nav aria-label="Ομάδες"><h3>Ομάδες</h3><ul class="menu-sports">' + academyGroups().map(function (g) {
+        return '<li class="menu-sport"><span class="menu-sport-name"><span aria-hidden="true">' + g.emoji + "</span>" + esc(g.sport) + "</span>" +
+          '<span class="menu-gender menu-academy">' + g.teams.map(function (s) {
+            return '<a href="#/' + s.key + '"' + (current === s.key ? ' aria-current="page"' : "") + ">" + esc(s.short || s.name) + "</a>";
+          }).join("") + "</span></li>";
+      }).join("") + "</ul></nav>" +
+      '<nav aria-label="Σελίδες"><h3>Σελίδες</h3><ul class="menu-links">' + ACADEMY_PAGES.map(function (p) {
+        return '<li><a href="#/' + p[0] + '"' + (here === p[0] ? ' aria-current="page"' : "") + ">" + p[1] + "<small>" + p[2] + "</small></a></li>";
+      }).join("") +
+      '<li><a href="#/">‹ PAOKalendar<small>Πίσω στα τμήματα του ΠΑΟΚ</small></a></li></ul></nav>';
+  }
   function academySwitchHtml(current) {
-    return '<nav class="gender-switch" aria-label="Ομάδες">' + data.academy.map(function (s) {
+    var sport = data.sectionMap[current].sport;
+    var teams = data.academy.filter(function (s) { return s.sport === sport; });
+    if (teams.length < 2) return "";
+    return '<nav class="gender-switch" aria-label="Ομάδες">' + teams.map(function (s) {
       return '<a href="#/' + s.key + '"' + (s.key === current ? ' aria-current="page"' : "") + ">" + esc(s.short || s.name) + "</a>";
     }).join("") + "</nav>";
   }
   function academiesHtml(tab) {
     var list = data.academyMatches;
-    var teams = '<div class="shortcuts">' + data.academy.map(function (s) {
-      var pos = paokPosition(s.key);
-      var next = list.filter(function (m) { return m.section === s.key && isUpcoming(m) && !m.status; })[0];
-      var when = next ? fmtShort.format(new Date(next.start)) + (next.timeKnown ? ", " + fmtTime.format(new Date(next.start)) : "") : "";
-      return '<a class="shortcut" href="#/' + s.key + '"><strong>' + esc(s.key === "football-b" ? s.name : "ΠΑΟΚ " + s.name) + "</strong><span>" +
-        esc([pos ? pos.pos + "η θέση, " + pos.pts + " β." : "", next ? "Επόμενος: " + (next.paokHome ? next.away : next.home) + " (" + when + ")" : ""]
-          .filter(Boolean).join(" · ") || "Πρόγραμμα, αποτελέσματα, βαθμολογία") + "</span></a>";
-    }).join("") + "</div>";
+    var groups = academyGroups().map(function (g) {
+      return '<h3 class="area-sport"><span aria-hidden="true">' + g.emoji + "</span> " + esc(g.sport) + '</h3><div class="shortcuts">' + g.teams.map(function (s) {
+        var pos = paokPosition(s.key);
+        var next = list.filter(function (m) { return m.section === s.key && isUpcoming(m) && !m.status; })[0];
+        var when = next ? fmtShort.format(new Date(next.start)) + (next.timeKnown ? ", " + fmtTime.format(new Date(next.start)) : "") : "";
+        return '<a class="shortcut" href="#/' + s.key + '"><strong>' + esc(teamTitle(s)) + "</strong><span>" +
+          esc([pos ? pos.pos + "η θέση, " + pos.pts + " β." : "", next ? "Επόμενος: " + (next.paokHome ? next.away : next.home) + " (" + when + ")" : ""]
+            .filter(Boolean).join(" · ") || "Πρόγραμμα, αποτελέσματα, βαθμολογία") + "</span></a>";
+      }).join("") + "</div>";
+    }).join("");
     var results = tab === "results";
     var tabs = '<nav class="tabs" aria-label="Ακαδημίες">' + [["", "Πρόγραμμα"], ["results", "Αποτελέσματα"]].map(function (t) {
       return '<a href="#/academies' + (t[0] ? "/" + t[0] : "") + '"' + (t[0] === (tab || "") ? ' aria-current="page"' : "") + ">" + t[1] + "</a>";
     }).join("") + "</nav>";
-    return '<a class="back" href="#/">‹ Αρχική</a>' +
-      '<div class="section-head"><span aria-hidden="true">⚽</span><h2>Β\' ομάδα και ακαδημίες</h2></div>' +
-      '<p class="lede" style="margin:0 0 16px">Η σελίδα φαίνεται μόνο σε λειτουργία διαχειριστή. Πρόγραμμα, αποτελέσματα και βαθμολογίες από το paokfc.gr.</p>' +
-      teams + nextHtml(list) + tabs +
+    return '<div class="section-head"><h2>Ακαδημίες</h2></div>' +
+      '<p class="actions"><a class="btn solid" href="#/academies/new">+ Νέος αγώνας</a></p>' +
+      groups + nextHtml(list) + tabs +
       '<div class="controls">' + LEGEND + "</div>" +
       listHtml(list.filter(function (m) { return results ? !isUpcoming(m) : isUpcoming(m); }), results ? "results" : "upcoming", true) +
       footerHtml();
+  }
+
+  // ---- Φόρμα «Νέος αγώνας» / αλλαγή αγώνα της φόρμας (api/admin.js, συλλογή custom)
+  function customById(id) {
+    return allMatches().filter(function (m) { return m.custom === id; })[0] || null;
+  }
+  function academyFormHtml(r) {
+    confirmDelete = false;
+    var m = r.tab === "edit" ? customById(r.sub) : null;
+    if (r.tab === "edit" && !m) return '<a class="back" href="#/academies">‹ Ακαδημίες</a><p class="empty">Ο αγώνας δεν βρέθηκε.</p>';
+    var section = m ? m.section : (data.sectionMap[r.sub] && isAcademy(r.sub) ? r.sub : data.academy[0].key);
+    var d = m ? new Date(m.start) : null;
+    var parts = m && /^(\d+)-(\d+)$/.exec(m.score || "");
+    var us = parts ? (m.paokHome ? parts[1] : parts[2]) : "", them = parts ? (m.paokHome ? parts[2] : parts[1]) : "";
+    var pad = function (n) { return (n < 10 ? "0" : "") + n; };
+    var athens = d ? new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Athens", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false })
+      .formatToParts(d).reduce(function (o, p) { o[p.type] = p.value; return o; }, {}) : null;
+    var date = athens ? athens.year + "-" + athens.month + "-" + athens.day : "";
+    var time = athens && m.timeKnown ? pad(+athens.hour % 24) + ":" + athens.minute : "";
+    // Προτάσεις από τους αγώνες που υπάρχουν ήδη.
+    var opts = function (f) {
+      var seen = {};
+      allMatches().filter(function (x) { return isAcademy(x.section); }).forEach(function (x) { var v = f(x); if (v) seen[v] = 1; });
+      return Object.keys(seen).sort().map(function (v) { return '<option value="' + esc(v) + '">'; }).join("");
+    };
+    function field(id, label, input) { return '<label class="adm-field wide"><span>' + label + "</span>" + input + "</label>"; }
+    return '<a class="back" href="' + (m ? matchHref(m) : "#/academies") + '">‹ ' + (m ? "Ο αγώνας" : "Ακαδημίες") + "</a>" +
+      '<div class="section-head"><h2>' + (m ? "Αλλαγή αγώνα" : "Νέος αγώνας") + "</h2></div>" +
+      '<form class="admin-box cm-form" id="cm-form" data-id="' + esc(m ? m.custom : "") + '" novalidate>' +
+      field("cm-section", "Ομάδα", '<select id="cm-section">' + academyGroups().map(function (g) {
+        return '<optgroup label="' + esc(g.sport) + '">' + g.teams.map(function (s) {
+          return '<option value="' + s.key + '"' + (s.key === section ? " selected" : "") + ">" + esc(teamTitle(s)) + "</option>";
+        }).join("") + "</optgroup>";
+      }).join("") + "</select>") +
+      '<div class="cm-row">' + field("cm-date", "Ημερομηνία", '<input id="cm-date" type="date" required value="' + date + '">') +
+        field("cm-time", "Ώρα (αν έχει οριστεί)", '<input id="cm-time" type="time" value="' + time + '">') + "</div>" +
+      field("cm-home", "Έδρα", '<select id="cm-home"><option value="1"' + (!m || m.paokHome ? " selected" : "") + '>Εντός (ΠΑΟΚ γηπεδούχος)</option>' +
+        '<option value="0"' + (m && !m.paokHome ? " selected" : "") + ">Εκτός</option></select>") +
+      field("cm-opponent", "Αντίπαλος", '<input id="cm-opponent" type="text" list="cm-opps" autocomplete="off" value="' + esc(m ? (m.paokHome ? m.away : m.home) : "") + '">' +
+        '<datalist id="cm-opps">' + opts(function (x) { return x.paokHome ? x.away : x.home; }) + "</datalist>") +
+      field("cm-competition", "Διοργάνωση", '<input id="cm-competition" type="text" list="cm-comps" autocomplete="off" value="' + esc(m ? m.competition : "") + '">' +
+        '<datalist id="cm-comps">' + opts(function (x) { return x.competition; }) + "</datalist>") +
+      field("cm-round", "Αγωνιστική / φάση (προαιρετικά)", '<input id="cm-round" type="text" value="' + esc(m ? m.round || "" : "") + '">') +
+      field("cm-venue", "Γήπεδο (προαιρετικά)", '<input id="cm-venue" type="text" list="cm-venues" autocomplete="off" value="' + esc(m ? m.venue || "" : "") + '">' +
+        '<datalist id="cm-venues">' + opts(function (x) { return x.venue; }) + "</datalist>") +
+      '<p class="adm-label">Τελικό σκορ (μόνο αν έχει γίνει ο αγώνας)</p>' +
+      '<div class="adm-score">' + field("cm-us", "ΠΑΟΚ", '<input id="cm-us" type="number" inputmode="numeric" min="0" value="' + us + '">') +
+        field("cm-them", "Αντίπαλος", '<input id="cm-them" type="number" inputmode="numeric" min="0" value="' + them + '">') + "</div>" +
+      (adminPass() ? "" : field("cm-pass", "Κωδικός διαχειριστή", '<input id="cm-pass" type="password" autocomplete="current-password">')) +
+      '<p class="help" id="cm-msg" role="status"></p>' +
+      '<div class="actions"><button type="submit" class="btn solid" data-act="cm-save">Αποθήκευση</button>' +
+      (m ? '<button type="button" class="btn" data-act="cm-delete">Διαγραφή</button>' : "") + "</div>" +
+      '<p class="help">Ο αγώνας φαίνεται αμέσως εδώ· στα ημερολόγια και στις ειδοποιήσεις μπαίνει με την επόμενη ενημέρωση. ' +
+      "Αν αργότερα τον φέρει η πηγή (ίδια μέρα, ίδια έδρα), μετρά εκείνος.</p></form>" + footerHtml();
+  }
+  function customFromForm() {
+    var v = function (id) { var el = $(id); return el ? el.value.trim() : ""; };
+    return { id: $("cm-form").dataset.id || undefined, section: v("cm-section"), date: v("cm-date"), time: v("cm-time"),
+      paokHome: v("cm-home") === "1", opponent: v("cm-opponent"), competition: v("cm-competition"), round: v("cm-round"),
+      venue: v("cm-venue"), us: v("cm-us"), them: v("cm-them") };
+  }
+  function customSave(del) {
+    var msg = $("cm-msg"), pass = $("cm-pass") ? $("cm-pass").value : adminPass();
+    if (!pass) { msg.textContent = "Γράψε τον κωδικό διαχειριστή."; return; }
+    var c = customFromForm();
+    if (del && !confirmDelete) { confirmDelete = true; msg.textContent = "Πάτα ξανά «Διαγραφή» για επιβεβαίωση."; return; }
+    msg.textContent = del ? "Διαγραφή…" : "Αποθήκευση…";
+    adminPost(del ? { password: pass, action: "match-delete", id: c.id } : { password: pass, action: "match-save", match: c }).then(function (x) {
+      if (x.r.status === 401) { try { localStorage.removeItem("paok-admin-pass"); } catch (e) {} msg.textContent = "Λάθος κωδικός."; return; }
+      if (!x.r.ok) { msg.textContent = (x.d && x.d.error) || "Δεν αποθηκεύτηκε."; return; }
+      try { localStorage.setItem("paok-admin-pass", pass); } catch (e) {}
+      data.academyMatches = data.academyMatches.filter(function (m) { return m.custom !== c.id; });
+      if (del) { toast("Ο αγώνας διαγράφηκε."); location.hash = "#/academies"; return; }
+      mergeCustom([x.d.match]);
+      toast("Ο αγώνας αποθηκεύτηκε.");
+      location.hash = matchHref(x.d.match);
+    }).catch(function () { msg.textContent = "Δεν υπάρχει σύνδεση. Δοκίμασε ξανά."; });
+  }
+  var confirmDelete = false;
+  // Αγώνες της φόρμας: φαίνονται αμέσως, εκτός αν η πηγή έχει ήδη τον ίδιο (ίδια μέρα ±1, ίδια έδρα).
+  function mergeCustom(list) {
+    (list || []).forEach(function (c) {
+      if (!data.sectionMap[c.section]) return;
+      var target = isAcademy(c.section) ? data.academyMatches : data.matches;
+      if (target.some(function (m) { return m.uid === c.uid; })) return;
+      var day = new Date(c.start).getTime();
+      var twin = target.some(function (m) {
+        return m.section === c.section && !m.custom && m.paokHome === c.paokHome && Math.abs(new Date(m.start).getTime() - day) < 36 * 3600 * 1000;
+      });
+      if (!twin) target.push(c);
+    });
+    data.academyMatches.sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : 0; });
+    data.matches.sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : 0; });
+  }
+  function customEditHtml(m) {
+    return m.custom ? '<p class="actions"><a class="btn" href="#/academies/edit/' + esc(m.custom) + '">Αλλαγή ή διαγραφή αγώνα</a></p>' : "";
   }
 
   // ---- Σελίδα τμήματος
@@ -1571,7 +1721,7 @@
       return { key: null, tab: "", page: "notifications" };
     }
     if (key === "m") return { key: null, tab: parts[2] || "", page: "match", nt: parts[1] || "" };
-    if (key === "academies" && isAdmin()) return { key: null, tab: tab, page: "academies" };
+    if (key === "academies" && isAdmin()) return { key: null, tab: tab, page: "academies", sub: parts[2] || "" };
     return data.sectionMap[key] && (!isAcademy(key) || isAdmin()) ? { key: key, tab: tab } : { key: null, tab: "" };
   }
   var lastRoute = null;
@@ -1589,12 +1739,13 @@
       : r.page === "notifications" ? "Ειδοποιήσεις – PAOKalendar"
       : r.page === "calendars" ? "Ημερολόγια – PAOKalendar"
       : r.page === "privacy" ? "Απόρρητο και cookies – PAOKalendar"
-      : r.page === "academies" ? "Ακαδημίες – PAOKalendar"
+      : r.page === "academies" ? (r.tab === "new" ? "Νέος αγώνας" : r.tab === "edit" ? "Αλλαγή αγώνα" : "Ακαδημίες") + " – PAOKalendar"
       : match ? match.home + " – " + match.away + " – PAOKalendar"
       : r.key ? data.sectionMap[r.key].name + " – PAOKalendar" : "PAOKalendar";
-    $("app").innerHTML = movedHtml() +
+    $("masthead").classList.toggle("academy-area", inAcademyArea(r));
+    $("app").innerHTML = movedHtml() + (inAcademyArea(r) ? academyBandHtml() : "") +
       (r.page === "app" ? appHtml() : r.page === "notifications" ? notificationsHtml() : r.page === "calendars" ? calendarsHtml()
-        : r.page === "privacy" ? privacyHtml() : r.page === "academies" ? academiesHtml(r.tab) : r.page === "match" ? matchHtml(match) : r.key ? sectionHtml(r.key, r.tab) : homeHtml());
+        : r.page === "privacy" ? privacyHtml() : r.page === "academies" ? (r.tab === "new" || r.tab === "edit" ? academyFormHtml(r) : academiesHtml(r.tab)) : r.page === "match" ? matchHtml(match) : r.key ? sectionHtml(r.key, r.tab) : homeHtml());
     if (routeChanged && match && r.tab === "notify") {
       var target = $("match-notify");
       if (target) target.scrollIntoView();
@@ -1624,6 +1775,9 @@
     } else { fallback(); }
   }
 
+  $("app").addEventListener("submit", function (e) {
+    if (e.target.id === "cm-form") { e.preventDefault(); customSave(false); }
+  });
   $("app").addEventListener("input", function (e) {
     if (e.target.id && e.target.id.indexOf("adm-") === 0) admInput(e.target);
   });
@@ -1635,6 +1789,7 @@
       toggleTopics(b.dataset.topics.split(" "), turnOn);
       return;
     }
+    if (b.dataset.act === "cm-delete") { customSave(true); return; }
     if (b.dataset.act === "push-off") { disablePush(); return; }
     if (b.dataset.act === "move-code") { showMoveCodeEntry(); return; }
     if (b.dataset.act === "push-test") { testPush(); return; }
@@ -2345,7 +2500,7 @@
 
     return '<div class="match"><a class="back" href="#/' + m.section + '">‹ ' + esc(s.name) + "</a>" + head +
       (actions.length ? '<div class="match-actions">' + actions.join("") + "</div>" : "") + tzNoteHtml() +
-      body + (isAdmin() ? adminMatchHtml(m) : "") + (isUpcoming(m) && !finalLive ? matchNotifyHtml(m) : "") + infoHtml + "</div>" + footerHtml();
+      body + (isAdmin() ? customEditHtml(m) + adminMatchHtml(m) : "") + (isUpcoming(m) && !finalLive ? matchNotifyHtml(m) : "") + infoHtml + "</div>" + footerHtml();
   }
 
   function athensSuffix(date) {
@@ -2938,9 +3093,9 @@
   }
   // Καταχωρίσεις του διαχειριστή (api/admin.js): το σκορ τους φαίνεται αμέσως, πριν από την ενημέρωση.
   function loadAdmin() {
-    if (!pushOrigin) return Promise.resolve([]);
+    if (!pushOrigin) return Promise.resolve({});
     return fetch("/api/admin", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : {}; })
-      .then(function (d) { return d.entries || []; }).catch(function () { return []; });
+      .then(function (d) { return d || {}; }).catch(function () { return {}; });
   }
   var adminEntries = {};
   function applyAdmin(entries) {
@@ -2971,7 +3126,8 @@
       if (logo && !paokLogo[m.section]) paokLogo[m.section] = logo;
       if (logo && !paokLogo._any) paokLogo._any = logo;
     });
-    applyAdmin(res[2] || []);
+    mergeCustom((res[2] || {}).custom);
+    applyAdmin((res[2] || {}).entries || []);
     loadedAt = Date.now();
     if (push.ready && push.sub && cleanMatchTopics()) syncPush().catch(function () {});
     render();

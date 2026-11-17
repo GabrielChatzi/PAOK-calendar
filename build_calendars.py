@@ -1740,11 +1740,39 @@ def admin_entries() -> dict[str, dict]:
             got = json.loads(fetch(ADMIN_URL))
             _ADMIN["entries"] = {e["nt"]: e for e in got.get("entries", [])}
             _ADMIN["live"] = {e["nt"]: e for e in got.get("live", [])}
+            _ADMIN["custom"] = got.get("custom", [])
         except Exception as e:
             print(f"  ! καταχωρίσεις διαχειριστή: {e}", file=sys.stderr)
             _ADMIN["entries"] = {}
             _ADMIN["live"] = {}
+            _ADMIN["custom"] = []
     return _ADMIN["entries"]
+
+
+def custom_matches(section: str, official: list[Match]) -> list[Match]:
+    """Οι αγώνες που έβαλε ο διαχειριστής από τη φόρμα «Νέος αγώνας» (api/admin.js, συλλογή custom).
+
+    Όπως στο manual.json: αν η πηγή έχει αγώνα του ΠΑΟΚ την ίδια μέρα (±1) με την ίδια έδρα, μετρά
+    εκείνος. Το σκορ της φόρμας περνά στον αγώνα της πηγής όταν εκείνη δεν έχει ακόμα αποτέλεσμα."""
+    admin_entries()
+    out = []
+    for d in _ADMIN.get("custom", []):
+        if d.get("section") != section:
+            continue
+        try:
+            m = match_from_json(d)
+        except (KeyError, ValueError) as e:
+            print(f"  ! αγώνας φόρμας {d.get('uid')}: {e}", file=sys.stderr)
+            continue
+        m.score = d.get("score", "")
+        same = [o for o in official if "-custom-" not in o.uid and abs((o.day - m.day).days) <= 1 and o.paok_home == m.paok_home]
+        if same:
+            for o in same:
+                if m.score and not o.score and o.day == m.day:
+                    o.score = m.score
+            continue
+        out.append(m)
+    return out
 
 
 def apply_live_finals(section: str, matches: list[Match]) -> None:
@@ -1965,7 +1993,8 @@ def main(only: list[str] | None = None) -> int:
             # Ακαδημίες: όταν το paokfc.gr δεν απαντά, κρατάμε τους προηγούμενους αγώνες αλλά
             # περνάμε κανονικά τις χειροκίνητες καταχωρίσεις (manual.json) και του διαχειριστή.
             print(f"  {key}: οι προηγούμενοι αγώνες, μαζί με τις χειροκίνητες καταχωρίσεις.", file=sys.stderr)
-            matches = [match_from_json(p) for p in prev_by_section[key] if "-manual-" not in p["uid"]]
+            matches = [match_from_json(p) for p in prev_by_section[key]
+                       if "-manual-" not in p["uid"] and "-custom-" not in p["uid"]]
             ok = True
         if not ok:
             print(f"  Τα αρχεία για {key} μένουν ως είχαν.", file=sys.stderr)
@@ -1973,6 +2002,7 @@ def main(only: list[str] | None = None) -> int:
             continue
         unique = list({m.uid: m for m in matches}.values())
         unique += manual_matches(key, unique)
+        unique += custom_matches(key, unique)
         try:
             import club  # δεύτερη πηγή: ανακοινώσεις της ΑΣ ΠΑΟΚ
             unique += club.reconcile(key, unique, checks, SECTIONS[key]["name"])

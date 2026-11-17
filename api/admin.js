@@ -9,6 +9,14 @@
 //                                                   silent: μόνο αποθήκευση, χωρίς ειδοποίηση·
 //                                                   event: βλ. EVENTS· χωρίς event, final → τελικό, αλλιώς σκορ)
 //   POST {password, action: "clear", nt}            σβήσιμο (χωρίς ειδοποίηση)
+//   POST {password, action: "match-save", match}    νέος αγώνας ή αλλαγή αγώνα (κυρίως Β' ομάδα και ακαδημίες,
+//                                                   που δεν έχουν σταθερή πηγή)· match: {id?, section, date,
+//                                                   time, paokHome, opponent, venue, competition, round, us, them}
+//   POST {password, action: "match-delete", id}     σβήσιμο αγώνα της φόρμας
+//
+// Οι αγώνες της φόρμας (συλλογή «custom») επιστρέφονται στο GET ως custom, στη μορφή του matches.json:
+// η σελίδα τους δείχνει αμέσως και το build_calendars.py τους βάζει στο πρόγραμμα, στα ημερολόγια
+// και στις ειδοποιήσεις, όπως τις καταχωρίσεις του manual.json.
 //
 // Ο κωδικός είναι η μεταβλητή ADMIN_PASSWORD της Vercel. Ό,τι γράφει ο διαχειριστής έχει
 // προτεραιότητα: το τελικό στέλνεται με το ίδιο κλειδί «once» με το αυτόματο (live.py,
@@ -32,7 +40,14 @@ function passwordOk(given) {
   return crypto.timingSafeEqual(h(given), h(want));
 }
 
-async function findMatch(nt) {
+async function findMatch(nt, db) {
+  // Αγώνας της φόρμας που δεν έχει περάσει ακόμα στο πρόγραμμα.
+  if (db) {
+    for (const doc of await db.collection("custom").find({}).toArray()) {
+      const m = customToMatch(doc);
+      if (m.nt === nt) return m;
+    }
+  }
   const urls = [
     `https://raw.githubusercontent.com/GabrielChatzi/PAOK-calendar/data/matches.json?t=${Math.floor(Date.now() / 60000)}`,
     "https://paokalendar.gr/matches.json",
@@ -44,6 +59,59 @@ async function findMatch(nt) {
     } catch { /* επόμενη */ }
   }
   throw new Error("Δεν διαβάστηκε το πρόγραμμα.");
+}
+
+// ---- Αγώνες της φόρμας «Νέος αγώνας»
+const shortId = (uid) => crypto.createHash("sha1").update(uid).digest("hex").slice(0, 10);  // ίδιο με match_topic_id
+
+// Η ώρα Ελλάδας ως ISO με τη σωστή μετατόπιση (+02:00 / +03:00) για εκείνη τη μέρα.
+export function athensIso(date, time) {
+  const [y, mo, d] = date.split("-").map(Number), [h, mi] = (time || "18:00").split(":").map(Number);
+  const guess = Date.UTC(y, mo - 1, d, h, mi);
+  const parts = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Athens", hour12: false, year: "numeric", month: "2-digit",
+    day: "2-digit", hour: "2-digit", minute: "2-digit" }).formatToParts(new Date(guess));
+  const get = (t) => Number(parts.find((p) => p.type === t).value);
+  const shown = Date.UTC(get("year"), get("month") - 1, get("day"), get("hour") % 24, get("minute"));
+  const off = Math.round((shown - guess) / 60000);
+  const pad = (n) => String(n).padStart(2, "0");
+  return `${date}T${pad(h)}:${pad(mi)}:00+${pad(Math.floor(off / 60))}:${pad(off % 60)}`;
+}
+
+// Μια εγγραφή της συλλογής στη μορφή του matches.json.
+export function customToMatch(doc) {
+  const uid = `${doc.section}-custom-${doc._id}`;
+  const m = {
+    section: doc.section, uid, nt: shortId(uid), custom: doc._id, start: athensIso(doc.date, doc.time), timeKnown: !!doc.time,
+    home: doc.paokHome ? "ΠΑΟΚ" : doc.opponent, away: doc.paokHome ? doc.opponent : "ΠΑΟΚ", paokHome: doc.paokHome,
+    venue: doc.venue || "", competition: doc.competition || "", round: doc.round || "", score: "", tv: "", tvUrl: "", url: "",
+    homeLogo: "", awayLogo: "",
+  };
+  if (Number.isInteger(doc.us) && Number.isInteger(doc.them)) m.score = doc.paokHome ? `${doc.us}-${doc.them}` : `${doc.them}-${doc.us}`;
+  return m;
+}
+
+// Ο αγώνας από τη φόρμα, ελεγμένος· σε λάθος { error }.
+export function parseCustom(x) {
+  if (!x || typeof x !== "object") return { error: "Λείπει ο αγώνας." };
+  const text = (v, n) => String(v ?? "").trim().slice(0, n);
+  const c = {
+    section: text(x.section, 40), date: text(x.date, 10), time: text(x.time, 5), paokHome: x.paokHome !== false,
+    opponent: text(x.opponent, 60), venue: text(x.venue, 80), competition: text(x.competition, 80), round: text(x.round, 60),
+  };
+  if (!/^[a-z0-9-]+$/.test(c.section)) return { error: "Διάλεξε ομάδα." };
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(c.date) || Number.isNaN(Date.parse(c.date))) return { error: "Διάλεξε ημερομηνία." };
+  if (c.time && !/^([01]\d|2[0-3]):[0-5]\d$/.test(c.time)) return { error: "Η ώρα θέλει μορφή 15:30." };
+  if (!c.opponent) return { error: "Γράψε τον αντίπαλο." };
+  if (/^\s*(ΠΑΟΚ|PAOK)\s*$/i.test(c.opponent)) return { error: "Ο αντίπαλος δεν μπορεί να είναι ο ΠΑΟΚ." };
+  const has = (v) => v !== undefined && v !== null && v !== "";
+  if (has(x.us) || has(x.them)) {
+    const us = Number(x.us), them = Number(x.them);
+    if (![us, them].every((n) => Number.isInteger(n) && n >= 0 && n <= 300)) return { error: "Το σκορ θέλει δύο αριθμούς (ή κανέναν)." };
+    c.us = us; c.them = them;
+  } else { c.us = null; c.them = null; }
+  if (x.id != null && !/^[0-9a-f]{12}$/.test(String(x.id))) return { error: "Άγνωστος αγώνας." };
+  c.id = x.id ? String(x.id) : crypto.randomBytes(6).toString("hex");
+  return c;
 }
 
 // Το κλειδί «once» για ένα σκορ σε εξέλιξη: το ίδιο φτιάχνει και το live.py για τα γκολ.
@@ -198,8 +266,9 @@ export default async function handler(req, res) {
     const entries = await col.find({ at: { $gte: since } }, { projection: { _id: 0, history: 0 } }).toArray();
     // Τελικά που έστειλε το live.py (api/push.js), για αγώνες χωρίς ακόμα επίσημο σκορ.
     const live = await (await getDb()).collection("livefinals").find({ at: { $gte: since } }, { projection: { _id: 0 } }).toArray();
+    const custom = (await (await getDb()).collection("custom").find({}).sort({ date: 1, time: 1 }).toArray()).map(customToMatch);
     res.setHeader("Cache-Control", "public, s-maxage=15");
-    return res.status(200).json({ entries, live });
+    return res.status(200).json({ entries, live, custom });
   }
   if (req.method !== "POST") return send(res, 405, { error: "Μόνο GET ή POST." });
 
@@ -210,6 +279,20 @@ export default async function handler(req, res) {
     return send(res, 401, { error: "Λάθος κωδικός." });
   }
   if (body.action === "check") return send(res, 200, { ok: true });
+
+  if (body.action === "match-save") {
+    const c = parseCustom(body.match);
+    if (c.error) return send(res, 400, { error: c.error });
+    const { id, ...fields } = c;
+    await (await getDb()).collection("custom").updateOne({ _id: id }, { $set: { ...fields, at: new Date() } }, { upsert: true });
+    return send(res, 200, { ok: true, match: customToMatch({ _id: id, ...fields }) });
+  }
+  if (body.action === "match-delete") {
+    const id = String(body.id || "");
+    if (!/^[0-9a-f]{12}$/.test(id)) return send(res, 400, { error: "Άγνωστος αγώνας." });
+    await (await getDb()).collection("custom").deleteOne({ _id: id });
+    return send(res, 200, { ok: true });
+  }
 
   const nt = String(body.nt || "");
   if (!/^[0-9a-f]{10}$/.test(nt)) return send(res, 400, { error: "Άγνωστος αγώνας." });
@@ -224,7 +307,7 @@ export default async function handler(req, res) {
   if (ev.error) return send(res, 400, { error: ev.error });
   const { home, away } = ev;
   let m;
-  try { m = await findMatch(nt); } catch (e) { return send(res, 502, { error: e.message }); }
+  try { m = await findMatch(nt, await getDb()); } catch (e) { return send(res, 502, { error: e.message }); }
   if (!m) return send(res, 404, { error: "Ο αγώνας δεν βρέθηκε στο πρόγραμμα." });
 
   const prior = await col.findOne({ _id: nt }, { projection: { home: 1, away: 1, final: 1 } });

@@ -1,0 +1,37 @@
+name: probe academy
+on:
+  push:
+    branches: [probe-academy]
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p probe
+          UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36"
+          get() { curl -sSL -m 40 -A "$UA" -o "probe/$1" "$2" -w "$1 %{http_code} %{size_download} %{url_effective}\n" >> probe/index.txt || echo "$1 FAIL" >> probe/index.txt; }
+          B=https://www.paokfc.gr
+          get u19-fix-en.html "$B/en/match-centre/2026-2027-en/u-20-match-center-en-nchc/fixtures-en-u20/"
+          get u19-table-en.html "$B/en/match-centre/2026-2027-en/u-20-match-center-en-nchc/vathmologia-u20/"
+          get u17-fix-en.html "$B/en/match-centre/2026-2027-en/u-17-en-match-center-nchc/fixtures-en-u17/"
+          get u15-fix-en.html "$B/en/match-centre/2026-2027-en/u-15-en-match-center-nchc/fixtures-u15-en/"
+          get b-fix-en.html "$B/en/match-centre/2026-2027-en/paok-b-nchc-en/fixtures/"
+          get b-table-en.html "$B/en/match-centre/2026-2027-en/paok-b-nchc-en/vathmologia-paok-b/"
+          get home-gr.html "$B/"
+          get match-gr.html "$B/matches/k17-paok-levadiakos-slgr-26/"
+          get wp-types.json "$B/wp-json/wp/v2/types"
+          get wp-root.json "$B/wp-json/"
+          # Ελληνικές σελίδες: όλα τα links του match-centre από την αρχική
+          grep -oE 'href="[^"]*match-centre[^"]*"' probe/home-gr.html | sort -u > probe/links-gr.txt || true
+          grep -oE 'href="[^"]*match-centre[^"]*"' probe/u19-fix-en.html | sort -u > probe/links-en.txt || true
+          i=0
+          for u in $(sed -E 's/href="([^"]*)"/\1/' probe/links-gr.txt | grep -E '2026-2027' | grep -viE 'en/' | head -40); do
+            i=$((i+1)); get "gr-$i.html" "$u"
+          done
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add probe && git commit -qm "probe" && git push

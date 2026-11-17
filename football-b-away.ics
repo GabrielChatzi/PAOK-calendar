@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:football-b-2026-e0f491c54c49@paok-calendar
-DTSTAMP:20261117T120046Z
+DTSTAMP:20261117T200056Z
 DTSTART;TZID=Europe/Athens:20260914T170000
 DTEND;TZID=Europe/Athens:20260914T190000
 SUMMARY:⚽ Πανθρακικός 2-0 ΠΑΟΚ
@@ -36,7 +36,7 @@ URL:https://www.paokfc.gr/matches/pantrakikos-paok-b-slgr2-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-2026-2d07e0349ef6@paok-calendar
-DTSTAMP:20261117T120046Z
+DTSTAMP:20261117T200056Z
 DTSTART;TZID=Europe/Athens:20260927T160000
 DTEND;TZID=Europe/Athens:20260927T180000
 SUMMARY:⚽ ΑΕΛ 1-0 ΠΑΟΚ
@@ -45,7 +45,7 @@ URL:https://www.paokfc.gr/matches/ael-paok-b-slgr2-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-2026-69828ff9cc81@paok-calendar
-DTSTAMP:20261117T120046Z
+DTSTAMP:20261117T200056Z
 DTSTART;TZID=Europe/Athens:20261012T144500
 DTEND;TZID=Europe/Athens:20261012T164500
 SUMMARY:⚽ Πανιώνιος 3-0 ΠΑΟΚ
@@ -55,7 +55,7 @@ URL:https://www.paokfc.gr/matches/panionios-paok-b-slgr2-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-2026-10f3d601f7d8@paok-calendar
-DTSTAMP:20261117T120046Z
+DTSTAMP:20261117T200056Z
 DTSTART;TZID=Europe/Athens:20261025T180000
 DTEND;TZID=Europe/Athens:20261025T200000
 SUMMARY:⚽ Αναγέννηση Καρδίτσας 1-0 ΠΑΟΚ (ώρα α
@@ -68,7 +68,7 @@ URL:https://www.paokfc.gr/matches/anagennisi-karditsas-paok-b-slgr2-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-2026-020ae63f16cb@paok-calendar
-DTSTAMP:20261117T120046Z
+DTSTAMP:20261117T200056Z
 DTSTART;TZID=Europe/Athens:20261108T150000
 DTEND;TZID=Europe/Athens:20261108T170000
 SUMMARY:⚽ ΠΑΣ Πύργος 2-4 ΠΑΟΚ
@@ -78,7 +78,7 @@ URL:https://www.paokfc.gr/matches/pas-pyrgos-paok-b-slgr2-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-2026-22404ce63919@paok-calendar
-DTSTAMP:20261117T120046Z
+DTSTAMP:20261117T200056Z
 DTSTART;TZID=Europe/Athens:20261114T150000
 DTEND;TZID=Europe/Athens:20261114T170000
 SUMMARY:⚽ Αστέρας Τρίπολης Β 4-0 ΠΑΟΚ
@@ -88,7 +88,7 @@ URL:https://www.paokfc.gr/matches/asteras-aktor-b-paok-b-slgr2-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-2026-90fceea32500@paok-calendar
-DTSTAMP:20261117T120046Z
+DTSTAMP:20261117T200056Z
 DTSTART;TZID=Europe/Athens:20261129T180000
 DTEND;TZID=Europe/Athens:20261129T200000
 SUMMARY:⚽ Μαρκό – ΠΑΟΚ (ώρα αναμένεται)
@@ -98,28 +98,23 @@ DESCRIPTION:Super League 2\nΗ ώρα δεν έχει οριστεί ακό
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-2026-6ab3a7eb191d@paok-calendar
-DTSTAMP:20261117T120046Z
-DTSTART;TZID=Europe/Athens:20261212T180000
-DTEND;TZID=Europe/Athens:20261212T200000
-SUMMARY:⚽ Καλλιθέα – ΠΑΟΚ (ώρα αναμένεται)
-DESCRIPTION:Super League 2\nΗ ώρα δεν έχει οριστεί ακό
- μα (προσωρινά 18:00). Θα ενημερωθεί αυτόματ
- α όταν ανακοινωθεί.
+DTSTAMP:20261117T200056Z
+DTSTART;TZID=Europe/Athens:20261213T150000
+DTEND;TZID=Europe/Athens:20261213T170000
+SUMMARY:⚽ Καλλιθέα – ΠΑΟΚ
+DESCRIPTION:Super League 2
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-2026-71e6a5994f6c@paok-calendar
-DTSTAMP:20261117T120046Z
-DTSTART;TZID=Europe/Athens:20261220T180000
-DTEND;TZID=Europe/Athens:20261220T200000
-SUMMARY:⚽ Ολυμπιακός Β – ΠΑΟΚ (ώρα αναμένετα
- ι)
-DESCRIPTION:Super League 2\nΗ ώρα δεν έχει οριστεί ακό
- μα (προσωρινά 18:00). Θα ενημερωθεί αυτόματ
- α όταν ανακοινωθεί.
+DTSTAMP:20261117T200056Z
+DTSTART;TZID=Europe/Athens:20261219T144500
+DTEND;TZID=Europe/Athens:20261219T164500
+SUMMARY:⚽ Ολυμπιακός Β – ΠΑΟΚ
+DESCRIPTION:Super League 2
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-2026-f0503259f343@paok-calendar
-DTSTAMP:20261117T120046Z
+DTSTAMP:20261117T200056Z
 DTSTART;TZID=Europe/Athens:20270117T180000
 DTEND;TZID=Europe/Athens:20270117T200000
 SUMMARY:⚽ Νέστος Χρυσούπολης – ΠΑΟΚ (ώρα ανα
@@ -130,7 +125,7 @@ DESCRIPTION:Super League 2\nΗ ώρα δεν έχει οριστεί ακό
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-2026-c7b9b1c53c84@paok-calendar
-DTSTAMP:20261117T120046Z
+DTSTAMP:20261117T200056Z
 DTSTART;TZID=Europe/Athens:20270131T180000
 DTEND;TZID=Europe/Athens:20270131T200000
 SUMMARY:⚽ Ελλάς Σύρου – ΠΑΟΚ (ώρα αναμένεται
@@ -141,7 +136,7 @@ DESCRIPTION:Super League 2\nΗ ώρα δεν έχει οριστεί ακό
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-2026-607fab6041ef@paok-calendar
-DTSTAMP:20261117T120046Z
+DTSTAMP:20261117T200056Z
 DTSTART;TZID=Europe/Athens:20270214T180000
 DTEND;TZID=Europe/Athens:20270214T200000
 SUMMARY:⚽ Απόλλων Καλαμαριάς – ΠΑΟΚ (ώρα ανα
@@ -152,7 +147,7 @@ DESCRIPTION:Super League 2\nΗ ώρα δεν έχει οριστεί ακό
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-2026-985c0a53de0d@paok-calendar
-DTSTAMP:20261117T120046Z
+DTSTAMP:20261117T200056Z
 DTSTART;TZID=Europe/Athens:20270228T180000
 DTEND;TZID=Europe/Athens:20270228T200000
 SUMMARY:⚽ Ζάκυνθος – ΠΑΟΚ (ώρα αναμένεται)
@@ -162,7 +157,7 @@ DESCRIPTION:Super League 2\nΗ ώρα δεν έχει οριστεί ακό
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-2026-6ed5702824fe@paok-calendar
-DTSTAMP:20261117T120046Z
+DTSTAMP:20261117T200056Z
 DTSTART;TZID=Europe/Athens:20270321T180000
 DTEND;TZID=Europe/Athens:20270321T200000
 SUMMARY:⚽ Νίκη Βόλου – ΠΑΟΚ (ώρα αναμένεται)
@@ -172,7 +167,7 @@ DESCRIPTION:Super League 2\nΗ ώρα δεν έχει οριστεί ακό
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-2026-e5b365bf97c2@paok-calendar
-DTSTAMP:20261117T120046Z
+DTSTAMP:20261117T200056Z
 DTSTART;TZID=Europe/Athens:20270404T180000
 DTEND;TZID=Europe/Athens:20270404T200000
 SUMMARY:⚽ Πανσερραϊκός – ΠΑΟΚ (ώρα αναμένετ

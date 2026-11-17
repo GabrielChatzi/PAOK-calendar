@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:football-u19-2026-94bd34187fef@paok-calendar
-DTSTAMP:20261117T120046Z
+DTSTAMP:20261117T200056Z
 DTSTART;TZID=Europe/Athens:20260913T120000
 DTEND;TZID=Europe/Athens:20260913T140000
 SUMMARY:⚽ ΠΑΟΚ 3-0 Άρης
@@ -35,7 +35,7 @@ URL:https://www.paokfc.gr/matches/k19-paok-aris-slgr-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u19-2026-5c941a2cf83d@paok-calendar
-DTSTAMP:20261117T120046Z
+DTSTAMP:20261117T200056Z
 DTSTART;TZID=Europe/Athens:20261010T130000
 DTEND;TZID=Europe/Athens:20261010T150000
 SUMMARY:⚽ ΠΑΟΚ 4-0 Καλαμάτα
@@ -45,7 +45,7 @@ URL:https://www.paokfc.gr/matches/k19-paok-kalamata-slgr-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u19-2026-061f51075c81@paok-calendar
-DTSTAMP:20261117T120046Z
+DTSTAMP:20261117T200056Z
 DTSTART;TZID=Europe/Athens:20261017T130000
 DTEND;TZID=Europe/Athens:20261017T150000
 SUMMARY:⚽ ΠΑΟΚ 4-0 Ηρακλής
@@ -55,7 +55,7 @@ URL:https://www.paokfc.gr/matches/k19-paok-pot-iraklis-slgr-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u19-2026-d51b880d1c85@paok-calendar
-DTSTAMP:20261117T120046Z
+DTSTAMP:20261117T200056Z
 DTSTART;TZID=Europe/Athens:20261031T120000
 DTEND;TZID=Europe/Athens:20261031T140000
 SUMMARY:⚽ ΠΑΟΚ 1-0 Αστέρας Τρίπολης
@@ -65,7 +65,7 @@ URL:https://www.paokfc.gr/matches/k19-paok-asteras-aktor-slgr-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u19-2026-b8659f355d00@paok-calendar
-DTSTAMP:20261117T120046Z
+DTSTAMP:20261117T200056Z
 DTSTART;TZID=Europe/Athens:20261104T153000
 DTEND;TZID=Europe/Athens:20261104T173000
 SUMMARY:⚽ ΠΑΟΚ 3-0 HSK Zrinjski
@@ -74,18 +74,8 @@ DESCRIPTION:UEFA Youth League\nΤελικό σκορ: ΠΑΟΚ 3-0 HSK Zrin
 URL:https://www.paokfc.gr/matches/k19-paok-hsk-zrinjski-27/
 END:VEVENT
 BEGIN:VEVENT
-UID:football-u19-2026-b83be960646e@paok-calendar
-DTSTAMP:20261117T120046Z
-DTSTART;TZID=Europe/Athens:20261121T180000
-DTEND;TZID=Europe/Athens:20261121T200000
-SUMMARY:⚽ ΠΑΟΚ – Κηφισιά (ώρα αναμένεται)
-DESCRIPTION:Super League Κ19\nΗ ώρα δεν έχει οριστεί α
- κόμα (προσωρινά 18:00). Θα ενημερωθεί αυτόμ
- ατα όταν ανακοινωθεί.
-END:VEVENT
-BEGIN:VEVENT
 UID:football-u19-2026-ab8cfa8b11ec@paok-calendar
-DTSTAMP:20261117T120046Z
+DTSTAMP:20261117T200056Z
 DTSTART;TZID=Europe/Athens:20261205T180000
 DTEND;TZID=Europe/Athens:20261205T200000
 SUMMARY:⚽ ΠΑΟΚ – Βόλος (ώρα αναμένεται)
@@ -95,7 +85,7 @@ DESCRIPTION:Super League Κ19\nΗ ώρα δεν έχει οριστεί α
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u19-2026-4c48b6148e2d@paok-calendar
-DTSTAMP:20261117T120046Z
+DTSTAMP:20261117T200056Z
 DTSTART;TZID=Europe/Athens:20261209T173000
 DTEND;TZID=Europe/Athens:20261209T193000
 SUMMARY:⚽ ΠΑΟΚ – Hoffenheim
@@ -103,7 +93,7 @@ DESCRIPTION:UEFA Youth League
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u19-2026-0954bc4867b5@paok-calendar
-DTSTAMP:20261117T120046Z
+DTSTAMP:20261117T200056Z
 DTSTART;TZID=Europe/Athens:20261212T180000
 DTEND;TZID=Europe/Athens:20261212T200000
 SUMMARY:⚽ ΠΑΟΚ – Λεβαδειακός (ώρα αναμένετα
@@ -111,5 +101,13 @@ SUMMARY:⚽ ΠΑΟΚ – Λεβαδειακός (ώρα αναμένετα
 DESCRIPTION:Super League Κ19\nΗ ώρα δεν έχει οριστεί α
  κόμα (προσωρινά 18:00). Θα ενημερωθεί αυτόμ
  ατα όταν ανακοινωθεί.
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u19-2026-b83be960646e@paok-calendar
+DTSTAMP:20261117T200056Z
+DTSTART;TZID=Europe/Athens:20261223T120000
+DTEND;TZID=Europe/Athens:20261223T140000
+SUMMARY:⚽ ΠΑΟΚ – Κηφισιά
+DESCRIPTION:Super League Κ19
 END:VEVENT
 END:VCALENDAR

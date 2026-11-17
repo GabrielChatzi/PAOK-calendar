@@ -830,10 +830,10 @@
      "logo": "https://media-cdn.incrowdsports.com/1d3274d8-da86-4d21-9e97-6810ab88babe.png",
      "paok": false,
      "cells": [
+      "8",
       "7",
-      "6",
       "1",
-      "+110"
+      "+132"
      ]
     },
     {
@@ -862,18 +862,6 @@
     },
     {
      "pos": 4,
-     "team": "Roma",
-     "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS1/1e9e0379-db30-4234-89b0-19576709c285.png",
-     "paok": false,
-     "cells": [
-      "7",
-      "3",
-      "4",
-      "-25"
-     ]
-    },
-    {
-     "pos": 5,
      "team": "Lietkabelis",
      "logo": "https://media-cdn.cortextech.io/ffcb6e37-31f4-48f6-91c2-a8c9a6f791a9.png",
      "paok": false,
@@ -885,7 +873,7 @@
      ]
     },
     {
-     "pos": 6,
+     "pos": 5,
      "team": "Ulm",
      "logo": "https://media-cdn.cortextech.io/5750bc8b-dd63-48e4-8586-10d4e5e2b4e2.png",
      "paok": false,
@@ -894,6 +882,18 @@
       "3",
       "5",
       "-7"
+     ]
+    },
+    {
+     "pos": 6,
+     "team": "Roma",
+     "logo": "https://media-cdn.cortextech.io/1dU3kpCqReRp93/1BSdBWIjCjnOS1/1e9e0379-db30-4234-89b0-19576709c285.png",
+     "paok": false,
+     "cells": [
+      "8",
+      "3",
+      "5",
+      "-47"
      ]
     },
     {
@@ -2285,6 +2285,20 @@
     },
     {
      "pos": 5,
+     "team": "ΕΡΜΗΣ ΖΩΓΡΑΦΟΥ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "9",
+      "3",
+      "2",
+      "4",
+      "39-41",
+      "11"
+     ]
+    },
+    {
+     "pos": 6,
      "team": "ΜΙΝΩΤΑΥΡΟΣ",
      "logo": "",
      "paok": false,
@@ -2298,21 +2312,21 @@
      ]
     },
     {
-     "pos": 6,
-     "team": "ΕΡΜΗΣ ΖΩΓΡΑΦΟΥ",
+     "pos": 7,
+     "team": "ΑΘΗΝΑ '90 ΣΑΛΑΣ",
      "logo": "",
      "paok": false,
      "cells": [
       "8",
-      "3",
-      "1",
+      "2",
       "4",
-      "36-38",
+      "2",
+      "39-38",
       "10"
      ]
     },
     {
-     "pos": 7,
+     "pos": 8,
      "team": "ΑΕΛ",
      "logo": "",
      "paok": false,
@@ -2323,20 +2337,6 @@
       "5",
       "31-53",
       "10"
-     ]
-    },
-    {
-     "pos": 8,
-     "team": "ΑΘΗΝΑ '90 ΣΑΛΑΣ",
-     "logo": "",
-     "paok": false,
-     "cells": [
-      "7",
-      "2",
-      "3",
-      "2",
-      "36-35",
-      "9"
      ]
     },
     {

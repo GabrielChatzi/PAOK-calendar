@@ -24,4 +24,63 @@ DTSTART:19701025T040000
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
+BEGIN:VEVENT
+UID:football-u15-2026-0367d6934fba@paok-calendar
+DTSTAMP:20261117T120046Z
+DTSTART;TZID=Europe/Athens:20260919T110000
+DTEND;TZID=Europe/Athens:20260919T130000
+SUMMARY:⚽ ΠΑΟΚ 5-0 Παναιτωλικός
+DESCRIPTION:Super League Κ15\nΤελικό σκορ: ΠΑΟΚ 5-0 Πανα
+ ιτωλικός
+URL:https://www.paokfc.gr/matches/k15-paok-panetolikos-slgr-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u15-2026-cb206f5067f6@paok-calendar
+DTSTAMP:20261117T120046Z
+DTSTART;TZID=Europe/Athens:20260927T114500
+DTEND;TZID=Europe/Athens:20260927T134500
+SUMMARY:⚽ ΠΑΟΚ 4-0 Ατρόμητος
+DESCRIPTION:Super League Κ15\nΤελικό σκορ: ΠΑΟΚ 4-0 Ατρό
+ μητος
+URL:https://www.paokfc.gr/matches/k15-paok-atromitos-slgr-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u15-2026-2606b2b19ba5@paok-calendar
+DTSTAMP:20261117T120046Z
+DTSTART;TZID=Europe/Athens:20261003T120000
+DTEND;TZID=Europe/Athens:20261003T140000
+SUMMARY:⚽ ΠΑΟΚ 1-1 Παναθηναϊκός
+DESCRIPTION:Super League Κ15\nΤελικό σκορ: ΠΑΟΚ 1-1 Πανα
+ θηναϊκός
+URL:https://www.paokfc.gr/matches/k15-paok-panathinaikos-slgr-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u15-2026-a78215c9d8a8@paok-calendar
+DTSTAMP:20261117T120046Z
+DTSTART;TZID=Europe/Athens:20261024T170000
+DTEND;TZID=Europe/Athens:20261024T190000
+SUMMARY:⚽ ΠΑΟΚ 2-0 ΟΦΗ
+DESCRIPTION:Super League Κ15\nΤελικό σκορ: ΠΑΟΚ 2-0 ΟΦΗ
+URL:https://www.paokfc.gr/matches/k15-paok-ofi-slgr-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u15-2026-ce941233ab20@paok-calendar
+DTSTAMP:20261117T120046Z
+DTSTART;TZID=Europe/Athens:20261108T110000
+DTEND;TZID=Europe/Athens:20261108T130000
+SUMMARY:⚽ ΠΑΟΚ 0-0 Ολυμπιακός
+DESCRIPTION:Super League Κ15\nΤελικό σκορ: ΠΑΟΚ 0-0 Ολυμ
+ πιακός
+URL:https://www.paokfc.gr/matches/k15-paok-olympiakos-slgr-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u15-2026-41960181b51a@paok-calendar
+DTSTAMP:20261117T120046Z
+DTSTART;TZID=Europe/Athens:20261128T180000
+DTEND;TZID=Europe/Athens:20261128T200000
+SUMMARY:⚽ ΠΑΟΚ – ΑΕΚ (ώρα αναμένεται)
+DESCRIPTION:Super League Κ15\nΗ ώρα δεν έχει οριστεί α
+ κόμα (προσωρινά 18:00). Θα ενημερωθεί αυτόμ
+ ατα όταν ανακοινωθεί.
+END:VEVENT
 END:VCALENDAR

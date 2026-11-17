@@ -24,4 +24,70 @@ DTSTART:19701025T040000
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
+BEGIN:VEVENT
+UID:football-u17-2026-0951dfc9f33c@paok-calendar
+DTSTAMP:20261117T120046Z
+DTSTART;TZID=Europe/Athens:20260912T113000
+DTEND;TZID=Europe/Athens:20260912T133000
+SUMMARY:⚽ Άρης 0-2 ΠΑΟΚ
+DESCRIPTION:Super League Κ17\nΤελικό σκορ: Άρης 0-2 ΠΑΟΚ
+URL:https://www.paokfc.gr/matches/k17-aris-paok-slgr-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u17-2026-a5d509da1fd2@paok-calendar
+DTSTAMP:20261117T120046Z
+DTSTART;TZID=Europe/Athens:20261011T130000
+DTEND;TZID=Europe/Athens:20261011T150000
+SUMMARY:⚽ Καλαμάτα 0-4 ΠΑΟΚ
+DESCRIPTION:Super League Κ17\nΤελικό σκορ: Καλαμάτα 0-4 
+ ΠΑΟΚ
+URL:https://www.paokfc.gr/matches/k17-kalamata-paok-slgr-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u17-2026-9a141e74eced@paok-calendar
+DTSTAMP:20261117T120046Z
+DTSTART;TZID=Europe/Athens:20261017T170000
+DTEND;TZID=Europe/Athens:20261017T190000
+SUMMARY:⚽ Ηρακλής 0-4 ΠΑΟΚ
+DESCRIPTION:Super League Κ17\nΤελικό σκορ: Ηρακλής 0-4 Π
+ ΑΟΚ
+URL:https://www.paokfc.gr/matches/k17-pot-iraklis-paok-slgr-27/
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u17-2026-72db6691b5d7@paok-calendar
+DTSTAMP:20261117T120046Z
+DTSTART;TZID=Europe/Athens:20261122T150000
+DTEND;TZID=Europe/Athens:20261122T170000
+SUMMARY:⚽ Κηφισιά – ΠΑΟΚ
+DESCRIPTION:Super League Κ17
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u17-2026-9a1e3b38e325@paok-calendar
+DTSTAMP:20261117T120046Z
+DTSTART;TZID=Europe/Athens:20261205T180000
+DTEND;TZID=Europe/Athens:20261205T200000
+SUMMARY:⚽ Βόλος – ΠΑΟΚ (ώρα αναμένεται)
+DESCRIPTION:Super League Κ17\nΗ ώρα δεν έχει οριστεί α
+ κόμα (προσωρινά 18:00). Θα ενημερωθεί αυτόμ
+ ατα όταν ανακοινωθεί.
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u17-2026-e8400cdea9ad@paok-calendar
+DTSTAMP:20261117T120046Z
+DTSTART;TZID=Europe/Athens:20261212T180000
+DTEND;TZID=Europe/Athens:20261212T200000
+SUMMARY:⚽ Λεβαδειακός – ΠΑΟΚ (ώρα αναμένετα
+ ι)
+DESCRIPTION:Super League Κ17\nΗ ώρα δεν έχει οριστεί α
+ κόμα (προσωρινά 18:00). Θα ενημερωθεί αυτόμ
+ ατα όταν ανακοινωθεί.
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u17-2026-809cdf25510a@paok-calendar
+DTSTAMP:20261117T120046Z
+DTSTART;TZID=Europe/Athens:20261220T120000
+DTEND;TZID=Europe/Athens:20261220T140000
+SUMMARY:⚽ Αστέρας Τρίπολης – ΠΑΟΚ
+DESCRIPTION:Super League Κ17
+END:VEVENT
 END:VCALENDAR

@@ -727,7 +727,53 @@
     var words = String(name).replace(/[."«»]/g, " ").split(/\s+/).filter(function (w) { return w.length > 1; });
     return (words.length > 1 ? words[0][0] + words[1][0] : (words[0] || "?").slice(0, 2)).toUpperCase();
   }
+  // Ακαδημίες: τα σήματα της πρώτης ομάδας του ίδιου συλλόγου (ΑΕΚ, Ολυμπιακός Β…) από τους κανονικούς
+  // αγώνες και τις βαθμολογίες του ίδιου αθλήματος· αλλιώς της πηγής τους (paokfc.gr), που συχνά μπλοκάρει.
+  var crestPool = null;
+  function crestWords(name) {
+    var t = String(name || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase()
+      .replace(/[ABEZHIKMNOPTYX]/g, function (c) { return "ΑΒΕΖΗΙΚΜΝΟΡΤΥΧ"["ABEZHIKMNOPTYX".indexOf(c)]; });
+    return (t.match(/[Α-ΩA-Z0-9]+/g) || []).filter(function (w) { return w.length > 1 && ["ΑΟ", "ΑΣ", "ΓΣ", "ΠΑΕ", "ΠΑΣ", "ΑΠΣ", "ΝΠΣ", "ΠΟΤ", "ΦΚ"].indexOf(w) < 0; })
+      .map(function (w) { return w.slice(0, 6); });
+  }
+  function academyCrest(name, section) {
+    var sport = (data.sectionMap[section] || {}).sport;
+    if (!crestPool) {
+      // Πρώτα από τα τμήματα ανδρών (π.χ. ESPN), μετά από όλα (π.χ. γυναικών) για συλλόγους που λείπουν.
+      crestPool = {};
+      var add = function (s, team, logo) {
+        if (!logo || isPaokName(team)) return;
+        var k = s.sport + (s.women ? "|w" : "|m");
+        (crestPool[k] = crestPool[k] || []).push([crestWords(team), logo]);
+      };
+      data.matches.forEach(function (m) { var s = sectionOf(m); add(s, m.home, m.homeLogo); add(s, m.away, m.awayLogo); });
+      data.sections.forEach(function (s) {
+        (standings[s.key] || []).forEach(function (t) { t.rows.forEach(function (r) { add(s, r.team, r.logo); }); });
+      });
+    }
+    var words = crestWords(name);
+    if (!words.length) return "";
+    var sub = function (a, b) { return a.every(function (w) { return b.indexOf(w) >= 0; }); };
+    var pick = function (pool) {
+      // Το σήμα που βρίσκεται πιο συχνά για αυτό το όνομα.
+      var count = {}, best = "", n = 0;
+      (pool || []).forEach(function (x) {
+        if (x[0].length && (sub(words, x[0]) || sub(x[0], words))) count[x[1]] = (count[x[1]] || 0) + 1;
+      });
+      Object.keys(count).forEach(function (u) { if (count[u] > n) { n = count[u]; best = u; } });
+      return best;
+    };
+    return pick(crestPool[sport + "|m"]) || pick(crestPool[sport + "|w"]);
+  }
   function crest(url, name, section) {
+    if (isAcademy(section)) {
+      if (isPaokName(name)) {
+        var main = data.sections.filter(function (s) { return s.sport === data.sectionMap[section].sport && !s.women; })[0];
+        url = (main && paokLogo[main.key]) || url;
+      } else {
+        url = academyCrest(name, section) || url;
+      }
+    }
     if (!url && name === "ΠΑΟΚ") url = paokLogo[section] || paokLogo._any;
     var fallback = '<span class="initials" aria-hidden="true">' + esc(initials(name)) + "</span>";
     if (!url) return fallback;
@@ -912,7 +958,7 @@
   // ---- Κύπελλα: η πορεία του ΠΑΟΚ, από τους αγώνες του (όλα τα αθλήματα, χωρίς άλλη πηγή).
   // Νοκ-άουτ: ένα ζευγάρι ανά αντίπαλο και φάση, με τους αγώνες και το σύνολο. Φάση ομίλων ή πρωταθλήματος:
   // μία γραμμή με τον απολογισμό (η βαθμολογία της, όπου υπάρχει, είναι πιο πάνω).
-  var CUP_RE = /Κύπελλ|Cup|Europa|Conference|Champions|EHF|CEV|Euro/i;
+  var CUP_RE = /Κύπελλ|Cup|Europa|Conference|Champions|EHF|CEV|Euro|Youth League/i;
   var GROUP_RE = /League Phase|Φάση πρωταθλήματος|Round \d|Όμιλ|Group|αγωνιστική|Κανονική/i;
   function seasonStart() {
     var now = new Date(), y = now.getMonth() >= 6 ? now.getFullYear() : now.getFullYear() - 1;
@@ -924,7 +970,7 @@
   }
   function cupsHtml(key) {
     var from = seasonStart();
-    var list = data.matches.filter(function (m) {
+    var list = allMatches().filter(function (m) {
       return m.section === key && CUP_RE.test(m.competition || "") && new Date(m.start).getTime() >= from;
     });
     if (!list.length) return "";
@@ -3112,7 +3158,7 @@
     });
   }
   function apply(res) {
-    data = res[0]; standings = res[1] || {};
+    data = res[0]; standings = res[1] || {}; crestPool = null;
     data.sectionMap = {};
     data.sections.forEach(function (s) { data.sectionMap[s.key] = s; });
     // Β' ομάδα και ακαδημίες: δική τους σελίδα (#/academies), μόνο σε λειτουργία διαχειριστή.

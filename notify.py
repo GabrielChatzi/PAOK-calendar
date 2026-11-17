@@ -45,13 +45,18 @@ EMOJI = {
     "football": "⚽", "football-women": "⚽", "basketball": "🏀", "basketball-women": "🏀",
     "volley": "🏐", "volley-women": "🏐", "handball": "🤾", "handball-women": "🤾",
     "waterpolo": "🤽", "waterpolo-women": "🤽", "futsal": "🥅",
+    "football-b": "⚽", "football-u19": "⚽", "football-u17": "⚽", "football-u15": "⚽",
 }
+# Β' ομάδα και ακαδημίες: η πηγή (paokfc.gr) ανεβάζει τα αποτελέσματα αργά, οπότε δεν ζητάμε
+# συχνότερες ενημερώσεις μετά τους αγώνες τους· τα φέρνει η κανονική ενημέρωση κάθε 2 ώρες.
+NO_REFRESH = {"football-b", "football-u19", "football-u17", "football-u15"}
 # Περίπου πόση ώρα κρατά ένας αγώνας ανά τμήμα (λεπτά), μαζί με τα διαλείμματα. Από εκεί και πέρα
 # περιμένουμε το τελικό αποτέλεσμα και ανανεώνουμε το πρόγραμμα πιο συχνά (βλ. reminders()).
 DURATION = {
     "football": 115, "football-women": 115, "basketball": 120, "basketball-women": 115,
     "volley": 130, "volley-women": 130, "handball": 95, "handball-women": 95,
     "waterpolo": 80, "waterpolo-women": 80, "futsal": 95,
+    "football-b": 115, "football-u19": 115, "football-u17": 100, "football-u15": 90,
 }
 RESULT_WAIT = dt.timedelta(hours=6)
 WEEKDAYS = ["Δευ", "Τρι", "Τετ", "Πεμ", "Παρ", "Σαβ", "Κυρ"]
@@ -210,7 +215,7 @@ def live_window(m: dict, now: dt.datetime) -> bool:
 
 def awaiting_result(m: dict, now: dt.datetime) -> bool:
     """Αν ένας αγώνας πρέπει να έχει τελειώσει αλλά δεν έχουμε ακόμα το αποτέλεσμα."""
-    if not m.get("timeKnown") or m.get("score") or m.get("status"):
+    if not m.get("timeKnown") or m.get("score") or m.get("status") or m["section"] in NO_REFRESH:
         return False
     start = dt.datetime.fromisoformat(m["start"])
     end = start + dt.timedelta(minutes=DURATION.get(m["section"], 120) - 10)

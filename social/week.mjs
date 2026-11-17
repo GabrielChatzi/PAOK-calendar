@@ -314,7 +314,9 @@ async function main() {
   const src = args.matches || (fs.existsSync("docs/matches.json") ? "docs/matches.json" : DATA_URL);
   const data = /^https?:/.test(src) ? await (await fetch(src)).json() : JSON.parse(fs.readFileSync(src, "utf8"));
   const names = JSON.parse(fs.readFileSync(path.join(HERE, "names.json"), "utf8"));
-  const p = plan(data.matches, today, { names });
+  // Β' ομάδα και ακαδημίες δεν μπαίνουν (ακόμα) στα social.
+  const academy = new Set((data.sections || []).filter((s) => s.academy).map((s) => s.key));
+  const p = plan(data.matches.filter((m) => !academy.has(m.section)), today, { names });
 
   if (prev === out && fs.existsSync(out)) {   // ίδιος φάκελος: κρατάμε τις παλιές εικόνες στην άκρη
     fs.rmSync(`${out}.prev`, { recursive: true, force: true });

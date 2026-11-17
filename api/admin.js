@@ -21,6 +21,7 @@ const EMOJI = {
   football: "⚽", "football-women": "⚽", basketball: "🏀", "basketball-women": "🏀",
   volley: "🏐", "volley-women": "🏐", handball: "🤾", "handball-women": "🤾",
   waterpolo: "🤽", "waterpolo-women": "🤽", futsal: "🥅",
+  "football-b": "⚽", "football-u19": "⚽", "football-u17": "⚽", "football-u15": "⚽",
 };
 const KEEP_DAYS = 4;
 

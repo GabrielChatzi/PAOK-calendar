@@ -78,6 +78,20 @@ SECTIONS = {
     "futsal": {"emoji": "🥅", "name": "Ποδόσφαιρο Σάλας", "sport": "Ποδόσφαιρο Σάλας", "women": False},
 }
 
+# Β' ομάδα και ακαδημίες ποδοσφαίρου (paokfc.gr). Στη σελίδα φαίνονται μόνο σε λειτουργία διαχειριστή
+# (σελίδα «Ακαδημίες»)· δεν μπαίνουν στην αρχική, στα συνδυαστικά ημερολόγια (api/cal.js) ή στα social.
+ACADEMY = {
+    "football-b": {"emoji": "⚽", "name": "ΠΑΟΚ Β", "sport": "Ποδόσφαιρο", "women": False, "academy": True,
+                   "short": "Β' ομάδα"},
+    "football-u19": {"emoji": "⚽", "name": "Κ19", "sport": "Ποδόσφαιρο", "women": False, "academy": True,
+                     "short": "Κ19"},
+    "football-u17": {"emoji": "⚽", "name": "Κ17", "sport": "Ποδόσφαιρο", "women": False, "academy": True,
+                     "short": "Κ17"},
+    "football-u15": {"emoji": "⚽", "name": "Κ15", "sport": "Ποδόσφαιρο", "women": False, "academy": True,
+                     "short": "Κ15"},
+}
+SECTIONS.update(ACADEMY)
+
 
 @dataclass
 class Match:
@@ -1414,6 +1428,144 @@ def futsal_matches() -> list[Match]:
     return out
 
 
+# ---------------------------------------------------------------- Β' ομάδα και ακαδημίες (paokfc.gr)
+
+PAOKFC = "https://www.paokfc.gr/"
+PAOKFC_LOGO = PAOKFC + "wp-content/themes/paokv2/images/logo-paok-small.png"
+# Ο φάκελος κάθε ομάδας στο «Πρόγραμμα και αποτελέσματα» του paokfc.gr.
+PAOKFC_TEAMS = {"football-b": "paok-b-nchc", "football-u19": "k20-nchc",
+                "football-u17": "k17-nchc", "football-u15": "k15-nchc"}
+# Οι διοργανώσεις όπως τις γράφει η πηγή → όπως τις δείχνουμε (ανά ομάδα).
+PAOKFC_COMPETITIONS = {
+    "Super League 2": "Super League 2",
+    "Super League": "Super League {age}",
+    "Κύπελλο": "Κύπελλο {age}",
+    "Greek Cup": "Κύπελλο {age}",
+    "Youth League": "UEFA Youth League",
+}
+# Η πηγή γράφει μερικές ομάδες με λατινικά ή με άλλο όνομα.
+PAOKFC_NAMES = {
+    "ASTERAS AKTOR": "Αστέρας Τρίπολης", "ASTERAS AKTOR B": "Αστέρας Τρίπολης Β",
+    "ATHENS KALLITHEA": "Καλλιθέα", "ΠΟΤ ΗΡΑΚΛΗΣ": "Ηρακλής", "ΑΠΣ ΖΑΚΥΝΘΟΣ": "Ζάκυνθος", "OLYMPIAKOS": "Ολυμπιακός",
+    "OLYMPIACOS": "Ολυμπιακός", "PANATHINAIKOS": "Παναθηναϊκός", "AEK": "ΑΕΚ", "ARIS": "Άρης",
+    "KIFISIA": "Κηφισιά", "VOLOS": "Βόλος", "LEVADIAKOS": "Λεβαδειακός", "OFI": "ΟΦΗ",
+    "ATROMITOS": "Ατρόμητος", "PANETOLIKOS": "Παναιτωλικός", "PANSERRAIKOS": "Πανσερραϊκός",
+    "KALAMATA": "Καλαμάτα", "AEL": "ΑΕΛ", "IRAKLIS": "Ηρακλής",
+}
+
+
+def paokfc_name(raw: str) -> str:
+    """Όνομα αντιπάλου όπως το δείχνουμε: ελληνικά όπου γίνεται, «Β» αντί για λατινικό «B»."""
+    name = re.sub(r"\s+", " ", raw).strip()
+    if plain(name) in PAOKFC_NAMES:
+        return PAOKFC_NAMES[plain(name)]
+    words = []
+    for w in name.split(" "):
+        # Ελληνική λέξη με λατινικό γράμμα που μοιάζει («Eλλάς», «Ολυμπιακός B»).
+        if re.search(r"[Α-Ωα-ωΆ-ώ]", w) or (w in ("B", "Β") and words and re.search(r"[Α-Ωα-ωΆ-ώ]", words[-1])):
+            w = "".join(_LOOKALIKE_ONE.get(c, c) for c in w)
+        words.append(w)
+    return " ".join(words)
+
+
+_LOOKALIKE_ONE = dict(zip("ABEZHIKMNOPTYX", "ΑΒΕΖΗΙΚΜΝΟΡΤΥΧ"))
+
+
+def paokfc_links(season: str) -> dict[str, dict[str, str]]:
+    """Οι σελίδες (πρόγραμμα, αποτελέσματα, βαθμολογία) κάθε ομάδας για τη σεζόν. Τα ονόματά τους
+    διαφέρουν από ομάδα σε ομάδα (π.χ. «k20-programma-16-nch», «apotelesmata-u15»), οπότε τα
+    βρίσκουμε από το μενού της σελίδας της σεζόν."""
+    page = fetch(f"{PAOKFC}programma-kai-apotelesmata/{season}/")
+    out: dict[str, dict[str, str]] = {}
+    for team, slug in re.findall(rf'href="[^"]*/programma-kai-apotelesmata/{season}/([a-z0-9-]+)/([a-z0-9-]+)/?"', page):
+        kind = ("results" if "apotelesmata" in slug else "fixtures" if "programma" in slug
+                else "table" if "vathmologia" in slug else "")
+        if kind:
+            out.setdefault(team, {}).setdefault(kind, f"{PAOKFC}programma-kai-apotelesmata/{season}/{team}/{slug}/")
+    return out
+
+
+def paokfc_items(page: str) -> list[dict]:
+    """Οι αγώνες μιας σελίδας προγράμματος ή αποτελεσμάτων του paokfc.gr (δύο μορφές HTML)."""
+    out = []
+    for cls, body in re.findall(r'<li class="(home|away)\s[^"]*">(.*?)</li>', page, re.S):
+        live = re.sub(r"<!--.*?-->", "", body, flags=re.S)
+        info = re.search(r"<span>([^<|]+?)\s*\|\s*([^<]*)</span>", live)
+        if not info:
+            continue
+        planned = re.search(r"<span>[^<|]+\|\s*(\d{2}\.\d{2}\.\d{4})", body)  # και μέσα σε σχόλιο
+        when = re.search(r"(\d{2})\.(\d{2})\.(\d{4})(?:\s*,\s*(\d{1,2}:\d{2}))?", info.group(2))
+        names = [clean(x) for x in re.findall(r'class="(?:one-third rival-team|rival-teamname|home-teamname)">(.*?)</', live, re.S)]
+        names = [n for n in names if n and not is_paok(n)]
+        if not names:
+            continue
+        logos = [u for u in re.findall(r'<img[^>]+src="([^"]+)"', live) if "logo-paok-small" not in u]
+        us = re.search(r'<span class="paok-score[^"]*">\s*(\d+)\s*</span>', live)
+        them = re.search(r'<span class="rival-score[^"]*">\s*(\d+)\s*</span>', live)
+        link = re.search(r'href="(https://www\.paokfc\.gr/matches/[^"#]+)', body)
+        out.append({
+            "home": cls == "home", "competition": clean(info.group(1)), "opponent": names[0],
+            "logo": logos[0] if logos else "",
+            "day": dt.date(int(when.group(3)), int(when.group(2)), int(when.group(1))) if when else
+                   dt.datetime.strptime(planned.group(1), "%d.%m.%Y").date() if planned else None,
+            "time": parse_time(when.group(4)) if when and when.group(4) else None,
+            "dated": bool(when),
+            "score": (int(us.group(1)), int(them.group(1))) if us and them else None,
+            "url": link.group(1).rstrip("/") + "/" if link else "",
+        })
+    return out
+
+
+def paokfc_matches(section: str, today: dt.date | None = None) -> list[Match]:
+    """Β' ομάδα και ακαδημίες από το «Πρόγραμμα και αποτελέσματα» του paokfc.gr.
+
+    Ο αγώνας χωρίς ανακοινωμένη ημερομηνία («Ημερομηνία: N/A») μπαίνει στην ημερομηνία της αγωνιστικής
+    που γράφει η πηγή στο κρυφό της σχόλιο, χωρίς ώρα. Αν αυτή έχει περάσει χωρίς αποτέλεσμα, ο αγώνας
+    έχει μετατεθεί και δεν ξέρουμε ακόμα πότε: δεν τον δείχνουμε μέχρι να οριστεί."""
+    today = today or dt.date.today()
+    season = f"{season_start_year(today)}-{season_start_year(today) + 1}"
+    links = paokfc_links(season).get(PAOKFC_TEAMS[section], {})
+    if not links.get("fixtures") and not links.get("results"):
+        raise RuntimeError(f"δεν βρέθηκαν οι σελίδες της ομάδας για τη σεζόν {season}")
+    age = SECTIONS[section]["name"]
+    start = season_start_year(today)
+    out: dict[tuple, Match] = {}
+    for kind in ("fixtures", "results"):
+        if not links.get(kind):
+            continue
+        page = fetch(links[kind])
+        for it in paokfc_items(page):
+            if not it["day"]:
+                continue
+            if not dt.date(start, 7, 1) <= it["day"] < dt.date(start + 1, 7, 1):
+                # Λάθος έτος στην πηγή (π.χ. «27.09.2006»): η μέρα και ο μήνας της σεζόν μετρούν.
+                it["day"] = it["day"].replace(year=start if it["day"].month >= 7 else start + 1)
+            if not it["dated"] and it["day"] < today and not it["score"]:
+                continue
+            opp = paokfc_name(it["opponent"])
+            comp = PAOKFC_COMPETITIONS.get(it["competition"], it["competition"]).format(age=age)
+            score = ""
+            if it["score"]:
+                us, them = it["score"]
+                score = f"{us}-{them}" if it["home"] else f"{them}-{us}"
+            # Η πηγή δείχνει κάθε λίστα δύο φορές και τον αγώνα που μόλις έγινε και στα δύο:
+            # ένας αγώνας ανά μέρα, έδρα και αντίπαλο, με το αποτέλεσμα όπου υπάρχει.
+            key = (it["day"], it["home"], plain(opp))
+            if key in out and (out[key].score or not score):
+                continue
+            # Αναγνωριστικό από διοργάνωση, έδρα και αντίπαλο (όχι από τη μέρα): μένει ίδιο όταν
+            # ορίζεται ή αλλάζει η ημερομηνία, ώστε να μη χάνονται οι ειδοποιήσεις του αγώνα.
+            uid = f"{section}-{start}-{short_hash(comp, 'h' if it['home'] else 'a', plain(opp))}"
+            if any(m.uid == uid and k[0] != it["day"] for k, m in out.items()):
+                uid += f"-{it['day']:%m%d}"  # δεύτερος αγώνας με τον ίδιο αντίπαλο στην ίδια έδρα
+            out[key] = Match(
+                section=section, uid=uid, day=it["day"], time=it["time"],
+                home=PAOK if it["home"] else opp, away=opp if it["home"] else PAOK, paok_home=it["home"],
+                competition=comp, score=score, url=it["url"] if score else "",
+                home_logo=PAOKFC_LOGO if it["home"] else it["logo"], away_logo=it["logo"] if it["home"] else PAOKFC_LOGO)
+    return list(out.values())
+
+
 # ---------------------------------------------------------------- iCal
 
 def ics_escape(s: str) -> str:
@@ -1755,6 +1907,7 @@ SOURCES: dict[str, list[tuple[str, Callable[[], list[Match]]]]] = {
     "futsal": [("Futsal Super League", futsal_matches)],
     "waterpolo-women": [("WPL", lambda: waterpolo_matches("waterpolo-women")),
                         ("European Aquatics", lambda: european_waterpolo_matches("waterpolo-women"))],
+    **{key: [("paokfc.gr", lambda key=key: paokfc_matches(key))] for key in ACADEMY},
 }
 
 
@@ -1827,7 +1980,7 @@ def main(only: list[str] | None = None) -> int:
         info = SECTIONS[key]
         for side, label, keep in (("home", "Εντός έδρας", True), ("away", "Εκτός έδρας", False)):
             subset = [m for m in unique if m.paok_home == keep]
-            name = f"ΠΑΟΚ {info['name']} – {label}"
+            name = f"{info['name'] if info['name'].startswith(PAOK) else PAOK + ' ' + info['name']} – {label}"
             changed = write_if_changed(OUT_DIR / f"{key}-{side}.ics", build_ics(name, subset, stamp))
             print(f"  {key}-{side}.ics: {len(subset)} αγώνες{' (ενημερώθηκε)' if changed else ''}")
             status[f"{key}-{side}"] = len(subset)

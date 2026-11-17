@@ -14,7 +14,7 @@ import json
 import re
 
 from build_calendars import (
-    DATAPROJECT, EPO, ea_data, ea_team, oxe_logo, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
+    ACADEMY, PAOKFC, PAOKFC_TEAMS, paokfc_links, paokfc_matches, paokfc_name, DATAPROJECT, EPO, ea_data, ea_team, oxe_logo, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
     fetch_until,
     is_paok, latin_title, plain, season_start_year, tidy_name, volley_rows,
 )
@@ -412,6 +412,45 @@ def ea_groups(women: bool) -> list[dict]:
     return out
 
 
+# ---------------------------------------------------------------- Β' ομάδα και ακαδημίες
+
+def paokfc_table(section: str) -> list[dict]:
+    """Η βαθμολογία της ομάδας στο paokfc.gr. Η σελίδα έχει τον πίνακα της ομάδας πρώτο και μετά
+    μικρούς πίνακες της πρώτης ομάδας (και όλα δύο φορές): κρατάμε μόνο τον πρώτο."""
+    start = season_start_year()
+    season = f"{start}-{start + 1}"
+    url = paokfc_links(season).get(PAOKFC_TEAMS[section], {}).get("table")
+    if not url:
+        raise RuntimeError(f"δεν βρέθηκε βαθμολογία για τη σεζόν {season}")
+    page = fetch(url)
+    tables = html_tables(page, PAOKFC)
+    if not tables:
+        raise RuntimeError("η σελίδα δεν έχει πίνακα")
+    title = re.search(r'table-tab-header"><i[^>]*></i><span>([^<]+)', page)
+    title = re.sub(r"\s*\d{4}-\d{4}$", "", clean(title.group(1))) if title else "Βαθμολογία"
+    if title == "Super League":
+        title += " " + ACADEMY[section]["name"]
+    # Ο πίνακας γράφει τα ονόματα με κεφαλαία χωρίς τόνους· όπου γίνεται, όπως στο πρόγραμμα (με σήμα).
+    known = {plain(n): (n, "") for n in FOOTBALL_NAMES.values()}
+    try:
+        for m in paokfc_matches(section):
+            opp, logo = (m.away, m.away_logo) if m.paok_home else (m.home, m.home_logo)
+            known[plain(opp)] = (opp, logo)
+    except Exception as e:
+        print(f"  ! {section}: ονόματα για τη βαθμολογία: {e}")
+    rows = []
+    for texts, _ in tables[0][1:]:
+        if len(texts) < 10 or not texts[0].isdigit():
+            continue
+        pos, team, played, w, d, l, gf, ga, _diff, pts = texts[:10]
+        name = paokfc_name(team)
+        name, logo = known.get(plain(name), (name, ""))
+        rows.append((int(pos), name, logo, [played, w, d, l, f"{gf}-{ga}", pts]))
+    if not rows:
+        raise RuntimeError("άδειος πίνακας")
+    return [table(title, url, ["Αγ", "Ν", "Ι", "Η", "Γκολ", "Β"], rows)]
+
+
 def with_cups(league, *cups):
     """Η βαθμολογία του πρωταθλήματος και, όπου υπάρχουν, των κυπέλλων (ένα κύπελλο που αποτυγχάνει δεν
     χαλά το πρωτάθλημα)."""
@@ -438,4 +477,5 @@ STANDINGS = {
     "waterpolo": with_cups(lambda: waterpolo(False), lambda: ea_groups(False)),
     "waterpolo-women": with_cups(lambda: waterpolo(True), lambda: ea_groups(True)),
     "futsal": futsal,
+    **{key: (lambda key=key: paokfc_table(key)) for key in ACADEMY},
 }

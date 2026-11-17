@@ -1471,11 +1471,25 @@ def paokfc_name(raw: str) -> str:
 _LOOKALIKE_ONE = dict(zip("ABEZHIKMNOPTYX", "ΑΒΕΖΗΙΚΜΝΟΡΤΥΧ"))
 
 
+def paokfc_fetch(url: str) -> str:
+    """Το paokfc.gr απαντά 403 στο urllib της Python (έλεγχος για bots) αλλά όχι στο curl."""
+    key = (url, None, "utf-8")
+    if key not in _FETCHED:
+        import subprocess
+        r = subprocess.run(["curl", "-sSL", "--fail", "--max-time", "60", "-A", UA,
+                            "-H", "Accept: text/html,application/xhtml+xml", "-H", "Accept-Language: el,en", url],
+                           capture_output=True, timeout=90)
+        if r.returncode:
+            raise RuntimeError(f"curl {url}: {r.stderr.decode(errors='replace').strip()}")
+        _FETCHED[key] = r.stdout.decode("utf-8", errors="replace")
+    return _FETCHED[key]
+
+
 def paokfc_links(season: str) -> dict[str, dict[str, str]]:
     """Οι σελίδες (πρόγραμμα, αποτελέσματα, βαθμολογία) κάθε ομάδας για τη σεζόν. Τα ονόματά τους
     διαφέρουν από ομάδα σε ομάδα (π.χ. «k20-programma-16-nch», «apotelesmata-u15»), οπότε τα
     βρίσκουμε από το μενού της σελίδας της σεζόν."""
-    page = fetch(f"{PAOKFC}programma-kai-apotelesmata/{season}/")
+    page = paokfc_fetch(f"{PAOKFC}programma-kai-apotelesmata/{season}/")
     out: dict[str, dict[str, str]] = {}
     for team, slug in re.findall(rf'href="[^"]*/programma-kai-apotelesmata/{season}/([a-z0-9-]+)/([a-z0-9-]+)/?"', page):
         kind = ("results" if "apotelesmata" in slug else "fixtures" if "programma" in slug
@@ -1533,7 +1547,7 @@ def paokfc_matches(section: str, today: dt.date | None = None) -> list[Match]:
     for kind in ("fixtures", "results"):
         if not links.get(kind):
             continue
-        page = fetch(links[kind])
+        page = paokfc_fetch(links[kind])
         for it in paokfc_items(page):
             if not it["day"]:
                 continue

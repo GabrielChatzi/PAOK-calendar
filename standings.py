@@ -14,7 +14,7 @@ import json
 import re
 
 from build_calendars import (
-    ACADEMY, PAOKFC, PAOKFC_TEAMS, paokfc_links, paokfc_matches, paokfc_name, DATAPROJECT, EPO, ea_data, ea_team, oxe_logo, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
+    ACADEMY, PAOKFC, PAOKFC_TEAMS, paokfc_fetch, paokfc_links, paokfc_matches, paokfc_name, DATAPROJECT, EPO, ea_data, ea_team, oxe_logo, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
     fetch_until,
     is_paok, latin_title, plain, season_start_year, tidy_name, volley_rows,
 )
@@ -422,7 +422,7 @@ def paokfc_table(section: str) -> list[dict]:
     url = paokfc_links(season).get(PAOKFC_TEAMS[section], {}).get("table")
     if not url:
         raise RuntimeError(f"δεν βρέθηκε βαθμολογία για τη σεζόν {season}")
-    page = fetch(url)
+    page = paokfc_fetch(url)
     tables = html_tables(page, PAOKFC)
     if not tables:
         raise RuntimeError("η σελίδα δεν έχει πίνακα")

@@ -58,7 +58,7 @@ class Academy(unittest.TestCase):
             "https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/k20-nchc/k20-programma-16-nch/": FIXTURES * 2,
             "https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/k20-nchc/k20-apotelesmata/": RESULTS * 2,
         }
-        with mock.patch.object(b, "fetch", lambda url, *a, **k: pages[url]):
+        with mock.patch.object(b, "paokfc_fetch", lambda url, *a, **k: pages[url]):
             ms = b.paokfc_matches("football-u19", dt.date(2026, 11, 17))
         return {(m.home, m.away): m for m in ms}
 
@@ -81,7 +81,7 @@ class Academy(unittest.TestCase):
         pages_date = FIXTURES.replace("Super League | Ημερομηνία: N/A</span></section>\n<div class=\"match-between\"><span class=\"rival-teamname\">PAOK",
                                       "Super League | 22.11.2026 ,13:00</span></section>\n<div class=\"match-between\"><span class=\"rival-teamname\">PAOK")
         self.assertNotEqual(pages_date, FIXTURES)
-        with mock.patch.object(b, "fetch", lambda url, *a, **k: {
+        with mock.patch.object(b, "paokfc_fetch", lambda url, *a, **k: {
                 "https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/": SEASON}.get(url, pages_date if "programma-16" in url else "")):
             moved = {(m.home, m.away): m for m in b.paokfc_matches("football-u19", dt.date(2026, 11, 17))}
         self.assertEqual(moved[("ΠΑΟΚ", "Κηφισιά")].day, dt.date(2026, 11, 22))

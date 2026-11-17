@@ -1955,7 +1955,10 @@ def main(only: list[str] | None = None) -> int:
                 matches += found
             except Exception as e:
                 ok = False
-                failures.append(f"{key} / {label}: {e}")
+                # Β' ομάδα και ακαδημίες: η πηγή (paokfc.gr) μπλοκάρει κατά διαστήματα τα αυτόματα αιτήματα
+                # (Cloudflare). Μένουν τα προηγούμενα δεδομένα, χωρίς να «κοκκινίζει» όλη η ενημέρωση.
+                if key not in ACADEMY:
+                    failures.append(f"{key} / {label}: {e}")
                 print(f"! {key} / {label}: {e}", file=sys.stderr)
         if not ok:
             print(f"  Τα αρχεία για {key} μένουν ως είχαν.", file=sys.stderr)
@@ -2037,7 +2040,8 @@ def main(only: list[str] | None = None) -> int:
             summary = ", ".join(f"{t['title']} ({len(t['rows'])} ομάδες)" for t in tables)
             print(f"{key} / βαθμολογία: {summary}")
         except Exception as e:
-            failures.append(f"{key} / βαθμολογία: {e}")
+            if key not in ACADEMY:
+                failures.append(f"{key} / βαθμολογία: {e}")
             print(f"! {key} / βαθμολογία: {e}", file=sys.stderr)
     write_if_changed(st_path, json.dumps(new_st, ensure_ascii=False, indent=1) + "\n",
                      ignore=lambda s: json.dumps(json.loads(s), sort_keys=True))

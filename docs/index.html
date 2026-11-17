@@ -912,7 +912,7 @@
   // ---- Κύπελλα: η πορεία του ΠΑΟΚ, από τους αγώνες του (όλα τα αθλήματα, χωρίς άλλη πηγή).
   // Νοκ-άουτ: ένα ζευγάρι ανά αντίπαλο και φάση, με τους αγώνες και το σύνολο. Φάση ομίλων ή πρωταθλήματος:
   // μία γραμμή με τον απολογισμό (η βαθμολογία της, όπου υπάρχει, είναι πιο πάνω).
-  var CUP_RE = /Κύπελλ|Cup|Europa|Conference|Champions|EHF|CEV|Euro/i;
+  var CUP_RE = /Κύπελλ|Cup|Europa|Conference|Champions|EHF|CEV|Euro|Youth League/i;
   var GROUP_RE = /League Phase|Φάση πρωταθλήματος|Round \d|Όμιλ|Group|αγωνιστική|Κανονική/i;
   function seasonStart() {
     var now = new Date(), y = now.getMonth() >= 6 ? now.getFullYear() : now.getFullYear() - 1;
@@ -924,7 +924,7 @@
   }
   function cupsHtml(key) {
     var from = seasonStart();
-    var list = data.matches.filter(function (m) {
+    var list = allMatches().filter(function (m) {
       return m.section === key && CUP_RE.test(m.competition || "") && new Date(m.start).getTime() >= from;
     });
     if (!list.length) return "";

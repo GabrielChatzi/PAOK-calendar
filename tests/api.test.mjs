@@ -397,3 +397,11 @@ test("api: μέτρηση εγκαταστάσεων και στατιστικά
   assert.deepEqual([p.total, p.gone, p.byService.google, p.byService.apple, p.noTopics, p.matchFollowers], [3, 1, 2, 1, 1, 1]);
   assert.deepEqual(p.sections.football, { devices: 2, pre: 0, time: 0, live: 1, result: 2 });
 });
+
+test("api/manifest: δεύτερο εικονίδιο για τον διαχειριστή", async () => {
+  const { adminManifest } = await import("../api/manifest.js");
+  const m = adminManifest();
+  assert.equal(m.short_name, "PAOK Admin");
+  assert.equal(m.start_url, "./?app=admin#/admin");
+  assert.notEqual(m.id, "./");
+});

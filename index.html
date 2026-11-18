@@ -198,6 +198,11 @@
   .area-band strong { font: 800 18px/1 var(--display); letter-spacing: .04em; text-transform: uppercase; }
   .area-band span { opacity: .75; }
   .area-sport { font: 600 20px/1.2 var(--display); margin: 18px 0 8px; }
+  .stats-page h3 { font: 600 22px/1.2 var(--display); margin: 22px 0 8px; }
+  .stats-t { width: 100%; margin: 0 0 6px; }
+  .stats-t td:first-child, .stats-t th:first-child { text-align: left; }
+  .stats-t td.num, .stats-t th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .stats-t tr.sum td { font-weight: 700; border-top: 2px solid var(--ink); }
   .cm-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
   .cm-form input, .cm-form select { width: 100%; min-width: 0; box-sizing: border-box; }
   .menu-academy a { font-size: 14px; padding-left: 2px; padding-right: 2px; }
@@ -1132,6 +1137,8 @@
         return '<li class="menu-sport"><span class="menu-sport-name"><span aria-hidden="true">' + g.emoji + "</span>" + esc(g.sport) + "</span>" +
           '<span class="menu-gender">' + link(g.men, "Ανδρών", g.sport) + link(g.women, "Γυναικών", g.sport) + "</span></li>";
       }).join("") + "</ul></nav>" +
+      (isAdmin() ? '<nav aria-label="Διαχειριστής"><h3>Διαχειριστής</h3><ul class="menu-links"><li><a href="#/stats"' +
+        (r.page === "stats" ? ' aria-current="page"' : "") + ">Στατιστικά<small>Εγκαταστάσεις και ειδοποιήσεις</small></a></li></ul></nav>" : "") +
       (canSeeAcademy() && data.academy.length
         ? '<nav aria-label="Ακαδημίες"><h3>Ακαδημίες' + (isAdmin() ? ' <small class="menu-admin">διαχειριστής</small>' : "") + "</h3>" + '<ul class="menu-links">' +
           '<li><a href="#/academies">Ακαδημίες ›<small>Β\' ομάδα και τμήματα υποδομής, με δικό τους μενού</small></a></li></ul></nav>'
@@ -1508,16 +1515,20 @@
       : "μήνυμα στη σελίδα PAOKalendar στο Instagram ή στο Facebook";
     function sec(title, body) { return "<h3>" + title + "</h3>" + body; }
     return '<a class="back" href="#/">‹ Αρχική</a><div class="follow privacy"><div class="section-head"><h2>Απόρρητο και cookies</h2></div>' +
-      '<p class="help">Τελευταία ενημέρωση: 5 Νοεμβρίου 2026</p>' +
+      '<p class="help">Τελευταία ενημέρωση: 18 Νοεμβρίου 2026</p>' +
       "<p>Το PAOKalendar είναι ανεπίσημη, μη εμπορική σελίδα φιλάθλων. Δεν έχει λογαριασμούς χρηστών, δεν ζητά όνομα ή email και δεν πουλά ούτε δίνει δεδομένα σε κανέναν.</p>" +
       sec("Cookies", "<p>Η σελίδα <strong>δεν χρησιμοποιεί cookies</strong>, ούτε για διαφημίσεις ούτε για παρακολούθηση. Γι' αυτό δεν σου ζητά συναίνεση.</p>") +
       sec("Τι κρατά η συσκευή σου", "<p>Στη μνήμη του browser σου (local storage), μόνο στη δική σου συσκευή: τα φίλτρα που διάλεξες, τις επιλογές ειδοποιήσεων, αν θέλεις ώρα Ελλάδας ή τη δική σου, και αν έκλεισες την πρόταση εγκατάστασης. Τα σβήνεις όποτε θέλεις, σβήνοντας τα δεδομένα της σελίδας από τις ρυθμίσεις του browser.</p>") +
       sec("Ειδοποιήσεις", "<p>Αν ενεργοποιήσεις τις ειδοποιήσεις, αποθηκεύουμε τη «συνδρομή» της συσκευής σου (μια διεύθυνση που δίνει η Apple, η Google ή ο browser σου για να φτάνουν οι ειδοποιήσεις) και τι διάλεξες να μαθαίνεις (π.χ. «ποδόσφαιρο: τελικό»). Δεν περιέχει όνομα, τηλέφωνο ή email.</p>" +
         "<p>Με το «Απενεργοποίηση όλων» στη σελίδα Ειδοποιήσεις η συνδρομή σβήνεται. Αν ακυρωθεί από τη συσκευή, σημειώνεται ως ανενεργή και δεν της στέλνεται τίποτα.</p>") +
-      sec("Στατιστικά επισκέψεων", "<p>Μετράμε πόσες επισκέψεις έχει η σελίδα με το Vercel Web Analytics, χωρίς cookies και χωρίς να ξεχωρίζει ποιος είσαι: βλέπουμε μόνο συνολικούς αριθμούς (επισκέψεις, σελίδες, χώρα, τύπος συσκευής).</p>") +
+      sec("Στατιστικά επισκέψεων", "<p>Μετράμε πόσες επισκέψεις έχει η σελίδα με το Vercel Web Analytics, χωρίς cookies και χωρίς να ξεχωρίζει ποιος είσαι: βλέπουμε μόνο συνολικούς αριθμούς (επισκέψεις, σελίδες, χώρα, τύπος συσκευής).</p>" +
+        "<p>Για να ξέρουμε πόσοι έχουν την εφαρμογή στην αρχική οθόνη, η εγκατεστημένη εφαρμογή στέλνει το πολύ μία φορά τη μέρα " +
+        "ένα <strong>τυχαίο ανώνυμο αναγνωριστικό</strong> της συσκευής (δημιουργείται στη συσκευή σου και δεν συνδέεται με εσένα) και το είδος της " +
+        "(iPhone/iPad, Android ή υπολογιστής). Κρατάμε μόνο πότε την άνοιξες πρώτη και τελευταία φορά· σβήνεται μόνο του 6 μήνες μετά το τελευταίο άνοιγμα. " +
+        "Από τον browser, χωρίς εγκατάσταση, δεν στέλνεται τίποτα.</p>") +
       sec("Ποιοι άλλοι εμπλέκονται", "<ul class=\"plain\">" +
         "<li><strong>Vercel</strong>: φιλοξενία της σελίδας και των λειτουργιών της (ΗΠΑ).</li>" +
-        "<li><strong>MongoDB Atlas</strong>: η βάση με τις συνδρομές ειδοποιήσεων.</li>" +
+        "<li><strong>MongoDB Atlas</strong>: η βάση με τις συνδρομές ειδοποιήσεων και τη μέτρηση εγκαταστάσεων.</li>" +
         "<li><strong>GitHub</strong>: οι αυτόματες ενημερώσεις του προγράμματος (δεν βλέπει δεδομένα επισκεπτών).</li>" +
         "<li><strong>Apple, Google, Mozilla, Microsoft</strong>: παραδίδουν τις ειδοποιήσεις στη συσκευή σου.</li>" +
         "<li><strong>Google Fonts</strong> και τα <strong>site των πηγών</strong> (σήματα ομάδων, live σκορ από ESPN και Euroleague): ο browser σου τα φορτώνει απευθείας, οπότε βλέπουν τη διεύθυνση IP σου, όπως σε κάθε σελίδα που τα χρησιμοποιεί.</li></ul>") +
@@ -1765,6 +1776,7 @@
     if (key === "notifications") return { key: null, tab: "", page: "notifications" };
     if (key === "calendars") return { key: null, tab: "", page: "calendars" };
     if (key === "privacy") return { key: null, tab: "", page: "privacy" };
+    if (key === "stats" && isAdmin()) return { key: null, tab: "", page: "stats" };
     if (key === "admin") {
       // Μία φορά στο #/admin: εμφανίζει τις ειδοποιήσεις λειτουργίας στη σελίδα Ειδοποιήσεις.
       try { localStorage.setItem("paok-admin", "1"); } catch (e) {}
@@ -1798,13 +1810,14 @@
       : r.page === "notifications" ? "Ειδοποιήσεις – PAOKalendar"
       : r.page === "calendars" ? "Ημερολόγια – PAOKalendar"
       : r.page === "privacy" ? "Απόρρητο και cookies – PAOKalendar"
+      : r.page === "stats" ? "Στατιστικά – PAOKalendar"
       : r.page === "academies" ? (r.tab === "new" ? "Νέος αγώνας" : r.tab === "edit" ? "Αλλαγή αγώνα" : "Ακαδημίες") + " – PAOKalendar"
       : match ? match.home + " – " + match.away + " – PAOKalendar"
       : r.key ? data.sectionMap[r.key].name + " – PAOKalendar" : "PAOKalendar";
     $("masthead").classList.toggle("academy-area", inAcademyArea(r));
     $("app").innerHTML = movedHtml() + (inAcademyArea(r) ? academyBandHtml() : "") +
       (r.page === "app" ? appHtml() : r.page === "notifications" ? notificationsHtml() : r.page === "calendars" ? calendarsHtml()
-        : r.page === "privacy" ? privacyHtml() : r.page === "academies" ? (r.tab === "new" || r.tab === "edit" ? academyFormHtml(r) : academiesHtml(r.tab)) : r.page === "match" ? matchHtml(match) : r.key ? sectionHtml(r.key, r.tab) : homeHtml());
+        : r.page === "privacy" ? privacyHtml() : r.page === "stats" ? statsPageHtml() : r.page === "academies" ? (r.tab === "new" || r.tab === "edit" ? academyFormHtml(r) : academiesHtml(r.tab)) : r.page === "match" ? matchHtml(match) : r.key ? sectionHtml(r.key, r.tab) : homeHtml());
     if (routeChanged && match && r.tab === "notify") {
       var target = $("match-notify");
       if (target) target.scrollIntoView();
@@ -1836,6 +1849,11 @@
 
   $("app").addEventListener("submit", function (e) {
     if (e.target.id === "cm-form") { e.preventDefault(); customSave(false); }
+    if (e.target.id === "stats-form") {
+      e.preventDefault();
+      try { localStorage.setItem("paok-admin-pass", $("stats-pass").value); } catch (x) {}
+      statsState = ""; statsData = null; render();
+    }
   });
   $("app").addEventListener("input", function (e) {
     if (e.target.id && e.target.id.indexOf("adm-") === 0) admInput(e.target);
@@ -1849,6 +1867,7 @@
       return;
     }
     if (b.dataset.act === "cm-delete") { customSave(true); return; }
+    if (b.dataset.act === "stats-reload") { statsData = null; statsState = ""; render(); return; }
     if (b.dataset.act === "push-off") { disablePush(); return; }
     if (b.dataset.act === "move-code") { showMoveCodeEntry(); return; }
     if (b.dataset.act === "push-test") { testPush(); return; }
@@ -3266,6 +3285,92 @@
     if (push.ready && push.sub && cleanMatchTopics()) syncPush().catch(function () {});
     render();
     startLive();
+  }
+
+  // ---- Μέτρηση εγκαταστάσεων: μόνο η εφαρμογή από την αρχική οθόνη, το πολύ μία φορά τη μέρα (βλ. Απόρρητο).
+  function installPing() {
+    if (!isStandalone || !pushOrigin) return;
+    try {
+      var today = new Date().toISOString().slice(0, 10);
+      if (localStorage.getItem("paok-ping-day") === today) return;
+      var device = localStorage.getItem("paok-device");
+      if (!/^[0-9a-f]{32}$/.test(device || "")) {
+        var b = new Uint8Array(16); crypto.getRandomValues(b);
+        device = Array.prototype.map.call(b, function (x) { return (x < 16 ? "0" : "") + x.toString(16); }).join("");
+        localStorage.setItem("paok-device", device);
+      }
+      var ua = navigator.userAgent;
+      var platform = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) ? "ios"
+        : /Android/.test(ua) ? "android" : /Windows|Macintosh|Linux|CrOS/.test(ua) ? "desktop" : "other";
+      fetch("/api/health", { method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ device: device, platform: platform }) })
+        .then(function (r) { if (r.ok) localStorage.setItem("paok-ping-day", today); }).catch(function () {});
+    } catch (e) {}
+  }
+  installPing();
+
+  // ---- Στατιστικά (διαχειριστής)
+  var statsData = null, statsState = "";
+  var PLATFORM_NAMES = [["ios", "iPhone / iPad"], ["android", "Android"], ["desktop", "Υπολογιστής"], ["other", "Άλλο"]];
+  var SERVICE_NAMES = [["google", "Google (Android, Chrome)"], ["apple", "Apple (iPhone, iPad, Safari)"], ["mozilla", "Mozilla (Firefox)"], ["microsoft", "Microsoft (Edge)"], ["other", "Άλλο"]];
+  var KIND_NAMES = [["pre", "Πριν"], ["time", "Ώρα"], ["live", "Live"], ["result", "Τελικό"]];
+  function loadStats() {
+    var pass = adminPass();
+    if (!pass) { statsState = "pass"; render(); return; }
+    statsState = "loading";
+    adminPost({ password: pass, action: "stats" }).then(function (x) {
+      if (x.r.status === 401) { try { localStorage.removeItem("paok-admin-pass"); } catch (e) {} statsState = "pass"; render(); return; }
+      if (!x.r.ok) { statsState = "error"; render(); return; }
+      statsData = x.d; statsState = ""; if (route().page === "stats") render();
+    }).catch(function () { statsState = "error"; render(); });
+  }
+  function statsPageHtml() {
+    var head = '<a class="back" href="#/">‹ Αρχική</a><div class="follow stats-page"><div class="section-head"><h2>Στατιστικά</h2></div>';
+    if (statsState === "pass") {
+      return head + '<form class="admin-box" id="stats-form"><label class="adm-field wide"><span>Κωδικός διαχειριστή</span>' +
+        '<input id="stats-pass" type="password" autocomplete="current-password"></label>' +
+        '<div class="actions"><button type="submit" class="btn solid">Προβολή</button></div></form></div>' + footerHtml();
+    }
+    if (!statsData) {
+      if (!statsState) setTimeout(loadStats, 0);
+      return head + '<p class="empty">' + (statsState === "error" ? "Δεν φορτώθηκαν. Δοκίμασε ξανά." : "Φόρτωση…") + "</p>" +
+        (statsState === "error" ? '<div class="actions"><button type="button" class="btn" data-act="stats-reload">Ξανά</button></div>' : "") + "</div>" + footerHtml();
+    }
+    var d = statsData, i = d.installs, p = d.push;
+    var n = function (o, k) { return (o && o[k]) || 0; };
+    var row = function (cells, cls) {
+      return "<tr" + (cls ? ' class="' + cls + '"' : "") + ">" + cells.map(function (c, j) { return j ? '<td class="num">' + c + "</td>" : "<td>" + c + "</td>"; }).join("") + "</tr>";
+    };
+    var tableH = function (cols, rows) {
+      return '<table class="st box stats-t"><thead><tr>' + cols.map(function (c, j) { return "<th" + (j ? ' class="num"' : "") + ">" + c + "</th>"; }).join("") +
+        "</tr></thead><tbody>" + rows.join("") + "</tbody></table>";
+    };
+    var since = i.since ? fmtShort.format(new Date(i.since)) : "";
+    var installs = tableH(["Εφαρμογή", "7 ημ.", "30 ημ.", "Νέες 7 ημ."], PLATFORM_NAMES.map(function (pl) {
+      return row([pl[1], n(i.last7, pl[0]), n(i.last30, pl[0]), n(i.new7, pl[0])]);
+    }).concat([row(["Σύνολο", n(i.last7, "total"), n(i.last30, "total"), n(i.new7, "total")], "sum")]));
+    var services = tableH(["Υπηρεσία", "Συσκευές"], SERVICE_NAMES.filter(function (sv) { return n(p.byService, sv[0]); }).map(function (sv) {
+      return row([sv[1], n(p.byService, sv[0])]);
+    }).concat([row(["Σύνολο", p.total], "sum")]));
+    var sectionRows = Object.keys(p.sections).map(function (k) {
+      var s = data.sectionMap[k];
+      return { name: s ? (s.academy ? teamTitle(s) : s.emoji + " " + s.name) : k, v: p.sections[k] };
+    }).sort(function (a, b) { return b.v.devices - a.v.devices; });
+    var sections = tableH(["Τμήμα", "Συσκ."].concat(KIND_NAMES.map(function (k) { return k[1]; })), sectionRows.map(function (x) {
+      return row([esc(x.name), x.v.devices].concat(KIND_NAMES.map(function (k) { return n(x.v, k[0]); })));
+    }));
+    return head +
+      "<h3>Εγκαταστάσεις</h3>" +
+      (i.total ? installs + '<p class="help">Διαφορετικές συσκευές που άνοιξαν την εφαρμογή από την αρχική οθόνη. Μέτρηση από ' + esc(since) +
+        " · σύνολο από τότε: " + i.total + ".</p>"
+        : '<p class="empty">Δεν έχει καταγραφεί ακόμα καμία. Η μέτρηση ξεκίνησε στις 18 Νοεμβρίου 2026: κάθε εγκατεστημένη εφαρμογή μετρά όταν ανοίξει.</p>') +
+      "<h3>Ειδοποιήσεις</h3>" + services +
+      '<p class="help">Συσκευές με ενεργές ειδοποιήσεις. ' + (p.gone ? p.gone + " ακόμα τις ακύρωσαν από τη συσκευή και δεν τις παίρνουν πια. " : "") +
+      (p.noTopics ? p.noTopics + " δεν έχουν διαλέξει τίποτα. " : "") + "</p>" +
+      "<h3>Ανά τμήμα</h3>" + sections +
+      '<p class="help">Συσκευές με τουλάχιστον μία ειδοποίηση για το τμήμα, και ανά είδος: πριν τον αγώνα, αλλαγή ώρας, live, τελικό. ' +
+      p.matchFollowers + " συσκευές ακολουθούν και συγκεκριμένους αγώνες.</p>" +
+      '<div class="actions"><button type="button" class="btn" data-act="stats-reload">Ανανέωση</button></div></div>' + footerHtml();
   }
 
   load().catch(function () {

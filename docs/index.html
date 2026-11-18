@@ -1132,8 +1132,8 @@
         return '<li class="menu-sport"><span class="menu-sport-name"><span aria-hidden="true">' + g.emoji + "</span>" + esc(g.sport) + "</span>" +
           '<span class="menu-gender">' + link(g.men, "Ανδρών", g.sport) + link(g.women, "Γυναικών", g.sport) + "</span></li>";
       }).join("") + "</ul></nav>" +
-      (isAdmin() && data.academy.length
-        ? '<nav aria-label="Ακαδημίες"><h3>Ακαδημίες <small class="menu-admin">διαχειριστής</small></h3><ul class="menu-links">' +
+      (canSeeAcademy() && data.academy.length
+        ? '<nav aria-label="Ακαδημίες"><h3>Ακαδημίες' + (isAdmin() ? ' <small class="menu-admin">διαχειριστής</small>' : "") + "</h3>" + '<ul class="menu-links">' +
           '<li><a href="#/academies">Ακαδημίες ›<small>Β\' ομάδα και τμήματα υποδομής, με δικό τους μενού</small></a></li></ul></nav>'
         : "") +
       '<nav aria-label="Σελίδες"><h3>Σελίδες</h3><ul class="menu-links">' + PAGES.map(function (p) {
@@ -1267,14 +1267,14 @@
   // ---- Β' ομάδα και ακαδημίες (μόνο διαχειριστής, μέχρι να ανοίξει για όλους)
   // Ο «χώρος» των ακαδημιών: η σελίδα #/academies, οι σελίδες των ομάδων και οι αγώνες τους.
   function inAcademyArea(r) {
-    if (!data || !isAdmin()) return false;
+    if (!data || !canSeeAcademy()) return false;
     if (r.page === "academies") return true;
     if (r.key) return isAcademy(r.key);
     if (r.page === "match") { var m = matchByNt(r.nt); return !!(m && isAcademy(m.section)); }
     return false;
   }
   function academyBandHtml() {
-    return '<p class="area-band"><a href="#/academies"><strong>Ακαδημίες</strong></a><span>Β\' ομάδα και τμήματα υποδομής · ορατό μόνο στον διαχειριστή</span></p>';
+    return '<p class="area-band"><a href="#/academies"><strong>Ακαδημίες</strong></a><span>Β\' ομάδα και τμήματα υποδομής' + (isAdmin() ? " · ορατό μόνο σε όσους έχουν τον σύνδεσμο" : "") + "</span></p>";
   }
   // Οι ομάδες των ακαδημιών ανά άθλημα, με τη σειρά του SECTIONS.
   function academyGroups() {
@@ -1303,7 +1303,9 @@
             return '<a href="#/' + s.key + '"' + (current === s.key ? ' aria-current="page"' : "") + ">" + esc(s.short || s.name) + "</a>";
           }).join("") + "</span></li>";
       }).join("") + "</ul></nav>" +
-      '<nav aria-label="Σελίδες"><h3>Σελίδες</h3><ul class="menu-links">' + ACADEMY_PAGES.map(function (p) {
+      '<nav aria-label="Σελίδες"><h3>Σελίδες</h3><ul class="menu-links">' + ACADEMY_PAGES.filter(function (p) {
+        return isAdmin() || p[0] !== "academies/new";
+      }).map(function (p) {
         return '<li><a href="#/' + p[0] + '"' + (here === p[0] ? ' aria-current="page"' : "") + ">" + p[1] + "<small>" + p[2] + "</small></a></li>";
       }).join("") +
       '<li><a href="#/">‹ PAOKalendar<small>Πίσω στα τμήματα του ΠΑΟΚ</small></a></li></ul></nav>';
@@ -1333,7 +1335,9 @@
       return '<a href="#/academies' + (t[0] ? "/" + t[0] : "") + '"' + (t[0] === (tab || "") ? ' aria-current="page"' : "") + ">" + t[1] + "</a>";
     }).join("") + "</nav>";
     return '<div class="section-head"><h2>Ακαδημίες</h2></div>' +
-      '<p class="actions"><a class="btn solid" href="#/academies/new">+ Νέος αγώνας</a></p>' +
+      (isAdmin() ? '<p class="actions"><a class="btn solid" href="#/academies/new">+ Νέος αγώνας</a>' +
+        '<button type="button" class="btn" data-copy="' + esc(location.origin + location.pathname + "#/akadimies/" + ACADEMY_KEY) +
+        '" data-msg="Ο κρυφός σύνδεσμος αντιγράφηκε. Όποιος τον ανοίξει βλέπει τις ακαδημίες (χωρίς δυνατότητα αλλαγών).">Αντιγραφή κρυφού συνδέσμου</button></p>' : "") +
       groups + nextHtml(list) + tabs +
       '<div class="controls">' + LEGEND + "</div>" +
       listHtml(list.filter(function (m) { return results ? !isUpcoming(m) : isUpcoming(m); }), results ? "results" : "upcoming", true) +
@@ -1767,8 +1771,17 @@
       return { key: null, tab: "", page: "notifications" };
     }
     if (key === "m") return { key: null, tab: parts[2] || "", page: "match", nt: parts[1] || "" };
-    if (key === "academies" && isAdmin()) return { key: null, tab: tab, page: "academies", sub: parts[2] || "" };
-    return data.sectionMap[key] && (!isAcademy(key) || isAdmin()) ? { key: key, tab: tab } : { key: null, tab: "" };
+    if (key === "akadimies" && parts[1] === ACADEMY_KEY) {
+      try { localStorage.setItem("paok-academy", ACADEMY_KEY); } catch (e) {}
+      history.replaceState(null, "", "#/academies");
+      return { key: null, tab: "", page: "academies", sub: "" };
+    }
+    if (key === "academies" && canSeeAcademy()) {
+      // Η φόρμα μόνο για τον διαχειριστή.
+      if ((tab === "new" || tab === "edit") && !isAdmin()) return { key: null, tab: "", page: "academies", sub: "" };
+      return { key: null, tab: tab, page: "academies", sub: parts[2] || "" };
+    }
+    return data.sectionMap[key] && (!isAcademy(key) || canSeeAcademy()) ? { key: key, tab: tab } : { key: null, tab: "" };
   }
   var lastRoute = null;
   function render() {
@@ -1950,6 +1963,13 @@
     return push.sub ? "on" : "off";
   }
   function isAdmin() { try { return localStorage.getItem("paok-admin") === "1"; } catch (e) { return false; } }
+  // Ακαδημίες για συγκεκριμένα άτομα: ο κρυφός σύνδεσμος #/akadimies/<ACADEMY_KEY> τις ανοίγει σε αυτή τη
+  // συσκευή (μόνο για προβολή). Αν αλλάξει το κλειδί, οι παλιοί σύνδεσμοι και όσοι τον άνοιξαν δεν τις βλέπουν πια.
+  var ACADEMY_KEY = "16c45ea7";
+  function canSeeAcademy() {
+    if (isAdmin()) return true;
+    try { return localStorage.getItem("paok-academy") === ACADEMY_KEY; } catch (e) { return false; }
+  }
   function hasTopic(t) { return !!push.sub && push.topics.indexOf(t) >= 0; }
   function matchFollowed(m) {
     var prefix = "m:" + m.nt + ":";
@@ -2305,7 +2325,7 @@
 
   // ---- Σελίδα αγώνα
   function matchByNt(nt) {
-    return allMatches().filter(function (m) { return m.nt === nt && (!isAcademy(m.section) || isAdmin()); })[0] || null;
+    return allMatches().filter(function (m) { return m.nt === nt && (!isAcademy(m.section) || canSeeAcademy()); })[0] || null;
   }
   function allMatches() { return data.matches.concat(data.academyMatches || []); }
   function isAcademy(key) { return !!(data.sectionMap[key] || {}).academy; }

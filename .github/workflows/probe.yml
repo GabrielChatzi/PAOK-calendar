@@ -12,17 +12,15 @@ jobs:
       - run: |
           mkdir -p probe
           UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36"
-          t() { echo "$(curl -sSL -m 30 -o "probe/$1" -w '%{http_code} %{size_download}' -A "$UA" -H 'Accept: application/json, text/html' "$2") $1 $2" | tee -a probe/result.txt; }
-          t paokfc.html https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/k20-nchc/k20-apotelesmata/
-          t sl.html https://www.superleaguegreece.net/
-          t sl-k19.html "https://www.superleaguegreece.net/k19/"
-          t sofa-search.json "https://api.sofascore.com/api/v1/search/all?q=PAOK%20U19"
-          t sofa-t19.json "https://api.sofascore.com/api/v1/unique-tournament/11414/seasons"
-          t fotmob.json "https://www.fotmob.com/api/data/teams?id=1303118"
-          t f24.html "https://www.futbol24.com/national/Greece/Super-League-U19/2026-2027/results/"
-          t fs.html "https://www.flashscore.gr/team/paok-b/"
-          t soccerway.html "https://int.soccerway.com/national/greece/super-league-k19/"
-          grep -oiE 'href="[^"]*(k19|k17|k15|u19|u17|u15|ypodom|akadim)[^"]*"' probe/sl.html | sort -u | head -40 > probe/sl-links.txt || true
+          t() { echo "$(curl -sSL -m 30 -o "probe/$1" -w '%{http_code} %{size_download}' -A "$UA" "$2") $1 $2" | tee -a probe/result.txt; }
+          t u19a.html https://www.sl2.gr/youth-league/u19/a
+          t u19b.html https://www.sl2.gr/youth-league/u19/b
+          t program.html https://www.sl2.gr/program
+          t rating.html https://www.sl2.gr/rating
+          t paokb.html https://www.sl2.gr/teams/paok-b
+          t mc.html https://www.sl2.gr/match-center
+          t pf.html https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/
+          cat probe/*.html | grep -oE '(src|href|data-[a-z-]+)="[^"]*(api|json|ajax|\.js|youth|u19|u16|program|rating)[^"]*"' | sort -u > probe/refs.txt || true
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

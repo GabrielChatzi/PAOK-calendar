@@ -1,0 +1,7 @@
+200 44596 u19a.html https://www.sl2.gr/youth-league/u19/a
+200 44596 u19b.html https://www.sl2.gr/youth-league/u19/b
+200 45661 program.html https://www.sl2.gr/program
+200 45588 rating.html https://www.sl2.gr/rating
+200 70094 paokb.html https://www.sl2.gr/teams/paok-b
+200 45832 mc.html https://www.sl2.gr/match-center
+403 5619 pf.html https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/

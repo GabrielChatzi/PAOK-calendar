@@ -1,0 +1,17 @@
+name: probe-tv
+on:
+  push:
+    branches: [probe-tv]
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash probe.sh > probe-log.txt 2>&1 || true
+      - run: |
+          mkdir -p /tmp/p && cp -r out probe-log.txt /tmp/p/ || cp probe-log.txt /tmp/p/
+          git config user.name github-actions; git config user.email actions@github.com
+          git checkout --orphan probe-tv-data && git rm -rfq . && cp -r /tmp/p/* .
+          git add -A && git commit -qm probe && git push -f origin probe-tv-data

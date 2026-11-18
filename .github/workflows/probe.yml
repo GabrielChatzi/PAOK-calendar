@@ -11,16 +11,7 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           mkdir -p probe
-          UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36"
-          t() { echo "$(curl -sSL -m 30 -o "probe/$1" -w '%{http_code} %{size_download}' -A "$UA" "$2") $1 $2" | tee -a probe/result.txt; }
-          A=https://www.sl2.gr/api/sportsdata/v1
-          for id in sl219a2627 sl219b2627 sl2-2627; do
-            t "c-$id.json" "$A/competitions/$id"
-            t "s-$id.json" "$A/competitions/$id/standings"
-            t "m-$id.json" "$A/competitions/$id/matches"
-            t "md-$id.json" "$A/competitions/$id/matchdays"
-            t "tm-$id.json" "$A/competitions/$id/teams"
-          done
+          curl -sS -m 30 https://paokalendar.gr/api/health | tee probe/health.json; echo
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

@@ -87,6 +87,9 @@ ACADEMY = {
                      "short": "Κ19"},
     "football-u17": {"emoji": "⚽", "name": "Κ17", "sport": "Ποδόσφαιρο", "women": False, "academy": True,
                      "short": "Κ17"},
+    # Η Κ16 αγωνίζεται στη Super League 2 Κ19.
+    "football-u16": {"emoji": "⚽", "name": "Κ16", "sport": "Ποδόσφαιρο", "women": False, "academy": True,
+                     "short": "Κ16", "league": "Super League 2 Κ19"},
     "football-u15": {"emoji": "⚽", "name": "Κ15", "sport": "Ποδόσφαιρο", "women": False, "academy": True,
                      "short": "Κ15"},
 }
@@ -1433,8 +1436,17 @@ def futsal_matches() -> list[Match]:
 PAOKFC = "https://www.paokfc.gr/"
 PAOKFC_LOGO = PAOKFC + "wp-content/themes/paokv2/images/logo-paok-small.png"
 # Ο φάκελος κάθε ομάδας στο «Πρόγραμμα και αποτελέσματα» του paokfc.gr.
+# Η Κ16 δεν είχε σελίδα τον Νοέμβριο του 2026: αν εμφανιστεί φάκελος που ξεκινά με «k16», τον βρίσκουμε μόνοι μας.
 PAOKFC_TEAMS = {"football-b": "paok-b-nchc", "football-u19": "k20-nchc",
-                "football-u17": "k17-nchc", "football-u15": "k15-nchc"}
+                "football-u17": "k17-nchc", "football-u16": "k16", "football-u15": "k15-nchc"}
+
+
+def paokfc_team(links: dict[str, dict[str, str]], section: str) -> dict[str, str]:
+    """Οι σελίδες της ομάδας: με το ακριβές όνομα φακέλου ή με το πρόθεμά του."""
+    team = PAOKFC_TEAMS[section]
+    if team in links:
+        return links[team]
+    return next((v for k, v in sorted(links.items()) if k.startswith(team + "-")), {})
 # Οι διοργανώσεις όπως τις γράφει η πηγή → όπως τις δείχνουμε (ανά ομάδα).
 PAOKFC_COMPETITIONS = {
     "Super League 2": "Super League 2",
@@ -1538,7 +1550,7 @@ def paokfc_matches(section: str, today: dt.date | None = None) -> list[Match]:
     έχει μετατεθεί και δεν ξέρουμε ακόμα πότε: δεν τον δείχνουμε μέχρι να οριστεί."""
     today = today or dt.date.today()
     season = f"{season_start_year(today)}-{season_start_year(today) + 1}"
-    links = paokfc_links(season).get(PAOKFC_TEAMS[section], {})
+    links = paokfc_team(paokfc_links(season), section)
     if not links.get("fixtures") and not links.get("results"):
         raise RuntimeError(f"δεν βρέθηκαν οι σελίδες της ομάδας για τη σεζόν {season}")
     age = SECTIONS[section]["name"]
@@ -1558,6 +1570,8 @@ def paokfc_matches(section: str, today: dt.date | None = None) -> list[Match]:
                 continue
             opp = paokfc_name(it["opponent"])
             comp = PAOKFC_COMPETITIONS.get(it["competition"], it["competition"]).format(age=age)
+            if SECTIONS[section].get("league") and it["competition"] in ("Super League", "Super League 2"):
+                comp = SECTIONS[section]["league"]
             score = ""
             if it["score"]:
                 us, them = it["score"]

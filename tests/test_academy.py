@@ -122,6 +122,18 @@ class Academy(unittest.TestCase):
             self.assertEqual(b.custom_matches("football-u15", [official]), [])
             self.assertEqual(b.custom_matches("football-u17", []), [])
 
+    def test_u16(self):
+        links = {"k15-nchc": {"fixtures": "a"}, "k16-u16-nchc": {"fixtures": "b"}}
+        self.assertEqual(b.paokfc_team(links, "football-u16"), {"fixtures": "b"})
+        self.assertEqual(b.paokfc_team({"k15-nchc": {}}, "football-u16"), {})
+        season = SEASON.replace("k20-nchc", "k16-nchc")
+        pages = {"https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/": season,
+                 "https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/k16-nchc/k20-programma-16-nch/": FIXTURES,
+                 "https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/k16-nchc/k20-apotelesmata/": ""}
+        with mock.patch.object(b, "paokfc_fetch", lambda url, *a, **k: pages[url]):
+            comps = {m.competition for m in b.paokfc_matches("football-u16", dt.date(2026, 11, 17))}
+        self.assertEqual(comps, {"Super League 2 Κ19", "UEFA Youth League"})
+
 
 if __name__ == "__main__":
     unittest.main()

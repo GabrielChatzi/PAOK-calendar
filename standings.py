@@ -15,7 +15,7 @@ import re
 from pathlib import Path
 
 from build_calendars import (
-    ACADEMY, PAOKFC, PAOKFC_TEAMS, paokfc_fetch, paokfc_links, paokfc_matches, paokfc_name, DATAPROJECT, EPO, ea_data, ea_team, oxe_logo, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
+    ACADEMY, PAOKFC, PAOKFC_TEAMS, paokfc_fetch, paokfc_links, paokfc_team, paokfc_matches, paokfc_name, DATAPROJECT, EPO, ea_data, ea_team, oxe_logo, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
     fetch_until,
     is_paok, latin_title, plain, season_start_year, tidy_name, volley_rows,
 )
@@ -452,7 +452,7 @@ def paokfc_table(section: str) -> list[dict]:
     μικρούς πίνακες της πρώτης ομάδας (και όλα δύο φορές): κρατάμε μόνο τον πρώτο."""
     start = season_start_year()
     season = f"{start}-{start + 1}"
-    url = paokfc_links(season).get(PAOKFC_TEAMS[section], {}).get("table")
+    url = paokfc_team(paokfc_links(season), section).get("table")
     if not url:
         raise RuntimeError(f"δεν βρέθηκε βαθμολογία για τη σεζόν {season}")
     page = paokfc_fetch(url)
@@ -461,7 +461,9 @@ def paokfc_table(section: str) -> list[dict]:
         raise RuntimeError("η σελίδα δεν έχει πίνακα")
     title = re.search(r'table-tab-header"><i[^>]*></i><span>([^<]+)', page)
     title = re.sub(r"\s*\d{4}-\d{4}$", "", clean(title.group(1))) if title else "Βαθμολογία"
-    if title == "Super League":
+    if ACADEMY[section].get("league"):
+        title = ACADEMY[section]["league"]
+    elif title == "Super League":
         title += " " + ACADEMY[section]["name"]
     # Ο πίνακας γράφει τα ονόματα με κεφαλαία χωρίς τόνους· όπου γίνεται, όπως στο πρόγραμμα (με σήμα).
     known = {plain(n): (n, "") for n in FOOTBALL_NAMES.values()}

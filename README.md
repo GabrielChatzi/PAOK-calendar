@@ -35,7 +35,7 @@
 
 ### Β' ομάδα και ακαδημίες (μόνο για τον διαχειριστή)
 
-Η ΠΑΟΚ Β (Super League 2) και οι Κ19 (μαζί με το UEFA Youth League), Κ17 και Κ15 διαβάζονται από το «Πρόγραμμα και αποτελέσματα» του [paokfc.gr](https://www.paokfc.gr/programma-kai-apotelesmata/) (`paokfc_matches` στο `build_calendars.py`, βαθμολογίες στο `standings.py`). Τα τμήματα είναι τα `football-b`, `football-u19`, `football-u17`, `football-u15` (λεξικό `ACADEMY`, με `"academy": true`).
+Η ΠΑΟΚ Β (Super League 2) και οι Κ19 (μαζί με το UEFA Youth League), Κ17, Κ16 (Super League 2 Κ19· χωρίς σελίδα στο paokfc.gr τον Νοέμβριο του 2026, οπότε από τη φόρμα) και Κ15 διαβάζονται από το «Πρόγραμμα και αποτελέσματα» του [paokfc.gr](https://www.paokfc.gr/programma-kai-apotelesmata/) (`paokfc_matches` στο `build_calendars.py`, βαθμολογίες στο `standings.py`). Τα τμήματα είναι τα `football-b`, `football-u19`, `football-u17`, `football-u16`, `football-u15` (λεξικό `ACADEMY`, με `"academy": true`).
 
 - Στη σελίδα φαίνονται **μόνο σε λειτουργία διαχειριστή**: στο μενού «Ακαδημίες» και στη σελίδα `#/academies`, με σελίδα για κάθε ομάδα (πρόγραμμα, αποτελέσματα, βαθμολογία). Δεν μπαίνουν στην αρχική, στα φίλτρα, στη σελίδα Ειδοποιήσεις, στα συνδυαστικά ημερολόγια (`api/cal.js`) ή στα social (`week.mjs`). Τα δεδομένα είναι στο δημόσιο `matches.json`· απλώς δεν εμφανίζονται.
 - Αγώνας χωρίς ανακοινωμένη ημερομηνία μπαίνει στη μέρα της αγωνιστικής χωρίς ώρα. Αν η μέρα αυτή περάσει χωρίς αποτέλεσμα (αναβολή), κρύβεται μέχρι να οριστεί νέα.

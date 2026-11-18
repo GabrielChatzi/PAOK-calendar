@@ -87,7 +87,7 @@ ACADEMY = {
                      "short": "Κ19"},
     "football-u17": {"emoji": "⚽", "name": "Κ17", "sport": "Ποδόσφαιρο", "women": False, "academy": True,
                      "short": "Κ17"},
-    # Η Κ16 αγωνίζεται στη Super League 2 Κ19.
+    # Η Κ16 αγωνίζεται στη Super League 2 Κ19 (στο sl2.gr ως «Π.Α.Ο.Κ. Β' Κ19»).
     "football-u16": {"emoji": "⚽", "name": "Κ16", "sport": "Ποδόσφαιρο", "women": False, "academy": True,
                      "short": "Κ16", "league": "Super League 2 Κ19"},
     "football-u15": {"emoji": "⚽", "name": "Κ15", "sport": "Ποδόσφαιρο", "women": False, "academy": True,
@@ -1438,7 +1438,7 @@ PAOKFC_LOGO = PAOKFC + "wp-content/themes/paokv2/images/logo-paok-small.png"
 # Ο φάκελος κάθε ομάδας στο «Πρόγραμμα και αποτελέσματα» του paokfc.gr.
 # Η Κ16 δεν είχε σελίδα τον Νοέμβριο του 2026: αν εμφανιστεί φάκελος που ξεκινά με «k16», τον βρίσκουμε μόνοι μας.
 PAOKFC_TEAMS = {"football-b": "paok-b-nchc", "football-u19": "k20-nchc",
-                "football-u17": "k17-nchc", "football-u16": "k16", "football-u15": "k15-nchc"}
+                "football-u17": "k17-nchc", "football-u16": "k16", "football-u15": "k15-nchc"}  # Β και Κ16: sl2.gr
 
 
 def paokfc_team(links: dict[str, dict[str, str]], section: str) -> dict[str, str]:
@@ -1481,6 +1481,87 @@ def paokfc_name(raw: str) -> str:
 
 
 _LOOKALIKE_ONE = dict(zip("ABEZHIKMNOPTYX", "ΑΒΕΖΗΙΚΜΝΟΡΤΥΧ"))
+
+
+# ---- Super League 2 (sl2.gr): η ΠΑΟΚ Β και η Κ16 (Πρωτάθλημα Νέων Κ19 της Super League 2).
+# Το site τα παίρνει από ανοιχτό API (sportsdata.gr): διοργανώσεις, αγώνες με ώρα, γήπεδο, κανάλι,
+# σκορ, και βαθμολογίες. Οι αγώνες χωρίς ορισμένη μέρα έχουν μόνο την ημερομηνία της αγωνιστικής.
+SL2_API = "https://www.sl2.gr/api/sportsdata/v1/"
+SL2_NAMES = {plain(k): v for k, v in {
+    "ΑΕΛ": "ΑΕΛ", "Α.Ε.Λ.": "ΑΕΛ", "ΑΕΛ NOVIBET": "ΑΕΛ",
+    "ΑΠΟΛΛΩΝ ΚΑΛ.": "Απόλλων Καλαμαριάς", "ΑΠΟΛΛΩΝ ΚΑΛΑΜΑΡΙΑΣ": "Απόλλων Καλαμαριάς",
+    "ΝΕΣΤΟΣ ΧΡΥΣ.": "Νέστος Χρυσούπολης", "ΝΕΣΤΟΣ ΧΡΥΣΟΥΠΟΛΗΣ": "Νέστος Χρυσούπολης",
+    "ΝΙΚΗ ΒΟΛΟΥ": "Νίκη Βόλου", "ΠΑΝΘΡΑΚΙΚΟΣ": "Πανθρακικός", "ΠΑΝΣΕΡΡΑΪΚΟΣ": "Πανσερραϊκός",
+    "ΑΝΑΓ. ΚΑΡΔΙΤΣΑΣ": "Αναγέννηση Καρδίτσας", "ΑΝΑΓΕΝΝΗΣΗ ΚΑΡΔΙΤΣΑΣ": "Αναγέννηση Καρδίτσας",
+    "ΕΛΛΑΣ ΣΥΡΟΥ": "Ελλάς Σύρου", "ΖΑΚΥΝΘΟΣ": "Ζάκυνθος", "ATHENS KALLITHEA": "Καλλιθέα",
+    "ΜΑΡΚΟ": "Μαρκό", "Γ.Σ. ΜΑΡΚΟ": "Μαρκό", "ΠΑΝΙΩΝΙΟΣ": "Πανιώνιος", "ΠΥΡΓΟΣ": "ΠΑΣ Πύργος",
+    "ΟΛΥΜΠΙΑΚΟΣ Β'": "Ολυμπιακός Β", "ASTERAS AKTOR Β'": "Αστέρας Τρίπολης Β",
+}.items()}
+SL2_TV = {"ERT": "ΕΡΤ", "Superbet": "Superbet TV", "SL2 YouTube": "YouTube (SL2)"}
+
+
+def sl2_json(path: str):
+    return json.loads(fetch(SL2_API + path))
+
+
+def sl2_name(raw: str) -> str:
+    """«ΝΙΚΗ ΒΟΛΟΥ Κ19» → «Νίκη Βόλου»· όσα δεν ξέρουμε μένουν όπως τα γράφει η πηγή (χωρίς την κατηγορία)."""
+    name = re.sub(r"\s+", " ", re.sub(r"\s+Κ\d{2}\s*$", "", raw)).strip()
+    return SL2_NAMES.get(plain(name), name)
+
+
+def sl2_competitions(section: str, today: dt.date | None = None) -> list[dict]:
+    """Οι διοργανώσεις της σεζόν όπου παίζει η ομάδα: για την ΠΑΟΚ Β το επαγγελματικό πρωτάθλημα (και
+    κύπελλα του), για την Κ16 ο όμιλος της Κ19 με τον ΠΑΟΚ."""
+    today = today or dt.date.today()
+    start = season_start_year(today)
+    season = f"{start}-{start + 1}"
+    out = []
+    for c in sl2_json("competitions"):
+        if c.get("season") != season:
+            continue
+        pro = "Επαγγελματικό" in (c.get("championship_el") or "")
+        if (section == "football-b" and pro) or (section == "football-u16" and c.get("youth_type") == "u19"):
+            out.append(c)
+    return out
+
+
+def sl2_matches(section: str, today: dt.date | None = None) -> list[Match]:
+    today = today or dt.date.today()
+    comps = sl2_competitions(section, today)
+    if not comps:
+        raise RuntimeError("δεν βρέθηκαν διοργανώσεις της σεζόν")
+    out = []
+    for c in comps:
+        for x in sl2_json(f"competitions/{c['slug']}/matches"):
+            home_paok, away_paok = is_paok(x["home_team"]["name_el"]), is_paok(x["away_team"]["name_el"])
+            if home_paok == away_paok:
+                continue
+            day = x.get("date") or x.get("matchday_date")
+            if not day:
+                continue
+            day = dt.date.fromisoformat(day)
+            time = parse_time(x["time"]) if x.get("date") and x.get("time") else None
+            score = ""
+            if x.get("status") == "finished" and x.get("home_score") is not None and x.get("away_score") is not None:
+                score = f"{x['home_score']}-{x['away_score']}"
+            status = {"postponed": "postponed", "cancelled": "cancelled", "abandoned": "abandoned"}.get(x.get("status") or "", "")
+            if not x.get("date") and day < today and not score:
+                continue  # η αγωνιστική πέρασε χωρίς να οριστεί μέρα: αναβολή, δεν ξέρουμε πότε
+            opp = x["away_team"] if home_paok else x["home_team"]
+            if c.get("is_cup"):
+                comp = re.sub(r"\s*\d{4}\s*-\s*\d{4}\s*$", "", c["title_el"]).strip()
+            else:
+                comp = SECTIONS[section].get("league") or "Super League 2"
+            logo = lambda t: ((t.get("logo") or {}).get("thumb") or "") if not is_paok(t["name_el"]) else ""
+            out.append(Match(
+                section=section, uid=f"{section}-sl2-{x['id']}", day=day, time=time,
+                home=PAOK if home_paok else sl2_name(opp["name_el"]), away=sl2_name(opp["name_el"]) if home_paok else PAOK,
+                paok_home=home_paok, venue=(x.get("venue_el") or "").strip(" -"), competition=comp,
+                round=x.get("matchday_el") or "", score=score, status=status,
+                tv=SL2_TV.get(x.get("channel") or "", x.get("channel") or ""),
+                home_logo=logo(x["home_team"]), away_logo=logo(x["away_team"])))
+    return out
 
 
 def paokfc_fetch(url: str) -> str:
@@ -1985,6 +2066,9 @@ SOURCES: dict[str, list[tuple[str, Callable[[], list[Match]]]]] = {
     "waterpolo-women": [("WPL", lambda: waterpolo_matches("waterpolo-women")),
                         ("European Aquatics", lambda: european_waterpolo_matches("waterpolo-women"))],
     **{key: [("paokfc.gr", lambda key=key: paokfc_matches(key))] for key in ACADEMY},
+    # ΠΑΟΚ Β και Κ16 από το επίσημο site της Super League 2 (το paokfc.gr μπλοκάρει, και δεν έχει την Κ16).
+    "football-b": [("sl2.gr", lambda: sl2_matches("football-b"))],
+    "football-u16": [("sl2.gr", lambda: sl2_matches("football-u16"))],
 }
 
 

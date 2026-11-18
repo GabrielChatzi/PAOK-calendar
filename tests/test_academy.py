@@ -135,5 +135,43 @@ class Academy(unittest.TestCase):
         self.assertEqual(comps, {"Super League 2 Κ19", "UEFA Youth League"})
 
 
+class SL2(unittest.TestCase):
+    """ΠΑΟΚ Β και Κ16 από το API του sl2.gr (δείγμα από τον Νοέμβριο του 2026)."""
+
+    def setUp(self):
+        import json
+        with open(os.path.join(os.path.dirname(__file__), "fixtures_sl2.json"), encoding="utf-8") as f:
+            d = json.load(f)
+        paths = {"competitions": d["competitions"], "competitions/sl219a2627/matches": d["u19a_matches"],
+                 "competitions/sl2-2627/matches": d["b_matches"], "competitions/sl219a2627/standings": d["u19a_standings"]}
+        patcher = mock.patch.object(b, "sl2_json", lambda path: paths.get(path, []))
+        patcher.start()
+        self.addCleanup(patcher.stop)
+
+    def test_u16(self):
+        ms = {m.day: m for m in b.sl2_matches("football-u16", dt.date(2026, 11, 18))}
+        first = ms[dt.date(2026, 10, 24)]
+        self.assertEqual((first.home, first.away, first.score, first.time, first.competition, first.round),
+                         ("ΠΑΟΚ", "Νίκη Βόλου", "1-1", dt.time(13, 45), "Super League 2 Κ19", "1η Αγωνιστική"))
+        self.assertEqual(first.venue, "ΑΘΛΗΤΙΚΟ ΚΕΝΤΡΟ ΛΩΛΑΣ")
+        self.assertTrue(first.away_logo.startswith("https://sl2-backend.sportsdata.gr/"))
+        self.assertEqual(first.home_logo, "")
+        later = ms[dt.date(2026, 11, 29)]  # χωρίς ορισμένη μέρα: η ημερομηνία της αγωνιστικής, χωρίς ώρα
+        self.assertEqual((later.time, later.home, later.away, later.venue), (None, "ΠΑΟΚ", "Πανθρακικός", ""))
+
+    def test_b(self):
+        (m, *_rest) = sorted(b.sl2_matches("football-b", dt.date(2026, 11, 18)), key=lambda m: m.day)
+        self.assertEqual((m.home, m.away, m.score, m.competition, m.tv), ("ΠΑΟΚ", "Ολυμπιακός Β", "1-1", "Super League 2", "ΕΡΤ"))
+
+    def test_table(self):
+        import standings
+        with mock.patch.object(standings, "sl2_json", b.sl2_json), \
+                mock.patch.object(standings, "sl2_competitions", lambda s: b.sl2_competitions(s, dt.date(2026, 11, 18))):
+            (t,) = standings.sl2_table("football-u16")
+        self.assertEqual(t["title"], "Super League 2 Κ19, Α' όμιλος")
+        paok = [r for r in t["rows"] if r["paok"]][0]
+        self.assertEqual((paok["pos"], paok["cells"][-1]), (4, "4"))
+
+
 if __name__ == "__main__":
     unittest.main()

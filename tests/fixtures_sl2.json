@@ -1,0 +1,397 @@
+{
+ "competitions": [
+  {
+   "slug": "sl219a2627",
+   "title_el": "Πρωτάθλημα Νέων Κ19 Super League 2 Α' Όμιλος 2026-2027",
+   "title_en": null,
+   "season": "2026-2027",
+   "championship_id": "410b9e7f1b8e457dbe245ae479b7ec5d",
+   "championship_el": "Πρωτάθλημα Νέων Super League 2",
+   "championship_en": null,
+   "is_cup": false,
+   "date_start": "2026-10-24",
+   "date_finish": "2027-04-18",
+   "youth_type": "u19"
+  },
+  {
+   "slug": "sl219b2627",
+   "title_el": "Πρωτάθλημα Νέων Κ19 Super League 2 Β' Όμιλος 2026-2027",
+   "title_en": null,
+   "season": "2026-2027",
+   "championship_id": "410b9e7f1b8e457dbe245ae479b7ec5d",
+   "championship_el": "Πρωτάθλημα Νέων Super League 2",
+   "championship_en": null,
+   "is_cup": false,
+   "date_start": "2026-10-24",
+   "date_finish": "2027-04-18",
+   "youth_type": "u19"
+  },
+  {
+   "slug": "sl2-2627",
+   "title_el": "Superbet League 2 2026-2027",
+   "title_en": "Superbet League 2 2026-2027",
+   "season": "2026-2027",
+   "championship_id": "faa342eb248145848da2f47fad3c87af",
+   "championship_el": "Επαγγελματικό Πρωτάθλημα Super League 2",
+   "championship_en": null,
+   "is_cup": false,
+   "date_start": "2026-07-01",
+   "date_finish": "2027-06-30",
+   "youth_type": null
+  },
+  {
+   "slug": "12534aea8f144f2191f558f6310c6baa",
+   "title_el": "Πρωτάθλημα Νέων Κ19 Super League 2 2025 - 2026",
+   "title_en": null,
+   "season": "2025-2026",
+   "championship_id": "410b9e7f1b8e457dbe245ae479b7ec5d",
+   "championship_el": "Πρωτάθλημα Νέων Super League 2",
+   "championship_en": null,
+   "is_cup": false,
+   "date_start": "2026-03-28",
+   "date_finish": "2026-04-04",
+   "youth_type": "u19"
+  }
+ ],
+ "u19a_matches": [
+  {
+   "id": "1926271003",
+   "matchday_el": "1η Αγωνιστική",
+   "matchday_date": "2026-10-25",
+   "date": "2026-10-24",
+   "time": "13:45:00",
+   "venue_el": "ΑΘΛΗΤΙΚΟ ΚΕΝΤΡΟ ΛΩΛΑΣ",
+   "channel": null,
+   "status": "finished",
+   "home_team": {
+    "name_el": "Π.Α.Ο.Κ. Β' Κ19",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/0385bfe6f0124eabb7618cd6f2aa751b/b89ec829b9c04580aec5f7656fd1ecee_thumb.png"
+    }
+   },
+   "away_team": {
+    "name_el": "ΝΙΚΗ ΒΟΛΟΥ Κ19",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/d974b1aaf0974622ab0cb072b2fe06bb/563c2c2f70b2431b9579dab266581ead_thumb.png"
+    }
+   },
+   "home_score": 1,
+   "away_score": 1
+  },
+  {
+   "id": "1926271008",
+   "matchday_el": "3η Αγωνιστική",
+   "matchday_date": "2026-11-08",
+   "date": "2026-11-07",
+   "time": "14:30:00",
+   "venue_el": "ΑΘΛΗΤΙΚΟ ΚΕΝΤΡΟ ΛΩΛΑΣ",
+   "channel": null,
+   "status": "finished",
+   "home_team": {
+    "name_el": "Π.Α.Ο.Κ. Β' Κ19",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/0385bfe6f0124eabb7618cd6f2aa751b/b89ec829b9c04580aec5f7656fd1ecee_thumb.png"
+    }
+   },
+   "away_team": {
+    "name_el": "ΝΕΣΤΟΣ ΧΡΥΣ. Κ19",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/48b46b2576864c26832db13c63e7e9e0/15f533f44940488a8446de1499de7736_thumb.png"
+    }
+   },
+   "home_score": 0,
+   "away_score": 1
+  },
+  {
+   "id": "1926271010",
+   "matchday_el": "4η Αγωνιστική",
+   "matchday_date": "2026-11-15",
+   "date": "2026-11-15",
+   "time": "15:00:00",
+   "venue_el": "ΑΘΛΗΤΙΚΟ ΚΕΝΤΡΟ ΛΩΛΑΣ",
+   "channel": null,
+   "status": "finished",
+   "home_team": {
+    "name_el": "Π.Α.Ο.Κ. Β' Κ19",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/0385bfe6f0124eabb7618cd6f2aa751b/b89ec829b9c04580aec5f7656fd1ecee_thumb.png"
+    }
+   },
+   "away_team": {
+    "name_el": "Α.Ε.Λ. Κ19",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/e6a56a5e053d46a18312b13520f0a963/f530f23fe61544738571b5844769b8f6_thumb.png"
+    }
+   },
+   "home_score": 4,
+   "away_score": 2
+  },
+  {
+   "id": "1926271014",
+   "matchday_el": "5η Αγωνιστική",
+   "matchday_date": "2026-11-21",
+   "date": "2026-11-21",
+   "time": "19:30:00",
+   "venue_el": "ΔΗΜΟΤΙΚΟ ΓΗΠΕΔΟ ΦΙΛΥΡΟΥ",
+   "channel": null,
+   "status": "scheduled",
+   "home_team": {
+    "name_el": "ΑΠΟΛΛΩΝ ΚΑΛ. Κ19",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/e2b204ca1fc74402887747185c46a5e1/74b397486cd94200b735bef4e1d1276a_thumb.png"
+    }
+   },
+   "away_team": {
+    "name_el": "Π.Α.Ο.Κ. Β' Κ19",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/0385bfe6f0124eabb7618cd6f2aa751b/b89ec829b9c04580aec5f7656fd1ecee_thumb.png"
+    }
+   },
+   "home_score": null,
+   "away_score": null
+  },
+  {
+   "id": "1926271017",
+   "matchday_el": "6η Αγωνιστική",
+   "matchday_date": "2026-11-29",
+   "date": null,
+   "time": null,
+   "venue_el": null,
+   "channel": null,
+   "status": "scheduled",
+   "home_team": {
+    "name_el": "Π.Α.Ο.Κ. Β' Κ19",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/0385bfe6f0124eabb7618cd6f2aa751b/b89ec829b9c04580aec5f7656fd1ecee_thumb.png"
+    }
+   },
+   "away_team": {
+    "name_el": "ΠΑΝΘΡΑΚΙΚΟΣ Κ19",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/8e899347a75a46889ddd7d0490f182fe/42c1047b95564511a24cbdb5db428f8c_thumb.png"
+    }
+   },
+   "home_score": null,
+   "away_score": null
+  },
+  {
+   "id": "1926271021",
+   "matchday_el": "7η Αγωνιστική",
+   "matchday_date": "2026-12-06",
+   "date": null,
+   "time": null,
+   "venue_el": null,
+   "channel": null,
+   "status": "scheduled",
+   "home_team": {
+    "name_el": "ΠΑΝΣΕΡΡΑΪΚΟΣ Κ19",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/9e35f361265d46d487df5824419a0a72/edf367db7766448db39d49ca05a58d59_thumb.png"
+    }
+   },
+   "away_team": {
+    "name_el": "Π.Α.Ο.Κ. Β' Κ19",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/0385bfe6f0124eabb7618cd6f2aa751b/b89ec829b9c04580aec5f7656fd1ecee_thumb.png"
+    }
+   },
+   "home_score": null,
+   "away_score": null
+  }
+ ],
+ "b_matches": [
+  {
+   "id": "2627006",
+   "matchday_el": "1η Αγωνιστική",
+   "matchday_date": "2026-09-05",
+   "date": "2026-09-09",
+   "time": "16:00:00",
+   "venue_el": "ΓΗΠΕΔΟ ΤΟΥΜΠΑΣ",
+   "channel": "ERT",
+   "status": "finished",
+   "home_team": {
+    "name_el": "ΠΑΟΚ Β'",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/0385bfe6f0124eabb7618cd6f2aa751b/b89ec829b9c04580aec5f7656fd1ecee_thumb.png"
+    }
+   },
+   "away_team": {
+    "name_el": "ΟΛΥΜΠΙΑΚΟΣ Β'",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/db0640a9731d4d37a2734dc25c4d4d95/2bdb093377e1431ca24293169ab76f4e_thumb.png"
+    }
+   },
+   "home_score": 1,
+   "away_score": 1
+  },
+  {
+   "id": "2627015",
+   "matchday_el": "2η Αγωνιστική",
+   "matchday_date": "2026-09-13",
+   "date": "2026-09-14",
+   "time": "17:00:00",
+   "venue_el": "Δ.Α.Κ. ΚΟΜΟΤΗΝΗΣ",
+   "channel": null,
+   "status": "finished",
+   "home_team": {
+    "name_el": "ΠΑΝΘΡΑΚΙΚΟΣ",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/8e899347a75a46889ddd7d0490f182fe/42c1047b95564511a24cbdb5db428f8c_thumb.png"
+    }
+   },
+   "away_team": {
+    "name_el": "ΠΑΟΚ Β'",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/0385bfe6f0124eabb7618cd6f2aa751b/b89ec829b9c04580aec5f7656fd1ecee_thumb.png"
+    }
+   },
+   "home_score": 2,
+   "away_score": 0
+  },
+  {
+   "id": "2627024",
+   "matchday_el": "3η Αγωνιστική",
+   "matchday_date": "2026-09-20",
+   "date": "2026-09-21",
+   "time": "17:00:00",
+   "venue_el": "ΔΗΜΟΤΙΚΟ ΓΗΠΕΔΟ ΣΕΡΡΩΝ",
+   "channel": null,
+   "status": "finished",
+   "home_team": {
+    "name_el": "ΠΑΟΚ Β'",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/0385bfe6f0124eabb7618cd6f2aa751b/b89ec829b9c04580aec5f7656fd1ecee_thumb.png"
+    }
+   },
+   "away_team": {
+    "name_el": "ΝΕΣΤΟΣ ΧΡΥΣΟΥΠΟΛΗΣ",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/48b46b2576864c26832db13c63e7e9e0/15f533f44940488a8446de1499de7736_thumb.png"
+    }
+   },
+   "home_score": 2,
+   "away_score": 1
+  }
+ ],
+ "u19a_standings": [
+  {
+   "position": 1,
+   "team": {
+    "name_el": "ΠΑΝΣΕΡΡΑΪΚΟΣ Κ19",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/9e35f361265d46d487df5824419a0a72/edf367db7766448db39d49ca05a58d59_thumb.png"
+    }
+   },
+   "matches": 4,
+   "wins": 3,
+   "draws": 0,
+   "losses": 1,
+   "gf": 10,
+   "ga": 2,
+   "gd": 8,
+   "points": 9
+  },
+  {
+   "position": 2,
+   "team": {
+    "name_el": "ΝΙΚΗ ΒΟΛΟΥ Κ19",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/d974b1aaf0974622ab0cb072b2fe06bb/563c2c2f70b2431b9579dab266581ead_thumb.png"
+    }
+   },
+   "matches": 4,
+   "wins": 2,
+   "draws": 2,
+   "losses": 0,
+   "gf": 7,
+   "ga": 3,
+   "gd": 4,
+   "points": 8
+  },
+  {
+   "position": 3,
+   "team": {
+    "name_el": "ΝΕΣΤΟΣ ΧΡΥΣ. Κ19",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/48b46b2576864c26832db13c63e7e9e0/15f533f44940488a8446de1499de7736_thumb.png"
+    }
+   },
+   "matches": 3,
+   "wins": 2,
+   "draws": 1,
+   "losses": 0,
+   "gf": 3,
+   "ga": 0,
+   "gd": 3,
+   "points": 7
+  },
+  {
+   "position": 4,
+   "team": {
+    "name_el": "Π.Α.Ο.Κ. Β' Κ19",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/0385bfe6f0124eabb7618cd6f2aa751b/b89ec829b9c04580aec5f7656fd1ecee_thumb.png"
+    }
+   },
+   "matches": 3,
+   "wins": 1,
+   "draws": 1,
+   "losses": 1,
+   "gf": 5,
+   "ga": 4,
+   "gd": 1,
+   "points": 4
+  },
+  {
+   "position": 5,
+   "team": {
+    "name_el": "Α.Ε.Λ. Κ19",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/e6a56a5e053d46a18312b13520f0a963/f530f23fe61544738571b5844769b8f6_thumb.png"
+    }
+   },
+   "matches": 4,
+   "wins": 0,
+   "draws": 2,
+   "losses": 2,
+   "gf": 3,
+   "ga": 7,
+   "gd": -4,
+   "points": 2
+  },
+  {
+   "position": 6,
+   "team": {
+    "name_el": "ΠΑΝΘΡΑΚΙΚΟΣ Κ19",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/8e899347a75a46889ddd7d0490f182fe/42c1047b95564511a24cbdb5db428f8c_thumb.png"
+    }
+   },
+   "matches": 3,
+   "wins": 0,
+   "draws": 1,
+   "losses": 2,
+   "gf": 2,
+   "ga": 6,
+   "gd": -4,
+   "points": 1
+  },
+  {
+   "position": 7,
+   "team": {
+    "name_el": "ΑΠΟΛΛΩΝ ΚΑΛ. Κ19",
+    "logo": {
+     "thumb": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/e2b204ca1fc74402887747185c46a5e1/74b397486cd94200b735bef4e1d1276a_thumb.png"
+    }
+   },
+   "matches": 3,
+   "wins": 0,
+   "draws": 1,
+   "losses": 2,
+   "gf": 1,
+   "ga": 9,
+   "gd": -8,
+   "points": 1
+  }
+ ]
+}

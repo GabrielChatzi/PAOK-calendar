@@ -15,7 +15,7 @@ import re
 from pathlib import Path
 
 from build_calendars import (
-    ACADEMY, PAOKFC, PAOKFC_TEAMS, paokfc_fetch, paokfc_links, paokfc_team, paokfc_matches, paokfc_name, DATAPROJECT, EPO, ea_data, ea_team, oxe_logo, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
+    ACADEMY, PAOKFC, PAOKFC_TEAMS, sl2_competitions, sl2_json, sl2_name, paokfc_fetch, paokfc_links, paokfc_team, paokfc_matches, paokfc_name, DATAPROJECT, EPO, ea_data, ea_team, oxe_logo, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
     fetch_until,
     is_paok, latin_title, plain, season_start_year, tidy_name, volley_rows,
 )
@@ -435,10 +435,33 @@ def manual_table(section: str) -> list[dict]:
                   ["Αγ", "Ν", "Ι", "Η", "Γκολ", "Β"], rows)]
 
 
+def sl2_table(section: str) -> list[dict]:
+    """Βαθμολογία από το sl2.gr: για την ΠΑΟΚ Β η Super League 2, για την Κ16 ο όμιλος της Κ19 με τον ΠΑΟΚ."""
+    out = []
+    for c in sl2_competitions(section):
+        if c.get("is_cup"):
+            continue
+        rows = sl2_json(f"competitions/{c['slug']}/standings")
+        if not any(is_paok(r["team"]["name_el"]) for r in rows):
+            continue
+        title = ACADEMY[section].get("league") or "Super League 2"
+        group = re.search(r"([Α-Ω])' Όμιλος", c.get("title_el") or "")
+        if group:
+            title += f", {group.group(1)}' όμιλος"
+        out.append(table(title, "https://www.sl2.gr/rating", ["Αγ", "Ν", "Ι", "Η", "Γκολ", "Β"], [
+            (r["position"], PAOK_NAME if is_paok(r["team"]["name_el"]) else sl2_name(r["team"]["name_el"]),
+             "" if is_paok(r["team"]["name_el"]) else ((r["team"].get("logo") or {}).get("thumb") or ""),
+             [r["matches"], r["wins"], r["draws"], r["losses"], f"{r['gf']}-{r['ga']}", r["points"]])
+            for r in rows]))
+    if not out:
+        raise RuntimeError("δεν βρέθηκε βαθμολογία με τον ΠΑΟΚ")
+    return out
+
+
 def academy_table(section: str) -> list[dict]:
     """Από το paokfc.gr· αν δεν απαντά, η χειροκίνητη (αν υπάρχει)."""
     try:
-        return paokfc_table(section)
+        return sl2_table(section) if section in ("football-b", "football-u16") else paokfc_table(section)
     except Exception as e:
         manual = manual_table(section)
         if manual:

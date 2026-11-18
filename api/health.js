@@ -1,8 +1,38 @@
 // Κατάσταση των ειδοποιήσεων: αν είναι συνδεδεμένη η βάση και πόσες συσκευές είναι γραμμένες,
 // ανά υπηρεσία (Apple, Google, Mozilla, Microsoft). Με ?topic=<θέμα> μετρά μόνο όσες το έχουν.
 // Με ?selftest=1 δοκιμάζει όλη τη διαδρομή χωρίς να στείλει τίποτα (βλ. selftest), για τον watchdog.
+//
+// POST {action: "ping", device, platform}: η εγκατεστημένη εφαρμογή (αρχική οθόνη) λέει «είμαι εδώ», το
+// πολύ μία φορά τη μέρα. device: τυχαίο ανώνυμο αναγνωριστικό της συσκευής (local storage), platform:
+// ios | android | desktop | other. Συλλογή «devices» {_id: device, platform, first, last}· σβήνεται
+// μόνη της 180 ημέρες μετά το τελευταίο άνοιγμα. Μετρά εγκαταστάσεις, τίποτα άλλο (βλ. Απόρρητο).
 import webpush from "web-push";
-import { TOPIC_RE, configured, getDb, send, subId, subs, validSubscription, vapidKeys } from "./_lib.js";
+import { TOPIC_RE, configured, getDb, readBody, send, subId, subs, validSubscription, vapidKeys } from "./_lib.js";
+
+const PLATFORMS = ["ios", "android", "desktop", "other"];
+let devicesIndexed = false;
+
+export function parsePing(body) {
+  const device = String(body?.device || "");
+  if (!/^[0-9a-f]{16,32}$/.test(device)) return null;
+  const platform = PLATFORMS.includes(body?.platform) ? body.platform : "other";
+  return { device, platform };
+}
+
+async function ping(req, res) {
+  let body;
+  try { body = await readBody(req); } catch (e) { return send(res, 400, { error: "Λάθος αίτημα." }); }
+  const p = parsePing(body);
+  if (!p) return send(res, 400, { error: "Λάθος αίτημα." });
+  const col = (await getDb()).collection("devices");
+  if (!devicesIndexed) {
+    await col.createIndex({ last: 1 }, { expireAfterSeconds: 180 * 86400 }).catch(() => {});
+    devicesIndexed = true;
+  }
+  const now = new Date();
+  await col.updateOne({ _id: p.device }, { $set: { platform: p.platform, last: now }, $setOnInsert: { first: now } }, { upsert: true });
+  return send(res, 200, { ok: true });
+}
 
 // Ό,τι χρησιμοποιούν η εγγραφή και η αποστολή: αναγνωριστικό συσκευής, έλεγχος συνδρομής, εγγραφή και
 // σβήσιμο στη βάση, κλειδιά VAPID και κρυπτογράφηση μιας ειδοποίησης (χωρίς να σταλεί).
@@ -31,7 +61,7 @@ async function selftest() {
   return { ok: Object.values(checks).every((v) => v === "ok"), checks };
 }
 
-function service(endpoint) {
+export function service(endpoint) {
   const host = new URL(endpoint).hostname;
   return host.includes("apple") ? "apple" : host.includes("google") ? "google"
     : host.includes("mozilla") ? "mozilla" : host.includes("windows") ? "microsoft" : "other";
@@ -40,6 +70,9 @@ function service(endpoint) {
 export default async function handler(req, res) {
   if (!configured()) return send(res, 200, { configured: false });
   if (req.query?.selftest) return send(res, 200, await selftest());
+  if (req.method === "POST") {
+    try { return await ping(req, res); } catch (e) { return send(res, 500, { error: "Δεν αποθηκεύτηκε." }); }
+  }
   try {
     const col = await subs();
     const topic = String(req.query?.topic || "");

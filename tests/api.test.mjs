@@ -377,3 +377,23 @@ test("πληροφορίες αγώνα: έλεγχος πεδίων", async () 
   assert.ok(a.parseInfo({ time: "25:00" }).error);
   assert.equal(a.parseInfo({ tvUrl: "https://youtu.be/abc" }).tvUrl, "https://youtu.be/abc");
 });
+
+test("api: μέτρηση εγκαταστάσεων και στατιστικά διαχειριστή", async () => {
+  const h = await import("../api/health.js");
+  const a = await import("../api/admin.js");
+  assert.deepEqual(h.parsePing({ device: "0123456789abcdef0123456789abcdef", platform: "ios" }), { device: "0123456789abcdef0123456789abcdef", platform: "ios" });
+  assert.equal(h.parsePing({ device: "x", platform: "ios" }), null);
+  assert.equal(h.parsePing({ device: "0123456789abcdef", platform: "toaster" }).platform, "other");
+  const now = new Date("2026-11-30T12:00:00Z"), d = (n) => new Date(now - n * 86400000);
+  const s = a.summarizeDevices([
+    { platform: "ios", first: d(2), last: d(1) }, { platform: "ios", first: d(40), last: d(20) },
+    { platform: "android", first: d(50), last: d(45) }], now);
+  assert.deepEqual([s.total, s.last7.ios, s.last30.ios, s.last30.total, s.new7.total, s.all.android], [3, 1, 2, 2, 1, 1]);
+  const p = a.summarizeSubs([
+    { endpoint: "https://web.push.apple.com/x", topics: ["s:football:result", "s:football:live", "m:0123456789:result"] },
+    { endpoint: "https://fcm.googleapis.com/x", topics: ["s:football:result", "s:basketball:pre"] },
+    { endpoint: "https://fcm.googleapis.com/y", topics: [] },
+    { endpoint: "https://fcm.googleapis.com/z", topics: ["s:football:result"], gone: true }], h.service);
+  assert.deepEqual([p.total, p.gone, p.byService.google, p.byService.apple, p.noTopics, p.matchFollowers], [3, 1, 2, 1, 1, 1]);
+  assert.deepEqual(p.sections.football, { devices: 2, pre: 0, time: 0, live: 1, result: 2 });
+});

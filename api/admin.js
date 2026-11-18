@@ -13,6 +13,8 @@
 //                                                   που δεν έχουν σταθερή πηγή)· match: {id?, section, date,
 //                                                   time, paokHome, opponent, venue, competition, round, us, them}
 //   POST {password, action: "match-delete", id}     σβήσιμο αγώνα της φόρμας
+//   POST {password, action: "stats"}                στατιστικά: εγκαταστάσεις (συλλογή devices, βλ. health.js),
+//                                                   συσκευές με ειδοποιήσεις ανά υπηρεσία και θέμα
 //   POST {password, action: "info-save", nt, tv, tvUrl, time, venue}
 //                                                   πληροφορίες για αγώνα του προγράμματος (κανάλι, σύνδεσμος
 //                                                   μετάδοσης, ώρα, γήπεδο), πάνω από ό,τι δίνουν οι πηγές·
@@ -67,6 +69,56 @@ async function findMatch(nt, db) {
     } catch { /* επόμενη */ }
   }
   throw new Error("Δεν διαβάστηκε το πρόγραμμα.");
+}
+
+// ---- Στατιστικά για τον διαχειριστή
+export function summarizeDevices(docs, now = new Date()) {
+  const day = 86400 * 1000, out = { total: docs.length, last7: {}, last30: {}, new7: {}, all: {} };
+  const add = (o, k) => { o[k] = (o[k] || 0) + 1; o.total = (o.total || 0) + 1; };
+  docs.forEach((d) => {
+    const p = d.platform || "other";
+    add(out.all, p);
+    if (now - new Date(d.last) <= 7 * day) add(out.last7, p);
+    if (now - new Date(d.last) <= 30 * day) add(out.last30, p);
+    if (now - new Date(d.first) <= 7 * day) add(out.new7, p);
+  });
+  out.since = docs.reduce((a, d) => (!a || new Date(d.first) < a ? new Date(d.first) : a), null);
+  return out;
+}
+
+// Θέματα ειδοποιήσεων: «s:<τμήμα>:<είδος>» ανά τμήμα και είδος· «m:<αγώνας>:…» μαζί, ως αγώνες που ακολουθούνται.
+export function summarizeSubs(docs, service) {
+  // Οι συνδρομές που ακύρωσε η συσκευή (gone) μετρούν χωριστά: δεν παίρνουν πια ειδοποιήσεις.
+  const out = { total: 0, gone: 0, byService: {}, noTopics: 0, sections: {}, matchFollowers: 0, matchTopics: 0 };
+  docs.forEach((d) => {
+    if (d.gone) { out.gone++; return; }
+    out.total++;
+    const s = service(d.endpoint);
+    out.byService[s] = (out.byService[s] || 0) + 1;
+    const topics = d.topics || [];
+    if (!topics.length) out.noTopics++;
+    let followsMatch = false;
+    topics.forEach((t) => {
+      const [kind, id, what] = t.split(":");
+      if (kind === "s") {
+        const sec = (out.sections[id] = out.sections[id] || { devices: 0, pre: 0, time: 0, live: 0, result: 0 });
+        sec[what] = (sec[what] || 0) + 1;
+      } else if (kind === "m") { out.matchTopics++; followsMatch = true; }
+    });
+    // Συσκευές ανά τμήμα (με οποιοδήποτε είδος ειδοποίησης).
+    new Set(topics.filter((t) => t.startsWith("s:")).map((t) => t.split(":")[1])).forEach((id) => out.sections[id].devices++);
+    if (followsMatch) out.matchFollowers++;
+  });
+  return out;
+}
+
+async function stats(db) {
+  const { service } = await import("./health.js");
+  const [devices, subsDocs] = await Promise.all([
+    db.collection("devices").find({}, { projection: { platform: 1, first: 1, last: 1 } }).toArray(),
+    db.collection("subs").find({}, { projection: { endpoint: 1, topics: 1, gone: 1 } }).toArray(),
+  ]);
+  return { installs: summarizeDevices(devices), push: summarizeSubs(subsDocs, service), at: new Date() };
 }
 
 // ---- Αγώνες της φόρμας «Νέος αγώνας»
@@ -301,6 +353,8 @@ export default async function handler(req, res) {
     return send(res, 401, { error: "Λάθος κωδικός." });
   }
   if (body.action === "check") return send(res, 200, { ok: true });
+
+  if (body.action === "stats") return send(res, 200, await stats(await getDb()));
 
   if (body.action === "match-save") {
     const c = parseCustom(body.match);

@@ -1,0 +1,24 @@
+1 200 240741 https://www.matchmoney.com.gr/athlitikes-metadosis/programma-tv-18-11-2026/  <= https://www.matchmoney.com.gr/athlitikes-metadosis/programma-tv-18-11-2026/
+2 404 0 https://www.matchmoney.com.gr/athlitikes-metadosis/programma-tv-19-11-2026/  <= https://www.matchmoney.com.gr/athlitikes-metadosis/programma-tv-19-11-2026/
+3 200 857258 https://www.matchmoney.com.gr/athlitikes-metadosis/  <= https://www.matchmoney.com.gr/athlitikes-metadosis/
+4 200 1273864 https://www.novasports.gr/tv-program/  <= https://www.novasports.gr/tv-program/
+5 404 797454 https://www.novasports.gr/programma/  <= https://www.novasports.gr/programma/
+6 200 106585 https://www.magentatv.gr/oikiaka-paketa  <= https://www.cosmotetv.gr/portal/residential/program
+7 404 27917 https://www.magentatv.gr/residential/program/sports  <= https://www.cosmotetv.gr/portal/residential/program/sports
+8 404 147213 https://www.ertsports.gr/programma/  <= https://www.ertsports.gr/programma/
+9 404 128021 https://www.sport24.gr/tv/  <= https://www.sport24.gr/tv/
+10 200 167959 https://www.gazzetta.gr/tv-program  <= https://www.gazzetta.gr/tv-program
+11 404 33963 https://www.contra.gr/tv/  <= https://www.contra.gr/tv/
+12 404 164630 https://www.sportime.gr/tv-program/  <= https://www.sportime.gr/tv-program/
+curl: (6) Could not resolve host: www.athlitiko-programma.gr
+13 000 0 https://www.athlitiko-programma.gr/  <= https://www.athlitiko-programma.gr/
+14 200 231701 https://agones.gr/tv  <= https://www.agones.gr/tv
+15 200 159310 https://www.paok24.com/mpasket/  <= https://paok24.com/mpasket
+16 200 70745 https://www.paokbc.gr/el/404  <= https://www.paokbc.gr/el/news
+17 403 5498 https://www.paokfc.gr/nea/  <= https://www.paokfc.gr/nea/
+18 404 1003158 https://www.betarades.gr/athlitikes-metadoseis/  <= https://www.betarades.gr/athlitikes-metadoseis/
+curl: (6) Could not resolve host: www.metadoseis.gr
+19 000 0 https://www.metadoseis.gr/  <= https://www.metadoseis.gr/
+curl: (28) Connection timed out after 25002 milliseconds
+20 000 0 https://www.tvguide.gr/  <= https://www.tvguide.gr/
+21 200 431035 https://programmatileorasis.gr/  <= https://www.programmatileorasis.gr/

@@ -26,6 +26,17 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <script>
+  // Εικονίδιο διαχειριστή: η διεύθυνση ?app=admin δίνει άλλο manifest, εικονίδιο και όνομα («PAOK Admin»),
+  // ώστε το «Προσθήκη στην αρχική οθόνη» να φτιάξει δεύτερη εφαρμογή που ανοίγει πάντα ως διαχειριστής.
+  (function () {
+    if (!/[?&]app=admin(&|$)/.test(location.search)) return;
+    document.querySelector('link[rel="manifest"]').href = "/api/manifest?app=admin";
+    document.querySelector('link[rel="apple-touch-icon"]').href = "icons/apple-touch-icon-admin.png";
+    document.querySelector('meta[name="apple-mobile-web-app-title"]').content = "PAOK Admin";
+    document.querySelector('meta[name="application-name"]').content = "PAOK Admin";
+  })();
+</script>
+<script>
   // Παλιές διευθύνσεις: όποιος μπαίνει από browser πηγαίνει αμέσως στο paokalendar.gr (ίδια σελίδα).
   // Η εγκατεστημένη παλιά εφαρμογή μένει εδώ (για να συνεχίσουν οι ειδοποιήσεις της) και δείχνει οδηγίες.
   (function () {
@@ -198,6 +209,9 @@
   .area-band strong { font: 800 18px/1 var(--display); letter-spacing: .04em; text-transform: uppercase; }
   .area-band span { opacity: .75; }
   .area-sport { font: 600 20px/1.2 var(--display); margin: 18px 0 8px; }
+  .menu-plain { all: unset; box-sizing: border-box; display: block; width: 100%; cursor: pointer; padding: 12px 0; border-bottom: 1px solid var(--rule); font: 600 19px/1.2 var(--display); }
+  .menu-plain small { display: block; font: 400 15px/1.35 var(--body); color: var(--muted); margin-top: 2px; }
+  .plain-steps { padding-left: 22px; } .plain-steps li { margin: 6px 0; }
   .stats-page h3 { font: 600 22px/1.2 var(--display); margin: 22px 0 8px; }
   .stats-t { width: 100%; margin: 0 0 6px; }
   .stats-t td:first-child, .stats-t th:first-child { text-align: left; }
@@ -1138,7 +1152,10 @@
           '<span class="menu-gender">' + link(g.men, "Ανδρών", g.sport) + link(g.women, "Γυναικών", g.sport) + "</span></li>";
       }).join("") + "</ul></nav>" +
       (isAdmin() ? '<nav aria-label="Διαχειριστής"><h3>Διαχειριστής</h3><ul class="menu-links"><li><a href="#/stats"' +
-        (r.page === "stats" ? ' aria-current="page"' : "") + ">Στατιστικά<small>Εγκαταστάσεις και ειδοποιήσεις</small></a></li></ul></nav>" : "") +
+        (r.page === "stats" ? ' aria-current="page"' : "") + ">Στατιστικά<small>Εγκαταστάσεις και ειδοποιήσεις</small></a></li>" +
+        '<li><a href="#/admin-app"' + (r.page === "admin-app" ? ' aria-current="page"' : "") + ">Εικονίδιο διαχειριστή<small>Δεύτερη εφαρμογή στην αρχική οθόνη</small></a></li>" +
+        (/[?&]app=admin(&|$)/.test(location.search) ? "" : '<li><button type="button" class="menu-plain" data-act="admin-off">Έξοδος από διαχειριστή<small>Η σελίδα όπως τη βλέπουν όλοι· ξανά με #/admin</small></button></li>') +
+        "</ul></nav>" : "") +
       (canSeeAcademy() && data.academy.length
         ? '<nav aria-label="Ακαδημίες"><h3>Ακαδημίες' + (isAdmin() ? ' <small class="menu-admin">διαχειριστής</small>' : "") + "</h3>" + '<ul class="menu-links">' +
           '<li><a href="#/academies">Ακαδημίες ›<small>Β\' ομάδα και τμήματα υποδομής, με δικό τους μενού</small></a></li></ul></nav>'
@@ -1167,6 +1184,13 @@
   }
   menuBtn.addEventListener("click", openMenu);
   menuEl.addEventListener("click", function (e) {
+    if (e.target.closest('[data-act="admin-off"]')) {
+      try { localStorage.removeItem("paok-admin"); } catch (x) {}
+      closeMenu(false);
+      if (location.hash && location.hash !== "#/") location.hash = "#/"; else render();
+      toast("Βγήκες από τη λειτουργία διαχειριστή. Για να ξαναμπείς: paokalendar.gr/#/admin");
+      return;
+    }
     if (e.target.closest("[data-close]")) closeMenu(true);
     else if (e.target.closest("a")) closeMenu(false);
   });
@@ -1777,10 +1801,10 @@
     if (key === "calendars") return { key: null, tab: "", page: "calendars" };
     if (key === "privacy") return { key: null, tab: "", page: "privacy" };
     if (key === "stats" && isAdmin()) return { key: null, tab: "", page: "stats" };
+    if (key === "admin-app" && isAdmin()) return { key: null, tab: "", page: "admin-app" };
     if (key === "admin") {
-      // Μία φορά στο #/admin: εμφανίζει τις ειδοποιήσεις λειτουργίας στη σελίδα Ειδοποιήσεις.
-      try { localStorage.setItem("paok-admin", "1"); } catch (e) {}
-      return { key: null, tab: "", page: "notifications" };
+      // #/admin: σύνδεση με τον κωδικό· μετά, οι ειδοποιήσεις λειτουργίας στη σελίδα Ειδοποιήσεις.
+      return isAdmin() ? { key: null, tab: "", page: "notifications" } : { key: null, tab: "", page: "admin-login" };
     }
     if (key === "m") return { key: null, tab: parts[2] || "", page: "match", nt: parts[1] || "" };
     if (key === "akadimies" && parts[1] === ACADEMY_KEY) {
@@ -1811,13 +1835,15 @@
       : r.page === "calendars" ? "Ημερολόγια – PAOKalendar"
       : r.page === "privacy" ? "Απόρρητο και cookies – PAOKalendar"
       : r.page === "stats" ? "Στατιστικά – PAOKalendar"
+      : r.page === "admin-app" ? "Εικονίδιο διαχειριστή – PAOKalendar"
+      : r.page === "admin-login" ? "Διαχειριστής – PAOKalendar"
       : r.page === "academies" ? (r.tab === "new" ? "Νέος αγώνας" : r.tab === "edit" ? "Αλλαγή αγώνα" : "Ακαδημίες") + " – PAOKalendar"
       : match ? match.home + " – " + match.away + " – PAOKalendar"
       : r.key ? data.sectionMap[r.key].name + " – PAOKalendar" : "PAOKalendar";
     $("masthead").classList.toggle("academy-area", inAcademyArea(r));
     $("app").innerHTML = movedHtml() + (inAcademyArea(r) ? academyBandHtml() : "") +
       (r.page === "app" ? appHtml() : r.page === "notifications" ? notificationsHtml() : r.page === "calendars" ? calendarsHtml()
-        : r.page === "privacy" ? privacyHtml() : r.page === "stats" ? statsPageHtml() : r.page === "academies" ? (r.tab === "new" || r.tab === "edit" ? academyFormHtml(r) : academiesHtml(r.tab)) : r.page === "match" ? matchHtml(match) : r.key ? sectionHtml(r.key, r.tab) : homeHtml());
+        : r.page === "privacy" ? privacyHtml() : r.page === "stats" ? statsPageHtml() : r.page === "admin-app" ? adminAppHtml() : r.page === "admin-login" ? adminLoginHtml() : r.page === "academies" ? (r.tab === "new" || r.tab === "edit" ? academyFormHtml(r) : academiesHtml(r.tab)) : r.page === "match" ? matchHtml(match) : r.key ? sectionHtml(r.key, r.tab) : homeHtml());
     if (routeChanged && match && r.tab === "notify") {
       var target = $("match-notify");
       if (target) target.scrollIntoView();
@@ -1849,6 +1875,7 @@
 
   $("app").addEventListener("submit", function (e) {
     if (e.target.id === "cm-form") { e.preventDefault(); customSave(false); }
+    if (e.target.id === "login-form") { e.preventDefault(); adminLogin(); }
     if (e.target.id === "stats-form") {
       e.preventDefault();
       try { localStorage.setItem("paok-admin-pass", $("stats-pass").value); } catch (x) {}
@@ -1958,9 +1985,9 @@
     adminTaps = adminTaps.filter(function (t) { return now - t < 2500; }).concat(now);
     if (adminTaps.length < 5) return;
     adminTaps = [];
-    var on = !isAdmin();
-    try { if (on) localStorage.setItem("paok-admin", "1"); else localStorage.removeItem("paok-admin"); } catch (err) {}
-    toast(on ? "Λειτουργία διαχειριστή: δες την ενότητα «Διαχειριστής» πιο κάτω." : "Λειτουργία διαχειριστή: κλειστή.");
+    if (!isAdmin()) { location.hash = "#/admin"; return; }
+    try { localStorage.removeItem("paok-admin"); } catch (err) {}
+    toast("Λειτουργία διαχειριστή: κλειστή.");
     render();
   });
 
@@ -1983,7 +2010,11 @@
     if (Notification.permission === "denied") return "denied";
     return push.sub ? "on" : "off";
   }
-  function isAdmin() { try { return localStorage.getItem("paok-admin") === "1"; } catch (e) { return false; } }
+  // Λειτουργία διαχειριστή μόνο αφού ο server δεχτεί τον κωδικό (#/admin → σύνδεση). Αν κάποια ενέργεια πάρει
+  // «Λάθος κωδικός» (π.χ. άλλαξε ο κωδικός), ο αποθηκευμένος σβήνεται και η λειτουργία κλείνει μόνη της.
+  function isAdmin() {
+    try { return localStorage.getItem("paok-admin") === "1" && !!localStorage.getItem("paok-admin-pass"); } catch (e) { return false; }
+  }
   // Ακαδημίες για συγκεκριμένα άτομα: ο κρυφός σύνδεσμος #/akadimies/<ACADEMY_KEY> τις ανοίγει σε αυτή τη
   // συσκευή (μόνο για προβολή). Αν αλλάξει το κλειδί, οι παλιοί σύνδεσμοι και όσοι τον άνοιξαν δεν τις βλέπουν πια.
   var ACADEMY_KEY = "16c45ea7";
@@ -3309,6 +3340,44 @@
   }
   installPing();
 
+  // ---- Σύνδεση διαχειριστή
+  function adminLoginHtml() {
+    return '<a class="back" href="#/">‹ Αρχική</a><div class="follow"><div class="section-head"><h2>Διαχειριστής</h2></div>' +
+      '<form class="admin-box" id="login-form"><label class="adm-field wide"><span>Κωδικός διαχειριστή</span>' +
+      '<input id="login-pass" type="password" autocomplete="current-password" required></label>' +
+      '<p class="help" id="login-msg" role="status"></p>' +
+      '<div class="actions"><button type="submit" class="btn solid">Σύνδεση</button></div></form></div>' + footerHtml();
+  }
+  function adminLogin() {
+    var pass = $("login-pass").value, msg = $("login-msg");
+    if (!pass) { msg.textContent = "Γράψε τον κωδικό."; return; }
+    msg.textContent = "Έλεγχος…";
+    adminPost({ password: pass, action: "check" }).then(function (x) {
+      if (!x.r.ok) { msg.textContent = x.r.status === 401 ? "Λάθος κωδικός." : (x.d.error || "Δεν έγινε. Δοκίμασε ξανά."); return; }
+      try { localStorage.setItem("paok-admin-pass", pass); localStorage.setItem("paok-admin", "1"); } catch (e) {}
+      toast("Λειτουργία διαχειριστή: ανοιχτή.");
+      render();
+    }).catch(function () { msg.textContent = "Δεν υπάρχει σύνδεση. Δοκίμασε ξανά."; });
+  }
+
+  // ---- Εικονίδιο διαχειριστή (δεύτερη εφαρμογή στην αρχική οθόνη, βλ. api/manifest.js)
+  function adminAppHtml() {
+    var url = "https://paokalendar.gr/?app=admin";
+    var inAdminApp = /[?&]app=admin(&|$)/.test(location.search);
+    return '<a class="back" href="#/">‹ Αρχική</a><div class="follow"><div class="section-head"><h2>Εικονίδιο διαχειριστή</h2></div>' +
+      (inAdminApp && isStandalone ? '<p class="lede">Είσαι στην εφαρμογή διαχειριστή («PAOK Admin»). Ανοίγει πάντα με τα εργαλεία διαχειριστή.</p>' : "") +
+      "<p>Στο iPhone μπορείς να έχεις δύο εικονίδια: το κανονικό PAOKalendar, όπως το βλέπουν όλοι, και το <strong>PAOK Admin</strong> με τα εργαλεία διαχειριστή. " +
+      "Κάθε εικονίδιο της αρχικής οθόνης έχει δική του μνήμη, οπότε το ένα δεν επηρεάζει το άλλο.</p>" +
+      '<ol class="plain-steps"><li>Άνοιξε στο <strong>Safari</strong> τη διεύθυνση <strong>' + esc(url) + "</strong>.</li>" +
+      "<li>Πάτα Κοινοποίηση → «Προσθήκη στην οθόνη Αφετηρίας». Το όνομα θα είναι «PAOK Admin» με το ασπρόμαυρο εικονίδιο που γράφει ADMIN.</li>" +
+      "<li>Άνοιξε το PAOK Admin και βάλε τον κωδικό διαχειριστή (μία φορά).</li>" +
+      "<li>Άνοιξε το <strong>κανονικό</strong> PAOKalendar, μενού → «Έξοδος από διαχειριστή». Από εκεί και πέρα είναι η εφαρμογή όπως τη βλέπουν όλοι.</li>" +
+      "<li>Για τις ειδοποιήσεις διάλεξε σε ποιο από τα δύο τις θέλεις (μετρά ως ξεχωριστή συσκευή).</li></ol>" +
+      '<div class="actions"><button type="button" class="btn" data-copy="' + esc(url) + '" data-msg="Η διεύθυνση αντιγράφηκε. Άνοιξέ τη στο Safari.">Αντιγραφή διεύθυνσης</button></div>' +
+      '<p class="help">Στο Android οι εφαρμογές από την αρχική οθόνη μοιράζονται τη μνήμη με το Chrome, οπότε η έξοδος από διαχειριστή ισχύει και στα δύο εικονίδια.</p>' +
+      "</div>" + footerHtml();
+  }
+
   // ---- Στατιστικά (διαχειριστής)
   var statsData = null, statsState = "";
   var PLATFORM_NAMES = [["ios", "iPhone / iPad"], ["android", "Android"], ["desktop", "Υπολογιστής"], ["other", "Άλλο"]];
@@ -3354,7 +3423,8 @@
     }).concat([row(["Σύνολο", p.total], "sum")]));
     var sectionRows = Object.keys(p.sections).map(function (k) {
       var s = data.sectionMap[k];
-      return { name: s ? (s.academy ? teamTitle(s) : s.emoji + " " + s.name) : k, v: p.sections[k] };
+      // «ops»: οι δικές σου ειδοποιήσεις διαχειριστή (live = λειτουργίας, πριν = υπενθυμίσεις social).
+      return { name: k === "ops" ? "🛠️ Διαχειριστής (λειτουργία, social)" : s ? (s.academy ? teamTitle(s) : s.emoji + " " + s.name) : k, v: p.sections[k] };
     }).sort(function (a, b) { return b.v.devices - a.v.devices; });
     var sections = tableH(["Τμήμα", "Συσκ."].concat(KIND_NAMES.map(function (k) { return k[1]; })), sectionRows.map(function (x) {
       return row([esc(x.name), x.v.devices].concat(KIND_NAMES.map(function (k) { return n(x.v, k[0]); })));
@@ -3369,7 +3439,8 @@
       (p.noTopics ? p.noTopics + " δεν έχουν διαλέξει τίποτα. " : "") + "</p>" +
       "<h3>Ανά τμήμα</h3>" + sections +
       '<p class="help">Συσκευές με τουλάχιστον μία ειδοποίηση για το τμήμα, και ανά είδος: πριν τον αγώνα, αλλαγή ώρας, live, τελικό. ' +
-      p.matchFollowers + " συσκευές ακολουθούν και συγκεκριμένους αγώνες.</p>" +
+      p.matchFollowers + " συσκευές ακολουθούν και συγκεκριμένους αγώνες." +
+      (p.sections.ops ? " Η γραμμή «Διαχειριστής» είναι οι δικές σου ειδοποιήσεις: στο Live οι ειδοποιήσεις λειτουργίας, στο Πριν οι υπενθυμίσεις social." : "") + "</p>" +
       '<div class="actions"><button type="button" class="btn" data-act="stats-reload">Ανανέωση</button></div></div>' + footerHtml();
   }
 

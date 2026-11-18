@@ -404,6 +404,18 @@ class Admin(unittest.TestCase):
             b.apply_admin("futsal", [m])
         self.assertEqual((m.score, m.live), ("7-3", None))
 
+    def test_admin_info_overrides_sources(self):
+        m = b.Match(section="basketball", uid="b1", day=dt.date(2026, 11, 18), time=dt.time(21, 30), home="Manresa",
+                    away="ΠΑΟΚ", paok_home=False, venue="Pavello")
+        other = b.Match(section="basketball", uid="b2", day=dt.date(2026, 11, 21), time=None, home="ΠΑΟΚ",
+                        away="Χ", paok_home=True, tv="ΕΡΤ")
+        nt = b.match_topic_id("b1")
+        info = {nt: {"nt": nt, "tv": "Novasports Prime", "tvUrl": "", "time": "21:00", "venue": ""}}
+        with mock.patch.dict(b._ADMIN, {"entries": {}, "info": info}):
+            b.apply_info("basketball", [m, other])
+        self.assertEqual((m.tv, m.tv_url, m.time, m.venue), ("Novasports Prime", "", dt.time(21, 0), "Pavello"))
+        self.assertEqual((other.tv, other.time), ("ΕΡΤ", None))
+
     def test_live_final_fills_missing_score_only(self):
         a = b.Match(section="volley", uid="v1", day=dt.date(2026, 11, 13), time=dt.time(18, 30), home="ΠΑΟΚ",
                     away="Άρης", paok_home=True)

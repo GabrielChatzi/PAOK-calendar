@@ -1741,11 +1741,13 @@ def admin_entries() -> dict[str, dict]:
             _ADMIN["entries"] = {e["nt"]: e for e in got.get("entries", [])}
             _ADMIN["live"] = {e["nt"]: e for e in got.get("live", [])}
             _ADMIN["custom"] = got.get("custom", [])
+            _ADMIN["info"] = {e["nt"]: e for e in got.get("info", [])}
         except Exception as e:
             print(f"  ! καταχωρίσεις διαχειριστή: {e}", file=sys.stderr)
             _ADMIN["entries"] = {}
             _ADMIN["live"] = {}
             _ADMIN["custom"] = []
+            _ADMIN["info"] = {}
     return _ADMIN["entries"]
 
 
@@ -1823,6 +1825,24 @@ def apply_admin(section: str, matches: list[Match]) -> None:
         m.score = f"{int(e['home'])}-{int(e['away'])}"
         m.note = str(e.get("note") or m.note)[:80]
         m.live = None
+
+
+def apply_info(section: str, matches: list[Match]) -> None:
+    """Πληροφορίες του διαχειριστή (κανάλι, σύνδεσμος μετάδοσης, ώρα, γήπεδο), πάνω από τις πηγές."""
+    admin_entries()
+    info = _ADMIN.get("info", {})
+    for m in matches:
+        e = info.get(match_topic_id(m.uid))
+        if not e:
+            continue
+        if e.get("tv"):
+            m.tv = str(e["tv"])[:60]
+        if e.get("tvUrl"):
+            m.tv_url = str(e["tvUrl"])[:300]
+        if e.get("venue"):
+            m.venue = str(e["venue"])[:80]
+        if e.get("time") and parse_time(e["time"]):
+            m.time = parse_time(e["time"])
 
 
 GENERIC_WORDS = {"ΑΟ", "ΑΣ", "ΓΣ", "ΠΑΕ", "ΚΑΕ", "ΤΑΑ", "ΣΦΠ", "ΝΟ", "ΟΑ", "ΑΕ", "ΑΘ", "FC", "BC", "VC", "WFC", "ΓΑΣ"}
@@ -2031,6 +2051,7 @@ def main(only: list[str] | None = None) -> int:
         # Ό,τι έγραψε ο διαχειριστής μετρά τελευταίο, πάνω από όλα.
         apply_live_finals(key, unique)
         apply_admin(key, unique)
+        apply_info(key, unique)
         info = SECTIONS[key]
         for side, label, keep in (("home", "Εντός έδρας", True), ("away", "Εκτός έδρας", False)):
             subset = [m for m in unique if m.paok_home == keep]

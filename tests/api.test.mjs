@@ -367,3 +367,13 @@ test("api/admin: αγώνας της φόρμας «Νέος αγώνας»", as
   assert.ok(a.parseCustom({ section: "football-u19", date: "2026-11-21", opponent: "Χ", us: 1 }).error);
   assert.ok(a.parseCustom({ section: "football-u19", date: "2026-11-21", time: "25:00", opponent: "Χ" }).error);
 });
+
+test("πληροφορίες αγώνα: έλεγχος πεδίων", async () => {
+  const a = await import("../api/admin.js");
+  assert.deepEqual(a.parseInfo({ tv: " Novasports  Prime ", tvUrl: "", time: "21:30", venue: "" }),
+    { tv: "Novasports Prime", tvUrl: "", time: "21:30", venue: "" });
+  assert.ok(a.parseInfo({ tv: "", tvUrl: "", time: "", venue: "" }).error);
+  assert.ok(a.parseInfo({ tvUrl: "javascript:alert(1)" }).error);
+  assert.ok(a.parseInfo({ time: "25:00" }).error);
+  assert.equal(a.parseInfo({ tvUrl: "https://youtu.be/abc" }).tvUrl, "https://youtu.be/abc");
+});

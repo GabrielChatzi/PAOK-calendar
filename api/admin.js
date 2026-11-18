@@ -13,6 +13,14 @@
 //                                                   που δεν έχουν σταθερή πηγή)· match: {id?, section, date,
 //                                                   time, paokHome, opponent, venue, competition, round, us, them}
 //   POST {password, action: "match-delete", id}     σβήσιμο αγώνα της φόρμας
+//   POST {password, action: "info-save", nt, tv, tvUrl, time, venue}
+//                                                   πληροφορίες για αγώνα του προγράμματος (κανάλι, σύνδεσμος
+//                                                   μετάδοσης, ώρα, γήπεδο), πάνω από ό,τι δίνουν οι πηγές·
+//                                                   κενό πεδίο: μένει ό,τι λέει η πηγή
+//   POST {password, action: "info-clear", nt}       σβήσιμο των πληροφοριών
+//
+// Οι πληροφορίες (συλλογή «info») επιστρέφονται στο GET ως info: η σελίδα τις δείχνει αμέσως και το
+// build_calendars.py τις περνά στο πρόγραμμα, στα ημερολόγια και στις υπενθυμίσεις.
 //
 // Οι αγώνες της φόρμας (συλλογή «custom») επιστρέφονται στο GET ως custom, στη μορφή του matches.json:
 // η σελίδα τους δείχνει αμέσως και το build_calendars.py τους βάζει στο πρόγραμμα, στα ημερολόγια
@@ -112,6 +120,17 @@ export function parseCustom(x) {
   if (x.id != null && !/^[0-9a-f]{12}$/.test(String(x.id))) return { error: "Άγνωστος αγώνας." };
   c.id = x.id ? String(x.id) : crypto.randomBytes(6).toString("hex");
   return c;
+}
+
+// Πληροφορίες αγώνα από τη φόρμα, ελεγμένες· σε λάθος { error }.
+export function parseInfo(x) {
+  if (!x || typeof x !== "object") return { error: "Λείπουν οι πληροφορίες." };
+  const text = (v, n) => String(v ?? "").trim().replace(/\s+/g, " ").slice(0, n);
+  const i = { tv: text(x.tv, 60), tvUrl: text(x.tvUrl, 300), time: text(x.time, 5), venue: text(x.venue, 80) };
+  if (i.tvUrl && !/^https?:\/\/[^\s"'<>]+$/i.test(i.tvUrl)) return { error: "Ο σύνδεσμος θέλει να ξεκινά με https://" };
+  if (i.time && !/^([01]\d|2[0-3]):[0-5]\d$/.test(i.time)) return { error: "Η ώρα θέλει μορφή 15:30." };
+  if (!i.tv && !i.tvUrl && !i.time && !i.venue) return { error: "Γράψε τουλάχιστον μία πληροφορία." };
+  return i;
 }
 
 // Το κλειδί «once» για ένα σκορ σε εξέλιξη: το ίδιο φτιάχνει και το live.py για τα γκολ.
@@ -267,8 +286,11 @@ export default async function handler(req, res) {
     // Τελικά που έστειλε το live.py (api/push.js), για αγώνες χωρίς ακόμα επίσημο σκορ.
     const live = await (await getDb()).collection("livefinals").find({ at: { $gte: since } }, { projection: { _id: 0 } }).toArray();
     const custom = (await (await getDb()).collection("custom").find({}).sort({ date: 1, time: 1 }).toArray()).map(customToMatch);
+    // Πληροφορίες για αγώνες που δεν έχουν γίνει ακόμα (ή μόλις έγιναν).
+    const day = new Date(Date.now() - 2 * 86400 * 1000).toISOString().slice(0, 10);
+    const info = await (await getDb()).collection("info").find({ date: { $gte: day } }, { projection: { _id: 0 } }).toArray();
     res.setHeader("Cache-Control", "public, s-maxage=15");
-    return res.status(200).json({ entries, live, custom });
+    return res.status(200).json({ entries, live, custom, info });
   }
   if (req.method !== "POST") return send(res, 405, { error: "Μόνο GET ή POST." });
 
@@ -296,6 +318,22 @@ export default async function handler(req, res) {
 
   const nt = String(body.nt || "");
   if (!/^[0-9a-f]{10}$/.test(nt)) return send(res, 400, { error: "Άγνωστος αγώνας." });
+
+  if (body.action === "info-clear") {
+    await (await getDb()).collection("info").deleteOne({ _id: nt });
+    return send(res, 200, { ok: true });
+  }
+  if (body.action === "info-save") {
+    const i = parseInfo(body);
+    if (i.error) return send(res, 400, { error: i.error });
+    let m;
+    try { m = await findMatch(nt, await getDb()); } catch (e) { return send(res, 502, { error: e.message }); }
+    if (!m) return send(res, 404, { error: "Ο αγώνας δεν βρέθηκε στο πρόγραμμα." });
+    // date: η μέρα του αγώνα (ώρα Ελλάδας), για να σταματήσει να επιστρέφεται όταν περάσει.
+    const info = { nt, section: m.section, date: String(m.start).slice(0, 10), ...i, at: new Date() };
+    await (await getDb()).collection("info").updateOne({ _id: nt }, { $set: info }, { upsert: true });
+    return send(res, 200, { ok: true, info });
+  }
 
   if (body.action === "clear") {
     await col.deleteOne({ _id: nt });

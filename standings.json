@@ -1994,12 +1994,12 @@
      "logo": "https://koecdn.twic.pics/media/olimpiakos-1757496832-ZYWvvSWe.png",
      "paok": false,
      "cells": [
-      "8",
-      "8",
+      "9",
+      "9",
       "0",
       "0",
-      "168-68",
-      "24"
+      "183-74",
+      "27"
      ]
     },
     {
@@ -2008,12 +2008,12 @@
      "logo": "https://koecdn.twic.pics/media/nov-logo-gr-1758978938-hWBXWQRE.png",
      "paok": false,
      "cells": [
+      "9",
       "8",
-      "7",
       "0",
       "1",
-      "141-75",
-      "21"
+      "162-80",
+      "24"
      ]
     },
     {
@@ -2120,11 +2120,11 @@
      "logo": "https://koecdn.twic.pics/media/pekev-1789898708-1ZgUQCyK.jpeg",
      "paok": false,
      "cells": [
-      "8",
+      "9",
       "1",
       "1",
-      "6",
-      "77-118",
+      "7",
+      "83-133",
       "4"
      ]
     },
@@ -2134,11 +2134,11 @@
      "logo": "https://koecdn.twic.pics/media/larisa-f-1789898479-XJuZR95A.png",
      "paok": false,
      "cells": [
-      "8",
+      "9",
       "1",
       "1",
-      "6",
-      "62-125",
+      "7",
+      "67-146",
       "4"
      ]
     },
@@ -2400,8 +2400,8 @@
  ],
  "football-b": [
   {
-   "title": "Super League 2 (ενημέρωση 2026-11-17)",
-   "url": "https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/paok-b-nchc/vathmologia-paok-b/",
+   "title": "Super League 2",
+   "url": "https://www.sl2.gr/rating",
    "columns": [
     "Αγ",
     "Ν",
@@ -2414,7 +2414,7 @@
     {
      "pos": 1,
      "team": "Μαρκό",
-     "logo": "",
+     "logo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/e576448345ca49eeb300016b5c485625/6a35e7d82ef04a338cea212d6b413d63_thumb.png",
      "paok": false,
      "cells": [
       "11",
@@ -2428,7 +2428,7 @@
     {
      "pos": 2,
      "team": "Καλλιθέα",
-     "logo": "",
+     "logo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/57dd2f792ee1472586b0c873f32267f5/ccb6faa5eb3a4fbd893b0446f8372c1e_thumb.png",
      "paok": false,
      "cells": [
       "11",
@@ -2442,7 +2442,7 @@
     {
      "pos": 3,
      "team": "Νίκη Βόλου",
-     "logo": "",
+     "logo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/d974b1aaf0974622ab0cb072b2fe06bb/563c2c2f70b2431b9579dab266581ead_thumb.png",
      "paok": false,
      "cells": [
       "11",
@@ -2456,7 +2456,7 @@
     {
      "pos": 4,
      "team": "ΑΕΛ",
-     "logo": "",
+     "logo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/e6a56a5e053d46a18312b13520f0a963/f530f23fe61544738571b5844769b8f6_thumb.png",
      "paok": false,
      "cells": [
       "11",
@@ -2470,7 +2470,7 @@
     {
      "pos": 5,
      "team": "Πανιώνιος",
-     "logo": "",
+     "logo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/c3ca3816303942d5a51ab2ad046ae2e8/d2b55f051fc64a75aafa9d86b2446c3a_thumb.png",
      "paok": false,
      "cells": [
       "11",
@@ -2484,7 +2484,7 @@
     {
      "pos": 6,
      "team": "Ελλάς Σύρου",
-     "logo": "",
+     "logo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/4c9e4e5ef45c4fb4bc6270b9ad5dde9a/e49cf2f91f0e4602aa86514912e0fb23_thumb.png",
      "paok": false,
      "cells": [
       "11",
@@ -2498,7 +2498,7 @@
     {
      "pos": 7,
      "team": "Πανσερραϊκός",
-     "logo": "",
+     "logo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/9e35f361265d46d487df5824419a0a72/edf367db7766448db39d49ca05a58d59_thumb.png",
      "paok": false,
      "cells": [
       "11",
@@ -2512,7 +2512,7 @@
     {
      "pos": 8,
      "team": "Αστέρας Τρίπολης Β",
-     "logo": "",
+     "logo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/616dba6a0146410fad808bc63dbb5b70/4621470d833b4db1aa1f6b162dfd5db2_thumb.png",
      "paok": false,
      "cells": [
       "11",
@@ -2526,7 +2526,7 @@
     {
      "pos": 9,
      "team": "Πανθρακικός",
-     "logo": "",
+     "logo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/8e899347a75a46889ddd7d0490f182fe/42c1047b95564511a24cbdb5db428f8c_thumb.png",
      "paok": false,
      "cells": [
       "11",
@@ -2540,7 +2540,7 @@
     {
      "pos": 10,
      "team": "Αναγέννηση Καρδίτσας",
-     "logo": "",
+     "logo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/5e9c482d669344b9a185f2c46244dfd4/a664a87716d84b6c8fd4721dccd677d5_thumb.png",
      "paok": false,
      "cells": [
       "11",
@@ -2568,7 +2568,7 @@
     {
      "pos": 12,
      "team": "Νέστος Χρυσούπολης",
-     "logo": "",
+     "logo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/48b46b2576864c26832db13c63e7e9e0/15f533f44940488a8446de1499de7736_thumb.png",
      "paok": false,
      "cells": [
       "11",
@@ -2582,7 +2582,7 @@
     {
      "pos": 13,
      "team": "Απόλλων Καλαμαριάς",
-     "logo": "",
+     "logo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/e2b204ca1fc74402887747185c46a5e1/74b397486cd94200b735bef4e1d1276a_thumb.png",
      "paok": false,
      "cells": [
       "11",
@@ -2595,8 +2595,8 @@
     },
     {
      "pos": 14,
-     "team": "ΠΥΡΓΟΣ",
-     "logo": "",
+     "team": "ΠΑΣ Πύργος",
+     "logo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/919c2c9158524f629bf9d1c0c72aaf7f/36e4596d36874628b6dd9f26094710a1_thumb.png",
      "paok": false,
      "cells": [
       "11",
@@ -2610,7 +2610,7 @@
     {
      "pos": 15,
      "team": "Ολυμπιακός Β",
-     "logo": "",
+     "logo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/db0640a9731d4d37a2734dc25c4d4d95/2bdb093377e1431ca24293169ab76f4e_thumb.png",
      "paok": false,
      "cells": [
       "11",
@@ -2624,7 +2624,7 @@
     {
      "pos": 16,
      "team": "Ζάκυνθος",
-     "logo": "",
+     "logo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/810b360609c849e98cb6166f1be09559/5593ed8258c3410293d4675e7fd85b02_thumb.png",
      "paok": false,
      "cells": [
       "11",
@@ -2640,7 +2640,7 @@
  ],
  "football-u19": [
   {
-   "title": "Super League Κ19 (ενημέρωση 2026-11-17)",
+   "title": "Super League Κ19",
    "url": "https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/k20-nchc/vathmologia-u20/",
    "columns": [
     "Αγ",
@@ -2654,7 +2654,7 @@
     {
      "pos": 1,
      "team": "Παναθηναϊκός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/pao.png",
      "paok": false,
      "cells": [
       "9",
@@ -2668,7 +2668,7 @@
     {
      "pos": 2,
      "team": "ΑΕΚ",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2015/07/aek_logo.png",
      "paok": false,
      "cells": [
       "8",
@@ -2682,7 +2682,7 @@
     {
      "pos": 3,
      "team": "Βόλος",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2019/07/nfc_volos_logo.png",
      "paok": false,
      "cells": [
       "9",
@@ -2696,7 +2696,7 @@
     {
      "pos": 4,
      "team": "Ολυμπιακός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/09/Olympiakos_logo_2027.png",
      "paok": false,
      "cells": [
       "8",
@@ -2724,7 +2724,7 @@
     {
      "pos": 6,
      "team": "Ατρόμητος",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2015/05/atromitos.png",
      "paok": false,
      "cells": [
       "8",
@@ -2738,7 +2738,7 @@
     {
      "pos": 7,
      "team": "Άρης",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/aris_new-150x150-1.png",
      "paok": false,
      "cells": [
       "9",
@@ -2752,7 +2752,7 @@
     {
      "pos": 8,
      "team": "Ηρακλής",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/Iraklis_logo-1.png",
      "paok": false,
      "cells": [
       "9",
@@ -2766,7 +2766,7 @@
     {
      "pos": 9,
      "team": "Κηφισιά",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2023/07/kifisi_logo_site.png",
      "paok": false,
      "cells": [
       "9",
@@ -2780,7 +2780,7 @@
     {
      "pos": 10,
      "team": "ΟΦΗ",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/09/OFI_Logo_Stars_K_Filled_2026.png",
      "paok": false,
      "cells": [
       "9",
@@ -2794,7 +2794,7 @@
     {
      "pos": 11,
      "team": "Αστέρας Τρίπολης",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2024/07/asterasxaktor-blue.png",
      "paok": false,
      "cells": [
       "9",
@@ -2808,7 +2808,7 @@
     {
      "pos": 12,
      "team": "Λεβαδειακός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2014/12/levadeiakos.png",
      "paok": false,
      "cells": [
       "9",
@@ -2822,7 +2822,7 @@
     {
      "pos": 13,
      "team": "Παναιτωλικός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2016/09/panaitolikos_logo.png",
      "paok": false,
      "cells": [
       "9",
@@ -2836,7 +2836,7 @@
     {
      "pos": 14,
      "team": "Καλαμάτα",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2022/12/kalamata_logo_site.png",
      "paok": false,
      "cells": [
       "9",
@@ -2852,7 +2852,7 @@
  ],
  "football-u17": [
   {
-   "title": "Super League Κ17 (ενημέρωση 2026-11-17)",
+   "title": "Super League Κ17",
    "url": "https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/k17-nchc/vathmologia-u17/",
    "columns": [
     "Αγ",
@@ -2866,7 +2866,7 @@
     {
      "pos": 1,
      "team": "Ολυμπιακός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/09/Olympiakos_logo_2027.png",
      "paok": false,
      "cells": [
       "7",
@@ -2894,7 +2894,7 @@
     {
      "pos": 3,
      "team": "ΑΕΚ",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2015/07/aek_logo.png",
      "paok": false,
      "cells": [
       "7",
@@ -2908,7 +2908,7 @@
     {
      "pos": 4,
      "team": "Αστέρας Τρίπολης",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2024/07/asterasxaktor-blue.png",
      "paok": false,
      "cells": [
       "7",
@@ -2922,7 +2922,7 @@
     {
      "pos": 5,
      "team": "Παναιτωλικός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2016/09/panaitolikos_logo.png",
      "paok": false,
      "cells": [
       "7",
@@ -2936,7 +2936,7 @@
     {
      "pos": 6,
      "team": "Βόλος",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2019/07/nfc_volos_logo.png",
      "paok": false,
      "cells": [
       "7",
@@ -2950,7 +2950,7 @@
     {
      "pos": 7,
      "team": "ΟΦΗ",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/09/OFI_Logo_Stars_K_Filled_2026.png",
      "paok": false,
      "cells": [
       "7",
@@ -2964,7 +2964,7 @@
     {
      "pos": 8,
      "team": "Παναθηναϊκός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/pao.png",
      "paok": false,
      "cells": [
       "7",
@@ -2978,7 +2978,7 @@
     {
      "pos": 9,
      "team": "Ατρόμητος",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2015/05/atromitos.png",
      "paok": false,
      "cells": [
       "7",
@@ -2992,7 +2992,7 @@
     {
      "pos": 10,
      "team": "Ηρακλής",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/Iraklis_logo-1.png",
      "paok": false,
      "cells": [
       "6",
@@ -3006,7 +3006,7 @@
     {
      "pos": 11,
      "team": "Άρης",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/aris_new-150x150-1.png",
      "paok": false,
      "cells": [
       "7",
@@ -3020,7 +3020,7 @@
     {
      "pos": 12,
      "team": "Λεβαδειακός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2014/12/levadeiakos.png",
      "paok": false,
      "cells": [
       "7",
@@ -3034,7 +3034,7 @@
     {
      "pos": 13,
      "team": "Κηφισιά",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2025/11/kifisia_logo_new_site.png",
      "paok": false,
      "cells": [
       "6",
@@ -3048,7 +3048,7 @@
     {
      "pos": 14,
      "team": "Καλαμάτα",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2022/12/kalamata_logo_site.png",
      "paok": false,
      "cells": [
       "7",
@@ -3064,7 +3064,7 @@
  ],
  "football-u15": [
   {
-   "title": "Super League Κ15 (ενημέρωση 2026-11-17)",
+   "title": "Super League Κ15",
    "url": "https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/k15-nchc/vathmologia-u15/",
    "columns": [
     "Αγ",
@@ -3078,7 +3078,7 @@
     {
      "pos": 1,
      "team": "Ολυμπιακός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/09/Olympiakos_logo_2027.png",
      "paok": false,
      "cells": [
       "7",
@@ -3092,7 +3092,7 @@
     {
      "pos": 2,
      "team": "ΑΕΚ",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2015/07/aek_logo.png",
      "paok": false,
      "cells": [
       "7",
@@ -3120,7 +3120,7 @@
     {
      "pos": 4,
      "team": "Παναθηναϊκός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/pao.png",
      "paok": false,
      "cells": [
       "7",
@@ -3148,7 +3148,7 @@
     {
      "pos": 6,
      "team": "Άρης",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/aris_new-150x150-1.png",
      "paok": false,
      "cells": [
       "7",
@@ -3162,7 +3162,7 @@
     {
      "pos": 7,
      "team": "ΟΦΗ",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/08/OFI_logo_2026_27.png",
      "paok": false,
      "cells": [
       "7",
@@ -3176,7 +3176,7 @@
     {
      "pos": 8,
      "team": "Κηφισιά",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2023/07/kifisi_logo_site.png",
      "paok": false,
      "cells": [
       "6",
@@ -3204,7 +3204,7 @@
     {
      "pos": 10,
      "team": "Παναιτωλικός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2016/09/panaitolikos_logo.png",
      "paok": false,
      "cells": [
       "7",
@@ -3218,7 +3218,7 @@
     {
      "pos": 11,
      "team": "Ηρακλής",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/Iraklis_logo-1.png",
      "paok": false,
      "cells": [
       "6",
@@ -3246,7 +3246,7 @@
     {
      "pos": 13,
      "team": "Λεβαδειακός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2014/12/levadeiakos.png",
      "paok": false,
      "cells": [
       "7",
@@ -3260,7 +3260,7 @@
     {
      "pos": 14,
      "team": "Καλαμάτα",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2022/12/kalamata_logo_site.png",
      "paok": false,
      "cells": [
       "7",
@@ -3269,6 +3269,120 @@
       "7",
       "2-17",
       "0"
+     ]
+    }
+   ]
+  }
+ ],
+ "football-u16": [
+  {
+   "title": "Super League 2 Κ19, Α' όμιλος",
+   "url": "https://www.sl2.gr/rating",
+   "columns": [
+    "Αγ",
+    "Ν",
+    "Ι",
+    "Η",
+    "Γκολ",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Πανσερραϊκός",
+     "logo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/9e35f361265d46d487df5824419a0a72/edf367db7766448db39d49ca05a58d59_thumb.png",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "0",
+      "1",
+      "10-2",
+      "9"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "Νίκη Βόλου",
+     "logo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/d974b1aaf0974622ab0cb072b2fe06bb/563c2c2f70b2431b9579dab266581ead_thumb.png",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "2",
+      "0",
+      "7-3",
+      "8"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "Νέστος Χρυσούπολης",
+     "logo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/48b46b2576864c26832db13c63e7e9e0/15f533f44940488a8446de1499de7736_thumb.png",
+     "paok": false,
+     "cells": [
+      "3",
+      "2",
+      "1",
+      "0",
+      "3-0",
+      "7"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "3",
+      "1",
+      "1",
+      "1",
+      "5-4",
+      "4"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "ΑΕΛ",
+     "logo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/e6a56a5e053d46a18312b13520f0a963/f530f23fe61544738571b5844769b8f6_thumb.png",
+     "paok": false,
+     "cells": [
+      "4",
+      "0",
+      "2",
+      "2",
+      "3-7",
+      "2"
+     ]
+    },
+    {
+     "pos": 6,
+     "team": "Πανθρακικός",
+     "logo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/8e899347a75a46889ddd7d0490f182fe/42c1047b95564511a24cbdb5db428f8c_thumb.png",
+     "paok": false,
+     "cells": [
+      "3",
+      "0",
+      "1",
+      "2",
+      "2-6",
+      "1"
+     ]
+    },
+    {
+     "pos": 7,
+     "team": "Απόλλων Καλαμαριάς",
+     "logo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/e2b204ca1fc74402887747185c46a5e1/74b397486cd94200b735bef4e1d1276a_thumb.png",
+     "paok": false,
+     "cells": [
+      "3",
+      "0",
+      "1",
+      "2",
+      "1-9",
+      "1"
      ]
     }
    ]

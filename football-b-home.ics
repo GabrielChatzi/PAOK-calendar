@@ -25,152 +25,156 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:football-b-2026-56aac6b3cff1@paok-calendar
-DTSTAMP:20261117T120046Z
+UID:football-b-sl2-2627006@paok-calendar
+DTSTAMP:20261118T134752Z
 DTSTART;TZID=Europe/Athens:20260909T160000
 DTEND;TZID=Europe/Athens:20260909T180000
 SUMMARY:⚽ ΠΑΟΚ 1-1 Ολυμπιακός Β
-DESCRIPTION:Super League 2\nΤελικό σκορ: ΠΑΟΚ 1-1 Ολυμπ
- ιακός Β
-URL:https://www.paokfc.gr/matches/paok-b-olympiakos-b-slgr2-27/
+LOCATION:ΓΗΠΕΔΟ ΤΟΥΜΠΑΣ
+DESCRIPTION:Super League 2 – 1η Αγωνιστική\nΤελικό σκ
+ ορ: ΠΑΟΚ 1-1 Ολυμπιακός Β\nTV: ΕΡΤ
 END:VEVENT
 BEGIN:VEVENT
-UID:football-b-2026-91a7f3657a4c@paok-calendar
-DTSTAMP:20261117T120046Z
+UID:football-b-sl2-2627024@paok-calendar
+DTSTAMP:20261118T134752Z
 DTSTART;TZID=Europe/Athens:20260921T170000
 DTEND;TZID=Europe/Athens:20260921T190000
 SUMMARY:⚽ ΠΑΟΚ 2-1 Νέστος Χρυσούπολης
-DESCRIPTION:Super League 2\nΤελικό σκορ: ΠΑΟΚ 2-1 Νέστο
- ς Χρυσούπολης
-URL:https://www.paokfc.gr/matches/paok-b-nestos-chrysoupolis-slgr2-27/
+LOCATION:ΔΗΜΟΤΙΚΟ ΓΗΠΕΔΟ ΣΕΡΡΩΝ
+DESCRIPTION:Super League 2 – 3η Αγωνιστική\nΤελικό σκ
+ ορ: ΠΑΟΚ 2-1 Νέστος Χρυσούπολης
 END:VEVENT
 BEGIN:VEVENT
-UID:football-b-2026-5ca1382edeb9@paok-calendar
-DTSTAMP:20261117T120046Z
+UID:football-b-sl2-2627039@paok-calendar
+DTSTAMP:20261118T134752Z
 DTSTART;TZID=Europe/Athens:20261005T144500
 DTEND;TZID=Europe/Athens:20261005T164500
 SUMMARY:⚽ ΠΑΟΚ 0-0 Ελλάς Σύρου
-DESCRIPTION:Super League 2\nΤελικό σκορ: ΠΑΟΚ 0-0 Ελλάς 
- Σύρου
-URL:https://www.paokfc.gr/matches/paok-b-hellas-syrou-slgr2-27/
+LOCATION:ΓΗΠΕΔΟ Μ.Γ.Σ. ΑΠΟΛΛΩΝ ΚΑΛΑΜΑΡΙΑΣ
+DESCRIPTION:Super League 2 – 5η Αγωνιστική\nΤελικό σκ
+ ορ: ΠΑΟΚ 0-0 Ελλάς Σύρου\nTV: ΕΡΤ
 END:VEVENT
 BEGIN:VEVENT
-UID:football-b-2026-a8c6f079adff@paok-calendar
-DTSTAMP:20261117T120046Z
+UID:football-b-sl2-2627053@paok-calendar
+DTSTAMP:20261118T134752Z
 DTSTART;TZID=Europe/Athens:20261019T150000
 DTEND;TZID=Europe/Athens:20261019T170000
 SUMMARY:⚽ ΠΑΟΚ 2-1 Απόλλων Καλαμαριάς
-DESCRIPTION:Super League 2\nΤελικό σκορ: ΠΑΟΚ 2-1 Απόλλ
- ων Καλαμαριάς
-URL:https://www.paokfc.gr/matches/paok-b-apollon-kalamarias-slgr2-27/
+LOCATION:ΓΗΠΕΔΟ Μ.Γ.Σ. ΑΠΟΛΛΩΝ ΚΑΛΑΜΑΡΙΑΣ
+DESCRIPTION:Super League 2 – 7η Αγωνιστική\nΤελικό σκ
+ ορ: ΠΑΟΚ 2-1 Απόλλων Καλαμαριάς
 END:VEVENT
 BEGIN:VEVENT
-UID:football-b-2026-1114ae3fc5a8@paok-calendar
-DTSTAMP:20261117T120046Z
+UID:football-b-sl2-2627067@paok-calendar
+DTSTAMP:20261118T134752Z
 DTSTART;TZID=Europe/Athens:20261101T150000
 DTEND;TZID=Europe/Athens:20261101T170000
 SUMMARY:⚽ ΠΑΟΚ 1-1 Ζάκυνθος
-DESCRIPTION:Super League 2\nΤελικό σκορ: ΠΑΟΚ 1-1 Ζάκυν
- θος
-URL:https://www.paokfc.gr/matches/paok-b-aps-zakynthos-slgr2-27/
+LOCATION:ΔΗΜΟΤΙΚΟ ΓΗΠΕΔΟ ΣΕΡΡΩΝ
+DESCRIPTION:Super League 2 – 9η Αγωνιστική\nΤελικό σκ
+ ορ: ΠΑΟΚ 1-1 Ζάκυνθος
 END:VEVENT
 BEGIN:VEVENT
-UID:football-b-2026-7b627f90efba@paok-calendar
-DTSTAMP:20261117T120046Z
+UID:football-b-sl2-2627090@paok-calendar
+DTSTAMP:20261118T134752Z
 DTSTART;TZID=Europe/Athens:20261123T150000
 DTEND;TZID=Europe/Athens:20261123T170000
 SUMMARY:⚽ ΠΑΟΚ – Νίκη Βόλου
-DESCRIPTION:Super League 2
+LOCATION:ΓΗΠΕΔΟ Μ.Γ.Σ. ΑΠΟΛΛΩΝ ΚΑΛΑΜΑΡΙΑΣ
+DESCRIPTION:Super League 2 – 12η Αγωνιστική\nTV: Superbet TV
 END:VEVENT
 BEGIN:VEVENT
-UID:football-b-2026-7ccc23869d3b@paok-calendar
-DTSTAMP:20261117T120046Z
-DTSTART;TZID=Europe/Athens:20261205T150000
-DTEND;TZID=Europe/Athens:20261205T170000
-SUMMARY:⚽ ΠΑΟΚ – Πανσερραϊκός
-DESCRIPTION:Super League 2
+UID:football-b-sl2-2627108@paok-calendar
+DTSTAMP:20261118T134752Z
+DTSTART;TZID=Europe/Athens:20261206T180000
+DTEND;TZID=Europe/Athens:20261206T200000
+SUMMARY:⚽ ΠΑΟΚ – Πανσερραϊκός (ώρα αναμένετ
+ αι)
+DESCRIPTION:Super League 2 – 14η Αγωνιστική\nΗ ώρα δεν 
+ έχει οριστεί ακόμα (προσωρινά 18:00). Θα ενη
+ μερωθεί αυτόματα όταν ανακοινωθεί.
 END:VEVENT
 BEGIN:VEVENT
-UID:football-b-2026-75d57d44d6b6@paok-calendar
-DTSTAMP:20261117T120046Z
+UID:football-b-sl2-2627135@paok-calendar
+DTSTAMP:20261118T134752Z
 DTSTART;TZID=Europe/Athens:20270110T180000
 DTEND;TZID=Europe/Athens:20270110T200000
 SUMMARY:⚽ ΠΑΟΚ – Πανθρακικός (ώρα αναμένετα
  ι)
-DESCRIPTION:Super League 2\nΗ ώρα δεν έχει οριστεί ακό
- μα (προσωρινά 18:00). Θα ενημερωθεί αυτόματ
- α όταν ανακοινωθεί.
+DESCRIPTION:Super League 2 – 17η Αγωνιστική\nΗ ώρα δεν 
+ έχει οριστεί ακόμα (προσωρινά 18:00). Θα ενη
+ μερωθεί αυτόματα όταν ανακοινωθεί.
 END:VEVENT
 BEGIN:VEVENT
-UID:football-b-2026-3fd36c292422@paok-calendar
-DTSTAMP:20261117T120046Z
+UID:football-b-sl2-2627152@paok-calendar
+DTSTAMP:20261118T134752Z
 DTSTART;TZID=Europe/Athens:20270124T180000
 DTEND;TZID=Europe/Athens:20270124T200000
 SUMMARY:⚽ ΠΑΟΚ – ΑΕΛ (ώρα αναμένεται)
-DESCRIPTION:Super League 2\nΗ ώρα δεν έχει οριστεί ακό
- μα (προσωρινά 18:00). Θα ενημερωθεί αυτόματ
- α όταν ανακοινωθεί.
+DESCRIPTION:Super League 2 – 19η Αγωνιστική\nΗ ώρα δεν 
+ έχει οριστεί ακόμα (προσωρινά 18:00). Θα ενη
+ μερωθεί αυτόματα όταν ανακοινωθεί.
 END:VEVENT
 BEGIN:VEVENT
-UID:football-b-2026-f530e3e94504@paok-calendar
-DTSTAMP:20261117T120046Z
+UID:football-b-sl2-2627166@paok-calendar
+DTSTAMP:20261118T134752Z
 DTSTART;TZID=Europe/Athens:20270207T180000
 DTEND;TZID=Europe/Athens:20270207T200000
 SUMMARY:⚽ ΠΑΟΚ – Πανιώνιος (ώρα αναμένεται)
-DESCRIPTION:Super League 2\nΗ ώρα δεν έχει οριστεί ακό
- μα (προσωρινά 18:00). Θα ενημερωθεί αυτόματ
- α όταν ανακοινωθεί.
+DESCRIPTION:Super League 2 – 21η Αγωνιστική\nΗ ώρα δεν 
+ έχει οριστεί ακόμα (προσωρινά 18:00). Θα ενη
+ μερωθεί αυτόματα όταν ανακοινωθεί.
 END:VEVENT
 BEGIN:VEVENT
-UID:football-b-2026-1cb7b4983b54@paok-calendar
-DTSTAMP:20261117T120046Z
+UID:football-b-sl2-2627180@paok-calendar
+DTSTAMP:20261118T134752Z
 DTSTART;TZID=Europe/Athens:20270221T180000
 DTEND;TZID=Europe/Athens:20270221T200000
 SUMMARY:⚽ ΠΑΟΚ – Αναγέννηση Καρδίτσας (ώρα α
  ναμένεται)
-DESCRIPTION:Super League 2\nΗ ώρα δεν έχει οριστεί ακό
- μα (προσωρινά 18:00). Θα ενημερωθεί αυτόματ
- α όταν ανακοινωθεί.
+DESCRIPTION:Super League 2 – 23η Αγωνιστική\nΗ ώρα δεν 
+ έχει οριστεί ακόμα (προσωρινά 18:00). Θα ενη
+ μερωθεί αυτόματα όταν ανακοινωθεί.
 END:VEVENT
 BEGIN:VEVENT
-UID:football-b-2026-4d259700bf49@paok-calendar
-DTSTAMP:20261117T120046Z
+UID:football-b-sl2-2627194@paok-calendar
+DTSTAMP:20261118T134752Z
 DTSTART;TZID=Europe/Athens:20270307T180000
 DTEND;TZID=Europe/Athens:20270307T200000
 SUMMARY:⚽ ΠΑΟΚ – ΠΑΣ Πύργος (ώρα αναμένεται)
-DESCRIPTION:Super League 2\nΗ ώρα δεν έχει οριστεί ακό
- μα (προσωρινά 18:00). Θα ενημερωθεί αυτόματ
- α όταν ανακοινωθεί.
+DESCRIPTION:Super League 2 – 25η Αγωνιστική\nΗ ώρα δεν 
+ έχει οριστεί ακόμα (προσωρινά 18:00). Θα ενη
+ μερωθεί αυτόματα όταν ανακοινωθεί.
 END:VEVENT
 BEGIN:VEVENT
-UID:football-b-2026-86383f41b7db@paok-calendar
-DTSTAMP:20261117T120046Z
+UID:football-b-sl2-2627201@paok-calendar
+DTSTAMP:20261118T134752Z
 DTSTART;TZID=Europe/Athens:20270314T180000
 DTEND;TZID=Europe/Athens:20270314T200000
 SUMMARY:⚽ ΠΑΟΚ – Αστέρας Τρίπολης Β (ώρα ανα
  μένεται)
-DESCRIPTION:Super League 2\nΗ ώρα δεν έχει οριστεί ακό
- μα (προσωρινά 18:00). Θα ενημερωθεί αυτόματ
- α όταν ανακοινωθεί.
+DESCRIPTION:Super League 2 – 26η Αγωνιστική\nΗ ώρα δεν 
+ έχει οριστεί ακόμα (προσωρινά 18:00). Θα ενη
+ μερωθεί αυτόματα όταν ανακοινωθεί.
 END:VEVENT
 BEGIN:VEVENT
-UID:football-b-2026-bf05a052b2c6@paok-calendar
-DTSTAMP:20261117T120046Z
+UID:football-b-sl2-2627219@paok-calendar
+DTSTAMP:20261118T134752Z
 DTSTART;TZID=Europe/Athens:20270328T180000
 DTEND;TZID=Europe/Athens:20270328T200000
 SUMMARY:⚽ ΠΑΟΚ – Μαρκό (ώρα αναμένεται)
-DESCRIPTION:Super League 2\nΗ ώρα δεν έχει οριστεί ακό
- μα (προσωρινά 18:00). Θα ενημερωθεί αυτόματ
- α όταν ανακοινωθεί.
+DESCRIPTION:Super League 2 – 28η Αγωνιστική\nΗ ώρα δεν 
+ έχει οριστεί ακόμα (προσωρινά 18:00). Θα ενη
+ μερωθεί αυτόματα όταν ανακοινωθεί.
 END:VEVENT
 BEGIN:VEVENT
-UID:football-b-2026-ce8b4a7b8318@paok-calendar
-DTSTAMP:20261117T120046Z
+UID:football-b-sl2-2627237@paok-calendar
+DTSTAMP:20261118T134752Z
 DTSTART;TZID=Europe/Athens:20270411T180000
 DTEND;TZID=Europe/Athens:20270411T200000
 SUMMARY:⚽ ΠΑΟΚ – Καλλιθέα (ώρα αναμένεται)
-DESCRIPTION:Super League 2\nΗ ώρα δεν έχει οριστεί ακό
- μα (προσωρινά 18:00). Θα ενημερωθεί αυτόματ
- α όταν ανακοινωθεί.
+DESCRIPTION:Super League 2 – 30η Αγωνιστική\nΗ ώρα δεν 
+ έχει οριστεί ακόμα (προσωρινά 18:00). Θα ενη
+ μερωθεί αυτόματα όταν ανακοινωθεί.
 END:VEVENT
 END:VCALENDAR

@@ -24,4 +24,98 @@ DTSTART:19701025T040000
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
+BEGIN:VEVENT
+UID:football-u16-sl2-1926271014@paok-calendar
+DTSTAMP:20261118T134752Z
+DTSTART;TZID=Europe/Athens:20261121T193000
+DTEND;TZID=Europe/Athens:20261121T213000
+SUMMARY:⚽ Απόλλων Καλαμαριάς – ΠΑΟΚ
+LOCATION:ΔΗΜΟΤΙΚΟ ΓΗΠΕΔΟ ΦΙΛΥΡΟΥ
+DESCRIPTION:Super League 2 Κ19 – 5η Αγωνιστική
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u16-sl2-1926271021@paok-calendar
+DTSTAMP:20261118T134752Z
+DTSTART;TZID=Europe/Athens:20261206T180000
+DTEND;TZID=Europe/Athens:20261206T200000
+SUMMARY:⚽ Πανσερραϊκός – ΠΑΟΚ (ώρα αναμένετ
+ αι)
+DESCRIPTION:Super League 2 Κ19 – 7η Αγωνιστική\nΗ ώρα δ
+ εν έχει οριστεί ακόμα (προσωρινά 18:00). Θα 
+ ενημερωθεί αυτόματα όταν ανακοινωθεί.
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u16-sl2-1926271024@paok-calendar
+DTSTAMP:20261118T134752Z
+DTSTART;TZID=Europe/Athens:20261213T180000
+DTEND;TZID=Europe/Athens:20261213T200000
+SUMMARY:⚽ Νίκη Βόλου – ΠΑΟΚ (ώρα αναμένεται)
+DESCRIPTION:Super League 2 Κ19 – 8η Αγωνιστική\nΗ ώρα δ
+ εν έχει οριστεί ακόμα (προσωρινά 18:00). Θα 
+ ενημερωθεί αυτόματα όταν ανακοινωθεί.
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u16-sl2-1926271029@paok-calendar
+DTSTAMP:20261118T134752Z
+DTSTART;TZID=Europe/Athens:20270110T180000
+DTEND;TZID=Europe/Athens:20270110T200000
+SUMMARY:⚽ Νέστος Χρυσούπολης – ΠΑΟΚ (ώρα ανα
+ μένεται)
+DESCRIPTION:Super League 2 Κ19 – 10η Αγωνιστική\nΗ ώρα δ
+ εν έχει οριστεί ακόμα (προσωρινά 18:00). Θα 
+ ενημερωθεί αυτόματα όταν ανακοινωθεί.
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u16-sl2-1926271031@paok-calendar
+DTSTAMP:20261118T134752Z
+DTSTART;TZID=Europe/Athens:20270117T180000
+DTEND;TZID=Europe/Athens:20270117T200000
+SUMMARY:⚽ ΑΕΛ – ΠΑΟΚ (ώρα αναμένεται)
+DESCRIPTION:Super League 2 Κ19 – 11η Αγωνιστική\nΗ ώρα δ
+ εν έχει οριστεί ακόμα (προσωρινά 18:00). Θα 
+ ενημερωθεί αυτόματα όταν ανακοινωθεί.
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u16-sl2-1926271038@paok-calendar
+DTSTAMP:20261118T134752Z
+DTSTART;TZID=Europe/Athens:20270131T180000
+DTEND;TZID=Europe/Athens:20270131T200000
+SUMMARY:⚽ Πανθρακικός – ΠΑΟΚ (ώρα αναμένετα
+ ι)
+DESCRIPTION:Super League 2 Κ19 – 13η Αγωνιστική\nΗ ώρα δ
+ εν έχει οριστεί ακόμα (προσωρινά 18:00). Θα 
+ ενημερωθεί αυτόματα όταν ανακοινωθεί.
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u16-sl2-1926271043@paok-calendar
+DTSTAMP:20261118T134752Z
+DTSTART;TZID=Europe/Athens:20270214T180000
+DTEND;TZID=Europe/Athens:20270214T200000
+SUMMARY:⚽ Νίκη Βόλου – ΠΑΟΚ (ώρα αναμένεται)
+DESCRIPTION:Super League 2 Κ19 – 15η Αγωνιστική\nΗ ώρα δ
+ εν έχει οριστεί ακόμα (προσωρινά 18:00). Θα 
+ ενημερωθεί αυτόματα όταν ανακοινωθεί.
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u16-sl2-1926271051@paok-calendar
+DTSTAMP:20261118T134752Z
+DTSTART;TZID=Europe/Athens:20270228T180000
+DTEND;TZID=Europe/Athens:20270228T200000
+SUMMARY:⚽ Πανσερραϊκός – ΠΑΟΚ (ώρα αναμένετ
+ αι)
+DESCRIPTION:Super League 2 Κ19 – 17η Αγωνιστική\nΗ ώρα δ
+ εν έχει οριστεί ακόμα (προσωρινά 18:00). Θα 
+ ενημερωθεί αυτόματα όταν ανακοινωθεί.
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u16-sl2-1926271059@paok-calendar
+DTSTAMP:20261118T134752Z
+DTSTART;TZID=Europe/Athens:20270321T180000
+DTEND;TZID=Europe/Athens:20270321T200000
+SUMMARY:⚽ Πανθρακικός – ΠΑΟΚ (ώρα αναμένετα
+ ι)
+DESCRIPTION:Super League 2 Κ19 – 20η Αγωνιστική\nΗ ώρα δ
+ εν έχει οριστεί ακόμα (προσωρινά 18:00). Θα 
+ ενημερωθεί αυτόματα όταν ανακοινωθεί.
+END:VEVENT
 END:VCALENDAR

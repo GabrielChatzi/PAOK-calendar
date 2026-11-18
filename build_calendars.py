@@ -2048,6 +2048,11 @@ def main(only: list[str] | None = None) -> int:
             club.tv(key, unique)
         except Exception as e:
             print(f"  ! ΑΣ ΠΑΟΚ, αποτελέσματα / {key}: {e}", file=sys.stderr)
+        try:
+            import tvguide  # κανάλι από τα προγράμματα αθλητικών μεταδόσεων, όπου λείπει
+            tvguide.tv(key, unique, academy=key in ACADEMY)
+        except Exception as e:
+            print(f"  ! τηλεοπτικά / {key}: {e}", file=sys.stderr)
         # Ό,τι έγραψε ο διαχειριστής μετρά τελευταίο, πάνω από όλα.
         apply_live_finals(key, unique)
         apply_admin(key, unique)

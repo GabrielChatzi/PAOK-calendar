@@ -3423,7 +3423,8 @@
     }).concat([row(["Σύνολο", p.total], "sum")]));
     var sectionRows = Object.keys(p.sections).map(function (k) {
       var s = data.sectionMap[k];
-      return { name: s ? (s.academy ? teamTitle(s) : s.emoji + " " + s.name) : k, v: p.sections[k] };
+      // «ops»: οι δικές σου ειδοποιήσεις διαχειριστή (live = λειτουργίας, πριν = υπενθυμίσεις social).
+      return { name: k === "ops" ? "🛠️ Διαχειριστής (λειτουργία, social)" : s ? (s.academy ? teamTitle(s) : s.emoji + " " + s.name) : k, v: p.sections[k] };
     }).sort(function (a, b) { return b.v.devices - a.v.devices; });
     var sections = tableH(["Τμήμα", "Συσκ."].concat(KIND_NAMES.map(function (k) { return k[1]; })), sectionRows.map(function (x) {
       return row([esc(x.name), x.v.devices].concat(KIND_NAMES.map(function (k) { return n(x.v, k[0]); })));
@@ -3438,7 +3439,8 @@
       (p.noTopics ? p.noTopics + " δεν έχουν διαλέξει τίποτα. " : "") + "</p>" +
       "<h3>Ανά τμήμα</h3>" + sections +
       '<p class="help">Συσκευές με τουλάχιστον μία ειδοποίηση για το τμήμα, και ανά είδος: πριν τον αγώνα, αλλαγή ώρας, live, τελικό. ' +
-      p.matchFollowers + " συσκευές ακολουθούν και συγκεκριμένους αγώνες.</p>" +
+      p.matchFollowers + " συσκευές ακολουθούν και συγκεκριμένους αγώνες." +
+      (p.sections.ops ? " Η γραμμή «Διαχειριστής» είναι οι δικές σου ειδοποιήσεις: στο Live οι ειδοποιήσεις λειτουργίας, στο Πριν οι υπενθυμίσεις social." : "") + "</p>" +
       '<div class="actions"><button type="button" class="btn" data-act="stats-reload">Ανανέωση</button></div></div>' + footerHtml();
   }
 

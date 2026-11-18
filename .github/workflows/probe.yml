@@ -13,14 +13,9 @@ jobs:
           mkdir -p probe
           UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36"
           t() { echo "$(curl -sSL -m 30 -o "probe/$1" -w '%{http_code} %{size_download}' -A "$UA" "$2") $1 $2" | tee -a probe/result.txt; }
-          t u19a.html https://www.sl2.gr/youth-league/u19/a
-          t u19b.html https://www.sl2.gr/youth-league/u19/b
-          t program.html https://www.sl2.gr/program
-          t rating.html https://www.sl2.gr/rating
-          t paokb.html https://www.sl2.gr/teams/paok-b
-          t mc.html https://www.sl2.gr/match-center
-          t pf.html https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/
-          cat probe/*.html | grep -oE '(src|href|data-[a-z-]+)="[^"]*(api|json|ajax|\.js|youth|u19|u16|program|rating)[^"]*"' | sort -u > probe/refs.txt || true
+          t app.js "https://www.sl2.gr/modules/custom/sl2_app/js/sl2-vue-app/dist/assets/app-BcKn3pNr.js"
+          grep -oE '"/[a-zA-Z0-9_/{}.-]*(api|json|sl2)[a-zA-Z0-9_/{}.?=&-]*"|`[^`]{0,120}(api|json)[^`]{0,120}`|https?://[a-zA-Z0-9./_-]+' probe/app.js | sort -u > probe/api.txt || true
+          for u in $(grep -oE '/api/[a-zA-Z0-9_/.-]+' probe/app.js | sort -u | head -25); do n=$(echo $u | tr / _); t "j$n.json" "https://www.sl2.gr$u"; done
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

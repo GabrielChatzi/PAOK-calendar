@@ -46,13 +46,14 @@ EMOJI = {
     "volley": "🏐", "volley-women": "🏐", "handball": "🤾", "handball-women": "🤾",
     "waterpolo": "🤽", "waterpolo-women": "🤽", "futsal": "🥅",
     "football-b": "⚽", "football-u19": "⚽", "football-u17": "⚽", "football-u16": "⚽", "football-u15": "⚽",
+    **{k: "⚽" for k in ("football-u14", "football-u13", "football-u13b", "football-u12", "football-women-u17", "football-women-u15", "football-women-u15b", "football-women-u12")},
     **{k: "🏐" for k in ("volley-u21", "volley-u18", "volley-women-u20", "volley-women-u18", "volley-women-u18es1",
                          "volley-women-u18es2")},
     **{k: "🏀" for k in ("basketball-u18", "basketball-u16", "basketball-u16b", "basketball-women-u18", "basketball-women-u16", "basketball-women-u16b")},
 }
 # Β' ομάδα και ακαδημίες: η πηγή (paokfc.gr) ανεβάζει τα αποτελέσματα αργά, οπότε δεν ζητάμε
 # συχνότερες ενημερώσεις μετά τους αγώνες τους· τα φέρνει η κανονική ενημέρωση κάθε 2 ώρες.
-NO_REFRESH = {"football-b", "football-u19", "football-u17", "football-u16", "football-u15", "volley-u21", "volley-u18",
+NO_REFRESH = {"football-u14", "football-u13", "football-u13b", "football-u12", "football-women-u17", "football-women-u15", "football-women-u15b", "football-women-u12", "football-b", "football-u19", "football-u17", "football-u16", "football-u15", "volley-u21", "volley-u18",
               "volley-women-u20", "volley-women-u18", "volley-women-u18es1", "volley-women-u18es2",
               "basketball-u18", "basketball-u16", "basketball-u16b", "basketball-women-u18", "basketball-women-u16", "basketball-women-u16b"}
 # Περίπου πόση ώρα κρατά ένας αγώνας ανά τμήμα (λεπτά), μαζί με τα διαλείμματα. Από εκεί και πέρα
@@ -62,6 +63,7 @@ DURATION = {
     "volley": 130, "volley-women": 130, "handball": 95, "handball-women": 95,
     "waterpolo": 80, "waterpolo-women": 80, "futsal": 95,
     "football-b": 115, "football-u19": 115, "football-u17": 100, "football-u16": 100, "football-u15": 90,
+    **{k: 80 for k in ("football-u14", "football-u13", "football-u13b", "football-u12", "football-women-u17", "football-women-u15", "football-women-u15b", "football-women-u12")},
     **{k: 120 for k in ("volley-u21", "volley-u18", "volley-women-u20", "volley-women-u18", "volley-women-u18es1",
                         "volley-women-u18es2")},
     **{k: 110 for k in ("basketball-u18", "basketball-u16", "basketball-u16b", "basketball-women-u18", "basketball-women-u16", "basketball-women-u16b")},

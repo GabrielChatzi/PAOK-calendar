@@ -49,6 +49,14 @@ jobs:
           PUSH: "1"
         run: python3 build_calendars.py
 
+      # Πόλο υποδομής: ειδοποίηση στον διαχειριστή όταν η ΚΟΕ βγάλει προκήρυξη ή πρόγραμμα (koe_watch.py).
+      - name: ΚΟΕ (πόλο υποδομής)
+        continue-on-error: true
+        env:
+          PUSH: "1"
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 koe_watch.py
+
       # Όλο το docs (σελίδα και δεδομένα) πηγαίνει στον κλάδο data: από εκεί τα διαβάζει η Vercel
       # (api/data.js) και τα σερβίρει το GitHub Pages (παλιά διεύθυνση). Ο main δεν αλλάζει.
       - name: Αποθήκευση αλλαγών

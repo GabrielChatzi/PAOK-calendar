@@ -283,3 +283,50 @@ class Ekasth(unittest.TestCase):
         self.assertEqual([r["cells"] for r in t[0]["rows"]], [["6", "6", "0", "+150", "12"], ["6", "3", "3", "-4", "9"]])
         self.assertTrue(t[0]["rows"][0]["paok"])
 
+
+class Epsm(unittest.TestCase):
+    PROGRAM = """<p>ΠΡΟΓΡΑΜΜΑ  ΑΓΩΝΩΝ ΠΡΩΤΑΘΛΗΜΑΤΩΝ ΥΠΟΔΟΜΩΝ<br>
+ΣΑΒΒΑΤΟΥ 21ΝΟΕΜΒΡΙΟΥ 2026<br><br>
+ΚΑΤΗΓΟΡΙΑ Κ-15 LEAGUE1 (2012 και νεότεροι)<br>
+Κ15 LEAGUE 1(5η αγωνιστική)<br>--------------------------<br>
+ΣΚΙΟΥΡΟΙ (1) - ΠΑΕ ΠΑΟΚ Κ14<br>
+</font><b>Γήπεδο: </b> ΠΥΛΑΙΑΣ ΔΗΜΟΤΙΚΟ - Πλαστικό - <b>ώρα: </b>09.00<br>
+Γιατρός: Χ.<br>
+ΠΑΕ ΠΑΟΚ Κ14 – ΔΟΞΑ ------ΘΑ ΓΙΝΕΙ ΚΥΡΙΑΚΗ 22-11-2026<br>
+</font><b>Γήπεδο: </b> ΤΣΑΚ ΜΠΑΜ ΑΡΕΝΑ - <b>ώρα: </b> 12.30<br>
+ΚΑΤΗΓΟΡΙΑ Κ-15 ΓΥΝΑΙΚΩΝ (2012 και νεότερες)<br>
+Κ15 ΓΥΝΑΙΚΩΝ(4η αγωνιστική)<br>
+ΑΣ ΠΑΟΚ (1) - ΑΟ ΛΕΟΝΤΕΣ ----- ΑΝΑΒΟΛΗ<br>
+</p>"""
+    ROUNDS = ("<b>1</b><sup>η</sup> ΑΓΩΝΙΣΤΙΚΗ<br><td>ΠΑΕ ΠΑΟΚ Κ14  - ΖΗΤΑ ΕΠΤΑ (1) 4 - 1</td>"
+              "<td>Α - Β 1 - 0</td><b>5</b><sup>η</sup> ΑΓΩΝΙΣΤΙΚΗ<td>ΣΚΙΟΥΡΟΙ (1) - ΠΑΕ ΠΑΟΚ Κ14 -</td>"
+              "<b>6</b><sup>η</sup> ΑΓΩΝΙΣΤΙΚΗ<td>ΠΑΕ ΠΑΟΚ Κ14 - ΟΛΥΜΠΙΑΚΟΣ -</td>")
+
+    def test_program(self):
+        import build_calendars as b
+        rows = b.epsm_program(self.PROGRAM)
+        self.assertEqual([(r["cat"], r["round"], r["day"], r["time"], r["home"], r["away"], r["status"]) for r in rows], [
+            ("Κ15LEAGUE1", "5", "2026-11-21", "09:00", "ΣΚΙΟΥΡΟΙ (1)", "ΠΑΕ ΠΑΟΚ Κ14", ""),
+            ("Κ15LEAGUE1", "5", "2026-11-22", "12:30", "ΠΑΕ ΠΑΟΚ Κ14", "ΔΟΞΑ", ""),
+            ("Κ15ΓΥΝΑΙΚΩΝ", "4", "2026-11-21", "", "ΑΣ ΠΑΟΚ (1)", "ΑΟ ΛΕΟΝΤΕΣ", "postponed")])
+        self.assertEqual(rows[0]["venue"], "ΠΥΛΑΙΑΣ ΔΗΜΟΤΙΚΟ - Πλαστικό")
+
+    def test_matches(self):
+        import build_calendars as b
+        rounds = b.epsm_rounds(self.ROUNDS)
+        self.assertEqual(rounds[0], {"round": "1", "home": "ΠΑΕ ΠΑΟΚ Κ14", "away": "ΖΗΤΑ ΕΠΤΑ (1)", "score": "4-1"})
+        ms = b.epsm_matches("football-u14", {"programs": {"1": b.epsm_program(self.PROGRAM)}}, rounds)
+        by = {m.round: m for m in ms}
+        self.assertNotIn("1η αγωνιστική", by)  # χωρίς γνωστή μέρα για την 1η αγωνιστική
+        self.assertEqual((by["5η αγωνιστική"].home, by["5η αγωνιστική"].time), ("ΣΚΙΟΥΡΟΙ (1)", dt.time(9)))
+        self.assertEqual((by["6η αγωνιστική"].day, by["6η αγωνιστική"].time), (dt.date(2026, 11, 28), None))
+
+
+class KoeWatch(unittest.TestCase):
+    def test_relevant(self):
+        import koe_watch as k
+        self.assertTrue(k.relevant("https://koe.org.gr/article/x", "Προκήρυξη Πανελληνίου Πρωταθλήματος Παίδων 2026-27"))
+        self.assertTrue(k.relevant("https://koe.org.gr/article/to-programma-ton-korasidon", "ΥΔΑΤΟΣΦΑΙΡΙΣΗ"))
+        self.assertFalse(k.relevant("https://koe.org.gr/article/x", "ΠΑΓΚΟΣΜΙΟ ΠΡΩΤΑΘΛΗΜΑ ΝΕΑΝΙΔΩΝ Κ18: αναχώρησε η αποστολή"))
+        self.assertFalse(k.relevant("https://koe.org.gr/article/x", "Κλήση 19 αθλητριών"))
+

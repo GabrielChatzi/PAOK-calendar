@@ -93,6 +93,24 @@ ACADEMY = {
     "football-u15": {"emoji": "⚽", "name": "Κ15", "sport": "Ποδόσφαιρο", "women": False, "academy": True,
                      "short": "Κ15"},
     # Βόλεϊ: πρωταθλήματα της ΕΠΕΣΘ (epesth.gr). «group»: η ομάδα του μενού (αγόρια / κορίτσια).
+    # Ποδόσφαιρο, μικρότερες ηλικίες της ΠΑΕ στα πρωταθλήματα υποδομών της ΕΠΣ Μακεδονίας (βλ. EPSM_TEAMS).
+    "football-u14": {"emoji": "⚽", "name": "Κ14", "sport": "Ποδόσφαιρο", "women": False, "academy": True,
+                     "short": "Κ14", "league": "Κ15 League 1 (ΕΠΣΜ)"},
+    "football-u13": {"emoji": "⚽", "name": "Κ13", "sport": "Ποδόσφαιρο", "women": False, "academy": True,
+                     "short": "Κ13", "league": "Κ14 League 1 (ΕΠΣΜ)"},
+    "football-u13b": {"emoji": "⚽", "name": "Κ13 (2)", "sport": "Ποδόσφαιρο", "women": False, "academy": True,
+                      "short": "Κ13 (2)", "league": "Κ14 League 2 (ΕΠΣΜ)"},
+    "football-u12": {"emoji": "⚽", "name": "Κ12", "sport": "Ποδόσφαιρο", "women": False, "academy": True,
+                     "short": "Κ12", "league": "Κ13 Ειδικής (ΕΠΣΜ)"},
+    # Ποδόσφαιρο κοριτσιών: Κ17 στο πανελλήνιο της ΕΠΟ, Κ15 και Κ12 (ΑΣ ΠΑΟΚ) στην ΕΠΣ Μακεδονίας.
+    "football-women-u17": {"emoji": "⚽", "name": "Κ17 Νεανίδων", "sport": "Ποδόσφαιρο", "women": True, "academy": True,
+                           "short": "Κ17", "group": "Ποδόσφαιρο Κοριτσιών", "league": "Πανελλήνιο Υποδομών Νεανίδων Κ17"},
+    "football-women-u15": {"emoji": "⚽", "name": "Κ15 Κοριτσιών", "sport": "Ποδόσφαιρο", "women": True, "academy": True,
+                           "short": "Κ15", "group": "Ποδόσφαιρο Κοριτσιών", "league": "Κ15 Γυναικών (ΕΠΣΜ)"},
+    "football-women-u15b": {"emoji": "⚽", "name": "Κ15 Κοριτσιών (2)", "sport": "Ποδόσφαιρο", "women": True, "academy": True,
+                            "short": "Κ15 (2)", "group": "Ποδόσφαιρο Κοριτσιών", "league": "Κ15 Γυναικών (ΕΠΣΜ)"},
+    "football-women-u12": {"emoji": "⚽", "name": "Κ12 Κορασίδων", "sport": "Ποδόσφαιρο", "women": True, "academy": True,
+                           "short": "Κ12", "group": "Ποδόσφαιρο Κοριτσιών", "league": "Κ12 Κορασίδων (ΕΠΣΜ)"},
     "volley-u21": {"emoji": "🏐", "name": "Κ21 Αγοριών", "sport": "Βόλεϊ", "women": False, "academy": True,
                    "short": "Κ21", "group": "Βόλεϊ Αγοριών", "league": "Κ21 Αγοριών (ΕΠΕΣΘ)"},
     "volley-u18": {"emoji": "🏐", "name": "Κ18 Αγοριών", "sport": "Βόλεϊ", "women": False, "academy": True,
@@ -1777,6 +1795,188 @@ def epesth_matches(section: str, today: dt.date | None = None) -> list[Match]:
     return out
 
 
+# ---- ΕΠΣ Μακεδονίας (ποδόσφαιρο υποδομών): το πρόγραμμα βγαίνει κάθε εβδομάδα σε ανακοίνωση
+# («Πρόγραμμα αγώνων υποδομών …», article.asp?code=…) και τα αποτελέσματα της τελευταίας αγωνιστικής στη σελίδα
+# βαθμολογίας κάθε κατηγορίας. Δεν υπάρχει όλο το πρόγραμμα της σεζόν σε ένα σημείο, οπότε κρατάμε όσα βρίσκουμε
+# στο docs/epsm.json (ποιες ανακοινώσεις διαβάστηκαν, οι αγώνες τους, τα σκορ) και τα συμπληρώνουμε σε κάθε εκτέλεση.
+EPSM = "https://www.epsm.gr/"
+EPSM_FIRST = 14860  # η πρώτη ανακοίνωση της σεζόν 2026-27 (όμιλοι υποδομών 1/10/2026)
+EPSM_STATE = OUT_DIR / "epsm.json"
+# Ανά τμήμα: κατηγορία στο πρόγραμμα (χωρίς κενά/παύλες), κατηγορία στη βαθμολογία, όνομα ομάδας.
+EPSM_TEAMS = {
+    "football-u14": {"cat": "Κ15LEAGUE1", "table": "Κ15 LEAGUE 1", "team": "ΠΑΕ ΠΑΟΚ Κ14"},
+    "football-u13": {"cat": "Κ14LEAGUE1", "table": "Κ14 LEAGUE 1", "team": "ΠΑΕ ΠΑΟΚ Κ13 (1)"},
+    "football-u13b": {"cat": "Κ14LEAGUE2", "table": "Κ14 LEAGUE 2", "team": "ΠΑΕ ΠΑΟΚ Κ13 (2)"},
+    "football-u12": {"cat": "Κ13ΕΙΔΙΚΗ", "table": "Κ13 ΕΙΔΙΚΗΣ 1ος ΟΜΙΛΟΣ", "team": "ΠΑΕ ΠΑΟΚ Κ12"},
+    "football-women-u15": {"cat": "Κ15ΓΥΝΑΙΚΩΝ", "table": "Κ15 ΓΥΝΑΙΚΩΝ", "team": "ΑΣ ΠΑΟΚ (1)"},
+    "football-women-u15b": {"cat": "Κ15ΓΥΝΑΙΚΩΝ", "table": "Κ15 ΓΥΝΑΙΚΩΝ", "team": "ΑΣ ΠΑΟΚ (2)"},
+    "football-women-u12": {"cat": "Κ12ΚΟΡΑΣΙΔΩΝ", "table": "Κ12 ΚΟΡΑΣΙΔΩΝ", "team": "ΑΣ ΠΑΟΚ"},
+}
+GREEK_MONTHS_GEN = {"ΙΑΝΟΥΑΡΙΟΥ": 1, "ΦΕΒΡΟΥΑΡΙΟΥ": 2, "ΜΑΡΤΙΟΥ": 3, "ΑΠΡΙΛΙΟΥ": 4, "ΜΑΙΟΥ": 5, "ΙΟΥΝΙΟΥ": 6,
+                    "ΙΟΥΛΙΟΥ": 7, "ΑΥΓΟΥΣΤΟΥ": 8, "ΣΕΠΤΕΜΒΡΙΟΥ": 9, "ΟΚΤΩΒΡΙΟΥ": 10, "ΝΟΕΜΒΡΙΟΥ": 11, "ΔΕΚΕΜΒΡΙΟΥ": 12}
+_EPSM: dict = {}
+
+
+def epsm_name(name: str) -> str:
+    return re.sub(r"\s+", " ", name.replace("–", "-")).strip()
+
+
+def epsm_cat(line: str) -> str:
+    """«ΚΑΤΗΓΟΡΙΑ Κ-15 LEAGUE1 (2012 και νεότεροι)» → «Κ15LEAGUE1»."""
+    t = re.sub(r"\(.*?\)", "", line.replace("ΚΑΤΗΓΟΡΙΑ", ""))
+    return re.sub(r"[\s\-–]", "", plain(t).upper())
+
+
+def epsm_program(page: str) -> list[dict]:
+    """Οι αγώνες μιας ανακοίνωσης προγράμματος: κατηγορία, αγωνιστική, μέρα, ώρα, γήπεδο, σημείωση."""
+    i = page.find("ΠΡΟΓΡΑΜΜΑ")
+    if i < 0:
+        return []
+    lines = [clean(x) for x in re.split(r"<br\s*/?>", page[i:].split("</p>")[0]) if clean(x)]
+    out, day, cat, rnd = [], None, "", ""
+    for n, line in enumerate(lines):
+        u = plain(line).upper()
+        m = re.match(r"(ΔΕΥΤΕΡΑΣ|ΤΡΙΤΗΣ|ΤΕΤΑΡΤΗΣ|ΠΕΜΠΤΗΣ|ΠΑΡΑΣΚΕΥΗΣ|ΣΑΒΒΑΤΟΥ|ΚΥΡΙΑΚΗΣ)\s*(\d{1,2})\s*([Α-Ω]+)\s*(\d{4})", u)
+        if m and m.group(3) in GREEK_MONTHS_GEN:
+            day = dt.date(int(m.group(4)), GREEK_MONTHS_GEN[m.group(3)], int(m.group(2)))
+            continue
+        if u.startswith("ΚΑΤΗΓΟΡΙΑ"):
+            cat, rnd = epsm_cat(line), ""
+            continue
+        m = re.search(r"\((\d+)η\s*αγωνιστικη\)", plain(line).lower())
+        if m:
+            rnd = m.group(1)
+            continue
+        if not day or " - " not in line.replace("–", "-") or u.startswith(("ΓΗΠΕΔΟ", "ΓΙΑΤΡΟΣ", "ΡΕΠΟ")):
+            continue
+        rest = re.split(r"\s*-{3,}\s*", line.replace("–", "-"), maxsplit=1)
+        teams, note = rest[0], (rest[1].strip(" -") if len(rest) > 1 else "")
+        if teams.count(" - ") != 1:
+            continue
+        home, away = (epsm_name(x) for x in teams.split(" - "))
+        when, venue, time = day, "", None
+        nxt = lines[n + 1] if n + 1 < len(lines) else ""
+        v = re.match(r"Γήπεδο:\s*(.*?)\s*-?\s*ώρα:\s*(\d{1,2})[.:](\d{2})", nxt)
+        if v:
+            venue, time = v.group(1).strip(" -"), dt.time(int(v.group(2)), int(v.group(3)))
+        moved = re.search(r"(\d{1,2})-(\d{1,2})-(\d{4})", note)
+        if moved:
+            when = dt.date(int(moved.group(3)), int(moved.group(2)), int(moved.group(1)))
+        status = "cancelled" if "ΜΑΤΑΙΩ" in plain(note).upper() else "postponed" if "ΑΝΑΒΟΛ" in plain(note).upper() else ""
+        out.append({"cat": cat, "round": rnd, "day": when.isoformat(), "time": time.strftime("%H:%M") if time else "",
+                    "home": home, "away": away, "venue": venue, "status": status})
+    return out
+
+
+def epsm_rounds(page: str) -> list[dict]:
+    """Το «Αναλυτικό πρόγραμμα» μιας κατηγορίας (table_ypodomon_analytika.asp): όλες οι αγωνιστικές της σεζόν
+    με τους αγώνες τους και το σκορ όσων έγιναν, χωρίς ημερομηνίες («Α - Β 4 - 1» ή «Α - Β -»)."""
+    page = re.sub(r"(?s)<(script|style)[^>]*>.*?</\1>", "", page)
+    tokens = [re.sub(r"\s+", " ", t).strip() for t in html.unescape(re.sub(r"<[^>]+>", "|", page)).split("|")]
+    tokens = [t for t in tokens if t]
+    out, rnd = [], ""
+    for i, t in enumerate(tokens):
+        if t == "ΑΓΩΝΙΣΤΙΚΗ" and i >= 2 and tokens[i - 1] == "η" and tokens[i - 2].isdigit():
+            rnd = tokens[i - 2]
+            continue
+        if not rnd:
+            continue
+        t = t.replace("–", "-")
+        m = re.match(r"^(.+?) - (.+?)(?:\s+(\d+)\s*-\s*(\d+)|\s+-)$", t)
+        if m:
+            out.append({"round": rnd, "home": epsm_name(m.group(1)), "away": epsm_name(m.group(2)),
+                        "score": f"{m.group(3)}-{m.group(4)}" if m.group(3) else ""})
+    return out
+
+
+def epsm_is_program(page: str) -> bool:
+    """Ο τίτλος της ανακοίνωσης (λίγο πριν από το «Γραφείο Τύπου») είναι «Πρόγραμμα … υποδομών …»."""
+    text = clean(re.sub(r"(?s)<(script|style)[^>]*>.*?</\1>", "", page))
+    i = text.find("Γραφείο Τύπου")
+    return i > 0 and bool(re.search(r"Πρόγραμμα[^.]{0,40}υποδομών", text[max(0, i - 160):i]))
+
+
+def epsm_table_url(cat: str, page: str = "") -> str:
+    page = page or ("table.asp" if cat.startswith("Κ17") else "table_ypodomon.asp")
+    return EPSM + page + "?" + urllib.parse.urlencode({"diorganosi": cat})
+
+
+def epsm_state(path: Path | None = None) -> dict:
+    """Διαβάζει τις νέες ανακοινώσεις και τα νέα σκορ μία φορά ανά εκτέλεση και τα κρατά στο docs/epsm.json."""
+    if "state" in _EPSM:
+        return _EPSM["state"]
+    path = path or EPSM_STATE
+    state = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    state.setdefault("scanned", EPSM_FIRST - 1)
+    state.setdefault("programs", {})
+    state.pop("results", None)
+    listing = fetch(EPSM + "program.asp")
+    latest = max([int(c) for c in re.findall(r"article\.asp\?code=(\d+)", listing)] + [state["scanned"]])
+    # Οι ανακοινώσεις έχουν αύξοντα αριθμό: διαβάζουμε όσες δεν έχουμε δει (τίτλος «Πρόγραμμα … υποδομών»).
+    for code in range(state["scanned"] + 1, latest + 1):
+        try:
+            page = fetch(f"{EPSM}article.asp?code={code}")
+        except Exception as e:  # π.χ. ανακοίνωση που σβήστηκε: την προσπερνάμε
+            print(f"  ! ΕΠΣΜ ανακοίνωση {code}: {e}", file=sys.stderr)
+            state["scanned"] = code
+            continue
+        if epsm_is_program(page):
+            state["programs"][str(code)] = epsm_program(page)
+        state["scanned"] = code
+    if path == EPSM_STATE and os.environ.get("EPSM_SAVE", "1") == "1":
+        path.write_text(json.dumps(state, ensure_ascii=False, indent=1), encoding="utf-8")
+    _EPSM["state"] = state
+    return state
+
+
+def epsm_matches(section: str, state: dict | None = None, rounds: list[dict] | None = None) -> list[Match]:
+    """Οι αγώνες από το αναλυτικό πρόγραμμα της κατηγορίας (όλη η σεζόν, με σκορ) και μέρα, ώρα και γήπεδο από
+    τις εβδομαδιαίες ανακοινώσεις. Αγωνιστική χωρίς ανακοίνωση ακόμα: η μέρα της αγωνιστικής αν είναι γνωστή από
+    άλλους αγώνες, αλλιώς μία εβδομάδα μετά την προηγούμενη γνωστή, χωρίς ώρα."""
+    cfg = EPSM_TEAMS[section]
+    state = state or epsm_state()
+    if rounds is None:
+        rounds = epsm_rounds(fetch(epsm_table_url(cfg["table"], "table_ypodomon_analytika.asp")))
+    rows: dict[tuple[str, str], dict] = {}
+    round_day: dict[str, collections.Counter] = collections.defaultdict(collections.Counter)
+    for code in sorted(state["programs"], key=int):  # οι νεότερες ανακοινώσεις διορθώνουν τις παλιότερες
+        for g in state["programs"][code]:
+            if g["cat"] != cfg["cat"]:
+                continue
+            rows[(g["home"], g["away"])] = g
+            if g["round"] and not g["status"]:
+                round_day[g["round"]][g["day"]] += 1
+    known = {r: dt.date.fromisoformat(c.most_common(1)[0][0]) for r, c in round_day.items()}
+    comp = SECTIONS[section]["league"]
+    out = []
+    for g in rounds:
+        if cfg["team"] not in (g["home"], g["away"]):
+            continue
+        home = g["home"] == cfg["team"]
+        opp = g["away"] if home else g["home"]
+        rnd = int(g["round"])
+        info = rows.get((g["home"], g["away"]))
+        if info:
+            day, time = dt.date.fromisoformat(info["day"]), dt.time.fromisoformat(info["time"]) if info["time"] else None
+        elif g["round"] in known:
+            day, time = known[g["round"]], None
+        else:
+            before = [int(r) for r in known if int(r) < rnd]
+            if not before:
+                continue
+            last = max(before)
+            day, time = known[str(last)] + dt.timedelta(days=7 * (rnd - last)), None
+        status = "" if g["score"] else (info or {}).get("status", "")
+        out.append(Match(
+            section=section, uid=f"{section}-epsm-{short_hash(str(season_start_year()), g['round'], 'h' if home else 'a', opp)}",
+            day=day, time=time, home=PAOK if home else opp, away=opp if home else PAOK, paok_home=home,
+            venue=(info or {}).get("venue", ""), competition=comp, round=f"{rnd}η αγωνιστική", score=g["score"],
+            status=status, url=epsm_table_url(cfg["table"], "table_ypodomon_analytika.asp")))
+    if not out:
+        raise RuntimeError("δεν βρέθηκαν αγώνες της ομάδας στο αναλυτικό πρόγραμμα της ΕΠΣΜ")
+    return out
+
+
 # ---- ΕΚΑΣΘ (μπάσκετ Θεσσαλονίκης): το MatchCenter της ένωσης (ekasth.gr/champs/matchcenter8) δίνει JSON με
 # όλες τις διοργανώσεις («channels»), και ανά διοργάνωση ομίλους με βαθμολογία και όλες τις αγωνιστικές.
 EKASTH = "https://ekasth.gr/champs/matchcenter8/"
@@ -2376,6 +2576,8 @@ SOURCES: dict[str, list[tuple[str, Callable[[], list[Match]]]]] = {
     "football-u16": [("sl2.gr", lambda: sl2_matches("football-u16"))],
     **{key: [("epesth.gr", lambda key=key: epesth_matches(key))] for key in EPESTH_TEAMS},
     **{key: [("ekasth.gr", lambda key=key: ekasth_matches(key))] for key in EKASTH_TEAMS},
+    **{key: [("epsm.gr", lambda key=key: epsm_matches(key))] for key in EPSM_TEAMS},
+    "football-women-u17": [("ΕΠΟ Υποδομών Κ17", lambda: epo_matches(56, "football-women-u17", required=True))],
 }
 
 

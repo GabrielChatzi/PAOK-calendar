@@ -15,7 +15,7 @@ import re
 from pathlib import Path
 
 from build_calendars import (
-    ACADEMY, EKASTH, EKASTH_TEAMS, ekasth_channel, ekasth_logo, ekasth_phase, EPESTH, EPESTH_TEAMS, epesth_crest, epesth_season, epesth_tables, PAOKFC, PAOKFC_TEAMS, sl2_competitions, sl2_json, sl2_name, paokfc_fetch, paokfc_links, paokfc_team, paokfc_matches, paokfc_name, DATAPROJECT, EPO, ea_data, ea_team, oxe_logo, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
+    ACADEMY, EPSM_TEAMS, epsm_name, epsm_table_url, EKASTH, EKASTH_TEAMS, ekasth_channel, ekasth_logo, ekasth_phase, EPESTH, EPESTH_TEAMS, epesth_crest, epesth_season, epesth_tables, PAOKFC, PAOKFC_TEAMS, sl2_competitions, sl2_json, sl2_name, paokfc_fetch, paokfc_links, paokfc_team, paokfc_matches, paokfc_name, DATAPROJECT, EPO, ea_data, ea_team, oxe_logo, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
     fetch_until,
     is_paok, latin_title, plain, season_start_year, tidy_name, volley_rows,
 )
@@ -475,6 +475,57 @@ def epesth_table(section: str) -> list[dict]:
     raise RuntimeError("δεν βρέθηκε βαθμολογία με τον ΠΑΟΚ")
 
 
+def epsm_table(section: str) -> list[dict]:
+    """Βαθμολογία της ΕΠΣ Μακεδονίας (σελίδα της κατηγορίας): «01. ΟΜΑΔΑ | βαθμοί | αγώνες | γκολ | Ν/Ι/Η»."""
+    cfg = EPSM_TEAMS[section]
+    url = epsm_table_url(cfg["table"])
+    page = fetch(url)
+    i = page.find("ΒΑΘΜΟΛΟΓΙΑ")
+    rows = []
+    for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", page[i:] if i >= 0 else "", re.S):
+        cells = [clean(c) for c in re.findall(r"<td[^>]*>(.*?)</td>", tr, re.S)]
+        k = next((n for n, c in enumerate(cells) if re.match(r"^\d+\.\s+\S", c)), None)
+        if k is None or len(cells) < k + 5:
+            continue
+        pos, team = re.match(r"^(\d+)\.\s+(.+)$", cells[k]).groups()
+        team = epsm_name(team)
+        pts, gp, goals, nih = cells[k + 1:k + 5]
+        w, d, l = (re.findall(r"\d+", nih) + ["", "", ""])[:3]
+        rows.append((int(pos), PAOK_NAME if team == cfg["team"] else team, "", [gp, w, d, l, goals, pts]))
+    if not rows:
+        return []  # π.χ. Κ12 Κορασίδων: «η βαθμολογία δεν εμφανίζεται σε αυτή την κατηγορία»
+    if not any(r[1] == PAOK_NAME for r in rows):
+        raise RuntimeError("δεν βρέθηκε βαθμολογία με τον ΠΑΟΚ")
+    out = table(ACADEMY[section]["league"], url, ["Αγ", "Ν", "Ι", "Η", "Γκολ", "Β"], rows)
+    for row, (_, team, _, _) in zip(out["rows"], rows):  # άλλες ομάδες «ΠΑΟΚ …» (π.χ. ΠΑΟΚ Σταυρού) μένουν ως έχουν
+        if team != PAOK_NAME:
+            row["team"], row["paok"] = team, False
+    return [out]
+
+
+def epo_group_table(comp_id: int, title: str) -> list[dict]:
+    """Ο όμιλος του ΠΑΟΚ σε διοργάνωση της ΕΠΟ με ομίλους (π.χ. Πανελλήνιο Υποδομών Νεανίδων Κ17)."""
+    page = fetch(f"{EPO}/el/competition/{comp_id}/matches")
+    urls = [html.unescape(v) for v, _ in re.findall(r'<option[^>]*value="([^"]*/group/\d+/matches)"[^>]*>([^<]*)', page)]
+    for u in [None] + urls:
+        p = page if u is None else fetch(EPO + u)
+        for body in re.findall(r'<table class="ranking-table">(.*?)</table>', p, re.S):
+            rows = []
+            for tr in re.findall(r"<tr>(.*?)</tr>", body, re.S):
+                cells = [clean(c) for c in re.findall(r"<td[^>]*>(.*?)</td>", tr, re.S)]
+                if len(cells) < 9:
+                    continue
+                logo = re.search(r'<img[^>]+src="([^"]+)"', tr)
+                pos, team, pts, gp, w, d, l, gf, ga = cells[:9]
+                rows.append((_num(pos), tidy_name(team), absolute(EPO, logo.group(1)) if logo else "",
+                             [gp, w, d, l, f"{gf}-{ga}", pts]))
+            if any(r[1] == PAOK_NAME for r in rows):
+                group = next((label for v, label in re.findall(r'<option[^>]*value="([^"]*)"[^>]*selected[^>]*>([^<]*)', p)), "")
+                name = title + (f", {clean(group).lower()}" if group else "")
+                return [table(name, EPO + (u or f"/el/competition/{comp_id}/matches"), ["Αγ", "Ν", "Ι", "Η", "Γκολ", "Β"], rows)]
+    raise RuntimeError("δεν βρέθηκε βαθμολογία με τον ΠΑΟΚ")
+
+
 def ekasth_table(section: str) -> list[dict]:
     """Βαθμολογία μπάσκετ από το MatchCenter της ΕΚΑΣΘ: ο όμιλος του πρωταθλήματος με την ομάδα (και των
     υπόλοιπων διοργανώσεων, π.χ. Rising Stars, αν έχουν βαθμολογία)."""
@@ -510,6 +561,10 @@ def academy_table(section: str) -> list[dict]:
             return epesth_table(section)
         if section in EKASTH_TEAMS:
             return ekasth_table(section)
+        if section in EPSM_TEAMS:
+            return epsm_table(section)
+        if section == "football-women-u17":
+            return epo_group_table(56, ACADEMY[section]["league"])
         return sl2_table(section) if section in ("football-b", "football-u16") else paokfc_table(section)
     except Exception as e:
         manual = manual_table(section)

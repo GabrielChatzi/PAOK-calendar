@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MatchCenter · Αγώνες ημέρας</title>
+<link rel="stylesheet" href="assets/style.css?v=6">
+<style>
+.chk{display:inline-flex;align-items:center;gap:8px;height:36px;padding:0 12px;border:1px solid var(--line);background:var(--bg-2);border-radius:4px;font-weight:700;font-size:13px;cursor:pointer;user-select:none}
+.chk input{width:16px;height:16px;accent-color:var(--accent);margin:0}
+.ofs{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);background:rgba(0,0,0,.18)}
+.ofs > div{padding:9px 16px 11px;min-width:0}
+.ofs > div + div{border-left:1px solid var(--line)}
+.ofs h4{margin:0 0 5px;font-size:10px;letter-spacing:.7px;color:var(--accent-hi);font-weight:800}
+.ofs p{margin:3px 0;font-size:13px;font-weight:700;font-stretch:85%;display:flex;gap:8px;line-height:1.2}
+.ofs p span{min-width:0;overflow-wrap:anywhere}
+.ofs p i{font-style:normal;color:var(--muted);font-weight:800;min-width:18px;flex:none}
+.ofs .none{color:var(--muted);font-size:12px;font-style:italic}
+</style>
+</head>
+<body>
+<header class="top" id="top"></header>
+<main class="wrap">
+  <div class="dayhead"><h1 id="dayTitle"></h1><span class="meta" id="dayMeta"></span></div>
+  <div class="filters">
+    <select class="in" id="fComp"><option value="">Όλες οι διοργανώσεις</option></select>
+    <select class="in" id="fGroup"><option value="">Όλοι οι όμιλοι</option></select>
+    <label class="chk"><input type="checkbox" id="fOff"> Διαιτητές & κριτές</label>
+  </div>
+  <div id="list"><div class="loading">Φόρτωση αγώνων…</div></div>
+</main>
+<footer>Δεδομένα: ΕΟΚ · basket.gr</footer>
+
+<script src="assets/config.js?v=6"></script>
+<script src="assets/common.js?v=6"></script>
+<script>
+const params = new URLSearchParams(location.search);
+let day = params.get("date") || todayISO();
+let fComp = params.get("comp") || "", fGroup = params.get("group") || "";
+
+header(`<div class="datenav">
+  <input class="in search" id="q" placeholder="Ομάδα">
+  <button class="btn" id="prev" aria-label="Προηγούμενη μέρα">‹</button>
+  <input class="in" type="date" id="date">
+  <button class="btn" id="next" aria-label="Επόμενη μέρα">›</button>
+  <button class="btn pri" id="today">Σήμερα</button></div>`, "day");
+
+const $ = id => document.getElementById(id);
+let data = null;
+
+function syncUrl() {
+  const p = new URLSearchParams({ date: day });
+  if (fComp) p.set("comp", fComp);
+  if (fGroup) p.set("group", fGroup);
+  history.replaceState(null, "", `?${p}`);
+}
+
+function fillSelect(el, values, current, allLabel) {
+  el.innerHTML = `<option value="">${allLabel}</option>` +
+    values.map(v => `<option value="${esc(v)}" ${v === current ? "selected" : ""}>${esc(v)}</option>`).join("");
+}
+
+function render() {
+  const q = UP($("q").value.trim());
+  const base = (data?.games || []).filter(g => allowComp(g.competition));
+  const comps = [...new Set(base.map(g => g.competition).filter(Boolean))].sort();
+  if (fComp && !comps.includes(fComp)) comps.push(fComp);
+  fillSelect($("fComp"), comps, fComp, "Όλες οι διοργανώσεις");
+  const groups = [...new Set(base.filter(g => !fComp || g.competition === fComp).map(g => g.group).filter(Boolean))].sort();
+  if (fGroup && !groups.includes(fGroup)) groups.push(fGroup);
+  fillSelect($("fGroup"), groups, fGroup, "Όλοι οι όμιλοι");
+
+  const games = base
+    .filter(g => !fComp || g.competition === fComp)
+    .filter(g => !fGroup || g.group === fGroup)
+    .filter(g => !q || UP(`${g.home.name} ${g.away.name}`).includes(q));
+  $("dayTitle").textContent = longDate(day + "T12:00:00Z");
+  const live = games.filter(g => isLive(g.state)).length;
+  $("dayMeta").textContent = `${games.length} ${games.length === 1 ? "αγώνας" : "αγώνες"}${live ? ` · ${live} σε εξέλιξη` : ""}`;
+  if (!games.length) { $("list").innerHTML = `<div class="empty">Δεν υπάρχουν αγώνες με αυτά τα κριτήρια.</div>`; return; }
+
+  const byComp = new Map();
+  games.forEach(g => { const k = g.competition || "—"; if (!byComp.has(k)) byComp.set(k, []); byComp.get(k).push(g); });
+  $("list").innerHTML = [...byComp.entries()].map(([name, gs]) => {
+    gs.sort((a, b) => (a.date || "").localeCompare(b.date || ""));
+    const logo = gs.find(g => g.competition_logo)?.competition_logo, ch = gs[0].channel_id;
+    return `<section class="comp"><div class="comp-h">${logo ? `<img src="${esc(logo)}" alt="">` : ""}
+      <h2 class="up"><a href="competition.html?ch=${encodeURIComponent(ch)}">${esc(name)}</a></h2>
+      <span>${gs.length} ${gs.length === 1 ? "αγώνας" : "αγώνες"}</span></div>
+      <div class="grid">${gs.map(g => gameBox(g, [g.group, g.matchday].filter(Boolean).join(" · "))).join("")}</div></section>`;
+  }).join("");
+  decorate();
+}
+
+const OFF = { day: "", map: {}, pending: 0, tries: 0, timer: null };
+const offOn = () => $("fOff").checked;
+try { $("fOff").checked = localStorage.getItem("mc_showoff") !== "0"; } catch { $("fOff").checked = true; }
+function decorate() {
+  document.querySelectorAll("#list .ofs").forEach(el => el.remove());
+  if (!offOn()) return;
+  const ord = ["Α", "Β", "Γ", "Δ", "Ε", "ΣΤ"];
+  const list = (L, extra = "") => (L || []).length || extra ? (L || []).map((p, i) => `<p><i>${ord[i] || i + 1}'</i><span>${esc(p.name)}</span></p>`).join("") + extra
+    : `<div class="none">${OFF.pending ? "φόρτωση…" : "—"}</div>`;
+  document.querySelectorAll("#list a.gbox").forEach(a => {
+    const id = new URLSearchParams(a.getAttribute("href").split("?")[1] || "").get("id"), o = OFF.map[id];
+    if (!o && !OFF.pending) return;
+    const com = (o?.commissioners || []).map(p => p.name).join(" / ");
+    a.insertAdjacentHTML("beforeend", `<div class="ofs"><div><h4>ΔΙΑΙΤΗΤΕΣ</h4>${list(o?.referees, com ? `<p><i>Κ</i><span>${esc(com)}</span></p>` : "")}</div>
+      <div><h4>ΚΡΙΤΕΣ</h4>${list(o?.judges)}</div></div>`);
+  });
+}
+async function loadOff(force) {
+  clearTimeout(OFF.timer);
+  if (!offOn()) return;
+  if (OFF.day !== day) { OFF.day = day; OFF.map = {}; OFF.tries = 0; force = true; }
+  if (!force) return;
+  const want = day;
+  try {
+    const d = await api("matches", { date: want });
+    if (want !== day) return;
+    (d.games || []).forEach(g => { OFF.map[g.id] = { referees: g.referees, judges: g.judges, commissioners: g.commissioners }; });
+    OFF.pending = d.pending || 0;
+    decorate();
+    if (OFF.pending && OFF.tries++ < 60) OFF.timer = setTimeout(() => loadOff(true), 3000);
+  } catch {}
+}
+$("fOff").onchange = () => { try { localStorage.setItem("mc_showoff", offOn() ? "1" : "0"); } catch {} decorate(); loadOff(true); };
+
+async function load() {
+  $("date").value = day;
+  syncUrl();
+  try { data = await api("day", { date: day }); render(); loadOff(); }
+  catch (e) { $("list").innerHTML = `<div class="empty">Σφάλμα φόρτωσης (${esc(e.message)}). Δοκιμάστε ξανά.</div>`; }
+}
+
+$("prev").onclick = () => { day = addDays(day, -1); load(); };
+$("next").onclick = () => { day = addDays(day, 1); load(); };
+$("today").onclick = () => { day = todayISO(); load(); };
+$("date").onchange = e => { day = e.target.value || todayISO(); load(); };
+$("fComp").onchange = e => { fComp = e.target.value; fGroup = ""; syncUrl(); render(); };
+$("fGroup").onchange = e => { fGroup = e.target.value; syncUrl(); render(); };
+$("q").oninput = render;
+load();
+setInterval(() => { if (day === todayISO()) load(); }, (S.refreshSeconds || 30) * 1000);
+</script>
+</body>
+</html>

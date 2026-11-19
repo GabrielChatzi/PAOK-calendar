@@ -1,0 +1,131 @@
+/* Shared helpers */
+const S = window.SITE || {};
+document.documentElement.style.setProperty("--accent", S.accent || "#1D4ED8");
+document.documentElement.style.setProperty("--accent-hi", `color-mix(in srgb, ${S.accent || "#1D4ED8"} 45%, #fff)`);
+
+const api = async (action, params = {}) => {
+  const r = await fetch(`bgapi.php?${new URLSearchParams({ action, ...params })}`);
+  if (!r.ok) { let m = ""; try { m = (await r.json()).error || ""; } catch {} throw new Error(`${action}: ${m || "HTTP " + r.status}`); }
+  return r.json();
+};
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const UP = s => String(s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+const pct = (m, a) => (a ? Math.round((100 * m) / a) : 0);
+const ma = (m, a) => `${m}/${a}`;
+const shortName = n => { const p = String(n || "").trim().split(/\s+/); return p.length > 1 ? `${p[0][0]}. ${p.slice(1).join(" ")}` : n; };
+const isFinal = st => /complet|finish|final|ended/i.test(st || "");
+const isLive = st => !!st && !isFinal(st) && !/upcoming|scheduled|postpon|cancel/i.test(st);
+const tz = { timeZone: "Europe/Athens" };
+const hhmm = iso => (iso ? new Date(iso).toLocaleTimeString("el-GR", { ...tz, hour: "2-digit", minute: "2-digit", hour12: false }) : "");
+const longDate = iso => new Date(iso).toLocaleDateString("el-GR", { ...tz, weekday: "long", day: "numeric", month: "long", year: "numeric" });
+const todayISO = () => new Date().toLocaleDateString("en-CA", tz);
+const addDays = (iso, n) => { const d = new Date(iso + "T12:00:00"); d.setDate(d.getDate() + n); return d.toISOString().slice(0, 10); };
+const allowComp = name => !(S.competitions || []).length ||
+  S.competitions.some(c => UP(name).includes(UP(c)));
+const qLabel = p => (p <= 4 ? `${p}η` : `ΠΑΡ${p - 4}`);
+function liveLabel(g) {
+  if (isFinal(g.state)) return `<span class="badge fin">ΤΕΛΙΚΟ</span>`;
+  if (isLive(g.state)) return `<span class="badge live">LIVE${g.period ? " · " + qLabel(g.period) : ""}${g.clock ? " " + g.clock : ""}</span>`;
+  return `<span class="badge time num">${hhmm(g.date)}</span>`;
+}
+function header(extra = "", page = "") {
+  document.getElementById("top").innerHTML = `<div class="wrap">
+    <a class="brand" href="index.html"><div class="mark"></div><div><b>${esc(S.title || "MatchCenter")}</b><span>${esc(S.subtitle || "")}</span></div></a>
+    <nav class="mainnav"><a href="index.html" class="${page === "day" ? "on" : ""}">Αγώνες ημέρας</a>
+      <a href="competitions.html" class="${page === "comp" ? "on" : ""}">Διοργανώσεις</a>
+      <a href="mvps.html" class="${page === "mvp" ? "on" : ""}">Σκόρερ</a>
+      <a href="teams.html" class="${page === "team" ? "on" : ""}">Ομάδες</a>
+      <a href="athletes.html" class="${page === "ath" ? "on" : ""}">Αθλητές</a></nav>
+    ${extra}</div>`;
+}
+function gameBox(g, head) {
+  const hs = g.home.score, as = g.away.score, done = isFinal(g.state);
+  const lose = side => done && hs != null && as != null && ((side === "h" && hs < as) || (side === "a" && as < hs)) ? "lose" : "";
+  return `<a class="gbox" href="game.html?id=${encodeURIComponent(g.id)}">
+    <div class="hd">${esc(head ?? (g.matchday || g.group || ""))}<span class="st">${liveLabel(g)}</span></div>
+    <div class="tm ${lose("h")}"><img src="${esc(g.home.logo || "")}" alt="" loading="lazy"><div class="n up">${esc(g.home.name)}</div><div class="s num">${hs ?? ""}</div></div>
+    <div class="tm ${lose("a")}"><img src="${esc(g.away.logo || "")}" alt="" loading="lazy"><div class="n up">${esc(g.away.name)}</div><div class="s num">${as ?? ""}</div></div>
+  </a>`;
+}
+const shortDate = iso => (iso ? new Date(iso).toLocaleDateString("el-GR", { ...tz, weekday: "short", day: "numeric", month: "short" }) : "");
+function standingsTable(rows, mark = [], note = "", compact = false) {
+  if (!rows?.length) return `<div class="note">Δεν υπάρχει βαθμολογία.</div>`;
+  const me = r => mark.some(n => UP(n) === UP(r.team));
+  const cols = compact ? `<colgroup><col class="c-pos"><col><col class="c-n"><col class="c-n"><col class="c-n"><col class="c-n pfpa"><col class="c-n pfpa"><col class="c-d"><col class="c-n"></colgroup>` : "";
+  return `<div class="tw"><table class="t ${compact ? "compact" : ""}" style="${compact ? "" : "min-width:560px"}">${cols}<thead><tr><th></th><th class="l">ΟΜΑΔΑ</th><th>ΑΓ</th><th>Ν</th><th>Η</th><th class="pfpa">ΥΠ</th><th class="pfpa">ΚΑΤ</th><th>+/-</th><th>ΒΑΘ</th></tr></thead>
+    <tbody>${rows.map(r => `<tr class="${me(r) ? "me" : ""}"><td class="n num">${r.pos}</td>
+      <td class="l"><div class="tl">${r.logo ? `<img src="${esc(r.logo)}" alt="">` : ""}<span class="up" title="${esc(r.team)}">${esc(r.team)}</span></div></td>
+      <td class="num">${r.played ?? ""}</td><td class="num">${r.wins ?? ""}</td><td class="num">${r.losses ?? ""}</td><td class="num pfpa">${r.pf ?? ""}</td>
+      <td class="num pfpa">${r.pa ?? ""}</td><td class="num">${r.diff > 0 ? "+" : ""}${r.diff ?? ""}</td><td class="num b">${r.points ?? ""}</td></tr>`).join("")}</tbody></table>
+    ${note ? `<div class="note" style="padding:12px;text-align:left">${note}</div>` : ""}</div>`;
+}
+
+/* basketball jersey with the number on it */
+function jerseySvg(num, color = "var(--accent)", size = 56) {
+  const h = /^#?[0-9a-f]{6}$/i.test(String(color)) ? String(color).replace("#", "") : null;
+  const light = h && (0.2126 * parseInt(h.slice(0, 2), 16) + 0.7152 * parseInt(h.slice(2, 4), 16) + 0.0722 * parseInt(h.slice(4, 6), 16)) / 255 > 0.6;
+  return `<svg class="jersey" width="${size}" height="${size}" viewBox="0 0 64 64" aria-hidden="true">
+    <path d="M21 4h7c1 4 3 6 4 6s3-2 4-6h7l3 2c0 9 2 13 8 15v39H10V21c6-2 8-6 8-15z" fill="${color}" stroke="rgba(255,255,255,.55)" stroke-width="1.5"/>
+    <text x="32" y="45" text-anchor="middle" font-size="${String(num ?? "").length > 1 ? 21 : 24}" font-weight="900" fill="${light ? "#0A1220" : "#fff"}"
+      font-family="Noto Sans Display,Arial Narrow,sans-serif">${esc(num ?? "")}</text></svg>`;
+}
+/* player photo: the jersey shows immediately. One request (api.php?action=photos) lists which players
+   have a photo in assets/players; only those are loaded and swapped in. No 404 probing. */
+let PHOTOS = null;
+const photoList = () => PHOTOS || (PHOTOS = (async () => {
+  try {
+    const c = sessionStorage.getItem("mc_photos");
+    if (c) { const { t, p } = JSON.parse(c); if (Date.now() - t < 300000) return p; }
+    const p = (await api("photos")).photos || {};
+    sessionStorage.setItem("mc_photos", JSON.stringify({ t: Date.now(), p }));
+    return p;
+  } catch { return {}; }
+})());
+function photoOr(pid, jersey, color, size = 56) {
+  const j = jerseySvg(jersey, color, size);
+  return pid ? `<span class="pslot" data-photo="${esc(pid)}" style="--s:${size}px">${j}</span>` : j;
+}
+/* empty slot that only becomes a small photo if the player has one (box score) */
+const photoMini = (pid, size = 28) => (pid ? `<span class="pmini" data-photo="${esc(pid)}" style="--s:${size}px"></span>` : "");
+async function loadPhotos(root = document) {
+  const els = [...root.querySelectorAll("[data-photo]:not([data-done])")];
+  if (!els.length) return;
+  els.forEach(el => (el.dataset.done = "1"));
+  const list = await photoList();
+  els.forEach(el => {
+    const file = list[el.dataset.photo];
+    if (!file) return;                                   // no photo: keep the jersey
+    const img = new Image();
+    img.onload = () => { if (el.isConnected) el.outerHTML = `<span class="pphoto" style="--s:${el.style.getPropertyValue("--s")}"><img src="${img.src}" alt=""></span>`; };
+    img.src = `assets/players/${file}`;
+  });
+}
+new MutationObserver(() => loadPhotos()).observe(document.documentElement, { childList: true, subtree: true });
+/* photo from assets/players/<full name>.jpg (the server finds it by name), else the jersey */
+const face = (photo, size = 56) => photo ? `<span class="pphoto" style="--s:${size}px;display:inline-block;width:${size}px;height:${size}px;overflow:hidden;border-radius:8px;flex:none;vertical-align:middle"><img src="${esc(photo)}" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:50% 15%;display:block"></span>` : jerseySvg("", "var(--bg-3)", size);
+const playerUrl = (pid, game) => (pid ? `player.html?id=${encodeURIComponent(pid)}` : "");
+
+/* ranked MVP rows (PIR + points): the row opens the game, the name opens the player */
+function mvpList(L, compact = false) {
+  if (!L.length) return `<div class="empty">Δεν υπάρχουν ακόμα αποτελέσματα εδώ.</div>`;
+  return `<div class="mvlist ${compact ? "compact" : ""}">` + L.map((r, i) => {
+    const mine = r.side === "home" ? r.home : r.away, opp = r.side === "home" ? r.away : r.home;
+    const sc = r.home.score != null ? `${r.home.score}-${r.away.score}` : "–";
+    const parts = String(r.player || "").trim().split(/\s+/), last = parts.shift() || "", first = parts.join(" ");   // ΕΠΩΝΥΜΟ ΟΝΟΜΑ
+    const pu = playerUrl(r.pid, r.game_id);
+    const name = `<small class="up">${esc(first)}</small><b class="up">${esc(last)}<i class="alt">ΣΚΟΡΕΡ</i></b>`;
+    return `<div class="mv ${i === 0 ? "top" : ""}" style="--i:${i}" data-href="game.html?id=${encodeURIComponent(r.game_id)}">
+      ${pu ? `<a class="jn" href="${pu}">` : `<div class="jn">`}${r.photo ? face(r.photo, compact ? 44 : 54) : photoOr(r.pid, r.jersey, "var(--bg-3)", compact ? 44 : 54)}${pu ? `</a>` : `</div>`}
+      ${pu ? `<a class="pn" href="${pu}">${name}</a>` : `<div class="pn">${name}</div>`}
+      <div class="g"><img src="${esc(mine.logo || "")}" alt="" loading="lazy"><span class="tm up">${esc(mine.name)}</span>
+        <span class="s num">${sc}</span><span class="op up">${esc(opp.name)}</span></div>
+      <div class="st num" style="grid-template-columns:1fr"><div class="k"><b>${r.pts}</b><span>ΠΟΝΤΟΙ</span></div></div></div>`;
+  }).join("") + `</div>`;
+}
+document.addEventListener("click", e => {
+  if (e.target.closest("a")) return;
+  const row = e.target.closest(".mv[data-href]");
+  if (row) location.href = row.dataset.href;
+});
+
+const teamUrl = key => (key ? `team.html?id=${encodeURIComponent(key)}` : "");

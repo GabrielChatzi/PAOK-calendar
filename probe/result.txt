@@ -1,4 +1,0 @@
-koe.html 200 197483 https://koe.org.gr/
-koe_gr.html 200 84785 https://www.koe.gr/
-epo56.html 200 168179 https://www.epo.gr/el/competition/56/stage/1581/group/2262/matches
-epo56p.html 200 94660 https://www.epo.gr/el/panellinio-protathlima-ypodomon-neanidon-k-17

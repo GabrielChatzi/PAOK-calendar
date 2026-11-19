@@ -11,12 +11,21 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           mkdir -p probe
-          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"
-          g(){ curl -sSL -A "$UA" -m 60 -o "probe/$1" -w "$1 %{http_code} %{size_download} %{url_effective}\n" "$2" >> probe/result.txt 2>&1; }
-          g koe.html "https://www.koe.org.gr/"
-          g koe_gr.html "https://www.koe.gr/"
-          g epo56.html "https://www.epo.gr/el/competition/56/matches"
-          g epo56p.html "https://www.epo.gr/el/panellinio-protathlima-ypodomon-neanidon-k-17"
+          python3 - <<'PY'
+          import urllib.request, urllib.parse
+          UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
+          out = open("probe/result.txt", "w")
+          for i, d in enumerate(["Κ15 LEAGUE 1", "Κ14 LEAGUE 1", "Κ14 LEAGUE 2", "Κ13 ΕΙΔΙΚΗΣ 1ος ΟΜΙΛΟΣ", "Κ15 ΓΥΝΑΙΚΩΝ", "Κ12 ΚΟΡΑΣΙΔΩΝ"]):
+              u = "https://www.epsm.gr/table_ypodomon_analytika.asp?" + urllib.parse.urlencode({"diorganosi": d})
+              try:
+                  b = urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=60).read()
+              except Exception as e:
+                  b = str(e).encode()
+              open(f"probe/an{i}.html", "wb").write(b)
+              out.write(f"{i} {d} {len(b)}\n")
+          koe = urllib.request.urlopen(urllib.request.Request("https://koe.org.gr/sports/water-polo", headers=UA), timeout=60).read()
+          open("probe/koe_wp.html", "wb").write(koe)
+          PY
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

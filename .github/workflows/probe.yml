@@ -10,13 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          mkdir -p probe/pdf
+          mkdir -p probe
           UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36"
-          curl -sSL -m 30 -A "$UA" -o probe/programmata.html https://epesth.gr/programmata/
-          i=0
-          grep -oE 'href="https://epesth.gr/wp-content/uploads/[^"]+\.pdf"' probe/programmata.html | sed -E 's/href="([^"]+)"/\1/' | sort -u > probe/pdfs.txt
-          while read -r u; do i=$((i+1)); curl -sSL -m 30 -A "$UA" -o "probe/pdf/$i.pdf" "$u"; echo "$i $u" >> probe/pdf/index.txt; done < probe/pdfs.txt
-          for s in k21-agorion-2026-2027 k17-agorion-2026-2027 k20-koritsion-2026-2027 k18-koritsion-2026-2027 k18-koritsion-e-s-2026-2027 k18-agorion-2026-2027; do curl -sSL -m 30 -A "$UA" -o "probe/$s.html" "https://epesth.gr/$s/"; done
+          curl -sSL -m 30 -A "$UA" -o probe/clubs.html https://epesth.gr/ta-somateia-tis-epesth/
+          echo done
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

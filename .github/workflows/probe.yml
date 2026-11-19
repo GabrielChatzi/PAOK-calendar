@@ -11,26 +11,27 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           mkdir -p probe
-          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"
-          B=https://ekasth.gr/champs/matchcenter8
-          g(){ curl -sSL -A "$UA" -m 60 -o "probe/$1" -w "$1 %{http_code} %{size_download}\n" "$2" >> probe/result.txt 2>&1; }
-          g channels.json "$B/bgapi.php?action=channels"
           python3 - <<'PY'
-          import json,urllib.request,urllib.parse
-          B="https://ekasth.gr/champs/matchcenter8/bgapi.php?"
-          def get(**q):
-              r=urllib.request.Request(B+urllib.parse.urlencode(q),headers={"User-Agent":"Mozilla/5.0"})
-              return json.load(urllib.request.urlopen(r,timeout=60))
-          ch=json.load(open("probe/channels.json"))
-          lst=ch.get("channels",ch) if isinstance(ch,dict) else ch
-          out={}
-          for c in lst[:60]:
-              cid=c.get("id") or c.get("channel_id")
+          import urllib.request, urllib.parse, re
+          UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
+          def get(u, enc=None):
               try:
-                  d=get(action="channel",ch=cid)
-                  out[cid]=d
-              except Exception as e: out[cid]={"error":str(e)}
-          json.dump(out,open("probe/chans.json","w"),ensure_ascii=False)
+                  r = urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=60)
+                  b = r.read(); return r.status, b
+              except Exception as e: return str(e), b""
+          out = open("probe/result.txt", "w")
+          pages = {"epsm_scores": "https://www.epsm.gr/scores_ypodomon.asp", "epsm_program": "https://www.epsm.gr/program.asp",
+                   "epo56": "https://www.epo.gr/el/competition/56/matches", "koe": "https://www.koe.gr/", "koe2": "https://www.koe.org.gr/"}
+          for d in ["Κ17 LEAGUE 1", "Κ16 LEAGUE 1", "Κ15 LEAGUE 1", "Κ14 LEAGUE 1", "Κ13 ΕΙΔΙΚΗΣ 1ος ΟΜΙΛΟΣ", "Κ13 ΕΙΔΙΚΗΣ 2ος ΟΜΙΛΟΣ",
+                    "Κ16 LEAGUE 2", "Κ15 LEAGUE 2", "Κ14 LEAGUE 2", "Κ15 ΓΥΝΑΙΚΩΝ", "Κ12 ΚΟΡΑΣΙΔΩΝ"]:
+              pages["t_" + d] = "https://www.epsm.gr/table_ypodomon.asp?" + urllib.parse.urlencode({"diorganosi": d}, encoding="windows-1253")
+              pages["u_" + d] = "https://www.epsm.gr/table_ypodomon.asp?" + urllib.parse.urlencode({"diorganosi": d})
+          for k, u in pages.items():
+              st, b = get(u)
+              fn = "probe/" + re.sub(r"[^A-Za-z0-9_]", "_", k) + ".html"
+              open(fn, "wb").write(b)
+              t = b.decode("utf-8", "ignore") + b.decode("windows-1253", "ignore")
+              out.write(f"{k} {st} {len(b)} paok={('ΠΑΟΚ' in t) or ('Π.Α.Ο.Κ' in t)} {fn}\n")
           PY
       - run: |
           git config user.name "github-actions[bot]"

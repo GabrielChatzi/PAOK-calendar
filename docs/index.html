@@ -1453,8 +1453,10 @@
       if (!s || !name || isPaokName(name)) return;
       var k = crestKey(s.sport, name);
       if (!crestWords(name).length) return;
-      var o = by[k] || (by[k] = { k: k, sport: s.sport, name: name, section: key, source: "", teams: {} });
-      if (logo && !/paokfc\.gr/.test(logo)) o.source = o.source || logo;
+      var o = by[k] || (by[k] = { k: k, sport: s.sport, name: name, section: key, source: "", fallback: "", teams: {} });
+      // Όπως στο crest(): το σήμα του paokfc.gr μετρά, αλλά μετά από άλλη πηγή ή σήμα της πρώτης ομάδας.
+      if (logo && /paokfc\.gr/.test(logo)) o.fallback = o.fallback || logo;
+      else if (logo) o.source = o.source || logo;
       o.teams[s.short || s.name] = 1;
     }
     data.academyMatches.forEach(function (m) {
@@ -1466,7 +1468,7 @@
     return Object.keys(by).map(function (k) {
       var o = by[k];
       o.saved = savedCrests[k] || "";
-      o.auto = o.source || academyCrest(o.name, o.section);
+      o.auto = o.source || academyCrest(o.name, o.section) || o.fallback;
       o.url = o.saved || o.auto;
       return o;
     }).sort(function (a, b) { return (!!a.url - !!b.url) || a.sport.localeCompare(b.sport, "el") || a.name.localeCompare(b.name, "el"); });

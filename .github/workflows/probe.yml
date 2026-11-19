@@ -11,21 +11,11 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           mkdir -p probe
-          python3 - <<'PY'
-          import urllib.request, urllib.parse
-          UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
-          out = open("probe/result.txt", "w")
-          for i, d in enumerate(["Κ15 LEAGUE 1", "Κ14 LEAGUE 1", "Κ14 LEAGUE 2", "Κ13 ΕΙΔΙΚΗΣ 1ος ΟΜΙΛΟΣ", "Κ15 ΓΥΝΑΙΚΩΝ", "Κ12 ΚΟΡΑΣΙΔΩΝ"]):
-              u = "https://www.epsm.gr/table_ypodomon_analytika.asp?" + urllib.parse.urlencode({"diorganosi": d})
-              try:
-                  b = urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=60).read()
-              except Exception as e:
-                  b = str(e).encode()
-              open(f"probe/an{i}.html", "wb").write(b)
-              out.write(f"{i} {d} {len(b)}\n")
-          koe = urllib.request.urlopen(urllib.request.Request("https://koe.org.gr/sports/water-polo", headers=UA), timeout=60).read()
-          open("probe/koe_wp.html", "wb").write(koe)
-          PY
+          U=https://www.paokfc.gr/wp-content/uploads/2026/07/pao.png
+          curl -sSL -o probe/w.png -w "weserv %{http_code} %{size_download} %{content_type}\n" "https://wsrv.nl/?url=$U" >> probe/result.txt
+          curl -sSL -A "Mozilla/5.0" -o probe/d.png -w "direct %{http_code} %{size_download} %{content_type}\n" "$U" >> probe/result.txt
+          curl -sSL https://paokalendar.gr/api/admin | python3 -c "import json,sys; d=json.load(sys.stdin); print([(c['sport'],c['name'],c['url'][:60]) for c in d.get('crests',[])])" >> probe/result.txt
+          curl -sSL -o probe/c.bin -w "crest %{http_code} %{content_type}\n" "https://paokalendar.gr/crests/$(curl -sSL https://paokalendar.gr/matches.json | grep -o 'paokalendar.gr/crests/[0-9a-f]*\.[a-z]*' | head -1 | sed 's#.*/##')" >> probe/result.txt
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

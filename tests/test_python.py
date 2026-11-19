@@ -539,6 +539,15 @@ class SocialRemind(unittest.TestCase):
         finally:
             self.ITEMS[1].update(missing=["Balkan – ΠΑΟΚ"], images=[])
 
+    def test_after_waits_for_other_post(self):
+        import social_remind
+        it = {"type": "post", "what": "schedule", "day": "2026-11-20", "time": "21:30", "title": "Π", "caption": "x",
+              "images": ["a.png"], "after": "2026-11-20-2100-results"}
+        now = lambda t: dt.datetime.fromisoformat(t).replace(tzinfo=b.ATHENS)
+        self.assertEqual(social_remind.due([it], {}, now("2026-11-20T21:30")), [])
+        self.assertEqual(len(social_remind.due([it], {"2026-11-20-2100-results": "x"}, now("2026-11-20T22:10"))), 1)
+        self.assertEqual(len(social_remind.due([it], {}, now("2026-11-21T00:40"))), 1)   # δεν περιμένει για πάντα
+
     def test_change_after_post(self):
         """Μετά την υπενθύμιση του προγράμματος, αλλαγή ώρας στέλνει «Άλλαξε το πρόγραμμα» μία φορά."""
         import json, tempfile

@@ -28,6 +28,7 @@ TOPIC = "s:ops:pre"
 EARLY = dt.timedelta(minutes=5)       # ο έλεγχος τρέχει κάθε 15': να μη φύγει πολύ αργά
 LATE = dt.timedelta(minutes=50)       # μετά από τόσο, για post/story χωρίς αναμονή, δεν στέλνεται πια
 RESULTS_LATE = dt.timedelta(hours=5)  # τα αποτελέσματα περιμένουν τα σκορ
+AFTER_WAIT = dt.timedelta(hours=3)    # πόσο περιμένει ένα post το «after» του
 KIND = {"post": "post", "story": "story", "reel": "Reel"}
 ICON = {"post": "🖼️", "story": "📱", "reel": "🎬"}
 
@@ -41,7 +42,8 @@ def ready(it: dict) -> bool:
 
 
 def message(it: dict) -> tuple[str, str]:
-    title = f"{ICON.get(it['type'], '📣')} Ώρα για {KIND.get(it['type'], it['type'])}: {it['title']}"
+    grid = f" {it['grid']}" if it.get("grid") else ""
+    title = f"{ICON.get(it['type'], '📣')} Ώρα για {KIND.get(it['type'], it['type'])}{grid}: {it['title']}"
     n = len(it.get("images") or [])
     parts = []
     if it.get("how"):
@@ -57,8 +59,12 @@ def due(items: list[dict], sent: dict, now: dt.datetime) -> list[dict]:
     out = []
     for it in items:
         at = dt.datetime.fromisoformat(f"{it['day']}T{it['time']}").replace(tzinfo=notify.ATHENS)
-        late = RESULTS_LATE if it.get("missing") is not None else LATE
+        late = RESULTS_LATE if it.get("missing") is not None or it.get("after") else LATE
         if key(it) in sent or not (at - EARLY <= now <= at + late) or not ready(it):
+            continue
+        # «after»: για τη σκακιέρα του grid πρώτα ανεβαίνει το άλλο post (π.χ. τα αποτελέσματα, που
+        # περιμένουν σκορ)· αν αργήσει πάνω από AFTER_WAIT, δεν περιμένουμε άλλο.
+        if it.get("after") and it["after"] not in sent and now < at + AFTER_WAIT:
             continue
         out.append(it)
     return out

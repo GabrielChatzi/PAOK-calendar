@@ -104,3 +104,24 @@ test("Ακαδημίες: πρόγραμμα Παρασκευή 13:00, αποτ�
   const r = items.find((i) => i.what === "academyResults");
   assert.equal(r.day, "2026-11-24"); assert.equal(r.missing.length, 3);
 });
+
+test("Σκακιέρα: ακαδημίες μέσα στο carousel, τα αποτελέσματα πριν από δεύτερο πρόγραμμα στη σειρά", async () => {
+  const { gridOrder, mergeAcademy } = await import("../social/week.mjs");
+  const items = [
+    { type: "post", what: "schedule", block: "2026-11-21", day: "2026-11-20", time: "21:00", first: "2026-11-21T11:00",
+      cards: [1], lines: ["a"], until: "2026-11-22T18:00", caption: "x\n\nΏρες" },
+    { type: "post", what: "results", block: "2026-11-17", day: "2026-11-21", time: "09:00", ends: "2026-11-20T20:35",
+      cards: [2], caption: "y\n\nΌλα τα σκορ" },
+  ];
+  const acad = [
+    { what: "academySchedule", block: "2026-11-21", cards: [3, 4], lines: ["b", "c"], until: "2026-11-23T15:00" },
+  ];
+  const out = gridOrder(mergeAcademy(items, acad), { day: "2026-11-17", time: "19:00", what: "schedule" });
+  const [s, r] = out;
+  assert.deepEqual(s.cards, [1, 3, 4]);                    // κανονικό εξώφυλλο, μετά οι ακαδημίες
+  assert.equal(s.until, "2026-11-23T15:00");
+  assert.match(s.caption, /οι 2 αγώνες των ακαδημιών/);
+  assert.equal(`${r.day} ${r.time} ${r.grid}`, "2026-11-20 21:00 ⬜");   // αποτελέσματα πρώτα
+  assert.equal(`${s.day} ${s.time} ${s.grid}`, "2026-11-20 21:30 ⬛");
+  assert.equal(s.after, "2026-11-20-2100-results");
+});

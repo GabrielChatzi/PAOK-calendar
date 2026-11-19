@@ -207,7 +207,8 @@ export function plan(matches, today, { names = { teams: {}, venues: {}, tv: {} }
     const pday = addDays(first, -1);
     if (pday >= from && pday <= to) {
       const end = dayEnd(pday);
-      items.push({ type: "post", what: "schedule", track: `${b.kind}-${b.key}`, day: pday,
+      items.push({ type: "post", what: "schedule", block: b.key, track: `${b.kind}-${b.key}`, day: pday,
+        first: all[0].start,
         time: hhmm(Math.max(19 * 60, end ? roundUp(end + 20) : 0)),
         title: `Πρόγραμμα ${label}`, cards: blockCards("fixtures", b, (l) => l),
         until: all.at(-1).start, lines: all.map((m) => matchLine(m, names)),
@@ -218,7 +219,8 @@ export function plan(matches, today, { names = { teams: {}, venues: {}, tv: {} }
     if (rday >= from && rday <= to) {
       const done = all.filter((m) => /^\d+-\d+$/.test(m.score || ""));
       const missing = all.filter((m) => !done.includes(m));
-      items.push({ type: "post", what: "results", day: rday, time: "09:00", title: `Αποτελέσματα ${label}`,
+      items.push({ type: "post", what: "results", block: b.key, day: rday, time: "09:00", title: `Αποτελέσματα ${label}`,
+        ends: `${last}T${hhmm(Math.min(dayEnd(last), 23 * 60 + 59))}`,
         cards: blockCards("results", b, (l) => l.filter((m) => done.includes(m))),
         caption: done.length ? resultsCaption(b, done, names) : "",
         missing: missing.map((m) => `${m.home} – ${m.away}`) });
@@ -301,7 +303,8 @@ export function academyPlan(matches, today, { names = { teams: {}, venues: {}, t
     const all = days.flatMap((d) => byDay.get(d));
     const pday = addDays(key, -1);  // Παρασκευή
     if (pday >= from && pday <= to) {
-      items.push({ type: "post", what: "academySchedule", track: `academy-${key}`, day: pday, time: "13:00",
+      items.push({ type: "post", what: "academySchedule", block: key, track: `academy-${key}`, day: pday, time: "13:00",
+        first: all.map((m) => m.start).sort()[0],
         title: "Πρόγραμμα ακαδημιών", cards: cards("fixtures", days, (l) => l),
         until: all.map((m) => m.start).sort().at(-1), lines: all.map((m) => matchLine(m, names)),
         caption: academyCaption("schedule", all) });
@@ -309,12 +312,79 @@ export function academyPlan(matches, today, { names = { teams: {}, venues: {}, t
     const rday = addDays(last, 1);
     if (rday >= from && rday <= to) {
       const done = all.filter((m) => /^\d+-\d+$/.test(m.score || ""));
-      items.push({ type: "post", what: "academyResults", day: rday, time: "13:00", title: "Αποτελέσματα ακαδημιών",
+      const endMin = Math.max(...byDay.get(last).map((m) => minutes(local(new Date(m.start)).time) + (DURATION[m.section.split("-")[0]] || 110)));
+      items.push({ type: "post", what: "academyResults", block: key, day: rday, time: "13:00", title: "Αποτελέσματα ακαδημιών",
+        ends: `${last}T${hhmm(Math.min(endMin, 23 * 60 + 59))}`,
         cards: cards("results", days, (l) => l.filter((m) => done.includes(m))),
         caption: done.length ? academyCaption("results", done, names) : "",
         missing: all.filter((m) => !done.includes(m)).map((m) => `${m.home} – ${m.away}`) });
     }
   }
+  return items;
+}
+
+// Οι ακαδημίες μπαίνουν ως επιπλέον κάρτες στο carousel του Σαββατοκύριακου (εξώφυλλο το κανονικό), ώστε
+// στο grid να εναλλάσσονται πάντα ⬛ πρόγραμμα και ⬜ αποτελέσματα (σκακιέρα). Μόνο Σαββατοκύριακο χωρίς
+// κανονικό post έχει δικό του post ακαδημιών, που τότε μετρά ως το πρόγραμμα/αποτελέσματα του μπλοκ.
+// Τα σκορ των ακαδημιών που αργούν δεν κρατάνε πίσω το post (μπαίνουν όσα έχουν έρθει).
+export function mergeAcademy(items, acad) {
+  const out = [...items];
+  for (const a of acad) {
+    const what = a.what === "academySchedule" ? "schedule" : "results";
+    const host = out.find((i) => i.type === "post" && i.what === what && i.block === a.block);
+    if (!host) { out.push({ ...a, what, academy: true }); continue; }
+    host.cards = [...host.cards, ...a.cards];
+    host.academyCards = a.cards.length;
+    if (what === "schedule") {
+      host.lines = [...(host.lines || []), ...a.lines];
+      host.until = [host.until, a.until].sort().at(-1);
+      host.caption = host.caption.replace(/\n\n(Ώρες)/, `\nΣτο carousel και οι ${a.lines.length} αγώνες των ακαδημιών 👶⚪️⚫️\n\n$1`);
+    } else {
+      host.ends = [host.ends, a.ends].sort().at(-1);
+      if (a.cards.length) host.caption = (host.caption || a.caption).replace(/\n\n(Όλα τα σκορ)/, "\nΣτο carousel και τα αποτελέσματα των ακαδημιών 👏\n\n$1");
+      if (a.missing?.length) host.note = `Ακαδημίες χωρίς σκορ ακόμα: ${a.missing.length}`;
+    }
+  }
+  return out;
+}
+
+const at = (it) => `${it.day}T${it.time}`;
+const plus = (day, time, m) => { const t = minutes(time) + m; return t >= 24 * 60 ? [addDays(day, 1), hhmm(t - 24 * 60)] : [day, hhmm(t)]; };
+
+// Σκακιέρα στο grid: τα post πρέπει να εναλλάσσονται ⬛ πρόγραμμα / ⬜ αποτελέσματα. Όταν δύο ίδια πέφτουν
+// στη σειρά, φέρνουμε νωρίτερα το επόμενο post του άλλου χρώματος: αποτελέσματα αμέσως μόλις τελειώσει το μπλοκ
+// τους (και το πρόγραμμα 30' μετά, με «after» για να μην έρθει η υπενθύμιση πριν από αυτά), πρόγραμμα αμέσως
+// μετά τα αποτελέσματα. Αλλιώς σημείωση «δύο ίδια στη σειρά».
+export function gridOrder(items, before = null) {
+  // before: το τελευταίο post που έχει ήδη ανέβει ({day, time, what}), για να συνεχίσει η εναλλαγή.
+  const lead = before && { ...before, type: "post", lead: true };
+  const posts = () => [...(lead ? [lead] : []), ...items.filter((i) => i.type === "post")]
+    .sort((a, b) => at(a).localeCompare(at(b)));
+  for (let guard = 0; guard < 10; guard++) {
+    const ps = posts();
+    const i = ps.findIndex((p, k) => k > 0 && p.what === ps[k - 1].what);
+    if (i < 0) break;
+    const cur = ps[i], prev = ps[i - 1];
+    if (cur.lead) break;
+    const j = ps.findIndex((p, k) => k > i && p.what !== cur.what);
+    const other = j > 0 ? ps[j] : null;
+    let fixed = false;
+    if (other && cur.what === "schedule" && other.ends && other.ends <= at(cur)) {
+      [other.day, other.time] = [cur.day, cur.time];
+      [cur.day, cur.time] = plus(cur.day, cur.time, 30);
+      cur.after = `${other.day}-${other.time.replace(":", "")}-${other.what}`;
+      fixed = true;
+    } else if (other && cur.what === "results") {
+      const [d, t] = plus(prev.day, prev.time, 30);
+      if (`${d}T${t}` < at(cur)) {
+        [other.day, other.time] = [d, t];
+        other.after = `${prev.day}-${prev.time.replace(":", "")}-${prev.what}`;
+        fixed = true;
+      }
+    }
+    if (!fixed) { cur.note = [cur.note, "⚠️ Δύο ίδια χρώματα στη σειρά στο grid"].filter(Boolean).join(" · "); break; }
+  }
+  for (const p of items) if (p.type === "post") p.grid = p.what === "schedule" ? "⬛" : "⬜";
   return items;
 }
 
@@ -374,7 +444,7 @@ export function readme(p) {
       cur = it.day;
       lines.push(`## ${DAYS[weekday(it.day)]} ${ddmm(it.day)}${it.day === p.today ? " (σήμερα)" : ""}`, "");
     }
-    lines.push(`### ${it.time} · ${TYPE[it.type]}: ${it.title}`, "");
+    lines.push(`### ${it.time} · ${TYPE[it.type]}${it.grid ? ` ${it.grid}` : ""}: ${it.title}`, "");
     if (it.how) lines.push(it.how, "");
     if (it.note) lines.push(it.note, "");
     if (it.missing?.length) {
@@ -401,7 +471,11 @@ async function main() {
   const academy = new Set((data.sections || []).filter((s) => s.academy).map((s) => s.key));
   names.labels = academyLabels(data.sections);
   const p = plan(data.matches.filter((m) => !academy.has(m.section)), today, { names });
-  p.items.push(...academyPlan(data.matches.filter((m) => academy.has(m.section)), today, { names }));
+  const main = data.matches.filter((m) => !academy.has(m.section)), acad = data.matches.filter((m) => academy.has(m.section));
+  // Το τελευταίο post πριν από το πλάνο (από το πλάνο της προηγούμενης εβδομάδας), για να συνεχίσει η σκακιέρα.
+  const past = mergeAcademy(plan(main, addDays(today, -7), { names }).items, academyPlan(acad, addDays(today, -7), { names }))
+    .filter((i) => i.type === "post" && i.day < p.from).sort((a, b) => at(a).localeCompare(at(b))).at(-1);
+  p.items = gridOrder(mergeAcademy(p.items, academyPlan(acad, today, { names })), past && { day: past.day, time: past.time, what: past.what });
   const order = { post: 0, reel: 1, story: 2 };
   p.items.sort((a, b) => a.day.localeCompare(b.day) || a.time.localeCompare(b.time) || order[a.type] - order[b.type]);
 

@@ -1,5 +1,0 @@
-range.json 200 196861
-day.json 200 16406
-comp.html 200 15007
-team.html 200 5855
-game.html 200 14270

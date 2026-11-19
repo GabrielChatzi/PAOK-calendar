@@ -14,12 +14,24 @@ jobs:
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"
           B=https://ekasth.gr/champs/matchcenter8
           g(){ curl -sSL -A "$UA" -m 60 -o "probe/$1" -w "$1 %{http_code} %{size_download}\n" "$2" >> probe/result.txt 2>&1; }
-          g range.json "$B/bgapi.php?action=range&from=2026-09-01&to=2027-06-30"
-          g day.json "$B/bgapi.php?action=day&date=2026-11-21"
-          g comp.html "$B/competition.html"
-          g team.html "$B/team.html"
-          g game.html "$B/game.html"
-          for f in comp team game; do grep -oE 'api\("[a-z_]+"[^)]{0,120}\)' probe/$f.html | sort -u >> probe/actions.txt; done
+          g channels.json "$B/bgapi.php?action=channels"
+          python3 - <<'PY'
+          import json,urllib.request,urllib.parse
+          B="https://ekasth.gr/champs/matchcenter8/bgapi.php?"
+          def get(**q):
+              r=urllib.request.Request(B+urllib.parse.urlencode(q),headers={"User-Agent":"Mozilla/5.0"})
+              return json.load(urllib.request.urlopen(r,timeout=60))
+          ch=json.load(open("probe/channels.json"))
+          lst=ch.get("channels",ch) if isinstance(ch,dict) else ch
+          out={}
+          for c in lst[:60]:
+              cid=c.get("id") or c.get("channel_id")
+              try:
+                  d=get(action="channel",ch=cid)
+                  out[cid]=d
+              except Exception as e: out[cid]={"error":str(e)}
+          json.dump(out,open("probe/chans.json","w"),ensure_ascii=False)
+          PY
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

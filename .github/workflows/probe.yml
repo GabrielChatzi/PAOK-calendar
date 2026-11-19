@@ -12,12 +12,11 @@ jobs:
       - run: |
           mkdir -p probe
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"
-          g(){ curl -sSL -A "$UA" -m 60 -o "probe/$1" -w "$1 %{http_code} %{size_download} %{content_type}\n" "$2" >> probe/result.txt 2>&1; }
-          g art.html "https://www.epsm.gr/article.asp?code=14948"
-          g team.html "https://www.epsm.gr/team.asp?team=%CE%A0%CE%91%CE%95%20%CE%A0%CE%91%CE%9F%CE%9A%20%CE%9A14"
+          g(){ curl -sSL -A "$UA" -m 60 -o "probe/$1" -w "$1 %{http_code} %{size_download}\n" "$2" >> probe/result.txt 2>&1; }
+          g arxeio.html "https://www.epsm.gr/arxeio.asp"
+          g arxeio2.html "https://www.epsm.gr/arxeio.asp?page=2"
+          g search.html "https://www.epsm.gr/search.asp?q=%CE%A0%CF%81%CF%8C%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B1%20%CE%B1%CE%B3%CF%8E%CE%BD%CF%89%CE%BD%20%CF%85%CF%80%CE%BF%CE%B4%CE%BF%CE%BC%CF%8E%CE%BD"
           g game.html "https://www.epsm.gr/game_ypodomon.asp?game_number=100043"
-          for u in $(grep -oE '(href|src)="[^"]+\.(pdf|xlsx?|docx?|jpg|png)"' probe/art.html | sed -E 's/^(href|src)="//;s/"$//' | grep -iv "logo\|icon" | head -5); do case $u in http*) U=$u;; /*) U="https://www.epsm.gr$u";; *) U="https://www.epsm.gr/$u";; esac; g "att_$(basename "$u" | tr -c 'A-Za-z0-9.' _ | tail -c 40)" "$(python3 -c 'import sys,urllib.parse;print(urllib.parse.quote(sys.argv[1],safe=":/?=&%"))' "$U")"; done
-          g koe_news.html "https://www.koe.org.gr/"
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

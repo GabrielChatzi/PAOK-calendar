@@ -1,0 +1,118 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Κ15 Κοριτσιών – Εκτός έδρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:football-women-u15-epsm-c4234fb5ec6f@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261114T090000
+DTEND;TZID=Europe/Athens:20261114T110000
+SUMMARY:⚽ ΑΙΑΝΤΑΣ ΠΥΛΑΙΑΣ 0-7 ΠΑΟΚ
+LOCATION:ΠΥΛΑΙΑΣ FOOTBALL HUB
+DESCRIPTION:Κ15 Γυναικών (ΕΠΣΜ) – 3η αγωνιστική\n
+ Τελικό σκορ: ΑΙΑΝΤΑΣ ΠΥΛΑΙΑΣ 0-7 ΠΑΟΚ
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+%C
+ E%93%CE%A5%CE%9D%CE%91%CE%99%CE%9A%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u15-epsm-cb50ef696122@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261129T180000
+DTEND;TZID=Europe/Athens:20261129T200000
+SUMMARY:⚽ ΑΣ ΠΑΟΚ (2) – ΠΑΟΚ (ώρα αναμένεται)
+DESCRIPTION:Κ15 Γυναικών (ΕΠΣΜ) – 5η αγωνιστική\n
+ Η ώρα δεν έχει οριστεί ακόμα (προσωρινά 18
+ :00). Θα ενημερωθεί αυτόματα όταν ανακοινω
+ θεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+%C
+ E%93%CE%A5%CE%9D%CE%91%CE%99%CE%9A%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u15-epsm-699ea3cceccb@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261206T180000
+DTEND;TZID=Europe/Athens:20261206T200000
+SUMMARY:⚽ ΖΗΤΑ ΕΠΤΑ – ΠΑΟΚ (ώρα αναμένεται)
+DESCRIPTION:Κ15 Γυναικών (ΕΠΣΜ) – 6η αγωνιστική\n
+ Η ώρα δεν έχει οριστεί ακόμα (προσωρινά 18
+ :00). Θα ενημερωθεί αυτόματα όταν ανακοινω
+ θεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+%C
+ E%93%CE%A5%CE%9D%CE%91%CE%99%CE%9A%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u15-epsm-c7b4d511f9b6@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261220T180000
+DTEND;TZID=Europe/Athens:20261220T200000
+SUMMARY:⚽ ΣΚΙΟΥΡΟΙ – ΠΑΟΚ (ώρα αναμένεται)
+DESCRIPTION:Κ15 Γυναικών (ΕΠΣΜ) – 8η αγωνιστική\n
+ Η ώρα δεν έχει οριστεί ακόμα (προσωρινά 18
+ :00). Θα ενημερωθεί αυτόματα όταν ανακοινω
+ θεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+%C
+ E%93%CE%A5%CE%9D%CE%91%CE%99%CE%9A%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u15-epsm-adf60dec1efc@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261227T180000
+DTEND;TZID=Europe/Athens:20261227T200000
+SUMMARY:⚽ ΟΜΑΔΑ Α – ΠΑΟΚ (ώρα αναμένεται)
+DESCRIPTION:Κ15 Γυναικών (ΕΠΣΜ) – 9η αγωνιστική\n
+ Η ώρα δεν έχει οριστεί ακόμα (προσωρινά 18
+ :00). Θα ενημερωθεί αυτόματα όταν ανακοινω
+ θεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+%C
+ E%93%CE%A5%CE%9D%CE%91%CE%99%CE%9A%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u15-epsm-02c9c14f7f6f@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270110T180000
+DTEND;TZID=Europe/Athens:20270110T200000
+SUMMARY:⚽ ΑΟ ΛΕΟΝΤΕΣ – ΠΑΟΚ (ώρα αναμένεται)
+DESCRIPTION:Κ15 Γυναικών (ΕΠΣΜ) – 11η αγωνιστική\
+ nΗ ώρα δεν έχει οριστεί ακόμα (προσωρινά 1
+ 8:00). Θα ενημερωθεί αυτόματα όταν ανακοιν
+ ωθεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+%C
+ E%93%CE%A5%CE%9D%CE%91%CE%99%CE%9A%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u15-epsm-172ae8ac37cf@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270131T180000
+DTEND;TZID=Europe/Athens:20270131T200000
+SUMMARY:⚽ ΑΝΑΓΕΝΝΗΣΗ ΧΑΛΚΗΔΟΝΑΣ – ΠΑΟΚ (ώρα 
+ αναμένεται)
+DESCRIPTION:Κ15 Γυναικών (ΕΠΣΜ) – 14η αγωνιστική\
+ nΗ ώρα δεν έχει οριστεί ακόμα (προσωρινά 1
+ 8:00). Θα ενημερωθεί αυτόματα όταν ανακοιν
+ ωθεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+%C
+ E%93%CE%A5%CE%9D%CE%91%CE%99%CE%9A%CE%A9%CE%9D
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,119 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Κ12 Κορασίδων – Εκτός έδρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:football-women-u12-epsm-d1ca3892d74a@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261031T120000
+DTEND;TZID=Europe/Athens:20261031T140000
+SUMMARY:⚽ ΑΟ ΛΕΟΝΤΕΣ (1) – ΠΑΟΚ
+LOCATION:LOVE FOOTBALL
+DESCRIPTION:Κ12 Κορασίδων (ΕΠΣΜ) – 1η αγωνιστική
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A12+%C
+ E%9A%CE%9F%CE%A1%CE%91%CE%A3%CE%99%CE%94%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u12-epsm-1669ef40bd88@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261114T180000
+DTEND;TZID=Europe/Athens:20261114T200000
+SUMMARY:ΑΝΑΒΛΗΘΗΚΕ: ⚽ ΑΣ ΠΟΔ. ΤΟΥΜΠΑΣ – ΠΑΟΚ 
+ (ώρα αναμένεται)
+DESCRIPTION:Κ12 Κορασίδων (ΕΠΣΜ) – 3η αγωνιστική
+ \nΑναβλήθηκε\nΗ ώρα δεν έχει οριστεί ακόμ
+ α (προσωρινά 18:00). Θα ενημερωθεί αυτόματα 
+ όταν ανακοινωθεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A12+%C
+ E%9A%CE%9F%CE%A1%CE%91%CE%A3%CE%99%CE%94%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u12-epsm-3129af91f3c0@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261121T123000
+DTEND;TZID=Europe/Athens:20261121T143000
+SUMMARY:⚽ ΣΚΙΟΥΡΟΙ – ΠΑΟΚ
+LOCATION:LOVEFOOTBALL
+DESCRIPTION:Κ12 Κορασίδων (ΕΠΣΜ) – 4η αγωνιστική
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A12+%C
+ E%9A%CE%9F%CE%A1%CE%91%CE%A3%CE%99%CE%94%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u12-epsm-d48637f77eec@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261205T180000
+DTEND;TZID=Europe/Athens:20261205T200000
+SUMMARY:⚽ ΜΑΚΕΔΟΝΙΚΟΣ – ΠΑΟΚ (ώρα αναμένετα
+ ι)
+DESCRIPTION:Κ12 Κορασίδων (ΕΠΣΜ) – 6η αγωνιστική
+ \nΗ ώρα δεν έχει οριστεί ακόμα (προσωρινά 
+ 18:00). Θα ενημερωθεί αυτόματα όταν ανακοιν
+ ωθεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A12+%C
+ E%9A%CE%9F%CE%A1%CE%91%CE%A3%CE%99%CE%94%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u12-epsm-c3d5ff7bd3d2@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261226T180000
+DTEND;TZID=Europe/Athens:20261226T200000
+SUMMARY:⚽ ΑΙΑΝΤΑΣ ΠΥΛΑΙΑΣ – ΠΑΟΚ (ώρα αναμέν
+ εται)
+DESCRIPTION:Κ12 Κορασίδων (ΕΠΣΜ) – 9η αγωνιστική
+ \nΗ ώρα δεν έχει οριστεί ακόμα (προσωρινά 
+ 18:00). Θα ενημερωθεί αυτόματα όταν ανακοιν
+ ωθεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A12+%C
+ E%9A%CE%9F%CE%A1%CE%91%CE%A3%CE%99%CE%94%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u12-epsm-42a1ba852981@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270116T180000
+DTEND;TZID=Europe/Athens:20270116T200000
+SUMMARY:⚽ ΑΟ ΛΕΟΝΤΕΣ (2) – ΠΑΟΚ (ώρα αναμένετα
+ ι)
+DESCRIPTION:Κ12 Κορασίδων (ΕΠΣΜ) – 12η αγωνιστικ
+ ή\nΗ ώρα δεν έχει οριστεί ακόμα (προσωριν
+ ά 18:00). Θα ενημερωθεί αυτόματα όταν ανακο
+ ινωθεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A12+%C
+ E%9A%CE%9F%CE%A1%CE%91%CE%A3%CE%99%CE%94%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u12-epsm-0573d011ae91@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270130T180000
+DTEND;TZID=Europe/Athens:20270130T200000
+SUMMARY:⚽ ΑΜΣ ΠΑΝΟΡΑΜΑ – ΠΑΟΚ (ώρα αναμένετα
+ ι)
+DESCRIPTION:Κ12 Κορασίδων (ΕΠΣΜ) – 14η αγωνιστικ
+ ή\nΗ ώρα δεν έχει οριστεί ακόμα (προσωριν
+ ά 18:00). Θα ενημερωθεί αυτόματα όταν ανακο
+ ινωθεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A12+%C
+ E%9A%CE%9F%CE%A1%CE%91%CE%A3%CE%99%CE%94%CE%A9%CE%9D
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,125 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Κ12 – Εκτός έδρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:football-u12-epsm-6bbf1a9e3e6a@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261017T160000
+DTEND;TZID=Europe/Athens:20261017T180000
+SUMMARY:⚽ ΧΑΝΘ 1-10 ΠΑΟΚ
+LOCATION:PLANET FC
+DESCRIPTION:Κ13 Ειδικής (ΕΠΣΜ) – 2η αγωνιστική\nΤ
+ ελικό σκορ: ΧΑΝΘ 1-10 ΠΑΟΚ
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A13+%C
+ E%95%CE%99%CE%94%CE%99%CE%9A%CE%97%CE%A3+1%CE%BF%CF%82+%CE%9F%CE%9C%CE%99%
+ CE%9B%CE%9F%CE%A3
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u12-epsm-3129af91f3c0@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261107T160000
+DTEND;TZID=Europe/Athens:20261107T180000
+SUMMARY:⚽ ΣΚΙΟΥΡΟΙ 3-10 ΠΑΟΚ
+LOCATION:ΠΥΛΑΙΑΣ FOOTBALL HUB
+DESCRIPTION:Κ13 Ειδικής (ΕΠΣΜ) – 4η αγωνιστική\nΤ
+ ελικό σκορ: ΣΚΙΟΥΡΟΙ 3-10 ΠΑΟΚ
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A13+%C
+ E%95%CE%99%CE%94%CE%99%CE%9A%CE%97%CE%A3+1%CE%BF%CF%82+%CE%9F%CE%9C%CE%99%
+ CE%9B%CE%9F%CE%A3
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u12-epsm-2f1e2802603b@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261121T090000
+DTEND;TZID=Europe/Athens:20261121T110000
+SUMMARY:⚽ ΠΡΩΤΕΑΣ – ΠΑΟΚ
+LOCATION:PLANET FC
+DESCRIPTION:Κ13 Ειδικής (ΕΠΣΜ) – 6η αγωνιστική
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A13+%C
+ E%95%CE%99%CE%94%CE%99%CE%9A%CE%97%CE%A3+1%CE%BF%CF%82+%CE%9F%CE%9C%CE%99%
+ CE%9B%CE%9F%CE%A3
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u12-epsm-868a3718e823@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261128T180000
+DTEND;TZID=Europe/Athens:20261128T200000
+SUMMARY:⚽ ΑΓΙΟΣ ΝΙΚΟΛΑΟΣ – ΠΑΟΚ (ώρα αναμένε
+ ται)
+DESCRIPTION:Κ13 Ειδικής (ΕΠΣΜ) – 7η αγωνιστική\nΗ
+  ώρα δεν έχει οριστεί ακόμα (προσωρινά 18:0
+ 0). Θα ενημερωθεί αυτόματα όταν ανακοινωθ
+ εί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A13+%C
+ E%95%CE%99%CE%94%CE%99%CE%9A%CE%97%CE%A3+1%CE%BF%CF%82+%CE%9F%CE%9C%CE%99%
+ CE%9B%CE%9F%CE%A3
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u12-epsm-a5b63cfd4a81@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261205T180000
+DTEND;TZID=Europe/Athens:20261205T200000
+SUMMARY:⚽ ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020 – ΠΑΟΚ (
+ ώρα αναμένεται)
+DESCRIPTION:Κ13 Ειδικής (ΕΠΣΜ) – 8η αγωνιστική\nΗ
+  ώρα δεν έχει οριστεί ακόμα (προσωρινά 18:0
+ 0). Θα ενημερωθεί αυτόματα όταν ανακοινωθ
+ εί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A13+%C
+ E%95%CE%99%CE%94%CE%99%CE%9A%CE%97%CE%A3+1%CE%BF%CF%82+%CE%9F%CE%9C%CE%99%
+ CE%9B%CE%9F%CE%A3
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u12-epsm-ad69277afb3d@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261219T180000
+DTEND;TZID=Europe/Athens:20261219T200000
+SUMMARY:⚽ ΜΠΕΜΠΗΔΕΣ 2000 – ΠΑΟΚ (ώρα αναμένετα
+ ι)
+DESCRIPTION:Κ13 Ειδικής (ΕΠΣΜ) – 10η αγωνιστική\n
+ Η ώρα δεν έχει οριστεί ακόμα (προσωρινά 18
+ :00). Θα ενημερωθεί αυτόματα όταν ανακοινω
+ θεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A13+%C
+ E%95%CE%99%CE%94%CE%99%CE%9A%CE%97%CE%A3+1%CE%BF%CF%82+%CE%9F%CE%9C%CE%99%
+ CE%9B%CE%9F%CE%A3
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u12-epsm-9f7f2259927f@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270102T180000
+DTEND;TZID=Europe/Athens:20270102T200000
+SUMMARY:⚽ ΑΛΕΞΑΝΔΡΟΣ ΚΙΛΚΙΣ – ΠΑΟΚ (ώρα αναμ
+ ένεται)
+DESCRIPTION:Κ13 Ειδικής (ΕΠΣΜ) – 12η αγωνιστική\n
+ Η ώρα δεν έχει οριστεί ακόμα (προσωρινά 18
+ :00). Θα ενημερωθεί αυτόματα όταν ανακοινω
+ θεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A13+%C
+ E%95%CE%99%CE%94%CE%99%CE%9A%CE%97%CE%A3+1%CE%BF%CF%82+%CE%9F%CE%9C%CE%99%
+ CE%9B%CE%9F%CE%A3
+END:VEVENT
+END:VCALENDAR

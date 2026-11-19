@@ -1,0 +1,148 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Κ13 – Εκτός έδρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:football-u13-epsm-059075065be4@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261017T141500
+DTEND;TZID=Europe/Athens:20261017T161500
+SUMMARY:⚽ ΑΙΑΣ ΕΥΟΣΜΟΥ 0-12 ΠΑΟΚ
+LOCATION:ΕΛΠΙΔΑΣ ΕΥΟΣΜΟΥ
+DESCRIPTION:Κ14 League 1 (ΕΠΣΜ) – 1η αγωνιστική\nΤελι
+ κό σκορ: ΑΙΑΣ ΕΥΟΣΜΟΥ 0-12 ΠΑΟΚ
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+1
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13-epsm-7b3f035fcc00@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261115T090000
+DTEND;TZID=Europe/Athens:20261115T110000
+SUMMARY:⚽ ΜΠΕΜΠΗΔΕΣ 2000 (1) 1-1 ΠΑΟΚ
+LOCATION:PLANET FC
+DESCRIPTION:Κ14 League 1 (ΕΠΣΜ) – 4η αγωνιστική\nΤελι
+ κό σκορ: ΜΠΕΜΠΗΔΕΣ 2000 (1) 1-1 ΠΑΟΚ
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+1
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13-epsm-75796f9b9865@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261128T180000
+DTEND;TZID=Europe/Athens:20261128T200000
+SUMMARY:⚽ ΑΓΡΟΤΙΚΟΣ ΑΣΤΕΡΑΣ – ΠΑΟΚ (ώρα αναμ
+ ένεται)
+DESCRIPTION:Κ14 League 1 (ΕΠΣΜ) – 6η αγωνιστική\nΗ ώρ
+ α δεν έχει οριστεί ακόμα (προσωρινά 18:00). 
+ Θα ενημερωθεί αυτόματα όταν ανακοινωθεί
+ .
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+1
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13-epsm-8308987f1f88@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261212T180000
+DTEND;TZID=Europe/Athens:20261212T200000
+SUMMARY:⚽ ΑΚΑΔ. ΠΟΔ. ΝΕΑΠΟΛΗΣ – ΠΑΟΚ (ώρα ανα
+ μένεται)
+DESCRIPTION:Κ14 League 1 (ΕΠΣΜ) – 8η αγωνιστική\nΗ ώρ
+ α δεν έχει οριστεί ακόμα (προσωρινά 18:00). 
+ Θα ενημερωθεί αυτόματα όταν ανακοινωθεί
+ .
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+1
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13-epsm-d797dc48384b@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261226T180000
+DTEND;TZID=Europe/Athens:20261226T200000
+SUMMARY:⚽ ΑΕ ΕΥΟΣΜΟΥ – ΠΑΟΚ (ώρα αναμένεται)
+DESCRIPTION:Κ14 League 1 (ΕΠΣΜ) – 10η αγωνιστική\nΗ ώρ
+ α δεν έχει οριστεί ακόμα (προσωρινά 18:00). 
+ Θα ενημερωθεί αυτόματα όταν ανακοινωθεί
+ .
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+1
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13-epsm-6b9ff11ae168@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270102T180000
+DTEND;TZID=Europe/Athens:20270102T200000
+SUMMARY:⚽ ΑΟ ΠΟΛΥΚΑΣΤΡΟΥ ΠΑΙΟΝΙΑΣ – ΠΑΟΚ (ώρ
+ α αναμένεται)
+DESCRIPTION:Κ14 League 1 (ΕΠΣΜ) – 11η αγωνιστική\nΗ ώρ
+ α δεν έχει οριστεί ακόμα (προσωρινά 18:00). 
+ Θα ενημερωθεί αυτόματα όταν ανακοινωθεί
+ .
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+1
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13-epsm-17e0a224b8f0@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270116T180000
+DTEND;TZID=Europe/Athens:20270116T200000
+SUMMARY:⚽ ΔΟΞΑ ΠΕΡΙΒΟΛΑΚΙΟΥ – ΠΑΟΚ (ώρα αναμ
+ ένεται)
+DESCRIPTION:Κ14 League 1 (ΕΠΣΜ) – 13η αγωνιστική\nΗ ώρ
+ α δεν έχει οριστεί ακόμα (προσωρινά 18:00). 
+ Θα ενημερωθεί αυτόματα όταν ανακοινωθεί
+ .
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+1
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13-epsm-d6f8dd6e0845@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270130T180000
+DTEND;TZID=Europe/Athens:20270130T200000
+SUMMARY:⚽ ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020 (1) – ΠΑΟ
+ Κ (ώρα αναμένεται)
+DESCRIPTION:Κ14 League 1 (ΕΠΣΜ) – 15η αγωνιστική\nΗ ώρ
+ α δεν έχει οριστεί ακόμα (προσωρινά 18:00). 
+ Θα ενημερωθεί αυτόματα όταν ανακοινωθεί
+ .
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+1
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13-epsm-c3b860649c8e@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270213T180000
+DTEND;TZID=Europe/Athens:20270213T200000
+SUMMARY:⚽ ΠΟΤ ΗΡΑΚΛΗΣ – ΠΑΟΚ (ώρα αναμένεται
+ )
+DESCRIPTION:Κ14 League 1 (ΕΠΣΜ) – 17η αγωνιστική\nΗ ώρ
+ α δεν έχει οριστεί ακόμα (προσωρινά 18:00). 
+ Θα ενημερωθεί αυτόματα όταν ανακοινωθεί
+ .
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+1
+END:VEVENT
+END:VCALENDAR

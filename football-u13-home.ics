@@ -1,0 +1,119 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Κ13 – Εντός έδρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:football-u13-epsm-27f5843da9a2@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261031T191500
+DTEND;TZID=Europe/Athens:20261031T211500
+SUMMARY:⚽ ΠΑΟΚ 6-4 ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ (1)
+LOCATION:ΤΣΑΚ ΜΠΑΜ ΑΡΕΝΑ
+DESCRIPTION:Κ14 League 1 (ΕΠΣΜ) – 2η αγωνιστική\nΤελι
+ κό σκορ: ΠΑΟΚ 6-4 ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ (1)
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+1
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13-epsm-c4e95beb5fbb@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261107T154500
+DTEND;TZID=Europe/Athens:20261107T174500
+SUMMARY:⚽ ΠΑΟΚ 9-0 ΑΘΛΗΤΙΚΗ ΑΚΑΔΗΜΙΑ ΓΙΑΝΝΙΤΣ
+ ΩΝ
+LOCATION:ΤΣΑΚ ΜΠΑΜ ΑΡΕΝΑ
+DESCRIPTION:Κ14 League 1 (ΕΠΣΜ) – 3η αγωνιστική\nΤελι
+ κό σκορ: ΠΑΟΚ 9-0 ΑΘΛΗΤΙΚΗ ΑΚΑΔΗΜΙΑ ΓΙΑΝΝΙ
+ ΤΣΩΝ
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+1
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13-epsm-f9f0c6fc9d82@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261121T160000
+DTEND;TZID=Europe/Athens:20261121T180000
+SUMMARY:⚽ ΠΑΟΚ – ΠΡΩΤΕΑΣ (1)
+LOCATION:ΤΣΑΚ ΜΠΑΜ ΑΡΕΝΑ
+DESCRIPTION:Κ14 League 1 (ΕΠΣΜ) – 5η αγωνιστική
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+1
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13-epsm-f3c653a61b1a@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261205T180000
+DTEND;TZID=Europe/Athens:20261205T200000
+SUMMARY:⚽ ΠΑΟΚ – ΑΛΕΞΑΝΔΡΟΣ ΚΙΛΚΙΣ (ώρα αναμ
+ ένεται)
+DESCRIPTION:Κ14 League 1 (ΕΠΣΜ) – 7η αγωνιστική\nΗ ώρ
+ α δεν έχει οριστεί ακόμα (προσωρινά 18:00). 
+ Θα ενημερωθεί αυτόματα όταν ανακοινωθεί
+ .
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+1
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13-epsm-bb94881aed5e@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261219T180000
+DTEND;TZID=Europe/Athens:20261219T200000
+SUMMARY:⚽ ΠΑΟΚ – ΜΑΚΕΔΟΝΙΚΟΣ (1) (ώρα αναμένε
+ ται)
+DESCRIPTION:Κ14 League 1 (ΕΠΣΜ) – 9η αγωνιστική\nΗ ώρ
+ α δεν έχει οριστεί ακόμα (προσωρινά 18:00). 
+ Θα ενημερωθεί αυτόματα όταν ανακοινωθεί
+ .
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+1
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13-epsm-1954fdbca3fd@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270109T180000
+DTEND;TZID=Europe/Athens:20270109T200000
+SUMMARY:⚽ ΠΑΟΚ – ΑΚΑΔ. ΠΟΔ. ΠΡΟ (ώρα αναμένετ
+ αι)
+DESCRIPTION:Κ14 League 1 (ΕΠΣΜ) – 12η αγωνιστική\nΗ ώρ
+ α δεν έχει οριστεί ακόμα (προσωρινά 18:00). 
+ Θα ενημερωθεί αυτόματα όταν ανακοινωθεί
+ .
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+1
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13-epsm-e8336b9586e4@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270206T180000
+DTEND;TZID=Europe/Athens:20270206T200000
+SUMMARY:⚽ ΠΑΟΚ – ΣΚΙΟΥΡΟΙ (1) (ώρα αναμένεται)
+DESCRIPTION:Κ14 League 1 (ΕΠΣΜ) – 16η αγωνιστική\nΗ ώρ
+ α δεν έχει οριστεί ακόμα (προσωρινά 18:00). 
+ Θα ενημερωθεί αυτόματα όταν ανακοινωθεί
+ .
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+1
+END:VEVENT
+END:VCALENDAR

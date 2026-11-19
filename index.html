@@ -1183,7 +1183,7 @@
         (/[?&]app=admin(&|$)/.test(location.search) ? "" : '<li><button type="button" class="menu-plain" data-act="admin-off">Έξοδος από διαχειριστή<small>Η σελίδα όπως τη βλέπουν όλοι· ξανά με #/admin</small></button></li>') +
         "</ul></nav>" : "") +
       (canSeeAcademy() && data.academy.length
-        ? '<nav aria-label="Ακαδημίες"><h3>Ακαδημίες' + (isAdmin() ? ' <small class="menu-admin">διαχειριστής</small>' : "") + "</h3>" + '<ul class="menu-links">' +
+        ? '<nav aria-label="Ακαδημίες"><h3>Ακαδημίες</h3><ul class="menu-links">' +
           '<li><a href="#/academies">Ακαδημίες ›<small>Β\' ομάδα και τμήματα υποδομής, με δικό τους μενού</small></a></li></ul></nav>'
         : "") +
       '<nav aria-label="Σελίδες"><h3>Σελίδες</h3><ul class="menu-links">' + PAGES.map(function (p) {
@@ -1269,7 +1269,8 @@
       '<h2 class="section-title">Μην χάσεις αγώνα</h2>' +
       '<div class="shortcuts">' + PAGES.slice(1).map(function (p) {
         return '<a class="shortcut" href="#/' + p[0] + '"><strong>' + p[1] + "</strong><span>" + p[2] + "</span></a>";
-      }).join("") + "</div>" + footerHtml();
+      }).join("") + (data.academy.length ? '<a class="shortcut" href="#/academies"><strong>Ακαδημίες</strong><span>Β\' ομάδα και τμήματα υποδομής: ποδόσφαιρο, μπάσκετ, βόλεϊ</span></a>' : "") +
+      "</div>" + footerHtml();
   }
 
   // ---- Ημερολόγια: «Όλος ο ΠΑΟΚ» με ένα πάτημα, ή όποια τμήματα θέλει κανείς σε μία συνδρομή
@@ -1331,7 +1332,7 @@
     return false;
   }
   function academyBandHtml() {
-    return '<p class="area-band"><a href="#/academies"><strong>Ακαδημίες</strong></a><span>Β\' ομάδα και τμήματα υποδομής' + (isAdmin() ? " · ορατό μόνο σε όσους έχουν τον σύνδεσμο" : "") + "</span></p>";
+    return '<p class="area-band"><a href="#/academies"><strong>Ακαδημίες</strong></a><span>Β\' ομάδα και τμήματα υποδομής' + "</span></p>";
   }
   // Οι ομάδες των ακαδημιών ανά άθλημα, με τη σειρά του SECTIONS.
   function academyGroups() {
@@ -1432,8 +1433,7 @@
     }).join("");
     return '<div class="section-head"><h2>Ακαδημίες</h2></div>' +
       (isAdmin() ? '<p class="actions"><a class="btn solid" href="#/academies/new">+ Νέος αγώνας</a><a class="btn" href="#/academies/crests">Σήματα</a>' +
-        '<button type="button" class="btn" data-copy="' + esc(location.origin + location.pathname + "#/akadimies/" + ACADEMY_KEY) +
-        '" data-msg="Ο κρυφός σύνδεσμος αντιγράφηκε. Όποιος τον ανοίξει βλέπει τις ακαδημίες (χωρίς δυνατότητα αλλαγών).">Αντιγραφή κρυφού συνδέσμου</button></p>' : "") +
+        '</p>' : "") +
       nextHtml(list) +
       '<h2 class="section-title">Όλοι οι αγώνες</h2>' +
       (acad.view === "month" ? "" : tabs) + bar +
@@ -2201,10 +2201,8 @@
   // Ακαδημίες για συγκεκριμένα άτομα: ο κρυφός σύνδεσμος #/akadimies/<ACADEMY_KEY> τις ανοίγει σε αυτή τη
   // συσκευή (μόνο για προβολή). Αν αλλάξει το κλειδί, οι παλιοί σύνδεσμοι και όσοι τον άνοιξαν δεν τις βλέπουν πια.
   var ACADEMY_KEY = "16c45ea7";
-  function canSeeAcademy() {
-    if (isAdmin()) return true;
-    try { return localStorage.getItem("paok-academy") === ACADEMY_KEY; } catch (e) { return false; }
-  }
+  // Από 19/11/2026 οι ακαδημίες είναι ορατές σε όλους· ο παλιός σύνδεσμος απλώς ανοίγει τη σελίδα τους.
+  function canSeeAcademy() { return true; }
   function hasTopic(t) { return !!push.sub && push.topics.indexOf(t) >= 0; }
   function matchFollowed(m) {
     var prefix = "m:" + m.nt + ":";
@@ -3480,7 +3478,7 @@
     data = res[0]; standings = res[1] || {}; crestPool = null;
     data.sectionMap = {};
     data.sections.forEach(function (s) { data.sectionMap[s.key] = s; });
-    // Β' ομάδα και ακαδημίες: δική τους σελίδα (#/academies), μόνο σε λειτουργία διαχειριστή.
+    // Β' ομάδα και ακαδημίες: δική τους σελίδα (#/academies), με δικό της μενού.
     // Δεν μπαίνουν στην αρχική, στα φίλτρα, στις ειδοποιήσεις ανά άθλημα ή στα ημερολόγια.
     data.academy = data.sections.filter(function (s) { return s.academy; });
     data.sections = data.sections.filter(function (s) { return !s.academy; });

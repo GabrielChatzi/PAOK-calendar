@@ -1,0 +1,145 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Κ13 (2) – Εκτός έδρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:football-u13b-epsm-cf5b4a2a26cc@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261017T104500
+DTEND;TZID=Europe/Athens:20261017T124500
+SUMMARY:⚽ ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020 (2) 2-4 ΠΑΟ
+ Κ
+LOCATION:ΘΕΣΣΑΛΟΝΙΚΗ FOOTBALL CLUB
+DESCRIPTION:Κ14 League 2 (ΕΠΣΜ) – 2η αγωνιστική\nΤελι
+ κό σκορ: ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020 (2) 2-4 Π
+ ΑΟΚ
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+2
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13b-epsm-17903fc89eb7@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261108T104500
+DTEND;TZID=Europe/Athens:20261108T124500
+SUMMARY:⚽ ΜΠΕΜΠΗΔΕΣ 2000 (2) 3-3 ΠΑΟΚ
+LOCATION:PLANET FC
+DESCRIPTION:Κ14 League 2 (ΕΠΣΜ) – 4η αγωνιστική\nΤελι
+ κό σκορ: ΜΠΕΜΠΗΔΕΣ 2000 (2) 3-3 ΠΑΟΚ
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+2
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13b-epsm-e3a28fc040d9@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261122T123000
+DTEND;TZID=Europe/Athens:20261122T143000
+SUMMARY:⚽ ΖΗΤΑ ΕΠΤΑ (2) – ΠΑΟΚ
+LOCATION:ΑΘΛΗΤΙΚΟ ΚΕΝΤΡΟ ΖΑΓΟΡΑΚΗΣ FC
+DESCRIPTION:Κ14 League 2 (ΕΠΣΜ) – 6η αγωνιστική
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+2
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13b-epsm-ec59380d7bc7@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261129T180000
+DTEND;TZID=Europe/Athens:20261129T200000
+SUMMARY:⚽ ΜΑΚΕΔΟΝΙΚΟΣ (2) – ΠΑΟΚ (ώρα αναμένε
+ ται)
+DESCRIPTION:Κ14 League 2 (ΕΠΣΜ) – 7η αγωνιστική\nΗ ώρ
+ α δεν έχει οριστεί ακόμα (προσωρινά 18:00). 
+ Θα ενημερωθεί αυτόματα όταν ανακοινωθεί
+ .
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+2
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13b-epsm-c9129ff8d16b@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261220T180000
+DTEND;TZID=Europe/Athens:20261220T200000
+SUMMARY:⚽ ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ (2) – ΠΑΟΚ (ώρα αν
+ αμένεται)
+DESCRIPTION:Κ14 League 2 (ΕΠΣΜ) – 10η αγωνιστική\nΗ ώρ
+ α δεν έχει οριστεί ακόμα (προσωρινά 18:00). 
+ Θα ενημερωθεί αυτόματα όταν ανακοινωθεί
+ .
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+2
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13b-epsm-eaf59909d604@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270103T180000
+DTEND;TZID=Europe/Athens:20270103T200000
+SUMMARY:⚽ ΠΡΩΤΕΑΣ (2) – ΠΑΟΚ (ώρα αναμένεται)
+DESCRIPTION:Κ14 League 2 (ΕΠΣΜ) – 12η αγωνιστική\nΗ ώρ
+ α δεν έχει οριστεί ακόμα (προσωρινά 18:00). 
+ Θα ενημερωθεί αυτόματα όταν ανακοινωθεί
+ .
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+2
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13b-epsm-0c8b3ca8132b@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270117T180000
+DTEND;TZID=Europe/Athens:20270117T200000
+SUMMARY:⚽ ΣΚΙΟΥΡΟΙ (2) – ΠΑΟΚ (ώρα αναμένεται)
+DESCRIPTION:Κ14 League 2 (ΕΠΣΜ) – 14η αγωνιστική\nΗ ώρ
+ α δεν έχει οριστεί ακόμα (προσωρινά 18:00). 
+ Θα ενημερωθεί αυτόματα όταν ανακοινωθεί
+ .
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+2
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13b-epsm-c66448155aac@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270207T180000
+DTEND;TZID=Europe/Athens:20270207T200000
+SUMMARY:⚽ ΑΚΡΙΤΕΣ ΣΥΚΕΩΝ (2) – ΠΑΟΚ (ώρα αναμέ
+ νεται)
+DESCRIPTION:Κ14 League 2 (ΕΠΣΜ) – 17η αγωνιστική\nΗ ώρ
+ α δεν έχει οριστεί ακόμα (προσωρινά 18:00). 
+ Θα ενημερωθεί αυτόματα όταν ανακοινωθεί
+ .
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+2
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u13b-epsm-d9ef3ee16d44@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270214T180000
+DTEND;TZID=Europe/Athens:20270214T200000
+SUMMARY:⚽ ΟΜΑΔΑ Α – ΠΑΟΚ (ώρα αναμένεται)
+DESCRIPTION:Κ14 League 2 (ΕΠΣΜ) – 18η αγωνιστική\nΗ ώρ
+ α δεν έχει οριστεί ακόμα (προσωρινά 18:00). 
+ Θα ενημερωθεί αυτόματα όταν ανακοινωθεί
+ .
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
+ AGUE+2
+END:VEVENT
+END:VCALENDAR

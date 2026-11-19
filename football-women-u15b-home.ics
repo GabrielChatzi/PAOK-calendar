@@ -1,0 +1,117 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Κ15 Κοριτσιών (2) – Εντός έδρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:football-women-u15b-epsm-c1aa2ba38262@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261107T090000
+DTEND;TZID=Europe/Athens:20261107T110000
+SUMMARY:⚽ ΠΑΟΚ 6-1 ΖΗΤΑ ΕΠΤΑ
+LOCATION:ΠΥΛΑΙΑΣ FOOTBALL HUB
+DESCRIPTION:Κ15 Γυναικών (ΕΠΣΜ) – 2η αγωνιστική\n
+ Τελικό σκορ: ΠΑΟΚ 6-1 ΖΗΤΑ ΕΠΤΑ
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+%C
+ E%93%CE%A5%CE%9D%CE%91%CE%99%CE%9A%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u15b-epsm-98694239c443@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261121T090000
+DTEND;TZID=Europe/Athens:20261121T110000
+SUMMARY:⚽ ΠΑΟΚ – ΣΚΙΟΥΡΟΙ
+LOCATION:ΠΥΛΑΙΑΣ FOOTBALL HUB
+DESCRIPTION:Κ15 Γυναικών (ΕΠΣΜ) – 4η αγωνιστική
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+%C
+ E%93%CE%A5%CE%9D%CE%91%CE%99%CE%9A%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u15b-epsm-fcdc519b6f94@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261129T180000
+DTEND;TZID=Europe/Athens:20261129T200000
+SUMMARY:⚽ ΠΑΟΚ – ΑΣ ΠΑΟΚ (1) (ώρα αναμένεται)
+DESCRIPTION:Κ15 Γυναικών (ΕΠΣΜ) – 5η αγωνιστική\n
+ Η ώρα δεν έχει οριστεί ακόμα (προσωρινά 18
+ :00). Θα ενημερωθεί αυτόματα όταν ανακοινω
+ θεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+%C
+ E%93%CE%A5%CE%9D%CE%91%CE%99%CE%9A%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u15b-epsm-bd7c69925d3d@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261213T180000
+DTEND;TZID=Europe/Athens:20261213T200000
+SUMMARY:⚽ ΠΑΟΚ – ΑΟ ΛΕΟΝΤΕΣ (ώρα αναμένεται)
+DESCRIPTION:Κ15 Γυναικών (ΕΠΣΜ) – 7η αγωνιστική\n
+ Η ώρα δεν έχει οριστεί ακόμα (προσωρινά 18
+ :00). Θα ενημερωθεί αυτόματα όταν ανακοινω
+ θεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+%C
+ E%93%CE%A5%CE%9D%CE%91%CE%99%CE%9A%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u15b-epsm-032648a18820@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261220T180000
+DTEND;TZID=Europe/Athens:20261220T200000
+SUMMARY:⚽ ΠΑΟΚ – ΟΜΑΔΑ Α (ώρα αναμένεται)
+DESCRIPTION:Κ15 Γυναικών (ΕΠΣΜ) – 8η αγωνιστική\n
+ Η ώρα δεν έχει οριστεί ακόμα (προσωρινά 18
+ :00). Θα ενημερωθεί αυτόματα όταν ανακοινω
+ θεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+%C
+ E%93%CE%A5%CE%9D%CE%91%CE%99%CE%9A%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u15b-epsm-138edfadf419@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270103T180000
+DTEND;TZID=Europe/Athens:20270103T200000
+SUMMARY:⚽ ΠΑΟΚ – ΑΝΑΓΕΝΝΗΣΗ ΧΑΛΚΗΔΟΝΑΣ (ώρα 
+ αναμένεται)
+DESCRIPTION:Κ15 Γυναικών (ΕΠΣΜ) – 10η αγωνιστική\
+ nΗ ώρα δεν έχει οριστεί ακόμα (προσωρινά 1
+ 8:00). Θα ενημερωθεί αυτόματα όταν ανακοιν
+ ωθεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+%C
+ E%93%CE%A5%CE%9D%CE%91%CE%99%CE%9A%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u15b-epsm-29bc3ef41b4d@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270124T180000
+DTEND;TZID=Europe/Athens:20270124T200000
+SUMMARY:⚽ ΠΑΟΚ – ΑΙΑΝΤΑΣ ΠΥΛΑΙΑΣ (ώρα αναμέν
+ εται)
+DESCRIPTION:Κ15 Γυναικών (ΕΠΣΜ) – 13η αγωνιστική\
+ nΗ ώρα δεν έχει οριστεί ακόμα (προσωρινά 1
+ 8:00). Θα ενημερωθεί αυτόματα όταν ανακοιν
+ ωθεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+%C
+ E%93%CE%A5%CE%9D%CE%91%CE%99%CE%9A%CE%A9%CE%9D
+END:VEVENT
+END:VCALENDAR

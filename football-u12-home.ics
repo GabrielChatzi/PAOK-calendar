@@ -1,0 +1,124 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Κ12 – Εντός έδρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:football-u12-epsm-215b283001b0@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261010T093000
+DTEND;TZID=Europe/Athens:20261010T113000
+SUMMARY:⚽ ΠΑΟΚ 1-1 ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020
+LOCATION:ΤΣΑΚ ΜΠΑΜ ΑΡΕΝΑ
+DESCRIPTION:Κ13 Ειδικής (ΕΠΣΜ) – 1η αγωνιστική\nΤ
+ ελικό σκορ: ΠΑΟΚ 1-1 ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗ
+ Σ 2020
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A13+%C
+ E%95%CE%99%CE%94%CE%99%CE%9A%CE%97%CE%A3+1%CE%BF%CF%82+%CE%9F%CE%9C%CE%99%
+ CE%9B%CE%9F%CE%A3
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u12-epsm-3e42060cdc8a@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261031T173000
+DTEND;TZID=Europe/Athens:20261031T193000
+SUMMARY:⚽ ΠΑΟΚ 1-6 ΜΠΕΜΠΗΔΕΣ 2000
+LOCATION:ΤΣΑΚ ΜΠΑΜ ΑΡΕΝΑ
+DESCRIPTION:Κ13 Ειδικής (ΕΠΣΜ) – 3η αγωνιστική\nΤ
+ ελικό σκορ: ΠΑΟΚ 1-6 ΜΠΕΜΠΗΔΕΣ 2000
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A13+%C
+ E%95%CE%99%CE%94%CE%99%CE%9A%CE%97%CE%A3+1%CE%BF%CF%82+%CE%9F%CE%9C%CE%99%
+ CE%9B%CE%9F%CE%A3
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u12-epsm-c63292ad129c@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261114T120000
+DTEND;TZID=Europe/Athens:20261114T140000
+SUMMARY:⚽ ΠΑΟΚ 2-1 ΑΛΕΞΑΝΔΡΟΣ ΚΙΛΚΙΣ
+LOCATION:ΤΣΑΚ ΜΠΑΜ ΑΡΕΝΑ
+DESCRIPTION:Κ13 Ειδικής (ΕΠΣΜ) – 5η αγωνιστική\nΤ
+ ελικό σκορ: ΠΑΟΚ 2-1 ΑΛΕΞΑΝΔΡΟΣ ΚΙΛΚΙΣ
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A13+%C
+ E%95%CE%99%CE%94%CE%99%CE%9A%CE%97%CE%A3+1%CE%BF%CF%82+%CE%9F%CE%9C%CE%99%
+ CE%9B%CE%9F%CE%A3
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u12-epsm-7e747f462867@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261212T180000
+DTEND;TZID=Europe/Athens:20261212T200000
+SUMMARY:⚽ ΠΑΟΚ – ΧΑΝΘ (ώρα αναμένεται)
+DESCRIPTION:Κ13 Ειδικής (ΕΠΣΜ) – 9η αγωνιστική\nΗ
+  ώρα δεν έχει οριστεί ακόμα (προσωρινά 18:0
+ 0). Θα ενημερωθεί αυτόματα όταν ανακοινωθ
+ εί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A13+%C
+ E%95%CE%99%CE%94%CE%99%CE%9A%CE%97%CE%A3+1%CE%BF%CF%82+%CE%9F%CE%9C%CE%99%
+ CE%9B%CE%9F%CE%A3
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u12-epsm-501a03290de8@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261226T180000
+DTEND;TZID=Europe/Athens:20261226T200000
+SUMMARY:⚽ ΠΑΟΚ – ΣΚΙΟΥΡΟΙ (ώρα αναμένεται)
+DESCRIPTION:Κ13 Ειδικής (ΕΠΣΜ) – 11η αγωνιστική\n
+ Η ώρα δεν έχει οριστεί ακόμα (προσωρινά 18
+ :00). Θα ενημερωθεί αυτόματα όταν ανακοινω
+ θεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A13+%C
+ E%95%CE%99%CE%94%CE%99%CE%9A%CE%97%CE%A3+1%CE%BF%CF%82+%CE%9F%CE%9C%CE%99%
+ CE%9B%CE%9F%CE%A3
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u12-epsm-4907089d8c3f@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270109T180000
+DTEND;TZID=Europe/Athens:20270109T200000
+SUMMARY:⚽ ΠΑΟΚ – ΠΡΩΤΕΑΣ (ώρα αναμένεται)
+DESCRIPTION:Κ13 Ειδικής (ΕΠΣΜ) – 13η αγωνιστική\n
+ Η ώρα δεν έχει οριστεί ακόμα (προσωρινά 18
+ :00). Θα ενημερωθεί αυτόματα όταν ανακοινω
+ θεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A13+%C
+ E%95%CE%99%CE%94%CE%99%CE%9A%CE%97%CE%A3+1%CE%BF%CF%82+%CE%9F%CE%9C%CE%99%
+ CE%9B%CE%9F%CE%A3
+END:VEVENT
+BEGIN:VEVENT
+UID:football-u12-epsm-d3d769e10a92@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270116T180000
+DTEND;TZID=Europe/Athens:20270116T200000
+SUMMARY:⚽ ΠΑΟΚ – ΑΓΙΟΣ ΝΙΚΟΛΑΟΣ (ώρα αναμένε
+ ται)
+DESCRIPTION:Κ13 Ειδικής (ΕΠΣΜ) – 14η αγωνιστική\n
+ Η ώρα δεν έχει οριστεί ακόμα (προσωρινά 18
+ :00). Θα ενημερωθεί αυτόματα όταν ανακοινω
+ θεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A13+%C
+ E%95%CE%99%CE%94%CE%99%CE%9A%CE%97%CE%A3+1%CE%BF%CF%82+%CE%9F%CE%9C%CE%99%
+ CE%9B%CE%9F%CE%A3
+END:VEVENT
+END:VCALENDAR

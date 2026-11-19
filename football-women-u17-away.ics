@@ -1,0 +1,87 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Κ17 Νεανίδων – Εκτός έδρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:football-women-u17-epo56-3a9e6e41e2e8@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261024T150000
+DTEND;TZID=Europe/Athens:20261024T170000
+SUMMARY:⚽ ΠΟΝΤΙΑΚΟΣ ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ ΑΟ Κ17 0-8
+  ΠΑΟΚ
+LOCATION:ΠΑΛΑΓΙΑΣ
+DESCRIPTION:Πανελλήνιο Πρωτάθλημα Υποδομών Νε
+ ανίδων Κ-17 – 1η ΦΑΣΗ - 1ος ΟΜΙΛΟΣ\nΤελικό σ
+ κορ: ΠΟΝΤΙΑΚΟΣ ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ ΑΟ Κ17 0-8 Π
+ ΑΟΚ
+URL:https://www.epo.gr/el/competition/56/matches
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u17-epo56-645ac15d415a@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261206T150000
+DTEND;TZID=Europe/Athens:20261206T170000
+SUMMARY:⚽ Α.Ο. ΛΕΟΝΤΕΣ Κ17 – ΠΑΟΚ
+LOCATION:Δημοτικό Γήπεδο Ευκαρπίας
+DESCRIPTION:Πανελλήνιο Πρωτάθλημα Υποδομών Νε
+ ανίδων Κ-17 – 1η ΦΑΣΗ - 1ος ΟΜΙΛΟΣ
+URL:https://www.epo.gr/el/competition/56/matches
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u17-epo56-fff1ac3787fa@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261219T150000
+DTEND;TZID=Europe/Athens:20261219T170000
+SUMMARY:⚽ ΑΣ ΘΕΣΣ/ΝΙΚΗ Ο ΑΡΗΣ Κ17 – ΠΑΟΚ
+LOCATION:Δημοτικό Γήπεδο Ευόσμου - Αθλητικό Π
+ άρκο
+DESCRIPTION:Πανελλήνιο Πρωτάθλημα Υποδομών Νε
+ ανίδων Κ-17 – 1η ΦΑΣΗ - 1ος ΟΜΙΛΟΣ
+URL:https://www.epo.gr/el/competition/56/matches
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u17-epo56-9bb149988c55@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270116T150000
+DTEND;TZID=Europe/Athens:20270116T170000
+SUMMARY:⚽ ΣΚΙΟΥΡΟΙ Κ17 – ΠΑΟΚ
+LOCATION:Δημοτικό Γήπεδο Πυλαίας Α.ΚΑΡΑΜΠΟΥΡ
+ ΝΙΩΤΗΣ
+DESCRIPTION:Πανελλήνιο Πρωτάθλημα Υποδομών Νε
+ ανίδων Κ-17 – 1η ΦΑΣΗ - 1ος ΟΜΙΛΟΣ
+URL:https://www.epo.gr/el/competition/56/matches
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u17-epo56-73b917dd19f9@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270207T150000
+DTEND;TZID=Europe/Athens:20270207T170000
+SUMMARY:⚽ ΣΕΙΡΗΝΕΣ ΓΡΕΒΕΝΩΝ Κ17 – ΠΑΟΚ
+LOCATION:ΓΗΠΕΔΟ ΕΠΣ ΓΡΕΒΕΝΩΝ
+DESCRIPTION:Πανελλήνιο Πρωτάθλημα Υποδομών Νε
+ ανίδων Κ-17 – 1η ΦΑΣΗ - 1ος ΟΜΙΛΟΣ
+URL:https://www.epo.gr/el/competition/56/matches
+END:VEVENT
+END:VCALENDAR

@@ -2640,7 +2640,7 @@
  ],
  "football-u19": [
   {
-   "title": "Super League Κ19",
+   "title": "Super League Κ19 (ενημέρωση 2026-11-17)",
    "url": "https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/k20-nchc/vathmologia-u20/",
    "columns": [
     "Αγ",
@@ -2654,7 +2654,7 @@
     {
      "pos": 1,
      "team": "Παναθηναϊκός",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/pao.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "9",
@@ -2668,7 +2668,7 @@
     {
      "pos": 2,
      "team": "ΑΕΚ",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2015/07/aek_logo.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "8",
@@ -2682,7 +2682,7 @@
     {
      "pos": 3,
      "team": "Βόλος",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2019/07/nfc_volos_logo.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "9",
@@ -2696,7 +2696,7 @@
     {
      "pos": 4,
      "team": "Ολυμπιακός",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/09/Olympiakos_logo_2027.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "8",
@@ -2724,7 +2724,7 @@
     {
      "pos": 6,
      "team": "Ατρόμητος",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2015/05/atromitos.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "8",
@@ -2738,7 +2738,7 @@
     {
      "pos": 7,
      "team": "Άρης",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/aris_new-150x150-1.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "9",
@@ -2752,7 +2752,7 @@
     {
      "pos": 8,
      "team": "Ηρακλής",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/Iraklis_logo-1.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "9",
@@ -2766,7 +2766,7 @@
     {
      "pos": 9,
      "team": "Κηφισιά",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2023/07/kifisi_logo_site.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "9",
@@ -2780,7 +2780,7 @@
     {
      "pos": 10,
      "team": "ΟΦΗ",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/09/OFI_Logo_Stars_K_Filled_2026.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "9",
@@ -2794,7 +2794,7 @@
     {
      "pos": 11,
      "team": "Αστέρας Τρίπολης",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2024/07/asterasxaktor-blue.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "9",
@@ -2808,7 +2808,7 @@
     {
      "pos": 12,
      "team": "Λεβαδειακός",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2014/12/levadeiakos.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "9",
@@ -2822,7 +2822,7 @@
     {
      "pos": 13,
      "team": "Παναιτωλικός",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2016/09/panaitolikos_logo.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "9",
@@ -2836,7 +2836,7 @@
     {
      "pos": 14,
      "team": "Καλαμάτα",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2022/12/kalamata_logo_site.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "9",
@@ -2852,7 +2852,7 @@
  ],
  "football-u17": [
   {
-   "title": "Super League Κ17",
+   "title": "Super League Κ17 (ενημέρωση 2026-11-17)",
    "url": "https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/k17-nchc/vathmologia-u17/",
    "columns": [
     "Αγ",
@@ -2866,7 +2866,7 @@
     {
      "pos": 1,
      "team": "Ολυμπιακός",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/09/Olympiakos_logo_2027.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -2894,7 +2894,7 @@
     {
      "pos": 3,
      "team": "ΑΕΚ",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2015/07/aek_logo.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -2908,7 +2908,7 @@
     {
      "pos": 4,
      "team": "Αστέρας Τρίπολης",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2024/07/asterasxaktor-blue.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -2922,7 +2922,7 @@
     {
      "pos": 5,
      "team": "Παναιτωλικός",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2016/09/panaitolikos_logo.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -2936,7 +2936,7 @@
     {
      "pos": 6,
      "team": "Βόλος",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2019/07/nfc_volos_logo.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -2950,7 +2950,7 @@
     {
      "pos": 7,
      "team": "ΟΦΗ",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/09/OFI_Logo_Stars_K_Filled_2026.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -2964,7 +2964,7 @@
     {
      "pos": 8,
      "team": "Παναθηναϊκός",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/pao.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -2978,7 +2978,7 @@
     {
      "pos": 9,
      "team": "Ατρόμητος",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2015/05/atromitos.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -2992,7 +2992,7 @@
     {
      "pos": 10,
      "team": "Ηρακλής",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/Iraklis_logo-1.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "6",
@@ -3006,7 +3006,7 @@
     {
      "pos": 11,
      "team": "Άρης",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/aris_new-150x150-1.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -3020,7 +3020,7 @@
     {
      "pos": 12,
      "team": "Λεβαδειακός",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2014/12/levadeiakos.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -3034,7 +3034,7 @@
     {
      "pos": 13,
      "team": "Κηφισιά",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2025/11/kifisia_logo_new_site.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "6",
@@ -3048,7 +3048,7 @@
     {
      "pos": 14,
      "team": "Καλαμάτα",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2022/12/kalamata_logo_site.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -3064,7 +3064,7 @@
  ],
  "football-u15": [
   {
-   "title": "Super League Κ15",
+   "title": "Super League Κ15 (ενημέρωση 2026-11-17)",
    "url": "https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/k15-nchc/vathmologia-u15/",
    "columns": [
     "Αγ",
@@ -3078,7 +3078,7 @@
     {
      "pos": 1,
      "team": "Ολυμπιακός",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/09/Olympiakos_logo_2027.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -3092,7 +3092,7 @@
     {
      "pos": 2,
      "team": "ΑΕΚ",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2015/07/aek_logo.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -3120,7 +3120,7 @@
     {
      "pos": 4,
      "team": "Παναθηναϊκός",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/pao.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -3148,7 +3148,7 @@
     {
      "pos": 6,
      "team": "Άρης",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/aris_new-150x150-1.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -3162,7 +3162,7 @@
     {
      "pos": 7,
      "team": "ΟΦΗ",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/08/OFI_logo_2026_27.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -3176,7 +3176,7 @@
     {
      "pos": 8,
      "team": "Κηφισιά",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2023/07/kifisi_logo_site.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "6",
@@ -3204,7 +3204,7 @@
     {
      "pos": 10,
      "team": "Παναιτωλικός",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2016/09/panaitolikos_logo.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -3218,7 +3218,7 @@
     {
      "pos": 11,
      "team": "Ηρακλής",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/Iraklis_logo-1.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "6",
@@ -3246,7 +3246,7 @@
     {
      "pos": 13,
      "team": "Λεβαδειακός",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2014/12/levadeiakos.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -3260,7 +3260,7 @@
     {
      "pos": 14,
      "team": "Καλαμάτα",
-     "logo": "https://www.paokfc.gr/wp-content/uploads/2022/12/kalamata_logo_site.png",
+     "logo": "",
      "paok": false,
      "cells": [
       "7",
@@ -3402,6 +3402,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "5",
+      "5",
+      "0",
+      "15-3",
+      "10"
+     ]
+    },
+    {
+     "pos": 2,
      "team": "ΧΑΝΘ",
      "logo": "https://epesth.gr/wp-content/uploads/2021/10/L-Hanth.gif",
      "paok": false,
@@ -3414,20 +3427,20 @@
      ]
     },
     {
-     "pos": 2,
-     "team": "ΠΑΟΚ",
-     "logo": "",
-     "paok": true,
+     "pos": 3,
+     "team": "ΑΣ ΕΛΠΙΣ",
+     "logo": "https://epesth.gr/wp-content/uploads/2021/10/L-Elpis.gif",
+     "paok": false,
      "cells": [
+      "5",
       "4",
-      "4",
-      "0",
-      "12-3",
-      "8"
+      "1",
+      "13-5",
+      "9"
      ]
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "ΦΟΙΝΙΚΑΣ ΠΟΛΙΧΝΗΣ",
      "logo": "https://epesth.gr/wp-content/uploads/2023/03/244205994_280764573765604_9029332810770461336_n.jpg",
      "paok": false,
@@ -3440,7 +3453,7 @@
      ]
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "ΙΩΝΙΚΟΣ",
      "logo": "https://epesth.gr/wp-content/uploads/2021/10/L-IonikosIon.jpg",
      "paok": false,
@@ -3450,19 +3463,6 @@
       "2",
       "10-9",
       "8"
-     ]
-    },
-    {
-     "pos": 5,
-     "team": "ΑΣ ΕΛΠΙΣ",
-     "logo": "https://epesth.gr/wp-content/uploads/2021/10/L-Elpis.gif",
-     "paok": false,
-     "cells": [
-      "4",
-      "3",
-      "1",
-      "10-5",
-      "7"
      ]
     },
     {
@@ -3480,28 +3480,28 @@
     },
     {
      "pos": 7,
-     "team": "ΠΕΡΣΕΑΣ",
-     "logo": "https://epesth.gr/wp-content/uploads/2021/10/L-Perseas.gif",
-     "paok": false,
-     "cells": [
-      "4",
-      "1",
-      "3",
-      "3-9",
-      "5"
-     ]
-    },
-    {
-     "pos": 8,
      "team": "ΑΡΗΣ",
      "logo": "https://epesth.gr/wp-content/uploads/2021/10/L-Aris.gif",
      "paok": false,
      "cells": [
-      "4",
-      "1",
+      "5",
+      "2",
       "3",
-      "3-9",
-      "5"
+      "6-9",
+      "7"
+     ]
+    },
+    {
+     "pos": 8,
+     "team": "ΠΕΡΣΕΑΣ",
+     "logo": "https://epesth.gr/wp-content/uploads/2021/10/L-Perseas.gif",
+     "paok": false,
+     "cells": [
+      "5",
+      "1",
+      "4",
+      "3-12",
+      "6"
      ]
     },
     {
@@ -3510,11 +3510,11 @@
      "logo": "https://epesth.gr/wp-content/uploads/2021/10/L-AENpanor.gif",
      "paok": false,
      "cells": [
-      "4",
+      "5",
       "1",
-      "3",
-      "3-9",
-      "5"
+      "4",
+      "3-12",
+      "6"
      ]
     },
     {
@@ -3523,11 +3523,11 @@
      "logo": "https://epesth.gr/wp-content/uploads/2021/10/L-Pigasos2.gif",
      "paok": false,
      "cells": [
-      "4",
+      "5",
       "0",
-      "4",
-      "0-12",
-      "4"
+      "5",
+      "0-15",
+      "5"
      ]
     }
    ]
@@ -5136,5 +5136,2176 @@
     }
    ]
   }
- ]
+ ],
+ "football-u14": [
+  {
+   "title": "Κ15 League 1 (ΕΠΣΜ)",
+   "url": "https://www.epsm.gr/table_ypodomon.asp?diorganosi=%CE%9A15+LEAGUE+1",
+   "columns": [
+    "Αγ",
+    "Ν",
+    "Ι",
+    "Η",
+    "Γκολ",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "4",
+      "4",
+      "0",
+      "0",
+      "27-4",
+      "12"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΧΑΝΘ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "4",
+      "0",
+      "0",
+      "22-3",
+      "12"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "ΑΚΡΙΤΕΣ ΣΥΚΕΩΝ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "4",
+      "0",
+      "0",
+      "20-4",
+      "12"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "ΕΛΠΙΔΑ ΤΟΥΜΠΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "4",
+      "0",
+      "0",
+      "16-6",
+      "12"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "ΑΧΙΛΛΕΑΣ ΤΡΙΑΝΔΡΙΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "4",
+      "0",
+      "0",
+      "13-4",
+      "12"
+     ]
+    },
+    {
+     "pos": 6,
+     "team": "ΠΑΝΑΘΗΝΑΪΚΟΣ ΘΕΣΣΑΛΟΝΙΚΗΣ (1)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "1",
+      "0",
+      "16-2",
+      "10"
+     ]
+    },
+    {
+     "pos": 7,
+     "team": "ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020 (1)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "1",
+      "0",
+      "16-2",
+      "10"
+     ]
+    },
+    {
+     "pos": 8,
+     "team": "ΜΠΕΜΠΗΔΕΣ 2000",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "1",
+      "0",
+      "17-7",
+      "10"
+     ]
+    },
+    {
+     "pos": 9,
+     "team": "ΜΑΡΑΘΩΝΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "0",
+      "1",
+      "23-7",
+      "9"
+     ]
+    },
+    {
+     "pos": 10,
+     "team": "ΓΕΡΜΑΝΙΚΗ ΑΚΑΔΗΜΙΑ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "0",
+      "1",
+      "14-6",
+      "9"
+     ]
+    },
+    {
+     "pos": 11,
+     "team": "ΜΑΚΕΔΟΝΙΚΟΣ (1)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "0",
+      "1",
+      "14-7",
+      "9"
+     ]
+    },
+    {
+     "pos": 12,
+     "team": "ΖΗΤΑ ΕΠΤΑ (1)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "0",
+      "1",
+      "10-7",
+      "9"
+     ]
+    },
+    {
+     "pos": 13,
+     "team": "ΠΟ ΜΑΛΑΚΟΠΗΣ ΠΥΛΑΙΑΣ (1)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "0",
+      "1",
+      "8-6",
+      "9"
+     ]
+    },
+    {
+     "pos": 14,
+     "team": "ΑΣΤΕΡΙΑ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "0",
+      "1",
+      "12-11",
+      "9"
+     ]
+    },
+    {
+     "pos": 15,
+     "team": "ΑΛΕΞΑΝΔΡΟΣ ΚΙΛΚΙΣ (1)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "2",
+      "0",
+      "7-4",
+      "8"
+     ]
+    },
+    {
+     "pos": 16,
+     "team": "ΗΡΑΚΛΗΣ ΑΜΠΕΛΟΚΗΠΩΝ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "2",
+      "1",
+      "0",
+      "15-4",
+      "7"
+     ]
+    },
+    {
+     "pos": 17,
+     "team": "ΑΙΑΣ ΕΥΟΣΜΟΥ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "1",
+      "1",
+      "18-9",
+      "7"
+     ]
+    },
+    {
+     "pos": 18,
+     "team": "ΑΕ ΝΕΩΝ ΣΙΝΔΟΥ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "2",
+      "1",
+      "0",
+      "8-5",
+      "7"
+     ]
+    },
+    {
+     "pos": 19,
+     "team": "ΠΑΝΣΕΡΡΑΪΚΟΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "1",
+      "1",
+      "7-5",
+      "7"
+     ]
+    },
+    {
+     "pos": 20,
+     "team": "ΦΟΙΝΙΚΑΣ ΠΟΛΙΧΝΗΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "1",
+      "1",
+      "12-11",
+      "7"
+     ]
+    },
+    {
+     "pos": 21,
+     "team": "ΑΜΣ ΝΙΚΟΠΟΛΗ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "1",
+      "1",
+      "8-8",
+      "7"
+     ]
+    },
+    {
+     "pos": 22,
+     "team": "ΠΙΕΡΙΚΟΣ 1961",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "0",
+      "2",
+      "15-5",
+      "6"
+     ]
+    },
+    {
+     "pos": 23,
+     "team": "ΑΝΑΓΕΝΝΗΣΗ ΑΓ. ΙΩΑΝΝΗ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "0",
+      "2",
+      "16-7",
+      "6"
+     ]
+    },
+    {
+     "pos": 24,
+     "team": "Μ.ΑΛΕΞΑΝΔΡΟΣ ΜΕΛΙΣΣΟΧΩΡΙΟΥ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "3",
+      "0",
+      "14-7",
+      "6"
+     ]
+    },
+    {
+     "pos": 25,
+     "team": "ΔΙΑΠΛΑΣΙΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "0",
+      "2",
+      "14-8",
+      "6"
+     ]
+    },
+    {
+     "pos": 26,
+     "team": "ΠΡΩΤΕΑΣ (1)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "0",
+      "2",
+      "9-6",
+      "6"
+     ]
+    },
+    {
+     "pos": 27,
+     "team": "ΝΙΚΗ ΕΥΚΑΡΠΙΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "2",
+      "0",
+      "1",
+      "9-9",
+      "6"
+     ]
+    },
+    {
+     "pos": 28,
+     "team": "ΠΟΣΕΙΔΩΝΑΣ ΜΗΧΑΝΙΩΝΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "2",
+      "1",
+      "14-9",
+      "5"
+     ]
+    },
+    {
+     "pos": 29,
+     "team": "ΠΑΟ ΚΟΥΦΑΛΙΩΝ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "2",
+      "1",
+      "11-7",
+      "5"
+     ]
+    },
+    {
+     "pos": 30,
+     "team": "ΠΡΩΤΑΘΛΗΤΕΣ ΠΕΥΚΩΝ (1)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "2",
+      "1",
+      "9-10",
+      "5"
+     ]
+    },
+    {
+     "pos": 31,
+     "team": "ΝΤΙΝΟΣ ΚΟΥΗΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "1",
+      "1",
+      "11-5",
+      "4"
+     ]
+    },
+    {
+     "pos": 32,
+     "team": "ΜΠΕΜΠΗΔΕΣ ΙΩΝΙΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "1",
+      "2",
+      "8-8",
+      "4"
+     ]
+    },
+    {
+     "pos": 33,
+     "team": "ΑΕ ΠΥΛΑΙΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "1",
+      "2",
+      "9-10",
+      "4"
+     ]
+    },
+    {
+     "pos": 34,
+     "team": "ΣΚΙΟΥΡΟΙ (1)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "1",
+      "2",
+      "7-8",
+      "4"
+     ]
+    },
+    {
+     "pos": 35,
+     "team": "ΑΘΛΗΤΙΚΗ ΑΚΑΔΗΜΙΑ ΓΙΑΝΝΙΤΣΩΝ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "1",
+      "2",
+      "4-7",
+      "4"
+     ]
+    },
+    {
+     "pos": 36,
+     "team": "Μ.ΑΛΕΞΑΝΔΡΟΣ ΘΕΣΣΑΛΟΝΙΚΗΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "1",
+      "2",
+      "6-10",
+      "4"
+     ]
+    },
+    {
+     "pos": 37,
+     "team": "ΑΠΟΛΛΩΝ ΚΑΛΑΜΑΡΙΑΣ (1)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "1",
+      "2",
+      "8-15",
+      "4"
+     ]
+    },
+    {
+     "pos": 38,
+     "team": "ΑΝΑΓΕΝΝΗΣΗ ΡΥΣΙΟΥ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "0",
+      "1",
+      "15-7",
+      "3"
+     ]
+    },
+    {
+     "pos": 39,
+     "team": "ΠΟΤ ΗΡΑΚΛΗΣ (1)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "0",
+      "3",
+      "13-9",
+      "3"
+     ]
+    },
+    {
+     "pos": 40,
+     "team": "ΝΕΑ ΠΟΛΙΤΕΙΑ ΕΥΟΣΜΟΥ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "0",
+      "2",
+      "4-7",
+      "3"
+     ]
+    },
+    {
+     "pos": 41,
+     "team": "ΟΔΥΣΣΕΑΣ ΚΟΡΔΕΛΙΟΥ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "2",
+      "1",
+      "0",
+      "1",
+      "4-7",
+      "3"
+     ]
+    },
+    {
+     "pos": 42,
+     "team": "ΟΛΥΜΠΟΣ ΔΕΝΔΡΟΠΟΤΑΜΟΥ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "0",
+      "2",
+      "7-11",
+      "3"
+     ]
+    },
+    {
+     "pos": 43,
+     "team": "ΠΑΝΟΡΑΜΑ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "0",
+      "2",
+      "4-8",
+      "3"
+     ]
+    },
+    {
+     "pos": 44,
+     "team": "ΜΕΝΤΕΚΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "0",
+      "3",
+      "9-14",
+      "3"
+     ]
+    },
+    {
+     "pos": 45,
+     "team": "ΑΕ ΦΙΛΥΡΟΥ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "0",
+      "2",
+      "9-15",
+      "3"
+     ]
+    },
+    {
+     "pos": 46,
+     "team": "ΑΟ ΜΕΣΗΜΒΡΙΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "0",
+      "2",
+      "5-13",
+      "3"
+     ]
+    },
+    {
+     "pos": 47,
+     "team": "ΟΛΥΜΠΙΑΚΟΣ ΘΕΣΣΑΛΟΝΙΚΗΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "0",
+      "3",
+      "1-9",
+      "3"
+     ]
+    },
+    {
+     "pos": 48,
+     "team": "ΛΙΜΑΝΙ ΠΟΣΕΙΔΩΝΑ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "0",
+      "3",
+      "5-16",
+      "3"
+     ]
+    },
+    {
+     "pos": 49,
+     "team": "ΦΟΙΝΙΚΑΣ ΤΟΥΜΠΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "0",
+      "3",
+      "6-19",
+      "3"
+     ]
+    },
+    {
+     "pos": 50,
+     "team": "ΜΠΑΜ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "0",
+      "1",
+      "2",
+      "4-11",
+      "1"
+     ]
+    },
+    {
+     "pos": 51,
+     "team": "ΑΟΚ ΑΓΙΟΥ ΑΘΑΝΑΣΙΟΥ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "0",
+      "1",
+      "3",
+      "7-16",
+      "1"
+     ]
+    },
+    {
+     "pos": 52,
+     "team": "ΑΓΙΟΣ ΓΕΩΡΓΙΟΣ Ν.ΚΡΗΝΗΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "0",
+      "1",
+      "3",
+      "4-13",
+      "1"
+     ]
+    },
+    {
+     "pos": 53,
+     "team": "ΑΝΑΓΕΝΝΗΣΗ ΕΠΑΝΟΜΗΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "0",
+      "0",
+      "4",
+      "0-12",
+      "0"
+     ]
+    },
+    {
+     "pos": 54,
+     "team": "ΑΝΑΓΕΝΝΗΣΗ ΝΕΩΝ ΕΠΙΒΑΤΩΝ 2021",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "0",
+      "0",
+      "3",
+      "0-13",
+      "0"
+     ]
+    },
+    {
+     "pos": 55,
+     "team": "ΑΚΑΔ. Γ. ΚΟΥΔΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "0",
+      "0",
+      "4",
+      "3-17",
+      "0"
+     ]
+    },
+    {
+     "pos": 56,
+     "team": "ΕΛΕΥΘΕΡΙΑΚΟΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "0",
+      "0",
+      "3",
+      "4-21",
+      "0"
+     ]
+    },
+    {
+     "pos": 57,
+     "team": "ΔΟΞΑ ΠΕΡΙΒΟΛΑΚΙΟΥ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "0",
+      "0",
+      "4",
+      "2-23",
+      "0"
+     ]
+    },
+    {
+     "pos": 58,
+     "team": "ΑΣ ΠΟΔ. ΤΟΥΜΠΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "0",
+      "0",
+      "4",
+      "3-26",
+      "0"
+     ]
+    },
+    {
+     "pos": 59,
+     "team": "ΚΕΝΤΑΥΡΟΣ ΛΑΓΚΑΔΑ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "0",
+      "0",
+      "4",
+      "0-36",
+      "0"
+     ]
+    }
+   ]
+  }
+ ],
+ "football-u13": [
+  {
+   "title": "Κ14 League 1 (ΕΠΣΜ)",
+   "url": "https://www.epsm.gr/table_ypodomon.asp?diorganosi=%CE%9A14+LEAGUE+1",
+   "columns": [
+    "Αγ",
+    "Ν",
+    "Ι",
+    "Η",
+    "Γκολ",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "ΑΛΕΞΑΝΔΡΟΣ ΚΙΛΚΙΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "4",
+      "0",
+      "0",
+      "37-1",
+      "12"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΑΚΡΙΤΕΣ ΣΥΚΕΩΝ (1)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "4",
+      "0",
+      "0",
+      "33-3",
+      "12"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "ΑΓΙΟΣ ΝΙΚΟΛΑΟΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "4",
+      "0",
+      "0",
+      "26-3",
+      "12"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "ΕΘΝΙΚΟΣ ΕΥΟΣΜΟΥ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "4",
+      "0",
+      "0",
+      "12-3",
+      "12"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "4",
+      "3",
+      "1",
+      "0",
+      "28-5",
+      "10"
+     ]
+    },
+    {
+     "pos": 6,
+     "team": "ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020 (1)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "3",
+      "0",
+      "0",
+      "20-1",
+      "9"
+     ]
+    },
+    {
+     "pos": 7,
+     "team": "ΑΚΑΔ. ΠΟΔ. ΠΡΟ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "0",
+      "1",
+      "26-9",
+      "9"
+     ]
+    },
+    {
+     "pos": 8,
+     "team": "ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ (1)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "0",
+      "1",
+      "24-7",
+      "9"
+     ]
+    },
+    {
+     "pos": 9,
+     "team": "ΑΟ ΝΕΑΣ ΕΥΚΑΡΠΙΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "0",
+      "1",
+      "21-9",
+      "9"
+     ]
+    },
+    {
+     "pos": 10,
+     "team": "ΜΑΚΕΔΟΝΙΚΟΣ (1)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "3",
+      "0",
+      "0",
+      "15-4",
+      "9"
+     ]
+    },
+    {
+     "pos": 11,
+     "team": "ΚΑΜΠΑΝΙΑΚΟΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "0",
+      "1",
+      "22-13",
+      "9"
+     ]
+    },
+    {
+     "pos": 12,
+     "team": "ΑΕ ΝΕΩΝ ΣΙΝΔΟΥ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "0",
+      "1",
+      "14-5",
+      "9"
+     ]
+    },
+    {
+     "pos": 13,
+     "team": "ΟΛΥΜΠΙΑΚΟΣ ΘΕΣΣΑΛΟΝΙΚΗΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "0",
+      "1",
+      "15-8",
+      "9"
+     ]
+    },
+    {
+     "pos": 14,
+     "team": "ΖΗΤΑ ΕΠΤΑ (1)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "0",
+      "1",
+      "14-7",
+      "9"
+     ]
+    },
+    {
+     "pos": 15,
+     "team": "ΟΜΟΝΟΙΑ ΣΤΑΥΡΟΥΠΟΛΗΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "0",
+      "1",
+      "14-9",
+      "9"
+     ]
+    },
+    {
+     "pos": 16,
+     "team": "ΔΟΞΑ ΠΕΝΤΑΛΟΦΟΥ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "0",
+      "1",
+      "12-7",
+      "9"
+     ]
+    },
+    {
+     "pos": 17,
+     "team": "ΜΠΕΜΠΗΔΕΣ 2000 (1)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "1",
+      "1",
+      "18-5",
+      "7"
+     ]
+    },
+    {
+     "pos": 18,
+     "team": "ΑΚΑΔ. ΑΙΟΛΟΣ 2014",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "2",
+      "2",
+      "0",
+      "0",
+      "17-1",
+      "6"
+     ]
+    },
+    {
+     "pos": 19,
+     "team": "ΝΕΑ ΠΟΛΙΤΕΙΑ ΕΥΟΣΜΟΥ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "2",
+      "2",
+      "0",
+      "0",
+      "13-1",
+      "6"
+     ]
+    },
+    {
+     "pos": 20,
+     "team": "ΣΚΙΟΥΡΟΙ (1)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "2",
+      "0",
+      "1",
+      "17-8",
+      "6"
+     ]
+    },
+    {
+     "pos": 21,
+     "team": "ΑΣΤΕΡΙΑ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "0",
+      "2",
+      "17-12",
+      "6"
+     ]
+    },
+    {
+     "pos": 22,
+     "team": "ΔΟΞΑ ΠΕΡΙΒΟΛΑΚΙΟΥ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "0",
+      "2",
+      "13-9",
+      "6"
+     ]
+    },
+    {
+     "pos": 23,
+     "team": "ΠΑΣ ΑΡΣΑΚΛΗ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "2",
+      "0",
+      "1",
+      "7-4",
+      "6"
+     ]
+    },
+    {
+     "pos": 24,
+     "team": "ΜΑΡΑΘΩΝΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "0",
+      "2",
+      "19-19",
+      "6"
+     ]
+    },
+    {
+     "pos": 25,
+     "team": "ΠΡΩΤΕΑΣ (1)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "0",
+      "2",
+      "11-11",
+      "6"
+     ]
+    },
+    {
+     "pos": 26,
+     "team": "ΑΚΑΔ. ΠΟΔ. ΟΙ ΕΠΙΘΕΤΙΚΟΙ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "0",
+      "2",
+      "8-13",
+      "6"
+     ]
+    },
+    {
+     "pos": 27,
+     "team": "ΠΡΩΤΑΘΛΗΤΕΣ ΠΕΥΚΩΝ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "0",
+      "2",
+      "10-17",
+      "6"
+     ]
+    },
+    {
+     "pos": 28,
+     "team": "ΑΚΑΔ. Γ. ΚΟΥΔΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "0",
+      "2",
+      "15-23",
+      "6"
+     ]
+    },
+    {
+     "pos": 29,
+     "team": "ΑΓΡΟΤΙΚΟΣ ΑΣΤΕΡΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "1",
+      "1",
+      "8-7",
+      "4"
+     ]
+    },
+    {
+     "pos": 30,
+     "team": "ΑΚΑΔ. ΜΙΚΡΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "1",
+      "1",
+      "8-8",
+      "4"
+     ]
+    },
+    {
+     "pos": 31,
+     "team": "ΕΘΝΙΚΟΣ ΠΥΛΑΙΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "0",
+      "2",
+      "14-13",
+      "3"
+     ]
+    },
+    {
+     "pos": 32,
+     "team": "ΑΝΑΓΕΝΝΗΣΗ ΧΑΛΚΗΔΟΝΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "0",
+      "2",
+      "8-8",
+      "3"
+     ]
+    },
+    {
+     "pos": 33,
+     "team": "ΠΟ ΞΗΡΟΚΡΗΝΗΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "0",
+      "3",
+      "13-16",
+      "3"
+     ]
+    },
+    {
+     "pos": 34,
+     "team": "ΑΟ ΚΑΡΔΙΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "0",
+      "2",
+      "6-9",
+      "3"
+     ]
+    },
+    {
+     "pos": 35,
+     "team": "ΑΕ ΑΜΠΕΛΟΚΗΠΩΝ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "0",
+      "3",
+      "5-8",
+      "3"
+     ]
+    },
+    {
+     "pos": 36,
+     "team": "ΑΣΤΕΡΑΣ ΑΜΠΕΛΟΚΗΠΩΝ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "2",
+      "1",
+      "0",
+      "1",
+      "3-6",
+      "3"
+     ]
+    },
+    {
+     "pos": 37,
+     "team": "ΠΟ ΜΑΛΑΚΟΠΗΣ ΠΥΛΑΙΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "0",
+      "3",
+      "9-18",
+      "3"
+     ]
+    },
+    {
+     "pos": 38,
+     "team": "ΕΝΩΣΗ ΑΝΘΟΚΗΠΩΝ ΚΑΡΑΤΑΣΟΥ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "0",
+      "3",
+      "7-17",
+      "3"
+     ]
+    },
+    {
+     "pos": 39,
+     "team": "ΚΙΣΣΟΣ ΧΟΡΤΙΑΤΗ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "0",
+      "3",
+      "6-16",
+      "3"
+     ]
+    },
+    {
+     "pos": 40,
+     "team": "ΔΟΞΑ ΑΔΕΝΔΡΟΥ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "0",
+      "3",
+      "3-16",
+      "3"
+     ]
+    },
+    {
+     "pos": 41,
+     "team": "ΑΕ ΕΥΟΣΜΟΥ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "0",
+      "3",
+      "2-22",
+      "3"
+     ]
+    },
+    {
+     "pos": 42,
+     "team": "ΑΧΙΛΛΕΑΣ ΤΡΙΑΝΔΡΙΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "0",
+      "1",
+      "3",
+      "4-26",
+      "1"
+     ]
+    },
+    {
+     "pos": 43,
+     "team": "ΑΚΑΔ. ΠΟΔ. ΝΕΑΠΟΛΗΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "0",
+      "1",
+      "3",
+      "1-24",
+      "1"
+     ]
+    },
+    {
+     "pos": 44,
+     "team": "ΠΟΤ ΗΡΑΚΛΗΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "0",
+      "0",
+      "3",
+      "3-13",
+      "0"
+     ]
+    },
+    {
+     "pos": 45,
+     "team": "ΗΡΑΚΛΗΣ ΑΜΠΕΛΟΚΗΠΩΝ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "2",
+      "0",
+      "0",
+      "2",
+      "2-12",
+      "0"
+     ]
+    },
+    {
+     "pos": 46,
+     "team": "ΚΕΡΑΥΝΟΣ ΩΡΑΙΟΚΑΣΤΡΟΥ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "0",
+      "0",
+      "3",
+      "2-13",
+      "0"
+     ]
+    },
+    {
+     "pos": 47,
+     "team": "Μ.ΑΛΕΞΑΝΔΡΟΣ ΘΕΣΣΑΛΟΝΙΚΗΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "0",
+      "0",
+      "4",
+      "0-12",
+      "0"
+     ]
+    },
+    {
+     "pos": 48,
+     "team": "ΙΩΝΙΚΟΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "0",
+      "0",
+      "4",
+      "3-27",
+      "0"
+     ]
+    },
+    {
+     "pos": 49,
+     "team": "ΑΘΛΗΤΙΚΗ ΑΚΑΔΗΜΙΑ ΓΙΑΝΝΙΤΣΩΝ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "0",
+      "0",
+      "4",
+      "0-27",
+      "0"
+     ]
+    },
+    {
+     "pos": 50,
+     "team": "ΑΙΑΣ ΕΥΟΣΜΟΥ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "0",
+      "0",
+      "3",
+      "1-30",
+      "0"
+     ]
+    },
+    {
+     "pos": 51,
+     "team": "ΑΟ ΠΟΛΥΚΑΣΤΡΟΥ ΠΑΙΟΝΙΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "0",
+      "0",
+      "4",
+      "0-41",
+      "0"
+     ]
+    }
+   ]
+  }
+ ],
+ "football-u13b": [
+  {
+   "title": "Κ14 League 2 (ΕΠΣΜ)",
+   "url": "https://www.epsm.gr/table_ypodomon.asp?diorganosi=%CE%9A14+LEAGUE+2",
+   "columns": [
+    "Αγ",
+    "Ν",
+    "Ι",
+    "Η",
+    "Γκολ",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "5",
+      "4",
+      "1",
+      "0",
+      "33-7",
+      "13"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020 (2)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "0",
+      "1",
+      "17-7",
+      "9"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "ΜΠΕΜΠΗΔΕΣ 2000 (2)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "1",
+      "1",
+      "17-13",
+      "7"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "ΜΑΚΕΔΟΝΙΚΟΣ (2)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "5",
+      "2",
+      "1",
+      "2",
+      "19-21",
+      "7"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "ΣΚΙΟΥΡΟΙ (2)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "5",
+      "2",
+      "0",
+      "3",
+      "14-24",
+      "6"
+     ]
+    },
+    {
+     "pos": 6,
+     "team": "ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ (2)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "0",
+      "2",
+      "11-11",
+      "6"
+     ]
+    },
+    {
+     "pos": 7,
+     "team": "ΠΡΩΤΕΑΣ (2)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "5",
+      "1",
+      "1",
+      "3",
+      "7-21",
+      "4"
+     ]
+    },
+    {
+     "pos": 8,
+     "team": "ΖΗΤΑ ΕΠΤΑ (2)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "0",
+      "3",
+      "12-14",
+      "3"
+     ]
+    },
+    {
+     "pos": 9,
+     "team": "ΑΚΡΙΤΕΣ ΣΥΚΕΩΝ (2)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "0",
+      "3",
+      "8-20",
+      "3"
+     ]
+    }
+   ]
+  }
+ ],
+ "football-u12": [
+  {
+   "title": "Κ13 Ειδικής (ΕΠΣΜ)",
+   "url": "https://www.epsm.gr/table_ypodomon.asp?diorganosi=%CE%9A13+%CE%95%CE%99%CE%94%CE%99%CE%9A%CE%97%CE%A3+1%CE%BF%CF%82+%CE%9F%CE%9C%CE%99%CE%9B%CE%9F%CE%A3",
+   "columns": [
+    "Αγ",
+    "Ν",
+    "Ι",
+    "Η",
+    "Γκολ",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "5",
+      "4",
+      "1",
+      "0",
+      "33-4",
+      "13"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "5",
+      "3",
+      "1",
+      "1",
+      "24-12",
+      "10"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "ΜΠΕΜΠΗΔΕΣ 2000",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "5",
+      "3",
+      "1",
+      "1",
+      "23-18",
+      "10"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "ΑΓΙΟΣ ΝΙΚΟΛΑΟΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "5",
+      "3",
+      "1",
+      "1",
+      "21-16",
+      "10"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "ΑΛΕΞΑΝΔΡΟΣ ΚΙΛΚΙΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "5",
+      "2",
+      "0",
+      "3",
+      "15-23",
+      "6"
+     ]
+    },
+    {
+     "pos": 6,
+     "team": "ΣΚΙΟΥΡΟΙ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "5",
+      "2",
+      "0",
+      "3",
+      "26-31",
+      "6"
+     ]
+    },
+    {
+     "pos": 7,
+     "team": "ΠΡΩΤΕΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "5",
+      "1",
+      "0",
+      "4",
+      "19-28",
+      "3"
+     ]
+    },
+    {
+     "pos": 8,
+     "team": "ΧΑΝΘ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "5",
+      "0",
+      "0",
+      "5",
+      "5-34",
+      "0"
+     ]
+    }
+   ]
+  }
+ ],
+ "football-women-u17": [
+  {
+   "title": "Πανελλήνιο Υποδομών Νεανίδων Κ17, 1ος ομιλος",
+   "url": "https://www.epo.gr/el/competition/56/matches",
+   "columns": [
+    "Αγ",
+    "Ν",
+    "Ι",
+    "Η",
+    "Γκολ",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "ΠΑΟΚ",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=gfyX-2TL",
+     "paok": true,
+     "cells": [
+      "1",
+      "1",
+      "0",
+      "0",
+      "8-0",
+      "3"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΣΕΙΡΗΝΕΣ ΓΡΕΒΕΝΩΝ Κ17",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/fb84f8acc0b35a20cf5eddd3d801eaf8.jpg?itok=DIJr-APp",
+     "paok": false,
+     "cells": [
+      "1",
+      "1",
+      "0",
+      "0",
+      "3-0",
+      "3"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "ΣΚΙΟΥΡΟΙ Κ17",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/3bfe993f792098774518adab55c24608.jpg?itok=COOP5h1r",
+     "paok": false,
+     "cells": [
+      "1",
+      "1",
+      "0",
+      "0",
+      "3-0",
+      "3"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "ΑΣ ΘΕΣΣ/ΝΙΚΗ Ο ΑΡΗΣ Κ17",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/43aad17f2d743f4123efc06a5acbe94b.jpg?itok=goRFYsZQ",
+     "paok": false,
+     "cells": [
+      "1",
+      "0",
+      "0",
+      "1",
+      "0-3",
+      "0"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "Α.Ο. ΛΕΟΝΤΕΣ Κ17",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/bc059cd79ef68a1b0542630b69146908.jpg?itok=_ZxjQaDy",
+     "paok": false,
+     "cells": [
+      "1",
+      "0",
+      "0",
+      "1",
+      "0-3",
+      "0"
+     ]
+    },
+    {
+     "pos": 6,
+     "team": "ΠΟΝΤΙΑΚΟΣ ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ ΑΟ Κ17",
+     "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/0f790193242b166f3739b2a9755fc844.jpg?itok=Y3ub2vLp",
+     "paok": false,
+     "cells": [
+      "1",
+      "0",
+      "0",
+      "1",
+      "0-8",
+      "0"
+     ]
+    }
+   ]
+  }
+ ],
+ "football-women-u15": [
+  {
+   "title": "Κ15 Γυναικών (ΕΠΣΜ)",
+   "url": "https://www.epsm.gr/table_ypodomon.asp?diorganosi=%CE%9A15+%CE%93%CE%A5%CE%9D%CE%91%CE%99%CE%9A%CE%A9%CE%9D",
+   "columns": [
+    "Αγ",
+    "Ν",
+    "Ι",
+    "Η",
+    "Γκολ",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "ΑΟ ΛΕΟΝΤΕΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "3",
+      "0",
+      "0",
+      "13-3",
+      "9"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "2",
+      "2",
+      "0",
+      "0",
+      "10-1",
+      "6"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "ΑΣ ΠΑΟΚ (2)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "2",
+      "2",
+      "0",
+      "0",
+      "11-3",
+      "6"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "ΑΝΑΓΕΝΝΗΣΗ ΧΑΛΚΗΔΟΝΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "0",
+      "2",
+      "7-8",
+      "3"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "ΣΚΙΟΥΡΟΙ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "0",
+      "2",
+      "5-7",
+      "3"
+     ]
+    },
+    {
+     "pos": 7,
+     "team": "ΑΙΑΝΤΑΣ ΠΥΛΑΙΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "0",
+      "0",
+      "3",
+      "1-13",
+      "0"
+     ]
+    },
+    {
+     "pos": 8,
+     "team": "ΖΗΤΑ ΕΠΤΑ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "2",
+      "0",
+      "0",
+      "2",
+      "1-13",
+      "0"
+     ]
+    }
+   ]
+  }
+ ],
+ "football-women-u15b": [
+  {
+   "title": "Κ15 Γυναικών (ΕΠΣΜ)",
+   "url": "https://www.epsm.gr/table_ypodomon.asp?diorganosi=%CE%9A15+%CE%93%CE%A5%CE%9D%CE%91%CE%99%CE%9A%CE%A9%CE%9D",
+   "columns": [
+    "Αγ",
+    "Ν",
+    "Ι",
+    "Η",
+    "Γκολ",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "ΑΟ ΛΕΟΝΤΕΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "3",
+      "0",
+      "0",
+      "13-3",
+      "9"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΑΣ ΠΑΟΚ (1)",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "2",
+      "2",
+      "0",
+      "0",
+      "10-1",
+      "6"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "2",
+      "2",
+      "0",
+      "0",
+      "11-3",
+      "6"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "ΑΝΑΓΕΝΝΗΣΗ ΧΑΛΚΗΔΟΝΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "0",
+      "2",
+      "7-8",
+      "3"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "ΣΚΙΟΥΡΟΙ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "0",
+      "2",
+      "5-7",
+      "3"
+     ]
+    },
+    {
+     "pos": 7,
+     "team": "ΑΙΑΝΤΑΣ ΠΥΛΑΙΑΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "3",
+      "0",
+      "0",
+      "3",
+      "1-13",
+      "0"
+     ]
+    },
+    {
+     "pos": 8,
+     "team": "ΖΗΤΑ ΕΠΤΑ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "2",
+      "0",
+      "0",
+      "2",
+      "1-13",
+      "0"
+     ]
+    }
+   ]
+  }
+ ],
+ "football-women-u12": []
 }

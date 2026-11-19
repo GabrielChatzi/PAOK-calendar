@@ -1,0 +1,121 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Κ12 Κορασίδων – Εντός έδρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:football-women-u12-epsm-0127a939738a@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261108T120000
+DTEND;TZID=Europe/Athens:20261108T140000
+SUMMARY:⚽ ΠΑΟΚ – ΑΙΑΝΤΑΣ ΠΥΛΑΙΑΣ
+LOCATION:CHAMPIONS
+DESCRIPTION:Κ12 Κορασίδων (ΕΠΣΜ) – 2η αγωνιστική
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A12+%C
+ E%9A%CE%9F%CE%A1%CE%91%CE%A3%CE%99%CE%94%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u12-epsm-22de3042d4c7@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261128T180000
+DTEND;TZID=Europe/Athens:20261128T200000
+SUMMARY:⚽ ΠΑΟΚ – ΑΟ ΛΕΟΝΤΕΣ (2) (ώρα αναμένετα
+ ι)
+DESCRIPTION:Κ12 Κορασίδων (ΕΠΣΜ) – 5η αγωνιστική
+ \nΗ ώρα δεν έχει οριστεί ακόμα (προσωρινά 
+ 18:00). Θα ενημερωθεί αυτόματα όταν ανακοιν
+ ωθεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A12+%C
+ E%9A%CE%9F%CE%A1%CE%91%CE%A3%CE%99%CE%94%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u12-epsm-7b81e4eb65f3@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261212T180000
+DTEND;TZID=Europe/Athens:20261212T200000
+SUMMARY:⚽ ΠΑΟΚ – ΑΜΣ ΠΑΝΟΡΑΜΑ (ώρα αναμένετα
+ ι)
+DESCRIPTION:Κ12 Κορασίδων (ΕΠΣΜ) – 7η αγωνιστική
+ \nΗ ώρα δεν έχει οριστεί ακόμα (προσωρινά 
+ 18:00). Θα ενημερωθεί αυτόματα όταν ανακοιν
+ ωθεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A12+%C
+ E%9A%CE%9F%CE%A1%CE%91%CE%A3%CE%99%CE%94%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u12-epsm-8f633f51e863@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20261219T180000
+DTEND;TZID=Europe/Athens:20261219T200000
+SUMMARY:⚽ ΠΑΟΚ – ΑΟ ΛΕΟΝΤΕΣ (1) (ώρα αναμένετα
+ ι)
+DESCRIPTION:Κ12 Κορασίδων (ΕΠΣΜ) – 8η αγωνιστική
+ \nΗ ώρα δεν έχει οριστεί ακόμα (προσωρινά 
+ 18:00). Θα ενημερωθεί αυτόματα όταν ανακοιν
+ ωθεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A12+%C
+ E%9A%CE%9F%CE%A1%CE%91%CE%A3%CE%99%CE%94%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u12-epsm-f7565c5fa753@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270102T180000
+DTEND;TZID=Europe/Athens:20270102T200000
+SUMMARY:⚽ ΠΑΟΚ – ΑΣ ΠΟΔ. ΤΟΥΜΠΑΣ (ώρα αναμένε
+ ται)
+DESCRIPTION:Κ12 Κορασίδων (ΕΠΣΜ) – 10η αγωνιστικ
+ ή\nΗ ώρα δεν έχει οριστεί ακόμα (προσωριν
+ ά 18:00). Θα ενημερωθεί αυτόματα όταν ανακο
+ ινωθεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A12+%C
+ E%9A%CE%9F%CE%A1%CE%91%CE%A3%CE%99%CE%94%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u12-epsm-501a03290de8@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270109T180000
+DTEND;TZID=Europe/Athens:20270109T200000
+SUMMARY:⚽ ΠΑΟΚ – ΣΚΙΟΥΡΟΙ (ώρα αναμένεται)
+DESCRIPTION:Κ12 Κορασίδων (ΕΠΣΜ) – 11η αγωνιστικ
+ ή\nΗ ώρα δεν έχει οριστεί ακόμα (προσωριν
+ ά 18:00). Θα ενημερωθεί αυτόματα όταν ανακο
+ ινωθεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A12+%C
+ E%9A%CE%9F%CE%A1%CE%91%CE%A3%CE%99%CE%94%CE%A9%CE%9D
+END:VEVENT
+BEGIN:VEVENT
+UID:football-women-u12-epsm-794668155d70@paok-calendar
+DTSTAMP:20261119T110349Z
+DTSTART;TZID=Europe/Athens:20270123T180000
+DTEND;TZID=Europe/Athens:20270123T200000
+SUMMARY:⚽ ΠΑΟΚ – ΜΑΚΕΔΟΝΙΚΟΣ (ώρα αναμένετα
+ ι)
+DESCRIPTION:Κ12 Κορασίδων (ΕΠΣΜ) – 13η αγωνιστικ
+ ή\nΗ ώρα δεν έχει οριστεί ακόμα (προσωριν
+ ά 18:00). Θα ενημερωθεί αυτόματα όταν ανακο
+ ινωθεί.
+URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A12+%C
+ E%9A%CE%9F%CE%A1%CE%91%CE%A3%CE%99%CE%94%CE%A9%CE%9D
+END:VEVENT
+END:VCALENDAR

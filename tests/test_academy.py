@@ -215,3 +215,20 @@ class Epesth(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class EpesthCrests(unittest.TestCase):
+    def test_match(self):
+        import build_calendars as b
+        old = b._EPESTH_CRESTS
+        b._EPESTH_CRESTS = [(set(b.epesth_words(n)), {w[:5] for w in b.epesth_words(n) if len(w) > 3}, u) for n, u in [
+            ("Α.Σ. AΡΗΣ", "aris"), ("Ν.Γ.Σ ΘΕΣΣΑΛΟΝΙΚΗΣ ΗΡΑΚΛΗΣ 1908", "iraklis"), ("Χ.Α.Ν.Θ.", "hanth"),
+            ("Π.Ο. ΝΕΩΝ ΜΟΥΔΑΝΙΩΝ", "moudania")]]
+        try:
+            self.assertEqual(b.epesth_crest("ΗΡΑΚΛΗΣ 1908"), "iraklis")
+            self.assertEqual(b.epesth_crest("ΧΑΝΘ"), "hanth")
+            self.assertEqual(b.epesth_crest("ΠΟ ΜΟΥΔΑΝΙΩΝ"), "moudania")
+            self.assertEqual(b.epesth_crest("ΑΡΗΣ"), "aris")
+            self.assertEqual(b.epesth_crest("ΑΓΝΩΣΤΟΣ"), "")
+        finally:
+            b._EPESTH_CRESTS = old

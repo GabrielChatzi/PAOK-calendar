@@ -1679,6 +1679,49 @@ def epesth_same(a: str, b: str) -> bool:
     return bool(wa & wb)
 
 
+_EPESTH_CRESTS: list[tuple[set, set, str]] | None = None
+
+
+def epesth_words(name: str) -> list[str]:
+    """Λέξεις ονόματος σωματείου, κεφαλαία, χωρίς τόνους και τελείες («Α.Ε.Ν. ΠΑΝΟΡΑΜΑΤΟΣ» → ΑΕΝ, ΠΑΝΟΡΑΜΑΤΟΣ),
+    με τα λατινικά που μοιάζουν ως ελληνικά («AΡΗΣ» → «ΑΡΗΣ»)."""
+    t = "".join(_LOOKALIKE_ONE.get(c, c) for c in plain(name.replace(".", "")).upper())
+    return [w for w in re.findall(r"[Α-ΩA-Z0-9]+", t) if not w.isdigit()]
+
+
+def epesth_crest(name: str) -> str:
+    """Το σήμα του σωματείου από τη σελίδα «Τα σωματεία της ΕΠΕΣΘ» (ένα κατέβασμα ανά εκτέλεση). Ταιριάζει
+    με όλες τις λέξεις (2 πόντοι η καθεμία) και με τα πρώτα 5 γράμματα (1)· μόνο μοναδικός νικητής."""
+    global _EPESTH_CRESTS
+    if _EPESTH_CRESTS is None:
+        _EPESTH_CRESTS = []
+        try:
+            page = fetch(EPESTH + "ta-somateia-tis-epesth/")
+            for row in re.findall(r"<tr[^>]*>(.*?)</tr>", page, re.S):
+                imgs = [u for u in re.findall(r'<img[^>]+src="([^"]+)"', row)
+                        if "/uploads/" in u and not re.search(r"/(Ball\w*|Bala)\.\w+$", u)]
+                cells = [clean(c) for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", row, re.S)]
+                cells = [c for c in cells if c and not c.strip(" .").isdigit()]
+                if imgs and cells:
+                    words = epesth_words(cells[0])
+                    _EPESTH_CRESTS.append((set(words), {w[:5] for w in words if len(w) > 3},
+                                           urllib.parse.quote(imgs[0], safe=":/%")))
+        except Exception as e:
+            print(f"  ! σήματα ΕΠΕΣΘ: {e}", file=sys.stderr)
+    words = epesth_words(name)
+    if not words:
+        return ""
+    scored = []
+    for full, prefixes, url in _EPESTH_CRESTS:
+        score = 2 * len(set(words) & full) + len({w[:5] for w in words if len(w) > 3} & prefixes)
+        if score:
+            scored.append((score, url))
+    scored.sort(reverse=True)
+    if not scored or (len(scored) > 1 and scored[1][0] == scored[0][0]):
+        return ""
+    return scored[0][1]
+
+
 def epesth_matches(section: str, today: dt.date | None = None) -> list[Match]:
     today = today or dt.date.today()
     cfg, season = EPESTH_TEAMS[section], epesth_season(today)
@@ -1714,7 +1757,8 @@ def epesth_matches(section: str, today: dt.date | None = None) -> list[Match]:
         out.append(Match(
             section=section, uid=f"{section}-{season[:4]}-{short_hash(str(f['round']), 'h' if home else 'a', plain(name))}",
             day=f["day"], time=f["time"], home=PAOK if home else name, away=name if home else PAOK, paok_home=home,
-            venue=f["venue"], competition=comp, round=f"{f['round']}η αγωνιστική", score=score))
+            venue=f["venue"], competition=comp, round=f"{f['round']}η αγωνιστική", score=score,
+            home_logo="" if home else epesth_crest(name), away_logo=epesth_crest(name) if home else ""))
     return out
 
 

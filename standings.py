@@ -15,7 +15,7 @@ import re
 from pathlib import Path
 
 from build_calendars import (
-    ACADEMY, EPESTH, EPESTH_TEAMS, epesth_season, epesth_tables, PAOKFC, PAOKFC_TEAMS, sl2_competitions, sl2_json, sl2_name, paokfc_fetch, paokfc_links, paokfc_team, paokfc_matches, paokfc_name, DATAPROJECT, EPO, ea_data, ea_team, oxe_logo, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
+    ACADEMY, EPESTH, EPESTH_TEAMS, epesth_crest, epesth_season, epesth_tables, PAOKFC, PAOKFC_TEAMS, sl2_competitions, sl2_json, sl2_name, paokfc_fetch, paokfc_links, paokfc_team, paokfc_matches, paokfc_name, DATAPROJECT, EPO, ea_data, ea_team, oxe_logo, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
     fetch_until,
     is_paok, latin_title, plain, season_start_year, tidy_name, volley_rows,
 )
@@ -470,7 +470,8 @@ def epesth_table(section: str) -> list[dict]:
         if not any(r[1] == cfg["team"] for r in body):
             continue
         return [table(ACADEMY[section].get("league") or ACADEMY[section]["name"], url, ["Αγ", "Ν", "Η", "Σετ", "Β"], [
-            (int(r[0]), PAOK_NAME if r[1] == cfg["team"] else r[1], "", [r[2], r[3], r[4], r[5], r[6]]) for r in body])]
+            (int(r[0]), PAOK_NAME if r[1] == cfg["team"] else r[1], "" if r[1] == cfg["team"] else epesth_crest(r[1]),
+             [r[2], r[3], r[4], r[5], r[6]]) for r in body])]
     raise RuntimeError("δεν βρέθηκε βαθμολογία με τον ΠΑΟΚ")
 
 

@@ -12,17 +12,24 @@ jobs:
       - run: |
           mkdir -p probe
           python3 - <<'PY'
-          import urllib.request, urllib.parse, re
-          UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36", "Accept-Language": "el,en"}
+          import urllib.request, urllib.parse, json, re
+          UA = {"User-Agent": "PAOKalendar/1.0 (https://paokalendar.gr)"}
+          def api(host, **q):
+              u = f"https://{host}/w/api.php?" + urllib.parse.urlencode({"format": "json", **q})
+              return json.load(urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=30))
           out = open("probe/result.txt", "w")
-          for q in ["Achilleas Triandrias", "Agrotikos Asteras", "Makedonikos", "Ethnikos Pylaias", "Nea Politeia Evosmou", "Megas Alexandros"]:
-              u = "https://www.transfermarkt.com/schnellsuche/ergebnis/schnellsuche?query=" + urllib.parse.quote(q)
+          for n in [l.strip() for l in open("missing.txt") if l.strip()]:
+              name = re.sub(r"\(\d\)|\b\d{4}\b", "", n).strip()
               try:
-                  t = urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=40).read().decode("utf-8", "ignore")
-                  hits = re.findall(r'wappen/(?:tiny|small|head)/(\d+)\.png[^>]*>.*?title="([^"]+)"', t, re.S)[:4]
-                  out.write(f"{q}: {len(t)} {hits}\n")
+                  r = api("el.wikipedia.org", action="query", list="search", srsearch=name + " ποδόσφαιρο", srlimit=3)
+                  titles = [x["title"] for x in r["query"]["search"]]
+                  imgs = []
+                  if titles:
+                      p = api("el.wikipedia.org", action="query", prop="pageimages", piprop="original", titles="|".join(titles))
+                      imgs = [(v["title"], v.get("original", {}).get("source", "")) for v in p["query"]["pages"].values()]
+                  out.write(f"{n} :: {imgs}\n")
               except Exception as e:
-                  out.write(f"{q}: ERR {e}\n")
+                  out.write(f"{n} :: ERR {e}\n")
           PY
       - run: |
           git config user.name "github-actions[bot]"

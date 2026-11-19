@@ -38,6 +38,10 @@ jobs:
             git show "origin/data:$f" > "docs/$f"
           done
 
+      # Τα προγράμματα της ΕΠΕΣΘ (βόλεϊ ακαδημίες) είναι PDF: pdftotext από το poppler-utils.
+      - name: pdftotext
+        run: command -v pdftotext || (sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils)
+
       - name: Δημιουργία ημερολογίων
         id: build
         continue-on-error: true

@@ -40,6 +40,7 @@ const EMOJI = {
   volley: "🏐", "volley-women": "🏐", handball: "🤾", "handball-women": "🤾",
   waterpolo: "🤽", "waterpolo-women": "🤽", futsal: "🥅",
   "football-b": "⚽", "football-u19": "⚽", "football-u17": "⚽", "football-u16": "⚽", "football-u15": "⚽",
+  "volley-u21": "🏐", "volley-u18": "🏐", "volley-women-u20": "🏐", "volley-women-u18": "🏐", "volley-women-u18es1": "🏐", "volley-women-u18es2": "🏐",
 };
 const KEEP_DAYS = 4;
 

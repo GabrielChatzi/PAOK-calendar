@@ -173,5 +173,45 @@ class SL2(unittest.TestCase):
         self.assertEqual((paok["pos"], paok["cells"][-1]), (4, "4"))
 
 
+class Epesth(unittest.TestCase):
+    """Βόλεϊ ακαδημίες από το epesth.gr: πρόγραμμα από PDF (κείμενο του pdftotext), σκορ από τη σελίδα."""
+    PDF = """                             ΠΡΟΓΡΑΜΜΑ ΑΓΩΝΩΝ ΠΡΩΤΑΘΛΗΜΑΤΟΣ Κ18 ΑΓΟΡΙΩΝ (ΕΦΗΒΩΝ)
+       ΗΜΕΡ/ΝΙΑ           ΓΗΠΕΔΟ                       ΩΡΑ                   ΣΥΝΑΝΤΗΣΗ                        AΠ.
+1η Αγωνιστική
+ Σάββατο 17/10/2026 Αλ. Νικολαΐδης                     15:00   ΠΗΓΑΣΟΣ ΠΟΛΙΧΝΗΣ - ΝΓΣΘ ΗΡΑΚΛΗΣ 1908            -
+ Σάββατο 17/10/2026 Κλ. Βικελίδης                      20:00            ΑΣ ΑΡΗΣ - ΠΑΟΚ                         -
+2η Αγωνιστική
+ Σάββατο 31/10/2026 ΠΑΟΚ Sports Arena (Βοηθητικό)      18:00                ΠΑΟΚ - ΑΣ ΕΛΠΙΣ                    -
+ 5η Αγωνιστική
+ Σάββατο 21/11/2026 Γ. Κατσάνης                        15:00   ΝΓΣΘ ΗΡΑΚΛΗΣ 1908 - ΠΑΟΚ                        -
+"""
+    PAGE = """<table><tr><td>1η Αγωνιστική</td><td>Σκορ</td></tr><tr><td>ΑΡΗΣ-ΠΑΟΚ</td><td>3-2</td></tr></table>
+<table><tr><td>2η Αγωνιστική</td><td>Σκορ</td></tr><tr><td>ΠΑΟΚ-ΑΣ ΕΛΠΙΣ</td><td>0-3</td></tr></table>
+<table><tr><td>5η Αγωνιστική</td><td>Σκορ</td></tr><tr><td>ΗΡΑΚΛΗΣ-ΠΑΟΚ</td><td></td></tr></table>
+<table><tr><td>α.α</td><td>Ομάδα</td><td>Αγ</td><td>Ν</td><td>Η</td><td>Σετ</td><td>Β</td></tr>
+<tr><td>1</td><td>ΑΣ ΕΛΠΙΣ</td><td>4</td><td>4</td><td>0</td><td>12-0</td><td>8</td></tr>
+<tr><td>9</td><td>ΠΑΟΚ</td><td>4</td><td>0</td><td>4</td><td>4-12</td><td>4</td></tr></table>"""
+    LIST = '<a href="https://epesth.gr/wp-content/uploads/2026/10/%CE%A0%CE%A1%CE%9F%CE%93%CE%A1%CE%91%CE%9C%CE%9C%CE%91-%CE%9A18-%CE%91%CE%93%CE%9F%CE%A1%CE%99%CE%91.pdf">x</a>'
+
+    def run_section(self):
+        pages = {"https://epesth.gr/programmata/": self.LIST, "https://epesth.gr/k18-agorion-2026-2027/": self.PAGE}
+        with mock.patch.object(b, "fetch", lambda url, *a, **k: pages[url]), \
+                mock.patch.object(b, "epesth_pdf_text", lambda url: self.PDF):
+            return sorted(b.epesth_matches("volley-u18", dt.date(2026, 11, 19)), key=lambda m: m.day)
+
+    def test_matches(self):
+        ms = self.run_section()
+        self.assertEqual([(m.home, m.away, m.score) for m in ms],
+                         [("ΑΡΗΣ", "ΠΑΟΚ", "3-2"), ("ΠΑΟΚ", "ΕΛΠΙΣ", "0-3"), ("ΗΡΑΚΛΗΣ 1908", "ΠΑΟΚ", "")])
+        self.assertEqual((ms[1].venue, ms[1].time, ms[1].round), ("ΠΑΟΚ Sports Arena (Βοηθητικό)", dt.time(18, 0), "2η αγωνιστική"))
+
+    def test_table(self):
+        import standings
+        with mock.patch.object(standings, "fetch", lambda url, *a, **k: self.PAGE), \
+                mock.patch.object(standings, "epesth_season", lambda: "2026-2027"):
+            (t,) = standings.epesth_table("volley-u18")
+        self.assertEqual([(r["pos"], r["paok"], r["cells"][-1]) for r in t["rows"]], [(1, False, "8"), (9, True, "4")])
+
+
 if __name__ == "__main__":
     unittest.main()

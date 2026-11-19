@@ -92,6 +92,19 @@ ACADEMY = {
                      "short": "Κ16", "league": "Super League 2 Κ19"},
     "football-u15": {"emoji": "⚽", "name": "Κ15", "sport": "Ποδόσφαιρο", "women": False, "academy": True,
                      "short": "Κ15"},
+    # Βόλεϊ: πρωταθλήματα της ΕΠΕΣΘ (epesth.gr). «group»: η ομάδα του μενού (αγόρια / κορίτσια).
+    "volley-u21": {"emoji": "🏐", "name": "Κ21 Αγοριών", "sport": "Βόλεϊ", "women": False, "academy": True,
+                   "short": "Κ21", "group": "Βόλεϊ Αγοριών", "league": "Κ21 Αγοριών (ΕΠΕΣΘ)"},
+    "volley-u18": {"emoji": "🏐", "name": "Κ18 Αγοριών", "sport": "Βόλεϊ", "women": False, "academy": True,
+                   "short": "Κ18", "group": "Βόλεϊ Αγοριών", "league": "Κ18 Αγοριών (ΕΠΕΣΘ)"},
+    "volley-women-u20": {"emoji": "🏐", "name": "Κ20 Κοριτσιών", "sport": "Βόλεϊ", "women": True, "academy": True,
+                         "short": "Κ20", "group": "Βόλεϊ Κοριτσιών", "league": "Κ20 Κοριτσιών (ΕΠΕΣΘ)"},
+    "volley-women-u18": {"emoji": "🏐", "name": "Κ18 Κοριτσιών", "sport": "Βόλεϊ", "women": True, "academy": True,
+                         "short": "Κ18", "group": "Βόλεϊ Κοριτσιών", "league": "Κ18 Κοριτσιών (ΕΠΕΣΘ)"},
+    "volley-women-u18es1": {"emoji": "🏐", "name": "Κ18 Κοριτσιών ΕΣ 1", "sport": "Βόλεϊ", "women": True, "academy": True,
+                            "short": "Κ18 ΕΣ 1", "group": "Βόλεϊ Κοριτσιών", "league": "Κ18 Κοριτσιών Ε.Σ. (ΕΠΕΣΘ)"},
+    "volley-women-u18es2": {"emoji": "🏐", "name": "Κ18 Κοριτσιών ΕΣ 2", "sport": "Βόλεϊ", "women": True, "academy": True,
+                            "short": "Κ18 ΕΣ 2", "group": "Βόλεϊ Κοριτσιών", "league": "Κ18 Κοριτσιών Ε.Σ. (ΕΠΕΣΘ)"},
 }
 SECTIONS.update(ACADEMY)
 
@@ -1564,6 +1577,146 @@ def sl2_matches(section: str, today: dt.date | None = None) -> list[Match]:
     return out
 
 
+# ---- Βόλεϊ ακαδημίες: Ένωση Πετοσφαιρικών Σωματείων Θεσσαλονίκης (epesth.gr)
+# Η μέρα, η ώρα και το γήπεδο είναι στα PDF προγράμματος (σελίδα «Προγράμματα»), τα σκορ και οι βαθμολογίες
+# στις σελίδες των κατηγοριών (π.χ. /k18-agorion-2026-2027/), ανά αγωνιστική. Τα ενώνουμε ανά αγωνιστική και
+# αντίπαλο. Τα PDF γίνονται κείμενο με το pdftotext (poppler-utils, βλ. update.yml).
+EPESTH = "https://epesth.gr/"
+# page: η σελίδα της κατηγορίας ({season} = «2026-2027»)· pdf: τι γράφει το όνομα του PDF· team: πώς γράφεται ο ΠΑΟΚ.
+EPESTH_TEAMS = {
+    "volley-u21": {"page": "k21-agorion-{season}", "pdf": "Κ21-ΑΓΟΡΙΩΝ", "team": "ΠΑΟΚ"},
+    "volley-u18": {"page": "k18-agorion-{season}", "pdf": "Κ18-ΑΓΟΡΙΑ", "team": "ΠΑΟΚ"},
+    "volley-women-u20": {"page": "k20-koritsion-{season}", "pdf": "Κ20-ΚΟΡΙΤΙΣΩΝ", "team": "ΠΑΟΚ"},
+    "volley-women-u18": {"page": "k18-koritsion-{season}", "pdf": "Κ18-ΚΟΡΙΤΙΣΩΝ.pdf", "team": "ΠΑΟΚ"},
+    "volley-women-u18es1": {"page": "k18-koritsion-e-s-{season}", "pdf": "Κ18-ΚΟΡΙΤΙΣΩΝ-Ε", "team": "ΠΑΟΚ 1"},
+    "volley-women-u18es2": {"page": "k18-koritsion-e-s-{season}", "pdf": "Κ18-ΚΟΡΙΤΙΣΩΝ-Ε", "team": "ΠΑΟΚ 2"},
+}
+# Τα αρχικά των σωματείων (ΑΣ, ΝΓΣΘ…) φεύγουν: «ΑΣ ΑΡΗΣ» → «ΑΡΗΣ».
+EPESTH_PREFIXES = {"ΑΣ", "ΝΓΣΘ", "ΟΠΑΘ", "ΑΜΟ", "ΑΣΕΓ", "ΑΠΣ", "ΑΕΣΕ"}
+EPESTH_ROW = re.compile(
+    r"^\s*\S+\s+(\d{1,2})/(\d{1,2})/(\d{4})\s+(.+?)\s{2,}(\d{1,2})[:.](\d{2})\s+(.+?)\s+-\s+(.+?)(?:\s{2,}.*)?$")
+
+
+def epesth_season(today: dt.date | None = None) -> str:
+    start = season_start_year(today or dt.date.today())
+    return f"{start}-{start + 1}"
+
+
+def epesth_name(raw: str) -> str:
+    words = re.sub(r"\s+", " ", raw).strip().split(" ")
+    while len(words) > 1 and words[0] in EPESTH_PREFIXES and not words[1].isdigit():
+        words = words[1:]
+    return " ".join(words)
+
+
+def epesth_pdf_text(url: str) -> str:
+    """Το κείμενο ενός PDF με τις στήλες στη θέση τους (pdftotext -layout)."""
+    import subprocess
+    import tempfile
+    import urllib.request
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=60) as r, tempfile.NamedTemporaryFile(suffix=".pdf") as f:
+        f.write(r.read())
+        f.flush()
+        out = subprocess.run(["pdftotext", "-layout", f.name, "-"], capture_output=True, timeout=60)
+    if out.returncode:
+        raise RuntimeError(f"pdftotext: {out.stderr.decode(errors='replace').strip()}")
+    return out.stdout.decode("utf-8", errors="replace")
+
+
+def epesth_fixtures(text: str, team: str) -> list[dict]:
+    """Οι αγώνες της ομάδας σε ένα PDF προγράμματος: αγωνιστική, μέρα, ώρα, γήπεδο, γηπεδούχος, φιλοξενούμενος."""
+    out, rnd = [], None
+    for line in text.splitlines():
+        head = re.match(r"^\s*(\d+)η\s+Αγωνιστική", line)
+        if head:
+            rnd = int(head.group(1))
+            continue
+        m = EPESTH_ROW.match(line)
+        if not m or rnd is None:
+            continue
+        d, mo, y, venue, hh, mm, home, away = m.groups()
+        home, away = home.strip(), away.strip()
+        if team not in (home, away):
+            continue
+        out.append({"round": rnd, "day": dt.date(int(y), int(mo), int(d)), "time": dt.time(int(hh) % 24, int(mm)),
+                    "venue": venue.strip(), "home": home, "away": away})
+    return out
+
+
+def epesth_tables(page: str) -> list[list[list[str]]]:
+    return [[[clean(c) for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", r, re.S)]
+             for r in re.findall(r"<tr[^>]*>(.*?)</tr>", t, re.S)]
+            for t in re.findall(r"<table[^>]*>(.*?)</table>", page, re.S)]
+
+
+def epesth_results(page: str, team: str) -> list[dict]:
+    """Τα σκορ της ομάδας από τη σελίδα της κατηγορίας: πίνακες «Nη Αγωνιστική | Σκορ» με «ΓΗΠ-ΦΙΛ | 3-1»."""
+    out = []
+    for rows in epesth_tables(page):
+        if not rows or not rows[0]:
+            continue
+        head = re.match(r"(\d+)η\s+αγωνιστική", rows[0][0], re.I)
+        if not head:
+            continue
+        for r in rows[1:]:
+            if len(r) < 2 or "-" not in r[0]:
+                continue
+            home, away = (x.strip() for x in r[0].split("-", 1))
+            if team not in (home, away):
+                continue
+            score = re.match(r"^(\d)\s*-\s*(\d)$", r[1])
+            out.append({"round": int(head.group(1)), "home": home, "away": away,
+                        "score": f"{score.group(1)}-{score.group(2)}" if score else ""})
+    return out
+
+
+def epesth_same(a: str, b: str) -> bool:
+    """Ίδιος αντίπαλος στο PDF και στη σελίδα («ΝΓΣΘ ΗΡΑΚΛΗΣ 1908» / «ΗΡΑΚΛΗΣ», «ΠΗΓΣΑΣΟΣ» / «ΠΗΓΑΣΟΣ»)."""
+    wa = {w[:5] for w in plain(a).split() if len(w) > 2 and not w.isdigit()}
+    wb = {w[:5] for w in plain(b).split() if len(w) > 2 and not w.isdigit()}
+    return bool(wa & wb)
+
+
+def epesth_matches(section: str, today: dt.date | None = None) -> list[Match]:
+    today = today or dt.date.today()
+    cfg, season = EPESTH_TEAMS[section], epesth_season(today)
+    team = cfg["team"]
+    listing = fetch(EPESTH + "programmata/")
+    pdfs = sorted({u for u in re.findall(r'href="(https://epesth\.gr/wp-content/uploads/[^"]+\.pdf)"', listing)
+                   if cfg["pdf"] in urllib.parse.unquote(u)})
+    fixtures = []
+    for u in pdfs:
+        try:
+            fixtures += epesth_fixtures(epesth_pdf_text(u), team)
+        except Exception as e:
+            print(f"  ! {section}: {urllib.parse.unquote(u).rsplit('/', 1)[-1]}: {e}", file=sys.stderr)
+    try:
+        results = epesth_results(fetch(EPESTH + cfg["page"].format(season=season) + "/"), team)
+    except Exception as e:
+        print(f"  ! {section}: σελίδα κατηγορίας: {e}", file=sys.stderr)
+        results = []
+    if not fixtures and not results:
+        raise RuntimeError("δεν βρέθηκαν αγώνες της ομάδας")
+    comp = SECTIONS[section].get("league") or SECTIONS[section]["name"]
+    out, used = [], set()
+    for f in fixtures:
+        home = f["home"] == team
+        opp = f["away"] if home else f["home"]
+        score = ""
+        for i, r in enumerate(results):
+            if i not in used and r["round"] == f["round"] and (r["home"] == team) == home \
+                    and epesth_same(r["away"] if home else r["home"], opp):
+                score, _ = r["score"], used.add(i)
+                break
+        name = epesth_name(opp)
+        out.append(Match(
+            section=section, uid=f"{section}-{season[:4]}-{short_hash(str(f['round']), 'h' if home else 'a', plain(name))}",
+            day=f["day"], time=f["time"], home=PAOK if home else name, away=name if home else PAOK, paok_home=home,
+            venue=f["venue"], competition=comp, round=f"{f['round']}η αγωνιστική", score=score))
+    return out
+
+
 def paokfc_fetch(url: str) -> str:
     """Το paokfc.gr απαντά 403 στο urllib της Python (έλεγχος για bots) αλλά όχι στο curl."""
     key = (url, None, "utf-8")
@@ -2065,10 +2218,11 @@ SOURCES: dict[str, list[tuple[str, Callable[[], list[Match]]]]] = {
     "futsal": [("Futsal Super League", futsal_matches)],
     "waterpolo-women": [("WPL", lambda: waterpolo_matches("waterpolo-women")),
                         ("European Aquatics", lambda: european_waterpolo_matches("waterpolo-women"))],
-    **{key: [("paokfc.gr", lambda key=key: paokfc_matches(key))] for key in ACADEMY},
+    **{key: [("paokfc.gr", lambda key=key: paokfc_matches(key))] for key in PAOKFC_TEAMS},
     # ΠΑΟΚ Β και Κ16 από το επίσημο site της Super League 2 (το paokfc.gr μπλοκάρει, και δεν έχει την Κ16).
     "football-b": [("sl2.gr", lambda: sl2_matches("football-b"))],
     "football-u16": [("sl2.gr", lambda: sl2_matches("football-u16"))],
+    **{key: [("epesth.gr", lambda key=key: epesth_matches(key))] for key in EPESTH_TEAMS},
 }
 
 

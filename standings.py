@@ -15,7 +15,7 @@ import re
 from pathlib import Path
 
 from build_calendars import (
-    ACADEMY, PAOKFC, PAOKFC_TEAMS, sl2_competitions, sl2_json, sl2_name, paokfc_fetch, paokfc_links, paokfc_team, paokfc_matches, paokfc_name, DATAPROJECT, EPO, ea_data, ea_team, oxe_logo, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
+    ACADEMY, EPESTH, EPESTH_TEAMS, epesth_season, epesth_tables, PAOKFC, PAOKFC_TEAMS, sl2_competitions, sl2_json, sl2_name, paokfc_fetch, paokfc_links, paokfc_team, paokfc_matches, paokfc_name, DATAPROJECT, EPO, ea_data, ea_team, oxe_logo, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
     fetch_until,
     is_paok, latin_title, plain, season_start_year, tidy_name, volley_rows,
 )
@@ -458,9 +458,27 @@ def sl2_table(section: str) -> list[dict]:
     return out
 
 
+def epesth_table(section: str) -> list[dict]:
+    """Βαθμολογία βόλεϊ ακαδημίας από τη σελίδα της κατηγορίας στο epesth.gr: ο πίνακας «α.α | Ομάδα | Αγ |
+    Ν | Η | Σετ | Β» που έχει την ομάδα του ΠΑΟΚ (τα πρωταθλήματα εκτός συναγωνισμού δεν έχουν)."""
+    cfg = EPESTH_TEAMS[section]
+    url = EPESTH + cfg["page"].format(season=epesth_season()) + "/"
+    for rows in epesth_tables(fetch(url)):
+        if not rows or len(rows[0]) < 7 or rows[0][1] != "Ομάδα":
+            continue
+        body = [r for r in rows[1:] if len(r) >= 7 and r[0].isdigit() and r[1]]
+        if not any(r[1] == cfg["team"] for r in body):
+            continue
+        return [table(ACADEMY[section].get("league") or ACADEMY[section]["name"], url, ["Αγ", "Ν", "Η", "Σετ", "Β"], [
+            (int(r[0]), PAOK_NAME if r[1] == cfg["team"] else r[1], "", [r[2], r[3], r[4], r[5], r[6]]) for r in body])]
+    raise RuntimeError("δεν βρέθηκε βαθμολογία με τον ΠΑΟΚ")
+
+
 def academy_table(section: str) -> list[dict]:
     """Από το paokfc.gr· αν δεν απαντά, η χειροκίνητη (αν υπάρχει)."""
     try:
+        if section in EPESTH_TEAMS:
+            return epesth_table(section)
         return sl2_table(section) if section in ("football-b", "football-u16") else paokfc_table(section)
     except Exception as e:
         manual = manual_table(section)
@@ -539,5 +557,6 @@ STANDINGS = {
     "waterpolo": with_cups(lambda: waterpolo(False), lambda: ea_groups(False)),
     "waterpolo-women": with_cups(lambda: waterpolo(True), lambda: ea_groups(True)),
     "futsal": futsal,
-    **{key: (lambda key=key: academy_table(key)) for key in ACADEMY},
+    # Οι ομάδες βόλεϊ «εκτός συναγωνισμού» δεν έχουν βαθμολογία.
+    **{key: (lambda key=key: academy_table(key)) for key in ACADEMY if "es" not in key.rsplit("-", 1)[-1]},
 }

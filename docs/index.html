@@ -782,7 +782,8 @@
       Object.keys(count).forEach(function (u) { if (count[u] > n) { n = count[u]; best = u; } });
       return best;
     };
-    return pick(crestPool[sport + "|m"]) || pick(crestPool[sport + "|w"]);
+    var women = (data.sectionMap[section] || {}).women;
+    return women ? pick(crestPool[sport + "|w"]) || pick(crestPool[sport + "|m"]) : pick(crestPool[sport + "|m"]) || pick(crestPool[sport + "|w"]);
   }
   function crest(url, name, section) {
     if (isAcademy(section)) {
@@ -1311,8 +1312,9 @@
   function academyGroups() {
     var groups = [], by = {};
     data.academy.forEach(function (s) {
-      if (!by[s.sport]) { by[s.sport] = { sport: s.sport, emoji: s.emoji, teams: [] }; groups.push(by[s.sport]); }
-      by[s.sport].teams.push(s);
+      var g = s.group || s.sport;  // π.χ. «Βόλεϊ Αγοριών» / «Βόλεϊ Κοριτσιών»
+      if (!by[g]) { by[g] = { sport: g, emoji: s.emoji, teams: [] }; groups.push(by[g]); }
+      by[g].teams.push(s);
     });
     return groups;
   }
@@ -1342,8 +1344,8 @@
       '<li><a href="#/">‹ PAOKalendar<small>Πίσω στα τμήματα του ΠΑΟΚ</small></a></li></ul></nav>';
   }
   function academySwitchHtml(current) {
-    var sport = data.sectionMap[current].sport;
-    var teams = data.academy.filter(function (s) { return s.sport === sport; });
+    var cur = data.sectionMap[current], group = cur.group || cur.sport;
+    var teams = data.academy.filter(function (s) { return (s.group || s.sport) === group; });
     if (teams.length < 2) return "";
     return '<nav class="gender-switch" aria-label="Ομάδες">' + teams.map(function (s) {
       return '<a href="#/' + s.key + '"' + (s.key === current ? ' aria-current="page"' : "") + ">" + esc(s.short || s.name) + "</a>";

@@ -1680,6 +1680,8 @@ def epesth_same(a: str, b: str) -> bool:
 
 
 _EPESTH_CRESTS: list[tuple[set, set, str]] | None = None
+# Συντομογραφίες του προγράμματος που δεν μοιάζουν με το όνομα στη σελίδα των σωματείων.
+EPESTH_CREST_ALIAS = {"ΕΟΣ": "ΕΟ ΣΤΑΥΡΟΥΠΟΛΗΣ"}
 
 
 def epesth_words(name: str) -> list[str]:
@@ -1708,7 +1710,7 @@ def epesth_crest(name: str) -> str:
                                            urllib.parse.quote(imgs[0], safe=":/%")))
         except Exception as e:
             print(f"  ! σήματα ΕΠΕΣΘ: {e}", file=sys.stderr)
-    words = epesth_words(name)
+    words = epesth_words(EPESTH_CREST_ALIAS.get(name.strip(), name))
     if not words:
         return ""
     scored = []

@@ -575,6 +575,10 @@
   ol.timeline .min { font: 800 18px/1 var(--display); }
   ol.timeline .who small { display: block; color: var(--muted); font-size: 13px; }
   ol.timeline li.away .who { text-align: right; }
+  table.scorers { width: 100%; border-collapse: collapse; border-top: 2px solid var(--ink); }
+  table.scorers td { padding: 9px 0; border-bottom: 1px solid var(--rule); }
+  table.scorers td:last-child { text-align: right; font: 800 18px/1 var(--display); white-space: nowrap; }
+  table.scorers td small { font: 400 13px/1 inherit; color: var(--muted); }
   .stat { padding: 8px 0; border-bottom: 1px solid var(--rule); }
   .stat-top { display: grid; grid-template-columns: 1fr auto 1fr; font-variant-numeric: tabular-nums; }
   .stat-top span:first-child { font-weight: 600; }
@@ -1676,7 +1680,8 @@
       var controls = '<div class="controls">' + (tab === "results" ? "" : seg("secView", [["list", "Λίστα"], ["month", "Μήνας"]], ui.secView)) +
         seg("secVenue", [["all", "Όλοι"], ["home", "Εντός"], ["away", "Εκτός"]], ui.secVenue) + LEGEND + "</div>";
       if (tab === "results") {
-        body = controls + listHtml(venueFiltered.filter(function (m) { return !isUpcoming(m); }), "results", false);
+        body = controls + listHtml(venueFiltered.filter(function (m) { return !isUpcoming(m); }), "results", false) +
+          scorersHtml(venueFiltered);
       } else if (ui.secView === "month") {
         body = controls + monthHtml(venueFiltered, false);
       } else {
@@ -2627,15 +2632,52 @@
       '<ul class="notify">' + rows + "</ul></section>";
   }
 
-  function timelineHtml(m, det) {
+  function timelineHtml(m, det, title) {
     if (!det.events || !det.events.length) return "";
     var icon = { goal: "⚽", yellow: "🟨", red: "🟥" };
-    return "<h3>Γεγονότα</h3><ol class=\"timeline\">" + det.events.map(function (e) {
+    return "<h3>" + esc(title || "Γεγονότα") + "</h3><ol class=\"timeline\">" + det.events.map(function (e) {
       var team = e.home ? m.home : m.away;
       return '<li class="' + (e.home ? "home" : "away") + '"><span class="min">' + esc(e.clock) + "</span>" +
         "<span>" + (icon[e.kind] || "") + '</span><span class="who">' + esc(e.player || "") + (e.note ? " " + esc(e.note) : "") +
         "<small>" + esc(team) + "</small></span></li>";
     }).join("") + "</ol>";
+  }
+
+  // Σκόρερ από το goals.json (βλ. apply_goals στο build_calendars.py), για αγώνες χωρίς live γεγονότα.
+  function minuteKey(x) {
+    var p = /^(\d+)(?:\+(\d+))?/.exec(x || "");
+    return p ? +p[1] + (p[2] ? +p[2] / 100 : 0) : 999;
+  }
+  function goalEvents(m) {
+    var g = m.goals;
+    if (!g) return [];
+    return ["home", "away"].reduce(function (all, side) {
+      return all.concat((g[side] || []).map(function (x) {
+        return { home: side === "home", kind: "goal", clock: x.min ? x.min + "'" : "", player: x.name,
+          note: x.pen ? "(πέν.)" : x.og ? "(αυτ.)" : "", k: minuteKey(x.min) };
+      }));
+    }, []).sort(function (a, b) { return a.k - b.k; });
+  }
+  // Οι σκόρερ του ΠΑΟΚ στους αγώνες ενός τμήματος (χωρίς τα αυτογκόλ), από τον πρώτο σε γκολ.
+  function scorersHtml(list) {
+    var by = {}, any = false;
+    list.forEach(function (m) {
+      if (!m.goals) return;
+      any = true;
+      (m.goals[m.paokHome ? "home" : "away"] || []).forEach(function (x) {
+        if (x.og) return;
+        var r = by[x.name] = by[x.name] || { name: x.name, goals: 0, pen: 0 };
+        r.goals++;
+        if (x.pen) r.pen++;
+      });
+    });
+    var rows = Object.keys(by).map(function (k) { return by[k]; }).sort(function (a, b) {
+      return b.goals - a.goals || a.name.localeCompare(b.name, "el");
+    });
+    if (!any || !rows.length) return "";
+    return '<h3>Σκόρερ</h3><table class="scorers"><tbody>' + rows.map(function (r) {
+      return '<tr><td class="name">' + esc(r.name) + "</td><td>" + r.goals + (r.pen ? ' <small>(' + r.pen + " πέν.)</small>" : "") + "</td></tr>";
+    }).join("") + '</tbody></table><p class="help">Από τους αγώνες με καταχωρισμένους σκόρερ.</p>';
   }
 
   function statsHtml(m, det) {
@@ -2814,6 +2856,8 @@
     } else if (!hasLive && !parts && isUpcoming(m)) {
       body = '<p class="help">Για αυτόν τον αγώνα δεν υπάρχει live σκορ εδώ. Όταν ξεκινήσει, θα βρεις σύνδεσμο για τη ζωντανή σελίδα της πηγής.</p>';
     }
+
+    if (m.goals && body.indexOf('class="timeline"') < 0) body = timelineHtml(m, { events: goalEvents(m) }, "Γκολ") + body;
 
     // Σετ/περίοδοι από το τελικό του live: μένουν στη σελίδα και μετά τον αγώνα.
     if (m.periods && m.periods.length && m.score && body.indexOf('class="st qt"') < 0) {

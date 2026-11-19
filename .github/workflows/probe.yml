@@ -12,37 +12,17 @@ jobs:
       - run: |
           mkdir -p probe
           python3 - <<'PY'
-          import urllib.request, re, html, json, concurrent.futures as cf
-          UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
-          def get(u):
+          import urllib.request, urllib.parse, re
+          UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36", "Accept-Language": "el,en"}
+          out = open("probe/result.txt", "w")
+          for q in ["Achilleas Triandrias", "Agrotikos Asteras", "Makedonikos", "Ethnikos Pylaias", "Nea Politeia Evosmou", "Megas Alexandros"]:
+              u = "https://www.transfermarkt.com/schnellsuche/ergebnis/schnellsuche?query=" + urllib.parse.quote(q)
               try:
-                  return urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=60).read().decode("utf-8", "ignore")
+                  t = urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=40).read().decode("utf-8", "ignore")
+                  hits = re.findall(r'wappen/(?:tiny|small|head)/(\d+)\.png[^>]*>.*?title="([^"]+)"', t, re.S)[:4]
+                  out.write(f"{q}: {len(t)} {hits}\n")
               except Exception as e:
-                  return ""
-          pool = {}
-          def grab(page):
-              # ranking tables
-              for tr in re.findall(r"<tr>(.*?)</tr>", page, re.S):
-                  m = re.search(r'<img[^>]+src="([^"]+)".*?class="team-text">([^<]+)<', tr, re.S)
-                  if m: pool.setdefault(html.unescape(m.group(2)).strip(), m.group(1))
-              for block in page.split("node--type-national-match")[1:]:
-                  names = [re.sub(r"<[^>]+>", "", n).strip() for n in re.findall(r"field--name-name[^>]*>(.*?)</div>", block, re.S)[:2]]
-                  logos = re.findall(r'field--name-field-icon.*?<img[^>]+src="([^"]+)"', block, re.S)[:2]
-                  for n, l in zip(names, logos): pool.setdefault(html.unescape(n), l)
-          def comp(i):
-              p = get(f"https://www.epo.gr/el/competition/{i}/matches")
-              if not p: return i, 0, ""
-              title = re.search(r"<title>([^<]*)", p)
-              pages = [p] + [get("https://www.epo.gr" + html.unescape(v)) for v in dict.fromkeys(re.findall(r'value="(/el/competition/%d/stage/\d+/group/\d+/matches)"' % i, p))][:12]
-              return i, pages, title.group(1) if title else ""
-          titles = {}
-          with cf.ThreadPoolExecutor(6) as ex:
-              for i, pages, t in ex.map(comp, range(1, 121)):
-                  if pages:
-                      titles[i] = t
-                      for pg in pages: grab(pg)
-          json.dump({"titles": titles, "pool": pool}, open("probe/epo_pool.json", "w"), ensure_ascii=False, indent=0)
-          print(len(titles), len(pool))
+                  out.write(f"{q}: ERR {e}\n")
           PY
       - run: |
           git config user.name "github-actions[bot]"

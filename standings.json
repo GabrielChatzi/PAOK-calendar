@@ -3612,6 +3612,32 @@
     },
     {
      "pos": 6,
+     "team": "ΑΠΣ ΑΙΑΣ",
+     "logo": "https://epesth.gr/wp-content/uploads/2021/10/L-Aias.gif",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "2",
+      "6-8",
+      "6"
+     ]
+    },
+    {
+     "pos": 7,
+     "team": "ΠΗΓΑΣΟΣ ΠΟΛΙΧΝΗΣ",
+     "logo": "https://epesth.gr/wp-content/uploads/2021/10/L-Pigasos2.gif",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "3",
+      "5-9",
+      "5"
+     ]
+    },
+    {
+     "pos": 8,
      "team": "ΙΩΝΙΚΟΣ",
      "logo": "https://epesth.gr/wp-content/uploads/2021/10/L-IonikosIon.jpg",
      "paok": false,
@@ -3621,32 +3647,6 @@
       "3",
       "3-10",
       "5"
-     ]
-    },
-    {
-     "pos": 7,
-     "team": "ΠΗΓΑΣΟΣ ΠΟΛΙΧΝΗΣ",
-     "logo": "https://epesth.gr/wp-content/uploads/2021/10/L-Pigasos2.gif",
-     "paok": false,
-     "cells": [
-      "3",
-      "1",
-      "2",
-      "5-6",
-      "4"
-     ]
-    },
-    {
-     "pos": 8,
-     "team": "ΑΠΣ ΑΙΑΣ",
-     "logo": "https://epesth.gr/wp-content/uploads/2021/10/L-Aias.gif",
-     "paok": false,
-     "cells": [
-      "3",
-      "1",
-      "2",
-      "3-8",
-      "4"
      ]
     },
     {
@@ -6981,7 +6981,7 @@
  ],
  "football-women-u17": [
   {
-   "title": "Πανελλήνιο Υποδομών Νεανίδων Κ17, 1ος ομιλος",
+   "title": "Πανελλήνιο Υποδομών Νεανίδων Κ17, 1ος όμιλος",
    "url": "https://www.epo.gr/el/competition/56/matches",
    "columns": [
     "Αγ",
@@ -7008,7 +7008,7 @@
     },
     {
      "pos": 2,
-     "team": "ΣΕΙΡΗΝΕΣ ΓΡΕΒΕΝΩΝ Κ17",
+     "team": "ΣΕΙΡΗΝΕΣ ΓΡΕΒΕΝΩΝ",
      "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/fb84f8acc0b35a20cf5eddd3d801eaf8.jpg?itok=DIJr-APp",
      "paok": false,
      "cells": [
@@ -7022,7 +7022,7 @@
     },
     {
      "pos": 3,
-     "team": "ΣΚΙΟΥΡΟΙ Κ17",
+     "team": "ΣΚΙΟΥΡΟΙ",
      "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/3bfe993f792098774518adab55c24608.jpg?itok=COOP5h1r",
      "paok": false,
      "cells": [
@@ -7036,7 +7036,7 @@
     },
     {
      "pos": 4,
-     "team": "ΑΣ ΘΕΣΣ/ΝΙΚΗ Ο ΑΡΗΣ Κ17",
+     "team": "ΑΣ ΘΕΣΣ/ΝΙΚΗ Ο ΑΡΗΣ",
      "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/43aad17f2d743f4123efc06a5acbe94b.jpg?itok=goRFYsZQ",
      "paok": false,
      "cells": [
@@ -7050,7 +7050,7 @@
     },
     {
      "pos": 4,
-     "team": "Α.Ο. ΛΕΟΝΤΕΣ Κ17",
+     "team": "Α.Ο. ΛΕΟΝΤΕΣ",
      "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/bc059cd79ef68a1b0542630b69146908.jpg?itok=_ZxjQaDy",
      "paok": false,
      "cells": [
@@ -7064,7 +7064,7 @@
     },
     {
      "pos": 6,
-     "team": "ΠΟΝΤΙΑΚΟΣ ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ ΑΟ Κ17",
+     "team": "ΠΟΝΤΙΑΚΟΣ ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ ΑΟ",
      "logo": "https://www.epo.gr/sites/default/files/styles/standings_club_logo/public/externals/0f790193242b166f3739b2a9755fc844.jpg?itok=Y3ub2vLp",
      "paok": false,
      "cells": [

@@ -26,24 +26,24 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:football-women-u17-epo56-3a9e6e41e2e8@paok-calendar
-DTSTAMP:20261119T110349Z
+DTSTAMP:20261119T111710Z
 DTSTART;TZID=Europe/Athens:20261024T150000
 DTEND;TZID=Europe/Athens:20261024T170000
-SUMMARY:⚽ ΠΟΝΤΙΑΚΟΣ ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ ΑΟ Κ17 0-8
-  ΠΑΟΚ
+SUMMARY:⚽ ΠΟΝΤΙΑΚΟΣ ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ ΑΟ 0-8 ΠΑ
+ ΟΚ
 LOCATION:ΠΑΛΑΓΙΑΣ
 DESCRIPTION:Πανελλήνιο Πρωτάθλημα Υποδομών Νε
  ανίδων Κ-17 – 1η ΦΑΣΗ - 1ος ΟΜΙΛΟΣ\nΤελικό σ
- κορ: ΠΟΝΤΙΑΚΟΣ ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ ΑΟ Κ17 0-8 Π
- ΑΟΚ
+ κορ: ΠΟΝΤΙΑΚΟΣ ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ ΑΟ 0-8 ΠΑΟ
+ Κ
 URL:https://www.epo.gr/el/competition/56/matches
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-u17-epo56-645ac15d415a@paok-calendar
-DTSTAMP:20261119T110349Z
+DTSTAMP:20261119T111710Z
 DTSTART;TZID=Europe/Athens:20261206T150000
 DTEND;TZID=Europe/Athens:20261206T170000
-SUMMARY:⚽ Α.Ο. ΛΕΟΝΤΕΣ Κ17 – ΠΑΟΚ
+SUMMARY:⚽ Α.Ο. ΛΕΟΝΤΕΣ – ΠΑΟΚ
 LOCATION:Δημοτικό Γήπεδο Ευκαρπίας
 DESCRIPTION:Πανελλήνιο Πρωτάθλημα Υποδομών Νε
  ανίδων Κ-17 – 1η ΦΑΣΗ - 1ος ΟΜΙΛΟΣ
@@ -51,10 +51,10 @@ URL:https://www.epo.gr/el/competition/56/matches
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-u17-epo56-fff1ac3787fa@paok-calendar
-DTSTAMP:20261119T110349Z
+DTSTAMP:20261119T111710Z
 DTSTART;TZID=Europe/Athens:20261219T150000
 DTEND;TZID=Europe/Athens:20261219T170000
-SUMMARY:⚽ ΑΣ ΘΕΣΣ/ΝΙΚΗ Ο ΑΡΗΣ Κ17 – ΠΑΟΚ
+SUMMARY:⚽ ΑΣ ΘΕΣΣ/ΝΙΚΗ Ο ΑΡΗΣ – ΠΑΟΚ
 LOCATION:Δημοτικό Γήπεδο Ευόσμου - Αθλητικό Π
  άρκο
 DESCRIPTION:Πανελλήνιο Πρωτάθλημα Υποδομών Νε
@@ -63,10 +63,10 @@ URL:https://www.epo.gr/el/competition/56/matches
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-u17-epo56-9bb149988c55@paok-calendar
-DTSTAMP:20261119T110349Z
+DTSTAMP:20261119T111710Z
 DTSTART;TZID=Europe/Athens:20270116T150000
 DTEND;TZID=Europe/Athens:20270116T170000
-SUMMARY:⚽ ΣΚΙΟΥΡΟΙ Κ17 – ΠΑΟΚ
+SUMMARY:⚽ ΣΚΙΟΥΡΟΙ – ΠΑΟΚ
 LOCATION:Δημοτικό Γήπεδο Πυλαίας Α.ΚΑΡΑΜΠΟΥΡ
  ΝΙΩΤΗΣ
 DESCRIPTION:Πανελλήνιο Πρωτάθλημα Υποδομών Νε
@@ -75,10 +75,10 @@ URL:https://www.epo.gr/el/competition/56/matches
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-u17-epo56-73b917dd19f9@paok-calendar
-DTSTAMP:20261119T110349Z
+DTSTAMP:20261119T111710Z
 DTSTART;TZID=Europe/Athens:20270207T150000
 DTEND;TZID=Europe/Athens:20270207T170000
-SUMMARY:⚽ ΣΕΙΡΗΝΕΣ ΓΡΕΒΕΝΩΝ Κ17 – ΠΑΟΚ
+SUMMARY:⚽ ΣΕΙΡΗΝΕΣ ΓΡΕΒΕΝΩΝ – ΠΑΟΚ
 LOCATION:ΓΗΠΕΔΟ ΕΠΣ ΓΡΕΒΕΝΩΝ
 DESCRIPTION:Πανελλήνιο Πρωτάθλημα Υποδομών Νε
  ανίδων Κ-17 – 1η ΦΑΣΗ - 1ος ΟΜΙΛΟΣ

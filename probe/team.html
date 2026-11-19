@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MatchCenter · Ομάδα</title>
+<link rel="stylesheet" href="assets/style.css?v=6">
+<style>
+  .kp{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin:16px 0 4px}
+  .kp div{background:var(--bg-2);box-shadow:inset 0 1px 0 var(--edge);padding:12px 14px}
+  .kp b{display:block;font-size:26px;font-weight:900;font-stretch:75%}
+  .kp span{font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.3px}
+  .sub{color:var(--muted);font-weight:700;margin-top:10px}
+  .pick{margin:18px 0 0;max-width:520px}
+  .pick label{display:block;font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.4px;margin-bottom:6px}
+  .pick select{width:100%;max-width:none;height:44px;font-weight:800}
+  .pick .grouptabs{margin-top:10px}
+  section{margin-top:28px}
+  .t td.nm a:hover{text-decoration:underline}
+</style>
+<style>.seasonsel{margin-left:auto;align-self:center;max-width:200px}</style>
+</head>
+<body>
+<header class="top" id="top"></header>
+<main class="wrap">
+  <div style="display:flex;gap:10px;align-items:center"><a class="back" id="backlink" href="teams.html">‹ Όλες οι ομάδες</a><select class="in seasonsel" id="season" hidden></select></div>
+  <div class="comphead" id="head"><div class="loading">Φόρτωση ομάδας…</div></div>
+  <div class="pick" id="pick"></div>
+  <div id="body"></div>
+</main>
+<footer>Δεδομένα: ΕΟΚ · basket.gr</footer>
+<script src="assets/config.js?v=6"></script>
+<script src="assets/common.js?v=9"></script>
+<script>
+header("", "team");
+const $ = id => document.getElementById(id);
+seasonPicker();
+const P = new URLSearchParams(location.search);
+if (SEASON) $("backlink").href = sq("teams.html", "?");
+let KEY = P.get("id") || "", CH = P.get("ch") || "", TEAM = P.get("team") || "", D = null;
+
+function render() {
+  const c = D.comp, A = c.avg;
+  history.replaceState(null, "", sq(`?id=${encodeURIComponent(KEY)}&ch=${encodeURIComponent(c.ch)}&team=${encodeURIComponent(c.team)}`));
+  const chs = [...new Map(D.comps.map(x => [x.ch, x.name])).entries()];
+  const mine = D.comps.filter(x => x.ch === c.ch);                  // 1st / 2nd team of the club in this championship
+  $("pick").innerHTML = (chs.length > 1 ? `<label>ΔΙΟΡΓΑΝΩΣΗ</label><select class="in" id="chsel">${chs.map(([ch, nm]) => `<option value="${esc(ch)}" ${ch === c.ch ? "selected" : ""}>${esc(nm)}</option>`).join("")}</select>` : "")
+    + (mine.length > 1 ? `<div class="grouptabs">${mine.map(x => `<button data-team="${esc(x.team)}" class="${x.team === c.team ? "on" : ""}">${esc(x.team)}</button>`).join("")}</div>` : "");
+  const done = c.games.filter(g => isFinal(g.state)), next = c.games.filter(g => !isFinal(g.state));
+  const kp = [["ΑΓΩΝΕΣ", c.gp], ["ΝΙΚΕΣ", c.w], ["ΗΤΤΕΣ", c.l], ["ΘΕΣΗ", c.pos ? c.pos + "η" : null], ["ΒΑΘΜΟΙ", c.points],
+    ["ΠΟΝΤΟΙ Μ.Ο.", A && A.pts], ["ΚΑΤΑ Μ.Ο.", A && A.pa]].filter(([, v]) => v != null && v !== "");
+  const S = c.scorers || [];
+  $("body").innerHTML = `
+    <div class="sub up">${esc([c.team, c.group].filter(Boolean).join(" · "))} · <a href="competition.html?ch=${encodeURIComponent(c.champ || c.ch)}&gid=${encodeURIComponent(c.ch)}">βαθμολογία ›</a></div>
+    ${kp.length ? `<div class="kp">${kp.map(([l, v]) => `<div><b class="num">${esc(v)}</b><span>${l}</span></div>`).join("")}</div>` : ""}
+    ${S.length ? `<section><h3 class="sec-h">ΣΚΟΡΕΡ ΟΜΑΔΑΣ</h3>
+      <div class="tw"><table class="t" style="min-width:0"><thead><tr><th class="l">ΠΑΙΚΤΗΣ</th><th>ΑΓΩΝΕΣ*</th><th>ΠΟΝΤΟΙ</th><th>Μ.Ο.</th><th>ΚΑΛΥΤΕΡΟ</th></tr></thead>
+      <tbody>${S.map(p => `<tr><td class="l nm"><a href="${playerUrl(p.pid)}">${p.photo ? face(p.photo, 28) : ""}${esc(p.name)}</a></td><td class="num">${p.apps}</td>
+        <td class="num b">${p.pts}</td><td class="num">${p.avg}</td><td class="num">${p.best}</td></tr>`).join("")}</tbody></table></div>
+      <div class="note" style="padding:8px 0;text-align:left">* αγώνες όπου ήταν στους 3 πρώτους σκόρερ της ομάδας (το basket.gr δεν δίνει πλήρη box score).</div></section>` : ""}
+    ${next.length ? `<section><h3 class="sec-h">ΕΠΟΜΕΝΟΙ ΑΓΩΝΕΣ</h3><div class="mdgrid">${next.map(g => gameBox(g, `${shortDate(g.date)} · ${hhmm(g.date)}`)).join("")}</div></section>` : ""}
+    ${done.length ? `<section><h3 class="sec-h">ΑΠΟΤΕΛΕΣΜΑΤΑ</h3><div class="mdgrid">${done.slice().reverse().map(g => gameBox(g, `${g.matchday || ""} · ${shortDate(g.date)}`)).join("")}</div></section>` : ""}
+    <div style="height:50px"></div>`;
+}
+
+async function load() {
+  $("body").innerHTML = `<div class="loading">Φόρτωση…</div>`;
+  try {
+    const q = { ch: CH }; if (KEY) q.id = KEY; else q.name = P.get("name") || ""; if (TEAM) q.team = TEAM;
+    D = await api("team", q);
+    KEY = D.team.key; CH = D.comp.ch; TEAM = D.comp.team;
+    document.title = `MatchCenter · ${D.team.name}`;
+    $("head").innerHTML = `${D.team.logo ? `<img src="${esc(D.team.logo)}" alt="">` : ""}<div><h1 class="up">${esc(D.team.name)}</h1><span>${new Set(D.comps.map(x => x.ch)).size} διοργανώσεις</span></div>`;
+    render();
+  } catch (e) { $("head").innerHTML = `<div class="empty">Η ομάδα δεν βρέθηκε (${esc(e.message)}).</div>`; $("body").innerHTML = ""; }
+}
+$("pick").onchange = e => { if (e.target.id === "chsel") { CH = e.target.value; TEAM = ""; load(); } };
+$("pick").onclick = e => { const t = e.target.dataset.team; if (t && t !== TEAM) { TEAM = t; load(); } };
+if (!KEY && !P.get("name")) location.href = "teams.html";
+load();
+</script>
+</body>
+</html>

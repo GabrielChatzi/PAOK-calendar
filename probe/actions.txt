@@ -1,0 +1,8 @@
+api("channel", { ch: CH })
+api("channels")
+api("channels", { archive: 1 })
+api("leaders", { ch: CH })
+api("mvps", { ch: CH, group, md: mdName })
+api("team", q)
+api("game", { id: ID })
+api("standings", { id: ID })

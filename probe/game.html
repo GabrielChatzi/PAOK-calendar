@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Αγώνας</title>
+<link rel="stylesheet" href="assets/style.css?v=6">
+<style>
+  .qt{margin:18px 0 0;background:var(--bg-2);box-shadow:inset 0 1px 0 var(--edge)}
+  .qt table{width:100%;border-collapse:collapse}
+  .qt th,.qt td{padding:12px 10px;text-align:center;border-bottom:1px solid var(--line);font-size:17px;font-weight:700}
+  .qt th{font-size:12px;color:var(--muted);font-weight:800;letter-spacing:.4px}
+  .qt td.t{text-align:left;display:flex;align-items:center;gap:10px;font-weight:800}
+  .qt td.t img{width:28px;height:28px}
+  .qt td.f{font-size:22px;font-weight:900;color:var(--accent-hi)}
+  .tops{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .tc{background:var(--bg-2);box-shadow:inset 0 1px 0 var(--edge)}
+  .tc h3{display:flex;align-items:center;gap:10px;margin:0;padding:14px 18px;border-bottom:1px solid var(--line);font-size:17px;font-weight:900;font-stretch:75%}
+  .tc h3 img{width:30px;height:30px}
+  .tp{display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:12px 18px;border-bottom:1px solid var(--line)}
+  .tp .ph{display:grid;place-items:center}
+  a.tp:hover{background:var(--bg-3)} a.tp:hover b{color:var(--accent-hi)}
+  .tp .n small{display:block;color:var(--muted);font-size:12px;font-weight:700}
+  .tp .n b{font-size:18px;font-weight:900;font-stretch:75%}
+  .tp .v{font-size:28px;font-weight:900;font-stretch:70%}
+  .tp .v span{font-size:12px;color:var(--muted);margin-left:4px}
+  .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+  .coach{margin:-4px 0 10px;font-size:13px;font-weight:600;color:var(--muted)}
+  .coach b{color:var(--text);font-weight:800}
+  .flow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .flow > div{background:var(--bg-2);box-shadow:inset 0 1px 0 var(--edge)}
+  .flow h4{display:flex;align-items:center;gap:8px;margin:0;padding:10px 14px;border-bottom:1px solid var(--line);font-size:14px;font-weight:900}
+  .flow h4 img{width:22px;height:22px;object-fit:contain}
+  .fl{display:grid;grid-template-columns:38px 1fr 40px;align-items:center;gap:10px;padding:7px 14px;border-bottom:1px solid var(--line);font-size:14px}
+  .fl .pt{display:inline-grid;place-items:center;height:22px;border-radius:4px;font-weight:900;font-size:13px;background:var(--bg-3)}
+  .fl .pt.p2{background:var(--accent);color:#fff} .fl .pt.p3{background:#f59e0b;color:#111}
+  .fl .who{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600}
+  .fl .sc{text-align:right;font-weight:900;font-size:16px}
+  @media (max-width:760px){ .tops{grid-template-columns:1fr} .flow{grid-template-columns:1fr} .qt th,.qt td{padding:10px 6px;font-size:15px} }
+</style>
+</head>
+<body>
+<header class="top" id="top"></header>
+<main class="wrap">
+  <a class="back" id="back" href="index.html">‹ Όλοι οι αγώνες</a>
+  <div id="hero"><div class="loading">Φόρτωση αγώνα…</div></div>
+  <div id="officials"></div>
+  <nav class="tabs" id="tabs"></nav>
+  <section class="panel" id="panel"></section>
+</main>
+<footer>Δεδομένα: ΕΟΚ · basket.gr</footer>
+
+<script src="assets/config.js?v=6"></script>
+<script src="assets/common.js?v=6"></script>
+<script>
+header("", "");
+const $ = id => document.getElementById(id);
+const ID = new URLSearchParams(location.search).get("id");
+let G = null, ST = null, tab = null;
+
+function coachLine(g, k) {
+  const c = g.sheet && g.sheet.coach && g.sheet.coach[k];
+  return c ? `<div class="coach">Coach: <b>${esc(c)}</b></div>` : "";
+}
+function renderHero(g) {
+  const started = isLive(g.state) || isFinal(g.state);
+  const lbl = isFinal(g.state) ? `<span class="badge fin">ΤΕΛΙΚΟ</span>`
+    : isLive(g.state) ? `<span class="badge live">LIVE${g.period ? " · " + qLabel(g.period) : ""}${g.clock ? " " + g.clock : ""}</span>`
+    : `<span class="badge time">${esc(longDate(g.date))}</span>`;
+  const day = g.date ? new Date(g.date).toLocaleDateString("en-CA", tz) : "";
+  $("back").href = `index.html${day ? "?date=" + day : ""}`;
+  document.title = `${g.home.name} – ${g.visitor.name}`;
+  $("hero").innerHTML = `<div class="hero">
+    <div class="meta"><b class="up"><a href="competition.html?ch=${encodeURIComponent(g.channel_id || "")}&gid=${encodeURIComponent(g.gid || "")}">${esc(g.competition || "")}</a></b>
+      ${g.group ? `<span>${esc(g.group)}</span>` : ""}
+      <span>${esc(g.matchday || "")}</span><span style="margin-left:auto">${esc(g.stadium || "")}</span></div>
+    <div class="row">
+      <a class="ht" href="team.html?name=${encodeURIComponent(g.home.name)}&ch=${encodeURIComponent(g.channel_id || "")}"><img src="${esc(g.home.logo || "")}" alt=""><div class="n up">${esc(g.home.name)}</div></a>
+      <div class="sc">${started ? `<div class="big num"><b>${g.home.score ?? 0}</b><b>${g.visitor.score ?? 0}</b></div>` : `<div class="when num">${hhmm(g.date)}</div>`}
+        <div class="lbl">${lbl}</div></div>
+      <a class="ht" href="team.html?name=${encodeURIComponent(g.visitor.name)}&ch=${encodeURIComponent(g.channel_id || "")}"><img src="${esc(g.visitor.logo || "")}" alt=""><div class="n up">${esc(g.visitor.name)}</div></a>
+    </div>
+    ${g.quarters.length ? `<div class="qs num">${g.quarters.map(q => `<div><span>${qLabel(q.period)}</span>${q.home}-${q.away}</div>`).join("")}</div>` : ""}
+  </div>`;
+}
+
+function renderOfficials(g) {
+  const o = g.officials || {}, ord = ["Α'", "Β'", "Γ'"];
+  const refs = (o.referees || []).map((p, i) => `<span><em>${ord[(p.position || i + 1) - 1] || ""}</em>${esc(p.name)}</span>`);
+  const rest = [...(o.judges || []).map(p => ["Κριτής", p.name]), ...(o.commissioners || []).map(p => ["Κομισάριος", p.name]),
+                ...(o.referee_coaches || []).map(p => ["Παρατηρητής", p.name])].map(([r, n]) => `<span><em>${esc(r)}</em>${esc(n)}</span>`);
+  $("officials").innerHTML = refs.length || rest.length ? `<section class="officials">
+    ${refs.length ? `<div><b>ΔΙΑΙΤΗΤΕΣ</b>${refs.join("")}</div>` : ""}
+    ${rest.length ? `<div><b>ΚΡΙΤΕΣ &amp; ΤΕΧΝΙΚΟΙ ΕΚΠΡΟΣΩΠΟΙ</b>${rest.join("")}</div>` : ""}</section>` : "";
+}
+
+/* score per quarter + top scorers of each team (what basket.gr provides) */
+function summaryBox(g) {
+  const s = g.summary;
+  if (!s || !s.text) return "";
+  return `<div style="margin:18px 0 0;padding:18px 20px;background:var(--bg-2);box-shadow:inset 0 1px 0 var(--edge);border-left:4px solid var(--accent)">
+    <p style="margin:0;font-size:17px;line-height:1.55">${esc(s.text)}</p>
+    ${s.line ? `<p style="margin:10px 0 0;font-size:14px;font-weight:800;color:var(--muted)" class="up">${esc(s.line)}</p>` : ""}</div>`;
+}
+function overview(g) {
+  if (!g.quarters.length && !g.home.top.length && !g.visitor.top.length)
+    return summaryBox(g) + `<div class="note">${isFinal(g.state) ? "Δεν υπάρχουν λεπτομέρειες για αυτόν τον αγώνα." : "Τα στοιχεία θα εμφανιστούν με την έναρξη του αγώνα."}</div>`;
+  const q = g.quarters;
+  const qt = q.length ? `<div class="qt"><table><tr><th style="text-align:left">ΟΜΑΔΑ</th>${q.map(x => `<th>${qLabel(x.period)}</th>`).join("")}<th>ΤΕΛ</th></tr>
+    ${[["home", g.home], ["away", g.visitor]].map(([k, t]) => `<tr><td class="t"><img src="${esc(t.logo || "")}" alt=""><span class="up">${esc(t.name)}</span></td>
+      ${q.map(x => `<td class="num">${x[k]}</td>`).join("")}<td class="num f">${t.score ?? ""}</td></tr>`).join("")}</table></div>` : "";
+  const card = t => `<div class="tc"><h3><img src="${esc(t.logo || "")}" alt=""><span class="up">${esc(t.name)}</span></h3>
+    ${t.top.length ? t.top.map(p => { const w = String(p.name).trim().split(/\s+/), sur = w.shift() || "";
+      const tag = p.pid ? "a" : "div", href = p.pid ? ` href="player.html?id=${encodeURIComponent(p.pid)}"` : "";
+      return `<${tag} class="tp"${href} style="color:inherit"><div class="ph">${face(p.photo, 48)}</div><div class="n"><small class="up">${esc(w.join(" "))}</small><b class="up">${esc(sur)}</b></div>
+        <div class="v num">${p.value ?? ""}<span>${p.label === "PTS" ? "ΠΟΝ" : esc(p.label)}</span></div></${tag}>`; }).join("")
+      : `<div class="note" style="padding:20px">—</div>`}</div>`;
+  const links = [g.stats_url ? `<a class="btn" href="${esc(g.stats_url)}" target="_blank" rel="noopener">Πλήρη στατιστικά</a>` : "",
+                 g.youtube ? `<a class="btn" href="${esc(g.youtube)}" target="_blank" rel="noopener">▶ Βίντεο αγώνα</a>` : ""].join("");
+  return `${g.home.top.length || g.visitor.top.length ? `<h3 class="sec-h" style="margin-top:22px">ΚΟΡΥΦΑΙΟΙ ΣΚΟΡΕΡ</h3><div class="tops">${card(g.home)}${card(g.visitor)}</div>` : ""}${summaryBox(g)}${qt}
+    ${links ? `<div class="links">${links}</div>` : ""}`;
+}
+
+function standings() {
+  if (!ST) return `<div class="loading">Φόρτωση βαθμολογίας…</div>`;
+  return `${ST.group ? `<h3 class="sec-h">ΒΑΘΜΟΛΟΓΙΑ · ${esc(UP(ST.group))}</h3>` : ""}` + standingsTable(ST.rows || [], [G.home.name, G.visitor.name], "");
+}
+
+/* full box score from the match sheet: minutes, free throws, 2s, 3s, fouls, points */
+function boxScore() {
+  const side = (t, b, k) => {
+    if (!b || !b.players || !b.players.length) return "";
+    const top = Math.max(...b.players.map(p => p.pts));
+    const row = p => { const w = String(p.name).trim().split(/\s+/), sur = w.shift() || "";
+      return `<tr><td class="l nm"><a href="player.html?id=${encodeURIComponent(p.pid || "")}">${p.photo ? face(p.photo, 28) : ""}<span class="up">${esc(w.join(" "))} <b>${esc(sur)}</b></span></a></td>
+        <td class="num">${p.min ? p.min + "'" : "–"}</td><td class="num">${p.ftm}</td><td class="num">${p.p2m}</td><td class="num">${p.p3m}</td>
+        <td class="num">${p.pf}</td><td class="num b" style="${p.pts === top && top > 0 ? "color:var(--accent-hi)" : ""}">${p.pts}</td></tr>`; };
+    const T = b.totals;
+    return `<h3 class="sec-h" style="display:flex;align-items:center;gap:10px;margin-top:22px"><img src="${esc(t.logo || "")}" alt="" style="width:28px;height:28px">${esc(UP(t.name))}</h3>${coachLine(G, k)}
+      <div class="tw"><table class="t box" style="min-width:0"><thead><tr><th class="l">ΠΑΙΚΤΗΣ</th><th>ΛΕΠ</th><th title="Ελεύθερες βολές">1Π</th><th title="Δίποντα">2Π</th><th title="Τρίποντα">3Π</th><th title="Φάουλ">ΦΑ</th><th>ΠΟΝ</th></tr></thead>
+      <tbody>${b.players.map(row).join("")}</tbody>
+      <tfoot><tr><td class="l"><b>ΣΥΝΟΛΟ</b></td><td></td><td class="num">${T.ftm}</td><td class="num">${T.p2m}</td><td class="num">${T.p3m}</td><td class="num">${T.pf}</td><td class="num b">${T.pts}</td></tr></tfoot></table></div>`;
+  };
+  return side(G.home, G.box.home, "home") + side(G.visitor, G.box.away, "away") +
+    `<div class="note" style="text-align:left;padding:10px 0 30px">Από το φύλλο αγώνα (basket.gr): εύστοχες βολές, δίποντα, τρίποντα, φάουλ, πόντοι.</div>`;
+}
+
+/* Ροή: the order each team scored, per quarter (from the scoresheet's running score) */
+function flowTab() {
+  const F = G.sheet.flow, n = Math.max(...["home", "away"].map(k => F[k].reduce((m, e) => Math.max(m, e.q), 0)), 0);
+  const col = (k, q) => {
+    const L = F[k].filter(e => e.q === q);
+    return L.length ? L.map(e => `<div class="fl"><span class="pt p${e.pts}">+${e.pts}</span><span class="who up">${e.no ? `<b>#${esc(e.no)}</b> ` : ""}${esc(e.name || "")}</span><span class="sc num">${e.score}</span></div>`).join("")
+      : `<div class="note" style="padding:10px">—</div>`;
+  };
+  const qs = (G.sheet.quarters || {});
+  let out = "";
+  for (let q = 1; q <= n; q++) {
+    out += `<h3 class="sec-h" style="margin-top:22px">${q <= 4 ? q + "η ΠΕΡΙΟΔΟΣ" : "ΠΑΡΑΤΑΣΗ " + (q - 4)}${qs.home && qs.home[q - 1] != null ? ` · ${qs.home[q - 1]}-${qs.away[q - 1]}` : ""}</h3>
+      <div class="flow"><div><h4 class="up"><img src="${esc(G.home.logo || "")}" alt="">${esc(G.home.name)}</h4>${col("home", q)}</div>
+      <div><h4 class="up"><img src="${esc(G.visitor.logo || "")}" alt="">${esc(G.visitor.name)}</h4>${col("away", q)}</div></div>`;
+  }
+  return out + `<div class="note" style="text-align:left;padding:12px 0 30px">${G.sheet.flow_ok === false ? "Η ροή μπορεί να είναι ελλιπής για αυτόν τον αγώνα. " : ""}Από το φύλλο αγώνα: η σειρά των πόντων κάθε ομάδας και το σκορ της ομάδας μετά από κάθε καλάθι. Το φύλλο δεν καταγράφει τη σειρά ανάμεσα στις δύο ομάδες.</div>`;
+}
+
+const TABS = [["info", "Αγώνας", () => overview(G)], ["box", "Box Score", boxScore], ["flow", "Ροή", flowTab], ["standings", "Βαθμολογία", standings]];
+function renderTabs() {
+  const tabs = TABS.filter(t => (t[0] !== "box" || G.box) && (t[0] !== "flow" || (G.sheet && G.sheet.flow)));
+  if (!tabs.some(t => t[0] === tab)) tab = "info";
+  $("tabs").innerHTML = tabs.map(([k, l]) => `<button data-k="${k}" class="${k === tab ? "on" : ""}">${esc(l)}</button>`).join("");
+  $("panel").innerHTML = tabs.find(t => t[0] === tab)[2]();
+}
+$("tabs").onclick = e => { const k = e.target.dataset.k; if (!k) return; tab = k; history.replaceState(null, "", `?id=${ID}&tab=${k}`); renderTabs(); };
+
+async function load() {
+  try {
+    G = await api("game", { id: ID });
+    renderHero(G); renderOfficials(G);
+    if (!tab) tab = new URLSearchParams(location.search).get("tab") || "info";
+    renderTabs();
+  } catch (e) { $("hero").innerHTML = `<div class="empty">Ο αγώνας δεν βρέθηκε (${esc(e.message)}).</div>`; }
+}
+async function loadStandings() {
+  try { ST = await api("standings", { id: ID }); } catch { ST = { rows: [] }; }
+  if (G) renderTabs();
+}
+if (!ID) location.href = "index.html";
+load().then(loadStandings);
+setInterval(() => { if (G && isLive(G.state)) load(); }, Math.max(30, S.refreshSeconds || 60) * 1000);
+</script>
+</body>
+</html>

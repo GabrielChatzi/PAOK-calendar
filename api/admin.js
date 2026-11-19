@@ -13,6 +13,9 @@
 //                                                   που δεν έχουν σταθερή πηγή)· match: {id?, section, date,
 //                                                   time, paokHome, opponent, venue, competition, round, us, them}
 //   POST {password, action: "match-delete", id}     σβήσιμο αγώνα της φόρμας
+//   POST {password, action: "crest-save", crest}     σήμα αντιπάλου των ακαδημιών ({sport, name, url}): διεύθυνση
+//                                                    εικόνας ή μικρή εικόνα (data:image/…) από το κινητό
+//   POST {password, action: "crest-delete", crest}   σβήσιμο σήματος ({sport, name})
 //   POST {password, action: "stats"}                στατιστικά: εγκαταστάσεις (συλλογή devices, βλ. health.js),
 //                                                   συσκευές με ειδοποιήσεις ανά υπηρεσία και θέμα
 //   POST {password, action: "info-save", nt, tv, tvUrl, time, venue}
@@ -139,6 +142,20 @@ export function athensIso(date, time) {
 }
 
 // Μια εγγραφή της συλλογής στη μορφή του matches.json.
+// Σήμα αντιπάλου (συλλογή «crests»): ένα ανά άθλημα και όνομα, όπως το γράφει η πηγή.
+export function parseCrest(x, needUrl = true) {
+  if (!x || typeof x !== "object") return { error: "Λείπει το σήμα." };
+  const sport = String(x.sport ?? "").trim().slice(0, 40), name = String(x.name ?? "").trim().replace(/\s+/g, " ").slice(0, 80);
+  if (!sport || !name) return { error: "Λείπει η ομάδα." };
+  const url = String(x.url ?? "").trim();
+  if (needUrl) {
+    if (!url) return { error: "Βάλε διεύθυνση εικόνας ή διάλεξε φωτογραφία." };
+    if (/^data:/.test(url) ? !/^data:image\/(png|jpeg|webp);base64,[A-Za-z0-9+/=]+$/.test(url) || url.length > 120000
+      : !/^https:\/\/[^\s"'<>]+$/.test(url) || url.length > 600) return { error: "Η εικόνα δεν είναι έγκυρη (https://… ή φωτογραφία ως 80 KB)." };
+  }
+  return { id: `${sport}|${name}`, sport, name, url };
+}
+
 export function customToMatch(doc) {
   const uid = `${doc.section}-custom-${doc._id}`;
   const m = {
@@ -342,8 +359,9 @@ export default async function handler(req, res) {
     // Πληροφορίες για αγώνες που δεν έχουν γίνει ακόμα (ή μόλις έγιναν).
     const day = new Date(Date.now() - 2 * 86400 * 1000).toISOString().slice(0, 10);
     const info = await (await getDb()).collection("info").find({ date: { $gte: day } }, { projection: { _id: 0 } }).toArray();
+    const crests = await (await getDb()).collection("crests").find({}, { projection: { _id: 0, sport: 1, name: 1, url: 1 } }).toArray();
     res.setHeader("Cache-Control", "public, s-maxage=15");
-    return res.status(200).json({ entries, live, custom, info });
+    return res.status(200).json({ entries, live, custom, info, crests });
   }
   if (req.method !== "POST") return send(res, 405, { error: "Μόνο GET ή POST." });
 
@@ -363,6 +381,14 @@ export default async function handler(req, res) {
     const { id, ...fields } = c;
     await (await getDb()).collection("custom").updateOne({ _id: id }, { $set: { ...fields, at: new Date() } }, { upsert: true });
     return send(res, 200, { ok: true, match: customToMatch({ _id: id, ...fields }) });
+  }
+  if (body.action === "crest-save" || body.action === "crest-delete") {
+    const c = parseCrest(body.crest, body.action === "crest-save");
+    if (c.error) return send(res, 400, { error: c.error });
+    const col = (await getDb()).collection("crests");
+    if (body.action === "crest-delete") await col.deleteOne({ _id: c.id });
+    else await col.updateOne({ _id: c.id }, { $set: { sport: c.sport, name: c.name, url: c.url, at: new Date() } }, { upsert: true });
+    return send(res, 200, { ok: true, crest: { sport: c.sport, name: c.name, url: c.url } });
   }
   if (body.action === "match-delete") {
     const id = String(body.id || "");

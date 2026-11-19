@@ -405,3 +405,15 @@ test("api/manifest: δεύτερο εικονίδιο για τον διαχει
   assert.equal(m.start_url, "./?app=admin#/admin");
   assert.notEqual(m.id, "./");
 });
+
+test("σήμα αντιπάλου: διεύθυνση ή μικρή εικόνα", async () => {
+  const a = await import("../api/admin.js");
+  const ok = a.parseCrest({ sport: "Βόλεϊ", name: " ΑΟ  Θήρας ", url: "https://epesth.gr/x.gif" });
+  assert.equal(ok.id, "Βόλεϊ|ΑΟ Θήρας");
+  assert.ok(a.parseCrest({ sport: "Βόλεϊ", name: "Χ", url: "data:image/png;base64,iVBORw0KGgo=" }).id);
+  assert.ok(a.parseCrest({ sport: "Βόλεϊ", name: "Χ", url: "javascript:alert(1)" }).error);
+  assert.ok(a.parseCrest({ sport: "Βόλεϊ", name: "Χ", url: "data:text/html;base64,AAAA" }).error);
+  assert.ok(a.parseCrest({ sport: "Βόλεϊ", name: "Χ", url: "" }).error);
+  assert.ok(!a.parseCrest({ sport: "Βόλεϊ", name: "Χ" }, false).error);
+});
+

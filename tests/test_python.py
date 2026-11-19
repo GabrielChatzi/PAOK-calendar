@@ -538,3 +538,36 @@ class SocialRemind(unittest.TestCase):
             self.assertEqual(self.due("2026-11-10T23:40"), ["dayResults"])
         finally:
             self.ITEMS[1].update(missing=["Balkan – ΠΑΟΚ"], images=[])
+
+    def test_change_after_post(self):
+        """Μετά την υπενθύμιση του προγράμματος, αλλαγή ώρας στέλνει «Άλλαξε το πρόγραμμα» μία φορά."""
+        import json, tempfile
+        from pathlib import Path
+        from unittest import mock
+        import social_remind
+        it = {"type": "post", "what": "academySchedule", "track": "academy-2026-11-21", "day": "2026-11-20",
+              "time": "13:00", "title": "Πρόγραμμα ακαδημιών", "caption": "x", "images": ["a.png"],
+              "until": "2026-11-22T13:00:00+02:00",
+              "lines": ["Ποδόσφαιρο Κ19: Άρης – ΠΑΟΚ, Σαβ 21.11 13:00", "Μπάσκετ Έφηβοι: ΠΑΟΚ – Ηρακλής, Κυρ 22.11 11:00"]}
+        with tempfile.TemporaryDirectory() as d:
+            plan, state = Path(d, "plan.json"), Path(d, "state.json")
+            pushed = []
+            run = lambda t: social_remind.main(plan, state, dt.datetime.fromisoformat(t).replace(tzinfo=b.ATHENS))
+            with mock.patch.object(social_remind.notify, "_push", lambda *a, **k: pushed.append(a[1:3])):
+                plan.write_text(json.dumps({"items": [it]}))
+                run("2026-11-20T13:00")
+                self.assertEqual(len(pushed), 1)               # η υπενθύμιση
+                run("2026-11-20T15:00")
+                self.assertEqual(len(pushed), 1)               # τίποτα δεν άλλαξε
+                it["lines"] = [it["lines"][0].replace("13:00", "15:30"), it["lines"][1]]
+                plan.write_text(json.dumps({"items": [it]}))
+                run("2026-11-20T17:00")
+                self.assertEqual(len(pushed), 2)
+                self.assertIn("Άλλαξε το πρόγραμμα ακαδημιών", pushed[1][0])
+                self.assertIn("15:30", pushed[1][1])
+                run("2026-11-20T19:00")
+                self.assertEqual(len(pushed), 2)               # μία φορά ανά αλλαγή
+                it["lines"] = it["lines"][:1]
+                plan.write_text(json.dumps({"items": [it]}))
+                run("2026-11-22T14:00")
+                self.assertEqual(len(pushed), 2)               # μετά τον τελευταίο αγώνα: σιωπή

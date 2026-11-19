@@ -78,3 +78,29 @@ test("Καθάρισμα ονομάτων", () => {
   assert.equal(cleanTeam("ΣΑΛΑΜΙΝΑ ΓΣ"), "ΣΑΛΑΜΙΝΑ");
   assert.equal(cleanTeam("Balkan"), "Balkan");
 });
+
+test("Ακαδημίες: πρόγραμμα Παρασκευή 13:00, αποτελέσματα μετά τον τελευταίο αγώνα, δικές τους κάρτες", async () => {
+  const { academyPlan, academyLabels } = await import("../social/week.mjs");
+  const names = { ...NAMES, labels: academyLabels([
+    { key: "football-u19", sport: "Ποδόσφαιρο", name: "Κ19", academy: true },
+    { key: "football-b", sport: "Ποδόσφαιρο", name: "ΠΑΟΚ Β", academy: true },
+    { key: "basketball-u18", sport: "Μπάσκετ", name: "Έφηβοι", academy: true }]) };
+  const ms = [
+    M("basketball-u18", "2026-11-21T11:00:00+02:00", "ΠΑΟΚ", "Ηρακλής"),
+    M("football-u19", "2026-11-21T13:00:00+02:00", "Άρης", "ΠΑΟΚ"),
+    M("football-b", "2026-11-23T15:00:00+02:00", "ΠΑΟΚ", "Νίκη Βόλου"),
+    M("basketball-u18", "2026-11-25T18:00:00+02:00", "ΠΑΟΚ", "Μακεδονικός"),  // μεσοβδόμαδο: όχι
+  ];
+  const items = academyPlan(ms, "2026-11-19", { names });
+  const s = items.find((i) => i.what === "academySchedule");
+  assert.equal(s.day, "2026-11-20"); assert.equal(s.time, "13:00");
+  assert.deepEqual(s.cards.map((c) => c.file), ["akadimies-2026-11-21", "akadimies-2026-11-23"]);
+  assert.equal(s.cards[0].kick, "ΑΚΑΔΗΜΙΕΣ · ΠΡΟΓΡΑΜΜΑ");
+  assert.deepEqual(s.cards[0].matches.map((r) => r.section), ["Ποδόσφαιρο Κ19", "Μπάσκετ Έφηβοι"]);  // ποδόσφαιρο πρώτα
+  assert.equal(s.until, "2026-11-23T15:00:00+02:00");
+  assert.equal(s.lines.length, 3);
+  assert.equal(s.lines[0], "Ποδόσφαιρο Κ19: Άρης – ΠΑΟΚ, Σάβ 21.11 13:00");
+  assert.match(s.caption, /3 αγώνες σε 2 αθλήματα/);
+  const r = items.find((i) => i.what === "academyResults");
+  assert.equal(r.day, "2026-11-24"); assert.equal(r.missing.length, 3);
+});

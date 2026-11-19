@@ -91,9 +91,9 @@ body{display:flow-root;width:1080px;height:${H}px;color:#fff;font-family:F;overf
 .foot{position:absolute;bottom:${story ? 210 : 44}px;left:0;right:0;text-align:center;font-weight:800;font-size:50px;letter-spacing:-1px;line-height:1}
 .foot em{font-style:normal;color:#8a8a84}
 </style></head><body><div class="st"></div><div class="glow"></div>
-${secs ? `<div class="ktop kick">ΠΡΟΓΡΑΜΜΑ ΑΓΩΝΩΝ</div><div class="secs">${secs.map((x, i) => `<div class="sec"><div class="head"><div class="day">${UP(x.day)}</div><div class="date">${x.date}</div></div>` +
+${secs ? `<div class="ktop kick">${spec.kick || "ΠΡΟΓΡΑΜΜΑ ΑΓΩΝΩΝ"}</div><div class="secs">${secs.map((x, i) => `<div class="sec"><div class="head"><div class="day">${UP(x.day)}</div><div class="date">${x.date}</div></div>` +
   `<div class="list">${rows[i].join("")}</div></div>`).join("")}</div>` :
-`<div class="head"><div class="kick">ΠΡΟΓΡΑΜΜΑ ΑΓΩΝΩΝ</div><div class="day">${UP(spec.day)}</div><div class="date">${spec.date}</div></div>
+`<div class="head"><div class="kick">${spec.kick || "ΠΡΟΓΡΑΜΜΑ ΑΓΩΝΩΝ"}</div><div class="day">${UP(spec.day)}</div><div class="date">${spec.date}</div></div>
 <div class="orn"><i></i><span>✦</span><i></i></div>
 <div class="mid"><div class="list">${rows.join("")}</div></div>`}
 <div class="foot"><b>PAOK</b><em>alendar</em></div><div class="grain"></div></body></html>`;

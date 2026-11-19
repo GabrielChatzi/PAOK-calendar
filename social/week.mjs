@@ -99,12 +99,19 @@ function cleanTv(raw, names) {
   return raw.split(" / ")[0].replace(/\s+HD$/i, "").trim();
 }
 
+// Ακαδημίες: «Ποδόσφαιρο Κ19», «Μπάσκετ Έφηβοι», «Βόλεϊ Κ18 Κοριτσιών» (από τα sections του matches.json).
+export function academyLabels(sections = []) {
+  const out = {};
+  for (const s of sections) if (s.academy) out[s.key] = s.key === "football-b" ? s.name : `${s.sport} ${s.name}`;
+  return out;
+}
+
 export function row(m, names) {
   const raw = m.paokHome ? m.away : m.home;
   const team = names.teams[`${m.section}:${raw}`] || {};
   const t = local(new Date(m.start));
   const r = {
-    section: LABEL[m.section] || m.section,
+    section: LABEL[m.section] || names.labels?.[m.section] || m.section,
     opponent: team.name || cleanTeam(raw),
     logo: team.logo ? path.join(HERE, "logos", team.logo) : (m.paokHome ? m.awayLogo : m.homeLogo) || "",
     venue: m.venue ? cleanVenue(m.venue, names) : m.paokHome ? HOME_VENUE[m.section] || "" : "",
@@ -120,6 +127,14 @@ export function row(m, names) {
     r.us = m.paokHome ? h : a; r.them = m.paokHome ? a : h;
   }
   return r;
+}
+
+// Μία γραμμή ανά αγώνα (τμήμα, αντίπαλος, μέρα, ώρα, γήπεδο): με αυτές το social_remind.py βλέπει τι
+// άλλαξε στο πρόγραμμα αφού ανέβηκε το post.
+export function matchLine(m, names) {
+  const r = row(m, names), t = local(new Date(m.start));
+  return `${r.section}: ${r.home ? `ΠΑΟΚ – ${r.opponent}` : `${r.opponent} – ΠΑΟΚ`}, ${DAYS[weekday(t.day)].slice(0, 3)} ${ddmm(t.day)}` +
+    `${m.timeKnown ? ` ${t.time}` : ""}${r.venue ? `, ${r.venue}` : ""}`;
 }
 
 // ---------------------------------------------------------------- το πλάνο
@@ -151,7 +166,7 @@ export function plan(matches, today, { names = { teams: {}, venues: {}, tv: {} }
     const list = byDay.get(day);
     if (!list) return null;
     return Math.max(...list.map((m) => minutes(local(new Date(m.start)).time) +
-      (DURATION[m.section.replace("-women", "")] || 110)));
+      (DURATION[m.section.split("-")[0]] || 110)));
   };
 
   const blocks = new Map();
@@ -192,8 +207,10 @@ export function plan(matches, today, { names = { teams: {}, venues: {}, tv: {} }
     const pday = addDays(first, -1);
     if (pday >= from && pday <= to) {
       const end = dayEnd(pday);
-      items.push({ type: "post", what: "schedule", day: pday, time: hhmm(Math.max(19 * 60, end ? roundUp(end + 20) : 0)),
+      items.push({ type: "post", what: "schedule", track: `${b.kind}-${b.key}`, day: pday,
+        time: hhmm(Math.max(19 * 60, end ? roundUp(end + 20) : 0)),
         title: `Πρόγραμμα ${label}`, cards: blockCards("fixtures", b, (l) => l),
+        until: all.at(-1).start, lines: all.map((m) => matchLine(m, names)),
         caption: scheduleCaption(b, all, byDay, names) });
     }
     // Αποτελέσματα: το πρωί μετά.
@@ -243,6 +260,77 @@ export function plan(matches, today, { names = { teams: {}, venues: {}, tv: {} }
   const order = { post: 0, reel: 1, story: 2 };
   items.sort((a, b) => a.day.localeCompare(b.day) || a.time.localeCompare(b.time) || order[a.type] - order[b.type]);
   return { today, from, to, items };
+}
+
+// ---------------------------------------------------------------- ακαδημίες
+
+// Ακαδημίες: μόνο το Σαββατοκύριακο (εκεί παίζουν σχεδόν όλες). Το πρόγραμμα βγαίνει συνήθως Τετάρτη ή
+// Πέμπτη, οπότε το post «Πρόγραμμα ακαδημιών» μπαίνει την Παρασκευή στις 13:00 (ή τη μέρα πριν από τον
+// πρώτο αγώνα, αν είναι νωρίτερα), όχι πάνω στο κανονικό πρόγραμμα των 19:00. Τα «Αποτελέσματα
+// ακαδημιών» την επόμενη μέρα από τον τελευταίο αγώνα στις 13:00, μετά τα κανονικά των 09:00.
+// Αν αλλάξει κάτι αφού ανέβει το πρόγραμμα, το social_remind.py στέλνει ειδοποίηση (βλ. «lines»).
+export function academyPlan(matches, today, { names = { teams: {}, venues: {}, tv: {} } } = {}) {
+  const from = addDays(today, -1), to = addDays(today, 6);
+  const byDay = new Map();
+  for (const m of matches) {
+    const { day } = local(new Date(m.start));
+    if (blockKey(day).kind !== "weekend") continue;
+    if (!byDay.has(day)) byDay.set(day, []);
+    byDay.get(day).push(m);
+  }
+  // Ανά μέρα: πρώτα ποδόσφαιρο, μετά μπάσκετ, βόλεϊ· μέσα στο άθλημα με την ώρα.
+  const SPORT = { football: 0, basketball: 1, volley: 2 };
+  for (const list of byDay.values()) list.sort((a, b) => (SPORT[a.section.split("-")[0]] ?? 9) -
+    (SPORT[b.section.split("-")[0]] ?? 9) || a.start.localeCompare(b.start));
+  const blocks = new Map();
+  for (const day of [...byDay.keys()].sort()) {
+    const k = blockKey(day).key;
+    if (!blocks.has(k)) blocks.set(k, []);
+    blocks.get(k).push(day);
+  }
+  const cards = (kind, days, pick) => days.flatMap((day) => {
+    const rows = pick(byDay.get(day)).map((m) => row(m, names));
+    const out = [];
+    for (let i = 0; i < rows.length; i += MAX_PER_CARD) out.push(rows.slice(i, i + MAX_PER_CARD));
+    return out.map((ms, i) => ({ kind, kick: kind === "results" ? "ΑΚΑΔΗΜΙΕΣ · ΑΠΟΤΕΛΕΣΜΑΤΑ" : "ΑΚΑΔΗΜΙΕΣ · ΠΡΟΓΡΑΜΜΑ",
+      day: DAYS[weekday(day)], date: ddmm(day), file: `akadimies-${day}${out.length > 1 ? `-${i + 1}` : ""}`, matches: ms }));
+  });
+  const items = [];
+  for (const [key, days] of blocks) {
+    const first = days[0], last = days.at(-1);
+    const all = days.flatMap((d) => byDay.get(d));
+    const pday = addDays(key, -1);  // Παρασκευή
+    if (pday >= from && pday <= to) {
+      items.push({ type: "post", what: "academySchedule", track: `academy-${key}`, day: pday, time: "13:00",
+        title: "Πρόγραμμα ακαδημιών", cards: cards("fixtures", days, (l) => l),
+        until: all.map((m) => m.start).sort().at(-1), lines: all.map((m) => matchLine(m, names)),
+        caption: academyCaption("schedule", all) });
+    }
+    const rday = addDays(last, 1);
+    if (rday >= from && rday <= to) {
+      const done = all.filter((m) => /^\d+-\d+$/.test(m.score || ""));
+      items.push({ type: "post", what: "academyResults", day: rday, time: "13:00", title: "Αποτελέσματα ακαδημιών",
+        cards: cards("results", days, (l) => l.filter((m) => done.includes(m))),
+        caption: done.length ? academyCaption("results", done, names) : "",
+        missing: all.filter((m) => !done.includes(m)).map((m) => `${m.home} – ${m.away}`) });
+    }
+  }
+  return items;
+}
+
+function academyCaption(what, list, names) {
+  const sports = new Set(list.map((m) => m.section.split("-")[0]));
+  const n = list.length;
+  const tail = "\n\nΤο παιδί σου παίζει στις ακαδημίες του ΠΑΟΚ; Βάλε τους αγώνες της ομάδας του στο ημερολόγιο " +
+    `του κινητού, με ειδοποιήσεις και βαθμολογία: ${SITE} → Ακαδημίες (link στο bio)\n\n#ΠΑΟΚ #PAOK #PAOKAcademy #PAOKalendar`;
+  if (what === "schedule") {
+    return `Οι ακαδημίες του ΠΑΟΚ το Σαββατοκύριακο ⚪️⚫️\n${n} ${n === 1 ? "αγώνας" : "αγώνες"}` +
+      `${sports.size > 1 ? ` σε ${sports.size} αθλήματα` : ""}, από την Β' ομάδα ως τα μικρά τμήματα.${tail}`;
+  }
+  const rows = list.map((m) => row(m, names));
+  const w = rows.filter((r) => r.us > r.them).length;
+  return `Τα αποτελέσματα των ακαδημιών ⚪️⚫️\n${w} ${w === 1 ? "νίκη" : "νίκες"} σε ${n} ${n === 1 ? "αγώνα" : "αγώνες"}. ` +
+    `Μπράβο σε όλα τα παιδιά! 👏${tail}`;
 }
 
 function scheduleCaption(b, all, byDay, names) {
@@ -309,9 +397,13 @@ async function main() {
   const src = args.matches || (fs.existsSync("docs/matches.json") ? "docs/matches.json" : DATA_URL);
   const data = /^https?:/.test(src) ? await (await fetch(src)).json() : JSON.parse(fs.readFileSync(src, "utf8"));
   const names = JSON.parse(fs.readFileSync(path.join(HERE, "names.json"), "utf8"));
-  // Β' ομάδα και ακαδημίες δεν μπαίνουν (ακόμα) στα social.
+  // Β' ομάδα και ακαδημίες: δικά τους post (academyPlan), όχι μέσα στο κανονικό πρόγραμμα.
   const academy = new Set((data.sections || []).filter((s) => s.academy).map((s) => s.key));
+  names.labels = academyLabels(data.sections);
   const p = plan(data.matches.filter((m) => !academy.has(m.section)), today, { names });
+  p.items.push(...academyPlan(data.matches.filter((m) => academy.has(m.section)), today, { names }));
+  const order = { post: 0, reel: 1, story: 2 };
+  p.items.sort((a, b) => a.day.localeCompare(b.day) || a.time.localeCompare(b.time) || order[a.type] - order[b.type]);
 
   if (prev === out && fs.existsSync(out)) {   // ίδιος φάκελος: κρατάμε τις παλιές εικόνες στην άκρη
     fs.rmSync(`${out}.prev`, { recursive: true, force: true });
@@ -325,7 +417,8 @@ async function main() {
     it.images = [];
     for (const c of it.cards) {
       const kind = c.story ? "story" : "post";
-      const spec = { day: c.day, date: c.date, file: c.file, matches: c.matches, ...(c.sections && { sections: c.sections }) };
+      const spec = { day: c.day, date: c.date, file: c.file, matches: c.matches, ...(c.sections && { sections: c.sections }),
+        ...(c.kick && { kick: c.kick }) };
       const name = `${c.file}-${c.kind === "results" ? "apotelesmata-" : ""}${kind}.png`;
       const json = JSON.stringify(spec);
       const hash = crypto.createHash("sha1").update(json + fs.readFileSync(path.join(HERE, `${c.kind}.mjs`))).digest("hex").slice(0, 10);

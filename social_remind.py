@@ -7,11 +7,17 @@
 τις εικόνες και τη λεζάντα για αντιγραφή.
 
 Τα αποτελέσματα ημέρας φεύγουν όταν μπουν όλα τα σκορ (ως 5 ώρες μετά την ώρα του πλάνου).
+
+Αλλαγές μετά την ανάρτηση: τα post προγράμματος (κανονικό και ακαδημιών) έχουν «track» και «lines» (μία
+γραμμή ανά αγώνα). Όταν φύγει η υπενθύμιση κρατάμε τις γραμμές· αν ως την έναρξη του τελευταίου αγώνα
+(«until») αλλάξει κάποια (ώρα, μέρα, γήπεδο, νέος ή αναβληθείς αγώνας), έρχεται ειδοποίηση «Άλλαξε το
+πρόγραμμα» με το τι άλλαξε, για διορθωμένο story ή επεξεργασία του post με τη νέα εικόνα.
 Τρέχει κάθε 15 λεπτά από το reminders.yml:  python3 social_remind.py plan.json .state/social.json
 """
 from __future__ import annotations
 
 import datetime as dt
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -58,16 +64,53 @@ def due(items: list[dict], sent: dict, now: dt.datetime) -> list[dict]:
     return out
 
 
+def changes(items: list[dict], tracked: dict, now: dt.datetime) -> list[tuple[dict, list[str], list[str]]]:
+    """Post προγράμματος που έχουν ήδη ανέβει και των οποίων οι αγώνες άλλαξαν: (item, νέες, παλιές γραμμές)."""
+    out = []
+    for it in items:
+        old = tracked.get(it.get("track") or "")
+        if not old or not it.get("lines") or now >= dt.datetime.fromisoformat(old["until"]):
+            continue
+        new_l, old_l = it["lines"], old["lines"]
+        added = [x for x in new_l if x not in old_l]
+        gone = [x for x in old_l if x not in new_l]
+        if added or gone:
+            out.append((it, added, gone))
+    return out
+
+
+def change_message(it: dict, added: list[str], gone: list[str]) -> tuple[str, str]:
+    title = "⚠️ Άλλαξε το " + it["title"][0].lower() + it["title"][1:]
+    parts = [f"Τώρα: {x}" for x in added[:3]]
+    if not added:
+        parts = [f"Βγήκε: {x}" for x in gone[:3]]
+    more = len(added) - 3 if added else len(gone) - 3
+    if more > 0:
+        parts.append(f"και {more} ακόμα")
+    return title, ". ".join(parts) + ". Πάτα για τη νέα εικόνα"
+
+
 def main(plan_path: Path, state_path: Path, now: dt.datetime | None = None) -> int:
     now = now or dt.datetime.now(notify.ATHENS)
     plan = json.loads(plan_path.read_text(encoding="utf-8"))
     sent = json.loads(state_path.read_text(encoding="utf-8")) if state_path.exists() else {}
-    for it in due(plan.get("items", []), sent, now):
+    tracked = sent.pop("_tracked", {})
+    items = plan.get("items", [])
+    for it, added, gone in changes(items, tracked, now):
+        title, body = change_message(it, added, gone)
+        tag = f"social-change-{it['track']}"
+        notify._push([TOPIC], title, body, f"/social/#{key(it)}", tag=tag,
+                     once=f"{tag}-{hashlib.sha1('|'.join(it['lines']).encode()).hexdigest()[:10]}")
+        tracked[it["track"]]["lines"] = it["lines"]
+    for it in due(items, sent, now):
         title, body = message(it)
         notify._push([TOPIC], title, body, f"/social/#{key(it)}", tag=f"social-{key(it)}", once=f"social-{key(it)}")
         sent[key(it)] = now.isoformat(timespec="minutes")
+        if it.get("track") and it.get("lines") and it.get("until"):
+            tracked[it["track"]] = {"lines": it["lines"], "until": it["until"]}
     cutoff = now - dt.timedelta(days=10)
     sent = {k: v for k, v in sent.items() if dt.datetime.fromisoformat(v) > cutoff}
+    sent["_tracked"] = {k: v for k, v in tracked.items() if dt.datetime.fromisoformat(v["until"]) > now}
     state_path.parent.mkdir(parents=True, exist_ok=True)
     state_path.write_text(json.dumps(sent, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     return 0

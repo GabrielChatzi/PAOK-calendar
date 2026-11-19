@@ -144,6 +144,18 @@ export function athensIso(date, time) {
 }
 
 // Μια εγγραφή της συλλογής στη μορφή του matches.json.
+// Η διεύθυνση δίνει εικόνα; Όχι όταν απαντά με σελίδα (π.χ. ανάρτηση στο Facebook). Αν η πηγή δεν απαντά
+// (μπλοκάρει τα αυτόματα αιτήματα), την αφήνουμε: στο κινητό μπορεί να φορτώνει κανονικά.
+export async function looksLikeImage(url, fetcher = fetch) {
+  try {
+    const r = await fetcher(url, { redirect: "follow", headers: { "User-Agent": "Mozilla/5.0" }, signal: AbortSignal.timeout(8000) });
+    if (!r.ok) return true;
+    return /^image\//.test(r.headers.get("content-type") || "");
+  } catch {
+    return true;
+  }
+}
+
 // Σήμα αντιπάλου (συλλογή «crests»): ένα ανά άθλημα και όνομα, όπως το γράφει η πηγή.
 export function parseCrest(x, needUrl = true) {
   if (!x || typeof x !== "object") return { error: "Λείπει το σήμα." };
@@ -387,6 +399,9 @@ export default async function handler(req, res) {
   if (body.action === "crest-save" || body.action === "crest-delete") {
     const c = parseCrest(body.crest, body.action === "crest-save");
     if (c.error) return send(res, 400, { error: c.error });
+    if (body.action === "crest-save" && !c.url.startsWith("data:") && !(await looksLikeImage(c.url))) {
+      return send(res, 400, { error: "Η διεύθυνση δεν είναι εικόνα (π.χ. σύνδεσμος ανάρτησης). Κράτα πατημένο το σήμα και διάλεξε «Αντιγραφή διεύθυνσης εικόνας», ή ανέβασε φωτογραφία/στιγμιότυπο." });
+    }
     const col = (await getDb()).collection("crests");
     if (body.action === "crest-delete") await col.deleteOne({ _id: c.id });
     else await col.updateOne({ _id: c.id }, { $set: { sport: c.sport, name: c.name, url: c.url, at: new Date() } }, { upsert: true });

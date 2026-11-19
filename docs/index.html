@@ -233,6 +233,13 @@
   .gender-switch a { padding: 7px 14px; text-decoration: none; font-weight: 500; }
   .gender-switch a + a { border-left: 1.5px solid var(--ink); }
   .gender-switch a[aria-current="page"] { background: var(--ink); color: var(--paper); }
+  /* Πολλές ομάδες (π.χ. ποδόσφαιρο ακαδημιών): πλέγμα που χωράει στην οθόνη, όχι μία γραμμή που τη φαρδαίνει. */
+  .gender-switch.team-switch { display: grid; grid-template-columns: repeat(auto-fill, minmax(72px, 1fr)); max-width: 100%;
+    border-width: 1.5px 0 0 1.5px; }
+  .gender-switch.team-switch a { text-align: center; padding: 8px 6px; white-space: nowrap;
+    border-right: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink); }
+  .gender-switch.team-switch a + a { border-left: 0; }
+  .gender-switch.team-switch a[aria-current="page"] { background: var(--ink); color: var(--paper); }
 
   /* Συντομεύσεις στο τέλος της αρχικής */
   .shortcuts { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
@@ -269,6 +276,7 @@
   .crest-name small { color: var(--muted); font-size: 14px; }
   .crest-form { padding: 10px 0 4px; }
   .crest-preview:empty { display: none; }
+  .crest-search { margin-top: 12px; }
   .chips-hint { margin: -2px 0 0; font-size: 14px; color: var(--muted); }
   .chip {
     flex: none; border: 1.5px solid var(--ink); background: var(--paper);
@@ -755,7 +763,8 @@
   // ---- Σήματα
   var paokLogo = {};
   function initials(name) {
-    var words = String(name).replace(/[."«»]/g, " ").split(/\s+/).filter(function (w) { return w.length > 1; });
+    // Μόνο γράμματα: «ΣΚΙΟΥΡΟΙ (1)» → «ΣΚ», όχι «Σ(».
+    var words = String(name).replace(/[^0-9A-Za-zΑ-Ωα-ωΆ-Ώά-ώϊϋΐΰ]+/g, " ").split(/\s+/).filter(function (w) { return w.length > 1 && !/^\d+$/.test(w); });
     return (words.length > 1 ? words[0][0] + words[1][0] : (words[0] || "?").slice(0, 2)).toUpperCase();
   }
   // Ακαδημίες: τα σήματα της πρώτης ομάδας του ίδιου συλλόγου (ΑΕΚ, Ολυμπιακός Β…) από τους κανονικούς
@@ -1374,7 +1383,7 @@
     var cur = data.sectionMap[current], group = cur.group || cur.sport;
     var teams = data.academy.filter(function (s) { return (s.group || s.sport) === group; });
     if (teams.length < 2) return "";
-    return '<nav class="gender-switch" aria-label="Ομάδες">' + teams.map(function (s) {
+    return '<nav class="gender-switch' + (teams.length > 3 ? " team-switch" : "") + '" aria-label="Ομάδες">' + teams.map(function (s) {
       return '<a href="#/' + s.key + '"' + (s.key === current ? ' aria-current="page"' : "") + ">" + esc(s.short || s.name) + "</a>";
     }).join("") + "</nav>";
   }
@@ -1475,14 +1484,21 @@
   }
   function academyCrestsHtml() {
     var all = academyOpponents(), missing = all.filter(function (o) { return !o.url; });
-    var show = ui.crestAll ? all : missing;
+    var mine = all.filter(function (o) { return o.saved; });
+    var view = ui.crestView || "missing", q = crestWords(ui.crestQ || "").join(" ");
+    var show = (view === "all" || q ? all : view === "mine" ? mine : missing).filter(function (o) {
+      return !q || crestWords(o.name).join(" ").indexOf(q) >= 0;
+    });
     var img = function (o, url) {
       return url ? '<img class="crest" src="' + esc(url) + '" alt="" referrerpolicy="no-referrer">' : '<span class="initials" aria-hidden="true">' + esc(initials(o.name)) + "</span>";
     };
     return '<a class="back" href="#/academies">‹ Ακαδημίες</a>' +
       '<div class="section-head"><h2>Σήματα</h2></div>' +
       '<p class="lede">Για αντιπάλους χωρίς σήμα ή με λάθος σήμα. Βάλε διεύθυνση εικόνας (στο κινητό: παρατεταμένο πάτημα στο σήμα ενός site, «Αντιγραφή διεύθυνσης εικόνας») ή διάλεξε φωτογραφία. Φαίνεται αμέσως σε όλους.</p>' +
-      seg("crestShow", [["missing", "Χωρίς σήμα (" + missing.length + ")"], ["all", "Όλοι (" + all.length + ")"]], ui.crestAll ? "all" : "missing") +
+      seg("crestShow", [["missing", "Χωρίς σήμα (" + missing.length + ")"], ["mine", "Δικά σου (" + mine.length + ")"],
+        ["all", "Όλοι (" + all.length + ")"]], view) +
+      '<label class="adm-field wide crest-search"><span>Αναζήτηση ομάδας (σε όλους)</span><input id="crest-q" type="search" value="' +
+        esc(ui.crestQ || "") + '" placeholder="π.χ. Νέας Κρήνης" autocomplete="off"></label>' +
       (show.length ? '<ul class="crest-list">' + show.map(function (o) {
         var open = ui.crestEdit === o.k;
         return '<li class="crest-row' + (open ? " open" : "") + '"><div class="crest-line">' + img(o, o.url) +
@@ -1535,7 +1551,8 @@
       var k = crestKey(c.sport, c.name);
       if (del) delete savedCrests[k]; else savedCrests[k] = x.d.crest.url;
       ui.crestEdit = null; ui.crestData = "";
-      toast(del ? "Το σήμα σβήστηκε." : "Το σήμα αποθηκεύτηκε.");
+      if (!del) { ui.crestView = "mine"; ui.crestQ = ""; }
+      toast(del ? "Το σήμα σβήστηκε." : "Το σήμα αποθηκεύτηκε. Το βλέπεις στα «Δικά σου».");
       render();
     }).catch(function () { msg.textContent = "Δεν υπάρχει σύνδεση. Δοκίμασε ξανά."; });
   }
@@ -2119,7 +2136,7 @@
     var group = b.closest("[data-seg]");
     if (group && b.dataset.v && group.dataset.seg === "acadVenue") { acad.venue = b.dataset.v; saveAcad(); ui.shown = PAGE; render(); return; }
     if (group && b.dataset.v && group.dataset.seg === "acadView") { acad.view = b.dataset.v; saveAcad(); ui.day = null; render(); return; }
-    if (group && b.dataset.v && group.dataset.seg === "crestShow") { ui.crestAll = b.dataset.v === "all"; ui.crestEdit = null; render(); return; }
+    if (group && b.dataset.v && group.dataset.seg === "crestShow") { ui.crestView = b.dataset.v; ui.crestQ = ""; ui.crestEdit = null; render(); return; }
     if (group && b.dataset.v && group.dataset.seg === "calVenue") { calSel.venue = b.dataset.v; saveCalSel(); render(); return; }
     if (group && b.dataset.v) {
       var k = group.dataset.seg;
@@ -2160,6 +2177,24 @@
   });
   window.addEventListener("hashchange", function () { closeMenu(false); render(); });
   document.addEventListener("change", function (e) { if (e.target && e.target.id === "crest-file") crestFile(e.target); });
+  // Προεπισκόπηση της διεύθυνσης εικόνας όσο γράφεται.
+  document.addEventListener("input", function (e) {
+    if (!e.target || e.target.id !== "crest-url") return;
+    var prev = $("crest-preview"), u = e.target.value.trim();
+    ui.crestData = "";
+    if (!prev) return;
+    prev.innerHTML = /^https:\/\//.test(u) ? '<img class="crest" src="' + esc(u) + '" alt="" referrerpolicy="no-referrer" ' +
+      'onerror="this.outerHTML=\'<span class=help>Δεν φορτώνει εικόνα από αυτή τη διεύθυνση.</span>\'">' : "";
+  });
+  // Αναζήτηση στα σήματα: ανανεώνει τη λίστα κρατώντας την εστίαση στο πεδίο.
+  document.addEventListener("input", function (e) {
+    if (!e.target || e.target.id !== "crest-q") return;
+    ui.crestQ = e.target.value; ui.crestEdit = null;
+    var pos = e.target.selectionStart;
+    render();
+    var f = $("crest-q");
+    if (f) { f.focus(); try { f.setSelectionRange(pos, pos); } catch (err) {} }
+  });
 
   // Λειτουργία διαχειριστή: 5 γρήγορα πατήματα στον τίτλο «Ειδοποιήσεις». Χρειάζεται γιατί η εφαρμογή
   // στην αρχική οθόνη του iPhone δεν έχει γραμμή διευθύνσεων (για το #/admin) και κρατά δικά της δεδομένα.

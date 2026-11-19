@@ -17,6 +17,7 @@ import json
 import re
 import subprocess
 import sys
+import urllib.parse
 from pathlib import Path
 
 DOCS = Path(__file__).resolve().parent / "docs"
@@ -47,13 +48,18 @@ def local(url: str, have: dict[str, str]) -> str:
     key = hashlib.sha1(url.encode()).hexdigest()[:16]
     if key in have:
         return SITE + have[key]
-    try:
-        r = subprocess.run(["curl", "-sSL", "--fail", "--max-time", "30", "--max-filesize", str(MAX), "-A", UA, url],
-                           capture_output=True, timeout=60)
-        data = r.stdout if r.returncode == 0 else b""
-    except Exception:
-        data = b""
-    ext = kind(data)
+    data, ext = b"", ""
+    # Πρώτα απευθείας· αν η πηγή μπλοκάρει (π.χ. Cloudflare στο paokfc.gr), μέσω της υπηρεσίας εικόνων wsrv.nl.
+    for src in (url, "https://wsrv.nl/?url=" + urllib.parse.quote(url, safe="")):
+        try:
+            r = subprocess.run(["curl", "-sSL", "--fail", "--max-time", "30", "--max-filesize", str(MAX), "-A", UA, src],
+                               capture_output=True, timeout=60)
+            data = r.stdout if r.returncode == 0 else b""
+        except Exception:
+            data = b""
+        ext = kind(data)
+        if ext:
+            break
     if not ext:
         print(f"  ! σήμα: {url}", file=sys.stderr)
         have[key] = ""

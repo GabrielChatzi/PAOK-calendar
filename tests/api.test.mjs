@@ -417,3 +417,12 @@ test("σήμα αντιπάλου: διεύθυνση ή μικρή εικόνα
   assert.ok(!a.parseCrest({ sport: "Βόλεϊ", name: "Χ" }, false).error);
 });
 
+test("σήμα: σελίδα (π.χ. Facebook) δεν περνά για εικόνα", async () => {
+  const a = await import("../api/admin.js");
+  const resp = (status, type) => async () => ({ ok: status < 400, status, headers: { get: () => type } });
+  assert.equal(await a.looksLikeImage("https://x/y.png", resp(200, "image/png")), true);
+  assert.equal(await a.looksLikeImage("https://www.facebook.com/share/1/", resp(200, "text/html; charset=utf-8")), false);
+  assert.equal(await a.looksLikeImage("https://blocked/y.png", resp(403, "text/html")), true);
+  assert.equal(await a.looksLikeImage("https://down/y.png", async () => { throw new Error("x"); }), true);
+});
+

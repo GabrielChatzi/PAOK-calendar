@@ -11,10 +11,17 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           mkdir -p probe
-          sleep 30
-          curl -sS https://paokalendar.gr/api/admin | python3 -c "import json,sys; d=json.load(sys.stdin); print(sorted(d), len(d.get('crests',[])))" > probe/result.txt 2>&1
-          curl -sS -o /dev/null -w "post %{http_code}\n" -X POST https://paokalendar.gr/api/admin -H 'Content-Type: application/json' -d '{"password":"x","action":"crest-save"}' >> probe/result.txt
-          curl -sS https://paokalendar.gr/ | grep -c academyCrestsHtml >> probe/result.txt || true
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"
+          g(){ curl -sSL -A "$UA" -m 40 -o "probe/$1" -w "$1 %{http_code} %{size_download}\n" "$2" >> probe/result.txt 2>&1; }
+          g mc8.html "https://www.ekasth1976.gr/p/mc8.html"
+          g mc-index.html "https://ekasth.gr/champs/matchcenter8/"
+          g ticker.html "https://ekasth.gr/champs/matchcenter8/ticker.html?embed=1"
+          g mcpost.html "https://www.ekasth1976.gr/2026/10/matchcenter_07672124.html"
+          g p1.html "https://www.ekasth1976.gr/2026/09/p-1.html"
+          g ef1.html "https://www.ekasth1976.gr/2026/09/ef-1.html"
+          g day.html "https://www.ekasth1976.gr/2026/11/21112026.html"
+          for f in mc-index.html ticker.html; do grep -oE '(src|href)="[^"]+\.(js|json|php)[^"]*"|fetch\([^)]*\)|https?://[^"'"'"' ]+\.(json|php)[^"'"'"' ]*' probe/$f | sort -u | head -40 > probe/$f.refs; done
+          for j in $(grep -ohE 'src="[^"]+\.js[^"]*"' probe/mc-index.html probe/ticker.html | sed 's/src="//;s/"$//' | sort -u | head -8); do n=$(echo $j | tr '/:?' '___' | tail -c 60); case $j in http*) u=$j;; /*) u="https://ekasth.gr$j";; *) u="https://ekasth.gr/champs/matchcenter8/$j";; esac; g "js_$n" "$u"; done
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

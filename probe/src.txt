@@ -1,2 +1,0 @@
-src="' + esc(url) + '"
-src="icons/apple-touch-icon.png"

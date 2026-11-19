@@ -1,0 +1,140 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Νεάνιδες – Εντός έδρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:basketball-women-u18-ek-CqO0aAsJY8Pvp7WMR-4KUA@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261030T200000
+DTEND;TZID=Europe/Athens:20261030T220000
+SUMMARY:🏀 ΠΑΟΚ 102-32 ΠΑΝΟΡΑΜΑ ΑΣ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Νεανίδων (ΕΚΑΣΘ) – 2η αγωνιστική\nΤ
+ ελικό σκορ: ΠΑΟΚ 102-32 ΠΑΝΟΡΑΜΑ ΑΣ
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=CqO0aAsJY8Pvp7WMR-4K
+ UA
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-u18-ek-iGRxONTdaa1lCmZYkvlzRg@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261110T200000
+DTEND;TZID=Europe/Athens:20261110T220000
+SUMMARY:🏀 ΠΑΟΚ 70-80 ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ ΣΥΚΕΩΝ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Νεανίδων (ΕΚΑΣΘ) – 5η αγωνιστική\nΤ
+ ελικό σκορ: ΠΑΟΚ 70-80 ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ ΣΥΚΕ
+ ΩΝ
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=iGRxONTdaa1lCmZYkvlz
+ Rg
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-u18-ek-5qIfxjfZYg-lsWV-mGjC2A@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261124T200000
+DTEND;TZID=Europe/Athens:20261124T220000
+SUMMARY:🏀 ΠΑΟΚ – ΔΗΜΟΚΡΙΤΟΣ ΑΜΠΕΛ. ΜΑΟ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Νεανίδων (ΕΚΑΣΘ) – 7η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=5qIfxjfZYg-lsWV-mGjC
+ 2A
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-u18-ek-NtjYtnkQDiUHLdMABgoMlA@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261208T200000
+DTEND;TZID=Europe/Athens:20261208T220000
+SUMMARY:🏀 ΠΑΟΚ – ΗΡΑΚΛΗΣ ΝΓΣΘ 1908
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Νεανίδων (ΕΚΑΣΘ) – 9η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=NtjYtnkQDiUHLdMABgoM
+ lA
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-u18-ek-rkYsq3pMSrj2LwvW45LeAQ@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20270112T200000
+DTEND;TZID=Europe/Athens:20270112T220000
+SUMMARY:🏀 ΠΑΟΚ – ΑΝΑΓΕΝΝΗΣΗ Ν.ΡΥΣΙΟΥ ΑΜΣ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Νεανίδων (ΕΚΑΣΘ) – 12η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=rkYsq3pMSrj2LwvW45Le
+ AQ
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-u18-ek-KKQ27F46WcaWSBZ9Rv4wXA@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20270126T200000
+DTEND;TZID=Europe/Athens:20270126T220000
+SUMMARY:🏀 ΠΑΟΚ – ΠΡΩΤΕΥΣ ΘΕΣΣΑΛΟΝΙΚΗΣ ΑΣ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Νεανίδων (ΕΚΑΣΘ) – 14η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=KKQ27F46WcaWSBZ9Rv4w
+ XA
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-u18-ek-RHuQc1FRmo-yaSwDqcjV2g@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20270202T200000
+DTEND;TZID=Europe/Athens:20270202T220000
+SUMMARY:🏀 ΠΑΟΚ – ΝΕΑΠΟΛΗ ΑΚΠΚ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Νεανίδων (ΕΚΑΣΘ) – 15η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=RHuQc1FRmo-yaSwDqcjV
+ 2g
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-u18-ek-GmnerH_vcUe0p5s2ggco4g@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20270216T200000
+DTEND;TZID=Europe/Athens:20270216T220000
+SUMMARY:🏀 ΠΑΟΚ – Μ.Ε.Ν. ΤΟΥΜΠΑΣ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Νεανίδων (ΕΚΑΣΘ) – 17η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=GmnerH_vcUe0p5s2ggco
+ 4g
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-u18-ek-0bJYec861b1vUAWr7OC-1A@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20270302T200000
+DTEND;TZID=Europe/Athens:20270302T220000
+SUMMARY:🏀 ΠΑΟΚ – ΜΓΣ ΑΠΟΛΛΩΝ ΚΑΛΑΜΑΡΙΑΣ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Νεανίδων (ΕΚΑΣΘ) – 19η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=0bJYec861b1vUAWr7OC-
+ 1A
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-u18-ek-AiG2WR7Q3HmM5Ab7YPYLJw@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20270323T200000
+DTEND;TZID=Europe/Athens:20270323T220000
+SUMMARY:🏀 ΠΑΟΚ – Α.Σ. ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Νεανίδων (ΕΚΑΣΘ) – 21η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=AiG2WR7Q3HmM5Ab7YPYL
+ Jw
+END:VEVENT
+END:VCALENDAR

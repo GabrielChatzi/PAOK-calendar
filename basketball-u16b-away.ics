@@ -1,0 +1,119 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Παίδες 2 – Εκτός έδρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:basketball-u16b-ek-C83nv59SLWZu6H819KBoFQ@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261011T150000
+DTEND;TZID=Europe/Athens:20261011T170000
+SUMMARY:🏀 ΣΕΒΑΣΜΟΣ ΑΣ 1 79-48 ΠΑΟΚ
+LOCATION:RESPECT ARENA
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 2η αγωνιστική\nΤελ
+ ικό σκορ: ΣΕΒΑΣΜΟΣ ΑΣ 1 79-48 ΠΑΟΚ
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=C83nv59SLWZu6H819KBo
+ FQ
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16b-ek-3y356QI_xYKUvRMSjnigPw@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261206T170000
+DTEND;TZID=Europe/Athens:20261206T190000
+SUMMARY:🏀 ΑΡΕΤΣΟΥ ΑΟ – ΠΑΟΚ
+LOCATION:Δ.Α.Κ. ΚΑΛΑΜΑΡΙΑΣ
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 9η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=3y356QI_xYKUvRMSjnig
+ Pw
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16b-ek-q57kD-BKjxqtyY-JwYRmQQ@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261213T143000
+DTEND;TZID=Europe/Athens:20261213T163000
+SUMMARY:🏀 ΜΑΛΑΚΟΠΗΣ ΑΟ – ΠΑΟΚ
+LOCATION:ΚΛΕΙΣΤΟ Δ.Α.Κ. ΠΥΛΑΙΑΣ
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 10η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=q57kD-BKjxqtyY-JwYRm
+ QQ
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16b-ek-dh2JoiU6Gf9xZom__W2Cjw@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20270110T163000
+DTEND;TZID=Europe/Athens:20270110T183000
+SUMMARY:🏀 ΑΜΣ ΤΟ ΠΑΝΟΡΑΜΑ – ΠΑΟΚ
+LOCATION:Δ.Α.Κ. ΠΑΝΟΡΑΜΑΤΟΣ
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 12η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=dh2JoiU6Gf9xZom__W2C
+ jw
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16b-ek-zyF_jyDQIsqQO6SPc2VfVQ@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20270117T163000
+DTEND;TZID=Europe/Athens:20270117T183000
+SUMMARY:🏀 ΠΑΝΟΡΑΜΑ ΑΣ 1 – ΠΑΟΚ
+LOCATION:Δ.Α.Κ. ΠΑΝΟΡΑΜΑΤΟΣ
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 13η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=zyF_jyDQIsqQO6SPc2Vf
+ VQ
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16b-ek-4o6m2Zr0TBg_b-0BVPbROA@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20270124T180000
+DTEND;TZID=Europe/Athens:20270124T200000
+SUMMARY:🏀 ΠΥΛΑΙΑΣ ΑΕ – ΠΑΟΚ (ώρα αναμένεται)
+LOCATION:ΚΛΕΙΣΤΟ Δ.Α.Κ. ΠΥΛΑΙΑΣ
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 14η αγωνιστική\nΗ ώ
+ ρα δεν έχει οριστεί ακόμα (προσωρινά 18:00).
+  Θα ενημερωθεί αυτόματα όταν ανακοινωθε
+ ί.
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=4o6m2Zr0TBg_b-0BVPbR
+ OA
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16b-ek-EeMK-BvAed_2zHHbz_o2lA@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20270131T143000
+DTEND;TZID=Europe/Athens:20270131T163000
+SUMMARY:🏀 ΜΕΝ ΤΟΥΜΠΑΣ – ΠΑΟΚ
+LOCATION:ΚΛΕΙΣΤΟ ΓΥΜΝΑΣΤΗΡΙΟ Μ.Ε.Ν.Τ.
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 15η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=EeMK-BvAed_2zHHbz_o2
+ lA
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16b-ek-Fc9M1Ahw6tzxRVpj1bHQOw@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20270214T163000
+DTEND;TZID=Europe/Athens:20270214T183000
+SUMMARY:🏀 ΑΝΑΤΟΛΙΑ ΣΑΑΚ – ΠΑΟΚ
+LOCATION:ΑΝΑΤΟΛΙΑ
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 17η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=Fc9M1Ahw6tzxRVpj1bHQ
+ Ow
+END:VEVENT
+END:VCALENDAR

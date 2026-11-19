@@ -1,0 +1,145 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Παίδες – Εντός έδρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:basketball-u16-ek-4GkNxgTySp9Ih9yqQT4PbA@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20260910T200000
+DTEND;TZID=Europe/Athens:20260910T220000
+SUMMARY:🏀 ΠΑΟΚ 86-26 ΗΡΑΚΛΗΣ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Gen A Rising Stars U16 (ΕΚΑΣΘ) – Φάση των 8\, 2η
+  αγωνιστική\nΤελικό σκορ: ΠΑΟΚ 86-26 ΗΡΑΚΛΗ
+ Σ
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=4GkNxgTySp9Ih9yqQT4P
+ bA
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16-ek-KC6pgMU0yKvR5IDiPU2mkw@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20260917T200000
+DTEND;TZID=Europe/Athens:20260917T220000
+SUMMARY:🏀 ΠΑΟΚ 66-58 ΧΑΝΘ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Gen A Rising Stars U16 (ΕΚΑΣΘ) – Ημιτελική φά
+ ση\, 2η αγωνιστική\nΤελικό σκορ: ΠΑΟΚ 66-58 Χ
+ ΑΝΘ
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=KC6pgMU0yKvR5IDiPU2m
+ kw
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16-ek-N1Eu6wFVNOpDJcMxsHnTIQ@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261007T200000
+DTEND;TZID=Europe/Athens:20261007T220000
+SUMMARY:🏀 ΠΑΟΚ 72-45 ΜΑΧΗΤΕΣ ΑΕΠΣ ΠΕΙΡΑΜΑΤΙΚΟ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 1η αγωνιστική\nΤελ
+ ικό σκορ: ΠΑΟΚ 72-45 ΜΑΧΗΤΕΣ ΑΕΠΣ ΠΕΙΡΑΜΑΤΙ
+ ΚΟ
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=N1Eu6wFVNOpDJcMxsHnT
+ IQ
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16-ek-VE3F9KfM7JdCkXjIIg2nEQ@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261118T200000
+DTEND;TZID=Europe/Athens:20261118T220000
+SUMMARY:🏀 ΠΑΟΚ 101-44 ΑΣ ΑΣΤΕΡΑΣ ΠΛΑΓΙΑΡΙΟΥ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 6η αγωνιστική\nΤελ
+ ικό σκορ: ΠΑΟΚ 101-44 ΑΣ ΑΣΤΕΡΑΣ ΠΛΑΓΙΑΡΙΟΥ
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=VE3F9KfM7JdCkXjIIg2n
+ EQ
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16-ek-h4kdmQiSTV6ZyVMLycEGsA@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261202T200000
+DTEND;TZID=Europe/Athens:20261202T220000
+SUMMARY:🏀 ΠΑΟΚ – Α.Σ. ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 8η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=h4kdmQiSTV6ZyVMLycEG
+ sA
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16-ek-WIzifF1bHGfA24ANe356Eg@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261223T200000
+DTEND;TZID=Europe/Athens:20261223T220000
+SUMMARY:🏀 ΠΑΟΚ – ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ ΣΥΚΕΩΝ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 11η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=WIzifF1bHGfA24ANe356
+ Eg
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16-ek-uppSAwrKbAeiXJwz_Hbzig@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20270113T200000
+DTEND;TZID=Europe/Athens:20270113T220000
+SUMMARY:🏀 ΠΑΟΚ – ΧΑΝΘ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 12η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=uppSAwrKbAeiXJwz_Hbz
+ ig
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16-ek-1Jz1H0DPmnKBO4usRArwzw@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20270120T200000
+DTEND;TZID=Europe/Athens:20270120T220000
+SUMMARY:🏀 ΠΑΟΚ – ΒΟΡΕΙΟΣ ΑΣΤΕΡΑΣ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 13η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=1Jz1H0DPmnKBO4usRArw
+ zw
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16-ek-Iljy2HEijt8HpIy_olpa_g@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20270127T200000
+DTEND;TZID=Europe/Athens:20270127T220000
+SUMMARY:🏀 ΠΑΟΚ – ΕΛΛΗΝΙΚΗ ΑΚΑΔΗΜΙΑ ΚΑΛΑΘΟΣ
+ ΦΑΙΡΙΣΗΣ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 14η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=Iljy2HEijt8HpIy_olpa
+ _g
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16-ek-VZ_4FPfvwPb6Ffbg-uifHg@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20270210T200000
+DTEND;TZID=Europe/Athens:20270210T220000
+SUMMARY:🏀 ΠΑΟΚ – ΗΡΑΚΛΗΣ ΝΓΣΘ 1908
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 16η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=VZ_4FPfvwPb6Ffbg-uif
+ Hg
+END:VEVENT
+END:VCALENDAR

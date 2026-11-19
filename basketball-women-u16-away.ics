@@ -1,0 +1,114 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Κορασίδες – Εκτός έδρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:basketball-women-u16-ek-_VAHo5waaKXBuFgQ1ZnYZw@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20260927T163000
+DTEND;TZID=Europe/Athens:20260927T183000
+SUMMARY:🏀 ΝΕΑΠΟΛΗ ΑΚΠΚ 23-82 ΠΑΟΚ
+LOCATION:ΕΑΚ ΝΕΑΠΟΛΗΣ
+DESCRIPTION:W Rising Stars U16 (ΕΚΑΣΘ) – Φάση των 3\, 2η α
+ γωνιστική\nΤελικό σκορ: ΝΕΑΠΟΛΗ ΑΚΠΚ 23-82 
+ ΠΑΟΚ
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=_VAHo5waaKXBuFgQ1ZnY
+ Zw
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-u16-ek-ty-hejIzsFwOPrfTT0TolA@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261010T110000
+DTEND;TZID=Europe/Athens:20261010T130000
+SUMMARY:🏀 ΜΓΣ ΑΠΟΛΛΩΝ ΚΑΛΑΜΑΡΙΑΣ 44-72 ΠΑΟΚ
+LOCATION:Δ.Α.Κ. ΚΑΛΑΜΑΡΙΑΣ
+DESCRIPTION:Κορασίδων (ΕΚΑΣΘ) – 2η αγωνιστική\n
+ Τελικό σκορ: ΜΓΣ ΑΠΟΛΛΩΝ ΚΑΛΑΜΑΡΙΑΣ 44-72 Π
+ ΑΟΚ
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=ty-hejIzsFwOPrfTT0To
+ lA
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-u16-ek-yjqmNJSERVyYtrAqWx5dhA@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261031T190000
+DTEND;TZID=Europe/Athens:20261031T210000
+SUMMARY:🏀 ΣΥΚΕΩΝ ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ 2 18-86 ΠΑΟΚ
+LOCATION:Δ.Α.Κ. ΕΠΤΑΠΥΡΓΙΟΥ
+DESCRIPTION:Κορασίδων (ΕΚΑΣΘ) – 4η αγωνιστική\n
+ Τελικό σκορ: ΣΥΚΕΩΝ ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ 2 18-86 
+ ΠΑΟΚ
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=yjqmNJSERVyYtrAqWx5d
+ hA
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-u16-ek-TsCB_uN3479XxQeIkCON-A@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261126T180000
+DTEND;TZID=Europe/Athens:20261126T200000
+SUMMARY:🏀 ΧΑΝΘ – ΠΑΟΚ (ώρα αναμένεται)
+LOCATION:ΑΘΛΗΤΙΚΟ ΚΕΝΤΡΟ Χ.Α.Ν.Θ. "ΜΙΜΗΣ ΤΣΙΚΙ
+ ΝΑΣ"
+DESCRIPTION:Κορασίδων (ΕΚΑΣΘ) – 6η αγωνιστική\n
+ Η ώρα δεν έχει οριστεί ακόμα (προσωρινά 18
+ :00). Θα ενημερωθεί αυτόματα όταν ανακοινω
+ θεί.
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=TsCB_uN3479XxQeIkCON
+ -A
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-u16-ek-Ovyy2N59x23EHzHWlz34Mw@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261212T170000
+DTEND;TZID=Europe/Athens:20261212T190000
+SUMMARY:🏀 ΑΡΗΣ Α.Σ. – ΠΑΟΚ
+LOCATION:Αλεξάνδρειο
+DESCRIPTION:Κορασίδων (ΕΚΑΣΘ) – 10η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=Ovyy2N59x23EHzHWlz34
+ Mw
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-u16-ek-ZeEYtaSt7mBkfJ4_ClvOaA@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20270109T180000
+DTEND;TZID=Europe/Athens:20270109T200000
+SUMMARY:🏀 ΧΟΡΤΙΑΤΗΣ Α.Σ. – ΠΑΟΚ
+LOCATION:ΚΛΕΙΣΤΟ ΓΥΜΝΑΣΤΗΡΙΟ ΑΣΒΕΣΤΟΧΩΡΙΟΥ
+DESCRIPTION:Κορασίδων (ΕΚΑΣΘ) – 12η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=ZeEYtaSt7mBkfJ4_ClvO
+ aA
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-women-u16-ek-zUxeQjDPBCdfrPy17smz_Q@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20270123T170000
+DTEND;TZID=Europe/Athens:20270123T190000
+SUMMARY:🏀 ΑΝΑΓΕΝΝΗΣΗ Ν.ΡΥΣΙΟΥ ΑΜΣ – ΠΑΟΚ
+LOCATION:ΓΗΠΕΔΟ ΝΕΟΥ ΡΥΣΙΟΥ
+DESCRIPTION:Κορασίδων (ΕΚΑΣΘ) – 14η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=zUxeQjDPBCdfrPy17smz
+ _Q
+END:VEVENT
+END:VCALENDAR

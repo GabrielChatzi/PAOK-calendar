@@ -2640,7 +2640,7 @@
  ],
  "football-u19": [
   {
-   "title": "Super League Κ19 (ενημέρωση 2026-11-17)",
+   "title": "Super League Κ19",
    "url": "https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/k20-nchc/vathmologia-u20/",
    "columns": [
     "Αγ",
@@ -2654,7 +2654,7 @@
     {
      "pos": 1,
      "team": "Παναθηναϊκός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/pao.png",
      "paok": false,
      "cells": [
       "9",
@@ -2668,7 +2668,7 @@
     {
      "pos": 2,
      "team": "ΑΕΚ",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2015/07/aek_logo.png",
      "paok": false,
      "cells": [
       "8",
@@ -2682,7 +2682,7 @@
     {
      "pos": 3,
      "team": "Βόλος",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2019/07/nfc_volos_logo.png",
      "paok": false,
      "cells": [
       "9",
@@ -2696,7 +2696,7 @@
     {
      "pos": 4,
      "team": "Ολυμπιακός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/09/Olympiakos_logo_2027.png",
      "paok": false,
      "cells": [
       "8",
@@ -2724,7 +2724,7 @@
     {
      "pos": 6,
      "team": "Ατρόμητος",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2015/05/atromitos.png",
      "paok": false,
      "cells": [
       "8",
@@ -2738,7 +2738,7 @@
     {
      "pos": 7,
      "team": "Άρης",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/aris_new-150x150-1.png",
      "paok": false,
      "cells": [
       "9",
@@ -2752,7 +2752,7 @@
     {
      "pos": 8,
      "team": "Ηρακλής",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/Iraklis_logo-1.png",
      "paok": false,
      "cells": [
       "9",
@@ -2766,7 +2766,7 @@
     {
      "pos": 9,
      "team": "Κηφισιά",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2023/07/kifisi_logo_site.png",
      "paok": false,
      "cells": [
       "9",
@@ -2780,7 +2780,7 @@
     {
      "pos": 10,
      "team": "ΟΦΗ",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/09/OFI_Logo_Stars_K_Filled_2026.png",
      "paok": false,
      "cells": [
       "9",
@@ -2794,7 +2794,7 @@
     {
      "pos": 11,
      "team": "Αστέρας Τρίπολης",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2024/07/asterasxaktor-blue.png",
      "paok": false,
      "cells": [
       "9",
@@ -2808,7 +2808,7 @@
     {
      "pos": 12,
      "team": "Λεβαδειακός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2014/12/levadeiakos.png",
      "paok": false,
      "cells": [
       "9",
@@ -2822,7 +2822,7 @@
     {
      "pos": 13,
      "team": "Παναιτωλικός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2016/09/panaitolikos_logo.png",
      "paok": false,
      "cells": [
       "9",
@@ -2836,7 +2836,7 @@
     {
      "pos": 14,
      "team": "Καλαμάτα",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2022/12/kalamata_logo_site.png",
      "paok": false,
      "cells": [
       "9",
@@ -2852,7 +2852,7 @@
  ],
  "football-u17": [
   {
-   "title": "Super League Κ17 (ενημέρωση 2026-11-17)",
+   "title": "Super League Κ17",
    "url": "https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/k17-nchc/vathmologia-u17/",
    "columns": [
     "Αγ",
@@ -2866,7 +2866,7 @@
     {
      "pos": 1,
      "team": "Ολυμπιακός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/09/Olympiakos_logo_2027.png",
      "paok": false,
      "cells": [
       "7",
@@ -2894,7 +2894,7 @@
     {
      "pos": 3,
      "team": "ΑΕΚ",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2015/07/aek_logo.png",
      "paok": false,
      "cells": [
       "7",
@@ -2908,7 +2908,7 @@
     {
      "pos": 4,
      "team": "Αστέρας Τρίπολης",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2024/07/asterasxaktor-blue.png",
      "paok": false,
      "cells": [
       "7",
@@ -2922,7 +2922,7 @@
     {
      "pos": 5,
      "team": "Παναιτωλικός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2016/09/panaitolikos_logo.png",
      "paok": false,
      "cells": [
       "7",
@@ -2936,7 +2936,7 @@
     {
      "pos": 6,
      "team": "Βόλος",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2019/07/nfc_volos_logo.png",
      "paok": false,
      "cells": [
       "7",
@@ -2950,7 +2950,7 @@
     {
      "pos": 7,
      "team": "ΟΦΗ",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/09/OFI_Logo_Stars_K_Filled_2026.png",
      "paok": false,
      "cells": [
       "7",
@@ -2964,7 +2964,7 @@
     {
      "pos": 8,
      "team": "Παναθηναϊκός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/pao.png",
      "paok": false,
      "cells": [
       "7",
@@ -2978,7 +2978,7 @@
     {
      "pos": 9,
      "team": "Ατρόμητος",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2015/05/atromitos.png",
      "paok": false,
      "cells": [
       "7",
@@ -2992,7 +2992,7 @@
     {
      "pos": 10,
      "team": "Ηρακλής",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/Iraklis_logo-1.png",
      "paok": false,
      "cells": [
       "6",
@@ -3006,7 +3006,7 @@
     {
      "pos": 11,
      "team": "Άρης",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/aris_new-150x150-1.png",
      "paok": false,
      "cells": [
       "7",
@@ -3020,7 +3020,7 @@
     {
      "pos": 12,
      "team": "Λεβαδειακός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2014/12/levadeiakos.png",
      "paok": false,
      "cells": [
       "7",
@@ -3034,7 +3034,7 @@
     {
      "pos": 13,
      "team": "Κηφισιά",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2025/11/kifisia_logo_new_site.png",
      "paok": false,
      "cells": [
       "6",
@@ -3048,7 +3048,7 @@
     {
      "pos": 14,
      "team": "Καλαμάτα",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2022/12/kalamata_logo_site.png",
      "paok": false,
      "cells": [
       "7",
@@ -3064,7 +3064,7 @@
  ],
  "football-u15": [
   {
-   "title": "Super League Κ15 (ενημέρωση 2026-11-17)",
+   "title": "Super League Κ15",
    "url": "https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/k15-nchc/vathmologia-u15/",
    "columns": [
     "Αγ",
@@ -3078,7 +3078,7 @@
     {
      "pos": 1,
      "team": "Ολυμπιακός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/09/Olympiakos_logo_2027.png",
      "paok": false,
      "cells": [
       "7",
@@ -3092,7 +3092,7 @@
     {
      "pos": 2,
      "team": "ΑΕΚ",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2015/07/aek_logo.png",
      "paok": false,
      "cells": [
       "7",
@@ -3120,7 +3120,7 @@
     {
      "pos": 4,
      "team": "Παναθηναϊκός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/pao.png",
      "paok": false,
      "cells": [
       "7",
@@ -3148,7 +3148,7 @@
     {
      "pos": 6,
      "team": "Άρης",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/aris_new-150x150-1.png",
      "paok": false,
      "cells": [
       "7",
@@ -3162,7 +3162,7 @@
     {
      "pos": 7,
      "team": "ΟΦΗ",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/08/OFI_logo_2026_27.png",
      "paok": false,
      "cells": [
       "7",
@@ -3176,7 +3176,7 @@
     {
      "pos": 8,
      "team": "Κηφισιά",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2023/07/kifisi_logo_site.png",
      "paok": false,
      "cells": [
       "6",
@@ -3204,7 +3204,7 @@
     {
      "pos": 10,
      "team": "Παναιτωλικός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2016/09/panaitolikos_logo.png",
      "paok": false,
      "cells": [
       "7",
@@ -3218,7 +3218,7 @@
     {
      "pos": 11,
      "team": "Ηρακλής",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2026/07/Iraklis_logo-1.png",
      "paok": false,
      "cells": [
       "6",
@@ -3246,7 +3246,7 @@
     {
      "pos": 13,
      "team": "Λεβαδειακός",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2014/12/levadeiakos.png",
      "paok": false,
      "cells": [
       "7",
@@ -3260,7 +3260,7 @@
     {
      "pos": 14,
      "team": "Καλαμάτα",
-     "logo": "",
+     "logo": "https://www.paokfc.gr/wp-content/uploads/2022/12/kalamata_logo_site.png",
      "paok": false,
      "cells": [
       "7",
@@ -3937,6 +3937,1201 @@
       "5",
       "1-15",
       "5"
+     ]
+    }
+   ]
+  }
+ ],
+ "basketball-u18": [
+  {
+   "title": "Εφήβων (ΕΚΑΣΘ), 1ος όμιλος",
+   "url": "https://ekasth.gr/champs/matchcenter8/competition.html?ch=ey9WHO6Y1c-p9j1KvBbp5g",
+   "columns": [
+    "Αγ",
+    "Ν",
+    "Η",
+    "+/-",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Α.Σ. ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPu-wjB2seFnkIKrt418zkw6z5_55JdNJhkMbSGTcpYZE",
+     "paok": false,
+     "cells": [
+      "5",
+      "5",
+      "0",
+      "+161",
+      "10"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΧΑΝΘ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPig0ZtjdYchdHyj36rCpL2_OP_hYfXcZFcL_9bQNQZcR",
+     "paok": false,
+     "cells": [
+      "5",
+      "4",
+      "1",
+      "+70",
+      "9"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "ΗΡΑΚΛΗΣ 1",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPv8KADfswAJTkstwM1Rcoqnx6PVWzyTOkiu4ZyqbhFX_",
+     "paok": false,
+     "cells": [
+      "5",
+      "4",
+      "1",
+      "+3",
+      "9"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "ΒΟΡΕΙΟΣ ΑΣΤΕΡΑΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPsc_H2_zZ5HQVtXNwstEZ-PRQXnKOBO_HbOLBm4VouOa",
+     "paok": false,
+     "cells": [
+      "5",
+      "3",
+      "2",
+      "+20",
+      "8"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "ΕΛΛΗΝΙΚΗ ΑΚΑΔΗΜΙΑ ΚΑΛΑΘΟΣΦΑΙΡΙΣΗΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPpg3N2bOyqYSOH-YQTYpqdrRQXnKOBO_HbOLBm4VouOa",
+     "paok": false,
+     "cells": [
+      "6",
+      "2",
+      "4",
+      "-49",
+      "8"
+     ]
+    },
+    {
+     "pos": 6,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "4",
+      "3",
+      "1",
+      "+87",
+      "7"
+     ]
+    },
+    {
+     "pos": 7,
+     "team": "ΑΘΛΗΤΙΚΗ ΕΝΩΣΗ ΠΕΥΚΩΝ ΣΥΚΕΩΝ ΜΑΧΗΤΕΣ ΠΕΙΡΑΜΑΤΙΚΟ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPm8T7OFpbev50o8Z67YWOFRKcAZeh-iAwgX6mMT-uUFO",
+     "paok": false,
+     "cells": [
+      "5",
+      "1",
+      "4",
+      "-40",
+      "6"
+     ]
+    },
+    {
+     "pos": 8,
+     "team": "ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ ΣΥΚΕΩΝ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPqCUII_7RNy7ZDeb2hL8wJTRvbSlzBYN7FdXirgUWVqv",
+     "paok": false,
+     "cells": [
+      "5",
+      "1",
+      "4",
+      "-76",
+      "6"
+     ]
+    },
+    {
+     "pos": 9,
+     "team": "ΑΘΛΗΤΙΚΟΣ ΣΥΛΛΟΓΟΣ ΑΣΤΕΡΑΣ ΠΛΑΓΙΑΡΙΟΥ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPnOfLmikYX2aroo9zDPyIQXRQXnKOBO_HbOLBm4VouOa",
+     "paok": false,
+     "cells": [
+      "6",
+      "0",
+      "6",
+      "-176",
+      "6"
+     ]
+    },
+    {
+     "pos": 10,
+     "team": "ΕΞΩΤΕΡΙΚΟ ΔΟΚ. ΟΜΑΔΑ3",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPhBX7j8cvqKl-t_C0itbujTRvbSlzBYN7FdXirgUWVqv",
+     "paok": false,
+     "cells": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Rising Stars U18 (ΕΚΑΣΘ), ημιτελική φάση",
+   "url": "https://ekasth.gr/champs/matchcenter8/competition.html?ch=sd6VluqQhvxmHtuMM0k9dQ",
+   "columns": [
+    "Αγ",
+    "Ν",
+    "Η",
+    "+/-",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Α.Σ. ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPu-wjB2seFnkIKrt418zkw6z5_55JdNJhkMbSGTcpYZE",
+     "paok": false,
+     "cells": [
+      "2",
+      "2",
+      "0",
+      "+38",
+      "4"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "2",
+      "2",
+      "0",
+      "+17",
+      "4"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "ΗΡΑΚΛΗΣ 1908",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPv8KADfswAJTkstwM1Rcoqnx6PVWzyTOkiu4ZyqbhFX_",
+     "paok": false,
+     "cells": [
+      "2",
+      "0",
+      "2",
+      "-17",
+      "2"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "ΒΟΡΕΙΟΣ ΑΣΤΕΡΑΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPsc_H2_zZ5HQVtXNwstEZ-PRQXnKOBO_HbOLBm4VouOa",
+     "paok": false,
+     "cells": [
+      "2",
+      "0",
+      "2",
+      "-38",
+      "2"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Rising Stars U18 (ΕΚΑΣΘ), φάση των 8",
+   "url": "https://ekasth.gr/champs/matchcenter8/competition.html?ch=sd6VluqQhvxmHtuMM0k9dQ",
+   "columns": [
+    "Αγ",
+    "Ν",
+    "Η",
+    "+/-",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "2",
+      "2",
+      "0",
+      "+38",
+      "4"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΒΟΡΕΙΟΣ ΑΣΤΕΡΑΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPsc_H2_zZ5HQVtXNwstEZ-PRQXnKOBO_HbOLBm4VouOa",
+     "paok": false,
+     "cells": [
+      "2",
+      "2",
+      "0",
+      "+6",
+      "4"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "ΗΡΑΚΛΗΣ 1908",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPv8KADfswAJTkstwM1Rcoqnx6PVWzyTOkiu4ZyqbhFX_",
+     "paok": false,
+     "cells": [
+      "2",
+      "1",
+      "1",
+      "+3",
+      "3"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "ΜΑΧΗΤΕΣ ΠΕΙΡΑΜΑΤΙΚΟ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPm8T7OFpbev50o8Z67YWOFRKcAZeh-iAwgX6mMT-uUFO",
+     "paok": false,
+     "cells": [
+      "2",
+      "1",
+      "1",
+      "-3",
+      "3"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "ΧΑΝΘ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPig0ZtjdYchdHyj36rCpL2_OP_hYfXcZFcL_9bQNQZcR",
+     "paok": false,
+     "cells": [
+      "2",
+      "0",
+      "2",
+      "-6",
+      "2"
+     ]
+    },
+    {
+     "pos": 6,
+     "team": "G.B.A.",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPpg3N2bOyqYSOH-YQTYpqdrRQXnKOBO_HbOLBm4VouOa",
+     "paok": false,
+     "cells": [
+      "2",
+      "0",
+      "2",
+      "-38",
+      "2"
+     ]
+    }
+   ]
+  }
+ ],
+ "basketball-u16": [
+  {
+   "title": "Παίδων (ΕΚΑΣΘ), 1ος όμιλος",
+   "url": "https://ekasth.gr/champs/matchcenter8/competition.html?ch=ElVW8Zz3cfMwKI508TFLPQ",
+   "columns": [
+    "Αγ",
+    "Ν",
+    "Η",
+    "+/-",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "6",
+      "5",
+      "1",
+      "+192",
+      "11"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "Α.Σ. ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPkhsh5CzwDmaCuaEvh-y7sw7jZ3QxI8YUZ-Bj573wGto",
+     "paok": false,
+     "cells": [
+      "5",
+      "5",
+      "0",
+      "+154",
+      "10"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "ΧΑΝΘ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPig0ZtjdYchdHyj36rCpL2_OP_hYfXcZFcL_9bQNQZcR",
+     "paok": false,
+     "cells": [
+      "5",
+      "5",
+      "0",
+      "+112",
+      "10"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "ΗΡΑΚΛΗΣ ΝΓΣΘ 1908",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPv8KADfswAJTkstwM1Rcoqnx6PVWzyTOkiu4ZyqbhFX_",
+     "paok": false,
+     "cells": [
+      "5",
+      "4",
+      "1",
+      "+21",
+      "9"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "ΜΑΧΗΤΕΣ ΑΕΠΣ ΠΕΙΡΑΜΑΤΙΚΟ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPm8T7OFpbev50o8Z67YWOFRKcAZeh-iAwgX6mMT-uUFO",
+     "paok": false,
+     "cells": [
+      "5",
+      "2",
+      "3",
+      "-36",
+      "7"
+     ]
+    },
+    {
+     "pos": 6,
+     "team": "ΑΣ ΑΣΤΕΡΑΣ ΠΛΑΓΙΑΡΙΟΥ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPnOfLmikYX2aroo9zDPyIQXRQXnKOBO_HbOLBm4VouOa",
+     "paok": false,
+     "cells": [
+      "5",
+      "1",
+      "4",
+      "-86",
+      "6"
+     ]
+    },
+    {
+     "pos": 7,
+     "team": "ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ ΣΥΚΕΩΝ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPqCUII_7RNy7ZDeb2hL8wJTRvbSlzBYN7FdXirgUWVqv",
+     "paok": false,
+     "cells": [
+      "6",
+      "0",
+      "6",
+      "-187",
+      "6"
+     ]
+    },
+    {
+     "pos": 8,
+     "team": "ΒΟΡΕΙΟΣ ΑΣΤΕΡΑΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPsc_H2_zZ5HQVtXNwstEZ-PRQXnKOBO_HbOLBm4VouOa",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "3",
+      "-59",
+      "5"
+     ]
+    },
+    {
+     "pos": 9,
+     "team": "ΕΛΛΗΝΙΚΗ ΑΚΑΔΗΜΙΑ ΚΑΛΑΘΟΣΦΑΙΡΙΣΗΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPpg3N2bOyqYSOH-YQTYpqdrRQXnKOBO_HbOLBm4VouOa",
+     "paok": false,
+     "cells": [
+      "5",
+      "0",
+      "5",
+      "-111",
+      "5"
+     ]
+    },
+    {
+     "pos": 10,
+     "team": "ΜΙΚΤΗ ΕΚΑΣΘ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPhBX7j8cvqKl-t_C0itbujTRvbSlzBYN7FdXirgUWVqv",
+     "paok": false,
+     "cells": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Gen A Rising Stars U16 (ΕΚΑΣΘ), ημιτελική φάση",
+   "url": "https://ekasth.gr/champs/matchcenter8/competition.html?ch=AZ_KcUkAn5LfmZ6s5ekvLg",
+   "columns": [
+    "Αγ",
+    "Ν",
+    "Η",
+    "+/-",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Α.Σ. ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPkhsh5CzwDmaCuaEvh-y7sw7jZ3QxI8YUZ-Bj573wGto",
+     "paok": false,
+     "cells": [
+      "2",
+      "2",
+      "0",
+      "+61",
+      "4"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "2",
+      "2",
+      "0",
+      "+17",
+      "4"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "ΧΑΝΘ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPig0ZtjdYchdHyj36rCpL2_OP_hYfXcZFcL_9bQNQZcR",
+     "paok": false,
+     "cells": [
+      "3",
+      "1",
+      "2",
+      "+14",
+      "4"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "ΒΟΡΕΙΟΣ ΑΣΤΕΡΑΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPsc_H2_zZ5HQVtXNwstEZ-PRQXnKOBO_HbOLBm4VouOa",
+     "paok": false,
+     "cells": [
+      "3",
+      "0",
+      "3",
+      "-92",
+      "3"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Gen A Rising Stars U16 (ΕΚΑΣΘ), φάση των 8",
+   "url": "https://ekasth.gr/champs/matchcenter8/competition.html?ch=AZ_KcUkAn5LfmZ6s5ekvLg",
+   "columns": [
+    "Αγ",
+    "Ν",
+    "Η",
+    "+/-",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "Α.Σ. ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPkhsh5CzwDmaCuaEvh-y7sw7jZ3QxI8YUZ-Bj573wGto",
+     "paok": false,
+     "cells": [
+      "2",
+      "2",
+      "0",
+      "+115",
+      "4"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "2",
+      "2",
+      "0",
+      "+79",
+      "4"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "ΧΑΝΘ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPig0ZtjdYchdHyj36rCpL2_OP_hYfXcZFcL_9bQNQZcR",
+     "paok": false,
+     "cells": [
+      "2",
+      "2",
+      "0",
+      "+59",
+      "4"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "ΒΟΡΕΙΟΣ ΑΣΤΕΡΑΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPsc_H2_zZ5HQVtXNwstEZ-PRQXnKOBO_HbOLBm4VouOa",
+     "paok": false,
+     "cells": [
+      "2",
+      "1",
+      "1",
+      "+9",
+      "3"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "ΕΛΛΗΝΙΚΗ ΑΚΑΔΗΜΙΑ ΚΑΛΑΘΟΣΦΑΙΡΙΣΗΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPpg3N2bOyqYSOH-YQTYpqdrRQXnKOBO_HbOLBm4VouOa",
+     "paok": false,
+     "cells": [
+      "2",
+      "1",
+      "1",
+      "-9",
+      "3"
+     ]
+    },
+    {
+     "pos": 6,
+     "team": "ΜΑΧΗΤΕΣ ΠΕΙΡΑΜΑΤΙΚΟ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPm8T7OFpbev50o8Z67YWOFRKcAZeh-iAwgX6mMT-uUFO",
+     "paok": false,
+     "cells": [
+      "2",
+      "0",
+      "2",
+      "-59",
+      "2"
+     ]
+    },
+    {
+     "pos": 7,
+     "team": "ΗΡΑΚΛΗΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPv8KADfswAJTkstwM1Rcoqnx6PVWzyTOkiu4ZyqbhFX_",
+     "paok": false,
+     "cells": [
+      "2",
+      "0",
+      "2",
+      "-79",
+      "2"
+     ]
+    },
+    {
+     "pos": 8,
+     "team": "ΜΑΣ ΕΡΜΗΣ ΛΑΓΚΑΔΑ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPvIFrpbl24GR4fK7YO2SRXnRvbSlzBYN7FdXirgUWVqv",
+     "paok": false,
+     "cells": [
+      "2",
+      "0",
+      "2",
+      "-115",
+      "2"
+     ]
+    }
+   ]
+  }
+ ],
+ "basketball-u16b": [
+  {
+   "title": "Παίδων (ΕΚΑΣΘ), 6ος όμιλος",
+   "url": "https://ekasth.gr/champs/matchcenter8/competition.html?ch=ElVW8Zz3cfMwKI508TFLPQ",
+   "columns": [
+    "Αγ",
+    "Ν",
+    "Η",
+    "+/-",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "ΠΑΝΟΡΑΜΑ ΑΣ 1",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPuW6NVMyDT3LDqVVctSf1sGTIRmtmzdJfrJghnWD5O92",
+     "paok": false,
+     "cells": [
+      "5",
+      "5",
+      "0",
+      "+152",
+      "10"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΜΕΝ ΤΟΥΜΠΑΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPvy8sWRIEiYUk_0wcBVSAgrOP_hYfXcZFcL_9bQNQZcR",
+     "paok": false,
+     "cells": [
+      "6",
+      "4",
+      "2",
+      "+57",
+      "10"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "ΣΕΒΑΣΜΟΣ ΑΣ 1",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPmO_dtLkQTSENDCSWfcP4TLRQXnKOBO_HbOLBm4VouOa",
+     "paok": false,
+     "cells": [
+      "5",
+      "4",
+      "1",
+      "+153",
+      "9"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "ΑΝΑΤΟΛΙΑ ΣΑΑΚ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPt2ya3IdEE_-hmecRfy4u2fOP_hYfXcZFcL_9bQNQZcR",
+     "paok": false,
+     "cells": [
+      "5",
+      "4",
+      "1",
+      "+74",
+      "9"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "6",
+      "3",
+      "3",
+      "-16",
+      "9"
+     ]
+    },
+    {
+     "pos": 6,
+     "team": "ΠΥΛΑΙΑΣ ΑΕ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPr2oJoxW3qb6ZEWmJp6Q5-bRvbSlzBYN7FdXirgUWVqv",
+     "paok": false,
+     "cells": [
+      "6",
+      "2",
+      "4",
+      "-97",
+      "8"
+     ]
+    },
+    {
+     "pos": 7,
+     "team": "ΜΑΛΑΚΟΠΗΣ ΑΟ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPk0C4Pd4bMM80V4qV42oHgqTIRmtmzdJfrJghnWD5O92",
+     "paok": false,
+     "cells": [
+      "5",
+      "2",
+      "3",
+      "+14",
+      "7"
+     ]
+    },
+    {
+     "pos": 8,
+     "team": "ΑΜΣ ΤΟ ΠΑΝΟΡΑΜΑ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPogowqEm-wvBei5qzzViehPRQXnKOBO_HbOLBm4VouOa",
+     "paok": false,
+     "cells": [
+      "5",
+      "0",
+      "5",
+      "-157",
+      "5"
+     ]
+    },
+    {
+     "pos": 9,
+     "team": "ΑΡΕΤΣΟΥ ΑΟ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPvSE8hJecTTuwqzMCLF3uqPRvbSlzBYN7FdXirgUWVqv",
+     "paok": false,
+     "cells": [
+      "5",
+      "0",
+      "5",
+      "-180",
+      "5"
+     ]
+    }
+   ]
+  }
+ ],
+ "basketball-women-u18": [
+  {
+   "title": "Νεανίδων (ΕΚΑΣΘ), 1ος όμιλος",
+   "url": "https://ekasth.gr/champs/matchcenter8/competition.html?ch=Q1EtPQlUBs-VdXgmrYPoqQ",
+   "columns": [
+    "Αγ",
+    "Ν",
+    "Η",
+    "+/-",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "6",
+      "5",
+      "1",
+      "+283",
+      "11"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ ΣΥΚΕΩΝ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPkhsh5CzwDmaCuaEvh-y7sw89nVpTKUBGjTGj7xAFDdj",
+     "paok": false,
+     "cells": [
+      "5",
+      "5",
+      "0",
+      "+273",
+      "10"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "Α.Σ. ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPu-wjB2seFnkIKrt418zkw6z5_55JdNJhkMbSGTcpYZE",
+     "paok": false,
+     "cells": [
+      "5",
+      "4",
+      "1",
+      "+79",
+      "9"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "ΜΓΣ ΑΠΟΛΛΩΝ ΚΑΛΑΜΑΡΙΑΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPr8CrSboulgfsvuKqZLHS5HOP_hYfXcZFcL_9bQNQZcR",
+     "paok": false,
+     "cells": [
+      "5",
+      "4",
+      "1",
+      "+180",
+      "9"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "ΠΑΝΟΡΑΜΑ ΑΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPuW6NVMyDT3LDqVVctSf1sGTIRmtmzdJfrJghnWD5O92",
+     "paok": false,
+     "cells": [
+      "6",
+      "3",
+      "3",
+      "-74",
+      "9"
+     ]
+    },
+    {
+     "pos": 6,
+     "team": "ΝΕΑΠΟΛΗ ΑΚΠΚ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPgl8nOA7rlk8or4oJLePo3XRvbSlzBYN7FdXirgUWVqv",
+     "paok": false,
+     "cells": [
+      "5",
+      "3",
+      "2",
+      "-120",
+      "8"
+     ]
+    },
+    {
+     "pos": 7,
+     "team": "ΑΝΑΓΕΝΝΗΣΗ Ν.ΡΥΣΙΟΥ ΑΜΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPrZM8z6npbG5ebsNPOgaUbvRvbSlzBYN7FdXirgUWVqv",
+     "paok": false,
+     "cells": [
+      "6",
+      "2",
+      "4",
+      "-68",
+      "7"
+     ]
+    },
+    {
+     "pos": 8,
+     "team": "ΗΡΑΚΛΗΣ ΝΓΣΘ 1908",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPv8KADfswAJTkstwM1Rcoqnx6PVWzyTOkiu4ZyqbhFX_",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "2",
+      "-47",
+      "6"
+     ]
+    },
+    {
+     "pos": 9,
+     "team": "ΔΗΜΟΚΡΙΤΟΣ ΑΜΠΕΛ. ΜΑΟ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPnHzgdtySg5q_qcY-NvtHqrOP_hYfXcZFcL_9bQNQZcR",
+     "paok": false,
+     "cells": [
+      "5",
+      "0",
+      "5",
+      "-172",
+      "5"
+     ]
+    },
+    {
+     "pos": 10,
+     "team": "Μ.Ε.Ν. ΤΟΥΜΠΑΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPvy8sWRIEiYUk_0wcBVSAgrOP_hYfXcZFcL_9bQNQZcR",
+     "paok": false,
+     "cells": [
+      "5",
+      "0",
+      "5",
+      "-173",
+      "5"
+     ]
+    },
+    {
+     "pos": 11,
+     "team": "ΠΡΩΤΕΥΣ ΘΕΣΣΑΛΟΝΙΚΗΣ ΑΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPsDhJXujq-eKvGRzHAS0RJHRvbSlzBYN7FdXirgUWVqv",
+     "paok": false,
+     "cells": [
+      "4",
+      "0",
+      "4",
+      "-161",
+      "4"
+     ]
+    }
+   ]
+  }
+ ],
+ "basketball-women-u16": [
+  {
+   "title": "Κορασίδων (ΕΚΑΣΘ), 2ος όμιλος",
+   "url": "https://ekasth.gr/champs/matchcenter8/competition.html?ch=JFhucS-Gxe2nnZ3qtSuaxw",
+   "columns": [
+    "Αγ",
+    "Ν",
+    "Η",
+    "+/-",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "ΣΥΚΕΩΝ ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ 2",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPqCUII_7RNy7ZDeb2hL8wJTRvbSlzBYN7FdXirgUWVqv",
+     "paok": false,
+     "cells": [
+      "6",
+      "4",
+      "2",
+      "-10",
+      "10"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "4",
+      "4",
+      "0",
+      "+259",
+      "8"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "ΜΓΣ ΑΠΟΛΛΩΝ ΚΑΛΑΜΑΡΙΑΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPr8CrSboulgfsvuKqZLHS5HOP_hYfXcZFcL_9bQNQZcR",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "1",
+      "+58",
+      "7"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "ΑΝΑΓΕΝΝΗΣΗ Ν.ΡΥΣΙΟΥ ΑΜΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPrZM8z6npbG5ebsNPOgaUbvRvbSlzBYN7FdXirgUWVqv",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "2",
+      "+62",
+      "6"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "ΧΑΝΘ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPig0ZtjdYchdHyj36rCpL2_OP_hYfXcZFcL_9bQNQZcR",
+     "paok": false,
+     "cells": [
+      "4",
+      "2",
+      "2",
+      "-13",
+      "6"
+     ]
+    },
+    {
+     "pos": 6,
+     "team": "ΑΡΗΣ Α.Σ.",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPu-wjB2seFnkIKrt418zkw6z5_55JdNJhkMbSGTcpYZE",
+     "paok": false,
+     "cells": [
+      "4",
+      "0",
+      "4",
+      "-169",
+      "4"
+     ]
+    },
+    {
+     "pos": 7,
+     "team": "ΧΟΡΤΙΑΤΗΣ Α.Σ.",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPmCa5ol_uik8jGKLmlUlk_7RvbSlzBYN7FdXirgUWVqv",
+     "paok": false,
+     "cells": [
+      "4",
+      "0",
+      "4",
+      "-187",
+      "4"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "W Rising Stars U16 (ΕΚΑΣΘ), φάση των 3",
+   "url": "https://ekasth.gr/champs/matchcenter8/competition.html?ch=VqtRAm1W1SYkUTZzI8RIkw",
+   "columns": [
+    "Αγ",
+    "Ν",
+    "Η",
+    "+/-",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "2",
+      "2",
+      "0",
+      "+86",
+      "4"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΝΕΑΠΟΛΗ ΑΚΠΚ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPgl8nOA7rlk8or4oJLePo3XRvbSlzBYN7FdXirgUWVqv",
+     "paok": false,
+     "cells": [
+      "2",
+      "1",
+      "1",
+      "-45",
+      "3"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "ΜΓΣ ΑΠΟΛΛΩΝ ΚΑΛΑΜΑΡΙΑΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPr8CrSboulgfsvuKqZLHS5HOP_hYfXcZFcL_9bQNQZcR",
+     "paok": false,
+     "cells": [
+      "2",
+      "0",
+      "2",
+      "-41",
+      "2"
+     ]
+    }
+   ]
+  }
+ ],
+ "basketball-women-u16b": [
+  {
+   "title": "Κορασίδων (ΕΚΑΣΘ), 1ος όμιλος",
+   "url": "https://ekasth.gr/champs/matchcenter8/competition.html?ch=JFhucS-Gxe2nnZ3qtSuaxw",
+   "columns": [
+    "Αγ",
+    "Ν",
+    "Η",
+    "+/-",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "ΦΡΥΓΑΝΙΩΤΗ ΜΑΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPvPWjsBU1plOY1G8S_DtI-wBUXsjc4_tESfrp5f4rvA_",
+     "paok": false,
+     "cells": [
+      "6",
+      "5",
+      "1",
+      "+192",
+      "11"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "4",
+      "3",
+      "1",
+      "+84",
+      "7"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "ΝΕΑΠΟΛΗ ΑΚΠΚ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPgl8nOA7rlk8or4oJLePo3XRvbSlzBYN7FdXirgUWVqv",
+     "paok": false,
+     "cells": [
+      "5",
+      "2",
+      "3",
+      "+67",
+      "7"
+     ]
+    },
+    {
+     "pos": 4,
+     "team": "ΑΡΙΣΤΟΤΕΛΗΣ ΣΤΑΥΡΟΥ ΕΑΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPk06P7bS1FSMsgCzGggVYqGAggkMI6e6yDRjN5TlWmHY",
+     "paok": false,
+     "cells": [
+      "5",
+      "2",
+      "3",
+      "-102",
+      "7"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "ΣΥΚΕΩΝ ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ 1",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPqCUII_7RNy7ZDeb2hL8wJTRvbSlzBYN7FdXirgUWVqv",
+     "paok": false,
+     "cells": [
+      "3",
+      "3",
+      "0",
+      "+183",
+      "6"
+     ]
+    },
+    {
+     "pos": 6,
+     "team": "ΠΡΩΤΕΥΣ ΘΕΣΣΑΛΟΝΙΚΗΣ ΑΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPsDhJXujq-eKvGRzHAS0RJHRvbSlzBYN7FdXirgUWVqv",
+     "paok": false,
+     "cells": [
+      "4",
+      "1",
+      "3",
+      "-95",
+      "5"
+     ]
+    },
+    {
+     "pos": 7,
+     "team": "ΣΤΑΥΡΟΥΠΟΛΗ ΕΚ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPrvTMnIX1ImpgMgGyPngk1XRvbSlzBYN7FdXirgUWVqv",
+     "paok": false,
+     "cells": [
+      "5",
+      "0",
+      "5",
+      "-329",
+      "5"
+     ]
+    },
+    {
+     "pos": 8,
+     "team": "ΠΥΡΓΟΣ Α.Μ.Σ. ΧΑΛΑΣΤΡΑΣ",
+     "logo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPgzQTTzqueutZjGsDQGl9wbRQXnKOBO_HbOLBm4VouOa",
+     "paok": false,
+     "cells": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
      ]
     }
    ]

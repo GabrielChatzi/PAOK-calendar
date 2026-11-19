@@ -1,0 +1,165 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Παίδες – Εκτός έδρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:basketball-u16-ek-6wVO2IJCPTxcmrvI-Xbr6w@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20260907T210000
+DTEND;TZID=Europe/Athens:20260907T230000
+SUMMARY:🏀 ΗΡΑΚΛΗΣ 55-74 ΠΑΟΚ
+LOCATION:ΙΒΑΝΩΦΕΙΟ
+DESCRIPTION:Gen A Rising Stars U16 (ΕΚΑΣΘ) – Φάση των 8\, 1η
+  αγωνιστική\nΤελικό σκορ: ΗΡΑΚΛΗΣ 55-74 ΠΑΟ
+ Κ
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=6wVO2IJCPTxcmrvI-Xbr
+ 6w
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16-ek-WPzdp_3rEBXIP1lub2CmIg@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20260914T173000
+DTEND;TZID=Europe/Athens:20260914T193000
+SUMMARY:🏀 ΧΑΝΘ 72-81 ΠΑΟΚ
+LOCATION:ΑΘΛΗΤΙΚΟ ΚΕΝΤΡΟ Χ.Α.Ν.Θ. "ΜΙΜΗΣ ΤΣΙΚΙ
+ ΝΑΣ"
+DESCRIPTION:Gen A Rising Stars U16 (ΕΚΑΣΘ) – Ημιτελική φά
+ ση\, 1η αγωνιστική\nΤελικό σκορ: ΧΑΝΘ 72-81 Π
+ ΑΟΚ
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=WPzdp_3rEBXIP1lub2Cm
+ Ig
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16-ek-_SBZCjemuVF45qvkLXr-ew@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261014T213000
+DTEND;TZID=Europe/Athens:20261014T233000
+SUMMARY:🏀 ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ ΣΥΚΕΩΝ 50-101 ΠΑΟΚ
+LOCATION:Δ.Α.Κ. ΕΠΤΑΠΥΡΓΙΟΥ
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 2η αγωνιστική\nΤελ
+ ικό σκορ: ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ ΣΥΚΕΩΝ 50-101 ΠΑΟ
+ Κ
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=_SBZCjemuVF45qvkLXr-
+ ew
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16-ek-FCBRbB6zWVkJNL2rtAYs_Q@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261021T213000
+DTEND;TZID=Europe/Athens:20261021T233000
+SUMMARY:🏀 ΧΑΝΘ 82-81 ΠΑΟΚ
+LOCATION:ΑΘΛΗΤΙΚΟ ΚΕΝΤΡΟ Χ.Α.Ν.Θ. "ΜΙΜΗΣ ΤΣΙΚΙ
+ ΝΑΣ"
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 3η αγωνιστική\nΤελ
+ ικό σκορ: ΧΑΝΘ 82-81 ΠΑΟΚ
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=FCBRbB6zWVkJNL2rtAYs
+ _Q
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16-ek-308XNyr3yKX4g9H49AeDJQ@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261104T203000
+DTEND;TZID=Europe/Athens:20261104T223000
+SUMMARY:🏀 ΒΟΡΕΙΟΣ ΑΣΤΕΡΑΣ 62-75 ΠΑΟΚ
+LOCATION:ΜΑΝΤΟΥΛΙΔΗΣ
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 4η αγωνιστική\nΤελ
+ ικό σκορ: ΒΟΡΕΙΟΣ ΑΣΤΕΡΑΣ 62-75 ΠΑΟΚ
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=308XNyr3yKX4g9H49AeD
+ JQ
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16-ek-ZlIWFFeCkG_8KYGAYfoRPg@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261111T193000
+DTEND;TZID=Europe/Athens:20261111T213000
+SUMMARY:🏀 ΕΛΛΗΝΙΚΗ ΑΚΑΔΗΜΙΑ ΚΑΛΑΘΟΣΦΑΙΡΙΣΗ
+ Σ 46-91 ΠΑΟΚ
+LOCATION:Δ.Α.Κ. ΚΑΛΑΜΑΡΙΑΣ
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 5η αγωνιστική\nΤελ
+ ικό σκορ: ΕΛΛΗΝΙΚΗ ΑΚΑΔΗΜΙΑ ΚΑΛΑΘΟΣΦΑΙΡ
+ ΙΣΗΣ 46-91 ΠΑΟΚ
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=ZlIWFFeCkG_8KYGAYfoR
+ Pg
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16-ek-Ist45tH5txgGf-9Ix5rMxg@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261125T210000
+DTEND;TZID=Europe/Athens:20261125T230000
+SUMMARY:🏀 ΗΡΑΚΛΗΣ ΝΓΣΘ 1908 – ΠΑΟΚ
+LOCATION:ΙΒΑΝΩΦΕΙΟ
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 7η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=Ist45tH5txgGf-9Ix5rM
+ xg
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16-ek-dC-np1Bs0w1hC9zxJQizcg@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261209T180000
+DTEND;TZID=Europe/Athens:20261209T200000
+SUMMARY:🏀 ΜΙΚΤΗ ΕΚΑΣΘ – ΠΑΟΚ (ώρα αναμένετα
+ ι)
+LOCATION:ΜΙΚΡΑ 2
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 9η αγωνιστική\nΗ ώρ
+ α δεν έχει οριστεί ακόμα (προσωρινά 18:00). 
+ Θα ενημερωθεί αυτόματα όταν ανακοινωθεί
+ .
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=dC-np1Bs0w1hC9zxJQiz
+ cg
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16-ek-qGAVR3V4VEK6vecB0QMIaw@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20261216T213000
+DTEND;TZID=Europe/Athens:20261216T233000
+SUMMARY:🏀 ΜΑΧΗΤΕΣ ΑΕΠΣ ΠΕΙΡΑΜΑΤΙΚΟ – ΠΑΟΚ
+LOCATION:Δ.Α.Κ. ΠΕΥΚΩΝ
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 10η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=qGAVR3V4VEK6vecB0QMI
+ aw
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16-ek-ZcsOQG0GKgUN1cRWwfdXtQ@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20270203T213000
+DTEND;TZID=Europe/Athens:20270203T233000
+SUMMARY:🏀 ΑΣ ΑΣΤΕΡΑΣ ΠΛΑΓΙΑΡΙΟΥ – ΠΑΟΚ
+LOCATION:ΓΗΠΕΔΟ ΝΕΟΥ ΡΥΣΙΟΥ
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 15η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=ZcsOQG0GKgUN1cRWwfdX
+ tQ
+END:VEVENT
+BEGIN:VEVENT
+UID:basketball-u16-ek-OxfwGbkOAhKz6AWClmkHSg@paok-calendar
+DTSTAMP:20261119T103334Z
+DTSTART;TZID=Europe/Athens:20270217T203000
+DTEND;TZID=Europe/Athens:20270217T223000
+SUMMARY:🏀 Α.Σ. ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ – ΠΑΟΚ
+LOCATION:Αλεξάνδρειο
+DESCRIPTION:Παίδων (ΕΚΑΣΘ) – 17η αγωνιστική
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=OxfwGbkOAhKz6AWClmkH
+ Sg
+END:VEVENT
+END:VCALENDAR

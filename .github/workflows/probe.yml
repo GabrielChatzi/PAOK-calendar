@@ -11,9 +11,9 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           mkdir -p probe
-          UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36"
-          curl -sSL -m 30 -A "$UA" -o probe/clubs.html https://epesth.gr/ta-somateia-tis-epesth/
-          echo done
+          for u in matches.json standings.json api/data; do curl -sSL -m 30 -o "probe/$(echo $u | tr / _)" -w "$u %{http_code} %{size_download}\n" "https://paokalendar.gr/$u"; done | tee probe/result.txt
+          grep -o 'src="[^"]*"' <(curl -sSL https://paokalendar.gr/) | head -5 > probe/src.txt || true
+          curl -sSL https://paokalendar.gr/ -o probe/index.html
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

@@ -48,11 +48,13 @@ EMOJI = {
     "football-b": "⚽", "football-u19": "⚽", "football-u17": "⚽", "football-u16": "⚽", "football-u15": "⚽",
     **{k: "🏐" for k in ("volley-u21", "volley-u18", "volley-women-u20", "volley-women-u18", "volley-women-u18es1",
                          "volley-women-u18es2")},
+    **{k: "🏀" for k in ("basketball-u18", "basketball-u16", "basketball-u16b", "basketball-women-u18", "basketball-women-u16", "basketball-women-u16b")},
 }
 # Β' ομάδα και ακαδημίες: η πηγή (paokfc.gr) ανεβάζει τα αποτελέσματα αργά, οπότε δεν ζητάμε
 # συχνότερες ενημερώσεις μετά τους αγώνες τους· τα φέρνει η κανονική ενημέρωση κάθε 2 ώρες.
 NO_REFRESH = {"football-b", "football-u19", "football-u17", "football-u16", "football-u15", "volley-u21", "volley-u18",
-              "volley-women-u20", "volley-women-u18", "volley-women-u18es1", "volley-women-u18es2"}
+              "volley-women-u20", "volley-women-u18", "volley-women-u18es1", "volley-women-u18es2",
+              "basketball-u18", "basketball-u16", "basketball-u16b", "basketball-women-u18", "basketball-women-u16", "basketball-women-u16b"}
 # Περίπου πόση ώρα κρατά ένας αγώνας ανά τμήμα (λεπτά), μαζί με τα διαλείμματα. Από εκεί και πέρα
 # περιμένουμε το τελικό αποτέλεσμα και ανανεώνουμε το πρόγραμμα πιο συχνά (βλ. reminders()).
 DURATION = {
@@ -62,6 +64,7 @@ DURATION = {
     "football-b": 115, "football-u19": 115, "football-u17": 100, "football-u16": 100, "football-u15": 90,
     **{k: 120 for k in ("volley-u21", "volley-u18", "volley-women-u20", "volley-women-u18", "volley-women-u18es1",
                         "volley-women-u18es2")},
+    **{k: 110 for k in ("basketball-u18", "basketball-u16", "basketball-u16b", "basketball-women-u18", "basketball-women-u16", "basketball-women-u16b")},
 }
 RESULT_WAIT = dt.timedelta(hours=6)
 WEEKDAYS = ["Δευ", "Τρι", "Τετ", "Πεμ", "Παρ", "Σαβ", "Κυρ"]

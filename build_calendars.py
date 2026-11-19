@@ -105,6 +105,19 @@ ACADEMY = {
                             "short": "Κ18 ΕΣ 1", "group": "Βόλεϊ Κοριτσιών", "league": "Κ18 Κοριτσιών Ε.Σ. (ΕΠΕΣΘ)"},
     "volley-women-u18es2": {"emoji": "🏐", "name": "Κ18 Κοριτσιών ΕΣ 2", "sport": "Βόλεϊ", "women": True, "academy": True,
                             "short": "Κ18 ΕΣ 2", "group": "Βόλεϊ Κοριτσιών", "league": "Κ18 Κοριτσιών Ε.Σ. (ΕΠΕΣΘ)"},
+    # Μπάσκετ: ΑΣ ΠΑΟΚ στα πρωταθλήματα της ΕΚΑΣΘ (βλ. EKASTH_TEAMS).
+    "basketball-u18": {"emoji": "🏀", "name": "Έφηβοι", "sport": "Μπάσκετ", "women": False, "academy": True,
+                       "short": "Έφηβοι", "group": "Μπάσκετ Αγοριών", "league": "Εφήβων (ΕΚΑΣΘ)"},
+    "basketball-u16": {"emoji": "🏀", "name": "Παίδες", "sport": "Μπάσκετ", "women": False, "academy": True,
+                       "short": "Παίδες", "group": "Μπάσκετ Αγοριών", "league": "Παίδων (ΕΚΑΣΘ)"},
+    "basketball-u16b": {"emoji": "🏀", "name": "Παίδες 2", "sport": "Μπάσκετ", "women": False, "academy": True,
+                        "short": "Παίδες 2", "group": "Μπάσκετ Αγοριών", "league": "Παίδων (ΕΚΑΣΘ)"},
+    "basketball-women-u18": {"emoji": "🏀", "name": "Νεάνιδες", "sport": "Μπάσκετ", "women": True, "academy": True,
+                             "short": "Νεάνιδες", "group": "Μπάσκετ Κοριτσιών", "league": "Νεανίδων (ΕΚΑΣΘ)"},
+    "basketball-women-u16": {"emoji": "🏀", "name": "Κορασίδες", "sport": "Μπάσκετ", "women": True, "academy": True,
+                             "short": "Κορασίδες", "group": "Μπάσκετ Κοριτσιών", "league": "Κορασίδων (ΕΚΑΣΘ)"},
+    "basketball-women-u16b": {"emoji": "🏀", "name": "Κορασίδες 2", "sport": "Μπάσκετ", "women": True, "academy": True,
+                              "short": "Κορασίδες 2", "group": "Μπάσκετ Κοριτσιών", "league": "Κορασίδων (ΕΚΑΣΘ)"},
 }
 SECTIONS.update(ACADEMY)
 
@@ -1764,6 +1777,98 @@ def epesth_matches(section: str, today: dt.date | None = None) -> list[Match]:
     return out
 
 
+# ---- ΕΚΑΣΘ (μπάσκετ Θεσσαλονίκης): το MatchCenter της ένωσης (ekasth.gr/champs/matchcenter8) δίνει JSON με
+# όλες τις διοργανώσεις («channels»), και ανά διοργάνωση ομίλους με βαθμολογία και όλες τις αγωνιστικές.
+EKASTH = "https://ekasth.gr/champs/matchcenter8/"
+# Ανά τμήμα: (λέξη στο όνομα της διοργάνωσης, όνομα ομάδας). Η πρώτη είναι το πρωτάθλημα (για τη βαθμολογία).
+EKASTH_TEAMS = {
+    "basketball-u18": [("ΕΦΗΒΩΝ", "ΑΣ ΠΑΟΚ"), ("RISING STARS U18", "ΑΣ ΠΑΟΚ")],
+    "basketball-u16": [("ΠΑΙΔΩΝ", "ΑΣ ΠΑΟΚ 1"), ("GEN A RISING STARS U16", "ΑΣ ΠΑΟΚ 1")],
+    "basketball-u16b": [("ΠΑΙΔΩΝ", "ΑΣ ΠΑΟΚ 2")],
+    "basketball-women-u18": [("ΝΕΑΝΙΔΩΝ", "ΑΣ ΠΑΟΚ")],
+    "basketball-women-u16": [("ΚΟΡΑΣΙΔΩΝ", "ΠΑΟΚ ΑΣ 1"), ("W RISING STARS U16", "ΑΣ ΠΑΟΚ")],
+    "basketball-women-u16b": [("ΚΟΡΑΣΙΔΩΝ", "ΠΑΟΚ ΑΣ 2")],
+}
+_EKASTH: dict = {}
+
+
+def ekasth_json(action: str, **params) -> dict:
+    key = (action, tuple(sorted(params.items())))
+    if key not in _EKASTH:
+        _EKASTH[key] = json.loads(fetch(EKASTH + "bgapi.php?" + urllib.parse.urlencode({"action": action, **params})))
+    return _EKASTH[key]
+
+
+def ekasth_channel(word: str) -> dict:
+    """Η διοργάνωση με αυτό το όνομα («ΠΑΙΔΩΝ 2026-2027»)· το «RISING STARS U18» δεν πιάνει το «GEN A …»."""
+    chans = ekasth_json("channels").get("channels", [])
+    found = [c for c in chans if re.sub(r"\s*\d{4}-\d{4}$", "", c["name"].replace("ΕΚΑΣΘ ", "")).strip() == word] or \
+        [c for c in chans if c["name"].startswith(word + " ")]
+    if not found:
+        raise RuntimeError(f"δεν βρέθηκε η διοργάνωση {word}")
+    return ekasth_json("channel", ch=found[0]["id"])
+
+
+def ekasth_logo(url: str | None) -> str:
+    return absolute(EKASTH, url) if url else ""
+
+
+def ekasth_round(md: str) -> str:
+    """«1η ΑΓΩΝΙΣΤΙΚΗ», «1 ΑΓΩΝΙΣΤΙΚΗ», «7η Αγωνιστική» → «1η αγωνιστική»."""
+    m = re.match(r"\s*(\d+)\s*η?\s*αγωνιστικη\s*$", plain(md or "").lower())
+    return f"{m.group(1)}η αγωνιστική" if m else (md or "")
+
+
+EKASTH_PHASES = {"ΦΑΣΗ ΤΩΝ": "Φάση των", "ΗΜΙΤΕΛΙΚΗ ΦΑΣΗ": "Ημιτελική φάση", "ΠΡΟΗΜΙΤΕΛΙΚΗ ΦΑΣΗ": "Προημιτελική φάση",
+                 "ΤΕΛΙΚΗ ΦΑΣΗ": "Τελική φάση", "ΤΕΛΙΚΗ": "Τελική", "ΤΕΛΙΚΟΣ": "Τελικός"}
+
+
+def ekasth_phase(name: str) -> str:
+    """«ΠΡΟΚΡΙΜΑΤΙΚΗ ΦΑΣΗ · ΦΑΣΗ ΤΩΝ 8» → «Φάση των 8» (με τόνους· αλλιώς ως έχει)."""
+    t = (name or "").split(" · ")[-1].strip()
+    for k, v in EKASTH_PHASES.items():
+        if t == k or t.startswith(k + " "):
+            return v + t[len(k):]
+    return t
+
+
+def ekasth_matches(section: str) -> list[Match]:
+    out = []
+    for i, (word, team) in enumerate(EKASTH_TEAMS[section]):
+        try:
+            ch = ekasth_channel(word)
+        except Exception as e:
+            if i == 0:
+                raise
+            print(f"  ! {section}: {word}: {e}", file=sys.stderr)
+            continue
+        comp = SECTIONS[section]["league"] if i == 0 else word.title() + " (ΕΚΑΣΘ)"
+        for g in ch.get("groups", []):
+            for md in g.get("matchdays", []):
+                for x in md.get("games", []):
+                    h, a = x["home"], x["away"]
+                    if team not in (h["name"], a["name"]):
+                        continue
+                    home = h["name"] == team
+                    opp = a if home else h
+                    when = dt.datetime.fromisoformat(x["date"]).astimezone(ATHENS)
+                    known = (when.hour, when.minute) not in ((0, 0), (0, 1), (0, 2))
+                    done = x.get("state") == "Completed" and h.get("score") is not None and a.get("score") is not None
+                    phase = "" if i == 0 else ekasth_phase(g["name"])
+                    out.append(Match(
+                        section=section, uid=f"{section}-ek-{x['id']}", day=when.date(), time=when.time() if known else None,
+                        home=PAOK if home else opp["name"], away=opp["name"] if home else PAOK, paok_home=home,
+                        venue=x.get("stadium") or "",
+                        competition=comp, round=", ".join(p for p in (phase, ekasth_round(md.get("name", ""))) if p),
+                        score=f"{h['score']}-{a['score']}" if done else "",
+                        url=f"{EKASTH}game.html?id={x['id']}",
+                        home_logo="" if home else ekasth_logo(opp.get("logo")),
+                        away_logo=ekasth_logo(opp.get("logo")) if home else ""))
+    if not out:
+        raise RuntimeError("δεν βρέθηκαν αγώνες της ομάδας")
+    return out
+
+
 def paokfc_fetch(url: str) -> str:
     """Το paokfc.gr απαντά 403 στο urllib της Python (έλεγχος για bots) αλλά όχι στο curl."""
     key = (url, None, "utf-8")
@@ -2270,6 +2375,7 @@ SOURCES: dict[str, list[tuple[str, Callable[[], list[Match]]]]] = {
     "football-b": [("sl2.gr", lambda: sl2_matches("football-b"))],
     "football-u16": [("sl2.gr", lambda: sl2_matches("football-u16"))],
     **{key: [("epesth.gr", lambda key=key: epesth_matches(key))] for key in EPESTH_TEAMS},
+    **{key: [("ekasth.gr", lambda key=key: ekasth_matches(key))] for key in EKASTH_TEAMS},
 }
 
 

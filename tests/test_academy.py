@@ -232,3 +232,54 @@ class EpesthCrests(unittest.TestCase):
             self.assertEqual(b.epesth_crest("ΑΓΝΩΣΤΟΣ"), "")
         finally:
             b._EPESTH_CRESTS = old
+
+
+class Ekasth(unittest.TestCase):
+    def setUp(self):
+        import json
+        import build_calendars as b
+        self.b = b
+        game = lambda gid, date, home, away, hs, as_, state: {
+            "id": gid, "date": date, "state": state, "stadium": "PAOK SPORTS ARENA (ΠΑΛΑΤΑΚΙ)", "group": "1ος όμιλος",
+            "home": {"name": home, "logo": "bgapi.php?action=img&t=h", "score": hs},
+            "away": {"name": away, "logo": "bgapi.php?action=img&t=a", "score": as_}}
+        chans = {"channels": [{"id": "P", "name": "ΠΑΙΔΩΝ 2026-2027"}, {"id": "G", "name": "GEN A RISING STARS U16"}]}
+        paidon = {"channel": {"id": "P"}, "groups": [{"name": "1ος όμιλος", "standings": [
+            {"team": "ΑΣ ΠΑΟΚ 1", "logo": "x", "played": 6, "wins": 6, "losses": 0, "diff": 150, "points": 12, "pos": 1},
+            {"team": "ΧΑΝΘ", "logo": "bgapi.php?action=img&t=c", "played": 6, "wins": 3, "losses": 3, "diff": -4, "points": 9, "pos": 2}],
+            "matchdays": [{"name": "1 ΑΓΩΝΙΣΤΙΚΗ", "games": [
+                game("g1", "2026-10-07T20:00:00+03:00", "ΑΣ ΠΑΟΚ 1", "ΧΑΝΘ", 72, 45, "Completed"),
+                game("g2", "2026-12-09T00:00:00+02:00", "ΧΑΝΘ", "ΑΣ ΠΑΟΚ 1", None, None, "Scheduled"),
+                game("g3", "2026-12-10T20:00:00+02:00", "ΑΣ ΠΑΟΚ 2", "ΧΑΝΘ", None, None, "Scheduled")]}]}]}
+        gen = {"channel": {"id": "G"}, "groups": [{"name": "ΠΡΟΚΡΙΜΑΤΙΚΗ ΦΑΣΗ · ΗΜΙΤΕΛΙΚΗ ΦΑΣΗ", "standings": [], "matchdays": [
+            {"name": "1η ΑΓΩΝΙΣΤΙΚΗ", "games": [game("g4", "2026-09-14T17:30:00+03:00", "ΧΑΝΘ", "ΑΣ ΠΑΟΚ 1", 72, 81, "Completed")]}]}]}
+        data = {"channels": chans, "P": paidon, "G": gen}
+
+        def fake(url, *a, **k):
+            q = dict(urllib.parse.parse_qsl(url.split("?", 1)[1]))
+            return json.dumps(data["channels"] if q["action"] == "channels" else data[q["ch"]])
+        import urllib.parse
+        self.old, b.fetch = b.fetch, fake
+        b._EKASTH.clear()
+
+    def tearDown(self):
+        self.b.fetch = self.old
+        self.b._EKASTH.clear()
+
+    def test_matches(self):
+        ms = sorted(self.b.ekasth_matches("basketball-u16"), key=lambda m: m.start())
+        self.assertEqual([m.uid for m in ms], ["basketball-u16-ek-g4", "basketball-u16-ek-g1", "basketball-u16-ek-g2"])
+        self.assertEqual((ms[0].home, ms[0].away, ms[0].score, ms[0].round), ("ΧΑΝΘ", self.b.PAOK, "72-81", "Ημιτελική φάση, 1η αγωνιστική"))
+        self.assertEqual(ms[0].competition, "Gen A Rising Stars U16 (ΕΚΑΣΘ)")
+        self.assertEqual((ms[1].score, ms[1].round, ms[1].competition), ("72-45", "1η αγωνιστική", "Παίδων (ΕΚΑΣΘ)"))
+        self.assertIsNone(ms[2].time)  # 00:00 = ώρα που δεν έχει οριστεί
+        self.assertEqual(ms[2].home_logo, self.b.EKASTH + "bgapi.php?action=img&t=h")
+
+    def test_table(self):
+        import standings as st
+        st.fetch = self.b.fetch
+        t = st.ekasth_table("basketball-u16")
+        self.assertEqual(t[0]["title"], "Παίδων (ΕΚΑΣΘ), 1ος όμιλος")
+        self.assertEqual([r["cells"] for r in t[0]["rows"]], [["6", "6", "0", "+150", "12"], ["6", "3", "3", "-4", "9"]])
+        self.assertTrue(t[0]["rows"][0]["paok"])
+

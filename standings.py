@@ -15,7 +15,7 @@ import re
 from pathlib import Path
 
 from build_calendars import (
-    ACADEMY, EPESTH, EPESTH_TEAMS, epesth_crest, epesth_season, epesth_tables, PAOKFC, PAOKFC_TEAMS, sl2_competitions, sl2_json, sl2_name, paokfc_fetch, paokfc_links, paokfc_team, paokfc_matches, paokfc_name, DATAPROJECT, EPO, ea_data, ea_team, oxe_logo, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
+    ACADEMY, EKASTH, EKASTH_TEAMS, ekasth_channel, ekasth_logo, ekasth_phase, EPESTH, EPESTH_TEAMS, epesth_crest, epesth_season, epesth_tables, PAOKFC, PAOKFC_TEAMS, sl2_competitions, sl2_json, sl2_name, paokfc_fetch, paokfc_links, paokfc_team, paokfc_matches, paokfc_name, DATAPROJECT, EPO, ea_data, ea_team, oxe_logo, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
     fetch_until,
     is_paok, latin_title, plain, season_start_year, tidy_name, volley_rows,
 )
@@ -475,11 +475,41 @@ def epesth_table(section: str) -> list[dict]:
     raise RuntimeError("δεν βρέθηκε βαθμολογία με τον ΠΑΟΚ")
 
 
+def ekasth_table(section: str) -> list[dict]:
+    """Βαθμολογία μπάσκετ από το MatchCenter της ΕΚΑΣΘ: ο όμιλος του πρωταθλήματος με την ομάδα (και των
+    υπόλοιπων διοργανώσεων, π.χ. Rising Stars, αν έχουν βαθμολογία)."""
+    out = []
+    for i, (word, team) in enumerate(EKASTH_TEAMS[section]):
+        try:
+            ch = ekasth_channel(word)
+        except Exception:
+            if i == 0:
+                raise
+            continue
+        for g in ch.get("groups", []):
+            rows = g.get("standings") or []
+            if not any(r["team"] == team for r in rows):
+                continue
+            title = ACADEMY[section]["league"] if i == 0 else word.title() + " (ΕΚΑΣΘ)"
+            phase = ekasth_phase(g.get("name", ""))
+            title += f", {phase[:1].lower() + phase[1:]}" if phase else ""
+            url = EKASTH + "competition.html?ch=" + ch["channel"]["id"]
+            out.append(table(title, url, ["Αγ", "Ν", "Η", "+/-", "Β"], [
+                (r["pos"], PAOK_NAME if r["team"] == team else r["team"], "" if r["team"] == team else ekasth_logo(r.get("logo")),
+                 [r["played"], r["wins"], r["losses"], f"{r['diff']:+d}" if r["diff"] else "0", r["points"]]) for r in rows]))
+        if i == 0 and not out:
+            raise RuntimeError("δεν βρέθηκε βαθμολογία με τον ΠΑΟΚ")
+    # Πρώτα το πρωτάθλημα, μετά οι πιο πρόσφατες φάσεις των άλλων διοργανώσεων.
+    return out[:1] + out[1:][::-1]
+
+
 def academy_table(section: str) -> list[dict]:
     """Από το paokfc.gr· αν δεν απαντά, η χειροκίνητη (αν υπάρχει)."""
     try:
         if section in EPESTH_TEAMS:
             return epesth_table(section)
+        if section in EKASTH_TEAMS:
+            return ekasth_table(section)
         return sl2_table(section) if section in ("football-b", "football-u16") else paokfc_table(section)
     except Exception as e:
         manual = manual_table(section)

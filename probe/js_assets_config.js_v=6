@@ -1,9 +1,0 @@
-/* Site settings: edit and re-upload this file only. */
-window.SITE = {
-  title: "ΕΚΑΣΘ MatchCenter",       // site title (top left)
-  subtitle: "ΕΚΑΣΘ MatchCenter",
-  accent: "#1D4ED8",                // brand colour
-  // Extra client-side filter (the main ΕΚΑΣΘ filter is in config.php). Empty = no extra filter.
-  competitions: [],
-  refreshSeconds: 60,               // auto refresh of today's list / live games
-};

@@ -1,4 +1,5 @@
 {
+ "_v": 2,
  "Άρης": {
   "at": "2026-11-19",
   "source": "",
@@ -16,8 +17,8 @@
  },
  "ΑΓΙΟΣ ΝΙΚΟΛΑΟΣ": {
   "at": "2026-11-19",
-  "source": "wikipedia",
-  "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/%CE%86%CE%B3%CE%B9%CE%BF%CF%82_%CE%9D%CE%B9%CE%BA%CF%8C%CE%BB%CE%B1%CE%BF%CF%82_%CE%9B%CE%B1%CF%83%CE%B9%CE%B8%CE%AF%CE%BF%CF%85_2505-Pano-3.jpg"
+  "source": "",
+  "url": ""
  },
  "ΑΓΡΟΤΙΚΟΣ ΑΣΤΕΡΑΣ": {
   "at": "2026-11-19",
@@ -26,8 +27,8 @@
  },
  "ΑΕ ΑΜΠΕΛΟΚΗΠΩΝ": {
   "at": "2026-11-19",
-  "source": "wikipedia",
-  "url": "https://upload.wikimedia.org/wikipedia/el/d/df/Ampelokipi.jpg"
+  "source": "",
+  "url": ""
  },
  "ΑΕ ΕΥΟΣΜΟΥ": {
   "at": "2026-11-19",
@@ -41,8 +42,8 @@
  },
  "ΑΕ ΠΥΛΑΙΑΣ": {
   "at": "2026-11-19",
-  "source": "wikipedia",
-  "url": "https://upload.wikimedia.org/wikipedia/el/1/16/Pylaia_logo.JPG"
+  "source": "site",
+  "url": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPr2oJoxW3qb6ZEWmJp6Q5-bRvbSlzBYN7FdXirgUWVqv"
  },
  "ΑΕ ΦΙΛΥΡΟΥ": {
   "at": "2026-11-19",
@@ -51,8 +52,8 @@
  },
  "ΑΕΚ": {
   "at": "2026-11-19",
-  "source": "",
-  "url": ""
+  "source": "wikipedia",
+  "url": "https://upload.wikimedia.org/wikipedia/el/5/55/AEK_salas_logo.jpg"
  },
  "ΑΘΛΗΤΙΚΗ ΑΚΑΔΗΜΙΑ ΓΙΑΝΝΙΤΣΩΝ": {
   "at": "2026-11-19",
@@ -86,18 +87,18 @@
  },
  "ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020": {
   "at": "2026-11-19",
-  "source": "epo",
-  "url": "https://www.epo.gr/modules/custom/competitions/images/blank-club-profile.png"
+  "source": "",
+  "url": ""
  },
  "ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020 (1)": {
   "at": "2026-11-19",
-  "source": "epo",
-  "url": "https://www.epo.gr/modules/custom/competitions/images/blank-club-profile.png"
+  "source": "",
+  "url": ""
  },
  "ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020 (2)": {
   "at": "2026-11-19",
-  "source": "epo",
-  "url": "https://www.epo.gr/modules/custom/competitions/images/blank-club-profile.png"
+  "source": "",
+  "url": ""
  },
  "ΑΚΑΔ. ΠΟΔ. ΝΕΑΠΟΛΗΣ": {
   "at": "2026-11-19",
@@ -146,8 +147,8 @@
  },
  "ΑΜΣ ΠΑΝΟΡΑΜΑ": {
   "at": "2026-11-19",
-  "source": "",
-  "url": ""
+  "source": "site",
+  "url": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPuW6NVMyDT3LDqVVctSf1sGTIRmtmzdJfrJghnWD5O92"
  },
  "ΑΝΑΓΕΝΝΗΣΗ ΑΓ. ΙΩΑΝΝΗ": {
   "at": "2026-11-19",
@@ -176,8 +177,8 @@
  },
  "ΑΟ ΚΑΡΔΙΑΣ": {
   "at": "2026-11-19",
-  "source": "site",
-  "url": "https://www.esake.gr/dat/esaketeam/B742845D/photo_new_04E98281.png"
+  "source": "",
+  "url": ""
  },
  "ΑΟ ΛΕΟΝΤΕΣ": {
   "at": "2026-11-19",
@@ -231,8 +232,8 @@
  },
  "ΑΣ ΠΟΔ. ΤΟΥΜΠΑΣ": {
   "at": "2026-11-19",
-  "source": "site",
-  "url": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPvy8sWRIEiYUk_0wcBVSAgrOP_hYfXcZFcL_9bQNQZcR"
+  "source": "",
+  "url": ""
  },
  "ΑΣΤΕΡΑΣ ΑΜΠΕΛΟΚΗΠΩΝ": {
   "at": "2026-11-19",
@@ -376,13 +377,13 @@
  },
  "Καλαμάτα": {
   "at": "2026-11-19",
-  "source": "wikipedia",
-  "url": "https://upload.wikimedia.org/wikipedia/el/f/f9/Kalamata_FC_logo.png"
+  "source": "",
+  "url": ""
  },
  "Κηφισιά": {
   "at": "2026-11-19",
-  "source": "wikipedia",
-  "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/%CE%91%CE%B3%CE%BF%CF%81%CE%AC_%CE%9A%CE%B7%CF%86%CE%B9%CF%83%CE%B9%CE%AC%CF%82_0910.jpg"
+  "source": "",
+  "url": ""
  },
  "ΛΙΜΑΝΙ ΠΟΣΕΙΔΩΝΑ": {
   "at": "2026-11-19",
@@ -391,8 +392,8 @@
  },
  "Λεβαδειακός": {
   "at": "2026-11-19",
-  "source": "wikipedia",
-  "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/APO_Levadiakos_%28logo%29.svg"
+  "source": "epo",
+  "url": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/ff5d75d878dbe9d93109df43f2f7b417.jpg?itok=H-S0hGbj"
  },
  "Μ.ΑΛΕΞΑΝΔΡΟΣ ΘΕΣΣΑΛΟΝΙΚΗΣ": {
   "at": "2026-11-19",
@@ -496,13 +497,13 @@
  },
  "ΟΦΗ": {
   "at": "2026-11-19",
-  "source": "",
-  "url": ""
+  "source": "wikipedia",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/OFI_Cr%C3%A8te_%28ancien_logo-2%29.svg"
  },
  "Ολυμπιακός": {
   "at": "2026-11-19",
-  "source": "wikipedia",
-  "url": "https://upload.wikimedia.org/wikipedia/el/0/0e/Olympiacos_FC_2024_logo.png"
+  "source": "",
+  "url": ""
  },
  "ΠΑΝΑΘΗΝΑΪΚΟΣ ΘΕΣΣΑΛΟΝΙΚΗΣ (1)": {
   "at": "2026-11-19",
@@ -511,8 +512,8 @@
  },
  "ΠΑΝΟΡΑΜΑ": {
   "at": "2026-11-19",
-  "source": "wikipedia",
-  "url": "https://upload.wikimedia.org/wikipedia/el/0/05/Panorama_Sports_Club_Logo.jpg"
+  "source": "site",
+  "url": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPuW6NVMyDT3LDqVVctSf1sGTIRmtmzdJfrJghnWD5O92"
  },
  "ΠΑΝΣΕΡΡΑΪΚΟΣ": {
   "at": "2026-11-19",
@@ -521,8 +522,8 @@
  },
  "ΠΑΟ ΚΟΥΦΑΛΙΩΝ": {
   "at": "2026-11-19",
-  "source": "wikipedia",
-  "url": "https://upload.wikimedia.org/wikipedia/el/9/9f/Paokoufaliwn.jpg"
+  "source": "",
+  "url": ""
  },
  "ΠΑΣ ΑΡΣΑΚΛΗ": {
   "at": "2026-11-19",
@@ -531,8 +532,8 @@
  },
  "ΠΙΕΡΙΚΟΣ 1961": {
   "at": "2026-11-19",
-  "source": "wikipedia",
-  "url": "https://upload.wikimedia.org/wikipedia/el/2/2b/%CE%A3%CF%8D%CE%BD%CE%B4%CE%B5%CF%83%CE%BC%CE%BF%CF%82_%CE%A6%CE%B9%CE%BB%CE%AC%CE%B8%CE%BB%CF%89%CE%BD_%CE%9A%CE%B1%CF%84%CE%B5%CF%81%CE%AF%CE%BD%CE%B7%CF%82_%CE%A0%CE%B9%CE%B5%CF%81%CE%B9%CE%BA%CF%8C%CF%82.svg"
+  "source": "",
+  "url": ""
  },
  "ΠΟ ΜΑΛΑΚΟΠΗΣ ΠΥΛΑΙΑΣ": {
   "at": "2026-11-19",
@@ -556,13 +557,13 @@
  },
  "ΠΟΤ ΗΡΑΚΛΗΣ": {
   "at": "2026-11-19",
-  "source": "",
-  "url": ""
+  "source": "epo",
+  "url": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/155608f7cfffd639dc16d2ccbd3f0b70.jpg?itok=OZr9TDUA"
  },
  "ΠΟΤ ΗΡΑΚΛΗΣ (1)": {
   "at": "2026-11-19",
-  "source": "",
-  "url": ""
+  "source": "epo",
+  "url": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/155608f7cfffd639dc16d2ccbd3f0b70.jpg?itok=OZr9TDUA"
  },
  "ΠΡΩΤΑΘΛΗΤΕΣ ΠΕΥΚΩΝ": {
   "at": "2026-11-19",
@@ -596,8 +597,8 @@
  },
  "Παναιτωλικός": {
   "at": "2026-11-19",
-  "source": "",
-  "url": ""
+  "source": "epo",
+  "url": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/091c1903de0921ffb8092e505fbb60ef.jpg?itok=F5BYrLlF"
  },
  "ΣΚΙΟΥΡΟΙ": {
   "at": "2026-11-19",

@@ -11,11 +11,39 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           mkdir -p probe
-          U=https://www.paokfc.gr/wp-content/uploads/2026/07/pao.png
-          curl -sSL -o probe/w.png -w "weserv %{http_code} %{size_download} %{content_type}\n" "https://wsrv.nl/?url=$U" >> probe/result.txt
-          curl -sSL -A "Mozilla/5.0" -o probe/d.png -w "direct %{http_code} %{size_download} %{content_type}\n" "$U" >> probe/result.txt
-          curl -sSL https://paokalendar.gr/api/admin | python3 -c "import json,sys; d=json.load(sys.stdin); print([(c['sport'],c['name'],c['url'][:60]) for c in d.get('crests',[])])" >> probe/result.txt
-          curl -sSL -o probe/c.bin -w "crest %{http_code} %{content_type}\n" "https://paokalendar.gr/crests/$(curl -sSL https://paokalendar.gr/matches.json | grep -o 'paokalendar.gr/crests/[0-9a-f]*\.[a-z]*' | head -1 | sed 's#.*/##')" >> probe/result.txt
+          python3 - <<'PY'
+          import urllib.request, re, html, json, concurrent.futures as cf
+          UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
+          def get(u):
+              try:
+                  return urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=60).read().decode("utf-8", "ignore")
+              except Exception as e:
+                  return ""
+          pool = {}
+          def grab(page):
+              # ranking tables
+              for tr in re.findall(r"<tr>(.*?)</tr>", page, re.S):
+                  m = re.search(r'<img[^>]+src="([^"]+)".*?class="team-text">([^<]+)<', tr, re.S)
+                  if m: pool.setdefault(html.unescape(m.group(2)).strip(), m.group(1))
+              for block in page.split("node--type-national-match")[1:]:
+                  names = [re.sub(r"<[^>]+>", "", n).strip() for n in re.findall(r"field--name-name[^>]*>(.*?)</div>", block, re.S)[:2]]
+                  logos = re.findall(r'field--name-field-icon.*?<img[^>]+src="([^"]+)"', block, re.S)[:2]
+                  for n, l in zip(names, logos): pool.setdefault(html.unescape(n), l)
+          def comp(i):
+              p = get(f"https://www.epo.gr/el/competition/{i}/matches")
+              if not p: return i, 0, ""
+              title = re.search(r"<title>([^<]*)", p)
+              pages = [p] + [get("https://www.epo.gr" + html.unescape(v)) for v in dict.fromkeys(re.findall(r'value="(/el/competition/%d/stage/\d+/group/\d+/matches)"' % i, p))][:12]
+              return i, pages, title.group(1) if title else ""
+          titles = {}
+          with cf.ThreadPoolExecutor(6) as ex:
+              for i, pages, t in ex.map(comp, range(1, 121)):
+                  if pages:
+                      titles[i] = t
+                      for pg in pages: grab(pg)
+          json.dump({"titles": titles, "pool": pool}, open("probe/epo_pool.json", "w"), ensure_ascii=False, indent=0)
+          print(len(titles), len(pool))
+          PY
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

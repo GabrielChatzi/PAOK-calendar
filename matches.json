@@ -562,8 +562,8 @@
    "start": "2026-08-30T09:55:00+03:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/uploads/2015/05/atromitos.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "7f8334b402"
   },
@@ -648,7 +648,7 @@
    "start": "2026-09-07T11:00:00+03:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
    "awayLogo": "https://www.paokfc.gr/wp-content/uploads/2026/07/pao.png",
    "tvUrl": "",
    "nt": "6c01a6d777"
@@ -667,8 +667,8 @@
    "start": "2026-09-07T11:30:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2026/07/pao.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "6ca22e8c00"
   },
@@ -686,7 +686,7 @@
    "start": "2026-09-07T21:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPv8KADfswAJTkstwM1Rcoqnx6PVWzyTOkiu4ZyqbhFX_",
+   "homeLogo": "https://paokalendar.gr/crests/ef09db47680f1bdf.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "0308a01090"
@@ -705,7 +705,7 @@
    "start": "2026-09-08T21:30:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPpg3N2bOyqYSOH-YQTYpqdrRQXnKOBO_HbOLBm4VouOa",
+   "homeLogo": "https://paokalendar.gr/crests/a8cf966a51a9fe2c.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "9c6d64f42d"
@@ -725,7 +725,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/db0640a9731d4d37a2734dc25c4d4d95/2bdb093377e1431ca24293169ab76f4e_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/3336d8d5b5f80ac9.png",
    "tvUrl": "",
    "nt": "6452e67946"
   },
@@ -744,7 +744,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPv8KADfswAJTkstwM1Rcoqnx6PVWzyTOkiu4ZyqbhFX_",
+   "awayLogo": "https://paokalendar.gr/crests/ef09db47680f1bdf.png",
    "tvUrl": "",
    "nt": "346cf184bf"
   },
@@ -763,7 +763,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPpg3N2bOyqYSOH-YQTYpqdrRQXnKOBO_HbOLBm4VouOa",
+   "awayLogo": "https://paokalendar.gr/crests/a8cf966a51a9fe2c.png",
    "tvUrl": "",
    "nt": "ffa83cf4a0"
   },
@@ -782,7 +782,7 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2026/07/aris_new-150x150-1.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "aed71132a4"
   },
@@ -819,8 +819,8 @@
    "start": "2026-09-13T12:00:00+03:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/uploads/2026/07/aris_new-150x150-1.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "43f64d116c"
   },
@@ -881,8 +881,8 @@
    "start": "2026-09-14T16:30:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2026/07/aris_new-150x150-1.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "c3d42c20ba"
   },
@@ -900,7 +900,7 @@
    "start": "2026-09-14T17:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/8e899347a75a46889ddd7d0490f182fe/42c1047b95564511a24cbdb5db428f8c_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/e32caebe67764286.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "09e823d705"
@@ -919,7 +919,7 @@
    "start": "2026-09-14T17:30:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPig0ZtjdYchdHyj36rCpL2_OP_hYfXcZFcL_9bQNQZcR",
+   "homeLogo": "https://paokalendar.gr/crests/d5a870f94b302f6e.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "57436c015a"
@@ -957,7 +957,7 @@
    "start": "2026-09-16T21:30:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPv8KADfswAJTkstwM1Rcoqnx6PVWzyTOkiu4ZyqbhFX_",
+   "homeLogo": "https://paokalendar.gr/crests/ef09db47680f1bdf.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "a2cb35b9a3"
@@ -977,7 +977,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPig0ZtjdYchdHyj36rCpL2_OP_hYfXcZFcL_9bQNQZcR",
+   "awayLogo": "https://paokalendar.gr/crests/d5a870f94b302f6e.png",
    "tvUrl": "",
    "nt": "c39a1c838b"
   },
@@ -996,7 +996,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPv8KADfswAJTkstwM1Rcoqnx6PVWzyTOkiu4ZyqbhFX_",
+   "awayLogo": "https://paokalendar.gr/crests/ef09db47680f1bdf.png",
    "tvUrl": "",
    "nt": "3bed92da42"
   },
@@ -1014,7 +1014,7 @@
    "start": "2026-09-19T11:00:00+03:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
    "awayLogo": "https://www.paokfc.gr/wp-content/uploads/2016/09/panaitolikos_logo.png",
    "tvUrl": "",
    "nt": "05a2371a65"
@@ -1033,8 +1033,8 @@
    "start": "2026-09-19T12:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2016/09/panaitolikos_logo.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "1f80f5ec32"
   },
@@ -1052,8 +1052,8 @@
    "start": "2026-09-19T13:15:00+03:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/uploads/2016/09/panaitolikos_logo.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "cec7866a3c"
   },
@@ -1134,7 +1134,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/48b46b2576864c26832db13c63e7e9e0/15f533f44940488a8446de1499de7736_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/0603c210e2bd10b8.png",
    "tvUrl": "",
    "nt": "439828507b"
   },
@@ -1196,7 +1196,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPr8CrSboulgfsvuKqZLHS5HOP_hYfXcZFcL_9bQNQZcR",
+   "awayLogo": "https://paokalendar.gr/crests/4f5350a97f9a34ed.png",
    "tvUrl": "",
    "nt": "f1522af7d2"
   },
@@ -1290,8 +1290,8 @@
    "start": "2026-09-27T11:45:00+03:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/uploads/2015/05/atromitos.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "ca8a0382ea"
   },
@@ -1309,7 +1309,7 @@
    "start": "2026-09-27T16:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/e6a56a5e053d46a18312b13520f0a963/f530f23fe61544738571b5844769b8f6_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/28bfa54c724e10bc.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "1e2f704d02"
@@ -1328,7 +1328,7 @@
    "start": "2026-09-27T16:30:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPgl8nOA7rlk8or4oJLePo3XRvbSlzBYN7FdXirgUWVqv",
+   "homeLogo": "https://paokalendar.gr/crests/73f92b95a4cc80c0.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "9550d5f1fa"
@@ -1490,8 +1490,8 @@
    "start": "2026-10-03T12:00:00+03:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/uploads/2026/07/pao.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "28fbc130da"
   },
@@ -1566,7 +1566,7 @@
    "start": "2026-10-03T18:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPvPWjsBU1plOY1G8S_DtI-wBUXsjc4_tESfrp5f4rvA_",
+   "homeLogo": "https://paokalendar.gr/crests/e27a2e131bfbde8d.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "e905f6d8bd"
@@ -1605,7 +1605,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPk0C4Pd4bMM80V4qV42oHgqTIRmtmzdJfrJghnWD5O92",
+   "awayLogo": "https://paokalendar.gr/crests/6a7322d3ff5aee1a.png",
    "tvUrl": "",
    "nt": "3cda1ac2c1"
   },
@@ -1681,7 +1681,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/4c9e4e5ef45c4fb4bc6270b9ad5dde9a/e49cf2f91f0e4602aa86514912e0fb23_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/a9f3c01b4b9d47c3.png",
    "tvUrl": "",
    "nt": "6b5cc39ec2"
   },
@@ -1718,7 +1718,7 @@
    "start": "2026-10-06T19:45:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPrZM8z6npbG5ebsNPOgaUbvRvbSlzBYN7FdXirgUWVqv",
+   "homeLogo": "https://paokalendar.gr/crests/c8bdd46ed9f6061c.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "f729419369"
@@ -1738,7 +1738,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPu-wjB2seFnkIKrt418zkw6z5_55JdNJhkMbSGTcpYZE",
+   "awayLogo": "https://paokalendar.gr/crests/2200b2a00577dd9a.png",
    "tvUrl": "",
    "nt": "58f6db0c6c"
   },
@@ -1800,7 +1800,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPm8T7OFpbev50o8Z67YWOFRKcAZeh-iAwgX6mMT-uUFO",
+   "awayLogo": "https://paokalendar.gr/crests/de353a346501536f.png",
    "tvUrl": "",
    "nt": "8e61c07e03"
   },
@@ -1819,7 +1819,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/Panellinios-logo.jpg",
+   "awayLogo": "https://paokalendar.gr/crests/671a667a21ed9b09.jpg",
    "tvUrl": "",
    "nt": "ee972dede7"
   },
@@ -1856,7 +1856,7 @@
    "start": "2026-10-10T11:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPr8CrSboulgfsvuKqZLHS5HOP_hYfXcZFcL_9bQNQZcR",
+   "homeLogo": "https://paokalendar.gr/crests/4f5350a97f9a34ed.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "34353474ca"
@@ -1894,7 +1894,7 @@
    "start": "2026-10-10T13:00:00+03:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
    "awayLogo": "https://www.paokfc.gr/wp-content/uploads/2022/12/kalamata_logo_site.png",
    "tvUrl": "",
    "nt": "61febe2508"
@@ -1932,7 +1932,7 @@
    "start": "2026-10-10T15:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Pigasos2.gif",
+   "homeLogo": "https://paokalendar.gr/crests/130b4d39e358485d.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "12cccb77ba"
@@ -2028,7 +2028,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPsDhJXujq-eKvGRzHAS0RJHRvbSlzBYN7FdXirgUWVqv",
+   "awayLogo": "https://paokalendar.gr/crests/08671264f06a8f49.png",
    "tvUrl": "",
    "nt": "7a09e2102b"
   },
@@ -2046,8 +2046,8 @@
    "start": "2026-10-11T10:30:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2022/12/kalamata_logo_site.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "870072703f"
   },
@@ -2084,8 +2084,8 @@
    "start": "2026-10-11T13:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2022/12/kalamata_logo_site.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "a93f503276"
   },
@@ -2103,7 +2103,7 @@
    "start": "2026-10-11T15:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPmO_dtLkQTSENDCSWfcP4TLRQXnKOBO_HbOLBm4VouOa",
+   "homeLogo": "https://paokalendar.gr/crests/a1e96876278022c0.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "d58b292222"
@@ -2123,7 +2123,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-IonikosIon.jpg",
+   "awayLogo": "https://paokalendar.gr/crests/650b5739185c662d.jpg",
    "tvUrl": "",
    "nt": "4f21954f25"
   },
@@ -2160,7 +2160,7 @@
    "start": "2026-10-12T14:45:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/c3ca3816303942d5a51ab2ad046ae2e8/d2b55f051fc64a75aafa9d86b2446c3a_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/31a122ba141db854.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "a68d18456f"
@@ -2203,7 +2203,7 @@
    "start": "2026-10-12T21:45:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/DEKA-Volley_small.jpg",
+   "homeLogo": "https://paokalendar.gr/crests/cd37e2be09885246.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "a0f51b4f2c"
@@ -2265,7 +2265,7 @@
    "start": "2026-10-14T21:30:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPqCUII_7RNy7ZDeb2hL8wJTRvbSlzBYN7FdXirgUWVqv",
+   "homeLogo": "https://paokalendar.gr/crests/75b973c541f921a8.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "f33aeca357"
@@ -2322,7 +2322,7 @@
    "start": "2026-10-17T13:00:00+03:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
    "awayLogo": "https://www.paokfc.gr/wp-content/uploads/2026/07/Iraklis_logo-1.png",
    "tvUrl": "",
    "nt": "8a7734af8b"
@@ -2436,8 +2436,8 @@
    "start": "2026-10-17T17:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2026/07/Iraklis_logo-1.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "4183e450df"
   },
@@ -2455,7 +2455,7 @@
    "start": "2026-10-17T17:30:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPk06P7bS1FSMsgCzGggVYqGAggkMI6e6yDRjN5TlWmHY",
+   "homeLogo": "https://paokalendar.gr/crests/d4601a50f18689f5.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "959f1c741f"
@@ -2493,7 +2493,7 @@
    "start": "2026-10-17T20:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Aris.gif",
+   "homeLogo": "https://paokalendar.gr/crests/a6cf7459614a4108.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "d27d51a72a"
@@ -2513,7 +2513,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPogowqEm-wvBei5qzzViehPRQXnKOBO_HbOLBm4VouOa",
+   "awayLogo": "https://paokalendar.gr/crests/4bd00357ce78a38b.png",
    "tvUrl": "",
    "nt": "aa68b56997"
   },
@@ -2531,8 +2531,8 @@
    "start": "2026-10-18T12:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2026/07/Iraklis_logo-1.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "7d5835c801"
   },
@@ -2551,7 +2551,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-AENpanor.gif",
+   "awayLogo": "https://paokalendar.gr/crests/4365a4ed96c7e519.gif",
    "tvUrl": "",
    "nt": "37936a5c64"
   },
@@ -2570,7 +2570,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Aris.gif",
+   "awayLogo": "https://paokalendar.gr/crests/a6cf7459614a4108.gif",
    "tvUrl": "",
    "nt": "f8561a259a"
   },
@@ -2608,7 +2608,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2023/03/244205994_280764573765604_9029332810770461336_n.jpg",
+   "awayLogo": "https://paokalendar.gr/crests/ab51bab042c507d3.jpg",
    "tvUrl": "",
    "nt": "252be74e66"
   },
@@ -2708,7 +2708,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/e2b204ca1fc74402887747185c46a5e1/74b397486cd94200b735bef4e1d1276a_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/5aaf016514977c07.png",
    "tvUrl": "",
    "nt": "65379e0d1f"
   },
@@ -2765,7 +2765,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPpg3N2bOyqYSOH-YQTYpqdrRQXnKOBO_HbOLBm4VouOa",
+   "awayLogo": "https://paokalendar.gr/crests/a8cf966a51a9fe2c.png",
    "tvUrl": "",
    "nt": "2f3986415b"
   },
@@ -2783,7 +2783,7 @@
    "start": "2026-10-20T21:30:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPsDhJXujq-eKvGRzHAS0RJHRvbSlzBYN7FdXirgUWVqv",
+   "homeLogo": "https://paokalendar.gr/crests/08671264f06a8f49.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "04df75a1f1"
@@ -2864,7 +2864,7 @@
    "start": "2026-10-21T21:30:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPig0ZtjdYchdHyj36rCpL2_OP_hYfXcZFcL_9bQNQZcR",
+   "homeLogo": "https://paokalendar.gr/crests/d5a870f94b302f6e.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "14f2ee5e8a"
@@ -2903,7 +2903,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/d974b1aaf0974622ab0cb072b2fe06bb/563c2c2f70b2431b9579dab266581ead_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/45c8d40c7b8bce10.png",
    "tvUrl": "",
    "nt": "bba0a09cc7"
   },
@@ -2922,7 +2922,7 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2026/09/OFI_Logo_Stars_K_Filled_2026.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "b2393e270d"
   },
@@ -2940,8 +2940,8 @@
    "start": "2026-10-24T15:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/0f790193242b166f3739b2a9755fc844.jpg?itok=8k2CeR2I",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "homeLogo": "https://paokalendar.gr/crests/1b8cd8b595a4c22b.png",
+   "awayLogo": "https://paokalendar.gr/crests/70e7f8e9f5d3d44a.png",
    "tvUrl": "",
    "nt": "44ebd40b97"
   },
@@ -2978,7 +2978,7 @@
    "start": "2026-10-24T17:00:00+03:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
    "awayLogo": "https://www.paokfc.gr/wp-content/uploads/2026/08/OFI_logo_2026_27.png",
    "tvUrl": "",
    "nt": "98ef460d46"
@@ -3073,7 +3073,7 @@
    "start": "2026-10-25T15:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/5e9c482d669344b9a185f2c46244dfd4/a664a87716d84b6c8fd4721dccd677d5_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/206cce345025deda.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "3e8671e3e2"
@@ -3111,8 +3111,8 @@
    "start": "2026-10-25T16:30:00+02:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/uploads/2026/09/OFI_Logo_Stars_K_Filled_2026.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "d8f881ee91"
   },
@@ -3198,7 +3198,7 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2026/10/Zrinjski_Mostar_Logo.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "eb993a63d0"
   },
@@ -3236,7 +3236,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPuW6NVMyDT3LDqVVctSf1sGTIRmtmzdJfrJghnWD5O92",
+   "awayLogo": "https://paokalendar.gr/crests/44e72a40b38b3daf.png",
    "tvUrl": "",
    "nt": "8b74fc407e"
   },
@@ -3292,7 +3292,7 @@
    "start": "2026-10-31T12:00:00+02:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
    "awayLogo": "https://www.paokfc.gr/wp-content/uploads/2024/07/asterasxaktor-blue.png",
    "tvUrl": "",
    "nt": "9b57050912"
@@ -3369,7 +3369,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-EspTher.gif",
+   "awayLogo": "https://paokalendar.gr/crests/13dcd700c3951554.gif",
    "tvUrl": "",
    "nt": "5c1aa5e6f6"
   },
@@ -3502,7 +3502,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Elpis.gif",
+   "awayLogo": "https://paokalendar.gr/crests/c712331b07c14a6d.gif",
    "tvUrl": "",
    "nt": "cfab3926a9"
   },
@@ -3520,7 +3520,7 @@
    "start": "2026-10-31T19:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPqCUII_7RNy7ZDeb2hL8wJTRvbSlzBYN7FdXirgUWVqv",
+   "homeLogo": "https://paokalendar.gr/crests/75b973c541f921a8.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "e76c84afea"
@@ -3559,7 +3559,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPu-wjB2seFnkIKrt418zkw6z5_55JdNJhkMbSGTcpYZE",
+   "awayLogo": "https://paokalendar.gr/crests/2200b2a00577dd9a.png",
    "tvUrl": "",
    "nt": "b89c1533d6"
   },
@@ -3616,7 +3616,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/810b360609c849e98cb6166f1be09559/5593ed8258c3410293d4675e7fd85b02_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/9b2ef52e0b4f74d0.png",
    "tvUrl": "",
    "nt": "034fb573a2"
   },
@@ -3634,7 +3634,7 @@
    "start": "2026-11-01T15:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-NVotsis1.jpg",
+   "homeLogo": "https://paokalendar.gr/crests/f5220de4cb0542e9.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "72ddd2ddc2"
@@ -3734,7 +3734,7 @@
    "start": "2026-11-01T21:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-MENT-1.gif",
+   "homeLogo": "https://paokalendar.gr/crests/95ecf0b818f2912d.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "016d851701"
@@ -3753,7 +3753,7 @@
    "start": "2026-11-02T21:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2024/03/MAK-NEO-830x830-1.jpg",
+   "homeLogo": "https://paokalendar.gr/crests/efadf5b8da59bd89.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "c9969587ad"
@@ -3796,7 +3796,7 @@
    "start": "2026-11-03T21:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPnOfLmikYX2aroo9zDPyIQXRQXnKOBO_HbOLBm4VouOa",
+   "homeLogo": "https://paokalendar.gr/crests/bd6151cb0b9a8f72.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "7ed8fef800"
@@ -3815,7 +3815,7 @@
    "start": "2026-11-03T21:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPgl8nOA7rlk8or4oJLePo3XRvbSlzBYN7FdXirgUWVqv",
+   "homeLogo": "https://paokalendar.gr/crests/73f92b95a4cc80c0.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "1a01a41190"
@@ -3834,8 +3834,8 @@
    "start": "2026-11-04T15:30:00+02:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/uploads/2026/10/Zrinjski_Mostar_Logo.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "5e5cbf6fce"
   },
@@ -3872,7 +3872,7 @@
    "start": "2026-11-04T20:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPsc_H2_zZ5HQVtXNwstEZ-PRQXnKOBO_HbOLBm4VouOa",
+   "homeLogo": "https://paokalendar.gr/crests/eaed84f681c3fdd7.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "ed1dd5febc"
@@ -3892,7 +3892,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPuW6NVMyDT3LDqVVctSf1sGTIRmtmzdJfrJghnWD5O92",
+   "awayLogo": "https://paokalendar.gr/crests/44e72a40b38b3daf.png",
    "tvUrl": "",
    "nt": "544d0f085d"
   },
@@ -3968,7 +3968,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/48b46b2576864c26832db13c63e7e9e0/15f533f44940488a8446de1499de7736_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/0603c210e2bd10b8.png",
    "tvUrl": "",
    "nt": "a9ef61f4f6"
   },
@@ -4024,7 +4024,7 @@
    "start": "2026-11-07T15:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPgl8nOA7rlk8or4oJLePo3XRvbSlzBYN7FdXirgUWVqv",
+   "homeLogo": "https://paokalendar.gr/crests/73f92b95a4cc80c0.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "75efdbf469"
@@ -4138,7 +4138,7 @@
    "start": "2026-11-07T18:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Perseas.gif",
+   "homeLogo": "https://paokalendar.gr/crests/1838d2be1f8aa90d.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "ba7fd70e88"
@@ -4157,7 +4157,7 @@
    "start": "2026-11-07T20:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-AENpanor.gif",
+   "homeLogo": "https://paokalendar.gr/crests/4365a4ed96c7e519.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "0481715198"
@@ -4196,7 +4196,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPr2oJoxW3qb6ZEWmJp6Q5-bRvbSlzBYN7FdXirgUWVqv",
+   "awayLogo": "https://paokalendar.gr/crests/e13535df8ce4ca35.png",
    "tvUrl": "",
    "nt": "09573abe56"
   },
@@ -4215,7 +4215,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPmCa5ol_uik8jGKLmlUlk_7RvbSlzBYN7FdXirgUWVqv",
+   "awayLogo": "https://paokalendar.gr/crests/098b3594f31398ad.png",
    "tvUrl": "",
    "nt": "e8db9e3c6e"
   },
@@ -4233,7 +4233,7 @@
    "start": "2026-11-08T11:00:00+02:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
    "awayLogo": "https://www.paokfc.gr/wp-content/uploads/2026/09/Olympiakos_logo_2027.png",
    "tvUrl": "",
    "nt": "209f3f61c2"
@@ -4271,8 +4271,8 @@
    "start": "2026-11-08T13:30:00+02:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/uploads/2026/09/Olympiakos_logo_2027.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "816b6d2ad0"
   },
@@ -4290,7 +4290,7 @@
    "start": "2026-11-08T15:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/919c2c9158524f629bf9d1c0c72aaf7f/36e4596d36874628b6dd9f26094710a1_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/289f9867a3b8c278.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "442879a7c6"
@@ -4310,7 +4310,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-EthnPylaias.gif",
+   "awayLogo": "https://paokalendar.gr/crests/ca43c017552cc58c.gif",
    "tvUrl": "",
    "nt": "5b5abf05c5"
   },
@@ -4329,7 +4329,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-NVotsis1.jpg",
+   "awayLogo": "https://paokalendar.gr/crests/f5220de4cb0542e9.jpg",
    "tvUrl": "",
    "nt": "9a7f98e7e8"
   },
@@ -4348,7 +4348,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-AENpanor.gif",
+   "awayLogo": "https://paokalendar.gr/crests/4365a4ed96c7e519.gif",
    "tvUrl": "",
    "nt": "0cd3547a26"
   },
@@ -4467,7 +4467,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/Iraklis-GS-1908-logo-e1634492746644.jpg",
+   "awayLogo": "https://paokalendar.gr/crests/dfe52c5f35b6e400.jpg",
    "tvUrl": "",
    "nt": "4f33b57a26"
   },
@@ -4510,7 +4510,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPkhsh5CzwDmaCuaEvh-y7sw89nVpTKUBGjTGj7xAFDdj",
+   "awayLogo": "https://paokalendar.gr/crests/f400cf509efbda6a.png",
    "tvUrl": "",
    "nt": "f89df15179"
   },
@@ -4528,7 +4528,7 @@
    "start": "2026-11-10T21:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPig0ZtjdYchdHyj36rCpL2_OP_hYfXcZFcL_9bQNQZcR",
+   "homeLogo": "https://paokalendar.gr/crests/d5a870f94b302f6e.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "494b52c14f"
@@ -4547,7 +4547,7 @@
    "start": "2026-11-11T19:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPpg3N2bOyqYSOH-YQTYpqdrRQXnKOBO_HbOLBm4VouOa",
+   "homeLogo": "https://paokalendar.gr/crests/a8cf966a51a9fe2c.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "b8d3f8d76a"
@@ -4604,7 +4604,7 @@
    "start": "2026-11-14T09:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-OlimposNew.gif",
+   "homeLogo": "https://paokalendar.gr/crests/c607b0f315b73d73.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "f3d727d423"
@@ -4680,7 +4680,7 @@
    "start": "2026-11-14T15:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/616dba6a0146410fad808bc63dbb5b70/4621470d833b4db1aa1f6b162dfd5db2_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/4aef824c428dfe2b.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "67fb3a868a"
@@ -4756,7 +4756,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Megas.gif",
+   "awayLogo": "https://paokalendar.gr/crests/0922c8c42a5bd55a.gif",
    "tvUrl": "",
    "nt": "666a45cc71"
   },
@@ -4857,7 +4857,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Pigasos2.gif",
+   "awayLogo": "https://paokalendar.gr/crests/130b4d39e358485d.gif",
    "tvUrl": "",
    "nt": "1c0875943e"
   },
@@ -4933,7 +4933,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPvy8sWRIEiYUk_0wcBVSAgrOP_hYfXcZFcL_9bQNQZcR",
+   "awayLogo": "https://paokalendar.gr/crests/cd081952bbf0f43b.png",
    "tvUrl": "",
    "nt": "c22ffbc20b"
   },
@@ -4971,7 +4971,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/e6a56a5e053d46a18312b13520f0a963/f530f23fe61544738571b5844769b8f6_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/28bfa54c724e10bc.png",
    "tvUrl": "",
    "nt": "21b55aaf4c"
   },
@@ -4990,7 +4990,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Aris.gif",
+   "awayLogo": "https://paokalendar.gr/crests/a6cf7459614a4108.gif",
    "tvUrl": "",
    "nt": "1b6a2460ad"
   },
@@ -5027,7 +5027,7 @@
    "start": "2026-11-15T18:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Perseas.gif",
+   "homeLogo": "https://paokalendar.gr/crests/1838d2be1f8aa90d.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "bbdefbeac7"
@@ -5065,7 +5065,7 @@
    "start": "2026-11-16T21:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-EOS.jpg",
+   "homeLogo": "https://paokalendar.gr/crests/7cbdd29c28a19fa5.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "fd291dda7c"
@@ -5084,7 +5084,7 @@
    "start": "2026-11-17T20:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPvy8sWRIEiYUk_0wcBVSAgrOP_hYfXcZFcL_9bQNQZcR",
+   "homeLogo": "https://paokalendar.gr/crests/cd081952bbf0f43b.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "1a3c2691b8"
@@ -5137,7 +5137,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPnOfLmikYX2aroo9zDPyIQXRQXnKOBO_HbOLBm4VouOa",
+   "awayLogo": "https://paokalendar.gr/crests/bd6151cb0b9a8f72.png",
    "tvUrl": "",
    "nt": "6bf7dc1853"
   },
@@ -5180,7 +5180,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPqCUII_7RNy7ZDeb2hL8wJTRvbSlzBYN7FdXirgUWVqv",
+   "awayLogo": "https://paokalendar.gr/crests/75b973c541f921a8.png",
    "tvUrl": "",
    "nt": "6dd837931a"
   },
@@ -5293,8 +5293,8 @@
    "start": "2026-11-21T12:30:00+02:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/fb84f8acc0b35a20cf5eddd3d801eaf8.jpg?itok=Lr8qTrJt",
+   "homeLogo": "https://paokalendar.gr/crests/70e7f8e9f5d3d44a.png",
+   "awayLogo": "https://paokalendar.gr/crests/b553c93283100b92.png",
    "tvUrl": "",
    "nt": "86f3ed283b"
   },
@@ -5313,7 +5313,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPrZM8z6npbG5ebsNPOgaUbvRvbSlzBYN7FdXirgUWVqv",
+   "awayLogo": "https://paokalendar.gr/crests/c8bdd46ed9f6061c.png",
    "tvUrl": "",
    "nt": "077f734ce3"
   },
@@ -5387,7 +5387,7 @@
    "start": "2026-11-21T15:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/Iraklis-GS-1908-logo-e1634492746644.jpg",
+   "homeLogo": "https://paokalendar.gr/crests/dfe52c5f35b6e400.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "22fc692aa9"
@@ -5406,7 +5406,7 @@
    "start": "2026-11-21T15:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Langadas.gif",
+   "homeLogo": "https://paokalendar.gr/crests/74ba218c5b6fb9e6.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "57d1ab0501"
@@ -5552,7 +5552,7 @@
    "start": "2026-11-21T19:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/e2b204ca1fc74402887747185c46a5e1/74b397486cd94200b735bef4e1d1276a_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/5aaf016514977c07.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "4ccedc41f3"
@@ -5572,7 +5572,7 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2023/07/kifisi_logo_site.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "ff1e700c60"
   },
@@ -5610,7 +5610,7 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2025/11/kifisia_logo_new_site.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "6c2178ec33"
   },
@@ -5647,7 +5647,7 @@
    "start": "2026-11-22T15:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/Vergina-logo-e1634493452639.jpg",
+   "homeLogo": "https://paokalendar.gr/crests/dabc093b55edb090.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "401ceaa0a2"
@@ -5666,7 +5666,7 @@
    "start": "2026-11-22T16:45:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPrvTMnIX1ImpgMgGyPngk1XRvbSlzBYN7FdXirgUWVqv",
+   "homeLogo": "https://paokalendar.gr/crests/53ad44874cf80e36.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "91a6c9869d"
@@ -5710,7 +5710,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/d974b1aaf0974622ab0cb072b2fe06bb/563c2c2f70b2431b9579dab266581ead_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/45c8d40c7b8bce10.png",
    "tvUrl": "",
    "nt": "b6e10647d4"
   },
@@ -5782,7 +5782,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPnHzgdtySg5q_qcY-NvtHqrOP_hYfXcZFcL_9bQNQZcR",
+   "awayLogo": "https://paokalendar.gr/crests/4090eabe33363d9c.png",
    "tvUrl": "",
    "nt": "a4116438af"
   },
@@ -5819,7 +5819,7 @@
    "start": "2026-11-24T21:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPqCUII_7RNy7ZDeb2hL8wJTRvbSlzBYN7FdXirgUWVqv",
+   "homeLogo": "https://paokalendar.gr/crests/75b973c541f921a8.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "f50cfaa3d0"
@@ -5839,7 +5839,7 @@
    "timeKnown": true,
    "paokHome": false,
    "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2026/11/Untitled-design-14.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "68553fcd94"
   },
@@ -5857,7 +5857,7 @@
    "start": "2026-11-25T21:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPv8KADfswAJTkstwM1Rcoqnx6PVWzyTOkiu4ZyqbhFX_",
+   "homeLogo": "https://paokalendar.gr/crests/ef09db47680f1bdf.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "2ea0c2af99"
@@ -5876,7 +5876,7 @@
    "start": "2026-11-26T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPig0ZtjdYchdHyj36rCpL2_OP_hYfXcZFcL_9bQNQZcR",
+   "homeLogo": "https://paokalendar.gr/crests/d5a870f94b302f6e.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "bb99347409"
@@ -5896,7 +5896,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPm8T7OFpbev50o8Z67YWOFRKcAZeh-iAwgX6mMT-uUFO",
+   "awayLogo": "https://paokalendar.gr/crests/de353a346501536f.png",
    "tvUrl": "",
    "nt": "a9be057e13"
   },
@@ -5938,7 +5938,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-POMoudanion.gif",
+   "awayLogo": "https://paokalendar.gr/crests/157aab7aec347343.gif",
    "tvUrl": "",
    "nt": "3c9a1561de"
   },
@@ -6084,7 +6084,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-POMoudanion.gif",
+   "awayLogo": "https://paokalendar.gr/crests/157aab7aec347343.gif",
    "tvUrl": "",
    "nt": "fa1761bb12"
   },
@@ -6128,7 +6128,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPvPWjsBU1plOY1G8S_DtI-wBUXsjc4_tESfrp5f4rvA_",
+   "awayLogo": "https://paokalendar.gr/crests/e27a2e131bfbde8d.png",
    "tvUrl": "",
    "nt": "4bf2b3b0b3"
   },
@@ -6146,7 +6146,7 @@
    "start": "2026-11-29T11:00:00+02:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
    "awayLogo": "https://www.paokfc.gr/wp-content/uploads/2015/07/aek_logo.png",
    "tvUrl": "",
    "nt": "12b27c0f88"
@@ -6166,7 +6166,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPt2ya3IdEE_-hmecRfy4u2fOP_hYfXcZFcL_9bQNQZcR",
+   "awayLogo": "https://paokalendar.gr/crests/541bd9770cbd296d.png",
    "tvUrl": "",
    "nt": "3a07f5a458"
   },
@@ -6184,8 +6184,8 @@
    "start": "2026-11-29T13:30:00+02:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/uploads/2015/07/aek_logo.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "0b5117a747"
   },
@@ -6203,8 +6203,8 @@
    "start": "2026-11-29T15:00:00+02:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/3bfe993f792098774518adab55c24608.jpg?itok=JsUQYFIb",
+   "homeLogo": "https://paokalendar.gr/crests/70e7f8e9f5d3d44a.png",
+   "awayLogo": "https://paokalendar.gr/crests/79c866141c19bde5.png",
    "tvUrl": "",
    "nt": "90fdba5378"
   },
@@ -6223,7 +6223,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-AENAgTriad.gif",
+   "awayLogo": "https://paokalendar.gr/crests/8cafbe3d94f54154.gif",
    "tvUrl": "",
    "nt": "7b7acd2976"
   },
@@ -6266,7 +6266,7 @@
    "start": "2026-11-29T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/e576448345ca49eeb300016b5c485625/6a35e7d82ef04a338cea212d6b413d63_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/6df3648d8faae8e0.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "b2dc0a3746"
@@ -6305,7 +6305,7 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/8e899347a75a46889ddd7d0490f182fe/42c1047b95564511a24cbdb5db428f8c_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/e32caebe67764286.png",
    "tvUrl": "",
    "nt": "178fefe2ff"
   },
@@ -6380,7 +6380,7 @@
    "start": "2026-11-29T18:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-AENpanor.gif",
+   "homeLogo": "https://paokalendar.gr/crests/4365a4ed96c7e519.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "e9809ceaf4"
@@ -6424,7 +6424,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Pigasos2.gif",
+   "awayLogo": "https://paokalendar.gr/crests/130b4d39e358485d.gif",
    "tvUrl": "",
    "nt": "e3873ad8e8"
   },
@@ -6442,7 +6442,7 @@
    "start": "2026-11-30T21:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Hanth.gif",
+   "homeLogo": "https://paokalendar.gr/crests/ea7f77b7613d9057.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "043149eb9d"
@@ -6462,7 +6462,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPsc_H2_zZ5HQVtXNwstEZ-PRQXnKOBO_HbOLBm4VouOa",
+   "awayLogo": "https://paokalendar.gr/crests/eaed84f681c3fdd7.png",
    "tvUrl": "",
    "nt": "d777d30e57"
   },
@@ -6480,7 +6480,7 @@
    "start": "2026-12-01T21:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPr8CrSboulgfsvuKqZLHS5HOP_hYfXcZFcL_9bQNQZcR",
+   "homeLogo": "https://paokalendar.gr/crests/4f5350a97f9a34ed.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "7ced4bff09"
@@ -6557,7 +6557,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPkhsh5CzwDmaCuaEvh-y7sw7jZ3QxI8YUZ-Bj573wGto",
+   "awayLogo": "https://paokalendar.gr/crests/c35ea78a2c95ae69.png",
    "tvUrl": "",
    "nt": "761c362e88"
   },
@@ -6613,7 +6613,7 @@
    "start": "2026-12-05T16:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Aias.gif",
+   "homeLogo": "https://paokalendar.gr/crests/217de571443cb8c2.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "87655ddef7"
@@ -6632,7 +6632,7 @@
    "start": "2026-12-05T16:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-EOS.jpg",
+   "homeLogo": "https://paokalendar.gr/crests/7cbdd29c28a19fa5.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "f0c392f30f"
@@ -6728,7 +6728,7 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2019/07/nfc_volos_logo.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "ed79170243"
   },
@@ -6746,8 +6746,8 @@
    "start": "2026-12-05T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2019/07/nfc_volos_logo.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "0eb6d160d3"
   },
@@ -6765,8 +6765,8 @@
    "start": "2026-12-05T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": true,
-   "homeLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/uploads/2019/07/nfc_volos_logo.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "9ee98030e6"
   },
@@ -6823,7 +6823,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPr8CrSboulgfsvuKqZLHS5HOP_hYfXcZFcL_9bQNQZcR",
+   "awayLogo": "https://paokalendar.gr/crests/4f5350a97f9a34ed.png",
    "tvUrl": "",
    "nt": "37a09d7c62"
   },
@@ -6841,7 +6841,7 @@
    "start": "2026-12-05T20:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPsDhJXujq-eKvGRzHAS0RJHRvbSlzBYN7FdXirgUWVqv",
+   "homeLogo": "https://paokalendar.gr/crests/08671264f06a8f49.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "7d87b31724"
@@ -6879,8 +6879,8 @@
    "start": "2026-12-06T15:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/bc059cd79ef68a1b0542630b69146908.jpg?itok=eRd5WHBk",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "homeLogo": "https://paokalendar.gr/crests/af4e177cf848cf4f.png",
+   "awayLogo": "https://paokalendar.gr/crests/70e7f8e9f5d3d44a.png",
    "tvUrl": "",
    "nt": "30e070b890"
   },
@@ -6899,7 +6899,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-NVotsis1.jpg",
+   "awayLogo": "https://paokalendar.gr/crests/f5220de4cb0542e9.jpg",
    "tvUrl": "",
    "nt": "4411a7e0d3"
   },
@@ -6918,7 +6918,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Pigasos2.gif",
+   "awayLogo": "https://paokalendar.gr/crests/130b4d39e358485d.gif",
    "tvUrl": "",
    "nt": "06897b9307"
   },
@@ -6936,7 +6936,7 @@
    "start": "2026-12-06T17:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPvSE8hJecTTuwqzMCLF3uqPRvbSlzBYN7FdXirgUWVqv",
+   "homeLogo": "https://paokalendar.gr/crests/fe8e9d714bc1d55b.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "496e1c706a"
@@ -6956,7 +6956,7 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/9e35f361265d46d487df5824419a0a72/edf367db7766448db39d49ca05a58d59_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/cb6f27cd2b720060.png",
    "tvUrl": "",
    "nt": "25529db288"
   },
@@ -6993,7 +6993,7 @@
    "start": "2026-12-06T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/9e35f361265d46d487df5824419a0a72/edf367db7766448db39d49ca05a58d59_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/cb6f27cd2b720060.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "5d54e062f0"
@@ -7093,7 +7093,7 @@
    "start": "2026-12-06T20:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Perseas.gif",
+   "homeLogo": "https://paokalendar.gr/crests/1838d2be1f8aa90d.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "6899aa9574"
@@ -7113,7 +7113,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/DEKA-Volley_small.jpg",
+   "awayLogo": "https://paokalendar.gr/crests/cd37e2be09885246.jpg",
    "tvUrl": "",
    "nt": "31c53fbbe8"
   },
@@ -7156,7 +7156,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPv8KADfswAJTkstwM1Rcoqnx6PVWzyTOkiu4ZyqbhFX_",
+   "awayLogo": "https://paokalendar.gr/crests/ef09db47680f1bdf.png",
    "tvUrl": "",
    "nt": "75b69564ac"
   },
@@ -7174,7 +7174,7 @@
    "start": "2026-12-08T21:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPv8KADfswAJTkstwM1Rcoqnx6PVWzyTOkiu4ZyqbhFX_",
+   "homeLogo": "https://paokalendar.gr/crests/ef09db47680f1bdf.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "7e09a8bd6f"
@@ -7212,7 +7212,7 @@
    "start": "2026-12-09T17:30:00+02:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
    "awayLogo": "https://www.paokfc.gr/wp-content/uploads/2026/11/Hoffenheim_logo.png",
    "tvUrl": "",
    "nt": "af437678df"
@@ -7231,7 +7231,7 @@
    "start": "2026-12-09T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPhBX7j8cvqKl-t_C0itbujTRvbSlzBYN7FdXirgUWVqv",
+   "homeLogo": "https://paokalendar.gr/crests/5ae872a725283cdb.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "f9a4a4c072"
@@ -7307,7 +7307,7 @@
    "start": "2026-12-12T14:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-IonikosIon.jpg",
+   "homeLogo": "https://paokalendar.gr/crests/650b5739185c662d.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "41748897da"
@@ -7327,7 +7327,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-IonikosIon.jpg",
+   "awayLogo": "https://paokalendar.gr/crests/650b5739185c662d.jpg",
    "tvUrl": "",
    "nt": "4e8af3614e"
   },
@@ -7364,7 +7364,7 @@
    "start": "2026-12-12T17:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPu-wjB2seFnkIKrt418zkw6z5_55JdNJhkMbSGTcpYZE",
+   "homeLogo": "https://paokalendar.gr/crests/2200b2a00577dd9a.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "0b9633578a"
@@ -7441,7 +7441,7 @@
    "timeKnown": false,
    "paokHome": false,
    "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2014/12/levadeiakos.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "5b5280adf2"
   },
@@ -7459,8 +7459,8 @@
    "start": "2026-12-12T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2014/12/levadeiakos.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "3fb5434d9f"
   },
@@ -7478,8 +7478,8 @@
    "start": "2026-12-12T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": true,
-   "homeLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/uploads/2014/12/levadeiakos.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "043199d9fa"
   },
@@ -7516,7 +7516,7 @@
    "start": "2026-12-12T18:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Aris.gif",
+   "homeLogo": "https://paokalendar.gr/crests/a6cf7459614a4108.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "9a0843ff97"
@@ -7535,7 +7535,7 @@
    "start": "2026-12-12T19:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-EthnPylaias.gif",
+   "homeLogo": "https://paokalendar.gr/crests/ca43c017552cc58c.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "f5e10ade31"
@@ -7574,7 +7574,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPk06P7bS1FSMsgCzGggVYqGAggkMI6e6yDRjN5TlWmHY",
+   "awayLogo": "https://paokalendar.gr/crests/d4601a50f18689f5.png",
    "tvUrl": "",
    "nt": "ec312d3521"
   },
@@ -7611,7 +7611,7 @@
    "start": "2026-12-13T14:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPk0C4Pd4bMM80V4qV42oHgqTIRmtmzdJfrJghnWD5O92",
+   "homeLogo": "https://paokalendar.gr/crests/6a7322d3ff5aee1a.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "33873491bf"
@@ -7649,7 +7649,7 @@
    "start": "2026-12-13T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/57dd2f792ee1472586b0c873f32267f5/ccb6faa5eb3a4fbd893b0446f8372c1e_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/e328c380b15e4f90.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "163b7f6d2d"
@@ -7687,7 +7687,7 @@
    "start": "2026-12-13T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/d974b1aaf0974622ab0cb072b2fe06bb/563c2c2f70b2431b9579dab266581ead_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/45c8d40c7b8bce10.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "1a3bb98500"
@@ -7787,7 +7787,7 @@
    "start": "2026-12-14T21:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Aris.gif",
+   "homeLogo": "https://paokalendar.gr/crests/a6cf7459614a4108.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "7b246a03ed"
@@ -7806,7 +7806,7 @@
    "start": "2026-12-15T20:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPu-wjB2seFnkIKrt418zkw6z5_55JdNJhkMbSGTcpYZE",
+   "homeLogo": "https://paokalendar.gr/crests/2200b2a00577dd9a.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "11048d9da2"
@@ -7825,7 +7825,7 @@
    "start": "2026-12-15T20:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPu-wjB2seFnkIKrt418zkw6z5_55JdNJhkMbSGTcpYZE",
+   "homeLogo": "https://paokalendar.gr/crests/2200b2a00577dd9a.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "0d82db28a0"
@@ -7868,7 +7868,7 @@
    "start": "2026-12-16T21:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPm8T7OFpbev50o8Z67YWOFRKcAZeh-iAwgX6mMT-uUFO",
+   "homeLogo": "https://paokalendar.gr/crests/de353a346501536f.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "8cf12c929b"
@@ -7906,8 +7906,8 @@
    "start": "2026-12-19T10:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2024/07/asterasxaktor-blue.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "0f5c93e1e7"
   },
@@ -7944,8 +7944,8 @@
    "start": "2026-12-19T15:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/43aad17f2d743f4123efc06a5acbe94b.jpg?itok=PIf0dUV1",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "homeLogo": "https://paokalendar.gr/crests/607f504381a1f0a9.png",
+   "awayLogo": "https://paokalendar.gr/crests/70e7f8e9f5d3d44a.png",
    "tvUrl": "",
    "nt": "e5d96e84ea"
   },
@@ -7982,7 +7982,7 @@
    "start": "2026-12-19T17:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Aias.gif",
+   "homeLogo": "https://paokalendar.gr/crests/217de571443cb8c2.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "ef145a7a07"
@@ -8077,8 +8077,8 @@
    "start": "2026-12-19T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2026/09/Olympiakos_logo_2027.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "849fbe6acf"
   },
@@ -8135,7 +8135,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-AENpanor.gif",
+   "awayLogo": "https://paokalendar.gr/crests/4365a4ed96c7e519.gif",
    "tvUrl": "",
    "nt": "f872cdc71a"
   },
@@ -8153,7 +8153,7 @@
    "start": "2026-12-19T19:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPqCUII_7RNy7ZDeb2hL8wJTRvbSlzBYN7FdXirgUWVqv",
+   "homeLogo": "https://paokalendar.gr/crests/75b973c541f921a8.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "94508caaf7"
@@ -8197,7 +8197,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPqCUII_7RNy7ZDeb2hL8wJTRvbSlzBYN7FdXirgUWVqv",
+   "awayLogo": "https://paokalendar.gr/crests/75b973c541f921a8.png",
    "tvUrl": "",
    "nt": "8f5a279d7f"
   },
@@ -8216,7 +8216,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPmO_dtLkQTSENDCSWfcP4TLRQXnKOBO_HbOLBm4VouOa",
+   "awayLogo": "https://paokalendar.gr/crests/a1e96876278022c0.png",
    "tvUrl": "",
    "nt": "48e024368e"
   },
@@ -8234,8 +8234,8 @@
    "start": "2026-12-20T12:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2024/07/asterasxaktor-blue.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "04ab9f7139"
   },
@@ -8272,7 +8272,7 @@
    "start": "2026-12-20T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/db0640a9731d4d37a2734dc25c4d4d95/2bdb093377e1431ca24293169ab76f4e_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/3336d8d5b5f80ac9.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "f0ac7aa884"
@@ -8367,7 +8367,7 @@
    "start": "2026-12-20T18:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Aris.gif",
+   "homeLogo": "https://paokalendar.gr/crests/a6cf7459614a4108.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "5090dcc2ff"
@@ -8386,7 +8386,7 @@
    "start": "2026-12-20T19:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-IonikosIon.jpg",
+   "homeLogo": "https://paokalendar.gr/crests/650b5739185c662d.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "47429a2f0d"
@@ -8406,7 +8406,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2024/03/MAK-NEO-830x830-1.jpg",
+   "awayLogo": "https://paokalendar.gr/crests/efadf5b8da59bd89.jpg",
    "tvUrl": "",
    "nt": "e486986b5e"
   },
@@ -8424,8 +8424,8 @@
    "start": "2026-12-23T12:00:00+02:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/uploads/2023/07/kifisi_logo_site.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "ffa1600832"
   },
@@ -8487,7 +8487,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPqCUII_7RNy7ZDeb2hL8wJTRvbSlzBYN7FdXirgUWVqv",
+   "awayLogo": "https://paokalendar.gr/crests/75b973c541f921a8.png",
    "tvUrl": "",
    "nt": "f4a09ab3c3"
   },
@@ -8990,7 +8990,7 @@
    "start": "2027-01-09T18:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPmCa5ol_uik8jGKLmlUlk_7RvbSlzBYN7FdXirgUWVqv",
+   "homeLogo": "https://paokalendar.gr/crests/098b3594f31398ad.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "bcca275e12"
@@ -9066,8 +9066,8 @@
    "start": "2027-01-09T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2026/09/OFI_Logo_Stars_K_Filled_2026.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "af940f402e"
   },
@@ -9143,7 +9143,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPgl8nOA7rlk8or4oJLePo3XRvbSlzBYN7FdXirgUWVqv",
+   "awayLogo": "https://paokalendar.gr/crests/73f92b95a4cc80c0.png",
    "tvUrl": "",
    "nt": "eb40fbcc5e"
   },
@@ -9199,8 +9199,8 @@
    "start": "2027-01-10T15:00:00+02:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/0f790193242b166f3739b2a9755fc844.jpg?itok=8k2CeR2I",
+   "homeLogo": "https://paokalendar.gr/crests/70e7f8e9f5d3d44a.png",
+   "awayLogo": "https://paokalendar.gr/crests/1b8cd8b595a4c22b.png",
    "tvUrl": "",
    "nt": "84c17e74c0"
   },
@@ -9219,7 +9219,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/Vergina-logo-e1634493452639.jpg",
+   "awayLogo": "https://paokalendar.gr/crests/dabc093b55edb090.jpg",
    "tvUrl": "",
    "nt": "40a68f8e45"
   },
@@ -9237,7 +9237,7 @@
    "start": "2027-01-10T16:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPogowqEm-wvBei5qzzViehPRQXnKOBO_HbOLBm4VouOa",
+   "homeLogo": "https://paokalendar.gr/crests/4bd00357ce78a38b.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "29b7fe4358"
@@ -9256,7 +9256,7 @@
    "start": "2027-01-10T17:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-NVotsis1.jpg",
+   "homeLogo": "https://paokalendar.gr/crests/f5220de4cb0542e9.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "e58657a296"
@@ -9276,7 +9276,7 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/8e899347a75a46889ddd7d0490f182fe/42c1047b95564511a24cbdb5db428f8c_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/e32caebe67764286.png",
    "tvUrl": "",
    "nt": "382447e2dc"
   },
@@ -9313,7 +9313,7 @@
    "start": "2027-01-10T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/48b46b2576864c26832db13c63e7e9e0/15f533f44940488a8446de1499de7736_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/0603c210e2bd10b8.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "76cb62c803"
@@ -9413,7 +9413,7 @@
    "start": "2027-01-10T20:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2023/03/244205994_280764573765604_9029332810770461336_n.jpg",
+   "homeLogo": "https://paokalendar.gr/crests/ab51bab042c507d3.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "7df84ee03c"
@@ -9432,7 +9432,7 @@
    "start": "2027-01-11T21:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/Iraklis-GS-1908-logo-e1634492746644.jpg",
+   "homeLogo": "https://paokalendar.gr/crests/dfe52c5f35b6e400.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "51fc801037"
@@ -9451,7 +9451,7 @@
    "start": "2027-01-12T19:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPpg3N2bOyqYSOH-YQTYpqdrRQXnKOBO_HbOLBm4VouOa",
+   "homeLogo": "https://paokalendar.gr/crests/a8cf966a51a9fe2c.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "a0e2d305ac"
@@ -9471,7 +9471,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPrZM8z6npbG5ebsNPOgaUbvRvbSlzBYN7FdXirgUWVqv",
+   "awayLogo": "https://paokalendar.gr/crests/c8bdd46ed9f6061c.png",
    "tvUrl": "",
    "nt": "283a26821b"
   },
@@ -9514,7 +9514,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPig0ZtjdYchdHyj36rCpL2_OP_hYfXcZFcL_9bQNQZcR",
+   "awayLogo": "https://paokalendar.gr/crests/d5a870f94b302f6e.png",
    "tvUrl": "",
    "nt": "0c451e77c0"
   },
@@ -9551,8 +9551,8 @@
    "start": "2027-01-16T15:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/3bfe993f792098774518adab55c24608.jpg?itok=JsUQYFIb",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "homeLogo": "https://paokalendar.gr/crests/79c866141c19bde5.png",
+   "awayLogo": "https://paokalendar.gr/crests/70e7f8e9f5d3d44a.png",
    "tvUrl": "",
    "nt": "affab51b8c"
   },
@@ -9689,8 +9689,8 @@
    "start": "2027-01-16T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://www.paokfc.gr/wp-content/uploads/2015/07/aek_logo.png",
-   "awayLogo": "https://www.paokfc.gr/wp-content/themes/paokv2/images/logo-paok-small.png",
+   "homeLogo": "https://paokalendar.gr/crests/",
+   "awayLogo": "https://paokalendar.gr/crests/",
    "tvUrl": "",
    "nt": "467b56eac3"
   },
@@ -9728,7 +9728,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPig0ZtjdYchdHyj36rCpL2_OP_hYfXcZFcL_9bQNQZcR",
+   "awayLogo": "https://paokalendar.gr/crests/d5a870f94b302f6e.png",
    "tvUrl": "",
    "nt": "abf35963d7"
   },
@@ -9766,7 +9766,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-OlimposNew.gif",
+   "awayLogo": "https://paokalendar.gr/crests/c607b0f315b73d73.gif",
    "tvUrl": "",
    "nt": "1747a86a61"
   },
@@ -9785,7 +9785,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-MENT-1.gif",
+   "awayLogo": "https://paokalendar.gr/crests/95ecf0b818f2912d.gif",
    "tvUrl": "",
    "nt": "333e14abda"
   },
@@ -9803,7 +9803,7 @@
    "start": "2027-01-17T16:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPuW6NVMyDT3LDqVVctSf1sGTIRmtmzdJfrJghnWD5O92",
+   "homeLogo": "https://paokalendar.gr/crests/44e72a40b38b3daf.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "39fcf17bb4"
@@ -9822,7 +9822,7 @@
    "start": "2027-01-17T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/48b46b2576864c26832db13c63e7e9e0/15f533f44940488a8446de1499de7736_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/0603c210e2bd10b8.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "bb24caaeb4"
@@ -9860,7 +9860,7 @@
    "start": "2027-01-17T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/e6a56a5e053d46a18312b13520f0a963/f530f23fe61544738571b5844769b8f6_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/28bfa54c724e10bc.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "fa5e4d8845"
@@ -9956,7 +9956,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-EOS.jpg",
+   "awayLogo": "https://paokalendar.gr/crests/7cbdd29c28a19fa5.jpg",
    "tvUrl": "",
    "nt": "f1c2a1fa56"
   },
@@ -9975,7 +9975,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPnOfLmikYX2aroo9zDPyIQXRQXnKOBO_HbOLBm4VouOa",
+   "awayLogo": "https://paokalendar.gr/crests/bd6151cb0b9a8f72.png",
    "tvUrl": "",
    "nt": "d042b2dcef"
   },
@@ -9993,7 +9993,7 @@
    "start": "2027-01-19T21:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPuW6NVMyDT3LDqVVctSf1sGTIRmtmzdJfrJghnWD5O92",
+   "homeLogo": "https://paokalendar.gr/crests/44e72a40b38b3daf.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "af32f4ba15"
@@ -10032,7 +10032,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPsc_H2_zZ5HQVtXNwstEZ-PRQXnKOBO_HbOLBm4VouOa",
+   "awayLogo": "https://paokalendar.gr/crests/eaed84f681c3fdd7.png",
    "tvUrl": "",
    "nt": "6221227163"
   },
@@ -10088,7 +10088,7 @@
    "start": "2027-01-23T17:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPrZM8z6npbG5ebsNPOgaUbvRvbSlzBYN7FdXirgUWVqv",
+   "homeLogo": "https://paokalendar.gr/crests/c8bdd46ed9f6061c.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "287bafa095"
@@ -10227,7 +10227,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPrvTMnIX1ImpgMgGyPngk1XRvbSlzBYN7FdXirgUWVqv",
+   "awayLogo": "https://paokalendar.gr/crests/53ad44874cf80e36.png",
    "tvUrl": "",
    "nt": "e1f106cae6"
   },
@@ -10283,7 +10283,7 @@
    "start": "2027-01-24T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPr2oJoxW3qb6ZEWmJp6Q5-bRvbSlzBYN7FdXirgUWVqv",
+   "homeLogo": "https://paokalendar.gr/crests/e13535df8ce4ca35.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "c531a2043b"
@@ -10303,7 +10303,7 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/e6a56a5e053d46a18312b13520f0a963/f530f23fe61544738571b5844769b8f6_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/28bfa54c724e10bc.png",
    "tvUrl": "",
    "nt": "d6c59b20af"
   },
@@ -10341,7 +10341,7 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/e2b204ca1fc74402887747185c46a5e1/74b397486cd94200b735bef4e1d1276a_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/5aaf016514977c07.png",
    "tvUrl": "",
    "nt": "c1b133afb9"
   },
@@ -10416,7 +10416,7 @@
    "start": "2027-01-24T19:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-AENpanor.gif",
+   "homeLogo": "https://paokalendar.gr/crests/4365a4ed96c7e519.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "d6dd3e5b5a"
@@ -10436,7 +10436,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPsDhJXujq-eKvGRzHAS0RJHRvbSlzBYN7FdXirgUWVqv",
+   "awayLogo": "https://paokalendar.gr/crests/08671264f06a8f49.png",
    "tvUrl": "",
    "nt": "20878f4fd9"
   },
@@ -10455,7 +10455,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPig0ZtjdYchdHyj36rCpL2_OP_hYfXcZFcL_9bQNQZcR",
+   "awayLogo": "https://paokalendar.gr/crests/d5a870f94b302f6e.png",
    "tvUrl": "",
    "nt": "bb7c2abbf6"
   },
@@ -10493,7 +10493,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPpg3N2bOyqYSOH-YQTYpqdrRQXnKOBO_HbOLBm4VouOa",
+   "awayLogo": "https://paokalendar.gr/crests/a8cf966a51a9fe2c.png",
    "tvUrl": "",
    "nt": "7d617c5e7a"
   },
@@ -10511,7 +10511,7 @@
    "start": "2027-01-30T15:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-AENAgTriad.gif",
+   "homeLogo": "https://paokalendar.gr/crests/8cafbe3d94f54154.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "50807e84ef"
@@ -10706,7 +10706,7 @@
    "start": "2027-01-31T14:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPvy8sWRIEiYUk_0wcBVSAgrOP_hYfXcZFcL_9bQNQZcR",
+   "homeLogo": "https://paokalendar.gr/crests/cd081952bbf0f43b.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "755e16dab3"
@@ -10745,7 +10745,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Perseas.gif",
+   "awayLogo": "https://paokalendar.gr/crests/1838d2be1f8aa90d.gif",
    "tvUrl": "",
    "nt": "7e855cd1ac"
   },
@@ -10763,7 +10763,7 @@
    "start": "2027-01-31T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/4c9e4e5ef45c4fb4bc6270b9ad5dde9a/e49cf2f91f0e4602aa86514912e0fb23_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/a9f3c01b4b9d47c3.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "deb63bb09f"
@@ -10801,7 +10801,7 @@
    "start": "2027-01-31T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/8e899347a75a46889ddd7d0490f182fe/42c1047b95564511a24cbdb5db428f8c_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/e32caebe67764286.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "a181e73a4a"
@@ -10896,7 +10896,7 @@
    "start": "2027-02-01T21:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Pigasos2.gif",
+   "homeLogo": "https://paokalendar.gr/crests/130b4d39e358485d.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "ec604d00fa"
@@ -10916,7 +10916,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPgl8nOA7rlk8or4oJLePo3XRvbSlzBYN7FdXirgUWVqv",
+   "awayLogo": "https://paokalendar.gr/crests/73f92b95a4cc80c0.png",
    "tvUrl": "",
    "nt": "5c048fc774"
   },
@@ -10934,7 +10934,7 @@
    "start": "2027-02-02T21:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPm8T7OFpbev50o8Z67YWOFRKcAZeh-iAwgX6mMT-uUFO",
+   "homeLogo": "https://paokalendar.gr/crests/de353a346501536f.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "8c5a85ec9d"
@@ -10953,7 +10953,7 @@
    "start": "2027-02-03T21:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPnOfLmikYX2aroo9zDPyIQXRQXnKOBO_HbOLBm4VouOa",
+   "homeLogo": "https://paokalendar.gr/crests/bd6151cb0b9a8f72.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "8fc666a787"
@@ -11186,8 +11186,8 @@
    "start": "2027-02-07T15:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/fb84f8acc0b35a20cf5eddd3d801eaf8.jpg?itok=Lr8qTrJt",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
+   "homeLogo": "https://paokalendar.gr/crests/b553c93283100b92.png",
+   "awayLogo": "https://paokalendar.gr/crests/70e7f8e9f5d3d44a.png",
    "tvUrl": "",
    "nt": "8fd89d96d3"
   },
@@ -11206,7 +11206,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Perseas.gif",
+   "awayLogo": "https://paokalendar.gr/crests/1838d2be1f8aa90d.gif",
    "tvUrl": "",
    "nt": "cfad4559ec"
   },
@@ -11225,7 +11225,7 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/c3ca3816303942d5a51ab2ad046ae2e8/d2b55f051fc64a75aafa9d86b2446c3a_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/31a122ba141db854.png",
    "tvUrl": "",
    "nt": "6571b3d2cc"
   },
@@ -11263,7 +11263,7 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/9e35f361265d46d487df5824419a0a72/edf367db7766448db39d49ca05a58d59_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/cb6f27cd2b720060.png",
    "tvUrl": "",
    "nt": "2f96cfc03e"
   },
@@ -11300,7 +11300,7 @@
    "start": "2027-02-08T21:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Elpis.gif",
+   "homeLogo": "https://paokalendar.gr/crests/c712331b07c14a6d.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "ce009a5aa8"
@@ -11320,7 +11320,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPqCUII_7RNy7ZDeb2hL8wJTRvbSlzBYN7FdXirgUWVqv",
+   "awayLogo": "https://paokalendar.gr/crests/75b973c541f921a8.png",
    "tvUrl": "",
    "nt": "50c97de3b8"
   },
@@ -11338,7 +11338,7 @@
    "start": "2027-02-09T21:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPkhsh5CzwDmaCuaEvh-y7sw89nVpTKUBGjTGj7xAFDdj",
+   "homeLogo": "https://paokalendar.gr/crests/f400cf509efbda6a.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "bbb55104f3"
@@ -11358,7 +11358,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPv8KADfswAJTkstwM1Rcoqnx6PVWzyTOkiu4ZyqbhFX_",
+   "awayLogo": "https://paokalendar.gr/crests/ef09db47680f1bdf.png",
    "tvUrl": "",
    "nt": "9af5be318e"
   },
@@ -11534,7 +11534,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Hanth.gif",
+   "awayLogo": "https://paokalendar.gr/crests/ea7f77b7613d9057.gif",
    "tvUrl": "",
    "nt": "bda53da113"
   },
@@ -11552,7 +11552,7 @@
    "start": "2027-02-14T16:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPt2ya3IdEE_-hmecRfy4u2fOP_hYfXcZFcL_9bQNQZcR",
+   "homeLogo": "https://paokalendar.gr/crests/541bd9770cbd296d.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "b3c478f1c7"
@@ -11590,7 +11590,7 @@
    "start": "2027-02-14T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/e2b204ca1fc74402887747185c46a5e1/74b397486cd94200b735bef4e1d1276a_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/5aaf016514977c07.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "908b54270f"
@@ -11628,7 +11628,7 @@
    "start": "2027-02-14T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/d974b1aaf0974622ab0cb072b2fe06bb/563c2c2f70b2431b9579dab266581ead_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/45c8d40c7b8bce10.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "c589b5eedf"
@@ -11667,7 +11667,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPvy8sWRIEiYUk_0wcBVSAgrOP_hYfXcZFcL_9bQNQZcR",
+   "awayLogo": "https://paokalendar.gr/crests/cd081952bbf0f43b.png",
    "tvUrl": "",
    "nt": "a2f9f36ed4"
   },
@@ -11685,7 +11685,7 @@
    "start": "2027-02-16T20:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPsc_H2_zZ5HQVtXNwstEZ-PRQXnKOBO_HbOLBm4VouOa",
+   "homeLogo": "https://paokalendar.gr/crests/eaed84f681c3fdd7.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "3cb03c0628"
@@ -11704,7 +11704,7 @@
    "start": "2027-02-17T20:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPkhsh5CzwDmaCuaEvh-y7sw7jZ3QxI8YUZ-Bj573wGto",
+   "homeLogo": "https://paokalendar.gr/crests/c35ea78a2c95ae69.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "e9d1a1ddef"
@@ -11824,7 +11824,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPvSE8hJecTTuwqzMCLF3uqPRvbSlzBYN7FdXirgUWVqv",
+   "awayLogo": "https://paokalendar.gr/crests/fe8e9d714bc1d55b.png",
    "tvUrl": "",
    "nt": "9371785530"
   },
@@ -11881,7 +11881,7 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/5e9c482d669344b9a185f2c46244dfd4/a664a87716d84b6c8fd4721dccd677d5_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/206cce345025deda.png",
    "tvUrl": "",
    "nt": "560fc4dc9b"
   },
@@ -11900,7 +11900,7 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/e6a56a5e053d46a18312b13520f0a963/f530f23fe61544738571b5844769b8f6_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/28bfa54c724e10bc.png",
    "tvUrl": "",
    "nt": "c9e45a27ac"
   },
@@ -11937,7 +11937,7 @@
    "start": "2027-02-21T20:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Pigasos2.gif",
+   "homeLogo": "https://paokalendar.gr/crests/130b4d39e358485d.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "f13a80e557"
@@ -11957,7 +11957,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPv8KADfswAJTkstwM1Rcoqnx6PVWzyTOkiu4ZyqbhFX_",
+   "awayLogo": "https://paokalendar.gr/crests/ef09db47680f1bdf.png",
    "tvUrl": "",
    "nt": "5033ca8c6e"
   },
@@ -11975,7 +11975,7 @@
    "start": "2027-02-23T20:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPnHzgdtySg5q_qcY-NvtHqrOP_hYfXcZFcL_9bQNQZcR",
+   "homeLogo": "https://paokalendar.gr/crests/4090eabe33363d9c.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "29b21e3d93"
@@ -12013,8 +12013,8 @@
    "start": "2027-02-27T15:00:00+02:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/bc059cd79ef68a1b0542630b69146908.jpg?itok=eRd5WHBk",
+   "homeLogo": "https://paokalendar.gr/crests/70e7f8e9f5d3d44a.png",
+   "awayLogo": "https://paokalendar.gr/crests/af4e177cf848cf4f.png",
    "tvUrl": "",
    "nt": "d0ea8f618f"
   },
@@ -12114,7 +12114,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Aris.gif",
+   "awayLogo": "https://paokalendar.gr/crests/a6cf7459614a4108.gif",
    "tvUrl": "",
    "nt": "18cbfea67d"
   },
@@ -12132,7 +12132,7 @@
    "start": "2027-02-28T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/810b360609c849e98cb6166f1be09559/5593ed8258c3410293d4675e7fd85b02_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/9b2ef52e0b4f74d0.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "4b85e241b1"
@@ -12151,7 +12151,7 @@
    "start": "2027-02-28T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/9e35f361265d46d487df5824419a0a72/edf367db7766448db39d49ca05a58d59_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/cb6f27cd2b720060.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "4606f8917f"
@@ -12171,7 +12171,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPr8CrSboulgfsvuKqZLHS5HOP_hYfXcZFcL_9bQNQZcR",
+   "awayLogo": "https://paokalendar.gr/crests/4f5350a97f9a34ed.png",
    "tvUrl": "",
    "nt": "92fe3cd97e"
   },
@@ -12290,7 +12290,7 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/919c2c9158524f629bf9d1c0c72aaf7f/36e4596d36874628b6dd9f26094710a1_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/289f9867a3b8c278.png",
    "tvUrl": "",
    "nt": "8d7c1c0f48"
   },
@@ -12308,7 +12308,7 @@
    "start": "2027-03-09T21:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPv8KADfswAJTkstwM1Rcoqnx6PVWzyTOkiu4ZyqbhFX_",
+   "homeLogo": "https://paokalendar.gr/crests/ef09db47680f1bdf.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "572b3910e9"
@@ -12523,7 +12523,7 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/616dba6a0146410fad808bc63dbb5b70/4621470d833b4db1aa1f6b162dfd5db2_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/4aef824c428dfe2b.png",
    "tvUrl": "",
    "nt": "aee824fb4c"
   },
@@ -12542,7 +12542,7 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/e2b204ca1fc74402887747185c46a5e1/74b397486cd94200b735bef4e1d1276a_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/5aaf016514977c07.png",
    "tvUrl": "",
    "nt": "8548ecd143"
   },
@@ -12698,7 +12698,7 @@
    "start": "2027-03-21T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/d974b1aaf0974622ab0cb072b2fe06bb/563c2c2f70b2431b9579dab266581ead_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/45c8d40c7b8bce10.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "582ba308a9"
@@ -12717,7 +12717,7 @@
    "start": "2027-03-21T18:00:00+02:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/8e899347a75a46889ddd7d0490f182fe/42c1047b95564511a24cbdb5db428f8c_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/e32caebe67764286.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "4a45d24c00"
@@ -12737,7 +12737,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://ekasth.gr/champs/matchcenter8/bgapi.php?action=img&t=GOQlp8ODfFZbgosGRLglPu-wjB2seFnkIKrt418zkw6z5_55JdNJhkMbSGTcpYZE",
+   "awayLogo": "https://paokalendar.gr/crests/2200b2a00577dd9a.png",
    "tvUrl": "",
    "nt": "05c970cce7"
   },
@@ -12888,8 +12888,8 @@
    "start": "2027-03-28T16:00:00+03:00",
    "timeKnown": true,
    "paokHome": true,
-   "homeLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/5772cc001561692e7ac1a3fa2b9cd87f.jpg?itok=adMbVNvk",
-   "awayLogo": "https://www.epo.gr/sites/default/files/styles/matches_club_logo/public/externals/43aad17f2d743f4123efc06a5acbe94b.jpg?itok=PIf0dUV1",
+   "homeLogo": "https://paokalendar.gr/crests/70e7f8e9f5d3d44a.png",
+   "awayLogo": "https://paokalendar.gr/crests/607f504381a1f0a9.png",
    "tvUrl": "",
    "nt": "31e0e7c39d"
   },
@@ -12908,7 +12908,7 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/e576448345ca49eeb300016b5c485625/6a35e7d82ef04a338cea212d6b413d63_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/6df3648d8faae8e0.png",
    "tvUrl": "",
    "nt": "b6179f9bdb"
   },
@@ -12927,7 +12927,7 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/48b46b2576864c26832db13c63e7e9e0/15f533f44940488a8446de1499de7736_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/0603c210e2bd10b8.png",
    "tvUrl": "",
    "nt": "0fee5772cc"
   },
@@ -13059,7 +13059,7 @@
    "start": "2027-04-04T18:00:00+03:00",
    "timeKnown": false,
    "paokHome": false,
-   "homeLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/9e35f361265d46d487df5824419a0a72/edf367db7766448db39d49ca05a58d59_thumb.png",
+   "homeLogo": "https://paokalendar.gr/crests/cb6f27cd2b720060.png",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "73efe9dd09"
@@ -13155,7 +13155,7 @@
    "timeKnown": false,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "https://sl2-backend.sportsdata.gr/static/uploads/logos/clubs/57dd2f792ee1472586b0c873f32267f5/ccb6faa5eb3a4fbd893b0446f8372c1e_thumb.png",
+   "awayLogo": "https://paokalendar.gr/crests/e328c380b15e4f90.png",
    "tvUrl": "",
    "nt": "afe62ae803"
   },

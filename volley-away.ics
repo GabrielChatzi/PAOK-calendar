@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:volley-2026-27-a3b82a15fd67@paok-calendar
-DTSTAMP:20261119T160055Z
+DTSTAMP:20261119T180058Z
 DTSTART;TZID=Europe/Athens:20261024T170000
 DTEND;TZID=Europe/Athens:20261024T190000
 SUMMARY:🏐 Ο.Φ.Η. 3-0 ΠΑΟΚ
@@ -39,7 +39,7 @@ URL:https://www.volleyleague.gr/index.php/season/2026-27/regular-season-res
 END:VEVENT
 BEGIN:VEVENT
 UID:volley-2026-27-1d3233390ed2@paok-calendar
-DTSTAMP:20261119T160055Z
+DTSTAMP:20261119T180058Z
 DTSTART;TZID=Europe/Athens:20261109T193000
 DTEND;TZID=Europe/Athens:20261109T213000
 SUMMARY:🏐 Α.Ο.Καλαμάτα 80 Affidea 1-3 ΠΑΟΚ
@@ -51,19 +51,19 @@ URL:https://www.volleyleague.gr/index.php/season/2026-27/regular-season-res
 END:VEVENT
 BEGIN:VEVENT
 UID:volley-2026-27-2ba71508738b@paok-calendar
-DTSTAMP:20261119T160055Z
+DTSTAMP:20261119T180058Z
 DTSTART;TZID=Europe/Athens:20261121T160000
 DTEND;TZID=Europe/Athens:20261121T180000
 SUMMARY:🏐 Ν.Ο.Π.Ε. Ρεθύμνου – ΠΑΟΚ
 LOCATION:Γυμναστήριο «Μελίνα Μερκούρη» Ρέθυ
  μνο
-DESCRIPTION:Volley League – 5η αγωνιστική
+DESCRIPTION:Volley League – 5η αγωνιστική\nTV: ESAP TV
 URL:https://www.volleyleague.gr/index.php/season/2026-27/regular-season-res
  ults-statistics
 END:VEVENT
 BEGIN:VEVENT
 UID:volley-2026-27-88309016e843@paok-calendar
-DTSTAMP:20261119T160055Z
+DTSTAMP:20261119T180058Z
 DTSTART;TZID=Europe/Athens:20261205T170000
 DTEND;TZID=Europe/Athens:20261205T190000
 SUMMARY:🏐 Φλοίσβος Members Paron – ΠΑΟΚ
@@ -75,7 +75,7 @@ URL:https://www.volleyleague.gr/index.php/season/2026-27/regular-season-res
 END:VEVENT
 BEGIN:VEVENT
 UID:volley-cev-87546@paok-calendar
-DTSTAMP:20261119T160055Z
+DTSTAMP:20261119T180058Z
 DTSTART;TZID=Europe/Athens:20261209T180000
 DTEND;TZID=Europe/Athens:20261209T200000
 SUMMARY:🏐 C.S. Arcada Galati – ΠΑΟΚ
@@ -86,7 +86,7 @@ URL:https://www-old.cev.eu/Competition-Area/MatchPage.aspx?mID=87546&ID=194
 END:VEVENT
 BEGIN:VEVENT
 UID:volley-2026-27-f91eee2b5daf@paok-calendar
-DTSTAMP:20261119T160055Z
+DTSTAMP:20261119T180058Z
 DTSTART;TZID=Europe/Athens:20261218T200000
 DTEND;TZID=Europe/Athens:20261218T220000
 SUMMARY:🏐 Πανιώνιος Betsson – ΠΑΟΚ
@@ -98,7 +98,7 @@ URL:https://www.volleyleague.gr/index.php/season/2026-27/regular-season-res
 END:VEVENT
 BEGIN:VEVENT
 UID:volley-2026-27-0cebb561db2e@paok-calendar
-DTSTAMP:20261119T160055Z
+DTSTAMP:20261119T180058Z
 DTSTART;TZID=Europe/Athens:20261229T170000
 DTEND;TZID=Europe/Athens:20261229T190000
 SUMMARY:🏐 Α.Ο.Ν.Σ Μίλων – ΠΑΟΚ
@@ -110,7 +110,7 @@ URL:https://www.volleyleague.gr/index.php/season/2026-27/regular-season-res
 END:VEVENT
 BEGIN:VEVENT
 UID:volley-2026-27-e4f5936ff170@paok-calendar
-DTSTAMP:20261119T160055Z
+DTSTAMP:20261119T180058Z
 DTSTART;TZID=Europe/Athens:20270117T180000
 DTEND;TZID=Europe/Athens:20270117T200000
 SUMMARY:🏐 Α.Ο.Π.Κηφισιάς – ΠΑΟΚ (ώρα αναμένε
@@ -124,7 +124,7 @@ URL:https://www.volleyleague.gr/index.php/season/2026-27/regular-season-res
 END:VEVENT
 BEGIN:VEVENT
 UID:volley-2026-27-7fa852a0a814@paok-calendar
-DTSTAMP:20261119T160055Z
+DTSTAMP:20261119T180058Z
 DTSTART;TZID=Europe/Athens:20270131T180000
 DTEND;TZID=Europe/Athens:20270131T200000
 SUMMARY:🏐 Α.Σ. Άρης – ΠΑΟΚ (ώρα αναμένεται)
@@ -137,7 +137,7 @@ URL:https://www.volleyleague.gr/index.php/season/2026-27/regular-season-res
 END:VEVENT
 BEGIN:VEVENT
 UID:volley-2026-27-2cb890cd3467@paok-calendar
-DTSTAMP:20261119T160055Z
+DTSTAMP:20261119T180058Z
 DTSTART;TZID=Europe/Athens:20270213T180000
 DTEND;TZID=Europe/Athens:20270213T200000
 SUMMARY:🏐 Ολυμπιακός Σ.Φ.Π. ONEX – ΠΑΟΚ (ώρα αν
@@ -152,7 +152,7 @@ URL:https://www.volleyleague.gr/index.php/season/2026-27/regular-season-res
 END:VEVENT
 BEGIN:VEVENT
 UID:volley-2026-27-5743f2f35a95@paok-calendar
-DTSTAMP:20261119T160055Z
+DTSTAMP:20261119T180058Z
 DTSTART;TZID=Europe/Athens:20270227T180000
 DTEND;TZID=Europe/Athens:20270227T200000
 SUMMARY:🏐 Παναθηναϊκός Α.Ο. – ΠΑΟΚ (ώρα αναμ
@@ -166,7 +166,7 @@ URL:https://www.volleyleague.gr/index.php/season/2026-27/regular-season-res
 END:VEVENT
 BEGIN:VEVENT
 UID:volley-2026-27-f952687f0172@paok-calendar
-DTSTAMP:20261119T160055Z
+DTSTAMP:20261119T180058Z
 DTSTART;TZID=Europe/Athens:20270327T180000
 DTEND;TZID=Europe/Athens:20270327T200000
 SUMMARY:🏐 Α.Ο.Φοίνικας Σύρου – ΠΑΟΚ (ώρα ανα

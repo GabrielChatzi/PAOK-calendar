@@ -12,6 +12,7 @@ sl2.gr, epo.gr…) στους αγώνες και στις βαθμολογίε�
 """
 from __future__ import annotations
 
+import collections
 import datetime as dt
 import hashlib
 import html
@@ -79,7 +80,7 @@ def local(url: str, have: dict[str, str]) -> str:
 # το μπάσκετ), (2) οι διοργανώσεις της ΕΠΟ, (3) η ελληνική Wikipedia (εικόνα της σελίδας του συλλόγου). Μόνο όταν
 # ταιριάζουν όλες οι λέξεις του ονόματος. Τα ευρήματα (και όσα δεν βρέθηκαν, για 30 μέρες) στο docs/crest_lookup.json.
 LOOKUP = DOCS / "crest_lookup.json"
-LOOKUP_VERSION = 2
+LOOKUP_VERSION = 3
 GENERIC = {"ΑΟ", "ΑΕ", "ΑΣ", "ΠΑΕ", "ΓΣ", "ΠΟ", "ΑΜΣ", "ΑΟΚ", "ΑΚΑΔ", "ΑΚΑΔΗΜΙΑ", "ΠΟΔ", "ΜΑΣ", "ΓΑΣ", "ΠΑΣ", "ΑΠΣ",
            "ΑΠΟ", "ΑΜΟ", "ΠΑΟ", "ΑΠΟΕ", "ΑΕΠΣ", "ΑΓΠΣ", "ΦΣ", "ΜΓΣ", "ΝΓΣΘ", "ΑΝΔΡΩΝ", "ΓΥΝΑΙΚΩΝ", "ΠΟΔΟΣΦΑΙΡΟ", "ΠΟΔΟΣΦΑΙΡΙΚΟΣ",
            "ΟΜΙΛΟΣ", "ΑΘΛΗΤΙΚΟΣ", "ΣΥΛΛΟΓΟΣ", "ΝΕΩΝ", "ΝΕΑΝΙΔΩΝ", "ΚΟΡΑΣΙΔΩΝ", "ΠΑΙΔΩΝ", "ΜΦΑΟΦ", "ΑΠΟΕ"}
@@ -166,7 +167,16 @@ def pick(pool: dict[frozenset, set], w: frozenset) -> str:
     return next(iter(urls)) if len(urls) == 1 else ""
 
 
-def find_missing(names: set[str], known: dict[frozenset, set]) -> dict[str, str]:
+def pick_common(pool: dict[frozenset, collections.Counter], w: frozenset) -> str:
+    """Από τα σήματα του site: αυτό που εμφανίζεται πιο συχνά για το όνομα (π.χ. ΑΕΚ σε πολλούς αγώνες)."""
+    count: collections.Counter = collections.Counter()
+    for k, c in pool.items():
+        if same_club(w, k):
+            count.update(c)
+    return count.most_common(1)[0][0] if count else ""
+
+
+def find_missing(names: set[str], known: dict[frozenset, collections.Counter]) -> dict[str, str]:
     """Σήματα για ονόματα χωρίς σήμα· γράφει/διαβάζει το docs/crest_lookup.json."""
     cache = json.loads(LOOKUP.read_text(encoding="utf-8")) if LOOKUP.exists() else {}
     if cache.get("_v") != LOOKUP_VERSION:  # άλλαξε ο τρόπος αναζήτησης: ξανά από την αρχή
@@ -177,7 +187,7 @@ def find_missing(names: set[str], known: dict[frozenset, set]) -> dict[str, str]
     pool = None
     for n in todo:
         w, url, src = words(n), "", ""
-        url = pick(known, w)
+        url = pick_common(known, w)
         src = "site" if url else ""
         if not url:
             if pool is None:
@@ -207,14 +217,14 @@ def main() -> int:
 
     st = json.loads(standings_path.read_text(encoding="utf-8")) if standings_path.exists() else {}
     # Σήματα που λείπουν: πρώτα τα ονόματα με σήμα σε όλο το site (κάθε άθλημα), μετά ΕΠΟ και Wikipedia.
-    known: dict[frozenset, set] = {}
+    known: dict[frozenset, collections.Counter] = {}
     missing: set[str] = set()
 
     def note(name: str, logo: str, section: str) -> None:
         if not name or "ΠΑΟΚ" in plain(name):
             return
         if logo:
-            known.setdefault(words(name), set()).add(logo)
+            known.setdefault(words(name), collections.Counter())[logo] += 1
         elif section in academy:
             missing.add(name)
     for m in data.get("matches", []):

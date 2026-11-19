@@ -184,6 +184,42 @@ class Match:
         return d
 
 
+GOALS_PATH = Path(__file__).resolve().parent / "goals.json"
+GOAL_TAGS = {"πεν": "pen", "αυτ": "og"}
+
+
+def apply_goals(matches: list[dict], path: Path = GOALS_PATH) -> None:
+    """Σκόρερ από το goals.json (όσα δεν δίνει η πηγή, π.χ. ακαδημίες), στο πεδίο «goals» του αγώνα:
+    {"home": [{"min": "45+1", "name": "…", "pen"/"og": true}], "away": […]}. Μπαίνουν μόνο όταν τα γκολ
+    κάθε ομάδας ταιριάζουν με το σκορ, ώστε ένα λάθος (ή αλλαγή του σκορ) να μη δείξει λάθος σκόρερ."""
+    if not path.exists():
+        return
+    try:
+        table = json.loads(path.read_text(encoding="utf-8"))
+    except ValueError as e:
+        print(f"! goals.json: {e}", file=sys.stderr)
+        return
+    for m in matches:
+        e = table.get(m["uid"])
+        if not isinstance(e, dict):
+            continue
+        parts = re.fullmatch(r"(\d+)-(\d+)", m.get("score") or "")
+        goals = {}
+        for side in ("home", "away"):
+            goals[side] = []
+            for g in e.get(side) or []:
+                d = {"min": str(g[0]).strip(), "name": str(g[1]).strip()}
+                for t in g[2:]:
+                    if t in GOAL_TAGS:
+                        d[GOAL_TAGS[t]] = True
+                goals[side].append(d)
+        if not parts or [len(goals["home"]), len(goals["away"])] != [int(parts[1]), int(parts[2])]:
+            print(f"! goals.json: {e.get('m') or m['uid']}: τα γκολ δεν ταιριάζουν με το σκορ «{m.get('score')}»",
+                  file=sys.stderr)
+            continue
+        m["goals"] = goals
+
+
 def match_topic_id(uid: str) -> str:
     """Σύντομο, σταθερό αναγνωριστικό αγώνα (για τη σελίδα του και τις ειδοποιήσεις του)."""
     return hashlib.sha1(uid.encode()).hexdigest()[:10]
@@ -2686,6 +2722,7 @@ def main(only: list[str] | None = None) -> int:
     import standings
 
     fill_logos(all_matches)
+    apply_goals(all_matches)
     all_matches.sort(key=lambda m: (m["start"], m["uid"]))
     data = {
         "sections": [{"key": k, **v} for k, v in SECTIONS.items()],

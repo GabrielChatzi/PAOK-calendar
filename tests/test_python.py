@@ -580,3 +580,28 @@ class SocialRemind(unittest.TestCase):
                 plan.write_text(json.dumps({"items": [it]}))
                 run("2026-11-22T14:00")
                 self.assertEqual(len(pushed), 2)               # μετά τον τελευταίο αγώνα: σιωπή
+
+
+class Goals(unittest.TestCase):
+    def setUp(self):
+        import json
+        import tempfile
+        from pathlib import Path
+        self.path = Path(tempfile.mkdtemp()) / "goals.json"
+        self.path.write_text(json.dumps({
+            "a": {"home": [["14", "Χ", "αυτ"], ["45+1", "Ψ", "πεν"]], "away": [["3", "Ω"]]},
+            "b": {"home": [["10", "Χ"]], "away": []},
+        }), encoding="utf-8")
+
+    def test_attached_when_they_match_the_score(self):
+        ms = [{"uid": "a", "score": "2-1"}, {"uid": "b", "score": "2-0"}, {"uid": "c", "score": "1-0"}]
+        b.apply_goals(ms, self.path)
+        self.assertEqual(ms[0]["goals"]["home"], [{"min": "14", "name": "Χ", "og": True},
+                                                  {"min": "45+1", "name": "Ψ", "pen": True}])
+        self.assertNotIn("goals", ms[1])  # 1 γκολ για σκορ 2-0: δεν μπαίνει
+        self.assertNotIn("goals", ms[2])
+
+    def test_not_before_the_result(self):
+        ms = [{"uid": "b", "score": ""}]
+        b.apply_goals(ms, self.path)
+        self.assertNotIn("goals", ms[0])

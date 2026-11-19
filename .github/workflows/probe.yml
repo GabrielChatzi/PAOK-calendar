@@ -11,26 +11,12 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           mkdir -p probe
-          python3 - <<'PY'
-          import urllib.request, re, html, concurrent.futures as cf
-          UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
-          def title(c):
-              try:
-                  t = urllib.request.urlopen(urllib.request.Request(f"https://www.epsm.gr/article.asp?code={c}", headers=UA), timeout=60).read().decode("utf-8", "ignore")
-              except Exception as e:
-                  return c, "ERR " + str(e), ""
-              t2 = re.sub(r"(?s)<(script|style)[^>]*>.*?</\1>", "", t)
-              x = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " | ", t2)))
-              x = re.sub(r"(\|\s*)+", "| ", x)
-              i = x.find("Αναζήτηση |")
-              head = x[i + 11:i + 200]
-              if re.search(r"υποδομ", head, re.I):
-                  open(f"probe/a{c}.html", "w").write(t)
-              return c, head[:150], ""
-          with cf.ThreadPoolExecutor(8) as ex:
-              res = sorted(ex.map(title, range(14600, 14960)))
-          open("probe/titles.txt", "w").write("\n".join(f"{c} {h}" for c, h, _ in res))
-          PY
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"
+          g(){ curl -sSL -A "$UA" -m 60 -o "probe/$1" -w "$1 %{http_code} %{size_download} %{url_effective}\n" "$2" >> probe/result.txt 2>&1; }
+          g koe.html "https://www.koe.org.gr/"
+          g koe_gr.html "https://www.koe.gr/"
+          g epo56.html "https://www.epo.gr/el/competition/56/matches"
+          g epo56p.html "https://www.epo.gr/el/panellinio-protathlima-ypodomon-neanidon-k-17"
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

@@ -340,6 +340,15 @@ class Crests(unittest.TestCase):
         self.assertEqual(crests.kind(b"<?xml version='1.0'?><svg></svg>"), "svg")
         self.assertEqual(crests.kind(b"<!DOCTYPE html><title>403</title>"), "")
 
+    def test_same_club(self):
+        import crests
+        same = lambda a, b: crests.same_club(crests.words(a), crests.words(b))  # noqa: E731
+        self.assertTrue(same("Μ.ΑΛΕΞΑΝΔΡΟΣ ΘΕΣΣΑΛΟΝΙΚΗΣ", "Γ.Σ. Μέγας Αλέξανδρος Θεσσαλονίκης"))
+        self.assertTrue(same("ΜΑΚΕΔΟΝΙΚΟΣ (1)", "Α.Σ. Μακεδονικός"))
+        self.assertTrue(same("ΠΑΟ ΚΟΥΦΑΛΙΩΝ", "Π.Α.Ο. Κουφαλίων"))
+        self.assertFalse(same("ΙΩΝΙΚΟΣ", "Α.Ο. Ιωνικός Νίκαιας"))  # μία λέξη: μόνο ακριβώς ίδιο
+        self.assertFalse(same("ΑΙΑΝΤΑΣ ΠΥΛΑΙΑΣ", "Α.Ε. Πυλαίας"))
+
     def test_rewrite(self):
         import json
         import tempfile

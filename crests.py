@@ -80,7 +80,7 @@ def local(url: str, have: dict[str, str]) -> str:
 # το μπάσκετ), (2) οι διοργανώσεις της ΕΠΟ, (3) η ελληνική Wikipedia (εικόνα της σελίδας του συλλόγου). Μόνο όταν
 # ταιριάζουν όλες οι λέξεις του ονόματος. Τα ευρήματα (και όσα δεν βρέθηκαν, για 30 μέρες) στο docs/crest_lookup.json.
 LOOKUP = DOCS / "crest_lookup.json"
-LOOKUP_VERSION = 3
+LOOKUP_VERSION = 4
 GENERIC = {"ΑΟ", "ΑΕ", "ΑΣ", "ΠΑΕ", "ΓΣ", "ΠΟ", "ΑΜΣ", "ΑΟΚ", "ΑΚΑΔ", "ΑΚΑΔΗΜΙΑ", "ΠΟΔ", "ΜΑΣ", "ΓΑΣ", "ΠΑΣ", "ΑΠΣ",
            "ΑΠΟ", "ΑΜΟ", "ΠΑΟ", "ΑΠΟΕ", "ΑΕΠΣ", "ΑΓΠΣ", "ΦΣ", "ΜΓΣ", "ΝΓΣΘ", "ΑΝΔΡΩΝ", "ΓΥΝΑΙΚΩΝ", "ΠΟΔΟΣΦΑΙΡΟ", "ΠΟΔΟΣΦΑΙΡΙΚΟΣ",
            "ΟΜΙΛΟΣ", "ΑΘΛΗΤΙΚΟΣ", "ΣΥΛΛΟΓΟΣ", "ΝΕΩΝ", "ΝΕΑΝΙΔΩΝ", "ΚΟΡΑΣΙΔΩΝ", "ΠΑΙΔΩΝ", "ΜΦΑΟΦ", "ΑΠΟΕ"}
@@ -176,7 +176,7 @@ def pick_common(pool: dict[frozenset, collections.Counter], w: frozenset) -> str
     return count.most_common(1)[0][0] if count else ""
 
 
-def find_missing(names: set[str], known: dict[frozenset, collections.Counter]) -> dict[str, str]:
+def find_missing(names: dict[str, str], known: dict[str, dict[frozenset, collections.Counter]]) -> dict[str, str]:
     """Σήματα για ονόματα χωρίς σήμα· γράφει/διαβάζει το docs/crest_lookup.json."""
     cache = json.loads(LOOKUP.read_text(encoding="utf-8")) if LOOKUP.exists() else {}
     if cache.get("_v") != LOOKUP_VERSION:  # άλλαξε ο τρόπος αναζήτησης: ξανά από την αρχή
@@ -187,7 +187,14 @@ def find_missing(names: set[str], known: dict[frozenset, collections.Counter]) -
     pool = None
     for n in todo:
         w, url, src = words(n), "", ""
-        url = pick_common(known, w)
+        # Πρώτα από το ίδιο άθλημα (το σήμα της ποδοσφαιρικής ΑΕΚ, όχι της ΚΑΕ), μετά από τα άλλα.
+        url = pick_common(known.get(names[n], {}), w)
+        if not url:
+            merged: dict[frozenset, collections.Counter] = {}
+            for sp, pool_ in known.items():
+                for k, c in pool_.items():
+                    merged.setdefault(k, collections.Counter()).update(c)
+            url = pick_common(merged, w)
         src = "site" if url else ""
         if not url:
             if pool is None:
@@ -217,16 +224,17 @@ def main() -> int:
 
     st = json.loads(standings_path.read_text(encoding="utf-8")) if standings_path.exists() else {}
     # Σήματα που λείπουν: πρώτα τα ονόματα με σήμα σε όλο το site (κάθε άθλημα), μετά ΕΠΟ και Wikipedia.
-    known: dict[frozenset, collections.Counter] = {}
-    missing: set[str] = set()
+    sport = {x["key"]: x.get("sport", "") for x in data.get("sections", [])}
+    known: dict[str, dict[frozenset, collections.Counter]] = {}  # ανά άθλημα
+    missing: dict[str, str] = {}
 
     def note(name: str, logo: str, section: str) -> None:
         if not name or "ΠΑΟΚ" in plain(name):
             return
         if logo:
-            known.setdefault(words(name), collections.Counter())[logo] += 1
+            known.setdefault(sport.get(section, ""), {}).setdefault(words(name), collections.Counter())[logo] += 1
         elif section in academy:
-            missing.add(name)
+            missing.setdefault(name, sport.get(section, ""))
     for m in data.get("matches", []):
         note(m.get("home", ""), m.get("homeLogo", ""), m.get("section"))
         note(m.get("away", ""), m.get("awayLogo", ""), m.get("section"))

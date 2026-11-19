@@ -41,8 +41,17 @@ jobs:
           git archive origin/data crests 2>/dev/null | tar -x -C docs || true
 
       # Τα προγράμματα της ΕΠΕΣΘ (βόλεϊ ακαδημίες) είναι PDF: pdftotext από το poppler-utils.
+      # Αν αποτύχει (π.χ. τα αποθετήρια του Ubuntu δεν απαντούν), η ενημέρωση συνεχίζει: το βόλεϊ ακαδημιών
+      # κρατά τα προηγούμενα δεδομένα του.
       - name: pdftotext
-        run: command -v pdftotext || (sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils)
+        continue-on-error: true
+        run: |
+          command -v pdftotext && exit 0
+          for i in 1 2; do
+            sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils && exit 0
+            sleep 20
+          done
+          exit 1
 
       - name: Δημιουργία ημερολογίων
         id: build

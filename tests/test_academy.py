@@ -330,3 +330,41 @@ class KoeWatch(unittest.TestCase):
         self.assertFalse(k.relevant("https://koe.org.gr/article/x", "ΠΑΓΚΟΣΜΙΟ ΠΡΩΤΑΘΛΗΜΑ ΝΕΑΝΙΔΩΝ Κ18: αναχώρησε η αποστολή"))
         self.assertFalse(k.relevant("https://koe.org.gr/article/x", "Κλήση 19 αθλητριών"))
 
+
+class Crests(unittest.TestCase):
+    def test_kind(self):
+        import crests
+        self.assertEqual(crests.kind(b"\x89PNG\r\n"), "png")
+        self.assertEqual(crests.kind(b"\xff\xd8\xff"), "jpg")
+        self.assertEqual(crests.kind(b"RIFF\0\0\0\0WEBPVP8"), "webp")
+        self.assertEqual(crests.kind(b"<?xml version='1.0'?><svg></svg>"), "svg")
+        self.assertEqual(crests.kind(b"<!DOCTYPE html><title>403</title>"), "")
+
+    def test_rewrite(self):
+        import json
+        import tempfile
+        from pathlib import Path
+        import crests
+        with tempfile.TemporaryDirectory() as d:
+            docs = Path(d)
+            (docs / "matches.json").write_text(json.dumps({
+                "sections": [{"key": "football-u19", "academy": True}, {"key": "football"}],
+                "matches": [{"section": "football-u19", "homeLogo": "https://www.paokfc.gr/a.png", "awayLogo": ""},
+                            {"section": "football", "homeLogo": "https://espn.com/b.png", "awayLogo": ""}]}))
+            (docs / "standings.json").write_text(json.dumps({"football-u19": [{"rows": [{"logo": "https://www.paokfc.gr/a.png"}]}]}))
+            seen = []
+
+            def fake_run(cmd, **k):
+                seen.append(cmd[-1])
+                return mock.Mock(returncode=0, stdout=b"\x89PNG fake")
+            with mock.patch.object(crests, "DOCS", docs), mock.patch.object(crests, "DIR", docs / "crests"), \
+                    mock.patch.object(crests.subprocess, "run", fake_run):
+                crests.main()
+                crests.main()  # δεύτερη φορά: από το αντίγραφο, χωρίς κατέβασμα
+            m = json.loads((docs / "matches.json").read_text())["matches"]
+            self.assertTrue(m[0]["homeLogo"].startswith(crests.SITE) and m[0]["homeLogo"].endswith(".png"))
+            self.assertEqual(m[1]["homeLogo"], "https://espn.com/b.png")  # μόνο οι ακαδημίες
+            st = json.loads((docs / "standings.json").read_text())
+            self.assertEqual(st["football-u19"][0]["rows"][0]["logo"], m[0]["homeLogo"])
+            self.assertEqual(seen, ["https://www.paokfc.gr/a.png"])
+

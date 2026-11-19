@@ -42,6 +42,10 @@
   ],
   "rewrites": [
     {
+      "source": "/crests/:f",
+      "destination": "/api/data?f=crests/:f"
+    },
+    {
       "source": "/:name(matches|standings|status).json",
       "destination": "/api/data?f=:name.json"
     },

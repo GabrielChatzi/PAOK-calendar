@@ -37,6 +37,8 @@ jobs:
           for f in $(git ls-tree --name-only origin/data | grep -E '\.(json|ics)$'); do
             git show "origin/data:$f" > "docs/$f"
           done
+          # Τα αντίγραφα των σημάτων (crests.py): αλλιώς το rsync --delete της αποθήκευσης θα τα έσβηνε.
+          git archive origin/data crests 2>/dev/null | tar -x -C docs || true
 
       # Τα προγράμματα της ΕΠΕΣΘ (βόλεϊ ακαδημίες) είναι PDF: pdftotext από το poppler-utils.
       - name: pdftotext
@@ -48,6 +50,11 @@ jobs:
         env:
           PUSH: "1"
         run: python3 build_calendars.py
+
+      # Σήματα αντιπάλων των ακαδημιών: αντίγραφο στο docs/crests, για να μη χαθούν αν μια πηγή μπλοκάρει.
+      - name: Σήματα ακαδημιών
+        continue-on-error: true
+        run: python3 crests.py
 
       # Πόλο υποδομής: ειδοποίηση στον διαχειριστή όταν η ΚΟΕ βγάλει προκήρυξη ή πρόγραμμα (koe_watch.py).
       - name: ΚΟΕ (πόλο υποδομής)

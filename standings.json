@@ -2654,7 +2654,7 @@
     {
      "pos": 1,
      "team": "Παναθηναϊκός",
-     "logo": "",
+     "logo": "https://upload.wikimedia.org/wikipedia/el/4/4f/Panathinaikos_A.O._logo.svg",
      "paok": false,
      "cells": [
       "9",
@@ -2696,7 +2696,7 @@
     {
      "pos": 4,
      "team": "Ολυμπιακός",
-     "logo": "",
+     "logo": "https://upload.wikimedia.org/wikipedia/el/0/0e/Olympiacos_FC_2024_logo.png",
      "paok": false,
      "cells": [
       "8",
@@ -2766,7 +2766,7 @@
     {
      "pos": 9,
      "team": "Κηφισιά",
-     "logo": "",
+     "logo": "https://upload.wikimedia.org/wikipedia/commons/5/55/%CE%91%CE%B3%CE%BF%CF%81%CE%AC_%CE%9A%CE%B7%CF%86%CE%B9%CF%83%CE%B9%CE%AC%CF%82_0910.jpg",
      "paok": false,
      "cells": [
       "9",
@@ -2794,7 +2794,7 @@
     {
      "pos": 11,
      "team": "Αστέρας Τρίπολης",
-     "logo": "",
+     "logo": "https://upload.wikimedia.org/wikipedia/el/5/50/Asteras_Tripolis_FC.svg",
      "paok": false,
      "cells": [
       "9",
@@ -2808,7 +2808,7 @@
     {
      "pos": 12,
      "team": "Λεβαδειακός",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/7ec28731bced3613.png",
      "paok": false,
      "cells": [
       "9",
@@ -2836,7 +2836,7 @@
     {
      "pos": 14,
      "team": "Καλαμάτα",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/103c1a0871239fc7.png",
      "paok": false,
      "cells": [
       "9",
@@ -2866,7 +2866,7 @@
     {
      "pos": 1,
      "team": "Ολυμπιακός",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/",
      "paok": false,
      "cells": [
       "7",
@@ -2908,7 +2908,7 @@
     {
      "pos": 4,
      "team": "Αστέρας Τρίπολης",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/",
      "paok": false,
      "cells": [
       "7",
@@ -2964,7 +2964,7 @@
     {
      "pos": 8,
      "team": "Παναθηναϊκός",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/",
      "paok": false,
      "cells": [
       "7",
@@ -3020,7 +3020,7 @@
     {
      "pos": 12,
      "team": "Λεβαδειακός",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/7ec28731bced3613.png",
      "paok": false,
      "cells": [
       "7",
@@ -3034,7 +3034,7 @@
     {
      "pos": 13,
      "team": "Κηφισιά",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/",
      "paok": false,
      "cells": [
       "6",
@@ -3048,7 +3048,7 @@
     {
      "pos": 14,
      "team": "Καλαμάτα",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/103c1a0871239fc7.png",
      "paok": false,
      "cells": [
       "7",
@@ -3078,7 +3078,7 @@
     {
      "pos": 1,
      "team": "Ολυμπιακός",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/",
      "paok": false,
      "cells": [
       "7",
@@ -3120,7 +3120,7 @@
     {
      "pos": 4,
      "team": "Παναθηναϊκός",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/",
      "paok": false,
      "cells": [
       "7",
@@ -3134,7 +3134,7 @@
     {
      "pos": 5,
      "team": "ΑSΤΕRΑS AKTOR",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/148daeb06fbce7ed.png",
      "paok": false,
      "cells": [
       "7",
@@ -3176,7 +3176,7 @@
     {
      "pos": 8,
      "team": "Κηφισιά",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/",
      "paok": false,
      "cells": [
       "6",
@@ -3246,7 +3246,7 @@
     {
      "pos": 13,
      "team": "Λεβαδειακός",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/7ec28731bced3613.png",
      "paok": false,
      "cells": [
       "7",
@@ -3260,7 +3260,7 @@
     {
      "pos": 14,
      "team": "Καλαμάτα",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/103c1a0871239fc7.png",
      "paok": false,
      "cells": [
       "7",
@@ -5181,7 +5181,7 @@
     {
      "pos": 3,
      "team": "ΑΚΡΙΤΕΣ ΣΥΚΕΩΝ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/",
      "paok": false,
      "cells": [
       "4",
@@ -5209,7 +5209,7 @@
     {
      "pos": 5,
      "team": "ΑΧΙΛΛΕΑΣ ΤΡΙΑΝΔΡΙΑΣ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/0ef2961e8391d905.gif",
      "paok": false,
      "cells": [
       "4",
@@ -5237,7 +5237,7 @@
     {
      "pos": 7,
      "team": "ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020 (1)",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/c9a5354765460e75.gif",
      "paok": false,
      "cells": [
       "4",
@@ -5293,7 +5293,7 @@
     {
      "pos": 11,
      "team": "ΜΑΚΕΔΟΝΙΚΟΣ (1)",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/efadf5b8da59bd89.jpg",
      "paok": false,
      "cells": [
       "4",
@@ -5349,7 +5349,7 @@
     {
      "pos": 15,
      "team": "ΑΛΕΞΑΝΔΡΟΣ ΚΙΛΚΙΣ (1)",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/9aad27db940cf2b7.svg",
      "paok": false,
      "cells": [
       "4",
@@ -5363,7 +5363,7 @@
     {
      "pos": 16,
      "team": "ΗΡΑΚΛΗΣ ΑΜΠΕΛΟΚΗΠΩΝ",
-     "logo": "",
+     "logo": "https://upload.wikimedia.org/wikipedia/el/2/2a/%CE%97%CF%81%CE%B1%CE%BA%CE%BB%CE%AE%CF%82_%CE%91%CE%BC%CF%80%CE%B5%CE%BB%CE%BF%CE%BA%CE%AE%CF%80%CF%89%CE%BD.svg",
      "paok": false,
      "cells": [
       "3",
@@ -5377,7 +5377,7 @@
     {
      "pos": 17,
      "team": "ΑΙΑΣ ΕΥΟΣΜΟΥ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/217de571443cb8c2.gif",
      "paok": false,
      "cells": [
       "4",
@@ -5405,7 +5405,7 @@
     {
      "pos": 19,
      "team": "ΠΑΝΣΕΡΡΑΪΚΟΣ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/",
      "paok": false,
      "cells": [
       "4",
@@ -5419,7 +5419,7 @@
     {
      "pos": 20,
      "team": "ΦΟΙΝΙΚΑΣ ΠΟΛΙΧΝΗΣ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/ab51bab042c507d3.jpg",
      "paok": false,
      "cells": [
       "4",
@@ -5447,7 +5447,7 @@
     {
      "pos": 22,
      "team": "ΠΙΕΡΙΚΟΣ 1961",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/",
      "paok": false,
      "cells": [
       "4",
@@ -5531,7 +5531,7 @@
     {
      "pos": 28,
      "team": "ΠΟΣΕΙΔΩΝΑΣ ΜΗΧΑΝΙΩΝΑΣ",
-     "logo": "",
+     "logo": "https://upload.wikimedia.org/wikipedia/el/c/c2/%CE%91.%CE%A3._%CE%A0%CE%BF%CF%83%CE%B5%CE%B9%CE%B4%CF%8E%CE%BD_%CE%9D%CE%AD%CE%B1%CF%82_%CE%9C%CE%B7%CF%87%CE%B1%CE%BD%CE%B9%CF%8E%CE%BD%CE%B1%CF%82.svg",
      "paok": false,
      "cells": [
       "4",
@@ -5545,7 +5545,7 @@
     {
      "pos": 29,
      "team": "ΠΑΟ ΚΟΥΦΑΛΙΩΝ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/0e64ebcd97bbe9c7.jpg",
      "paok": false,
      "cells": [
       "4",
@@ -5601,7 +5601,7 @@
     {
      "pos": 33,
      "team": "ΑΕ ΠΥΛΑΙΑΣ",
-     "logo": "",
+     "logo": "https://upload.wikimedia.org/wikipedia/el/1/16/Pylaia_logo.JPG",
      "paok": false,
      "cells": [
       "4",
@@ -5643,7 +5643,7 @@
     {
      "pos": 36,
      "team": "Μ.ΑΛΕΞΑΝΔΡΟΣ ΘΕΣΣΑΛΟΝΙΚΗΣ",
-     "logo": "",
+     "logo": "https://upload.wikimedia.org/wikipedia/el/e/e0/GS_Megas_Alexandros_Logo.JPG",
      "paok": false,
      "cells": [
       "4",
@@ -5657,7 +5657,7 @@
     {
      "pos": 37,
      "team": "ΑΠΟΛΛΩΝ ΚΑΛΑΜΑΡΙΑΣ (1)",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/",
      "paok": false,
      "cells": [
       "4",
@@ -5671,7 +5671,7 @@
     {
      "pos": 38,
      "team": "ΑΝΑΓΕΝΝΗΣΗ ΡΥΣΙΟΥ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/c8bdd46ed9f6061c.png",
      "paok": false,
      "cells": [
       "4",
@@ -5713,7 +5713,7 @@
     {
      "pos": 41,
      "team": "ΟΔΥΣΣΕΑΣ ΚΟΡΔΕΛΙΟΥ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/dd9fe0b8c0a3b8e5.png",
      "paok": false,
      "cells": [
       "2",
@@ -5741,7 +5741,7 @@
     {
      "pos": 43,
      "team": "ΠΑΝΟΡΑΜΑ",
-     "logo": "",
+     "logo": "https://upload.wikimedia.org/wikipedia/el/0/05/Panorama_Sports_Club_Logo.jpg",
      "paok": false,
      "cells": [
       "3",
@@ -5881,7 +5881,7 @@
     {
      "pos": 53,
      "team": "ΑΝΑΓΕΝΝΗΣΗ ΕΠΑΝΟΜΗΣ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/c81f4b10da619e85.png",
      "paok": false,
      "cells": [
       "4",
@@ -5895,7 +5895,7 @@
     {
      "pos": 54,
      "team": "ΑΝΑΓΕΝΝΗΣΗ ΝΕΩΝ ΕΠΙΒΑΤΩΝ 2021",
-     "logo": "",
+     "logo": "https://upload.wikimedia.org/wikipedia/el/c/cb/Anagennisi_NE.png",
      "paok": false,
      "cells": [
       "3",
@@ -5923,7 +5923,7 @@
     {
      "pos": 56,
      "team": "ΕΛΕΥΘΕΡΙΑΚΟΣ",
-     "logo": "",
+     "logo": "https://upload.wikimedia.org/wikipedia/el/4/49/APO_Eleftheriakos_logo.jpg",
      "paok": false,
      "cells": [
       "3",
@@ -5951,7 +5951,7 @@
     {
      "pos": 58,
      "team": "ΑΣ ΠΟΔ. ΤΟΥΜΠΑΣ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/cd081952bbf0f43b.png",
      "paok": false,
      "cells": [
       "4",
@@ -5995,7 +5995,7 @@
     {
      "pos": 1,
      "team": "ΑΛΕΞΑΝΔΡΟΣ ΚΙΛΚΙΣ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/9aad27db940cf2b7.svg",
      "paok": false,
      "cells": [
       "4",
@@ -6009,7 +6009,7 @@
     {
      "pos": 2,
      "team": "ΑΚΡΙΤΕΣ ΣΥΚΕΩΝ (1)",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/",
      "paok": false,
      "cells": [
       "4",
@@ -6023,7 +6023,7 @@
     {
      "pos": 3,
      "team": "ΑΓΙΟΣ ΝΙΚΟΛΑΟΣ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/",
      "paok": false,
      "cells": [
       "4",
@@ -6065,7 +6065,7 @@
     {
      "pos": 6,
      "team": "ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020 (1)",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/c9a5354765460e75.gif",
      "paok": false,
      "cells": [
       "3",
@@ -6093,7 +6093,7 @@
     {
      "pos": 8,
      "team": "ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ (1)",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/68d21cf404646061.svg",
      "paok": false,
      "cells": [
       "4",
@@ -6121,7 +6121,7 @@
     {
      "pos": 10,
      "team": "ΜΑΚΕΔΟΝΙΚΟΣ (1)",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/efadf5b8da59bd89.jpg",
      "paok": false,
      "cells": [
       "3",
@@ -6135,7 +6135,7 @@
     {
      "pos": 11,
      "team": "ΚΑΜΠΑΝΙΑΚΟΣ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/d7ad81ac6dc3c37f.png",
      "paok": false,
      "cells": [
       "4",
@@ -6205,7 +6205,7 @@
     {
      "pos": 16,
      "team": "ΔΟΞΑ ΠΕΝΤΑΛΟΦΟΥ",
-     "logo": "",
+     "logo": "https://upload.wikimedia.org/wikipedia/el/6/60/%CE%94%CE%9F%CE%9E%CE%91_%CE%A0%CE%95%CE%9D%CE%A4%CE%91%CE%9B%CE%9F%CE%A6%CE%9F%CE%A5.png",
      "paok": false,
      "cells": [
       "4",
@@ -6387,7 +6387,7 @@
     {
      "pos": 29,
      "team": "ΑΓΡΟΤΙΚΟΣ ΑΣΤΕΡΑΣ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/",
      "paok": false,
      "cells": [
       "3",
@@ -6415,7 +6415,7 @@
     {
      "pos": 31,
      "team": "ΕΘΝΙΚΟΣ ΠΥΛΑΙΑΣ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/ca43c017552cc58c.gif",
      "paok": false,
      "cells": [
       "3",
@@ -6443,7 +6443,7 @@
     {
      "pos": 33,
      "team": "ΠΟ ΞΗΡΟΚΡΗΝΗΣ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/64642dda30762b87.jpg",
      "paok": false,
      "cells": [
       "4",
@@ -6457,7 +6457,7 @@
     {
      "pos": 34,
      "team": "ΑΟ ΚΑΡΔΙΑΣ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/4c377f30a9f4a59f.png",
      "paok": false,
      "cells": [
       "3",
@@ -6471,7 +6471,7 @@
     {
      "pos": 35,
      "team": "ΑΕ ΑΜΠΕΛΟΚΗΠΩΝ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/e0f7ee515c925348.jpg",
      "paok": false,
      "cells": [
       "4",
@@ -6569,7 +6569,7 @@
     {
      "pos": 42,
      "team": "ΑΧΙΛΛΕΑΣ ΤΡΙΑΝΔΡΙΑΣ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/0ef2961e8391d905.gif",
      "paok": false,
      "cells": [
       "4",
@@ -6611,7 +6611,7 @@
     {
      "pos": 45,
      "team": "ΗΡΑΚΛΗΣ ΑΜΠΕΛΟΚΗΠΩΝ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/",
      "paok": false,
      "cells": [
       "2",
@@ -6639,7 +6639,7 @@
     {
      "pos": 47,
      "team": "Μ.ΑΛΕΞΑΝΔΡΟΣ ΘΕΣΣΑΛΟΝΙΚΗΣ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/",
      "paok": false,
      "cells": [
       "4",
@@ -6653,7 +6653,7 @@
     {
      "pos": 48,
      "team": "ΙΩΝΙΚΟΣ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/650b5739185c662d.jpg",
      "paok": false,
      "cells": [
       "4",
@@ -6681,7 +6681,7 @@
     {
      "pos": 50,
      "team": "ΑΙΑΣ ΕΥΟΣΜΟΥ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/217de571443cb8c2.gif",
      "paok": false,
      "cells": [
       "3",
@@ -6739,7 +6739,7 @@
     {
      "pos": 2,
      "team": "ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020 (2)",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/c9a5354765460e75.gif",
      "paok": false,
      "cells": [
       "4",
@@ -6767,7 +6767,7 @@
     {
      "pos": 4,
      "team": "ΜΑΚΕΔΟΝΙΚΟΣ (2)",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/efadf5b8da59bd89.jpg",
      "paok": false,
      "cells": [
       "5",
@@ -6795,7 +6795,7 @@
     {
      "pos": 6,
      "team": "ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ (2)",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/68d21cf404646061.svg",
      "paok": false,
      "cells": [
       "4",
@@ -6837,7 +6837,7 @@
     {
      "pos": 9,
      "team": "ΑΚΡΙΤΕΣ ΣΥΚΕΩΝ (2)",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/",
      "paok": false,
      "cells": [
       "4",
@@ -6867,7 +6867,7 @@
     {
      "pos": 1,
      "team": "ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/c9a5354765460e75.gif",
      "paok": false,
      "cells": [
       "5",
@@ -6909,7 +6909,7 @@
     {
      "pos": 4,
      "team": "ΑΓΙΟΣ ΝΙΚΟΛΑΟΣ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/",
      "paok": false,
      "cells": [
       "5",
@@ -6923,7 +6923,7 @@
     {
      "pos": 5,
      "team": "ΑΛΕΞΑΝΔΡΟΣ ΚΙΛΚΙΣ",
-     "logo": "",
+     "logo": "https://paokalendar.gr/crests/9aad27db940cf2b7.svg",
      "paok": false,
      "cells": [
       "5",

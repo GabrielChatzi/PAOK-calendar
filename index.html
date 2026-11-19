@@ -818,7 +818,7 @@
   }
   function crest(url, name, section) {
     if (isAcademy(section)) {
-      if (isPaokName(name)) {
+      if (isPaokName(name) || /^(ΑΣ|ΠΑΕ|ΚΑΕ)\s+ΠΑΟΚ\b/.test(name)) {  // και η άλλη ομάδα του ΠΑΟΚ (π.χ. «ΑΣ ΠΑΟΚ (2)»)
         var main = data.sections.filter(function (s) { return s.sport === data.sectionMap[section].sport && !s.women; })[0];
         url = (main && paokLogo[main.key]) || url;
       } else if (savedCrest(name, section)) {
@@ -1459,7 +1459,7 @@
     var by = {};
     function add(name, logo, key) {
       var s = data.sectionMap[key];
-      if (!s || !name || isPaokName(name)) return;
+      if (!s || !name || isPaokName(name) || /^(ΑΣ|ΠΑΕ|ΚΑΕ)\s+ΠΑΟΚ\b/.test(name)) return;
       var k = crestKey(s.sport, name);
       if (!crestWords(name).length) return;
       var o = by[k] || (by[k] = { k: k, sport: s.sport, name: name, section: key, source: "", fallback: "", teams: {} });
@@ -1480,7 +1480,9 @@
       o.auto = o.source || academyCrest(o.name, o.section) || o.fallback;
       o.url = o.saved || o.auto;
       return o;
-    }).sort(function (a, b) { return (!!a.url - !!b.url) || a.sport.localeCompare(b.sport, "el") || a.name.localeCompare(b.name, "el"); });
+    }).sort(function (a, b) {  // αλφαβητικά (χωρίς τόνους), μετά ανά άθλημα
+      return a.name.localeCompare(b.name, "el", { sensitivity: "base" }) || a.sport.localeCompare(b.sport, "el");
+    });
   }
   function academyCrestsHtml() {
     var all = academyOpponents(), missing = all.filter(function (o) { return !o.url; });

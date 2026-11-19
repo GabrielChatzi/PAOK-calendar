@@ -1384,7 +1384,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/Panellinios-logo.jpg",
    "tvUrl": "",
    "nt": "ee972dede7"
   },
@@ -1440,7 +1440,7 @@
    "start": "2026-10-10T15:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Pigasos2.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "12cccb77ba"
@@ -1593,7 +1593,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-IonikosIon.jpg",
    "tvUrl": "",
    "nt": "4f21954f25"
   },
@@ -1673,7 +1673,7 @@
    "start": "2026-10-12T21:45:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/DEKA-Volley_small.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "a0f51b4f2c"
@@ -1849,7 +1849,7 @@
    "start": "2026-10-17T20:00:00+03:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Aris.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "d27d51a72a"
@@ -1888,7 +1888,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-AENpanor.gif",
    "tvUrl": "",
    "nt": "37936a5c64"
   },
@@ -1907,7 +1907,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Aris.gif",
    "tvUrl": "",
    "nt": "f8561a259a"
   },
@@ -1945,7 +1945,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2023/03/244205994_280764573765604_9029332810770461336_n.jpg",
    "tvUrl": "",
    "nt": "252be74e66"
   },
@@ -2554,7 +2554,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-EspTher.gif",
    "tvUrl": "",
    "nt": "5c1aa5e6f6"
   },
@@ -2649,7 +2649,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Elpis.gif",
    "tvUrl": "",
    "nt": "cfab3926a9"
   },
@@ -2724,7 +2724,7 @@
    "start": "2026-11-01T15:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-NVotsis1.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "72ddd2ddc2"
@@ -2824,7 +2824,7 @@
    "start": "2026-11-01T21:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-MENT-1.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "016d851701"
@@ -2843,7 +2843,7 @@
    "start": "2026-11-02T21:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2024/03/MAK-NEO-830x830-1.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "c9969587ad"
@@ -3038,7 +3038,7 @@
    "start": "2026-11-07T18:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Perseas.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "ba7fd70e88"
@@ -3057,7 +3057,7 @@
    "start": "2026-11-07T20:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-AENpanor.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "0481715198"
@@ -3134,7 +3134,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-EthnPylaias.gif",
    "tvUrl": "",
    "nt": "5b5abf05c5"
   },
@@ -3153,7 +3153,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-NVotsis1.jpg",
    "tvUrl": "",
    "nt": "9a7f98e7e8"
   },
@@ -3172,7 +3172,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-AENpanor.gif",
    "tvUrl": "",
    "nt": "0cd3547a26"
   },
@@ -3291,7 +3291,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/Iraklis-GS-1908-logo-e1634492746644.jpg",
    "tvUrl": "",
    "nt": "4f33b57a26"
   },
@@ -3352,7 +3352,7 @@
    "start": "2026-11-14T09:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-OlimposNew.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "f3d727d423"
@@ -3447,7 +3447,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Megas.gif",
    "tvUrl": "",
    "nt": "666a45cc71"
   },
@@ -3509,7 +3509,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Pigasos2.gif",
    "tvUrl": "",
    "nt": "1c0875943e"
   },
@@ -3604,7 +3604,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Aris.gif",
    "tvUrl": "",
    "nt": "1b6a2460ad"
   },
@@ -3641,7 +3641,7 @@
    "start": "2026-11-15T18:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Perseas.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "bbdefbeac7"
@@ -3830,7 +3830,7 @@
    "start": "2026-11-21T15:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/Iraklis-GS-1908-logo-e1634492746644.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "22fc692aa9"
@@ -3849,7 +3849,7 @@
    "start": "2026-11-21T15:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Langadas.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "57d1ab0501"
@@ -4032,7 +4032,7 @@
    "start": "2026-11-22T15:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/Vergina-logo-e1634493452639.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "401ceaa0a2"
@@ -4209,7 +4209,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-POMoudanion.gif",
    "tvUrl": "",
    "nt": "3c9a1561de"
   },
@@ -4279,7 +4279,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-POMoudanion.gif",
    "tvUrl": "",
    "nt": "fa1761bb12"
   },
@@ -4361,7 +4361,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-AENAgTriad.gif",
    "tvUrl": "",
    "nt": "7b7acd2976"
   },
@@ -4461,7 +4461,7 @@
    "start": "2026-11-29T18:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-AENpanor.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "e9809ceaf4"
@@ -4505,7 +4505,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Pigasos2.gif",
    "tvUrl": "",
    "nt": "e3873ad8e8"
   },
@@ -4523,7 +4523,7 @@
    "start": "2026-11-30T21:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Hanth.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "043149eb9d"
@@ -4637,7 +4637,7 @@
    "start": "2026-12-05T16:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Aias.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "87655ddef7"
@@ -4790,7 +4790,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-NVotsis1.jpg",
    "tvUrl": "",
    "nt": "4411a7e0d3"
   },
@@ -4809,7 +4809,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Pigasos2.gif",
    "tvUrl": "",
    "nt": "06897b9307"
   },
@@ -4908,7 +4908,7 @@
    "start": "2026-12-06T20:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Perseas.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "6899aa9574"
@@ -4928,7 +4928,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/DEKA-Volley_small.jpg",
    "tvUrl": "",
    "nt": "31c53fbbe8"
   },
@@ -5065,7 +5065,7 @@
    "start": "2026-12-12T14:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-IonikosIon.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "41748897da"
@@ -5085,7 +5085,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-IonikosIon.jpg",
    "tvUrl": "",
    "nt": "4e8af3614e"
   },
@@ -5179,7 +5179,7 @@
    "start": "2026-12-12T18:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Aris.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "9a0843ff97"
@@ -5198,7 +5198,7 @@
    "start": "2026-12-12T19:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-EthnPylaias.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "f5e10ade31"
@@ -5355,7 +5355,7 @@
    "start": "2026-12-14T21:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Aris.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "7b246a03ed"
@@ -5474,7 +5474,7 @@
    "start": "2026-12-19T17:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Aias.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "ef145a7a07"
@@ -5551,7 +5551,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-AENpanor.gif",
    "tvUrl": "",
    "nt": "f872cdc71a"
   },
@@ -5669,7 +5669,7 @@
    "start": "2026-12-20T18:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Aris.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "5090dcc2ff"
@@ -5688,7 +5688,7 @@
    "start": "2026-12-20T19:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-IonikosIon.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "47429a2f0d"
@@ -5708,7 +5708,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2024/03/MAK-NEO-830x830-1.jpg",
    "tvUrl": "",
    "nt": "e486986b5e"
   },
@@ -6103,7 +6103,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/Vergina-logo-e1634493452639.jpg",
    "tvUrl": "",
    "nt": "40a68f8e45"
   },
@@ -6121,7 +6121,7 @@
    "start": "2027-01-10T17:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-NVotsis1.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "e58657a296"
@@ -6221,7 +6221,7 @@
    "start": "2027-01-10T20:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2023/03/244205994_280764573765604_9029332810770461336_n.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "7df84ee03c"
@@ -6240,7 +6240,7 @@
    "start": "2027-01-11T21:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/Iraklis-GS-1908-logo-e1634492746644.jpg",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "51fc801037"
@@ -6403,7 +6403,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-OlimposNew.gif",
    "tvUrl": "",
    "nt": "1747a86a61"
   },
@@ -6422,7 +6422,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-MENT-1.gif",
    "tvUrl": "",
    "nt": "333e14abda"
   },
@@ -6768,7 +6768,7 @@
    "start": "2027-01-24T19:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-AENpanor.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "d6dd3e5b5a"
@@ -6806,7 +6806,7 @@
    "start": "2027-01-30T15:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-AENAgTriad.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "50807e84ef"
@@ -6964,7 +6964,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Perseas.gif",
    "tvUrl": "",
    "nt": "7e855cd1ac"
   },
@@ -7058,7 +7058,7 @@
    "start": "2027-02-01T21:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Pigasos2.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "ec604d00fa"
@@ -7254,7 +7254,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Perseas.gif",
    "tvUrl": "",
    "nt": "cfad4559ec"
   },
@@ -7329,7 +7329,7 @@
    "start": "2027-02-08T21:30:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Elpis.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "ce009a5aa8"
@@ -7468,7 +7468,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Hanth.gif",
    "tvUrl": "",
    "nt": "bda53da113"
   },
@@ -7738,7 +7738,7 @@
    "start": "2027-02-21T20:00:00+02:00",
    "timeKnown": true,
    "paokHome": false,
-   "homeLogo": "",
+   "homeLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Pigasos2.gif",
    "awayLogo": "",
    "tvUrl": "",
    "nt": "f13a80e557"
@@ -7839,7 +7839,7 @@
    "timeKnown": true,
    "paokHome": true,
    "homeLogo": "",
-   "awayLogo": "",
+   "awayLogo": "https://epesth.gr/wp-content/uploads/2021/10/L-Aris.gif",
    "tvUrl": "",
    "nt": "18cbfea67d"
   },
@@ -8867,27 +8867,27 @@
   }
  ],
  "updated": {
-  "football": "2026-11-19T10:59+02:00",
-  "football-women": "2026-11-19T10:59+02:00",
-  "basketball": "2026-11-19T10:59+02:00",
-  "basketball-women": "2026-11-19T10:59+02:00",
-  "volley": "2026-11-19T10:59+02:00",
-  "volley-women": "2026-11-19T10:59+02:00",
-  "handball": "2026-11-19T10:56+02:00",
-  "handball-women": "2026-11-19T11:01+02:00",
-  "waterpolo": "2026-11-19T11:01+02:00",
-  "waterpolo-women": "2026-11-19T11:01+02:00",
-  "futsal": "2026-11-19T11:01+02:00",
-  "football-b": "2026-11-19T11:01+02:00",
-  "football-u19": "2026-11-19T11:01+02:00",
-  "football-u17": "2026-11-19T11:01+02:00",
-  "football-u15": "2026-11-19T11:01+02:00",
-  "football-u16": "2026-11-19T11:01+02:00",
-  "volley-u21": "2026-11-19T11:01+02:00",
-  "volley-u18": "2026-11-19T11:01+02:00",
-  "volley-women-u20": "2026-11-19T11:01+02:00",
-  "volley-women-u18": "2026-11-19T11:01+02:00",
-  "volley-women-u18es1": "2026-11-19T11:01+02:00",
-  "volley-women-u18es2": "2026-11-19T11:01+02:00"
+  "football": "2026-11-19T11:10+02:00",
+  "football-women": "2026-11-19T11:10+02:00",
+  "basketball": "2026-11-19T11:10+02:00",
+  "basketball-women": "2026-11-19T11:10+02:00",
+  "volley": "2026-11-19T11:10+02:00",
+  "volley-women": "2026-11-19T11:10+02:00",
+  "handball": "2026-11-19T11:11+02:00",
+  "handball-women": "2026-11-19T11:11+02:00",
+  "waterpolo": "2026-11-19T11:11+02:00",
+  "waterpolo-women": "2026-11-19T11:12+02:00",
+  "futsal": "2026-11-19T11:12+02:00",
+  "football-b": "2026-11-19T11:12+02:00",
+  "football-u19": "2026-11-19T11:12+02:00",
+  "football-u17": "2026-11-19T11:12+02:00",
+  "football-u15": "2026-11-19T11:12+02:00",
+  "football-u16": "2026-11-19T11:12+02:00",
+  "volley-u21": "2026-11-19T11:12+02:00",
+  "volley-u18": "2026-11-19T11:12+02:00",
+  "volley-women-u20": "2026-11-19T11:12+02:00",
+  "volley-women-u18": "2026-11-19T11:12+02:00",
+  "volley-women-u18es1": "2026-11-19T11:12+02:00",
+  "volley-women-u18es2": "2026-11-19T11:12+02:00"
  }
 }

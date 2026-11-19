@@ -517,11 +517,11 @@ def epo_group_table(comp_id: int, title: str) -> list[dict]:
                     continue
                 logo = re.search(r'<img[^>]+src="([^"]+)"', tr)
                 pos, team, pts, gp, w, d, l, gf, ga = cells[:9]
-                rows.append((_num(pos), tidy_name(team), absolute(EPO, logo.group(1)) if logo else "",
+                rows.append((_num(pos), re.sub(r"\s+Κ\d\d$", "", tidy_name(team)), absolute(EPO, logo.group(1)) if logo else "",
                              [gp, w, d, l, f"{gf}-{ga}", pts]))
             if any(r[1] == PAOK_NAME for r in rows):
                 group = next((label for v, label in re.findall(r'<option[^>]*value="([^"]*)"[^>]*selected[^>]*>([^<]*)', p)), "")
-                name = title + (f", {clean(group).lower()}" if group else "")
+                name = title + (f", {clean(group).replace('ΟΜΙΛΟΣ', 'όμιλος')}" if group else "")
                 return [table(name, EPO + (u or f"/el/competition/{comp_id}/matches"), ["Αγ", "Ν", "Ι", "Η", "Γκολ", "Β"], rows)]
     raise RuntimeError("δεν βρέθηκε βαθμολογία με τον ΠΑΟΚ")
 

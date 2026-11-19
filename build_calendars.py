@@ -598,6 +598,13 @@ STATUS_TEXT = {"postponed": "Αναβλήθηκε", "cancelled": "Ματαιώθ
 EPO = "https://www.epo.gr"
 
 
+def strip_age(matches: list[Match], age: str) -> list[Match]:
+    """«ΣΚΙΟΥΡΟΙ Κ17» → «ΣΚΙΟΥΡΟΙ»: στις υποδομές της ΕΠΟ όλες οι ομάδες γράφονται με την ηλικία."""
+    for m in matches:
+        m.home, m.away = (re.sub(rf"\s+{age}$", "", x) for x in (m.home, m.away))
+    return matches
+
+
 def epo_matches(comp_id: int, section: str, required: bool) -> list[Match]:
     """Πρόγραμμα από το epo.gr, για όλες τις φάσεις της τρέχουσας σεζόν.
 
@@ -2577,7 +2584,7 @@ SOURCES: dict[str, list[tuple[str, Callable[[], list[Match]]]]] = {
     **{key: [("epesth.gr", lambda key=key: epesth_matches(key))] for key in EPESTH_TEAMS},
     **{key: [("ekasth.gr", lambda key=key: ekasth_matches(key))] for key in EKASTH_TEAMS},
     **{key: [("epsm.gr", lambda key=key: epsm_matches(key))] for key in EPSM_TEAMS},
-    "football-women-u17": [("ΕΠΟ Υποδομών Κ17", lambda: epo_matches(56, "football-women-u17", required=True))],
+    "football-women-u17": [("ΕΠΟ Υποδομών Κ17", lambda: strip_age(epo_matches(56, "football-women-u17", required=True), "Κ17"))],
 }
 
 

@@ -1614,7 +1614,8 @@ def epesth_pdf_text(url: str) -> str:
     import subprocess
     import tempfile
     import urllib.request
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    # Τα ονόματα των PDF έχουν ελληνικά (και «΄»): η διεύθυνση θέλει κωδικοποίηση.
+    req = urllib.request.Request(urllib.parse.quote(url, safe=":/%?=&"), headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=60) as r, tempfile.NamedTemporaryFile(suffix=".pdf") as f:
         f.write(r.read())
         f.flush()

@@ -1,0 +1,36 @@
+User-agent: Googlebot
+User-agent: Googlebot-image
+User-agent: AdsBot-Google
+# Explicitly allow product attributes
+Allow: /*?attribute_pa_*
+Allow: /
+# Block only the essential "junk" for Google
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /my-account/
+Disallow: /wishlist/
+Disallow: /compare/
+
+User-agent: *
+Disallow: /*?filter_*
+Disallow: /*?min_price=*
+Disallow: /*?max_price=*
+Disallow: /*?orderby=*
+Disallow: /*?rating_filter=*
+Disallow: /*?product_count=*
+Disallow: /*?add-to-cart=*
+Disallow: /*?page=*
+Disallow: /*&filter_*
+Disallow: /*&min_price=*
+Disallow: /*&max_price=*
+Disallow: /*&orderby=*
+Disallow: /*&rating_filter=*
+Disallow: /*&product_count=*
+Disallow: /*&add-to-cart=*
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /my-account/
+Disallow: /wishlist/
+Disallow: /compare/
+
+Sitemap: https://epesth.gr/sitemap_index.xml

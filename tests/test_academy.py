@@ -348,6 +348,8 @@ class Crests(unittest.TestCase):
         self.assertTrue(same("ΠΑΟ ΚΟΥΦΑΛΙΩΝ", "Π.Α.Ο. Κουφαλίων"))
         self.assertFalse(same("ΙΩΝΙΚΟΣ", "Α.Ο. Ιωνικός Νίκαιας"))  # μία λέξη: μόνο ακριβώς ίδιο
         self.assertFalse(same("ΑΙΑΝΤΑΣ ΠΥΛΑΙΑΣ", "Α.Ε. Πυλαίας"))
+        self.assertFalse(same("ΑΣ ΠΟΔ. ΤΟΥΜΠΑΣ", "Μ.Ε.Ν. ΤΟΥΜΠΑΣ"))
+        self.assertFalse(same("ΑΟ ΚΑΡΔΙΑΣ", "ΚΑΡΔΙΤΣΑ"))
 
     def test_rewrite(self):
         import json

@@ -79,6 +79,7 @@ def local(url: str, have: dict[str, str]) -> str:
 # το μπάσκετ), (2) οι διοργανώσεις της ΕΠΟ, (3) η ελληνική Wikipedia (εικόνα της σελίδας του συλλόγου). Μόνο όταν
 # ταιριάζουν όλες οι λέξεις του ονόματος. Τα ευρήματα (και όσα δεν βρέθηκαν, για 30 μέρες) στο docs/crest_lookup.json.
 LOOKUP = DOCS / "crest_lookup.json"
+LOOKUP_VERSION = 2
 GENERIC = {"ΑΟ", "ΑΕ", "ΑΣ", "ΠΑΕ", "ΓΣ", "ΠΟ", "ΑΜΣ", "ΑΟΚ", "ΑΚΑΔ", "ΑΚΑΔΗΜΙΑ", "ΠΟΔ", "ΜΑΣ", "ΓΑΣ", "ΠΑΣ", "ΑΠΣ",
            "ΑΠΟ", "ΑΜΟ", "ΠΑΟ", "ΑΠΟΕ", "ΑΕΠΣ", "ΑΓΠΣ", "ΦΣ", "ΜΓΣ", "ΝΓΣΘ", "ΑΝΔΡΩΝ", "ΓΥΝΑΙΚΩΝ", "ΠΟΔΟΣΦΑΙΡΟ", "ΠΟΔΟΣΦΑΙΡΙΚΟΣ",
            "ΟΜΙΛΟΣ", "ΑΘΛΗΤΙΚΟΣ", "ΣΥΛΛΟΓΟΣ", "ΝΕΩΝ", "ΝΕΑΝΙΔΩΝ", "ΚΟΡΑΣΙΔΩΝ", "ΠΑΙΔΩΝ", "ΜΦΑΟΦ", "ΑΠΟΕ"}
@@ -93,10 +94,13 @@ def plain(text: str) -> str:
 
 
 def words(name: str) -> frozenset[str]:
-    """Οι λέξεις που ξεχωρίζουν το όνομα (5 πρώτα γράμματα): χωρίς «Α.Σ.», «(1)», «Κ17», χρονιές, «(ποδόσφαιρο)»."""
-    t = plain(name).replace(".", " ")  # «Μ.ΑΛΕΞΑΝΔΡΟΣ» → «ΑΛΕΞΑΝΔΡΟΣ», «Α.Σ.» → (τίποτα)
+    """Οι λέξεις που ξεχωρίζουν το όνομα (6 πρώτα γράμματα): χωρίς «Α.Σ.», «(1)», «Κ17», χρονιές, «(ποδόσφαιρο)»."""
+    # Αρχικά με τελείες γίνονται μία λέξη («Μ.Ε.Ν.» → «ΜΕΝ», «Α.Σ.» → «ΑΣ»)· ένα μόνο γράμμα πριν από λέξη
+    # χάνεται («Μ.ΑΛΕΞΑΝΔΡΟΣ» → «ΑΛΕΞΑΝΔΡΟΣ»).
+    t = re.sub(r"(?<![Α-ΩA-Z])((?:[Α-ΩA-Z]\.\s?){2,})", lambda m: re.sub(r"[.\s]", "", m.group(1)) + " ", plain(name))
+    t = t.replace(".", " ")
     t = re.sub(r"\((?:\d|ΠΟΔΟΣΦΑΙΡ[^)]*)\)|\bΚ\d\d\b|\b\d+\b", " ", t)
-    return frozenset(w[:5] for w in re.findall(r"[Α-ΩA-Z0-9]+", t) if len(w) > 1 and w not in GENERIC)
+    return frozenset(w[:6] for w in re.findall(r"[Α-ΩA-Z0-9]+", t) if len(w) > 1 and w not in GENERIC)
 
 
 def http(url: str) -> str:
@@ -114,12 +118,14 @@ def epo_pool() -> dict[frozenset, set]:
     def grab(page: str) -> None:
         for tr in re.findall(r"<tr>(.*?)</tr>", page, re.S):
             m = re.search(r'<img[^>]+src="([^"]+)".*?class="team-text">([^<]+)<', tr, re.S)
-            if m:
+            if m and "blank-club" not in m.group(1):
                 pool.setdefault(words(html.unescape(m.group(2))), set()).add("https://www.epo.gr" + html.unescape(m.group(1)))
         for block in page.split("node--type-national-match")[1:]:
             names = [re.sub(r"<[^>]+>", "", n).strip() for n in re.findall(r"field--name-name[^>]*>(.*?)</div>", block, re.S)[:2]]
             logos = re.findall(r'field--name-field-icon.*?<img[^>]+src="([^"]+)"', block, re.S)[:2]
             for n, logo in zip(names, logos):
+                if "blank-club" in logo:
+                    continue
                 pool.setdefault(words(html.unescape(n)), set()).add("https://www.epo.gr" + html.unescape(logo))
 
     for comp in EPO_COMPS:
@@ -139,7 +145,9 @@ def wiki(name: str) -> str:
     q = urllib.parse.urlencode({"action": "query", "list": "search", "srsearch": re.sub(r"\(\d\)", "", name) + " ποδόσφαιρο",
                                 "srlimit": 5, "format": "json"})
     hits = json.loads(http("https://el.wikipedia.org/w/api.php?" + q))["query"]["search"]
-    titles = [h["title"] for h in hits if same_club(want, words(h["title"])) and not OTHER_SPORT.search(plain(h["title"]).lower())]
+    club = re.compile(r"ποδοσφαιρ|σωματει|συλλογ|ομιλος|ομαδα")  # όχι η σελίδα της πόλης ή του χωριού
+    titles = [h["title"] for h in hits if same_club(want, words(h["title"])) and not OTHER_SPORT.search(plain(h["title"]).lower())
+              and club.search(plain(re.sub(r"<[^>]+>", "", h.get("snippet", ""))).lower())]
     if not titles:
         return ""
     q = urllib.parse.urlencode({"action": "query", "prop": "pageimages", "piprop": "original", "titles": titles[0], "format": "json"})
@@ -161,8 +169,10 @@ def pick(pool: dict[frozenset, set], w: frozenset) -> str:
 def find_missing(names: set[str], known: dict[frozenset, set]) -> dict[str, str]:
     """Σήματα για ονόματα χωρίς σήμα· γράφει/διαβάζει το docs/crest_lookup.json."""
     cache = json.loads(LOOKUP.read_text(encoding="utf-8")) if LOOKUP.exists() else {}
+    if cache.get("_v") != LOOKUP_VERSION:  # άλλαξε ο τρόπος αναζήτησης: ξανά από την αρχή
+        cache = {"_v": LOOKUP_VERSION}
     today = dt.date.today()
-    todo = [n for n in sorted(names) if words(n) and not (
+    todo = [n for n in sorted(names) if words(n) and n != "_v" and not (
         n in cache and (cache[n]["url"] or dt.date.fromisoformat(cache[n]["at"]) > today - dt.timedelta(days=30)))]
     pool = None
     for n in todo:
@@ -183,7 +193,7 @@ def find_missing(names: set[str], known: dict[frozenset, set]) -> dict[str, str]
         print(f"  {n}: {src + ' ' + url if url else '—'}")
     if todo:
         LOOKUP.write_text(json.dumps(cache, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
-    return {n: v["url"] for n, v in cache.items() if v.get("url")}
+    return {n: v["url"] for n, v in cache.items() if n != "_v" and v.get("url")}
 
 
 def main() -> int:

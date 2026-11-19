@@ -25,4 +25,55 @@ DTSTART:19701025T040000
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
+BEGIN:VEVENT
+UID:volley-women-u18es1-2026-5333cf0b92ad@paok-calendar
+DTSTAMP:20261119T085906Z
+DTSTART;TZID=Europe/Athens:20261018T150000
+DTEND;TZID=Europe/Athens:20261018T170000
+SUMMARY:🏐 ΠΑΟΚ – ΑΕΝ ΠΑΝΟΡΑΜΑΤΟΣ 2
+LOCATION:Μητσάκη
+DESCRIPTION:Κ18 Κοριτσιών Ε.Σ. (ΕΠΕΣΘ) – 1η αγωνι
+ στική
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-women-u18es1-2026-fe86a8a45d67@paok-calendar
+DTSTAMP:20261119T085906Z
+DTSTART;TZID=Europe/Athens:20261108T150000
+DTEND;TZID=Europe/Athens:20261108T170000
+SUMMARY:🏐 ΠΑΟΚ 3-0 ΕΘΝΙΚΟΣ ΠΥΛΑΙΑΣ
+LOCATION:Μητσάκη
+DESCRIPTION:Κ18 Κοριτσιών Ε.Σ. (ΕΠΕΣΘ) – 3η αγωνι
+ στική\nΤελικό σκορ: ΠΑΟΚ 3-0 ΕΘΝΙΚΟΣ ΠΥΛΑΙ
+ ΑΣ
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-women-u18es1-2026-eb7d947e00a1@paok-calendar
+DTSTAMP:20261119T085906Z
+DTSTART;TZID=Europe/Athens:20261115T150000
+DTEND;TZID=Europe/Athens:20261115T170000
+SUMMARY:🏐 ΠΑΟΚ 0-3 ΑΡΗΣ 1
+LOCATION:Μητσάκη
+DESCRIPTION:Κ18 Κοριτσιών Ε.Σ. (ΕΠΕΣΘ) – 4η αγωνι
+ στική\nΤελικό σκορ: ΠΑΟΚ 0-3 ΑΡΗΣ 1
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-women-u18es1-2026-a03fcd85cd7d@paok-calendar
+DTSTAMP:20261119T085906Z
+DTSTART;TZID=Europe/Athens:20261206T150000
+DTEND;TZID=Europe/Athens:20261206T170000
+SUMMARY:🏐 ΠΑΟΚ – Ν. ΒΟΤΣΗΣ 1
+LOCATION:Μητσάκη
+DESCRIPTION:Κ18 Κοριτσιών Ε.Σ. (ΕΠΕΣΘ) – 7η αγωνι
+ στική
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-women-u18es1-2026-97fc07a7a0dc@paok-calendar
+DTSTAMP:20261119T085906Z
+DTSTART;TZID=Europe/Athens:20270110T150000
+DTEND;TZID=Europe/Athens:20270110T170000
+SUMMARY:🏐 ΠΑΟΚ – ΒΕΡΓΙΝΑ 1
+LOCATION:Μητσάκη
+DESCRIPTION:Κ18 Κοριτσιών Ε.Σ. (ΕΠΕΣΘ) – 10η αγωνι
+ στική
+END:VEVENT
 END:VCALENDAR

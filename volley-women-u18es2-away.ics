@@ -25,4 +25,55 @@ DTSTART:19701025T040000
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
+BEGIN:VEVENT
+UID:volley-women-u18es2-2026-9b9719ba6ce1@paok-calendar
+DTSTAMP:20261119T085906Z
+DTSTART;TZID=Europe/Athens:20261114T093000
+DTEND;TZID=Europe/Athens:20261114T113000
+SUMMARY:🏐 ΙΤΑΛΙΚΗ ΑΚΑΔΗΜΙΑ 3-0 ΠΑΟΚ
+LOCATION:ΔΑΚ Καλαμαριάς
+DESCRIPTION:Κ18 Κοριτσιών Ε.Σ. (ΕΠΕΣΘ) – 4η αγωνι
+ στική\nΤελικό σκορ: ΙΤΑΛΙΚΗ ΑΚΑΔΗΜΙΑ 3-0 Π
+ ΑΟΚ
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-women-u18es2-2026-b4742c3191b5@paok-calendar
+DTSTAMP:20261119T085906Z
+DTSTART;TZID=Europe/Athens:20261206T200000
+DTEND;TZID=Europe/Athens:20261206T220000
+SUMMARY:🏐 ΠΕΡΣΕΑΣ 2 – ΠΑΟΚ
+LOCATION:Δ.Γ. Περαίας
+DESCRIPTION:Κ18 Κοριτσιών Ε.Σ. (ΕΠΕΣΘ) – 7η αγωνι
+ στική
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-women-u18es2-2026-a13036810644@paok-calendar
+DTSTAMP:20261119T085906Z
+DTSTART;TZID=Europe/Athens:20261212T180000
+DTEND;TZID=Europe/Athens:20261212T200000
+SUMMARY:🏐 ΑΡΗΣ 2 – ΠΑΟΚ
+LOCATION:Κλ. Βικελίδης
+DESCRIPTION:Κ18 Κοριτσιών Ε.Σ. (ΕΠΕΣΘ) – 8η αγωνι
+ στική
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-women-u18es2-2026-adbe7b61dac5@paok-calendar
+DTSTAMP:20261119T085906Z
+DTSTART;TZID=Europe/Athens:20270110T173000
+DTEND;TZID=Europe/Athens:20270110T193000
+SUMMARY:🏐 Ν. ΒΟΤΣΗΣ 2 – ΠΑΟΚ
+LOCATION:Βότση
+DESCRIPTION:Κ18 Κοριτσιών Ε.Σ. (ΕΠΕΣΘ) – 10η αγωνι
+ στική
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-women-u18es2-2026-b596d672b107@paok-calendar
+DTSTAMP:20261119T085906Z
+DTSTART;TZID=Europe/Athens:20270130T150000
+DTEND;TZID=Europe/Athens:20270130T170000
+SUMMARY:🏐 ΑΕΝ ΑΓ. ΤΡΙΑΔΟΣ – ΠΑΟΚ
+LOCATION:Αγ. Θεράποντα
+DESCRIPTION:Κ18 Κοριτσιών Ε.Σ. (ΕΠΕΣΘ) – 13η αγωνι
+ στική
+END:VEVENT
 END:VCALENDAR

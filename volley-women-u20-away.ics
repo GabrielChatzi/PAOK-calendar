@@ -24,4 +24,54 @@ DTSTART:19701025T040000
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
+BEGIN:VEVENT
+UID:volley-women-u20-2026-d8ec64d51204@paok-calendar
+DTSTAMP:20261119T085906Z
+DTSTART;TZID=Europe/Athens:20261012T214500
+DTEND;TZID=Europe/Athens:20261012T234500
+SUMMARY:🏐 ΔΕΚΑ 2-3 ΠΑΟΚ
+LOCATION:11ο Δημ. Σχολ. Ευόσμου
+DESCRIPTION:Κ20 Κοριτσιών (ΕΠΕΣΘ) – 1η αγωνιστικ
+ ή\nΤελικό σκορ: ΔΕΚΑ 2-3 ΠΑΟΚ
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-women-u20-2026-dbdbb8cdb4a4@paok-calendar
+DTSTAMP:20261119T085906Z
+DTSTART;TZID=Europe/Athens:20261102T210000
+DTEND;TZID=Europe/Athens:20261102T230000
+SUMMARY:🏐 ΜΑΚΕΔΟΝΙΚΟΣ 0-3 ΠΑΟΚ
+LOCATION:Μακεδονικού
+DESCRIPTION:Κ20 Κοριτσιών (ΕΠΕΣΘ) – 3η αγωνιστικ
+ ή\nΤελικό σκορ: ΜΑΚΕΔΟΝΙΚΟΣ 0-3 ΠΑΟΚ
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-women-u20-2026-de7ebfb66a14@paok-calendar
+DTSTAMP:20261119T085906Z
+DTSTART;TZID=Europe/Athens:20261116T213000
+DTEND;TZID=Europe/Athens:20261116T233000
+SUMMARY:🏐 ΕΟΣ 0-3 ΠΑΟΚ
+LOCATION:ΕΑΚ Σταυρούπουλης
+DESCRIPTION:Κ20 Κοριτσιών (ΕΠΕΣΘ) – 5η αγωνιστικ
+ ή\nΤελικό σκορ: ΕΟΣ 0-3 ΠΑΟΚ
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-women-u20-2026-0e1f8dc39876@paok-calendar
+DTSTAMP:20261119T085906Z
+DTSTART;TZID=Europe/Athens:20270111T213000
+DTEND;TZID=Europe/Athens:20270111T233000
+SUMMARY:🏐 ΗΡΑΚΛΗΣ 1908 – ΠΑΟΚ
+LOCATION:Γ. Κατσάνης
+DESCRIPTION:Κ20 Κοριτσιών (ΕΠΕΣΘ) – 11η αγωνιστι
+ κή
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-women-u20-2026-8e2755199682@paok-calendar
+DTSTAMP:20261119T085906Z
+DTSTART;TZID=Europe/Athens:20270201T210000
+DTEND;TZID=Europe/Athens:20270201T230000
+SUMMARY:🏐 ΠΗΓΑΣΟΣ ΠΟΛΙΧΝΗΣ – ΠΑΟΚ
+LOCATION:Αλ. Νικολαΐδης
+DESCRIPTION:Κ20 Κοριτσιών (ΕΠΕΣΘ) – 14η αγωνιστι
+ κή
+END:VEVENT
 END:VCALENDAR

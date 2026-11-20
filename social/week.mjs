@@ -424,7 +424,7 @@ export function gridOrder(items, before = null) {
 
 // Αλλαγές μετά την ανάρτηση του προγράμματος: νέος αγώνας (π.χ. αναβληθείς που ανακοινώθηκε την
 // τελευταία στιγμή), άλλη ώρα/μέρα/γήπεδο ή αγώνας που βγήκε. Οι γραμμές του προγράμματος όπως ήταν όταν
-// ανέβηκε («postedLines») κρατιούνται από το προηγούμενο plan.json· για κάθε διαφορά βγαίνει story
+// ανέβηκε («sentLines») κρατιούνται από το προηγούμενο plan.json· για κάθε διαφορά βγαίνει story
 // «Αλλαγή προγράμματος» με τους αγώνες που μπήκαν ή άλλαξαν (όχι post, για να μη χαλάσει η σκακιέρα).
 // now: «YYYY-MM-DDTHH:MM» ώρα Ελλάδας.
 export function changeStories(items, prev = [], now, matches = [], names = { teams: {}, venues: {}, tv: {} }) {
@@ -434,11 +434,15 @@ export function changeStories(items, prev = [], now, matches = [], names = { tea
   for (const it of items) {
     if (it.type !== "post" || it.what !== "schedule" || !it.track || !it.lines) continue;
     const old = prev.find((p) => p.type === "post" && p.what === "schedule" && p.track === it.track);
-    if (!it.posted && at(it) > now && !old?.postedLines) continue;   // δεν έχει ανέβει ακόμα
-    it.postedLines = old?.postedLines || old?.lines || it.lines;
+    // Ανέβηκε; Όταν έχει περάσει η ώρα του και η υπενθύμιση δεν περιμένει κάτι άλλο (τα σκορ του, ή τα
+    // αποτελέσματα που πρέπει να μπουν πρώτα στο grid, «after»). Από εκεί κρατάμε τις γραμμές του.
+    const dep = it.after && items.find((x) => `${x.day}-${x.time.replace(":", "")}-${x.what}` === it.after);
+    const up = it.posted || (at(it) <= now && !it.missing?.length && !dep?.missing?.length);
+    if (!up && !old?.sentLines) continue;
+    it.sentLines = old?.sentLines || it.lines;
     if (!it.until || new Date(it.until) <= nowDate) continue;
-    const added = it.lines.filter((l) => !it.postedLines.includes(l));
-    const gone = it.postedLines.filter((l) => !it.lines.includes(l));
+    const added = it.lines.filter((l) => !it.sentLines.includes(l));
+    const gone = it.sentLines.filter((l) => !it.lines.includes(l));
     if (!added.length && !gone.length) continue;
     const sig = crypto.createHash("sha1").update(JSON.stringify([added, gone])).digest("hex").slice(0, 8);
     const was = prev.find((p) => p.what === "change" && p.track === it.track && p.sig === sig);

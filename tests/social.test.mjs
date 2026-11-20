@@ -141,7 +141,7 @@ test("Αλλαγή μετά το post: νέος αγώνας μετά την α�
   const tue = plan(ms, "2026-11-17", { names: NAMES }).items;
   const s0 = tue.find((i) => i.what === "schedule" && i.day === "2026-11-17");
   assert.equal(changeStories(tue, [], "2026-11-17T20:00", ms, NAMES).length, 0);
-  assert.deepEqual(s0.postedLines, s0.lines);
+  assert.deepEqual(s0.sentLines, s0.lines);
   // Παρασκευή: μπήκε ο αγώνας του futsal στις 14:00. Το πρόγραμμα της Τρίτης μένει στο πλάνο ως «posted».
   const ms2 = [...ms, M("futsal", "2026-11-20T14:00:00+02:00", "ΠΑΟΚ", "Αθήνα 90")];
   const fri = plan(ms2, "2026-11-20", { names: NAMES }).items;
@@ -166,4 +166,20 @@ test("Γήπεδο με το όνομα σε εισαγωγικά", () => {
   const r = row(M("futsal", "2026-11-20T14:00:00+02:00", "ΠΑΟΚ", "Αθήνα 90", { venue: "Κλειστό «Κατσιμήδειο» Τρικάλων" }), NAMES);
   assert.equal(r.venue, "Κατσιμήδειο Τρικάλων");
   assert.equal(row(M("volley", "2026-11-20T14:00:00+02:00", "Άρης", "ΠΑΟΚ", { venue: "Κλειστό Γυμναστήριο Μίκρας" }), NAMES).venue, "Μίκρας");
+});
+
+test("Αλλαγή: όσο το πρόγραμμα περιμένει τα αποτελέσματα («after»), δεν έχει ανέβει", async () => {
+  const { changeStories } = await import("../social/week.mjs");
+  const items = [
+    { type: "post", what: "results", day: "2026-11-20", time: "21:00", missing: ["Πυλαία – ΠΑΟΚ"] },
+    { type: "post", what: "schedule", track: "weekend-2026-11-21", day: "2026-11-20", time: "21:30",
+      after: "2026-11-20-2100-results", until: "2026-11-23T20:00:00+02:00", lines: ["Β: Ρέθυμνο – ΠΑΟΚ, Γυμναστήριο"] },
+  ];
+  const prev = structuredClone(items);
+  items[1].lines = ["Β: Ρέθυμνο – ΠΑΟΚ, Μελίνα Μερκούρη"];
+  assert.equal(changeStories(items, prev, "2026-11-20T23:08").length, 0);
+  assert.equal(items[1].sentLines, undefined);
+  items[0].missing = [];
+  assert.equal(changeStories(items, prev, "2026-11-20T23:20").length, 0);   // ανεβαίνει τώρα, με τις νέες γραμμές
+  assert.deepEqual(items[1].sentLines, ["Β: Ρέθυμνο – ΠΑΟΚ, Μελίνα Μερκούρη"]);
 });

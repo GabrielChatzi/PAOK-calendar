@@ -5045,19 +5045,32 @@
     },
     {
      "pos": 2,
-     "team": "ΠΑΟΚ",
-     "logo": "",
-     "paok": true,
+     "team": "ΣΥΚΕΩΝ ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ 1",
+     "logo": "https://paokalendar.gr/crests/75b973c541f921a8.png",
+     "paok": false,
      "cells": [
       "4",
-      "3",
-      "1",
-      "+84",
-      "7"
+      "4",
+      "0",
+      "+241",
+      "8"
      ]
     },
     {
      "pos": 3,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "5",
+      "3",
+      "2",
+      "+26",
+      "8"
+     ]
+    },
+    {
+     "pos": 4,
      "team": "ΝΕΑΠΟΛΗ ΑΚΠΚ",
      "logo": "https://paokalendar.gr/crests/73f92b95a4cc80c0.png",
      "paok": false,
@@ -5070,7 +5083,7 @@
      ]
     },
     {
-     "pos": 4,
+     "pos": 5,
      "team": "ΑΡΙΣΤΟΤΕΛΗΣ ΣΤΑΥΡΟΥ ΕΑΣ",
      "logo": "https://paokalendar.gr/crests/d4601a50f18689f5.png",
      "paok": false,
@@ -5080,19 +5093,6 @@
       "3",
       "-102",
       "7"
-     ]
-    },
-    {
-     "pos": 5,
-     "team": "ΣΥΚΕΩΝ ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ 1",
-     "logo": "https://paokalendar.gr/crests/75b973c541f921a8.png",
-     "paok": false,
-     "cells": [
-      "3",
-      "3",
-      "0",
-      "+183",
-      "6"
      ]
     },
     {

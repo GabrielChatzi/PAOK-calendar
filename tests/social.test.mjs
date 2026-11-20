@@ -94,9 +94,14 @@ test("Ακαδημίες: πρόγραμμα Παρασκευή 13:00, αποτ�
   const items = academyPlan(ms, "2026-11-19", { names });
   const s = items.find((i) => i.what === "academySchedule");
   assert.equal(s.day, "2026-11-20"); assert.equal(s.time, "13:00");
-  assert.deepEqual(s.cards.map((c) => c.file), ["akadimies-2026-11-21", "akadimies-2026-11-23"]);
+  // Μία κάρτα ανά άθλημα (ποδόσφαιρο πρώτα), με τις μέρες από κάτω.
+  assert.deepEqual(s.cards.map((c) => c.file), ["akadimies-2026-11-21-football", "akadimies-2026-11-21-basketball"]);
   assert.equal(s.cards[0].kick, "ΑΚΑΔΗΜΙΕΣ · ΠΡΟΓΡΑΜΜΑ");
-  assert.deepEqual(s.cards[0].matches.map((r) => r.section), ["Ποδόσφαιρο Κ19", "Μπάσκετ Έφηβοι"]);  // ποδόσφαιρο πρώτα
+  assert.equal(s.cards[0].academy, true);
+  assert.deepEqual([s.cards[0].day, s.cards[0].date], ["Ποδόσφαιρο", "21–23.11"]);
+  assert.deepEqual(s.cards[0].sections.map((x) => [x.day, x.date, x.matches.map((r) => r.section)]),
+    [["Σάββατο", "21.11", ["Κ19"]], ["Δευτέρα", "23.11", ["Β' Ομάδα"]]]);
+  assert.deepEqual([s.cards[1].day, s.cards[1].date], ["Μπάσκετ", "21.11"]);
   assert.equal(s.until, "2026-11-23T15:00:00+02:00");
   assert.equal(s.lines.length, 3);
   assert.equal(s.lines[0], "Ποδόσφαιρο Κ19: Άρης – ΠΑΟΚ, Σάβ 21.11 13:00");

@@ -271,6 +271,16 @@ export function plan(matches, today, { names = { teams: {}, venues: {}, tv: {} }
 // πρώτο αγώνα, αν είναι νωρίτερα), όχι πάνω στο κανονικό πρόγραμμα των 19:00. Τα «Αποτελέσματα
 // ακαδημιών» την επόμενη μέρα από τον τελευταίο αγώνα στις 13:00, μετά τα κανονικά των 09:00.
 // Αν αλλάξει κάτι αφού ανέβει το πρόγραμμα, το social_remind.py στέλνει ειδοποίηση (βλ. «lines»).
+const SPORT_NAME = { football: "Ποδόσφαιρο", basketball: "Μπάσκετ", volley: "Βόλεϊ" };
+const sportOf = (m) => m.section.split("-")[0];
+// «21.11», «21–22.11», «30.11–01.12»
+const span = (ds) => ds.length < 2 ? ddmm(ds[0]) : ds[0].slice(5, 7) === ds.at(-1).slice(5, 7)
+  ? `${ds[0].slice(8, 10)}–${ddmm(ds.at(-1))}` : `${ddmm(ds[0])}–${ddmm(ds.at(-1))}`;
+function teamLabel(m, names) {
+  if (m.section === "football-b") return "Β' Ομάδα";
+  return (names.labels?.[m.section] || m.section).replace(/^(Ποδόσφαιρο|Μπάσκετ|Βόλεϊ) /, "");
+}
+
 export function academyPlan(matches, today, { names = { teams: {}, venues: {}, tv: {} } } = {}) {
   const from = addDays(today, -1), to = addDays(today, 6);
   const byDay = new Map();
@@ -290,13 +300,28 @@ export function academyPlan(matches, today, { names = { teams: {}, venues: {}, t
     if (!blocks.has(k)) blocks.set(k, []);
     blocks.get(k).push(day);
   }
-  const cards = (kind, days, pick) => days.flatMap((day) => {
-    const rows = pick(byDay.get(day)).map((m) => row(m, names));
+  // Μία κάρτα ανά άθλημα (ποδόσφαιρο, μπάσκετ, βόλεϊ) και από κάτω οι μέρες, για να μη μοιάζει με το
+  // κανονικό πρόγραμμα (εκεί μία κάρτα ανά μέρα). Στις γραμμές μόνο η ομάδα («Κ19», «Κ15 Κοριτσιών»).
+  const cards = (kind, days, pick) => {
     const out = [];
-    for (let i = 0; i < rows.length; i += MAX_PER_CARD) out.push(rows.slice(i, i + MAX_PER_CARD));
-    return out.map((ms, i) => ({ kind, kick: kind === "results" ? "ΑΚΑΔΗΜΙΕΣ · ΑΠΟΤΕΛΕΣΜΑΤΑ" : "ΑΚΑΔΗΜΙΕΣ · ΠΡΟΓΡΑΜΜΑ",
-      day: DAYS[weekday(day)], date: ddmm(day), file: `akadimies-${day}${out.length > 1 ? `-${i + 1}` : ""}`, matches: ms }));
-  });
+    const sports = [...new Set(days.flatMap((d) => pick(byDay.get(d))).map(sportOf))]
+      .sort((a, b) => (SPORT[a] ?? 9) - (SPORT[b] ?? 9));
+    for (const sport of sports) {
+      const rows = days.flatMap((day) => pick(byDay.get(day)).filter((m) => sportOf(m) === sport)
+        .map((m) => ({ day, r: { ...row(m, names), section: teamLabel(m, names) } })));
+      const chunks = [];
+      for (let i = 0; i < rows.length; i += MAX_PER_CARD) chunks.push(rows.slice(i, i + MAX_PER_CARD));
+      chunks.forEach((ch, i) => {
+        const ds = [...new Set(ch.map((x) => x.day))];
+        out.push({ kind, academy: true, kick: kind === "results" ? "ΑΚΑΔΗΜΙΕΣ · ΑΠΟΤΕΛΕΣΜΑΤΑ" : "ΑΚΑΔΗΜΙΕΣ · ΠΡΟΓΡΑΜΜΑ",
+          day: SPORT_NAME[sport] || sport, date: span(ds),
+          file: `akadimies-${days[0]}-${sport}${chunks.length > 1 ? `-${i + 1}` : ""}`,
+          sections: ds.map((d) => ({ day: DAYS[weekday(d)], date: ddmm(d), matches: ch.filter((x) => x.day === d).map((x) => x.r) })),
+          matches: ch.map((x) => x.r) });
+      });
+    }
+    return out;
+  };
   const items = [];
   for (const [key, days] of blocks) {
     const first = days[0], last = days.at(-1);
@@ -492,6 +517,7 @@ async function main() {
     for (const c of it.cards) {
       const kind = c.story ? "story" : "post";
       const spec = { day: c.day, date: c.date, file: c.file, matches: c.matches, ...(c.sections && { sections: c.sections }),
+        ...(c.academy && { academy: true }),
         ...(c.kick && { kick: c.kick }) };
       const name = `${c.file}-${c.kind === "results" ? "apotelesmata-" : ""}${kind}.png`;
       const json = JSON.stringify(spec);

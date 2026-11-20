@@ -51,11 +51,13 @@ const AWAY = '<svg viewBox="0 0 48 48" width="22" height="22"><path d="M44 21c0-
 
 function html(spec, rows, story) {
   // Πολλές μέρες σε μία εικόνα (spec.sections): η καθεμία με τον δικό της τίτλο, η μία κάτω από την άλλη.
-  const secs = spec.sections || null;
-  const n = secs ? rows.flat().length + secs.length * 0.9 : rows.length;
+  const acad = !!spec.academy;
+  const secs = !acad && spec.sections || null;
+  const n = acad ? rows.flat().length + spec.sections.length * 0.45 : secs ? rows.flat().length + secs.length * 0.9 : rows.length;
   const sz = secs ? Math.round((story ? 330 : 260) * Math.min(1, 2 / secs.length)) : 0;
   // Λιγότεροι αγώνες → μεγαλύτερα στοιχεία.
-  const k = story ? Math.min(1.25, 1 + (6 - n) * 0.06) : n > 5 ? 1 - (n - 5) * 0.2 : Math.min(1.15, 1 + (5 - n) * 0.05);
+  // Ακαδημίες: όσο μεγάλα χωράνε (περίπου 160px ανά αγώνα και 50px ανά μέρα, σε ~780px).
+  const k = acad && !story ? Math.min(1.15, 780 / (rows.flat().length * 160 + spec.sections.length * 50)) : story ? Math.min(1.25, 1 + (6 - n) * 0.06) : n > 5 ? 1 - (n - 5) * 0.2 : Math.min(1.15, 1 + (5 - n) * 0.05);
   const H = story ? 1920 : 1350;
   const top = story ? 250 : 60;
   return `<!doctype html><html><head><meta charset=utf-8><style>${FONTS}
@@ -88,10 +90,15 @@ body{display:flow-root;width:1080px;height:${H}px;color:#fff;font-family:F;overf
 .sec .day{font-size:${secs ? Math.min(sz, Math.round(sz * 7.4 / Math.max(...secs.map((x) => [...x.day].length)))) : 0}px;margin-top:0}
 .sec .date{top:${Math.round(sz * 0.42)}px;font-size:${Math.round(sz * 0.5)}px}
 .sec .list{margin-top:${Math.round(sz * 0.42)}px}
+${acad ? `.date{top:${top + 84 + Math.round(Math.min(330, 330 * 7.4 / [...spec.day].length) * 0.5)}px}` : ""}
+.ak{display:flex;align-items:center;justify-content:center;gap:24px;line-height:1}.pill{font-family:S;font-weight:900;font-size:50px;letter-spacing:9px;padding:8px 18px 6px 27px;background:#fff;color:#0b0b0b;line-height:1}
+.frame{position:absolute;z-index:1;inset:24px;border:1.5px solid rgba(255,255,255,.32);pointer-events:none}.frame:after{content:'';position:absolute;inset:8px;border:1px solid rgba(255,255,255,.14)}.dh{display:flex;align-items:center;gap:18px;font-weight:800;font-size:${26 * k}px;letter-spacing:8px;color:rgba(255,255,255,.62);margin-top:${6 * k}px}.dh:first-child{margin-top:0}.dh i{flex:1;height:1px;background:rgba(255,255,255,.28)}.dh b{font-weight:800;color:rgba(255,255,255,.95)}
 .foot{position:absolute;bottom:${story ? 210 : 44}px;left:0;right:0;text-align:center;font-weight:800;font-size:50px;letter-spacing:-1px;line-height:1}
 .foot em{font-style:normal;color:#8a8a84}
 </style></head><body><div class="st"></div><div class="glow"></div>
-${secs ? `<div class="ktop kick">${spec.kick || "ΠΡΟΓΡΑΜΜΑ ΑΓΩΝΩΝ"}</div><div class="secs">${secs.map((x, i) => `<div class="sec"><div class="head"><div class="day">${UP(x.day)}</div><div class="date">${x.date}</div></div>` +
+${acad ? `<div class="frame"></div><div class="head"><div class="kick ak"><span class="pill">ΑΚΑΔΗΜΙΕΣ</span>${String(spec.kick || "").replace(/^ΑΚΑΔΗΜΙΕΣ\s*·\s*/, "")}</div><div class="day">${UP(spec.day)}</div><div class="date">${spec.date}</div></div>
+<div class="mid"><div class="list">${spec.sections.map((x, i) => `<div class="dh"><i></i><span><b>${UP(x.day)}</b> ${x.date}</span><i></i></div>` + rows[i].join("")).join("")}</div></div>` :
+secs ? `<div class="ktop kick">${spec.kick || "ΠΡΟΓΡΑΜΜΑ ΑΓΩΝΩΝ"}</div><div class="secs">${secs.map((x, i) => `<div class="sec"><div class="head"><div class="day">${UP(x.day)}</div><div class="date">${x.date}</div></div>` +
   `<div class="list">${rows[i].join("")}</div></div>`).join("")}</div>` :
 `<div class="head"><div class="kick">${spec.kick || "ΠΡΟΓΡΑΜΜΑ ΑΓΩΝΩΝ"}</div><div class="day">${UP(spec.day)}</div><div class="date">${spec.date}</div></div>
 <div class="orn"><i></i><span>✦</span><i></i></div>

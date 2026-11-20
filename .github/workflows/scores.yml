@@ -1,0 +1,51 @@
+name: Σκορ που λείπουν
+
+# Κάθε 5 λεπτά: όταν ένας αγώνας έχει τελειώσει (περίπου) και δεν έχουμε σκορ, ειδοποίηση στον διαχειριστή
+# («s:ops:live» / «s:ops:pre») να το περάσει από τη σελίδα του αγώνα (notify.py scores). Μία φορά ανά αγώνα.
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write  # ταυτότητα για τις ειδοποιήσεις web push (/api/push)
+
+concurrency:
+  group: scores
+  cancel-in-progress: false
+
+jobs:
+  scores:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            notify.py
+            build_calendars.py
+          sparse-checkout-cone-mode: false
+
+      - uses: actions/cache/restore@v4
+        with:
+          path: .state
+          key: scores-${{ github.run_id }}
+          restore-keys: scores-
+
+      - name: Τελευταίο πρόγραμμα
+        run: |
+          mkdir -p docs
+          git fetch --depth=1 origin +refs/heads/data:refs/remotes/origin/data
+          git show origin/data:matches.json > docs/matches.json
+
+      - name: Ειδοποίηση
+        env:
+          PUSH: "1"
+        run: python3 notify.py scores
+
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: .state
+          key: scores-${{ github.run_id }}

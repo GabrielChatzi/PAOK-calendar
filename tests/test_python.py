@@ -512,6 +512,39 @@ class LiveResults(unittest.TestCase):
         self.assertEqual(m.score, "")
 
 
+class ScoreAlerts(unittest.TestCase):
+    """Ειδοποίηση στον διαχειριστή για σκορ που λείπει, μία φορά, μετά τη λήξη (ακαδημίες όχι)."""
+
+    def test_once_after_end(self):
+        import json, tempfile
+        from pathlib import Path
+        from unittest import mock
+        ms = [{"section": "handball-women", "uid": "h1", "nt": "977ada4407", "home": "Α.Ε.Σ.Χ. ΠΥΛΑΙΑΣ", "away": "ΠΑΟΚ",
+               "start": "2026-11-20T19:00:00+02:00", "timeKnown": True, "score": ""},
+              {"section": "basketball-u16", "uid": "a1", "nt": "x", "home": "ΠΑΟΚ", "away": "Β",
+               "start": "2026-11-20T18:00:00+02:00", "timeKnown": True, "score": ""},
+              {"section": "volley", "uid": "v1", "nt": "y", "home": "ΠΑΟΚ", "away": "Γ", "live": {"src": "x"},
+               "start": "2026-11-20T18:30:00+02:00", "timeKnown": True, "score": ""}]
+        at = lambda t: dt.datetime.fromisoformat(t + "+02:00")
+        with tempfile.TemporaryDirectory() as d:
+            mp, sp = Path(d, "m.json"), Path(d, "s.json")
+            mp.write_text(json.dumps({"matches": ms}))
+            pushed = []
+            with mock.patch.object(notify, "_push", lambda *a, **k: pushed.append((a[1], a[3]))):
+                notify.score_alerts(mp, sp, at("2026-11-20T20:30"))
+                self.assertEqual(pushed, [])
+                notify.score_alerts(mp, sp, at("2026-11-20T20:36"))
+                self.assertEqual(len(pushed), 1)
+                self.assertIn("Βάλε το σκορ", pushed[0][0])
+                self.assertEqual(pushed[0][1], "/#/m/977ada4407")
+                notify.score_alerts(mp, sp, at("2026-11-20T20:41"))
+                self.assertEqual(len(pushed), 1)
+                notify.score_alerts(mp, sp, at("2026-11-20T21:00"))   # βόλεϊ με live: 130' + 25'
+                self.assertEqual(len(pushed), 1)
+                notify.score_alerts(mp, sp, at("2026-11-20T21:06"))
+                self.assertEqual(len(pushed), 2)
+
+
 class SocialRemind(unittest.TestCase):
     ITEMS = [
         {"type": "post", "what": "results", "day": "2026-11-10", "time": "09:00", "title": "Αποτελέσματα",

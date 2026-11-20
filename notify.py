@@ -232,6 +232,47 @@ def awaiting_result(m: dict, now: dt.datetime) -> bool:
     return end <= now <= start + RESULT_WAIT
 
 
+# Ειδοποίηση στον διαχειριστή όταν ένας αγώνας έχει τελειώσει (περίπου, βλ. DURATION) και δεν έχουμε σκορ,
+# για να το περάσει από τη σελίδα του αγώνα. Στους αγώνες με live περιμένουμε λίγο ακόμα (μπορεί να
+# κράτησε περισσότερο, π.χ. πέντε σετ). Ακαδημίες όχι (NO_REFRESH): εκεί τα σκορ αργούν πάντα.
+ADMIN_TOPICS = ["s:ops:live", "s:ops:pre"]
+SCORE_GRACE = dt.timedelta(minutes=0)
+SCORE_GRACE_LIVE = dt.timedelta(minutes=25)
+
+
+def missing_scores(matches: list[dict], now: dt.datetime) -> list[tuple[dict, dt.datetime]]:
+    """(αγώνας, περίπου ώρα λήξης) για αγώνες που έληξαν και δεν έχουν ακόμα σκορ."""
+    out = []
+    for m in matches:
+        if not m.get("timeKnown") or m.get("score") or m.get("status") or m["section"] in NO_REFRESH:
+            continue
+        start = dt.datetime.fromisoformat(m["start"])
+        end = start + dt.timedelta(minutes=DURATION.get(m["section"], 120))
+        if end + (SCORE_GRACE_LIVE if m.get("live") else SCORE_GRACE) <= now <= start + RESULT_WAIT:
+            out.append((m, end))
+    return out
+
+
+def score_alerts(matches_path: Path, state_path: Path, now: dt.datetime | None = None) -> int:
+    """Τρέχει κάθε 5 λεπτά (scores.yml): μία ειδοποίηση ανά αγώνα που έληξε χωρίς σκορ."""
+    now = now or dt.datetime.now(dt.timezone.utc)
+    data = json.loads(matches_path.read_text(encoding="utf-8"))
+    state = json.loads(state_path.read_text(encoding="utf-8")) if state_path.exists() else {}
+    for m, end in missing_scores(data.get("matches", []), now):
+        key = f"score:{m['uid']}@{m['start']}"
+        if key in state:
+            continue
+        _push(ADMIN_TOPICS, f"✍️ Βάλε το σκορ: {teams(m)}",
+              f"Έληξε περίπου στις {end.astimezone(ATHENS):%H:%M} και δεν έχουμε ακόμα τελικό από την πηγή. "
+              "Πάτα για να το περάσεις.", f"/#/m/{m['nt']}", tag=f"score-{m['nt']}", once=key)
+        state[key] = now.isoformat(timespec="minutes")
+    cutoff = now - dt.timedelta(days=3)
+    state = {k: v for k, v in state.items() if dt.datetime.fromisoformat(v) > cutoff}
+    state_path.parent.mkdir(parents=True, exist_ok=True)
+    state_path.write_text(json.dumps(state, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    return 0
+
+
 def reminders(matches_path: Path, state_path: Path) -> int:
     """Υπενθύμιση για αγώνες που ξεκινούν μέσα στην επόμενη ώρα, μία φορά για τον καθένα.
 
@@ -295,6 +336,9 @@ def reminders(matches_path: Path, state_path: Path) -> int:
 
 
 if __name__ == "__main__":
+    if sys.argv[1:2] == ["scores"]:
+        here = Path(__file__).resolve().parent
+        sys.exit(score_alerts(here / "docs" / "matches.json", here / ".state" / "scores.json"))
     if sys.argv[1:2] == ["reminders"]:
         here = Path(__file__).resolve().parent
         sys.exit(reminders(here / "docs" / "matches.json", here / ".state" / "reminded.json"))

@@ -581,6 +581,43 @@ class SocialRemind(unittest.TestCase):
                 run("2026-11-22T14:00")
                 self.assertEqual(len(pushed), 2)               # μετά τον τελευταίο αγώνα: σιωπή
 
+    def test_change_story(self):
+        """Το story «Αλλαγή προγράμματος»: μία ειδοποίηση (της αλλαγής) που ανοίγει το story, όχι δύο.
+        Το post που έχει ήδη ανέβει («posted») δεν ξαναστέλνει υπενθύμιση."""
+        import json, tempfile
+        from pathlib import Path
+        from unittest import mock
+        import social_remind
+        lines = ["Χάντμπολ Γυναικών: Πυλαία – ΠΑΟΚ, Παρ 20.11 19:00"]
+        post = {"type": "post", "what": "schedule", "track": "midweek-2026-11-17", "day": "2026-11-17", "time": "19:00",
+                "title": "Πρόγραμμα της εβδομάδας", "caption": "x", "images": ["a.png"],
+                "until": "2026-11-20T19:00:00+02:00", "lines": lines}
+        story = {"type": "story", "what": "change", "track": "midweek-2026-11-17", "day": "2026-11-20", "time": "00:05",
+                 "title": "Αλλαγή προγράμματος", "images": ["c.png"], "note": "Νέος"}
+        with tempfile.TemporaryDirectory() as d:
+            plan, state = Path(d, "plan.json"), Path(d, "state.json")
+            pushed = []
+            run = lambda t: social_remind.main(plan, state, dt.datetime.fromisoformat(t).replace(tzinfo=b.ATHENS))
+            with mock.patch.object(social_remind.notify, "_push", lambda *a, **k: pushed.append(a[1:4])):
+                plan.write_text(json.dumps({"items": [post]}))
+                run("2026-11-17T19:00")
+                self.assertEqual(len(pushed), 1)
+                new = dict(post, posted=True, images=[], lines=lines + ["Φούτσαλ Ανδρών: ΠΑΟΚ – Αθήνα 90, Παρ 20.11 14:00"])
+                plan.write_text(json.dumps({"items": [new, story]}))
+                run("2026-11-20T00:05")
+                self.assertEqual(len(pushed), 2)
+                self.assertIn("Άλλαξε το πρόγραμμα", pushed[1][0])
+                self.assertIn("Αθήνα 90", pushed[1][1])
+                self.assertEqual(pushed[1][2], "/social/#2026-11-20-0005-change")
+                run("2026-11-20T00:20")
+                self.assertEqual(len(pushed), 2)
+            # Χωρίς κρατημένες γραμμές (π.χ. χάθηκε η cache): έρχεται η υπενθύμιση του story.
+            state.unlink()
+            with mock.patch.object(social_remind.notify, "_push", lambda *a, **k: pushed.append(a[1:4])):
+                run("2026-11-20T00:05")
+                self.assertEqual(len(pushed), 3)
+                self.assertIn("Αλλαγή προγράμματος", pushed[2][0])
+
 
 class Goals(unittest.TestCase):
     def setUp(self):

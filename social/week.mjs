@@ -91,6 +91,9 @@ function cleanVenue(raw, names) {
   if (names.venues[raw] !== undefined) return names.venues[raw];
   const v = raw.replace(/Κλειστό Γυμναστήριο|ΚΛΕΙΣΤΟ ΓΥΜΝΑΣΤΗΡΙΟ|Δημοτικό Στάδιο|ΔΗΜΟΤΙΚΟ ΣΤΑΔΙΟ|ΓΗΠ\.|ΔΗΜ\.|Stadium/gu, " ")
     .replace(/["«»].*$/u, "").replace(/\s+/g, " ").trim();
+  // «Κλειστό «Κατσιμήδειο» Τρικάλων» → «Κατσιμήδειο Τρικάλων» (όχι σκέτο «Κλειστό»).
+  const q = /[«"]([^»"]+)[»"]\s*(.*)$/u.exec(raw);
+  if (q && /^(?:Κλειστό|Γήπεδο|Στάδιο|Γυμναστήριο|Κολυμβητήριο)?$/iu.test(v)) return `${q[1]} ${q[2]}`.trim().slice(0, 24);
   return v.length <= 24 ? v : "";
 }
 function cleanTv(raw, names) {
@@ -205,9 +208,13 @@ export function plan(matches, today, { names = { teams: {}, venues: {}, tv: {} }
     const label = b.kind === "weekend" ? "του Σαββατοκύριακου" : "της εβδομάδας";
     // Πρόγραμμα: το βράδυ πριν.
     const pday = addDays(first, -1);
-    if (pday >= from && pday <= to) {
+    // Πρόγραμμα που έχει ήδη ανέβει (πριν από το πλάνο) αλλά το μπλοκ δεν έχει τελειώσει: μένει στο πλάνο ως
+    // «posted», χωρίς εικόνες, για να φαίνονται οι αλλαγές (νέος αγώνας, άλλη ώρα) ως τον τελευταίο αγώνα.
+    const posted = pday < from && pday >= addDays(today, -8) && last >= today;
+    if ((pday >= from && pday <= to) || posted) {
       const end = dayEnd(pday);
       items.push({ type: "post", what: "schedule", block: b.key, track: `${b.kind}-${b.key}`, day: pday,
+        ...(posted && { posted: true }),
         first: all[0].start,
         time: hhmm(Math.max(19 * 60, end ? roundUp(end + 20) : 0)),
         title: `Πρόγραμμα ${label}`, cards: blockCards("fixtures", b, (l) => l),
@@ -327,8 +334,10 @@ export function academyPlan(matches, today, { names = { teams: {}, venues: {}, t
     const first = days[0], last = days.at(-1);
     const all = days.flatMap((d) => byDay.get(d));
     const pday = addDays(key, -1);  // Παρασκευή
-    if (pday >= from && pday <= to) {
+    const posted = pday < from && last >= today;   // όπως στο plan(): ανέβηκε, παρακολουθούμε τις αλλαγές
+    if ((pday >= from && pday <= to) || posted) {
       items.push({ type: "post", what: "academySchedule", block: key, track: `academy-${key}`, day: pday, time: "13:00",
+        ...(posted && { posted: true }),
         first: all.map((m) => m.start).sort()[0],
         title: "Πρόγραμμα ακαδημιών", cards: cards("fixtures", days, (l) => l),
         until: all.map((m) => m.start).sort().at(-1), lines: all.map((m) => matchLine(m, names)),
@@ -383,7 +392,7 @@ const plus = (day, time, m) => { const t = minutes(time) + m; return t >= 24 * 6
 export function gridOrder(items, before = null) {
   // before: το τελευταίο post που έχει ήδη ανέβει ({day, time, what}), για να συνεχίσει η εναλλαγή.
   const lead = before && { ...before, type: "post", lead: true };
-  const posts = () => [...(lead ? [lead] : []), ...items.filter((i) => i.type === "post")]
+  const posts = () => [...(lead ? [lead] : []), ...items.filter((i) => i.type === "post" && !i.posted)]
     .sort((a, b) => at(a).localeCompare(at(b)));
   for (let guard = 0; guard < 10; guard++) {
     const ps = posts();
@@ -411,6 +420,56 @@ export function gridOrder(items, before = null) {
   }
   for (const p of items) if (p.type === "post") p.grid = p.what === "schedule" ? "⬛" : "⬜";
   return items;
+}
+
+// Αλλαγές μετά την ανάρτηση του προγράμματος: νέος αγώνας (π.χ. αναβληθείς που ανακοινώθηκε την
+// τελευταία στιγμή), άλλη ώρα/μέρα/γήπεδο ή αγώνας που βγήκε. Οι γραμμές του προγράμματος όπως ήταν όταν
+// ανέβηκε («postedLines») κρατιούνται από το προηγούμενο plan.json· για κάθε διαφορά βγαίνει story
+// «Αλλαγή προγράμματος» με τους αγώνες που μπήκαν ή άλλαξαν (όχι post, για να μη χαλάσει η σκακιέρα).
+// now: «YYYY-MM-DDTHH:MM» ώρα Ελλάδας.
+export function changeStories(items, prev = [], now, matches = [], names = { teams: {}, venues: {}, tv: {} }) {
+  const out = [];
+  const nowDate = new Date(`${now}:00${offset(now)}`);
+  const byLine = new Map(matches.map((m) => [matchLine(m, names), m]));
+  for (const it of items) {
+    if (it.type !== "post" || it.what !== "schedule" || !it.track || !it.lines) continue;
+    const old = prev.find((p) => p.type === "post" && p.what === "schedule" && p.track === it.track);
+    if (!it.posted && at(it) > now && !old?.postedLines) continue;   // δεν έχει ανέβει ακόμα
+    it.postedLines = old?.postedLines || old?.lines || it.lines;
+    if (!it.until || new Date(it.until) <= nowDate) continue;
+    const added = it.lines.filter((l) => !it.postedLines.includes(l));
+    const gone = it.postedLines.filter((l) => !it.lines.includes(l));
+    if (!added.length && !gone.length) continue;
+    const sig = crypto.createHash("sha1").update(JSON.stringify([added, gone])).digest("hex").slice(0, 8);
+    const was = prev.find((p) => p.what === "change" && p.track === it.track && p.sig === sig);
+    const [day, time] = was ? [was.day, was.time] : now.split("T");
+    const ms = added.map((l) => byLine.get(l)).filter(Boolean).sort((a, b) => a.start.localeCompare(b.start));
+    const days = [...new Set(ms.map((m) => local(new Date(m.start)).day))];
+    const cards = days.flatMap((d) => {
+      const rows = ms.filter((m) => local(new Date(m.start)).day === d).map((m) => row(m, names));
+      const chunks = [];
+      for (let i = 0; i < rows.length; i += MAX_PER_CARD) chunks.push(rows.slice(i, i + MAX_PER_CARD));
+      return chunks.map((matches, i) => ({ kind: "fixtures", story: true, kick: "ΑΛΛΑΓΗ ΠΡΟΓΡΑΜΜΑΤΟΣ",
+        day: DAYS[weekday(d)], date: ddmm(d), file: `allagi-${sig}-${d}${chunks.length > 1 ? `-${i + 1}` : ""}`, matches }));
+    });
+    // Ίδιος αγώνας με άλλη ώρα: «Άλλαξε», αλλιώς «Νέος» / «Βγήκε».
+    const what = (l) => l.split(",")[0];
+    const changed = added.filter((l) => gone.some((g) => what(g) === what(l)));
+    const parts = [...changed.map((l) => `Άλλαξε: ${l}`),
+      ...added.filter((l) => !changed.includes(l)).map((l) => `Νέος: ${l}`),
+      ...gone.filter((g) => !added.some((l) => what(l) === what(g))).map((g) => `Βγήκε: ${g}`)];
+    out.push({ type: "story", what: "change", track: it.track, sig, day, time, title: "Αλλαγή προγράμματος",
+      cards, added, gone,
+      note: `${parts.join(" · ")} · Sticker «Σύνδεσμος» → ${SITE}. Αν θέλεις, πρόσθεσε και στο post τη νέα εικόνα (επεξεργασία carousel).` });
+  }
+  return out;
+}
+// Η διαφορά ώρας της Ελλάδας μια συγκεκριμένη ώρα («+02:00» ή «+03:00»).
+function offset(t) {
+  const d = new Date(`${t}:00Z`);
+  const l = local(d);
+  const diff = (new Date(`${l.day}T${l.time}:00Z`) - d) / 36e5;
+  return `+0${diff}:00`;
 }
 
 function academyCaption(what, list, names) {
@@ -464,7 +523,7 @@ export function readme(p) {
     "Φτιάχνεται μόνο του μετά από κάθε ενημέρωση του προγράμματος (social.yml), οπότε δείχνει πάντα τις τελευταίες ώρες και αλλαγές. " +
     "Στο iPhone (Safari): πάτα μια εικόνα, κράτα το δάχτυλο πάνω της → «Προσθήκη στις Φωτογραφίες».", ""];
   let cur = "";
-  for (const it of p.items) {
+  for (const it of p.items.filter((i) => !i.posted)) {
     if (it.day !== cur) {
       cur = it.day;
       lines.push(`## ${DAYS[weekday(it.day)]} ${ddmm(it.day)}${it.day === p.today ? " (σήμερα)" : ""}`, "");
@@ -489,6 +548,8 @@ async function main() {
   const today = args.date || local(new Date()).day;
   const out = path.resolve(args.out || "out/social");
   let prev = args.prev && path.resolve(args.prev);
+  // Το προηγούμενο πλάνο: από εκεί οι γραμμές του προγράμματος όπως ήταν όταν ανέβηκε (changeStories).
+  const prevItems = (() => { try { return JSON.parse(fs.readFileSync(path.join(prev || out, "plan.json"), "utf8")).items || []; } catch { return []; } })();
   const src = args.matches || (fs.existsSync("docs/matches.json") ? "docs/matches.json" : DATA_URL);
   const data = /^https?:/.test(src) ? await (await fetch(src)).json() : JSON.parse(fs.readFileSync(src, "utf8"));
   const names = JSON.parse(fs.readFileSync(path.join(HERE, "names.json"), "utf8"));
@@ -501,6 +562,10 @@ async function main() {
   const past = mergeAcademy(plan(main, addDays(today, -7), { names }).items, academyPlan(acad, addDays(today, -7), { names }))
     .filter((i) => i.type === "post" && i.day < p.from).sort((a, b) => at(a).localeCompare(at(b))).at(-1);
   p.items = gridOrder(mergeAcademy(p.items, academyPlan(acad, today, { names })), past && { day: past.day, time: past.time, what: past.what });
+  const n = local(new Date());
+  const now = args.date && args.date !== n.day ? `${today}T12:00` : `${n.day}T${n.time}`;
+  p.items.push(...changeStories(p.items, prevItems, now, data.matches, names));
+  for (const it of p.items) if (it.posted) it.cards = [];   // έχει ήδη ανέβει: μόνο για τις αλλαγές
   const order = { post: 0, reel: 1, story: 2 };
   p.items.sort((a, b) => a.day.localeCompare(b.day) || a.time.localeCompare(b.time) || order[a.type] - order[b.type]);
 

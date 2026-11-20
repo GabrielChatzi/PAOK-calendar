@@ -86,7 +86,7 @@
   function render(data) {
     var now = athensNow(), focus = location.hash.slice(1);
     var yesterday = new Date(Date.parse(now.day + "T12:00:00Z") - 864e5).toISOString().slice(0, 10);
-    var items = data.plan.items.filter(function (it) { return it.day >= yesterday; });  // και ό,τι έμεινε από χθες
+    var items = data.plan.items.filter(function (it) { return it.day >= yesterday && !it.posted; });  // και ό,τι έμεινε από χθες
     document.getElementById("sub").textContent = "Τι ανεβάζεις και πότε, " + dayLabel(data.plan.from) + " – " + dayLabel(data.plan.to) +
       ". Κράτα πατημένη μια εικόνα για αποθήκευση.";
     var html = "", last = "";

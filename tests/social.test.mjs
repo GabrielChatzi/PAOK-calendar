@@ -130,3 +130,40 @@ test("Σκακιέρα: ακαδημίες μέσα στο carousel, τα απο
   assert.equal(`${s.day} ${s.time} ${s.grid}`, "2026-11-20 21:30 ⬛");
   assert.equal(s.after, "2026-11-20-2100-results");
 });
+
+test("Αλλαγή μετά το post: νέος αγώνας μετά την ανάρτηση του προγράμματος βγάζει story", async () => {
+  const { changeStories } = await import("../social/week.mjs");
+  const ms = [
+    M("volley-women", "2026-11-18T18:00:00+02:00", "ΠΑΟΚ", "Μαρκόπουλο", { score: "3-0" }),
+    M("handball-women", "2026-11-20T19:00:00+02:00", "Πυλαία", "ΠΑΟΚ"),
+  ];
+  // Τρίτη: το πρόγραμμα της εβδομάδας ανεβαίνει.
+  const tue = plan(ms, "2026-11-17", { names: NAMES }).items;
+  const s0 = tue.find((i) => i.what === "schedule" && i.day === "2026-11-17");
+  assert.equal(changeStories(tue, [], "2026-11-17T20:00", ms, NAMES).length, 0);
+  assert.deepEqual(s0.postedLines, s0.lines);
+  // Παρασκευή: μπήκε ο αγώνας του futsal στις 14:00. Το πρόγραμμα της Τρίτης μένει στο πλάνο ως «posted».
+  const ms2 = [...ms, M("futsal", "2026-11-20T14:00:00+02:00", "ΠΑΟΚ", "Αθήνα 90")];
+  const fri = plan(ms2, "2026-11-20", { names: NAMES }).items;
+  const s1 = fri.find((i) => i.what === "schedule" && i.track === s0.track);
+  assert.equal(s1.posted, true);
+  const [c] = changeStories(fri, tue, "2026-11-20T00:05", ms2, NAMES);
+  assert.equal(`${c.type} ${c.day} ${c.time}`, "story 2026-11-20 00:05");
+  assert.deepEqual(c.cards.map((x) => [x.kick, x.day, x.matches.map((r) => r.opponent)]),
+    [["ΑΛΛΑΓΗ ΠΡΟΓΡΑΜΜΑΤΟΣ", "Παρασκευή", ["Αθήνα 90"]]]);
+  assert.match(c.note, /Νέος: Φούτσαλ Ανδρών: ΠΑΟΚ – Αθήνα 90, Παρ 20\.11 14:00/);
+  // Στο επόμενο τρέξιμο κρατά την ίδια ώρα (ίδια αλλαγή), και μετά τον τελευταίο αγώνα σταματά.
+  const again = plan(ms2, "2026-11-20", { names: NAMES }).items;
+  assert.equal(changeStories(again, [...fri, c], "2026-11-20T02:00", ms2, NAMES)[0].time, "00:05");
+  assert.equal(changeStories(plan(ms2, "2026-11-20", { names: NAMES }).items, [...fri, c], "2026-11-20T19:30", ms2, NAMES).length, 0);
+  // Ώρα που άλλαξε: «Άλλαξε».
+  const ms3 = [ms[0], { ...ms[1], start: "2026-11-20T20:30:00+02:00" }];
+  const [c3] = changeStories(plan(ms3, "2026-11-19", { names: NAMES }).items, tue, "2026-11-19T10:00", ms3, NAMES);
+  assert.match(c3.note, /^Άλλαξε: Χάντμπολ Γυναικών: Πυλαία – ΠΑΟΚ, Παρ 20\.11 20:30/);
+});
+
+test("Γήπεδο με το όνομα σε εισαγωγικά", () => {
+  const r = row(M("futsal", "2026-11-20T14:00:00+02:00", "ΠΑΟΚ", "Αθήνα 90", { venue: "Κλειστό «Κατσιμήδειο» Τρικάλων" }), NAMES);
+  assert.equal(r.venue, "Κατσιμήδειο Τρικάλων");
+  assert.equal(row(M("volley", "2026-11-20T14:00:00+02:00", "Άρης", "ΠΑΟΚ", { venue: "Κλειστό Γυμναστήριο Μίκρας" }), NAMES).venue, "Μίκρας");
+});

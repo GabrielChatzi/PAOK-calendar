@@ -60,7 +60,7 @@ def due(items: list[dict], sent: dict, now: dt.datetime) -> list[dict]:
     for it in items:
         at = dt.datetime.fromisoformat(f"{it['day']}T{it['time']}").replace(tzinfo=notify.ATHENS)
         late = RESULTS_LATE if it.get("missing") is not None or it.get("after") else LATE
-        if key(it) in sent or not (at - EARLY <= now <= at + late) or not ready(it):
+        if it.get("posted") or key(it) in sent or not (at - EARLY <= now <= at + late) or not ready(it):
             continue
         # «after»: για τη σκακιέρα του grid πρώτα ανεβαίνει το άλλο post (π.χ. τα αποτελέσματα, που
         # περιμένουν σκορ)· αν αργήσει πάνω από AFTER_WAIT, δεν περιμένουμε άλλο.
@@ -87,6 +87,7 @@ def changes(items: list[dict], tracked: dict, now: dt.datetime) -> list[tuple[di
 
 def change_message(it: dict, added: list[str], gone: list[str]) -> tuple[str, str]:
     title = "⚠️ Άλλαξε το " + it["title"][0].lower() + it["title"][1:]
+    gone = [g for g in gone if g.split(",")[0] not in {a.split(",")[0] for a in added}]
     parts = [f"Τώρα: {x}" for x in added[:3]]
     if not added:
         parts = [f"Βγήκε: {x}" for x in gone[:3]]
@@ -102,13 +103,23 @@ def main(plan_path: Path, state_path: Path, now: dt.datetime | None = None) -> i
     sent = json.loads(state_path.read_text(encoding="utf-8")) if state_path.exists() else {}
     tracked = sent.pop("_tracked", {})
     items = plan.get("items", [])
+    # Το story «Αλλαγή προγράμματος» (week.mjs) για κάθε post προγράμματος, αν υπάρχει.
+    story = {it["track"]: it for it in items if it.get("what") == "change"}
+    noticed = set()
     for it, added, gone in changes(items, tracked, now):
         title, body = change_message(it, added, gone)
         tag = f"social-change-{it['track']}"
-        notify._push([TOPIC], title, body, f"/social/#{key(it)}", tag=tag,
+        target = story.get(it["track"], it)
+        if target is not it:
+            sent[key(target)] = now.isoformat(timespec="minutes")   # η ειδοποίηση αλλαγής καλύπτει και το story
+            body = body.replace("Πάτα για τη νέα εικόνα", "Πάτα για το story «Αλλαγή προγράμματος»")
+        noticed.add(it["track"])
+        notify._push([TOPIC], title, body, f"/social/#{key(target)}", tag=tag,
                      once=f"{tag}-{hashlib.sha1('|'.join(it['lines']).encode()).hexdigest()[:10]}")
         tracked[it["track"]]["lines"] = it["lines"]
     for it in due(items, sent, now):
+        if it.get("what") == "change" and it.get("track") in noticed:
+            continue
         title, body = message(it)
         notify._push([TOPIC], title, body, f"/social/#{key(it)}", tag=f"social-{key(it)}", once=f"social-{key(it)}")
         sent[key(it)] = now.isoformat(timespec="minutes")

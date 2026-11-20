@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:basketball-women-u18-ek-CqO0aAsJY8Pvp7WMR-4KUA@paok-calendar
-DTSTAMP:20261119T103334Z
+DTSTAMP:20261120T193102Z
 DTSTART;TZID=Europe/Athens:20261030T200000
 DTEND;TZID=Europe/Athens:20261030T220000
 SUMMARY:🏀 ΠΑΟΚ 102-32 ΠΑΝΟΡΑΜΑ ΑΣ
@@ -38,7 +38,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=CqO0aAsJY8Pvp7WMR-4K
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-u18-ek-iGRxONTdaa1lCmZYkvlzRg@paok-calendar
-DTSTAMP:20261119T103334Z
+DTSTAMP:20261120T193102Z
 DTSTART;TZID=Europe/Athens:20261110T200000
 DTEND;TZID=Europe/Athens:20261110T220000
 SUMMARY:🏀 ΠΑΟΚ 70-80 ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ ΣΥΚΕΩΝ
@@ -51,9 +51,9 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=iGRxONTdaa1lCmZYkvlz
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-u18-ek-5qIfxjfZYg-lsWV-mGjC2A@paok-calendar
-DTSTAMP:20261119T103334Z
-DTSTART;TZID=Europe/Athens:20261124T200000
-DTEND;TZID=Europe/Athens:20261124T220000
+DTSTAMP:20261120T193102Z
+DTSTART;TZID=Europe/Athens:20261204T200000
+DTEND;TZID=Europe/Athens:20261204T220000
 SUMMARY:🏀 ΠΑΟΚ – ΔΗΜΟΚΡΙΤΟΣ ΑΜΠΕΛ. ΜΑΟ
 LOCATION:PAOK Sports Arena
 DESCRIPTION:Νεανίδων (ΕΚΑΣΘ) – 7η αγωνιστική
@@ -62,7 +62,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=5qIfxjfZYg-lsWV-mGjC
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-u18-ek-NtjYtnkQDiUHLdMABgoMlA@paok-calendar
-DTSTAMP:20261119T103334Z
+DTSTAMP:20261120T193102Z
 DTSTART;TZID=Europe/Athens:20261208T200000
 DTEND;TZID=Europe/Athens:20261208T220000
 SUMMARY:🏀 ΠΑΟΚ – ΗΡΑΚΛΗΣ ΝΓΣΘ 1908
@@ -73,7 +73,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=NtjYtnkQDiUHLdMABgoM
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-u18-ek-rkYsq3pMSrj2LwvW45LeAQ@paok-calendar
-DTSTAMP:20261119T103334Z
+DTSTAMP:20261120T193102Z
 DTSTART;TZID=Europe/Athens:20270112T200000
 DTEND;TZID=Europe/Athens:20270112T220000
 SUMMARY:🏀 ΠΑΟΚ – ΑΝΑΓΕΝΝΗΣΗ Ν.ΡΥΣΙΟΥ ΑΜΣ
@@ -84,7 +84,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=rkYsq3pMSrj2LwvW45Le
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-u18-ek-KKQ27F46WcaWSBZ9Rv4wXA@paok-calendar
-DTSTAMP:20261119T103334Z
+DTSTAMP:20261120T193102Z
 DTSTART;TZID=Europe/Athens:20270126T200000
 DTEND;TZID=Europe/Athens:20270126T220000
 SUMMARY:🏀 ΠΑΟΚ – ΠΡΩΤΕΥΣ ΘΕΣΣΑΛΟΝΙΚΗΣ ΑΣ
@@ -95,7 +95,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=KKQ27F46WcaWSBZ9Rv4w
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-u18-ek-RHuQc1FRmo-yaSwDqcjV2g@paok-calendar
-DTSTAMP:20261119T103334Z
+DTSTAMP:20261120T193102Z
 DTSTART;TZID=Europe/Athens:20270202T200000
 DTEND;TZID=Europe/Athens:20270202T220000
 SUMMARY:🏀 ΠΑΟΚ – ΝΕΑΠΟΛΗ ΑΚΠΚ
@@ -106,7 +106,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=RHuQc1FRmo-yaSwDqcjV
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-u18-ek-GmnerH_vcUe0p5s2ggco4g@paok-calendar
-DTSTAMP:20261119T103334Z
+DTSTAMP:20261120T193102Z
 DTSTART;TZID=Europe/Athens:20270216T200000
 DTEND;TZID=Europe/Athens:20270216T220000
 SUMMARY:🏀 ΠΑΟΚ – Μ.Ε.Ν. ΤΟΥΜΠΑΣ
@@ -117,7 +117,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=GmnerH_vcUe0p5s2ggco
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-u18-ek-0bJYec861b1vUAWr7OC-1A@paok-calendar
-DTSTAMP:20261119T103334Z
+DTSTAMP:20261120T193102Z
 DTSTART;TZID=Europe/Athens:20270302T200000
 DTEND;TZID=Europe/Athens:20270302T220000
 SUMMARY:🏀 ΠΑΟΚ – ΜΓΣ ΑΠΟΛΛΩΝ ΚΑΛΑΜΑΡΙΑΣ
@@ -128,7 +128,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=0bJYec861b1vUAWr7OC-
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-u18-ek-AiG2WR7Q3HmM5Ab7YPYLJw@paok-calendar
-DTSTAMP:20261119T103334Z
+DTSTAMP:20261120T193102Z
 DTSTART;TZID=Europe/Athens:20270323T200000
 DTEND;TZID=Europe/Athens:20270323T220000
 SUMMARY:🏀 ΠΑΟΚ – Α.Σ. ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ

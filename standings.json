@@ -1266,6 +1266,19 @@
    "rows": [
     {
      "pos": 1,
+     "team": "ΠΑΟΚ",
+     "logo": "https://images.dataproject.com/eope/TeamLogo/100/40/TeamLogo_118.jpg",
+     "paok": true,
+     "cells": [
+      "7",
+      "6",
+      "1",
+      "18-8",
+      "13"
+     ]
+    },
+    {
+     "pos": 2,
      "team": "Πανιώνιος",
      "logo": "",
      "paok": false,
@@ -1278,7 +1291,7 @@
      ]
     },
     {
-     "pos": 2,
+     "pos": 3,
      "team": "Ολυμπιακός Σ.Φ.Π.",
      "logo": "",
      "paok": false,
@@ -1291,7 +1304,7 @@
      ]
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Παναθηναϊκός Α.Ο.",
      "logo": "",
      "paok": false,
@@ -1301,19 +1314,6 @@
       "0",
       "18-3",
       "12"
-     ]
-    },
-    {
-     "pos": 4,
-     "team": "ΠΑΟΚ",
-     "logo": "https://images.dataproject.com/eope/TeamLogo/100/40/TeamLogo_118.jpg",
-     "paok": true,
-     "cells": [
-      "6",
-      "5",
-      "1",
-      "15-7",
-      "11"
      ]
     },
     {
@@ -1344,6 +1344,19 @@
     },
     {
      "pos": 7,
+     "team": "Α.Ο. Θήρας",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "7",
+      "2",
+      "5",
+      "11-18",
+      "9"
+     ]
+    },
+    {
+     "pos": 8,
      "team": "Α.Ο. Μαρκοπούλου",
      "logo": "",
      "paok": false,
@@ -1356,7 +1369,7 @@
      ]
     },
     {
-     "pos": 8,
+     "pos": 9,
      "team": "Α.Σ. Άρης",
      "logo": "",
      "paok": false,
@@ -1366,19 +1379,6 @@
       "5",
       "11-18",
       "9"
-     ]
-    },
-    {
-     "pos": 9,
-     "team": "Α.Ο. Θήρας",
-     "logo": "",
-     "paok": false,
-     "cells": [
-      "6",
-      "2",
-      "4",
-      "10-15",
-      "8"
      ]
     },
     {

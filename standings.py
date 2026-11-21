@@ -496,6 +496,13 @@ def epsm_table(section: str) -> list[dict]:
         return []  # π.χ. Κ12 Κορασίδων: «η βαθμολογία δεν εμφανίζεται σε αυτή την κατηγορία»
     if not any(r[1] == PAOK_NAME for r in rows):
         raise RuntimeError("δεν βρέθηκε βαθμολογία με τον ΠΑΟΚ")
+    # Η ΕΠΣΜ κρύβει ομάδες εκτός κατάταξης (π.χ. «ΟΜΑΔΑ Α» στην Κ15 Γυναικών) αλλά κρατά τη θέση τους
+    # (01…05, 07): αρίθμηση ξανά με τη σειρά, με την ίδια θέση στις ισοβαθμίες της πηγής.
+    renum, last = [], None
+    for n, r in enumerate(rows):
+        renum.append((renum[-1][0] if last == r[0] else n + 1,) + r[1:])
+        last = r[0]
+    rows = renum
     out = table(ACADEMY[section]["league"], url, ["Αγ", "Ν", "Ι", "Η", "Γκολ", "Β"], rows)
     for row, (_, team, _, _) in zip(out["rows"], rows):  # άλλες ομάδες «ΠΑΟΚ …» (π.χ. ΠΑΟΚ Σταυρού) μένουν ως έχουν
         if team != PAOK_NAME:

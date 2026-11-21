@@ -822,7 +822,7 @@
   }
   function crest(url, name, section) {
     if (isAcademy(section)) {
-      if (isPaokName(name) || /^(ΑΣ|ΠΑΕ|ΚΑΕ)\s+ΠΑΟΚ\b/.test(name)) {  // και η άλλη ομάδα του ΠΑΟΚ (π.χ. «ΑΣ ΠΑΟΚ (2)»)
+      if (isPaokName(name) || otherPaok(name)) {  // και η άλλη ομάδα του ΠΑΟΚ (π.χ. «ΑΣ ΠΑΟΚ (2)»)
         var main = data.sections.filter(function (s) { return s.sport === data.sectionMap[section].sport && !s.women; })[0];
         url = (main && paokLogo[main.key]) || url;
       } else if (savedCrest(name, section)) {
@@ -1086,6 +1086,8 @@
     }).join("") + '<p class="source">Τα σκορ είναι από τη σκοπιά του ΠΑΟΚ (ΠΑΟΚ πρώτα).</p></div>';
   }
   function isPaokName(name) { return /^\s*(PAOK|ΠΑΟΚ)/i.test(name || ""); }
+  // Η άλλη ομάδα του ΠΑΟΚ στην ίδια κατηγορία (π.χ. «ΑΣ ΠΑΟΚ (2)»). Όχι \b: στο JavaScript δεν ισχύει για ελληνικά.
+  function otherPaok(name) { return /^(ΑΣ|ΠΑΕ|ΚΑΕ)\s+ΠΑΟΚ(?=[\s(]|$)/.test(name || ""); }
 
   function standingsHtml(key) {
     var tables = standings[key] || [];
@@ -1463,7 +1465,7 @@
     var by = {};
     function add(name, logo, key) {
       var s = data.sectionMap[key];
-      if (!s || !name || isPaokName(name) || /^(ΑΣ|ΠΑΕ|ΚΑΕ)\s+ΠΑΟΚ\b/.test(name)) return;
+      if (!s || !name || isPaokName(name) || otherPaok(name)) return;
       var k = crestKey(s.sport, name);
       if (!crestWords(name).length) return;
       var o = by[k] || (by[k] = { k: k, sport: s.sport, name: name, section: key, source: "", fallback: "", teams: {} });

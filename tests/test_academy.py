@@ -379,3 +379,17 @@ class Crests(unittest.TestCase):
             self.assertEqual(st["football-u19"][0]["rows"][0]["logo"], m[0]["homeLogo"])
             self.assertEqual(seen, ["https://www.paokfc.gr/a.png"])
 
+
+
+class EpsmStandings(unittest.TestCase):
+    def test_hidden_team_renumbered(self):
+        import standings as s
+        rows = [("01. ΑΟ ΛΕΟΝΤΕΣ", "9", "3", "13-3", "3-0-0"), ("02. ΑΣ ΠΑΟΚ (1)", "6", "2", "10-1", "2-0-0"),
+                ("03. ΑΣ ΠΑΟΚ (2)", "6", "2", "11-3", "2-0-0"), ("07. ΑΙΑΝΤΑΣ ΠΥΛΑΙΑΣ", "0", "3", "1-13", "0-0-3"),
+                ("07. ΖΗΤΑ ΕΠΤΑ", "0", "2", "1-13", "0-0-2")]
+        page = "ΒΑΘΜΟΛΟΓΙΑ<table>" + "".join("<tr>" + "".join(f"<td>{c}</td>" for c in r) + "</tr>" for r in rows) + "</table>"
+        with mock.patch.object(s, "fetch", return_value=page):
+            t = s.epsm_table("football-women-u15")[0]["rows"]
+        self.assertEqual([(r["pos"], r["team"], r["paok"]) for r in t],
+                         [(1, "ΑΟ ΛΕΟΝΤΕΣ", False), (2, "ΠΑΟΚ", True), (3, "ΑΣ ΠΑΟΚ (2)", False),
+                          (4, "ΑΙΑΝΤΑΣ ΠΥΛΑΙΑΣ", False), (4, "ΖΗΤΑ ΕΠΤΑ", False)])

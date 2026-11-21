@@ -5264,6 +5264,20 @@
     },
     {
      "pos": 9,
+     "team": "ΑΛΕΞΑΝΔΡΟΣ ΚΙΛΚΙΣ (1)",
+     "logo": "https://paokalendar.gr/crests/9aad27db940cf2b7.svg",
+     "paok": false,
+     "cells": [
+      "5",
+      "3",
+      "2",
+      "0",
+      "9-5",
+      "11"
+     ]
+    },
+    {
+     "pos": 10,
      "team": "ΗΡΑΚΛΗΣ ΑΜΠΕΛΟΚΗΠΩΝ",
      "logo": "https://paokalendar.gr/crests/e12600e7d637395b.svg",
      "paok": false,
@@ -5277,7 +5291,7 @@
      ]
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "ΠΑΝΑΘΗΝΑΪΚΟΣ ΘΕΣΣΑΛΟΝΙΚΗΣ (1)",
      "logo": "",
      "paok": false,
@@ -5291,7 +5305,7 @@
      ]
     },
     {
-     "pos": 11,
+     "pos": 12,
      "team": "ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020 (1)",
      "logo": "",
      "paok": false,
@@ -5305,7 +5319,7 @@
      ]
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "ΑΙΑΣ ΕΥΟΣΜΟΥ",
      "logo": "https://paokalendar.gr/crests/217de571443cb8c2.gif",
      "paok": false,
@@ -5319,7 +5333,7 @@
      ]
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "ΜΠΕΜΠΗΔΕΣ 2000",
      "logo": "",
      "paok": false,
@@ -5333,7 +5347,7 @@
      ]
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "ΠΑΝΣΕΡΡΑΪΚΟΣ",
      "logo": "https://paokalendar.gr/crests/cb6f27cd2b720060.png",
      "paok": false,
@@ -5347,7 +5361,7 @@
      ]
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "ΠΙΕΡΙΚΟΣ 1961",
      "logo": "",
      "paok": false,
@@ -5361,7 +5375,7 @@
      ]
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "ΜΑΚΕΔΟΝΙΚΟΣ (1)",
      "logo": "https://paokalendar.gr/crests/efadf5b8da59bd89.jpg",
      "paok": false,
@@ -5375,7 +5389,7 @@
      ]
     },
     {
-     "pos": 17,
+     "pos": 18,
      "team": "ΠΑΝΟΡΑΜΑ",
      "logo": "https://paokalendar.gr/crests/44e72a40b38b3daf.png",
      "paok": false,
@@ -5389,7 +5403,7 @@
      ]
     },
     {
-     "pos": 18,
+     "pos": 19,
      "team": "ΖΗΤΑ ΕΠΤΑ (1)",
      "logo": "",
      "paok": false,
@@ -5403,21 +5417,21 @@
      ]
     },
     {
-     "pos": 19,
+     "pos": 20,
      "team": "ΠΟ ΜΑΛΑΚΟΠΗΣ ΠΥΛΑΙΑΣ (1)",
      "logo": "",
      "paok": false,
      "cells": [
-      "4",
+      "5",
       "3",
       "0",
-      "1",
-      "8-6",
+      "2",
+      "9-8",
       "9"
      ]
     },
     {
-     "pos": 20,
+     "pos": 21,
      "team": "ΠΟΣΕΙΔΩΝΑΣ ΜΗΧΑΝΙΩΝΑΣ",
      "logo": "https://paokalendar.gr/crests/b77de0c5f576bc2f.png",
      "paok": false,
@@ -5427,20 +5441,6 @@
       "2",
       "1",
       "20-9",
-      "8"
-     ]
-    },
-    {
-     "pos": 21,
-     "team": "ΑΛΕΞΑΝΔΡΟΣ ΚΙΛΚΙΣ (1)",
-     "logo": "https://paokalendar.gr/crests/9aad27db940cf2b7.svg",
-     "paok": false,
-     "cells": [
-      "4",
-      "2",
-      "2",
-      "0",
-      "7-4",
       "8"
      ]
     },
@@ -6894,6 +6894,20 @@
     },
     {
      "pos": 3,
+     "team": "ΑΓΙΟΣ ΝΙΚΟΛΑΟΣ",
+     "logo": "",
+     "paok": false,
+     "cells": [
+      "6",
+      "4",
+      "1",
+      "1",
+      "24-17",
+      "13"
+     ]
+    },
+    {
+     "pos": 4,
      "team": "ΜΠΕΜΠΗΔΕΣ 2000",
      "logo": "",
      "paok": false,
@@ -6907,30 +6921,16 @@
      ]
     },
     {
-     "pos": 4,
-     "team": "ΑΓΙΟΣ ΝΙΚΟΛΑΟΣ",
-     "logo": "",
-     "paok": false,
-     "cells": [
-      "5",
-      "3",
-      "1",
-      "1",
-      "21-16",
-      "10"
-     ]
-    },
-    {
      "pos": 5,
      "team": "ΑΛΕΞΑΝΔΡΟΣ ΚΙΛΚΙΣ",
      "logo": "https://paokalendar.gr/crests/9aad27db940cf2b7.svg",
      "paok": false,
      "cells": [
-      "5",
+      "6",
       "2",
       "0",
-      "3",
-      "15-23",
+      "4",
+      "16-26",
       "6"
      ]
     },

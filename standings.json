@@ -2092,11 +2092,11 @@
      "logo": "https://koecdn.twic.pics/media/327204416-876598936727395-7539238121809845951-n-1759145224-TwVlRdRx.jpg",
      "paok": false,
      "cells": [
-      "9",
+      "10",
       "3",
       "0",
-      "6",
-      "114-137",
+      "7",
+      "121-147",
       "9"
      ]
     },
@@ -2116,6 +2116,20 @@
     },
     {
      "pos": 10,
+     "team": "ΝΟ ΛΑΡΙΣΗΣ",
+     "logo": "https://koecdn.twic.pics/media/larisa-f-1789898479-XJuZR95A.png",
+     "paok": false,
+     "cells": [
+      "10",
+      "2",
+      "1",
+      "7",
+      "77-153",
+      "7"
+     ]
+    },
+    {
+     "pos": 11,
      "team": "Π.Ε.Κ.Ε. ΒΡΟΝΤΑΔΟΥ",
      "logo": "https://koecdn.twic.pics/media/pekev-1789898708-1ZgUQCyK.jpeg",
      "paok": false,
@@ -2125,20 +2139,6 @@
       "1",
       "8",
       "86-151",
-      "4"
-     ]
-    },
-    {
-     "pos": 11,
-     "team": "ΝΟ ΛΑΡΙΣΗΣ",
-     "logo": "https://koecdn.twic.pics/media/larisa-f-1789898479-XJuZR95A.png",
-     "paok": false,
-     "cells": [
-      "9",
-      "1",
-      "1",
-      "7",
-      "67-146",
       "4"
      ]
     },

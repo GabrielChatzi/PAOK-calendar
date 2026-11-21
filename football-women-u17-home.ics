@@ -26,19 +26,20 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:football-women-u17-epo56-ec00491e16bd@paok-calendar
-DTSTAMP:20261119T111710Z
+DTSTAMP:20261121T160055Z
 DTSTART;TZID=Europe/Athens:20261121T123000
 DTEND;TZID=Europe/Athens:20261121T143000
-SUMMARY:⚽ ΠΑΟΚ – ΣΕΙΡΗΝΕΣ ΓΡΕΒΕΝΩΝ
+SUMMARY:⚽ ΠΑΟΚ 7-1 ΣΕΙΡΗΝΕΣ ΓΡΕΒΕΝΩΝ
 LOCATION:Αθλητικό Κέντρο Π.Α.Ο.Κ. Νέας Μεσήμβρ
  ιας
 DESCRIPTION:Πανελλήνιο Πρωτάθλημα Υποδομών Νε
- ανίδων Κ-17 – 1η ΦΑΣΗ - 1ος ΟΜΙΛΟΣ
+ ανίδων Κ-17 – 1η ΦΑΣΗ - 1ος ΟΜΙΛΟΣ\nΤελικό σ
+ κορ: ΠΑΟΚ 7-1 ΣΕΙΡΗΝΕΣ ΓΡΕΒΕΝΩΝ
 URL:https://www.epo.gr/el/competition/56/matches
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-u17-epo56-557d5c620cb9@paok-calendar
-DTSTAMP:20261119T111710Z
+DTSTAMP:20261121T160055Z
 DTSTART;TZID=Europe/Athens:20261129T150000
 DTEND;TZID=Europe/Athens:20261129T170000
 SUMMARY:⚽ ΠΑΟΚ – ΣΚΙΟΥΡΟΙ
@@ -50,7 +51,7 @@ URL:https://www.epo.gr/el/competition/56/matches
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-u17-epo56-900b2bcc1df2@paok-calendar
-DTSTAMP:20261119T111710Z
+DTSTAMP:20261121T160055Z
 DTSTART;TZID=Europe/Athens:20270110T150000
 DTEND;TZID=Europe/Athens:20270110T170000
 SUMMARY:⚽ ΠΑΟΚ – ΠΟΝΤΙΑΚΟΣ ΑΛΕΞΑΝΔΡΟΥΠΟΛΗΣ 
@@ -63,7 +64,7 @@ URL:https://www.epo.gr/el/competition/56/matches
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-u17-epo56-42bee08d966b@paok-calendar
-DTSTAMP:20261119T111710Z
+DTSTAMP:20261121T160055Z
 DTSTART;TZID=Europe/Athens:20270227T150000
 DTEND;TZID=Europe/Athens:20270227T170000
 SUMMARY:⚽ ΠΑΟΚ – Α.Ο. ΛΕΟΝΤΕΣ
@@ -75,7 +76,7 @@ URL:https://www.epo.gr/el/competition/56/matches
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-u17-epo56-699d2ed6826e@paok-calendar
-DTSTAMP:20261119T111710Z
+DTSTAMP:20261121T160055Z
 DTSTART;TZID=Europe/Athens:20270328T160000
 DTEND;TZID=Europe/Athens:20270328T180000
 SUMMARY:⚽ ΠΑΟΚ – ΑΣ ΘΕΣΣ/ΝΙΚΗ Ο ΑΡΗΣ

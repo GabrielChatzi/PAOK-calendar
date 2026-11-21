@@ -825,8 +825,9 @@ def eurocup_matches() -> list[Match]:
     return out
 
 
-def wbl1_matches() -> list[Match]:
-    url = "https://www.basket.gr/wbl1/schedule/"
+def basketgr_schedule(url: str, section: str, uid_tag: str, competition: str) -> list[Match]:
+    """Οι αγώνες του ΠΑΟΚ σε μια σελίδα προγράμματος του basket.gr (ΕΟΚ): wbl1, risingstars κ.λπ.
+    Κάθε αγώνας: <div class="page-schedule" data-round="…"> με info «ημέρα, ώρα | Γήπεδο: …», club, points, logo."""
     page = fetch_until(url, lambda t: '<div class="page-schedule" ' in t and "ΠΑΟΚ" in t)
     out = []
     for block in page.split('<div class="page-schedule" ')[1:]:
@@ -846,18 +847,51 @@ def wbl1_matches() -> list[Match]:
         score = f"{points[0]}-{points[1]}" if len(points) >= 2 and all(p.isdigit() for p in points[:2]) else ""
         round_name = html.unescape(rnd.group(1)) if rnd else ""
         out.append(Match(
-            section="basketball-women",
-            uid=f"basketball-women-wbl1-{short_hash(round_name, clubs[0], clubs[1])}",
+            section=section,
+            uid=f"{section}-{uid_tag}-{short_hash(round_name, clubs[0], clubs[1])}",
             day=dt.date(int(dm.group(3)), month, int(dm.group(1))),
             time=parse_time(when.split(",", 1)[-1] if "," in when else ""),
             home=tidy_name(clubs[0]), away=tidy_name(clubs[1]), paok_home=is_paok(clubs[0]),
             venue=re.sub(r"^\s*Γήπεδο:\s*", "", venue).strip(),
-            competition="Women's Basketball League 1", round=round_name, score=score, url=url,
+            competition=competition, round=round_name, score=score, url=url,
             home_logo=logos[0], away_logo=logos[1],
         ))
     if not out:
-        raise RuntimeError("Δεν βρέθηκαν αγώνες ΠΑΟΚ στο basket.gr/wbl1")
+        raise RuntimeError(f"Δεν βρέθηκαν αγώνες ΠΑΟΚ στο {url}")
     return out
+
+
+def wbl1_matches() -> list[Match]:
+    return basketgr_schedule("https://www.basket.gr/wbl1/schedule/", "basketball-women", "wbl1",
+                             "Women's Basketball League 1")
+
+
+# Εθνική φάση των Rising Stars της ΕΟΚ (risingstars.basket.gr). Η τοπική φάση είναι στην ΕΚΑΣΘ.
+RISING_STARS = {
+    "basketball-u16": ("https://risingstars.basket.gr/u16/schedule/", "Gen A Rising Stars U16"),
+    "basketball-u18": ("https://risingstars.basket.gr/u18/schedule/", "Rising Stars U18"),
+}
+_RS_FAILED: set[str] = set()
+
+
+def rising_stars_matches(section: str) -> list[Match]:
+    """Χωρίς να ρίχνει όλο το τμήμα αν αποτύχει: τότε μένουν οι αγώνες της προηγούμενης ενημέρωσης
+    (βλ. keep_source_matches), και τα υπόλοιπα (ΕΚΑΣΘ) ενημερώνονται κανονικά."""
+    url, comp = RISING_STARS[section]
+    try:
+        return basketgr_schedule(url, section, "rs", comp)
+    except Exception as e:
+        print(f"  ! {section} / Rising Stars: {e}", file=sys.stderr)
+        _RS_FAILED.add(section)
+        return []
+
+
+def keep_source_matches(previous: list[dict], current: list[Match], tag: str) -> None:
+    """Οι αγώνες μιας πηγής που απέτυχε αυτή τη φορά, από την προηγούμενη ενημέρωση."""
+    have = {m.uid for m in current}
+    for d in previous:
+        if f"-{tag}-" in d["uid"] and d["uid"] not in have:
+            current.append(match_from_json(d))
 
 
 # ---------------------------------------------------------------- χάντμπολ
@@ -2654,6 +2688,8 @@ SOURCES: dict[str, list[tuple[str, Callable[[], list[Match]]]]] = {
     "football-u16": [("sl2.gr", lambda: sl2_matches("football-u16"))],
     **{key: [("epesth.gr", lambda key=key: epesth_matches(key))] for key in EPESTH_TEAMS},
     **{key: [("ekasth.gr", lambda key=key: ekasth_matches(key))] for key in EKASTH_TEAMS},
+    **{key: [("ekasth.gr", lambda key=key: ekasth_matches(key)),
+             ("risingstars.basket.gr", lambda key=key: rising_stars_matches(key))] for key in RISING_STARS},
     **{key: [("epsm.gr", lambda key=key: epsm_matches(key))] for key in EPSM_TEAMS},
     "football-women-u17": [("ΕΠΟ Υποδομών Κ17", lambda: strip_age(epo_matches(56, "football-women-u17", required=True), "Κ17"))],
 }
@@ -2718,6 +2754,8 @@ def main(only: list[str] | None = None) -> int:
         carry_periods(prev_by_section[key], unique)
         keep_stats(prev_by_section[key], unique)  # πριν από το live, ώστε ο κωδικός Genius να μη ζητείται ξανά
         keep_friendlies(prev_by_section[key], unique)
+        if key in _RS_FAILED:
+            keep_source_matches(prev_by_section[key], unique, "rs")
         unique[:] = drop_shadow_friendlies(unique)
         for m in unique:
             m.venue = normalize_venue(m.venue)

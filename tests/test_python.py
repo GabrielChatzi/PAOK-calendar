@@ -228,6 +228,37 @@ class KeepStats(unittest.TestCase):
         self.assertNotIn("stats", m.to_json())
 
 
+class RisingStars(unittest.TestCase):
+    PAGE = ('<div class="page-schedule" data-round="3η Αγωνιστική"><div class="info">Σάββατο 21 Νοεμβρίου 2026, 16:00 | '
+            'Γήπεδο: ΚΓ ΟΛΥΜΠΙΑΚΟΥ ΧΩΡΙΟΥ</div><div class="logo"><img src="https://apps.basket.gr/clubs/9/logo"></div>'
+            '<div class="club">ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ</div><div class="points">69</div><div class="points">84</div>'
+            '<div class="logo"><img src="https://apps.basket.gr/clubs/2/logo"></div><div class="club">ΠΑΟΚ</div></div>'
+            '<div class="page-schedule" data-round="4η Αγωνιστική"><div class="info">Κυριακή 22 Νοεμβρίου 2026, 12:00 | '
+            'Γήπεδο: ΚΓ ΟΛΥΜΠΙΑΚΟΥ ΧΩΡΙΟΥ</div><div class="club">ΠΑΟΚ</div><div class="points">-</div>'
+            '<div class="club">ΑΟ ΑΜΥΝΤΑΣ</div></div>')
+
+    def test_national_phase(self):
+        with mock.patch.object(b, "fetch", return_value=self.PAGE):
+            ms = b.rising_stars_matches("basketball-u16")
+        self.assertEqual([(m.day.isoformat(), m.home, m.away, m.score, m.paok_home) for m in ms],
+                         [("2026-11-21", "ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ", "ΠΑΟΚ", "69-84", False),
+                          ("2026-11-22", "ΠΑΟΚ", "ΑΟ ΑΜΥΝΤΑΣ", "", True)])
+        self.assertEqual(ms[0].time, dt.time(16, 0))
+        self.assertEqual(ms[0].venue, "ΚΓ ΟΛΥΜΠΙΑΚΟΥ ΧΩΡΙΟΥ")
+        self.assertEqual(ms[0].competition, "Gen A Rising Stars U16")
+        self.assertIn("-rs-", ms[0].uid)
+
+    def test_failure_keeps_previous(self):
+        with mock.patch.object(b, "fetch", side_effect=RuntimeError("down")), mock.patch("time.sleep"):
+            self.assertEqual(b.rising_stars_matches("basketball-u18"), [])
+        self.assertIn("basketball-u18", b._RS_FAILED)
+        with mock.patch.object(b, "fetch", return_value=self.PAGE):
+            prev = [m.to_json() for m in b.basketgr_schedule("x", "basketball-u18", "rs", "Rising Stars U18")]
+        cur = []
+        b.keep_source_matches(prev, cur, "rs")
+        self.assertEqual(len(cur), 2)
+
+
 class Postponed(unittest.TestCase):
     def test_status_change_notifies_and_stops_waiting(self):
         old = dict(M, start="2099-01-01T16:00:00+02:00")

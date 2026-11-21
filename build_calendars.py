@@ -827,15 +827,25 @@ def eurocup_matches() -> list[Match]:
 
 def basketgr_schedule(url: str, section: str, uid_tag: str, competition: str) -> list[Match]:
     """Οι αγώνες του ΠΑΟΚ σε μια σελίδα προγράμματος του basket.gr (ΕΟΚ): wbl1, risingstars κ.λπ.
-    Κάθε αγώνας: <div class="page-schedule" data-round="…"> με info «ημέρα, ώρα | Γήπεδο: …», club, points, logo."""
-    page = fetch_until(url, lambda t: '<div class="page-schedule" ' in t and "ΠΑΟΚ" in t)
+    Κάθε αγώνας: <div class="page-schedule"> (μονά ή διπλά εισαγωγικά) με info «ημέρα, ώρα | Γήπεδο: …»,
+    club, points, logo, και ίσως σύνδεσμο YouTube. Η αγωνιστική: data-round, ή η τελευταία επικεφαλίδα
+    «Nη Αγωνιστική» πριν από τον αγώνα."""
+    block_re = re.compile(r"""<div class=["']page-schedule["']""")
+    page = fetch_until(url, lambda t: bool(block_re.search(t)) and "ΠΑΟΚ" in t)
+    q = r"""["']"""
+    parts = block_re.split(page)
     out = []
-    for block in page.split('<div class="page-schedule" ')[1:]:
-        rnd = re.search(r'data-round="([^"]*)"', block)
-        info = re.search(r'<div class="info">(.*?)</div>', block, re.S)
-        clubs = [clean(c) for c in re.findall(r'<div class="club">(.*?)</div>', block, re.S)]
-        points = [clean(p) for p in re.findall(r'<div class="points">(.*?)</div>', block, re.S)]
-        logos = re.findall(r'<div class="logo"><img[^>]+src="([^"]+)"', block) + ["", ""]
+    heading = ""
+    for prev, block in zip(parts, parts[1:]):
+        hs = re.findall(r"(\d+)\s*η\s+αγωνιστικ", plain(clean(prev)).lower())
+        if hs:
+            heading = f"{hs[-1]}η Αγωνιστική"
+        rnd = re.search(rf"data-round={q}([^\"']*)", block)
+        info = re.search(rf"<div class={q}info{q}>(.*?)</div>", block, re.S)
+        clubs = [clean(c) for c in re.findall(rf"<div class={q}club{q}>(.*?)</div>", block, re.S)]
+        points = [clean(p) for p in re.findall(rf"<div class={q}points{q}>(.*?)</div>", block, re.S)]
+        logos = re.findall(rf"<div class={q}logo{q}><img[^>]+src={q}([^\"']+)", block) + ["", ""]
+        youtube = re.search(rf"href={q}(https://(?:www\.)?youtu[^\"']+)", block)
         if len(clubs) < 2 or not info or not (is_paok(clubs[0]) or is_paok(clubs[1])):
             continue
         text = clean(info.group(1))
@@ -845,7 +855,7 @@ def basketgr_schedule(url: str, section: str, uid_tag: str, competition: str) ->
             continue
         when, _, venue = text.partition("|")
         score = f"{points[0]}-{points[1]}" if len(points) >= 2 and all(p.isdigit() for p in points[:2]) else ""
-        round_name = html.unescape(rnd.group(1)) if rnd else ""
+        round_name = html.unescape(rnd.group(1)) if rnd else heading
         out.append(Match(
             section=section,
             uid=f"{section}-{uid_tag}-{short_hash(round_name, clubs[0], clubs[1])}",
@@ -853,8 +863,9 @@ def basketgr_schedule(url: str, section: str, uid_tag: str, competition: str) ->
             time=parse_time(when.split(",", 1)[-1] if "," in when else ""),
             home=tidy_name(clubs[0]), away=tidy_name(clubs[1]), paok_home=is_paok(clubs[0]),
             venue=re.sub(r"^\s*Γήπεδο:\s*", "", venue).strip(),
-            competition=competition, round=round_name, score=score, url=url,
+            competition=competition, round=round_name if rnd else ekasth_round(heading), score=score, url=url,
             home_logo=logos[0], away_logo=logos[1],
+            tv="YouTube" if youtube else "", tv_url=html.unescape(youtube.group(1)) if youtube else "",
         ))
     if not out:
         # Με απόσπασμα της σελίδας γύρω από τον ΠΑΟΚ, για να φαίνεται στο log αν άλλαξε η μορφή της.

@@ -229,13 +229,16 @@ class KeepStats(unittest.TestCase):
 
 
 class RisingStars(unittest.TestCase):
-    PAGE = ('<div class="page-schedule" data-round="3η Αγωνιστική"><div class="info">Σάββατο 21 Νοεμβρίου 2026, 16:00 | '
-            'Γήπεδο: ΚΓ ΟΛΥΜΠΙΑΚΟΥ ΧΩΡΙΟΥ</div><div class="logo"><img src="https://apps.basket.gr/clubs/9/logo"></div>'
-            '<div class="club">ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ</div><div class="points">69</div><div class="points">84</div>'
-            '<div class="logo"><img src="https://apps.basket.gr/clubs/2/logo"></div><div class="club">ΠΑΟΚ</div></div>'
-            '<div class="page-schedule" data-round="4η Αγωνιστική"><div class="info">Κυριακή 22 Νοεμβρίου 2026, 12:00 | '
-            'Γήπεδο: ΚΓ ΟΛΥΜΠΙΑΚΟΥ ΧΩΡΙΟΥ</div><div class="club">ΠΑΟΚ</div><div class="points">-</div>'
-            '<div class="club">ΑΟ ΑΜΥΝΤΑΣ</div></div>')
+    PAGE = ("<h3 class='round'>3η Αγωνιστική</h3><div class='page-schedule'><div class='row-info'><div class='info'>"
+            "Σάββατο 21 Νοεμβρίου 2026, 16:00 | Γήπεδο: ΚΓ ΟΛΥΜΠΙΑΚΟΥ ΧΩΡΙΟΥ</div></div><div class='row-score'>"
+            "<div class='teama'><div class='divider'></div><div class='logo'><img class='image' src='https://apps.basket.gr/clubs/9/logo'></div>"
+            "<div class='club'>ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ</div><div class='points'>69</div></div> <div class='vs'>-</div><div class='teamb'>"
+            "<div class='points'>84</div><div class='club'>ΠΑΟΚ</div><div class='logo'><img class='image' src='https://apps.basket.gr/clubs/2/logo'></div>"
+            "</div></div><div class='row-info'><div class='live'> <div class='youtube'><a href='https://www.youtube.com/watch?v=abc&amp;list=X' "
+            "target='_blank'>YouTube Live!</a></div></div></div></div>"
+            "<h3>4η Αγωνιστική</h3><div class='page-schedule'><div class='row-info'><div class='info'>Κυριακή 22 Νοεμβρίου 2026, 12:00 | "
+            "Γήπεδο: ΚΓ ΟΛΥΜΠΙΑΚΟΥ ΧΩΡΙΟΥ</div></div><div class='row-score'><div class='teama'><div class='club'>ΠΑΟΚ</div>"
+            "<div class='points'></div></div><div class='vs'>-</div><div class='teamb'><div class='points'></div><div class='club'>ΑΟ ΑΜΥΝΤΑΣ</div></div></div></div>")
 
     def test_national_phase(self):
         with mock.patch.object(b, "fetch", return_value=self.PAGE):
@@ -247,6 +250,9 @@ class RisingStars(unittest.TestCase):
         self.assertEqual(ms[0].venue, "ΚΓ ΟΛΥΜΠΙΑΚΟΥ ΧΩΡΙΟΥ")
         self.assertEqual(ms[0].competition, "Gen A Rising Stars U16")
         self.assertIn("-rs-", ms[0].uid)
+        self.assertEqual([m.round for m in ms], ["3η αγωνιστική", "4η αγωνιστική"])
+        self.assertEqual(ms[0].away_logo, "https://apps.basket.gr/clubs/2/logo")
+        self.assertEqual(ms[0].tv_url, "https://www.youtube.com/watch?v=abc&list=X")
 
     def test_failure_keeps_previous(self):
         with mock.patch.object(b, "fetch", side_effect=RuntimeError("down")), mock.patch("time.sleep"):

@@ -2847,7 +2847,7 @@
 
     var body = "";
     var hasLive = !!m.live;
-    if (hasLive && det) {
+    if ((hasLive || m.stats) && det) {
       body += timelineHtml(m, det) + quartersHtml(m, det) + statsHtml(m, det) + boxHtml(m, det);
       if (!body && det.state && det.state.state === "pre" && liveCandidate(m)) body = '<p class="loading">Ο αγώνας δεν έχει ξεκινήσει ακόμα. Το σκορ θα ανανεώνεται εδώ μόλις αρχίσει.</p>';
       if (det.sourceNote) body += '<p class="help source-note">' + esc(det.sourceNote) + "</p>";
@@ -3259,8 +3259,10 @@
     return { title: "Συνθέσεις", cols: cols, home: teams.home, away: teams.away,
              legend: seen.totalGoals ? "Γ γκολ · Ασ ασίστ · Σ σουτ · Ε στην εστία · Φ φάουλ · Απ αποκρούσεις. Με έντονα η αρχική ενδεκάδα." : "Με έντονα η αρχική ενδεκάδα." };
   }
+  // Live σε εξέλιξη (m.live) ή, μετά τον αγώνα, η πηγή των στατιστικών (m.stats, όταν το live έχει σβήσει).
+  function statsSource(m) { return m.live || m.stats || null; }
   function fetchDetail(m) {
-    var L = m.live || {};
+    var L = statsSource(m) || {};
     if (L.src === "espn") {
       return fetch("https://site.api.espn.com/apis/site/v2/sports/soccer/" + encodeURIComponent(L.league) +
         "/summary?event=" + encodeURIComponent(L.id), { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (d) {
@@ -3362,7 +3364,7 @@
   var detailTimer = null;
   function pollDetail(m) {
     clearTimeout(detailTimer);
-    if (!m || !m.live) return;
+    if (!m || !statsSource(m)) return;
     var r = route();
     if (r.page !== "match" || r.nt !== m.nt) return;
     var active = liveCandidate(m) || (liveState[m.uid] && liveState[m.uid].state === "in");
@@ -3440,7 +3442,7 @@
   // (Genius Sports, ΕΟΚ), χάντμπολ (EHF)
   var API_LIVE = ["koe", "ea", "dp", "gs", "ehf", "eok"];
   function waterpoloFetch(m, box) {
-    var L = m.live, q = box ? ["box=1"] : [];
+    var L = statsSource(m), q = box ? ["box=1"] : [];
     ["src", "code", "cat", "gara", "tur", "gru", "a", "b", "fed", "id", "day", "side", "key", "comp"].forEach(function (k) {
       if (L[k] != null) q.push(k + "=" + encodeURIComponent(L[k]));
     });
@@ -3466,9 +3468,10 @@
     return { state: j.state, home: j.home || 0, away: j.away || 0, label: label, quarter: j.quarter || 0 };
   }
   function waterpoloDetail(m) {
+    var src = statsSource(m).src;
     return waterpoloFetch(m, true).then(function (j) {
       var dt = j.detail || {};  // στατιστικά ομάδας και παικτών (πόλο ΚΟΕ, βόλεϊ, χάντμπολ EHF)
-      if (m.live.src === "dp") {
+      if (src === "dp") {
         var vs = waterpoloState(j, "dp"), done = j.done || 0, sets = [];
         // Πάντα 5 σετ, όπως στα σκορ του βόλεϊ· όσα δεν έχουν παιχτεί μένουν κενά, ο νικητής κάθε σετ με έντονα.
         for (var i = 0; i < 5; i++) {
@@ -3483,22 +3486,22 @@
                  quarters: vs.state === "pre" ? [] : sets, current: cur, stats: dt.stats || [], box: dt.box || null, currentLabel: vs.quarter === 6 ? "Χρυσό σετ" : vs.quarter + "ο σετ",
                  sourceNote: "Live από την Data Project (επίσημο σύστημα της ΕΟΠΕ)." };
       }
-      var st = waterpoloState(j, m.live.src), quarters = [];
+      var st = waterpoloState(j, src), quarters = [];
       if (j.quarters && j.quarters.length) {
         // Πάντα οι 4 περίοδοι· όσες δεν έχουν παιχτεί μένουν κενές. Μετά την 4η, τα πέναλτι.
-        var halves = m.live.src === "ehf", n = halves ? 2 : 4;  // χάντμπολ: δύο ημίχρονα
+        var halves = src === "ehf", n = halves ? 2 : 4;  // χάντμπολ: δύο ημίχρονα
         for (var i = 0; i < Math.max(n, j.quarters.length); i++) {
           var x = j.quarters[i];
-          quarters.push({ label: i < n ? i + 1 + (halves ? "ο" : "η") : m.live.src === "gs" ? "Παρ." : "Πέν.", home: x ? x.home : "", away: x ? x.away : "" });
+          quarters.push({ label: i < n ? i + 1 + (halves ? "ο" : "η") : src === "gs" ? "Παρ." : "Πέν.", home: x ? x.home : "", away: x ? x.away : "" });
         }
       }
-      var bb = m.live.src === "gs" && j.box ? basketBox(j.box.home, j.box.away, false) : { stats: dt.stats || [], box: dt.box || null };
+      var bb = src === "gs" && j.box ? basketBox(j.box.home, j.box.away, false) : { stats: dt.stats || [], box: dt.box || null };
       return { state: st, quarters: st.state === "pre" ? [] : quarters, home: st.home, away: st.away,
                stats: st.state === "pre" ? [] : bb.stats, box: st.state === "pre" ? null : bb.box,
                fouls: st.state === "in" && j.fouls ? j.fouls : null, foulsPeriod: j.quarter || 0,
-               periodTitle: m.live.src === "ehf" ? "Σκορ ανά ημίχρονο" : undefined,
+               periodTitle: src === "ehf" ? "Σκορ ανά ημίχρονο" : undefined,
                sourceNote: "Live από " + ({ koe: "την ΚΟΕ (live.koe.org.gr)", gs: "τη Genius Sports (επίσημα στατιστικά της Basket League)",
-                 eok: "το livescore της ΕΟΚ (basket.gr)", ehf: "την EHF (eurohandball.com)" }[m.live.src] || "την European Aquatics") + "." };
+                 eok: "το livescore της ΕΟΚ (basket.gr)", ehf: "την EHF (eurohandball.com)" }[src] || "την European Aquatics") + "." };
     });
   }
 

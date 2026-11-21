@@ -197,6 +197,37 @@ class Results(unittest.TestCase):
         self.assertEqual(ms[0].score, "")
 
 
+class KeepStats(unittest.TestCase):
+    def match(self, **kw):
+        return b.Match(section="basketball", uid="basketball-esake-1", day=dt.date(2026, 11, 21), time=dt.time(18, 0),
+                       home="ΠΑΟΚ", away="Χ", paok_home=True, **kw)
+
+    def test_admin_final_keeps_stats_source(self):
+        live = {"src": "gs", "key": "K", "day": "2026-11-21", "side": "h"}
+        m = self.match(live=live)
+        with mock.patch.object(b, "admin_entries", return_value={b.match_topic_id(m.uid): {"final": True, "home": 80, "away": 75}}):
+            b.apply_admin("basketball", [m])
+        self.assertIsNone(m.live)
+        self.assertEqual(m.stats, live)
+        self.assertEqual(m.to_json()["stats"], live)
+
+    def test_stats_carried_from_previous_build(self):
+        prev = [{"uid": "basketball-esake-1", "live": {"src": "gs", "key": "K", "day": "2026-11-21", "id": "123"}}]
+        m = self.match(score="80-75")  # το σκορ ήρθε από την επίσημη σελίδα, χωρίς live
+        b.keep_stats(prev, [m])
+        self.assertEqual(m.stats["id"], "123")
+        # Και στην επόμενη ενημέρωση, από το «stats» της προηγούμενης.
+        n = self.match(score="80-75")
+        b.keep_stats([m.to_json()], [n])
+        self.assertEqual(n.stats["id"], "123")
+
+    def test_no_stats_while_live(self):
+        m = self.match(live={"src": "gs"}, stats={"src": "gs"})
+        b.keep_stats([], [m])
+        self.assertIsNone(m.stats)
+        self.assertNotIn("stats", m.to_json())
+
+
 class Postponed(unittest.TestCase):
     def test_status_change_notifies_and_stops_waiting(self):
         old = dict(M, start="2099-01-01T16:00:00+02:00")

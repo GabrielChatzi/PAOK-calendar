@@ -160,6 +160,9 @@ class Match:
     away_logo: str = ""
     # Πού βρίσκεται το ζωντανό σκορ, αν υπάρχει (βλ. live.py και τη σελίδα).
     live: dict | None = None
+    # Από πού έρχονται τα στατιστικά (box score) μετά τον αγώνα, όταν το live έχει σβήσει (σκορ από την
+    # επίσημη σελίδα ή τον διαχειριστή): ίδια μορφή με το live, μόνο για τη σελίδα αγώνα (βλ. keep_stats).
+    stats: dict | None = None
     status: str = ""  # "postponed" | "cancelled" | "abandoned": δεν θα γίνει / δεν ολοκληρώθηκε
     note: str = ""    # π.χ. «πέναλτι 4–3», «μετά από παράταση», ή ο λόγος της αναβολής
     # Σκορ ανά σετ/περίοδο ([γηπεδούχος, φιλοξενούμενος]), από το τελικό του live: μένει μετά τον αγώνα.
@@ -177,7 +180,7 @@ class Match:
         d["awayLogo"] = d.pop("away_logo")
         d["tvUrl"] = d.pop("tv_url")
         d["nt"] = match_topic_id(self.uid)
-        for k in ("live", "status", "note", "periods"):
+        for k in ("live", "stats", "status", "note", "periods"):
             if not d[k]:
                 del d[k]
         del d["day"], d["time"]
@@ -1004,9 +1007,25 @@ def basket_league_live(matches: list[Match]) -> None:
     """Live Basket League από τη Genius Sports (api/live.js βρίσκει τον αγώνα της ημέρας)."""
     today = dt.datetime.now(ATHENS).date()
     for m in matches:
-        if m.score or not m.time or m.live or "-esake-" not in m.uid or not -1 <= (m.day - today).days <= 10:
+        if not m.time or m.live or "-esake-" not in m.uid or not -1 <= (m.day - today).days <= 10:
             continue
-        m.live = {"src": "gs", "key": GS_BASKET_LEAGUE, "day": m.day.isoformat(), "side": "h" if m.paok_home else "a"}
+        desc = {"src": "gs", "key": GS_BASKET_LEAGUE, "day": m.day.isoformat(), "side": "h" if m.paok_home else "a"}
+        if not m.score:
+            m.live = desc
+        elif not m.stats:
+            m.stats = desc  # τελειωμένος χωρίς live: μόνο τα στατιστικά
+    # Ο κωδικός του αγώνα στη Genius: το widget δείχνει μόνο τους κοντινούς αγώνες, άρα χωρίς αυτόν
+    # τα στατιστικά ενός παλιότερου αγώνα δεν θα βρίσκονταν πια.
+    import live
+    for m in matches:
+        d = m.stats
+        if not d or d.get("src") != "gs" or d.get("id") or not -3 <= (m.day - today).days <= 0:
+            continue
+        try:
+            m.stats = {**d, "id": live.gs_find_id(d)}
+            print(f"  στατιστικά Genius: {m.home} – {m.away} → {m.stats['id']}")
+        except Exception as e:
+            print(f"  ! κωδικός Genius για {m.home} – {m.away}: {e}", file=sys.stderr)
 
 
 def other_live(section: str, matches: list[Match]) -> None:
@@ -1066,6 +1085,7 @@ def live_results(section: str, matches: list[Match], now: dt.datetime | None = N
         if section in ("volley", "volley-women") and not is_volley_final(score):
             continue
         print(f"  τελικό από live: {m.home} – {m.away} {score}")
+        m.stats = m.stats or m.live
         m.score, m.live = score, None
 
 
@@ -2449,6 +2469,20 @@ def carry_scores(section: str, previous: list[dict], current: list[Match], now: 
             m.note = m.note or p.get("note", "")
 
 
+def keep_stats(previous: list[dict], current: list[Match]) -> None:
+    """Τα στατιστικά μένουν στη σελίδα αγώνα και μετά το τέλος: όταν το live σβήσει (σκορ από την επίσημη
+    σελίδα ή τον διαχειριστή), κρατάμε από πού έρχονταν, από αυτή ή την προηγούμενη ενημέρωση."""
+    before = {p["uid"]: p for p in previous}
+    for m in current:
+        if m.live or not m.score:
+            m.stats = None if m.live else m.stats
+            continue
+        p = before.get(m.uid) or {}
+        prev = p.get("stats") or p.get("live")
+        if prev and (not m.stats or (prev.get("id") and not m.stats.get("id") and prev.get("src") == m.stats.get("src"))):
+            m.stats = prev
+
+
 def carry_periods(previous: list[dict], current: list[Match]) -> None:
     """Τα σετ/περίοδοι μένουν από την προηγούμενη ενημέρωση (το live τα δίνει μόνο μία φορά)."""
     before = {p["uid"]: p for p in previous}
@@ -2467,6 +2501,7 @@ def apply_admin(section: str, matches: list[Match]) -> None:
             continue
         m.score = f"{int(e['home'])}-{int(e['away'])}"
         m.note = str(e.get("note") or m.note)[:80]
+        m.stats = m.stats or m.live
         m.live = None
 
 
@@ -2525,7 +2560,7 @@ def match_from_json(d: dict) -> Match:
                  competition=d.get("competition", ""), round=d.get("round", ""), score=d.get("score", ""),
                  tv=d.get("tv", ""), tv_url=d.get("tvUrl", ""), url=d.get("url", ""),
                  home_logo=d.get("homeLogo", ""), away_logo=d.get("awayLogo", ""),
-                 status=d.get("status", ""), note=d.get("note", ""))
+                 status=d.get("status", ""), note=d.get("note", ""), stats=d.get("stats"))
 
 
 def keep_friendlies(previous: list[dict], current: list[Match]) -> None:
@@ -2681,6 +2716,7 @@ def main(only: list[str] | None = None) -> int:
         carry_uids(prev_by_section[key], unique)
         carry_scores(key, prev_by_section[key], unique, dt.datetime.now(ATHENS))
         carry_periods(prev_by_section[key], unique)
+        keep_stats(prev_by_section[key], unique)  # πριν από το live, ώστε ο κωδικός Genius να μη ζητείται ξανά
         keep_friendlies(prev_by_section[key], unique)
         unique[:] = drop_shadow_friendlies(unique)
         for m in unique:
@@ -2707,6 +2743,7 @@ def main(only: list[str] | None = None) -> int:
         apply_live_finals(key, unique)
         apply_admin(key, unique)
         apply_info(key, unique)
+        keep_stats(prev_by_section[key], unique)
         info = SECTIONS[key]
         for side, label, keep in (("home", "Εντός έδρας", True), ("away", "Εκτός έδρας", False)):
             subset = [m for m in unique if m.paok_home == keep]

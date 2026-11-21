@@ -261,9 +261,12 @@ async function gsMatches(key) {
 async function gs(p) {
   const d = new Date(`${p.day}T12:00:00Z`);
   const dayText = `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
-  const list = await gsMatches(p.key);
+  // Με τον κωδικό του αγώνα (τελειωμένοι αγώνες, βλ. keep_stats στο build_calendars.py) κατευθείαν στο
+  // data.json: το widget δείχνει μόνο τους κοντινούς αγώνες.
+  const known = p.id && /^\d+$/.test(p.id) ? { id: p.id, status: "" } : null;
+  const list = known ? [] : await gsMatches(p.key);
   let id = gsFound[`${p.key}|${p.day}`];
-  let row = id && list.find((x) => x.id === id);
+  let row = known || (id && list.find((x) => x.id === id));
   if (!row) {
     // Οι αγώνες σε εξέλιξη δείχνουν περίοδο αντί για ημερομηνία· γι' αυτό μπαίνουν κι αυτοί.
     const today = new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Athens" });

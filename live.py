@@ -187,12 +187,8 @@ GS_DATA = "https://fibalivestats.dcd.shared.geniussports.com/data/"
 _gs_found: dict[str, str] = {}
 
 
-def basketball_state(live: dict) -> dict:
-    """Basket League απευθείας από τη Genius Sports (ίδια λογική με το api/live.js, χωρίς τη Vercel).
-
-    Τον αγώνα της ημέρας τον βρίσκει στο widget του esake.gr· σκορ, περίοδο και τέλος περιόδου/αγώνα
-    από το data.json του αγώνα. Περίοδος τελειωμένη μόνο αν η τελευταία ενέργεια είναι το τέλος αυτής.
-    """
+def _gs_lookup(live: dict) -> tuple[dict, dict | None]:
+    """Ο αγώνας του ΠΑΟΚ της ημέρας στο widget του esake.gr: (γραμμή του widget, data.json αν διαβάστηκε)."""
     import re
     paok = re.compile(r"P\.?\s?A\.?\s?O\.?\s?K|Π\.?Α\.?Ο\.?Κ", re.I)
     req = urllib.request.Request(GS_WIDGET + live["key"], headers={"User-Agent": UA, "Referer": "https://www.esake.gr/"})
@@ -212,23 +208,37 @@ def basketball_state(live: dict) -> dict:
     day_text = f"{day.day} {day:%b} {day.year}"
     key = f"{live['key']}|{live['day']}"
     row = next((x for x in rows if x["id"] == _gs_found.get(key)), None)
-    data = None
-    if not row:
-        today = dt.datetime.now(notify.ATHENS).date()
-        for c in rows:
-            if not (c["date"] == day_text or (day == today and "live" in c["status"].lower())):
-                continue
-            try:
-                j = get_json(f"{GS_DATA}{c['id']}/data.json")
-            except Exception:
-                continue
-            tm = (j or {}).get("tm") or {}
-            if any(paok.search((tm.get(t) or {}).get("name") or "") for t in ("1", "2")):
-                row, data = c, j
-                break
-        if not row:
-            raise ValueError("ο αγώνας δεν βρέθηκε στη Genius Sports")
-        _gs_found[key] = row["id"]
+    if row:
+        return row, None
+    today = dt.datetime.now(notify.ATHENS).date()
+    for c in rows:
+        if not (c["date"] == day_text or (day == today and "live" in c["status"].lower())):
+            continue
+        try:
+            j = get_json(f"{GS_DATA}{c['id']}/data.json")
+        except Exception:
+            continue
+        tm = (j or {}).get("tm") or {}
+        if any(paok.search((tm.get(t) or {}).get("name") or "") for t in ("1", "2")):
+            _gs_found[key] = c["id"]
+            return c, j
+    raise ValueError("ο αγώνας δεν βρέθηκε στη Genius Sports")
+
+
+def gs_find_id(live: dict) -> str:
+    """Ο κωδικός του αγώνα στη Genius, για τα στατιστικά μετά τον αγώνα (το widget δείχνει μόνο τους κοντινούς)."""
+    return _gs_lookup(live)[0]["id"]
+
+
+def basketball_state(live: dict) -> dict:
+    """Basket League απευθείας από τη Genius Sports (ίδια λογική με το api/live.js, χωρίς τη Vercel).
+
+    Τον αγώνα της ημέρας τον βρίσκει στο widget του esake.gr (ή απευθείας με τον κωδικό, αν τον έχουμε)·
+    σκορ, περίοδο και τέλος περιόδου/αγώνα από το data.json του αγώνα.
+    """
+    if live.get("id"):
+        return gs_state(get_json(f"{GS_DATA}{live['id']}/data.json") or {}, "", live.get("side"))
+    row, data = _gs_lookup(live)
     j = data or get_json(f"{GS_DATA}{row['id']}/data.json") or {}
     return gs_state(j, row["status"], live.get("side"))
 

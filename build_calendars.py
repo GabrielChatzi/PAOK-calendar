@@ -857,7 +857,10 @@ def basketgr_schedule(url: str, section: str, uid_tag: str, competition: str) ->
             home_logo=logos[0], away_logo=logos[1],
         ))
     if not out:
-        raise RuntimeError(f"Δεν βρέθηκαν αγώνες ΠΑΟΚ στο {url}")
+        # Με απόσπασμα της σελίδας γύρω από τον ΠΑΟΚ, για να φαίνεται στο log αν άλλαξε η μορφή της.
+        i = page.find("ΠΑΟΚ")
+        near = re.sub(r"\s+", " ", page[max(0, i - 1500):i + 300]) if i >= 0 else f"(χωρίς ΠΑΟΚ, {len(page)} χαρακτήρες)"
+        raise RuntimeError(f"Δεν βρέθηκαν αγώνες ΠΑΟΚ στο {url}: {near}")
     return out
 
 

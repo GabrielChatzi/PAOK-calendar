@@ -4964,58 +4964,6 @@
      ]
     }
    ]
-  },
-  {
-   "title": "W Rising Stars U16 (ΕΚΑΣΘ), φάση των 3",
-   "url": "https://ekasth.gr/champs/matchcenter8/competition.html?ch=VqtRAm1W1SYkUTZzI8RIkw",
-   "columns": [
-    "Αγ",
-    "Ν",
-    "Η",
-    "+/-",
-    "Β"
-   ],
-   "rows": [
-    {
-     "pos": 1,
-     "team": "ΠΑΟΚ",
-     "logo": "",
-     "paok": true,
-     "cells": [
-      "2",
-      "2",
-      "0",
-      "+86",
-      "4"
-     ]
-    },
-    {
-     "pos": 2,
-     "team": "ΝΕΑΠΟΛΗ ΑΚΠΚ",
-     "logo": "https://paokalendar.gr/crests/73f92b95a4cc80c0.png",
-     "paok": false,
-     "cells": [
-      "2",
-      "1",
-      "1",
-      "-45",
-      "3"
-     ]
-    },
-    {
-     "pos": 3,
-     "team": "ΜΓΣ ΑΠΟΛΛΩΝ ΚΑΛΑΜΑΡΙΑΣ",
-     "logo": "https://paokalendar.gr/crests/4f5350a97f9a34ed.png",
-     "paok": false,
-     "cells": [
-      "2",
-      "0",
-      "2",
-      "-41",
-      "2"
-     ]
-    }
-   ]
   }
  ],
  "basketball-women-u16b": [

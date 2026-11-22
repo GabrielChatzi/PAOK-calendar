@@ -58,6 +58,8 @@ jobs:
             git commit -qm "Αρχείο παλιών σεζόν: $1"
             git push origin HEAD:data
           }
+          python3 archive.py summaries || echo "! περιλήψεις σεζόν: σφάλμα"
+          (save summaries) || (sleep 5; save summaries) || true
           for y in $YEARS; do
             python3 archive.py backfill "$y" || echo "! σεζόν $y: σφάλμα"
             (save "$y") || (sleep 5; save "$y") || echo "! σεζόν $y: δεν αποθηκεύτηκε"

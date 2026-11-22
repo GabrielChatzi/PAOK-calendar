@@ -2030,16 +2030,18 @@
     var sum = sec.summary, wikiSrc = (sum && sum.source) || (ms.filter(function (m) { return m.source === "wikipedia"; })[0] || {}).url;
     var sumHtml = sum ? '<dl class="ev-facts arch-sum">' + (sum.league ? "<dt>Πρωτάθλημα</dt><dd>" + esc(sum.league) + "</dd>" : "") +
       (sum.cups || []).map(function (c) { return "<dt>" + esc(c.name) + "</dt><dd>" + esc(c.result) + "</dd>"; }).join("") +
+      (sum.record ? "<dt>Ρεκόρ</dt><dd>" + esc(sum.record) + "</dd>" : "") +
       (sum.topscorer ? "<dt>Πρώτος σκόρερ</dt><dd>" + esc(sum.topscorer) + "</dd>" : "") + "</dl>" : "";
     return chips +
       (won.length ? '<p class="arch-won">🏆 ' + won.map(function (t) { return esc(t.name); }).join(" · ") + "</p>" : "") + sumHtml +
-      '<p class="lede">' + played + " αγώνες με αποτέλεσμα: " + n.win + " νίκες" + (n.draw ? ", " + n.draw + " ισοπαλίες" : "") + ", " + n.loss + " ήττες." +
-      (sec.backfilled ? " Από τις πηγές που κρατούν παλιές σεζόν: μπορεί να λείπουν διοργανώσεις." : "") + "</p>" +
+      (played ? '<p class="lede">' + played + " αγώνες με αποτέλεσμα: " + n.win + " νίκες" + (n.draw ? ", " + n.draw + " ισοπαλίες" : "") + ", " + n.loss + " ήττες." +
+        (sec.backfilled ? " Από τις πηγές που κρατούν παλιές σεζόν: μπορεί να λείπουν διοργανώσεις." : "") + "</p>"
+        : '<p class="help">Δεν υπάρχουν αγώνες αυτής της σεζόν στο αρχείο, μόνο η περίληψη.</p>') +
       (sec.standings && sec.standings.length ? '<h3 class="area-sport">Βαθμολογία</h3>' + tablesHtml(sec.standings, key) : "") +
       order.map(function (c) {
         return '<h3 class="area-sport">' + esc(c) + '</h3><ol class="arch-list">' + byComp[c].map(archRowHtml).join("") + "</ol>";
       }).join("") +
-      (wikiSrc ? '<p class="help">Παλιοί αγώνες και περίληψη σεζόν: <a href="' + esc(wikiSrc) + '" rel="noopener" target="_blank">Wikipedia</a> (CC BY-SA).</p>' : "");
+      (wikiSrc ? '<p class="help">Περίληψη σεζόν' + (ms.some(function (m) { return m.source === "wikipedia"; }) ? " και παλιοί αγώνες" : "") + ': <a href="' + esc(wikiSrc) + '" rel="noopener" target="_blank">Wikipedia</a> (CC BY-SA).</p>' : "");
   }
 
   // ---- Σελίδα τμήματος

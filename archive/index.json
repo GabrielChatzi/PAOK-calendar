@@ -1099,6 +1099,16 @@
      "summary": true
     }
    }
+  },
+  {
+   "season": "1975-76",
+   "sections": {
+    "football": {
+     "matches": 35,
+     "standings": false,
+     "summary": true
+    }
+   }
   }
  ]
 }

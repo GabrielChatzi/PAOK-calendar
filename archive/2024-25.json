@@ -298,6 +298,38 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/1010.png"
     },
     {
+     "uid": "football-wiki-4cbbb5abef21",
+     "section": "football",
+     "start": "2024-10-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Egaleo",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Stavros Mavrothalassitis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "0-3",
+     "url": "https://en.wikipedia.org/wiki/2024%E2%80%9325_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Camara",
+        "min": "14"
+       },
+       {
+        "name": "Shoretire",
+        "min": "39"
+       },
+       {
+        "name": "Murg",
+        "min": "54"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-715619",
      "nt": "fa52bc5681",
      "section": "football",
@@ -394,6 +426,59 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/22325.png"
     },
     {
+     "uid": "football-wiki-4f1349fffebf",
+     "section": "football",
+     "start": "2024-12-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Egaleo",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "7-1",
+     "url": "https://en.wikipedia.org/wiki/2024%E2%80%9325_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Shoretire",
+        "min": "6"
+       },
+       {
+        "name": "Tissoudali",
+        "min": "12"
+       },
+       {
+        "name": "Tissoudali",
+        "min": "47"
+       },
+       {
+        "name": "Tissoudali",
+        "min": "51"
+       },
+       {
+        "name": "Živković",
+        "min": "36"
+       },
+       {
+        "name": "Taison",
+        "min": "80"
+       },
+       {
+        "name": "Brandon",
+        "min": "81"
+       }
+      ],
+      "away": [
+       {
+        "name": "",
+        "min": "23"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-715644",
      "nt": "2682afa14a",
      "section": "football",
@@ -442,6 +527,30 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-2eb128e6e722",
+     "section": "football",
+     "start": "2024-12-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Agia Sophia Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2024%E2%80%9325_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "",
+        "min": "53"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-715660",
      "nt": "19884b34d4",
      "section": "football",
@@ -472,6 +581,35 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/715664",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/443.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-310f02c7afe8",
+     "section": "football",
+     "start": "2025-01-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2024%E2%80%9325_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "A. Živković",
+        "min": "90+1"
+       }
+      ],
+      "away": [
+       {
+        "name": "",
+        "min": "107"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-715677",
@@ -780,7 +918,26 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/887.png"
     }
    ],
-   "backfilled": true
+   "backfilled": true,
+   "summary": {
+    "league": "3η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Προημιτελικά"
+     },
+     {
+      "name": "UEFA Champions League",
+      "result": "3ος προκριματικός γύρος"
+     },
+     {
+      "name": "UEFA Europa League",
+      "result": "Πλέι οφ νοκ άουτ"
+     }
+    ],
+    "topscorer": "Mady Camara (9)",
+    "source": "https://en.wikipedia.org/wiki/2024%E2%80%9325_PAOK_FC_season"
+   }
   },
   "basketball": {
    "matches": [
@@ -4021,5 +4178,5 @@
    "backfilled": true
   }
  },
- "updated": "2026-11-22T17:41+02:00"
+ "updated": "2026-11-22T21:48+02:00"
 }

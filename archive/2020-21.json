@@ -438,6 +438,46 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-2238c565d14c",
+     "section": "football",
+     "start": "2021-01-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEL",
+     "paokHome": true,
+     "venue": "Toumba",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "5-0",
+     "url": "https://en.wikipedia.org/wiki/2020%E2%80%9321_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tzolis",
+        "min": "9"
+       },
+       {
+        "name": "",
+        "min": "23"
+       },
+       {
+        "name": "",
+        "min": "74"
+       },
+       {
+        "name": "Krmenčík",
+        "min": "47"
+       },
+       {
+        "name": "Ingason",
+        "min": "55"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-590818",
      "nt": "357ba53043",
      "section": "football",
@@ -486,6 +526,40 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/11431.png"
     },
     {
+     "uid": "football-wiki-149b14ace0f2",
+     "section": "football",
+     "start": "2021-02-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEL",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "AEL FC Arena",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/2020%E2%80%9321_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Pereira",
+        "min": "39",
+        "og": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Tsingaras",
+        "min": "19"
+       },
+       {
+        "name": "Krmenčík",
+        "min": "29"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-590836",
      "nt": "45edcf98bb",
      "section": "football",
@@ -500,6 +574,55 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/590836",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/15722.png"
+    },
+    {
+     "uid": "football-wiki-c3077b07f98f",
+     "section": "football",
+     "start": "2021-02-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Lamia",
+     "paokHome": true,
+     "venue": "Toumba",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "5-2",
+     "url": "https://en.wikipedia.org/wiki/2020%E2%80%9321_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tzolis",
+        "min": "6"
+       },
+       {
+        "name": "",
+        "min": "67"
+       },
+       {
+        "name": "Schwab",
+        "min": "55"
+       },
+       {
+        "name": "Rodrigo",
+        "min": "82"
+       },
+       {
+        "name": "Krmenčík",
+        "min": "88"
+       }
+      ],
+      "away": [
+       {
+        "name": "Adejo",
+        "min": "11"
+       },
+       {
+        "name": "Bejarano",
+        "min": "24"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-590846",
@@ -548,6 +671,35 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/590855",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/8354.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-a28fa56d177f",
+     "section": "football",
+     "start": "2021-03-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Lamia",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Lamia Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2020%E2%80%9321_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "James",
+        "min": "52"
+       }
+      ],
+      "away": [
+       {
+        "name": "Ninua",
+        "min": "14"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-590866",
@@ -614,6 +766,30 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-601d45ecdbf6",
+     "section": "football",
+     "start": "2021-04-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Olympic Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/2020%E2%80%9321_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Murg",
+        "min": "90+4"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-596839",
      "nt": "43ee834b92",
      "section": "football",
@@ -678,6 +854,39 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/443.png"
     },
     {
+     "uid": "football-wiki-27b49a69766e",
+     "section": "football",
+     "start": "2021-04-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2020%E2%80%9321_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Krmenčík",
+        "min": "84"
+       },
+       {
+        "name": "A. Živković",
+        "min": "90+5"
+       }
+      ],
+      "away": [
+       {
+        "name": "Galanopoulos",
+        "min": "69"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-596861",
      "nt": "92cbcd1cd1",
      "section": "football",
@@ -740,9 +949,62 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/596876",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/8354.png"
+    },
+    {
+     "uid": "football-wiki-03849c5621cc",
+     "section": "football",
+     "start": "2021-05-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Olympic Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Greek Cup Final",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/2020%E2%80%9321_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "M'Vila",
+        "min": "50"
+       }
+      ],
+      "away": [
+       {
+        "name": "Vieirinha",
+        "min": "36",
+        "pen": true
+       },
+       {
+        "name": "Krmenčík",
+        "min": "90"
+       }
+      ]
+     },
+     "source": "wikipedia"
     }
    ],
-   "backfilled": true
+   "backfilled": true,
+   "summary": {
+    "league": "2η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Κατάκτηση"
+     },
+     {
+      "name": "UEFA Champions League",
+      "result": "Πλέι οφ"
+     },
+     {
+      "name": "UEFA Europa League",
+      "result": "Όμιλοι"
+     }
+    ],
+    "topscorer": "Karol Świderski (11)",
+    "source": "https://en.wikipedia.org/wiki/2020%E2%80%9321_PAOK_FC_season"
+   }
   },
   "basketball": {
    "matches": [
@@ -2520,5 +2782,5 @@
    "backfilled": true
   }
  },
- "updated": "2026-11-22T18:00+02:00"
+ "updated": "2026-11-22T21:48+02:00"
 }

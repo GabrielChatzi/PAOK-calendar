@@ -49,7 +49,7 @@ for year in [2025, 2024, 2023, 2022, 2021, 2019, 2016]:
             try:
                 ms = run(get) or []
                 ms = [m for m in ms if m]
-                dates = sorted(m.start.date().isoformat() for m in ms if getattr(m, "start", None))
+                dates = sorted(m.day.isoformat() for m in ms if getattr(m, "day", None))
                 scored = sum(1 for m in ms if getattr(m, "score", ""))
                 ok = f"{len(ms)} αγώνες, {scored} με σκορ, {dates[0] if dates else '-'} … {dates[-1] if dates else '-'}"
             except Exception as e:

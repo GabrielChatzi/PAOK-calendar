@@ -584,9 +584,9 @@
    "season": "2011-12",
    "sections": {
     "football": {
-     "matches": 48,
+     "matches": 51,
      "standings": false,
-     "summary": false
+     "summary": true
     },
     "basketball": {
      "matches": 32,

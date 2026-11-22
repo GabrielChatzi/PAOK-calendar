@@ -391,6 +391,20 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-8e9214133254",
+     "section": "football",
+     "start": "2011-12-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Asteras",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Michalis Kritikopoulos Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Fourth round",
+     "url": "https://en.wikipedia.org/wiki/2011%E2%80%9312_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-335278",
      "nt": "d9bb388737",
      "section": "football",
@@ -439,6 +453,35 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/3881.png"
     },
     {
+     "uid": "football-wiki-7c4cd6b6c095",
+     "section": "football",
+     "start": "2012-01-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Fifth round",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2011%E2%80%9312_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "",
+        "min": "54"
+       },
+       {
+        "name": "Lino",
+        "min": "33",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-336061",
      "nt": "0b7656666d",
      "section": "football",
@@ -453,6 +496,40 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/336061",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/2789.png"
+    },
+    {
+     "uid": "football-wiki-538c8fa49386",
+     "section": "football",
+     "start": "2012-01-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Atromitos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Προημιτελικός",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/2011%E2%80%9312_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lino",
+        "min": "29",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Fytanidis",
+        "min": "90"
+       },
+       {
+        "name": "Brito",
+        "min": "91"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-336950",
@@ -777,7 +854,22 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/6790.png"
     }
    ],
-   "backfilled": true
+   "backfilled": true,
+   "summary": {
+    "league": "5η θέση (3η στην κανονική περίοδο)",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Προημιτελικά"
+     },
+     {
+      "name": "UEFA Europa League",
+      "result": "Φάση των 32"
+     }
+    ],
+    "topscorer": "Stefanos Athanasiadis (12)",
+    "source": "https://en.wikipedia.org/wiki/2011%E2%80%9312_PAOK_FC_season"
+   }
   },
   "basketball": {
    "matches": [
@@ -2241,5 +2333,5 @@
    "backfilled": true
   }
  },
- "updated": "2026-11-22T18:41+02:00"
+ "updated": "2026-11-22T21:49+02:00"
 }

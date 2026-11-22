@@ -1,0 +1,1255 @@
+{
+ "season": "1974-75",
+ "sections": {
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-9cd308f401d2",
+     "section": "football",
+     "start": "1974-09-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Red Star Belgrade",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Κυπελλούχων",
+     "round": "1ος αγώνας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Terzanidis",
+        "min": "67"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c132dbc60941",
+     "section": "football",
+     "start": "1974-09-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panachaiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kostas Davourlis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Rigas",
+        "min": "26"
+       },
+       {
+        "name": "Spentzopoulos",
+        "min": "47"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a46c2e57992c",
+     "section": "football",
+     "start": "1974-10-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Red Star Belgrade",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Red Star Stadium",
+     "competition": "Κύπελλο Κυπελλούχων",
+     "round": "2ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Petrović",
+        "min": "58"
+       },
+       {
+        "name": "Savić",
+        "min": "103"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b3e5d00d748e",
+     "section": "football",
+     "start": "1974-10-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Spyridon",
+        "min": "73"
+       },
+       {
+        "name": "Alexiadis",
+        "min": "80"
+       }
+      ],
+      "away": [
+       {
+        "name": "Aslanidis",
+        "min": "53",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-db18f0821b66",
+     "section": "football",
+     "start": "1974-10-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kavala",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "6-2",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Paridis",
+        "min": "13"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "24"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "36"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "56"
+       },
+       {
+        "name": "Sarafis",
+        "min": "66"
+       },
+       {
+        "name": "Kermanidis",
+        "min": "79"
+       }
+      ],
+      "away": [
+       {
+        "name": "Machairidis",
+        "min": "38"
+       },
+       {
+        "name": "Avramidis",
+        "min": "64",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2fed71cc9197",
+     "section": "football",
+     "start": "1974-10-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos Volos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Volos Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9c3b7ae4aaad",
+     "section": "football",
+     "start": "1974-11-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kalamata",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "12"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "52"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ec9142a75be4",
+     "section": "football",
+     "start": "1974-11-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "1-4",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Pellios",
+        "min": "44",
+        "og": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Aslanidis",
+        "min": "56"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "60"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "85"
+       },
+       {
+        "name": "Guerino",
+        "min": "87"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4ee6d408b12a",
+     "section": "football",
+     "start": "1974-11-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Egaleo",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "33"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "49"
+       },
+       {
+        "name": "Guerino",
+        "min": "63"
+       }
+      ],
+      "away": [
+       {
+        "name": "Martinos",
+        "min": "51"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-890f70733015",
+     "section": "football",
+     "start": "1974-12-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Leoforos Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Eleftherakis",
+        "min": "21"
+       }
+      ],
+      "away": [
+       {
+        "name": "Sarafis",
+        "min": "31"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-580256357ed3",
+     "section": "football",
+     "start": "1974-12-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kermanidis",
+        "min": "21"
+       },
+       {
+        "name": "Terzanidis",
+        "min": "70"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e304b1070deb",
+     "section": "football",
+     "start": "1974-12-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kastoria",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "7-1",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "12"
+       },
+       {
+        "name": "Koudas",
+        "min": "31"
+       },
+       {
+        "name": "Kermanidis",
+        "min": "27"
+       },
+       {
+        "name": "Sarafis",
+        "min": "32"
+       },
+       {
+        "name": "Sarafis",
+        "min": "43"
+       },
+       {
+        "name": "Fountoukidis",
+        "min": "62"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "66"
+       }
+      ],
+      "away": [
+       {
+        "name": "Tsouloukidis",
+        "min": "18"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b8b3284745e3",
+     "section": "football",
+     "start": "1974-12-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Atromitos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Peristeri Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Aslanidis",
+        "min": "47"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ecac1e2c4e36",
+     "section": "football",
+     "start": "1975-01-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kermanidis",
+        "min": "19"
+       }
+      ],
+      "away": [
+       {
+        "name": "Wagner",
+        "min": "3"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-56106061be9d",
+     "section": "football",
+     "start": "1975-01-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Piraeus",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Apostolidis",
+        "min": "85",
+        "og": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7a8f2dacb5f4",
+     "section": "football",
+     "start": "1975-01-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "PAS Giannina",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "6"
+       },
+       {
+        "name": "Paridis",
+        "min": "52"
+       },
+       {
+        "name": "Paridis",
+        "min": "86"
+       },
+       {
+        "name": "Apostolidis",
+        "min": "76"
+       }
+      ],
+      "away": [
+       {
+        "name": "Komitsis",
+        "min": "44"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1576ea7e9c04",
+     "section": "football",
+     "start": "1975-01-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panserraikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Serres Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-951c3a721865",
+     "section": "football",
+     "start": "1975-01-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Aslanidis 10'",
+        "min": "21"
+       }
+      ],
+      "away": [
+       {
+        "name": "Emvoliadis",
+        "min": "13"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e57ed7d9c8e5",
+     "section": "football",
+     "start": "1975-02-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEL",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Alcazar Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Kermanidis",
+        "min": "19"
+       },
+       {
+        "name": "Guerino",
+        "min": "63"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-dc8428a37ff6",
+     "section": "football",
+     "start": "1975-02-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ilisiakos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Anastasiadis",
+        "min": "6"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-16cdbb3494c5",
+     "section": "football",
+     "start": "1975-02-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panachaiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Anastasiadis",
+        "min": "3",
+        "pen": true
+       },
+       {
+        "name": "Anastasiadis",
+        "min": "27"
+       },
+       {
+        "name": "Sarafis",
+        "min": "48"
+       }
+      ],
+      "away": [
+       {
+        "name": "Stravopodis",
+        "min": "20"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-68b42b8d8275",
+     "section": "football",
+     "start": "1975-02-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "5-0",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Paridis",
+        "min": "23"
+       },
+       {
+        "name": "Koudas",
+        "min": "28"
+       },
+       {
+        "name": "Koudas",
+        "min": "51"
+       },
+       {
+        "name": "Tsilingiridis",
+        "min": "68"
+       },
+       {
+        "name": "Sarafis",
+        "min": "87"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a55a455a82d3",
+     "section": "football",
+     "start": "1975-03-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kavala",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kavala Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Paridis",
+        "min": "55"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3130375f0b91",
+     "section": "football",
+     "start": "1975-03-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos Volos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "25"
+       },
+       {
+        "name": "Sarafis",
+        "min": "30"
+       },
+       {
+        "name": "Gounaris",
+        "min": "33"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e6b084e665b2",
+     "section": "football",
+     "start": "1975-03-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kalamata",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kalamata Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-27cd57d2a24f",
+     "section": "football",
+     "start": "1975-03-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Chania",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Perivolia Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Apostolidis",
+        "min": "77"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d9799c08cae1",
+     "section": "football",
+     "start": "1975-03-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "20"
+       },
+       {
+        "name": "Apostolidis",
+        "min": "66"
+       },
+       {
+        "name": "Sarafis",
+        "min": "72",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-105c71147348",
+     "section": "football",
+     "start": "1975-03-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Egaleo",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Stavros Mavrothalassitis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Trouboukis",
+        "min": "71"
+       }
+      ],
+      "away": [
+       {
+        "name": "Anastasiadis",
+        "min": "74"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e0f64726cb1e",
+     "section": "football",
+     "start": "1975-04-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Apostolidis",
+        "min": "29"
+       },
+       {
+        "name": "Sarafis",
+        "min": "41"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b3c929d76c06",
+     "section": "football",
+     "start": "1975-04-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "3-2",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Davourlis",
+        "min": "14",
+        "pen": true
+       },
+       {
+        "name": "Kritikopoulos",
+        "min": "43"
+       },
+       {
+        "name": "Persidis",
+        "min": "60"
+       }
+      ],
+      "away": [
+       {
+        "name": "Sarafis",
+        "min": "4"
+       },
+       {
+        "name": "Sarafis",
+        "min": "87",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c4be936af77b",
+     "section": "football",
+     "start": "1975-04-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kastoria",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kastoria Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Moschofidis",
+        "min": "13"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-932bd7ace75b",
+     "section": "football",
+     "start": "1975-04-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Atromitos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "5-1",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Apostolidis",
+        "min": "2"
+       },
+       {
+        "name": "Kermanidis",
+        "min": "3"
+       },
+       {
+        "name": "Sarafis",
+        "min": "54"
+       },
+       {
+        "name": "Terzanidis",
+        "min": "64"
+       },
+       {
+        "name": "Lazos",
+        "min": "71"
+       }
+      ],
+      "away": [
+       {
+        "name": "Vakalis",
+        "min": "20"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d703aba79cad",
+     "section": "football",
+     "start": "1975-05-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikos Goumas Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Nikolaou",
+        "min": "28"
+       },
+       {
+        "name": "Wagner",
+        "min": "58"
+       },
+       {
+        "name": "Ardizoglou",
+        "min": "85"
+       }
+      ],
+      "away": [
+       {
+        "name": "Guerino",
+        "min": "88"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5f5f9438c8a5",
+     "section": "football",
+     "start": "1975-05-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ethnikos Piraeus",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "2"
+       },
+       {
+        "name": "Apostolidis",
+        "min": "79"
+       },
+       {
+        "name": "Guerino",
+        "min": "88"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5c38826b924e",
+     "section": "football",
+     "start": "1975-05-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "PAS Giannina",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Zosimades Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "31η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Álvarez",
+        "min": "17"
+       },
+       {
+        "name": "Álvarez",
+        "min": "33"
+       }
+      ],
+      "away": [
+       {
+        "name": "Guerino",
+        "min": "38"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-124812104890",
+     "section": "football",
+     "start": "1975-05-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panserraikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "32η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Katsavakis",
+        "min": "31",
+        "og": true
+       },
+       {
+        "name": "Sarafis",
+        "min": "72",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e61c4cecbc50",
+     "section": "football",
+     "start": "1975-05-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Persidis",
+        "min": "16"
+       },
+       {
+        "name": "Kritikopoulos",
+        "min": "70"
+       },
+       {
+        "name": "Kritikopoulos",
+        "min": "90"
+       },
+       {
+        "name": "Losada",
+        "min": "73"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-044b701e6254",
+     "section": "football",
+     "start": "1975-06-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "33η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Psimogiannos",
+        "min": "21"
+       },
+       {
+        "name": "Psimogiannos",
+        "min": "78"
+       }
+      ],
+      "away": [
+       {
+        "name": "Aslanidis",
+        "min": "77"
+       },
+       {
+        "name": "Paridis",
+        "min": "85"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0560d12baa54",
+     "section": "football",
+     "start": "1975-06-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEL",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "34η αγωνιστική",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Guerino",
+        "min": "15"
+       },
+       {
+        "name": "Guerino",
+        "min": "48"
+       },
+       {
+        "name": "Seitaridis",
+        "min": "35",
+        "og": true
+       },
+       {
+        "name": "Anastasiadis",
+        "min": "42"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "3η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Ημιτελικά"
+     },
+     {
+      "name": "Κύπελλο Κυπελλούχων",
+      "result": "1ος γύρος"
+     }
+    ],
+    "topscorer": "Stavros Sarafis (15)",
+    "source": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season"
+   },
+   "backfilled": true
+  }
+ },
+ "updated": "2026-11-22T21:54+02:00"
+}

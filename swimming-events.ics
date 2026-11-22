@@ -26,11 +26,12 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:event-9b709431bbf6@paok-calendar
-DTSTAMP:20261122T091956Z
+DTSTAMP:20261122T092501Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261130
-SUMMARY:🏊 Έρχονται τα «Αλεξάνδρεια Junior 2026» 
- στο Ποσειδώνιο
+SUMMARY:🏊 Αλεξάνδρεια Junior 2026
+LOCATION:Ποσειδώνιο Κολυμβητήριο\, Θεσσαλονί
+ κη
 DESCRIPTION:ΠΑΟΚ Κολύμβηση
 URL:https://acpaok.gr/%ce%ba%ce%bf%ce%bb%cf%8d%ce%bc%ce%b2%ce%b7%cf%83%ce%b
  7-%ce%ad%cf%81%cf%87%ce%bf%ce%bd%cf%84%ce%b1%ce%b9-%cf%84%ce%b1-%ce%b1%ce%

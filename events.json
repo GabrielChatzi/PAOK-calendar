@@ -212,7 +212,7 @@
   {
    "id": "e1c36556700c",
    "sport": "weightlifting",
-   "title": "Με στόχο τις διακρίσεις στο Πανελλήνιο Πρωτάθλημα ο ΠΑΟΚ στην Άρση Βαρών",
+   "title": "Πανελλήνιο Πρωτάθλημα Άρσης Βαρών",
    "start": "2026-11-19",
    "end": "2026-11-22",
    "time": "",
@@ -228,16 +228,17 @@
      "date": "2026-11-20"
     }
    ],
-   "source": "acpaok"
+   "source": "acpaok",
+   "edited": true
   },
   {
    "id": "9b709431bbf6",
    "sport": "swimming",
-   "title": "Έρχονται τα «Αλεξάνδρεια Junior 2026» στο Ποσειδώνιο",
+   "title": "Αλεξάνδρεια Junior 2026",
    "start": "2026-11-28",
    "end": "2026-11-29",
    "time": "",
-   "venue": "",
+   "venue": "Ποσειδώνιο Κολυμβητήριο, Θεσσαλονίκη",
    "athletes": "",
    "results": "",
    "para": false,
@@ -249,7 +250,8 @@
      "date": "2026-11-17"
     }
    ],
-   "source": "acpaok"
+   "source": "acpaok",
+   "edited": true
   }
  ],
  "notices": [

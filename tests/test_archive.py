@@ -58,7 +58,7 @@ class Archive(unittest.TestCase):
         self.assertEqual(next(x for x in d["sections"]["volley"]["matches"] if x["uid"] == "v-1")["score"], "3-1")
         idx = json.loads((archive.ARCHIVE / "index.json").read_text(encoding="utf-8"))
         self.assertEqual(idx["seasons"][0]["season"], "2026-27")
-        self.assertEqual(idx["seasons"][0]["sections"]["volley"], {"matches": 2, "standings": True})
+        self.assertEqual(idx["seasons"][0]["sections"]["volley"], {"matches": 2, "standings": True, "summary": False})
 
     def test_standings_go_to_season_of_last_played_match(self):
         # Ιούλιος: η νέα σεζόν δεν έχει αγώνες ακόμα, η βαθμολογία είναι της προηγούμενης.
@@ -88,7 +88,7 @@ class Archive(unittest.TestCase):
             real_st = st.STANDINGS
             st.STANDINGS = {"volley": lambda: [{"title": "VL 2023-24", "columns": [], "rows": []}]}
             try:
-                archive.backfill(2023)
+                archive.backfill(2023, {"volley"})
             finally:
                 st.STANDINGS = real_st
         finally:

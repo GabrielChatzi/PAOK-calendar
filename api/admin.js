@@ -26,6 +26,7 @@
 //   POST {password, action: "event-save", event}    ατομικά αθλήματα: νέα διοργάνωση ή αλλαγή (και αυτόματης,
 //                                                   με event.auto)· event: {id?, sport, title, start, end, time,
 //                                                   venue, athletes, results, para, url}
+//   POST {password, action: "goals-save", nt, homeText, awayText}  σκόρερ αγώνα (κενά: σβήσιμο)
 //   POST {password, action: "event-delete", id, auto}  σβήσιμο (auto: κρύψιμο αυτόματης διοργάνωσης)
 //
 // Οι πληροφορίες (συλλογή «info») επιστρέφονται στο GET ως info: η σελίδα τις δείχνει αμέσως και το
@@ -393,6 +394,43 @@ export function parseEvent(body) {
   return e;
 }
 
+// ---- Σκόρερ αγώνα (συλλογή «goals», _id: nt). Για όλα τα τμήματα, μαζί με ακαδημίες.
+// Ποδόσφαιρο, σάλας, χάντμπολ, πόλο: γκολ, ένα ανά γραμμή «45+1 Όνομα» (με «πεν» ή «αυτ»), ή «Όνομα 7» για πολλά
+// γκολ χωρίς λεπτά. Μπάσκετ, βόλεϊ: πόντοι, «Όνομα 18». Κάθε γραμμή: {name, min?, n?, pen?, og?}.
+export const POINTS_SPORTS = ["basketball", "volley"];
+export function pointsSport(section) { return POINTS_SPORTS.includes(sport(section).split("-")[0]); }
+
+export function parseScorerLines(text, points) {
+  const out = [];
+  for (const raw of String(text ?? "").replace(/\r/g, "").split("\n").slice(0, 60)) {
+    let l = raw.trim().replace(/\s+/g, " ");
+    if (!l) continue;
+    const g = {};
+    const pen = /\s+\(?(πεν|πέν|πέναλτι|pen)\.?\)?$/i, og = /\s+\(?(αυτ|αυτογκόλ|og)\.?\)?$/i;
+    if (pen.test(l)) { g.pen = true; l = l.replace(pen, ""); }
+    if (og.test(l)) { g.og = true; l = l.replace(og, ""); }
+    let m = /^(\d{1,3}(?:\+\d{1,2})?)['΄’]?\s+(.+)$/.exec(l);
+    if (m && !points) { g.min = m[1]; l = m[2]; }
+    m = /^(.+?)\s+[x×]?(\d{1,3})$/.exec(l);
+    if (m) { l = m[1]; g.n = Number(m[2]); }
+    g.name = l.replace(/[–-]\s*$/, "").trim().slice(0, 40);
+    if (!g.name) return { error: `Δεν καταλαβαίνω τη γραμμή «${raw.trim()}».` };
+    if (points && !g.n) return { error: `Γράψε τους πόντους: «${g.name} 12».` };
+    if (g.n === 1 && !points) delete g.n;
+    out.push(g);
+  }
+  return out;
+}
+
+export function parseGoals(body, section) {
+  const points = pointsSport(section);
+  const home = parseScorerLines(body.homeText, points);
+  if (home.error) return home;
+  const away = parseScorerLines(body.awayText, points);
+  if (away.error) return away;
+  return { home, away, points };
+}
+
 export default async function handler(req, res) {
   if (!configured()) return send(res, 503, { error: "Η βάση δεν έχει ρυθμιστεί." });
   const col = (await getDb()).collection("admin");
@@ -410,8 +448,11 @@ export default async function handler(req, res) {
     // Ατομικά αθλήματα: διοργανώσεις της φόρμας, αλλαγές και κρυψίματα αυτόματων (events.py).
     const events = (await (await getDb()).collection("events").find({}).sort({ start: 1 }).toArray())
       .map(({ _id, at, ...rest }) => ({ id: _id, ...rest }));
+    // Σκόρερ (όλων των αγώνων: λίγα και μικρά, χρειάζονται και για τους πίνακες σκόρερ των τμημάτων).
+    const goals = (await (await getDb()).collection("goals").find({}).toArray())
+      .map(({ _id, at, ...rest }) => ({ nt: _id, ...rest }));
     res.setHeader("Cache-Control", "public, s-maxage=15");
-    return res.status(200).json({ entries, live, custom, info, crests, events });
+    return res.status(200).json({ entries, live, custom, info, crests, events, goals });
   }
   if (req.method !== "POST") return send(res, 405, { error: "Μόνο GET ή POST." });
 
@@ -488,6 +529,22 @@ export default async function handler(req, res) {
     return send(res, 200, { ok: true, info });
   }
 
+  if (body.action === "goals-save") {
+    let m;
+    try { m = await findMatch(nt, await getDb()); } catch (e) { return send(res, 502, { error: e.message }); }
+    if (!m) return send(res, 404, { error: "Ο αγώνας δεν βρέθηκε στο πρόγραμμα." });
+    const g = parseGoals(body, m.section);
+    if (g.error) return send(res, 400, { error: g.error });
+    const gcol = (await getDb()).collection("goals");
+    if (!g.home.length && !g.away.length) {
+      await gcol.deleteOne({ _id: nt });
+      return send(res, 200, { ok: true, goals: null });
+    }
+    const doc = { section: m.section, uid: m.uid, home: g.home, away: g.away, points: g.points, at: new Date() };
+    await gcol.updateOne({ _id: nt }, { $set: doc }, { upsert: true });
+    const { at, ...rest } = doc;
+    return send(res, 200, { ok: true, goals: { nt, ...rest } });
+  }
   if (body.action === "clear") {
     await col.deleteOne({ _id: nt });
     return send(res, 200, { ok: true });
@@ -517,6 +574,13 @@ export default async function handler(req, res) {
     $set: entry,
     $push: { history: { $each: [{ home, away, final: entry.final, event: ev.event, title: body.silent ? null : msg.payload.title, at: entry.at }], $slice: -30 } },
   }, { upsert: true });
+  // Γκολ ή καλάθι με όνομα: μπαίνει και στους σκόρερ του αγώνα (που διορθώνονται μετά από τη φόρμα «Σκόρερ»).
+  if (ev.event === "goal" && ev.scorer) {
+    const points = pointsSport(m.section);
+    const g = points ? { name: ev.scorer, n: ev.points || 1 } : { name: ev.scorer, ...(ev.minute ? { min: ev.minute.replace(/'$/, "") } : {}) };
+    await (await getDb()).collection("goals").updateOne({ _id: nt },
+      { $push: { [ev.side]: g }, $set: { section: m.section, uid: m.uid, points, at: new Date() } }, { upsert: true });
+  }
   // Μόνο ενημέρωση: το σκορ φαίνεται στη σελίδα, χωρίς ειδοποίηση.
   if (body.silent) return send(res, 200, { ok: true, entry, push: null });
   const r = await deliver(msg.topics, msg.payload, { once: msg.once });

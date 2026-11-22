@@ -942,7 +942,1204 @@
     }
    ],
    "backfilled": true
+  },
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-7236b868ff57",
+     "section": "football",
+     "start": "2004-08-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Maccabi Tel Aviv",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "UEFA Champions League",
+     "round": "1ος αγώνας",
+     "score": "0-3",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Yiasoumi",
+        "min": "50"
+       }
+      ],
+      "away": [
+       {
+        "name": "Addo",
+        "min": "12"
+       },
+       {
+        "name": "Mesika",
+        "min": "42"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-167721785977",
+     "section": "football",
+     "start": "2004-08-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Maccabi Tel Aviv",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Bloomfield Stadium",
+     "competition": "UEFA Champions League",
+     "round": "2ος αγώνας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "L. Cohen",
+        "min": "8"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-264f4d8ff411",
+     "section": "football",
+     "start": "2004-09-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Lilas Vasiliko",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "First leg",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Theodoridis",
+        "min": "36"
+       },
+       {
+        "name": "Salpingidis",
+        "min": "61"
+       },
+       {
+        "name": "Spasić",
+        "min": "72"
+       },
+       {
+        "name": "Spasić",
+        "min": "78"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-504cfac8a8aa",
+     "section": "football",
+     "start": "2004-09-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AZ",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "1ος αγώνας",
+     "score": "2-3",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Salpingidis",
+        "min": "26"
+       },
+       {
+        "name": "Vokolos",
+        "min": "31"
+       }
+      ],
+      "away": [
+       {
+        "name": "Van Galen",
+        "min": "18"
+       },
+       {
+        "name": "Landzaat",
+        "min": "36"
+       },
+       {
+        "name": "Meerdink",
+        "min": "49"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5bd2fbe2d212",
+     "section": "football",
+     "start": "2004-09-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kerkyra",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Christos Maladenis",
+        "min": "53"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-16cd36dd27d3",
+     "section": "football",
+     "start": "2004-09-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Lilas Vasiliko",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Vasiliko Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Second leg",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0e21f63705fe",
+     "section": "football",
+     "start": "2004-09-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Mario Breska",
+        "min": "53"
+       },
+       {
+        "name": "Mario Breska",
+        "min": "67"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-968330963fb6",
+     "section": "football",
+     "start": "2004-09-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AZ",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Alkmaarderhout",
+     "competition": "Κύπελλο UEFA",
+     "round": "2ος αγώνας",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Buskermolen",
+        "min": "10"
+       },
+       {
+        "name": "Mathijsen",
+        "min": "72"
+       }
+      ],
+      "away": [
+       {
+        "name": "Salpingidis",
+        "min": "8"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6d6901c244ed",
+     "section": "football",
+     "start": "2004-10-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Guy Feutchine",
+        "min": "45"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e936846abb2d",
+     "section": "football",
+     "start": "2004-10-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kallithea",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Grigoris Lambrakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Athanasios Tsigas",
+        "min": "49"
+       }
+      ],
+      "away": [
+       {
+        "name": "Christos Karipidis",
+        "min": "61"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-83749c8f0b24",
+     "section": "football",
+     "start": "2004-10-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "28",
+        "pen": true
+       },
+       {
+        "name": "Christos Karipidis",
+        "min": "80"
+       }
+      ],
+      "away": [
+       {
+        "name": "Fernando Sanjurjo",
+        "min": "67"
+       },
+       {
+        "name": "Avraam Papadopoulos",
+        "min": "82"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9090b77293a6",
+     "section": "football",
+     "start": "2004-10-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Georgios Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "5-1",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Giovanni",
+        "min": "7"
+       },
+       {
+        "name": "Rivaldo",
+        "min": "13"
+       },
+       {
+        "name": "Rivaldo",
+        "min": "26"
+       },
+       {
+        "name": "Predrag Dordevic",
+        "min": "45"
+       },
+       {
+        "name": "Nery Castillo",
+        "min": "90"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "65"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ec339ead7e2d",
+     "section": "football",
+     "start": "2004-11-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ergotelis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Patrick Ogunsoto",
+        "min": "63"
+       },
+       {
+        "name": "Patrick Ogunsoto",
+        "min": "78"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-268254a9320f",
+     "section": "football",
+     "start": "2004-11-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Chalkidona",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Peristeri Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Christos Iliopoulos",
+        "min": "55"
+       },
+       {
+        "name": "Giorgos Zacharopoulos",
+        "min": "90"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-fe54f5436e1b",
+     "section": "football",
+     "start": "2004-11-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Xanthi",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Xanthi FC Arena",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Christos Maladenis",
+        "min": "62"
+       },
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "90"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0f29e3a178ca",
+     "section": "football",
+     "start": "2004-12-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Guy Feutchine",
+        "min": "80"
+       }
+      ],
+      "away": [
+       {
+        "name": "Simos Krassas",
+        "min": "57"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-14de46728c03",
+     "section": "football",
+     "start": "2004-12-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Vardinogiannis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Nikos Machlas",
+        "min": "45"
+       },
+       {
+        "name": "Nikos Kounenakis",
+        "min": "50"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "19",
+        "pen": true
+       },
+       {
+        "name": "Christos Maladenis",
+        "min": "84"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e91675e7d784",
+     "section": "football",
+     "start": "2004-12-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ionikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Guy Feutchine",
+        "min": "30"
+       },
+       {
+        "name": "Guy Feutchine",
+        "min": "76"
+       },
+       {
+        "name": "Sladan Spasic",
+        "min": "65"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-671cbaf51654",
+     "section": "football",
+     "start": "2004-12-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Egaleo",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "First leg",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-281848587098",
+     "section": "football",
+     "start": "2004-12-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Leoforos Alexandras Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Giannis Goumas",
+        "min": "38"
+       },
+       {
+        "name": "Michalis Konstantinou",
+        "min": "86"
+       }
+      ],
+      "away": [
+       {
+        "name": "Paraskevas Andralas",
+        "min": "34"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a6567aed5607",
+     "section": "football",
+     "start": "2005-01-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Kalamarias",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "5-2",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dionysis Chasiotis",
+        "min": "15"
+       },
+       {
+        "name": "Christos Maladenis",
+        "min": "34"
+       },
+       {
+        "name": "Christos Maladenis",
+        "min": "42"
+       },
+       {
+        "name": "Sladan Spasic",
+        "min": "40"
+       },
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "73"
+       }
+      ],
+      "away": [
+       {
+        "name": "Cleyton",
+        "min": "23"
+       },
+       {
+        "name": "Stelios Iliadis",
+        "min": "47"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f0ef0ae612c3",
+     "section": "football",
+     "start": "2005-01-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Egaleo",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Stavros Mavrothalassitis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Second leg",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Makris",
+        "min": "76"
+       },
+       {
+        "name": "Barkoglou",
+        "min": "83"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6f4ef172027c",
+     "section": "football",
+     "start": "2005-01-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Egaleo",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Stavros Mavrothalassitis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Thomas Makris",
+        "min": "65"
+       },
+       {
+        "name": "Nikos Nikolopoulos",
+        "min": "70"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "12"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-95e10901c0bd",
+     "section": "football",
+     "start": "2005-01-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kerkyra",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kerkyra Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "74"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f9e1e0aaadf9",
+     "section": "football",
+     "start": "2005-01-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dionysis Chasiotis",
+        "min": "71"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d6e41936820b",
+     "section": "football",
+     "start": "2005-02-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Indrit Fortuzi",
+        "min": "66"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0c10ba5c1b43",
+     "section": "football",
+     "start": "2005-02-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kallithea",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Loukas Karadimos",
+        "min": "9"
+       },
+       {
+        "name": "Panagiotis Engomitis",
+        "min": "68"
+       },
+       {
+        "name": "Sladan Spasic",
+        "min": "90"
+       }
+      ],
+      "away": [
+       {
+        "name": "Christos Koutsospyros",
+        "min": "34"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-bad771d1204a",
+     "section": "football",
+     "start": "2005-02-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "1-3",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Emmanuel Ekwueme",
+        "min": "63"
+       }
+      ],
+      "away": [
+       {
+        "name": "Marcin Mieciel",
+        "min": "5"
+       },
+       {
+        "name": "Marcin Mieciel",
+        "min": "37"
+       },
+       {
+        "name": "Christos Maladenis",
+        "min": "11"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-09156af10f4d",
+     "section": "football",
+     "start": "2005-03-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "47"
+       }
+      ],
+      "away": [
+       {
+        "name": "Predrag Dordevic",
+        "min": "21",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2d6918415947",
+     "section": "football",
+     "start": "2005-03-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ergotelis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Pankritio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "52"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-56b8112502c5",
+     "section": "football",
+     "start": "2005-03-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Chalkidona",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Guy Feutchine",
+        "min": "15"
+       },
+       {
+        "name": "Giorgos Theodoridis",
+        "min": "89"
+       }
+      ],
+      "away": [
+       {
+        "name": "Christos Iliopoulos",
+        "min": "22"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-dbffad06ae46",
+     "section": "football",
+     "start": "2005-04-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Xanthi",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Guy Feutchine",
+        "min": "62"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1441a68b3005",
+     "section": "football",
+     "start": "2005-04-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Olympic Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Alessandro Soares",
+        "min": "37"
+       },
+       {
+        "name": "Alessandro Soares",
+        "min": "58"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f370a02c07e3",
+     "section": "football",
+     "start": "2005-04-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Marcin Mieciel",
+        "min": "28"
+       },
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "35"
+       },
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "59"
+       },
+       {
+        "name": "Giorgos Theodoridis",
+        "min": "48"
+       }
+      ],
+      "away": [
+       {
+        "name": "Metodi Deyanov",
+        "min": "5"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-90b6895f870b",
+     "section": "football",
+     "start": "2005-04-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ionikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Neapoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Marcelo Gutman",
+        "min": "70"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dimitrios Salpingidis",
+        "min": "7"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ecc7b8a54386",
+     "section": "football",
+     "start": "2005-05-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "25"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dimitrios Papadopoulos",
+        "min": "23"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-fba0549dfc1e",
+     "section": "football",
+     "start": "2005-05-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Kalamarias",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kalamaria Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Cleyton",
+        "min": "64"
+       },
+       {
+        "name": "Cleyton",
+        "min": "65"
+       }
+      ],
+      "away": [
+       {
+        "name": "Marcin Mieciel",
+        "min": "6"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ee82d53d1b08",
+     "section": "football",
+     "start": "2005-05-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Egaleo",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "2-4",
+     "url": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Marcin Mieciel",
+        "min": "20"
+       },
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "87"
+       }
+      ],
+      "away": [
+       {
+        "name": "Nikos Nikolopoulos",
+        "min": "37"
+       },
+       {
+        "name": "Nikos Nikolopoulos",
+        "min": "50"
+       },
+       {
+        "name": "Nikos Nikolopoulos",
+        "min": "83"
+       },
+       {
+        "name": "Giorgos Barkoglou",
+        "min": "44"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "5η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "2ος γύρος"
+     },
+     {
+      "name": "UEFA Champions League",
+      "result": "3ος προκριματικός γύρος"
+     },
+     {
+      "name": "Κύπελλο UEFA",
+      "result": "1ος γύρος"
+     }
+    ],
+    "topscorer": "Dimitris Salpingidis (14)",
+    "source": "https://en.wikipedia.org/wiki/2004%E2%80%9305_PAOK_FC_season"
+   },
+   "backfilled": true
   }
  },
- "updated": "2026-11-22T19:01+02:00"
+ "updated": "2026-11-22T21:50+02:00"
 }

@@ -1,0 +1,1358 @@
+{
+ "season": "1976-77",
+ "sections": {
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-878a548b06c0",
+     "section": "football",
+     "start": "1976-09-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Omonia",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "GSP Stadium (1902)",
+     "competition": "Κύπελλο Πρωταθλητριών",
+     "round": "1ος αγώνας",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Koudas",
+        "min": "38"
+       },
+       {
+        "name": "Sarafis",
+        "min": "87"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5806b7533940",
+     "section": "football",
+     "start": "1976-09-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Omonia",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Πρωταθλητριών",
+     "round": "2ος αγώνας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "67"
+       }
+      ],
+      "away": [
+       {
+        "name": "Demetriou",
+        "min": "33",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7ca25fc6305f",
+     "section": "football",
+     "start": "1976-10-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kavala",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kavala Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-df267c00699f",
+     "section": "football",
+     "start": "1976-10-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panachaiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Gounaris",
+        "min": "30"
+       },
+       {
+        "name": "Damanakis",
+        "min": "65"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f9c007837057",
+     "section": "football",
+     "start": "1976-10-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Dynamo Kyiv",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Central Stadium, Kyiv",
+     "competition": "Κύπελλο Πρωταθλητριών",
+     "round": "1ος αγώνας",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Buryak",
+        "min": "12"
+       },
+       {
+        "name": "Buryak",
+        "min": "22"
+       },
+       {
+        "name": "Kolotov",
+        "min": "27"
+       },
+       {
+        "name": "Slobodyan",
+        "min": "60"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1ca4d04801be",
+     "section": "football",
+     "start": "1976-10-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Atromitos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Leoforos Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "1-6",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Athanasopoulos",
+        "min": "34"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kermanidis",
+        "min": "8"
+       },
+       {
+        "name": "Sarafis",
+        "min": "20"
+       },
+       {
+        "name": "Sarafis",
+        "min": "25"
+       },
+       {
+        "name": "Koudas",
+        "min": "38"
+       },
+       {
+        "name": "Koudas",
+        "min": "43"
+       },
+       {
+        "name": "Anastasiadis",
+        "min": "80"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-54befb522b81",
+     "section": "football",
+     "start": "1976-10-31T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kermanidis",
+        "min": "37"
+       },
+       {
+        "name": "Koudas",
+        "min": "51",
+        "pen": true
+       },
+       {
+        "name": "Koudas",
+        "min": "55"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-dfabd5b3447f",
+     "section": "football",
+     "start": "1976-11-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Dynamo Kyiv",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Πρωταθλητριών",
+     "round": "2ος αγώνας",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Kolotov",
+        "min": "73"
+       },
+       {
+        "name": "Blokhin",
+        "min": "82"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-afb36526bbd9",
+     "section": "football",
+     "start": "1976-11-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kastoria",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Municipal Stadium of Kastoria",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Orfanos",
+        "min": "58"
+       },
+       {
+        "name": "Kermanidis",
+        "min": "85"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6b87ca090135",
+     "section": "football",
+     "start": "1976-11-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Drampis",
+        "min": "6"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kermanidis",
+        "min": "83"
+       },
+       {
+        "name": "Orfanos",
+        "min": "84"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8947a7496910",
+     "section": "football",
+     "start": "1976-11-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Pierikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "6-1",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Apostolidis",
+        "min": "15"
+       },
+       {
+        "name": "Guerino",
+        "min": "37"
+       },
+       {
+        "name": "Guerino",
+        "min": "50"
+       },
+       {
+        "name": "Damanakis",
+        "min": "52"
+       },
+       {
+        "name": "Orfanos",
+        "min": "80"
+       },
+       {
+        "name": "Orfanos",
+        "min": "85"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kalampakas",
+        "min": "67"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-64f5276ee94f",
+     "section": "football",
+     "start": "1976-11-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panserraikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Serres Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "3-3",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tsirikas",
+        "min": "3",
+        "pen": true
+       },
+       {
+        "name": "Kaltsas",
+        "min": "35"
+       },
+       {
+        "name": "Pantazis",
+        "min": "42"
+       }
+      ],
+      "away": [
+       {
+        "name": "Guerino",
+        "min": "10"
+       },
+       {
+        "name": "Apostolidis",
+        "min": "13"
+       },
+       {
+        "name": "Kermanidis",
+        "min": "52"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-77f15a2eee32",
+     "section": "football",
+     "start": "1976-12-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panthrakikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Guerino",
+        "min": "20"
+       },
+       {
+        "name": "Kermanidis",
+        "min": "64"
+       },
+       {
+        "name": "Orfanos",
+        "min": "87"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3c48e584176a",
+     "section": "football",
+     "start": "1976-12-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Guerino 30'",
+        "min": "30"
+       },
+       {
+        "name": "Kermanidis",
+        "min": "75"
+       }
+      ],
+      "away": [
+       {
+        "name": "Aidiniou",
+        "min": "13"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1b5f8fdc9345",
+     "section": "football",
+     "start": "1976-12-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "0-3",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Iosifidis",
+        "min": "78"
+       },
+       {
+        "name": "Anastasiadis",
+        "min": "84",
+        "pen": true
+       },
+       {
+        "name": "Sarafis",
+        "min": "89"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5cd8ffc01cc1",
+     "section": "football",
+     "start": "1976-12-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-dfebf7ac1ac1",
+     "section": "football",
+     "start": "1976-12-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "PAS Giannina",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Zosimades Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "4-5",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Espinosa",
+        "min": "11"
+       },
+       {
+        "name": "Espinosa",
+        "min": "90"
+       },
+       {
+        "name": "Glasmanis",
+        "min": "48"
+       },
+       {
+        "name": "Brentanos",
+        "min": "59",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Guerino",
+        "min": "10"
+       },
+       {
+        "name": "Guerino",
+        "min": "27"
+       },
+       {
+        "name": "Kermanidis",
+        "min": "36"
+       },
+       {
+        "name": "Damanakis",
+        "min": "73"
+       },
+       {
+        "name": "Sarafis",
+        "min": "77"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d2f7deb98378",
+     "section": "football",
+     "start": "1977-01-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ethnikos Piraeus",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kermanidis",
+        "min": "6"
+       },
+       {
+        "name": "Kermanidis",
+        "min": "31"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kritikos",
+        "min": "56"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6b297bcd737a",
+     "section": "football",
+     "start": "1977-01-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panetolikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Orfanos",
+        "min": "70"
+       },
+       {
+        "name": "Orfanos",
+        "min": "75",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Fountoukidis",
+        "min": "2",
+        "og": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b535707e887b",
+     "section": "football",
+     "start": "1977-01-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Leoforos Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-416f25fdc248",
+     "section": "football",
+     "start": "1977-01-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "9"
+       },
+       {
+        "name": "Guerino",
+        "min": "42"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-78815fa0644e",
+     "section": "football",
+     "start": "1977-01-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Rethymno Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Alexandris",
+        "min": "7"
+       },
+       {
+        "name": "Gialamas",
+        "min": "9"
+       }
+      ],
+      "away": [
+       {
+        "name": "Sarafis",
+        "min": "89"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2af60da7c68c",
+     "section": "football",
+     "start": "1977-02-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kavala",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Orfanos",
+        "min": "72",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Machairidis",
+        "min": "35"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f658404229ec",
+     "section": "football",
+     "start": "1977-02-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Guerino",
+        "min": "21"
+       },
+       {
+        "name": "Apostolidis",
+        "min": "50"
+       }
+      ],
+      "away": [
+       {
+        "name": "Mavros",
+        "min": "44"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f21b28589379",
+     "section": "football",
+     "start": "1977-02-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panachaiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kostas Davourlis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Ioakeimidis",
+        "min": "71",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Orfanos",
+        "min": "36"
+       },
+       {
+        "name": "Guerino",
+        "min": "55"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b46119deb164",
+     "section": "football",
+     "start": "1977-02-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Atromitos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Iosifidis",
+        "min": "44"
+       },
+       {
+        "name": "Apostolidis",
+        "min": "80"
+       }
+      ],
+      "away": [
+       {
+        "name": "Skarpelis",
+        "min": "15"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9ebdc57acf85",
+     "section": "football",
+     "start": "1977-02-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a345dde8344f",
+     "section": "football",
+     "start": "1977-03-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kastoria",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Anastasiadis",
+        "min": "63"
+       },
+       {
+        "name": "Guerino",
+        "min": "75"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kopanos",
+        "min": "81"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-106b7812ec76",
+     "section": "football",
+     "start": "1977-03-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Guerino",
+        "min": "75"
+       },
+       {
+        "name": "Orfanos",
+        "min": "81"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-be419a743629",
+     "section": "football",
+     "start": "1977-03-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Piraeus",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "2-3",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Rohrbach",
+        "min": "87"
+       },
+       {
+        "name": "Intzoglou 80'",
+        "min": "90"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kermanidis",
+        "min": "43"
+       },
+       {
+        "name": "Guerino",
+        "min": "64"
+       },
+       {
+        "name": "Koudas",
+        "min": "74"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-18f14f393671",
+     "section": "football",
+     "start": "1977-03-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Pierikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Katerini Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostikos",
+        "min": "21"
+       }
+      ],
+      "away": [
+       {
+        "name": "Anastasiadis",
+        "min": "34"
+       },
+       {
+        "name": "Guerino",
+        "min": "50"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-682f13f5e9a1",
+     "section": "football",
+     "start": "1977-03-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panserraikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Guerino",
+        "min": "19",
+        "pen": true
+       },
+       {
+        "name": "Koudas",
+        "min": "62"
+       },
+       {
+        "name": "Sarafis",
+        "min": "71"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1136b8598282",
+     "section": "football",
+     "start": "1977-04-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kritikopoulos",
+        "min": "2"
+       },
+       {
+        "name": "Delikaris",
+        "min": "12"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-dafb504b44bc",
+     "section": "football",
+     "start": "1977-04-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kermanidis",
+        "min": "67"
+       },
+       {
+        "name": "Koudas",
+        "min": "89"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f9aea1c507c4",
+     "section": "football",
+     "start": "1977-05-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "AEK Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Nikoloudis",
+        "min": "11"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b004e03032ee",
+     "section": "football",
+     "start": "1977-05-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "PAS Giannina",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Guerino",
+        "min": "21"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kontogeorgakis",
+        "min": "25",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5cd7640efe5b",
+     "section": "football",
+     "start": "1977-05-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Piraeus",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Intzoglou",
+        "min": "31"
+       }
+      ],
+      "away": [
+       {
+        "name": "Sarafis",
+        "min": "59"
+       },
+       {
+        "name": "Terzanidis",
+        "min": "84"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3ded2f0be4fb",
+     "section": "football",
+     "start": "1977-06-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panetolikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Panetolikos Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "31η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Papaioannou",
+        "min": "45"
+       }
+      ],
+      "away": [
+       {
+        "name": "Orfanos",
+        "min": "20"
+       },
+       {
+        "name": "Orfanos",
+        "min": "61"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-19a7ce0cce4a",
+     "section": "football",
+     "start": "1977-06-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Fostiras",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Orfanos",
+        "min": "4"
+       },
+       {
+        "name": "Orfanos",
+        "min": "42"
+       },
+       {
+        "name": "Guerino",
+        "min": "57",
+        "pen": true
+       },
+       {
+        "name": "Guerino",
+        "min": "82"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4b77039a6235",
+     "section": "football",
+     "start": "1977-06-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "32η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b15d6e431252",
+     "section": "football",
+     "start": "1977-06-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Rizoupoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "33η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-29322453b837",
+     "section": "football",
+     "start": "1977-06-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Papadimitriou",
+        "min": "29"
+       },
+       {
+        "name": "Vakalis",
+        "min": "83"
+       }
+      ],
+      "away": [
+       {
+        "name": "Terzanidis",
+        "min": "43"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ee1b34f4bcc4",
+     "section": "football",
+     "start": "1977-06-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "34η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Anastasiadis",
+        "min": "36",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Karaiskos",
+        "min": "76"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "3η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Φιναλίστ"
+     },
+     {
+      "name": "Κύπελλο Πρωταθλητριών",
+      "result": "2ος γύρος"
+     }
+    ],
+    "topscorer": "Neto Guerino (13)",
+    "source": "https://en.wikipedia.org/wiki/1976%E2%80%9377_PAOK_FC_season"
+   },
+   "backfilled": true
+  }
+ },
+ "updated": "2026-11-22T21:54+02:00"
+}

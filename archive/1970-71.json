@@ -1,0 +1,1227 @@
+{
+ "season": "1970-71",
+ "sections": {
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-aeb1e165de42",
+     "section": "football",
+     "start": "1970-09-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Dinamo București",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Stadionul Național",
+     "competition": "Κύπελλο Εκθέσεων",
+     "round": "1ος αγώνας",
+     "score": "5-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dumitrache",
+        "min": "8"
+       },
+       {
+        "name": "Dumitrache",
+        "min": "49"
+       },
+       {
+        "name": "Dumitrache",
+        "min": "73"
+       },
+       {
+        "name": "Popescu",
+        "min": "64"
+       },
+       {
+        "name": "Popescu",
+        "min": "83"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-378cf06a81f0",
+     "section": "football",
+     "start": "1970-09-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Piraeus",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-226eebeac40f",
+     "section": "football",
+     "start": "1970-09-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikos Goumas Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Pomonis",
+        "min": "63"
+       },
+       {
+        "name": "Nikolaidis",
+        "min": "78"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6c7851ebe17a",
+     "section": "football",
+     "start": "1970-09-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Dinamo București",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Εκθέσεων",
+     "round": "2ος αγώνας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "80"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ad8116994c04",
+     "section": "football",
+     "start": "1970-10-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Proodeftiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "6-3",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Mantzourakis",
+        "min": "1"
+       },
+       {
+        "name": "Mantzourakis",
+        "min": "72"
+       },
+       {
+        "name": "Koudas",
+        "min": "15"
+       },
+       {
+        "name": "Paridis",
+        "min": "26"
+       },
+       {
+        "name": "Sarafis",
+        "min": "43"
+       },
+       {
+        "name": "Glezos",
+        "min": "61",
+        "og": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Kallis",
+        "min": "19"
+       },
+       {
+        "name": "Glezos",
+        "min": "40"
+       },
+       {
+        "name": "Roubanis",
+        "min": "65"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0eae536b54bc",
+     "section": "football",
+     "start": "1970-10-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lagos",
+        "min": "4"
+       },
+       {
+        "name": "Lagos",
+        "min": "82"
+       },
+       {
+        "name": "Intzoglou",
+        "min": "87"
+       }
+      ],
+      "away": [
+       {
+        "name": "Koudas",
+        "min": "21"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f9d3bae9f5d3",
+     "section": "football",
+     "start": "1970-10-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Nikoloudis",
+        "min": "31"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c374b839da55",
+     "section": "football",
+     "start": "1970-11-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Veria",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Veria Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Michailidis",
+        "min": "21"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ea82186ce9a0",
+     "section": "football",
+     "start": "1970-11-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Papaioannou",
+        "min": "27"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-31eb2a38d7ab",
+     "section": "football",
+     "start": "1970-11-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "EPA Larnaca",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Paridis",
+        "min": "11"
+       },
+       {
+        "name": "Stavridis",
+        "min": "40"
+       },
+       {
+        "name": "Stavridis",
+        "min": "75"
+       }
+      ],
+      "away": [
+       {
+        "name": "Konstantas",
+        "min": "68"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-cfcd4ac3b322",
+     "section": "football",
+     "start": "1970-11-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Egaleo",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "24"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-98a1ab5d8932",
+     "section": "football",
+     "start": "1970-11-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panserraikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Aslanidis",
+        "min": "68"
+       }
+      ],
+      "away": [
+       {
+        "name": "Bitzidis",
+        "min": "85"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d9fd64a7d4a4",
+     "section": "football",
+     "start": "1970-12-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "20"
+       },
+       {
+        "name": "Paridis",
+        "min": "65"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6280163ec7b9",
+     "section": "football",
+     "start": "1970-12-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Fostiras",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "26"
+       },
+       {
+        "name": "Sarafis",
+        "min": "44"
+       },
+       {
+        "name": "Stavridis",
+        "min": "64"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a20de109e764",
+     "section": "football",
+     "start": "1970-12-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Pierikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Katerini Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0123f3297faa",
+     "section": "football",
+     "start": "1971-01-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e218e8839a14",
+     "section": "football",
+     "start": "1971-01-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6cab0e99be64",
+     "section": "football",
+     "start": "1971-01-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Leoforos Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Chatziandreou",
+        "min": "8"
+       },
+       {
+        "name": "Chatziandreou",
+        "min": "31"
+       },
+       {
+        "name": "Domazos",
+        "min": "60"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b96e31ba4b67",
+     "section": "football",
+     "start": "1971-01-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kavala",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kavala Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Machairidis",
+        "min": "67"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e42d1ba8f670",
+     "section": "football",
+     "start": "1971-01-31T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ethnikos Piraeus",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "58"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8fe6156c07ae",
+     "section": "football",
+     "start": "1971-02-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-fea75b31e16b",
+     "section": "football",
+     "start": "1971-02-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Proodeftiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Spetsarias",
+        "min": "53"
+       }
+      ],
+      "away": [
+       {
+        "name": "Koudas",
+        "min": "49"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-aeed44b87155",
+     "section": "football",
+     "start": "1971-02-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Stavridis",
+        "min": "14"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "83"
+       }
+      ],
+      "away": [
+       {
+        "name": "Papaioannou",
+        "min": "17"
+       },
+       {
+        "name": "Alexiadis",
+        "min": "41"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7f42ee15334c",
+     "section": "football",
+     "start": "1971-02-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kallithea",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Aslanidis",
+        "min": "13"
+       },
+       {
+        "name": "Paridis",
+        "min": "49"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3a986aa6e2ab",
+     "section": "football",
+     "start": "1971-03-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lazos",
+        "min": "17"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "30"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "76"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dedes",
+        "min": "16"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c2dd051895d5",
+     "section": "football",
+     "start": "1971-03-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "0-4",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Aslanidis",
+        "min": "52"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "85",
+        "pen": true
+       },
+       {
+        "name": "Paridis",
+        "min": "70"
+       },
+       {
+        "name": "Stavridis",
+        "min": "87"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-62a5605e4e61",
+     "section": "football",
+     "start": "1971-03-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Veria",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6f1954d53b6a",
+     "section": "football",
+     "start": "1971-03-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "EPA Larnaca",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Old GSP Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Konstantinou",
+        "min": "18"
+       }
+      ],
+      "away": [
+       {
+        "name": "Aslanidis",
+        "min": "52"
+       },
+       {
+        "name": "Koudas",
+        "min": "66"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b1d6247f48fa",
+     "section": "football",
+     "start": "1971-03-31T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Trikala",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "6-1",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Mantzourakis",
+        "min": "17"
+       },
+       {
+        "name": "Mantzourakis",
+        "min": "58"
+       },
+       {
+        "name": "Mantzourakis",
+        "min": "67"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "35"
+       },
+       {
+        "name": "Paridis",
+        "min": "52"
+       },
+       {
+        "name": "Koudas",
+        "min": "85"
+       }
+      ],
+      "away": [
+       {
+        "name": "Sinatkas",
+        "min": "64"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-50b1b7347fa6",
+     "section": "football",
+     "start": "1971-04-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Egaleo",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Stavros Mavrothalassitis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Zanteroglou",
+        "min": "75"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-55cb25852ebb",
+     "section": "football",
+     "start": "1971-04-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panserraikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Serres Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Terzanidis",
+        "min": "36"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-65502a478b6c",
+     "section": "football",
+     "start": "1971-04-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Vardinogiannis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vouzounerakis",
+        "min": "18",
+        "pen": true
+       },
+       {
+        "name": "Vouzounerakis",
+        "min": "71"
+       }
+      ],
+      "away": [
+       {
+        "name": "Mantzourakis",
+        "min": "41",
+        "pen": true
+       },
+       {
+        "name": "Sarafis",
+        "min": "68"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-42989bfd006d",
+     "section": "football",
+     "start": "1971-05-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Fostiras",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Tavros Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Remoundos",
+        "min": "58"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4032b67a5278",
+     "section": "football",
+     "start": "1971-05-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "3-2",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "58"
+       },
+       {
+        "name": "Vlachos",
+        "min": "59",
+        "og": true
+       },
+       {
+        "name": "Paridis",
+        "min": "61"
+       }
+      ],
+      "away": [
+       {
+        "name": "Domazos",
+        "min": "36"
+       },
+       {
+        "name": "Tomaras",
+        "min": "53"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3c798c49862a",
+     "section": "football",
+     "start": "1971-05-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Pierikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "32"
+       }
+      ],
+      "away": [
+       {
+        "name": "Liapis",
+        "min": "23"
+       },
+       {
+        "name": "Pantazis",
+        "min": "44"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ec5224f62364",
+     "section": "football",
+     "start": "1971-05-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "31η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Synetopoulos",
+        "min": "68"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-466090237d7e",
+     "section": "football",
+     "start": "1971-05-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "3-2",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Aslanidis",
+        "min": "40"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "61"
+       },
+       {
+        "name": "Paridis",
+        "min": "43"
+       }
+      ],
+      "away": [
+       {
+        "name": "Nikolaidis",
+        "min": "28"
+       },
+       {
+        "name": "Papaemmanouil",
+        "min": "56"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ebda6fbd5c54",
+     "section": "football",
+     "start": "1971-05-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Rizoupoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "32η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimopoulos",
+        "min": "61"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5d8042dab6f2",
+     "section": "football",
+     "start": "1971-06-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "33η αγωνιστική",
+     "score": "3-2",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Aslanidis",
+        "min": "66"
+       },
+       {
+        "name": "Stavridis",
+        "min": "70"
+       },
+       {
+        "name": "Stavridis",
+        "min": "76"
+       }
+      ],
+      "away": [
+       {
+        "name": "Antoniadis",
+        "min": "17"
+       },
+       {
+        "name": "Antoniadis",
+        "min": "50"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8986bc279901",
+     "section": "football",
+     "start": "1971-06-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Angelis",
+        "min": "18"
+       },
+       {
+        "name": "Gioutsos",
+        "min": "43"
+       },
+       {
+        "name": "Pamboullis",
+        "min": "82"
+       }
+      ],
+      "away": [
+       {
+        "name": "Sarafis",
+        "min": "46"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5920c8641634",
+     "section": "football",
+     "start": "1971-06-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kavala",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "34η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Aslanidis",
+        "min": "23"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "8η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Φιναλίστ"
+     },
+     {
+      "name": "Κύπελλο Εκθέσεων",
+      "result": "1ος γύρος"
+     }
+    ],
+    "topscorer": "Achilleas Aslanidis (9)",
+    "source": "https://en.wikipedia.org/wiki/1970%E2%80%9371_PAOK_FC_season"
+   },
+   "backfilled": true
+  }
+ },
+ "updated": "2026-11-22T21:54+02:00"
+}

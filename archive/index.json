@@ -1149,6 +1149,16 @@
      "summary": true
     }
    }
+  },
+  {
+   "season": "1970-71",
+   "sections": {
+    "football": {
+     "matches": 41,
+     "standings": false,
+     "summary": true
+    }
+   }
   }
  ]
 }

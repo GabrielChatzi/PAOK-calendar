@@ -1,0 +1,64 @@
+# Παλιές σεζόν στο αρχείο (archive.py backfill), με το χέρι από το Actions.
+# Π.χ. years «2024 2023 2022» και only κενό (όλα τα τμήματα) ή «volley,handball».
+name: Αρχείο παλιών σεζόν
+
+on:
+  workflow_dispatch:
+    inputs:
+      years:
+        description: "Σεζόν (έτος έναρξης), με κενά: 2024 2023 …"
+        required: true
+        default: "2025 2024 2023 2022 2021 2020 2019"
+      only:
+        description: "Μόνο αυτά τα τμήματα (κόμμα), κενό για όλα"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-calendars  # όχι ταυτόχρονα με την ενημέρωση, που γράφει τον ίδιο κλάδο
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Προηγούμενα δεδομένα
+        run: |
+          git fetch --depth=1 origin +refs/heads/data:refs/remotes/origin/data
+          git archive origin/data archive 2>/dev/null | tar -x -C docs || true
+      - name: pdftotext
+        continue-on-error: true
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Παλιές σεζόν
+        env:
+          ONLY: ${{ inputs.only }}
+          YEARS: ${{ inputs.years }}
+        run: python3 archive.py backfill $YEARS
+      - name: Αποθήκευση
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          save() {
+            rm -rf "$RUNNER_TEMP/data"
+            git fetch --depth=1 origin +refs/heads/data:refs/remotes/origin/data
+            git worktree prune
+            git worktree add --detach "$RUNNER_TEMP/data" origin/data
+            mkdir -p "$RUNNER_TEMP/data/archive"
+            rsync -a docs/archive/ "$RUNNER_TEMP/data/archive/"
+            cd "$RUNNER_TEMP/data"
+            git add -A
+            if git diff --cached --quiet; then echo "Καμία αλλαγή."; return 0; fi
+            git commit -qm "Αρχείο παλιών σεζόν: $YEARS"
+            git push origin HEAD:data
+          }
+          (save) || (sleep 5; save)
+        env:
+          YEARS: ${{ inputs.years }}

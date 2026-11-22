@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [build_calendars.py, standings.py, notify.py, club.py, events.py, manual.json, goals.json, .github/workflows/update.yml]
+    paths: [build_calendars.py, standings.py, notify.py, club.py, events.py, trophies.py, archive.py, manual.json, goals.json, .github/workflows/update.yml]
 
 permissions:
   contents: write
@@ -39,6 +39,8 @@ jobs:
           done
           # Τα αντίγραφα των σημάτων (crests.py): αλλιώς το rsync --delete της αποθήκευσης θα τα έσβηνε.
           git archive origin/data crests 2>/dev/null | tar -x -C docs || true
+          # Το αρχείο σεζόν (archive.py), για τον ίδιο λόγο.
+          git archive origin/data archive 2>/dev/null | tar -x -C docs || true
 
       # Τα προγράμματα της ΕΠΕΣΘ (βόλεϊ ακαδημίες) είναι PDF: pdftotext από το poppler-utils.
       # Αν αποτύχει (π.χ. τα αποθετήρια του Ubuntu δεν απαντούν), η ενημέρωση συνεχίζει: το βόλεϊ ακαδημιών
@@ -81,6 +83,16 @@ jobs:
           PUSH: "1"
         run: python3 events.py
 
+      # Τρόπαια ανά τμήμα (trophies.py): η «τροπαιοθήκη» των σελίδων της ΑΣ ΠΑΟΚ και η σταθερή λίστα ΠΑΕ/ΚΑΕ.
+      - name: Τρόπαια
+        continue-on-error: true
+        run: python3 trophies.py
+
+      # Αρχείο σεζόν (archive.py): οι αγώνες και οι βαθμολογίες της σεζόν μένουν και όταν αλλάξει η σεζόν.
+      - name: Αρχείο σεζόν
+        continue-on-error: true
+        run: python3 archive.py
+
       # Όλο το docs (σελίδα και δεδομένα) πηγαίνει στον κλάδο data: από εκεί τα διαβάζει η Vercel
       # (api/data.js) και τα σερβίρει το GitHub Pages (παλιά διεύθυνση). Ο main δεν αλλάζει.
       - name: Αποθήκευση αλλαγών
@@ -93,7 +105,9 @@ jobs:
             git worktree prune
             git worktree add --detach "$RUNNER_TEMP/data" origin/data
             rsync -a --delete --exclude .git --exclude vercel.json --exclude .nojekyll --exclude README.md \
-              --exclude __pycache__ docs/ "$RUNNER_TEMP/data/"
+              --exclude __pycache__ --exclude archive/ docs/ "$RUNNER_TEMP/data/"
+            # Το αρχείο σεζόν χωρίς --delete: ένα αρχείο που δεν κατέβηκε δεν σβήνεται.
+            [ -d docs/archive ] && rsync -a docs/archive/ "$RUNNER_TEMP/data/archive/"
             cd "$RUNNER_TEMP/data"
             git add -A
             if git diff --cached --quiet; then echo "Καμία αλλαγή."; return 0; fi

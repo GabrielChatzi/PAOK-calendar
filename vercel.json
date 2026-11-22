@@ -42,6 +42,10 @@
   ],
   "rewrites": [
     {
+      "source": "/archive/:f",
+      "destination": "/api/data?f=archive/:f"
+    },
+    {
       "source": "/crests/:f",
       "destination": "/api/data?f=crests/:f"
     },

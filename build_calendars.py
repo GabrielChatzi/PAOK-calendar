@@ -267,6 +267,11 @@ def fetch_until(url: str, ok: Callable[[str], bool], tries: int = 3) -> str:
     return page
 
 
+# Αρχείο παλιών σεζόν (archive.py backfill): η σεζόν που ζητείται από όσες πηγές έχουν επιλογή σεζόν
+# (ESPN, esake.gr). None = κανονική λειτουργία.
+ARCHIVE_YEAR: int | None = None
+
+
 def season_start_year(today: dt.date | None = None) -> int:
     today = today or dt.date.today()
     return today.year if today.month >= 7 else today.year - 1
@@ -588,7 +593,7 @@ def espn_matches(section: str, team_id: str, leagues: list[str]) -> list[Match]:
     base = "https://site.api.espn.com/apis/site/v2/sports/soccer"
     events: dict[str, tuple[str, dict]] = {}
     for league in leagues:
-        for suffix in ("?fixture=true", ""):
+        for suffix in ((f"?season={ARCHIVE_YEAR}",) if ARCHIVE_YEAR else ("?fixture=true", "")):
             try:
                 data = json.loads(fetch(f"{base}/{league}/teams/{team_id}/schedule{suffix}"))
             except Exception as e:  # ένα λάθος σε μία διοργάνωση δεν ακυρώνει τις άλλες
@@ -755,6 +760,14 @@ def latin_title(name: str) -> str:
 def basket_league_matches() -> list[Match]:
     url = f"https://www.esake.gr/el/action/EsaketeamView?idteam={ESAKE_TEAM_ID}&mode=3"
     page = fetch(url)
+    if ARCHIVE_YEAR:  # παλιά σεζόν: η επιλογή «idchampionship» της σελίδας (π.χ. «Basket League 2019-2020»)
+        y = ARCHIVE_YEAR
+        champ = next((v for v, label in re.findall(r'<option value="([0-9A-F]{8})"[^>]*>([^<]*)</option>', page)
+                      if re.search(rf"{y}\s*-\s*(?:{y + 1}|{(y + 1) % 100:02d})\b", label)), None)
+        if not champ:
+            raise RuntimeError(f"Δεν βρέθηκε η σεζόν {y}-{y + 1} στο esake.gr")
+        url += f"&idchampionship={champ}"
+        page = fetch(url)
     out = []
     # Οι αγώνες είναι ομαδοποιημένοι ανά μήνα: «Οκτώβριος <span>2026</span>».
     for section in page.split('<div class="esake-program-series-title">')[1:]:

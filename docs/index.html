@@ -217,6 +217,25 @@
   .stats-t td:first-child, .stats-t th:first-child { text-align: left; }
   .stats-t td.num, .stats-t th.num { text-align: right; font-variant-numeric: tabular-nums; }
   .stats-t tr.sum td { font-weight: 700; border-top: 2px solid var(--ink); }
+  .history-tabs { margin-top: -6px; }
+  .trophies { list-style: none; padding: 0; margin: 0 0 18px; }
+  .trophies li { display: flex; gap: 14px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+  .tr-count { font: 700 34px/1 var(--display); min-width: 44px; text-align: right; }
+  .trophies strong { display: block; font-size: 18px; }
+  .tr-years { display: block; color: var(--muted); font-size: 14px; line-height: 1.5; margin-top: 2px; }
+  .trophies small { display: block; color: var(--muted); font-size: 13px; }
+  .tr-places { margin: -8px 0 18px; color: var(--muted); font-size: 15px; }
+  .tr-places summary { cursor: pointer; }
+  .tr-places ul { padding-left: 18px; margin: 6px 0 0; }
+  .arch-won { font: 600 18px/1.3 var(--display); margin: 0 0 8px; }
+  .arch-list { list-style: none; padding: 0; margin: 0 0 16px; }
+  .arch-row { display: grid; grid-template-columns: 52px 1fr auto; gap: 10px; padding: 8px 0 8px 8px; border-bottom: 1px solid var(--rule);
+    border-left: 4px solid transparent; align-items: baseline; }
+  .arch-row.win { border-left-color: var(--ink); }
+  .arch-row.draw { border-left-color: var(--muted); }
+  .arch-date { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .arch-teams small { display: block; color: var(--muted); font-size: 13px; }
+  .arch-score { font: 700 18px/1 var(--display); font-variant-numeric: tabular-nums; }
   .para-tag { display: inline-block; font: 700 12px/1 var(--body); letter-spacing: .02em; padding: 3px 6px 2px; border: 1.5px solid currentColor;
     vertical-align: 1px; color: var(--ink); }
   .game.event .time { font-size: 19px; }
@@ -1111,6 +1130,9 @@
     var tables = standings[key] || [];
     var cups = cupsHtml(key);
     if (!tables.length && !cups) return '<p class="empty">Δεν υπάρχει βαθμολογία για αυτό το τμήμα ακόμα.</p>';
+    return tablesHtml(tables, key) + cups;
+  }
+  function tablesHtml(tables, key) {
     return tables.map(function (t) {
       var head = "<tr><th>#</th><th>Ομάδα</th>" + t.columns.map(function (c) { return "<th>" + esc(c) + "</th>"; }).join("") + "</tr>";
       var rows = t.rows.map(function (r) {
@@ -1120,8 +1142,8 @@
       }).join("");
       return '<div class="standing"><h3>' + esc(t.title) + '</h3><div class="table-wrap"><table class="st">' +
         "<thead>" + head + "</thead><tbody>" + rows + "</tbody></table></div>" +
-        '<p class="source"><a href="' + esc(t.url) + '" rel="noopener" target="_blank">Πηγή βαθμολογίας</a></p></div>';
-    }).join("") + cups;
+        (t.url ? '<p class="source"><a href="' + esc(t.url) + '" rel="noopener" target="_blank">Πηγή βαθμολογίας</a></p>' : "") + "</div>";
+    }).join("");
   }
 
   // ---- Ημερολόγια και ειδοποιήσεις
@@ -1214,6 +1236,7 @@
         (r.page === "stats" ? ' aria-current="page"' : "") + ">Στατιστικά<small>Εγκαταστάσεις και ειδοποιήσεις</small></a></li>" +
         '<li><a href="#/admin-app"' + (r.page === "admin-app" ? ' aria-current="page"' : "") + ">Εικονίδιο διαχειριστή<small>Δεύτερη εφαρμογή στην αρχική οθόνη</small></a></li>" +
         '<li><a href="#/atomika"' + (r.page === "atomika" ? ' aria-current="page"' : "") + ">Ατομικά αθλήματα και ΑμεΑ<small>Διοργανώσεις και ομάδες ΑμεΑ (ακόμα κρυφά)</small></a></li>" +
+        '<li><a href="#/trophies"' + (r.page === "trophies" ? ' aria-current="page"' : "") + ">Τρόπαια και αρχείο<small>Τίτλοι ανά τμήμα, παλιές σεζόν (ακόμα κρυφά)</small></a></li>" +
         (/[?&]app=admin(&|$)/.test(location.search) ? "" : '<li><button type="button" class="menu-plain" data-act="admin-off">Έξοδος από διαχειριστή<small>Η σελίδα όπως τη βλέπουν όλοι· ξανά με #/admin</small></button></li>') +
         "</ul></nav>" : "") +
       (canSeeAcademy() && data.academy.length
@@ -1900,6 +1923,105 @@
     }).catch(function () { msg.textContent = "Δεν υπάρχει σύνδεση. Δοκίμασε ξανά."; });
   }
 
+  // ---- Ιστορία: τρόπαια (trophies.json) και αρχείο σεζόν (archive/*.json, βλ. archive.py). Μόνο διαχειριστής.
+  function canSeeHistory() { return isAdmin(); }
+  var trophies = null, archIndex = null, archSeasons = {}, histLoading = {};
+  function histLoad(name, url, done) {
+    if (histLoading[name]) return;
+    histLoading[name] = true;
+    fetch(url, { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
+      .then(function (d) { done(d); histLoading[name] = false; render(); });
+  }
+  function loadTrophies() { histLoad("trophies", "trophies.json", function (d) { trophies = d || { sections: {} }; }); }
+  function trophyList(key) { return ((trophies || {}).sections || {})[key] || []; }
+  function trophyCount(t) { return (t.years || []).length; }
+  function trophiesBlock(key, withTitle) {
+    var list = trophyList(key), s = data.sectionMap[key];
+    if (!list.length) return "";
+    var title = s ? '<a href="#/' + key + '/trophies">' + esc((s.emoji || "") + " " + teamTitle(s)) + "</a>" : esc(((trophies.labels || {})[key]) || key);
+    var places = ((trophies.places || {})[key] || []);
+    return (withTitle ? '<h3 class="area-sport">' + title + "</h3>" : "") +
+      '<ul class="trophies">' + list.map(function (t) {
+        return '<li><span class="tr-count">' + trophyCount(t) + '</span><div><strong>' + esc(t.name) + "</strong>" +
+          (t.years && t.years.length ? '<span class="tr-years">' + t.years.map(esc).join(" · ") + "</span>" : "") +
+          (t.note ? "<small>" + esc(t.note) + "</small>" : "") + "</div></li>";
+      }).join("") + "</ul>" +
+      (places.length ? '<details class="tr-places"><summary>Διακρίσεις (' + places.length + ")</summary><ul>" + places.map(function (p) {
+        return "<li>" + esc(p.name) + ": " + p.years.map(esc).join(", ") + "</li>";
+      }).join("") + "</ul></details>" : "");
+  }
+  function trophiesHtml(key) {
+    if (!trophies) { loadTrophies(); return '<p class="empty">Φόρτωση…</p>'; }
+    var block = trophiesBlock(key, false);
+    return (block || '<p class="empty">Δεν έχουν καταγραφεί τρόπαια για αυτό το τμήμα.</p>') +
+      '<p class="help">' + esc(((trophies.notes || {})[key]) || "") + ' <a href="#/trophies">Όλα τα τρόπαια του ΠΑΟΚ</a></p>';
+  }
+  // #/trophies: όλα τα τμήματα, πρώτα ανδρικά/γυναικεία και μετά οι ακαδημίες.
+  function allTrophiesHtml() {
+    if (!trophies) { loadTrophies(); return '<p class="empty">Φόρτωση…</p>'; }
+    var keys = Object.keys(trophies.sections || {}).filter(function (k) { return data.sectionMap[k] && trophyList(k).length; });
+    var total = 0;
+    keys.forEach(function (k) { trophyList(k).forEach(function (t) { total += trophyCount(t); }); });
+    var main = keys.filter(function (k) { return !isAcademy(k); }), acad = keys.filter(isAcademy);
+    var ind = Object.keys(trophies.sections || {}).filter(function (k) { return k.indexOf("event:") === 0 && trophyList(k).length; });
+    ind.forEach(function (k) { keys.push(k); trophyList(k).forEach(function (t) { total += trophyCount(t); }); });
+    return '<div class="section-head"><h2>Τρόπαια</h2></div>' +
+      '<p class="lede">' + total + " τίτλοι σε " + keys.length + " τμήματα. Μόνο για τον διαχειριστή μέχρι να ανοίξει για όλους.</p>" +
+      main.map(function (k) { return trophiesBlock(k, true); }).join("") +
+      (acad.length ? '<h2 class="section-title">Ακαδημίες</h2>' + acad.map(function (k) { return trophiesBlock(k, true); }).join("") : "") +
+      (ind.length ? '<h2 class="section-title">Ατομικά αθλήματα</h2>' + ind.map(function (k) { return trophiesBlock(k, true); }).join("") : "") +
+      (trophies.sources ? '<p class="help">Πηγές: ' + trophies.sources.map(function (x) {
+        return '<a href="' + esc(x.url) + '" rel="noopener" target="_blank">' + esc(x.name) + "</a>";
+      }).join(", ") + "</p>" : "") + footerHtml();
+  }
+  function archSeasonParam() { return (location.hash.split("/")[3] || "").replace(/[^0-9-]/g, ""); }
+  function archResult(m) {
+    var sc = m.score ? m.score.split("-") : null;
+    if (!sc || sc.length !== 2 || isNaN(+sc[0]) || isNaN(+sc[1])) return "";
+    var us = +sc[m.paokHome ? 0 : 1], them = +sc[m.paokHome ? 1 : 0];
+    return us > them ? "win" : us < them ? "loss" : "draw";
+  }
+  function archRowHtml(m) {
+    var d = new Date(m.start);
+    return '<li class="arch-row ' + archResult(m) + '"><span class="arch-date">' + esc(d.getDate() + "/" + (d.getMonth() + 1)) + "</span>" +
+      '<span class="arch-teams">' + esc(m.home) + " – " + esc(m.away) + "<small>" + esc([m.round, m.venue].filter(Boolean).join(" · ")) + "</small></span>" +
+      '<span class="arch-score">' + esc(m.score || (m.postponed ? "αναβ." : "–")) + "</span></li>";
+  }
+  function archiveHtml(key) {
+    if (!archIndex) { histLoad("index", "archive/index.json", function (d) { archIndex = d || { seasons: [] }; }); return '<p class="empty">Φόρτωση…</p>'; }
+    if (!trophies) loadTrophies();
+    var seasons = archIndex.seasons.filter(function (x) { return x.sections[key]; });
+    if (!seasons.length) return '<p class="empty">Δεν υπάρχει ακόμα αρχείο για αυτό το τμήμα. Γεμίζει μόνο του σε κάθε ενημέρωση.</p>';
+    var season = archSeasonParam();
+    if (!seasons.some(function (x) { return x.season === season; })) season = seasons[0].season;
+    var chips = '<div class="chips ev-chips">' + seasons.map(function (x) {
+      return '<a class="chip" href="#/' + key + "/archive/" + x.season + '" aria-pressed="' + (x.season === season) + '">' + esc(x.season) + "</a>";
+    }).join("") + "</div>";
+    var d = archSeasons[season];
+    if (!d) { histLoad("s" + season, "archive/" + season + ".json", function (x) { archSeasons[season] = x || { sections: {} }; }); return chips + '<p class="empty">Φόρτωση…</p>'; }
+    var sec = d.sections[key] || { matches: [] };
+    var ms = sec.matches.filter(function (m) { return m.start; });
+    var n = { win: 0, loss: 0, draw: 0 }, played = 0;
+    ms.forEach(function (m) { var r = archResult(m); if (r) { n[r]++; played++; } });
+    var byComp = {}, order = [];
+    ms.forEach(function (m) {
+      var c = m.competition || "Αγώνες";
+      if (!byComp[c]) { byComp[c] = []; order.push(c); }
+      byComp[c].push(m);
+    });
+    // Τρόπαια της σεζόν: «2025-26», ή χρονιά «2026» (τελικοί την άνοιξη).
+    var y2 = String(+season.slice(0, 4) + 1);
+    var won = trophyList(key).filter(function (t) { return (t.years || []).some(function (y) { return y === season || y === y2; }); });
+    return chips +
+      (won.length ? '<p class="arch-won">🏆 ' + won.map(function (t) { return esc(t.name); }).join(" · ") + "</p>" : "") +
+      '<p class="lede">' + played + " αγώνες με αποτέλεσμα: " + n.win + " νίκες" + (n.draw ? ", " + n.draw + " ισοπαλίες" : "") + ", " + n.loss + " ήττες." +
+      (sec.backfilled ? " Από τις πηγές που κρατούν παλιές σεζόν: μπορεί να λείπουν διοργανώσεις." : "") + "</p>" +
+      (sec.standings && sec.standings.length ? '<h3 class="area-sport">Βαθμολογία</h3>' + tablesHtml(sec.standings, key) : "") +
+      order.map(function (c) {
+        return '<h3 class="area-sport">' + esc(c) + '</h3><ol class="arch-list">' + byComp[c].map(archRowHtml).join("") + "</ol>";
+      }).join("");
+  }
+
   // ---- Σελίδα τμήματος
   var TABS =[["", "Πρόγραμμα"], ["results", "Αποτελέσματα"], ["standings", "Βαθμολογία"], ["follow", "Ακολούθησε"]];
   function sectionHtml(key, tab) {
@@ -1909,8 +2031,15 @@
     var tabs = '<nav class="tabs" aria-label="' + esc(s.name) + '">' + TABS.map(function (t) {
       return '<a href="#/' + key + (t[0] ? "/" + t[0] : "") + '"' + (t[0] === tab ? ' aria-current="page"' : "") + ">" + t[1] + "</a>";
     }).join("") + "</nav>";
+    if (canSeeHistory()) tabs += '<nav class="tabs history-tabs" aria-label="Ιστορία">' + [["trophies", "Τρόπαια"], ["archive", "Αρχείο σεζόν"]].map(function (t) {
+      return '<a href="#/' + key + "/" + t[0] + '"' + (t[0] === tab ? ' aria-current="page"' : "") + ">" + t[1] + "</a>";
+    }).join("") + "</nav>";
     var body;
-    if (tab === "standings") {
+    if (tab === "trophies" && canSeeHistory()) {
+      body = trophiesHtml(key);
+    } else if (tab === "archive" && canSeeHistory()) {
+      body = archiveHtml(key);
+    } else if (tab === "standings") {
       body = standingsHtml(key);
     } else if (tab === "follow") {
       body = followHtml(key);
@@ -2231,6 +2360,7 @@
     if (key === "calendars") return { key: null, tab: "", page: "calendars" };
     if (key === "privacy") return { key: null, tab: "", page: "privacy" };
     if (key === "stats" && isAdmin()) return { key: null, tab: "", page: "stats" };
+    if (key === "trophies" && canSeeHistory()) return { key: null, tab: "", page: "trophies" };
     if (key === "admin-app" && isAdmin()) return { key: null, tab: "", page: "admin-app" };
     if (key === "admin") {
       // #/admin: σύνδεση με τον κωδικό· μετά, οι ειδοποιήσεις λειτουργίας στη σελίδα Ειδοποιήσεις.
@@ -2269,6 +2399,7 @@
       : r.page === "stats" ? "Στατιστικά – PAOKalendar"
       : r.page === "admin-app" ? "Εικονίδιο διαχειριστή – PAOKalendar"
       : r.page === "admin-login" ? "Διαχειριστής – PAOKalendar"
+      : r.page === "trophies" ? "Τρόπαια – PAOKalendar"
       : r.page === "atomika" ? (r.tab === "new" ? "Νέα διοργάνωση" : r.tab === "edit" ? "Αλλαγή διοργάνωσης" : r.tab === "e" && evById(r.sub) ? evById(r.sub).title : "Ατομικά αθλήματα") + " – PAOKalendar"
       : r.page === "academies" ? (r.tab === "new" ? "Νέος αγώνας" : r.tab === "edit" ? "Αλλαγή αγώνα" : r.tab === "crests" ? "Σήματα" : "Ακαδημίες") + " – PAOKalendar"
       : match ? match.home + " – " + match.away + " – PAOKalendar"
@@ -2276,7 +2407,7 @@
     $("masthead").classList.toggle("academy-area", inAcademyArea(r));
     $("app").innerHTML = movedHtml() + (inAcademyArea(r) ? academyBandHtml() : "") +
       (r.page === "app" ? appHtml() : r.page === "notifications" ? notificationsHtml() : r.page === "calendars" ? calendarsHtml()
-        : r.page === "privacy" ? privacyHtml() : r.page === "stats" ? statsPageHtml() : r.page === "admin-app" ? adminAppHtml() : r.page === "admin-login" ? adminLoginHtml() : r.page === "atomika" ? (r.tab === "new" || r.tab === "edit" ? eventFormHtml(r) : r.tab === "e" ? eventPageHtml(r.sub) : eventsHtml(r.tab)) : r.page === "academies" ? (r.tab === "new" || r.tab === "edit" ? academyFormHtml(r) : r.tab === "crests" ? academyCrestsHtml() : academiesHtml(r.tab)) : r.page === "match" ? matchHtml(match) : r.key ? sectionHtml(r.key, r.tab) : homeHtml());
+        : r.page === "privacy" ? privacyHtml() : r.page === "stats" ? statsPageHtml() : r.page === "admin-app" ? adminAppHtml() : r.page === "admin-login" ? adminLoginHtml() : r.page === "trophies" ? allTrophiesHtml() : r.page === "atomika" ? (r.tab === "new" || r.tab === "edit" ? eventFormHtml(r) : r.tab === "e" ? eventPageHtml(r.sub) : eventsHtml(r.tab)) : r.page === "academies" ? (r.tab === "new" || r.tab === "edit" ? academyFormHtml(r) : r.tab === "crests" ? academyCrestsHtml() : academiesHtml(r.tab)) : r.page === "match" ? matchHtml(match) : r.key ? sectionHtml(r.key, r.tab) : homeHtml());
     if (routeChanged && match && r.tab === "notify") {
       var target = $("match-notify");
       if (target) target.scrollIntoView();

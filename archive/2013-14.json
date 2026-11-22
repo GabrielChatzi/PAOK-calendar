@@ -166,6 +166,38 @@
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-cf432eac0326",
+     "section": "football",
+     "start": "2013-09-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Anagennisi Karditsa",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/2013%E2%80%9314_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Georgiadis",
+        "min": "45+1"
+       },
+       {
+        "name": "Vukić",
+        "min": "75"
+       },
+       {
+        "name": "Necid",
+        "min": "83"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-381689",
      "nt": "1be238ee4d",
      "section": "football",
@@ -259,6 +291,30 @@
      "score": "0-3",
      "url": "https://www.espn.com/soccer/match/_/gameId/382188",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-31c934eabf01",
+     "section": "football",
+     "start": "2013-10-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Anagennisi Karditsa",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karditsa Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/2013%E2%80%9314_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Oliseh",
+        "min": "67"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-375878",
@@ -452,6 +508,30 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-f57cf6f2cc75",
+     "section": "football",
+     "start": "2014-01-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/2013%E2%80%9314_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Athanasiadis",
+        "min": "58"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-385946",
      "nt": "f39fec813e",
      "section": "football",
@@ -484,6 +564,51 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-14d26ee76289",
+     "section": "football",
+     "start": "2014-01-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "5-1",
+     "url": "https://en.wikipedia.org/wiki/2013%E2%80%9314_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Athanasiadis",
+        "min": "20"
+       },
+       {
+        "name": "Stoch",
+        "min": "22"
+       },
+       {
+        "name": "Stoch",
+        "min": "55"
+       },
+       {
+        "name": "Oliseh",
+        "min": "82"
+       },
+       {
+        "name": "Martens",
+        "min": "90+3"
+       }
+      ],
+      "away": [
+       {
+        "name": "Pourtoulidis",
+        "min": "4"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-386730",
      "nt": "c1e9844749",
      "section": "football",
@@ -497,6 +622,38 @@
      "score": "4-1",
      "url": "https://www.espn.com/soccer/match/_/gameId/386730",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-d35e70cb3838",
+     "section": "football",
+     "start": "2014-01-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Smyrnis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/2013%E2%80%9314_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vukić",
+        "min": "27"
+       },
+       {
+        "name": "Vukić",
+        "min": "35"
+       },
+       {
+        "name": "Maduro",
+        "min": "76"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-387275",
@@ -544,6 +701,38 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/387612",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/443.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-9709077919e6",
+     "section": "football",
+     "start": "2014-02-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Smyrnis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Georgios Kamaras Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "0-3",
+     "url": "https://en.wikipedia.org/wiki/2013%E2%80%9314_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Athanasiadis",
+        "min": "42"
+       },
+       {
+        "name": "Koulouris",
+        "min": "54"
+       },
+       {
+        "name": "Koulouris",
+        "min": "90"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-387781",
@@ -706,6 +895,39 @@
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-89d49eef74f7",
+     "section": "football",
+     "start": "2014-04-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2013%E2%80%9314_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Domínguez",
+        "min": "8"
+       },
+       {
+        "name": "Fuster",
+        "min": "11"
+       }
+      ],
+      "away": [
+       {
+        "name": "Athanasiadis",
+        "min": "31"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-391490",
      "nt": "135c43758a",
      "section": "football",
@@ -736,6 +958,71 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/391496",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/5276.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-66cd0d1aa0c7",
+     "section": "football",
+     "start": "2014-04-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2013%E2%80%9314_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Athanasiadis",
+        "min": "47"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-cb2141949fe2",
+     "section": "football",
+     "start": "2014-04-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Olympic Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/2013%E2%80%9314_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Berg",
+        "min": "15"
+       },
+       {
+        "name": "Berg",
+        "min": "50"
+       },
+       {
+        "name": "Berg",
+        "min": "88"
+       },
+       {
+        "name": "Karelis",
+        "min": "54"
+       }
+      ],
+      "away": [
+       {
+        "name": "Vukić",
+        "min": "70",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-392028",
@@ -832,9 +1119,57 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/392039",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/443.png"
+    },
+    {
+     "uid": "football-wiki-db8c4ac01f75",
+     "section": "football",
+     "start": "2014-05-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Asteras Tripolis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2013%E2%80%9314_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Stoch",
+        "min": "59"
+       }
+      ],
+      "away": [
+       {
+        "name": "Barrales",
+        "min": "12"
+       }
+      ]
+     },
+     "source": "wikipedia"
     }
    ],
-   "backfilled": true
+   "backfilled": true,
+   "summary": {
+    "league": "2η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Φιναλίστ"
+     },
+     {
+      "name": "UEFA Champions League",
+      "result": "Πλέι οφ"
+     },
+     {
+      "name": "UEFA Europa League",
+      "result": "Φάση των 32"
+     }
+    ],
+    "topscorer": "Stefanos Athanasiadis (10 Goals)",
+    "source": "https://en.wikipedia.org/wiki/2013%E2%80%9314_PAOK_FC_season"
+   }
   },
   "basketball": {
    "matches": [
@@ -2577,5 +2912,5 @@
    "backfilled": true
   }
  },
- "updated": "2026-11-22T18:35+02:00"
+ "updated": "2026-11-22T21:49+02:00"
 }

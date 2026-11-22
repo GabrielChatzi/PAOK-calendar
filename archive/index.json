@@ -148,6 +148,193 @@
      "standings": true
     }
    }
+  },
+  {
+   "season": "2025-26",
+   "sections": {
+    "football": {
+     "matches": 47,
+     "standings": false
+    },
+    "basketball": {
+     "matches": 28,
+     "standings": false
+    },
+    "handball": {
+     "matches": 33,
+     "standings": true
+    },
+    "handball-women": {
+     "matches": 38,
+     "standings": true
+    },
+    "futsal": {
+     "matches": 22,
+     "standings": true
+    },
+    "football-b": {
+     "matches": 28,
+     "standings": false
+    }
+   }
+  },
+  {
+   "season": "2024-25",
+   "sections": {
+    "football": {
+     "matches": 48,
+     "standings": false
+    },
+    "basketball": {
+     "matches": 27,
+     "standings": false
+    },
+    "volley": {
+     "matches": 20,
+     "standings": true
+    },
+    "handball": {
+     "matches": 26,
+     "standings": true
+    },
+    "handball-women": {
+     "matches": 36,
+     "standings": true
+    },
+    "futsal": {
+     "matches": 22,
+     "standings": true
+    },
+    "football-b": {
+     "matches": 27,
+     "standings": false
+    }
+   }
+  },
+  {
+   "season": "2023-24",
+   "sections": {
+    "football": {
+     "matches": 52,
+     "standings": false
+    },
+    "basketball": {
+     "matches": 29,
+     "standings": false
+    },
+    "volley": {
+     "matches": 20,
+     "standings": true
+    },
+    "handball": {
+     "matches": 31,
+     "standings": true
+    },
+    "handball-women": {
+     "matches": 31,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2022-23",
+   "sections": {
+    "football": {
+     "matches": 38,
+     "standings": false
+    },
+    "basketball": {
+     "matches": 31,
+     "standings": false
+    },
+    "volley": {
+     "matches": 32,
+     "standings": true
+    },
+    "handball": {
+     "matches": 29,
+     "standings": true
+    },
+    "handball-women": {
+     "matches": 34,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2021-22",
+   "sections": {
+    "football": {
+     "matches": 54,
+     "standings": false
+    },
+    "basketball": {
+     "matches": 24,
+     "standings": false
+    },
+    "volley": {
+     "matches": 24,
+     "standings": true
+    },
+    "handball": {
+     "matches": 34,
+     "standings": true
+    },
+    "handball-women": {
+     "matches": 27,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2020-21",
+   "sections": {
+    "football": {
+     "matches": 46,
+     "standings": false
+    },
+    "basketball": {
+     "matches": 25,
+     "standings": false
+    },
+    "volley": {
+     "matches": 14,
+     "standings": true
+    },
+    "handball": {
+     "matches": 22,
+     "standings": true
+    },
+    "handball-women": {
+     "matches": 15,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2019-20",
+   "sections": {
+    "football": {
+     "matches": 34,
+     "standings": false
+    },
+    "basketball": {
+     "matches": 26,
+     "standings": false
+    },
+    "volley": {
+     "matches": 18,
+     "standings": true
+    },
+    "handball": {
+     "matches": 24,
+     "standings": true
+    },
+    "handball-women": {
+     "matches": 19,
+     "standings": true
+    }
+   }
   }
  ]
 }

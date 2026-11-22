@@ -1,0 +1,1316 @@
+{
+ "season": "1977-78",
+ "sections": {
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-0cfefbf6fead",
+     "section": "football",
+     "start": "1977-09-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Leoforos Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d38b427b6dd7",
+     "section": "football",
+     "start": "1977-09-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Zagłębie Sosnowiec",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Κυπελλούχων",
+     "round": "1ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Pellios",
+        "min": "25"
+       },
+       {
+        "name": "Anastasiadis",
+        "min": "80",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-99a5c0594fa4",
+     "section": "football",
+     "start": "1977-09-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Rizoupoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Asimakopoulos",
+        "min": "44",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Pathiakakis",
+        "min": "42"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ec5bbe5eee88",
+     "section": "football",
+     "start": "1977-09-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Zagłębie Sosnowiec",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Stadion Ludowy",
+     "competition": "Κύπελλο Κυπελλούχων",
+     "round": "2ος αγώνας",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Kermanidis",
+        "min": "47"
+       },
+       {
+        "name": "Damanakis",
+        "min": "69"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3f5e0d029006",
+     "section": "football",
+     "start": "1977-10-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Pierikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "73"
+       },
+       {
+        "name": "Orfanos",
+        "min": "81"
+       },
+       {
+        "name": "Orfanos",
+        "min": "87"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-21d137f530d0",
+     "section": "football",
+     "start": "1977-10-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Vardinogiannis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Papadopoulos",
+        "min": "15"
+       },
+       {
+        "name": "Foustanakis",
+        "min": "43"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kermanidis",
+        "min": "29"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d287c8b81ef3",
+     "section": "football",
+     "start": "1977-10-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "PAS Giannina",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Orfanos",
+        "min": "8"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-23dc882eaf0c",
+     "section": "football",
+     "start": "1977-10-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Vejle",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Vejle Stadium",
+     "competition": "Κύπελλο Κυπελλούχων",
+     "round": "1ος αγώνας",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Eg",
+        "min": "12"
+       },
+       {
+        "name": "Jacquet",
+        "min": "79"
+       },
+       {
+        "name": "Østergaard",
+        "min": "88"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6df92e1e4278",
+     "section": "football",
+     "start": "1977-10-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panachaiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kostas Davourlis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Ioakeimidis",
+        "min": "44"
+       },
+       {
+        "name": "Spentzopoulos",
+        "min": "71"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b4aede2214d0",
+     "section": "football",
+     "start": "1977-10-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kermanidis",
+        "min": "20"
+       }
+      ],
+      "away": [
+       {
+        "name": "Gesios",
+        "min": "67"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-249443b85b5e",
+     "section": "football",
+     "start": "1977-11-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Vejle",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Κυπελλούχων",
+     "round": "2ος αγώνας",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Orfanos",
+        "min": "23"
+       },
+       {
+        "name": "Kermanidis",
+        "min": "89"
+       }
+      ],
+      "away": [
+       {
+        "name": "Jacquet",
+        "min": "74"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-226659785324",
+     "section": "football",
+     "start": "1977-11-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kastoria",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kastoria Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Argyros",
+        "min": "69"
+       }
+      ],
+      "away": [
+       {
+        "name": "Orfanos",
+        "min": "70"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-516a40d908bf",
+     "section": "football",
+     "start": "1977-11-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ethnikos Piraeus",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Orfanos",
+        "min": "56"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-56252b772cb7",
+     "section": "football",
+     "start": "1977-11-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kavala",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Orfanos",
+        "min": "12",
+        "pen": true
+       },
+       {
+        "name": "Orfanos",
+        "min": "31"
+       },
+       {
+        "name": "Sarafis",
+        "min": "22"
+       }
+      ],
+      "away": [
+       {
+        "name": "Triantafyllidis",
+        "min": "18"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5acadbc8d74f",
+     "section": "football",
+     "start": "1977-11-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8a2e78983365",
+     "section": "football",
+     "start": "1977-12-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Veria",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Orfanos",
+        "min": "43"
+       },
+       {
+        "name": "Orfanos",
+        "min": "83"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b82e6d57bb3e",
+     "section": "football",
+     "start": "1977-12-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-21c7fd8abfc4",
+     "section": "football",
+     "start": "1977-12-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-834bbc1acc09",
+     "section": "football",
+     "start": "1977-12-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Levadiakos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "6-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Orfanos",
+        "min": "20"
+       },
+       {
+        "name": "Orfanos",
+        "min": "78"
+       },
+       {
+        "name": "Kostikos",
+        "min": "37"
+       },
+       {
+        "name": "Kostikos",
+        "min": "90"
+       },
+       {
+        "name": "Kermanidis",
+        "min": "45"
+       },
+       {
+        "name": "Iosifidis",
+        "min": "54"
+       }
+      ],
+      "away": [
+       {
+        "name": "Margaritis",
+        "min": "87"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4eb340278c47",
+     "section": "football",
+     "start": "1977-12-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panserraikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Serres Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Chatzistavridis",
+        "min": "82"
+       }
+      ],
+      "away": [
+       {
+        "name": "Malaxianakis",
+        "min": "44"
+       },
+       {
+        "name": "Boditsopoulos",
+        "min": "80"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d8a81b1fe5e4",
+     "section": "football",
+     "start": "1978-01-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Damanakis",
+        "min": "67"
+       }
+      ],
+      "away": [
+       {
+        "name": "Bajević",
+        "min": "44"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-025b44c88094",
+     "section": "football",
+     "start": "1978-01-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Egaleo",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Stavros Mavrothalassitis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Forakis",
+        "min": "13"
+       },
+       {
+        "name": "Chatziskoulidis",
+        "min": "62"
+       }
+      ],
+      "away": [
+       {
+        "name": "Orfanos",
+        "min": "50",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-32a4cb988510",
+     "section": "football",
+     "start": "1978-01-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "29"
+       },
+       {
+        "name": "Sarafis",
+        "min": "63"
+       },
+       {
+        "name": "Koudas",
+        "min": "46"
+       }
+      ],
+      "away": [
+       {
+        "name": "Giannakoulas",
+        "min": "60"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2b9dcb24f5bb",
+     "section": "football",
+     "start": "1978-01-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Orfanos",
+        "min": "33"
+       },
+       {
+        "name": "Orfanos",
+        "min": "39"
+       },
+       {
+        "name": "Koudas",
+        "min": "63"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1d2be10df04d",
+     "section": "football",
+     "start": "1978-02-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos Volos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "2"
+       },
+       {
+        "name": "Sarafis",
+        "min": "64"
+       },
+       {
+        "name": "Orfanos",
+        "min": "23",
+        "pen": true
+       },
+       {
+        "name": "Orfanos",
+        "min": "43",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Voulgaris",
+        "min": "40",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-df8e5df5234c",
+     "section": "football",
+     "start": "1978-02-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Pierikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Katerini Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Mischos",
+        "min": "5"
+       }
+      ],
+      "away": [
+       {
+        "name": "Anastasiadis",
+        "min": "58",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b23abbe3ce4e",
+     "section": "football",
+     "start": "1978-02-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "5-0",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "24"
+       },
+       {
+        "name": "Orfanos",
+        "min": "37"
+       },
+       {
+        "name": "Orfanos",
+        "min": "70",
+        "pen": true
+       },
+       {
+        "name": "Iosifidis",
+        "min": "43"
+       },
+       {
+        "name": "Pathiakakis",
+        "min": "56"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6d5737739423",
+     "section": "football",
+     "start": "1978-02-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "PAS Giannina",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Zosimades Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Liakos",
+        "min": "37"
+       }
+      ],
+      "away": [
+       {
+        "name": "Damanakis",
+        "min": "32"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-775329c19524",
+     "section": "football",
+     "start": "1978-02-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panachaiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Anastasiadis",
+        "min": "27"
+       }
+      ],
+      "away": [
+       {
+        "name": "Spentzopoulos",
+        "min": "90"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ed69ce7cdc58",
+     "section": "football",
+     "start": "1978-03-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Sarafis",
+        "min": "25"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-43b56d8135ab",
+     "section": "football",
+     "start": "1978-03-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Kermanidis",
+        "min": "79"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d3371998a069",
+     "section": "football",
+     "start": "1978-03-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kastoria",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Damanakis",
+        "min": "16"
+       },
+       {
+        "name": "Guerino",
+        "min": "58"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kopanos",
+        "min": "38"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3fec84490535",
+     "section": "football",
+     "start": "1978-03-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Piraeus",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Karaiskos",
+        "min": "57",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Koudas",
+        "min": "67"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9747f358b07f",
+     "section": "football",
+     "start": "1978-03-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kavala",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kavala Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3fb5494b01bc",
+     "section": "football",
+     "start": "1978-04-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kermanidis",
+        "min": "3"
+       },
+       {
+        "name": "Koudas",
+        "min": "64"
+       }
+      ],
+      "away": [
+       {
+        "name": "Pallas",
+        "min": "31",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-616dc3bb2e27",
+     "section": "football",
+     "start": "1978-04-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Veria",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Veria Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "1-3",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Chatzaras",
+        "min": "20",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Kermanidis",
+        "min": "16"
+       },
+       {
+        "name": "Damanakis",
+        "min": "47"
+       },
+       {
+        "name": "Orfanos",
+        "min": "90"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e89f446cd16f",
+     "section": "football",
+     "start": "1978-04-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Guerino",
+        "min": "16"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-21718056d1d2",
+     "section": "football",
+     "start": "1978-04-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Veria",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "5-0",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Guerino",
+        "min": "2"
+       },
+       {
+        "name": "Guerino",
+        "min": "4"
+       },
+       {
+        "name": "Koudas",
+        "min": "52"
+       },
+       {
+        "name": "Sarafis",
+        "min": "63"
+       },
+       {
+        "name": "Apostolidis",
+        "min": "75"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-bf8f02d29ab3",
+     "section": "football",
+     "start": "1978-04-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "31η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7a88aaecdffe",
+     "section": "football",
+     "start": "1978-05-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panserraikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "32η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kermanidis",
+        "min": "17"
+       },
+       {
+        "name": "Kermanidis",
+        "min": "49"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kaltsas",
+        "min": "65"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e376c56db15d",
+     "section": "football",
+     "start": "1978-05-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikos Goumas Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "33η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Bajević",
+        "min": "17"
+       },
+       {
+        "name": "Mavros",
+        "min": "89"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c0d1021f69fb",
+     "section": "football",
+     "start": "1978-05-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Orfanos",
+        "min": "112"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ddce1f43ab3b",
+     "section": "football",
+     "start": "1978-05-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Egaleo",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "34η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Guerino",
+        "min": "22"
+       },
+       {
+        "name": "Guerino",
+        "min": "85"
+       },
+       {
+        "name": "Anastasiadis",
+        "min": "70",
+        "pen": true
+       },
+       {
+        "name": "Kermanidis",
+        "min": "87"
+       }
+      ],
+      "away": [
+       {
+        "name": "Konstantinou",
+        "min": "53"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c772d93aa1db",
+     "section": "football",
+     "start": "1978-06-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Bajević",
+        "min": "50"
+       },
+       {
+        "name": "Mavros",
+        "min": "80"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "2η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Φιναλίστ"
+     },
+     {
+      "name": "Κύπελλο Κυπελλούχων",
+      "result": "2ος γύρος"
+     }
+    ],
+    "topscorer": "Kostas Orfanos (15)",
+    "source": "https://en.wikipedia.org/wiki/1977%E2%80%9378_PAOK_FC_season"
+   },
+   "backfilled": true
+  }
+ },
+ "updated": "2026-11-22T21:53+02:00"
+}

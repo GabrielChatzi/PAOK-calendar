@@ -1,0 +1,1236 @@
+{
+ "season": "1989-90",
+ "sections": {
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-d0a377018ddd",
+     "section": "football",
+     "start": "1989-08-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Anagennisi Giannitsa",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "5-0",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Small",
+        "min": "36"
+       },
+       {
+        "name": "Small",
+        "min": "46"
+       },
+       {
+        "name": "Mitsibonas",
+        "min": "50"
+       },
+       {
+        "name": "Skartados",
+        "min": "52",
+        "pen": true
+       },
+       {
+        "name": "Skartados",
+        "min": "68",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-204a82caa42f",
+     "section": "football",
+     "start": "1989-08-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Egaleo",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Stavros Mavrothalassitis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Pistolis",
+        "min": "70"
+       }
+      ],
+      "away": [
+       {
+        "name": "Karageorgiou",
+        "min": "24"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0308a1ec7f5a",
+     "section": "football",
+     "start": "1989-09-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kozani",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b9bc2fc64fc7",
+     "section": "football",
+     "start": "1989-09-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "30",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Okoński",
+        "min": "72"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-441559062804",
+     "section": "football",
+     "start": "1989-09-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Rizoupoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Konstantopoulos",
+        "min": "44"
+       },
+       {
+        "name": "Vlachos",
+        "min": "54",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b245de1bcb89",
+     "section": "football",
+     "start": "1989-10-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Kalamaria",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Small",
+        "min": "14"
+       },
+       {
+        "name": "Tolba",
+        "min": "27"
+       }
+      ],
+      "away": [
+       {
+        "name": "Nolis",
+        "min": "77"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b91ac9e8f030",
+     "section": "football",
+     "start": "1989-10-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panelefsiniakos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Elefsina Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Tolba",
+        "min": "60"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-39f5cfffc527",
+     "section": "football",
+     "start": "1989-10-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Levadiakos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Small",
+        "min": "22"
+       },
+       {
+        "name": "Tolba",
+        "min": "62"
+       }
+      ],
+      "away": [
+       {
+        "name": "Ziogas",
+        "min": "58"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-860b21a8513e",
+     "section": "football",
+     "start": "1989-10-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Piraeus",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "73"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d518540c87f2",
+     "section": "football",
+     "start": "1989-10-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEL",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Baran",
+        "min": "2",
+        "og": true
+       },
+       {
+        "name": "Skartados",
+        "min": "28"
+       },
+       {
+        "name": "Small",
+        "min": "47"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7fe73c49fa38",
+     "section": "football",
+     "start": "1989-10-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4bb1a252a404",
+     "section": "football",
+     "start": "1989-11-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Alexoulis",
+        "min": "56"
+       },
+       {
+        "name": "Karageorgiou",
+        "min": "85"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b91398e2d8ef",
+     "section": "football",
+     "start": "1989-11-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Alexiou",
+        "min": "12"
+       },
+       {
+        "name": "Mitropoulos",
+        "min": "32"
+       },
+       {
+        "name": "Anastopoulos",
+        "min": "47"
+       },
+       {
+        "name": "Anastopoulos",
+        "min": "74"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-120d0c3583de",
+     "section": "football",
+     "start": "1989-11-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "80"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-853a2f01e244",
+     "section": "football",
+     "start": "1989-11-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Doxa Drama",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Doxa Drama Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "28"
+       },
+       {
+        "name": "Mitsibonas",
+        "min": "66"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-87168f30385c",
+     "section": "football",
+     "start": "1989-11-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Sparti",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Leontiadis",
+        "min": "89",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a19d064ae956",
+     "section": "football",
+     "start": "1989-12-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Vardinogiannis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f1259fc5b8d5",
+     "section": "football",
+     "start": "1989-12-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panserraikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Alexoulis",
+        "min": "8"
+       },
+       {
+        "name": "Skartados",
+        "min": "44"
+       },
+       {
+        "name": "Anastasiadis",
+        "min": "90"
+       }
+      ],
+      "away": [
+       {
+        "name": "Aliatidis",
+        "min": "40"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-56f1155c2a46",
+     "section": "football",
+     "start": "1989-12-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ionikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Neapoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Leontiadis",
+        "min": "19"
+       },
+       {
+        "name": "Skartados",
+        "min": "81"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-cec8ed6003e6",
+     "section": "football",
+     "start": "1989-12-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Sparti",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Sparta Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Georgoulis",
+        "min": "64"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8c3395dc4761",
+     "section": "football",
+     "start": "1990-01-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos Volos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "4",
+        "pen": true
+       },
+       {
+        "name": "Toursounidis",
+        "min": "57"
+       },
+       {
+        "name": "Borbokis",
+        "min": "67"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c5402b5bfab8",
+     "section": "football",
+     "start": "1990-01-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lagonidis",
+        "min": "13"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ff2d23f6be7d",
+     "section": "football",
+     "start": "1990-01-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Xanthi",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Xanthi Ground",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Tolba",
+        "min": "42"
+       },
+       {
+        "name": "Borbokis",
+        "min": "90"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e6f7b501e975",
+     "section": "football",
+     "start": "1990-01-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tolba",
+        "min": "22"
+       },
+       {
+        "name": "Palaskas",
+        "min": "66"
+       }
+      ],
+      "away": [
+       {
+        "name": "Georgakopoulos",
+        "min": "11"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-11c0762c2b9b",
+     "section": "football",
+     "start": "1990-01-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Moustakidis",
+        "min": "67"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0cf6decb2e0e",
+     "section": "football",
+     "start": "1990-01-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikos Goumas Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Batista",
+        "min": "2"
+       },
+       {
+        "name": "Savevski",
+        "min": "85"
+       }
+      ],
+      "away": [
+       {
+        "name": "Mitsibonas",
+        "min": "11"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8ce4aeb5b3e9",
+     "section": "football",
+     "start": "1990-01-31T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Λιγκ Καπ",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Polak",
+        "min": "26"
+       },
+       {
+        "name": "Saravakos 33'",
+        "min": "78"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0322c9dc56a1",
+     "section": "football",
+     "start": "1990-02-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lagonidis",
+        "min": "11"
+       }
+      ],
+      "away": [
+       {
+        "name": "Katzenbach",
+        "min": "27"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-59721c223e45",
+     "section": "football",
+     "start": "1990-02-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Kalamaria",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kalamaria Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "0-3",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Toursounidis",
+        "min": "2"
+       },
+       {
+        "name": "Lagonidis",
+        "min": "37"
+       },
+       {
+        "name": "Anastasiadis",
+        "min": "80"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f72304501907",
+     "section": "football",
+     "start": "1990-02-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Levadiakos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Levadia Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lemonis",
+        "min": "28"
+       }
+      ],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "67"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-be92803744df",
+     "section": "football",
+     "start": "1990-02-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ethnikos Piraeus",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Mellos",
+        "min": "65"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2e222fe00fe3",
+     "section": "football",
+     "start": "1990-03-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEL",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Alcazar Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "12"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4881bc0cf84a",
+     "section": "football",
+     "start": "1990-03-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "10",
+        "pen": true
+       },
+       {
+        "name": "Skartados",
+        "min": "53"
+       }
+      ],
+      "away": [
+       {
+        "name": "Anastasiadis",
+        "min": "84"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2246c95aeb71",
+     "section": "football",
+     "start": "1990-03-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimitriadis",
+        "min": "87"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ab1d142dbf40",
+     "section": "football",
+     "start": "1990-03-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lagonidis",
+        "min": "10"
+       },
+       {
+        "name": "Skartados 39'",
+        "min": "35"
+       },
+       {
+        "name": "Skartados 39'",
+        "min": "39"
+       },
+       {
+        "name": "Alexoulis",
+        "min": "47"
+       }
+      ],
+      "away": [
+       {
+        "name": "Mitropoulos",
+        "min": "11"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a204618ce6a1",
+     "section": "football",
+     "start": "1990-04-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "1-3",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Mavros",
+        "min": "25"
+       }
+      ],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "1"
+       },
+       {
+        "name": "Mitoglou",
+        "min": "77"
+       },
+       {
+        "name": "Plitsis",
+        "min": "82"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1c05ee14331a",
+     "section": "football",
+     "start": "1990-04-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Doxa Drama",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Anastasiadis",
+        "min": "12"
+       },
+       {
+        "name": "Anastasiadis",
+        "min": "52"
+       },
+       {
+        "name": "Papatheodorou",
+        "min": "61",
+        "og": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Chionas",
+        "min": "30"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-827adbcc763b",
+     "section": "football",
+     "start": "1990-04-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Anastasiadis",
+        "min": "32"
+       },
+       {
+        "name": "Toursounidis",
+        "min": "74"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-71850e2c194b",
+     "section": "football",
+     "start": "1990-04-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panserraikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Serres Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-99741bf4156a",
+     "section": "football",
+     "start": "1990-05-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ionikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "31η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2766d1a59e03",
+     "section": "football",
+     "start": "1990-05-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos Volos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Volos Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "32η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tahos",
+        "min": "47"
+       },
+       {
+        "name": "Peridis",
+        "min": "84"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-eafad6f3a5bb",
+     "section": "football",
+     "start": "1990-05-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Xanthi",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "33η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Baniotis",
+        "min": "15"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4def15ebf313",
+     "section": "football",
+     "start": "1990-05-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Athens Olympic Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "34η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Saravakos",
+        "min": "68"
+       },
+       {
+        "name": "Saravakos",
+        "min": "72",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Lagonidis",
+        "min": "5"
+       },
+       {
+        "name": "Malioufas",
+        "min": "14"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "3η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Φάση των 16"
+     },
+     {
+      "name": "Λιγκ Καπ",
+      "result": "1ος γύρος"
+     }
+    ],
+    "topscorer": "Georgios Skartados (15)",
+    "source": "https://en.wikipedia.org/wiki/1989%E2%80%9390_PAOK_FC_season"
+   },
+   "backfilled": true
+  }
+ },
+ "updated": "2026-11-22T21:52+02:00"
+}

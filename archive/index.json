@@ -959,6 +959,16 @@
      "summary": true
     }
    }
+  },
+  {
+   "season": "1989-90",
+   "sections": {
+    "football": {
+     "matches": 43,
+     "standings": false,
+     "summary": true
+    }
+   }
   }
  ]
 }

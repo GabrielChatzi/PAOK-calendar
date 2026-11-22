@@ -217,7 +217,12 @@
   .stats-t td:first-child, .stats-t th:first-child { text-align: left; }
   .stats-t td.num, .stats-t th.num { text-align: right; font-variant-numeric: tabular-nums; }
   .stats-t tr.sum td { font-weight: 700; border-top: 2px solid var(--ink); }
-  .history-tabs { margin-top: -6px; }
+  .tabs.history-tabs { margin-top: -15px; }
+  /* Η δεύτερη σειρά καρτελών έχει 1 ή 2 καρτέλες: όσες στήλες όσες και οι καρτέλες, χωρίς κενά κελιά. */
+  .tabs.history-tabs.n1 { grid-template-columns: 1fr; }
+  .tabs.history-tabs.n2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tabs.history-tabs a { border-bottom: 0; }
+  .tabs.history-tabs a:last-child { border-right: 0; }
   .trophies { list-style: none; padding: 0; margin: 0 0 18px; }
   .trophies li { display: flex; gap: 14px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--rule); }
   .tr-count { font: 700 34px/1 var(--display); min-width: 44px; text-align: right; }
@@ -2059,7 +2064,7 @@
       return '<a href="#/' + key + (t[0] ? "/" + t[0] : "") + '"' + (t[0] === tab ? ' aria-current="page"' : "") + ">" + t[1] + "</a>";
     }).join("") + "</nav>";
     var histTabs = (canSeeTrophies() ? [["trophies", "Τρόπαια"]] : []).concat(canSeeHistory() ? [["archive", "Αρχείο σεζόν"]] : []);
-    if (histTabs.length) tabs += '<nav class="tabs history-tabs" aria-label="Ιστορία">' + histTabs.map(function (t) {
+    if (histTabs.length) tabs += '<nav class="tabs history-tabs n' + histTabs.length + '" aria-label="Ιστορία">' + histTabs.map(function (t) {
       return '<a href="#/' + key + "/" + t[0] + '"' + (t[0] === tab ? ' aria-current="page"' : "") + ">" + t[1] + "</a>";
     }).join("") + "</nav>";
     var body;

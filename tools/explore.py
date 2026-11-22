@@ -1,5 +1,5 @@
 """Προσωρινό: σελίδες σεζόν του ΠΑΟΚ στη Wikipedia."""
-import json, re, sys, urllib.parse
+import json, re, sys, time, urllib.parse, urllib.request
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import build_calendars as bc
@@ -7,10 +7,19 @@ OUT = Path("/tmp/out"); OUT.mkdir(exist_ok=True)
 lines = []
 API = "https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=wikitext&redirects=1&page="
 for y in range(1959, 2026):
+    d = None
     title = f"{y}–{(y + 1) % 100:02d} PAOK FC season"
     if y == 1999: title = "1999–2000 PAOK FC season"
     try:
-        d = json.loads(bc.fetch(API + urllib.parse.quote(title)))
+        for attempt in range(4):
+            try:
+                req = urllib.request.Request(API + urllib.parse.quote(title), headers={"User-Agent": "PAOKalendar/1.0 (https://paokalendar.gr; info@paokalendar.gr)"})
+                d = json.loads(urllib.request.urlopen(req, timeout=60).read().decode())
+                break
+            except urllib.error.HTTPError as e:
+                if e.code != 429: raise
+                time.sleep(10 * (attempt + 1))
+        time.sleep(1.5)
     except Exception as e:
         lines.append(f"{y}\tERR {e}"); continue
     if "error" in d:

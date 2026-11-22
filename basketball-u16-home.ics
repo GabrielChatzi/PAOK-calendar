@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:basketball-u16-ek-4GkNxgTySp9Ih9yqQT4PbA@paok-calendar
-DTSTAMP:20261121T205749Z
+DTSTAMP:20261122T120054Z
 DTSTART;TZID=Europe/Athens:20260910T200000
 DTEND;TZID=Europe/Athens:20260910T220000
 SUMMARY:🏀 ΠΑΟΚ 86-26 ΗΡΑΚΛΗΣ
@@ -39,7 +39,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=4GkNxgTySp9Ih9yqQT4P
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u16-ek-KC6pgMU0yKvR5IDiPU2mkw@paok-calendar
-DTSTAMP:20261121T205749Z
+DTSTAMP:20261122T120054Z
 DTSTART;TZID=Europe/Athens:20260917T200000
 DTEND;TZID=Europe/Athens:20260917T220000
 SUMMARY:🏀 ΠΑΟΚ 66-58 ΧΑΝΘ
@@ -52,7 +52,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=KC6pgMU0yKvR5IDiPU2m
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u16-ek-N1Eu6wFVNOpDJcMxsHnTIQ@paok-calendar
-DTSTAMP:20261121T205749Z
+DTSTAMP:20261122T120054Z
 DTSTART;TZID=Europe/Athens:20261007T200000
 DTEND;TZID=Europe/Athens:20261007T220000
 SUMMARY:🏀 ΠΑΟΚ 72-45 ΜΑΧΗΤΕΣ ΑΕΠΣ ΠΕΙΡΑΜΑΤΙΚΟ
@@ -65,7 +65,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=N1Eu6wFVNOpDJcMxsHnT
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u16-rs-b415a84f3f81@paok-calendar
-DTSTAMP:20261121T205749Z
+DTSTAMP:20261122T120054Z
 DTSTART;TZID=Europe/Athens:20261101T150000
 DTEND;TZID=Europe/Athens:20261101T170000
 SUMMARY:🏀 ΠΑΟΚ 73-83 ΠΡΩΤΕΑΣ ΒΟΥΛΑΣ
@@ -77,7 +77,7 @@ URL:https://risingstars.basket.gr/u16/schedule/
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u16-ek-VE3F9KfM7JdCkXjIIg2nEQ@paok-calendar
-DTSTAMP:20261121T205749Z
+DTSTAMP:20261122T120054Z
 DTSTART;TZID=Europe/Athens:20261118T200000
 DTEND;TZID=Europe/Athens:20261118T220000
 SUMMARY:🏀 ΠΑΟΚ 101-44 ΑΣ ΑΣΤΕΡΑΣ ΠΛΑΓΙΑΡΙΟΥ
@@ -89,19 +89,19 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=VE3F9KfM7JdCkXjIIg2n
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u16-rs-54d831d571e9@paok-calendar
-DTSTAMP:20261121T205749Z
+DTSTAMP:20261122T120054Z
 DTSTART;TZID=Europe/Athens:20261122T120000
 DTEND;TZID=Europe/Athens:20261122T140000
-SUMMARY:🏀 ΠΑΟΚ – ΑΟ ΑΜΥΝΤΑΣ
+SUMMARY:🏀 ΠΑΟΚ 79-67 ΑΟ ΑΜΥΝΤΑΣ
 LOCATION:ΚΓ ΟΛΥΜΠΙΑΚΟΥ ΧΩΡΙΟΥ
-DESCRIPTION:Gen A Rising Stars U16 – 4η αγωνιστική\nTV: YouTub
- e https://www.youtube.com/watch?v=l8eHThYrGmM&list=PLV_FLK9Iu014&index=6&p
- p=iAQBsAgC
+DESCRIPTION:Gen A Rising Stars U16 – 4η αγωνιστική\nΤελικ
+ ό σκορ: ΠΑΟΚ 79-67 ΑΟ ΑΜΥΝΤΑΣ\nTV: YouTube https://www.y
+ outube.com/watch?v=l8eHThYrGmM&list=PLV_FLK9Iu014&index=6&pp=iAQBsAgC
 URL:https://risingstars.basket.gr/u16/schedule/
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u16-ek-h4kdmQiSTV6ZyVMLycEGsA@paok-calendar
-DTSTAMP:20261121T205749Z
+DTSTAMP:20261122T120054Z
 DTSTART;TZID=Europe/Athens:20261202T200000
 DTEND;TZID=Europe/Athens:20261202T220000
 SUMMARY:🏀 ΠΑΟΚ – Α.Σ. ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ
@@ -112,7 +112,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=h4kdmQiSTV6ZyVMLycEG
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u16-ek-WIzifF1bHGfA24ANe356Eg@paok-calendar
-DTSTAMP:20261121T205749Z
+DTSTAMP:20261122T120054Z
 DTSTART;TZID=Europe/Athens:20261223T200000
 DTEND;TZID=Europe/Athens:20261223T220000
 SUMMARY:🏀 ΠΑΟΚ – ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ ΣΥΚΕΩΝ
@@ -123,7 +123,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=WIzifF1bHGfA24ANe356
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u16-ek-uppSAwrKbAeiXJwz_Hbzig@paok-calendar
-DTSTAMP:20261121T205749Z
+DTSTAMP:20261122T120054Z
 DTSTART;TZID=Europe/Athens:20270113T200000
 DTEND;TZID=Europe/Athens:20270113T220000
 SUMMARY:🏀 ΠΑΟΚ – ΧΑΝΘ
@@ -134,7 +134,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=uppSAwrKbAeiXJwz_Hbz
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u16-ek-1Jz1H0DPmnKBO4usRArwzw@paok-calendar
-DTSTAMP:20261121T205749Z
+DTSTAMP:20261122T120054Z
 DTSTART;TZID=Europe/Athens:20270120T200000
 DTEND;TZID=Europe/Athens:20270120T220000
 SUMMARY:🏀 ΠΑΟΚ – ΒΟΡΕΙΟΣ ΑΣΤΕΡΑΣ
@@ -145,7 +145,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=1Jz1H0DPmnKBO4usRArw
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u16-ek-Iljy2HEijt8HpIy_olpa_g@paok-calendar
-DTSTAMP:20261121T205749Z
+DTSTAMP:20261122T120054Z
 DTSTART;TZID=Europe/Athens:20270127T200000
 DTEND;TZID=Europe/Athens:20270127T220000
 SUMMARY:🏀 ΠΑΟΚ – ΕΛΛΗΝΙΚΗ ΑΚΑΔΗΜΙΑ ΚΑΛΑΘΟΣ
@@ -157,7 +157,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=Iljy2HEijt8HpIy_olpa
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u16-ek-VZ_4FPfvwPb6Ffbg-uifHg@paok-calendar
-DTSTAMP:20261121T205749Z
+DTSTAMP:20261122T120054Z
 DTSTART;TZID=Europe/Athens:20270210T200000
 DTEND;TZID=Europe/Athens:20270210T220000
 SUMMARY:🏀 ΠΑΟΚ – ΗΡΑΚΛΗΣ ΝΓΣΘ 1908

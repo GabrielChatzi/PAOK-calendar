@@ -1,0 +1,115 @@
+{{Use dmy dates|date=October 2023}}
+{{Infobox football club season
+  | club               = [[PAOK FC|PAOK]]
+  | season             = 2010–11
+  | stadium            = [[Toumba Stadium]]
+  | manager            =  [[Makis Chavos]]
+  | mgrtitle           = Manager
+  | chairman           =  [[Theodoros Zagorakis]]
+  | chrtitle           = Chairman
+  | league             = [[2010–11 Super League Greece|Super League]]
+  | league result      = 3rd (4th in regular season)
+  | cup1               = [[2010–11 Greek Football Cup|Greek Cup]]
+  | cup1 result        = Semi-finals
+  | cup2               = [[2010–11 UEFA Champions League|Champions League]]
+  | cup2 result        = Third qualifying round
+  | cup3               = [[2010–11 UEFA Europa League|Europa League]]
+  | cup3 result        = Round of 32
+  | league topscorer   = <br> [[Dimitris Salpingidis]] (6)
+  | season topscorer   = <br> Dimitris Salpingidis (12)
+  | highest attendance =
+  | lowest attendance  =
+| pattern_la1   = _thinblackborder
+| pattern_b1    = _paokfc0910h
+| pattern_ra1   = _thinblackborder
+| pattern_sh1   =
+| pattern_so1   = _blacktop
+| leftarm1      = FFFFFF
+| body1         = FFFFFF
+| rightarm1     = FFFFFF
+| shorts1       = FFFFFF
+| socks1        = FFFFFF
+|pattern_la2=_aok1011h|pattern_b2=_aok1011h|pattern_ra2=_aok1011h|pattern_sh2=|pattern_so2=_whitetop|leftarm2=000000|body2=000000|rightarm2=000000|shorts2=000000|socks2=000000
+|pattern_la3=_thinblackborder|pattern_b3=_vneck|pattern_ra3=_thinblackborder|pattern_sh3=|pattern_so3=_blacktop|leftarm3=FFFFFF|body3=FFFFFF|rightarm3=FFFFFF|shorts3=FFFFFF|socks3=FFFFFF
+  | prevseason = [[2009–10 PAOK FC season|2009–10]]
+  | nextseason = [[2011–12 PAOK FC season|2011–12]]
+}}
+The '''2010–11 season''' was '''[[PAOK FC|PAOK Football Club's]]''' 85th in existence and the club's [[Super League Greece#Seasons in Alpha Ethniki and Super League Greece|52nd consecutive season]] in the top flight of Greek football. The team entered the [[Greek Football Cup]] and also competed in the [[UEFA Champions League]] starting from the [[2010–11 UEFA Champions League#Third qualifying round|third qualifying round]].
+
+== Players ==
+{{Fs start|bg=000000|color=FFFFFF}}
+{{Fs player|no=1|nat=GRE|name=[[Kostas Chalkias]]|pos=GK|}}
+{{Fs player|no=4|nat=GRE|name=[[Sotiris Balafas]]|pos=MF}}
+{{Fs player|no=5|nat=URU|name=[[Pablo Gabriel García|Pablo Garcia]]|pos=MF}}
+{{Fs player|no=6|nat=ESP|name=[[Vitolo (footballer, born 1983)|Victor Vitolo]]|pos=MF}}
+{{Fs player|no=7|nat=Morocco|name=[[Nabil El Zhar]]|pos=MF}}
+{{Fs player|no=8|nat=ITA|name=[[Bruno Cirillo]]|pos=DF}}
+{{Fs player|no=9|nat=GRE|name=[[Dimitris Salpingidis]]|pos=FW}}
+{{Fs player|no=11|nat=Bosnia and Herzegovina|name=[[Zlatan Muslimovic]]|pos=FW}}
+{{Fs player|no=13|nat=GRE|name=[[Stelios Malezas]]|pos=DF}}
+{{Fs player|no=14|nat=GRE|name=[[Athanasios Papazoglou]]|pos=FW}}
+{{fs player|no=15|nat=CHI|name=[[Pablo Contreras]]|pos=DF}}
+{{Fs player|no=16|nat=BRA|name=[[Lino (footballer, born 1977)|Alves Lino]]|pos=DF}}
+{{Fs player|no=18|nat=GRE|name=[[Giorgos Fotakis]]|pos=MF}}
+{{Fs player|no=19|nat=GRE|name=[[Vasilios Koutsianikoulis]]|pos=MF}}
+{{Fs mid|bg=000000|color=FFFFFF}}
+{{Fs player|no=20|nat=POR|name=[[Vieirinha]]|pos=MF}}
+{{Fs player|no=21|nat=SRB|name=[[Vladimir Ivić]]|pos=MF}}
+{{Fs player|no=22|nat=GRE|name=[[Asterios Giakoumis]]|pos=GK}}
+{{Fs player|no=23|pos=DF |nat=GRE |name=[[Eleftherios Sakellariou|Lefteris Sakellariou]]}}
+{{Fs player|no=27|nat=POL|name=[[Mirosław Sznaucner]]|pos=DF}}
+{{Fs player|no=28|nat=GRE|name=[[Stavros Tsoukalas]]|pos=MF}}
+{{Fs player|no=30|nat=GRE|name=[[Fotis Koutzavasilis]]|pos=GK}}
+{{Fs player|no=31|nat=ARG|name=[[Lucio Filomeno]]|pos=FW}}
+{{Fs player|no=33|nat=GRE|name=[[Stefanos Athanasiadis]]|pos=FW}}
+{{Fs player|no=36|nat=ITA|name=[[Mirko Savini]]|pos=DF}}
+{{Fs player|no=37|nat=GRE|name=[[Vangelis Georgiou]]|pos=DF}}
+{{Fs player|no=77|nat=BRA|name=[[Etto]]|pos=DF}}
+{{Fs player|no=85|nat=COL|name=[[Diego Arias (Colombian footballer)|Diego Arias]]|pos=MF}}
+{{Fs player|no=91|nat=CRO|name=[[Dario Krešić]]|pos=GK}}
+{{Fs end}}
+
+'For recent transfers, see [[List of Greek football transfers summer 2010]]'
+
+===Out on loan===
+{{Fs start}}
+{{Fs player|no=|nat=GHA|pos=MF|name=[[Mohammed Abubakari]]|other=on loan to [[Panseraikos]]}}
+{{Fs player|no=|nat=Greece|pos=MF|name=[[Hussein Mumin]]|other=on loan to [[Panetolikos F.C.|Panetolikos]]}}
+{{Fs player|no=|nat=GRE|pos=GK|name=[[Panagiotis Glykos]]|other=on loan to [[Agrotikos Asteras F.C.]]}}
+{{Fs player|no=|nat=GRE|pos=DF|name=[[Aristotelis Karasalidis]]|other=on loan to [[Anagennisi Giannitsa F.C.]]}}
+{{Fs player|no=|nat=GRE|pos=MF|name=[[Grigoris Efthimiadis]]|other=on loan to [[Anagennisi Giannitsa F.C.]]}}
+{{Fs player|no=|nat=GRE|pos=DF|name=[[Panagiotis Kourdakis]]|other=on loan to [[Anagennisi Epanomi F.C.]]}}
+{{Fs mid}}
+{{Fs player|no=|nat=GRE|pos=MF|name=[[Nikos Astaris]]|other=on loan to [[Anagennisi Epanomi F.C.]]}}
+{{Fs player|no=|nat=GRE|pos=MF|name=[[Giorgos Paralikis]]|other=on loan to [[Anagennisi Epanomi F.C.]]}}
+{{Fs player|no=|nat=GRE|pos=DF|name=[[Aleksandros Apostolopoulos]]|other=on loan to [[APS Zakynthos]]}}
+{{Fs player|no=|nat=GRE|pos=MF|name=[[Paliouras Konstantinos]]|other=on loan to [[APS Zakynthos]]}}
+{{Fs player|no=|nat=GRE|pos=MF|name=[[Nikos Astaris]]|other=on loan to [[Makedonikos F.C.]]}}
+{{Fs end}}
+
+===International players===
+{|
+|- style='vertical-align:top'
+||
+||
+*{{flagicon|GRE}} [[Kostas Chalkias]]
+*{{flagicon|GRE}} [[Dimitris Salpingidis]]
+*{{flagicon|GRE}} [[Stelios Malezas]]
+*{{flagicon|GRE}} [[Vasilios Koutsianikoulis]]
+*{{flagicon|GRE}} [[Giorgos Fotakis]]
+||
+*{{flagicon|Tunisia}} [[Anis Boussaidi]]
+*{{flagicon|Bosnia and Herzegovina}} [[Zlatan Muslimovic]]
+*{{flagicon|CHI}} [[Pablo Contreras]]
+*{{flagicon|ANG}} [[Francisco Zuela]]
+*{{flagicon|POR}} [[Vieirinha]]
+*{{flagicon|Morocco}} [[Nabil El Zhar]]
+||
+|}
+
+=== Players in and out ===
+
+==== In ====
+{{fb in2 header}}
+
+{{fb in2 player |tc=GRE |bg=  |type=Transfer |p=[[Dimitris 

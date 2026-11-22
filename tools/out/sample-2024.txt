@@ -1,0 +1,201 @@
+{{Football box collapsible
+|round = [[Exhibition game#Association football|Friendly]]
+|date = Wednesday, 3 July 2024
+|time = 19:00 [[Eastern European Summer Time|EEST]], [[UTC+03:00]]
+|team1 = PAOK
+|score = 2–1
+|report = 
+|team2 = [[AEK Larnaca FC|AEK Larnaca]]
+|goals1 =
+* [[Stefan Schwab|Schwab]] {{goal|28}}
+* [[Thomas Murg|Murg]] {{goal|39}} 
+|goals2 =
+* {{goal|54}}
+|stadium = Multifunctionale accomodatie "De Kerkebos"
+|location = [[Horst aan de Maas|Swolgen]] 
+|attendance = 
+|referee = 
+|result = W
+}}
+{{Footballbox collapsible
+|round = [[Exhibition game#Association football|Friendly]]
+|date = Saturday, 6 July 2024
+|time = 17:00 [[Eastern European Summer Time|EEST]], [[UTC+03:00]]
+|team1 = PAOK
+|score = 0–1
+|report = 
+|team2 = [[Hibernian F.C.|Hibernian]]
+|goals1 = 
+|goals2 = {{goal|5}}
+|stadium = Multifunctionale accomodatie "De Kerkebos"
+|location = [[Horst aan de Maas|Swolgen]] 
+|attendance =
+|referee = 
+|result = L
+}}
+{{Football box collapsible
+|round = [[Exhibition game#Association football|Friendly]]
+|date = Wednesday, 10 July 2024
+|time = 19:00 [[Eastern European Summer Time|EEST]], [[UTC+03:00]]
+|team1 = PAOK 
+|score = 1–3
+|report = 
+|team2 = [[K.R.C. Genk|Genk]]
+|goals1 = [[Abdul Rahman Baba|Baba]] {{goal|49}}
+|goals2 = {{goal|6}}, {{goal|10}}, {{goal|85}}
+|stadium = Sportpark Ter Horst
+|location = [[Horst aan de Maas|Horst]]
+|attendance = 
+|referee =
+|result = L
+|note = Two-hour game consisting of four 30 minute quarters
+}}
+{{Footballbox collapsible
+|round = [[Exhibition game#Association football|Friendly]]
+|date = Saturday, 13 July 2024
+|time = 15:00 [[Eastern European Summer Time|EEST]], [[UTC+03:00]]
+|team1 = PAOK 
+|score = 1–2
+|report = 
+|team2 = [[Royale Union Saint-Gilloise|Union Saint-Gilloise]]
+|goals1 = [[Stefan Schwab|Schwab]] {{goal|27|pen.}}
+|goals2 = {{goal|50}}, {{goal|66}}
+|stadium = Sportpark Ter Horst
+|location = [[Horst aan de Maas|Horst]]
+|attendance =
+|referee = 
+|result = L
+}}
+{{Footballbox collapsible
+|round = [[Exhibition game#Association football|Friendly]]
+|date = Saturday, 13 July 2024
+|time = 20:00 [[Eastern European Summer Time|EEST]], [[UTC+03:00]]
+|team1 = PAOK 
+|score = 1–2
+|report = 
+|team2 = [[SBV Vitesse|Vitesse]]
+|goals1 = [[Mbwana Samatta|Samatta]] {{goal|11}}
+|goals2 = {{goal|51}}, {{goal|54}}
+|stadium = Sportpark RKSV Driel 
+|location = Driel
+|attendance =
+|referee = 
+|result = L
+}}
+
+==Competitions==
+===Overview===
+
+{{Fb overview2
+|c=4
+|c1=[[2024–25 Super League Greece|Super League Greece]] |fm1= 17 August 2024 |lm1=  11 May 2025 |sr1=Matchday 1 |fp1= |w1=18 |d1=4 |l1=10 |f1=62 |a1=37
+|c2=[[2024–25 Greek Football Cup|Greek Football Cup]]   |fm2= 30 October 2024 |lm2= 9 January 2025 |sr2= Round of 16 |fp2= |w2=2 |d2=1 |l2=1 |f2=11 |a2=3
+|c3=[[2024–25 UEFA Champions League|Champions League]] |fm3= 24 July 2024 |lm3= 13 August 2024 |sr3=Second qualifying round |fp3= |w3=2 |d3=1 |l3=1 |f3=9 |a3=8
+|c4=[[2024–25 UEFA Europa League|Europa League]] |fm4= 22 August 2024 |lm4= 20 February 2025 |sr4=Play-off round |fp4= |w4=5 |d4=1 |l4=6 |f4=19 |a4=14
+|u=
+|s=[https://www.soccerway.com/team/paok/Kry6HxA9/ Soccerway]
+|d=|ga1=|ga4=|ga=|Ga4=|gd4=}}
+
+===Managerial statistics===
+
+{| class="wikitable" style="text-align: left"
+|+ 
+|-
+!rowspan=2|Head coach
+!rowspan=2|From
+!rowspan=2|To
+!colspan=8|Record
+|-
+!{{Tooltip|G|Games managed}}
+!{{Tooltip|W|Games won}}
+!{{Tooltip|D|Games drawn}}
+!{{Tooltip|L|Games lost}}
+!{{Tooltip|GF|Goals for}}
+!{{Tooltip|GA|Goals against}}
+!{{Tooltip|GD|Goal difference}}
+!{{Tooltip|Win %|Winning percentage}}
+|-
+| {{flagicon|ROM}} [[Răzvan Lucescu]]
+| 1 July 2024
+| Present
+{{WDL||27|7|18|for=101|against=62|diff=yes}}
+|}
+Last updated: 11 May 2025
+
+===Super League Greece===
+{{main|2024–25 Super League Greece}}
+
+====League table====
+{{2024–25 Super League Greece table|showteam=PAOK}}
+
+====Matches====
+
+{{footballbox collapsible
+|round = 1
+|date = Saturday, 17 August 2024
+|time = 20:00 [[Eastern European Time|EEST]], [[UTC+03:00]]
+|team1 = [[PAOK FC|PAOK]] 
+|score = 3–2
+|report = https://www.slgr.gr/el/game/2425007/
+|team2 = [[Panserraikos F.C.|Panserraikos]]
+|goals1 = 
+* [[Stefan Schwab|Schwab]] {{goal|35|pen.}},  {{goal|60|pen.}}
+* [[Magomed Ozdoyev|Ozdoyev]] {{yel|45}}, {{goal|45+3}}
+|goals2 = {{goal|31|pen.}}, {{goal|49}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 7,668
+|referee = Vasilis Fotias ([[Pella Football Clubs Association|Pella]])
+|result = W
+|motm = 
+}}
+{{footballbox collapsible
+|round = 2
+|date = Sunday, 25 August 2025
+|time = 20:30 [[Eastern European Time|EEST]], [[UTC+03:00]] 
+|team1 = PAOK
+|score = 2–0
+|report = https://www.slgr.gr/el/game/2425014/
+|team2 =  [[Panetolikos F.C.|Panetolikos]]
+|goals1 = 
+* [[Giannis Michailidis|Michailidis]] {{yel|38}}
+* [[Joan Sastre (footballer)|Sastre]] {{goal|51}}
+* [[Mady Camara|Camara]] {{yel|63}}
+* [[Tarik Tissoudali|Tissoudali]] {{goal|79}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 10,171
+|referee = Christos Vergetis ([[Arcadia Football Clubs Association|Arcardia]])
+|result = W
+|motm = 
+}}
+{{footballbox collapsible
+|round = 3
+|date = Sunday, 1 September 2024
+|time = 20:30 [[Eastern European Time|EEST]], [[UTC+03:00]] 
+|team1 = [[Atromitos F.C.|Atromitos]] 
+|score = 1–2
+|report = https://www.slgr.gr/el/game/2425017/
+|team2 = PAOK
+|goals1 = {{goal|85|pen.}}
+|goals2 = 
+* {{goal|45}}, {{yel|85}} [[Andrija Živković|A. Živković]]
+* {{yel|69}} [[Baba Rahman|Baba]]
+* {{goal|90}} [[Mady Camara|Camara]] 
+* {{yel|90+5}} [[Tarik Tissoudali|Tissoudali]] 
+|stadium = [[Peristeri Stadium]]
+|location = [[Peristeri]]
+|attendance = 2,573
+|referee = Spiridon Zabalas ([[Epirus Football Clubs Association|Epirus]])
+|result = W
+|motm =
+}}
+{{footballbox collapsible
+|round = [[Panathinaikos-PAOK rivalry|4]]
+|date = Sunday, 15 September 2024
+|time = 20:30 [[Eastern European Time|EEST]], [[UTC+03:00]] 
+|team1 = PAOK
+|score = [[Panathinaikos-PAOK rivalry|0–0]]
+|report = https://www.slgr.gr/el/game/2425027/
+|team2 =  [[Panathinaikos F.C.|Pa

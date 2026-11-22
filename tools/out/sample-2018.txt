@@ -1,0 +1,103 @@
+{{Infobox football club season
+| club = [[PAOK FC|PAOK]]
+| image = Paok-spartak (16).jpg
+| image_size = 320px
+| season = 2018–19
+| stadium = [[Toumba Stadium]]
+| manager = [[Răzvan Lucescu]]
+| chrtitle = President
+| chairman = [[Ivan Savvidis]]
+| league = [[2018–19 Super League Greece|Super League]]
+| league result = [[2018–19 Super League Greece#League table|'''1st''']]
+| cup1 = [[2018–19 Greek Football Cup|Greek Cup]]
+| cup1 result = [[2018–19 Greek Football Cup#Final|'''Winners''']]
+| cup2 = [[2018–19 UEFA Champions League|UEFA Champions League]]
+| cup2 result = [[2018–19 UEFA Champions League#Play-off round|Play-off round]]
+| cup3 = [[2018–19 UEFA Europa League|UEFA Europa League]]
+| cup3 result = [[2018–19 UEFA Europa League#Group L|Group stage]]
+| league topscorer = <br>[[Aleksandar Prijović]] (9)
+| season topscorer = <br>Aleksandar Prijović (18)
+| highest attendance = 26,725 vs [[S.L. Benfica|Benfica]] (29 August 2018)
+| lowest attendance = 10,837 vs [[PAS Giannina F.C.|PAS Giannina]] (30 January 2019)
+| average attendance = 20,606
+| pattern_la1 = _paok1819h
+| pattern_b1 = _paok1819h
+| pattern_ra1 = _paok1819h
+| pattern_sh1 = _paok1819h
+| pattern_so1 = _macronfootballgfcajaccio1819a
+| leftarm1 = FFFFFF
+| body1 = FFFFFF
+| rightarm1 = FFFFFF
+| shorts1 = 000000
+| socks1 = FFFFFF
+| pattern_la2 = _paok1819a
+| pattern_b2 = _paok1819a
+| pattern_ra2 = _paok1819a
+| pattern_sh2 = _paok1819a
+| pattern_so2 = _paok1819a
+| leftarm2 = 515460
+| body2 = 515460
+| rightarm2 = 515460
+| shorts2 = 515460
+| socks2 = 7F7F7F
+| pattern_la3 = _paok1819t
+| pattern_b3 = _paok1819t
+| pattern_ra3 = _paok1819t
+| pattern_sh3 = 
+| pattern_so3 = 
+| leftarm3 = f93328
+| body3 = f93328
+| rightarm3 = f93328
+| shorts3 = f93328
+| socks3 = f93328
+| prevseason = [[2017–18 PAOK FC season|2017–18]]
+| nextseason = [[2019–20 PAOK FC season|2019–20]]
+}}
+The '''2018–19 season''' was '''[[PAOK FC|PAOK Football Club's]]''' 93rd in existence and the club's [[Super League Greece#Seasons in Alpha Ethniki and Super League Greece|60th consecutive season]] in the top flight of Greek football. The team won the [[2018–19 Super League Greece|Super League]] [[List of unbeaten football club seasons|unbeaten]], defended their [[Greek Football Cup]] title won in 2018, and also competed in the [[UEFA Champions League]] and [[UEFA Europa League]].
+
+==Coaching staff==
+
+[[File:Răzvan Lucescu.jpg|thumb|This was [[Răzvan Lucescu]]'s second season with PAOK.]]
+{{Fb cs header}}
+{{Fb cs staff |bg= |p=Head coach	 |s={{flagicon|ROM}} [[Răzvan Lucescu]] }}
+{{Fb cs staff |bg=y |p=Assistant manager |s={{flagicon|ITA}} Diego Longo }}
+{{Fb cs staff |bg= |p=Assistant manager |s={{flagicon|ITA}} [[Cristiano Bacci]] }}
+{{Fb cs staff |bg=y |p=Team Manager |s={{flagicon|GRE}} [[Pantelis Konstantinidis]] }}
+{{Fb cs staff |bg= |p=Goalkeeping coach |s={{flagicon|GRE}} Giorgos Skiatitis }}
+{{Fb cs staff |bg=y |p=Head Gymnast Rehabilitation |s={{flagicon|GRE}} Georgios Tsonakas }}
+{{Fb cs staff |bg= |p=Gymnast Rehabilitation |s={{flagicon|GRE}} Vasilios Kanaras }}
+{{Fb cs staff |bg=y |p=Fitness Coach |s={{flagicon|ITA}} Matteo Spatafora }}
+{{Fb cs staff |bg= |p=Data Analyst (Vis-Track) |s={{flagicon|GRE}} Kyriakos Tsitsiridis }}
+{{Fb cs staff |bg=y |p=Opponent Analysis |s={{flagicon|GRE}} Ioannis Thomaidis }}
+{{Fb cs staff |bg= |p=Head of Medical Services |s={{flagicon|GRE}} Emmanouil Papakostas }}
+{{Fb cs staff |bg=y |p=Club's Doctor |s={{flagicon|GRE}} Kostas Tziantzis }}
+{{Fb cs staff |bg= |p=Exercise Physiology |s={{flagicon|GRE}} Giorgos Ziogas }}
+{{Fb cs staff |bg=y |p=Nutritionist |s={{flagicon|GRE}} Ioanna Paspala }}
+{{Fb cs staff |bg= |p=Physiotherapist |s={{flagicon|GRE}} Petros Nikolakoudis }}
+{{Fb cs staff |bg=y |p=Physiotherapist |s={{flagicon|GRE}} Nikolaos Tsirelas }}
+{{Fb cs staff |bg= |p=Physiotherapist |s={{flagicon|GRE}} Athanasios Kapoulas }}
+{{Fb cs staff |bg=y |p=Physiotherapist |s={{flagicon|GRE}} Nikolaos Gagalis }}
+{{Fb cs staff |bg= |p=Physiotherapist |s={{flagicon|GRE}} Nikolaos Mouratidis }}
+{{Fb cs staff |bg=y |p=Academy's Technical Director |s={{flagicon|ESP}} Daniel Bigas Alsina }}
+{{Fb cs footer|u=18 August 2017 |s=[http://www.paokfc.gr/en/a-omada/first-team-2-en/technical-staff-a-team-en/ paokfc.gr] |date=June 2017}}
+
+===Other information===
+[[File:Paok-spartak (2).jpg|thumb|Toumba Stadium]]
+{{fb oi header}}
+{{Fb oi information |bg= |id=Owner |i=[[Ivan Savvidis|Dimera Group Limited]]}}
+{{Fb oi information |bg= |id=Chairman |i={{flagicon|RUS}} {{flagicon|GRE}} [[Ivan Savvidis]]}}
+{{Fb oi information |bg= |id=Vice President & CEO|i={{Flagicon|GRE}} Chrisostomos Gagatsis}}
+{{Fb oi information |bg= |id=Technical Director|i={{flagicon|POR}} Mário Branco<ref>{{cite news|url=https://www.paokfc.gr/en/news/20180823-dieuthintis-anaptuxis-podosfairikou-tmimatos-o-mario-branco/|title=Mario Branco takes over as Head of Football Development|publisher=paokfc.gr|date=23 August 2018|accessdate=13 June 2019}}</ref>}}
+|-
+{{Fb oi information |bg= |id=Members |i={{flagicon|RUS}} {{flagicon|GRE}} Giorgos Savvidis<br />{{flagicon|RUS}} Maria Goncharova<br />{{flagicon|RUS}} Artur Davidyan<br />{{flagicon|GRE}} Dimokratis Papadopoulos<br />{{flagicon|GRE}} Ilias Gerontidis}}
+{{Fb oi information |bg= |id=Consultant of Football|i={{flagicon|GRE}} [[Giorgos Koudas]]}}
+{{fb oi information |bg=y |id={{Fb oi ground}} |i={{Fb oi ground|g=[[Toumba Stadium]]|c=29,000|d=106×71 metres}} }}
+{{fb oi information |bg=y |id=Training Ground |i=[[PAOK FC Sport Center|PAOK Sport Center]]<ref>{{cite web|url=http://www.paokfc.gr/en/the-club/facilities-en/training-center/|title=Nea Mesimvria Sports Center|publisher=paokfc.gr}}</ref>}}
+{{Fb oi footer|s=[http://www.paokfc.gr/en/the-club/administration/ paokfc.gr]|date=June 2017}}
+
+==Players==
+
+===Squad information===
+{{fb si header |age=y}}
+{{fb si player |bg=y |n=1 |pos=GK |nb=ARG |p=[[Rodrigo Rey]] |eu=y |age={{Age|1991|03|08}} |s=2017 |a=18 |g=0 |e=2021 |f={{ntsh|1.5}}€1.5M |vc= |notes=Second nationality: Italy }}
+{{fb si player |

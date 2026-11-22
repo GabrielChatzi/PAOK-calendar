@@ -1,0 +1,227 @@
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 2 August 1985
+|time = 
+|team1 = SU Vortuna Bad Leonfelden
+|score = 3–12
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 =  
+|goals2 = [[Michalis Iordanidis|Iordanidis]] {{goal}} {{goal}} {{goal}} <br> [[:el:Νίκος Λιάκος|Liakos]] {{goal}} {{goal}} {{goal}} <br> [[Sotiris Mavromatis|Mavromatis]] {{goal}} {{goal}} <br> [[Kostas Orfanos|Orfanos]] {{goal}} {{goal}} <br> [[Kostas Malioufas|Malioufas]] {{goal}} <br> [[Aris Karasavvidis|Karasavvidis]] {{goal}}    
+|stadium = 
+|location = [[Austria]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 3 August 1985
+|time = 
+|team1 = [[Grazer AK]]
+|score = 5–3
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = {{goal|30}} <br> {{goal|38}} <br> {{goal|48}} <br> {{goal|53}} <br> {{goal|55}}  
+|goals2 = [[Rade Paprica|Paprica]] {{goal|23}} <br> [[Aris Karasavvidis|Karasavvidis]] {{goal|63||67}}  
+|stadium = 
+|location = [[Austria]]
+|attendance = 
+|referee = 
+|result = L
+|note = Teams played with 9 players instead of 11 and without the offside rule.
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 5 August 1985
+|time = 
+|team1 = [[SK Rapid Wien|Rapid Wien]]
+|score = 3–4
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = {{goal|1}} <br> [[Hans Krankl|Krankl]] {{goal|30||87}}
+|goals2 = [[Aris Karasavvidis|Karasavvidis]] {{goal|34}} <br> [[Kostas Orfanos|Orfanos]] {{goal|41}} <br> [[Georgios Kostikos (footballer, born 1958)|Kostikos]] {{goal|48}} <br> [[Georgios Skartados|Skartados]] {{goal|64|pen.}}  
+|stadium = 
+|location = [[Austria]]
+|attendance = 
+|referee = 
+|result = W
+|note = Teams played with 9 players instead of 11 and without the offside rule.
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 8 August 1985
+|time = 
+|team1 = [[FC Kufstein]]
+|score = 1–2
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = {{goal|20}} 
+|goals2 = [[Vassilis Vasilakos|Vasilakos]] {{goal|40}} <br> [[Michalis Iordanidis|Iordanidis]] {{goal|80}}    
+|stadium = 
+|location = [[Austria]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 10 August 1985
+|time = 
+|team1 = SK Jenbach
+|score = 0–7
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = {{goal|20}} 
+|goals2 = [[Georgios Skartados|Skartados]] {{goal|10}} <br> [[Vasilios Vasilakos|Vasilakos]] {{goal|21}} <br> [[Kostas Orfanos|Orfanos]] {{goal|41}} <br> [[Aris Karasavvidis|Karasavvidis]] {{goal|42}} <br> [[Michalis Iordanidis|Iordanidis]] {{goal|55}} <br> [[Rade Paprica|Paprica]] {{goal|56||62}}    
+|stadium = 
+|location = [[Austria]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 11 August 1985
+|time = 
+|team1 = SpG Wattens
+|score = 0–3
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = {{goal|20}} 
+|goals2 = [[Kostas Orfanos|Orfanos]] {{goal|42}} <br> [[Vassilis Vasilakos|Vasilakos]] {{goal|44}} <br> [[Georgios Skartados|Skartados]] {{goal|83}}    
+|stadium = 
+|location = [[Austria]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 18 August 1985
+|time = 
+|team1 = [[Athlitiki Enosi Larissa F.C.|AEL]]
+|score = 1–0
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Michalis Ziogas|Ziogas]] {{goal|31}}    
+|goals2 = 
+|stadium = [[Alcazar Stadium]]
+|location = [[Larissa]]
+|attendance = 
+|referee = 
+|result = L
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 19 August 1985
+|time = 
+|team1 = [[Iraklis F.C. (Thessaloniki)|Iraklis]]
+|score = 1–1
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Vasilis Hatzipanagis|Hatzipanagis]] {{goal|89}}    
+|goals2 = [[Kostas Orfanos|Orfanos]] {{goal|84}}
+|stadium = [[Kaftanzoglio Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = 
+|result = D
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 21 August 1985
+|time = 
+|team1 = [[Kavala F.C.|Kavala]]
+|score = 4–1
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Nikos Karageorgiou|Karageorgiou]] {{goal|11|pen.|59}} <br> Vrynios {{goal|27}} <br> Strantzalis {{goal|56}}    
+|goals2 = [[Michalis Iordanidis|Iordanidis]] {{goal|21}}
+|stadium = [[Kavala Stadium]]
+|location = [[Kavala]]
+|attendance = 
+|referee = Kapetandreou
+|result = L
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 23 August 1985
+|time = 
+|team1 = [[Aris Thessaloniki F.C.|Aris]]
+|score = 1–0
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Anagnostou {{goal|23}}    
+|goals2 = 
+|stadium = [[Kaftanzoglio Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = Zakestidis
+|result = L
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 28 August 1985
+|time = 
+|team1 = [[Panathinaikos F.C.|Panathinaikos]]
+|score = 2–0
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Kostas Mavridis|Mavridis]] {{goal|73}} <br> [[Dimitris Saravakos|Saravakos]] {{goal|82}}    
+|goals2 = 
+|stadium = [[Athens Olympic Stadium]]
+|location = [[Athens]]
+|attendance = 
+|referee = Andreou
+|result = L
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 31 August 1985
+|time = 
+|team1 = [[Makedonikos F.C.|Makedonikos]]
+|score = 1–1
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Zarkos {{goal|23}}    
+|goals2 = [[Michalis Iordanidis|Iordanidis]] {{goal|20}}
+|stadium = [[Makedonikos Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = 
+|result = D
+}}
+
+==Competitions==
+
+===Overview===
+{{Fb overview
+|c=3
+|c1=[[1985–86 Alpha Ethniki|Alpha Ethniki]] |w1=10 |d1=7 |l1=13 |f1=33 |a1=38
+|c2=[[1985–86 Greek Football Cup|Greek Cup]] |w2=0 |d2=2 |l2=0 |f2=1 |a2=1
+|c3=[[1985–86 European Cup|European Cup]] |w3=0 |d3=0 |l3=2 |f3=2 |a3=5
+}}
+
+===Managerial statistics===
+
+{| class="wikitable" style="text-align: "
+|+ 
+|-
+!rowspan=2|Head coach
+!rowspan=2|From
+!rowspan=2|To
+!colspan=8|Record
+|-
+!{{Tooltip|G|Games managed}}

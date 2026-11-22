@@ -1,0 +1,180 @@
+{{footballbox collapsible
+|round = 1
+|date = 17 September 2000
+|time = 21:15 [[Eastern European Time|EET]]
+|team1 = [[Kalamata F.C.|Kalamata]]	
+|score =0–0 
+|report =
+|team2 = [[PAOK FC|PAOK]]	
+|goals1 = 
+|goals2 = 
+|stadium = [[Kalamata Metropolitan Stadium]]
+|location   = [[Kalamata]]
+|attendance = 2,388
+|referee = Borovilos ([[Arcadia Football Clubs Association|Arcadia]])
+|result =D
+}}
+
+{{footballbox collapsible
+|round = 2
+|date = 24 September 2000
+|time = 19:30 [[Eastern European Time|EET]]
+|team1 = [[PAS Giannina F.C.|PAS Giannina]]
+|score =1–3
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Konstantinos Tsalikis|Tsalikis]] {{goal|5}}
+|goals2 =  [[Koffi Amponsah|Amponsah]]  {{goal|24}}<br> [[Ioannis Okkas|Okkas]] {{goal|38}}<br> [[Omari Tetradze|Tetradze]] {{goal|87}}
+|stadium = [[Kostas Davourlis Stadium]]
+|location   = [[Patras]]
+|attendance = 2,238
+|referee = Dovas ([[Athens Football Clubs Association|Athens]])
+|result =W
+}}
+
+{{footballbox collapsible
+|round = 3
+|date = 2 October 2000
+|time = 19:00 [[Eastern European Time|EET]]
+|team1 =  [[PAOK FC|PAOK]]
+|score =  1–1
+|report = 
+|team2 = [[Panionios F.C.|Panionios]]
+|goals1 = [[Omari Tetradze|Tetradze]] {{goal|19}}
+|goals2 = [[Stelios Chasiotis|Chasiotis]] {{goal|67}}
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 6,455
+|referee = Borovilos ([[Arcadia Football Clubs Association|Arcadia]])
+|result =D
+}}
+
+{{footballbox collapsible
+|round = 4
+|date = 1 November 2000
+|time = 17:00 [[Eastern European Time|EET]]
+|team1 = [[Aris Thessaloniki F.C.|Aris]]
+|score = 4–0
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Thomas Kyparissis|Kyparissis]] {{goal|39}}<br>[[Giorgos Koutsis|Koutsis]] {{goal|45+1}}<br>[[Giorgos Koltsidas|Koltsidas]] {{goal|49}}<br>[[Angelos Charisteas|Charisteas]] {{goal|71}}
+|goals2 = [[Ifeanyi Udeze|Udeze]] {{sent off|0|43}}
+|stadium = [[Kleanthis Vikelidis Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 12,890 
+|referee = Kasnaferis ([[Athens Football Clubs Association|Athens]])
+|result =L
+}}
+
+{{footballbox collapsible
+|round = 5
+|date = 5 November 2000
+|time = 17:00 [[Eastern European Time|EET]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 4–1
+|report = 
+|team2 = [[OFI Crete F.C.|OFI]]
+|goals1 = [[Nikolaos Frousos|Frousos]] {{goal|31|pen.}} <br> [[Ioannis Okkas|Okkas]] {{goal|39}}<br>[[Dimitris Nalitzis|Nalitzis]] {{goal|88}}<br>[[Panagiotis Engomitis|Engomitis]] {{goal|90}}
+|goals2 = [[Carlos Mauro Pereira da Silva|Mauro]] {{goal|71}} 
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 6,491
+|referee = Papapanayiotou ([[Piraeus Football Clubs Association|Piraeus]])
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 6
+|date = 12 November 2000
+|time = 17:00 [[Eastern European Time|EET]]
+|team1 = [[Paniliakos F.C.|Paniliakos]]
+|score = 1–1
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Martín Mandra|Mandra]] {{goal|28|pen.}}
+|goals2 = [[Stelios Venetidis|Venetidis]] {{goal|72}}
+|stadium = [[Pyrgos Stadium|Pirgos Municipal Stadium]]
+|location   = [[Pyrgos, Elis]]
+|attendance = 1,149
+|referee = Finokaliotis ([[Athens Football Clubs Association|Athens]])
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 7
+|date = 18 November 2000
+|time = 19:00 [[Eastern European Time|EET]]
+|team1 = [[PAOK FC|PAOK]]
+|score =2–2
+|report =
+|team2 = [[Panathinaikos F.C.|Panathinaikos]]	
+|goals1 = [[Dimitris Nalitzis|Nalitzis]] {{goal|11}}<br>[[Loukas Karadimos|Karadimos]] {{goal|25}}
+|goals2 = [[Goran Vlaović|Vlaović]] {{goal|57}} <br> [[Igor Sypniewski|Sypniewski]] {{goal|78}}
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 12,978
+|referee = Nikou ([[Imathia Football Clubs Association|Imathia]])
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 8
+|date = 27 November 2000
+|time = 18:00 [[Eastern European Time|EET]]
+|team1 = [[PAOK FC|PAOK]]
+|score =2–4
+|report = 
+|team2 = [[Olympiacos F.C.|Olympiacos]]
+|goals1 = [[Georgios Georgiadis (footballer, born 1972)|Georgiadis]] {{sent off|2|11|39}} <br>[[Dimitris Nalitzis|Nalitzis]] {{goal|56}}<br>[[Nikolaos Frousos|Frousos]] {{goal|68}}
+|goals2 = [[Grigoris Georgatos|Georgatos]] {{goal|32}} <br>[[Alexis Alexandris|Alexandris]] {{goal|66}} <br>[[Predrag Đorđević|Đorđević]] {{goal|75||90+3}}
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 5,723
+|referee = Kasnaferis ([[Athens Football Clubs Association|Athens]])
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 9
+|date = 3 December 2000
+|time = 17:00 [[Eastern European Time|EET]]
+|team1 = [[Xanthi F.C.|Xanthi]]
+|score =0–2
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = 
+|goals2 = [[Ioannis Okkas|Okkas]] {{goal|68}} <br> [[Nikolaos Frousos|Frousos]] {{goal|81}}
+|stadium = [[Xanthi Ground]]
+|location   = [[Xanthi]]
+|attendance = 3,666
+|referee = Papilias ([[Piraeus Football Clubs Association|Piraeus]])
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 10
+|date = 10 December 2000
+|time = 19:00 [[Eastern European Time|EET]]
+|team1 = [[PAOK FC|PAOK]]
+|score =  4–2
+|report =
+|team2 = [[Iraklis F.C. (Thessaloniki)|Iraklis]]
+|goals1 = [[Anastasios Katsabis|Katsabis]] {{goal|10}}<br>[[Nikolaos Frousos|Frousos]] {{goal|45+3|pen.}}<br>[[Pantelis Kafes|Kafes]] {{goal|48}}<br>[[Pantelis Konstantinidis|Konstantinidis]] {{goal|51}}
+|goals2 = [[Antonis Sapountzis|Sapountzis]] {{goal|28}} <br> [[Michalis Konstantinou|Konstantinou]] {{goal|60}}
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 6,492
+|referee = Borovilos ([[Arcadia Football Clubs Association|Arcadia]])
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 11
+|date = 17 December 2000
+|time = 17:00 [[Eastern European Time|EET]]
+|team1 =[[Athinaikos F.C.|Athinaikos]]
+|score =3–4 
+|report = 
+|team2 = [[PAOK FC|PAOK]] 
+|goals1 = [[Fangio Buyse|Buyse]] {{goal|8|pen.}}<br>[[Giorgos Papandreou|Papandreou]] {{goal|76|pen.|87}}
+|goals2 = [[Pantelis Konstantinidis|Konstantinidis]] {{goal|4||6}} <br> [[Nikolaos Frousos|Frousos]] {{goal|40|pen.}}<br> [[Ioannis Okkas|Okkas]] {{goal|83

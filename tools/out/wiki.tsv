@@ -8,60 +8,60 @@
 1966	MISSING
 1967	MISSING
 1968	31952	boxes=46 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'footballbox collapsible']	league=''5th''	cup=''Quarter-finals''
-1969	ERR HTTP Error 429: Too Many Requests
-1970	ERR HTTP Error 429: Too Many Requests
-1971	ERR HTTP Error 429: Too Many Requests
-1972	ERR HTTP Error 429: Too Many Requests
-1973	ERR HTTP Error 429: Too Many Requests
-1974	ERR HTTP Error 429: Too Many Requests
-1975	ERR HTTP Error 429: Too Many Requests
-1976	ERR HTTP Error 429: Too Many Requests
-1977	ERR HTTP Error 429: Too Many Requests
-1978	ERR HTTP Error 429: Too Many Requests
-1979	ERR HTTP Error 429: Too Many Requests
-1980	ERR HTTP Error 429: Too Many Requests
-1981	ERR HTTP Error 429: Too Many Requests
-1982	ERR HTTP Error 429: Too Many Requests
-1983	ERR HTTP Error 429: Too Many Requests
-1984	ERR HTTP Error 429: Too Many Requests
-1985	ERR HTTP Error 429: Too Many Requests
-1986	ERR HTTP Error 429: Too Many Requests
-1987	ERR HTTP Error 429: Too Many Requests
-1988	ERR HTTP Error 429: Too Many Requests
-1989	ERR HTTP Error 429: Too Many Requests
-1990	ERR HTTP Error 429: Too Many Requests
-1991	ERR HTTP Error 429: Too Many Requests
-1992	ERR HTTP Error 429: Too Many Requests
-1993	ERR HTTP Error 429: Too Many Requests
-1994	ERR HTTP Error 429: Too Many Requests
-1995	ERR HTTP Error 429: Too Many Requests
-1996	ERR HTTP Error 429: Too Many Requests
-1997	ERR HTTP Error 429: Too Many Requests
-1998	ERR HTTP Error 429: Too Many Requests
-1999	ERR HTTP Error 429: Too Many Requests
-2000	ERR HTTP Error 429: Too Many Requests
-2001	ERR HTTP Error 429: Too Many Requests
-2002	ERR HTTP Error 429: Too Many Requests
-2003	ERR HTTP Error 429: Too Many Requests
-2004	ERR HTTP Error 429: Too Many Requests
-2005	ERR HTTP Error 429: Too Many Requests
-2006	ERR HTTP Error 429: Too Many Requests
-2007	ERR HTTP Error 429: Too Many Requests
-2008	ERR HTTP Error 429: Too Many Requests
-2009	ERR HTTP Error 429: Too Many Requests
-2010	ERR HTTP Error 429: Too Many Requests
-2011	ERR HTTP Error 429: Too Many Requests
-2012	ERR HTTP Error 429: Too Many Requests
-2013	ERR HTTP Error 429: Too Many Requests
-2014	ERR HTTP Error 429: Too Many Requests
-2015	ERR HTTP Error 429: Too Many Requests
-2016	ERR HTTP Error 429: Too Many Requests
-2017	ERR HTTP Error 429: Too Many Requests
-2018	ERR HTTP Error 429: Too Many Requests
-2019	ERR HTTP Error 429: Too Many Requests
-2020	ERR HTTP Error 429: Too Many Requests
-2021	ERR HTTP Error 429: Too Many Requests
-2022	ERR HTTP Error 429: Too Many Requests
-2023	ERR HTTP Error 429: Too Many Requests
-2024	ERR HTTP Error 429: Too Many Requests
-2025	ERR HTTP Error 429: Too Many Requests
+1969	28447	boxes=45 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'footballbox collapsible']	league=''5th''	cup=''Runners-up''
+1970	32424	boxes=49 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'fbaicon']	league=''8th''	cup=''Runners-up''
+1971	35772	boxes=51 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'footballbox collapsible']	league=''5th''	cup='''Winners'''
+1972	35081	boxes=53 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league=''Runners-up''	cup=''Runners-up''
+1973	43056	boxes=64 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league=''4th''	cup='''Winners'''
+1974	35804	boxes=54 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league=''3rd''	cup=''Semi-finals''
+1975	40253	boxes=49 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league='''Winners'''	cup=''Round of 16''
+1976	37752	boxes=58 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league=''3rd''	cup=''Runners-up''
+1977	36285	boxes=53 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league=''Runners-up''	cup=''Runners-up''
+1978	34535	boxes=49 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league=''4th''	cup=''Round of 16''
+1979	38558	boxes=58 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'footballbox collapsible']	league=''5th''	cup=''Semi-finals''
+1980	38637	boxes=55 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'footballbox collapsible']	league=''4th''	cup=''Runners-up''
+1981	37417	boxes=57 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league=''3rd''	cup=''Semi-finals''
+1982	39566	boxes=62 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league=''4th''	cup=''Runners-up''
+1983	35036	boxes=53 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league=''5th''	cup=''Quarter-finals''
+1984	52134	boxes=61 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'footballbox collapsible']	league='''Winners'''	cup=''Runners-up''
+1985	35562	boxes=49 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league=''10th''	cup=''Additional round''
+1986	33719	boxes=51 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'footballbox collapsible']	league=''5th''	cup=''2nd round''
+1987	36115	boxes=49 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'footballbox collapsible']	league=''3rd''	cup=''2nd round''
+1988	40684	boxes=56 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league=''8th''	cup=''Quarter-finals''
+1989	37105	boxes=52 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'footballbox collapsible']	league=''3rd''	cup=''Round of 16''
+1990	41191	boxes=61 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league=''4th''	cup=''Semi-finals''
+1991	43776	boxes=60 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league=''4th''	cup=''Runners-up''
+1992	40521	boxes=52 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league=''5th''	cup=''2nd round''
+1993	35680	boxes=55 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'footballbox collapsible']	league=''5th''	cup=''3rd round''
+1994	37702	boxes=55 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'footballbox collapsible']	league=''3rd''	cup=''2nd round''
+1995	41736	boxes=63 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'footballbox collapsible']	league=''14th''	cup=''Semi-finals''
+1996	42316	boxes=58 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'footballbox collapsible']	league=''4th''	cup=''Round of 16''
+1997	47268	boxes=63 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'fbaicon']	league=''4th''	cup=''Semi-finals''
+1998	39737	boxes=54 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'fbaicon']	league=''4th''	cup=''Round of 16''
+1999	42464	boxes=47 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league=''5th''	cup=''Second round''
+2000	51136	boxes=56 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league=''4th''	cup='''Winners'''
+2001	39449	boxes=45 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league=''4th''	cup=Quarter-finals
+2002	45536	boxes=50 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league=4th	cup='''Winners'''
+2003	37289	boxes=43 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league=3rd	cup=Third round
+2004	42354	boxes=41 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league=5th	cup=Second round
+2005	41965	boxes=40 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'football box collapsible']	league=6th	cup=Fourth round
+2006	45285	boxes=37 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'footballbox collapsible']	league=6th	cup=Quarter-finals
+2007	39717	boxes=38 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'footballbox collapsible']	league=9th	cup=Fourth round
+2008	58122	boxes=95 ['Fb kit footer', 'Fb kit header', 'Fb overview', 'Fb_rs']	league='''2nd''' in regular season, '''4th''' after play-offs<ref>Super League classification tables, showing in the playoffs classification table, that the results of play-offs change the overall classification of teams Super League Greece 2008–2009 results – http://www.superleaguegreece.net/history/season2009/season2009.htm {{Webarchive	cup=Quarter-finals
+2009	62691	boxes=126 ['Fb cm footer', 'Fb in footer', 'Fb overview', 'Fb rs footer']	league=2nd (3rd in [[Season (sports)#Regular season	cup=''[[2009–10 Greek Football Cup#Quarter-Finals
+2010	61340	boxes=65 ['Fb overview', 'Fb_rs', 'Fb_rs_footer', 'fb in footer']	league=3rd (4th in regular season)	cup=Semi-finals
+2011	90149	boxes=106 ['Fb cs footer', 'Fb cs header}}', 'Fb cs staff', 'Fb kit footer']	league=5th (3rd in regular season)	cup=Quarter-finals
+2012	95265	boxes=102 ['Fb cs footer', 'Fb cs header}}', 'Fb cs staff', 'Fb kit footer']	league='' 2nd ''	cup=''Semi-finals''
+2013	106335	boxes=156 ['Fb kit footer', 'Fb overview', 'Fb ss footer', 'Fb ss header 4']	league=''2nd''	cup=''Runners-up''
+2014	75124	boxes=98 ['Fb kit footer', 'Fb overview', 'Fb ss footer', 'Fb ss header 4']	league=3rd	cup=Group stage
+2015	78596	boxes=128 ['Fb cs footer', 'Fb cs header}}', 'Fb cs staff', 'Fb kit footer']	league=4th (1st at Playoffs)	cup=Semi-finals
+2016	91336	boxes=196 ['Fb cs footer', 'Fb cs header}}', 'Fb cs staff', 'Fb disc footer 3']	league=[[2016–17 Super League Greece	cup='''Winners'''
+2017	79714	boxes=157 ['Fb cs footer', 'Fb cs header}}', 'Fb cs staff', 'Fb oi footer']	league=[[2017–18 Super League Greece	cup='''[[2017–18 Greek Football Cup
+2018	97809	boxes=168 ['Fb cs footer', 'Fb cs header}}', 'Fb cs staff', 'Fb oi footer']	league=[[2018–19 Super League Greece#League table	cup=[[2018–19 Greek Football Cup#Final
+2019	72654	boxes=123 ['Fb cs footer', 'Fb cs header}}', 'Fb cs staff', 'Fb oi footer']	league=[[2019–20 Super League Greece	cup=[[2019–20 Greek Football Cup
+2020	92743	boxes=114 ['Fb cs footer', 'Fb cs header}}', 'Fb cs staff', 'Fb in2 player']	league=[[2020–21 Super League Greece	cup=[[2020–21 Greek Football Cup#Final
+2021	89449	boxes=119 ['Fb cs footer', 'Fb cs header}}', 'Fb cs staff', 'Fb overview2']	league=[[2021–22 Super League Greece	cup=[[2021–22 Greek Football Cup
+2022	65202	boxes=101 ['Fb cs footer', 'Fb cs header}}', 'Fb cs staff', 'Fb overview2']	league=[[2022–23 Super League Greece	cup=[[2022–23 Greek Football Cup
+2023	91399	boxes=98 ['Fb cs footer', 'Fb cs header}}', 'Fb cs staff', 'Fb overview2']	league=[[2023–24 Super League Greece	cup=[[2023–24 Greek Football Cup
+2024	80341	boxes=111 ['Fb cs footer', 'Fb cs header}}', 'Fb cs staff', 'Fb overview2']	league=[[2024–25 Super League Greece	cup=[[2024–25 Greek Football Cup
+2025	75676	boxes=107 ['Fb overview2', 'Football box collapsible', 'Footballbox collapsible', 'fbaicon']	league=[[2025–26 Super League Greece#League table	cup=[[2025–26 Greek Football Cup

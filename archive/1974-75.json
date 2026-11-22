@@ -1249,6 +1249,19 @@
     "source": "https://en.wikipedia.org/wiki/1974%E2%80%9375_PAOK_FC_season"
    },
    "backfilled": true
+  },
+  "basketball": {
+   "matches": [],
+   "summary": {
+    "league": "4η θέση",
+    "cups": [
+     {
+      "name": "Korać Cup",
+      "result": "Φάση των 32"
+     }
+    ],
+    "source": "https://en.wikipedia.org/wiki/PAOK_BC"
+   }
   }
  },
  "updated": "2026-11-22T21:54+02:00"

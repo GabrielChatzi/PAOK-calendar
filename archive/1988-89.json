@@ -1181,6 +1181,31 @@
     "source": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season"
    },
    "backfilled": true
+  },
+  "basketball": {
+   "matches": [],
+   "summary": {
+    "league": "2η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "2η θέση"
+     },
+     {
+      "name": "Korać Cup",
+      "result": "Φάση των 16"
+     }
+    ],
+    "source": "https://en.wikipedia.org/wiki/PAOK_BC"
+   }
+  },
+  "volley": {
+   "matches": [],
+   "summary": {
+    "league": "5η θέση",
+    "record": "5–15 (Ν–Η)",
+    "source": "https://el.wikipedia.org/wiki/%CE%A0.%CE%91.%CE%9F.%CE%9A._%28%CF%80%CE%B5%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD%29"
+   }
   }
  },
  "updated": "2026-11-22T21:52+02:00"

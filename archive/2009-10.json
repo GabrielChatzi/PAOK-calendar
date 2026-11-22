@@ -1224,7 +1224,17 @@
      "awayLogo": "https://www.esake.gr/dat/resize/esaketeam/00000012/photo_53824924.png"
     }
    ],
-   "backfilled": true
+   "backfilled": true,
+   "summary": {
+    "league": "5η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Φάση των 8"
+     }
+    ],
+    "source": "https://en.wikipedia.org/wiki/PAOK_BC"
+   }
   },
   "handball": {
    "matches": [
@@ -1845,7 +1855,11 @@
      ]
     }
    ],
-   "backfilled": true
+   "backfilled": true,
+   "summary": {
+    "league": "Πρωταθλητής",
+    "source": "https://el.wikipedia.org/wiki/%CE%A0.%CE%91.%CE%9F.%CE%9A._%28%CF%87%CE%B5%CE%B9%CF%81%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD%29"
+   }
   },
   "handball-women": {
    "matches": [
@@ -2037,6 +2051,22 @@
     }
    ],
    "backfilled": true
+  },
+  "volley": {
+   "matches": [],
+   "summary": {
+    "league": "6η θέση",
+    "record": "11–16 (Ν–Η)",
+    "source": "https://el.wikipedia.org/wiki/%CE%A0.%CE%91.%CE%9F.%CE%9A._%28%CF%80%CE%B5%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD%29"
+   }
+  },
+  "football-women": {
+   "matches": [],
+   "summary": {
+    "league": "1η θέση",
+    "record": "18–4–0 (Ν–Ι–Η)",
+    "source": "https://en.wikipedia.org/wiki/PAOK_FC_%28women%29"
+   }
   }
  },
  "updated": "2026-11-22T21:50+02:00"

@@ -452,7 +452,21 @@
      "awayLogo": "https://www.esake.gr/dat/esaketeam/00000010/photo_new_2BF3BBDA.png"
     }
    ],
-   "backfilled": true
+   "backfilled": true,
+   "summary": {
+    "league": "7η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Φάση των 16"
+     },
+     {
+      "name": "EuroCup Challenge",
+      "result": "Φάση των 16"
+     }
+    ],
+    "source": "https://en.wikipedia.org/wiki/PAOK_BC"
+   }
   },
   "handball": {
    "matches": [
@@ -1155,7 +1169,11 @@
      ]
     }
    ],
-   "backfilled": true
+   "backfilled": true,
+   "summary": {
+    "league": "7η θέση",
+    "source": "https://el.wikipedia.org/wiki/%CE%A0.%CE%91.%CE%9F.%CE%9A._%28%CF%87%CE%B5%CE%B9%CF%81%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD%29"
+   }
   },
   "football": {
    "matches": [
@@ -2662,6 +2680,21 @@
     "source": "https://en.wikipedia.org/wiki/2002%E2%80%9303_PAOK_FC_season"
    },
    "backfilled": true
+  },
+  "volley": {
+   "matches": [],
+   "summary": {
+    "league": "5η θέση",
+    "record": "15–13 (Ν–Η)",
+    "source": "https://el.wikipedia.org/wiki/%CE%A0.%CE%91.%CE%9F.%CE%9A._%28%CF%80%CE%B5%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD%29"
+   }
+  },
+  "football-women": {
+   "matches": [],
+   "summary": {
+    "league": "2η θέση",
+    "source": "https://en.wikipedia.org/wiki/PAOK_FC_%28women%29"
+   }
   }
  },
  "updated": "2026-11-22T21:50+02:00"

@@ -1401,7 +1401,21 @@
      "awayLogo": "https://www.esake.gr/dat/esaketeam/00000003/photo_new_0ACA2387.png"
     }
    ],
-   "backfilled": true
+   "backfilled": true,
+   "summary": {
+    "league": "6η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Ημιτελικά"
+     },
+     {
+      "name": "Basketball Champions League",
+      "result": "Προκριματικά"
+     }
+    ],
+    "source": "https://en.wikipedia.org/wiki/PAOK_BC"
+   }
   },
   "volley": {
    "matches": [
@@ -1889,7 +1903,12 @@
      ]
     }
    ],
-   "backfilled": true
+   "backfilled": true,
+   "summary": {
+    "league": "4η θέση",
+    "record": "12–10 (Ν–Η)",
+    "source": "https://el.wikipedia.org/wiki/%CE%A0.%CE%91.%CE%9F.%CE%9A._%28%CF%80%CE%B5%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD%29"
+   }
   },
   "handball": {
    "matches": [
@@ -2492,7 +2511,11 @@
      ]
     }
    ],
-   "backfilled": true
+   "backfilled": true,
+   "summary": {
+    "league": "5η θέση",
+    "source": "https://el.wikipedia.org/wiki/%CE%A0.%CE%91.%CE%9F.%CE%9A._%28%CF%87%CE%B5%CE%B9%CF%81%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD%29"
+   }
   },
   "handball-women": {
    "matches": [
@@ -4176,6 +4199,21 @@
     }
    ],
    "backfilled": true
+  },
+  "volley-women": {
+   "matches": [],
+   "summary": {
+    "league": "Βόλεϊ Λιγκ, 2η θέση",
+    "source": "https://el.wikipedia.org/wiki/%CE%A0.%CE%91.%CE%9F.%CE%9A._%28%CF%80%CE%B5%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7_%CE%B3%CF%85%CE%BD%CE%B1%CE%B9%CE%BA%CF%8E%CE%BD%29"
+   }
+  },
+  "football-women": {
+   "matches": [],
+   "summary": {
+    "league": "5η θέση",
+    "record": "12–7–3 (Ν–Ι–Η)",
+    "source": "https://en.wikipedia.org/wiki/PAOK_FC_%28women%29"
+   }
   }
  },
  "updated": "2026-11-22T21:48+02:00"

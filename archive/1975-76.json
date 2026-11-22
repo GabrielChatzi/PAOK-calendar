@@ -1109,6 +1109,23 @@
     "source": "https://en.wikipedia.org/wiki/1975%E2%80%9376_PAOK_FC_season"
    },
    "backfilled": true
+  },
+  "basketball": {
+   "matches": [],
+   "summary": {
+    "league": "9η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Φάση των 32"
+     },
+     {
+      "name": "Korać Cup",
+      "result": "Φάση των 32"
+     }
+    ],
+    "source": "https://en.wikipedia.org/wiki/PAOK_BC"
+   }
   }
  },
  "updated": "2026-11-22T21:54+02:00"

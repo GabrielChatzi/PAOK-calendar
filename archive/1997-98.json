@@ -1644,6 +1644,31 @@
     "source": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season"
    },
    "backfilled": true
+  },
+  "basketball": {
+   "matches": [],
+   "summary": {
+    "league": "2η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Φάση των 16"
+     },
+     {
+      "name": "EuroLeague",
+      "result": "Φάση των 16"
+     }
+    ],
+    "source": "https://en.wikipedia.org/wiki/PAOK_BC"
+   }
+  },
+  "volley": {
+   "matches": [],
+   "summary": {
+    "league": "9η θέση",
+    "record": "7–15 (Ν–Η)",
+    "source": "https://el.wikipedia.org/wiki/%CE%A0.%CE%91.%CE%9F.%CE%9A._%28%CF%80%CE%B5%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD%29"
+   }
   }
  },
  "updated": "2026-11-22T21:51+02:00"

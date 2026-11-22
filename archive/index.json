@@ -324,9 +324,9 @@
    "season": "2021-22",
    "sections": {
     "football": {
-     "matches": 54,
+     "matches": 61,
      "standings": false,
-     "summary": false
+     "summary": true
     },
     "basketball": {
      "matches": 24,

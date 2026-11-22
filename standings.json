@@ -4964,6 +4964,58 @@
      ]
     }
    ]
+  },
+  {
+   "title": "W Rising Stars U16 (ΕΚΑΣΘ), φάση των 3",
+   "url": "https://ekasth.gr/champs/matchcenter8/competition.html?ch=VqtRAm1W1SYkUTZzI8RIkw",
+   "columns": [
+    "Αγ",
+    "Ν",
+    "Η",
+    "+/-",
+    "Β"
+   ],
+   "rows": [
+    {
+     "pos": 1,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "2",
+      "2",
+      "0",
+      "+86",
+      "4"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΝΕΑΠΟΛΗ ΑΚΠΚ",
+     "logo": "https://paokalendar.gr/crests/73f92b95a4cc80c0.png",
+     "paok": false,
+     "cells": [
+      "2",
+      "1",
+      "1",
+      "-45",
+      "3"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "ΜΓΣ ΑΠΟΛΛΩΝ ΚΑΛΑΜΑΡΙΑΣ",
+     "logo": "https://paokalendar.gr/crests/4f5350a97f9a34ed.png",
+     "paok": false,
+     "cells": [
+      "2",
+      "0",
+      "2",
+      "-41",
+      "2"
+     ]
+    }
+   ]
   }
  ],
  "basketball-women-u16b": [
@@ -6082,6 +6134,20 @@
     },
     {
      "pos": 11,
+     "team": "ΔΟΞΑ ΠΕΝΤΑΛΟΦΟΥ",
+     "logo": "https://paokalendar.gr/crests/0712481f728ae639.png",
+     "paok": false,
+     "cells": [
+      "5",
+      "3",
+      "1",
+      "1",
+      "13-8",
+      "10"
+     ]
+    },
+    {
+     "pos": 12,
      "team": "ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020 (1)",
      "logo": "",
      "paok": false,
@@ -6095,7 +6161,7 @@
      ]
     },
     {
-     "pos": 12,
+     "pos": 13,
      "team": "ΑΚΑΔ. ΠΟΔ. ΠΡΟ",
      "logo": "",
      "paok": false,
@@ -6109,7 +6175,7 @@
      ]
     },
     {
-     "pos": 13,
+     "pos": 14,
      "team": "ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ (1)",
      "logo": "https://paokalendar.gr/crests/2200b2a00577dd9a.png",
      "paok": false,
@@ -6123,7 +6189,7 @@
      ]
     },
     {
-     "pos": 14,
+     "pos": 15,
      "team": "ΣΚΙΟΥΡΟΙ (1)",
      "logo": "https://paokalendar.gr/crests/79c866141c19bde5.png",
      "paok": false,
@@ -6137,7 +6203,7 @@
      ]
     },
     {
-     "pos": 15,
+     "pos": 16,
      "team": "ΑΟ ΝΕΑΣ ΕΥΚΑΡΠΙΑΣ",
      "logo": "",
      "paok": false,
@@ -6151,7 +6217,7 @@
      ]
     },
     {
-     "pos": 16,
+     "pos": 17,
      "team": "ΑΕ ΝΕΩΝ ΣΙΝΔΟΥ",
      "logo": "",
      "paok": false,
@@ -6165,7 +6231,7 @@
      ]
     },
     {
-     "pos": 17,
+     "pos": 18,
      "team": "ΚΑΜΠΑΝΙΑΚΟΣ",
      "logo": "https://paokalendar.gr/crests/d7ad81ac6dc3c37f.png",
      "paok": false,
@@ -6175,20 +6241,6 @@
       "0",
       "2",
       "24-18",
-      "9"
-     ]
-    },
-    {
-     "pos": 18,
-     "team": "ΔΟΞΑ ΠΕΝΤΑΛΟΦΟΥ",
-     "logo": "https://paokalendar.gr/crests/0712481f728ae639.png",
-     "paok": false,
-     "cells": [
-      "4",
-      "3",
-      "0",
-      "1",
-      "12-7",
       "9"
      ]
     },
@@ -6376,6 +6428,20 @@
     },
     {
      "pos": 32,
+     "team": "ΠΟ ΞΗΡΟΚΡΗΝΗΣ",
+     "logo": "https://paokalendar.gr/crests/64642dda30762b87.jpg",
+     "paok": false,
+     "cells": [
+      "5",
+      "1",
+      "1",
+      "3",
+      "14-17",
+      "4"
+     ]
+    },
+    {
+     "pos": 33,
      "team": "ΑΚΑΔ. ΠΟΔ. ΝΕΑΠΟΛΗΣ",
      "logo": "",
      "paok": false,
@@ -6389,7 +6455,7 @@
      ]
     },
     {
-     "pos": 33,
+     "pos": 34,
      "team": "ΕΘΝΙΚΟΣ ΠΥΛΑΙΑΣ",
      "logo": "https://paokalendar.gr/crests/ca43c017552cc58c.gif",
      "paok": false,
@@ -6399,20 +6465,6 @@
       "0",
       "2",
       "14-13",
-      "3"
-     ]
-    },
-    {
-     "pos": 34,
-     "team": "ΠΟ ΞΗΡΟΚΡΗΝΗΣ",
-     "logo": "https://paokalendar.gr/crests/64642dda30762b87.jpg",
-     "paok": false,
-     "cells": [
-      "4",
-      "1",
-      "0",
-      "3",
-      "13-16",
       "3"
      ]
     },

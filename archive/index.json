@@ -464,9 +464,9 @@
    "season": "2016-17",
    "sections": {
     "football": {
-     "matches": 47,
+     "matches": 58,
      "standings": false,
-     "summary": false
+     "summary": true
     },
     "basketball": {
      "matches": 30,

@@ -215,6 +215,34 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-e445eff74f1f",
+     "section": "football",
+     "start": "2016-10-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEL",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2016%E2%80%9317_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Mystakidis",
+        "min": "28"
+       },
+       {
+        "name": "Pereyra",
+        "min": "41"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-460182",
      "nt": "d68b0bec92",
      "section": "football",
@@ -295,6 +323,21 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/6790.png"
     },
     {
+     "uid": "football-wiki-79f3fe14531e",
+     "section": "football",
+     "start": "2016-12-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Trikala",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Trikala Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/2016%E2%80%9317_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-460157",
      "nt": "25dfa852b3",
      "section": "football",
@@ -340,6 +383,54 @@
      "score": "3-0",
      "url": "https://www.espn.com/soccer/match/_/gameId/460152",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-755b0fd7ef9a",
+     "section": "football",
+     "start": "2016-12-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panelefsiniakos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Municipal Stadium of Eleusina",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "3η αγωνιστική",
+     "score": "0-7",
+     "url": "https://en.wikipedia.org/wiki/2016%E2%80%9317_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Athanasiadis",
+        "min": "48"
+       },
+       {
+        "name": "Pereyra",
+        "min": "51"
+       },
+       {
+        "name": "Shakhov",
+        "min": "58"
+       },
+       {
+        "name": "Mystakidis",
+        "min": "70"
+       },
+       {
+        "name": "Koulouris",
+        "min": "75"
+       },
+       {
+        "name": "Pelkas",
+        "min": "77"
+       },
+       {
+        "name": "Pelkas",
+        "min": "90"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-461334",
@@ -390,6 +481,35 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/6848.png"
     },
     {
+     "uid": "football-wiki-89e51e8eaf8e",
+     "section": "football",
+     "start": "2017-01-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panetolikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Panetolikos Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/2016%E2%80%9317_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Kitsiou",
+        "min": "77"
+       },
+       {
+        "name": "Athanasiadis",
+        "min": "84",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-460136",
      "nt": "01e7d1f763",
      "section": "football",
@@ -420,6 +540,48 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/460128",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/6848.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-86278cdb540b",
+     "section": "football",
+     "start": "2017-01-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panetolikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/2016%E2%80%9317_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Shakhov",
+        "min": "53"
+       },
+       {
+        "name": "Deligiannidis",
+        "min": "42"
+       },
+       {
+        "name": "Biseswar",
+        "min": "43"
+       },
+       {
+        "name": "Prijović",
+        "min": "78",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Paulo",
+        "min": "90+3"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-460123",
@@ -468,6 +630,39 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/460112",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/8354.png"
+    },
+    {
+     "uid": "football-wiki-e12eb6e1ec27",
+     "section": "football",
+     "start": "2017-02-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Xanthi",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Xanthi FC Arena",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/2016%E2%80%9317_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lazić",
+        "min": "52"
+       }
+      ],
+      "away": [
+       {
+        "name": "Mystakidis",
+        "min": "20"
+       },
+       {
+        "name": "Prijović",
+        "min": "64"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-460108",
@@ -549,6 +744,30 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/460094",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/2575.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-60bf0ef5f67d",
+     "section": "football",
+     "start": "2017-03-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Xanthi",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/2016%E2%80%9317_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Younés",
+        "min": "64"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-460087",
@@ -647,6 +866,34 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/443.png"
     },
     {
+     "uid": "football-wiki-f0ddf3ca7529",
+     "section": "football",
+     "start": "2017-04-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Leoforos Alexandras Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2016%E2%80%9317_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Moledo",
+        "min": "21"
+       },
+       {
+        "name": "Leto",
+        "min": "83"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-460045",
      "nt": "d7e41fa305",
      "section": "football",
@@ -660,6 +907,42 @@
      "score": "1-3",
      "url": "https://www.espn.com/soccer/match/_/gameId/460045",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-6d6984e08f1c",
+     "section": "football",
+     "start": "2017-04-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/2016%E2%80%9317_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Pelkas",
+        "min": "14"
+       },
+       {
+        "name": "Matos",
+        "min": "48"
+       },
+       {
+        "name": "Shakhov",
+        "min": "73"
+       },
+       {
+        "name": "Prijović",
+        "min": "83"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-461319",
@@ -678,6 +961,39 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/3874.png"
     },
     {
+     "uid": "football-wiki-6ce122f9ae9f",
+     "section": "football",
+     "start": "2017-05-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Panthessaliko Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Τελικός",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2016%E2%80%9317_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Biseswar",
+        "min": "24"
+       },
+       {
+        "name": "Henrique",
+        "min": "81"
+       }
+      ],
+      "away": [
+       {
+        "name": "Christodoulopoulos",
+        "min": "27"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-479054",
      "nt": "bce1f59e84",
      "section": "football",
@@ -692,6 +1008,21 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/479054",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/887.png"
+    },
+    {
+     "uid": "football-wiki-3af14b2c81ef",
+     "section": "football",
+     "start": "2017-05-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Leoforos Alexandras Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "0-3",
+     "url": "https://en.wikipedia.org/wiki/2016%E2%80%9317_PAOK_FC_season",
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-479051",
@@ -758,7 +1089,26 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/443.png"
     }
    ],
-   "backfilled": true
+   "backfilled": true,
+   "summary": {
+    "league": "2η θέση; 4th after play-offs",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Κατάκτηση"
+     },
+     {
+      "name": "UEFA Champions League",
+      "result": "3ος προκριματικός γύρος"
+     },
+     {
+      "name": "UEFA Europa League",
+      "result": "Φάση των 32"
+     }
+    ],
+    "topscorer": "Aleksandar Prijović (7)",
+    "source": "https://en.wikipedia.org/wiki/2016%E2%80%9317_PAOK_FC_season"
+   }
   },
   "basketball": {
    "matches": [
@@ -2398,5 +2748,5 @@
    "backfilled": true
   }
  },
- "updated": "2026-11-22T18:27+02:00"
+ "updated": "2026-11-22T21:49+02:00"
 }

@@ -1,0 +1,1190 @@
+{
+ "season": "1968-69",
+ "sections": {
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-58824fc80210",
+     "section": "football",
+     "start": "1968-09-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas 64'",
+        "min": "33"
+       },
+       {
+        "name": "Koudas 64'",
+        "min": "37"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "44"
+       },
+       {
+        "name": "Lazos",
+        "min": "88"
+       }
+      ],
+      "away": [
+       {
+        "name": "Karakyriakos",
+        "min": "59"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-40ed7f74bb1a",
+     "section": "football",
+     "start": "1968-09-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Rizoupoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Ramfos",
+        "min": "7"
+       }
+      ],
+      "away": [
+       {
+        "name": "Sarafis",
+        "min": "2"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e3b38fda5903",
+     "section": "football",
+     "start": "1968-10-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Veria",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "14"
+       },
+       {
+        "name": "Sarafis",
+        "min": "63"
+       }
+      ],
+      "away": [
+       {
+        "name": "Michailidis",
+        "min": "51"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ebfa22f1ad13",
+     "section": "football",
+     "start": "1968-10-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Koudas",
+        "min": "67"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-086e828f548c",
+     "section": "football",
+     "start": "1968-10-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Theofanidis",
+        "min": "31"
+       }
+      ],
+      "away": [
+       {
+        "name": "Intzoglou",
+        "min": "1"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-258a89ddd2d8",
+     "section": "football",
+     "start": "1968-11-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kalliontzis",
+        "min": "21"
+       },
+       {
+        "name": "Kalliontzis",
+        "min": "74"
+       },
+       {
+        "name": "Kasapis",
+        "min": "60"
+       }
+      ],
+      "away": [
+       {
+        "name": "Koudas",
+        "min": "42"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d6d66d2496d5",
+     "section": "football",
+     "start": "1968-11-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEL Limassol",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "5-0",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "11"
+       },
+       {
+        "name": "Koudas",
+        "min": "14"
+       },
+       {
+        "name": "Koudas",
+        "min": "72"
+       },
+       {
+        "name": "Sarafis",
+        "min": "73"
+       },
+       {
+        "name": "Theofanidis",
+        "min": "89"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ac43090e3a08",
+     "section": "football",
+     "start": "1968-11-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Syropoulos",
+        "min": "20"
+       },
+       {
+        "name": "Alexiadis",
+        "min": "83"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-55fe5135c4cf",
+     "section": "football",
+     "start": "1968-11-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Pierikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Katerini Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Amanatidis",
+        "min": "57"
+       },
+       {
+        "name": "Felekidis",
+        "min": "70"
+       },
+       {
+        "name": "Papadopoulos",
+        "min": "90"
+       }
+      ],
+      "away": [
+       {
+        "name": "Paridis",
+        "min": "53"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8a08db51f1d6",
+     "section": "football",
+     "start": "1968-12-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Vyzas Megara",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Paridis",
+        "min": "74"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6b035f796868",
+     "section": "football",
+     "start": "1968-12-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Michas",
+        "min": "64"
+       },
+       {
+        "name": "Botinos",
+        "min": "72"
+       },
+       {
+        "name": "Sideris",
+        "min": "84"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-922973d6c47f",
+     "section": "football",
+     "start": "1968-12-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Chalkida",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Chalkida Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Rongas",
+        "min": "72"
+       }
+      ],
+      "away": [
+       {
+        "name": "Giakoumis",
+        "min": "84"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9089423efac5",
+     "section": "football",
+     "start": "1968-12-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Egaleo",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Stavros Mavrothalassitis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Markopoulos",
+        "min": "84"
+       },
+       {
+        "name": "Makris",
+        "min": "90+3"
+       }
+      ],
+      "away": [
+       {
+        "name": "Paridis",
+        "min": "28"
+       },
+       {
+        "name": "Theofanidis",
+        "min": "65",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c9621635db99",
+     "section": "football",
+     "start": "1969-01-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Trikala",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Trikala Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Beveniou",
+        "min": "30"
+       }
+      ],
+      "away": [
+       {
+        "name": "Koudas",
+        "min": "60"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-202f8bbfc63c",
+     "section": "football",
+     "start": "1969-01-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Theofanidis",
+        "min": "27",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Gonios",
+        "min": "12"
+       },
+       {
+        "name": "Domazos",
+        "min": "73"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-dd17689eed5e",
+     "section": "football",
+     "start": "1969-01-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Piraeus",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Aslanidis",
+        "min": "11"
+       },
+       {
+        "name": "Afentoulidis",
+        "min": "23"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b0e87dbeea12",
+     "section": "football",
+     "start": "1969-01-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panserraikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Afentoulidis",
+        "min": "47"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "89",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Iliadis",
+        "min": "65"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8bc38dd14af9",
+     "section": "football",
+     "start": "1969-02-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Vardinogiannis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Papoutsakis",
+        "min": "75",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Mitrakas",
+        "min": "89"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-69681d8f0b1c",
+     "section": "football",
+     "start": "1969-02-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Fountoukidis",
+        "min": "48"
+       },
+       {
+        "name": "Sarafis",
+        "min": "82"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6d146101c931",
+     "section": "football",
+     "start": "1969-02-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Veria",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Veria Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Mittas",
+        "min": "87",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Aslanidis",
+        "min": "53"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8e5a1512f2b3",
+     "section": "football",
+     "start": "1969-02-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Terzanidis",
+        "min": "23"
+       }
+      ],
+      "away": [
+       {
+        "name": "Papaioannou",
+        "min": "59"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f9e381f2c734",
+     "section": "football",
+     "start": "1969-03-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Th.Intzoglou",
+        "min": "71"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c303b35c957e",
+     "section": "football",
+     "start": "1969-03-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Paridis",
+        "min": "12"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3b53160ea641",
+     "section": "football",
+     "start": "1969-03-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEL Limassol",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "GSO Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Koudas",
+        "min": "10"
+       },
+       {
+        "name": "Sarafis",
+        "min": "59"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5c0faca00faf",
+     "section": "football",
+     "start": "1969-03-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-887d075300e8",
+     "section": "football",
+     "start": "1969-03-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Pierikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "5-1",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "10"
+       },
+       {
+        "name": "Afentoulidis",
+        "min": "44"
+       },
+       {
+        "name": "Fountoukidis",
+        "min": "55"
+       },
+       {
+        "name": "Koudas",
+        "min": "62"
+       },
+       {
+        "name": "Koudas",
+        "min": "68"
+       }
+      ],
+      "away": [
+       {
+        "name": "Papadopoulos",
+        "min": "89"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b8bc5ab7f106",
+     "section": "football",
+     "start": "1969-04-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Vyzas Megara",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Megara Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Emmanouil",
+        "min": "40"
+       },
+       {
+        "name": "Seitaridis",
+        "min": "87"
+       }
+      ],
+      "away": [
+       {
+        "name": "Koudas",
+        "min": "69"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3f3178903dcf",
+     "section": "football",
+     "start": "1969-04-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Megas Alexandros Thessaloniki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "6-0",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "2"
+       },
+       {
+        "name": "Koudas",
+        "min": "5"
+       },
+       {
+        "name": "Paridis",
+        "min": "21"
+       },
+       {
+        "name": "Sarafis",
+        "min": "44"
+       },
+       {
+        "name": "Sarafis",
+        "min": "60"
+       },
+       {
+        "name": "Fountoukidis",
+        "min": "71"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6ba102a231ba",
+     "section": "football",
+     "start": "1969-04-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "1",
+        "pen": true
+       },
+       {
+        "name": "Koudas",
+        "min": "42"
+       }
+      ],
+      "away": [
+       {
+        "name": "Sideris",
+        "min": "87"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a4ae1b84c217",
+     "section": "football",
+     "start": "1969-04-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Chalkida",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "5-1",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "2"
+       },
+       {
+        "name": "Koudas",
+        "min": "8"
+       },
+       {
+        "name": "Koudas",
+        "min": "14"
+       },
+       {
+        "name": "Paridis",
+        "min": "27"
+       },
+       {
+        "name": "Afentoulidis",
+        "min": "61"
+       }
+      ],
+      "away": [
+       {
+        "name": "Simitzis",
+        "min": "72"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d9463fafeb20",
+     "section": "football",
+     "start": "1969-05-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Egaleo",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Afentoulidis",
+        "min": "49"
+       }
+      ],
+      "away": [
+       {
+        "name": "Stavropoulos",
+        "min": "86"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7e0278a057b6",
+     "section": "football",
+     "start": "1969-05-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Trikala",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "31η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Afentoulidis",
+        "min": "14",
+        "pen": true
+       },
+       {
+        "name": "Afentoulidis",
+        "min": "49"
+       },
+       {
+        "name": "Koudas",
+        "min": "76"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kalatzis",
+        "min": "38"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c9d41b2f1998",
+     "section": "football",
+     "start": "1969-06-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Leoforos Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "32η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Gonios",
+        "min": "28"
+       },
+       {
+        "name": "Athanasopoulos",
+        "min": "42"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-22619ee59d44",
+     "section": "football",
+     "start": "1969-06-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panetolikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Panetolikos Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "2-3",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kalamidas",
+        "min": "34"
+       },
+       {
+        "name": "Koutsogiannis",
+        "min": "75"
+       }
+      ],
+      "away": [
+       {
+        "name": "Koudas",
+        "min": "25"
+       },
+       {
+        "name": "Koudas",
+        "min": "97"
+       },
+       {
+        "name": "Paridis",
+        "min": "30"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-77e49a168aef",
+     "section": "football",
+     "start": "1969-06-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ethnikos Piraeus",
+     "paokHome": true,
+     "venue": "Makedonikos Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "33η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Paridis",
+        "min": "5"
+       },
+       {
+        "name": "Paridis",
+        "min": "25"
+       },
+       {
+        "name": "Sarafis",
+        "min": "55"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-aa404e2866a1",
+     "section": "football",
+     "start": "1969-06-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panserraikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Serres Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "34η αγωνιστική",
+     "score": "2-4",
+     "url": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Bitzidis",
+        "min": "20",
+        "pen": true
+       },
+       {
+        "name": "Naskos",
+        "min": "43"
+       }
+      ],
+      "away": [
+       {
+        "name": "Koudas",
+        "min": "29"
+       },
+       {
+        "name": "Koudas",
+        "min": "90"
+       },
+       {
+        "name": "Sarafis 65'",
+        "min": "70"
+       },
+       {
+        "name": "Afentoulidis",
+        "min": "73",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "5η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Προημιτελικά"
+     }
+    ],
+    "topscorer": "Giorgos Koudas (26)",
+    "source": "https://en.wikipedia.org/wiki/1968%E2%80%9369_PAOK_FC_season"
+   },
+   "backfilled": true
+  }
+ },
+ "updated": "2026-11-22T21:54+02:00"
+}

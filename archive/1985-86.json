@@ -1,0 +1,1022 @@
+{
+ "season": "1985-86",
+ "sections": {
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-334c29d7a16c",
+     "section": "football",
+     "start": "1985-09-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Pittas",
+        "min": "10"
+       }
+      ],
+      "away": [
+       {
+        "name": "Mavrikis",
+        "min": "70"
+       },
+       {
+        "name": "Barzov",
+        "min": "82"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-af934ecb0870",
+     "section": "football",
+     "start": "1985-09-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Athens Olympic Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Manolas",
+        "min": "25"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ed30a2596890",
+     "section": "football",
+     "start": "1985-09-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Hellas Verona",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Stadio Marcantonio Bentegodi",
+     "competition": "Κύπελλο Πρωταθλητριών",
+     "round": "1ος αγώνας",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Elkjær",
+        "min": "15"
+       },
+       {
+        "name": "Elkjær",
+        "min": "85"
+       },
+       {
+        "name": "Volpati",
+        "min": "87"
+       }
+      ],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "70"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-cfb7aaba8f7a",
+     "section": "football",
+     "start": "1985-09-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "5-0",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Paprica",
+        "min": "27"
+       },
+       {
+        "name": "Kostikos",
+        "min": "46"
+       },
+       {
+        "name": "Kostikos",
+        "min": "65"
+       },
+       {
+        "name": "Skartados",
+        "min": "62"
+       },
+       {
+        "name": "Skartados",
+        "min": "88"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-53e493ba2035",
+     "section": "football",
+     "start": "1985-09-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Piraeus",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c74015364476",
+     "section": "football",
+     "start": "1985-10-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Hellas Verona",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Πρωταθλητριών",
+     "round": "2ος αγώνας",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vasilakos",
+        "min": "4"
+       }
+      ],
+      "away": [
+       {
+        "name": "Elkjær",
+        "min": "29"
+       },
+       {
+        "name": "Elkjær",
+        "min": "73"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-46ed62d1f8cf",
+     "section": "football",
+     "start": "1985-10-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Mavromatis",
+        "min": "83"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2bbe710114fb",
+     "section": "football",
+     "start": "1985-10-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Anagennisi Giannitsa",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Ioannis Tserkezidis Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Penos",
+        "min": "39"
+       }
+      ],
+      "away": [
+       {
+        "name": "Karasavvidis",
+        "min": "70"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-588ee60cdf14",
+     "section": "football",
+     "start": "1985-10-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panserraikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Serres Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Jarůšek",
+        "min": "30"
+       },
+       {
+        "name": "Jarůšek",
+        "min": "63"
+       },
+       {
+        "name": "Anastasiadis",
+        "min": "46",
+        "pen": true
+       },
+       {
+        "name": "Dimitriou",
+        "min": "54"
+       }
+      ],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "45"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a2740386775d",
+     "section": "football",
+     "start": "1985-10-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Kavouras",
+        "min": "81"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3d9ed48ecb52",
+     "section": "football",
+     "start": "1985-11-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Nikić",
+        "min": "73"
+       },
+       {
+        "name": "Bahtić",
+        "min": "82"
+       },
+       {
+        "name": "Bibisidis",
+        "min": "85"
+       }
+      ],
+      "away": [
+       {
+        "name": "Singas",
+        "min": "58"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-948d55c3c4d4",
+     "section": "football",
+     "start": "1985-11-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panachaiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kostas Davourlis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Chardalias",
+        "min": "57",
+        "pen": true
+       },
+       {
+        "name": "Vujadinović",
+        "min": "59"
+       }
+      ],
+      "away": [
+       {
+        "name": "Karasavvidis",
+        "min": "20"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b75632c549a3",
+     "section": "football",
+     "start": "1985-11-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Athens Olympic Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-cc9092da8fd4",
+     "section": "football",
+     "start": "1985-11-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Doxa Drama",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "24",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-77336b092828",
+     "section": "football",
+     "start": "1985-12-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Athens Olympic Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Anastopoulos",
+        "min": "2"
+       },
+       {
+        "name": "Anastopoulos",
+        "min": "81"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-91d975a8d294",
+     "section": "football",
+     "start": "1985-12-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Kalamarias",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "25"
+       },
+       {
+        "name": "Baniotis",
+        "min": "31"
+       },
+       {
+        "name": "Vasilakos",
+        "min": "62"
+       },
+       {
+        "name": "Vasilakos",
+        "min": "65"
+       }
+      ],
+      "away": [
+       {
+        "name": "Katrakylakis",
+        "min": "47"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1989df4b027c",
+     "section": "football",
+     "start": "1985-12-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Vardinogiannis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vlastos",
+        "min": "23"
+       },
+       {
+        "name": "Vlastos",
+        "min": "61"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3a9c1c737d7b",
+     "section": "football",
+     "start": "1985-12-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEL",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Karasavvidis",
+        "min": "35"
+       }
+      ],
+      "away": [
+       {
+        "name": "Galitsios",
+        "min": "87"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8e34cfec1038",
+     "section": "football",
+     "start": "1986-01-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "PAS Giannina",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Zosimades Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Manevski",
+        "min": "40"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kostikos",
+        "min": "87"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c6ad42a90b75",
+     "section": "football",
+     "start": "1986-01-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Barzov",
+        "min": "23",
+        "pen": true
+       },
+       {
+        "name": "Mavrikis",
+        "min": "73"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kostikos",
+        "min": "36"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-982c1ab3f744",
+     "section": "football",
+     "start": "1986-01-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Singas",
+        "min": "18"
+       },
+       {
+        "name": "Vasilakos",
+        "min": "59"
+       }
+      ],
+      "away": [
+       {
+        "name": "Mavros",
+        "min": "43"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e6637d60ad93",
+     "section": "football",
+     "start": "1986-02-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Rizoupoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kastanos",
+        "min": "84"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b301b88e3a56",
+     "section": "football",
+     "start": "1986-02-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ethnikos Piraeus",
+     "paokHome": true,
+     "venue": "Katerini Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostikos",
+        "min": "2"
+       },
+       {
+        "name": "Psarras",
+        "min": "88"
+       }
+      ],
+      "away": [
+       {
+        "name": "Tsouxtos",
+        "min": "83"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-221cc50b8fd7",
+     "section": "football",
+     "start": "1986-02-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0d314885475c",
+     "section": "football",
+     "start": "1986-02-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panserraikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8fe06263cdda",
+     "section": "football",
+     "start": "1986-03-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Athens Olympic Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "5-0",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Charalambidis",
+        "min": "25"
+       },
+       {
+        "name": "Mavridis",
+        "min": "46"
+       },
+       {
+        "name": "Zajec",
+        "min": "47"
+       },
+       {
+        "name": "Rocha",
+        "min": "62"
+       },
+       {
+        "name": "Saravakos",
+        "min": "90"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4924390b227b",
+     "section": "football",
+     "start": "1986-03-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "18"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9742e22b6099",
+     "section": "football",
+     "start": "1986-03-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panachaiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "51"
+       },
+       {
+        "name": "Skartados",
+        "min": "87"
+       }
+      ],
+      "away": [
+       {
+        "name": "Chardalias",
+        "min": "9"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f71fe990b6e8",
+     "section": "football",
+     "start": "1986-03-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Doxa Drama",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Doxa Drama Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Pachatouridis",
+        "min": "32"
+       },
+       {
+        "name": "Yfantidis",
+        "min": "45"
+       }
+      ],
+      "away": [
+       {
+        "name": "Liakos",
+        "min": "64"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-61e9994b2ab8",
+     "section": "football",
+     "start": "1986-03-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Orfanos",
+        "min": "27"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-654beeeade45",
+     "section": "football",
+     "start": "1986-04-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Kalamaria",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kalamaria Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tsalkitzis",
+        "min": "39"
+       }
+      ],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "68"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7161245e033a",
+     "section": "football",
+     "start": "1986-04-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-60dc31510584",
+     "section": "football",
+     "start": "1986-04-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEL",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Alcazar Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Agorogiannis",
+        "min": "1"
+       },
+       {
+        "name": "Ziogas",
+        "min": "32"
+       }
+      ],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "37"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-aca99d65cd55",
+     "section": "football",
+     "start": "1986-04-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "PAS Giannina",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "4-2",
+     "url": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "21",
+        "pen": true
+       },
+       {
+        "name": "Skartados",
+        "min": "29"
+       },
+       {
+        "name": "Mavromatis",
+        "min": "42"
+       },
+       {
+        "name": "Iordanidis",
+        "min": "66"
+       }
+      ],
+      "away": [
+       {
+        "name": "Mantzoukis",
+        "min": "12"
+       },
+       {
+        "name": "Papadimitriou",
+        "min": "84"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "10η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Επιπλέον γύρος"
+     },
+     {
+      "name": "Κύπελλο Πρωταθλητριών",
+      "result": "1ος γύρος"
+     }
+    ],
+    "topscorer": "Skartados (11)",
+    "source": "https://en.wikipedia.org/wiki/1985%E2%80%9386_PAOK_FC_season"
+   },
+   "backfilled": true
+  }
+ },
+ "updated": "2026-11-22T21:52+02:00"
+}

@@ -999,6 +999,16 @@
      "summary": true
     }
    }
+  },
+  {
+   "season": "1985-86",
+   "sections": {
+    "football": {
+     "matches": 34,
+     "standings": false,
+     "summary": true
+    }
+   }
   }
  ]
 }

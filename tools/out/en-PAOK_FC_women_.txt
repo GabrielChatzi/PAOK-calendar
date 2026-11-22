@@ -1,0 +1,578 @@
+{{EngvarB|date=July 2024}}
+{{Infobox football club
+| clubname = FC PAOK [[File:Competitiester.svg|20x20px]] [[File:Competitiester.svg|20x20px]]
+| image = PAOK FC EMBLEM.png
+| image_size = 180px
+| upright = 0.75
+| fullname = ({{langx|el|Πανθεσσαλονίκειος Αθλητικός Όμιλος Κωνσταντινοπολιτών}})<br />(Pan-Thessalonikian Athletic Club of Constantinopolitans)
+| nickname = ''Dikefalos tou Vorra'' (Doublehead Eagle of the North)
+| founded = 2001
+| emblem founder = 
+| ground = [[Toumba Stadium]]
+| capacity = 28,703<ref>{{cite web |url=http://www.paokfc.gr/swift.jsp?CMCCode=100601&extLang= |title=Γήπεδο Τούμπας |access-date=2012-01-17 |url-status=dead |archive-url=https://web.archive.org/web/20120120162536/http://paokfc.gr/swift.jsp?CMCCode=100601&extLang= |archive-date=2012-01-20 }}</ref>
+| chairman = Thanasis Katsaris
+| manager = Thanasis Patrikidis
+| league = [[Greek football women A Division|Greek A Division]]
+| season = [[2025–26 Greek A Division (women's football)|2025–26]]
+| position = [[Greek A Division (women's football)|Greek A Division]], Champions
+| topscorer = 
+| firstgame = 
+| website = {{URL|https://paok.gr}}
+| pattern_la1 = _paok2425h
+| pattern_b1 = _paok2425h
+| pattern_ra1 = _paok2425h
+| pattern_sh1 = _paok2425h
+| pattern_so1 = _paok2425hl
+| leftarm1 = 000000
+| body1 = FFFFFF
+| rightarm1 = 000000
+| shorts1 = 000000
+| socks1 = FFFFFF
+| pattern_la2 = _paok2425a
+| pattern_b2 = _paok2425A
+| pattern_ra2 = _paok2425a
+| pattern_sh2 = _paok2425A
+| pattern_so2 = _paok2425al
+| leftarm2 = FFFFFF
+| body2 = FFFFFF
+| rightarm2 = FFFFFF
+| shorts2 = FFFFFF
+| socks2 = FFFFFF
+| pattern_la3 = 
+| pattern_b3 = 
+| pattern_ra3 = 
+| pattern_sh3 = 
+| pattern_so3 = 
+| leftarm3 = 
+| body3 = 
+| rightarm3 = 
+| shorts3 = 
+| socks3 = 
+}}
+{{PAOK sections}}
+[[File:Paok stadium.jpg|thumb|240px|[[Toumba Stadium]]]]
+
+'''Football Club P.A.O.K. Thessaloniki Women's Football''' or with its official name '''FC PAOK Thessaloniki''',<ref>[https://www.uefa.com/womenschampionsleague/history/clubs/81221--paok/ uefa.com] Profile</ref> represents the major [[Greece|Greek]] multi-sports club [[P.A.O.K.|AC PAOK]]<ref>[https://www.uefa.com/MultimediaFiles/Download/competitions/General/01/96/56/86/1965686_DOWNLOAD.pdf uefa.com] 2013/14 entries and coefficients</ref> in the national [[Greek football women A Division|A Division]] and international [[women's association football|women's football]] competitions.
+
+It was founded in 2001 as PAOK took over Olympiada'96 Thessaloniki, which faced economic problems. It is currently the leading women's football team in Greece,<ref>{{Cite web |url=http://www.womensoccer.gr/History/egxories.htm |title=Womenfootball.gr |access-date=12 October 2011 |archive-date=3 March 2018 |archive-url=https://web.archive.org/web/20180303050432/http://www.womensoccer.gr/History/egxories.htm |url-status=dead }}</ref> having represented the country in the [[UEFA Women's Champions League]] for the last seven years.<ref>[https://www.uefa.com/womenschampionsleague/history/clubs/81221--paok/]</ref>
+
+==Current squad==
+{{Updated|8 November 2026}}
+{{Fs start}}
+{{Fs player|no=1|nat=BRA|pos=GK|name=[[Dani Neuhaus]]}}
+{{Fs player|no=3|nat=GRE|pos=DF|name=[[Maria Gkizari]]}}
+{{Fs player|no=4|nat=GRE|pos=DF|name=[[Evmorfia Kiourexidou]]}}
+{{Fs player|no=5|nat=GRE|pos=DF|name=[[Maria Gkouni]]}}
+{{fs player|no=6|nat=WAL|pos=DF|name=[[Grace Morris]]}}
+{{fs player|no=7|nat=CYP|pos=FW|name=[[Eirini Michail]]}}
+{{Fs player|no=8|nat=ESP|pos=MF|name=[[Marta Llopis]]}}
+{{Fs player|no=10|nat=GRE|pos=MF|name=[[Thomai Vardali]]|other=[[Captain (sports)|captain]]}}
+{{Fs player|no=11|nat=GRE|pos=MF|name=[[Nikoleta Kalesi]]}}
+{{fs player|no=12|nat=GRE|pos=DF|name=[[Anna Veliani]]}}
+{{Fs player|no=13|nat=GRE|pos=GK|name=[[Chrysa Grigoriadou]]}}
+{{fs player|no=14|nat=GRE|pos=FW|name=[[Vasiliki Giannaka]]}}
+{{Fs player|no=17|nat=GRE|pos=MF|name=[[Maria Mitkou]]|other=[[Captain (sports)|vice-captain]]}}
+{{Fs mid}}
+{{Fs player|no=18|nat=GRE|pos=MF|name=[[Efi Brame]]}}
+{{fs player|no=19|nat=GRE|pos=FW|name=[[Foteini Mpouronikou]]}}
+{{Fs player|no=22|nat=GRE|pos=MF|name=[[Panagiota Argyriou]]}}
+{{fs player|no=23|nat=GRE|pos=MF|name=[[Eleftheria Drakogiannaki]]}}
+{{Fs player|no=24|nat=BIH|pos=FW|name=[[Minela Gačanica]]}}
+{{Fs player|no=25|nat=GRE|pos=DF|name=[[Elisavet Schortsianiti]]}}
+{{Fs player|no=27|nat=GRE|pos=DF|name=[[Markella Koskeridou]]}}
+{{Fs player|no=33|nat=GRE|pos=MF|name=[[Chrysanthi Voila]]}}
+{{Fs player|no=70|nat=MKD|pos=MF|name=[[Lenche Andreevska]]}}
+{{Fs player|no=77|nat=GRE|pos=MF|name=[[Ioli Stavropoulou]]}}
+{{fs player|no=96|nat=GRE|pos=DF|name=[[Niki Malamousi]]}}
+{{Fs player|no=|nat=GRE|pos=GK|name=[[Maria Tsakiri]]}}
+{{fs player|no=|nat=GRE|pos=DF|name=[[Konstantina Drakogiannaki]]}}
+{{fs player|no=|nat=GRE|pos=GK|name=[[Eva Konstantinidou]]}}
+{{Fs end}}
+
+===Out on loan===
+{{Fs start}}
+{{fs player|no=|nat=GRE|pos=DF|name=[[Afroditi Stefani]]|other=at [[Volos F.C.|Volos]] until 30 June 2027}}
+{{Fs end}}
+
+== PAOK B (Youth Infrastructure Team) ==
+* '''Panhellenic Junior Infrastructure Championship U-17''
+* Championship (2): 2023, 2024
+* '''Infrastructure Championship U-12 [[Macedonia Football Clubs Association|Macedonia FCA Championship]]''' 
+* Championship (1): 2024
+* 1st place in K12 in [[Macedonia (disambiguation)|Macedonian]] [[Christmas]] Football Tournament with 7 games 2021.
+* 1st place in a tournament in [[Kastoria]] for the B team of PAOK 2017.
+* 1st place in 2022 "Scoring for Equality" tournament.
+* 1st place in Junior [[Macedonia Football Clubs Association|Macedonia FCA Championship]] U-16  2022.
+* 1st [[Lamia]] Tournament: 2024
+
+==Notable players==
+* {{flagicon|United States}} Kori Butterfield<ref>{{Cite web|url=https://www.goal.com/en-us/news/missiles-butterfield-path-israel-injury-nwsl-europe/blt46c0bbc269956378|title='Running off the pitch with missiles in the air was crazy' - Butterfield's path through Israel, injury & NWSL|publisher=goal.com}}</ref>
+* {{flagicon|Serbia}} [[Jelena Dimitrijevic (footballer)|Jelena Dimitrijevic]]
+* {{flagicon|Colombia}} [[Gisela Arrieta]]
+* {{flagicon|Latvia}} {{flagicon|USA}} [[Anna Kristīne Gornela]]
+* {{flagicon|Greece}} [[Ioanna Chamalidou]]
+* {{flagicon|Greece}} [[Natalia Chatzigiannidou]]
+* {{flagicon|Cyprus}} [[Eleni Giannou]]
+* {{flagicon|Greece}} [[Anastasia Gkatsou]]
+* {{flagicon|Greece}} [[Glykeria Gkatzogianni]]
+* {{flagicon|Greece}} [[Eleni Kakambouki]]
+* {{flagicon|Greece}} [[Dimitra Karapetsa]]
+* {{flagicon|Greece}} [[Kyriaki Kynossidou]]
+* {{flagicon|Greece}} [[Eirini Nefrou]]
+* {{flagicon|Greece}} [[Dimitra Panteliadou]]
+* {{flagicon|Greece}} [[Anthi Papakonstantinou]]
+* {{flagicon|Greece}} [[Maria Paterna]]
+* {{flagicon|Greece}} [[Nikoleta Pitsiou]]
+* {{flagicon|Greece}} [[Grigoria Pouliou]]
+* {{flagicon|Greece}} [[Anastasia Spyridonidou]]
+* {{flagicon|Greece}} [[Thenia Zerva]]
+* {{flagicon|IND}} [[Manisha Kalyan]]<ref>{{cite web|url=https://sportstar.thehindu.com/football/india-women-forward-manisha-kalyan-joins-greek-side-paok-from-apollon-ladies-indian-football/article68407304.ece|title=Indian Football: India forward Manisha Kalyan joins Greek side PAOK from Apollon Ladies|website=sportstar.thehindu.com|access-date=15 July 2022|archive-url=https://web.archive.org/web/20240715155855/https://sportstar.thehindu.com/football/india-women-forward-manisha-kalyan-joins-greek-side-paok-from-apollon-ladies-indian-football/article68407304.ece|archive-date=15 July 2024}}</ref>
+
+==Honours==
+* '''[[Greek football women A Division|A Division]] (20) (record)''': [[2001–02 Greek A Division (women's football)|2001–02]], [[2005–06 Greek A Division (women's football)|2005–06]], [[2006-07 Greek A Division (women's football)|2006–07]], [[2007–08 Greek A Division (women's football)|2007–08]], [[2008–09 Greek A Division (women's football)|2008–09]], [[2009–10 Greek A Division (women's football)|2009–10]], [[2010–11 Greek A Division (women's football)|2010–11]], [[2011–12 Greek A Division (women's football)|2011–12]], [[2012–13 Greek A Division (women's football)|2012–13]],  [[2014–15 Greek A Division (women's football)|2014–15]], [[2015–16 Greek A Division (women's football)|2015–16]], [[2016–17 Greek A Division (women's football)|2016–17]], [[2017–18 Greek A Division (women's football)|2017–18]], [[2018–19 Greek A Division (women's football)|2018–19]], [[2019–20 Greek A Division (women's football)|2019–20]], [[2020–21 Greek A Division (women's football)|2020–21]], [[2021–22 Greek A Division (women's football)|2021–22]], [[2022–23 Greek A Division (women's football)|2022–23]], [[2023–24 Greek A Division (women's football)|2023–24]], [[2025–26 Greek A Division (women's football)|2025–26]]
+* '''[[Greek Women's Cup]] (8) (record)''': 2002, 2013, 2014, 2015, 2016, 2017, [[2024 Greek Women's Cup|2024]], [[2025–26 Greek Women's Cup|2026]]
+* '''[[Double (association football)|Double]] (7) (record)''': 2002, 2013, 2015, 2016, 2017, 2023, 2026
+
+==Season to season==
+{| class="wikitable" style="text-align: center;"
+|-
+! rowspan="2" |Season
+! colspan="9" |League
+! rowspan="2" align="center" |[[Greek Women's Cup|Cup]]
+! rowspan="2" align="center" |[[UEFA Women's Champions League|UWCL]]
+! colspan="2" |Top scorer<ref name="Top scorer">All league goals scored, including playoff games</ref>
+|-
+!{{Tooltip|Div|Division}}!!{{Tooltip|Pos|Position}} !! width="25" |{{Tooltip|Pld|Played}} !! width="25" |{{Tooltip|W|Won}} !! width="25" |{{Tooltip|D|Drawn}} !! width="25" |{{Tooltip|L|Lost}} !! width="25" |{{Tooltip|GF|Goals for}} !! width="25" |{{Tooltip|GA|Goals against}} !! width="25" |{{Tooltip|Pts|Points}} !!Name(s) !!{{goal}}
+|-
+| 2001–02 || [[Greek A Division (women's football)|A]] || bgcolor="gold" |1st || 17 || 15 || 1 || 1 ||  ||  ||'''46'''
+| bgcolor="gold"|Champion
+| —
+|
+| colspan="2" | 
+|-
+| 2002–03 || [[Greek A Division (women's football)|A]] || bgcolor="silver" |2nd || 22 ||  ||  ||  || 78 || 17 ||'''50'''
+| rowspan="10" bgcolor="#DCDCDC" |
+| [[2002–03 UEFA Women's Cup|Second qualifying round]]
+| align="left" |{{flagicon|GRE}} [[Dimitra Panteliadou]]
+| colspan="2" | 23
+|-
+| 2003–04 || [[Greek A Division (women's football)|A]] || 3rd/4th || 12 ||  ||  ||  ||  ||  ||
+| —
+| 
+| colspan="2" | 
+|-
+| 2004–05 || [[Greek A Division (women's football)|A]] || bgcolor="silver"|2nd || 16 || 8 || 5 || 3 || 54 || 15 ||'''29'''
+| —
+| 
+| colspan="2" | 
+|-
+| 2005–06 || [[Greek A Division (women's football)|A]] || bgcolor="gold"|1st || 13 ||  ||  ||  ||  ||  ||'''35'''
+| —
+| 
+| colspan="2" | 
+|-
+| 2006–07 || [[Greek A Division (women's football)|A]] || bgcolor="gold"|1st ||  ||  ||  ||  ||  ||  ||
+| [[2006–07 UEFA Women's Cup|First qualifying round]]
+| 
+| colspan="2" | 
+|-
+| 2007–08 || [[Greek A Division (women's football)|A]] || bgcolor="gold"|1st || 16 || 13 || 2 || 1 || 53 || 9 ||'''41'''
+| [[2007–08 UEFA Women's Cup|First qualifying round]]
+| 
+| colspan="2" | 
+|-
+| 2008–09 || [[Greek A Division (women's football)|A]] || bgcolor="gold"|1st || 16 || 14 || 2 || 0 || 66 || 3 ||'''44'''
+| [[2008–09 UEFA Women's Cup|First qualifying round]]
+| 
+| colspan="2" | 
+|-
+| 2009–10 || [[Greek A Division (women's football)|A]] || bgcolor="gold"|1st || 22 || 18 || 4 || 0 || 73 || 15 ||'''58'''
+| [[2009–10 UEFA Women's Champions League|Round of 32]]
+| 
+| colspan="2" | 
+|-
+| 2010–11 || [[Greek A Division (women's football)|A]] || bgcolor="gold"|1st || 24 || 24 || 0 || 0 || 101 || 9 ||'''72'''
+| [[2010–11 UEFA Women's Champions League|Round of 32]]
+| 
+| colspan="2" | 
+|-
+| 2011–12 || [[Greek A Division (women's football)|A]] || bgcolor="gold"|1st || 18 || 15 || 2 || 1 || 77 || 13 ||'''47'''
+| [[2011–12 UEFA Women's Champions League|Qualifying round]]
+| align="left" |{{flagicon|GRE}} [[Dimitra Panteliadou]]
+| colspan="2" | 20
+|-
+| 2012–13 || [[Greek A Division (women's football)|A]] || bgcolor="gold"|1st || 18 || 16 || 1 || 1 || 80 || 11 ||'''49'''
+| bgcolor="gold"|Champion
+| [[2012–13 UEFA Women's Champions League|Qualifying round]]
+| 
+| colspan="2" | 
+|-
+| 2013–14 || [[Greek A Division (women's football)|A]] || 3rd || 18 || 12 || 3 || 3 || 74 || 21 ||'''39'''
+| bgcolor="gold"|Champion
+| [[2013–14 UEFA Women's Champions League|Qualifying round]]
+| 
+| colspan="2" | 
+|-
+| 2014–15 || [[Greek A Division (women's football)|A]] || bgcolor="gold"|1st || 18 || 15 || 3 || 0 || 78 || 6 ||'''48'''
+| bgcolor="gold"|Champion
+| —
+| 
+| colspan="2" | 
+|-
+| 2015–16 || [[Greek A Division (women's football)|A]] || bgcolor="gold"|1st || 18 || 17 || 1 || 0 || 70 || 6 ||'''52'''
+| bgcolor="gold"|Champion
+| [[2015–16 UEFA Women's Champions League|Round of 32]]
+| align="left" |{{flagicon|GRE}} [[Dimitra Panteliadou]]
+| colspan="2" | 20
+|-
+| 2016–17 || [[Greek A Division (women's football)|A]] || bgcolor="gold"|1st || 16 || 16 || 0 || 0 || 79 || 7 ||'''48'''
+| bgcolor="gold"|Champion
+| [[2016–17 UEFA Women's Champions League|Qualifying round]]
+| align="left" |{{flagicon|GRE}} [[Eleni Markou]]
+| colspan="2" | 18
+|-
+| 2017–18 || [[Greek A Division (women's football)|A]] || bgcolor="gold"|1st || 22 || 18 || 2 || 2 || 90 || 10 ||'''56'''
+| rowspan="6" bgcolor="#DCDCDC" |
+| [[2017–18 UEFA Women's Champions League|Round of 32]]
+| align="left" |{{flagicon|GRE}} [[Eleni Markou]]
+| colspan="2" | 27
+|-
+| 2018–19 || [[Greek A Division (women's football)|A]] || bgcolor="gold"|1st || 20 || 20 || 0 || 0 || 106 || 5 ||'''60'''
+| —
+| align="left" |{{flagicon|COL}} [[Gisela Arrieta|Gisela Betancourt]]
+| colspan="2" | 30
+|-
+| 2019–20 || [[Greek A Division (women's football)|A]] || bgcolor="gold"|1st || 14 || 14 || 0 || 0 || 75 || 1 ||'''42'''
+| [[2019–20 UEFA Women's Champions League|Qualifying round]]
+| align="left" |{{flagicon|COL}} [[Gisela Arrieta|Gisela Betancourt]]
+| colspan="2" | 25
+|-
+| 2020–21 || [[Greek A Division (women's football)|A]] || bgcolor="gold"|1st || 11 || 11 || 0 || 0 || 71 || 2 ||'''33'''
+| [[2020–21 UEFA Women's Champions League|First qualifying round]]
+| align="left" |{{flagicon|GRE}} [[Anastasia Spyridonidou]]
+| colspan="2" | 22
+|-
+| 2021–22 || [[Greek A Division (women's football)|A]] || bgcolor="gold"|[[2021–22 Greek A Division (women's football)|1st]] || 20 || 19 || 1 || 0 || 79 || 3 ||'''58'''
+| [[2021–22 UEFA Women's Champions League|Round 1]]
+| align="left" |{{flagicon|KEN}} [[Esse Akida]]
+| colspan="2" | 17
+|-
+| 2022–23 || [[Greek A Division (women's football)|A]] || bgcolor="gold"|[[2022–23 Greek A Division (women's football)|1st]] || 20 || 19 || 0 || 1 || 70 || 8 ||'''57'''
+| [[2022–23 UEFA Women's Champions League|Round 1]]
+| align="left" |{{flagicon|GRE}} [[Thomai Vardali]]
+| colspan="2" | 16
+|-
+| 2023–24 || [[Greek A Division (women's football)|A]] || bgcolor="gold"|[[2023–24 Greek A Division (women's football)|1st]] || 26 || 24 || 2 || 0 || 78 || 8 ||'''74'''
+| bgcolor="gold"|[[2024 Greek Women's Cup|Champion]]
+| [[2023–24 UEFA Women's Champions League|Round 1]]
+| align="left" |{{flagicon|SWE}} [[Emelie Helmvall]]
+| colspan="2" | 23
+|-
+| 2024–25 || [[Greek A Division (women's football)|A]] || [[2024–25 Greek A Division (women's football)|5th]] || 22 || 12 || 7 || 3 || 44 || 13 ||'''43'''
+| [[2025 Greek Women's Cup|Semifinals]]
+| [[2024–25 UEFA Women's Champions League|Round 1]]
+| align="left" |{{flagicon|GRE}} [[Thomai Vardali]]<br />{{flagicon|IND}} [[Manisha Kalyan]]
+| colspan="2" | 7
+|-
+| 2025–26 || [[Greek A Division (women's football)|A]] || bgcolor="gold"|[[2025–26 Greek A Division (women's football)|1st]] || 26 || 23 || 3 || 0 || 89 || 4 ||'''72'''
+| bgcolor="gold"|[[2025–26 Greek Women's Cup|Champion]]
+| —
+| align="left" |{{flagicon|BIH}} [[Minela Gačanica]]
+| colspan="2" | 23
+|}
+
+==UEFA competitions record==
+{| class="wikitable"
+|-
+! Season
+! Competition
+! Round
+! Club
+! Home
+! Away
+! Aggregate
+! Qual.
+|-
+| colspan="8" style="background:white;"|
+|-
+| rowspan="3" | [[2002–03 UEFA Women's Cup|2002–03]]
+| rowspan="3" | [[UEFA Women's Cup]]
+| rowspan="3" style="text-align:center;"|[[2002–03 UEFA Women's Cup#Group 5|Second Qualifying Round]]
+| {{flagicon|Romania}} [[Regal București]]
+| colspan="2" style="text-align:center;"| 0–3
+| rowspan="3" style="text-align:center;"| 4th place
+| style="text-align:center;" rowspan="3"| [[File:Symbol delete vote.svg|17px]]
+|-
+| {{flagicon|NOR}} [[Trondheims-Ørn]]
+| colspan="2" style="text-align:center;"| 0–12
+|-
+| {{flagicon|Netherlands}} [[SV Saestum]]
+| colspan="2" style="text-align:center;"| 1–8
+|-
+| rowspan="3" | [[2006–07 UEFA Women's Cup|2006–07]]
+| rowspan="3" | [[UEFA Women's Cup]]
+| rowspan="3" style="text-align:center;"|[[2006–07 UEFA Women's Cup#Group A8|First Qualifying Round]]
+| {{flagicon|Israel}} [[Maccabi Holon]]
+| colspan="2" style="text-align:center;"| 1–1
+| rowspan="3" style="text-align:center;"| 3rd place
+| style="text-align:center;" rowspan="3"| [[File:Symbol delete vote.svg|17px]]
+|-
+| {{flagicon|UKR}} [[Lehenda Chernihiv]]
+| colspan="2" style="text-align:center;"| 0–5
+|-
+| {{flagicon|Cyprus}} [[AEK Kokkinochovion]]
+| colspan="2" style="text-align:center;"| 5–2
+|-
+| rowspan="3" | [[2007–08 UEFA Women's Cup|2007–08]]
+| rowspan="3" | [[UEFA Women's Cup]]
+| rowspan="3" style="text-align:center;"|[[2007–08 UEFA Women's Cup#Group A8|First Qualifying Round]]
+| {{flagicon|Belarus}} [[Universitet Vitebsk]]
+| colspan="2" style="text-align:center;"| 0–4
+| rowspan="3" style="text-align:center;"| 3rd place
+| style="text-align:center;" rowspan="3"| [[File:Symbol delete vote.svg|17px]]
+|-
+| {{flagicon|Bulgaria}} [[FC NSA Sofia]]
+| colspan="2" style="text-align:center;"| 2–2
+|-
+| {{flagicon|Estonia}} [[Pärnu JK]]
+| colspan="2" style="text-align:center;"| 3–2
+|-
+| rowspan="3" | [[2008–09 UEFA Women's Cup|2008–09]]
+| rowspan="3" | [[UEFA Women's Cup]]
+| rowspan="3" style="text-align:center;"|[[2008–09 UEFA Women's Cup#Group A8|First Qualifying Round]]
+| {{flagicon|Estonia}} [[FC Levadia Tallinn (women)|Levadia Tallinn]]
+| colspan="2" style="text-align:center;"| 3–0
+| rowspan="3" style="text-align:center;"| 3rd place
+| style="text-align:center;" rowspan="3"| [[File:Symbol delete vote.svg|17px]]
+|-
+| {{flagicon|Ukraine}} [[Naftokhimik Kalush]]
+| colspan="2" style="text-align:center;"| 0–1
+|-
+| {{flagicon|Poland}} [[AZS Wroclaw]]
+| colspan="2" style="text-align:center;"| 0–4
+|-
+|| [[2009–10 UEFA Women's Champions League|2009–10]]
+|| [[UEFA Women's Champions League|Champions League]]
+| style="text-align:center;"|[[2009–10 UEFA Women's Champions League#Round of 32|Round of 32]]
+| {{flagicon|England}} [[Arsenal W.F.C.|Arsenal]]
+| style="text-align:center;"| 0–9
+| style="text-align:center;"| 0–9
+| style="text-align:center;"| '''0–18'''
+| style="text-align:center;"| [[File:Symbol delete vote.svg|17px]]
+|-
+|| [[2010–11 UEFA Women's Champions League|2010–11]]
+|| [[UEFA Women's Champions League|Champions League]]
+| style="text-align:center;"|[[2010–11 UEFA Women's Champions League#Round of 32|Round of 32]]
+| {{flagicon|Austria}} [[SV Neulengbach]]
+| style="text-align:center;"| 1–0
+| style="text-align:center;"| 0–3
+| style="text-align:center;"| '''1–3'''
+| style="text-align:center;"| [[File:Symbol delete vote.svg|17px]]
+|-
+| rowspan="3" | [[2011–12 UEFA Women's Champions League|2011–12]]
+| rowspan="3" | [[UEFA Women's Champions League|Champions League]]
+| rowspan="3" style="text-align:center;"|[[2011–12 UEFA Women's Champions League#Group 1|Qualifying Round]]
+| {{flagicon|Moldova}} [[Goliador Chisinau]]
+| colspan="2" style="text-align:center;"| 3–0
+| rowspan="3" style="text-align:center;"| 3rd place
+| style="text-align:center;" rowspan="3"| [[File:Symbol delete vote.svg|17px]]
+|-
+| {{flagicon|Macedonia}} [[ZFK Nase Taksi]]
+| colspan="2" style="text-align:center;"| 0–1
+|-
+| {{flagicon|Switzerland}} [[YB Frauen]]
+| colspan="2" style="text-align:center;"| 1–1
+|-
+| rowspan="3" | [[2012–13 UEFA Women's Champions League|2012–13]]
+| rowspan="3" | [[UEFA Women's Champions League|Champions League]]
+| rowspan="3" style="text-align:center;"|[[2012–13 UEFA Women's Champions League#Group 7|Qualifying Round]]
+| {{flagicon|Macedonia}} [[ZFK Nase Taksi]]
+| colspan="2" style="text-align:center;"| 1–0
+| rowspan="3" style="text-align:center;"| 2nd place
+| style="text-align:center;" rowspan="3"| [[File:Symbol delete vote.svg|17px]]
+|-
+| {{flagicon|Latvia}} [[FC Skonto/Cerība-46.vsk.|FC Skonto/Cerība]]
+| colspan="2" style="text-align:center;"| 8–0
+|-
+| {{flagicon|Hungary}} [[MTK Hungária FC]]
+| colspan="2" style="text-align:center;"| 0–2
+|-
+| rowspan="3" | [[2013–14 UEFA Women's Champions League|2013–14]]
+| rowspan="3" | [[UEFA Women's Champions League|Champions League]]
+| rowspan="3" style="text-align:center;"|[[2013–14 UEFA Women's Champions League#Group 6|Qualifying Round]]
+| {{flagicon|EST}} [[Pärnu JK]]
+| colspan="2" style="text-align:center;"| 1–3
+| rowspan="3" style="text-align:center;"| 3rd place
+| style="text-align:center;" rowspan="3"| [[File:Symbol delete vote.svg|17px]]
+|-
+| {{flagicon|MKD}} [[ŽFK Biljanini Izvori]]
+| colspan="2" style="text-align:center;"| 5–0
+|-
+| {{flagicon|FIN}} [[PK-35 Vantaa (women)|PK-35 Vantaa]]
+| colspan="2" style="text-align:center;"| 1–2
+|-
+| rowspan="4" | [[2015–16 UEFA Women's Champions League|2015–16]]
+| rowspan="4" | [[UEFA Women's Champions League|Champions League]]
+| rowspan="3" style="text-align:center;"|[[2015–16 UEFA Women's Champions League#Group 2|Qualifying Round]]
+| {{flagicon|NIR}} [[Glentoran Belfast United L.F.C.|Glentoran Belfast United]]
+| colspan="2" style="text-align:center;"| 4–0
+| rowspan="3" style="text-align:center;"| 1st place
+| style="text-align:center;" rowspan="3"| [[File:Symbol keep vote.svg|17px]]
+|-
+| {{flagicon|MKD}} [[ŽFK Dragon 2014]]
+| colspan="2" style="text-align:center;"| 10–0
+|-
+| {{flagicon|BUL}} [[FC NSA Sofia]]
+| colspan="2" style="text-align:center;"| 4–0
+|-
+| style="text-align:center;"|[[2015–16 UEFA Women's Champions League#Round of 32|Round of 32]]
+| {{flagicon|SWE}} [[KIF Örebro DFF]]
+| style="text-align:center;"| 0–3
+| style="text-align:center;"| 0–5
+| style="text-align:center;"| '''0–8'''
+| style="text-align:center;"| [[File:Symbol delete vote.svg|17px]]
+|-
+| rowspan="3" | [[2016–17 UEFA Women's Champions League|2016–17]]
+| rowspan="3" | [[UEFA Women's Champions League|Champions League]]
+| rowspan="3" style="text-align:center;"|[[2016–17 UEFA Women's Champions League#Group 1|Qualifying Round]]
+| {{flagicon|KOS}} [[WFC Hajvalia]]
+| colspan="2" style="text-align:center;"| 1–1
+| rowspan="3" style="text-align:center;"| 2nd place
+| style="text-align:center;" rowspan="3"| [[File:Symbol delete vote.svg|17px]]
+|-
+| {{flagicon|FRO}} [[KÍ Klaksvík (women)|KÍ Klaksvík]]
+| colspan="2" style="text-align:center;"| 1–1
+|-
+| {{flagicon|CYP}} [[Apollon Limassol (women)|Apollon Limassol]]
+| colspan="2" style="text-align:center;"| 3–3
+|-
+| rowspan="4" | [[2017–18 UEFA Women's Champions League|2017–18]]
+| rowspan="4" | [[UEFA Women's Champions League|Champions League]]
+| rowspan="3" style="text-align:center;"|[[2017–18 UEFA Women's Champions League#Group 10|Qualifying Round]]
+| {{flagicon|LUX}} [[SC Bettembourg Féminine|Bettembourg]]
+| colspan="2" style="text-align:center;"| 8–0
+| rowspan="3" style="text-align:center;"| 1st place
+| style="text-align:center;" rowspan="3"| [[File:Symbol keep vote.svg|17px]]
+|-
+| {{flagicon|ALB}} [[KF Vllaznia Shkodër (women)|Vllaznia]]
+| colspan="2" style="text-align:center;"| 1–0
+|-
+| {{flagicon|BIH}} [[SFK 2000]]
+| colspan="2" style="text-align:center;"| 3–0
+|-
+| style="text-align:center;"|[[2017–18 UEFA Women's Champions League#Round of 32|Round of 32]]
+| {{flagicon|CZE}} [[AC Sparta Praha (women)|Sparta Praha]]
+| style="text-align:center;"| 0–5
+| style="text-align:center;"| 0–3
+| style="text-align:center;"| '''0–8'''
+| style="text-align:center;"| [[File:Symbol delete vote.svg|17px]]
+|-
+| rowspan="3" | [[2019–20 UEFA Women's Champions League|2019–20]]
+| rowspan="3" | [[UEFA Women's Champions League|Champions League]]
+| rowspan="3" style="text-align:center;"|[[2019–20 UEFA Women's Champions League#Group 8|Qualifying Round]]
+| {{flagicon|BEL}} [[RSC Anderlecht (women)|Anderlecht]]
+| colspan="2" style="text-align:center;"| 0–5
+| rowspan="3" style="text-align:center;"| 4th place
+| style="text-align:center;" rowspan="3"| [[File:Symbol delete vote.svg|17px]]
+|-
+| {{flagicon|NOR}} [[LSK Kvinner FK|LSK Kvinner]]
+| colspan="2" style="text-align:center;"| 0–1
+|-
+| {{flagicon|NIR}} [[Linfield Ladies F.C.|Linfield]]
+| colspan="2" style="text-align:center;"| 2–3
+|-
+|[[2020–21 UEFA Women's Champions League|2020–21]]
+|[[UEFA Women's Champions League|Champions League]]
+|style="text-align:center;"|[[2020–21 UEFA Women's Champions League#First qualifying round|First Qualifying Round]]
+|{{Fbicon|Portugal}} [[S.L. Benfica (women's football)|Benfica]]
+| colspan="2" style="text-align:center"| 1–3
+| style="text-align:center"| '''1–3'''
+| style="text-align:center;"| [[File:Symbol delete vote.svg|17px]]
+|-
+| rowspan="2" | [[2021–22 UEFA Women's Champions League|2021–22]]
+| rowspan="2" | [[UEFA Women's Champions League|Champions League]]
+| rowspan="2" style="text-align:center;"|[[2021–22 UEFA Women's Champions League#Tournament 7|First Qualifying Round]]
+| {{flagicon|MLD}} [[Agarista-ȘS Anenii Noi|Agarista Anenii Noi]]
+| colspan="2" style="text-align:center;"| 6–0
+| rowspan="2" style="text-align:center;"| 2nd place
+| style="text-align:center;" rowspan="2"| [[File:Symbol delete vote.svg|17px]]
+|-
+| {{flagicon|NOR}} [[Vålerenga Fotball Damer|Vålerenga]]
+| colspan="2" style="text-align:center;"| 0–2
+|-
+| rowspan="2" |[[2022–23 UEFA Women's Champions League|2022–23]]
+| rowspan="2" |[[UEFA Women's Champions League|Champions League]]
+| rowspan="2"style="text-align:center;"|[[2022–23 UEFA Women's Champions League#Round 1|First Qualifying Round]]
+| {{flagicon|WAL}} [[Swansea City Ladies F.C.|Swansea City]]
+| colspan="2" style="text-align:center;"| 2–0
+| rowspan="2" style="text-align:center;"| 2nd place
+| style="text-align:center;" rowspan="2"| [[File:Symbol delete vote.svg|17px]]
+|-
+| {{flagicon|SCO}} [[Rangers W.F.C.|Rangers]]
+| colspan="2" style="text-align:center;"| 0–4
+|-
+| rowspan="2" |[[2023–24 UEFA Women's Champions League|2023–24]]
+| rowspan="2" |[[UEFA Women's Champions League|Champions League]]
+| rowspan="2"style="text-align:center;"|[[2023–24 UEFA Women's Champions League#Tournament 9|First Qualifying Round]]
+| {{flagicon|LUX}} [[Racing FC Union Luxembourg|Racing Union]]
+| colspan="2" style="text-align:center;"| 6–1
+| rowspan="2" style="text-align:center;"| 2nd place
+| style="text-align:center;" rowspan="2"| [[File:Symbol delete vote.svg|17px]]
+|-
+| {{flagicon|AUT}} [[SKN St. Pölten (women)|St. Pölten]]
+| colspan="2" style="text-align:center;"| 0–3
+|-
+| rowspan="2" |[[2024–25 UEFA Women's Champions League|2024–25]]
+| rowspan="2" |[[UEFA Women's Champions League|Champions League]]
+| rowspan="2"style="text-align:center;"|[[2024–25 UEFA Women's Champions League#Tournament 7|First Qualifying Round]]
+| {{flagicon|ISR}} [[F.C. Kiryat Gat (women)|Kiryat Gat]]
+| colspan="2" style="text-align:center;"| 2–1
+| rowspan="2" style="text-align:center;"| 2nd place
+| style="text-align:center;" rowspan="2"| [[File:Symbol delete vote.svg|17px]]
+|-
+| {{flagicon|SUI}} [[Servette FC Chênois Féminin|Servette FC]]
+| colspan="2" style="text-align:center;"| 0–2
+|-
+| rowspan=5 |[[Template:2026–27 in European women's football (UEFA)|2026–27]]
+| rowspan=4 |[[2026–27 UEFA Women's Champions League|Champions League]]
+| rowspan="2" style="text-align:center;"|[[2026–27 UEFA Women's Champions League#First qualifying round|First Qualifying Round]]
+| {{flagicon|ISR}} [[Hapoel Katamon Jerusalem F.C. (women)|Hapoel Katamon Jerusalem]]
+| colspan="2" style="text-align:center;"|3–1
+| rowspan="2" style="text-align:center;"|1st place
+| rowspan="2" style="text-align:center;"|[[File:Symbol keep vote.svg|17px]]
+|-
+| {{flagicon|AZE}} [[Neftçi PFK (women)|Neftçi]]
+| colspan="2" style="text-align:center;"|3–0
+|-
+|rowspan="2" style="text-align:center;"|[[2026–27 UEFA Women's Champions League#Second qualifying round|Second Qualifying Round]]
+| {{flagicon|HUN}} [[Ferencvárosi TC (women's football)|Ferencváros]]
+| colspan="2" style="text-align:center;"|3–2
+| rowspan="2" style="text-align:center;"|2nd place
+| rowspan="2" style="text-align:center;"|[[File:Symbol delete vote.svg|17px]]
+|-
+| {{flagicon|NOR}} [[SK Brann (women)|Brann]]
+| colspan="2" style="text-align:center;"|2–3
+|-
+|[[2026–27 UEFA Women's Europa Cup|Europa Cup]]
+|rowspan="2" style="text-align:center;"|[[2026–27 UEFA Women's Europa Cup qualifying rounds|Second Qualifying round]]
+| {{flagicon|SVK}} [[Spartak Myjava (women)|Spartak Myjava]]
+| style="text-align:center;"| 2–3
+| style="text-align:center;"| 1–1
+| style="text-align:center;"| '''3–4'''
+| style="text-align:center;"| [[File:Symbol delete vote.svg|17px]]
+|}
+
+==References==
+{{reflist}}
+
+==External links==
+*{{official website|http://acpaok.gr}}
+
+{{P.A.O.K.}}
+{{Greek A Ethniki women football}}
+{{Use dmy dates|date=July 2024}}
+
+[[Category:Association football clubs established in 2002]]
+[[Category:Women's football clubs in Greece]]
+[[Category:2001 establishments in Greece]]
+[[Category:P.A.O.K.]]

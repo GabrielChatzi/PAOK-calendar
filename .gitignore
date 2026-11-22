@@ -8,6 +8,7 @@ body.md
 docs/*.ics
 docs/matches.json
 docs/standings.json
+docs/events.json
 docs/status.json
 docs/sources.json
 .live/

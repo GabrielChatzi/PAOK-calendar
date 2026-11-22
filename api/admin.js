@@ -23,6 +23,10 @@
 //                                                   μετάδοσης, ώρα, γήπεδο), πάνω από ό,τι δίνουν οι πηγές·
 //                                                   κενό πεδίο: μένει ό,τι λέει η πηγή
 //   POST {password, action: "info-clear", nt}       σβήσιμο των πληροφοριών
+//   POST {password, action: "event-save", event}    ατομικά αθλήματα: νέα διοργάνωση ή αλλαγή (και αυτόματης,
+//                                                   με event.auto)· event: {id?, sport, title, start, end, time,
+//                                                   venue, athletes, results, para, url}
+//   POST {password, action: "event-delete", id, auto}  σβήσιμο (auto: κρύψιμο αυτόματης διοργάνωσης)
 //
 // Οι πληροφορίες (συλλογή «info») επιστρέφονται στο GET ως info: η σελίδα τις δείχνει αμέσως και το
 // build_calendars.py τις περνά στο πρόγραμμα, στα ημερολόγια και στις υπενθυμίσεις.
@@ -206,6 +210,34 @@ export function parseCustom(x) {
   return c;
 }
 
+// ---- Ατομικά αθλήματα: διοργανώσεις (συλλογή «events», βλ. events.py). Τα κλειδιά όπως στο SPORTS του events.py.
+export const EVENT_SPORTS = ["athletics", "swimming", "finswimming", "weightlifting", "wrestling", "boxing", "judo",
+  "taekwondo", "kickboxing", "sambo", "cycling", "chess"];
+
+// Η διοργάνωση από τη φόρμα, ελεγμένη· σε λάθος { error }. id: δικό της (νέα) ή μιας αυτόματης (αλλαγή της).
+export function parseCompetition(x) {
+  if (!x || typeof x !== "object") return { error: "Λείπει η διοργάνωση." };
+  const line = (v, n) => String(v ?? "").trim().replace(/\s+/g, " ").slice(0, n);
+  const lines = (v, n) => String(v ?? "").replace(/\r/g, "").split("\n").map((l) => l.trim()).filter(Boolean).join("\n").slice(0, n);
+  const e = {
+    sport: line(x.sport, 20), title: line(x.title, 120), start: line(x.start, 10), end: line(x.end, 10) || line(x.start, 10),
+    time: line(x.time, 5), venue: line(x.venue, 100), athletes: lines(x.athletes, 800), results: lines(x.results, 1500),
+    para: x.para === true, url: line(x.url, 300),
+  };
+  if (!EVENT_SPORTS.includes(e.sport)) return { error: "Διάλεξε άθλημα." };
+  if (!e.title) return { error: "Γράψε το όνομα της διοργάνωσης." };
+  const day = /^\d{4}-\d{2}-\d{2}$/;
+  if (!day.test(e.start) || Number.isNaN(Date.parse(e.start))) return { error: "Διάλεξε ημερομηνία έναρξης." };
+  if (!day.test(e.end) || Number.isNaN(Date.parse(e.end))) return { error: "Η ημερομηνία λήξης δεν είναι σωστή." };
+  if (e.end < e.start) return { error: "Η λήξη είναι πριν από την έναρξη." };
+  if ((Date.parse(e.end) - Date.parse(e.start)) / 86400000 > 31) return { error: "Μια διοργάνωση κρατά ως έναν μήνα." };
+  if (e.time && !/^([01]\d|2[0-3]):[0-5]\d$/.test(e.time)) return { error: "Η ώρα θέλει μορφή 15:30." };
+  if (e.url && !/^https?:\/\/[^\s"'<>]+$/i.test(e.url)) return { error: "Ο σύνδεσμος θέλει να ξεκινά με https://" };
+  if (x.id != null && !/^[0-9a-f]{12}$/.test(String(x.id))) return { error: "Άγνωστη διοργάνωση." };
+  e.id = x.id ? String(x.id) : crypto.randomBytes(6).toString("hex");
+  return e;
+}
+
 // Πληροφορίες αγώνα από τη φόρμα, ελεγμένες· σε λάθος { error }.
 export function parseInfo(x) {
   if (!x || typeof x !== "object") return { error: "Λείπουν οι πληροφορίες." };
@@ -374,8 +406,11 @@ export default async function handler(req, res) {
     const day = new Date(Date.now() - 2 * 86400 * 1000).toISOString().slice(0, 10);
     const info = await (await getDb()).collection("info").find({ date: { $gte: day } }, { projection: { _id: 0 } }).toArray();
     const crests = await (await getDb()).collection("crests").find({}, { projection: { _id: 0, sport: 1, name: 1, url: 1 } }).toArray();
+    // Ατομικά αθλήματα: διοργανώσεις της φόρμας, αλλαγές και κρυψίματα αυτόματων (events.py).
+    const events = (await (await getDb()).collection("events").find({}).sort({ start: 1 }).toArray())
+      .map(({ _id, at, ...rest }) => ({ id: _id, ...rest }));
     res.setHeader("Cache-Control", "public, s-maxage=15");
-    return res.status(200).json({ entries, live, custom, info, crests });
+    return res.status(200).json({ entries, live, custom, info, crests, events });
   }
   if (req.method !== "POST") return send(res, 405, { error: "Μόνο GET ή POST." });
 
@@ -406,6 +441,25 @@ export default async function handler(req, res) {
     if (body.action === "crest-delete") await col.deleteOne({ _id: c.id });
     else await col.updateOne({ _id: c.id }, { $set: { sport: c.sport, name: c.name, url: c.url, at: new Date() } }, { upsert: true });
     return send(res, 200, { ok: true, crest: { sport: c.sport, name: c.name, url: c.url } });
+  }
+  if (body.action === "event-save") {
+    const e = parseCompetition(body.event);
+    if (e.error) return send(res, 400, { error: e.error });
+    const { id, ...fields } = e;
+    // source: «admin» για νέα διοργάνωση της φόρμας· μια αυτόματη (auto: true) μένει «acpaok» με τις αλλαγές.
+    const set = { ...fields, hidden: false, at: new Date() };
+    if (!body.event.auto) set.source = "admin";
+    await (await getDb()).collection("events").updateOne({ _id: id }, { $set: set }, { upsert: true });
+    return send(res, 200, { ok: true, event: { id, ...fields, source: set.source || "acpaok", edited: true } });
+  }
+  if (body.action === "event-delete") {
+    // Δική της: σβήνεται. Αυτόματη (από την ΑΣ ΠΑΟΚ): κρύβεται, αλλιώς θα ξαναερχόταν με την επόμενη ενημέρωση.
+    const id = String(body.id || "");
+    if (!/^[0-9a-f]{12}$/.test(id)) return send(res, 400, { error: "Άγνωστη διοργάνωση." });
+    const col = (await getDb()).collection("events");
+    if (body.auto) await col.updateOne({ _id: id }, { $set: { hidden: true, at: new Date() } }, { upsert: true });
+    else await col.deleteOne({ _id: id });
+    return send(res, 200, { ok: true });
   }
   if (body.action === "match-delete") {
     const id = String(body.id || "");

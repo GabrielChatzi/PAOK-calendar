@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [build_calendars.py, standings.py, notify.py, club.py, manual.json, goals.json, .github/workflows/update.yml]
+    paths: [build_calendars.py, standings.py, notify.py, club.py, events.py, manual.json, goals.json, .github/workflows/update.yml]
 
 permissions:
   contents: write
@@ -72,6 +72,14 @@ jobs:
           PUSH: "1"
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 koe_watch.py
+
+      # Ατομικά αθλήματα: διοργανώσεις από τις αναρτήσεις της ΑΣ ΠΑΟΚ και τη φόρμα του διαχειριστή (events.py),
+      # και ειδοποίηση στον διαχειριστή για νέες διοργανώσεις και ανακοινώσεις ομοσπονδιών.
+      - name: Ατομικά αθλήματα
+        continue-on-error: true
+        env:
+          PUSH: "1"
+        run: python3 events.py
 
       # Όλο το docs (σελίδα και δεδομένα) πηγαίνει στον κλάδο data: από εκεί τα διαβάζει η Vercel
       # (api/data.js) και τα σερβίρει το GitHub Pages (παλιά διεύθυνση). Ο main δεν αλλάζει.

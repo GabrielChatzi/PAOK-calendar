@@ -489,9 +489,9 @@
    "season": "2015-16",
    "sections": {
     "football": {
-     "matches": 47,
+     "matches": 57,
      "standings": false,
-     "summary": false
+     "summary": true
     },
     "basketball": {
      "matches": 45,

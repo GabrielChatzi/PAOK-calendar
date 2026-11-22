@@ -278,6 +278,34 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/443.png"
     },
     {
+     "uid": "football-wiki-d347b9585aec",
+     "section": "football",
+     "start": "2015-10-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panthrakikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2015%E2%80%9316_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Pelkas",
+        "min": "73"
+       },
+       {
+        "name": "Mak",
+        "min": "86"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-437177",
      "nt": "5ca2193409",
      "section": "football",
@@ -371,6 +399,59 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-ad6a59e24f95",
+     "section": "football",
+     "start": "2015-12-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Chania",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Perivolia Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2η αγωνιστική",
+     "score": "2-6",
+     "url": "https://en.wikipedia.org/wiki/2015%E2%80%9316_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Stamatis",
+        "min": "3"
+       },
+       {
+        "name": "Lita",
+        "min": "79"
+       }
+      ],
+      "away": [
+       {
+        "name": "Jairo",
+        "min": "73"
+       },
+       {
+        "name": "Sabo",
+        "min": "23"
+       },
+       {
+        "name": "Sabo",
+        "min": "41"
+       },
+       {
+        "name": "Sabo",
+        "min": "85"
+       },
+       {
+        "name": "Mystakidis",
+        "min": "61"
+       },
+       {
+        "name": "Pelkas",
+        "min": "64"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-437546",
      "nt": "715d587cdb",
      "section": "football",
@@ -419,6 +500,35 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-f8166c4aa434",
+     "section": "football",
+     "start": "2015-12-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos Volos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Volos Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "3η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2015%E2%80%9316_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Alamanis",
+        "min": "32"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dimitriadis",
+        "min": "16"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-437562",
      "nt": "e4fdf12e98",
      "section": "football",
@@ -432,6 +542,39 @@
      "score": "1-0",
      "url": "https://www.espn.com/soccer/match/_/gameId/437562",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-c3d6fd8775af",
+     "section": "football",
+     "start": "2016-01-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kalloni",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Mytilene Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2015%E2%80%9316_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Anastasiadis",
+        "min": "3"
+       },
+       {
+        "name": "Georgiou",
+        "min": "79"
+       }
+      ],
+      "away": [
+       {
+        "name": "Mak",
+        "min": "89"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-440012",
@@ -448,6 +591,38 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/440012",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/10515.png"
+    },
+    {
+     "uid": "football-wiki-04b48b53c1df",
+     "section": "football",
+     "start": "2016-01-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kalloni",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/2015%E2%80%9316_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Mak",
+        "min": "65"
+       },
+       {
+        "name": "Athanasiadis",
+        "min": "58"
+       },
+       {
+        "name": "Berbatov",
+        "min": "86"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-440981",
@@ -497,6 +672,35 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-a7106714c6c3",
+     "section": "football",
+     "start": "2016-01-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2015%E2%80%9316_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Masouras",
+        "min": "35"
+       }
+      ],
+      "away": [
+       {
+        "name": "Pelkas",
+        "min": "15"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-439913",
      "nt": "3d4b869893",
      "section": "football",
@@ -527,6 +731,21 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/439922",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/435.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-0fdd282821d6",
+     "section": "football",
+     "start": "2016-02-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/2015%E2%80%9316_PAOK_FC_season",
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-439931",
@@ -575,6 +794,21 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/439949",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/8354.png"
+    },
+    {
+     "uid": "football-wiki-bce51339cb30",
+     "section": "football",
+     "start": "2016-03-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "0-3",
+     "url": "https://en.wikipedia.org/wiki/2015%E2%80%9316_PAOK_FC_season",
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-445326",
@@ -653,6 +887,35 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/446841",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/5276.png"
+    },
+    {
+     "uid": "football-wiki-9a71420033cb",
+     "section": "football",
+     "start": "2016-04-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Platanias",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Perivolia Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/2015%E2%80%9316_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-aa72408ba4ad",
+     "section": "football",
+     "start": "2016-04-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/2015%E2%80%9316_PAOK_FC_season",
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-448464",
@@ -751,7 +1014,22 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/443.png"
     }
    ],
-   "backfilled": true
+   "backfilled": true,
+   "summary": {
+    "league": "4η θέση (1η στα πλέι οφ)",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Ημιτελικά"
+     },
+     {
+      "name": "UEFA Europa League",
+      "result": "Όμιλοι"
+     }
+    ],
+    "topscorer": "Stefanos Athanasiadis (11)",
+    "source": "https://en.wikipedia.org/wiki/2015%E2%80%9316_PAOK_FC_season"
+   }
   },
   "basketball": {
    "matches": [
@@ -2640,5 +2918,5 @@
    "backfilled": true
   }
  },
- "updated": "2026-11-22T18:29+02:00"
+ "updated": "2026-11-22T21:49+02:00"
 }

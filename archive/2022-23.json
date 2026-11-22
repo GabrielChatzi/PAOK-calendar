@@ -246,6 +246,35 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/20043.png"
     },
     {
+     "uid": "football-wiki-e1dd800926b8",
+     "section": "football",
+     "start": "2022-12-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kalamata",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kalamata Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/2022%E2%80%9323_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Oliveira",
+        "min": "26",
+        "pen": true
+       },
+       {
+        "name": "Brandon",
+        "min": "78"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-650321",
      "nt": "154a239a3f",
      "section": "football",
@@ -310,6 +339,34 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-2db949f89609",
+     "section": "football",
+     "start": "2023-01-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kalamata",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2022%E2%80%9323_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Brandon",
+        "min": "11"
+       },
+       {
+        "name": "",
+        "min": "13"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-650348",
      "nt": "e81cfb0e63",
      "section": "football",
@@ -326,6 +383,34 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/1010.png"
     },
     {
+     "uid": "football-wiki-00e3db186392",
+     "section": "football",
+     "start": "2023-01-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2022%E2%80%9323_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Brandon",
+        "min": "53"
+       },
+       {
+        "name": "Taison",
+        "min": "72"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-650355",
      "nt": "475c69972d",
      "section": "football",
@@ -340,6 +425,36 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/650355",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/443.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-8492fe80fc45",
+     "section": "football",
+     "start": "2023-01-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Leoforos Alexandras Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2022%E2%80%9323_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "",
+        "min": "18"
+       }
+      ],
+      "away": [
+       {
+        "name": "Oliveira",
+        "min": "78",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-650361",
@@ -438,6 +553,51 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/21093.png"
     },
     {
+     "uid": "football-wiki-207dd093cac9",
+     "section": "football",
+     "start": "2023-03-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Lamia",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Lamia Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "1-5",
+     "url": "https://en.wikipedia.org/wiki/2022%E2%80%9323_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "",
+        "min": "86"
+       }
+      ],
+      "away": [
+       {
+        "name": "Narey",
+        "min": "1"
+       },
+       {
+        "name": "Konstantelias",
+        "min": "25"
+       },
+       {
+        "name": "Douglas Augusto",
+        "min": "62"
+       },
+       {
+        "name": "Brandon",
+        "min": "67"
+       },
+       {
+        "name": "Sastre",
+        "min": "69"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-650405",
      "nt": "655cea5e39",
      "section": "football",
@@ -516,6 +676,36 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/667304",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/20043.png"
+    },
+    {
+     "uid": "football-wiki-0ead734104a0",
+     "section": "football",
+     "start": "2023-04-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Lamia",
+     "paokHome": true,
+     "venue": "Toumba",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2022%E2%80%9323_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Schwab",
+        "min": "25",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "",
+        "min": "51"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-667314",
@@ -612,9 +802,52 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/667341",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/435.png"
+    },
+    {
+     "uid": "football-wiki-b82538631892",
+     "section": "football",
+     "start": "2023-05-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Panthessaliko Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Greek Cup Final",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2022%E2%80%9323_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "",
+        "min": "26"
+       },
+       {
+        "name": "",
+        "min": "90+2"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
     }
    ],
-   "backfilled": true
+   "backfilled": true,
+   "summary": {
+    "league": "4η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Φιναλίστ"
+     },
+     {
+      "name": "UEFA Conference League",
+      "result": "2ος προκριματικός γύρος"
+     }
+    ],
+    "topscorer": "Nélson Oliveira Khaled Narey Brandon Thomas Andrija Živković(7 goals each)",
+    "source": "https://en.wikipedia.org/wiki/2022%E2%80%9323_PAOK_FC_season"
+   }
   },
   "basketball": {
    "matches": [
@@ -3201,5 +3434,5 @@
    "backfilled": true
   }
  },
- "updated": "2026-11-22T17:51+02:00"
+ "updated": "2026-11-22T21:48+02:00"
 }

@@ -294,9 +294,9 @@
    "season": "2022-23",
    "sections": {
     "football": {
-     "matches": 38,
+     "matches": 45,
      "standings": false,
-     "summary": false
+     "summary": true
     },
     "basketball": {
      "matches": 31,

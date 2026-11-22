@@ -56,7 +56,7 @@ def save(data: dict) -> None:
 
 # Ό,τι χρειάζεται η σελίδα του αρχείου· όχι live, στατιστικά κ.λπ. που αλλάζουν ή ζυγίζουν πολύ.
 KEEP = ("uid", "nt", "section", "start", "timeKnown", "home", "away", "paokHome", "venue", "competition", "round",
-        "score", "periods", "url", "homeLogo", "awayLogo", "postponed", "friendly")
+        "score", "periods", "url", "homeLogo", "awayLogo", "postponed", "friendly", "goals", "source")
 
 
 def slim(m: dict) -> dict:
@@ -181,6 +181,8 @@ def backfill(year: int, only: set[str] | None = None) -> list[str]:
                     + ("" if not errors else " · " + " | ".join(errors)))
             print(line, flush=True)
             report.append(line)
+        if not only or "football" in only:
+            report.append(wiki_football(year, arch))
     finally:
         bc.season_start_year, st.season_start_year = real, real
         bc.ARCHIVE_YEAR = None
@@ -191,14 +193,47 @@ def backfill(year: int, only: set[str] | None = None) -> list[str]:
     return report
 
 
+def near(day: str, days: set[dt.date], slack: int = 1) -> bool:
+    d = dt.date.fromisoformat(day[:10])
+    return any(abs((d - x).days) <= slack for x in days)
+
+
+def wiki_football(year: int, arch: dict) -> str:
+    """Ποδόσφαιρο από τη σελίδα σεζόν της Wikipedia (wiki.py): οι αγώνες που δεν υπάρχουν ήδη (ίδια μέρα ±1,
+    π.χ. από το ESPN) και η περίληψη της σεζόν (τελική θέση, κύπελλα, πρώτος σκόρερ)."""
+    import wiki
+    season = season_label(year)
+    try:
+        matches, summary = wiki.season(year)
+    except Exception as e:
+        line = f"{season} football (Wikipedia): {type(e).__name__}: {str(e)[:100]}"
+        print(line, flush=True)
+        return line
+    matches = [m for m in matches if season_of(m["start"]) == season]
+    sec = arch["sections"].setdefault("football", {"matches": []})
+    have = {dt.date.fromisoformat(m["start"][:10]) for m in sec.get("matches", []) if m.get("source") != "wikipedia"}
+    fresh = [m for m in matches if not near(m["start"], have)]
+    # Οι αγώνες της Wikipedia ξαναγράφονται κάθε φορά (διορθώσεις στη σελίδα)· οι άλλοι μένουν.
+    sec["matches"] = [m for m in sec.get("matches", []) if m.get("source") != "wikipedia"]
+    merge_matches(sec, fresh)
+    if summary:
+        sec["summary"] = summary
+    if fresh:
+        sec["backfilled"] = True
+    line = (f"{season} football (Wikipedia): {len(matches)} αγώνες, {len(fresh)} νέοι"
+            + (f", {summary.get('league', '')}" if summary else ""))
+    print(line, flush=True)
+    return line
+
+
 def write_index() -> None:
     seasons = []
     for p in sorted(ARCHIVE.glob("*.json"), reverse=True):
         if p.name == "index.json":
             continue
         d = json.loads(p.read_text(encoding="utf-8"))
-        secs = {k: {"matches": len(v.get("matches", [])), "standings": bool(v.get("standings"))}
-                for k, v in d["sections"].items() if v.get("matches") or v.get("standings")}
+        secs = {k: {"matches": len(v.get("matches", [])), "standings": bool(v.get("standings")), "summary": bool(v.get("summary"))}
+                for k, v in d["sections"].items() if v.get("matches") or v.get("standings") or v.get("summary")}
         if secs:
             seasons.append({"season": d["season"], "sections": secs})
     ARCHIVE.mkdir(parents=True, exist_ok=True)

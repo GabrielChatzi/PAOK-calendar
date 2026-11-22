@@ -1966,7 +1966,9 @@
     keys.forEach(function (k) { trophyList(k).forEach(function (t) { total += trophyCount(t); }); });
     var main = keys.filter(function (k) { return !isAcademy(k); }), acad = keys.filter(isAcademy);
     var ind = Object.keys(trophies.sections || {}).filter(function (k) { return k.indexOf("event:") === 0 && trophyList(k).length; });
-    ind.forEach(function (k) { keys.push(k); trophyList(k).forEach(function (t) { total += trophyCount(t); }); });
+    var oldAcad = Object.keys(trophies.sections || {}).filter(function (k) { return k.indexOf("academy:") === 0 && trophyList(k).length; });
+    ind.concat(oldAcad).forEach(function (k) { keys.push(k); trophyList(k).forEach(function (t) { total += trophyCount(t); }); });
+    acad = acad.concat(oldAcad);
     return '<div class="section-head"><h2>Τρόπαια</h2></div>' +
       '<p class="lede">' + total + " τίτλοι σε " + keys.length + " τμήματα. Μόνο για τον διαχειριστή μέχρι να ανοίξει για όλους.</p>" +
       main.map(function (k) { return trophiesBlock(k, true); }).join("") +

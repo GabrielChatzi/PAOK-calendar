@@ -251,6 +251,9 @@ test("api/data: μόνο τα γνωστά αρχεία", async () => {
   assert.equal((await call(data, { f: "football-women-home.ics" })).status, 200);
   assert.equal((await call(data, { f: "events.json" })).status, 200);
   assert.equal((await call(data, { f: "athletics-events.ics" })).status, 200);
+  assert.equal((await call(data, { f: "archive/index.json" })).status, 200);
+  assert.equal((await call(data, { f: "archive/2024-25.json" })).status, 200);
+  assert.equal((await call(data, { f: "archive/../matches.json" })).status, 404);
   assert.equal((await call(data, { f: "../secret" })).status, 404);
   assert.equal((await call(data, { f: "package.json" })).status, 404);
 });

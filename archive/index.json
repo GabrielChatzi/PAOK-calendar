@@ -939,6 +939,16 @@
      "summary": true
     }
    }
+  },
+  {
+   "season": "1991-92",
+   "sections": {
+    "football": {
+     "matches": 52,
+     "standings": false,
+     "summary": true
+    }
+   }
   }
  ]
 }

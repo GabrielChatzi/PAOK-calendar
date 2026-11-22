@@ -1,0 +1,1637 @@
+{
+ "season": "1991-92",
+ "sections": {
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-1d512e73950d",
+     "section": "football",
+     "start": "1991-08-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Poseidon Michaniona",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Michaniona",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "3-2",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Bourdamis",
+        "min": "34",
+        "pen": true
+       },
+       {
+        "name": "Trakas",
+        "min": "74"
+       },
+       {
+        "name": "Kastanidis",
+        "min": "83"
+       }
+      ],
+      "away": [
+       {
+        "name": "Leontiadis",
+        "min": "43"
+       },
+       {
+        "name": "Skartados",
+        "min": "86"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f730260343b2",
+     "section": "football",
+     "start": "1991-08-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Poseidon Heraklion",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "5-0",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "29",
+        "pen": true
+       },
+       {
+        "name": "Skartados",
+        "min": "42"
+       },
+       {
+        "name": "Skartados",
+        "min": "66"
+       },
+       {
+        "name": "Basbanas",
+        "min": "77"
+       },
+       {
+        "name": "Toursounidis",
+        "min": "89"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-afdc53220c92",
+     "section": "football",
+     "start": "1991-08-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos Volos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Volos Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Garelis",
+        "min": "55"
+       }
+      ],
+      "away": [
+       {
+        "name": "Borbokis",
+        "min": "27"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a869229e1ae0",
+     "section": "football",
+     "start": "1991-08-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Messolonghi",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Mitoglou",
+        "min": "13"
+       },
+       {
+        "name": "Lagonidis",
+        "min": "52"
+       },
+       {
+        "name": "Skartados",
+        "min": "61",
+        "pen": true
+       },
+       {
+        "name": "Alexoulis",
+        "min": "77"
+       }
+      ],
+      "away": [
+       {
+        "name": "Mitsibonas",
+        "min": "83",
+        "og": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-915f60c07f3c",
+     "section": "football",
+     "start": "1991-09-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Alexiou",
+        "min": "67"
+       }
+      ],
+      "away": [
+       {
+        "name": "Gioukoudis",
+        "min": "64"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d6fcf113a39f",
+     "section": "football",
+     "start": "1991-09-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Piraeus",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kalaydzhief",
+        "min": "9"
+       }
+      ],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "64",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-911997dbe471",
+     "section": "football",
+     "start": "1991-09-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Athinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Borbokis",
+        "min": "27"
+       },
+       {
+        "name": "Lagonidis",
+        "min": "90"
+       }
+      ],
+      "away": [
+       {
+        "name": "Ch.Dimopoulos",
+        "min": "2"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-99599aeb4bb8",
+     "section": "football",
+     "start": "1991-09-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "KV Mechelen",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "1ος αγώνας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "40"
+       }
+      ],
+      "away": [
+       {
+        "name": "Ingesson",
+        "min": "62"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-767036ed0d83",
+     "section": "football",
+     "start": "1991-09-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Pierikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Katerini Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Randjelović",
+        "min": "83"
+       }
+      ],
+      "away": [
+       {
+        "name": "Alexiou",
+        "min": "43"
+       },
+       {
+        "name": "Borbokis",
+        "min": "70"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f6c69ee67d77",
+     "section": "football",
+     "start": "1991-09-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEL",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Alcazar Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9947dbf3f747",
+     "section": "football",
+     "start": "1991-10-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "KV Mechelen",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Achter de Kazerne",
+     "competition": "Κύπελλο UEFA",
+     "round": "2ος αγώνας",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Borbokis",
+        "min": "85"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5b19d4ada82a",
+     "section": "football",
+     "start": "1991-10-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "0-3",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Th.Dimopoulos",
+        "min": "23"
+       },
+       {
+        "name": "Iliadis",
+        "min": "55"
+       },
+       {
+        "name": "Toutziaris",
+        "min": "61"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-81925796bc96",
+     "section": "football",
+     "start": "1991-10-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panachaiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kostas Davourlis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "3-3",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Pană",
+        "min": "2"
+       },
+       {
+        "name": "Pias",
+        "min": "10"
+       },
+       {
+        "name": "Drakopoulos",
+        "min": "50"
+       }
+      ],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "21",
+        "pen": true
+       },
+       {
+        "name": "Skartados",
+        "min": "80",
+        "pen": true
+       },
+       {
+        "name": "Lagonidis",
+        "min": "30"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2cfe7a13e40c",
+     "section": "football",
+     "start": "1991-10-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Swarovski Tirol",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "1ος αγώνας",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Westerthaler",
+        "min": "52"
+       },
+       {
+        "name": "Westerthaler",
+        "min": "79"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1afe357185fa",
+     "section": "football",
+     "start": "1991-11-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Alexiou",
+        "min": "50"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-43091ed78a48",
+     "section": "football",
+     "start": "1991-11-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Swarovski Tirol",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Old Tivoli Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "2ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Westerthaler",
+        "min": "27"
+       },
+       {
+        "name": "Westerthaler",
+        "min": "66"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3209e2a4611a",
+     "section": "football",
+     "start": "1991-11-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tsakogiorgas",
+        "min": "37"
+       }
+      ],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "57"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8267a8ee8cdb",
+     "section": "football",
+     "start": "1991-11-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Doxa Drama",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "3-2",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Alexiou",
+        "min": "20"
+       },
+       {
+        "name": "Oikonomidis",
+        "min": "27"
+       },
+       {
+        "name": "Skartados",
+        "min": "78"
+       }
+      ],
+      "away": [
+       {
+        "name": "Mouratidis",
+        "min": "33"
+       },
+       {
+        "name": "Georgiadis",
+        "min": "87"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e16a00209fdf",
+     "section": "football",
+     "start": "1991-12-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Xanthi",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Alexiou",
+        "min": "37"
+       },
+       {
+        "name": "Malioufas",
+        "min": "41"
+       }
+      ],
+      "away": [
+       {
+        "name": "Ouzounidis",
+        "min": "76",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7042c831bdf2",
+     "section": "football",
+     "start": "1991-12-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panserraikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Serres Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-92e4e551b4ef",
+     "section": "football",
+     "start": "1991-12-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Đurđević",
+        "min": "33"
+       },
+       {
+        "name": "Skartados",
+        "min": "73"
+       }
+      ],
+      "away": [
+       {
+        "name": "Katzenbach",
+        "min": "67"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f358e997ec42",
+     "section": "football",
+     "start": "1992-01-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Korinthos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Đurđević",
+        "min": "76"
+       },
+       {
+        "name": "Alexiou",
+        "min": "83"
+       }
+      ],
+      "away": [
+       {
+        "name": "Karastamatis",
+        "min": "51"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5e5ecd90e1a8",
+     "section": "football",
+     "start": "1992-01-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AFC Patra",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Patras",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Plitsis",
+        "min": "61"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-62b0bc87ba52",
+     "section": "football",
+     "start": "1992-01-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "3-2",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tsalouchidis",
+        "min": "18"
+       },
+       {
+        "name": "Savichev",
+        "min": "30"
+       },
+       {
+        "name": "Protasov",
+        "min": "82"
+       }
+      ],
+      "away": [
+       {
+        "name": "Anastasiadis",
+        "min": "11"
+       },
+       {
+        "name": "Lagonidis",
+        "min": "90"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-658752f54a01",
+     "section": "football",
+     "start": "1992-01-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Chionas",
+        "min": "20"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ea402dae6395",
+     "section": "football",
+     "start": "1992-01-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AFC Patra",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Borbokis",
+        "min": "44"
+       },
+       {
+        "name": "Borbokis",
+        "min": "81"
+       },
+       {
+        "name": "Alexiou",
+        "min": "63"
+       }
+      ],
+      "away": [
+       {
+        "name": "Fikaris",
+        "min": "29"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f901b6db8e0c",
+     "section": "football",
+     "start": "1992-01-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikos Goumas Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimitriadis 70'",
+        "min": "28"
+       },
+       {
+        "name": "Savvidis",
+        "min": "73"
+       },
+       {
+        "name": "Klopas",
+        "min": "81"
+       }
+      ],
+      "away": [
+       {
+        "name": "Đurđević",
+        "min": "86"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1567387d2961",
+     "section": "football",
+     "start": "1992-02-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Gekas",
+        "min": "5"
+       }
+      ],
+      "away": [
+       {
+        "name": "Đurđević",
+        "min": "38"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7079924eead4",
+     "section": "football",
+     "start": "1992-02-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Korinthos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Đurđević",
+        "min": "2"
+       },
+       {
+        "name": "Skartados",
+        "min": "14"
+       },
+       {
+        "name": "Kalogeropoulos",
+        "min": "64"
+       },
+       {
+        "name": "Toursounidis",
+        "min": "79"
+       }
+      ],
+      "away": [
+       {
+        "name": "Lupu",
+        "min": "37"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-cd14bae4b6bf",
+     "section": "football",
+     "start": "1992-02-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ethnikos Piraeus",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Kamitsis",
+        "min": "67"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a12a3c394072",
+     "section": "football",
+     "start": "1992-02-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Athinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Vyronas National Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kolev",
+        "min": "54",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "59",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-df8ab4d84bd3",
+     "section": "football",
+     "start": "1992-02-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Pierikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Toursounidis",
+        "min": "69"
+       },
+       {
+        "name": "Borbokis",
+        "min": "86"
+       }
+      ],
+      "away": [
+       {
+        "name": "Randjelović",
+        "min": "56"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c580e9d6b8c1",
+     "section": "football",
+     "start": "1992-02-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Korinthos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Corinth Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8ae291803b53",
+     "section": "football",
+     "start": "1992-03-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEL",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Đurđević",
+        "min": "27"
+       },
+       {
+        "name": "Leontiadis",
+        "min": "81"
+       }
+      ],
+      "away": [
+       {
+        "name": "Petkov",
+        "min": "7"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4870f48c2428",
+     "section": "football",
+     "start": "1992-03-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Toutziaris",
+        "min": "32"
+       },
+       {
+        "name": "Papadopoulos",
+        "min": "75"
+       }
+      ],
+      "away": [
+       {
+        "name": "Toursounidis",
+        "min": "22"
+       },
+       {
+        "name": "Leontiadis",
+        "min": "50"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-94731396290d",
+     "section": "football",
+     "start": "1992-03-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Doxa Drama",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Doxa Drama Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Iordanidis",
+        "min": "13"
+       },
+       {
+        "name": "Mouratidis",
+        "min": "78"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-cf70ec77fd1b",
+     "section": "football",
+     "start": "1992-03-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panachaiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tolba",
+        "min": "75",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-aad4d7d12166",
+     "section": "football",
+     "start": "1992-03-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Vardinogiannis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Patemtzis",
+        "min": "48"
+       }
+      ],
+      "away": [
+       {
+        "name": "Anastasiadis",
+        "min": "53"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4696c10d60f0",
+     "section": "football",
+     "start": "1992-03-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tolba",
+        "min": "8"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5b5b460e1c2c",
+     "section": "football",
+     "start": "1992-04-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Doxa Drama",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tolba",
+        "min": "14",
+        "pen": true
+       },
+       {
+        "name": "Tolba",
+        "min": "21"
+       },
+       {
+        "name": "Skartados",
+        "min": "59"
+       },
+       {
+        "name": "Borbokis",
+        "min": "74"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7f488d73b4b5",
+     "section": "football",
+     "start": "1992-04-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Doxa Drama",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Doxa Drama Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f76391fc17c7",
+     "section": "football",
+     "start": "1992-04-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikos Goumas Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Alexandris",
+        "min": "7"
+       },
+       {
+        "name": "Manolas",
+        "min": "69"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-52fec903df3f",
+     "section": "football",
+     "start": "1992-04-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Xanthi",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Xanthi Ground",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tzatzos",
+        "min": "33"
+       },
+       {
+        "name": "Malousis",
+        "min": "90+2"
+       }
+      ],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "89"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f367e18f8ed0",
+     "section": "football",
+     "start": "1992-04-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Đurđević",
+        "min": "16"
+       },
+       {
+        "name": "Alexiou",
+        "min": "57"
+       },
+       {
+        "name": "Alexiou",
+        "min": "103"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a90433a15aa6",
+     "section": "football",
+     "start": "1992-05-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panserraikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lagonidis",
+        "min": "19"
+       },
+       {
+        "name": "Đurđević",
+        "min": "53"
+       },
+       {
+        "name": "Toursounidis",
+        "min": "71"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-13e1363d9ddf",
+     "section": "football",
+     "start": "1992-05-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Rizoupoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Roussos",
+        "min": "75"
+       },
+       {
+        "name": "Karasavvidis",
+        "min": "79",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d40f7c419df7",
+     "section": "football",
+     "start": "1992-05-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Korinthos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Corinth Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "31η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Papapanagis",
+        "min": "68",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "73",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f378fac22c59",
+     "section": "football",
+     "start": "1992-05-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "52"
+       }
+      ],
+      "away": [
+       {
+        "name": "Tsalouchidis",
+        "min": "63"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3c3cdbce4cac",
+     "section": "football",
+     "start": "1992-05-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "32η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lagonidis",
+        "min": "75"
+       }
+      ],
+      "away": [
+       {
+        "name": "Savvidis",
+        "min": "42"
+       },
+       {
+        "name": "Vaitsis",
+        "min": "54"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2386e252602d",
+     "section": "football",
+     "start": "1992-05-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Litovchenko",
+        "min": "21"
+       },
+       {
+        "name": "Tsalouchidis",
+        "min": "62"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7f58060ee0bd",
+     "section": "football",
+     "start": "1992-05-31T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Athens Olympic Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "33η αγωνιστική",
+     "score": "5-1",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Saravakos",
+        "min": "34"
+       },
+       {
+        "name": "Saravakos",
+        "min": "42",
+        "pen": true
+       },
+       {
+        "name": "Saravakos",
+        "min": "84"
+       },
+       {
+        "name": "Saravakos",
+        "min": "88"
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "60"
+       }
+      ],
+      "away": [
+       {
+        "name": "Toursounidis",
+        "min": "54",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c374e5ea8d16",
+     "section": "football",
+     "start": "1992-06-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "34η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Toursounidis",
+        "min": "71"
+       },
+       {
+        "name": "Lagonidis",
+        "min": "84"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dimitriadis",
+        "min": "65"
+       },
+       {
+        "name": "Dimitriadis",
+        "min": "77"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "4η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Φιναλίστ"
+     },
+     {
+      "name": "Κύπελλο UEFA",
+      "result": "2ος γύρος"
+     }
+    ],
+    "topscorer": "Georgios Skartados (9)",
+    "source": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season"
+   },
+   "backfilled": true
+  }
+ },
+ "updated": "2026-11-22T21:52+02:00"
+}

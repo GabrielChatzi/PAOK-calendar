@@ -1,0 +1,1162 @@
+{
+ "season": "1996-97",
+ "sections": {
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-851aae003f2d",
+     "section": "football",
+     "start": "1996-09-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Vardinogiannis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Anastasiou",
+        "min": "24"
+       },
+       {
+        "name": "Frantzeskos 49'",
+        "min": "35"
+       },
+       {
+        "name": "Moutas",
+        "min": "68"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dymkowski",
+        "min": "90"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f312007fe4ba",
+     "section": "football",
+     "start": "1996-09-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Toursounidis",
+        "min": "27",
+        "pen": true
+       },
+       {
+        "name": "Toursounidis",
+        "min": "71",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d653cab6cb42",
+     "section": "football",
+     "start": "1996-09-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kalamata",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kalamata Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e24516ecea2a",
+     "section": "football",
+     "start": "1996-10-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Alexiou",
+        "min": "29"
+       },
+       {
+        "name": "Toursounidis",
+        "min": "34",
+        "pen": true
+       },
+       {
+        "name": "Pisz",
+        "min": "40"
+       },
+       {
+        "name": "Katsouris",
+        "min": "79"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-52c89ece85a3",
+     "section": "football",
+     "start": "1996-10-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Rizoupoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e889673c41e3",
+     "section": "football",
+     "start": "1996-10-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Athinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Katsouris",
+        "min": "58"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ca11b655557f",
+     "section": "football",
+     "start": "1996-10-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panachaiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kostas Davourlis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Savvidis",
+        "min": "8"
+       },
+       {
+        "name": "Savvidis",
+        "min": "59"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9822fd22f41b",
+     "section": "football",
+     "start": "1996-11-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Edessaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vryzas",
+        "min": "55"
+       }
+      ],
+      "away": [
+       {
+        "name": "Andreadis",
+        "min": "34"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7002b03e6901",
+     "section": "football",
+     "start": "1996-11-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "2-3",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sapountzis",
+        "min": "84"
+       },
+       {
+        "name": "Mantzios",
+        "min": "85"
+       }
+      ],
+      "away": [
+       {
+        "name": "Zouboulis",
+        "min": "19"
+       },
+       {
+        "name": "Zouboulis",
+        "min": "65"
+       },
+       {
+        "name": "Dymkowski",
+        "min": "43"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-87b7efd99fb5",
+     "section": "football",
+     "start": "1996-11-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-395a9a02a710",
+     "section": "football",
+     "start": "1996-11-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ionikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Toursounidis",
+        "min": "43",
+        "pen": true
+       },
+       {
+        "name": "Vryzas",
+        "min": "45"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ee2b6c829c66",
+     "section": "football",
+     "start": "1996-11-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Zouboulis",
+        "min": "19"
+       }
+      ],
+      "away": [
+       {
+        "name": "Alexandris",
+        "min": "52"
+       },
+       {
+        "name": "Đorđević",
+        "min": "73",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-dbbcf2a3bfe9",
+     "section": "football",
+     "start": "1996-12-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Athens Olympic Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "5-0",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Warzycha",
+        "min": "7"
+       },
+       {
+        "name": "Warzycha",
+        "min": "62"
+       },
+       {
+        "name": "Warzycha",
+        "min": "65"
+       },
+       {
+        "name": "Goumas",
+        "min": "37"
+       },
+       {
+        "name": "Nasiopoulos",
+        "min": "70"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-37c89adee3ee",
+     "section": "football",
+     "start": "1996-12-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Veria",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-49f34dc936e3",
+     "section": "football",
+     "start": "1996-12-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Alexandris",
+        "min": "40"
+       },
+       {
+        "name": "Alexandris",
+        "min": "59"
+       }
+      ],
+      "away": [
+       {
+        "name": "Tasiopoulos",
+        "min": "41"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-cb119d213888",
+     "section": "football",
+     "start": "1996-12-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Paniliakos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Toursounidis",
+        "min": "82",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Strantzalis",
+        "min": "40"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c022f20fc859",
+     "section": "football",
+     "start": "1996-12-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Karapialis",
+        "min": "55"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1e1e53a2bcf0",
+     "section": "football",
+     "start": "1997-01-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c0902e45aef7",
+     "section": "football",
+     "start": "1997-01-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Xanthi",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Xanthi Ground",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Teggelidis",
+        "min": "11"
+       }
+      ],
+      "away": [
+       {
+        "name": "Frantzeskos 53'",
+        "min": "71"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-209bd22094cd",
+     "section": "football",
+     "start": "1997-01-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kavala",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vryzas",
+        "min": "16"
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "29"
+       },
+       {
+        "name": "Zouboulis",
+        "min": "50"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a5c94dbf5c9e",
+     "section": "football",
+     "start": "1997-01-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kastoria",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Municipal Stadium of Kastoria",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Duda",
+        "min": "80"
+       }
+      ],
+      "away": [
+       {
+        "name": "Frantzeskos",
+        "min": "50"
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "54"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5722e3028825",
+     "section": "football",
+     "start": "1997-01-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frantzeskos",
+        "min": "30"
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "72"
+       }
+      ],
+      "away": [
+       {
+        "name": "Marinakis",
+        "min": "89"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-35331a575c54",
+     "section": "football",
+     "start": "1997-02-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kofidis",
+        "min": "7"
+       },
+       {
+        "name": "Gonias",
+        "min": "67",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6aefb04afa0f",
+     "section": "football",
+     "start": "1997-02-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kalamata",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Toursounidis",
+        "min": "48",
+        "pen": true
+       },
+       {
+        "name": "Pârvu",
+        "min": "51"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-674688de5cc5",
+     "section": "football",
+     "start": "1997-02-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frantzeskos",
+        "min": "7"
+       },
+       {
+        "name": "Tasiopoulos",
+        "min": "72"
+       },
+       {
+        "name": "Inebolidis",
+        "min": "83"
+       }
+      ],
+      "away": [
+       {
+        "name": "Damigos",
+        "min": "87"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-fb616e5b08ea",
+     "section": "football",
+     "start": "1997-02-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Athinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Vyronas National Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "2-3",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sabbadini",
+        "min": "16"
+       },
+       {
+        "name": "Velis",
+        "min": "27"
+       }
+      ],
+      "away": [
+       {
+        "name": "Frantzeskos",
+        "min": "45"
+       },
+       {
+        "name": "Sidiropoulos",
+        "min": "56"
+       },
+       {
+        "name": "Vryzas",
+        "min": "57"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ecbb0712558e",
+     "section": "football",
+     "start": "1997-03-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panachaiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Marangos",
+        "min": "45"
+       },
+       {
+        "name": "Marangos",
+        "min": "84"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a5f7f8591c95",
+     "section": "football",
+     "start": "1997-03-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Edessaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Municipal Stadium of Edessa",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "1-4",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kryos",
+        "min": "79"
+       }
+      ],
+      "away": [
+       {
+        "name": "Frantzeskos",
+        "min": "24"
+       },
+       {
+        "name": "Marangos",
+        "min": "32"
+       },
+       {
+        "name": "Zagorakis",
+        "min": "63"
+       },
+       {
+        "name": "Kolompourdas",
+        "min": "88"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-17af5f818daa",
+     "section": "football",
+     "start": "1997-03-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vryzas",
+        "min": "70"
+       },
+       {
+        "name": "Vryzas",
+        "min": "75"
+       }
+      ],
+      "away": [
+       {
+        "name": "Mavrogenidis",
+        "min": "82"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6f7622e948a0",
+     "section": "football",
+     "start": "1997-03-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ionikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Neapoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Filis",
+        "min": "28"
+       },
+       {
+        "name": "Brewster",
+        "min": "55"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dymkowski",
+        "min": "63"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8ddbd7193636",
+     "section": "football",
+     "start": "1997-03-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frantzeskos",
+        "min": "87"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-acef7bfed24d",
+     "section": "football",
+     "start": "1997-04-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Veria",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Veria Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Troupkos",
+        "min": "45"
+       }
+      ],
+      "away": [
+       {
+        "name": "Tasiopoulos",
+        "min": "44"
+       },
+       {
+        "name": "Kapetanopoulos",
+        "min": "72"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b43c32868351",
+     "section": "football",
+     "start": "1997-04-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Paniliakos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Pyrgos Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Marangos",
+        "min": "12"
+       },
+       {
+        "name": "Gitsis",
+        "min": "28",
+        "og": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-119569485801",
+     "section": "football",
+     "start": "1997-04-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9e282493d283",
+     "section": "football",
+     "start": "1997-05-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikos Goumas Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "31η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostis",
+        "min": "90"
+       }
+      ],
+      "away": [
+       {
+        "name": "Zouboulis",
+        "min": "23"
+       },
+       {
+        "name": "Vryzas",
+        "min": "59"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b6313f7722f9",
+     "section": "football",
+     "start": "1997-05-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Xanthi",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "32η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Zouboulis",
+        "min": "12"
+       },
+       {
+        "name": "Zouboulis",
+        "min": "88"
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "63"
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "80"
+       }
+      ],
+      "away": [
+       {
+        "name": "Sebwe",
+        "min": "89"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-406cddbf99de",
+     "section": "football",
+     "start": "1997-05-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kavala",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kavala Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "33η αγωνιστική",
+     "score": "0-3",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Toursounidis",
+        "min": "48",
+        "pen": true
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "62"
+       },
+       {
+        "name": "Zouboulis",
+        "min": "75"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-fdb6392968c2",
+     "section": "football",
+     "start": "1997-05-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kastoria",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "34η αγωνιστική",
+     "score": "6-0",
+     "url": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frantzeskos",
+        "min": "12"
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "36"
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "54"
+       },
+       {
+        "name": "Vryzas",
+        "min": "19"
+       },
+       {
+        "name": "Vryzas",
+        "min": "28"
+       },
+       {
+        "name": "Zagorakis",
+        "min": "86"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "4η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Φάση των 16"
+     }
+    ],
+    "source": "https://en.wikipedia.org/wiki/1996%E2%80%9397_PAOK_FC_season"
+   },
+   "backfilled": true
+  }
+ },
+ "updated": "2026-11-22T21:51+02:00"
+}

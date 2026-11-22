@@ -134,6 +134,39 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/11431.png"
     },
     {
+     "uid": "football-wiki-a86b222cc5f1",
+     "section": "football",
+     "start": "2017-09-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Levadiakos",
+     "paokHome": true,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2017%E2%80%9318_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Pelkas 40'",
+        "min": "41"
+       },
+       {
+        "name": "Shakhov",
+        "min": "71"
+       }
+      ],
+      "away": [
+       {
+        "name": "Giakoumakis",
+        "min": "46"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-496625",
      "nt": "db9b57f722",
      "section": "football",
@@ -196,6 +229,30 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/496727",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/435.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-0018848ce78c",
+     "section": "football",
+     "start": "2017-10-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Pontus",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kalamaria Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/2017%E2%80%9318_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Mak",
+        "min": "90"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-496718",
@@ -262,6 +319,46 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-f25bdc986c16",
+     "section": "football",
+     "start": "2017-11-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aiginiakos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "3η αγωνιστική",
+     "score": "0-5",
+     "url": "https://en.wikipedia.org/wiki/2017%E2%80%9318_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Limnios",
+        "min": "5"
+       },
+       {
+        "name": "Prijović",
+        "min": "53"
+       },
+       {
+        "name": "Prijović",
+        "min": "67"
+       },
+       {
+        "name": "El Kaddouri",
+        "min": "71"
+       },
+       {
+        "name": "Shakhov",
+        "min": "82"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-496692",
      "nt": "f8bb6bca8d",
      "section": "football",
@@ -309,6 +406,51 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-86e52396342b",
+     "section": "football",
+     "start": "2017-12-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Trikala",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Trikala Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "1-5",
+     "url": "https://en.wikipedia.org/wiki/2017%E2%80%9318_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Panos",
+        "min": "16"
+       }
+      ],
+      "away": [
+       {
+        "name": "Matos",
+        "min": "5"
+       },
+       {
+        "name": "Matos",
+        "min": "58"
+       },
+       {
+        "name": "Biseswar",
+        "min": "70"
+       },
+       {
+        "name": "Campos",
+        "min": "80"
+       },
+       {
+        "name": "Shakhov",
+        "min": "90+4"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-498782",
      "nt": "ac6df4263a",
      "section": "football",
@@ -323,6 +465,40 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/498782",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/5276.png"
+    },
+    {
+     "uid": "football-wiki-3a6328b51fbb",
+     "section": "football",
+     "start": "2018-01-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Trikala",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2017%E2%80%9318_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Prijović",
+        "min": "78"
+       },
+       {
+        "name": "Prijović",
+        "min": "90+4",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Milosavljev",
+        "min": "90+1"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-500406",
@@ -357,6 +533,34 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/15722.png"
     },
     {
+     "uid": "football-wiki-c7f3a2676f84",
+     "section": "football",
+     "start": "2018-01-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Atromitos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "First leg",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2017%E2%80%9318_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Pelkas",
+        "min": "18"
+       },
+       {
+        "name": "Shakhov",
+        "min": "86"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-500390",
      "nt": "ed2923c1d7",
      "section": "football",
@@ -387,6 +591,43 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/500382",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/6848.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-c3761e93566c",
+     "section": "football",
+     "start": "2018-02-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Atromitos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Peristeri Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Second leg",
+     "score": "1-3",
+     "url": "https://en.wikipedia.org/wiki/2017%E2%80%9318_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vasilakakis",
+        "min": "54"
+       }
+      ],
+      "away": [
+       {
+        "name": "Shakhov",
+        "min": "30"
+       },
+       {
+        "name": "Cañas",
+        "min": "68"
+       },
+       {
+        "name": "Koulouris",
+        "min": "79"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-500370",
@@ -421,6 +662,58 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-5b89d0c0c931",
+     "section": "football",
+     "start": "2018-02-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "0-3",
+     "url": "https://en.wikipedia.org/wiki/2017%E2%80%9318_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1b5b80eccc94",
+     "section": "football",
+     "start": "2018-02-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "First leg",
+     "score": "1-3",
+     "url": "https://en.wikipedia.org/wiki/2017%E2%80%9318_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Korbos",
+        "min": "85"
+       }
+      ],
+      "away": [
+       {
+        "name": "Maurício",
+        "min": "24"
+       },
+       {
+        "name": "Prijović",
+        "min": "34"
+       },
+       {
+        "name": "Biseswar",
+        "min": "73"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-500450",
      "nt": "d5fdddb65d",
      "section": "football",
@@ -435,6 +728,30 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/500450",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/8354.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-3a4d71057bdc",
+     "section": "football",
+     "start": "2018-03-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "0-3",
+     "url": "https://en.wikipedia.org/wiki/2017%E2%80%9318_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Varela",
+        "min": "90"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-500438",
@@ -467,6 +784,44 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/500430",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/2789.png"
+    },
+    {
+     "uid": "football-wiki-b71a223ce2ae",
+     "section": "football",
+     "start": "2018-04-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Second leg",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/2017%E2%80%9318_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koulouris",
+        "min": "21"
+       },
+       {
+        "name": "Pelkas",
+        "min": "68"
+       },
+       {
+        "name": "Prijović",
+        "min": "80",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Masouras",
+        "min": "40"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-500424",
@@ -514,9 +869,52 @@
      "score": "3-0",
      "url": "https://www.espn.com/soccer/match/_/gameId/500464",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-69071517f2c2",
+     "section": "football",
+     "start": "2018-05-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Athens Olympic Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Τελικός",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/2017%E2%80%9318_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Vieirinha",
+        "min": "65"
+       },
+       {
+        "name": "Pelkas",
+        "min": "90+2"
+       }
+      ]
+     },
+     "source": "wikipedia"
     }
    ],
-   "backfilled": true
+   "backfilled": true,
+   "summary": {
+    "league": "2η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Κατάκτηση"
+     },
+     {
+      "name": "UEFA Europa League",
+      "result": "Πλέι οφ"
+     }
+    ],
+    "topscorer": "Aleksandar Prijović (19)",
+    "source": "https://en.wikipedia.org/wiki/2017%E2%80%9318_PAOK_FC_season"
+   }
   },
   "basketball": {
    "matches": [
@@ -2299,5 +2697,5 @@
    "backfilled": true
   }
  },
- "updated": "2026-11-22T18:24+02:00"
+ "updated": "2026-11-22T21:49+02:00"
 }

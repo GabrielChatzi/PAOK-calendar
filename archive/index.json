@@ -439,9 +439,9 @@
    "season": "2017-18",
    "sections": {
     "football": {
-     "matches": 32,
+     "matches": 44,
      "standings": false,
-     "summary": false
+     "summary": true
     },
     "basketball": {
      "matches": 34,

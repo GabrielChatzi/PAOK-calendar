@@ -68,6 +68,50 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/1010.png"
     },
     {
+     "uid": "football-wiki-c9bb19e9e193",
+     "section": "football",
+     "start": "2007-10-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Thrasyvoulos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Fyli Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "4-2",
+     "url": "https://en.wikipedia.org/wiki/2007%E2%80%9308_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Efstathios Rokas",
+        "min": "3"
+       },
+       {
+        "name": "Manolis Liapakis",
+        "min": "16"
+       },
+       {
+        "name": "Georgios Poulakos",
+        "min": "54"
+       },
+       {
+        "name": "Giannis Katsikis",
+        "min": "90"
+       }
+      ],
+      "away": [
+       {
+        "name": "Lazaros Christodoulopoulos",
+        "min": "67"
+       },
+       {
+        "name": "Glen Salmon",
+        "min": "88"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-229948",
      "nt": "a320945a8f",
      "section": "football",
@@ -478,7 +522,18 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     }
    ],
-   "backfilled": true
+   "backfilled": true,
+   "summary": {
+    "league": "9η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "4ος γύρος"
+     }
+    ],
+    "topscorer": "Glen Salmon (4)",
+    "source": "https://en.wikipedia.org/wiki/2007%E2%80%9308_PAOK_FC_season"
+   }
   },
   "basketball": {
    "matches": [
@@ -1654,5 +1709,5 @@
    "backfilled": true
   }
  },
- "updated": "2026-11-22T18:52+02:00"
+ "updated": "2026-11-22T21:50+02:00"
 }

@@ -684,9 +684,9 @@
    "season": "2007-08",
    "sections": {
     "football": {
-     "matches": 30,
+     "matches": 31,
      "standings": false,
-     "summary": false
+     "summary": true
     },
     "basketball": {
      "matches": 26,

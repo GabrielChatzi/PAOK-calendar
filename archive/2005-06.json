@@ -1136,7 +1136,1172 @@
     }
    ],
    "backfilled": true
+  },
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-50dbeb8c1ccf",
+     "section": "football",
+     "start": "2005-08-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Xanthi",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Xanthi FC Arena",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Paraskevas Antzas",
+        "min": "37"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5a4f35084d9f",
+     "section": "football",
+     "start": "2005-09-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Atromitos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Marcin Mieciel",
+        "min": "25"
+       },
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "35"
+       }
+      ],
+      "away": [
+       {
+        "name": "Giorgos Zacharopoulos",
+        "min": "60"
+       },
+       {
+        "name": "Ifeanyi Udeze",
+        "min": "89",
+        "og": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ca848b88d79e",
+     "section": "football",
+     "start": "2005-09-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Metalurh Donetsk",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "1ος αγώνας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Salpingidis",
+        "min": "25"
+       }
+      ],
+      "away": [
+       {
+        "name": "Shyshchenko",
+        "min": "66"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7d8067038c8f",
+     "section": "football",
+     "start": "2005-09-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4410b6e12dd1",
+     "section": "football",
+     "start": "2005-09-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Egaleo",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "12"
+       },
+       {
+        "name": "Guy Feutchine",
+        "min": "20"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2f2b240d8e7f",
+     "section": "football",
+     "start": "2005-09-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Metalurh Donetsk",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Shakhtar Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "2ος αγώνας",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kosyrin",
+        "min": "39"
+       },
+       {
+        "name": "Shyshchenko",
+        "min": "57"
+       }
+      ],
+      "away": [
+       {
+        "name": "Salpingidis",
+        "min": "42"
+       },
+       {
+        "name": "Konstantinidis",
+        "min": "46"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-289e7e7f9653",
+     "section": "football",
+     "start": "2005-10-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEL",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "61",
+        "pen": true
+       },
+       {
+        "name": "Christos Maladenis",
+        "min": "79"
+       }
+      ],
+      "away": [
+       {
+        "name": "Christos Karipidis",
+        "min": "2",
+        "og": true
+       },
+       {
+        "name": "Thomas Kyparissis",
+        "min": "90"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-58bb0ecf8c93",
+     "section": "football",
+     "start": "2005-10-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Yaya Touré",
+        "min": "59"
+       }
+      ],
+      "away": [
+       {
+        "name": "Pantelis Konstantinidis",
+        "min": "66"
+       },
+       {
+        "name": "Pantelis Konstantinidis",
+        "min": "71"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-598261862ba8",
+     "section": "football",
+     "start": "2005-10-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Shakhtar Donetsk",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "RSC Olimpiyskiy",
+     "competition": "Κύπελλο UEFA",
+     "round": "1η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Brandão",
+        "min": "68"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1a3326887ede",
+     "section": "football",
+     "start": "2005-10-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ionikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "6-1",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Ifeanyi Udeze",
+        "min": "18"
+       },
+       {
+        "name": "Pantelis Konstantinidis",
+        "min": "27"
+       },
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "36"
+       },
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "71"
+       },
+       {
+        "name": "Guy Feutchine",
+        "min": "49"
+       },
+       {
+        "name": "Lazaros Christodoulopoulos",
+        "min": "59"
+       }
+      ],
+      "away": [
+       {
+        "name": "Oliver Makor",
+        "min": "45"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f2f36d776deb",
+     "section": "football",
+     "start": "2005-10-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Agrotikos Asteras",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Agrotikos Asteras Ground",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Giannis Mallous",
+        "min": "53"
+       }
+      ],
+      "away": [
+       {
+        "name": "Giannis Mallous",
+        "min": "1",
+        "og": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-fa4ee3e46a05",
+     "section": "football",
+     "start": "2005-10-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Leoforos Alexandras Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vangelis Mantzios",
+        "min": "14"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8136265afcc0",
+     "section": "football",
+     "start": "2005-11-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "45",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-aca247557d0c",
+     "section": "football",
+     "start": "2005-11-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kallithea",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Grigoris Lambrakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Georgios Koulakiotis",
+        "min": "65"
+       }
+      ],
+      "away": [
+       {
+        "name": "Shikabala",
+        "min": "21"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-18db4761737a",
+     "section": "football",
+     "start": "2005-11-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Stuttgart",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "2η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Karipidis",
+        "min": "48"
+       }
+      ],
+      "away": [
+       {
+        "name": "Ljuboja",
+        "min": "85"
+       },
+       {
+        "name": "Ljuboja",
+        "min": "90+1"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7db3fe81ae6c",
+     "section": "football",
+     "start": "2005-11-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Akratitos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lazaros Christodoulopoulos",
+        "min": "74"
+       },
+       {
+        "name": "Shikabala",
+        "min": "90"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2b60edbf57e4",
+     "section": "football",
+     "start": "2005-12-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Rapid București",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Stadionul Giuleşti-Valentin Stănescu",
+     "competition": "Κύπελλο UEFA",
+     "round": "3η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Măldărăşanu",
+        "min": "45+2"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b774154aecef",
+     "section": "football",
+     "start": "2005-12-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Olympic Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Bruno Cirillo",
+        "min": "26"
+       },
+       {
+        "name": "Alessandro Soares",
+        "min": "90"
+       }
+      ],
+      "away": [
+       {
+        "name": "Marcin Mięciel",
+        "min": "20"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-aa7e0e2d3b1b",
+     "section": "football",
+     "start": "2005-12-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Levadiakos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Levadia Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Amir Azmy",
+        "min": "5",
+        "og": true
+       },
+       {
+        "name": "Alex",
+        "min": "58"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "57"
+       },
+       {
+        "name": "Christos Maladenis",
+        "min": "88"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5ef71a259991",
+     "section": "football",
+     "start": "2005-12-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Rennes",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "4η αγωνιστική",
+     "score": "5-1",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Rochat",
+        "min": "3",
+        "og": true
+       },
+       {
+        "name": "Christodoulopoulos",
+        "min": "38"
+       },
+       {
+        "name": "Yiasoumi",
+        "min": "79"
+       },
+       {
+        "name": "Yiasoumi",
+        "min": "89"
+       },
+       {
+        "name": "Salpingidis",
+        "min": "83"
+       }
+      ],
+      "away": [
+       {
+        "name": "Briand",
+        "min": "70"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ea6e3607519e",
+     "section": "football",
+     "start": "2005-12-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lazaros Christodoulopoulos",
+        "min": "37"
+       },
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "43"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c5ae0be4b092",
+     "section": "football",
+     "start": "2006-01-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Kalamarias",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kalamaria Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Theodoros Zagorakis",
+        "min": "5",
+        "og": true
+       },
+       {
+        "name": "Charilaos Pappas",
+        "min": "40"
+       }
+      ],
+      "away": [
+       {
+        "name": "Yiasoumis Yiasoumi",
+        "min": "65"
+       },
+       {
+        "name": "Elias Charalambous",
+        "min": "67"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5479b8a08c42",
+     "section": "football",
+     "start": "2006-01-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Xanthi",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "63"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7195dfa54720",
+     "section": "football",
+     "start": "2006-01-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Atromitos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Peristeri Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Giannis Katemis",
+        "min": "49"
+       },
+       {
+        "name": "Georgios Korakakis",
+        "min": "83"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "43",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5ddcc4b8f511",
+     "section": "football",
+     "start": "2006-02-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Marcin Mieciel",
+        "min": "24"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-dfb5cb9c0451",
+     "section": "football",
+     "start": "2006-02-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Egaleo",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Stavros Mavrothalassitis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Nikos Nikolopoulos",
+        "min": "34"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c2ce2e7aeb86",
+     "section": "football",
+     "start": "2006-02-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEL",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Alcazar Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Giannis Chloros",
+        "min": "43"
+       },
+       {
+        "name": "Christos Kalantzis",
+        "min": "51"
+       }
+      ],
+      "away": [
+       {
+        "name": "Marcin Mięciel",
+        "min": "84"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7e82a352aa36",
+     "section": "football",
+     "start": "2006-02-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Kalamaria Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Shikabala",
+        "min": "5"
+       }
+      ],
+      "away": [
+       {
+        "name": "Ioannis Okkas",
+        "min": "31"
+       },
+       {
+        "name": "Michalis Konstantinou",
+        "min": "77"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-dbccfc133fd0",
+     "section": "football",
+     "start": "2006-03-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ionikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Neapoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Benjamin Onwuachi",
+        "min": "61"
+       }
+      ],
+      "away": [
+       {
+        "name": "Shikabala",
+        "min": "36"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2c77f562a3b5",
+     "section": "football",
+     "start": "2006-03-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Dimitrios Papadopoulos",
+        "min": "65"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9e01885240d0",
+     "section": "football",
+     "start": "2006-03-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "49"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5e4a485da381",
+     "section": "football",
+     "start": "2006-03-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kallithea",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "74",
+        "pen": true
+       },
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "81",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Christos Koutsospyros",
+        "min": "54"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e4bdc8030d5e",
+     "section": "football",
+     "start": "2006-04-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Akratitos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Yiannis Pathiakakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "0-3",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "6"
+       },
+       {
+        "name": "Yiasoumis Yiasoumi",
+        "min": "24"
+       },
+       {
+        "name": "Yiasoumis Yiasoumi",
+        "min": "45"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3d9447ce6435",
+     "section": "football",
+     "start": "2006-04-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Georgios Alexopoulos",
+        "min": "74",
+        "og": true
+       },
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "79"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kostas Katsouranis",
+        "min": "90",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0a24768cb7c8",
+     "section": "football",
+     "start": "2006-04-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Levadiakos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "20"
+       },
+       {
+        "name": "Dimitris Salpingidis",
+        "min": "86"
+       },
+       {
+        "name": "Yiasoumis Yiasoumi",
+        "min": "90"
+       }
+      ],
+      "away": [
+       {
+        "name": "Anastasios Pantos",
+        "min": "39"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-80cf17a236ca",
+     "section": "football",
+     "start": "2006-04-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Vardinogiannis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Joseph Nwafor",
+        "min": "43"
+       },
+       {
+        "name": "Davidson",
+        "min": "60"
+       }
+      ],
+      "away": [
+       {
+        "name": "Yiasoumis Yiasoumi",
+        "min": "75"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e2b765953984",
+     "section": "football",
+     "start": "2006-05-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Kalamarias",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Marcin Mięciel",
+        "min": "17"
+       }
+      ],
+      "away": [
+       {
+        "name": "Wellington",
+        "min": "37"
+       },
+       {
+        "name": "Cleyton",
+        "min": "69"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "6η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "4ος γύρος"
+     },
+     {
+      "name": "Κύπελλο UEFA",
+      "result": "Όμιλοι"
+     }
+    ],
+    "topscorer": "Dimitris Salpingidis (17)",
+    "source": "https://en.wikipedia.org/wiki/2005%E2%80%9306_PAOK_FC_season"
+   },
+   "backfilled": true
   }
  },
- "updated": "2026-11-22T18:58+02:00"
+ "updated": "2026-11-22T21:50+02:00"
 }

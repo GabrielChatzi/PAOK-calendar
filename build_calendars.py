@@ -201,34 +201,67 @@ GOALS_PATH = Path(__file__).resolve().parent / "goals.json"
 GOAL_TAGS = {"πεν": "pen", "αυτ": "og"}
 
 
-def apply_goals(matches: list[dict], path: Path = GOALS_PATH) -> None:
-    """Σκόρερ από το goals.json (όσα δεν δίνει η πηγή, π.χ. ακαδημίες), στο πεδίο «goals» του αγώνα:
-    {"home": [{"min": "45+1", "name": "…", "pen"/"og": true}], "away": […]}. Μπαίνουν μόνο όταν τα γκολ
-    κάθε ομάδας ταιριάζουν με το σκορ, ώστε ένα λάθος (ή αλλαγή του σκορ) να μη δείξει λάθος σκόρερ."""
-    if not path.exists():
-        return
+POINTS_SPORTS = ("basketball", "volley")  # σκόρερ με πόντους (όπως στο api/admin.js)
+
+
+def is_points_section(section: str) -> bool:
+    return section.split("-")[0] in POINTS_SPORTS
+
+
+def goals_fit(goals: dict, score: str) -> bool:
+    """Τα γκολ κάθε ομάδας ταιριάζουν με το σκορ (με «n» = πολλά γκολ σε μία γραμμή); μόνο σε αθλήματα με γκολ."""
+    parts = re.fullmatch(r"(\d+)-(\d+)", score or "")
+    count = lambda side: sum(int(g.get("n") or 1) for g in goals.get(side) or [])  # noqa: E731
+    return bool(parts) and [count("home"), count("away")] == [int(parts[1]), int(parts[2])]
+
+
+def admin_goals() -> dict[str, dict]:
+    """Οι σκόρερ της φόρμας του διαχειριστή (api/admin.js, συλλογή «goals»), με το nt του αγώνα."""
     try:
-        table = json.loads(path.read_text(encoding="utf-8"))
-    except ValueError as e:
-        print(f"! goals.json: {e}", file=sys.stderr)
-        return
+        got = json.loads(fetch(ADMIN_URL))
+    except Exception as e:
+        print(f"  ! σκόρερ διαχειριστή: {e}", file=sys.stderr)
+        return {}
+    return {g["nt"]: g for g in got.get("goals", []) if isinstance(g, dict) and g.get("nt")}
+
+
+def apply_goals(matches: list[dict], path: Path = GOALS_PATH, admin: dict[str, dict] | None = None) -> None:
+    """Σκόρερ στο πεδίο «goals» του αγώνα: {"home": [{"min": "45+1", "name": "…", "n": 2, "pen"/"og": true}], "away": […]}.
+
+    Από τη φόρμα του διαχειριστή (admin, με το nt· μετρά πρώτη) και από το goals.json (με το uid). Στα αθλήματα με
+    γκολ μπαίνουν μόνο όταν τα γκολ κάθε ομάδας ταιριάζουν με το σκορ, ώστε ένα λάθος (ή αλλαγή του σκορ) να μη
+    δείξει λάθος σκόρερ· στο μπάσκετ και στο βόλεϊ (πόντοι) μπαίνουν πάντα, με «points»: true."""
+    table = {}
+    if path.exists():
+        try:
+            table = json.loads(path.read_text(encoding="utf-8"))
+        except ValueError as e:
+            print(f"! goals.json: {e}", file=sys.stderr)
     for m in matches:
+        a = (admin or {}).get(m.get("nt") or match_topic_id(m["uid"]))
         e = table.get(m["uid"])
-        if not isinstance(e, dict):
+        if a:
+            goals = {side: [{k: g[k] for k in ("min", "name", "n", "pen", "og") if g.get(k)} for g in a.get(side) or []
+                            if isinstance(g, dict) and g.get("name")] for side in ("home", "away")}
+            label = f"{m['home']} – {m['away']}"
+        elif isinstance(e, dict):
+            goals = {}
+            for side in ("home", "away"):
+                goals[side] = []
+                for g in e.get(side) or []:
+                    d = {"min": str(g[0]).strip(), "name": str(g[1]).strip()}
+                    for t in g[2:]:
+                        if t in GOAL_TAGS:
+                            d[GOAL_TAGS[t]] = True
+                    goals[side].append(d)
+            label = e.get("m") or m["uid"]
+        else:
             continue
-        parts = re.fullmatch(r"(\d+)-(\d+)", m.get("score") or "")
-        goals = {}
-        for side in ("home", "away"):
-            goals[side] = []
-            for g in e.get(side) or []:
-                d = {"min": str(g[0]).strip(), "name": str(g[1]).strip()}
-                for t in g[2:]:
-                    if t in GOAL_TAGS:
-                        d[GOAL_TAGS[t]] = True
-                goals[side].append(d)
-        if not parts or [len(goals["home"]), len(goals["away"])] != [int(parts[1]), int(parts[2])]:
-            print(f"! goals.json: {e.get('m') or m['uid']}: τα γκολ δεν ταιριάζουν με το σκορ «{m.get('score')}»",
-                  file=sys.stderr)
+        if is_points_section(m.get("section", "")):
+            m["goals"] = {**goals, "points": True}
+            continue
+        if not goals_fit(goals, m.get("score") or ""):
+            print(f"! σκόρερ: {label}: τα γκολ δεν ταιριάζουν με το σκορ «{m.get('score')}»", file=sys.stderr)
             continue
         m["goals"] = goals
 
@@ -2836,7 +2869,7 @@ def main(only: list[str] | None = None) -> int:
     import standings
 
     fill_logos(all_matches)
-    apply_goals(all_matches)
+    apply_goals(all_matches, admin=admin_goals())
     all_matches.sort(key=lambda m: (m["start"], m["uid"]))
     data = {
         "sections": [{"key": k, **v} for k, v in SECTIONS.items()],

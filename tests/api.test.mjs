@@ -388,6 +388,18 @@ test("api/admin: διοργάνωση ατομικού αθλήματος", asyn
   assert.ok(a.parseCompetition({ sport: "judo", title: "Χ", start: "2027-01-05", url: "javascript:alert(1)" }).error);
 });
 
+test("api/admin: σκόρερ από τη φόρμα", async () => {
+  const a = await import("../api/admin.js");
+  assert.deepEqual(a.parseScorerLines("45+1 Τζόλης πεν\nΚωνσταντέλιας 2\n12' Σβαμπ (αυτ.)\n\nΠέλκας", false), [
+    { pen: true, min: "45+1", name: "Τζόλης" }, { n: 2, name: "Κωνσταντέλιας" }, { og: true, min: "12", name: "Σβαμπ" }, { name: "Πέλκας" }]);
+  assert.deepEqual(a.parseScorerLines("Μάντζαρης 18", true), [{ n: 18, name: "Μάντζαρης" }]);
+  assert.ok(a.parseScorerLines("Μάντζαρης", true).error);
+  assert.equal(a.pointsSport("basketball-women-u16"), true);
+  assert.equal(a.pointsSport("volley-u18"), true);
+  assert.equal(a.pointsSport("handball-u18"), false);
+  assert.equal(a.pointsSport("football"), false);
+});
+
 test("ατομικά αθλήματα: ίδια αθλήματα στο api/admin και στο events.py", async () => {
   const a = await import("../api/admin.js");
   const { readFileSync } = await import("node:fs");

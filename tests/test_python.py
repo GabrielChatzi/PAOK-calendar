@@ -743,3 +743,15 @@ class Goals(unittest.TestCase):
         ms = [{"uid": "b", "score": ""}]
         b.apply_goals(ms, self.path)
         self.assertNotIn("goals", ms[0])
+
+    def test_admin_goals_first_with_counts_and_points(self):
+        ms = [{"uid": "a", "nt": "n1", "section": "handball-u18", "home": "ΠΑΟΚ", "away": "Άρης", "score": "3-1"},
+              {"uid": "x", "nt": "n2", "section": "basketball-u16", "home": "ΠΑΟΚ", "away": "Άρης", "score": "70-60"},
+              {"uid": "y", "nt": "n3", "section": "football-u17", "home": "ΠΑΟΚ", "away": "Άρης", "score": "2-0"}]
+        admin = {"n1": {"home": [{"name": "Χ", "n": 2}, {"name": "Ψ", "min": "50"}], "away": [{"name": "Ω"}]},
+                 "n2": {"home": [{"name": "Μ", "n": 18}], "away": []},
+                 "n3": {"home": [{"name": "Χ", "min": "10"}], "away": []}}
+        b.apply_goals(ms, self.path, admin=admin)
+        self.assertEqual(ms[0]["goals"]["home"], [{"name": "Χ", "n": 2}, {"min": "50", "name": "Ψ"}])  # πάνω από το goals.json
+        self.assertEqual(ms[1]["goals"], {"home": [{"name": "Μ", "n": 18}], "away": [], "points": True})
+        self.assertNotIn("goals", ms[2])  # 1 γκολ για 2-0

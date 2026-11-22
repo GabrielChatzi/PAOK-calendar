@@ -969,6 +969,16 @@
      "summary": true
     }
    }
+  },
+  {
+   "season": "1988-89",
+   "sections": {
+    "football": {
+     "matches": 40,
+     "standings": false,
+     "summary": true
+    }
+   }
   }
  ]
 }

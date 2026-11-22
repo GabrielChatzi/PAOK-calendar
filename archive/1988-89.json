@@ -1,0 +1,1187 @@
+{
+ "season": "1988-89",
+ "sections": {
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-1508ff136d76",
+     "section": "football",
+     "start": "1988-08-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Thriamvos Athens",
+     "paokHome": true,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "63",
+        "pen": true
+       },
+       {
+        "name": "Borbokis",
+        "min": "85"
+       },
+       {
+        "name": "Borbokis",
+        "min": "89"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-be85b29ed19a",
+     "section": "football",
+     "start": "1988-09-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Proodeftiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikaia Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Fotis",
+        "min": "8"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6a3ae8f26469",
+     "section": "football",
+     "start": "1988-09-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Napoli",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Stadio San Paolo",
+     "competition": "Κύπελλο UEFA",
+     "round": "1ος αγώνας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Maradona",
+        "min": "59",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b8811d92d1c1",
+     "section": "football",
+     "start": "1988-09-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEL",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kyrillidis",
+        "min": "13",
+        "og": true
+       },
+       {
+        "name": "Skartados",
+        "min": "58"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kanieba",
+        "min": "6"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a9e1f0993b4c",
+     "section": "football",
+     "start": "1988-09-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Rizoupoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Karanikas",
+        "min": "67"
+       },
+       {
+        "name": "Jurišić",
+        "min": "85"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-717ea49c4ba4",
+     "section": "football",
+     "start": "1988-09-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Fernando",
+        "min": "22"
+       },
+       {
+        "name": "Fernando",
+        "min": "80"
+       }
+      ],
+      "away": [
+       {
+        "name": "Th.Dimopoulos",
+        "min": "81"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-592d846c96b6",
+     "section": "football",
+     "start": "1988-10-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Athens Olympic Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Borbokis",
+        "min": "56"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6cffba9ced05",
+     "section": "football",
+     "start": "1988-10-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Napoli",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "2ος αγώνας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "65"
+       }
+      ],
+      "away": [
+       {
+        "name": "Careca",
+        "min": "17"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-37f3e79cba2b",
+     "section": "football",
+     "start": "1988-10-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Vardinogiannis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Mitoglou",
+        "min": "37",
+        "og": true
+       },
+       {
+        "name": "Charalambidis",
+        "min": "43"
+       },
+       {
+        "name": "Hisis",
+        "min": "66"
+       }
+      ],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "63",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-45912fd554d6",
+     "section": "football",
+     "start": "1988-10-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Small",
+        "min": "21"
+       },
+       {
+        "name": "Small",
+        "min": "51"
+       }
+      ],
+      "away": [
+       {
+        "name": "Mavros",
+        "min": "63"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-50d141e3988c",
+     "section": "football",
+     "start": "1988-11-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Kalamaria",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kalamaria Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "1-4",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Traianopoulos",
+        "min": "65"
+       }
+      ],
+      "away": [
+       {
+        "name": "Singas",
+        "min": "28"
+       },
+       {
+        "name": "Small",
+        "min": "44"
+       },
+       {
+        "name": "Alexandridis",
+        "min": "72"
+       },
+       {
+        "name": "Borbokis",
+        "min": "86"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-71e05eae7bff",
+     "section": "football",
+     "start": "1988-11-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "59",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7c2b7c54bb4b",
+     "section": "football",
+     "start": "1988-11-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2551d0829bde",
+     "section": "football",
+     "start": "1988-11-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ethnikos Piraeus",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "5-1",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Fernando",
+        "min": "27"
+       },
+       {
+        "name": "Alexandridis",
+        "min": "39"
+       },
+       {
+        "name": "Borbokis",
+        "min": "41"
+       },
+       {
+        "name": "Lagonidis",
+        "min": "51"
+       },
+       {
+        "name": "Leontiadis",
+        "min": "53"
+       }
+      ],
+      "away": [
+       {
+        "name": "Katsikogiannis",
+        "min": "90",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1fca04896d53",
+     "section": "football",
+     "start": "1988-11-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Naoussa",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "50",
+        "pen": true
+       },
+       {
+        "name": "Skartados",
+        "min": "77"
+       },
+       {
+        "name": "Lagonidis",
+        "min": "70"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-994c03108fab",
+     "section": "football",
+     "start": "1988-12-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Levadiakos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Levadia Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Barrios",
+        "min": "7"
+       },
+       {
+        "name": "Lemonis",
+        "min": "75"
+       }
+      ],
+      "away": [
+       {
+        "name": "Small",
+        "min": "27"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8c2677c65417",
+     "section": "football",
+     "start": "1988-12-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Doxa Drama",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Fernando",
+        "min": "9"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c579aa2d0372",
+     "section": "football",
+     "start": "1988-12-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Naoussa",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Municipal Stadium of Naousa",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "1-3",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Markou",
+        "min": "11"
+       }
+      ],
+      "away": [
+       {
+        "name": "Small",
+        "min": "25"
+       },
+       {
+        "name": "Small",
+        "min": "36"
+       },
+       {
+        "name": "Borbokis",
+        "min": "62"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-804a0b6de159",
+     "section": "football",
+     "start": "1988-12-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Levadiakos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados 56'",
+        "min": "89"
+       },
+       {
+        "name": "Small",
+        "min": "70"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kavouras",
+        "min": "25"
+       },
+       {
+        "name": "Kavouras",
+        "min": "86"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-975bb97a8cd4",
+     "section": "football",
+     "start": "1988-12-31T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos Volos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "55"
+       }
+      ],
+      "away": [
+       {
+        "name": "Skoutas",
+        "min": "63"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-52be983682fa",
+     "section": "football",
+     "start": "1989-01-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Diagoras",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Diagoras Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Bisdikis",
+        "min": "16"
+       }
+      ],
+      "away": [
+       {
+        "name": "Mitoglou",
+        "min": "61"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c3d995914856",
+     "section": "football",
+     "start": "1989-01-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Levadiakos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Levadia Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Small",
+        "min": "52"
+       },
+       {
+        "name": "Anastasiadis",
+        "min": "75"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e92330690e19",
+     "section": "football",
+     "start": "1989-01-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Christodoulou",
+        "min": "24"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-415d4b8f1bd9",
+     "section": "football",
+     "start": "1989-01-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEL",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Alcazar Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Mitsibonas",
+        "min": "69"
+       },
+       {
+        "name": "Karapialis",
+        "min": "79"
+       }
+      ],
+      "away": [
+       {
+        "name": "Yankos",
+        "min": "22"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a479daf0de3e",
+     "section": "football",
+     "start": "1989-01-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "3-2",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Small",
+        "min": "9"
+       },
+       {
+        "name": "Small",
+        "min": "65"
+       },
+       {
+        "name": "Skartados",
+        "min": "44"
+       }
+      ],
+      "away": [
+       {
+        "name": "Vlachos",
+        "min": "45"
+       },
+       {
+        "name": "Apostolou",
+        "min": "84"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7be7e148ea88",
+     "section": "football",
+     "start": "1989-02-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Small",
+        "min": "17"
+       },
+       {
+        "name": "Skartados",
+        "min": "88"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7bfb45d26238",
+     "section": "football",
+     "start": "1989-02-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-bf2bae05ac4c",
+     "section": "football",
+     "start": "1989-02-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Karasavvidis",
+        "min": "66"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ca7f7382baae",
+     "section": "football",
+     "start": "1989-02-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Mavros",
+        "min": "33"
+       },
+       {
+        "name": "Mavros",
+        "min": "119"
+       },
+       {
+        "name": "Aposporis",
+        "min": "47"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3340a091db13",
+     "section": "football",
+     "start": "1989-02-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-126cce82defe",
+     "section": "football",
+     "start": "1989-02-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-372577536b42",
+     "section": "football",
+     "start": "1989-03-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Kalamaria",
+     "paokHome": true,
+     "venue": "Kavala Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tsourelas",
+        "min": "72"
+       }
+      ],
+      "away": [
+       {
+        "name": "Vellios",
+        "min": "64"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c5337378ed9d",
+     "section": "football",
+     "start": "1989-03-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Leoforos Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Saravakos",
+        "min": "25",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6db08a2c99c6",
+     "section": "football",
+     "start": "1989-03-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lagonidis",
+        "min": "80"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dimitriadis",
+        "min": "58"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-95412c18d2d2",
+     "section": "football",
+     "start": "1989-03-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Piraeus",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Chojnacki",
+        "min": "37"
+       },
+       {
+        "name": "Batista",
+        "min": "58"
+       }
+      ],
+      "away": [
+       {
+        "name": "Yankos",
+        "min": "20"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-52f6ce5f7dfe",
+     "section": "football",
+     "start": "1989-04-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Levadiakos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Karageorgiou",
+        "min": "56",
+        "pen": true
+       },
+       {
+        "name": "Fernando",
+        "min": "72"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-96acb8512520",
+     "section": "football",
+     "start": "1989-04-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Doxa Drama",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Doxa Drama Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Charalambidis",
+        "min": "89",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0f005098acda",
+     "section": "football",
+     "start": "1989-04-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos Volos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Volos Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Karamichalos",
+        "min": "34"
+       },
+       {
+        "name": "Boda",
+        "min": "50",
+        "pen": true
+       },
+       {
+        "name": "Boda",
+        "min": "60"
+       },
+       {
+        "name": "Boda",
+        "min": "79"
+       }
+      ],
+      "away": [
+       {
+        "name": "Anastasiadis",
+        "min": "30"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8bf14dedfaf4",
+     "section": "football",
+     "start": "1989-05-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Diagoras",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Osvold",
+        "min": "61",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Krassonis",
+        "min": "1"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-bf6d9d1cd716",
+     "section": "football",
+     "start": "1989-05-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikos Goumas Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season",
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "8η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Προημιτελικά"
+     },
+     {
+      "name": "Κύπελλο UEFA",
+      "result": "1ος γύρος"
+     }
+    ],
+    "topscorer": "Skartados, Small (6)",
+    "source": "https://en.wikipedia.org/wiki/1988%E2%80%9389_PAOK_FC_season"
+   },
+   "backfilled": true
+  }
+ },
+ "updated": "2026-11-22T21:52+02:00"
+}

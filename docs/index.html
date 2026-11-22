@@ -232,6 +232,9 @@
   .tr-places { margin: -8px 0 18px; color: var(--muted); font-size: 15px; }
   .tr-places summary { cursor: pointer; }
   .tr-places ul { padding-left: 18px; margin: 6px 0 0; }
+  .arch-pick { display: flex; align-items: center; gap: 10px; margin: 4px 0 14px; font-weight: 600; }
+  .arch-pick select { font: inherit; font-size: 18px; padding: 8px 10px; border: 1.5px solid var(--ink); border-radius: 0;
+    background: var(--paper); color: var(--ink); min-width: 140px; }
   .arch-won { font: 600 18px/1.3 var(--display); margin: 0 0 8px; }
   .arch-list { list-style: none; padding: 0; margin: 0 0 16px; }
   .arch-row { display: grid; grid-template-columns: 52px 1fr auto; gap: 10px; padding: 8px 0 8px 8px; border-bottom: 1px solid var(--rule);
@@ -1933,7 +1936,7 @@
   }
 
   // ---- Ιστορία: τρόπαια (trophies.json) και αρχείο σεζόν (archive/*.json, βλ. archive.py). Μόνο διαχειριστής.
-  function canSeeHistory() { return isAdmin(); }  // αρχείο σεζόν: ακόμα μόνο ο διαχειριστής
+  function canSeeHistory() { return true; }
   function canSeeTrophies() { return true; }
   var trophies = null, archIndex = null, archSeasons = {}, histLoading = {};
   function histLoad(name, url, done) {
@@ -2019,13 +2022,19 @@
     if (!seasons.length) return '<p class="empty">Δεν υπάρχει ακόμα αρχείο για αυτό το τμήμα. Γεμίζει μόνο του σε κάθε ενημέρωση.</p>';
     var season = archSeasonParam();
     if (!seasons.some(function (x) { return x.season === season; })) season = seasons[0].season;
-    var chips = '<div class="chips ev-chips">' + seasons.map(function (x) {
-      return '<a class="chip" href="#/' + key + "/archive/" + x.season + '" aria-pressed="' + (x.season === season) + '">' + esc(x.season) + "</a>";
-    }).join("") + "</div>";
+    // Επιλογή σεζόν: λίστα (dropdown), από τη νεότερη στην παλαιότερη.
+    var chips = '<label class="arch-pick"><span>Σεζόν</span><select data-arch="' + esc(key) + '">' + seasons.map(function (x) {
+      return '<option value="' + esc(x.season) + '"' + (x.season === season ? " selected" : "") + ">" + esc(x.season) + "</option>";
+    }).join("") + "</select></label>";
     var d = archSeasons[season];
     if (!d) { histLoad("s" + season, "archive/" + season + ".json", function (x) { archSeasons[season] = x || { sections: {} }; }); return chips + '<p class="empty">Φόρτωση…</p>'; }
     var sec = d.sections[key] || { matches: [] };
-    var ms = sec.matches.filter(function (m) { return m.start; });
+    // Σε σεζόν που τελείωσε, αγώνες χωρίς αποτέλεσμα δεν έγιναν (π.χ. «αν χρειαστεί» στα πλέι οφ, διακοπή 2019-20)·
+    // το «ρεπό» δεν είναι αγώνας.
+    var over = season < (archIndex.seasons[0] || {}).season;
+    var all = sec.matches.filter(function (m) { return m.start && !/^ρεπό$/i.test(m.home) && !/^ρεπό$/i.test(m.away); });
+    var ms = over ? all.filter(function (m) { return m.score || m.postponed; }) : all;
+    var notPlayed = all.length - ms.length;
     var n = { win: 0, loss: 0, draw: 0 }, played = 0;
     ms.forEach(function (m) { var r = archResult(m); if (r) { n[r]++; played++; } });
     var byComp = {}, order = [];
@@ -2047,6 +2056,8 @@
       (played ? '<p class="lede">' + played + " αγώνες με αποτέλεσμα: " + n.win + " νίκες" + (n.draw ? ", " + n.draw + " ισοπαλίες" : "") + ", " + n.loss + " ήττες." +
         (sec.backfilled ? " Από τις πηγές που κρατούν παλιές σεζόν: μπορεί να λείπουν διοργανώσεις." : "") + "</p>"
         : '<p class="help">Δεν υπάρχουν αγώνες αυτής της σεζόν στο αρχείο, μόνο η περίληψη.</p>') +
+      (notPlayed ? '<p class="help">' + notPlayed + (notPlayed === 1 ? " αγώνας του προγράμματος δεν έγινε" : " αγώνες του προγράμματος δεν έγιναν") +
+        (season === "2019-20" ? " (διακοπή λόγω πανδημίας)." : " (π.χ. «αν χρειαστεί» στα πλέι οφ).") + "</p>" : "") +
       (sec.standings && sec.standings.length ? '<h3 class="area-sport">Βαθμολογία</h3>' + tablesHtml(sec.standings, key) : "") +
       order.map(function (c) {
         return '<h3 class="area-sport">' + esc(c) + '</h3><ol class="arch-list">' + byComp[c].map(archRowHtml).join("") + "</ol>";
@@ -2611,6 +2622,10 @@
     renderPage.apply(this, arguments);
     if (navStack.length > 1) Array.prototype.forEach.call(document.querySelectorAll("a.back"), function (a) { a.textContent = "‹ Πίσω"; });
   };
+  document.addEventListener("change", function (e) {
+    var sel = e.target.closest && e.target.closest("select[data-arch]");
+    if (sel) location.hash = "#/" + sel.dataset.arch + "/archive/" + sel.value;
+  });
   document.addEventListener("click", function (e) {
     var a = e.target.closest && e.target.closest("a.back");
     if (!a || e.metaKey || e.ctrlKey || e.shiftKey || navStack.length < 2) return;

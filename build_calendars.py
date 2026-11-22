@@ -430,6 +430,8 @@ def volley_matches() -> list[Match]:
         home, away, head = r["home"], r["away"], r["heading"]
         if not (is_paok(home) or is_paok(away)):
             continue
+        if not re.fullmatch(r"(0?[1-9]|[12]\d|3[01])/(0?[1-9]|1[0-2])/\d{4}", r["date"] or ""):
+            continue  # «00/00/0000»: αγώνας που δεν ορίστηκε ποτέ (π.χ. «αν χρειαστεί» στα πλέι οφ)
         if "αγωνιστική" in head.lower():
             comp, rnd = "Volley League", re.sub(r"\s*-\s*Τέλος.*", "", head)
         else:

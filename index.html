@@ -235,6 +235,8 @@
   .arch-row.draw { border-left-color: var(--muted); }
   .arch-date { color: var(--muted); font-variant-numeric: tabular-nums; }
   .arch-teams small { display: block; color: var(--muted); font-size: 13px; }
+  .arch-teams small.arch-sc { color: var(--ink); }
+  .arch-sum { margin: 0 0 12px; }
   .arch-score { font: 700 18px/1 var(--display); font-variant-numeric: tabular-nums; }
   .para-tag { display: inline-block; font: 700 12px/1 var(--body); letter-spacing: .02em; padding: 3px 6px 2px; border: 1.5px solid currentColor;
     vertical-align: 1px; color: var(--ink); }
@@ -1981,10 +1983,23 @@
     var us = +sc[m.paokHome ? 0 : 1], them = +sc[m.paokHome ? 1 : 0];
     return us > them ? "win" : us < them ? "loss" : "draw";
   }
+  // Οι σκόρερ του ΠΑΟΚ σε έναν αγώνα του αρχείου: «Βρύζας 2, Τουρσουνίδης».
+  function archScorers(m) {
+    var g = m.goals && m.goals[m.paokHome ? "home" : "away"];
+    if (!g || !g.length) return "";
+    var by = {}, order = [];
+    g.forEach(function (x) {
+      if (x.og || !x.name) return;
+      if (!by[x.name]) { by[x.name] = 0; order.push(x.name); }
+      by[x.name] += x.n || 1;
+    });
+    return order.map(function (n) { return n + (by[n] > 1 ? " " + by[n] : ""); }).join(", ");
+  }
   function archRowHtml(m) {
-    var d = new Date(m.start);
+    var d = new Date(m.start), sc = archScorers(m);
     return '<li class="arch-row ' + archResult(m) + '"><span class="arch-date">' + esc(d.getDate() + "/" + (d.getMonth() + 1)) + "</span>" +
-      '<span class="arch-teams">' + esc(m.home) + " – " + esc(m.away) + "<small>" + esc([m.round, m.venue].filter(Boolean).join(" · ")) + "</small></span>" +
+      '<span class="arch-teams">' + esc(m.home) + " – " + esc(m.away) + "<small>" + esc([m.round, m.venue].filter(Boolean).join(" · ")) + "</small>" +
+      (sc ? '<small class="arch-sc">⚽ ' + esc(sc) + "</small>" : "") + "</span>" +
       '<span class="arch-score">' + esc(m.score || (m.postponed ? "αναβ." : "–")) + "</span></li>";
   }
   function archiveHtml(key) {
@@ -2012,14 +2027,21 @@
     // Τρόπαια της σεζόν: «2025-26», ή χρονιά «2026» (τελικοί την άνοιξη).
     var y2 = String(+season.slice(0, 4) + 1);
     var won = trophyList(key).filter(function (t) { return (t.years || []).some(function (y) { return y === season || y === y2; }); });
+    var sum = sec.summary, wikiSrc = (sum && sum.source) || (ms.filter(function (m) { return m.source === "wikipedia"; })[0] || {}).url;
+    var sumHtml = sum ? '<dl class="ev-facts arch-sum">' + (sum.league ? "<dt>Πρωτάθλημα</dt><dd>" + esc(sum.league) + "</dd>" : "") +
+      (sum.cups || []).map(function (c) { return "<dt>" + esc(c.name) + "</dt><dd>" + esc(c.result) + "</dd>"; }).join("") +
+      (sum.record ? "<dt>Ρεκόρ</dt><dd>" + esc(sum.record) + "</dd>" : "") +
+      (sum.topscorer ? "<dt>Πρώτος σκόρερ</dt><dd>" + esc(sum.topscorer) + "</dd>" : "") + "</dl>" : "";
     return chips +
-      (won.length ? '<p class="arch-won">🏆 ' + won.map(function (t) { return esc(t.name); }).join(" · ") + "</p>" : "") +
-      '<p class="lede">' + played + " αγώνες με αποτέλεσμα: " + n.win + " νίκες" + (n.draw ? ", " + n.draw + " ισοπαλίες" : "") + ", " + n.loss + " ήττες." +
-      (sec.backfilled ? " Από τις πηγές που κρατούν παλιές σεζόν: μπορεί να λείπουν διοργανώσεις." : "") + "</p>" +
+      (won.length ? '<p class="arch-won">🏆 ' + won.map(function (t) { return esc(t.name); }).join(" · ") + "</p>" : "") + sumHtml +
+      (played ? '<p class="lede">' + played + " αγώνες με αποτέλεσμα: " + n.win + " νίκες" + (n.draw ? ", " + n.draw + " ισοπαλίες" : "") + ", " + n.loss + " ήττες." +
+        (sec.backfilled ? " Από τις πηγές που κρατούν παλιές σεζόν: μπορεί να λείπουν διοργανώσεις." : "") + "</p>"
+        : '<p class="help">Δεν υπάρχουν αγώνες αυτής της σεζόν στο αρχείο, μόνο η περίληψη.</p>') +
       (sec.standings && sec.standings.length ? '<h3 class="area-sport">Βαθμολογία</h3>' + tablesHtml(sec.standings, key) : "") +
       order.map(function (c) {
         return '<h3 class="area-sport">' + esc(c) + '</h3><ol class="arch-list">' + byComp[c].map(archRowHtml).join("") + "</ol>";
-      }).join("");
+      }).join("") +
+      (wikiSrc ? '<p class="help">Περίληψη σεζόν' + (ms.some(function (m) { return m.source === "wikipedia"; }) ? " και παλιοί αγώνες" : "") + ': <a href="' + esc(wikiSrc) + '" rel="noopener" target="_blank">Wikipedia</a> (CC BY-SA).</p>' : "");
   }
 
   // ---- Σελίδα τμήματος

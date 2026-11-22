@@ -1055,7 +1055,25 @@
      "score": "2-1",
      "url": "https://www.paokfc.gr/matches/k19-atromitos-paok-slgr-27/",
      "homeLogo": "https://paokalendar.gr/crests/a0fe6c71e098e046.png",
-     "awayLogo": "https://paokalendar.gr/crests/909f25def91e08f1.png"
+     "awayLogo": "https://paokalendar.gr/crests/909f25def91e08f1.png",
+     "goals": {
+      "home": [
+       {
+        "min": "3",
+        "name": "Σασσάνης"
+       },
+       {
+        "min": "57",
+        "name": "Διαμαντάκος"
+       }
+      ],
+      "away": [
+       {
+        "min": "35",
+        "name": "Χαλδέζος"
+       }
+      ]
+     }
     },
     {
      "uid": "football-u19-2026-635d2b8af2ca",
@@ -1070,7 +1088,30 @@
      "score": "3-1",
      "url": "https://www.paokfc.gr/matches/k19-panathinaikos-paok-slgr-27/",
      "homeLogo": "https://paokalendar.gr/crests/2ab072c44000dfaf.png",
-     "awayLogo": "https://paokalendar.gr/crests/909f25def91e08f1.png"
+     "awayLogo": "https://paokalendar.gr/crests/909f25def91e08f1.png",
+     "goals": {
+      "home": [
+       {
+        "min": "5",
+        "name": "Νέμπης"
+       },
+       {
+        "min": "14",
+        "name": "Simnovec",
+        "og": true
+       },
+       {
+        "min": "20",
+        "name": "Νέμπης"
+       }
+      ],
+      "away": [
+       {
+        "min": "54",
+        "name": "Κυριαζίδης"
+       }
+      ]
+     }
     },
     {
      "uid": "football-u19-2026-94bd34187fef",
@@ -1085,7 +1126,24 @@
      "score": "3-0",
      "url": "https://www.paokfc.gr/matches/k19-paok-aris-slgr-27/",
      "homeLogo": "https://paokalendar.gr/crests/909f25def91e08f1.png",
-     "awayLogo": "https://paokalendar.gr/crests/ec280d3a8cac721a.png"
+     "awayLogo": "https://paokalendar.gr/crests/ec280d3a8cac721a.png",
+     "goals": {
+      "home": [
+       {
+        "min": "26",
+        "name": "Αρέτης"
+       },
+       {
+        "min": "91",
+        "name": "Γκιόκας"
+       },
+       {
+        "min": "93",
+        "name": "Σουβλατζής"
+       }
+      ],
+      "away": []
+     }
     },
     {
      "uid": "football-u19-2026-9e53b82fc76e",
@@ -1100,7 +1158,30 @@
      "score": "2-2",
      "url": "https://www.paokfc.gr/matches/k19-panetolikos-paok-slgr-27/",
      "homeLogo": "https://paokalendar.gr/crests/d66e60116a4b532f.png",
-     "awayLogo": "https://paokalendar.gr/crests/909f25def91e08f1.png"
+     "awayLogo": "https://paokalendar.gr/crests/909f25def91e08f1.png",
+     "goals": {
+      "home": [
+       {
+        "min": "43",
+        "name": "Αλμπάνης"
+       },
+       {
+        "min": "45",
+        "name": "Γεωργούλας"
+       }
+      ],
+      "away": [
+       {
+        "min": "13",
+        "name": "Ψυρούκης"
+       },
+       {
+        "min": "91",
+        "name": "Κυριαζίδης",
+        "pen": true
+       }
+      ]
+     }
     },
     {
      "uid": "football-u19-2026-5c941a2cf83d",
@@ -1115,7 +1196,29 @@
      "score": "4-0",
      "url": "https://www.paokfc.gr/matches/k19-paok-kalamata-slgr-27/",
      "homeLogo": "https://paokalendar.gr/crests/909f25def91e08f1.png",
-     "awayLogo": "https://paokalendar.gr/crests/6da2a2199d43d351.png"
+     "awayLogo": "https://paokalendar.gr/crests/6da2a2199d43d351.png",
+     "goals": {
+      "home": [
+       {
+        "min": "15",
+        "name": "Κυριαζίδης"
+       },
+       {
+        "min": "43",
+        "name": "Χαλδέζος",
+        "pen": true
+       },
+       {
+        "min": "45+1",
+        "name": "Αρέτης"
+       },
+       {
+        "min": "73",
+        "name": "Σουβλατζής"
+       }
+      ],
+      "away": []
+     }
     },
     {
      "uid": "football-u19-2026-061f51075c81",
@@ -1130,7 +1233,29 @@
      "score": "4-0",
      "url": "https://www.paokfc.gr/matches/k19-paok-pot-iraklis-slgr-27/",
      "homeLogo": "https://paokalendar.gr/crests/909f25def91e08f1.png",
-     "awayLogo": "https://paokalendar.gr/crests/c2c8e8e821dbe01b.png"
+     "awayLogo": "https://paokalendar.gr/crests/c2c8e8e821dbe01b.png",
+     "goals": {
+      "home": [
+       {
+        "min": "3",
+        "name": "Χαλδέζος",
+        "pen": true
+       },
+       {
+        "min": "9",
+        "name": "Κρομμύδας"
+       },
+       {
+        "min": "33",
+        "name": "Αζζούζ"
+       },
+       {
+        "min": "91",
+        "name": "Γραββάνης"
+       }
+      ],
+      "away": []
+     }
     },
     {
      "uid": "football-u19-2026-6839aef7ce4e",
@@ -1145,7 +1270,33 @@
      "score": "2-3",
      "url": "https://www.paokfc.gr/matches/k19-ofi-paok-slgr-27/",
      "homeLogo": "https://paokalendar.gr/crests/7fb776a421e17cb0.png",
-     "awayLogo": "https://paokalendar.gr/crests/909f25def91e08f1.png"
+     "awayLogo": "https://paokalendar.gr/crests/909f25def91e08f1.png",
+     "goals": {
+      "home": [
+       {
+        "min": "41",
+        "name": "Αντωνακάκης"
+       },
+       {
+        "min": "70",
+        "name": "Σιτμαλίδης"
+       }
+      ],
+      "away": [
+       {
+        "min": "31",
+        "name": "Κυριαζίδης"
+       },
+       {
+        "min": "53",
+        "name": "Αζζούζ"
+       },
+       {
+        "min": "86",
+        "name": "Γραββάνης"
+       }
+      ]
+     }
     },
     {
      "uid": "football-u19-2026-21577bb2834f",
@@ -1175,7 +1326,16 @@
      "score": "1-0",
      "url": "https://www.paokfc.gr/matches/k19-paok-asteras-aktor-slgr-27/",
      "homeLogo": "https://paokalendar.gr/crests/909f25def91e08f1.png",
-     "awayLogo": "https://paokalendar.gr/crests/574d5b94c9c8bf8e.png"
+     "awayLogo": "https://paokalendar.gr/crests/574d5b94c9c8bf8e.png",
+     "goals": {
+      "home": [
+       {
+        "min": "85",
+        "name": "Γραββάνης"
+       }
+      ],
+      "away": []
+     }
     },
     {
      "uid": "football-u19-2026-b8659f355d00",
@@ -17527,5 +17687,5 @@
    ]
   }
  },
- "updated": "2026-11-22T21:47+02:00"
+ "updated": "2026-11-22T22:04+02:00"
 }

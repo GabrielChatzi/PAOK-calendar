@@ -136,6 +136,50 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-3e5eb88d8c7a",
+     "section": "football",
+     "start": "2025-09-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Levadiakos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Levadia Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kędziora",
+        "min": "12",
+        "og": true
+       },
+       {
+        "name": "",
+        "min": "41"
+       },
+       {
+        "name": "",
+        "min": "51",
+        "pen": true
+       },
+       {
+        "name": "",
+        "min": "54"
+       }
+      ],
+      "away": [
+       {
+        "name": "Chalov",
+        "min": "36",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-752297",
      "nt": "4a1b6a19da",
      "section": "football",
@@ -264,6 +308,48 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/20043.png"
     },
     {
+     "uid": "football-wiki-b890d6da4979",
+     "section": "football",
+     "start": "2025-10-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEL",
+     "paokHome": true,
+     "venue": "Toumba",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Ivanušec",
+        "min": "2"
+       },
+       {
+        "name": "Konstantelias",
+        "min": "12"
+       },
+       {
+        "name": "Despodov",
+        "min": "18",
+        "pen": true
+       },
+       {
+        "name": "Mythou",
+        "min": "31"
+       }
+      ],
+      "away": [
+       {
+        "name": "",
+        "min": "75"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-752332",
      "nt": "812c7dc2c1",
      "section": "football",
@@ -360,6 +446,35 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-5909694cdbf4",
+     "section": "football",
+     "start": "2025-12-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "",
+        "min": "47"
+       }
+      ],
+      "away": [
+       {
+        "name": "Giakoumakis",
+        "min": "90+6"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-752362",
      "nt": "bbafc0b44f",
      "section": "football",
@@ -408,6 +523,47 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-a4c76a1adb28",
+     "section": "football",
+     "start": "2025-12-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Marko",
+     "paokHome": true,
+     "venue": "Toumba",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Konstantelias",
+        "min": "17"
+       },
+       {
+        "name": "Konstantelias",
+        "min": "37"
+       },
+       {
+        "name": "Mythou",
+        "min": "26"
+       },
+       {
+        "name": "Camara",
+        "min": "90"
+       }
+      ],
+      "away": [
+       {
+        "name": "",
+        "min": "84"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-752376",
      "nt": "dac33d081c",
      "section": "football",
@@ -424,6 +580,34 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/443.png"
     },
     {
+     "uid": "football-wiki-0083180496c6",
+     "section": "football",
+     "start": "2026-01-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Atromitos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Živković",
+        "min": "54"
+       }
+      ],
+      "away": [
+       {
+        "name": "",
+        "min": "52"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-752384",
      "nt": "b076255647",
      "section": "football",
@@ -438,6 +622,33 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/752384",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/11431.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-2ce3f00dc99a",
+     "section": "football",
+     "start": "2026-01-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Mythou",
+        "min": "7"
+       },
+       {
+        "name": "Ozdoyev",
+        "min": "15"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-752389",
@@ -504,6 +715,31 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/21970.png"
     },
     {
+     "uid": "football-wiki-244cadc571a7",
+     "section": "football",
+     "start": "2026-02-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Leoforos Alexandras Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "First leg",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Giakoumakis",
+        "min": "67",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-752408",
      "nt": "8c848adbaf",
      "section": "football",
@@ -518,6 +754,34 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/752408",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/11553.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-aa9b6b33db16",
+     "section": "football",
+     "start": "2026-02-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Second leg",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Giakoumakis",
+        "min": "71"
+       },
+       {
+        "name": "Chatsidis",
+        "min": "87"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-752417",
@@ -698,6 +962,48 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-2363fba074ba",
+     "section": "football",
+     "start": "2026-04-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Panthessaliko Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Greek Cup Final",
+     "score": "2-3",
+     "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Michailidis",
+        "min": "15"
+       },
+       {
+        "name": "Jeremejeff",
+        "min": "90+7"
+       }
+      ],
+      "away": [
+       {
+        "name": "",
+        "min": "28"
+       },
+       {
+        "name": "",
+        "min": "50"
+       },
+       {
+        "name": "",
+        "min": "105+4",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-401866556",
      "nt": "06ed7e1538",
      "section": "football",
@@ -762,7 +1068,22 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     }
    ],
-   "backfilled": true
+   "backfilled": true,
+   "summary": {
+    "league": "3η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Φιναλίστ"
+     },
+     {
+      "name": "UEFA Europa League",
+      "result": "Πλέι οφ νοκ άουτ"
+     }
+    ],
+    "topscorer": "Magomed Ozdoyev Giannis Konstantelias (8 goals each)",
+    "source": "https://en.wikipedia.org/wiki/2025%E2%80%9326_PAOK_FC_season"
+   }
   },
   "basketball": {
    "matches": [
@@ -3681,5 +4002,5 @@
    "backfilled": true
   }
  },
- "updated": "2026-11-22T17:36+02:00"
+ "updated": "2026-11-22T21:48+02:00"
 }

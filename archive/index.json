@@ -1009,6 +1009,16 @@
      "summary": true
     }
    }
+  },
+  {
+   "season": "1984-85",
+   "sections": {
+    "football": {
+     "matches": 40,
+     "standings": false,
+     "summary": true
+    }
+   }
   }
  ]
 }

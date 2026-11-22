@@ -1,0 +1,1344 @@
+{
+ "season": "1984-85",
+ "sections": {
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-c5b487dea2ed",
+     "section": "football",
+     "start": "1984-09-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikos Goumas Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "1-3",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Majstorović",
+        "min": "59"
+       }
+      ],
+      "away": [
+       {
+        "name": "Damanakis",
+        "min": "18"
+       },
+       {
+        "name": "Damanakis",
+        "min": "31"
+       },
+       {
+        "name": "Skartados",
+        "min": "19"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-99a2837c0491",
+     "section": "football",
+     "start": "1984-09-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "68"
+       },
+       {
+        "name": "Paprica",
+        "min": "90"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6da57e9bedd2",
+     "section": "football",
+     "start": "1984-10-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Piraeus",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Peristeri Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Batsinilas",
+        "min": "62"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dimopoulos",
+        "min": "23"
+       },
+       {
+        "name": "Alexandridis",
+        "min": "89"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-018db582c098",
+     "section": "football",
+     "start": "1984-10-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostikos",
+        "min": "87",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-501ed94f8715",
+     "section": "football",
+     "start": "1984-10-31T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Damanakis",
+        "min": "26"
+       },
+       {
+        "name": "Damanakis",
+        "min": "47"
+       },
+       {
+        "name": "Alavantas",
+        "min": "79"
+       }
+      ],
+      "away": [
+       {
+        "name": "Xanthopoulos",
+        "min": "45"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0a67394f4858",
+     "section": "football",
+     "start": "1984-11-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikos Goumas Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tsourelas",
+        "min": "30",
+        "og": true
+       },
+       {
+        "name": "Mavros",
+        "min": "70"
+       }
+      ],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "22"
+       },
+       {
+        "name": "Singas",
+        "min": "90"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-eb8cca8ba458",
+     "section": "football",
+     "start": "1984-11-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Kalamarias",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "70"
+       },
+       {
+        "name": "Karasavvidis",
+        "min": "76"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a5cd1da70f95",
+     "section": "football",
+     "start": "1984-11-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEL",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Paprica",
+        "min": "5"
+       },
+       {
+        "name": "Alexandridis",
+        "min": "47"
+       },
+       {
+        "name": "Kostikos",
+        "min": "66"
+       },
+       {
+        "name": "Kostikos",
+        "min": "84"
+       }
+      ],
+      "away": [
+       {
+        "name": "Adamczyk",
+        "min": "56"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-499a863d0fe9",
+     "section": "football",
+     "start": "1984-11-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Egaleo",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Stavros Mavrothalassitis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Papatheodorou",
+        "min": "75"
+       }
+      ],
+      "away": [
+       {
+        "name": "Simeoforidis",
+        "min": "14",
+        "og": true
+       },
+       {
+        "name": "Baniotis",
+        "min": "83"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a9033d1527d4",
+     "section": "football",
+     "start": "1984-12-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimopoulos",
+        "min": "35"
+       }
+      ],
+      "away": [
+       {
+        "name": "Karaiskos",
+        "min": "19"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b9d2fdf50989",
+     "section": "football",
+     "start": "1984-12-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panachaiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kostas Davourlis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "0-3",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Kostikos",
+        "min": "69"
+       },
+       {
+        "name": "Kostikos",
+        "min": "77",
+        "pen": true
+       },
+       {
+        "name": "Kostikos",
+        "min": "84",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8a0a85a56352",
+     "section": "football",
+     "start": "1984-12-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Pierikos",
+     "paokHome": true,
+     "venue": "Kavala Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostikos",
+        "min": "33",
+        "pen": true
+       },
+       {
+        "name": "Singas",
+        "min": "39"
+       }
+      ],
+      "away": [
+       {
+        "name": "Komjáti",
+        "min": "29"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d63e35cdcd53",
+     "section": "football",
+     "start": "1984-12-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Karasavvidis",
+        "min": "24"
+       },
+       {
+        "name": "Alexandridis",
+        "min": "63"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-27ffc6fefb38",
+     "section": "football",
+     "start": "1984-12-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Doxa Drama",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Paprica",
+        "min": "29"
+       },
+       {
+        "name": "Karasavvidis",
+        "min": "48"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ba7bb72c3986",
+     "section": "football",
+     "start": "1985-01-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Vardinogiannis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tsirimokos",
+        "min": "24"
+       },
+       {
+        "name": "Tsirimokos",
+        "min": "78",
+        "pen": true
+       },
+       {
+        "name": "Vlastos",
+        "min": "32"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dimopoulos",
+        "min": "76"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-30d184db7cdc",
+     "section": "football",
+     "start": "1985-01-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimopoulos",
+        "min": "78"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8871a665ca82",
+     "section": "football",
+     "start": "1985-01-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Zelelidis",
+        "min": "65"
+       },
+       {
+        "name": "Eriksson",
+        "min": "85"
+       },
+       {
+        "name": "Kouis",
+        "min": "90+2"
+       }
+      ],
+      "away": [
+       {
+        "name": "Vasilakos",
+        "min": "89"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c93c7fb6d054",
+     "section": "football",
+     "start": "1985-01-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Olympic Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Paprica",
+        "min": "80"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4670988977ae",
+     "section": "football",
+     "start": "1985-01-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e1ffd8d7a020",
+     "section": "football",
+     "start": "1985-02-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Bibisidis",
+        "min": "6"
+       },
+       {
+        "name": "Zelelidis",
+        "min": "59"
+       },
+       {
+        "name": "Zelelidis",
+        "min": "90+5"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-88e401079c28",
+     "section": "football",
+     "start": "1985-02-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Lamia",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "6-0",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Damanakis",
+        "min": "13"
+       },
+       {
+        "name": "Paprica 52'",
+        "min": "19",
+        "pen": true
+       },
+       {
+        "name": "Paprica 52'",
+        "min": "65"
+       },
+       {
+        "name": "Dimopoulos",
+        "min": "41"
+       },
+       {
+        "name": "Dimopoulos",
+        "min": "87"
+       },
+       {
+        "name": "Iordanidis",
+        "min": "75"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-62e5a4819733",
+     "section": "football",
+     "start": "1985-02-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ethnikos Piraeus",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "5-2",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Paprica",
+        "min": "24"
+       },
+       {
+        "name": "Skartados",
+        "min": "34"
+       },
+       {
+        "name": "Skartados",
+        "min": "66"
+       },
+       {
+        "name": "Skartados",
+        "min": "75",
+        "pen": true
+       },
+       {
+        "name": "Liakos",
+        "min": "70"
+       }
+      ],
+      "away": [
+       {
+        "name": "Liolios",
+        "min": "46"
+       },
+       {
+        "name": "Batsinilas",
+        "min": "84",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a28a442cf018",
+     "section": "football",
+     "start": "1985-02-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Olympic Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Mitropoulos",
+        "min": "47"
+       },
+       {
+        "name": "Sarganis",
+        "min": "80",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Paprica",
+        "min": "89"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7c80e08c5006",
+     "section": "football",
+     "start": "1985-02-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Lamia",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Lamia Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "1-9",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lendas",
+        "min": "38",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Vasilakos",
+        "min": "7"
+       },
+       {
+        "name": "Vasilakos",
+        "min": "50"
+       },
+       {
+        "name": "Vasilakos",
+        "min": "75"
+       },
+       {
+        "name": "Iordanidis",
+        "min": "15"
+       },
+       {
+        "name": "Iordanidis",
+        "min": "54"
+       },
+       {
+        "name": "Mavromatis",
+        "min": "36"
+       },
+       {
+        "name": "Mavromatis",
+        "min": "52"
+       },
+       {
+        "name": "Paprica",
+        "min": "70"
+       },
+       {
+        "name": "Iosifidis",
+        "min": "86"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-df6281449ee9",
+     "section": "football",
+     "start": "1985-03-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimopoulos",
+        "min": "61"
+       }
+      ],
+      "away": [
+       {
+        "name": "Esterházy",
+        "min": "29"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1447c8c301d4",
+     "section": "football",
+     "start": "1985-03-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Kalamarias",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vasilakos",
+        "min": "25"
+       },
+       {
+        "name": "Dimopoulos",
+        "min": "62"
+       },
+       {
+        "name": "Skartados",
+        "min": "77"
+       }
+      ],
+      "away": [
+       {
+        "name": "Skočajić",
+        "min": "65",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-81276f68afee",
+     "section": "football",
+     "start": "1985-03-31T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEL",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Alcazar Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Parafestas",
+        "min": "86",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Dimopoulos",
+        "min": "26"
+       },
+       {
+        "name": "Dimopoulos",
+        "min": "83"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1f40c74c5ca3",
+     "section": "football",
+     "start": "1985-04-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos Volos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Volos Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "1-4",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Douzenis",
+        "min": "32",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Jurišić",
+        "min": "19"
+       },
+       {
+        "name": "Dimopoulos",
+        "min": "61"
+       },
+       {
+        "name": "Dimopoulos",
+        "min": "68"
+       },
+       {
+        "name": "Dimopoulos",
+        "min": "73"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9e59a48f536e",
+     "section": "football",
+     "start": "1985-04-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Egaleo",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimopoulos",
+        "min": "32"
+       },
+       {
+        "name": "Dimopoulos",
+        "min": "57"
+       },
+       {
+        "name": "Karasavvidis",
+        "min": "45"
+       }
+      ],
+      "away": [
+       {
+        "name": "Pigaditis",
+        "min": "42",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2ba702b9939d",
+     "section": "football",
+     "start": "1985-04-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Trikala Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "1"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2db7a13e51ae",
+     "section": "football",
+     "start": "1985-04-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panachaiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Karasavvidis",
+        "min": "45"
+       },
+       {
+        "name": "Skartados",
+        "min": "85"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0c9b375e3e50",
+     "section": "football",
+     "start": "1985-05-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Pierikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Katerini Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Michalitsios",
+        "min": "84"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dimopoulos",
+        "min": "45"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a649ac26d3e3",
+     "section": "football",
+     "start": "1985-05-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos Volos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostikos",
+        "min": "36"
+       },
+       {
+        "name": "Damanakis",
+        "min": "38"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8aa29b922445",
+     "section": "football",
+     "start": "1985-05-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Doxa Drama",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Doxa Drama Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Panidis",
+        "min": "14"
+       },
+       {
+        "name": "Yfantidis",
+        "min": "64"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dimopoulos",
+        "min": "71"
+       },
+       {
+        "name": "Alavantas",
+        "min": "85"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-28d2f3edbaa3",
+     "section": "football",
+     "start": "1985-05-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Olympic Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Antoniou",
+        "min": "16"
+       },
+       {
+        "name": "Rocha",
+        "min": "49"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-107efc3fb9ba",
+     "section": "football",
+     "start": "1985-05-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostikos",
+        "min": "24"
+       },
+       {
+        "name": "Singas",
+        "min": "34"
+       },
+       {
+        "name": "Baniotis",
+        "min": "49"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9e1d49286b7e",
+     "section": "football",
+     "start": "1985-06-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Singas",
+        "min": "39"
+       },
+       {
+        "name": "Kostikos",
+        "min": "44"
+       },
+       {
+        "name": "Alexandridis",
+        "min": "63"
+       },
+       {
+        "name": "Karasavvidis",
+        "min": "80"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8b4b3b5f1793",
+     "section": "football",
+     "start": "1985-06-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6590d9ee6c89",
+     "section": "football",
+     "start": "1985-06-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "81"
+       }
+      ],
+      "away": [
+       {
+        "name": "Saravakos",
+        "min": "78"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8c18f8322f62",
+     "section": "football",
+     "start": "1985-06-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEL",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Olympic Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Ziogas",
+        "min": "39"
+       },
+       {
+        "name": "Ziogas",
+        "min": "73"
+       },
+       {
+        "name": "Kmiecik",
+        "min": "47"
+       },
+       {
+        "name": "Valaoras",
+        "min": "75"
+       }
+      ],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "55"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "Πρωταθλητής",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Φιναλίστ"
+     }
+    ],
+    "topscorer": "Christos Dimopoulos (12)",
+    "source": "https://en.wikipedia.org/wiki/1984%E2%80%9385_PAOK_FC_season"
+   },
+   "backfilled": true
+  }
+ },
+ "updated": "2026-11-22T21:53+02:00"
+}

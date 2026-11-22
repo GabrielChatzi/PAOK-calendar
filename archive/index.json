@@ -264,9 +264,9 @@
    "season": "2023-24",
    "sections": {
     "football": {
-     "matches": 52,
+     "matches": 58,
      "standings": false,
-     "summary": false
+     "summary": true
     },
     "basketball": {
      "matches": 29,

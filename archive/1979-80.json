@@ -1,0 +1,1263 @@
+{
+ "season": "1979-80",
+ "sections": {
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-53b6bb62c80c",
+     "section": "football",
+     "start": "1979-09-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kavala",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "6-2",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostikos",
+        "min": "6"
+       },
+       {
+        "name": "Kostikos",
+        "min": "8"
+       },
+       {
+        "name": "Kostikos",
+        "min": "52"
+       },
+       {
+        "name": "Orfanos",
+        "min": "19"
+       },
+       {
+        "name": "Orfanos",
+        "min": "56"
+       },
+       {
+        "name": "Alexandridis",
+        "min": "66"
+       }
+      ],
+      "away": [
+       {
+        "name": "Filippidis",
+        "min": "77"
+       },
+       {
+        "name": "Triantafyllidis",
+        "min": "79"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a2a475e056c9",
+     "section": "football",
+     "start": "1979-10-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Semertzidis",
+        "min": "35"
+       },
+       {
+        "name": "Ananiadis",
+        "min": "68"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f7d7244dccaa",
+     "section": "football",
+     "start": "1979-10-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Guerino",
+        "min": "9"
+       },
+       {
+        "name": "Guerino",
+        "min": "37"
+       },
+       {
+        "name": "Orfanos",
+        "min": "67"
+       },
+       {
+        "name": "Vasilakos",
+        "min": "72"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6259ad094a9d",
+     "section": "football",
+     "start": "1979-10-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ethnikos Piraeus",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kermanidis",
+        "min": "46"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-aa997fd38ce6",
+     "section": "football",
+     "start": "1979-11-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Doxa Drama",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Doxa Drama Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Strantzalis",
+        "min": "30"
+       }
+      ],
+      "away": [
+       {
+        "name": "Damanakis",
+        "min": "29"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-78a3c4b0af13",
+     "section": "football",
+     "start": "1979-11-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Rodos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Apostolidis",
+        "min": "28"
+       },
+       {
+        "name": "Guerino",
+        "min": "29",
+        "pen": true
+       },
+       {
+        "name": "Kermanidis",
+        "min": "39"
+       },
+       {
+        "name": "Kostikos",
+        "min": "67"
+       }
+      ],
+      "away": [
+       {
+        "name": "Rados",
+        "min": "20"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b272c8f141ca",
+     "section": "football",
+     "start": "1979-11-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Leoforos Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b4d7b94472be",
+     "section": "football",
+     "start": "1979-11-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Anagennisi Giannitsa",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "6-0",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostikos",
+        "min": "3"
+       },
+       {
+        "name": "Kostikos",
+        "min": "85"
+       },
+       {
+        "name": "Koudas",
+        "min": "16"
+       },
+       {
+        "name": "Iosifidis",
+        "min": "29"
+       },
+       {
+        "name": "Alexandridis",
+        "min": "44"
+       },
+       {
+        "name": "Alexandridis",
+        "min": "56"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e01f102a3b51",
+     "section": "football",
+     "start": "1979-11-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEL",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Alcazar Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Koudas",
+        "min": "23"
+       },
+       {
+        "name": "Orfanos",
+        "min": "81"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-80326539aad0",
+     "section": "football",
+     "start": "1979-12-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostikos",
+        "min": "4"
+       },
+       {
+        "name": "Kostikos",
+        "min": "31"
+       },
+       {
+        "name": "Damanakis",
+        "min": "85"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b348279a54f1",
+     "section": "football",
+     "start": "1979-12-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "PAS Giannina",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostikos",
+        "min": "3"
+       },
+       {
+        "name": "Vasilakos",
+        "min": "16"
+       }
+      ],
+      "away": [
+       {
+        "name": "Papangelis",
+        "min": "67"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-96f3a81bfae2",
+     "section": "football",
+     "start": "1979-12-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Korinthos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Corinth Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tsikitzelas",
+        "min": "35"
+       },
+       {
+        "name": "Pissas",
+        "min": "47"
+       },
+       {
+        "name": "Pittas",
+        "min": "57"
+       }
+      ],
+      "away": [
+       {
+        "name": "Orfanos",
+        "min": "78"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-dbcfab3d639e",
+     "section": "football",
+     "start": "1979-12-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Guerino",
+        "min": "7",
+        "pen": true
+       },
+       {
+        "name": "Guerino",
+        "min": "48"
+       },
+       {
+        "name": "Kostikos",
+        "min": "51"
+       }
+      ],
+      "away": [
+       {
+        "name": "Anastopoulos",
+        "min": "22"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b9664ceaa577",
+     "section": "football",
+     "start": "1979-12-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panachaiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kostas Davourlis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Spentzopoulos",
+        "min": "73"
+       }
+      ],
+      "away": [
+       {
+        "name": "Orfanos",
+        "min": "17"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-465a555d3a14",
+     "section": "football",
+     "start": "1980-01-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vasilakos",
+        "min": "29"
+       },
+       {
+        "name": "Kermanidis",
+        "min": "65"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kalabakas",
+        "min": "15"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a8d1fbabd2bf",
+     "section": "football",
+     "start": "1980-01-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kastoria",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kastoria Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-54c7602e626f",
+     "section": "football",
+     "start": "1980-01-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Rizoupoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Zoumas",
+        "min": "15"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-501e453c8f7c",
+     "section": "football",
+     "start": "1980-01-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostikos",
+        "min": "32"
+       },
+       {
+        "name": "Kermanidis",
+        "min": "83"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e7653347755e",
+     "section": "football",
+     "start": "1980-01-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kavala",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kavala Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Koiveroglou",
+        "min": "39",
+        "og": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a508d9e1ea09",
+     "section": "football",
+     "start": "1980-02-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostikos",
+        "min": "13"
+       },
+       {
+        "name": "Kostikos",
+        "min": "83"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-148292a2c464",
+     "section": "football",
+     "start": "1980-02-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Galakos",
+        "min": "14"
+       }
+      ],
+      "away": [
+       {
+        "name": "Orfanos",
+        "min": "12"
+       },
+       {
+        "name": "Vasilakos",
+        "min": "25"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2e3201dea296",
+     "section": "football",
+     "start": "1980-02-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikos Goumas Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vlachos",
+        "min": "10"
+       },
+       {
+        "name": "Bajević",
+        "min": "27"
+       },
+       {
+        "name": "Ardizoglou",
+        "min": "70"
+       }
+      ],
+      "away": [
+       {
+        "name": "Guerino",
+        "min": "41"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-88d202a0c92b",
+     "section": "football",
+     "start": "1980-02-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Piraeus",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Labrinos",
+        "min": "47"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-33a556b6a01f",
+     "section": "football",
+     "start": "1980-02-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Guerino",
+        "min": "9"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0f05495e7522",
+     "section": "football",
+     "start": "1980-02-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Doxa Drama",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Alavantas",
+        "min": "36"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3fd1bb9f474f",
+     "section": "football",
+     "start": "1980-03-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Rodos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Diagoras Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e4299782780e",
+     "section": "football",
+     "start": "1980-03-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Zindros",
+        "min": "67"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f518043e8e92",
+     "section": "football",
+     "start": "1980-03-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Rocha",
+        "min": "11"
+       },
+       {
+        "name": "Terzanidis",
+        "min": "83"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a1ba37043e4b",
+     "section": "football",
+     "start": "1980-03-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEL",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kermanidis",
+        "min": "29"
+       },
+       {
+        "name": "Guerino",
+        "min": "58"
+       },
+       {
+        "name": "Sarafis",
+        "min": "67"
+       },
+       {
+        "name": "Sarafis",
+        "min": "81",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d5f6617fff90",
+     "section": "football",
+     "start": "1980-03-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Vardinogiannis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Singas",
+        "min": "13",
+        "og": true
+       },
+       {
+        "name": "Papadopoulos",
+        "min": "71",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Sarafis",
+        "min": "74",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-92b5de0a8b33",
+     "section": "football",
+     "start": "1980-03-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kastoria",
+     "paokHome": true,
+     "venue": "Katerini Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostikos",
+        "min": "4"
+       },
+       {
+        "name": "Kostikos",
+        "min": "53"
+       },
+       {
+        "name": "Koudas",
+        "min": "69"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b1473fd51543",
+     "section": "football",
+     "start": "1980-04-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "PAS Giannina",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Zosimades Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Seitaridis",
+        "min": "13",
+        "pen": true
+       },
+       {
+        "name": "Seitaridis",
+        "min": "75",
+        "pen": true
+       },
+       {
+        "name": "Tsirimokos",
+        "min": "83"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b431a1de0755",
+     "section": "football",
+     "start": "1980-04-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Korinthos",
+     "paokHome": true,
+     "venue": "Katerini Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Orfanos",
+        "min": "2"
+       },
+       {
+        "name": "Sarafis 29'",
+        "min": "20"
+       },
+       {
+        "name": "Tsikitzelas",
+        "min": "62",
+        "og": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Pittas",
+        "min": "65",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-40df310cee4b",
+     "section": "football",
+     "start": "1980-04-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Moraitelis",
+        "min": "68",
+        "pen": true
+       },
+       {
+        "name": "Gravanis",
+        "min": "85"
+       }
+      ],
+      "away": [
+       {
+        "name": "Guerino",
+        "min": "63",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4f438f475b7e",
+     "section": "football",
+     "start": "1980-04-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panachaiki",
+     "paokHome": true,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "31η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostikos",
+        "min": "39",
+        "pen": true
+       },
+       {
+        "name": "Kermanidis",
+        "min": "76"
+       }
+      ],
+      "away": [
+       {
+        "name": "Spentzopoulos",
+        "min": "83"
+       },
+       {
+        "name": "Psarras",
+        "min": "88"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-deadf51a9951",
+     "section": "football",
+     "start": "1980-04-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "60"
+       },
+       {
+        "name": "Vasilakos",
+        "min": "108"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7eb073bdc6cf",
+     "section": "football",
+     "start": "1980-05-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "32η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kalabakas",
+        "min": "10"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kostikos",
+        "min": "28",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c8a1b6f4184c",
+     "section": "football",
+     "start": "1980-05-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Orfanidis",
+        "min": "2"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5b688b9f89ac",
+     "section": "football",
+     "start": "1980-05-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Athens",
+     "paokHome": true,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "33η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostikos",
+        "min": "46"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8000f20197da",
+     "section": "football",
+     "start": "1980-05-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "34η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Galakos",
+        "min": "14"
+       },
+       {
+        "name": "Galakos",
+        "min": "30"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-83f35f167e1b",
+     "section": "football",
+     "start": "1980-05-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kalabakas",
+        "min": "25"
+       }
+      ],
+      "away": [
+       {
+        "name": "Damanakis",
+        "min": "26"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "5η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Ημιτελικά"
+     }
+    ],
+    "topscorer": "Giorgos Kostikos (16)",
+    "source": "https://en.wikipedia.org/wiki/1979%E2%80%9380_PAOK_FC_season"
+   },
+   "backfilled": true
+  }
+ },
+ "updated": "2026-11-22T21:53+02:00"
+}

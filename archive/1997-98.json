@@ -1,0 +1,1650 @@
+{
+ "season": "1997-98",
+ "sections": {
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-8c9d7eccfe15",
+     "section": "football",
+     "start": "1997-08-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Spartak Trnava",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "1ος αγώνας",
+     "score": "5-3",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Zagorakis",
+        "min": "32",
+        "pen": true
+       },
+       {
+        "name": "Marangos",
+        "min": "35"
+       },
+       {
+        "name": "Marangos",
+        "min": "45"
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "52"
+       },
+       {
+        "name": "Olivares",
+        "min": "80"
+       }
+      ],
+      "away": [
+       {
+        "name": "Ujlaky",
+        "min": "22"
+       },
+       {
+        "name": "Ujlaky",
+        "min": "27"
+       },
+       {
+        "name": "Luhový",
+        "min": "24"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e3876067b1aa",
+     "section": "football",
+     "start": "1997-08-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Spartak Trnava",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Anton Malatinský Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "2ος αγώνας",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Zagorakis",
+        "min": "80"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9a9f7c979212",
+     "section": "football",
+     "start": "1997-08-31T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-560f0f62281d",
+     "section": "football",
+     "start": "1997-09-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Vardinogiannis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Anastasiou",
+        "min": "13"
+       },
+       {
+        "name": "Riznić",
+        "min": "39"
+       }
+      ],
+      "away": [
+       {
+        "name": "Toursounidis",
+        "min": "15",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a6003ad44380",
+     "section": "football",
+     "start": "1997-09-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Arsenal",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "1ος αγώνας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frantzeskos",
+        "min": "61"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d18278d02a7e",
+     "section": "football",
+     "start": "1997-09-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Xanthi",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Toursounidis",
+        "min": "13"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kyparissis",
+        "min": "57"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-41170f6673ec",
+     "section": "football",
+     "start": "1997-09-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kalamata",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frantzeskos",
+        "min": "5"
+       },
+       {
+        "name": "Marangos",
+        "min": "61"
+       },
+       {
+        "name": "Zouboulis",
+        "min": "69"
+       },
+       {
+        "name": "Cominges",
+        "min": "88"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-735c5065ea5c",
+     "section": "football",
+     "start": "1997-09-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Arsenal",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Highbury",
+     "competition": "Κύπελλο UEFA",
+     "round": "2ος αγώνας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Bergkamp",
+        "min": "22"
+       }
+      ],
+      "away": [
+       {
+        "name": "Vryzas",
+        "min": "87"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-44d569773016",
+     "section": "football",
+     "start": "1997-10-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Proodeftiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikaia Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "3-3",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Zajmi",
+        "min": "61"
+       },
+       {
+        "name": "Zajmi",
+        "min": "70"
+       },
+       {
+        "name": "Almanidis",
+        "min": "90+3"
+       }
+      ],
+      "away": [
+       {
+        "name": "Frantzeskos 90+1'",
+        "min": "33"
+       },
+       {
+        "name": "Frantzeskos 90+1'",
+        "min": "89"
+       },
+       {
+        "name": "Zagorakis",
+        "min": "87",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7a63b68a9bce",
+     "section": "football",
+     "start": "1997-10-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frantzeskos",
+        "min": "34"
+       },
+       {
+        "name": "Toursounidis",
+        "min": "45+2"
+       }
+      ],
+      "away": [
+       {
+        "name": "Ofori-Quaye",
+        "min": "27"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-dd415bbd1a43",
+     "section": "football",
+     "start": "1997-10-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Atlético Madrid",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Vicente Calderón Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "1ος αγώνας",
+     "score": "5-2",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vieri",
+        "min": "10"
+       },
+       {
+        "name": "Vieri",
+        "min": "31"
+       },
+       {
+        "name": "Vieri",
+        "min": "55"
+       },
+       {
+        "name": "Lardín",
+        "min": "12"
+       },
+       {
+        "name": "Kiko",
+        "min": "75"
+       }
+      ],
+      "away": [
+       {
+        "name": "Frantzeskos",
+        "min": "19"
+       },
+       {
+        "name": "Marangos",
+        "min": "65"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6431bcb841cf",
+     "section": "football",
+     "start": "1997-10-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kavala",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Anthi Karagianni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Cominges",
+        "min": "78"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-93064c07d492",
+     "section": "football",
+     "start": "1997-11-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frantzeskos",
+        "min": "29"
+       },
+       {
+        "name": "Olivares",
+        "min": "61"
+       }
+      ],
+      "away": [
+       {
+        "name": "Konstantinou",
+        "min": "9"
+       },
+       {
+        "name": "Konstantinou",
+        "min": "86"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2078eb584e19",
+     "section": "football",
+     "start": "1997-11-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Atlético Madrid",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "2ος αγώνας",
+     "score": "4-4",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frantzeskos",
+        "min": "17"
+       },
+       {
+        "name": "Olivares",
+        "min": "55"
+       },
+       {
+        "name": "Zagorakis",
+        "min": "76",
+        "pen": true
+       },
+       {
+        "name": "Zouboulis",
+        "min": "81"
+       }
+      ],
+      "away": [
+       {
+        "name": "Lardín",
+        "min": "2"
+       },
+       {
+        "name": "Bogdanović",
+        "min": "28"
+       },
+       {
+        "name": "Santi",
+        "min": "51"
+       },
+       {
+        "name": "Kiko",
+        "min": "90"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-356d0511fe46",
+     "section": "football",
+     "start": "1997-11-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ionikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Neapoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "3-2",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frousos",
+        "min": "32"
+       },
+       {
+        "name": "Xanthopoulos",
+        "min": "45"
+       },
+       {
+        "name": "Kalykas",
+        "min": "76"
+       }
+      ],
+      "away": [
+       {
+        "name": "Frantzeskos",
+        "min": "48"
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "60"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3498b1fd2250",
+     "section": "football",
+     "start": "1997-11-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Nagbe",
+        "min": "12"
+       },
+       {
+        "name": "Cominges",
+        "min": "87"
+       }
+      ],
+      "away": [
+       {
+        "name": "Lagonikakis",
+        "min": "16"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4e53256b3aa0",
+     "section": "football",
+     "start": "1997-11-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Proodeftiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vryzas",
+        "min": "8"
+       },
+       {
+        "name": "Vryzas",
+        "min": "50"
+       },
+       {
+        "name": "Toursounidis",
+        "min": "27",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Almanidis",
+        "min": "48"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-cc01a1c02168",
+     "section": "football",
+     "start": "1997-11-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Paniliakos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Pyrgos Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Barnjak",
+        "min": "42"
+       }
+      ],
+      "away": [
+       {
+        "name": "Frantzeskos",
+        "min": "23"
+       },
+       {
+        "name": "Toursounidis",
+        "min": "35"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-58d6d5fb8a0e",
+     "section": "football",
+     "start": "1997-11-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "0-3",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Kafes",
+        "min": "18"
+       },
+       {
+        "name": "Marangos",
+        "min": "40"
+       },
+       {
+        "name": "Nagbe",
+        "min": "70"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5f19f7e05857",
+     "section": "football",
+     "start": "1997-12-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Proodeftiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikaia Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Almanidis",
+        "min": "84",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b1ac830168ad",
+     "section": "football",
+     "start": "1997-12-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Nagbe",
+        "min": "27"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-cabdf3b292e0",
+     "section": "football",
+     "start": "1997-12-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panachaiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kostas Davourlis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "1-4",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Samaras",
+        "min": "32"
+       }
+      ],
+      "away": [
+       {
+        "name": "Nagbe",
+        "min": "15"
+       },
+       {
+        "name": "Zagorakis",
+        "min": "28",
+        "pen": true
+       },
+       {
+        "name": "Kalla",
+        "min": "68",
+        "og": true
+       },
+       {
+        "name": "Katsouris",
+        "min": "81"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-397fc514a54a",
+     "section": "football",
+     "start": "1997-12-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Veria",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Marangos",
+        "min": "29"
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "42"
+       },
+       {
+        "name": "Kapetanopoulos",
+        "min": "74"
+       }
+      ],
+      "away": [
+       {
+        "name": "Troupkos 71'",
+        "min": "88"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e2de7abda041",
+     "section": "football",
+     "start": "1998-01-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Piraeus",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Zouboulis",
+        "min": "73"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b02d1a0576ea",
+     "section": "football",
+     "start": "1998-01-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ionikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Marangos",
+        "min": "28"
+       },
+       {
+        "name": "Nagbe",
+        "min": "47"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-04443e95ba03",
+     "section": "football",
+     "start": "1998-01-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Athinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kovács",
+        "min": "90"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-19a41877ad3e",
+     "section": "football",
+     "start": "1998-01-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikos Goumas Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Maladenis",
+        "min": "17"
+       },
+       {
+        "name": "Maladenis",
+        "min": "90+1"
+       },
+       {
+        "name": "Batista",
+        "min": "57"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3beb97c4763c",
+     "section": "football",
+     "start": "1998-01-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Nagbe",
+        "min": "54"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-282b852b4236",
+     "section": "football",
+     "start": "1998-01-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ionikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Neapoli Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Staboulis",
+        "min": "89"
+       }
+      ],
+      "away": [
+       {
+        "name": "Marangos",
+        "min": "34"
+       },
+       {
+        "name": "Vryzas",
+        "min": "85"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-aaa316bf05c6",
+     "section": "football",
+     "start": "1998-02-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Xanthi",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Xanthi Ground",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tengelidis",
+        "min": "2"
+       },
+       {
+        "name": "Kyparissis",
+        "min": "66"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kovács",
+        "min": "48"
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "64"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d13fc99e8380",
+     "section": "football",
+     "start": "1998-02-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kalamata",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kalamata Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Hagan",
+        "min": "10"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kovács",
+        "min": "50"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-764977f8b9c1",
+     "section": "football",
+     "start": "1998-02-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Skoda Xanthi",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frantzeskos",
+        "min": "36"
+       },
+       {
+        "name": "Velis",
+        "min": "84"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-02a6a94096dc",
+     "section": "football",
+     "start": "1998-02-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Proodeftiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Toursounidis",
+        "min": "7"
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "20"
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "89"
+       }
+      ],
+      "away": [
+       {
+        "name": "Almanidis",
+        "min": "4"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b64a7158ad25",
+     "section": "football",
+     "start": "1998-02-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Athens Olympic Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Karapialis",
+        "min": "46"
+       },
+       {
+        "name": "Alexandris",
+        "min": "59"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a61397ca5fa0",
+     "section": "football",
+     "start": "1998-02-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Skoda Xanthi",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "A.O. Xanthi Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vilanakis",
+        "min": "13"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5633d1662a43",
+     "section": "football",
+     "start": "1998-03-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kavala",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frantzeskos",
+        "min": "50"
+       },
+       {
+        "name": "Vryzas",
+        "min": "77"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-15a4352be4d2",
+     "section": "football",
+     "start": "1998-03-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vokolos",
+        "min": "90+2"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2a3bd4dfb3eb",
+     "section": "football",
+     "start": "1998-03-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "2-3",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Xhumba",
+        "min": "2"
+       },
+       {
+        "name": "Konstantinou",
+        "min": "64"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kovács",
+        "min": "42"
+       },
+       {
+        "name": "Kovács",
+        "min": "54"
+       },
+       {
+        "name": "Tasiopoulos",
+        "min": "45"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-39e927d00187",
+     "section": "football",
+     "start": "1998-03-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ionikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Cominges",
+        "min": "23"
+       },
+       {
+        "name": "Cominges",
+        "min": "26"
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "30"
+       }
+      ],
+      "away": [
+       {
+        "name": "Frousos",
+        "min": "31"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b1fe52b8462a",
+     "section": "football",
+     "start": "1998-03-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vryzas",
+        "min": "82"
+       }
+      ],
+      "away": [
+       {
+        "name": "Nalitzis",
+        "min": "23"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1b92e7facc2c",
+     "section": "football",
+     "start": "1998-03-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Athens Olympic Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "G.Ch. Georgiadis",
+        "min": "20"
+       },
+       {
+        "name": "G.Ch. Georgiadis",
+        "min": "70"
+       },
+       {
+        "name": "G.S. Georgiadis",
+        "min": "89"
+       }
+      ],
+      "away": [
+       {
+        "name": "Marangos",
+        "min": "83"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a07af54faac1",
+     "section": "football",
+     "start": "1998-03-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Paniliakos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "3-2",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Cominges",
+        "min": "27"
+       },
+       {
+        "name": "Olivares",
+        "min": "31"
+       },
+       {
+        "name": "Zouboulis",
+        "min": "80"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kyzeridis",
+        "min": "29"
+       },
+       {
+        "name": "Rosales",
+        "min": "55"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-18469cb40ccc",
+     "section": "football",
+     "start": "1998-04-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "6-1",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Toursounidis",
+        "min": "16"
+       },
+       {
+        "name": "Toursounidis",
+        "min": "37"
+       },
+       {
+        "name": "Nagbe",
+        "min": "51"
+       },
+       {
+        "name": "Marangos",
+        "min": "57"
+       },
+       {
+        "name": "Vryzas",
+        "min": "74"
+       },
+       {
+        "name": "Cominges",
+        "min": "82"
+       }
+      ],
+      "away": [
+       {
+        "name": "Paiteris",
+        "min": "68"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-cecfe22343ea",
+     "section": "football",
+     "start": "1998-04-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Rizoupoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "4-4",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tatsis",
+        "min": "16"
+       },
+       {
+        "name": "Tatsis",
+        "min": "58"
+       },
+       {
+        "name": "Karagounis",
+        "min": "32"
+       },
+       {
+        "name": "Labriakos",
+        "min": "83"
+       }
+      ],
+      "away": [
+       {
+        "name": "Cominges",
+        "min": "27"
+       },
+       {
+        "name": "Cominges",
+        "min": "35",
+        "pen": true
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "30"
+       },
+       {
+        "name": "Nagbe",
+        "min": "77"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-27a9ae104239",
+     "section": "football",
+     "start": "1998-05-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panachaiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "31η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Nagbe",
+        "min": "20"
+       },
+       {
+        "name": "Olivares",
+        "min": "23"
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "34"
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "36"
+       }
+      ],
+      "away": [
+       {
+        "name": "Klejch",
+        "min": "54"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-60f2a73db570",
+     "section": "football",
+     "start": "1998-05-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Veria",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Veria Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "32η αγωνιστική",
+     "score": "1-3",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Pangouras",
+        "min": "73"
+       }
+      ],
+      "away": [
+       {
+        "name": "Cominges",
+        "min": "22"
+       },
+       {
+        "name": "Cominges",
+        "min": "55"
+       },
+       {
+        "name": "Vryzas",
+        "min": "54"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-92d2ce51e4a7",
+     "section": "football",
+     "start": "1998-05-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ethnikos Piraeus",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "33η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Athanasiadis",
+        "min": "12"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d2b172463151",
+     "section": "football",
+     "start": "1998-05-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Athinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Vyronas National Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "34η αγωνιστική",
+     "score": "0-5",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Olivares",
+        "min": "16"
+       },
+       {
+        "name": "Zouboulis",
+        "min": "29"
+       },
+       {
+        "name": "Zouboulis",
+        "min": "58"
+       },
+       {
+        "name": "Kafes",
+        "min": "44"
+       },
+       {
+        "name": "Toursounidis",
+        "min": "75"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "4η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Ημιτελικά"
+     },
+     {
+      "name": "Κύπελλο UEFA",
+      "result": "2ος γύρος"
+     }
+    ],
+    "topscorer": "Frantzeskos (17)",
+    "source": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season"
+   },
+   "backfilled": true
+  }
+ },
+ "updated": "2026-11-22T21:51+02:00"
+}

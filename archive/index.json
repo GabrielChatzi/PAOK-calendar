@@ -861,6 +861,16 @@
    }
   },
   {
+   "season": "1997-98",
+   "sections": {
+    "football": {
+     "matches": 48,
+     "standings": false,
+     "summary": true
+    }
+   }
+  },
+  {
    "season": "1995-96",
    "sections": {
     "basketball": {

@@ -50,7 +50,7 @@
       "destination": "/api/data?f=crests/:f"
     },
     {
-      "source": "/:name(matches|standings|status|events).json",
+      "source": "/:name(matches|standings|status|events|trophies).json",
       "destination": "/api/data?f=:name.json"
     },
     {

@@ -1,0 +1,1430 @@
+{
+ "season": "1982-83",
+ "sections": {
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-ef3d3dd7000d",
+     "section": "football",
+     "start": "1982-09-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Sochaux",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "1ος αγώνας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimopoulos",
+        "min": "80"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e7eb3e204e00",
+     "section": "football",
+     "start": "1982-09-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEL",
+     "paokHome": true,
+     "venue": "Veria Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "3-2",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dramalis",
+        "min": "29",
+        "og": true
+       },
+       {
+        "name": "Koudas",
+        "min": "78"
+       },
+       {
+        "name": "Alavantas",
+        "min": "89"
+       }
+      ],
+      "away": [
+       {
+        "name": "Andreoudis",
+        "min": "44"
+       },
+       {
+        "name": "Valaoras",
+        "min": "68"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0c6a3525d015",
+     "section": "football",
+     "start": "1982-09-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Makedonikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Makedonikos Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f5992c5f07b9",
+     "section": "football",
+     "start": "1982-09-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Sochaux",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Stade Auguste Bonal",
+     "competition": "Κύπελλο UEFA",
+     "round": "2ος αγώνας",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Anziani",
+        "min": "90",
+        "pen": true
+       },
+       {
+        "name": "Anziani",
+        "min": "98"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dimopoulos",
+        "min": "94"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-69c31b7d1cff",
+     "section": "football",
+     "start": "1982-10-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "PAS Giannina",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Zosimades Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e7aece9b21b5",
+     "section": "football",
+     "start": "1982-10-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Sevilla",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "1ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimopoulos",
+        "min": "49"
+       },
+       {
+        "name": "Kostikos",
+        "min": "61"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-968d0f91ff98",
+     "section": "football",
+     "start": "1982-10-31T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Kouis",
+        "min": "54"
+       },
+       {
+        "name": "Doulgerakis",
+        "min": "87"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-896943d9163b",
+     "section": "football",
+     "start": "1982-11-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Sevilla",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Estadio Ramón Sánchez Pizjuán",
+     "competition": "Κύπελλο UEFA",
+     "round": "2ος αγώνας",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Santi",
+        "min": "19"
+       },
+       {
+        "name": "López",
+        "min": "39"
+       },
+       {
+        "name": "Magdaleno",
+        "min": "56"
+       },
+       {
+        "name": "Pintinho",
+        "min": "89"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0079037c6eba",
+     "section": "football",
+     "start": "1982-11-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Doxa Drama",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Doxa Drama Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Barzov",
+        "min": "44"
+       },
+       {
+        "name": "Vasilakakis",
+        "min": "52"
+       },
+       {
+        "name": "Flegas",
+        "min": "59"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kostikos",
+        "min": "50"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-bc1c9b4bff73",
+     "section": "football",
+     "start": "1982-11-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "4-2",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Georgopoulos",
+        "min": "28"
+       },
+       {
+        "name": "Dimopoulos",
+        "min": "38"
+       },
+       {
+        "name": "Trimhold",
+        "min": "44"
+       },
+       {
+        "name": "Damanakis",
+        "min": "60",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Kirisits",
+        "min": "41"
+       },
+       {
+        "name": "Iordănescu",
+        "min": "76",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-99713be85920",
+     "section": "football",
+     "start": "1982-11-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6db84c8dbd09",
+     "section": "football",
+     "start": "1982-12-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panachaiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "56"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3415b6a7052e",
+     "section": "football",
+     "start": "1982-12-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Rizoupoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Darras",
+        "min": "66"
+       },
+       {
+        "name": "Rammos",
+        "min": "76"
+       }
+      ],
+      "away": [
+       {
+        "name": "Vasilakos",
+        "min": "79"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c1d830d1dd03",
+     "section": "football",
+     "start": "1982-12-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Anagennisi Karditsa",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "7-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Trimhold",
+        "min": "5"
+       },
+       {
+        "name": "Trimhold",
+        "min": "83"
+       },
+       {
+        "name": "Georgopoulos",
+        "min": "11"
+       },
+       {
+        "name": "Psarras",
+        "min": "24"
+       },
+       {
+        "name": "Vasilakos",
+        "min": "73"
+       },
+       {
+        "name": "Guerino",
+        "min": "75"
+       },
+       {
+        "name": "Damanakis",
+        "min": "77"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-961a80a1da18",
+     "section": "football",
+     "start": "1982-12-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "5-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "11"
+       },
+       {
+        "name": "Kostikos",
+        "min": "50"
+       },
+       {
+        "name": "Dimopoulos",
+        "min": "60"
+       },
+       {
+        "name": "Dimopoulos",
+        "min": "69"
+       },
+       {
+        "name": "Dimopoulos",
+        "min": "85"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-02bb9608fa0d",
+     "section": "football",
+     "start": "1982-12-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Piraeus",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Ilunga",
+        "min": "59"
+       }
+      ],
+      "away": [
+       {
+        "name": "Triantafyllidis",
+        "min": "38"
+       },
+       {
+        "name": "Dimopoulos",
+        "min": "56"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4bee2a69ca2e",
+     "section": "football",
+     "start": "1983-01-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Rodos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimopoulos",
+        "min": "33",
+        "pen": true
+       },
+       {
+        "name": "Triantafyllidis",
+        "min": "76"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-622e0ae71797",
+     "section": "football",
+     "start": "1983-01-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kastoria",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Triantafyllidis",
+        "min": "4"
+       },
+       {
+        "name": "Triantafyllidis",
+        "min": "80"
+       },
+       {
+        "name": "Georgopoulos",
+        "min": "74"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-79bff0c30117",
+     "section": "football",
+     "start": "1983-01-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panserraikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Serres Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d0738c74e519",
+     "section": "football",
+     "start": "1983-01-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Guerino",
+        "min": "81"
+       }
+      ],
+      "away": [
+       {
+        "name": "Anastopoulos",
+        "min": "3",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ccd5f53d484e",
+     "section": "football",
+     "start": "1983-01-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Almopos Aridea",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Aridea Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "0-3",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Apostolidis",
+        "min": "51"
+       },
+       {
+        "name": "Koudas",
+        "min": "79"
+       },
+       {
+        "name": "Vasilakos",
+        "min": "89"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9becd96a6b2e",
+     "section": "football",
+     "start": "1983-01-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Papamichail",
+        "min": "65"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-01674d39b0be",
+     "section": "football",
+     "start": "1983-02-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Damanakis",
+        "min": "48"
+       },
+       {
+        "name": "Trimhold",
+        "min": "54"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f0357c9047c1",
+     "section": "football",
+     "start": "1983-02-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEL",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Alcazar Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Ziogas",
+        "min": "90"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d93d0566c659",
+     "section": "football",
+     "start": "1983-02-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Vyzas Megara",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Megara Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "1-3",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Zografos",
+        "min": "21"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kostikos",
+        "min": "50"
+       },
+       {
+        "name": "Dimopoulos",
+        "min": "58"
+       },
+       {
+        "name": "Triantafyllidis",
+        "min": "80"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0376056762b5",
+     "section": "football",
+     "start": "1983-02-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Makedonikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimopoulos",
+        "min": "23"
+       },
+       {
+        "name": "Kostikos",
+        "min": "74"
+       },
+       {
+        "name": "Triantafyllidis",
+        "min": "76"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-07c23697e530",
+     "section": "football",
+     "start": "1983-02-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "PAS Giannina",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimopoulos",
+        "min": "10"
+       },
+       {
+        "name": "Dimopoulos",
+        "min": "18"
+       },
+       {
+        "name": "Kostikos",
+        "min": "26"
+       },
+       {
+        "name": "Vasilakos",
+        "min": "76"
+       }
+      ],
+      "away": [
+       {
+        "name": "Petriniotis",
+        "min": "19",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-617772108d83",
+     "section": "football",
+     "start": "1983-03-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-045683cf79cb",
+     "section": "football",
+     "start": "1983-03-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Alexandroupoli",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Fotis Kosmas Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Dimopoulos",
+        "min": "31"
+       },
+       {
+        "name": "Koudas",
+        "min": "36"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f0d39bfe08dd",
+     "section": "football",
+     "start": "1983-03-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Doxa Drama",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimopoulos",
+        "min": "48"
+       },
+       {
+        "name": "Dimopoulos",
+        "min": "54",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2b16d8a14d5f",
+     "section": "football",
+     "start": "1983-03-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Vardinogiannis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Agiomamitis",
+        "min": "74"
+       },
+       {
+        "name": "Kirisits",
+        "min": "82",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Vasilakos",
+        "min": "42"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-78ea3462384e",
+     "section": "football",
+     "start": "1983-04-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "1-3",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Trimhold",
+        "min": "69"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kalambakas",
+        "min": "31"
+       },
+       {
+        "name": "Kalambakas",
+        "min": "36"
+       },
+       {
+        "name": "Kafkenaris",
+        "min": "87"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9d4865841eec",
+     "section": "football",
+     "start": "1983-04-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panachaiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kostas Davourlis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Bonić",
+        "min": "80"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f4e0abc0e896",
+     "section": "football",
+     "start": "1983-04-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ethnikos Alexandroupoli",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Trimhold",
+        "min": "9"
+       },
+       {
+        "name": "Trimhold",
+        "min": "54"
+       },
+       {
+        "name": "Vasilakos",
+        "min": "42"
+       },
+       {
+        "name": "Tsourelas",
+        "min": "53"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7ea211e4cc61",
+     "section": "football",
+     "start": "1983-04-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados 51'",
+        "min": "51"
+       },
+       {
+        "name": "Trimhold",
+        "min": "60"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-deaa01e69e64",
+     "section": "football",
+     "start": "1983-05-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Corinth Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "1-3",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Pellios",
+        "min": "33",
+        "og": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Vasilakos",
+        "min": "61"
+       },
+       {
+        "name": "Vasilakos",
+        "min": "90"
+       },
+       {
+        "name": "Koudas",
+        "min": "82"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9deb9d0a8000",
+     "section": "football",
+     "start": "1983-05-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ethnikos Piraeus",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "8"
+       },
+       {
+        "name": "Kostikos",
+        "min": "40",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Ilunga",
+        "min": "19"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c88b71f60e1e",
+     "section": "football",
+     "start": "1983-05-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panargiakos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Argos Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Triantafyllidis",
+        "min": "45"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-aea299b1721e",
+     "section": "football",
+     "start": "1983-05-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Rodos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Diagoras Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Psarras",
+        "min": "46"
+       },
+       {
+        "name": "Vasilakos 86'",
+        "min": "58"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-da82e7821bdd",
+     "section": "football",
+     "start": "1983-05-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kastoria",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kastoria Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Guerino",
+        "min": "80"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-580544236c97",
+     "section": "football",
+     "start": "1983-06-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panargiakos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-729615b1a2d9",
+     "section": "football",
+     "start": "1983-06-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panserraikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "31η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Trimhold",
+        "min": "55"
+       },
+       {
+        "name": "Vasilakos",
+        "min": "88"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7a92be889d25",
+     "section": "football",
+     "start": "1983-06-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "32η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Anastopoulos",
+        "min": "41"
+       },
+       {
+        "name": "Vamvakoulas",
+        "min": "74"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ef3d05e3b079",
+     "section": "football",
+     "start": "1983-06-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Rodos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostikos",
+        "min": "35"
+       },
+       {
+        "name": "Kostikos",
+        "min": "48"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-969dde391a89",
+     "section": "football",
+     "start": "1983-06-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "33η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Guerino",
+        "min": "87",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-65181dc62034",
+     "section": "football",
+     "start": "1983-06-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Rodos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Diagoras Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Papaoikonomou",
+        "min": "66",
+        "og": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-164a62d9c1ef",
+     "section": "football",
+     "start": "1983-06-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Leoforos Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "34η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kovis",
+        "min": "20"
+       },
+       {
+        "name": "Mavridis",
+        "min": "84"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-806b17d6212f",
+     "section": "football",
+     "start": "1983-06-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Athens Olympic Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Mavros",
+        "min": "27"
+       },
+       {
+        "name": "Vlachos",
+        "min": "80"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "4η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Φιναλίστ"
+     },
+     {
+      "name": "Κύπελλο UEFA",
+      "result": "2ος γύρος"
+     }
+    ],
+    "topscorer": "Christos Dimopoulos (11)",
+    "source": "https://en.wikipedia.org/wiki/1982%E2%80%9383_PAOK_FC_season"
+   },
+   "backfilled": true
+  }
+ },
+ "updated": "2026-11-22T21:53+02:00"
+}

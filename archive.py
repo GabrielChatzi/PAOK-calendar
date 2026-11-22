@@ -125,7 +125,7 @@ class _Timeout(Exception):
     pass
 
 
-def _with_timeout(fn, secs: int = 180):
+def _with_timeout(fn, secs: int = 90):
     def boom(*_):
         raise _Timeout(f"πάνω από {secs}″")
     signal.signal(signal.SIGALRM, boom)

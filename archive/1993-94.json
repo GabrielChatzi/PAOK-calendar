@@ -650,7 +650,1288 @@
     }
    ],
    "backfilled": true
+  },
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-d27ad327f0d3",
+     "section": "football",
+     "start": "1993-08-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Proodeftiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dermitzakis",
+        "min": "5"
+       },
+       {
+        "name": "Zagorakis",
+        "min": "27"
+       },
+       {
+        "name": "Lagonidis",
+        "min": "65",
+        "pen": true
+       },
+       {
+        "name": "Anastasiadis",
+        "min": "70"
+       }
+      ],
+      "away": [
+       {
+        "name": "Vogiatzis",
+        "min": "56",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e7a6c55c78b0",
+     "section": "football",
+     "start": "1993-08-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panachaiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Luhový",
+        "min": "30"
+       },
+       {
+        "name": "Luhový",
+        "min": "53"
+       },
+       {
+        "name": "Alexiou",
+        "min": "45"
+       },
+       {
+        "name": "Borbokis",
+        "min": "60"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kyriakopoulos",
+        "min": "57"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b463216bb13e",
+     "section": "football",
+     "start": "1993-09-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Christensen",
+        "min": "78"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a1f623bc69df",
+     "section": "football",
+     "start": "1993-09-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AO Velissario",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Zosimades Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tahiri",
+        "min": "61"
+       }
+      ],
+      "away": [
+       {
+        "name": "Luhový",
+        "min": "27"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-284874fbaacd",
+     "section": "football",
+     "start": "1993-09-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Naoussa",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Zagorakis",
+        "min": "8"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-24bf78bee16c",
+     "section": "football",
+     "start": "1993-09-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostis",
+        "min": "36",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Borbokis",
+        "min": "25"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-29cb447b3cff",
+     "section": "football",
+     "start": "1993-09-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Atromitos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Chavos",
+        "min": "76"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0806d52abd28",
+     "section": "football",
+     "start": "1993-09-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ea015d974e42",
+     "section": "football",
+     "start": "1993-10-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Grigoris Lambrakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lagonikakis",
+        "min": "24"
+       }
+      ],
+      "away": [
+       {
+        "name": "Lagonidis",
+        "min": "83"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5a7912ee2ca5",
+     "section": "football",
+     "start": "1993-10-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Alexandroupoli",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Fotis Kosmas Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Nikolaidis",
+        "min": "65"
+       }
+      ],
+      "away": [
+       {
+        "name": "Antonas",
+        "min": "88"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-12ab0f37f7f3",
+     "section": "football",
+     "start": "1993-10-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Edessaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "6-1",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Oikonomidis",
+        "min": "9"
+       },
+       {
+        "name": "Oikonomidis",
+        "min": "77"
+       },
+       {
+        "name": "Lagonidis 47'",
+        "min": "37"
+       },
+       {
+        "name": "Gioukoudis",
+        "min": "63"
+       },
+       {
+        "name": "Luhový",
+        "min": "80"
+       },
+       {
+        "name": "Luhový",
+        "min": "89"
+       }
+      ],
+      "away": [
+       {
+        "name": "Skara",
+        "min": "39",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b378fa591a58",
+     "section": "football",
+     "start": "1993-10-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Athinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Vyronas National Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Alvertis",
+        "min": "12"
+       },
+       {
+        "name": "Alvertis",
+        "min": "53"
+       },
+       {
+        "name": "Bong",
+        "min": "47"
+       },
+       {
+        "name": "Spinoulas",
+        "min": "80"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d16a2c21ef7f",
+     "section": "football",
+     "start": "1993-10-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Xanthi",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Chavos",
+        "min": "45"
+       },
+       {
+        "name": "Anastasiadis",
+        "min": "81"
+       }
+      ],
+      "away": [
+       {
+        "name": "Tzatzos",
+        "min": "84"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2509b02276b8",
+     "section": "football",
+     "start": "1993-10-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lagonidis",
+        "min": "55"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-79c0d1eabf81",
+     "section": "football",
+     "start": "1993-10-31T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Kalamaria",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kalamaria Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vlachoudis",
+        "min": "30"
+       }
+      ],
+      "away": [
+       {
+        "name": "Luhový",
+        "min": "42"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6d8d03b9b2f1",
+     "section": "football",
+     "start": "1993-11-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Luhový",
+        "min": "7"
+       },
+       {
+        "name": "Chavos",
+        "min": "19"
+       }
+      ],
+      "away": [
+       {
+        "name": "Tsifoutis",
+        "min": "48"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-202b38d4981f",
+     "section": "football",
+     "start": "1993-11-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Rizoupoli Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "4-4",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lagonidis",
+        "min": "45+2",
+        "og": true
+       },
+       {
+        "name": "Karasavvidis",
+        "min": "64",
+        "pen": true
+       },
+       {
+        "name": "Karasavvidis",
+        "min": "86",
+        "pen": true
+       },
+       {
+        "name": "Shehu",
+        "min": "82"
+       }
+      ],
+      "away": [
+       {
+        "name": "Luhový",
+        "min": "45"
+       },
+       {
+        "name": "Luhový",
+        "min": "48"
+       },
+       {
+        "name": "Kapetanopoulos",
+        "min": "60"
+       },
+       {
+        "name": "Gioukoudis",
+        "min": "77"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9c3db79f81d3",
+     "section": "football",
+     "start": "1993-11-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Levadiakos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Levadia Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Bletsas",
+        "min": "90"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6af68e840200",
+     "section": "football",
+     "start": "1993-11-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lagonidis",
+        "min": "64"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7b27b8e5ef94",
+     "section": "football",
+     "start": "1993-12-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEL",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Alcazar Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Issa",
+        "min": "90"
+       }
+      ],
+      "away": [
+       {
+        "name": "Karasavvidis",
+        "min": "22"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a74def550824",
+     "section": "football",
+     "start": "1993-12-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Chavos",
+        "min": "9"
+       },
+       {
+        "name": "Luhový",
+        "min": "17"
+       },
+       {
+        "name": "Luhový",
+        "min": "82"
+       }
+      ],
+      "away": [
+       {
+        "name": "Warzycha",
+        "min": "38"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-bcfdd29ea919",
+     "section": "football",
+     "start": "1993-12-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Athens Olympic Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-82678a3a9ff2",
+     "section": "football",
+     "start": "1993-12-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sapountzis",
+        "min": "59",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7d5b2fb711c0",
+     "section": "football",
+     "start": "1993-12-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Doxa Drama",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Doxa Drama Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Aleksić",
+        "min": "61"
+       }
+      ],
+      "away": [
+       {
+        "name": "Karasavvidis",
+        "min": "8"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b619adb2346b",
+     "section": "football",
+     "start": "1993-12-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2474a0b80ecf",
+     "section": "football",
+     "start": "1994-01-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Athinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Luhový",
+        "min": "56"
+       },
+       {
+        "name": "Dermitzakis",
+        "min": "59"
+       },
+       {
+        "name": "Dermitzakis",
+        "min": "70"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6ee1df0bbbc2",
+     "section": "football",
+     "start": "1994-01-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panachaiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kostas Davourlis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Ottiji",
+        "min": "34"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dermitzakis",
+        "min": "79"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f6f2f78f19c4",
+     "section": "football",
+     "start": "1994-01-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Zagorakis",
+        "min": "39"
+       }
+      ],
+      "away": [
+       {
+        "name": "Tsalouchidis",
+        "min": "29"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-152c5366f625",
+     "section": "football",
+     "start": "1994-01-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Naoussa",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Municipal Stadium of Naousa",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Alexiou",
+        "min": "48"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-80c22f353a87",
+     "section": "football",
+     "start": "1994-01-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Alexiou",
+        "min": "33"
+       },
+       {
+        "name": "Luhový",
+        "min": "90"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-829038ec5421",
+     "section": "football",
+     "start": "1994-02-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikos Goumas Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kasapis",
+        "min": "44"
+       },
+       {
+        "name": "Savevski",
+        "min": "64"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b4699b22e01b",
+     "section": "football",
+     "start": "1994-02-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "3-2",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Luhový",
+        "min": "6"
+       },
+       {
+        "name": "Toursounidis",
+        "min": "25",
+        "pen": true
+       },
+       {
+        "name": "Ceaușilă",
+        "min": "61"
+       }
+      ],
+      "away": [
+       {
+        "name": "Mirtsekis",
+        "min": "3"
+       },
+       {
+        "name": "Nalitzis",
+        "min": "72"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-03f9a5baf31e",
+     "section": "football",
+     "start": "1994-02-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Edessaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Municipal Stadium of Edessa",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skara",
+        "min": "44",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-af996306fcdc",
+     "section": "football",
+     "start": "1994-02-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Xanthi",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Xanthi Ground",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "5-2",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tengelidis",
+        "min": "14"
+       },
+       {
+        "name": "Pano",
+        "min": "18",
+        "pen": true
+       },
+       {
+        "name": "Marcelo",
+        "min": "56"
+       },
+       {
+        "name": "Marcelo",
+        "min": "68"
+       },
+       {
+        "name": "Karageorgiou",
+        "min": "89"
+       }
+      ],
+      "away": [
+       {
+        "name": "Luhový",
+        "min": "61"
+       },
+       {
+        "name": "Chavos",
+        "min": "78"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-46926908255d",
+     "section": "football",
+     "start": "1994-03-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Kalamaria",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Luhový",
+        "min": "3"
+       }
+      ],
+      "away": [
+       {
+        "name": "Nolis",
+        "min": "8"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-772f3b1eed17",
+     "section": "football",
+     "start": "1994-03-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Vardinogiannis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Machlas",
+        "min": "70"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ed48878dc921",
+     "section": "football",
+     "start": "1994-03-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Levadiakos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Borbokis",
+        "min": "8"
+       },
+       {
+        "name": "Alexiou",
+        "min": "69"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a99b71cf7cef",
+     "section": "football",
+     "start": "1994-03-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Rizoupoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Nikolaidis",
+        "min": "22"
+       },
+       {
+        "name": "Kovačević",
+        "min": "54"
+       },
+       {
+        "name": "Platinakis",
+        "min": "58"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dermitzakis",
+        "min": "90",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-cad175d75419",
+     "section": "football",
+     "start": "1994-04-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEL",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "31η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dermitzakis",
+        "min": "45"
+       },
+       {
+        "name": "Gioukoudis",
+        "min": "83"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-39f0996b8039",
+     "section": "football",
+     "start": "1994-04-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Athens Olympic Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "32η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Warzycha",
+        "min": "6",
+        "pen": true
+       },
+       {
+        "name": "Warzycha",
+        "min": "79",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5175e737b1c9",
+     "section": "football",
+     "start": "1994-04-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "33η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Luhový",
+        "min": "33",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Milojević",
+        "min": "28"
+       },
+       {
+        "name": "Sapountzis",
+        "min": "65"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-138d341bf727",
+     "section": "football",
+     "start": "1994-04-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Doxa Drama",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "34η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Luhový",
+        "min": "15"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "5η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "3ος γύρος"
+     }
+    ],
+    "topscorer": "Luhový (15)",
+    "source": "https://en.wikipedia.org/wiki/1993%E2%80%9394_PAOK_FC_season"
+   },
+   "backfilled": true
   }
  },
- "updated": "2026-11-22T19:29+02:00"
+ "updated": "2026-11-22T21:52+02:00"
 }

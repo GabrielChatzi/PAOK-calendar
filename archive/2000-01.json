@@ -501,7 +501,1936 @@
     }
    ],
    "backfilled": true
+  },
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-bff0a202bd06",
+     "section": "football",
+     "start": "2000-08-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Atromitos",
+     "paokHome": true,
+     "venue": "Kalamaria Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Matchday 1",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frousos",
+        "min": "80"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9834adc15c7c",
+     "section": "football",
+     "start": "2000-08-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "A.S. Ampelokipoi",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kalamaria Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Matchday 2",
+     "score": "1-6",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Miskos",
+        "min": "50"
+       }
+      ],
+      "away": [
+       {
+        "name": "Camps",
+        "min": "2"
+       },
+       {
+        "name": "Camps",
+        "min": "45"
+       },
+       {
+        "name": "Amponsah",
+        "min": "10"
+       },
+       {
+        "name": "Nalitzis",
+        "min": "24"
+       },
+       {
+        "name": "Georgiadis",
+        "min": "40",
+        "pen": true
+       },
+       {
+        "name": "Okkas",
+        "min": "78"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-eef27cc9ebaf",
+     "section": "football",
+     "start": "2000-08-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kavala",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Anthi Karagianni Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Matchday 3",
+     "score": "1-5",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Katsabis",
+        "min": "37",
+        "og": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Angos",
+        "min": "9",
+        "og": true
+       },
+       {
+        "name": "Camps",
+        "min": "34"
+       },
+       {
+        "name": "Katsabis",
+        "min": "60"
+       },
+       {
+        "name": "Frousos",
+        "min": "74"
+       },
+       {
+        "name": "Frousos",
+        "min": "90"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4c046cffd5ee",
+     "section": "football",
+     "start": "2000-08-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panachaiki",
+     "paokHome": true,
+     "venue": "Kalamaria Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Matchday 4",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Okkas",
+        "min": "3"
+       },
+       {
+        "name": "Vryzas",
+        "min": "87"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-126b71ba75d1",
+     "section": "football",
+     "start": "2000-08-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Nafpaktiakos Asteras",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Papacharalambeio National Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Matchday 5",
+     "score": "3-3",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Loukopoulos",
+        "min": "39"
+       },
+       {
+        "name": "Samlidis",
+        "min": "64"
+       },
+       {
+        "name": "Kyparissis",
+        "min": "81"
+       }
+      ],
+      "away": [
+       {
+        "name": "Spasić",
+        "min": "6"
+       },
+       {
+        "name": "Nalitzis",
+        "min": "60"
+       },
+       {
+        "name": "Nalitzis",
+        "min": "78"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f80cd3ff03d2",
+     "section": "football",
+     "start": "2000-08-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Atromitos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikaia Municipal Gymnasium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Matchday 6",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vahirua",
+        "min": "56"
+       }
+      ],
+      "away": [
+       {
+        "name": "Nalitzis",
+        "min": "11"
+       },
+       {
+        "name": "Nalitzis",
+        "min": "81",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-49450af60d97",
+     "section": "football",
+     "start": "2000-09-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "A.S. Ampelokipoi",
+     "paokHome": true,
+     "venue": "Epanomi Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Matchday 7",
+     "score": "6-1",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Bratić",
+        "min": "1"
+       },
+       {
+        "name": "Bratić",
+        "min": "39"
+       },
+       {
+        "name": "Spasić",
+        "min": "26"
+       },
+       {
+        "name": "Spasić",
+        "min": "34"
+       },
+       {
+        "name": "Nalitzis",
+        "min": "43"
+       },
+       {
+        "name": "Kafes",
+        "min": "58"
+       }
+      ],
+      "away": [
+       {
+        "name": "Radoiković",
+        "min": "53"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8f8afc8364bb",
+     "section": "football",
+     "start": "2000-09-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Beitar Jerusalem",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "1ος αγώνας",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Camps",
+        "min": "45"
+       },
+       {
+        "name": "Cohen",
+        "min": "49",
+        "og": true
+       },
+       {
+        "name": "Nalitzis",
+        "min": "55"
+       }
+      ],
+      "away": [
+       {
+        "name": "Hamar",
+        "min": "39"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-606b977a5b48",
+     "section": "football",
+     "start": "2000-09-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kalamata",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kalamata Metropolitan Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d048eb5f24d5",
+     "section": "football",
+     "start": "2000-09-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "PAS Giannina",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kostas Davourlis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "1-3",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tsalikis",
+        "min": "5"
+       }
+      ],
+      "away": [
+       {
+        "name": "Amponsah",
+        "min": "24"
+       },
+       {
+        "name": "Okkas",
+        "min": "38"
+       },
+       {
+        "name": "Tetradze",
+        "min": "87"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-95f90168a020",
+     "section": "football",
+     "start": "2000-09-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Beitar Jerusalem",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Teddy Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "2ος αγώνας",
+     "score": "3-3",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sivilia",
+        "min": "45"
+       },
+       {
+        "name": "Sivilia",
+        "min": "61"
+       },
+       {
+        "name": "Abukasis",
+        "min": "54",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Katsabis",
+        "min": "16"
+       },
+       {
+        "name": "Nalitzis",
+        "min": "43"
+       },
+       {
+        "name": "Konstantinidis",
+        "min": "90"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-77649b38aba4",
+     "section": "football",
+     "start": "2000-10-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tetradze",
+        "min": "19"
+       }
+      ],
+      "away": [
+       {
+        "name": "Chasiotis",
+        "min": "67"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-aa8a6f3a56c9",
+     "section": "football",
+     "start": "2000-10-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panachaiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kostas Davourlis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Matchday 9",
+     "score": "2-3",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Natrosvili",
+        "min": "16"
+       },
+       {
+        "name": "Vukčević",
+        "min": "76"
+       }
+      ],
+      "away": [
+       {
+        "name": "Katsabis",
+        "min": "31"
+       },
+       {
+        "name": "Camps",
+        "min": "38",
+        "pen": true
+       },
+       {
+        "name": "Spasić",
+        "min": "89"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-27abdb17d569",
+     "section": "football",
+     "start": "2000-10-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Nafpaktiakos Asteras",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Matchday 10",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frousos",
+        "min": "32"
+       },
+       {
+        "name": "Frousos",
+        "min": "73"
+       },
+       {
+        "name": "Frousos",
+        "min": "80"
+       },
+       {
+        "name": "Camps",
+        "min": "47"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-62aee41a836e",
+     "section": "football",
+     "start": "2000-10-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Udinese",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Stadio Friuli",
+     "competition": "Κύπελλο UEFA",
+     "round": "1ος αγώνας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Margiotta",
+        "min": "90+4"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-69097c6aa137",
+     "section": "football",
+     "start": "2000-11-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kyparissis",
+        "min": "39"
+       },
+       {
+        "name": "Koutsis",
+        "min": "45+1"
+       },
+       {
+        "name": "Koltsidas",
+        "min": "49"
+       },
+       {
+        "name": "Charisteas",
+        "min": "71"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6e8d54b96f0d",
+     "section": "football",
+     "start": "2000-11-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frousos",
+        "min": "31",
+        "pen": true
+       },
+       {
+        "name": "Okkas",
+        "min": "39"
+       },
+       {
+        "name": "Nalitzis",
+        "min": "88"
+       },
+       {
+        "name": "Engomitis",
+        "min": "90"
+       }
+      ],
+      "away": [
+       {
+        "name": "Mauro",
+        "min": "71"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c8008eb3dfb3",
+     "section": "football",
+     "start": "2000-11-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Udinese",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "2ος αγώνας",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Camps",
+        "min": "73"
+       },
+       {
+        "name": "Camps",
+        "min": "102"
+       },
+       {
+        "name": "Frousos",
+        "min": "108"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-23d8e2bdf773",
+     "section": "football",
+     "start": "2000-11-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Paniliakos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Pirgos Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Mandra",
+        "min": "28",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Venetidis",
+        "min": "72"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-54d27321892a",
+     "section": "football",
+     "start": "2000-11-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Nalitzis",
+        "min": "11"
+       },
+       {
+        "name": "Karadimos",
+        "min": "25"
+       }
+      ],
+      "away": [
+       {
+        "name": "Vlaović",
+        "min": "57"
+       },
+       {
+        "name": "Sypniewski",
+        "min": "78"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-68c607bceaa4",
+     "section": "football",
+     "start": "2000-11-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "PSV Eindhoven",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Philips Stadion",
+     "competition": "Κύπελλο UEFA",
+     "round": "1ος αγώνας",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Bruggink",
+        "min": "5"
+       },
+       {
+        "name": "Kežman",
+        "min": "15"
+       },
+       {
+        "name": "Kežman",
+        "min": "44"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7ce296452b3d",
+     "section": "football",
+     "start": "2000-11-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "2-4",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Nalitzis",
+        "min": "56"
+       },
+       {
+        "name": "Frousos",
+        "min": "68"
+       }
+      ],
+      "away": [
+       {
+        "name": "Georgatos",
+        "min": "32"
+       },
+       {
+        "name": "Alexandris",
+        "min": "66"
+       },
+       {
+        "name": "Đorđević",
+        "min": "75"
+       },
+       {
+        "name": "Đorđević",
+        "min": "90+3"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c0d14ad62323",
+     "section": "football",
+     "start": "2000-11-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kavala",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Matchday 8",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frousos",
+        "min": "4"
+       },
+       {
+        "name": "Frousos",
+        "min": "70"
+       },
+       {
+        "name": "Orfanos",
+        "min": "49"
+       }
+      ],
+      "away": [
+       {
+        "name": "Athanasiadis",
+        "min": "73"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e320cedf503b",
+     "section": "football",
+     "start": "2000-12-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Xanthi",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Xanthi Ground",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Okkas",
+        "min": "68"
+       },
+       {
+        "name": "Frousos",
+        "min": "81"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-287d33390ecb",
+     "section": "football",
+     "start": "2000-12-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "PSV Eindhoven",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "2ος αγώνας",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Bruggink",
+        "min": "43"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-120c75488db1",
+     "section": "football",
+     "start": "2000-12-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "4-2",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Katsabis",
+        "min": "10"
+       },
+       {
+        "name": "Frousos",
+        "min": "45+3",
+        "pen": true
+       },
+       {
+        "name": "Kafes",
+        "min": "48"
+       },
+       {
+        "name": "Konstantinidis",
+        "min": "51"
+       }
+      ],
+      "away": [
+       {
+        "name": "Sapountzis",
+        "min": "28"
+       },
+       {
+        "name": "Konstantinou",
+        "min": "60"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4e1df2cc8392",
+     "section": "football",
+     "start": "2000-12-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Athinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Vyronas National Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "3-4",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Buyse",
+        "min": "8",
+        "pen": true
+       },
+       {
+        "name": "Papandreou",
+        "min": "76",
+        "pen": true
+       },
+       {
+        "name": "Papandreou",
+        "min": "87"
+       }
+      ],
+      "away": [
+       {
+        "name": "Konstantinidis",
+        "min": "4"
+       },
+       {
+        "name": "Konstantinidis",
+        "min": "6"
+       },
+       {
+        "name": "Frousos",
+        "min": "40",
+        "pen": true
+       },
+       {
+        "name": "Okkas",
+        "min": "83"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ad75bcf5136b",
+     "section": "football",
+     "start": "2001-01-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ethnikos Asteras",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frousos",
+        "min": "9"
+       },
+       {
+        "name": "Georgiadis",
+        "min": "50"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kontopoulos",
+        "min": "85"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f52105c70d41",
+     "section": "football",
+     "start": "2001-01-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ionikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Neapoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Afash",
+        "min": "63"
+       },
+       {
+        "name": "Curbelo",
+        "min": "70",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Georgiadis",
+        "min": "2"
+       },
+       {
+        "name": "Kafes",
+        "min": "24"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-13ea72196ab1",
+     "section": "football",
+     "start": "2001-01-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frousos",
+        "min": "50"
+       },
+       {
+        "name": "Frousos",
+        "min": "80",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Ruiz",
+        "min": "36"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e2d37592213d",
+     "section": "football",
+     "start": "2001-01-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Katsiaros",
+        "min": "37"
+       }
+      ],
+      "away": [
+       {
+        "name": "Engomitis",
+        "min": "41"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5e443814c7df",
+     "section": "football",
+     "start": "2001-01-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panachaiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kostas Davourlis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Solakis",
+        "min": "62"
+       }
+      ],
+      "away": [
+       {
+        "name": "Konstantinidis",
+        "min": "39"
+       },
+       {
+        "name": "Spasić",
+        "min": "90+2"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b1b64915cedc",
+     "section": "football",
+     "start": "2001-01-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kalamata",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "7-1",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Spasić",
+        "min": "3"
+       },
+       {
+        "name": "Okkas",
+        "min": "14"
+       },
+       {
+        "name": "Konstantinidis",
+        "min": "30"
+       },
+       {
+        "name": "Koulakiotis",
+        "min": "67"
+       },
+       {
+        "name": "Nalitzis",
+        "min": "72"
+       },
+       {
+        "name": "Nalitzis",
+        "min": "83"
+       },
+       {
+        "name": "Engomitis",
+        "min": "90+2"
+       }
+      ],
+      "away": [
+       {
+        "name": "Frantzeskos",
+        "min": "62"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b324d141cdd3",
+     "section": "football",
+     "start": "2001-01-31T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koulakiotis",
+        "min": "45+2"
+       },
+       {
+        "name": "Konstantinidis",
+        "min": "82"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4e598c431c7f",
+     "section": "football",
+     "start": "2001-02-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "PAS Giannina",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "2-3",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kafes",
+        "min": "30"
+       },
+       {
+        "name": "Spasić",
+        "min": "57"
+       }
+      ],
+      "away": [
+       {
+        "name": "Élder",
+        "min": "25",
+        "pen": true
+       },
+       {
+        "name": "Bletsas",
+        "min": "51"
+       },
+       {
+        "name": "Kormaris",
+        "min": "62"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7db9ad6f826a",
+     "section": "football",
+     "start": "2001-02-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Efthimiadis",
+        "min": "90"
+       }
+      ],
+      "away": [
+       {
+        "name": "Okkas",
+        "min": "24"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-10fca0c37324",
+     "section": "football",
+     "start": "2001-02-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Engomitis",
+        "min": "37"
+       },
+       {
+        "name": "Okkas",
+        "min": "83"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-bd22f6666fa6",
+     "section": "football",
+     "start": "2001-02-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Xanthi",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Konstantinidis",
+        "min": "26"
+       },
+       {
+        "name": "Georgiadis",
+        "min": "52"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-83fd97c44556",
+     "section": "football",
+     "start": "2001-02-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Vardinogiannis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-dafd402592ec",
+     "section": "football",
+     "start": "2001-03-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Paniliakos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "3-2",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frousos",
+        "min": "5"
+       },
+       {
+        "name": "Nalitzis",
+        "min": "56"
+       },
+       {
+        "name": "Georgiadis",
+        "min": "86"
+       }
+      ],
+      "away": [
+       {
+        "name": "Sapanis",
+        "min": "50"
+       },
+       {
+        "name": "Sapanis",
+        "min": "65"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1b96fded96e3",
+     "section": "football",
+     "start": "2001-03-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Xanthi",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Xanthi Ground",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Zapropoulos",
+        "min": "65"
+       }
+      ],
+      "away": [
+       {
+        "name": "Udeze",
+        "min": "21"
+       },
+       {
+        "name": "Georgiadis",
+        "min": "71"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2c57b4099805",
+     "section": "football",
+     "start": "2001-03-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Leoforos Alexandras Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "5-2",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Warzycha",
+        "min": "12"
+       },
+       {
+        "name": "Pflipsen",
+        "min": "43",
+        "pen": true
+       },
+       {
+        "name": "Olisadebe",
+        "min": "55"
+       },
+       {
+        "name": "Basinas",
+        "min": "68"
+       },
+       {
+        "name": "Vlaović",
+        "min": "78"
+       }
+      ],
+      "away": [
+       {
+        "name": "Georgiadis",
+        "min": "45+2",
+        "pen": true
+       },
+       {
+        "name": "Nalitzis",
+        "min": "85"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-05df72811ab2",
+     "section": "football",
+     "start": "2001-03-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Olympic Stadium (Athens)",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Anatolakis",
+        "min": "34"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-19223dae0f1b",
+     "section": "football",
+     "start": "2001-04-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Xanthi",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Spasić",
+        "min": "44"
+       },
+       {
+        "name": "Georgiadis",
+        "min": "53"
+       },
+       {
+        "name": "Engomitis",
+        "min": "60"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-164dddf16fd1",
+     "section": "football",
+     "start": "2001-04-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "5-2",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Georgiadis",
+        "min": "22",
+        "pen": true
+       },
+       {
+        "name": "Georgiadis",
+        "min": "83"
+       },
+       {
+        "name": "Amponsah",
+        "min": "33"
+       },
+       {
+        "name": "Nalitzis",
+        "min": "73"
+       },
+       {
+        "name": "Kafes",
+        "min": "87"
+       }
+      ],
+      "away": [
+       {
+        "name": "Chatzis",
+        "min": "54"
+       },
+       {
+        "name": "Skarmoutsos",
+        "min": "85"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2a135eba4354",
+     "section": "football",
+     "start": "2001-04-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Konstantinou",
+        "min": "16"
+       }
+      ],
+      "away": [
+       {
+        "name": "Georgiadis",
+        "min": "69"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1ec03adc66ab",
+     "section": "football",
+     "start": "2001-04-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Georgios Kamaras Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Papadimitriou",
+        "min": "13"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a1ff71af3152",
+     "section": "football",
+     "start": "2001-04-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Athinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Georgiadis",
+        "min": "11"
+       },
+       {
+        "name": "Spasić",
+        "min": "61"
+       },
+       {
+        "name": "Kafes",
+        "min": "69"
+       }
+      ],
+      "away": [
+       {
+        "name": "Buyse",
+        "min": "17",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-fbb6ddb87439",
+     "section": "football",
+     "start": "2001-04-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Asteras",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Michalis Kritikopoulos Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "3-3",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lagos",
+        "min": "21"
+       },
+       {
+        "name": "Lagos",
+        "min": "62"
+       },
+       {
+        "name": "Segos",
+        "min": "50"
+       }
+      ],
+      "away": [
+       {
+        "name": "Konstantinidis",
+        "min": "12"
+       },
+       {
+        "name": "Nalitzis",
+        "min": "34"
+       },
+       {
+        "name": "Katsabis",
+        "min": "70"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-bc3b395bdaee",
+     "section": "football",
+     "start": "2001-05-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ionikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Amponsah",
+        "min": "47"
+       }
+      ],
+      "away": [
+       {
+        "name": "Curbelo",
+        "min": "7"
+       },
+       {
+        "name": "Curbelo",
+        "min": "45",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6669c52700d5",
+     "section": "football",
+     "start": "2001-05-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikos Goumas Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "2-4",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Đorđević",
+        "min": "78",
+        "pen": true
+       },
+       {
+        "name": "Choutos",
+        "min": "90+2"
+       }
+      ],
+      "away": [
+       {
+        "name": "Engomitis",
+        "min": "4"
+       },
+       {
+        "name": "Borbokis",
+        "min": "31"
+       },
+       {
+        "name": "Georgiadis",
+        "min": "46"
+       },
+       {
+        "name": "Nalitzis",
+        "min": "85"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ca99355a2fcf",
+     "section": "football",
+     "start": "2001-05-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikos Goumas Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "3-2",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tsiartas",
+        "min": "13",
+        "pen": true
+       },
+       {
+        "name": "Nikolaidis",
+        "min": "26"
+       },
+       {
+        "name": "Konstantinidis",
+        "min": "65"
+       }
+      ],
+      "away": [
+       {
+        "name": "Borbokis",
+        "min": "35"
+       },
+       {
+        "name": "Spasić",
+        "min": "43"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c45eb298805e",
+     "section": "football",
+     "start": "2001-05-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panachaiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "5-1",
+     "url": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Georgiadis",
+        "min": "14",
+        "pen": true
+       },
+       {
+        "name": "Okkas",
+        "min": "63"
+       },
+       {
+        "name": "Nalitzis",
+        "min": "74"
+       },
+       {
+        "name": "Borbokis",
+        "min": "80"
+       },
+       {
+        "name": "Engomitis",
+        "min": "82"
+       }
+      ],
+      "away": [
+       {
+        "name": "Papadopoulos",
+        "min": "77"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "4η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Κατάκτηση"
+     },
+     {
+      "name": "Κύπελλο UEFA",
+      "result": "3ος γύρος"
+     }
+    ],
+    "topscorer": "Dimitris Nalitzis (9) Nikolaos Frousos (9)",
+    "source": "https://en.wikipedia.org/wiki/2000%E2%80%9301_PAOK_FC_season"
+   },
+   "backfilled": true
   }
  },
- "updated": "2026-11-22T19:11+02:00"
+ "updated": "2026-11-22T21:51+02:00"
 }

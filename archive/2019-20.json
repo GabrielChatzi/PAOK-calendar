@@ -344,6 +344,38 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-4ef0548bc2d0",
+     "section": "football",
+     "start": "2020-01-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Vardinogiannis",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "0-3",
+     "url": "https://en.wikipedia.org/wiki/2019%E2%80%9320_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Limnios",
+        "min": "24"
+       },
+       {
+        "name": "Bisewar",
+        "min": "32"
+       },
+       {
+        "name": "Akpom",
+        "min": "64"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-549309",
      "nt": "ff5dd96e38",
      "section": "football",
@@ -358,6 +390,48 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/549309",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/887.png"
+    },
+    {
+     "uid": "football-wiki-6e0196962b9b",
+     "section": "football",
+     "start": "2020-01-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Toumba",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/2019%E2%80%9320_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lamprou",
+        "min": "12"
+       },
+       {
+        "name": "Pelkas",
+        "min": "23",
+        "pen": true
+       },
+       {
+        "name": "Pelkas",
+        "min": "55"
+       },
+       {
+        "name": "Świderski",
+        "min": "80"
+       }
+      ],
+      "away": [
+       {
+        "name": "",
+        "min": "27"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-549303",
@@ -424,6 +498,35 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-d36dd42b8a9f",
+     "section": "football",
+     "start": "2020-02-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2019%E2%80%9320_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vieirinha",
+        "min": "34",
+        "pen": true
+       },
+       {
+        "name": "Fernando Varela",
+        "min": "72"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-549276",
      "nt": "8f17816ddc",
      "section": "football",
@@ -438,6 +541,30 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/549276",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/1010.png"
+    },
+    {
+     "uid": "football-wiki-e1013d49a771",
+     "section": "football",
+     "start": "2020-02-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Olympic Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/2019%E2%80%9320_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Świderski",
+        "min": "12"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-549271",
@@ -488,6 +615,48 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-222cdcac0685",
+     "section": "football",
+     "start": "2020-03-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "3-2",
+     "url": "https://en.wikipedia.org/wiki/2019%E2%80%9320_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Pelkas",
+        "min": "10"
+       },
+       {
+        "name": "Pelkas",
+        "min": "69",
+        "pen": true
+       },
+       {
+        "name": "Mišić",
+        "min": "12"
+       }
+      ],
+      "away": [
+       {
+        "name": "Hassan",
+        "min": "3"
+       },
+       {
+        "name": "Guilherme",
+        "min": "8"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-570867",
      "nt": "6eb6fa62fb",
      "section": "football",
@@ -536,6 +705,34 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/1010.png"
     },
     {
+     "uid": "football-wiki-d4496b90230e",
+     "section": "football",
+     "start": "2020-06-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Georgios Karaiskakis",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2019%E2%80%9320_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "",
+        "min": "65"
+       },
+       {
+        "name": "",
+        "min": "85"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-571478",
      "nt": "d056ab4be5",
      "section": "football",
@@ -552,7 +749,26 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     }
    ],
-   "backfilled": true
+   "backfilled": true,
+   "summary": {
+    "league": "2η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Ημιτελικά"
+     },
+     {
+      "name": "UEFA Champions League",
+      "result": "3ος προκριματικός γύρος"
+     },
+     {
+      "name": "UEFA Europa League",
+      "result": "Πλέι οφ"
+     }
+    ],
+    "topscorer": "Karol Świderski (11)",
+    "source": "https://en.wikipedia.org/wiki/2019%E2%80%9320_PAOK_FC_season"
+   }
   },
   "basketball": {
    "matches": [
@@ -2454,5 +2670,5 @@
    "backfilled": true
   }
  },
- "updated": "2026-11-22T18:05+02:00"
+ "updated": "2026-11-22T21:48+02:00"
 }

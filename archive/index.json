@@ -384,9 +384,9 @@
    "season": "2019-20",
    "sections": {
     "football": {
-     "matches": 34,
+     "matches": 40,
      "standings": false,
-     "summary": false
+     "summary": true
     },
     "basketball": {
      "matches": 26,

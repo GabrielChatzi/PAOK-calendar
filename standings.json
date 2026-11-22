@@ -2426,6 +2426,20 @@
      ]
     },
     {
+     "pos": 1,
+     "team": "Μαρκό",
+     "logo": "https://paokalendar.gr/crests/6df3648d8faae8e0.png",
+     "paok": false,
+     "cells": [
+      "11",
+      "9",
+      "2",
+      "0",
+      "25-6",
+      "29"
+     ]
+    },
+    {
      "pos": 2,
      "team": "ΑΕΛ",
      "logo": "https://paokalendar.gr/crests/28bfa54c724e10bc.png",
@@ -2437,6 +2451,34 @@
       "1",
       "17-7",
       "23"
+     ]
+    },
+    {
+     "pos": 2,
+     "team": "ΑΕΛ",
+     "logo": "https://paokalendar.gr/crests/28bfa54c724e10bc.png",
+     "paok": false,
+     "cells": [
+      "12",
+      "6",
+      "5",
+      "1",
+      "17-7",
+      "23"
+     ]
+    },
+    {
+     "pos": 3,
+     "team": "Καλλιθέα",
+     "logo": "https://paokalendar.gr/crests/e328c380b15e4f90.png",
+     "paok": false,
+     "cells": [
+      "12",
+      "6",
+      "4",
+      "2",
+      "13-7",
+      "22"
      ]
     },
     {
@@ -2468,6 +2510,34 @@
      ]
     },
     {
+     "pos": 4,
+     "team": "Πανιώνιος",
+     "logo": "https://paokalendar.gr/crests/31a122ba141db854.png",
+     "paok": false,
+     "cells": [
+      "12",
+      "6",
+      "3",
+      "3",
+      "15-9",
+      "21"
+     ]
+    },
+    {
+     "pos": 5,
+     "team": "Νίκη Βόλου",
+     "logo": "https://paokalendar.gr/crests/45c8d40c7b8bce10.png",
+     "paok": false,
+     "cells": [
+      "11",
+      "6",
+      "2",
+      "3",
+      "16-10",
+      "20"
+     ]
+    },
+    {
      "pos": 5,
      "team": "Νίκη Βόλου",
      "logo": "https://paokalendar.gr/crests/45c8d40c7b8bce10.png",
@@ -2492,6 +2562,34 @@
       "2",
       "3",
       "22-15",
+      "19"
+     ]
+    },
+    {
+     "pos": 6,
+     "team": "Πανσερραϊκός",
+     "logo": "https://paokalendar.gr/crests/cb6f27cd2b720060.png",
+     "paok": false,
+     "cells": [
+      "12",
+      "7",
+      "2",
+      "3",
+      "22-15",
+      "19"
+     ]
+    },
+    {
+     "pos": 7,
+     "team": "Ελλάς Σύρου",
+     "logo": "https://paokalendar.gr/crests/a9f3c01b4b9d47c3.png",
+     "paok": false,
+     "cells": [
+      "12",
+      "5",
+      "4",
+      "3",
+      "18-11",
       "19"
      ]
     },
@@ -2524,6 +2622,34 @@
      ]
     },
     {
+     "pos": 8,
+     "team": "Αστέρας Τρίπολης Β",
+     "logo": "https://paokalendar.gr/crests/4aef824c428dfe2b.png",
+     "paok": false,
+     "cells": [
+      "12",
+      "4",
+      "4",
+      "4",
+      "15-13",
+      "16"
+     ]
+    },
+    {
+     "pos": 9,
+     "team": "Πανθρακικός",
+     "logo": "https://paokalendar.gr/crests/e32caebe67764286.png",
+     "paok": false,
+     "cells": [
+      "12",
+      "3",
+      "5",
+      "4",
+      "12-14",
+      "14"
+     ]
+    },
+    {
      "pos": 9,
      "team": "Πανθρακικός",
      "logo": "https://paokalendar.gr/crests/e32caebe67764286.png",
@@ -2552,6 +2678,20 @@
      ]
     },
     {
+     "pos": 10,
+     "team": "Αναγέννηση Καρδίτσας",
+     "logo": "https://paokalendar.gr/crests/206cce345025deda.png",
+     "paok": false,
+     "cells": [
+      "12",
+      "3",
+      "4",
+      "5",
+      "8-12",
+      "13"
+     ]
+    },
+    {
      "pos": 11,
      "team": "ΠΑΟΚ",
      "logo": "",
@@ -2562,6 +2702,34 @@
       "3",
       "5",
       "10-17",
+      "12"
+     ]
+    },
+    {
+     "pos": 11,
+     "team": "ΠΑΟΚ",
+     "logo": "",
+     "paok": true,
+     "cells": [
+      "11",
+      "3",
+      "3",
+      "5",
+      "10-17",
+      "12"
+     ]
+    },
+    {
+     "pos": 12,
+     "team": "Νέστος Χρυσούπολης",
+     "logo": "https://paokalendar.gr/crests/0603c210e2bd10b8.png",
+     "paok": false,
+     "cells": [
+      "12",
+      "3",
+      "3",
+      "6",
+      "11-15",
       "12"
      ]
     },
@@ -2594,6 +2762,34 @@
      ]
     },
     {
+     "pos": 13,
+     "team": "Απόλλων Καλαμαριάς",
+     "logo": "https://paokalendar.gr/crests/5aaf016514977c07.png",
+     "paok": false,
+     "cells": [
+      "12",
+      "2",
+      "4",
+      "6",
+      "9-15",
+      "10"
+     ]
+    },
+    {
+     "pos": 14,
+     "team": "ΠΑΣ Πύργος",
+     "logo": "https://paokalendar.gr/crests/289f9867a3b8c278.png",
+     "paok": false,
+     "cells": [
+      "11",
+      "2",
+      "3",
+      "6",
+      "9-16",
+      "9"
+     ]
+    },
+    {
      "pos": 14,
      "team": "ΠΑΣ Πύργος",
      "logo": "https://paokalendar.gr/crests/289f9867a3b8c278.png",
@@ -2619,6 +2815,34 @@
       "7",
       "14-25",
       "7"
+     ]
+    },
+    {
+     "pos": 15,
+     "team": "Ολυμπιακός Β",
+     "logo": "https://paokalendar.gr/crests/3336d8d5b5f80ac9.png",
+     "paok": false,
+     "cells": [
+      "12",
+      "1",
+      "4",
+      "7",
+      "14-25",
+      "7"
+     ]
+    },
+    {
+     "pos": 16,
+     "team": "Ζάκυνθος",
+     "logo": "https://paokalendar.gr/crests/9b2ef52e0b4f74d0.png",
+     "paok": false,
+     "cells": [
+      "12",
+      "0",
+      "4",
+      "8",
+      "8-30",
+      "4"
      ]
     },
     {
@@ -3289,6 +3513,20 @@
    "rows": [
     {
      "pos": 1,
+     "team": "Νέστος Χρυσούπολης",
+     "logo": "https://paokalendar.gr/crests/0603c210e2bd10b8.png",
+     "paok": false,
+     "cells": [
+      "4",
+      "3",
+      "1",
+      "0",
+      "4-0",
+      "10"
+     ]
+    },
+    {
+     "pos": 2,
      "team": "Πανσερραϊκός",
      "logo": "https://paokalendar.gr/crests/cb6f27cd2b720060.png",
      "paok": false,
@@ -3302,7 +3540,7 @@
      ]
     },
     {
-     "pos": 2,
+     "pos": 3,
      "team": "Νίκη Βόλου",
      "logo": "https://paokalendar.gr/crests/45c8d40c7b8bce10.png",
      "paok": false,
@@ -3313,20 +3551,6 @@
       "1",
       "8-5",
       "8"
-     ]
-    },
-    {
-     "pos": 3,
-     "team": "Νέστος Χρυσούπολης",
-     "logo": "https://paokalendar.gr/crests/0603c210e2bd10b8.png",
-     "paok": false,
-     "cells": [
-      "3",
-      "2",
-      "1",
-      "0",
-      "3-0",
-      "7"
      ]
     },
     {
@@ -3363,11 +3587,11 @@
      "logo": "https://paokalendar.gr/crests/e32caebe67764286.png",
      "paok": false,
      "cells": [
-      "3",
+      "4",
       "0",
       "1",
-      "2",
-      "2-6",
+      "3",
+      "2-7",
       "1"
      ]
     },

@@ -1,0 +1,153 @@
+{
+ "seasons": [
+  {
+   "season": "2026-27",
+   "sections": {
+    "football": {
+     "matches": 37,
+     "standings": true
+    },
+    "football-u19": {
+     "matches": 18,
+     "standings": true
+    },
+    "football-u17": {
+     "matches": 13,
+     "standings": true
+    },
+    "basketball-u16": {
+     "matches": 25,
+     "standings": true
+    },
+    "basketball-u18": {
+     "matches": 24,
+     "standings": true
+    },
+    "football-b": {
+     "matches": 30,
+     "standings": true
+    },
+    "handball": {
+     "matches": 28,
+     "standings": true
+    },
+    "football-u15": {
+     "matches": 13,
+     "standings": true
+    },
+    "football-women": {
+     "matches": 25,
+     "standings": true
+    },
+    "futsal": {
+     "matches": 22,
+     "standings": true
+    },
+    "basketball-women-u16": {
+     "matches": 14,
+     "standings": true
+    },
+    "waterpolo-women": {
+     "matches": 25,
+     "standings": true
+    },
+    "waterpolo": {
+     "matches": 26,
+     "standings": true
+    },
+    "handball-women": {
+     "matches": 20,
+     "standings": true
+    },
+    "basketball": {
+     "matches": 42,
+     "standings": true
+    },
+    "basketball-women-u16b": {
+     "matches": 12,
+     "standings": true
+    },
+    "basketball-u16b": {
+     "matches": 16,
+     "standings": true
+    },
+    "basketball-women": {
+     "matches": 22,
+     "standings": true
+    },
+    "basketball-women-u18": {
+     "matches": 20,
+     "standings": true
+    },
+    "volley-women-u18": {
+     "matches": 10,
+     "standings": true
+    },
+    "football-u12": {
+     "matches": 14,
+     "standings": true
+    },
+    "football-u13b": {
+     "matches": 18,
+     "standings": true
+    },
+    "volley-u21": {
+     "matches": 17,
+     "standings": true
+    },
+    "volley-women-u20": {
+     "matches": 10,
+     "standings": true
+    },
+    "football-u14": {
+     "matches": 19,
+     "standings": true
+    },
+    "football-u13": {
+     "matches": 16,
+     "standings": true
+    },
+    "volley-women": {
+     "matches": 7,
+     "standings": true
+    },
+    "volley-u18": {
+     "matches": 9,
+     "standings": true
+    },
+    "volley-women-u18es1": {
+     "matches": 10,
+     "standings": false
+    },
+    "volley-women-u18es2": {
+     "matches": 10,
+     "standings": false
+    },
+    "football-u16": {
+     "matches": 18,
+     "standings": true
+    },
+    "football-women-u17": {
+     "matches": 10,
+     "standings": true
+    },
+    "volley": {
+     "matches": 25,
+     "standings": true
+    },
+    "football-women-u12": {
+     "matches": 14,
+     "standings": false
+    },
+    "football-women-u15": {
+     "matches": 14,
+     "standings": true
+    },
+    "football-women-u15b": {
+     "matches": 14,
+     "standings": true
+    }
+   }
+  }
+ ]
+}

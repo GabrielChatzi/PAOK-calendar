@@ -1,0 +1,1339 @@
+{
+ "season": "1980-81",
+ "sections": {
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-cb82635433df",
+     "section": "football",
+     "start": "1980-09-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kastoria",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kastoria Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tsironis",
+        "min": "39"
+       }
+      ],
+      "away": [
+       {
+        "name": "Anastasiadis",
+        "min": "47"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ef04a80ae26d",
+     "section": "football",
+     "start": "1980-09-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "49"
+       }
+      ],
+      "away": [
+       {
+        "name": "Ardizoglou",
+        "min": "24"
+       },
+       {
+        "name": "Mavros",
+        "min": "45"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5bf1a875efb4",
+     "section": "football",
+     "start": "1980-09-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEL",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Alcazar Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8fd831a2df81",
+     "section": "football",
+     "start": "1980-09-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panachaiki",
+     "paokHome": true,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "9",
+        "pen": true
+       },
+       {
+        "name": "Sarafis",
+        "min": "33"
+       },
+       {
+        "name": "Triantafyllidis",
+        "min": "56"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0af55625762e",
+     "section": "football",
+     "start": "1980-10-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Korinthos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Thodio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6b8ce5d9c1f4",
+     "section": "football",
+     "start": "1980-10-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Pathiakakis",
+        "min": "64",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Kermanidis",
+        "min": "61"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-28f6dd49c4a9",
+     "section": "football",
+     "start": "1980-10-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "4-2",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "15"
+       },
+       {
+        "name": "Koudas",
+        "min": "62"
+       },
+       {
+        "name": "Vasilakos",
+        "min": "26"
+       },
+       {
+        "name": "Alexandridis",
+        "min": "77"
+       }
+      ],
+      "away": [
+       {
+        "name": "Delikaris",
+        "min": "64"
+       },
+       {
+        "name": "Andreuchi",
+        "min": "85"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7cb82fb24dcf",
+     "section": "football",
+     "start": "1980-10-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Niki Volos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Ionia",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Krallis",
+        "min": "30"
+       }
+      ],
+      "away": [
+       {
+        "name": "Vasilakos",
+        "min": "52"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ec54353a8137",
+     "section": "football",
+     "start": "1980-11-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "PAS Giannina",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Zosimades Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Liakos",
+        "min": "48"
+       },
+       {
+        "name": "Papazoglou",
+        "min": "69"
+       }
+      ],
+      "away": [
+       {
+        "name": "Koudas",
+        "min": "2"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-86b25278316d",
+     "section": "football",
+     "start": "1980-11-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Doxa Drama",
+     "paokHome": true,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "20",
+        "pen": true
+       },
+       {
+        "name": "Pellios",
+        "min": "76"
+       }
+      ],
+      "away": [
+       {
+        "name": "Charalambidis",
+        "min": "22"
+       },
+       {
+        "name": "Strantzalis",
+        "min": "39"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ec7ad8f8d6b3",
+     "section": "football",
+     "start": "1980-11-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Kostikos",
+        "min": "39"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-744c43873905",
+     "section": "football",
+     "start": "1980-11-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ethnikos Piraeus",
+     "paokHome": true,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "81",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Denev",
+        "min": "86",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e7d4dcc1d847",
+     "section": "football",
+     "start": "1980-11-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Vardinogiannis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Vasilakos",
+        "min": "22"
+       },
+       {
+        "name": "Vasilakos",
+        "min": "75"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ca3136f13ed1",
+     "section": "football",
+     "start": "1980-12-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kavala",
+     "paokHome": true,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kermanidis",
+        "min": "38"
+       },
+       {
+        "name": "Petsas",
+        "min": "68",
+        "og": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-868d8831fe45",
+     "section": "football",
+     "start": "1980-12-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Veria",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Veria Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Georgopoulos",
+        "min": "61"
+       },
+       {
+        "name": "Alexandridis",
+        "min": "75"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ec9ec466f400",
+     "section": "football",
+     "start": "1980-12-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Athens",
+     "paokHome": true,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kermanidis",
+        "min": "12"
+       },
+       {
+        "name": "Kermanidis",
+        "min": "34"
+       },
+       {
+        "name": "Triantafyllidis",
+        "min": "88"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-497fe64dcdde",
+     "section": "football",
+     "start": "1980-12-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Novoselac",
+        "min": "21"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c5b5260a23ad",
+     "section": "football",
+     "start": "1981-01-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Atromitos",
+     "paokHome": true,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kermanidis",
+        "min": "61"
+       },
+       {
+        "name": "Kermanidis",
+        "min": "86"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-28adab187e4d",
+     "section": "football",
+     "start": "1981-01-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos Volos",
+     "paokHome": true,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kermanidis",
+        "min": "5"
+       },
+       {
+        "name": "Sarafis",
+        "min": "38"
+       }
+      ],
+      "away": [
+       {
+        "name": "Trichias",
+        "min": "51"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2a69d025edf3",
+     "section": "football",
+     "start": "1981-01-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panserraikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Serres Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Papadimitriou",
+        "min": "83"
+       }
+      ],
+      "away": [
+       {
+        "name": "Guerino",
+        "min": "8",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-65f6b4978191",
+     "section": "football",
+     "start": "1981-01-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kastoria",
+     "paokHome": true,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kermanidis",
+        "min": "19"
+       },
+       {
+        "name": "Voitsidis",
+        "min": "49",
+        "og": true
+       },
+       {
+        "name": "Koudas",
+        "min": "75"
+       }
+      ],
+      "away": [
+       {
+        "name": "Papavasiliou",
+        "min": "5"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1b5573c06302",
+     "section": "football",
+     "start": "1981-02-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikos Goumas Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Manolas",
+        "min": "22"
+       },
+       {
+        "name": "Gesios",
+        "min": "26"
+       },
+       {
+        "name": "Mavros",
+        "min": "59"
+       },
+       {
+        "name": "Vlachos",
+        "min": "66"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-dc27ec25d4e1",
+     "section": "football",
+     "start": "1981-02-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos Volos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Volos Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kouloglou",
+        "min": "25"
+       }
+      ],
+      "away": [
+       {
+        "name": "Damanakis",
+        "min": "4"
+       },
+       {
+        "name": "Kermanidis",
+        "min": "55"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0c5aba49e457",
+     "section": "football",
+     "start": "1981-02-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEL",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "5-1",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Singas",
+        "min": "26"
+       },
+       {
+        "name": "Kostikos",
+        "min": "46",
+        "pen": true
+       },
+       {
+        "name": "Kostikos",
+        "min": "54"
+       },
+       {
+        "name": "Kostikos",
+        "min": "75",
+        "pen": true
+       },
+       {
+        "name": "Kermanidis",
+        "min": "80"
+       }
+      ],
+      "away": [
+       {
+        "name": "Charalabidis",
+        "min": "2",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a9aaa884c7c9",
+     "section": "football",
+     "start": "1981-02-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panachaiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kostas Davourlis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Psarras",
+        "min": "11"
+       },
+       {
+        "name": "Kizas",
+        "min": "88",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-14721c7cbd7d",
+     "section": "football",
+     "start": "1981-02-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Korinthos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "4-2",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "5"
+       },
+       {
+        "name": "Koudas",
+        "min": "36"
+       },
+       {
+        "name": "Kostikos",
+        "min": "53",
+        "pen": true
+       },
+       {
+        "name": "Kermanidis",
+        "min": "56"
+       }
+      ],
+      "away": [
+       {
+        "name": "Togias",
+        "min": "41"
+       },
+       {
+        "name": "Gerothodoros",
+        "min": "65",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0cfbc87c4814",
+     "section": "football",
+     "start": "1981-03-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostikos",
+        "min": "4"
+       },
+       {
+        "name": "Kostikos",
+        "min": "19"
+       },
+       {
+        "name": "Kostikos",
+        "min": "81"
+       },
+       {
+        "name": "Koudas",
+        "min": "20"
+       }
+      ],
+      "away": [
+       {
+        "name": "Apostolidis",
+        "min": "79",
+        "og": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7cbfe0b3be8e",
+     "section": "football",
+     "start": "1981-03-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Rizoupoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-44809972c996",
+     "section": "football",
+     "start": "1981-03-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "PAS Giannina",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostikos",
+        "min": "49",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Singas",
+        "min": "77",
+        "og": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e771071aa813",
+     "section": "football",
+     "start": "1981-04-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Doxa Drama",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Doxa Drama Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f3ca27e20b9e",
+     "section": "football",
+     "start": "1981-04-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Singas",
+        "min": "77"
+       }
+      ],
+      "away": [
+       {
+        "name": "Zindros",
+        "min": "75"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6ff404e2964f",
+     "section": "football",
+     "start": "1981-04-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Piraeus",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Singas",
+        "min": "6"
+       },
+       {
+        "name": "Guerino",
+        "min": "45"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d5fa25929fe3",
+     "section": "football",
+     "start": "1981-05-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostikos",
+        "min": "58"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a7d4e6012262",
+     "section": "football",
+     "start": "1981-05-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ethnikos Asteras",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "5-0",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kermanidis",
+        "min": "15"
+       },
+       {
+        "name": "Kostikos",
+        "min": "25",
+        "pen": true
+       },
+       {
+        "name": "Koudas",
+        "min": "52"
+       },
+       {
+        "name": "Koudas",
+        "min": "64"
+       },
+       {
+        "name": "Vasilakos",
+        "min": "88"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8f9cdc6faff7",
+     "section": "football",
+     "start": "1981-05-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kavala",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kavala Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Filippidis",
+        "min": "35"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7802e1b5f7fd",
+     "section": "football",
+     "start": "1981-05-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Rizoupoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "31η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tsiggoulis",
+        "min": "38"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7f79a747b422",
+     "section": "football",
+     "start": "1981-05-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Asteras",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kesariani Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "2-3",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Michelis",
+        "min": "80"
+       },
+       {
+        "name": "Lykoudis",
+        "min": "82"
+       }
+      ],
+      "away": [
+       {
+        "name": "Apostolidis",
+        "min": "35"
+       },
+       {
+        "name": "Georgopoulos",
+        "min": "44"
+       },
+       {
+        "name": "Triantafyllidis",
+        "min": "78"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1cf2a592cb81",
+     "section": "football",
+     "start": "1981-05-31T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "32η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vasilakos",
+        "min": "67"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9a3dd38da626",
+     "section": "football",
+     "start": "1981-06-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kostikos",
+        "min": "38",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e69e29f973c8",
+     "section": "football",
+     "start": "1981-06-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Atromitos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Peristeri Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "33η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Triantafyllidis",
+        "min": "23"
+       },
+       {
+        "name": "Dimopoulos",
+        "min": "57"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-cb7c35de65ba",
+     "section": "football",
+     "start": "1981-06-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Chalkida Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Damanakis",
+        "min": "52"
+       },
+       {
+        "name": "Georgopoulos",
+        "min": "81"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-bc3ffddc34e3",
+     "section": "football",
+     "start": "1981-06-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panserraikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "34η αγωνιστική",
+     "score": "3-3",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimopoulos",
+        "min": "13"
+       },
+       {
+        "name": "Alexandridis",
+        "min": "48"
+       },
+       {
+        "name": "Alexandridis",
+        "min": "65"
+       }
+      ],
+      "away": [
+       {
+        "name": "Pantazis",
+        "min": "14"
+       },
+       {
+        "name": "Pantazis",
+        "min": "68"
+       },
+       {
+        "name": "Georgiadis",
+        "min": "20"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4ee170eeefea",
+     "section": "football",
+     "start": "1981-06-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikos Goumas Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Damanakis",
+        "min": "18",
+        "og": true
+       },
+       {
+        "name": "Orfanos",
+        "min": "61"
+       },
+       {
+        "name": "Kousoulakis",
+        "min": "90"
+       }
+      ],
+      "away": [
+       {
+        "name": "Damanakis",
+        "min": "63"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "4η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Φιναλίστ"
+     }
+    ],
+    "topscorer": "Kermanidis, Kostikos (9)",
+    "source": "https://en.wikipedia.org/wiki/1980%E2%80%9381_PAOK_FC_season"
+   },
+   "backfilled": true
+  }
+ },
+ "updated": "2026-11-22T21:53+02:00"
+}

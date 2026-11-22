@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:football-u13b-epsm-cf5b4a2a26cc@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261122T140053Z
 DTSTART;TZID=Europe/Athens:20261017T104500
 DTEND;TZID=Europe/Athens:20261017T124500
 SUMMARY:⚽ ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020 (2) 2-4 ΠΑΟ
@@ -40,7 +40,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u13b-epsm-17903fc89eb7@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261122T140053Z
 DTSTART;TZID=Europe/Athens:20261108T104500
 DTEND;TZID=Europe/Athens:20261108T124500
 SUMMARY:⚽ ΜΠΕΜΠΗΔΕΣ 2000 (2) 3-3 ΠΑΟΚ
@@ -52,18 +52,19 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u13b-epsm-e3a28fc040d9@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261122T140053Z
 DTSTART;TZID=Europe/Athens:20261122T123000
 DTEND;TZID=Europe/Athens:20261122T143000
-SUMMARY:⚽ ΖΗΤΑ ΕΠΤΑ (2) – ΠΑΟΚ
+SUMMARY:⚽ ΖΗΤΑ ΕΠΤΑ (2) 1-7 ΠΑΟΚ
 LOCATION:ΑΘΛΗΤΙΚΟ ΚΕΝΤΡΟ ΖΑΓΟΡΑΚΗΣ FC
-DESCRIPTION:Κ14 League 2 (ΕΠΣΜ) – 6η αγωνιστική
+DESCRIPTION:Κ14 League 2 (ΕΠΣΜ) – 6η αγωνιστική\nΤελι
+ κό σκορ: ΖΗΤΑ ΕΠΤΑ (2) 1-7 ΠΑΟΚ
 URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
  AGUE+2
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u13b-epsm-ec59380d7bc7@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261122T140053Z
 DTSTART;TZID=Europe/Athens:20261129T160000
 DTEND;TZID=Europe/Athens:20261129T180000
 SUMMARY:⚽ ΜΑΚΕΔΟΝΙΚΟΣ (2) – ΠΑΟΚ
@@ -74,7 +75,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u13b-epsm-c9129ff8d16b@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261122T140053Z
 DTSTART;TZID=Europe/Athens:20261220T180000
 DTEND;TZID=Europe/Athens:20261220T200000
 SUMMARY:⚽ ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ (2) – ΠΑΟΚ (ώρα αν
@@ -88,7 +89,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u13b-epsm-eaf59909d604@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261122T140053Z
 DTSTART;TZID=Europe/Athens:20270103T180000
 DTEND;TZID=Europe/Athens:20270103T200000
 SUMMARY:⚽ ΠΡΩΤΕΑΣ (2) – ΠΑΟΚ (ώρα αναμένεται)
@@ -101,7 +102,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u13b-epsm-0c8b3ca8132b@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261122T140053Z
 DTSTART;TZID=Europe/Athens:20270117T180000
 DTEND;TZID=Europe/Athens:20270117T200000
 SUMMARY:⚽ ΣΚΙΟΥΡΟΙ (2) – ΠΑΟΚ (ώρα αναμένεται)
@@ -114,7 +115,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u13b-epsm-c66448155aac@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261122T140053Z
 DTSTART;TZID=Europe/Athens:20270207T180000
 DTEND;TZID=Europe/Athens:20270207T200000
 SUMMARY:⚽ ΑΚΡΙΤΕΣ ΣΥΚΕΩΝ (2) – ΠΑΟΚ (ώρα αναμέ
@@ -128,7 +129,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u13b-epsm-d9ef3ee16d44@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261122T140053Z
 DTSTART;TZID=Europe/Athens:20270214T180000
 DTEND;TZID=Europe/Athens:20270214T200000
 SUMMARY:⚽ ΟΜΑΔΑ Α – ΠΑΟΚ (ώρα αναμένεται)

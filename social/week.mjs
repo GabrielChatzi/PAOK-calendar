@@ -559,6 +559,9 @@ async function main() {
   const names = JSON.parse(fs.readFileSync(path.join(HERE, "names.json"), "utf8"));
   // Β' ομάδα και ακαδημίες: δικά τους post (academyPlan), όχι μέσα στο κανονικό πρόγραμμα.
   const academy = new Set((data.sections || []).filter((s) => s.academy).map((s) => s.key));
+  // ΑμεΑ (ομαδικά): ακόμα μόνο για τον διαχειριστή, όχι στα social.
+  const amea = new Set((data.sections || []).filter((s) => s.amea).map((s) => s.key));
+  data.matches = data.matches.filter((m) => !amea.has(m.section));
   names.labels = academyLabels(data.sections);
   const p = plan(data.matches.filter((m) => !academy.has(m.section)), today, { names });
   const main = data.matches.filter((m) => !academy.has(m.section)), acad = data.matches.filter((m) => academy.has(m.section));

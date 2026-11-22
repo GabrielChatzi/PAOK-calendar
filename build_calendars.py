@@ -139,6 +139,16 @@ ACADEMY = {
 }
 SECTIONS.update(ACADEMY)
 
+# ΑμεΑ σε ομαδικά αθλήματα (ΑΣ ΠΑΟΚ ΑμεΑ). Δεν έχουν πηγή που διαβάζεται (ανακοινώνονται στο Instagram
+# @acpaok_amea): οι αγώνες μπαίνουν από τη φόρμα «Νέος αγώνας» και το manual.json. Στη σελίδα μόνο για τον
+# διαχειριστή (#/atomika, μαζί με τα ατομικά)· δεν μπαίνουν στην αρχική, στα social ή στα συνδυαστικά ημερολόγια.
+# Νέα ομάδα = μία γραμμή εδώ· εμφανίζεται μόνη της στη σελίδα και στη φόρμα.
+AMEA = {
+    "basketball-amea": {"emoji": "🏀", "name": "Μπάσκετ ΑμεΑ", "sport": "Μπάσκετ", "women": False, "amea": True,
+                        "short": "Μπάσκετ"},
+}
+SECTIONS.update(AMEA)
+
 
 @dataclass
 class Match:
@@ -2706,6 +2716,8 @@ SOURCES: dict[str, list[tuple[str, Callable[[], list[Match]]]]] = {
              ("risingstars.basket.gr", lambda key=key: rising_stars_matches(key))] for key in RISING_STARS},
     **{key: [("epsm.gr", lambda key=key: epsm_matches(key))] for key in EPSM_TEAMS},
     "football-women-u17": [("ΕΠΟ Υποδομών Κ17", lambda: strip_age(epo_matches(56, "football-women-u17", required=True), "Κ17"))],
+    # ΑμεΑ: μόνο οι αγώνες της φόρμας και του manual.json.
+    **{key: [] for key in AMEA},
 }
 
 

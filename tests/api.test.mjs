@@ -249,6 +249,8 @@ test("api/data: μόνο τα γνωστά αρχεία", async () => {
   mockFetch([[/raw\.githubusercontent\.com/, "{}"]]);
   assert.equal((await call(data, { f: "matches.json" })).status, 200);
   assert.equal((await call(data, { f: "football-women-home.ics" })).status, 200);
+  assert.equal((await call(data, { f: "events.json" })).status, 200);
+  assert.equal((await call(data, { f: "athletics-events.ics" })).status, 200);
   assert.equal((await call(data, { f: "../secret" })).status, 404);
   assert.equal((await call(data, { f: "package.json" })).status, 404);
 });
@@ -366,6 +368,28 @@ test("api/admin: αγώνας της φόρμας «Νέος αγώνας»", as
   assert.ok(a.parseCustom({ section: "football-u19", date: "2026-11-21", opponent: "" }).error);
   assert.ok(a.parseCustom({ section: "football-u19", date: "2026-11-21", opponent: "Χ", us: 1 }).error);
   assert.ok(a.parseCustom({ section: "football-u19", date: "2026-11-21", time: "25:00", opponent: "Χ" }).error);
+});
+
+test("api/admin: διοργάνωση ατομικού αθλήματος", async () => {
+  const a = await import("../api/admin.js");
+  const e = a.parseCompetition({ sport: "athletics", title: "  Πανελλήνιο   Κλειστού ", start: "2027-02-13", end: "",
+    athletes: "Α\r\n\n  Β ", para: true, url: "https://acpaok.gr/x/" });
+  assert.equal(e.error, undefined);
+  assert.deepEqual([e.title, e.end, e.athletes, e.para], ["Πανελλήνιο Κλειστού", "2027-02-13", "Α\nΒ", true]);
+  assert.match(e.id, /^[0-9a-f]{12}$/);
+  assert.equal(a.parseCompetition({ id: "0123456789ab", sport: "judo", title: "Χ", start: "2027-01-01" }).id, "0123456789ab");
+  assert.ok(a.parseCompetition({ sport: "golf", title: "Χ", start: "2027-01-01" }).error);
+  assert.ok(a.parseCompetition({ sport: "judo", title: "", start: "2027-01-01" }).error);
+  assert.ok(a.parseCompetition({ sport: "judo", title: "Χ", start: "2027-01-05", end: "2027-01-04" }).error);
+  assert.ok(a.parseCompetition({ sport: "judo", title: "Χ", start: "2027-01-05", url: "javascript:alert(1)" }).error);
+});
+
+test("ατομικά αθλήματα: ίδια αθλήματα στο api/admin και στο events.py", async () => {
+  const a = await import("../api/admin.js");
+  const { readFileSync } = await import("node:fs");
+  const py = readFileSync(new URL("../events.py", import.meta.url), "utf-8");
+  const block = py.slice(py.indexOf("SPORTS = {"), py.indexOf("CAT_SPORT"));
+  assert.deepEqual([...block.matchAll(/^\s{4}"([a-z]+)":/gm)].map((m) => m[1]), a.EVENT_SPORTS);
 });
 
 test("πληροφορίες αγώνα: έλεγχος πεδίων", async () => {

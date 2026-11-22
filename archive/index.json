@@ -1159,6 +1159,16 @@
      "summary": true
     }
    }
+  },
+  {
+   "season": "1969-70",
+   "sections": {
+    "football": {
+     "matches": 39,
+     "standings": false,
+     "summary": true
+    }
+   }
   }
  ]
 }

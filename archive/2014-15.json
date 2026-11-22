@@ -113,6 +113,30 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-c1fa86372199",
+     "section": "football",
+     "start": "2014-09-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Kalamarias",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2014%E2%80%9315_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Efstathiou",
+        "min": "18"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-406419",
      "nt": "e629776a39",
      "section": "football",
@@ -190,6 +214,35 @@
      "score": "4-1",
      "url": "https://www.espn.com/soccer/match/_/gameId/408332",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-3435c4e55312",
+     "section": "football",
+     "start": "2014-10-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "PAS Giannina",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2014%E2%80%9315_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tziolis",
+        "min": "57"
+       }
+      ],
+      "away": [
+       {
+        "name": "Ilić",
+        "min": "23"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-408579",
@@ -762,7 +815,22 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     }
    ],
-   "backfilled": true
+   "backfilled": true,
+   "summary": {
+    "league": "3η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Όμιλοι"
+     },
+     {
+      "name": "UEFA Europa League",
+      "result": "Όμιλοι"
+     }
+    ],
+    "topscorer": "Stefanos Athanasiadis Facundo Pereyra (11 each)",
+    "source": "https://en.wikipedia.org/wiki/2014%E2%80%9315_PAOK_FC_season"
+   }
   },
   "basketball": {
    "matches": [
@@ -2124,5 +2192,5 @@
    "backfilled": true
   }
  },
- "updated": "2026-11-22T18:32+02:00"
+ "updated": "2026-11-22T21:49+02:00"
 }

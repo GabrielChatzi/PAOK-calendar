@@ -5,6 +5,7 @@
 
     python3 archive.py                  κάθε ενημέρωση: ό,τι έχει τώρα το matches.json/standings.json μπαίνει
                                         στη σεζόν του (οι αγώνες με το uid, οι βαθμολογίες ολόκληρες)
+    python3 archive.py summaries        τελική θέση/κύπελλα ανά σεζόν από τη Wikipedia (wiki_sections.py)
     python3 archive.py backfill 2024    μια παλιά σεζόν (2024-25) από τις ίδιες πηγές με το build_calendars
                                         (όσες δίνουν παλιές σεζόν)· τα δεδομένα της σεζόν που υπάρχουν ήδη μένουν
     ONLY=football,basketball python3 archive.py backfill 2024   μόνο κάποια τμήματα
@@ -226,6 +227,29 @@ def wiki_football(year: int, arch: dict) -> str:
     return line
 
 
+def summaries(data: dict[str, dict[str, dict]] | None = None) -> None:
+    """Περίληψη ανά σεζόν (τελική θέση, κύπελλο, Ευρώπη) από τα άρθρα της Wikipedia (wiki_sections.py), για τα
+    τμήματα χωρίς σελίδες σεζόν. Μπαίνει και σε σεζόν χωρίς αγώνες στο αρχείο. Δεν αλλάζει περίληψη από
+    σελίδα σεζόν (ποδόσφαιρο, wiki.py)."""
+    if data is None:
+        import wiki_sections
+        data = wiki_sections.summaries()
+    by_season: dict[str, dict[str, dict]] = {}
+    for key, seasons in data.items():
+        for season, info in seasons.items():
+            by_season.setdefault(season, {})[key] = info
+    for season, secs in sorted(by_season.items()):
+        arch = load(season)
+        for key, info in secs.items():
+            sec = arch["sections"].setdefault(key, {"matches": []})
+            old = sec.get("summary") or {}
+            if old and "PAOK_FC_season" in str(old.get("source", "")):
+                continue
+            sec["summary"] = info
+        save(arch)
+    write_index()
+
+
 def write_index() -> None:
     seasons = []
     for p in sorted(ARCHIVE.glob("*.json"), reverse=True):
@@ -241,6 +265,9 @@ def write_index() -> None:
 
 
 def main(argv: list[str]) -> int:
+    if argv[:1] == ["summaries"]:
+        summaries()
+        return 0
     if argv[:1] == ["backfill"]:
         only = set(filter(None, os.environ.get("ONLY", "").split(","))) or None
         years = [int(y) for y in argv[1:]]

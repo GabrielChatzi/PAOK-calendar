@@ -108,7 +108,9 @@ def params(body: str) -> dict[str, str]:
 def plain(t: str) -> str:
     """Κείμενο χωρίς σημάνσεις wiki: [[α|β]] → β, χωρίς ref, σχόλια, πρότυπα, ''' και HTML."""
     t = re.sub(r"<ref[^>]*/>|<ref[^>]*>.*?</ref>|<!--.*?-->", "", t or "", flags=re.S)
-    t = re.sub(r"\{\{\s*(?:flagicon|fbaicon|flag icon|nowrap)[^{}]*\}\}", "", t, flags=re.I)
+    t = re.sub(r"\{\{\s*(?:flagicon|fbaicon|flag icon)[^{}]*\}\}", "", t, flags=re.I)
+    t = re.sub(r"\{\{\s*(?:colou?r)\s*\|[^|{}]*\|([^{}]*)\}\}", r"\1", t, flags=re.I)
+    t = re.sub(r"\{\{\s*(?:tooltip|abbr|nowrap)\s*\|([^|{}]*)(?:\|[^{}]*)?\}\}", r"\1", t, flags=re.I)
     for _ in range(3):
         t = re.sub(r"\{\{[^{}]*\}\}", "", t)
     t = re.sub(r"\[\[(?:[^|\]]*\|)?([^\]]*)\]\]", r"\1", t)

@@ -1,0 +1,17 @@
+name: explore
+on:
+  push:
+    branches: [explore-archive]
+jobs:
+  explore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: sudo apt-get install -y poppler-utils >/dev/null
+      - run: python3 tools/explore.py
+        continue-on-error: true
+      - uses: actions/upload-artifact@v4
+        with: { name: out, path: /tmp/out }

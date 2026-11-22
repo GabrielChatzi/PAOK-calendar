@@ -609,9 +609,9 @@
    "season": "2010-11",
    "sections": {
     "football": {
-     "matches": 48,
+     "matches": 54,
      "standings": false,
-     "summary": false
+     "summary": true
     },
     "basketball": {
      "matches": 42,

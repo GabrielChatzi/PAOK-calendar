@@ -24,7 +24,7 @@ concurrency:
 jobs:
   backfill:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 330
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -37,12 +37,11 @@ jobs:
       - name: pdftotext
         continue-on-error: true
         run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      # Μία σεζόν τη φορά, με αποθήκευση μετά από κάθε μία: αν το job κοπεί (όριο χρόνου), μένουν όσες έγιναν.
       - name: Παλιές σεζόν
         env:
           ONLY: ${{ inputs.only }}
           YEARS: ${{ inputs.years }}
-        run: python3 archive.py backfill $YEARS
-      - name: Αποθήκευση
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -56,9 +55,10 @@ jobs:
             cd "$RUNNER_TEMP/data"
             git add -A
             if git diff --cached --quiet; then echo "Καμία αλλαγή."; return 0; fi
-            git commit -qm "Αρχείο παλιών σεζόν: $YEARS"
+            git commit -qm "Αρχείο παλιών σεζόν: $1"
             git push origin HEAD:data
           }
-          (save) || (sleep 5; save)
-        env:
-          YEARS: ${{ inputs.years }}
+          for y in $YEARS; do
+            python3 archive.py backfill "$y" || echo "! σεζόν $y: σφάλμα"
+            (save "$y") || (sleep 5; save "$y") || echo "! σεζόν $y: δεν αποθηκεύτηκε"
+          done

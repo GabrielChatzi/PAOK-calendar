@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:football-women-u15b-epsm-c1aa2ba38262@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261122T173218Z
 DTSTART;TZID=Europe/Athens:20261107T090000
 DTEND;TZID=Europe/Athens:20261107T110000
 SUMMARY:⚽ ΠΑΟΚ 6-1 ΖΗΤΑ ΕΠΤΑ
@@ -38,18 +38,19 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+%C
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-u15b-epsm-98694239c443@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261122T173218Z
 DTSTART;TZID=Europe/Athens:20261121T090000
 DTEND;TZID=Europe/Athens:20261121T110000
-SUMMARY:⚽ ΠΑΟΚ – ΣΚΙΟΥΡΟΙ
+SUMMARY:⚽ ΠΑΟΚ 10-0 ΣΚΙΟΥΡΟΙ
 LOCATION:ΠΥΛΑΙΑΣ FOOTBALL HUB
-DESCRIPTION:Κ15 Γυναικών (ΕΠΣΜ) – 4η αγωνιστική
+DESCRIPTION:Κ15 Γυναικών (ΕΠΣΜ) – 4η αγωνιστική\n
+ Τελικό σκορ: ΠΑΟΚ 10-0 ΣΚΙΟΥΡΟΙ
 URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+%C
  E%93%CE%A5%CE%9D%CE%91%CE%99%CE%9A%CE%A9%CE%9D
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-u15b-epsm-fcdc519b6f94@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261122T173218Z
 DTSTART;TZID=Europe/Athens:20261128T090000
 DTEND;TZID=Europe/Athens:20261128T110000
 SUMMARY:⚽ ΠΑΟΚ – ΑΣ ΠΑΟΚ (1)
@@ -60,7 +61,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+%C
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-u15b-epsm-bd7c69925d3d@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261122T173218Z
 DTSTART;TZID=Europe/Athens:20261212T180000
 DTEND;TZID=Europe/Athens:20261212T200000
 SUMMARY:⚽ ΠΑΟΚ – ΑΟ ΛΕΟΝΤΕΣ (ώρα αναμένεται)
@@ -73,7 +74,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+%C
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-u15b-epsm-032648a18820@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261122T173218Z
 DTSTART;TZID=Europe/Athens:20261219T180000
 DTEND;TZID=Europe/Athens:20261219T200000
 SUMMARY:⚽ ΠΑΟΚ – ΟΜΑΔΑ Α (ώρα αναμένεται)
@@ -86,7 +87,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+%C
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-u15b-epsm-138edfadf419@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261122T173218Z
 DTSTART;TZID=Europe/Athens:20270102T180000
 DTEND;TZID=Europe/Athens:20270102T200000
 SUMMARY:⚽ ΠΑΟΚ – ΑΝΑΓΕΝΝΗΣΗ ΧΑΛΚΗΔΟΝΑΣ (ώρα 
@@ -100,7 +101,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+%C
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-u15b-epsm-29bc3ef41b4d@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261122T173218Z
 DTSTART;TZID=Europe/Athens:20270123T180000
 DTEND;TZID=Europe/Athens:20270123T200000
 SUMMARY:⚽ ΠΑΟΚ – ΑΙΑΝΤΑΣ ΠΥΛΑΙΑΣ (ώρα αναμέν

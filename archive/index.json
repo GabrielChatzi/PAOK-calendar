@@ -1129,6 +1129,16 @@
      "summary": true
     }
    }
+  },
+  {
+   "season": "1972-73",
+   "sections": {
+    "football": {
+     "matches": 42,
+     "standings": false,
+     "summary": true
+    }
+   }
   }
  ]
 }

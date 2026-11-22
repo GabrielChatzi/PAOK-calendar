@@ -1,0 +1,1350 @@
+{
+ "season": "1972-73",
+ "sections": {
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-6d201f790800",
+     "section": "football",
+     "start": "1972-09-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Rapid Wien",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Prater stadion",
+     "competition": "Κύπελλο Κυπελλούχων",
+     "round": "1ος αγώνας",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6cc594c846ca",
+     "section": "football",
+     "start": "1972-09-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Omonia",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "15"
+       },
+       {
+        "name": "Apostolidis",
+        "min": "82"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "90"
+       }
+      ],
+      "away": [
+       {
+        "name": "Charalampous",
+        "min": "3"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4d3be0538611",
+     "section": "football",
+     "start": "1972-09-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Trikala",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Trikala Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Koudas",
+        "min": "44"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-99730889b1c1",
+     "section": "football",
+     "start": "1972-09-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Rapid Wien",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Κυπελλούχων",
+     "round": "2ος αγώνας",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "32",
+        "pen": true
+       },
+       {
+        "name": "Aslanidis",
+        "min": "90"
+       }
+      ],
+      "away": [
+       {
+        "name": "Gallos",
+        "min": "23"
+       },
+       {
+        "name": "Krankl",
+        "min": "43"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-80170f496630",
+     "section": "football",
+     "start": "1972-10-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Gounaris",
+        "min": "56"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e56b07dc2377",
+     "section": "football",
+     "start": "1972-10-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Fostiras",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "12"
+       },
+       {
+        "name": "Koudas",
+        "min": "85"
+       },
+       {
+        "name": "Vouzounerakis",
+        "min": "25"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-dac9345e531b",
+     "section": "football",
+     "start": "1972-10-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Egaleo",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Stavros Mavrothalassitis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Stavropoulos",
+        "min": "14"
+       },
+       {
+        "name": "Stavropoulos",
+        "min": "36"
+       }
+      ],
+      "away": [
+       {
+        "name": "Koudas",
+        "min": "44"
+       },
+       {
+        "name": "Koudas",
+        "min": "82"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-35d2addc8fd6",
+     "section": "football",
+     "start": "1972-10-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "38"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e049e5ccf428",
+     "section": "football",
+     "start": "1972-11-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Piraeus",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "2-3",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kremmydas",
+        "min": "3"
+       },
+       {
+        "name": "Kritikopoulos",
+        "min": "89"
+       }
+      ],
+      "away": [
+       {
+        "name": "Aslanidis",
+        "min": "11"
+       },
+       {
+        "name": "Fountoukidis",
+        "min": "14"
+       },
+       {
+        "name": "Sarafis",
+        "min": "25"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-60e007acc96c",
+     "section": "football",
+     "start": "1972-11-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "44"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "56"
+       },
+       {
+        "name": "Fountoukidis",
+        "min": "76"
+       },
+       {
+        "name": "Sarafis",
+        "min": "83"
+       }
+      ],
+      "away": [
+       {
+        "name": "Gesios",
+        "min": "85"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-94229c2c4ae5",
+     "section": "football",
+     "start": "1972-11-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Atromitos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Peristeri Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Sarafis",
+        "min": "1"
+       },
+       {
+        "name": "Apostolidis",
+        "min": "20"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c389ba2f9a23",
+     "section": "football",
+     "start": "1972-12-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-828f7ae7733d",
+     "section": "football",
+     "start": "1972-12-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Anagennisi Epanomi",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kalamaria Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "0-3",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Koudas",
+        "min": "40"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "44"
+       },
+       {
+        "name": "Fountoukidis",
+        "min": "65"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0cb5bcad7175",
+     "section": "football",
+     "start": "1972-12-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panachaiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kostas Davourlis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Davourlis",
+        "min": "29"
+       },
+       {
+        "name": "Michalopoulos",
+        "min": "42"
+       }
+      ],
+      "away": [
+       {
+        "name": "Sarafis",
+        "min": "27"
+       },
+       {
+        "name": "Koudas",
+        "min": "59"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-afe73ac6afad",
+     "section": "football",
+     "start": "1972-12-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kavala",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kavala Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Apostolidis",
+        "min": "43"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "82"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-de7aad6c56e5",
+     "section": "football",
+     "start": "1972-12-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panserraikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "9"
+       },
+       {
+        "name": "Koudas",
+        "min": "73"
+       }
+      ],
+      "away": [
+       {
+        "name": "Zarzopoulos",
+        "min": "63"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ca67906651e7",
+     "section": "football",
+     "start": "1972-12-31T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kalamata",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kalamata Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "0-3",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Fountoukidis",
+        "min": "32"
+       },
+       {
+        "name": "Apostolidis",
+        "min": "77"
+       },
+       {
+        "name": "Apostolidis",
+        "min": "80"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8ae43e2257b8",
+     "section": "football",
+     "start": "1973-01-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos Volos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "5-1",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Aslanidis",
+        "min": "12"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "24"
+       },
+       {
+        "name": "Sarafis",
+        "min": "50"
+       },
+       {
+        "name": "Sarafis",
+        "min": "58"
+       },
+       {
+        "name": "Paridis",
+        "min": "85"
+       }
+      ],
+      "away": [
+       {
+        "name": "Papadopoulos",
+        "min": "16",
+        "og": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-fb1e29cfa5ac",
+     "section": "football",
+     "start": "1973-01-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "18"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "90",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Lagos",
+        "min": "39"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-01114e5628b4",
+     "section": "football",
+     "start": "1973-01-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos Volos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Volos Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "1-5",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Valachas",
+        "min": "43"
+       }
+      ],
+      "away": [
+       {
+        "name": "Fountoukidis",
+        "min": "1"
+       },
+       {
+        "name": "Sarafis",
+        "min": "27"
+       },
+       {
+        "name": "Sarafis",
+        "min": "52"
+       },
+       {
+        "name": "Apostolidis",
+        "min": "67"
+       },
+       {
+        "name": "Gounaris",
+        "min": "82"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-bc83cf749086",
+     "section": "football",
+     "start": "1973-01-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "41"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-34b923fe159b",
+     "section": "football",
+     "start": "1973-02-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Omonia",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "GSP Stadium (1902)",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "1-3",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Mouskos",
+        "min": "38"
+       }
+      ],
+      "away": [
+       {
+        "name": "Apostolidis",
+        "min": "5"
+       },
+       {
+        "name": "Aslanidis",
+        "min": "55"
+       },
+       {
+        "name": "Koudas",
+        "min": "86"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7b72bace681a",
+     "section": "football",
+     "start": "1973-02-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Fostiras",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Tavros Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Deimezis",
+        "min": "83"
+       }
+      ],
+      "away": [
+       {
+        "name": "Apostolidis",
+        "min": "53"
+       },
+       {
+        "name": "Sarafis",
+        "min": "106"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9af3c9d0b61c",
+     "section": "football",
+     "start": "1973-02-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Trikala",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koudas",
+        "min": "41"
+       },
+       {
+        "name": "Apostolidis",
+        "min": "67"
+       },
+       {
+        "name": "Apostolidis",
+        "min": "72"
+       },
+       {
+        "name": "Sarafis",
+        "min": "70"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7a445581dd9e",
+     "section": "football",
+     "start": "1973-02-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Losada",
+        "min": "75"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d631528c79f4",
+     "section": "football",
+     "start": "1973-03-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Fostiras",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Tavros Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Remoundos",
+        "min": "67"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-501d2dba29f1",
+     "section": "football",
+     "start": "1973-03-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Egaleo",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "10"
+       },
+       {
+        "name": "Sarafis",
+        "min": "28"
+       },
+       {
+        "name": "Apostolidis",
+        "min": "11"
+       },
+       {
+        "name": "Koudas",
+        "min": "58"
+       }
+      ],
+      "away": [
+       {
+        "name": "Tsalamangas",
+        "min": "48"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-59581c871f83",
+     "section": "football",
+     "start": "1973-03-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Leoforos Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2d8ed5c78e9c",
+     "section": "football",
+     "start": "1973-03-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ethnikos Piraeus",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Apostolidis",
+        "min": "2"
+       },
+       {
+        "name": "Sarafis",
+        "min": "13"
+       },
+       {
+        "name": "Sarafis",
+        "min": "65"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1ccccf34bac4",
+     "section": "football",
+     "start": "1973-04-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "1-3",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koutroubelis",
+        "min": "2"
+       }
+      ],
+      "away": [
+       {
+        "name": "Sarafis",
+        "min": "8"
+       },
+       {
+        "name": "Apostolidis",
+        "min": "30"
+       },
+       {
+        "name": "Paridis",
+        "min": "79"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-02fe21622f42",
+     "section": "football",
+     "start": "1973-04-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Atromitos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "38"
+       },
+       {
+        "name": "Sarafis",
+        "min": "87"
+       }
+      ],
+      "away": [
+       {
+        "name": "Tsivgoulis",
+        "min": "64"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9b390c1f471b",
+     "section": "football",
+     "start": "1973-04-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikos Goumas Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Sarafis",
+        "min": "48"
+       },
+       {
+        "name": "Apostolidis",
+        "min": "51"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-cdcd2f5d9bd8",
+     "section": "football",
+     "start": "1973-04-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Paridis",
+        "min": "26"
+       },
+       {
+        "name": "Paridis",
+        "min": "34"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-318182b760fc",
+     "section": "football",
+     "start": "1973-04-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panachaiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "3-5",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Paridis",
+        "min": "41"
+       },
+       {
+        "name": "Paridis",
+        "min": "64"
+       },
+       {
+        "name": "Sarafis",
+        "min": "89",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Davourlis",
+        "min": "30"
+       },
+       {
+        "name": "Davourlis",
+        "min": "61"
+       },
+       {
+        "name": "Davourlis",
+        "min": "82"
+       },
+       {
+        "name": "Stravopodis",
+        "min": "47"
+       },
+       {
+        "name": "Pappas",
+        "min": "87"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3cc5618fbcd0",
+     "section": "football",
+     "start": "1973-04-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kavala",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lazos",
+        "min": "48"
+       },
+       {
+        "name": "Apostolidis",
+        "min": "54"
+       },
+       {
+        "name": "Paridis",
+        "min": "74"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f045668d4d97",
+     "section": "football",
+     "start": "1973-05-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panserraikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Serres Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "1-3",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Balabanidis",
+        "min": "90"
+       }
+      ],
+      "away": [
+       {
+        "name": "Aslanidis",
+        "min": "9",
+        "pen": true
+       },
+       {
+        "name": "Koudas",
+        "min": "80"
+       },
+       {
+        "name": "Terzanidis",
+        "min": "89"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5408e32f1ef4",
+     "section": "football",
+     "start": "1973-05-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kalamata",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "31η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Paridis",
+        "min": "44",
+        "pen": true
+       },
+       {
+        "name": "Paridis",
+        "min": "60"
+       },
+       {
+        "name": "Paridis",
+        "min": "90"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ce87d13f2501",
+     "section": "football",
+     "start": "1973-05-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "32η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5cfc4a678ae3",
+     "section": "football",
+     "start": "1973-05-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ethnikos Piraeus",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "3-2",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Sarafis",
+        "min": "57"
+       },
+       {
+        "name": "Sarafis",
+        "min": "112"
+       },
+       {
+        "name": "Terzanidis",
+        "min": "98"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kritikopoulos",
+        "min": "30"
+       },
+       {
+        "name": "Moutafis",
+        "min": "119"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-cf446214b0e3",
+     "section": "football",
+     "start": "1973-05-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos Volos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "33η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Apostolidis",
+        "min": "8"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-fe28f859395f",
+     "section": "football",
+     "start": "1973-06-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "34η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kapernekas",
+        "min": "26",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Paridis",
+        "min": "36"
+       },
+       {
+        "name": "Paridis",
+        "min": "86"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-26d12f4fa625",
+     "section": "football",
+     "start": "1973-06-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Angelis",
+        "min": "46"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "2η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Φιναλίστ"
+     },
+     {
+      "name": "Κύπελλο Κυπελλούχων",
+      "result": "1ος γύρος"
+     }
+    ],
+    "topscorer": "Stavros Sarafis (19)",
+    "source": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season"
+   },
+   "backfilled": true
+  }
+ },
+ "updated": "2026-11-22T21:54+02:00"
+}

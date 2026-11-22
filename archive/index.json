@@ -335,6 +335,386 @@
      "standings": true
     }
    }
+  },
+  {
+   "season": "2018-19",
+   "sections": {
+    "football": {
+     "matches": 42,
+     "standings": false
+    },
+    "basketball": {
+     "matches": 28,
+     "standings": false
+    },
+    "handball": {
+     "matches": 35,
+     "standings": true
+    },
+    "handball-women": {
+     "matches": 27,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2017-18",
+   "sections": {
+    "football": {
+     "matches": 32,
+     "standings": false
+    },
+    "basketball": {
+     "matches": 34,
+     "standings": false
+    },
+    "handball": {
+     "matches": 31,
+     "standings": true
+    },
+    "handball-women": {
+     "matches": 24,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2016-17",
+   "sections": {
+    "football": {
+     "matches": 47,
+     "standings": false
+    },
+    "basketball": {
+     "matches": 30,
+     "standings": false
+    },
+    "handball": {
+     "matches": 26,
+     "standings": true
+    },
+    "handball-women": {
+     "matches": 24,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2015-16",
+   "sections": {
+    "football": {
+     "matches": 47,
+     "standings": false
+    },
+    "basketball": {
+     "matches": 45,
+     "standings": false
+    },
+    "handball": {
+     "matches": 29,
+     "standings": true
+    },
+    "handball-women": {
+     "matches": 23,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2014-15",
+   "sections": {
+    "football": {
+     "matches": 48,
+     "standings": false
+    },
+    "basketball": {
+     "matches": 52,
+     "standings": false
+    },
+    "handball-women": {
+     "matches": 22,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2013-14",
+   "sections": {
+    "football": {
+     "matches": 52,
+     "standings": false
+    },
+    "basketball": {
+     "matches": 45,
+     "standings": false
+    },
+    "handball": {
+     "matches": 23,
+     "standings": true
+    },
+    "handball-women": {
+     "matches": 20,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2012-13",
+   "sections": {
+    "football": {
+     "matches": 40,
+     "standings": false
+    },
+    "basketball": {
+     "matches": 28,
+     "standings": false
+    },
+    "handball": {
+     "matches": 28,
+     "standings": true
+    },
+    "handball-women": {
+     "matches": 23,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2011-12",
+   "sections": {
+    "football": {
+     "matches": 48,
+     "standings": false
+    },
+    "basketball": {
+     "matches": 32,
+     "standings": false
+    },
+    "handball": {
+     "matches": 26,
+     "standings": true
+    },
+    "handball-women": {
+     "matches": 13,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2010-11",
+   "sections": {
+    "football": {
+     "matches": 48,
+     "standings": false
+    },
+    "basketball": {
+     "matches": 42,
+     "standings": false
+    },
+    "handball": {
+     "matches": 27,
+     "standings": true
+    },
+    "handball-women": {
+     "matches": 21,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2009-10",
+   "sections": {
+    "football": {
+     "matches": 40,
+     "standings": false
+    },
+    "basketball": {
+     "matches": 28,
+     "standings": false
+    },
+    "handball": {
+     "matches": 28,
+     "standings": true
+    },
+    "handball-women": {
+     "matches": 2,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2008-09",
+   "sections": {
+    "football": {
+     "matches": 36,
+     "standings": false
+    },
+    "basketball": {
+     "matches": 28,
+     "standings": false
+    },
+    "handball": {
+     "matches": 30,
+     "standings": true
+    },
+    "handball-women": {
+     "matches": 1,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2007-08",
+   "sections": {
+    "football": {
+     "matches": 30,
+     "standings": false
+    },
+    "basketball": {
+     "matches": 26,
+     "standings": false
+    },
+    "handball": {
+     "matches": 33,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2006-07",
+   "sections": {
+    "football": {
+     "matches": 30,
+     "standings": false
+    },
+    "basketball": {
+     "matches": 41,
+     "standings": false
+    },
+    "handball": {
+     "matches": 29,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2005-06",
+   "sections": {
+    "basketball": {
+     "matches": 29,
+     "standings": false
+    },
+    "handball": {
+     "matches": 29,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2004-05",
+   "sections": {
+    "basketball": {
+     "matches": 42,
+     "standings": false
+    },
+    "handball": {
+     "matches": 4,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2003-04",
+   "sections": {
+    "basketball": {
+     "matches": 29,
+     "standings": false
+    },
+    "handball": {
+     "matches": 28,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2002-03",
+   "sections": {
+    "basketball": {
+     "matches": 28,
+     "standings": false
+    },
+    "handball": {
+     "matches": 33,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2001-02",
+   "sections": {
+    "basketball": {
+     "matches": 32,
+     "standings": false
+    },
+    "handball": {
+     "matches": 27,
+     "standings": true
+    }
+   }
+  },
+  {
+   "season": "2000-01",
+   "sections": {
+    "basketball": {
+     "matches": 31,
+     "standings": false
+    }
+   }
+  },
+  {
+   "season": "1999-00",
+   "sections": {
+    "basketball": {
+     "matches": 14,
+     "standings": false
+    }
+   }
+  },
+  {
+   "season": "1995-96",
+   "sections": {
+    "basketball": {
+     "matches": 8,
+     "standings": false
+    }
+   }
+  },
+  {
+   "season": "1994-95",
+   "sections": {
+    "basketball": {
+     "matches": 35,
+     "standings": false
+    }
+   }
+  },
+  {
+   "season": "1993-94",
+   "sections": {
+    "basketball": {
+     "matches": 38,
+     "standings": false
+    }
+   }
+  },
+  {
+   "season": "1992-93",
+   "sections": {
+    "basketball": {
+     "matches": 22,
+     "standings": false
+    }
+   }
   }
  ]
 }

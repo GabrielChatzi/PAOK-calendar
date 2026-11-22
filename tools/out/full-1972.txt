@@ -1,0 +1,1106 @@
+{{Infobox football club season
+| club = [[PAOK FC|PAOK]]
+| season = 1972–73
+| stadium = [[Toumba Stadium]]
+| manager = [[Les Shannon]]
+| chrtitle = President
+| chairman =  Stratos Simitzis 
+| league = [[1972–73 Alpha Ethniki|Alpha Ethniki]]
+|league result = ''Runners-up''
+| cup1 = [[1972–73 Greek Football Cup|Greek Cup]]
+| cup1 result = ''Runners-up''
+| cup2 = [[1972–73 UEFA Cup Winners' Cup|UEFA Cup Winners' Cup]]
+| cup2 result = ''First round''
+| cup3 = 
+| cup3 result = 
+| league topscorer = <br>[[Stavros Sarafis]] (19)
+| season topscorer = <br>[[Stavros Sarafis]] (25)
+| highest attendance = 44,486 vs [[Aris Thessaloniki F.C.|Aris]]
+| lowest attendance = 
+| average attendance = 
+| prevseason = [[1971–72 PAOK FC season|1971–72]]
+| nextseason = [[1973–74 PAOK FC season|1973–74]]
+}}
+
+The '''1972–73 season''' was '''[[PAOK FC|PAOK Football Club's]]''' 47th in existence and the club's [[Super League Greece#Seasons in Alpha Ethniki and Super League Greece|14th consecutive season]] in the top flight of Greek football. The team entered the [[Greek Football Cup]] in first round, and also faced [[SK Rapid Wien|Rapid Wien]] in the [[1972–73 UEFA Cup Winners' Cup|UEFA Cup Winners' Cup]] first round.
+
+==Players==
+===Squad===
+{{Fs start|bg=000000|color=FFFFFF}}
+{{Fs player|no= |nat=GRE |pos=GK |name=[[Ioannis Stefas]] }}
+{{Fs player|no= |nat=GRE |pos=GK |name=Savvas Chatzioannou}}
+{{Fs player|no= |nat=GRE |pos=GK |name=Apostolos Savvoulidis}}
+{{Fs break}}
+{{Fs player|no= |nat=GRE |pos=DF |name=[[Kostas Iosifidis]] }}
+{{Fs player|no= |nat=GRE |pos=DF |name=[[Ioannis Gounaris]] }}
+{{Fs player|no= |nat=GRE |pos=DF |name=[[Aristotelis Fountoukidis|Aristos Fountoukidis]] }}
+{{Fs player|no= |nat=GRE |pos=DF |name=Pavlos Papadopoulos }}
+{{Fs player|no= |nat=GRE |pos=DF |name=[[Michalis Bellis]] }}
+{{Fs player|no= |nat=GRE |pos=DF |name=Ioannis Chatziantoniou }}
+{{Fs player|no= |nat=GRE |pos=DF |name=Babis Tsilingiridis }}
+{{Fs player|no= |nat=GRE |pos=DF |name=[[Filotas Pellios]] }}
+{{Fs mid|bg=000000|color=FFFFFF}}
+{{Fs player|no= |nat=GRE |pos=MF |name=[[Giorgos Koudas]]|other=[[Captain (association football)|captain]] }}
+{{Fs player|no= |nat=GRE |pos=MF |name=[[Koulis Apostolidis]] }}
+{{Fs player|no= |nat=GRE |pos=MF |name=[[Stavros Sarafis]] }}
+{{Fs player|no= |nat=GRE |pos=MF |name=[[Christos Terzanidis]] }}
+{{Fs player|no= |nat=GRE |pos=MF |name=Vasilis Lazos }}
+{{Fs player|no= |nat=GRE |pos=MF |name=[[Georgios Paraschos]] }}
+{{Fs break}}
+{{Fs player|no= |nat=GRE |pos=FW |name=[[Achilleas Aslanidis]] }}
+{{Fs player|no= |nat=GRE |pos=FW |name=[[Dimitris Paridis]] }}
+{{Fs player|no= |nat=GRE |pos=FW |name=[[Giannis Mantzourakis]] }}
+{{Fs player|no= |nat=GRE |pos=FW |name=[[:el:Πέτρος Βουζουνεράκης|Petros Vouzounerakis]] }}
+{{Fs player|no= |nat=GRE |pos=FW |name=Lefteris Tsakiropoulos }}
+{{Fs player|no= |nat=GRE |pos=FW |name=Dimitris Stavridis }}
+{{Fs end}}
+
+==Transfers==
+;Players transferred in
+{| class="wikitable plainrowheaders"
+!scope="col" style="width:6em;"|Transfer Window
+!scope="col" style="width:3em;"|{{tooltip|Pos.|Playing position}}
+!scope="col" style="width:12em;"|Name
+!scope="col" style="width:10em;"|Club
+!scope="col" style="width:7em;"|Fee
+|-
+|Summer
+|align="center"|GK
+|{{flagicon|GRE}} [[Ioannis Stefas]]
+|{{flagicon|GRE}} [[Korinthos F.C.|Korinthos]]
+|?
+|-
+|Summer
+|align="center"|DF
+|{{flagicon|GRE}} Babis Tsilingiridis
+|{{flagicon|GRE}} [[Xanthi F.C.|Xanthi]]
+|1 million [[Modern drachma|Dr.]]
+|-
+|Summer
+|align="center"|FW
+|{{flagicon|GRE}} [[:el:Πέτρος Βουζουνεράκης|Petros Vouzounerakis]]
+|{{flagicon|GRE}} [[OFI Crete F.C.|OFI]]
+|?
+|}
+
+==Pre-season==
+{{legend2|#CCFFCC|Win|border=1px solid #AAAAAA}}
+{{legend2|#FFFFCC|Draw|border=1px solid #AAAAAA}}
+{{legend2|#FFCCCC|Loss|border=1px solid #AAAAAA}}
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 20 August 1972
+|time = 
+|team1 = [[Kozani F.C.|Kozani]] 
+|score = 2–2
+|report = 
+|team2 =  [[PAOK FC|PAOK]]
+|goals1 = Poimenidis {{goal|1||67}} 
+|goals2 = [[Koulis Apostolidis|Apostolidis]] {{goal|27}} <br> [[:el:Πέτρος Βουζουνεράκης|Vouzounerakis]] {{goal|83}} 
+|stadium = 
+|location = [[Kozani]]
+|attendance = 
+|referee = 
+|result = D
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 23 August 1972
+|time = 
+|team1 = [[Edessaikos F.C.|Edessaikos]] 
+|score = 1–4
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Doupkaris {{goal|56}} 
+|goals2 = [[Dimitris Paridis|Paridis]] {{goal|24||62}} <br> [[Christos Terzanidis|Terzanidis]] {{goal|29}} <br> [[Koulis Apostolidis|Apostolidis]] {{goal|79}}   
+|stadium = 
+|location = [[Edessa, Greece|Edessa]]
+|attendance = 
+|referee = Doumousiaris
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 24 August 1972
+|time = 
+|team1 = [[Eordaikos 2007 F.C.|Aris Ptolemaida]] 
+|score = 1–3
+|report = 
+|team2 =  [[PAOK FC|PAOK]]
+|goals1 = Tangalidis {{goal|12}} 
+|goals2 =  [[Stavros Sarafis|Sarafis]] {{goal|19}} <br> [[Achilleas Aslanidis|Aslanidis]] {{goal|35|pen.}} <br> [[Dimitris Paridis|Paridis]] {{goal|56}}   
+|stadium = 
+|location = [[Ptolemaida]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 25 August 1972
+|time = 
+|team1 = Lassani 
+|score = 0–4
+|report = 
+|team2 =[[PAOK FC|PAOK]]
+|goals1 =  
+|goals2 =  [[:el:Πέτρος Βουζουνεράκης|Vouzounerakis]] {{goal|25}} <br> Lazos {{goal|32}} <br> [[Dimitris Paridis|Paridis]] {{goal|40||51}}   
+|stadium = 
+|location = [[Kozani]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 29 August 1972
+|time = 
+|team1 = [[PAOK FC|PAOK]] 
+|score = 1–3
+|report = 
+|team2 = [[MTK Budapest FC|MTK]]
+|goals1 = [[Achilleas Aslanidis|Aslanidis]] {{goal|12|pen.}}
+|goals2 = Kunszt {{goal|5}} <br> [[József Becsei|Becsei]] {{goal|50}} <br> [[Lajos Dunai|Dunai]] {{goal|53}}  
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = 
+|result = L
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 31 August 1972
+|time = 
+|team1 = [[Olympiacos F.C.|Olympiacos]] 
+|score = 1–2
+|report = 
+|team2 =  [[PAOK FC|PAOK]]
+|goals1 = Papadimitriou {{goal|40|pen.}} 
+|goals2 =  [[Dimitris Paridis|Paridis]] {{goal|47}} <br> [[:el:Πέτρος Βουζουνεράκης|Vouzounerakis]] {{goal|59}}   
+|stadium = [[Karaiskakis Stadium]]
+|location = [[Piraeus]]
+|attendance = 
+|referee = Levogiannis
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 7 September 1972
+|time = 
+|team1 = [[PAOK FC|PAOK]] 
+|score = 2–0
+|report = 
+|team2 =  [[Komlói Bányász SK]]
+|goals1 = [[Giorgos Koudas|Koudas]] {{goal|47}} <br> [[:el:Πέτρος Βουζουνεράκης|Vouzounerakis]] {{goal|85}} 
+|goals2 =   
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = Pyloridis
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 9 September 1972
+|time = 
+|team1 = [[PAOK FC|PAOK]]
+|score = 3–1
+|report = 
+|team2 =  [[Xanthi F.C.|Xanthi]]
+|goals1 = [[Achilleas Aslanidis|Aslanidis]] {{goal|6}} <br> [[Giorgos Koudas|Koudas]] {{goal|48}} <br> [[Stavros Sarafis|Sarafis]] {{goal|69}} 
+|goals2 = Mourtzas {{goal|16}} 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+==Competitions==
+
+===Overview===
+{{Fb overview
+|c=3
+|c1=[[1972–73 Alpha Ethniki|Alpha Ethniki]] |w1=27 |d1=4 |l1=3 |f1=75 |a1=24
+|c2=[[1972–73 Greek Football Cup|Greek Cup]] |w2=5 |d2=0 |l2=1 |f2=15 |a2=5
+|c3=[[1972–73 UEFA Cup Winners' Cup|UEFA Cup Winners' Cup]] |w3=0 |d3=2 |l3=0 |f3=2 |a3=2
+}}
+
+==Alpha Ethniki==
+{{main article|1972–73 Alpha Ethniki}}
+
+===Standings===
+
+{{:1972–73 Alpha Ethniki|showteam=PAOK}}
+
+====Results summary====
+
+{{Fb_rs |hw=15 |hd=1 |hl=1 |hgf=40 |hga=11 |aw=12 |ad=3 |al=2 |agf=35 |aga=13}}
+{{Fb_rs_footer |u={{Start date|1973|06|03|df=y}} |s=[[#Matches|Competitive matches]] |date=January 2021}}
+
+====Results by round====
+{{#invoke:sports rbr table|table|legendpos=b|header=Round
+
+|label1= Ground
+| res1=[[Toumba Stadium|H]] /[[Trikala Municipal Stadium|A]] /[[Toumba Stadium|H]] /[[Toumba Stadium|H]] /[[Stavros Mavrothalassitis Stadium|A]] /[[Toumba Stadium|H]] /[[Karaiskakis Stadium|A]]  /[[Toumba Stadium|H]] /[[Peristeri Stadium|A]] /[[Toumba Stadium|H]] / [[Kostas Davourlis Stadium|A]] /[[Kavala Stadium|A]] /[[Toumba Stadium|H]] /[[Kalamata Municipal Stadium|A]] /[[Toumba Stadium|H]] / [[Volos Municipal Stadium|A]] /[[Toumba Stadium|H]] /[[GSP Stadium (1902)|A]] /[[Toumba Stadium|H]] /[[Karaiskakis Stadium|A]] /[[Tavros Stadium|A]] /[[Toumba Stadium|H]] /[[Leoforos Stadium|A]] /[[Toumba Stadium|H]] /[[Kaftanzoglio Stadium|A]] /[[Toumba Stadium|H]] /[[Nikos Goumas Stadium|A]] /[[Toumba Stadium|H]] /[[Toumba Stadium|H]] /[[Serres Municipal Stadium|A]] /[[Toumba Stadium|H]] /[[Nea Smyrni Stadium|Α]] /[[Toumba Stadium|H]] /[[Kleanthis Vikelidis Stadium|Α]]
+|label2= Result
+| res2=W /W /W /W /D /W /W /W /W /D /D /W /W /W /W /W /W /W /W /L /L /W /W /W /W /W /W /L /W /W /W /D /W /W 
+|label3= Position
+| res3=3 /2 /1 /1 /1 /1 /1 /1 /1 /1 /1 /1 /1 /1 /1 /1 /1 /1 /1 /1 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 /2 
+<!-- -->
+|text_H=Home|text_A=Away
+|color_W=green2|text_W=Win
+|color_D=yellow2|text_D=Draw
+|color_L=red2|text_L=Loss
+|color_1=1st|color_2=2nd|color_3=3rd|color_18-=red1
+
+|updated=complete
+|source=[[#Matches|League matches]]
+|date=January 2021
+}}
+
+====Matches====
+<ref>{{cite web|title=ΠΑΟΚ–Ομόνοια 3–1 (17/9/1972)|url=https://www.paokmania.gr/stiles/arxeio/aspromavres-istories/132388-me-to-deksi-sto-protathlima-1972-73|language=el|work=paokmania.gr|date=17 September 2017|access-date=26 January 2021}}</ref><ref>{{cite web|title=ΠΑΟΚ–Ηρακλής 4–1 (12/11/1972)|url=https://www.paokmania.gr/stiles/arxeio/aspromavres-istories/135268-tromakse-oli-tin-ellada-o-paok-tou-sanon|language=el|work=paokmania.gr|date=12 November 2020|access-date=26 January 2021}}</ref><ref>{{cite web|title=Καλαμάτα–ΠΑΟΚ 0–3 (31/12/1972)|url=https://www.paokmania.gr/stiles/mme/170334-astrapse-kai-vrontikse-stin-kalamata|language=el|work=paokmania.gr|date=31 December 2019|access-date=26 January 2021}}</ref><ref>{{cite web|title=Ολυμπιακός–ΠΑΟΚ 1–0 (25/2/1973) - Eνα ντέρμπι που έμοιαζε με γουέστερν!|trans-title =A derby like a Western|url=http://www.gazzetta.gr/stili/h-mixani-tou-xronou/article/1051402/ena-ntermpi-poy-emoiaze-me-goyestern-pics|language=el|work=gazzetta.gr|author=Stavros Sountoulidis|date=25 February 2017|access-date=26 January 2021}}</ref><ref>{{cite web|title=ΠΑΟΚ–Παναχαϊκή 3–5 (22/4/1973)|url=http://www.paokmania.gr/stiles/arxeio/aspromavres-istories/123119-i-odyniri-itta-apo-ton-panaxaiki|language=el|work=paokmania.gr|date=22 April 2017|access-date=26 January 2021}}</ref><ref>{{cite web|title=Η δωροδοκία (Το πριμ του Ολυμπιακού στους παίκτες της Παναχαϊκής)|trans-title=The bribery (Olympiacos' bonus to Panachaiki players)|url=https://www.sdna.gr/podosfairo/superleague/article/588841/i-dorodokia|language=el|work=sdna.gr|author=Zastro|date=18 April 2019|access-date=26 January 2021}}</ref><ref>{{cite web|title=Πανιώνιος–ΠΑΟΚ 0–0 (20/5/1973)|url=https://www.paokmania.gr/stiles/mme/176121-piso-apo-tin-isopalia-kryvotan-i-sfagi-1973|language=el|work=paokmania.gr|date=20 May 2020|access-date=26 January 2021}}</ref><ref>{{cite web|title=Αρης–ΠΑΟΚ 1–2 (3/6/1973)|url=https://www.paokmania.gr/stiles/mme/176623-diplo-me-anatropi-sto-xarilaou-1973|language=el|work=paokmania.gr|date=3 June 2020|access-date=26 January 2021}}</ref>
+
+{{legend2|#CCFFCC|Win|border=1px solid #AAAAAA}}
+{{legend2|#FFFFCC|Draw|border=1px solid #AAAAAA}}
+{{legend2|#FFCCCC|Loss|border=1px solid #AAAAAA}}
+
+{{footballbox collapsible
+|round = 1
+|date = 17 September 1972
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 3–1 
+|report =
+|team2 = [[AC Omonia|Omonia]]
+|goals1 = [[Stavros Sarafis|Sarafis]] {{goal|15}} <br> [[Koulis Apostolidis|Apostolidis]] {{goal|82}} <br> [[Achilleas Aslanidis|Aslanidis]] {{goal|90}}
+|goals2 = Charalampous {{goal|3}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 2
+|date = 24 September 1972
+|time = 
+|team1 = [[Trikala F.C.|Trikala]] 
+|score = 0–1
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = 
+|goals2 = [[Giorgos Koudas|Koudas]] {{goal|44}}
+|stadium = [[Trikala Municipal Stadium]]
+|location = [[Trikala]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 3
+|date = 1 October 1972
+|time = 
+|team1 = [[PAOK FC|PAOK]] 
+|score = [[Olympiacos–PAOK rivalry|1–0]]
+|report = 
+|team2 = [[Olympiacos F.C.|Olympiacos]]
+|goals1 = [[Achilleas Aslanidis|Aslanidis]] {{sent off|0|54}} <br> [[Ioannis Gounaris|Gounaris]] {{goal|56}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 42,150
+|referee = Komninakis
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 4
+|date = 8 October 1972
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 3–0 
+|report =
+|team2 = [[Fostiras F.C.|Fostiras]]
+|goals1 = [[Giorgos Koudas|Koudas]] {{goal|12||85}} <br> [[:el:Πέτρος Βουζουνεράκης|Vouzounerakis]] {{goal|25}} 
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 5
+|date = 22 October 1972
+|time = 
+|team1 = [[Egaleo F.C.|Egaleo]] 
+|score = 2–2
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Stavropoulos {{goal|14||36}}
+|goals2 = [[Giorgos Koudas|Koudas]] {{goal|44||82}}
+|stadium = [[Stavros Mavrothalassitis Stadium]]
+|location = [[Athens]]
+|attendance = 
+|referee = 
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 6
+|date = 29 October 1972
+|time = 
+|team1 = [[PAOK FC|PAOK]] 
+|score = [[Panathinaikos–PAOK rivalry|1–0]]
+|report = 
+|team2 = [[Panathinaikos F.C.|Panathinaikos]]
+|goals1 = [[Giorgos Koudas|Koudas]] {{goal|38}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 39,500
+|referee = Latsios
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 7
+|date = 5 November 1972
+|time = 
+|team1 = [[Ethnikos Piraeus F.C.|Ethnikos Piraeus]] 
+|score = 2–3
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Kremmydas {{goal|3}} <br> [[Michalis Kritikopoulos|Kritikopoulos]] {{goal|89}}
+|goals2 = [[Achilleas Aslanidis|Aslanidis]] {{goal|11}} <br> [[Aristotelis Fountoukidis|Fountoukidis]] {{goal|14}} <br> [[Stavros Sarafis|Sarafis]] {{goal|25}}
+|stadium = [[Karaiskakis Stadium]]
+|location = [[Piraeus]]
+|attendance = 23,070
+|referee = Kougias
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 8
+|date = 12 November 1972
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 4–1 
+|report =
+|team2 = [[Iraklis F.C. (Thessaloniki)|Iraklis]]
+|goals1 = [[Giorgos Koudas|Koudas]] {{goal|44}} <br> [[Achilleas Aslanidis|Aslanidis]] {{goal|56}} <br> [[Aristotelis Fountoukidis|Fountoukidis]] {{goal|76}} <br> [[Stavros Sarafis|Sarafis]] {{goal|83}}
+|goals2 = [[Dimitris Gesios|Gesios]] {{goal|85}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 34,902
+|referee = Zlatanos
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 9
+|date = 26 November 1972
+|time = 
+|team1 = [[Atromitos F.C.|Atromitos]] 
+|score = 0–2
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = 
+|goals2 = [[Stavros Sarafis|Sarafis]] {{goal|1}} <br> [[Koulis Apostolidis|Apostolidis]] {{goal|20}} 
+|stadium = [[Peristeri Stadium]] 
+|location = [[Athens]]
+|attendance = 
+|referee = Papavassiliou
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 10
+|date = 3 December 1972
+|time = 
+|team1 = [[PAOK FC|PAOK]] 
+|score = [[Double-headed eagles derby|0–0]]
+|report = 
+|team2 = [[AEK Athens F.C.|AEK Athens]]
+|goals1 = 
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 39,554
+|referee = Marinos
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 11
+|date = 10 December 1972
+|time = 
+|team1 = [[Panachaiki F.C.|Panachaiki]] 
+|score = 2–2
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Kostas Davourlis|Davourlis]] {{goal|29}} <br> [[Andreas Michalopoulos|Michalopoulos]] {{goal|42}}
+|goals2 = [[Stavros Sarafis|Sarafis]] {{goal|27}} <br> [[Giorgos Koudas|Koudas]] {{goal|59}}
+|stadium = [[Kostas Davourlis Stadium]]
+|location = [[Patras]]
+|attendance = 
+|referee = Armodoros
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 12
+|date = 17 December 1972
+|time = 
+|team1 = [[Kavala F.C.|Kavala]] 
+|score = 0–2
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Kopsachilis {{penmiss}} <small>65'</small>
+|goals2 = [[Koulis Apostolidis|Apostolidis]] {{goal|43}} <br> [[Achilleas Aslanidis|Aslanidis]] {{goal|82}}
+|stadium = [[Kavala Stadium]]
+|location = [[Kavala]]
+|attendance = 18,169
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 13
+|date = 24 December 1972
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 2–1 
+|report =
+|team2 = [[Panserraikos F.C.|Panserraikos]]
+|goals1 = [[Giorgos Koudas|Koudas]] {{goal|9||73}} 
+|goals2 = [[Sakis Zarzopoulos|Zarzopoulos]] {{goal|63}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 19,076
+|referee = Latsios
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 14
+|date = 31 December 1972
+|time = 
+|team1 = [[Kalamata F.C.|Kalamata]] 
+|score = 0–3
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = 
+|goals2 = [[Aristotelis Fountoukidis|Fountoukidis]] {{goal|32}} <br> [[Koulis Apostolidis|Apostolidis]] {{goal|77||80}} 
+|stadium = [[Kalamata Municipal Stadium]]
+|location = [[Kalamata]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 15
+|date = 7 January 1973
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 2–1 
+|report =
+|team2 = [[Panionios F.C.|Panionios]]
+|goals1 = [[Stavros Sarafis|Sarafis]] {{goal|18}} <br> [[Achilleas Aslanidis|Aslanidis]] {{goal|90|pen.}}
+|goals2 = Lagos {{goal|39}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = Karvelis
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 16
+|date = 21 January 1973
+|time = 
+|team1 = [[Olympiacos Volos F.C.|Olympiacos Volos]] 
+|score = 1–5
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Valachas {{goal|43}}
+|goals2 = [[Aristotelis Fountoukidis|Fountoukidis]] {{goal|1}} <br> [[Stavros Sarafis|Sarafis]] {{goal|27||52}} <br> [[Koulis Apostolidis|Apostolidis]] {{goal|67}} <br> [[Ioannis Gounaris|Gounaris]] {{goal|82}}
+|stadium = [[Volos Municipal Stadium]]
+|location = [[Volos]]
+|attendance = 9,866
+|referee = Nanos 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 17
+|date = 28 January 1973
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = [[Derby of Thessaloniki|1–0]] 
+|report =
+|team2 = [[Aris Thessaloniki F.C.|Aris]]
+|goals1 = [[Stavros Sarafis|Sarafis]] {{goal|41}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 44,486
+|referee = Alexopoulos
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 18
+|date = 4 February 1973
+|time = 
+|team1 = [[AC Omonia|Omonia]] 
+|score = 1–3
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Mouskos {{goal|38}} 
+|goals2 = [[Koulis Apostolidis|Apostolidis]] {{goal|5}} <br> [[Achilleas Aslanidis|Aslanidis]] {{goal|55}} <br> [[Giorgos Koudas|Koudas]] {{goal|86}}
+|stadium = [[GSP Stadium (1902)]]
+|location = [[Nicosia]]
+|attendance = 11,205
+|referee = Pagourtzis
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 19
+|date = 11 February 1973
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 4–0 
+|report =
+|team2 = [[Trikala F.C.|Trikala]]
+|goals1 = [[Giorgos Koudas|Koudas]] {{goal|41}} <br> [[Koulis Apostolidis|Apostolidis]] {{goal|67||72}} <br> [[Stavros Sarafis|Sarafis]] {{goal|70}} 
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 17,134
+|referee = Tsagarousianos
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 20
+|date = 25 February 1973
+|time = 
+|team1 = [[Olympiacos F.C.|Olympiacos]] 
+|score = [[Olympiacos–PAOK rivalry|1–0]]
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Julio Losada|Losada]] {{goal|75}} 
+|goals2 = 
+|stadium = [[Karaiskakis Stadium]]
+|location = [[Piraeus]]
+|attendance = 41,052
+|referee = Fakis
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 21
+|date = 4 March 1973
+|time = 
+|team1 = [[Fostiras F.C.|Fostiras]] 
+|score = 1–0
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Remoundos {{goal|67}}
+|goals2 = 
+|stadium = [[Tavros Stadium]]
+|location = [[Athens]]
+|attendance = 
+|referee = 
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 22
+|date = 11 March 1973
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 4–1
+|report =
+|team2 = [[Egaleo F.C.|Egaleo]]
+|goals1 = [[Stavros Sarafis|Sarafis]] {{goal|10||28}} <br> [[Koulis Apostolidis|Apostolidis]] {{goal|11}} <br> [[Giorgos Koudas|Koudas]] {{goal|58}}
+|goals2 = Tsalamangas {{goal|48}} 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 23
+|date = 18 March 1973
+|time = 
+|team1 = [[Panathinaikos F.C.|Panathinaikos]] 
+|score = [[Panathinaikos–PAOK rivalry|0–2]] <br><small>([[Walkover|w/o]])</small>
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = 
+|goals2 = 
+|stadium = [[Leoforos Stadium]]
+|location = [[Athens]]
+|attendance = 
+|referee = 
+|result = W
+|note = Panathinaikos were sentenced with a two-match penalty after the eventful derby against Olympiacos on matchday 22 (suspended at 82nd minute). The two teams played a friendly game which ended 3–3.
+}}
+
+{{footballbox collapsible
+|round = 24
+|date = 26 March 1973
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 3–0
+|report =
+|team2 = [[Ethnikos Piraeus F.C.|Ethnikos Piraeus]]
+|goals1 = [[Koulis Apostolidis|Apostolidis]] {{goal|2}} <br> [[Stavros Sarafis|Sarafis]] {{goal|13||65}} 
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 25
+|date = 1 April 1973
+|time = 
+|team1 = [[Iraklis F.C. (Thessaloniki)|Iraklis]]
+|score = 1–3
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Koutroubelis {{goal|2}}
+|goals2 = [[Stavros Sarafis|Sarafis]] {{goal|8}} <br> [[Koulis Apostolidis|Apostolidis]] {{goal|30}} <br> [[Dimitris Paridis|Paridis]] {{goal|79}}
+|stadium = [[Kaftanzoglio Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 26
+|date = 8 April 1973
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 2–1
+|report =
+|team2 = [[Atromitos F.C.|Atromitos]]
+|goals1 = [[Stavros Sarafis|Sarafis]] {{goal|38||87}}
+|goals2 = Tsivgoulis {{goal|64}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 27
+|date = 15 April 1973
+|time = 
+|team1 = [[AEK Athens F.C.|AEK Athens]] 
+|score = [[Double-headed eagles derby|0–2]]
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = 
+|goals2 = [[Stavros Sarafis|Sarafis]] {{goal|48}} <br> [[Koulis Apostolidis|Apostolidis]] {{goal|51}}  
+|stadium = [[Nikos Goumas Stadium]]
+|location = [[Athens]]
+|attendance = 29,654
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 28
+|date = 22 April 1973
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 3–5
+|report =
+|team2 = [[Panachaiki F.C.|Panachaiki]]
+|goals1 = [[Dimitris Paridis|Paridis]] {{goal|41||64}} <br> [[Stavros Sarafis|Sarafis]] {{goal|89|pen.}}
+|goals2 = [[Kostas Davourlis|Davourlis]] {{goal|30||61||82}} <br> [[Vassilis Stravopodis|Stravopodis]] {{goal|47}} <br> [[Manolis Pappas|Pappas]] {{goal|87}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 32,015
+|referee = Armodoros
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 29
+|date = 30 April 1973
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 3–0
+|report =
+|team2 = [[Kavala F.C.|Kavala]]
+|goals1 = Lazos {{goal|48}} <br> [[Koulis Apostolidis|Apostolidis]] {{goal|54}} <br> [[Dimitris Paridis|Paridis]] {{goal|74}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 30
+|date = 6 May 1973
+|time = 
+|team1 = [[Panserraikos F.C.|Panserraikos]] 
+|score = 1–3
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Balabanidis {{goal|90}}
+|goals2 = [[Achilleas Aslanidis|Aslanidis]] {{goal|9|pen.}} <br> [[Giorgos Koudas|Koudas]] {{goal|80}} <br> [[Christos Terzanidis|Terzanidis]] {{goal|89}}
+|stadium = [[Serres Municipal Stadium]]
+|location = [[Serres]]
+|attendance = 11,049 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 31
+|date = 13 May 1973
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 3–0
+|report =
+|team2 = [[Kalamata F.C.|Kalamata]]
+|goals1 = [[Dimitris Paridis|Paridis]] {{goal|44|pen.|60||90}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 32
+|date = 20 May 1973
+|time = 
+|team1 = [[Panionios F.C.|Panionios]] 
+|score = 0–0
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = 
+|goals2 = 
+|stadium = [[Nea Smyrni Stadium]]
+|location = [[Athens]]
+|attendance = 15,844
+|referee = Papavassiliou
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 33
+|date = 27 May 1973
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 1–0
+|report =
+|team2 = [[Olympiacos Volos F.C.|Olympiacos Volos]]
+|goals1 = [[Koulis Apostolidis|Apostolidis]] {{goal|8}} 
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 10,819
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 34
+|date = 3 June 1973
+|time = 
+|team1 = [[Aris Thessaloniki F.C.|Aris]] 
+|score = [[Derby of Thessaloniki|1–2]]
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Kapernekas {{goal|26|pen.}}
+|goals2 = [[Michalis Bellis|Bellis]] {{sent off|0|30}} <br> [[Dimitris Paridis|Paridis]] {{goal|36||86}}
+|stadium = [[Kleanthis Vikelidis Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 22,648
+|referee = Vamvakopoulos
+|result = W
+}}
+
+==Greek Cup==
+{{main|1972–73 Greek Football Cup}}
+
+===First round===
+
+{{footballbox collapsible
+|date = 6 December 1972
+|time = 
+|team1 = [[:el:Αναγέννηση Επανομής|Anagennisi Epanomi]] 
+|score = 0–3
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = 
+|goals2 = [[Giorgos Koudas|Koudas]] {{goal|40}} <br> [[Achilleas Aslanidis|Aslanidis]] {{goal|44}} <br> [[Aristotelis Fountoukidis|Fountoukidis]] {{goal|65}} 
+|stadium = [[Kalamaria Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+===Second round===
+<ref>{{cite web|title=ΠΑΟΚ–Ολυμπιακός Βόλου 5–1 (Κύπελλο)|url=https://www.paokmania.gr/stiles/arxeio/aspromavres-istories/116302-podariko-me-to-deksi-ton-genari-tou-1973|language=el|work=paokmania.gr|date=3 January 2017|access-date=17 February 2021}}</ref>
+
+{{footballbox collapsible
+|date = 3 January 1973
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 5–1
+|report =
+|team2 = [[Olympiacos Volos F.C.|Olympiacos Volos]]
+|goals1 = [[Achilleas Aslanidis|Aslanidis]] {{goal|12||24}} <br> [[Stavros Sarafis|Sarafis]] {{goal|50||58}} <br> [[Dimitris Paridis|Paridis]] {{goal|85}}
+|goals2 = Papadopoulos {{goal|16|o.g.}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 5,836
+|referee = 
+|result = W
+}}
+
+===Third round===
+
+{{footballbox collapsible
+|date = 7 February 1973
+|time = 
+|team1 = [[Fostiras F.C.|Fostiras]] 
+|score = 1–2 
+|aet = yes
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Deimezis {{goal|83}}
+|goals2 = [[Koulis Apostolidis|Apostolidis]] {{goal|53}} <br> [[Stavros Sarafis|Sarafis]] {{goal|106}}
+|stadium = [[Tavros Stadium]]
+|location = [[Athens]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+===Quarter–finals===
+
+{{footballbox collapsible
+|date = 18 April 1973
+|time = 
+|team1 = [[PAOK FC|PAOK]] 
+|score = [[Panathinaikos–PAOK rivalry|2–0]]
+|report = 
+|team2 = [[Panathinaikos F.C.|Panathinaikos]]
+|goals1 = [[Dimitris Paridis|Paridis]] {{goal|26||34}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance =
+|referee = 
+|result = W
+}}
+
+===Semi–finals===
+
+{{footballbox collapsible
+|date = 23 May 1973
+|time = 
+|team1 = [[PAOK FC|PAOK]] 
+|score = 3–2 
+|aet = yes
+|report = 
+|team2 = [[Ethnikos Piraeus F.C.|Ethnikos Piraeus]]
+|goals1 = [[Stavros Sarafis|Sarafis]] {{goal|57||112}} <br> [[Christos Terzanidis|Terzanidis]] {{goal|98}} 
+|goals2 = [[Michalis Kritikopoulos|Kritikopoulos]] {{goal|30}} <br> Moutafis {{goal|119}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = Kougias
+|result = W
+}}
+
+===Final===
+{{main|1973 Greek Football Cup final}}
+<ref>{{cite web|title=1973 Greek Cup final Olympiacos–PAOK 1–0 (17/6/1973)|url=https://www.inpaok.com/443862/1973-ήθελε-το-repeat-o-παοκ-αλλά/|language=el|work=inpaok.com|author=Manos Tsalgatidis|date=30 April 2018|access-date=26 January 2021}}</ref>
+
+{{footballbox collapsible
+|date = 17 June 1973
+|time = 
+|team1 = [[Olympiacos F.C.|Olympiacos]] 
+|score = [[Olympiacos–PAOK rivalry|1–0]]
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Angelis {{goal|46}}
+|goals2 = 
+|stadium = [[Karaiskakis Stadium]]
+|location = [[Piraeus]]
+|attendance = 40,070
+|referee = Vital Loraux ([[Royal Belgian Football Association|Belgium]])
+|result = L
+}}
+
+==UEFA Cup Winners' Cup==
+{{main article|1972–73 UEFA Cup Winners' Cup}}
+
+===First round===
+{{main article|1972–73 UEFA Cup Winners' Cup#First round|l1=First round}}
+
+<ref>{{cite web|title=Τα παιχνίδια με τη Ραπίντ...|trans-title =The matches against Rapid Wien|url=https://www.paokmania.gr/stiles/arxeio/aspromavres-istories/32378-τα-παιχνίδι-με-τη-ραπίντ|language=el|work=paokmania.gr|date=11 August 2012|access-date=26 January 2021}}</ref>
+
+{{football box collapsible
+|round = [[1972–73 UEFA Cup Winners' Cup#First round|1st leg]]
+|date = 12 September 1972
+|time = 
+|team1 = [[SK Rapid Wien|Rapid Wien]] {{flagicon|AUT}} 
+|score = 0–0
+|report = https://web.archive.org/web/20140317224403/http://www.sharkscores.com/Match/Default.aspx?id=808548
+|team2 = {{flagicon|GRE|old}} [[PAOK FC|PAOK]] 
+|goals1 = 
+|goals2 =
+|stadium = [[Prater stadion]]
+|location = [[Wienna]], [[Austria]]
+|attendance = 
+|referee = [[Francesco Francescon]] ([[Italian Football Federation|Italy]])
+|result = D
+}}
+
+{{football box collapsible
+|round = [[1972–73 UEFA Cup Winners' Cup#First round|2nd leg]]
+|date = 26 September 1972
+|time = 
+|team1 = [[PAOK FC|PAOK]] {{flagicon|GRE|old}}
+|score = 2–2
+|aggregatescore = 2–2 ([[Away goals rule|a]])
+|report = https://web.archive.org/web/20140317212548/http://www.sharkscores.com/Match/Default.aspx?id=808549
+|team2 = {{flagicon|AUT}} [[SK Rapid Wien|Rapid Wien]]
+|goals1 = [[Stavros Sarafis|Sarafis]] {{goal|32|pen.}} <br> [[Giorgos Koudas|Koudas]] {{sent off|0|79}} <br> [[Achilleas Aslanidis|Aslanidis]] {{goal|90}} 
+|goals2 = [[Geza Gallos|Gallos]] {{goal|23}} <br> [[Hans Krankl|Krankl]] {{goal|43}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]], [[Greece]]
+|attendance = 32,420
+|referee = [[Károly Palotai]] ([[Hungarian Football Federation|Hungary]])
+|result = D
+}}
+
+==Statistics==
+
+===Squad statistics===
+{{Efs start3 |updated=June 18, 1973 |c1=[[1972–73 Alpha Ethniki|Alpha Ethniki]] |c2=[[1972–73 Greek Football Cup|Greek Cup]]|c3=[[1972–73 UEFA Cup Winners' Cup|UEFA CWC]]}}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Goalkeepers
+|-
+{{Efs player3|no= |nat=GRE|name=[[Ioannis Stefas]] |24|0|0 |5|0|0 |1|0|0 }}
+{{Efs player3|no= |nat=GRE|name=Savvas Chatzioannou |7|0|0 |0|0|0 |0|0|0 }}
+{{Efs player3|no= |nat=GRE|name=Apostolos Savvoulidis |4|0|0 |1|0|0 |1|0|0 }}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Defenders
+|-
+{{Efs player3|no= |nat=GRE|name=[[Ioannis Gounaris]] |32|0|2 |6|0|0 |2|0|0 }}	
+{{Efs player3|no= |nat=GRE|name=[[Aristotelis Fountoukidis|Aristos Fountoukidis]] |29|0|4 |6|0|1 |2|0|0 }}
+{{Efs player3|no= |nat=GRE|name=Pavlos Papadopoulos | 27|0|0 |4|0|0 |2|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Kostas Iosifidis]] |25|0|0 |5|0|0 |2|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Michalis Bellis]] |19|0|0 |2|0|0 |1|0|0 }}
+{{Efs player3|no= |nat=GRE|name=Ioannis Chatziantoniou | 18|0|0 |2|0|0 |0|0|0 }}
+{{Efs player3|no= |nat=GRE|name=Babis Tsilingiridis | 10|0|0 |2|0|0 |0|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Filotas Pellios]] |3|0|0 |1|0|0 |0|0|0 }}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Midfielders
+|-
+{{Efs player3|no= |nat=GRE|name=[[Koulis Apostolidis]] |33|0|15 |5|0|1 |2|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Giorgos Koudas]] |31|0|14 |5|0|1 |1|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Christos Terzanidis]] |29|0|1 |6|0|1 |2|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Stavros Sarafis]] |28|0|19 |6|0|5 |1|0|1 }}
+{{Efs player3|no= |nat=GRE|name=Vasilis Lazos | 17|0|1 |5|0|0 |1|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Georgios Paraschos]] | 6|0|0 |0|0|0 |0|0|0 }}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Forwards
+|-
+{{Efs player3|no= |nat=GRE|name=[[Achilleas Aslanidis]] |27|0|7 |6|0|3 |2|0|1 }}
+{{Efs player3|no= |nat=GRE|name=[[Dimitris Paridis]] | 22|0|9 |6|0|3 |2|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Giannis Mantzourakis]] |6|0|0 |2|0|0 |0|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[:el:Πέτρος Βουζουνεράκης|Petros Vouzounerakis]] |4|0|1 |0|0|0 |0|0|0 }}
+{{Efs player3|no= |nat=GRE|name=Lefteris Tsakiropoulos |3|0|0 |0|0|0 |0|0|0 }}
+{{Efs player3|no= |nat=GRE|name=Dimitris Stavridis |1|0|0 |0|0|0 |0|0|0 }}	
+|}
+
+Source: Match reports in [[#Competitions|competitive matches]], [https://www.rsssf.org/tablesg/grk73.html RSSSF]
+
+===Goalscorers===
+{| class="wikitable sortable" style="text-align:center" 
+|-
+!width=5|{{Abbr| Rank | Ranking }}
+!width=5|{{Abbr| No. | Squad Number }}
+!width=5|{{Abbr| Pos. | Position }}
+!width=180|Player
+!width=30|[[1972–73 Alpha Ethniki|Alpha Ethniki]]
+!width=30|[[1972–73 Greek Football Cup|Greek Cup]]
+!width=30|[[1972–73 UEFA Cup Winners' Cup|UEFA CWC]]
+!width=50|Total 
+|-
+|-
+|1||||MF||align=left|{{flagicon|GRE}} [[Stavros Sarafis]]||19||5||1||'''25'''
+|-
+|2||||MF||align=left|{{flagicon|GRE}} [[Koulis Apostolidis]]||15||1||0||'''16'''
+|-
+|3||||MF||align=left|{{flagicon|GRE}} [[Giorgos Koudas]]||14||1||0||'''15'''
+|-
+|4||||FW||align=left|{{flagicon|GRE}} [[Dimitris Paridis]]||9||3||0||'''12'''
+|-
+|5||||FW||align=left|{{flagicon|GRE}} [[Achilleas Aslanidis]]||7||3||1||'''11'''
+|-
+|6||||DF||align=left|{{flagicon|GRE}} [[Aristotelis Fountoukidis|Aristos Fountoukidis]]||4||1||0||'''5'''
+|-
+|rowspan=2|7||||DF||align=left|{{flagicon|GRE}} [[Ioannis Gounaris]]||2||0||0||'''2'''
+|-
+| |||MF||align=left|{{flagicon|GRE}} [[Christos Terzanidis]]||1||1||0||'''2'''
+|-
+|rowspan=2|9||||FW||align=left|{{flagicon|GRE}} [[:el:Πέτρος Βουζουνεράκης|Petros Vouzounerakis]]||1||0||0||'''1'''
+|-
+| |||MF||align=left|{{flagicon|GRE}} Vasilis Lazos||1||0||0||'''1'''
+|-
+|colspan="4"|Walkover||2||0||0||'''2'''
+|- bgcolor="#EFEFEF"
+|colspan=4|'''TOTALS'''
+|'''75'''||'''15'''||'''2'''||'''92'''	
+|}
+
+Source: Match reports in [[#Competitions|competitive matches]], [https://www.rsssf.org/tablesg/grk73.html RSSSF]
+
+==External links==
+* [https://www.rsssf.org/tablesg/grk73.html RSSSF]
+* [http://www.paokfc.gr/ PAOK FC official website]
+
+== References ==
+{{Reflist}}
+
+{{PAOK FC seasons}}
+{{1972–73 in Greek football}}
+
+{{DEFAULTSORT:1972-73 PAOK FC season}}
+[[Category:PAOK FC seasons]]
+[[Category:Greek football clubs 1972–73 season|PAOK]]

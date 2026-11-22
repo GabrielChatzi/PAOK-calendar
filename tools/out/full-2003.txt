@@ -1,0 +1,1149 @@
+{{unreferenced|date=September 2017}}
+{{Infobox football club season
+| club               = [[PAOK FC|PAOK]]
+| season             = 2003–04
+| manager            = [[Angelos Anastasiadis]]
+| chairman           =  Giannis Goumenos
+| league             = [[2003–04 Alpha Ethniki|Alpha Ethniki]]
+| league result      = 3rd
+| cup1               = [[2003–04 Greek Football Cup|Greek Cup]]
+| cup1 result        = Third round
+| cup2               = [[2003–04 UEFA Cup|UEFA Cup]]
+| cup2 result        = Second round
+| cup3               = 
+| cup3 result        = 
+| league topscorer   = <br> [[Dimitris Salpingidis]] (16)
+| season topscorer   = <br> Dimitris Salpingidis (18)
+| stadium             = [[Toumba Stadium]]
+| highest attendance = 
+| lowest attendance  = 
+| pattern_la1      = _adidasstripeswhite
+| pattern_b1       = _paok0304h
+| pattern_ra1      = _adidasstripeswhite
+| pattern_sh1      = _1FFCfrankfurt06
+| pattern_so1      = _color_3_stripes_white
+| leftarm1         = 000000
+| body1            = 000000
+| rightarm1        = 000000
+| shorts1          = 000000
+| socks1           = 000000
+| pattern_la2      = _adidasblack
+| pattern_b2       = _paok0304a
+| pattern_ra2      = _adidasblack
+| pattern_sh2      = _adidasblack
+| pattern_so2      = _color_3_stripes_black
+| leftarm2         = FFFFFF
+| body2            = FFFFFF
+| rightarm2        = FFFFFF
+| shorts2          = FFFFFF
+| socks2           = FFFFFF
+| pattern_la3      = 
+| pattern_b3       = 
+| pattern_ra3      = 
+| pattern_sh3      = 
+| pattern_so3      = 
+| leftarm3         = 
+| body3            = 
+| rightarm3        = 
+| shorts3          = 
+| socks3           = 
+| prevseason = [[2002–03 PAOK FC season|2002–03]]
+| nextseason = [[2004–05 PAOK FC season|2004–05]]
+}}
+
+The '''2003–04 season''' was '''[[PAOK FC|PAOK Football Club's]]''' 78th in existence and the club's [[Super League Greece#Seasons in Alpha Ethniki and Super League Greece|45th consecutive season]] in the top flight of Greek football. The team will enter the [[Greek Football Cup]] in the First round and will also enter in [[2003–04 UEFA Cup|UEFA Cup]]  starting from the First round.
+
+==Players==
+===Squad===
+{{Fs start|bg=000000|color=FFFFFF}}
+{{Fs player|no=1  |nat=GRE |pos=GK |name=[[Ilias Atmatsidis]]}}
+{{Fs player|no=15 |nat=GRE |pos=GK |name=[[Vangelis Pourliotopoulos]]}}
+{{Fs player|no=29 |nat=GRE |pos=GK |name=[[Kostas Andriopoulos]]}}
+{{Fs player|no=33 |nat=GRE |pos=GK |name=[[Kyriakos Tohouroglou]] }}
+{{Fs player|no=50 |nat=GRE |pos=GK |name=[[Christos Lambakis]] }}
+{{Fs player|no=55 |nat=POR |pos=GK |name=[[Daniel Fernandes (footballer)|Daniel Fernandes]]|}}
+{{Fs break}}
+{{Fs player|no=3  |nat=GRE |pos=DF |name=[[Vangelis Koutsopoulos]] }}
+{{Fs player|no=4  |nat=GRE |pos=DF |name=[[Leonidas Vokolos]] }}
+{{Fs player|no=5  |nat=GRE |pos=DF |name=[[Vaggelis Nastos]] }}
+{{Fs player|no=16 |nat=GRE |pos=DF |name=[[Fotis Kiskabanis]] }}
+{{Fs player|no=23 |nat=GRE |pos=DF |name=[[Dionysis Chasiotis]] }}
+{{Fs player|no=24 |nat=NGA |pos=DF |name=[[Ifeanyi Udeze]] }}
+{{Fs player|no=26 |nat=GRE |pos=DF |name=[[Giorgos Zisopoulos]] }}
+{{Fs player|no=32 |nat=GRE |pos=DF |name=[[Christos Karipidis]] }}
+{{Fs player|no=99 |nat=GRE |pos=DF |name=[[Petros Konteon]] }}
+{{Fs break}}
+{{Fs player|no=5  |nat=GRE |pos=MF |name=[[Christos Maladenis]] }}
+{{Fs player|no=6  |nat=GRE |pos=MF |name=[[Dimitris Markos]] }}
+{{Fs player|no=8  |nat=GRE |pos=MF |name=[[Dimitris Zavadias]] }}
+{{Fs player|no=13 |nat=GRE |pos=MF |name=[[Giorgos Theodoridis]]}}
+{{Fs mid|bg=000000|color=FFFFFF}}
+{{Fs player|no=14 |nat=GRE |pos=MF |name=[[Giorgos Koutsis]] }}
+{{Fs player|no=16 |nat=NGA |pos=MF |name=[[Napoleon Amaefule]] }}
+{{Fs player|no=18 |nat=GRE |pos=MF |name=[[Lambros Vangelis]] }}
+{{Fs player|no=19 |nat=GRE |pos=MF |name=[[Ilias Eleftheriadis]] }}
+{{Fs player|no=20 |nat=SCG |pos=MF |name=[[Sladan Spasic]] }}
+{{Fs player|no=21 |nat=GRE |pos=MF |name=[[Loukas Karadimos]] }}
+{{Fs player|no=22|nat=Cameroon |pos=MF |name=[[Guy Feutchine]] }}
+{{Fs player|no=28 |nat=CYP |pos=MF |name=[[Alexandros Garpozis]] }}
+{{Fs player|no=30 |nat=CYP |pos=MF |name=[[Panagiotis Engomitis]] }}
+{{Fs player|no=44 |nat=GHA |pos=MF |name=[[Ebenezer Hagan]] }}
+{{Fs player|no=80 |nat=CYP |pos=MF |name=[[Liasos Louka]] }}
+{{Fs player|no=84 |nat=GRE |pos=MF |name=[[Georgios Makris]] }}
+{{Fs player|no=88 |nat=GRE |pos=MF |name=[[Ryan Kapagiannidis]] }}
+{{Fs break}}
+{{Fs player|no=7  |nat=CYP |pos=FW |name=[[Stefanos Voskaridis]] }}
+{{Fs player|no=9  |nat=GRE |pos=FW |name=[[Dimitris Salpingidis]] }}
+{{Fs player|no=11 |nat=CYP |pos=FW |name=[[Yiasoumis Yiasoumi]] }}
+{{Fs player|no=25 |nat=NGA |pos=FW |name=[[Thankgod Amaefule]] }}
+{{Fs player|no=27 |nat=GRE |pos=FW |name=[[Christos Balodimos]] }}
+{{Fs player|no=31 |nat=GRE |pos=FW |name=[[Michalis Giannitsanakis]] }}
+{{Fs end}}
+
+==Transfers==
+
+;Players transferred in
+{| class="wikitable plainrowheaders"
+!scope="col" style="width:6em;"|Transfer Window
+!scope="col" style="width:3em;"|{{tooltip|Pos.|Playing position}}
+!scope="col" style="width:12em;"|Name
+!scope="col" style="width:13em;"|Club
+!scope="col" style="width:8em;"|Fee
+|-
+|Summer
+|align="center"|DF
+|{{flagicon|NGA}} [[Ifeanyi Udeze]]
+|{{flagicon|ENG}} [[West Bromwich Albion F.C.|West Brom]]
+|End of loan
+|-
+|Summer
+|align="center"|FW
+|{{flagicon|GRE}} [[Michalis Giannitsanakis|M. Giannitsanakis]]
+|{{flagicon|GRE}}  Aris Soudas
+|Free
+|-
+|Summer
+|align="center"|FW
+|{{flagicon|NGA}} [[Thankgod Amaefule]]
+|{{flagicon|POL}} [[Okęcie Warszawa]]
+|Free
+|-
+|Summer
+|align="center"|FW
+|{{flagicon|GRE}} [[Christos Balodimos]]
+|{{flagicon|GRE}} Iraklis K20
+|Free
+|-
+|Summer
+|align="center"|MF
+|{{flagicon|GHA}} [[Ebenezer Hagan]]
+|{{flagicon|GRE}} [[Iraklis F.C. (Thessaloniki)|Iraklis]]
+|Free
+|-
+|Summer
+|align="center"|MF
+|{{flagicon|GRE}} [[Lambros Vangelis]]
+|{{flagicon|ITA}} [[S.S. Robur Siena|Siena]]
+|Free
+|-
+|Summer
+|align="center"|DF
+|{{flagicon|GRE}} [[Leonidas Vokolos]]
+|{{flagicon|GRE}} [[Panathinaikos F.C.|Panathinaikos]]
+|Free
+|-
+|Summer
+|align="center"|MF
+|{{flagicon|Nigeria}} [[Napoleon Amaefule]]
+|{{flagicon|POL}} [[Polonia Warsaw]]
+|Free
+|-
+|Summer
+|align="center"|DF
+|{{flagicon|GRE}} [[Stelios Malezas]]
+|{{flagicon|GRE}} [[Pontioi Katerini F.C.|Pontioi Katerini]]
+|50K
+|-
+|Summer
+|align="center"|DF
+|{{flagicon|GRE}} [[Christos Karipidis]]
+|{{flagicon|GRE}} [[PAE Kerkyra|Kerkyra]]
+|End of loan
+|-
+|Winter
+|align="center"|MF
+|{{flagicon|CYP}} [[Liasos Louka]]
+|{{flagicon|CYP}} [[Nea Salamis Famagusta FC|Nea Salamis]]
+|150K
+|-
+|Winter
+|align="center"|GK
+|{{flagicon|POR}} [[Daniel Fernandes (footballer)|Daniel Fernandes]]
+|{{flagicon|ESP}} [[Celta de Vigo B]]
+|Free
+|-
+|Winter
+|align="center"|MF
+|{{flagicon|CYP}} [[Alexandros Garpozis]]
+|{{flagicon|CYP}} [[AEL Limassol]]
+|Free
+|-
+|Winter
+|align="center"|DF
+|{{flagicon|GRE}} [[Giorgos Zisopoulos]]
+|{{flagicon|GRE}} [[Aris Thessaloniki F.C.|Aris]]
+|Free
+|-
+|Winter
+|align="center"|GK
+|{{flagicon|GRE}} [[Christos Lambakis]]
+|{{flagicon|GRE}} [[Aris Thessaloniki F.C.|Aris]]
+|Free
+|-
+|Winter
+|align="center"|MF
+|{{flagicon|GRE}} [[Christos Maladenis]]
+|{{flagicon|GRE}} [[AEK Athens F.C.|AEK Athens]]
+|Free
+|}
+
+;Players transferred out
+{| class="wikitable plainrowheaders"
+!scope="col" style="width:6em;"|Transfer Window
+!scope="col" style="width:3em;"|{{tooltip|Pos.|Playing position}}
+!scope="col" style="width:12em;"|Name
+!scope="col" style="width:13em;"|Club
+!scope="col" style="width:8em;"|Fee
+|-
+|Summer
+|align="center"|MF
+|{{flagicon|GRE}} [[Georgios Georgiadis (footballer, born 1972)|Georgios Georgiadis]]
+|{{flagicon|GRE}} [[Olympiacos F.C.|Olympiacos]]
+|Free
+|-
+|Summer
+|align="center"|MF
+|{{flagicon|GRE}} [[Pantelis Kafes]]
+|{{flagicon|GRE}} [[Olympiacos F.C.|Olympiacos]]
+|Free
+|-
+|Summer
+|align="center"|FW
+|{{flagicon|GRE}} [[Nikolaos Frousos]]
+|{{flagicon|GRE}} [[Ionikos F.C.|Ionikos]]
+|Free
+|-
+|Summer
+|align="center"|FW
+|{{flagicon|GRE}} [[Ioannis Okkas]]
+|{{flagicon|GRE}} [[AEK Athens F.C.|AEK Athens]]
+|Free
+|-
+|Summer
+|align="center"|DF
+|{{flagicon|GHA}} [[Koffi Amponsah]]
+|{{flagicon|GRE}} [[AEK Athens F.C.|AEK Athens]]
+|Free
+|-
+|Summer
+|align="center"|MF
+|{{flagicon|POL}} [[Mariusz Kukiełka]]
+|{{flagicon|GER}} [[1. FC Nürnberg|Nürnberg]]
+|Free
+|-
+|Summer
+|align="center"|DF
+|{{flagicon|GRE}} [[Petros Kanakoudis]]
+|{{flagicon|GRE}} [[ILTEX Lykoi F.C.|ILTEX Lykoi]]
+|Free
+|-
+|Summer
+|align="center"|MF
+|{{flagicon|FRA}} [[Aboubacar Fofana (French footballer)|Aboubacar Fofana]]
+|{{flagicon|ITA}} [[Juventus FC|Juventus]]
+|End of Loan
+|-
+|Winter
+|align="center"|DF
+|{{flagicon|GRE}} [[Vaggelis Nastos]]
+|{{flagicon|ITA}} [[A.C. Perugia Calcio|Perugia]]
+|Free
+|-
+|Winter
+|align="center"|MF
+|{{flagicon|NGA}} [[Napoleon Amaefule]]
+|{{flagicon|NGA}} [[Shooting Stars S.C.|Shooting Stars]]
+|Free
+|}
+
+==Competitions==
+
+===Overview===
+{{Fb overview
+|c=3
+|c1=[[2003–04 Alpha Ethniki|Alpha Ethniki]] |w1=18 |d1=6 |l1=6 |f1=47 |a1=27
+|c2=[[2003–04 Greek Football Cup|Greek Cup]] |w2=2 |d2=3 |l2=1 |f2=7 |a2=4
+|c3=[[2003–04 UEFA Cup|UEFA Cup]] |w3=1 |d3=2 |l3=1 |f3=4 |a3=2
+}}
+
+==Alpha Ethniki==
+{{main|2003–04 Alpha Ethniki}}
+
+===League table===
+{{:2003–04 Alpha Ethniki|showteam=PAOK}}
+
+====Results summary====
+{{Fb_rs |hw=10 |hd=3 |hl=2 |hgf=27 |hga=11 |aw=8 |ad=3 |al=4 |agf=20 |aga=16}}
+{{Fb_rs_footer |u={{Start date|2004|05|22|df=y}} |s=[[#Matches|Competitive matches]] |date=March 2017}}
+
+====Results by round====
+{{#invoke:sports rbr table|table|legendpos=b|header=Round
+
+|label1= Ground
+| res1=[[Toumba Stadium|H]] /[[Toumba Stadium|H]] /[[Yiannis Pathiakakis Stadium|A]] /[[Toumba Stadium|H]] /[[Pyrgos Stadium|A]] /[[Toumba Stadium|H]] /[[Theodoros Vardinogiannis Stadium|A]] /[[Toumba Stadium|H]] /[[Yiannis Pathiakakis Stadium|A]] /[[Neapoli Stadium|A]] /[[Toumba Stadium|H]] /[[Leoforos Alexandras Stadium|A]] /[[Toumba Stadium|H]] /[[Nikaia Stadium|A]] /[[Toumba Stadium|H]] /[[Karaiskakis Stadium|A]] /[[Stavros Mavrothalassitis Stadium|A]] /[[Toumba Stadium|H]] /[[Nikaia Municipal Gymnasium|A]] /[[Toumba Stadium|H]] /[[Xanthi Ground|A]] /[[Toumba Stadium|H]] /[[Grigoris Lambrakis Stadium|A]] /[[Toumba Stadium|H]] /[[Toumba Stadium|H]] /[[Makedonikos Stadium|A]] /[[Toumba Stadium|H]] /[[Nea Smyrni Stadium|A]] /[[Toumba Stadium|H]] /[[Kleanthis Vikelidis Stadium|A]] 
+|label2= Result
+| res2=L /W /W /D /W /D /W /W /L /W /W /L /W /W /W /W /D /D /W /W /D /W /W /W /W /L /L /L /W /D  
+|label3= Position
+| res3=15 /8 /4 /6 /3 /4 /4 /3 /3 /3 /3 /4 /4 /4 /3 /3 /3 /3 /3 /3 /3 /3 /3 /3 /3 /3 /3 /3 /3 /3  
+<!-- -->
+|text_H=Home|text_A=Away
+|color_W=green2|text_W=Win
+|color_D=yellow2|text_D=Draw
+|color_L=red2|text_L=Loss
+|color_1=1st|color_2=2nd|color_3=3rd|color_15-=red1
+
+|updated=complete
+|source=[[#Matches|League matches]]
+|date=March 2017
+}}
+
+====Matches====
+{{legend2|#CCFFCC|Win|border=1px solid #AAAAAA}}
+{{legend2|#FFFFCC|Draw|border=1px solid #AAAAAA}}
+{{legend2|#FFCCCC|Loss|border=1px solid #AAAAAA}}
+{{footballbox collapsible
+
+|round = 1
+|date = 24 August 2003
+|time = 18:15 [[Eastern European Time|EET]]
+|team1 = [[PAOK FC|PAOK]]
+|score =0–2 
+|report =
+|team2 = [[Olympiacos F.C.|Olympiacos]]
+|goals1 = {{penmiss}} <small>66'</small> [[Yiasoumis Yiasoumi]]
+|goals2 = {{goal|18}} [[Georgios Georgiadis (footballer, born 1972)|Georgios Georgiadis]] <br>{{goal|76}} [[Pantelis Kafes]]
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = Cl. doors
+|referee = 
+|result =L
+}}
+
+{{footballbox collapsible
+|round = 2
+|date = 31 August 2003
+|time = 18:15 [[Eastern European Time|EET]]
+|team1 = [[PAOK FC|PAOK]]
+|score =2–0 
+|report = 
+|team2 = [[Egaleo F.C.|Egaleo]]
+|goals1 = [[Panagiotis Engomitis]] {{goal|24}} <br>[[Dimitris Salpingidis]] {{goal|77}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance =7.368
+|referee = 
+|result =W
+}}
+
+{{footballbox collapsible
+|round = 3
+|date = 14 September 2003
+|time = 18:00 [[Eastern European Time|EET]]
+|team1 = [[Akratitos F.C.|Akratitos]]
+|score = 1–2
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Panagiotis Gitsis]] {{goal|88}}
+|goals2 = {{goal|22}} [[Guy Feutchine]] <br>{{goal|87}} [[Panagiotis Engomitis]]
+|stadium = [[Yiannis Pathiakakis Stadium]]
+|location   = [[Athens]]
+|attendance = 2.180
+|referee = 
+|result =W
+}}
+
+{{footballbox collapsible
+|round = 4
+|date = 21 September 2003
+|time =18:00 [[Eastern European Time|EET]]
+|team1 = [[PAOK FC|PAOK]]
+|score =0–0
+|report = 
+|team2 = [[Proodeftiki F.C.|Proodeftiki]]
+|goals1 =
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 6.166
+|referee =
+|result =D
+}}
+
+{{footballbox collapsible
+|round = 5
+|date = 28 September 2003
+|time = 16:00 [[Eastern European Time|EET]]
+|team1 = [[Paniliakos F.C.|Paniliakos]]
+|score = 1–4
+|report =
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Athanasios Tsigas]] {{goal|90}}
+|goals2 = {{goal|18}} [[Dimitris Markos]]<br>{{goal|21||87|}} [[Dimitris Salpingidis]]<br>{{goal|60}} [[Panagiotis Engomitis]]
+|stadium = [[Pyrgos Stadium]]
+|location   = [[Pyrgos, Elis|Pyrgos]]
+|attendance = 2.320
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 6
+|date = 4 October 2003
+|time = 18:00 [[Eastern European Time|EET]]
+|team1 =[[PAOK FC|PAOK]] 
+|score =1–1 
+|report = 
+|team2 = [[Xanthi F.C.|Xanthi]]
+|goals1 = [[Dimitris Markos]] {{goal|5}}
+|goals2 = {{goal|16|pen.}} [[Günter Friesenbichler]]
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance =4.707
+|referee = 
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 7
+|date = 19 October 2003
+|time = 15:45 [[Eastern European Time|EET]]
+|team1 = [[OFI Crete F.C.|OFI]]
+|score = 0–3
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = 
+|goals2 = {{goal|45}} [[Dimitris Salpingidis]] <br>{{goal|68}} [[Michalis Giannitsanakis]] <br>{{goal|77}} [[Ebenezer Hagan]] 
+|stadium = [[Theodoros Vardinogiannis Stadium]]
+|location   = [[Heraklion]]
+|attendance = 2.725
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 8
+|date = 26 October 2003
+|time = 16:00 [[Eastern European Time|EET]]
+|team1 = [[PAOK FC|PAOK]]
+|score =2–1
+|report = 
+|team2 = [[Athens Kallithea F.C.|Kallithea]]
+|goals1 = [[Dimitris Zavadias]] {{goal|27|pen.}}<br>[[Dimitris Salpingidis]] {{goal|32}}
+|goals2 = {{goal|40}} [[Giannis Tatsis]] 
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = Cl. doors
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 9
+|date = 1 November 2003
+|time = 18:00 [[Eastern European Time|EET]]
+|team1 = [[AEK Athens F.C.|AEK Athens]]
+|score =3–1
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Nikos Liberopoulos]] {{goal|16}}<br>[[Ioannis Okkas]] {{goal|63}}<br>[[Vasilios Lakis]] {{goal|89}}
+|goals2 = {{goal|83}} [[Dimitris Salpingidis]] 
+|stadium = [[Yiannis Pathiakakis Stadium]]
+|location   = [[Athens]]
+|attendance = 2.134
+|referee = 
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 10
+|date = 9 November 2003
+|time = 18:00 [[Eastern European Time|EET]]
+|team1 = [[Ionikos F.C.|Ionikos]]
+|score = 0–1
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = 
+|goals2 = {{goal|8}} [[Giorgos Koutsis]]
+|stadium = [[Neapoli Stadium]]
+|location   = [[Piraeus]]
+|attendance = 1.031
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 11
+|date = 23 November 2003
+|time = 19:15 [[Eastern European Time|EET]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 2–0
+|report = 
+|team2 = [[Iraklis F.C. (Thessaloniki)|Iraklis]]
+|goals1 = [[Yiasoumis Yiasoumi]] {{goal|47}}<br>[[Dimitris Salpingidis]] {{goal|73|pen.}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 12.284
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 12
+|date = 30 November 2003
+|time = 19:00 [[Eastern European Time|EET]]
+|team1 = [[Panathinaikos F.C.|Panathinaikos]]
+|score = 3–0
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Dimitrios Papadopoulos (footballer, born 1981)|Dimitrios Papadopoulos]] {{goal|20}}<br>[[Jan Michaelsen]] {{goal|37}}<br>[[Giannis Goumas]] {{goal|45}}
+|goals2 = 
+|stadium = [[Leoforos Alexandras Stadium]]
+|location   = [[Athens]]
+|attendance = 9.658
+|referee = 
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 13
+|date = 7 December 2003
+|time = 19:00 [[Eastern European Time|EET]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 2–0
+|report =
+|team2 = [[Panionios F.C.|Panionios]]
+|goals1 = [[Giorgos Koutsis]] {{goal|2}}<br>[[Yiasoumis Yiasoumi]] {{goal|58}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 2.163
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 14
+|date = 13 December 2003
+|time = 18:00 [[Eastern European Time|EET]]
+|team1 = [[Chalkidona F.C.|Chalkidona]]
+|score = 1–2
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Guy Feutchine]] {{goal|13|o.g.}}
+|goals2 = {{goal|57}} [[Giorgos Koutsis]] <br>{{goal|70}} [[Yiasoumis Yiasoumi]]
+|stadium = [[Nikaia Stadium]]
+|location   = [[Athens]]
+|attendance = 779
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 15
+|date = 21 December 2003
+|time = 16:00 [[Eastern European Time|EET]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 3–0
+|report = 
+|team2 = [[Aris Thessaloniki F.C.|Aris]]
+|goals1 = [[Yiasoumis Yiasoumi]] {{goal|48}} <br>[[Dimitris Salpingidis]] {{goal|54}} <br>[[Giorgos Koutsis]] {{goal|86}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 13.950
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 16
+|date = 11 January 2004
+|time = 18:00 [[Eastern European Time|EET]]
+|team1 = [[Olympiacos F.C.|Olympiacos]]	 
+|score =1–2
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Nery Castillo]] {{goal|67}} 
+|goals2 = {{goal|68}} [[Dimitris Salpingidis]]<br>{{goal|87}} [[Sladan Spasic]]
+|stadium = [[Georgios Kamaras Stadium]]
+|location   = [[Athens]]
+|attendance = 9.164
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 17
+|date = 17 January 2004
+|time = 18:00 [[Eastern European Time|EET]]
+|team1 = [[Egaleo F.C.|Egaleo]]
+|score = 0–0
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = 
+|goals2 = 
+|stadium = [[Stavros Mavrothalassitis Stadium]]
+|location   = [[Athens]]
+|attendance = 1.568
+|referee =
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 18
+|date = 24 January 2004
+|time = 16:00 [[Eastern European Time|EET]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 2–2 
+|report = 
+|team2 = [[Akratitos F.C.|Akratitos]]
+|goals1 = [[Dimitris Salpingidis]] {{penmiss}} <small>31'</small> {{goal|89}}<br>[[Guy Feutchine]] {{goal|73}}
+|goals2 = {{goal|19}} [[Panagiotis Gitsis]]<br>{{goal|80}} [[Erik Lincar]]
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 3.393
+|referee =
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 19
+|date = 1 February 2004
+|time = 15:45 [[Eastern European Time|EET]]
+|team1 = [[Proodeftiki F.C.|Proodeftiki]]
+|score = 1–3
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Vangelis Togias]] {{goal|36}}
+|goals2 = {{goal|48}} [[Dimitris Salpingidis]]<br>{{goal|58}} [[Dionysis Chasiotis]]<br>{{goal|68}} [[Ebenezer Hagan]]
+|stadium = [[Nikaia Municipal Gymnasium]]
+|location   = [[Piraeus]]
+|attendance = 1.816
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 20
+|date = 8 February 2004
+|time = 18:00 [[Eastern European Time|EET]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 3–0
+|report = 
+|team2 = [[Paniliakos F.C.|Paniliakos]]
+|goals1 = [[Dimitris Salpingidis]] {{goal|27}} <br>[[Giorgos Koutsis]] {{goal|44}} <br>[[Christos Maladenis]] {{goal|83}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 12.331
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 21
+|date = 21 February 2004
+|time = 15:00 [[Eastern European Time|EET]]
+|team1 = [[Xanthi F.C.|Xanthi]]
+|score = 0–0
+|report = http://www.worldfootball.net/report/superleague-2003-2004-skoda-xanthi-paok-saloniki/
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = 
+|goals2 = 
+|stadium = [[Xanthi Ground]]
+|location   = [[Xanthi]]
+|attendance = 7.052
+|referee = 
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 22
+|date = 29 February 2004
+|time = 15:00 [[Eastern European Time|EET]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 2–0
+|report =http://www.worldfootball.net/report/superleague-2003-2004-paok-saloniki-ofi-heraklion/
+|team2 = [[OFI Crete F.C.|OFI]]
+|goals1 = [[Yiasoumis Yiasoumi]] {{goal|29}} <br>[[Dimitris Salpingidis]] {{goal|53}} 
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 11.417
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 23
+|date = 14 March 2004
+|time = 15:00 [[Eastern European Time|EET]]
+|team1 = [[Athens Kallithea F.C.|Kallithea]]
+|score = 0–1
+|report = http://www.worldfootball.net/report/superleague-2003-2004-kallithea-gs-paok-saloniki/
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = 
+|goals2 = {{goal|41}} [[Sladan Spasic]] 
+|stadium = [[Grigoris Lambrakis Stadium]]
+|location   = [[Athens]]
+|attendance = 1.873
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 24
+|date = 21 March 2004
+|time = 17:00 [[Eastern European Time|EET]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 3–2
+|report = http://www.worldfootball.net/report/superleague-2003-2004-paok-saloniki-aek-athen/
+|team2 = [[AEK Athens F.C.|AEK Athens]]
+|goals1 = [[Yiasoumis Yiasoumi]] {{goal|44||45|}} <br>[[Dimitris Salpingidis]] {{goal|57}}
+|goals2 = {{goal|34||42|}} [[Nikos Liberopoulos]]
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 24.829
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 25
+|date = 4 April 2004
+|time = 16:00 [[Eastern European Time|EET]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 2–0
+|report = http://www.worldfootball.net/report/superleague-2003-2004-paok-saloniki-ionikos-nikea/
+|team2 = [[Ionikos F.C.|Ionikos]]
+|goals1 = [[Dimitris Salpingidis]] {{goal|33|pen.|84|}} 
+|goals2 =
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 6.687
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 26
+|date = 18 April 2004
+|time = 17:00 [[Eastern European Time|EET]]
+|team1 = [[Iraklis F.C. (Thessaloniki)|Iraklis]]
+|score =3–0 
+|report = http://www.worldfootball.net/report/superleague-2003-2004-aep-iraklis-fc-paok-saloniki/
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Marcin Mieciel]] {{goal|4}} <br>[[Nikos Machlas]] {{goal|13}} <br>[[Edvin Murati]] {{goal|23}}
+|goals2 = 
+|stadium = [[Makedonikos Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 4.824
+|referee = 
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 27
+|date = 25 April 2004
+|time = 17:00 [[Eastern European Time|EET]]
+|team1  = [[PAOK FC|PAOK]]
+|score   = 1–2
+|report   = http://www.worldfootball.net/report/superleague-2003-2004-paok-saloniki-panathinaikos/
+|team2 = [[Panathinaikos F.C.|Panathinaikos]]
+|goals1 = [[Ebenezer Hagan]] {{goal|7}} 
+|goals2 = {{goal|48}} [[Dimitrios Papadopoulos (footballer, born 1981)|Dimitrios Papadopoulos]] <br>{{goal|90}} [[Emmanuel Olisadebe]]
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 17.805
+|referee = 
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 28
+|date = 2 May 2004
+|time = 17:00 [[Eastern European Time|EET]]
+|team1 = [[Panionios F.C.|Panionios]]
+|score = 1–0
+|report = http://www.worldfootball.net/report/superleague-2003-2004-panionios-gss-paok-saloniki/
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Alain Raguel]] {{goal|22}}
+|goals2 = 
+|stadium = [[Nea Smyrni Stadium]]
+|location   = [[Nea Smyrni|Nea Smyrni, Athens]]
+|attendance = 2.251
+|referee =
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 29
+|date = 16 May 2004
+|time = 17:00 [[Eastern European Time|EET]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 2–1
+|report = http://www.worldfootball.net/report/superleague-2003-2004-paok-saloniki-atromitos/
+|team2 = [[Chalkidona F.C.|Chalkidona]]
+|goals1 = [[Ebenezer Hagan]] {{goal|50}}<br>[[Sladan Spasic]] {{goal|86}}
+|goals2 = {{goal|76}} [[Dimosthenis Manousakis]]
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 8.312
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 30
+|date = 22 May 2004
+|time = 17:15 [[Eastern European Time|EET]]
+|team1 = [[Aris Thessaloniki F.C.|Aris]]
+|score = 1–1
+|report = http://www.worldfootball.net/report/superleague-2003-2004-aris-saloniki-paok-saloniki/
+|team2 = [[PAOK FC|PAOK]]
+|goals1 =[[Georgios Kousas]] {{goal|57}} 
+|goals2 = {{goal|21}} [[Lambros Vangelis]]
+|stadium = [[Makedonikos Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 1.074
+|referee = 
+|result = D
+}}
+
+==Greek Cup==
+{{main|2003–04 Greek Football Cup}}
+
+===First round===
+
+{{footballbox collapsible
+|round      = First leg
+|date       = 9 August 2003
+|time       = 13:00 [[Eastern European Summer Time|EEST]]
+|team1      = PAOK
+|score      = 1–1
+|report     = [https://www.epo.gr/vodafon/kyppello/Kipello2003-2004.pdf Report (page 4)]
+|team2      = [[Athlitiki Enosi Larissa F.C.|AEL]]
+|goals1     =
+*[[Yiasoumis Yiasoumi|Yiasoumi]] {{goal|9}}
+|goals2     =
+*Tsakmakidis {{goal|41}} 
+|stadium    = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 
+|referee    = Dimitris Dabosis ([[Pieria Football Clubs Association|Pieria]])
+|result     = D
+}}
+
+{{footballbox collapsible
+|round      = Second leg
+|date       = 19 August 2003
+|time       = 13:00 [[Eastern European Summer Time|EEST]]
+|team1      = [[Athlitiki Enosi Larissa F.C.|AEL]]
+|score      = 0–3
+|aggregatescore = 1–4
+|report     = [https://www.epo.gr/vodafon/kyppello/Kipello2003-2004.pdf Report (page 4-5)]
+|team2      = PAOK
+|goals1     =
+|goals2     =
+*[[Ebenezer Hagan|Hagan]] {{goal|13}}
+*[[Slađan Spasić|Spasić]] {{goal|41}}
+*[[Yiasoumis Yiasoumi|Yiasoumi]] {{goal|70}}
+|stadium    = [[Kozani Stadium]]
+|location   = [[Kozani]]
+|attendance = 
+|referee    = Makis Efthimiadis ([[Drama Football Clubs Association|Drama]])
+|result     = W
+}}
+
+===Second round===
+
+{{footballbox collapsible
+|round      = First leg
+|date       = 17 September 2003
+|time       = 16:45 [[Eastern European Summer Time|EEST]]
+|team1      = [[Egaleo F.C.|Egaleo]]
+|score      = 1–1
+|report     = [https://www.epo.gr/vodafon/kyppello/Kipello2003-2004.pdf Report (page 11)]
+|team2      = PAOK
+|goals1     =
+*[[Anestis Agritis|Agritis]] {{goal|8}}
+|goals2     =
+*[[Dimitris Salpingidis|Salpingidis]] {{goal|80}}
+|stadium    = [[Stavros Mavrothalassitis Stadium]]
+|location   = [[Aigaleo]]
+|attendance = 
+|referee    = Giannis Spyropoulos ([[Phthiotis Football Clubs Association|Phthiotis]])
+|result     = D
+}}
+
+{{footballbox collapsible
+|round      = Second leg
+|date       = 29 October 2003
+|time       = 19:00 [[Eastern European Time|EET]]
+|team1      = PAOK
+|score      = 1–0
+|aggregatescore = 2–1
+|report     = [https://www.epo.gr/vodafon/kyppello/Kipello2003-2004.pdf Report (page 11)]
+|team2      = [[Egaleo F.C.|Egaleo]]
+|goals1     =
+*[[Dimitris Salpingidis|Salpingidis]] {{goal|14}}
+|goals2     =
+|stadium    = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 
+|referee    = Giorgos Takidis ([[Kilkis Football Clubs Association|Kilkis]])
+|result     = W
+}}
+
+===Round of 16===
+
+{{footballbox collapsible
+|round      = First leg
+|date       = 7 January 2004
+|time       = 17:00 [[Eastern European Time|EET]]
+|team1      = PAOK
+|score      = 0–1
+|report     = [https://www.epo.gr/vodafon/kyppello/Kipello2003-2004.pdf Report (page 16)]
+|team2      = [[Kastoria F.C.|Kastoria]]
+|goals1     =
+|goals2     =
+*Kapetanopoulos {{goal|23|pen.}}
+|stadium    = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 
+|referee    = Dimitris Dabosis ([[Pieria Football Clubs Association|Pieria]])
+|result     = L
+}}
+
+{{footballbox collapsible
+|round      = Second leg
+|date       = 14 January 2004
+|time       = 14:30 [[Eastern European Time|EET]]
+|team1      = [[Kastoria F.C.|Kastoria]]
+|score      = 1–1 
+|aggregatescore = 2–1
+|report     = [https://www.epo.gr/vodafon/kyppello/Kipello2003-2004.pdf Report (page 16)]
+|team2      = PAOK
+|goals1     =
+*Panteliadis {{goal|62}}
+|goals2     =
+*[[Yiasoumis Yiasoumi|Yiasoumi]] {{goal|41}}
+|stadium    = [[Municipal Stadium of Kastoria]]
+|location   = [[Kastoria]]
+|attendance = 
+|referee    = Efthimios Damianos ([[Kozani Football Clubs Association|Kozani]])
+|result     = D
+}}
+
+==UEFA Cup==
+{{main|2003–04 UEFA Cup}}
+
+===First round===
+{{main|2003–04 UEFA Cup#First round|l1=First round}}
+
+{{football box collapsible
+|round      = [[2003–04 UEFA Cup#First round|1st leg]]
+|date       = 24 September 2003
+|time       = 20:30 [[Central European Time|CET]]
+|team1      = [[PAOK FC|PAOK]] {{flagicon|GRE}}
+|score      = 0–1
+|report     = http://www.uefa.com/uefaeuropaleague/season=2003/matches/round=1718/match=73505/index.html
+|team2      = {{flagicon|NOR}} [[Lyn Fotball|Lyn]]
+|goals1     = 
+|goals2     = {{goal|39}} [[Helgi Sigurðsson]]
+|stadium    = [[Toumba Stadium]]
+|location   = [[Thessaloniki]], [[Greece]]
+|attendance = 
+|referee    = {{flagicon|HUN}} [[Hanacsek]]
+|result     = L
+}}
+
+{{football box collapsible
+|round      = [[2003–04 UEFA Cup#First round|2nd leg]]
+|date       = 15 October 2003
+|time       = 19:00 [[Central European Time|CET]]
+|team1      = [[Lyn Fotball|Lyn]] {{flagicon|NOR}} 
+|score      = 0–3
+|aggregatescore = 1–3
+|report     = http://www.uefa.com/uefaeuropaleague/season=2003/matches/round=1718/match=73506/index.html
+|team2      = {{flagicon|GRE}} [[PAOK FC|PAOK]]
+|goals1     = 
+|goals2     = {{goal|51}} [[Yiasoumis Yiasoumi]] <br>{{goal|61}} [[Giorgos Koutsis]] <br>{{goal|68}} [[Leonidas Vokolos]]
+|stadium    = [[Ullevaal Stadion]]
+|location   = [[Oslo]], [[Norway]]
+|attendance = 
+|referee    = {{flagicon|SVK}} [[Darko Čeferin]]
+|result     = W
+}}
+
+===Second round===
+{{main|2003–04 UEFA Cup#Second round|l1=Second round}}
+
+{{football box collapsible
+|round      = [[2003–04 UEFA Cup#First leg 3|1st leg]]
+|date       = 6 November 2003
+|time       = 20:30 [[Central European Time|CET]]
+|team1      = [[PAOK FC|PAOK]] {{flagicon|GRE}}
+|score      = 1–1
+|report     = http://www.uefa.com/uefaeuropaleague/season=2003/matches/round=1719/match=73648/index.html
+|team2      = {{flagicon|HUN}} [[Debreceni VSC|Debrecen]]
+|goals1     = [[Loukas Karadimos|Karadimos]] {{goal|8}}
+|goals2     = {{goal|25}} [[Péter Bajzát|Bajzát]]
+|stadium    = [[Toumba Stadium]]
+|location   = [[Thessaloniki]], [[Greece]]
+|attendance = 
+|referee    = {{flagicon|CRO}} [[Edo Trivković]]
+|result     = D
+}}
+
+{{football box collapsible
+|round      = [[2003–04 UEFA Cup#Second leg 2|2nd leg]]
+|date       = 27 November 2003
+|time       = 17:00 [[Central European Time|CET]]
+|team1      = [[Debreceni VSC|Debrecen]] {{flagicon|HUN}}
+|score      = 0–0
+|aggregatescore = 1[[Away goals rule|a]]–1
+|report     = http://www.uefa.com/uefaeuropaleague/season=2003/matches/round=1719/match=73649/index.html
+|team2      = {{flagicon|GRE}} [[PAOK FC|PAOK]]
+|goals1     = 
+|goals2     = 
+|stadium    = [[Stadion Oláh Gábor Út]]
+|location   = [[Debrecen]], [[Hungary]]
+|attendance = 
+|referee    = {{flagicon|ISR}} [[Alon Yefet]]
+|result     = D
+}}
+
+==Statistics==
+
+===Squad statistics===
+{{Efs start3 |updated=22 May 2004 |c1=[[2003–04 Alpha Ethniki|Alpha Ethniki]] |c2=[[2003–04 Greek Football Cup|Greek Cup]] |c3=[[2003–04 UEFA Cup|UEFA Cup]]}}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Goalkeepers
+|-
+{{Efs player3|no= 1|nat=GRE|name=[[Ilias Atmatsidis]]                       |20|2|0 |3|0|0 |4|0|0 }}
+{{Efs player3|no=29|nat=GRE|name=[[Kostas Andriopoulos]]                    | 1|0|0 |0|0|0 |0|0|0 }}
+{{Efs player3|no=33|nat=GRE|name=[[Kyriakos Tohouroglou]]                   |12|1|0 |3|0|0 |0|0|0 }}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Defenders
+|-
+{{Efs player3|no= 3|nat=GRE|name=[[Vangelis Koutsopoulos]]                  |24|4|0 |3|0|0 |4|1|0 }}
+{{Efs player3|no= 4|nat=GRE|name=[[Leonidas Vokolos]]                       |28|0|0 |6|0|0 |4|0|1 }}
+{{Efs player3|no= 5|nat=GRE|name=[[Vaggelis Nastos]]                        | 0|0|0 |1|1|0 |0|0|0 }}
+{{Efs player3|no=16|nat=GRE|name=[[Fotis Kiskabanis]]                       | 1|1|0 |0|0|0 |0|0|0 }}
+{{Efs player3|no=23|nat=GRE|name=[[Dionysis Chasiotis]]                     |24|2|1 |3|0|0 |3|0|0 }}
+{{Efs player3|no=24|nat=NGA|name=[[Ifeanyi Udeze]]                          |17|1|0 |2|0|0 |4|0|0 }}
+{{Efs player3|no=26|nat=GRE|name=[[Giorgos Zisopoulos]]                     | 1|1|0 |0|0|0 |0|0|0 }}
+{{Efs player3|no=32|nat=GRE|name=[[Christos Karipidis]]                     |15|8|0 |5|2|0 |1|0|0 }}
+{{Efs player3|no=99|nat=GRE|name=[[Petros Konteon]]                         | 7|6|0 |1|1|0 |0|0|0 }}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Midfielders
+|-
+{{Efs player3|no= 5|nat=GRE|name=[[Christos Maladenis]]                     | 9|0|1 |0|0|0 |0|0|0 }}
+{{Efs player3|no= 6|nat=GRE|name=[[Dimitris Markos]]                        | 9|1|2 |3|0|0 |2|0|0 }}
+{{Efs player3|no= 8|nat=GRE|name=[[Dimitris Zavadias]]                      | 5|2|1 |1|0|0 |0|0|0 }}
+{{Efs player3|no=10|nat=GRE|name=[[Giorgos Theodoridis]]                    |20|13|0 |6|2|0 |0|0|0 }}
+{{Efs player3|no=14|nat=GRE|name=[[Giorgos Koutsis]]                        |25|0|5 |3|0|0 |2|0|1 }}
+{{Efs player3|no=16|nat=NGA|name=[[Napoleon Amaefule]]                      | 8|6|0 |1|0|0 |0|0|0 }}
+{{Efs player3|no=18|nat=GRE|name=[[Lambros Vangelis]]                       |14|4|1 |4|1|0 |3|1|0 }}
+{{Efs player3|no=19|nat=GRE|name=[[Ilias Eleftheriadis]]                    | 3|2|0 |0|0|0 |0|0|0 }}
+{{Efs player3|no=20|nat=SCG|name=[[Sladan Spasic]]                          |17|5|3 |4|1|1 |4|4|0 }}
+{{Efs player3|no=21|nat=GRE|name=[[Loukas Karadimos]]                       |15|3|0 |6|2|0 |3|1|1 }}
+{{Efs player3|no=22|nat=Cameroon|name=[[Guy Feutchine]]                     |27|0|2 |4|0|0 |4|0|0 }}
+{{Efs player3|no=28|nat=CYP|name=[[Alexandros Garpozis]]                    | 6|5|0 |0|0|0 |0|0|0 }}
+{{Efs player3|no=30|nat=CYP|name=[[Panagiotis Engomitis]]                   | 8|2|3 |2|1|0 |1|0|0 }}
+{{Efs player3|no=44|nat=GHA|name=[[Ebenezer Hagan]]                         |26|2|4 |4|0|1 |4|0|0 }}
+{{Efs player3|no=80|nat=CYP|name=[[Liasos Louka]]                           | 2|1|0 |0|0|0 |0|0|0 }}
+{{Efs player3|no=84|nat=GRE|name=[[Georgios Makris]]                        | 1|1|0 |0|0|0 |0|0|0 }}
+{{Efs player3|no=88|nat=GRE|name=[[Ryan Kapagiannidis]]                     | 4|2|0 |2|0|0 |0|0|0 }}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Forwards
+|-
+{{Efs player3|no= 7|nat=CYP|name=[[Stefanos Voskaridis]]                    | 6|6|0 |0|0|0 |3|3|0 }}
+{{Efs player3|no= 9|nat=GRE|name=[[Dimitris Salpingidis]]                   |29|1|16 |4|1|2 |4|0|0 }}
+{{Efs player3|no=11|nat=CYP|name=[[Yiasoumis Yiasoumi]]                     |26|2|7 |6|1|3 |4|0|1 }}
+{{Efs player3|no=27|nat=GRE|name=[[Christos Balodimos]]                     | 1|1|0 |1|1|0 |0|0|0 }}
+{{Efs player3|no=31|nat=GRE|name=[[Michalis Giannitsanakis]]                | 8|5|1 |4|4|0 |2|2|0 }}
+|}
+
+Source: Match reports in [[#Competitions|competitive matches]], [https://www.uefa.com/uefaeuropaleague/history/clubs/50130--paok/ uefa.com], [http://www.epo.gr/vodafon/kyppello/Kipello2003-2004.pdf epo.gr], [https://www.worldfootball.net/teams/te1454/paok-saloniki/all-matches/ worldfootball.net]
+
+===Goalscorers===
+
+{| class="wikitable sortable" style="text-align:center" 
+|-
+!width=5|{{Abbr| Rank | Ranking }}
+!width=5|{{Abbr| No. | Squad Number }}
+!width=5|{{Abbr| Pos. | Position }}
+!width=150|Player
+!width=30|[[2003–04 Alpha Ethniki|Alpha Ethniki]]
+!width=30|[[2003–04 Greek Football Cup|Greek Cup]]
+!width=30px|[[2003–04 UEFA Cup|UEFA Cup]]
+!width=50|Total 
+|-
+|-
+|1||9||FW||align=left|{{flagicon|GRE}} [[Dimitris Salpingidis]]||16||2||0||'''18'''
+|-
+|2||11||FW||align=left|{{flagicon|CYP}} [[Yiasoumis Yiasoumi]]||7||3||1||'''11'''
+|-
+|3||14||MF||align=left|{{flagicon|GRE}} [[Giorgos Koutsis]]||5||0||1||'''6'''
+|-
+|4||44||MF||align=left|{{flagicon|GHA}} [[Ebenezer Hagan]]||4||1||0||'''5'''
+|-
+|5||20||MF||align=left|{{flagicon|SCG}} [[Sladan Spasic]]||3||1||0||'''4'''
+|-
+|6||30||MF||align=left|{{flagicon|CYP}} [[Panagiotis Engomitis]]||3||0||0||'''3'''
+|-
+|7||22||MF||align=left|{{flagicon|Cameroon}} [[Guy Feutchine]]||2||0||0||'''2'''
+|-
+|8||6||MF||align=left|{{flagicon|GRE}} [[Dimitris Markos]]||2||0||0||'''2'''
+|-
+|9||31||FW||align=left|{{flagicon|GRE}} [[Michalis Giannitsanakis|M. Giannitsanakis]]||1||0||0||'''1'''
+|-
+|10||18||MF||align=left|{{flagicon|GRE}} [[Lambros Vangelis]]||1||0||0||'''1'''
+|-
+|11||5||MF||align=left|{{flagicon|GRE}} [[Christos Maladenis]]||1||0||0||'''1'''
+|-
+|12||23||DF||align=left|{{flagicon|GRE}} [[Dionysis Chasiotis]]||1||0||0||'''1'''
+|-
+|13||8||MF||align=left|{{flagicon|GRE}} [[Dimitris Zavadias]]||1||0||0||'''1'''
+|-
+|14||21||MF||align=left|{{flagicon|GRE}} [[Loukas Karadimos]]||0||0||1||'''1'''
+|-
+|15||4||DF||align=left|{{flagicon|GRE}} [[Leonidas Vokolos]]||0||0||1||'''1'''
+|-
+|colspan="4"|Own goals||0||0||0||'''0'''
+|- bgcolor="#EFEFEF"
+|colspan=4|'''TOTALS'''
+|'''47'''||'''7'''||'''4'''||'''58'''
+|}
+
+Source: Match reports in [[#Competitions|competitive matches]], [https://www.uefa.com/uefaeuropaleague/history/clubs/50130--paok/ uefa.com], [http://www.epo.gr/vodafon/kyppello/Kipello2003-2004.pdf epo.gr], [https://www.worldfootball.net/teams/te1454/paok-saloniki/all-matches/ worldfootball.net]
+
+==External links==
+* [http://www.paokfc.gr/ PAOK FC official website]
+
+{{PAOK FC seasons}}
+{{2003–04 in Greek football}}
+
+{{DEFAULTSORT:2003-04 PAOK F.C. season}}
+[[Category:PAOK FC seasons]]
+[[Category:Greek football clubs 2003–04 season|PAOK]]

@@ -1,0 +1,1771 @@
+{{Use dmy dates|date=July 2024}}
+{{more citations needed|date=August 2012}}
+{{Infobox football club season
+| club               = PAOK FC
+| season             = 2009–10
+| manager            =  [[Fernando Santos (Portuguese footballer)|Fernando Santos]]
+| mgrtitle           = Manager
+| chairman           =  [[Theodoros Zagorakis]]
+| chrtitle           = Chairman
+| league             = [[2009–10 Super League Greece|Super League Greece]]
+| league result      = 2nd (3rd in [[Season (sports)#Regular season|regular season]])
+| cup1               = [[2009–10 Greek Football Cup|Greek Cup]]
+| cup1 result        = ''[[2009–10 Greek Football Cup#Quarter-Finals|Quarter-finals]]''
+| cup2               = [[2009–10 UEFA Europa League|UEFA Europa League]]
+| cup2 result        = ''[[2009–10 UEFA Europa League#Play-off round|Play-off round]]''
+| league topscorer   = ''[[Vladimir Ivić]] (9)''
+| season topscorer   = ''[[Vladimir Ivić]] (10)''
+| highest attendance = 
+| lowest attendance  = 
+| prevseason         = [[2008–09 PAOK FC season|2008–09]]
+| nextseason         = [[2010–11 PAOK FC season|2010–11]]
+| pattern_la1        = _thinblackborder
+| pattern_b1         = _paokfc0910h
+| pattern_ra1        = _thinblackborder
+| pattern_sh1        = 
+| pattern_so1        = _blacktop
+| leftarm1           = FFFFFF
+| body1              = FFFFFF
+| rightarm1          = FFFFFF
+| shorts1            = FFFFFF
+| socks1             = FFFFFF
+| pattern_la2        = _thinwhiteborder
+| pattern_b2         = _paok0910c
+| pattern_ra2        = _thinwhiteborder
+| pattern_sh2        = 
+| pattern_so2        = _whitetop
+| leftarm2           = 000000
+| body2              = FFFFFF
+| rightarm2          = 000000
+| shorts2            = 000000
+| socks2             = 000000
+| pattern_la3        = _thinblackborder
+| pattern_b3         = _paok0910b
+| pattern_ra3        = _thinblackborder
+| pattern_sh3        = 
+| pattern_so3        = _blacktop
+| leftarm3           = FFFFFF
+| body3              = FFFFFF
+| rightarm3          = FFFFFF
+| shorts3            = FFFFFF
+| socks3             = FFFFFF
+}}
+
+The '''2009–10 season''' is [[PAOK FC]]'s 51st consecutive season in the [[Super League Greece]]. They have qualified for the [[UEFA Europa League]] third qualifying round for the [[2009–10 UEFA Europa League|2009–10]] season.
+
+==Players==
+
+===Squad information===
+{{fb si header |age=y}}
+
+{{fb si player |bg  =|p=[[Konstantinos Chalkias|Chalkias]] |eu=y |nb=GRE |n=1  |pos=GK |age={{Age|1974|5|30}}  |s=2008 |a=30 |g=0  |e=2010 |f=Free |vc=VC1}}
+{{fb si player |bg  =|p=[[Nikos Arabatzis|Arabatzis]] |eu=y |nb=GRE |n=2  |pos=DF |age={{Age|1984|5|10}}  |s=2006 |a=47 |g=1  |e=2012 |f=Free |vc=}}
+{{fb si player |bg  =|p=[[Pablo Gabriel García|García]] |eu=y |nb=URU |ni=ESP |n=5  |pos=MF |age={{Age|1977|5|11}}  |s=2008 |a=19 |g=0  |e=2010 |f=Free |vc=}}
+{{fb si player |bg  =|p=[[Vitolo (footballer, born 1983)|Vitolo]] |eu=y |nb=ESP |n=6  |pos=MF |age={{Age|1983|9|9}}  |s=2009 |a=0 |g=0  |e=2013 |f=Free |vc=}}
+{{fb si player |bg  =|p=[[Sérgio Conceição|Conceição]] |eu=y |nb=POR |n=7  |pos=MF |age={{Age|1974|11|15}}  |s=2008 |a=32 |g=6  |e=2010 |f=Free |vc=Captain }}
+{{fb si player |bg  =|p=[[Bruno Cirillo|Cirillo]] |eu=y |nb=ITA |n=8  |pos=DF |age={{Age|1977|3|21}}  |s=2009 |a=1 |g=0  |e=2011 |f=Free |vc= }}
+{{fb si player |bg  =|p=[[Ilias Anastasakos|Anastasakos]] |eu=y |nb=GRE |n=9  |pos=FW |age={{Age|1978|3|3}}  |s=2008 |a=13 |g=7  |e=2010 |f=Free |vc= }}
+{{fb si player |bg  =|p=[[Olivier Sorlin|Sorlin]] |eu=y |nb=FRA |n=10  |pos=MF |age={{Age|1979|4|9}}  |s=2009 |a=13 |g=1  |e=2011 |f=€0.3M |vc= }}
+{{fb si player |bg  =|p=[[Zlatan Muslimović|Muslimović]] |eu=y |nb=BIH |ni=SWE |n=11  |pos=FW |age={{Age|1981|3|6}}  |s=2008 |a=23 |g=8  |e=2011 |f=€0.5M |vc= }}
+{{fb si player |bg  =|p=[[Stelios Malezas|Malezas]] |eu=y |nb=GRE |n=13  |pos=DF |age={{Age|1985|3|11}}  |s=2005 |a=48 |g=2  |e=2013 |f=YS |vc=VC3 }}
+{{fb si player |bg  =|p=[[Athanasios Papazoglou|Papazoglou]] |eu=y |nb=GRE |n=14  |pos=FW |age={{Age|1988|3|30}}  |s=2009 |a=0 |g=0  |e=2013 |f=Free |vc= }}
+{{fb si player |bg  =|p=[[Pablo Contreras|Contreras]] |eu=y |nb=CHI |ni=ESP |n=15  |pos=DF |age={{Age|1978|10|11}}  |s=2008 |a=23 |g=2  |e=2013 |f=Free |vc=VC2 }}
+{{fb si player |bg  =|p=[[Lino (footballer, born 1977)|Lino]] |eu=n |nb=BRA |n=16  |pos=MF |age={{Age|1977|6|1}}  |s=2009 |a=13 |g=1  |e=2010 |f=Free |vc= }}
+{{fb si player |bg  =|p=[[Georgios Fotakis|Fotakis]] |eu=y |nb=GRE |n=18  |pos=MF |age={{Age|1981|10|29}}  |s=2009 |a=1 |g=0  |e=2013 |f=Free |vc= }}
+{{fb si player |bg  =|p=[[Vasilios Koutsianikoulis|Koutsianikoulis]] |eu=y |nb=GRE |n=19  |pos=MF |age={{Age|1988|9|9}}  |s=2009 |a=0 |g=0  |e=2013 |f=€1.2M |vc= }}
+{{fb si player |bg  =|p=[[Vieirinha]] |eu=y |nb=POR |n=20  |pos=MF |age={{Age|1986|1|24}}  |s=2008 |a=16 |g=1  |e=2013 |f=€0.37M |vc= }}
+{{fb si player |bg  =|p=[[Vladimir Ivić|Ivić]] |eu=y |nb=SER |n=21  |pos=MF |age={{Age|1977|5|7}}  |s=2008 |a=24 |g=8  |e=2010 |f=Free |vc= }}
+{{fb si player |bg  =|p=[[Ricardo Matias Verón|Verón]] |eu=y |nb=ARG| ni=PER|natvar=state |n=22  |pos=MF |age={{Age|1981|1|22}}  |s=2008 |a=36 |g=0  |e=2011 |f=€0.13M |vc= }}
+{{fb si player |bg  =|p=[[Mirosław Sznaucner|Sznaucner]] |eu=y |nb=POL |n=27  |pos=DF |age={{Age|1979|5|9}}  |s=2007 |a=44 |g=0  |e=2012 |f=Free |vc= }}
+{{fb si player |bg  =|p=[[Mohammed Abubakari|Abubakari]] |eu=n |nb=GHA |n=28  |pos=MF |age={{Age|1986|2|15}}  |s=2009 |a=0 |g=0  |e=2013 |f=Free |vc= }}
+{{fb si player |bg  =|p=[[Fotis Koutzavasilis|Koutzavasilis]] |eu=y |nb=GRE |n=30  |pos=GK |age={{Age|1989|5|11}}  |s=2009 |a=0 |g=0  |e=2013 |f=YS |vc= }}
+{{fb si player |bg  =|p=[[Lucio Filomeno|Filomeno]] |eu=y |nb=ARG |ni=ITA |n=31  |pos=FW |age={{Age|1980|5|8}}  |s=2009 |a=1 |g=0  |e=2011 |f=Free |vc= }}
+{{fb si player |bg  =|p=[[Mirko Savini|Savini]] |eu=y |nb=ITA |n=36  |pos=DF |age={{Age|1979|5|11}}  |s=2009 |a=0 |g=0  |e=2011 |f=Free |vc= }}
+{{fb si player |bg  =|p=[[Vangelis Karapiperis|Karapiperis]] |eu=y |nb=GRE |n=77  |pos=DF |age={{Age|1984|5|10}}  |s=2006 |a=47 |g=1  |e=2012 |f=Free |vc=}}
+{{fb si player |bg  =|p=[[Joe Bizera|Bizera]] |eu=y |nb=URU |ni=ITA |n=80  |pos=DF |age={{Age|1980|5|17}}  |s=2008 |a=10 |g=0  |e=2011 |f=Free |vc= }}
+{{fb si player |bg  =|p=[[Dario Krešić|Krešić]] |eu=y |nb=CRO |n=91  |pos=GK |age={{Age|1984|2|11}}  |s=2009 |a=0 |g=0  |e=2013 |f=Free |vc= }}
+
+{{Fb si footer|u=30 July |c=GRE |ss=2009 |o= |date=June 2009}}
+
+=== Players in / out ===
+
+====In====
+{{fb in2 header}}
+
+{{fb in2 player |tc=GRE |bg  =|type=Transfer |p=[[Vasilios Koutsianikoulis|Koutsianikoulis]] |eu=y |nb=GRE |n=19 |pos=DF |age={{Age|1988|8|9|2009|5|26}} |fcl=[[Ergotelis F.C.|Ergotelis]]|fcnat=GRE|w=S |e=2013 |f=€1.2M }}
+{{fb in2 player |tc=GRE |bg  =|type=Transfer |p=[[Mohammed Abubakari|Abubakari]] |eu=n |nb=GHA |n=28 |pos=MF |age={{Age|1986|2|15|2009|5|27}} |fcl=[[Panserraikos F.C.|Panserraikos]]|fcnat=GRE|w=S |e=2013 |f=Free }}
+{{fb in2 player |tc=GRE |bg  =|type=Transfer |p=[[Dario Krešić|Krešić]] |eu=y |nb=CRO |n=91 |pos=GK |age={{Age|1984|2|11|2009|6|24}} |fcl=[[Panionios F.C.|Panionios]]|fcnat=GRE|w=S |e=2013 |f=Free }}
+{{fb in2 player |tc=GRE |bg  =|type=Transfer |p=[[Athanasios Papazoglou|Papazoglou]] |eu=y |nb=GRE |n=14 |pos=FW |age={{Age|1988|3|30|2009|6|1}} |fcl=[[Aris Thessaloniki F.C.|Aris]]|fcnat=GRE|w=S |e=2013 |f=Free }}
+{{fb in2 player |tc=GRE |bg  =|type=Transfer |p=[[Georgios Fotakis|Fotakis]] |eu=y |nb=GRE |n=18 |pos=MF |age={{Age|1981|10|29|2009|6|2}} |fcl=[[Athlitiki Enosi Larissa F.C.|Larissa]]|fcnat=GRE|w=S |e=2013 |f=Free }}
+{{fb in2 player |tc=GRE |bg  =|type=Transfer |p=[[Olivier Sorlin|Sorlin]] |eu=y |nb=FRA |n=10 |pos=MF |age={{Age|1979|5|9}} |fcl=[[Stade Rennais F.C.|Rennes]]|fcnat=FRA|w=S |e=2011 |f=€0.3M }}
+{{fb in2 player |tc=GRE |bg  =|type=Transfer |p=[[Bruno Cirillo|Cirillo]] |eu=y |nb=ITA |n=8 |pos=DF |age={{Age|1977|3|21|2009|6|12}} |fcl=[[Reggina Calcio|Reggina]]|fcnat=ITA|w=S |e=2011 |f=Free }}
+{{fb in2 player |tc=GRE |bg  =|type=Transfer |p=[[Lucio Filomeno|Filomeno]] |eu=y |nb=ARG |ni=ITA |n=31 |pos=FW |age={{Age|1980|5|8|2009|6|20}} |fcl=[[Asteras Tripolis F.C.|Asteras Tripolis]]|fcnat=GRE|w=S |e=2011 |f=Free }}
+{{fb in2 player |tc=GRE |bg  =|type=Transfer |p=[[Mirko Savini|Savini]] |eu=y |nb=ITA |n=36 |pos=DF |age={{Age|1979|5|11|2009|7|11}} |fcl=[[U.S. Città di Palermo|Palermo]]|fcnat=ITA|w=S |e=2011 |f=Free }}
+{{fb in2 player |tc=GRE |bg  =|type=Transfer |p=[[Vieirinha]] |eu=y |nb=POR |n=20 |pos=MF |age={{Age|1986|1|24}} |fcl=[[FC Porto|Porto]]|fcnat=POR|w=S |e= 2013|f=€0.37M }}
+{{fb in2 player |tc=GRE |bg  =|type=Transfer |p=[[Vitolo (footballer, born 1983)|Vitolo]] |eu=y |nb=ESP |n=6 |pos=MF |age={{Age|1983|9|9|2009|7|28}} |fcl=[[Racing de Santander|Racing&nbsp;Santander]]|fcnat=ESP|w=S |e=2013 |f=Free }}
+{{fb in2 player |tc=GRE |bg  =|type=Loan |p=[[Bryce Moon|Moon]] |eu=n |nb=ZAF |n=3 |pos=DF |age={{Age|1986|4|6|2009|8|31}} |fcl=[[Panathinaikos F.C.|Panathinaikos]]|fcnat=GRE|w=S |e=2010 |f=€0.2M }}
+{{fb in2 player |tc=GRE |bg  =|type=Transfer |p=[[Cristiano (footballer, born 1983)|Cristiano]] |eu=n |nb=BRA |n=80 |pos=MF |age={{Age|1983|9|28|2010|1|1}} |fcl=[[F.C. Paços de Ferreira|Paços de Ferreira]]|fcnat=POR|w=W |e=2012 |f=€0.15M }}
+{{fb in2 player |tc=GRE |bg  =|type=Loan |p=[[Edinho (footballer, born July 1982)|Edinho]] |eu=y |nb=POR |n=80 |pos=FW |age={{Age|1982|7|7|2010|1|16}} |fcl=[[Málaga CF|Málaga]]|fcnat=ESP|w=W |e=2010 |f=Free }}
+
+{{Fb in footer|date=September 2010}}
+
+Total spending: {{loss}}  €2&nbsp;million
+
+====Out====
+{{fb out2 header }}
+
+{{fb out2 player |tc=GRE |bg= |type=End of loan |p=[[Marcos António Elias Santos|Marcos António]] |eu=n |nb=BRA |n=4 |pos=DF |age={{Age|1983|5|25|2009}} |ncl=[[AJ Auxerre|Auxerre]]|ncnat=FRA|w=S |f=Free }}
+{{fb out2 player |tc=GRE |bg= |type=End of loan |p=[[Filipos Darlas|Darlas]] |eu=y |nb=GRE |n=6 |pos=DF |age={{Age|1983|10|23|2009}} |ncl=[[Panathinaikos F.C.|Panathinaikos]]|ncnat=GRE|w=S |f=Free }}
+{{fb out2 player |tc=GRE |bg= |type=End of contract |p=[[Lambros Vangelis|Vangelis]] |eu=y |nb=GRE |n=18 |pos=MF |age={{Age|1983|10|23|2009}} |ncl=[[PAS Giannina F.C.|PAS Giannina]]|ncnat=GRE|w=S |f=Free }}
+{{fb out2 player |tc=GRE |bg= |type=End of contract |p=[[Ibrahima Bakayoko|Bakayoko]] |eu=n |nb=CIV |n=10 |pos=FW |age={{Age|1976|12|31|2009}} |ncl=[[PAS Giannina F.C.|PAS Giannina]]|ncnat=GRE|w=S |f=Free }}
+{{fb out2 player |tc=GRE |bg= |type=End of contract |p=[[Pantelis Konstantinidis|Konstantinidis]] |eu=y |nb=GRE |n=3 |pos=MF |age={{Age|1975|8|16|2009}} |ncl=[[OFI Crete F.C.|OFI]]|ncnat=GRE|w=S |f=Free }}
+{{fb out2 player |tc=GRE |bg= |type=End of contract |p=[[Stelios Iliadis|Iliadis]] |eu=y |nb=GRE |n=8 |pos=MF |age={{Age|1986|6|3|2009}} |ncl=[[Iraklis F.C. (Thessaloniki)|Iraklis]]|ncnat=GRE|w=S |f=Free }}
+{{fb out2 player |tc=GRE |bg= |type=End of contract |p=[[Vasilios Lakis|Lakis]] |eu=y |nb=GRE |n=23 |pos=MF |age={{Age|1976|9|10|2009}} |ncl=[[Kavala F.C.|Kavala]]|ncnat=GRE|w=S |f=Free }}
+{{fb out2 player |tc=GRE |bg= |type=End of contract |p=[[Dimitris Rizos|Rizos]] |eu=y |nb=GRE |n=50 |pos=GK |age={{Age|1976|10|7|2009}} |nc= |w=S |f=Free }}
+{{fb out2 player |tc=GRE |bg= |type=End of contract |p=[[Lampros Choutos|Choutos]] |eu=y |nb=GRE |n=79 |pos=FW |age={{Age|1979|12|7|2009}} |ncl=[[A.S. Pescina Valle del Giovenco|Pescina V.d.G.]]|ncnat=ITA|w=S |f=Free }}
+{{fb out2 player |tc=GRE |bg= |type=Loan |p=[[Stefanos Athanasiadis|Athanasiadis]] |eu=y |nb=GRE |n=28 |pos=FW |age={{Age|1988|12|24|2009}} |ncl=[[Panserraikos F.C.|Panserraikos]]|ncnat=GRE|w=S |f= }}
+{{fb out2 player |tc=GRE |bg= |type=Loan |p=[[Sotiris Balafas|Balafas]] |eu=y |nb=GRE |n=25 |pos=MF |age={{Age|1986|8|19|2009}} |ncl=[[PAS Giannina F.C.|PAS Giannina]]|ncnat=GRE|w=S |f= }}
+{{fb out2 player |tc=GRE |bg= |type=Loan |p=[[Vangelis Karapiperis|Karapiperis]] |eu=y |nb=GRE |n=77 |pos=DF |age={{Age|1988|4|17|2009}} |ncl=[[Panserraikos F.C.|Panserraikos]]|ncnat=GRE|w=S |f= }}
+{{fb out2 player |tc=GRE |bg= |type=Loan |p=[[Panagiotis Glikos|Glikos]] |eu=y |nb=GRE |n=71 |pos=GK |age={{Age|1986|6|3|2009}} |ncl= [[Olympiacos Volos F.C.|Olympiacos Volos]]|ncnat=GRE|w=S |f= }}
+{{fb out2 player |tc=GRE |bg= |type=Transfer |p=[[Ilias Anastasakos|Anastasakos]] |eu=y |nb=GRE |n=9 |pos=FW |age={{Age|1978|3|3|2009}} |ncl=[[Atromitos F.C.|Atromitos]]|ncnat=GRE|w=S |f=€0.08M  }}
+
+{{Fb in footer|date=September 2010}}
+
+Total income: {{gain}}  €80,000
+
+==Pre-season==
+{{fb cm header }}
+
+{{fb cm1 match
+|tc     = GRE
+|m      = 1
+|d      = 14 July
+|cn     = Friendly
+|rn     = –
+|ground = N
+|ol     = [[N.E.C. (football club)|NEC]]{{flagicon|NED}}
+|gf     = 1
+|ga     = 1
+|rep    = {{fb report 2t|width = 
+|ko  = 20:00
+|att = 
+|lt  = [[N.E.C. (football club)|NEC]]
+|rt  = [[PAOK FC|PAOK]]
+|ltf = [[Bjorn Vleminckx|Vleminckx]] {{goal|57}}<br />[[John Goossens|Goossens]] {{yel|70}}
+|rtf = [[Bruno Cirillo|Cirillo]] {{yel|27}}<br />[[Georgios Fotakis|Fotakis]] {{yel|50}}<br />[[Joe Bizera|Bizera]] {{yel|56}}<br />[[Georgios Fotakis|Fotakis]] {{goal|63}}
+|rep = 
+}}
+}}
+
+{{fb cm1 match
+|tc     = GRE
+|m      = 2
+|d      = 16 July
+|cn     = Friendly
+|rn     = –
+|ground = N
+|ol     = [[C.D. Guadalajara|Guadalajara]]{{flagicon|MEX}}
+|gf     = 0
+|ga     = 1
+|rep    = {{fb report 2t|width = 
+|ko  = 20:00
+|att = 
+|lt  = [[PAOK FC|PAOK]]
+|rt  = [[C.D. Guadalajara|Guadalajara]]
+|ltf = 
+|rtf = [[Sergio Amaury Ponce|Ponce]] {{goal|65}}
+|rep = 
+}}
+}}
+
+{{fb cm1 match
+|tc     = GRE
+|m      = 3
+|d      = 20 July
+|cn     = Friendly
+|rn     = –
+|ground = [[Willem II Stadion|A]] {{Flagicon|NED}}
+|ol     = [[Willem II Tilburg|Willem II]]{{flagicon|NED}}
+|gf     = 2
+|ga     = 0
+|rep    = {{fb report 2t|width = 
+|ko  = 20:00
+|att = 
+|lt  = [[Willem II Tilburg|Willem II]]
+|rt  = [[PAOK FC|PAOK]]
+|ltf = 
+|rtf = [[Zlatan Muslimović|Muslimović]] {{goal|33}}<br />[[Ilias Anastasakos|Anastasakos]] {{goal|92}}
+|rep = 
+}}
+}}
+
+{{fb cm1 match
+|tc     = GRE
+|m      = 4
+|d      = 22 July
+|cn     = Friendly
+|rn     = –
+|ground = [[Sparta Stadion Het Kasteel|A]] {{Flagicon|NED}}
+|ol     = [[Sparta Rotterdam]]{{flagicon|NED}}
+|gf     = 1
+|ga     = 0
+|rep    = {{fb report 2t|width = 
+|ko  = 20:30
+|att = 
+|lt  = [[Sparta Rotterdam]]
+|rt  = [[PAOK FC|PAOK]]
+|ltf = 
+|rtf = [[Bruno Cirillo|Cirillo]] {{goal|37}}
+|rep = 
+}}
+}}
+
+{{fb cm1 match
+|tc     = GRE
+|m      = 5
+|d      = 12 August
+|cn     = Friendly
+|rn     = –
+|ground = [[Toumba Stadium|H]]<!-- GRE -->
+|ol     = [[Ergotelis F.C.|Ergotelis]]
+|gf     = 1
+|ga     = 0
+|rep    = {{fb report 2t|width = 
+|ko  = 
+|att = 
+|lt  = [[PAOK FC|PAOK]]
+|rt  = [[Ergotelis F.C.|Ergotelis]]
+|ltf = [[Olivier Sorlin|Sorlin]] {{goal|92}}
+|rtf = 
+|rep = 
+}}
+}}
+
+{{fb cm1 match
+|tc     = GRE
+|m      = 6
+|d      = 5 September
+|cn     = Friendly
+|rn     = –
+|ground = [[Stadium of Serres|A]]<!-- GRE -->
+|ol     = [[Panserraikos F.C.|Panserraikos]]
+|gf     = 1
+|ga     = 0
+|rep    = {{fb report 2t|width = 
+|ko  = 
+|att = 6000
+|ref = Haralampidis
+|lt  = [[Panserraikos F.C.|Panserraikos]]
+|rt  = [[PAOK FC|PAOK]]
+|ltf = 
+|rtf = [[Vieirinha]] {{goal|21}}
+|rep = 
+}}
+}}
+
+{{Fb cm footer|u=7 September 2009 |t=PAOK |notes= |s= |date=September 2009}}
+
+==Competitions==
+
+===Overview===
+{{Fb overview
+|c=4
+|c1=[[2009–10 Super League Greece|Super League Greece]] |w1=19 |d1=5 |l1=6 |f1=41 |a1=16
+|c2=[[2009–10 Greek Football Cup|Greek Cup]] |w2=2 |d2=0 |l2=1 |f2=3 |a2=4
+|c3=[[2009–10 Super League Greece#Play-offs|UEFA play-offs]] |w3=4 |d3=1 |l3=1 |f3=7 |a3=3
+|c4=[[2009–10 UEFA Europa League|UEFA Europa League]] |w4=1 |d4=2 |l4=1 |f4=3 |a4=3
+|u={{Start date|2010|05|19|df=y}}.
+}}
+
+==Super League Greece==
+{{main|2009–10 Super League Greece}}
+
+===League table===
+{{:2009–10 Super League Greece|transcludesection=Regular season|showteam=PAOK}}
+
+===Results summary===
+{{Fb_rs |hw=13 |hd=0 |hl=2 |hgf=26 |hga=6 |aw=6 |ad=5 |al=4 |agf=15 |aga=10 }}
+{{Fb rs footer|u=18 April|s=[[#Matches|Competitive matches]]|date=November 2009}}
+
+===Results by round===
+{{#invoke:sports rbr table|table|legendpos=b
+|header=Round
+|label1= Ground
+|res1=H/A/H/A/A/H/H/A/H/A/H/A/H/A/A/H/A/H/A/H/A/A/H/A/H/A/H/A/H/H
+|label2= Result
+|res2=W/D/L/D/D/W/W/L/W/W/W/L/W/D/W/W/W/W/W/W/D/W/W/W/W/L/L/L/W/W
+|label3= Position
+|res3=8/6/5/10/9/7/3/4/3/3/3/3/3/3/3/3/3/3/2/2/3/3/2/2/2/2/3/3/3/3
+<!-- -->
+|text_H=Home|text_A=Away
+|color_W=green2|text_W=Win
+|color_D=yellow2|text_D=Draw
+|color_L=red2|text_L=Loss
+|color_1=1st|color_2=2nd|color_3=3rd|color_18-=red1
+
+|updated=complete
+|source=[[#Matches|Competitive matches]]
+|date=November 2009
+}}
+
+===Matches===
+{{legend2|#CCFFCC|Win|border=1px solid #AAAAAA}}
+{{legend2|#FFFFCC|Draw|border=1px solid #AAAAAA}}
+{{legend2|#FFCCCC|Loss|border=1px solid #AAAAAA}}
+
+{{football box collapsible
+|round = 2
+|date = 30 August 2009
+|time = 16:45 [[Eastern European Time|EET]]
+|team1 = PAOK
+|score =3–0 
+|report = https://www.soccerway.com/match/levadiakos-YouAGdPF/paok-Kry6HxA9/?mid=WYqZwDbr
+|team2 = [[Levadiakos F.C.|Levadiakos]]
+|goals1 = [[Mohammed Abubakari|Abubakari]] {{yel|60}}<br />[[Vieirinha]] {{goal|61|}}<br />[[Lucio Filomeno|Filomeno]] {{goal|65|}} {{yel|66}}<br /> [[Vasilios Koutsianikoulis|Koutsianikoulis]] {{goal|73|}} <br />[[Stelios Malezas|Malezas]] {{yel|81}}
+|goals2 = {{yel|24}} [[Giorgos Koltzos|Koltzos]]
+|stadium = [[Stadio Toumba|Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 11,934
+|referee = Georgios Giannopoulos
+|result =W
+}}
+
+{{football box collapsible
+|round = 3
+|date = 13 September 2009
+|time = 16:45 [[Eastern European Time|EET]]
+|team1 = [[Asteras Tripolis F.C.|Asteras Tripolis]]
+|score =1–1 
+|report = https://www.soccerway.com/match/asteras-tripolis-KMRQ5buc/paok-Kry6HxA9/?mid=niBZjlS6
+|team2 = PAOK
+|goals1 = [[Danijel Cesarec|Cesarec]] {{goal|62|}} <br />[[Horacio Cardozo|Cardozo]] {{yel|66}}
+|goals2 = {{yel|21}} [[Nikos Arabatzis|Arabatzis]] <br />{{goal|48|}} {{yel|76}} [[Georgios Fotakis|Fotakis]] 
+|stadium = [[Theodoros Kolokotronis Stadium]]
+|location   = [[Tripoli, Greece|Tripoli]]
+|attendance = 2,500
+|referee = Giorgos Stathopoulos
+|result =D
+}}
+
+{{football box collapsible
+|round = 4
+|date = 20 September 2009
+|time = 16:00 [[Eastern European Time|EET]]
+|team1 = PAOK
+|score =1–2
+|report =https://www.soccerway.com/match/olympiacos-piraeus-hnzvnHPS/paok-Kry6HxA9/?mid=8IBriuYN
+|team2 = [[Olympiacos F.C.|Olympiacos]]
+|goals1 = [[Vieirinha]] {{goal|11|}} <br />[[Georgios Fotakis|Fotakis]] {{yel|29}} <br />[[Lucio Filomeno|Filomeno]] {{yel|55}} 
+|goals2 = {{goal|41|}} [[Diogo Luís Santo|Diogo]] <br />{{yel|60}} [[Leonardo de Jesus Geraldo|Leonardo]] <br />{{goal|90|}} [[Avraam Papadopoulos|Papadopoulos]] 
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 23,010
+|referee = Anastasios Kakos
+|result =L
+}}
+
+{{football box collapsible
+|round = 1
+|date = 23 September 2009
+|time =19:00 [[Eastern European Time|EET]]
+|team1 = [[Panionios F.C.|Panionios]]
+|score =0–0
+|report =https://www.soccerway.com/match/panionios-M1Q9temj/paok-Kry6HxA9/?mid=MebsrZzL	
+|team2 = PAOK
+|goals1 = [[Georgios Tzavellas|Tzavellas]] {{yel|90}}
+|goals2 = {{yel|67}} [[Bruno Cirillo|Cirillo]] <br />{{sentoff|0|74}}  [[Thanasis Papazoglou|Papazoglou]] <br />{{yel|90}} [[Pablo Gabriel García|García]]
+|stadium = [[Nea Smyrni Stadium]]
+|location   = [[Nea Smyrni|Nea Smyrni, Athens]]
+|attendance = 2,003
+|referee = Dimitris Kyrkos
+|result =D
+}}
+
+{{football box collapsible
+|round = 5
+|date = 27 September 2009
+|time = 19:00 [[Eastern European Time|EET]]
+|team1 = [[Atromitos F.C.|Atromitos]]
+|score =0–0
+|report = https://www.soccerway.com/match/atromitos-GAUEFGvM/paok-Kry6HxA9/?mid=QonPeBao
+|team2 = PAOK
+|goals1 = [[Konstantinos Nebegleras|Nebegleras]] {{yel|24}}<br />[[Giannis Skondras|Skondras]] {{yel|27}}<br />[[Ilias Anastasakos|Anastasakos]] {{yel|83}}
+|goals2 = {{yel|23}} [[Stelios Malezas|Malezas]] <br />{{yel|48}} [[Nikos Arabatzis|Arabatzis]] <br />{{yel|86}} [[Pablo Contreras|Contreras]]
+|stadium = [[Peristeri Stadium]]
+|location   = [[Peristeri|Peristeri, Athens]]
+|attendance = 4,020
+|referee = Marios Labropoulos
+|result =D
+}}
+
+{{football box collapsible
+|round = 6
+|date = 5 October 2009
+|time = 20:30 [[Eastern European Time|EET]]
+|team1 = PAOK
+|score =1–0
+|report = https://www.soccerway.com/match/iraklis-fc-46PfJ545/paok-Kry6HxA9/?mid=zuEoalqi
+|team2 = [[Iraklis F.C. (Thessaloniki)|Iraklis]]
+|goals1 = [[Bruno Cirillo|Cirillo]] {{yel|30}}<br />[[Stelios Malezas|Malezas]] {{yel|39}}<br />[[Sérgio Conceição|Conceição]] {{yel|57}}<br />[[Pablo Gabriel García|García]] {{yel|83}}<br />[[Vladimir Ivić|Ivić]] {{goal|87}}
+|goals2 = {{yel|25}} [[Matías Lequi|Lequi]] <br />{{yel|39}} [[Victoraș Iacob|Iacob]] <br />{{yel|81}} [[Kostas Giannoulis|Giannoulis]] 
+|stadium = [[Stadio Toumba|Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 13,944
+|referee = Vasilios Pamporidis
+|result =W
+}}
+
+{{football box collapsible
+|round = 7
+|date = 17 October 2009
+|time = 19:00 [[Eastern European Time|EET]]
+|team1 = PAOK
+|score =2–0
+|report = https://www.soccerway.com/match/giannina-rN9JmpKO/paok-Kry6HxA9/?mid=tWHuepDS
+|team2 = [[PAS Giannina F.C.|PAS Giannina]]
+|goals1 = [[Sérgio Conceição|Conceição]] {{yel|25}}<br /> [[Vladimir Ivić|Ivić]] {{yel|39}}<br /> [[Lino (footballer, born 1977)|Lino]] {{goal|43}}<br />[[Nikos Arabatzis|Arabatzis]] {{goal|45}}<br />[[Olivier Sorlin|Sorlin]] {{yel|90}}
+|goals2 = {{yel|27}} [[Petros Kanakoudis|Kanakoudis]]<br />{{yel|42}} [[Vanderson Scardovelli|Scardovelli]]<br />{{yel|71}} [[Georgios Dasios|Dasios]]
+|stadium = [[Stadio Toumba|Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 13,239
+|referee = Michalis Tsiniaris
+|result =W
+}}
+
+{{football box collapsible
+|round = 8
+|date = 25 October 2009
+|time = 19:00 [[Eastern European Time|EET]]
+|team1 = [[Panathinaikos F.C.|Panathinaikos]]
+|score =2–1
+|report =https://www.soccerway.com/match/panathinaikos-SENMmweG/paok-Kry6HxA9/?mid=0EJeA3sS
+|team2 = PAOK
+|goals1 = [[Kostas Katsouranis|Katsouranis]] {{goal|23||70|}}<br /> [[Josu Sarriegi|Sarriegi]] {{yel|41}}
+|goals2 = {{sentoff|2|37|83}} [[Vladimir Ivić|Ivić]]  <br />{{goal|39}} [[Vieirinha]] <br />{{yel|44}} [[Pablo Gabriel García|García]] <br />{{yel|51}} [[Pablo Contreras|Contreras]] <br />{{yel|52}} [[Olivier Sorlin|Sorlin]]
+|stadium = [[Olympic Stadium (Athens)|Olympic Stadium]]
+|location   = [[Athens]]
+|attendance = 19,875
+|referee = Ilias Spathas
+|result =L
+}}
+
+{{football box collapsible
+|round = 9
+|date = 31 October 2009
+|time = 16:45 [[Eastern European Time|EET]]
+|team1 = PAOK
+|score =1–0
+|report =https://www.soccerway.com/match/paok-Kry6HxA9/xanthi-QLy2IIf3/?mid=61yO9GBs
+|team2 = [[Xanthi F.C.|Xanthi]]
+|goals1 = [[Vladimir Ivić|Ivić]] {{goal|90|}}<br />[[Lino (footballer, born 1977)|Lino]]  {{yel|90}}
+|goals2 = {{yel|72}} [[Giannis Papadimitriou|Papadimitriou]] <br />{{yel|83}} [[Zdeno Štrba|Štrba]] <br />{{yel|89}} [[Kim Jaggy|Jaggy]]
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 11,044
+|referee = Giorgos Daloukas
+|result =W
+}}
+
+{{football box collapsible
+|round      = 10
+|date       = 7 November 2009
+|time       = 19:00 [[Eastern European Time|EET]]
+|team1      = [[Panthrakikos F.C.|Panthrakikos]]
+|score      = 1–2
+|report     = https://www.soccerway.com/match/panthrakikos-vcFKL6zJ/paok-Kry6HxA9/?mid=CxsDTFXP
+|team2      = PAOK
+|goals1     = [[Željko Đokić|Đokić]]  {{yel|32}}<br />[[Marcelo Goianira|Marcelo]]  {{yel|32}}<br />[[Ludovic Clément|Clément]]  {{yel|32}}<br />[[Alexis N'Gambi|N'Gambi]]  {{yel|36}}<br />[[Bédi Buval|Buval]] {{goal|69}}<br />[[Vlasis Kazakis|Kazakis]] {{yel|90}}
+|goals2     = {{goal|26}} {{yel|32}} [[Vieirinha]] <br />{{yel|33}} [[Dario Krešić|Krešić]] <br />{{yel|41}} [[Vitolo (footballer, born 1983)|Vitolo]] <br />{{goal|56}} [[Pablo Gabriel García|García]] <br />{{yel|90}} [[Lino (footballer, born 1977)|Lino]]
+|stadium    = [[Komotini Municipal Stadium]]
+|location   = [[Komotini]]
+|attendance = 3.738
+|referee    = Nikos Charalampidis
+|result     = W
+}}
+
+{{football box collapsible
+|round = 11
+|date = 22 November 2009
+|time = 19:00 [[Eastern European Time|EET]]
+|team1 = PAOK
+|score = 4–1
+|report =https://www.soccerway.com/match/aris-SvR5syYq/paok-Kry6HxA9/?mid=4CPLvDPn
+|team2 = [[Aris Thessaloniki F.C.|Aris]]
+|goals1 = [[Vladimir Ivić|Ivić]] {{goal|20|pen.}} {{yel|21}} <br />[[Zlatan Muslimović|Muslimović]] {{yel|29}} {{goal|45||60|}}<br />[[Pablo Gabriel García|García]] {{yel|33}}<br />[[Bruno Cirillo|Cirillo]] {{yel|45}}<br />[[Vitolo (footballer, born 1983)|Vitolo]] {{goal|47|pen.}} {{yel|83}}<br />[[Georgios Fotakis|Fotakis]] {{yel|86}}
+|goals2 = {{yel|12}} [[Valentin Roberge|Roberge]]<br /> {{yel|12}} {{goal|85}} [[Darcy Dolce Neto|Neto]]<br />{{yel|19}} [[Cristian Nasuti|Nasuti]]<br />{{yel|45}} [[Carlos Arano|Arano]]<br />{{yel|45}} [[Mehdi Nafti|Nafti]]<br />{{yel|83}} [[Stavros Labriakos|Labriakos]]
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 23,034
+|referee = Dimitris Kalopoulos
+|result =W
+}}
+
+{{football box collapsible
+|round      = 12
+|date       = 28 November 2009
+|time       = 19:00 [[Eastern European Time|EET]]
+|team1      = [[AEK Athens F.C.|AEK Athens]]
+|score      = 1–0
+|report     = https://www.soccerway.com/match/aek-ANpZncAM/paok-Kry6HxA9/?mid=8lMLrCvt
+|team2      = PAOK
+|goals1     = [[Grigoris Makos|Makos]] {{yel|30}}<br />[[Gustavo Manduca|Manduca]] {{goal|48}}<br />[[Youssouf Hersi|Hersi]] {{yel|76}}
+|goals2     = {{yel|40}} [[Vladimir Ivić|Ivić]]<br />{{yel|45}} [[Vitolo (footballer, born 1983)|Vitolo]] <br />{{yel|59}} [[Nikos Arabatzis|Arabatzis]] <br />{{yel|87}} [[Pablo Contreras|Contreras]] 
+|stadium    = [[Olympic Stadium (Athens)|Olympic Stadium]]
+|location   = [[Athens]]
+|attendance = 15,942
+|referee    = Giorgos Stathopoulos
+|result     = L
+}}
+
+{{football box collapsible
+|round = 13
+|date = 5 December 2009
+|time = 19:00 [[Eastern European Time|EET]]
+|team1 = PAOK
+|score = 1–0
+|report =https://www.soccerway.com/match/ael-larissa-0hPDuF2d/paok-Kry6HxA9/?mid=OEFkY5oo
+|team2 = [[Athlitiki Enosi Larissa F.C.|AEL]]
+|goals1 = [[Vladimir Ivić|Ivić]] {{goal|4|pen.}}<br />[[Pablo Contreras|Contreras]] {{yel|25}}<br />[[Bruno Cirillo|Cirillo]] {{yel|53}}<br />[[Zlatan Muslimović|Muslimović]] {{sentoff|2|62|90}}
+|goals2 = {{yel|3}} [[Arkadiusz Malarz|Malarz]]  <br />{{yel|53}} [[Walter Iglesias|Iglesias]]  <br />{{sentoff|0|54}} [[Gastón Casas|Casas]] <br /> {{yel|88}} [[Nikos Dabizas|Dabizas]]
+|stadium= [[Stadio Toumba|Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 16,539
+|referee = Konstantinos Papastamatis
+|result = W
+}}
+
+{{football box collapsible
+|round = 14
+|date = 13 December 2009
+|time = 16:45 [[Eastern European Time|EET]]
+|team1 = [[Nea Kavala F.C.|Kavala]]
+|score =0–0
+|report =https://www.soccerway.com/match/kavala-ERAyvVXs/paok-Kry6HxA9/?mid=21GHxJMk
+|team2 = PAOK
+|goals1 = [[Savo Pavićević|Pavićević]] {{yel|2}} <br />[[Frédéric Mendy (footballer, born 1981)|Mendy]] {{yel|8}} <br />[[Douglão]] {{yel|36}} <br />[[Evangelos Ikonomou|Ikonomou]] {{yel|58}} <br />[[Manolis Psomas|Psomas]] {{yel|61}} <br />[[Siniša Dobrašinović|Dobrašinović]] {{yel|82}}
+|goals2 = {{yel|43}} [[Olivier Sorlin|Sorlin]] <br />{{yel|59}} [[Lino (footballer, born 1977)|Lino]]
+|stadium= [[Anthi Karagianni Stadium]]
+|location   = [[Kavala]]
+|attendance = 7,142
+|referee = Dimitris Gagas
+|result =D
+}}
+
+{{football box collapsible
+|round = 15
+|date = 19 December 2009
+|time = 16:45 [[Eastern European Time|EET]]
+|team1 = [[Ergotelis F.C.|Ergotelis]]
+|score =0–2
+|report =https://www.soccerway.com/match/ergotelis-nocrKoka/paok-Kry6HxA9/?mid=ARJPzci2
+|team2 = PAOK
+|goals1 = [[Dimitrios Orfanos|Orfanos]] {{yel|25}}<br />[[Manolis Roubakis|Roubakis]] {{yel|36}}<br />[[Deividas Česnauskis|Česnauskis]] {{yel|44}}<br />[[Sergio Leal|Leal]] {{yel|83}}
+|goals2 = {{goal|53}} [[Nikos Arabatzis|Arabatzis]]<br />{{goal|65}} {{yel|65}} [[Vieirinha]] <br />{{yel|78}} [[Pablo Contreras|Contreras]]
+|stadium = [[Pankritio Stadium]]
+|location   = [[Heraklion]]
+|attendance = 2,189
+|referee = Stavros Tritsonis
+|result =W
+}}
+
+{{football box collapsible
+|round = 16
+|date = 6 January 2010
+|time = 19:00 [[Eastern European Time|EET]]
+|team1 = PAOK
+|score =1–0
+|report =https://www.soccerway.com/match/panionios-M1Q9temj/paok-Kry6HxA9/?mid=tnkxMCrs
+|team2 = [[Panionios F.C.|Panionios]]
+|goals1 = [[Vladimir Ivić|Ivić]] {{goal|31}}<br />[[Vasilios Koutsianikoulis|Koutsianikoulis]] {{yel|36}}<br />[[Vieirinha]] {{yel|75}}<br />[[Pablo Contreras|Contreras]] {{yel|90}}
+|goals2 = {{yel|10}} [[Martin Latka|Latka]] <br />{{yel|30}} [[Bennard Yao Kumordzi|Kumordzi]] <br />{{yel|64}} [[Marios Nicolaou (footballer, born 1983)|Nicolaou]] <br />{{yel|73}} [[Boško Balaban|Balaban]] 
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 16,129
+|referee = Giorgos Daloukas
+|result =W
+}}
+
+{{football box collapsible
+|round = 17
+|date = 9 January 2010
+|time = 19:00 [[Eastern European Time|EET]]
+|team1 = [[Levadiakos F.C.|Levadiakos]]
+|score = 0–2
+|report = https://www.soccerway.com/match/levadiakos-YouAGdPF/paok-Kry6HxA9/?mid=WKFdJASa
+|team2 = PAOK
+|goals1 = [[Federico Martorell|Martorell]] {{yel|36}}<br /> [[Thanasis Moulopoulos|Moulopoulos]] {{yel|55}}
+|goals2 = {{goal|10}} {{yel|52}} [[Vladimir Ivić|Ivić]]<br />{{sentoff|2|28|59|}} [[Nikos Arabatzis|Arabatzis]]<br />{{goal|82}} [[Lino (footballer, born 1977)|Lino]] 
+|stadium = [[Levadia Municipal Stadium]]
+|location   = [[Livadeia]]
+|attendance = 3,209
+|referee = Andreas Pappas
+|result = W
+}}
+
+{{football box collapsible
+|round = 18
+|date = 16 January 2010
+|time = 16:45 [[Eastern European Time|EET]]
+|team1 = PAOK
+|score = 1–0
+|report = https://www.soccerway.com/match/asteras-tripolis-KMRQ5buc/paok-Kry6HxA9/?mid=f57JeyWR
+|team2 = [[Asteras Tripolis F.C.|Asteras Tripolis]]
+|goals1 =[[Vladimir Ivić|Ivić]] {{yel|16}}<br />[[Vieirinha]] {{sentoff|0|20}}<br />[[Vasilios Koutsianikoulis|Koutsianikoulis]] {{goal|53}}<br />[[Mirosław Sznaucner|Sznaucner]] {{yel|90}}
+|goals2 ={{yel|16}} [[Nikolaos Lazaridis|Lazaridis]] <br /> {{yel|21}} [[Adrián Bastía|Bastía]] <br /> {{yel|35}} [[Bruno Urribarri|Urribarri]]
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 14,128
+|referee = Michalis Dakos
+|result = W
+}}
+
+{{football box collapsible
+|round = 19
+|date = 24 January 2010
+|time = 19:00 [[Eastern European Time|EET]]
+|team1 = [[Olympiacos F.C.|Olympiacos]]
+|score = 0–1
+|report = https://www.soccerway.com/match/olympiacos-piraeus-hnzvnHPS/paok-Kry6HxA9/?mid=lp27palD
+|team2 = PAOK
+|goals1 = [[Georgios Galitsios|Galitsios]] {{yel|18}}<br />[[Enzo Maresca|Maresca]] {{yel|74}} <br />[[Diogo Luís Santo|Diogo]] {{yel|90}}
+|goals2 = {{yel|11}} [[Vitolo (footballer, born 1983)|Vitolo]] <br /> {{yel|16}} [[Pablo Contreras|Contreras]] <br /> {{goal|20}} [[Edinho (footballer, born July 1982)|Edinho]] <br /> {{yel|71}} [[Kostas Chalkias|Chalkias]] <br /> {{yel|76}} [[Pablo Gabriel García|García]]
+|stadium = [[Georgios Karaiskakis Stadium|Karaiskakis Stadium]]
+|location   = [[Piraeus]]
+|attendance = 26,139
+|referee = Giorgos Daloukas
+|result = W
+}}
+
+{{football box collapsible
+|round = 20
+|date = 30 January 2010
+|time = 19:00 [[Eastern European Time|EET]]
+|team1 = PAOK
+|score = 1–0
+|report = https://www.soccerway.com/match/atromitos-GAUEFGvM/paok-Kry6HxA9/?mid=CIqb7MeQ
+|team2 = [[Atromitos F.C.|Atromitos]]
+|goals1 = [[Cristiano Moraes de Oliveira|Cristiano]] {{yel|34}} <br /> [[Thanasis Papazoglou|Papazoglou]] {{goal|87}}
+|goals2 ={{yel|15}} [[Paschalis Melissas|Melissas]]<br />{{yel|19}} [[Marcelo Sarmiento|Sarmiento]]<br />{{yel|40}} [[Christos Kalantzis|Kalantzis]]<br />{{yel|45}} [[Marcelo José Oliveira|Oliveira]]
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 17,119
+|referee = Evaggelos Giannopoulos
+|result = W
+}}
+
+{{football box collapsible
+|round      = 21
+|date       = 7 February 2010
+|time       = 15:00 [[Eastern European Time|EET]]
+|team1      = [[Iraklis F.C. (Thessaloniki)|Iraklis]]
+|score      = 1–1
+|report     = https://www.soccerway.com/match/iraklis-fc-46PfJ545/paok-Kry6HxA9/?mid=rZHP2X9b
+|team2      = PAOK
+|goals1     = [[Lucas Rimoldi|Rimoldi]] {{yel|24}}<br>[[Bogdan Mara|Mara]] {{yel|30}}<br>[[Francisco Martos|Martos]] {{yel|43}}<br>[[Dimitris Giantsis|Giantsis]] {{goal|55}}<br>[[Miguel Sebastián Garcia|S. Garcia]] {{yel|70}}<br>[[Kostas Giannoulis|Giannoulis]] {{yel|70}}
+|goals2     = {{yel|18}} [[Nikos Arabatzis|Arabatzis]] <br>{{yel|28}} {{goal|35}} [[Zlatan Muslimović|Muslimović]] <br> {{sentoff|2|29|45}} [[Vitolo (footballer, born 1983)|Vitolo]]<br>{{yel|90}} [[Vieirinha]] 
+|stadium    = [[Kaftanzoglio Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 4,571
+|referee    = Ilias Spathas
+|result     = D
+}}
+
+{{football box collapsible
+|round = 22
+|date = 13 February 2010
+|time = 19:00 [[Eastern European Time|EET]]
+|team1 = [[PAS Giannina F.C.|PAS Giannina]]
+|score = 0–1
+|report = https://www.soccerway.com/match/giannina-rN9JmpKO/paok-Kry6HxA9/?mid=6LnBEAg4
+|team2 = PAOK
+|goals1 = [[Georgios Kousas|Kousas]] {{yel|29}}<br>[[Mirnes Šišić|Šišić]] {{yel|45}}<br>[[Georgios Dasios|Dasios]] {{yel|48}}<br>[[Konstantinos Kaznaferis|Kaznaferis]] {{yel|80}}<br>[[Vanderson Scardovelli|Scardovelli]] {{yel|82}}
+|goals2 = {{yel|41}} {{goal|43}} [[Georgios Fotakis|Fotakis]] <br>{{yel|49}} [[Vieirinha]] <br>{{sentoff|2|59|63}} [[Nikos Arabatzis|Arabatzis]] <br>{{yel|49}} [[Bryce Moon|Moon]] 
+|stadium = [[Zosimades Stadium]]
+|location   = [[Ioannina]]
+|attendance = 4191
+|referee = Stavros Tritsonis
+|result = W
+}}
+
+{{football box collapsible
+|round      = 23
+|date       = 21 February 2010
+|time       = 19:00 [[Eastern European Time|EET]]
+|team1      = PAOK
+|score      = 2–1
+|report     = https://www.soccerway.com/match/panathinaikos-SENMmweG/paok-Kry6HxA9/?mid=vc90T98c
+|team2      = [[Panathinaikos F.C.|Panathinaikos]]
+|goals1     = [[Pablo Contreras|Contreras]] {{yel|24}}<br>[[Pablo Gabriel García|García]] {{yel|41}} {{goal|59}}<br>[[Zlatan Muslimović|Muslimović]] {{goal|68}} {{yel|69}}
+|goals2     = {{yel|31}} [[Loukas Vyntra|Vyntra]]<br>{{yel|41}} [[Sebastián Leto|Leto]]<br>{{yel|47}} [[Josu Sarriegi|Sarriegi]]<br>{{goal|64}} [[Djibril Cissé|Cissé]]
+|stadium    = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 23104
+|referee    = Giorgos Daloukas
+|result     = W
+}}
+
+{{football box collapsible
+|round = 24
+|date = 27 February 2010
+|time = 19:00 [[Eastern European Time|EET]]
+|team1 = [[Xanthi F.C.|Xanthi]]
+|score = 0–3
+|report = https://www.soccerway.com/match/paok-Kry6HxA9/xanthi-QLy2IIf3/?mid=OlXhJPpj
+|team2 = PAOK
+|goals1 = [[Luciano de Souza]] {{yel|73}}<br> [[Marcelinho (footballer, born June 1987)|Marcelinho]] {{yel|84}}
+|goals2 = {{goal|7||66|}} [[Vieirinha]]<br>{{goal|13}} [[Vladimir Ivić|Ivić]]
+|stadium = [[Xanthi FC Arena]]
+|location   = [[Xanthi]]
+|attendance = 1457
+|referee = Stavros Tritsonis
+|result = W
+}}
+
+{{football box collapsible
+|round = 25
+|date = 6 March 2010
+|time = 16:45 [[Eastern European Time|EET]]
+|team1 = PAOK
+|score = 3–0
+|report = https://www.soccerway.com/match/panthrakikos-vcFKL6zJ/paok-Kry6HxA9/?mid=612Gx5iS
+|team2 = [[Panthrakikos F.C.|Panthrakikos]]
+|goals1 = [[Stelios Malezas|Malezas]] {{goal|24}}<br>[[Olivier Sorlin|Sorlin]] {{goal|41}}<br>[[Lino (footballer, born 1977)|Lino]] {{goal|78}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 20,013
+|referee = Marios Labropoulos
+|result = W
+}}
+
+{{football box collapsible
+|round = 26
+|date = 14 March 2010
+|time = 19:00 [[Eastern European Time|EET]]
+|team1 = [[Aris Thessaloniki F.C.|Aris]]
+|score = 2–0
+|report = https://www.soccerway.com/match/aris-SvR5syYq/paok-Kry6HxA9/?mid=4K4SZyyl
+|team2 = PAOK
+|goals1 = [[Koke (footballer, born 1983)|Koke]] {{yel|15}}<br>[[Javier Cámpora|Cámpora]] {{penmiss}} <small>20'</small> {{goal|22||65|}} {{yel|27}}<br>[[Camel Meriem|Meriem]] {{yel|48}}
+|goals2 = {{yel|2}} [[Pablo Gabriel García|García]]<br>{{yel|19}} [[Pablo Contreras|Contreras]]<br>{{yel|25}} [[Vladimir Ivić|Ivić]]<br>{{sentoff|2|41|80}} [[Vieirinha]]<br>{{sentoff|2|63|78}} [[Mirosław Sznaucner|Sznaucner]]<br>{{yel|80}} [[Kostas Chalkias|Chalkias]]
+|stadium = [[Kleanthis Vikelidis Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 17,353
+|referee = Ilias Spathas
+|result = L
+}}
+
+{{football box collapsible
+|round      = 27
+|date       = 21 March 2010
+|time       = 19:00 [[Eastern European Time|EET]]
+|team1      = PAOK
+|score      = 0–1
+|report     = https://www.soccerway.com/match/aek-ANpZncAM/paok-Kry6HxA9/?mid=CYqkgHsQ
+|team2      = [[AEK Athens F.C.|AEK Athens]]
+|goals1     = [[Nikos Arabatzis|Arabatzis]] {{yel|44}}<br>[[Vasilios Koutsianikoulis|Koutsianikoulis]] {{yel|45}}
+|goals2     = {{goal|15}} {{yel|36}} [[Ismael Blanco|Blanco]] <br>{{yel|20}} [[Sanel Jahić|Jahić]] <br>{{yel|73}} [[Sebastián Saja|Saja]] <br>{{yel|83}} [[Ignacio Scocco|Scocco]] 
+|stadium    = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 18589
+|referee    = Anastasios Kakos
+|result     = L
+}}
+
+{{football box collapsible
+|round = 28
+|date = 28 March 2010
+|time = 19:00 [[Eastern European Time|EET]]
+|team1 = [[Athlitiki Enosi Larissa F.C.|AEL]]
+|score = 2–1
+|report = https://www.soccerway.com/match/ael-larissa-0hPDuF2d/paok-Kry6HxA9/?mid=dpEyrXJI
+|team2 = PAOK
+|goals1 = [[Panagiotis Katsiaros|Katsiaros]] {{sentoff|2|13|90}}<br>[[Daniel Cousin|Cousin]] {{goal|16}} {{yel|51}}<br>[[Nikos Dabizas|Dabizas]] {{yel|39}}<br>[[Sander Puri|Puri]] {{goal|90}}
+|goals2 = {{yel|25}} [[Bruno Cirillo|Cirillo]] <br>{{yel|48}} [[Georgios Fotakis|Fotakis]] <br>{{goal|82}} {{yel|87}} [[Pablo Contreras|Contreras]] <br>{{yel|84}} [[Vladimir Ivić|Ivić]]
+|stadium = [[Alcazar Stadium]]
+|location   = [[Larissa]]
+|attendance = 6848
+|referee = Giorgos Stathopoulos
+|result = L
+}}
+
+{{football box collapsible
+|round = 29
+|date = 11 April 2010
+|time = 19:00 [[Eastern European Time|EET]]
+|team1 = PAOK
+|score = 1–0
+|report = https://www.soccerway.com/match/kavala-ERAyvVXs/paok-Kry6HxA9/?mid=EiqGcCJ5
+|team2 = [[Kavala F.C.|Kavala]]
+|goals1 = [[Zlatan Muslimović|Muslimović]] {{goal|45}}<br>[[Georgios Fotakis|Fotakis]] {{yel|82}}<br>[[Stelios Malezas|Malezas]] {{yel|90}}
+|goals2 = {{yel|26}} [[Wilson Oruma|Oruma]]<br>{{yel|73}} [[Diogo Rincón|Rincón]]<br>{{yel|76}} [[Lazaros Theodorelis|Theodorelis]]<br>{{yel|90}} [[Savo Pavićević|Pavićević]]
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 11,117
+|referee = Michalis Dakos
+|result = W
+}}
+
+{{football box collapsible
+|round = 30
+|date = 18 April 2010
+|time = 19:00 [[Eastern European Time|EET]]
+|team1 = PAOK
+|score = 4–1
+|report = https://www.soccerway.com/match/ergotelis-nocrKoka/paok-Kry6HxA9/?mid=KxUgDiJh
+|team2 = [[Ergotelis F.C.|Ergotelis]]
+|goals1 = [[Olivier Sorlin|Sorlin]] {{goal|2}}<br>[[Zlatan Muslimović|Muslimović]] {{goal|10}}<br>[[Bruno Cirillo|Cirillo]] {{goal|16}}<br>[[Thanasis Papazoglou|Papazoglou]] {{goal|27}}
+|goals2 = {{goal|46}} [[Christos Chrysofakis|Chrysofakis]] <br>{{yel|47}} [[Dimitrios Orfanos|Orfanos]]<br>{{yel|84}} [[Mateo Bertoša|Bertoša]]
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 9,014
+|referee = Konstantinos Papastamatis
+|result = W
+}}
+
+===Play-offs===
+{{main|2009–10 Super League Greece#Play-offs|l1=2009–10 Super League Greece Play-offs}}
+{{:2009–10 Super League Greece|transcludesection=Play-offs|showteam=PAOK|show_matches=n}}
+
+====Matches====
+{{legend2|#CCFFCC|Win|border=1px solid #AAAAAA}}
+{{legend2|#FFFFCC|Draw|border=1px solid #AAAAAA}}
+{{legend2|#FFCCCC|Loss|border=1px solid #AAAAAA}}
+
+{{football box collapsible
+|round = 1
+|date = 28 April 2010
+|time = 16:45 [[Eastern European Time|EET]]
+|team1 = [[AEK Athens F.C.|AEK Athens]]
+|score = 0–0
+|report = https://www.soccerway.com/match/aek-ANpZncAM/paok-Kry6HxA9/?mid=IL3sJ00q
+|team2 = PAOK
+|goals1 = [[Carlos Araujo|Araujo]] {{yel|71}}
+|goals2 = {{yel|35}} [[Vitolo (footballer, born 1983)|Vitolo]]
+|stadium = [[Olympic Stadium (Athens)|Olympic Stadium]]
+|location   = [[Athens]]
+|attendance = 11,807
+|referee = Michalis Dakos
+|result = D
+}}
+
+{{football box collapsible
+|round      = 2
+|date       = 2 May 2010
+|time       = 21:15 [[Eastern European Time|EET]]
+|team1      = PAOK
+|score      = 2–0
+|report     = https://www.soccerway.com/match/aris-SvR5syYq/paok-Kry6HxA9/?mid=4x6gGbp2
+|team2      = [[Aris Thessaloniki F.C.|Aris]] 
+|goals1     = [[Vladimir Ivić|Ivić]] {{yel|5}} {{goal|26}}<br>[[Mirko Savini|Savini]] {{yel|14}} {{goal|36}}<br>[[Pablo Gabriel García|García]] {{yel|37}}<br>[[Pablo Contreras|Contreras]] {{yel|62}}<br>[[Lucio Filomeno|Filomeno]] {{yel|84}}<br>[[Kostas Chalkias|Chalkias]] {{yel|86}}
+|goals2     = {{yel|5}} [[Darcy Dolce Neto|Neto]] <br>{{yel|64}} [[Cristian Nasuti|Nasuti]] <br>{{yel|70}} [[Athanassios Prittas|Prittas]] <br>{{yel|86}} [[Stavros Labriakos|Labriakos]]
+|stadium    = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 23,412
+|referee    = Giorgos Stathopoulos
+|result     = W
+}}
+
+{{football box collapsible
+|round      = 3
+|date       = 9 May 2010
+|time       = 19:00 [[Eastern European Time|EET]]
+|team1      = PAOK
+|score      = 1–0
+|report     = https://www.soccerway.com/match/olympiacos-piraeus-hnzvnHPS/paok-Kry6HxA9/?mid=6RBTRGgC
+|team2      = [[Olympiacos F.C.|Olympiacos]]
+|goals1     = [[Zlatan Muslimović|Muslimović]] {{goal|11}} <br>[[Olivier Sorlin|Sorlin]] {{yel|38}}<br>[[Lino (footballer, born 1977)|Lino]] {{yel|80}}
+|goals2     = {{yel|74}} [[Michał Żewłakow|Żewłakow]]<br>{{yel|82}} [[Vasilis Torosidis|Torosidis]]
+|stadium    = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 24,109
+|referee    = Anastasios Kakos
+|result     = W
+}}
+
+{{football box collapsible
+|round      = 4
+|date       = 12 May 2010
+|time       = 16:45 [[Eastern European Time|EET]]
+|team1      = [[Olympiacos F.C.|Olympiacos]]
+|score      = 0–1
+|report     = https://www.soccerway.com/match/olympiacos-piraeus-hnzvnHPS/paok-Kry6HxA9/?mid=Yed6Fcza
+|team2      = PAOK
+|goals1     = [[Enzo Maresca|Maresca]] {{yel|29}} <br> [[Avraam Papadopoulos|Papadopoulos]] {{yel|45}} <br> [[Vasilis Torosidis|Torosidis]] {{yel|59}} <br> [[Dudu Cearense|Dudu]] {{yel|81}} <br>[[Raúl Bravo|Bravo]] {{yel|85}} <br> [[Olof Mellberg|Mellberg]] {{sentoff|0|89}}
+|goals2     = {{yel|23}} [[Vitolo (footballer, born 1983)|Vitolo]]<br>{{goal|33}} [[Vladimir Ivić|Ivić]]<br>{{yel|45}} [[Lucio Filomeno|Filomeno]]<br>{{yel|58}} [[Pablo Gabriel García|García]]<br>{{sentoff|2|89|90}} [[Pablo Contreras|Contreras]]
+|stadium    = [[Georgios Karaiskakis Stadium|Karaiskakis Stadium]]
+|location   = [[Piraeus]]
+|attendance = 15,829
+|referee    = Giorgos Daloukas
+|result     = W
+}}
+
+{{football box collapsible
+|round = 5
+|date = 16 May 2010
+|time = 21:15 [[Eastern European Time|EET]]
+|team1 = PAOK
+|score = 1–0
+|report = https://www.soccerway.com/match/aek-ANpZncAM/paok-Kry6HxA9/?mid=nqMZTsT2
+|team2 = [[AEK Athens F.C.|AEK Athens]]
+|goals1 = [[Bruno Cirillo|Cirillo]] {{yel|31}}<br>[[Georgios Fotakis|Fotakis]] {{sentoff|2|32|90}}<br>[[Zlatan Muslimović|Muslimović]] {{goal|52}} {{yel|53}}
+|goals2 = {{yel|18}} [[Nikolaos Georgeas|Georgeas]] <br>{{yel|20}} [[Panagiotis Lagos|Lagos]] <br>{{yel|22}} [[Krisztián Németh|Németh]] <br>{{penmiss}} <small>49'</small> [[Ignacio Scocco|Scocco]] <br>{{yel|87}} [[Daniel Majstorović|Majstorović]]
+|stadium = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance =25,303
+|referee = Michalis Koukoulakis
+|result =W
+}}
+
+{{football box collapsible
+|round = 6
+|date = 19 May 2010
+|time = 20:30 [[Eastern European Time|EET]]
+|team1 = [[Aris Thessaloniki F.C.|Aris]]
+|score = 3–2
+|report = https://www.soccerway.com/match/aris-SvR5syYq/paok-Kry6HxA9/?mid=IwD7g73b
+|team2 = PAOK
+|goals1 = [[Stelios Malezas|Malezas]] {{goal|12|o.g.}}<br> [[Javito]] {{goal|32}}<br> [[Darío Fernández|Fernández]] {{yel|39}} <br>[[Javier Cámpora|Cámpora]] {{goal|62}} 
+|goals2 = {{goal|22}} [[Thanasis Papazoglou|Papazoglou]]<br> {{yel|23}} [[Vieirinha]]<br>{{yel|43}} [[Edinho (footballer, born July 1982)|Edinho]]<br>{{goal|45|pen.}} [[Bruno Cirillo|Cirillo]]<br>{{yel|54}} [[Olivier Sorlin|Sorlin]]<br>{{yel|86}} [[Nikos Arabatzis|Arabatzis]]
+|stadium = [[Kleanthis Vikelidis Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 6,962
+|referee = Giorgos Stathopoulos
+|result = L
+}}
+
+==Greek Cup==
+{{main|2009–10 Greek Football Cup}}
+
+===Fourth round===
+
+{{football box collapsible
+|date       = 28 October 2009
+|time       = 14:00
+|team1      = [[OFI Crete F.C.|OFI]]
+|score      = 0–1
+|report     = https://www.soccerway.com/match/ofi-crete-bTObIPJB/paok-Kry6HxA9/?mid=lYBSCIBp
+|team2      = PAOK
+|goals1     = 
+|goals2     = {{goal|40}} [[Thanasis Papazoglou|Papazoglou]]
+|stadium    = [[Theodoros Vardinogiannis Stadium]]
+|location   = [[Heraklion]]
+|attendance = 7,500
+|referee    = Konstantinos Papastamatis
+|result     = W
+}}
+
+===Fifth round===
+
+{{football box collapsible
+|date       = 20 January 2010
+|time       = 17:00
+|team1      = [[Panserraikos F.C.|Panserraikos]]
+|score      = 0–2
+|report     = https://www.soccerway.com/match/panserraikos-YqtVj85g/paok-Kry6HxA9/?mid=WtLD7Tbc
+|team2      = PAOK
+|goals1     = [[Aris Galanopoulos|Galanopoulos]] {{yel|13}} <br>[[Cesar Alberto Castro|Castro]] {{yel|22}} <br>[[Lucas Rimoldi|Rimoldi]] {{yel|66}} <br>[[Bochy Hoyos|Hoyos]] {{yel|86}}
+|goals2     = {{goal|14}} [[Lino (footballer, born 1977)|Lino]]<br>{{yel|26}} [[Olivier Sorlin|Sorlin]]<br>{{goal|74}} [[Thanasis Papazoglou|Papazoglou]]
+|stadium    = [[Serres Municipal Stadium]]
+|location   = [[Serres]]
+|attendance = 
+|referee    = Georgios Stathopoulos
+|result     = W
+}}
+
+===Quarter-finals===
+
+{{football box collapsible
+|date       = 2 February 2010
+|time       = 17:00
+|team1      = [[PAS Giannina F.C.|PAS Giannina]]
+|score      = 4–0
+|report     = https://www.soccerway.com/match/giannina-rN9JmpKO/paok-Kry6HxA9/?mid=Uu3zpCDh
+|team2      = PAOK
+|goals1     = [[Patrick Dimbala|Dimbala]] {{goal|8||80|}}<br>[[Georgios Kousas|Kousas]] {{goal|24}} {{yel|24}}<br>[[Ibrahima Bakayoko|Bakayoko]] {{yel|29}}<br>[[Mirosław Sznaucner|Sznaucner]] {{goal|43|o.g.}}<br>[[Georgios Sikalias|Sikalias]] {{yel|75}}<br>[[Georgios Dasios|Dasios]] {{yel|79}}
+|goals2     = {{yel|1}} [[Vitolo (footballer, born 1983)|Vitolo]]<br>{{yel|23}} [[Pablo Gabriel García|García]]<br>{{yel|79}} [[Mirko Savini|Savini]]
+|stadium    = [[Zosimades Stadium]]
+|location   = [[Ioannina]]
+|attendance = 4,000
+|referee    = Vasilios Pamporidis
+|result     = L
+}}
+<small>''One Match, or a replay match on a draw''</small>
+
+==UEFA Europa League==
+{{main|2009–10 UEFA Europa League}}
+
+===Third qualifying round===
+{{main|2009–10_UEFA_Europa_League#Third_qualifying_round|l1=2009–10 UEFA Europa League Third qualifying round}}
+
+{{football box collapsible
+|round      = [[2009–10 UEFA Europa League qualifying phase and play-off round#V.C3.A5lerenga v PAOK|1st leg]]
+|date       = 30 July 2009
+|time       = 19:00 [[Central European Summer Time|CEST]] ([[UTC+02:00]])
+|team1      = [[Vålerenga IF Fotball|Vålerenga]] {{flagicon|NOR}}
+|score      = 1–2
+|report     = http://www.uefa.com/uefaeuropaleague/season=2010/matches/round=2000035/match=2000628/index.html
+|team2      = {{flagicon|GRE}} PAOK
+|goals1     = [[Jarl André Storbæk|Storbæk]] {{goal|42}}<br>[[Bojan Zajić|Zajić]] {{yel|44}}
+|goals2     = {{goal|31}} [[Lino (footballer, born 1977)|Lino]]<br>{{goal|37}} [[Zlatan Muslimović|Muslimović]] <br>{{yel|77}} [[Bruno Cirillo|Cirillo]]
+|stadium    = [[Ullevaal Stadion]]
+|location   = [[Oslo]], [[Norway]]
+|attendance = 3,470
+|referee    = {{flagicon|ROM}} [[Alexandru Deaconu]]
+|result     = W
+}}
+{{football box collapsible
+|round      = [[2009–10 UEFA Europa League qualifying phase and play-off round#PAOK v V.C3.A5lerenga|2nd leg]]
+|date       = 6 August 2009
+|time       = 20:45 [[Central European Summer Time|CEST]] ([[UTC+02:00]])
+|team1      = PAOK {{flagicon|GRE}}
+|score      = 0–1
+|aggregatescore = 2[[Away goals rule|a]]–2
+|report     = http://www.uefa.com/uefaeuropaleague/season=2010/matches/round=2000035/match=2000663/index.html
+|team2      = {{flagicon|NOR}} [[Vålerenga IF Fotball|Vålerenga]]
+|goals1     = [[Georgios Fotakis|Fotakis]] {{yel|87}} <br>[[Thanasis Papazoglou|Papazoglou]] {{yel|90+2}} 
+|goals2     = {{yel|29}} [[Erik Hagen|Hagen]] <br>{{goal|60}} [[Morten Berre|Berre]] 
+|stadium    = [[Toumba Stadium]]
+|location   = [[Thessaloniki]], [[Greece]]
+|attendance = 26,500
+|referee    = {{flagicon|ITA}} [[Luca Banti]]
+|result     = L
+}}
+
+===Play-off Round===
+{{main|2009–10_UEFA_Europa_League#Play-off_round|l1=2009–10 UEFA Europa League Play-off round}}
+
+{{football box collapsible
+|round      = [[2009–10 UEFA Europa League qualifying phase and play-off round#PAOK v Heerenveen|1st leg]]
+|date       = 20 August 2009
+|time       = 19:00 [[Central European Summer Time|CEST]] ([[UTC+02:00]])
+|team1      = [[PAOK FC|PAOK]] {{flagicon|GRE}}
+|score      = 1–1
+|report     = http://www.uefa.com/uefaeuropaleague/season=2010/matches/round=2000036/match=2000689/index.html
+|team2      = {{flagicon|NED}} [[SC Heerenveen|Heerenven]]
+|goals1     = [[Vieirinha]] {{yel|52}}<br>[[Vladimir Ivić|Ivić]] {{goal|55}}<br>[[Stelios Malezas|Malezas]] {{yel|61}}<br>[[Vitolo (footballer, born 1983)|Vitolo]] {{yel|62}}
+|goals2     = {{goal|45+3}} {{yel|50}} [[Paulo Henrique Carneiro Filho|Paulo Henrique]] <br>{{yel|56}} [[Gerry Koning|Koning]]
+|stadium    = [[Toumba Stadium]]
+|location   = [[Thessaloniki]], [[Greece]]
+|attendance = 26,500
+|referee    = {{flagicon|Scotland}} [[Willie Collum]]
+|result     = D
+}}
+{{football box collapsible
+|round      = [[2009–10 UEFA Europa League qualifying phase and play-off round#Heerenveen v PAOK|2nd leg]]
+|date       = 27 August 2009
+|time       = 18:45 [[Central European Summer Time|CEST]] ([[UTC+02:00]])
+|team1      = [[SC Heerenveen|Heerenveen]] {{flagicon|NED}}
+|score      = 0–0
+|aggregatescore = 1[[Away goals rule|a]]–1
+|report     = http://www.uefa.com/uefaeuropaleague/season=2010/matches/round=2000036/match=2000726/index.html
+|team2      = {{flagicon|GRE}} [[PAOK FC|PAOK]]
+|goals1     = [[Michel Breuer|Breuer]] {{yel|25}} <br>[[Michael Dingsdag|Dingsdag]] {{yel|56}} <br>[[Hernán Losada|Losada]] {{yel|61}} <br>[[Igor Đurić (Serbian footballer)|Đurić]] {{yel|89}} <br>[[Kristian Bak Nielsen|Bak]] {{yel|90+5}}
+|goals2     = {{yel|69}} [[Vitolo (footballer, born 1983)|Vitolo]]<br>{{yel|86}} [[Joe Bizera|Bizera]]<br>{{yel|90+5}} [[Bruno Cirillo|Cirillo]]
+|stadium    = [[Abe Lenstra Stadion]]
+|location   = [[Heerenveen]], [[Netherlands]]
+|attendance = 14,000
+|referee    = {{flagicon|ESP}} [[Eduardo Iturralde González]]
+|result     = D
+}}
+
+==Squad stats==
+
+===Squad statistics===
+{{Efs start3 |updated=Full Season-All matches |c1=[[2009–10 Super League Greece|Super League]] |c2=[[2009–10 Greek Football Cup|Greek Cup]] |c3=[[2009–10 Super League Greece#Play-offs|Play-offs]] |c4=[[2009–10 UEFA Europa League|Europa League]]}}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Goalkeepers
+|-
+{{Efs player3|no= 1|nat=GRE|name=[[Kostas Chalkias]]                        |28|0|0 |2|0|0 |4|0|0 |4|0|0}}
+{{Efs player3|no=91|nat=CRO|name=[[Dario Krešić]]                           | 4|2|0 |1|0|0 |2|0|0 |0|0|0}}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Defenders
+|-
+{{Efs player3|no= 2|nat=GRE|name=[[Nikos Arabatzis]]                        |20|1|2 |2|0|0 |1|0|0 |0|0|0}}
+{{Efs player3|no= 3|nat=RSA|name=[[Bryce Moon]]                             | 6|5|0 |1|0|0 |0|0|0 |0|0|0}}
+{{Efs player3|no= 8|nat=ITA|name=[[Bruno Cirillo]]                          |19|2|1 |0|0|0 |6|0|1 |4|0|0}}
+{{Efs player3|no=13|nat=GRE|name=[[Stelios Malezas]]                        |21|0|1 |3|1|0 |5|2|0 |2|1|0}}
+{{Efs player3|no=15|nat=Chile|name=[[Pablo Contreras]]                      |19|4|1 |3|0|0 |4|0|0 |0|0|0}}
+{{Efs player3|no=16|nat=BRA|name=[[Lino (footballer, born 1977)|Lino]]                 |28|0|3 |3|0|1 |5|0|0 |4|0|1}}
+{{Efs player3|no=27|nat=POL|name=[[Mirosław Sznaucner]]                     |12|1|0 |1|0|0 |2|0|0 |2|0|0}}
+{{Efs player3|no=36|nat=ITA|name=[[Mirko Savini]]                           |11|3|0 |2|1|0 |3|0|1 |2|0|0}}
+{{Efs player3|no=23|nat=URU|name=[[Joe Bizera]]                             | 1|0|0 |0|0|0 |0|0|0 |3|0|0}}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Midfielders
+|-
+{{Efs player3|no  =|nat=SER|name=[[Kristijan Miljević]]                     | 0|0|0 |0|0|0 |1|1|0 |0|0|0}}
+{{Efs player3|no  =|nat=GRE|name=Grigoris Efthimiadis                       | 0|0|0 |0|0|0 |1|1|0 |0|0|0}}
+{{Efs player3|no= 5|nat=URU|name=[[Pablo Gabriel García|Pablo García]]      |25|1|2 |3|2|0 |5|0|0 |4|0|0}}
+{{Efs player3|no= 6|nat=ESP|name=[[Vitolo (footballer, born 1983)|Vitolo]]  |21|0|1 |3|0|0 |5|0|0 |2|0|0}}
+{{Efs player3|no= 7|nat=POR|name=[[Sérgio Conceição]]                       | 6|2|0 |0|0|0 |0|0|0 |3|0|0}}
+{{Efs player3|no=10|nat=FRA|name=[[Olivier Sorlin]]                         |24|2|2 |2|0|0 |5|0|0 |2|0|0}}
+{{Efs player3|no=18|nat=GRE|name=[[Georgios Fotakis]]                       |21|7|2 |3|1|0 |4|3|0 |3|0|0}}
+{{Efs player3|no=19|nat=GRE|name=[[Vasilios Koutsianikoulis|Koutsianikoulis]] |26|18|2 |3|1|0 |3|2|0 |3|3|0}}
+{{Efs player3|no=20|nat=POR|name=[[Vieirinha]]                              |28|0|7 |2|0|0 |6|0|0 |2|0|0}}
+{{Efs player3|no=21|nat=SER|name=[[Vladimir Ivić]]                          |26|3|7 |0|0|0 |4|0|2 |4|0|1}}
+{{Efs player3|no=22|nat=ARG|name=[[Ricardo Verón]]                          | 1|1|0 |1|0|0 |0|0|0 |0|0|0}}
+{{Efs player3|no=28|nat=GHA|name=[[Mohammed Abubakari]]                     | 1|0|0 |0|0|0 |0|0|0 |0|0|0}}
+{{Efs player3|no=80|nat=BRA|name=[[Cristiano Moraes de Oliveira|Cristiano]] | 8|4|0 |1|0|0 |0|0|0 |0|0|0}}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Forwards
+|-
+{{Efs player3|no  =|nat=GRE|name=[[Ilias Anastasakos]]                      | 0|0|0 |0|0|0 |0|0|0 |4|3|0}}
+{{Efs player3|no= 9|nat=POR|name=[[Edinho (footballer, born July 1982)|Edinho]]  |10|5|1 |2|1|0 |4|3|0 |0|0|0}}
+{{Efs player3|no=11|nat=BIH|name=[[Zlatan Muslimović]]                      |19|4|6 |1|1|0 |5|1|2 |3|0|1}}
+{{Efs player3|no=14|nat=GRE|name=[[Thanasis Papazoglou]]                    |19|11|2 |3|1|2 |3|2|1 |1|1|0}}
+{{Efs player3|no=31|nat=ARG|name=[[Lucio Filomeno]]                         | 9|7|1 |0|0|0 |5|2|0 |4|4|0}}
+
+{{Fb ss footer |u=19 May 2010 |se=2010 |o=squad number |s=Match reports in [[#Competitions|competitive matches]],  [http://www.superleaguegreece.net/el/teams/team/paok-fc-4/2009-2010-superleague-1/teamstats superleaguegreece.net], [https://www.uefa.com/uefaeuropaleague/history/clubs/50130--paok/ uefa.com], [http://paokfc.gr/squad.jsp?extLang= paokfc.gr] [https://www.soccerway.com/greece/super-league-2009-2010/results/ soccerway.com]|date=August 2011}}
+
+===Goalscorers===
+
+{| class="wikitable sortable" style="text-align:center" 
+|-
+!width=5|{{Abbr| Rank | Ranking }}
+!width=5|{{Abbr| No. | Squad Number }}
+!width=5|{{Abbr| Pos. | Position }}
+!width=150|Player
+!width=30|[[2009–10 Super League Greece|Super League]]
+!width=30|[[2009–10 Greek Football Cup|Greek Cup]]
+!width=30px|[[2009–10 Super League Greece#Play-offs|Play-offs]]
+!width=30px|[[2009–10 UEFA Europa League|Europa League]]
+!width=50|Total 
+|-
+|1||21||MF||align=left|{{flagicon|SER}} [[Vladimir Ivić]]||7||0||2||1||'''10'''
+|-
+|2||11||FW||align=left|{{flagicon|BIH}} [[Zlatan Muslimović]]||6||0||2||1||'''9'''
+|-
+|3||20||MF||align=left|{{flagicon|POR}} [[Vieirinha]]||7||0||0||0||'''7'''
+|-
+|4||14||FW||align=left|{{flagicon|GRE}} [[Thanasis Papazoglou]]||2||2||1||0||'''5'''
+|-
+|5||16||DF||align=left|{{flagicon|BRA}} [[Lino (footballer, born 1977)|Lino]] ||3||1||0||1||'''5'''
+|-
+|6||5||MF||align=left|{{flagicon|URU}} [[Pablo Gabriel García|Pablo García]]||2||0||0||0||'''2'''
+|-
+|7||10||MF||align=left|{{flagicon|FRA}} [[Olivier Sorlin]]||2||0||0||0||'''2'''
+|-
+|8||18||MF||align=left|{{flagicon|GRE}} [[Georgios Fotakis]]||2||0||0||0||'''2'''
+|-
+|9||19||MF||align=left|{{flagicon|GRE}} [[Vasilios Koutsianikoulis|Koutsianikoulis]]||2||0||0||0||'''2'''
+|-
+|10||2||DF||align=left|{{flagicon|GRE}} [[Nikos Arabatzis]]||2||0||0||0||'''2'''
+|-
+|11||8||DF||align=left|{{flagicon|ITA}} [[Bruno Cirillo]]||1||0||1||0||'''2'''
+|-
+|12||9||FW||align=left|{{flagicon|POR}} [[Edinho (footballer, born July 1982)|Edinho]]||1||0||0||0||'''1'''
+|-
+|13||31||FW||align=left|{{flagicon|ARG}} [[Lucio Filomeno]]||1||0||0||0||'''1'''
+|-
+|14||6||MF||align=left|{{flagicon|ESP}} [[Vitolo (footballer, born 1983)|Vitolo]]||1||0||0||0||'''1'''
+|-
+|15||15||DF||align=left|{{flagicon|Chile}} [[Pablo Contreras]]||1||0||0||0||'''1'''
+|-
+|16||13||DF||align=left|{{flagicon|GRE}} [[Stelios Malezas]]||1||0||0||0||'''1'''
+|-
+|17||36||DF||align=left|{{flagicon|ITA}} [[Mirko Savini]]||0||0||1||0||'''1'''
+|-
+|colspan="4"|Own goals||0||0||0||0||'''0'''
+|- bgcolor="#EFEFEF"
+|colspan=4|'''TOTALS'''
+|'''41'''||'''3'''||'''7'''||'''3'''||'''54'''	
+|}
+
+<small>Last updated: All matches<br />
+Source: Match reports in [[#Competitions|Competitive matches]] <br /> 0 shown as blank</small>
+
+===Disciplinary record===
+{| class="wikitable" style="font-size: 100%; text-align: center;"
+|-
+! rowspan="2"  style="width:3%; text-align:center;"|{{Tooltip| No. | Squad Number }}
+! rowspan="2"  style="width:3%; text-align:center;"|{{Tooltip| Pos | Position }}
+! rowspan="2"  style="width:3%; text-align:center;"|{{Tooltip| Nat | Nationality }}
+! rowspan="2"  style="width:14%; text-align:center;"|Name
+! colspan="3" style="text-align:center;"|Super League
+! colspan="3" style="text-align:center;"|Greek Cup
+! colspan="3" style="text-align:center;"|Play-off
+! colspan="3" style="text-align:center;"|Europa League
+! colspan="3" style="text-align:center;"|Total
+! rowspan="2" style="width:14%; text-align:center;"|Notes
+|-
+!  style="width:2em;"|{{yel}}
+!  style="width:2em;"|{{sent off|2}}
+!  style="width:2em;"|{{sent off}}
+!  style="width:2em;"|{{yel}}
+!  style="width:2em;"|{{sent off|2}}
+!  style="width:2em;"|{{sent off}}
+!  style="width:2em;"|{{yel}}
+!  style="width:2em;"|{{sent off|2}}
+!  style="width:2em;"|{{sent off}}
+!  style="width:2em;"|{{yel}}
+!  style="width:2em;"|{{sent off|2}}
+!  style="width:2em;"|{{sent off}}
+!  style="width:2em;"|{{yel}}
+!  style="width:2em;"|{{sent off|2}}
+!  style="width:2em;"|{{sent off}}
+|-
+|15
+|[[Defender (association football)|DF]]
+|{{flagicon|Chile}}
+|[[Pablo Contreras]]
+|10
+|
+|
+|
+|
+|
+|1
+|1
+|
+|
+|
+|
+|'''11'''
+|'''1'''
+|
+|
+|-
+|6
+|[[Midfielder|MF]]
+|{{flagicon|ESP}}
+|[[Vitolo (footballer, born 1983)|Vitolo]]
+|4
+|1
+|
+|1
+|
+|
+|2
+|
+|
+|2
+|
+|
+|'''9'''
+|'''1'''
+|
+|
+|-
+|5
+|[[Midfielder|MF]]
+|{{flagicon|URU}}
+|[[Pablo Gabriel García|Pablo Garcia]]
+|7
+|
+|
+|1
+|
+|
+|2
+|
+|
+|
+|
+|
+|'''10'''
+|
+|
+|
+|-
+|20
+|[[Midfielder|MF]]
+|{{flagicon|POR}}
+|[[Vieirinha]]
+|5
+|1
+|1
+|
+|
+|
+|1
+|
+|
+|1
+|
+|
+|'''7'''
+|'''1'''
+|'''1'''
+|
+|-
+|2
+|[[Defender (association football)|DF]]
+|{{flagicon|GRE}}
+|[[Nikos Arabatzis]]
+|5
+|2
+|
+|
+|
+|
+|
+|
+|
+|1
+|
+|
+|'''6'''
+|'''2'''
+|
+|
+|-
+|21
+|[[Midfielder|MF]]
+|{{flagicon|SER}}
+|[[Vladimir Ivić]]
+|6
+|1
+|
+|
+|
+|
+|1
+|
+|
+|
+|
+|
+|'''7'''
+|'''1'''
+|
+|
+|-
+|8
+|[[Defender (association football)|DF]]
+|{{flagicon|ITA}}
+|[[Bruno Cirillo]]
+|5
+|
+|
+|
+|
+|
+|1
+|
+|
+|2
+|
+|
+|'''8'''
+|
+|
+|
+|-
+|18
+|[[Midfielder|MF]]
+|{{flagicon|GRE}}
+|[[Georgios Fotakis]]
+|5
+|
+|
+|
+|
+|
+|
+|1
+|
+|1
+|
+|
+|'''6'''
+|'''1'''
+|
+|
+|-
+|10
+|[[Midfielder|MF]]
+|{{flagicon|FRA}} 
+|[[Olivier Sorlin]]
+|3
+|
+|
+|1
+|
+|
+|2
+|
+|
+|
+|
+|
+|'''6'''
+|
+|
+|
+|-
+|11
+|[[Forward (association football)|FW]]
+|{{flagicon|BIH}}
+|[[Zlatan Muslimović]]
+|3
+|1
+|
+|
+|
+|
+|1
+|
+|
+|
+|
+|
+|'''4'''
+|'''1'''
+|
+|
+|-
+|13
+|[[Defender (association football)|DF]]
+|{{flagicon|GRE}}
+|[[Stelios Malezas]]
+|4
+|
+|
+|
+|
+|
+|
+|
+|
+|1
+|
+|
+|'''5'''
+|
+|
+|
+|-
+|16
+|[[Defender (association football)|DF]]
+|{{flagicon|BRA}}
+|[[Lino (footballer, born 1977)|Lino]]
+|3
+|
+|
+|
+|
+|
+|1
+|
+|
+|
+|
+|
+|'''4'''
+|
+|
+|
+|-
+|31
+|[[Forward (association football)|FW]]
+|{{flagicon|ARG}}
+|[[Lucio Filomeno]]
+|2
+|
+|
+|
+|
+|
+|2
+|
+|
+|
+|
+|
+|'''4'''
+|
+|
+|
+|-
+|1
+|[[Goalkeeper (association football)|GK]]
+|{{flagicon|GRE}}
+|[[Kostas Chalkias]]
+|2
+|
+|
+|
+|
+|
+|1
+|
+|
+|
+|
+|
+|'''3'''
+|
+|
+|
+|-
+|27
+|[[Defender (association football)|DF]]
+|{{flagicon|POL}}
+|[[Mirosław Sznaucner]]
+|1
+|1
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|'''1'''
+|'''1'''
+|
+|
+|-
+|14
+|[[Forward (association football)|FW]]
+|{{flagicon|GRE}}
+|[[Thanasis Papazoglou]]
+|
+|
+|1
+|
+|
+|
+|
+|
+|
+|1
+|
+|
+|'''1'''
+|
+|'''1'''
+|
+|-
+|19
+|[[Midfielder|MF]]
+|{{flagicon|GRE}}
+|[[Vasilios Koutsianikoulis|Koutsianikoulis]]
+|2
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|'''2'''
+|
+|
+|
+|-
+|7
+|[[Midfielder|MF]]
+|{{flagicon|POR}}
+|[[Sérgio Conceição]]
+|2
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|'''2'''
+|
+|
+|
+|-
+|36
+|[[Defender (association football)|DF]]
+|{{flagicon|ITA}}
+|[[Mirko Savini]]
+|
+|
+|
+|1
+|
+|
+|1
+|
+|
+|
+|
+|
+|'''2'''
+|
+|
+|
+|-
+|28
+|[[Midfielder|MF]]
+|{{flagicon|GHA}}
+|[[Mohammed Abubakari]]
+|1
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|'''1'''
+|
+|
+|
+|-
+|3
+|[[Defender (association football)|DF]]
+|{{flagicon|RSA}}
+|[[Bryce Moon]]
+|1
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|'''1'''
+|
+|
+|
+|-
+|91
+|[[Goalkeeper (association football)|GK]]
+|{{flagicon|CRO}}
+|[[Dario Krešić]]
+|1
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|'''1'''
+|
+|
+|
+|-
+|
+|[[Midfielder|MF]]
+|{{flagicon|BRA}}
+|[[Cristiano Moraes de Oliveira|Cristiano]]
+|1
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|'''1'''
+|
+|
+|
+|-
+|80
+|[[Defender (association football)|DF]]
+|{{flagicon|URU}}
+|[[Joe Bizera]]
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|1
+|
+|
+|'''1'''
+|
+|
+|
+|-
+|9
+|[[Forward (association football)|FW]]
+|{{flagicon|POR}}
+|[[Edinho (footballer, born July 1982)|Edinho]]
+|
+|
+|
+|
+|
+|
+|1
+|
+|
+|
+|
+|
+|'''1'''
+|
+|
+|
+|-
+|colspan="3"|
+|'''TOTAL'''
+|'''73'''
+|'''7'''
+|'''2'''
+|'''4'''
+|'''0'''
+|'''0'''
+|'''18'''
+|'''2'''
+|'''0'''
+|'''9'''
+|'''0'''
+|'''0'''
+|'''104'''
+|'''9'''
+|'''2'''
+|}
+
+{{smalldiv|1=
+Only competitive matches <br />
+Ordered by {{sent off}}, {{sent off|2}} and {{yel}} <br />
+{{yel}} = Number of bookings; {{sent off|2}} = Number of sending offs after a second yellow card; {{sent off}} = Number of sending offs by a direct red card.<br />
+0 shown as blank
+
+Source: Match reports in [[#Competitions|competitive matches]], [[#Competitions|competitive matches]],  [http://www.superleaguegreece.net/el/teams/team/paok-fc-4/2009-2010-superleague-1/teamstats superleaguegreece.net], [https://www.uefa.com/uefaeuropaleague/history/clubs/50130--paok/ uefa.com], [https://web.archive.org/web/20110717063912/http://www.paokfc.gr/squad.jsp?extLang= paokfc.gr] [https://www.soccerway.com/greece/super-league-2009-2010/results/ soccerway.com]
+}}
+
+===Start formations===
+{{fb sf header}}
+{{fb sf formation |q=21 |f=4–2–3–1 |m=1–3, 6, 15–17, 19–32 }}
+{{fb sf formation |q=8 |f=4–3–3 |m=7–12, 14, 18 }}
+{{fb sf formation |q=3 |f=4–4–2 |m=4–5, 13 }}
+{{Fb sf footer|u=6 March  |date=November 2009}}
+
+==References==
+{{Reflist}}
+
+{{PAOK FC seasons}}
+{{2009–10 in Greek football}}
+
+{{DEFAULTSORT:PAOK FC Season 2009-10}}
+[[Category:PAOK FC seasons|2009-10]]
+[[Category:Greek football clubs 2009–10 season|PAOK]]

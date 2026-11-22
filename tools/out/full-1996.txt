@@ -1,0 +1,1449 @@
+{{Infobox football club season
+| club = [[PAOK FC|PAOK]]
+| season = 1996–97
+| stadium = [[Toumba Stadium]]
+| manager =  [[Gunder Bengtsson]] <br>  [[Christos Archontidis]] <br>  [[Angelos Anastasiadis]]           
+| chrtitle = President
+| chairman =  Giorgos Kalyvas <br>  Giorgos Batatoudis
+| league = [[1996–97 Alpha Ethniki|Alpha Ethniki]]
+|league result = ''4th''
+| cup1 = [[1996–97 Greek Football Cup|Greek Cup]]
+| cup1 result = ''Round of 16''
+| cup2 = 
+| cup2 result =  
+| cup3 = 
+| cup3 result = 
+| league topscorer = 
+| season topscorer = <br>[[Kostas Frantzeskos|Frantzeskos]] (16)
+| highest attendance = 35,850 vs [[Olympiacos F.C.|Olympiacos]]
+| lowest attendance = 
+| average attendance = 
+| prevseason = [[1995–96 PAOK FC season|1995–96]]
+| nextseason = [[1997–98 PAOK FC season|1997–98]]
+}}
+
+The '''1996–97 season''' was '''[[PAOK FC|PAOK Football Club's]]''' 70th in existence and the club's [[Super League Greece#Seasons in Alpha Ethniki and Super League Greece|38th consecutive season]] in the top flight of Greek football. The team entered the [[Greek Football Cup]] in third round.
+
+==Players==
+===Squad===
+{{Fs start|bg=000000|color=FFFFFF}}
+{{Fs player|no= |nat=GRE |pos=GK |name=[[Nikolaos Michopoulos]]}}
+{{Fs player|no= |nat=GRE |pos=GK |name=[[Vangelis Pourliotopoulos]]}}
+{{Fs player|no= |nat=GRE |pos=GK |name=Asterios Themelis}}
+{{Fs break}}
+{{Fs player|no= |nat=GRE |pos=DF |name=[[Tasos Tasiopoulos]] }}
+{{Fs player|no= |nat=GRE |pos=DF |name=[[Dimitrios Kapetanopoulos]] }}
+{{Fs player|no= |nat=GRE |pos=DF |name=[[Panagiotis Katsouris]] }}
+{{Fs player|no= |nat=GRE |pos=DF |name=Nikos Kolompourdas }}
+{{Fs player|no= |nat=GRE |pos=DF |name=Panagiotis Sidiropoulos }}
+{{Fs player|no= |nat=ROM |pos=DF |name=[[Ionel Pârvu]] }}
+{{Fs player|no= |nat=RUS |pos=DF |name=[[Andrey Chernyshov]] }}
+{{Fs player|no= |nat=GRE |pos=DF |name=[[Alexis Alexiou]] }}
+{{Fs player|no= |nat=GRE |pos=DF |name=[[Makis Chavos]] }}
+{{Fs player|no= |nat=GRE |pos=DF |name=Nikos Panagiotidis }}
+{{Fs player|no= |nat=GRE |pos=DF |name=Giorgos Koumaropoulos }}
+{{Fs player|no= |nat=AUS |pos=DF |name=[[Joe Palatsides]] }}
+{{Fs player|no= |nat=GRE |pos=DF |name=[[Vangelis Nastos]] }}
+{{Fs mid|bg=000000|color=FFFFFF}}
+{{Fs player|no= |nat=GRE |pos=DF |name=Charalampos Nikolaou }}
+{{Fs player|no= |nat=GRE |pos=DF |name=Panagiotis Karametaxas }}
+{{Fs break}}
+{{Fs player|no= |nat=GRE |pos=MF |name=[[Theodoros Zagorakis]]|other=[[Captain (association football)|captain]] }}
+{{Fs player|no= |nat=GRE |pos=MF |name=[[Giorgos Toursounidis]] }}
+{{Fs player|no= |nat=GRE |pos=MF |name=[[Achilleas Zafiriou]] }}
+{{Fs player|no= |nat=GRE |pos=MF |name=[[Kostas Frantzeskos]] }}
+{{Fs player|no= |nat=GRE |pos=MF |name=[[Spyros Marangos]] }}
+{{Fs player|no= |nat=POL |pos=MF |name=[[Leszek Pisz]] }}
+{{Fs player|no= |nat=GRE |pos=MF |name=[[Giorgos Hatzizisis]] }}
+{{Fs player|no= |nat=GRE |pos=MF |name=[[Pantelis Kafes]] }}
+{{Fs break}}
+{{Fs player|no= |nat=GRE |pos=FW |name=[[Zisis Vryzas]] }}
+{{Fs player|no= |nat=GRE |pos=FW |name=[[Paraschos Zouboulis]] }}
+{{Fs player|no= |nat=POL |pos=FW |name=[[Robert Dymkowski]] }}
+{{Fs player|no= |nat=AUS |pos=FW |name=[[John Anastasiadis]] }}
+{{Fs player|no= |nat=GRE |pos=FW |name=[[Antonis Gioukoudis]] }}
+{{Fs player|no= |nat=GRE |pos=FW |name=Kostas Inebolidis }}
+{{Fs end}}
+
+==Transfers==
+
+;Players transferred in
+{| class="wikitable plainrowheaders"
+!scope="col" style="width:6em;"|Transfer Window
+!scope="col" style="width:3em;"|{{tooltip|Pos.|Playing position}}
+!scope="col" style="width:13em;"|Name
+!scope="col" style="width:13em;"|Club
+!scope="col" style="width:7em;"|Fee
+|-
+|Summer
+|align="center"|DF
+|{{flagicon|GRE}} [[Vangelis Nastos]]
+|{{flagicon|GRE}} [[PAOK Academy|PAOK U20]]
+|
+|-
+|Summer
+|align="center"|DF
+|{{flagicon|GRE}} Panagiotis Karametaxas
+|{{flagicon|GRE}} Apollon Chrysochoriou
+|?
+|-
+|Summer
+|align="center"|DF
+|{{flagicon|GRE}} Charalampos Nikolaou
+|{{flagicon|GRE}} [[Athlitiki Enosi Larissa F.C.|AEL]]
+|?
+|-
+|Summer
+|align="center"|DF
+|{{flagicon|GRE}} [[Tasos Tasiopoulos]]
+|{{flagicon|GRE}} [[Athinaikos F.C.|Athinaikos]]
+|?
+|-
+|Summer
+|align="center"|DF
+|{{flagicon|GRE}} Nikos Kolompourdas
+|{{flagicon|GER}} [[1. FC Köln II|Köln II]]
+|Free
+|-
+|Summer
+|align="center"|DF
+|{{flagicon|GRE}} [[Panagiotis Katsouris]]
+|{{flagicon|GRE}} [[Naoussa F.C.|Naoussa]]
+|?
+|-
+|Summer
+|align="center"|DF
+|{{flagicon|RUS}} [[Andrey Chernyshov]]
+|{{flagicon|AUT}} [[SK Sturm Graz|Sturm Graz]]
+|?
+|-
+|Summer
+|align="center"|MF
+|{{flagicon|POL}} [[Leszek Pisz]]
+|{{flagicon|POL}} [[Legia Warsaw]]
+|?
+|-
+|Summer
+|align="center"|MF
+|{{flagicon|GRE}} [[Giorgos Hatzizisis]]
+|{{flagicon|GRE}} [[Eordaikos 2007 F.C.|Eordaikos]]
+|?
+|-
+|Summer
+|align="center"|FW
+|{{flagicon|GRE}} [[Zisis Vryzas]]
+|{{flagicon|GRE}} [[Xanthi F.C.|Xanthi]]
+|250 million [[Modern drachma|Dr.]]
+|-
+|Summer
+|align="center"|FW
+|{{flagicon|POL}} [[Robert Dymkowski]]
+|{{flagicon|POL}} [[Pogoń Szczecin]]
+|Loan
+|-
+|Winter
+|align="center"|GK
+|{{flagicon|GRE}} Asterios Themelis
+|{{flagicon|GRE}} [[Anagennisi Kolindros F.C.|Anagennisi Kolindros]]
+|Loan Return
+|-
+|Winter
+|align="center"|DF
+|{{flagicon|AUS}} [[Joe Palatsides]]
+|{{flagicon|GRE}} [[Apollon Kalamarias F.C.|Apollon Kalamarias]]
+|?
+|-
+|Winter
+|align="center"|DF
+|{{flagicon|GRE}} Panagiotis Sidiropoulos
+|{{flagicon|GRE}} [[Ionikos F.C.|Ionikos]]
+|?
+|-
+|Winter
+|align="center"|DF
+|{{flagicon|ROM}} [[Ionel Pârvu]]
+|{{flagicon|ROM}} [[FC Steaua București|Steaua București]]
+|?
+|-
+|Winter
+|align="center"|MF
+|{{flagicon|GRE}} [[Kostas Frantzeskos]]
+|{{flagicon|GRE}} [[OFI Crete F.C.|OFI]]
+|100 million [[Modern drachma|Dr.]]
+|-
+|Winter
+|align="center"|MF
+|{{flagicon|GRE}} [[Spyros Marangos]]
+|{{flagicon|GRE}} [[Panathinaikos F.C.|Panathinaikos]]
+|?
+|-
+|Winter
+|align="center"|MF
+|{{flagicon|GRE}} [[Pantelis Kafes]]
+|{{flagicon|GRE}} [[Pontioi Verias F.C.|Pontioi Veria]]
+|?
+|-
+|Winter
+|align="center"|FW
+|{{flagicon|GRE}} Kostas Inebolidis
+|{{flagicon|GRE}} [[Aetos Skydra F.C.|Aetos Skydra]]
+|?
+|}
+
+;Players transferred out
+{| class="wikitable plainrowheaders"
+!scope="col" style="width:6em;"|Transfer Window
+!scope="col" style="width:3em;"|{{tooltip|Pos.|Playing position}}
+!scope="col" style="width:12em;"|Name
+!scope="col" style="width:13em;"|Club
+!scope="col" style="width:7em;"|Fee
+|-
+|Summer
+|align="center"|GK
+|{{flagicon|GRE}} Asterios Themelis
+|{{flagicon|GRE}} [[Anagennisi Kolindros F.C.|Anagennisi Kolindros]]
+|Loan
+|-
+|Summer
+|align="center"|DF
+|{{flagicon|GRE}} Giannis Tsoraklidis
+|{{flagicon|GRE}} [[Poseidon Nea Michaniona F.C.|Poseidon Michaniona]]
+|Loan
+|-
+|Summer
+|align="center"|DF
+|{{flagicon|GRE}} Giannis Voltezos
+|{{flagicon|GRE}} [[Kastoria F.C.|Kastoria]]
+|Free
+|-
+|Summer
+|align="center"|MF
+|{{flagicon|GRE}} Giannis Antonas
+|{{flagicon|GRE}} [[Panionios F.C.|Panionios]]
+|Free
+|-
+|Summer
+|align="center"|MF
+|{{flagicon|GRE}} [[Giotis Tsalouchidis]]
+|{{flagicon|GRE}} [[Veria F.C.|Veria]]
+|Free
+|-
+|Summer
+|align="center"|MF
+|{{flagicon|DEN}} Jesper Johansen
+|{{flagicon|BEL}} [[K. Beerschot V.A.C.]]
+|Free
+|-
+|Summer
+|align="center"|MF
+|{{flagicon|NED}} Maurice van Ham
+|{{flagicon|BEL}} [[K.S.K. Beveren|Beveren]]
+|End of loan
+|-
+|Summer
+|align="center"|MF
+|{{flagicon|FRY}} Goran Aleksić
+|{{flagicon|FRA}} [[US Créteil-Lusitanos|Créteil]]
+|Free
+|-
+|Summer
+|align="center"|FW
+|{{flagicon|FRY}} Miroslav Jović
+|{{flagicon|GER}} [[Energie Cottbus]]
+|Free
+|-
+|Summer
+|align="center"|FW
+|{{flagicon|GRE}} Dimitris Nolis
+|{{flagicon|GRE}} [[Kastoria F.C.|Kastoria]]
+|Free
+|-
+|Winter
+|align="center"|DF
+|{{flagicon|GRE}} [[Alexis Alexiou]]
+|{{flagicon|GRE}} [[Apollon Kalamarias F.C.|Apollon Kalamarias]]
+|Free
+|-
+|Winter
+|align="center"|DF
+|{{flagicon|GRE}} [[Makis Chavos]]
+|{{flagicon|GRE}} [[Xanthi F.C.|Xanthi]]
+|Free
+|-
+|Winter
+|align="center"|DF
+|{{flagicon|RUS}} [[Andrey Chernyshov]]
+|{{flagicon|GER}} [[SpVgg Greuther Fürth|Greuther Fürth]]
+|Free
+|-
+|Winter
+|align="center"|MF
+|{{flagicon|POL}} [[Leszek Pisz]]
+|{{flagicon|GRE}} [[Kavala F.C.|Kavala]]
+|Free
+|}
+
+==Pre-season==
+<ref>{{cite web|title=PAOK–Leicester City 3–0 (Friendly)|url=http://www.paokmania.gr/stiles/mme/194977-filiki-triaria-sti-lester-1996|language=el|work=paokmania.gr|date=5 August 2021|access-date=18 February 2022}}</ref><ref>{{cite web|title=PAOK–Southampton 2–0 (Friendly)|url=http://www.paokmania.gr/stiles/arxeio/aspromavres-istories/130395-patise-ti-saouthampton-me-golares|language=el|work=paokmania.gr|date=11 August 2021|access-date=18 February 2022}}</ref><ref>{{cite web|title=Φιλικό τουρνουά με Άρη και Ηρακλή|url=http://www.paokmania.gr/stiles/mme/180533-filiko-tournoua-me-ari-kai-irakli-1996|language=el|work=paokmania.gr|date=4 September 2020|access-date=18 February 2022}}</ref>
+
+{{legend2|#CCFFCC|Win|border=1px solid #AAAAAA}}
+{{legend2|#FFFFCC|Draw|border=1px solid #AAAAAA}}
+{{legend2|#FFCCCC|Loss|border=1px solid #AAAAAA}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 20 July 1996
+|time = 
+|team1 = Thayngen
+|score = 0–3
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = 
+|goals2 = [[Zisis Vryzas|Vryzas]] {{goal}} {{goal}} {{goal}}     
+|stadium = 
+|location = [[Germany]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 24 July 1996
+|time = 
+|team1 = [[SpVgg Ludwigsburg]]
+|score = 1–0
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 =  
+|goals2 =         
+|stadium = 
+|location = [[Germany]]
+|attendance = 
+|referee = 
+|result = L
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 26 July 1996
+|time = 
+|team1 = Thayngen
+|score = 0–2
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = 
+|goals2 =    
+|stadium =  
+|location = [[Germany]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 28 July 1996
+|time = 
+|team1 = [[Kickers Offenbach]]
+|score = 2–1
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = 
+|goals2 = [[Tasos Tasiopoulos|Tasiopoulos]] {{goal}}     
+|stadium =  
+|location = [[Germany]]
+|attendance = 
+|referee = 
+|result = L
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 30 July 1996
+|time = 
+|team1 = [[SC Freiburg]]
+|score = 0–0
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 =  
+|goals2 =      
+|stadium =  
+|location = [[Germany]]
+|attendance = 
+|referee = 
+|result = D
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 2 August 1996
+|time = 
+|team1 = Ehingen
+|score = 1–3
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = {{goal|40}} 
+|goals2 = Karametaxas {{goal|20}} <br> [[Robert Dymkowski|Dymkowski]] {{goal}} <br> [[Tasos Tasiopoulos|Tasiopoulos]] {{goal}}    
+|stadium =  
+|location = [[Germany]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 5 August 1996
+|time = 
+|team1 = [[PAOK FC|PAOK]]
+|score = 3–0
+|report = 
+|team2 = [[Leicester City F.C.|Leicester City]]
+|goals1 = [[Paraschos Zouboulis|Zouboulis]] {{goal|3||65}} <br> [[Zisis Vryzas|Vryzas]] {{goal|76}} 
+|goals2 =  
+|stadium = [[Toumba Stadium]] 
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = Papadopoulos
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 6 August 1996
+|time = 
+|team1 = [[Poseidon Nea Michaniona F.C.|Poseidon Michaniona]]
+|score = 0–5
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = 
+|goals2 = [[Dimitrios Kapetanopoulos|Kapetanopoulos]] {{goal|47||52}} <br> [[Giorgos Hatzizisis|Hatzizisis]] {{goal|68||72}} <br> [[Antonis Gioukoudis|Gioukoudis]] {{goal|90}}   
+|stadium =  
+|location = [[Michaniona]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 8 August 1996
+|time = 
+|team1 = [[PAOK FC|PAOK]]
+|score = 1–0
+|report = 
+|team2 = [[Xanthi F.C.|Xanthi]]
+|goals1 = [[Paraschos Zouboulis|Zouboulis]] {{goal|5}}  
+|goals2 =       
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 11 August 1996
+|time = 
+|team1 = [[PAOK FC|PAOK]]
+|score = 2–0
+|report = 
+|team2 = [[Southampton F.C.|Southampton]]
+|goals1 = [[Leszek Pisz|Pisz]] {{goal|55}} <br> [[Dimitrios Kapetanopoulos|Kapetanopoulos]] {{goal|80}}  
+|goals2 =       
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 14 August 1996
+|time = 
+|team1 = [[Veria F.C.|Veria]]
+|score = 1–2
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Evripidis Katsavos|Katsavos]] {{goal|20}}  
+|goals2 = [[Thomas Troupkos|Troupkos]] {{goal|6|o.g.}} <br> [[Robert Dymkowski|Dymkowski]] {{goal|30}} 
+|stadium = [[Veria Stadium]] 
+|location = [[Veria]]
+|attendance = 
+|referee = Tevekelis
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 19 August 1996
+|time = 
+|team1 =[[PAOK FC|PAOK]]
+|score = 2–0
+|report = 
+|team2 = [[FK Inter Bratislava|Inter Bratislava]]
+|goals1 = [[Paraschos Zouboulis|Zouboulis]] {{goal|28}} <br> [[Zisis Vryzas|Vryzas]] {{goal|77}} 
+|goals2 =    
+|stadium = [[Toumba Stadium]] 
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 21 August 1996
+|time = 
+|team1 = [[Edessaikos F.C.|Edessaikos]]
+|score = 2–3
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Hristo Kolev|Kolev]] {{goal|38|pen.}} <br> Georgopoulos {{goal|70}} 
+|goals2 = [[Dimitrios Kapetanopoulos|Kapetanopoulos]] {{goal|6}} <br> [[Antonis Gioukoudis|Gioukoudis]] {{goal|52}} <br> [[Paraschos Zouboulis|Zouboulis]] {{goal|56}}   
+|stadium = [[Municipal Stadium of Edessa]] 
+|location = [[Edessa, Greece|Edessa]]
+|attendance = 
+|referee = Aggelakis
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 26 August 1996
+|time = 
+|team1 = [[AEK Athens F.C.|AEK Athens]]
+|score = 3–1
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Giorgos Toursounidis|Toursounidis]] {{goal|56|o.g.}} <br> [[Christos Kostis|Kostis]] {{goal|59}} <br> [[Demis Nikolaidis|Nikolaidis]] {{goal|67}}
+|goals2 = [[Zisis Vryzas|Vryzas]] {{goal|50}}       
+|stadium = [[Nikos Goumas Stadium]]
+|location = [[Athens]]
+|attendance = 
+|referee =  
+|result = L
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 28 August 1996
+|time = 
+|team1 = [[Doxa Drama F.C.|Doxa Drama]]
+|score = 2–0
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Kiosses {{goal|24}} <br> Tavlaridis {{goal|82}} 
+|goals2 =        
+|stadium = Doxa Drama Stadium
+|location = [[Drama, Greece|Drama]]
+|attendance = 
+|referee = Mintiouris 
+|result = L
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 2 September 1996
+|time = 
+|team1 = [[Aris Thessaloniki F.C.|Aris]]
+|score = 0–0
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = 
+|goals2 =        
+|stadium = [[Kaftanzoglio Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = Zachariadis
+|result = D
+|note = Game length was 45 minutes.
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 2 September 1996
+|time = 
+|team1 = [[Iraklis F.C. (Thessaloniki)|Iraklis]]
+|score = 3–0
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Ivan Jovanović (football manager)|Jovanović]] {{goal|35|pen.}} <br> [[Nikos Mirtsekis|Mirtsekis]] {{goal|40}} <br> [[Kostas Lagonidis|Lagonidis]] {{goal|44}}
+|goals2 =        
+|stadium = [[Kaftanzoglio Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = Papachintzios
+|result = L
+|note = Game length was 45 minutes.
+}}
+
+==Competitions==
+
+===Overview===
+{{Fb overview
+|c=2
+|c1=[[1996–97 Alpha Ethniki|Alpha Ethniki]] |w1=19 |d1=9 |l1=6 |f1=53 |a1=28
+|c2=[[1996–97 Greek Football Cup|Greek Cup]] |w2=2 |d2=0 |l2=2 |f2=9 |a2=6
+}}
+
+===Managerial statistics===
+
+{| class="wikitable" style="text-align: "
+|+ 
+|-
+!rowspan=2|Head coach
+!rowspan=2|From
+!rowspan=2|To
+!colspan=8|Record
+|-
+!{{Tooltip|G|Games managed}}
+!{{Tooltip|W|Games won}}
+!{{Tooltip|D|Games drawn}}
+!{{Tooltip|L|Games lost}}
+!{{Tooltip|GF|Goals for}}
+!{{Tooltip|GA|Goals against}}
+!{{Tooltip|GD|Goal difference}}
+!{{Tooltip|Win %|Winning percentage}}
+|-
+| {{Flag icon|SWE}} [[Gunder Bengtsson]]
+| Start of season
+| 01.12.1996
+{{WDL|13|5|4|4|for=15|against=15|diff=yes}}
+|-
+| {{Flag icon|GRE}} [[Christos Archontidis]] 
+| 08.12.1996
+| 02.02.1997
+{{WDL|10|3|4|3|for=10|against=9|diff=yes}}
+|-
+| {{Flag icon|GRE}} [[Angelos Anastasiadis]] 
+| 09.02.1997
+| End of season
+{{WDL|15|13|1|1|for=37|against=10|diff=yes}}
+|}
+
+==Alpha Ethniki==
+{{main article|1996–97 Alpha Ethniki}}
+
+===Standings===
+
+{{:1996–97 Alpha Ethniki|showteam=PAOK}}
+
+====Results summary====
+
+{{Fb_rs |hw=12 |hd=5 |hl=0 |hgf=32 |hga=6 |aw=7 |ad=4 |al=6 |agf=21 |aga=22}}
+{{Fb_rs_footer |u={{Start date|1997|05|25|df=y}} |s=[[#Matches|Competitive matches]] |date=February 2022}}
+
+====Results by round====
+{{#invoke:sports rbr table|table|legendpos=b|header=Round
+
+|label1= Ground
+| res1=[[Theodoros Vardinogiannis Stadium|A]] /[[Toumba Stadium|H]] /[[Kalamata Municipal Stadium|A]] /[[Rizoupoli Stadium|A]] /[[Toumba Stadium|H]] /[[Kostas Davourlis Stadium|A]] /[[Toumba Stadium|H]]  /[[Kleanthis Vikelidis Stadium|A]] /[[Toumba Stadium|H]] /[[Athens Olympic Stadium|A]] / [[Toumba Stadium|H]] /[[Toumba Stadium|H]] /[[Karaiskakis Stadium|A]] /[[Toumba Stadium|H]] /[[Xanthi Ground|A]] / [[Toumba Stadium|H]] /[[Municipal Stadium of Kastoria|A]] /[[Toumba Stadium|H]] /[[Kaftanzoglio Stadium|A]] /[[Toumba Stadium|H]] /[[Toumba Stadium|H]] /[[Vyronas National Stadium|A]] /[[Toumba Stadium|H]] /[[Municipal Stadium of Edessa|A]] /[[Toumba Stadium|H]] /[[Neapoli Stadium|A]] /[[Toumba Stadium|H]] /[[Veria Stadium|A]] /[[Pyrgos Stadium|A]] /[[Toumba Stadium|H]] /[[Nikos Goumas Stadium|A]] /[[Toumba Stadium|H]] /[[Kavala Stadium|A]] /[[Toumba Stadium|H]] 
+|label2= Result
+| res2=L /W /D /D /W /L /D /D /W /L /D /D /L /D /D /W /W /W /L /W /W /W /W /W /W /L /W /W /W /D /W /W /W /W 
+|label3= Position
+| res3=15 /8 /8 /9 /9 /9 /9 /10 /7 /10 /10 /11 /11 /11 /11 /11 /9 /7 /9 /7 /6 /6 /6 /6 /5 /5 /5 /5 /5 /5 /5 /5 /4 /4  
+<!-- -->
+|text_H=Home|text_A=Away
+|color_W=green2|text_W=Win
+|color_D=yellow2|text_D=Draw
+|color_L=red2|text_L=Loss
+|color_1=1st|color_2=2nd|color_3=3rd|color_18-=red1
+
+|updated=complete
+|source=[[#Matches|League matches]]
+|date=February 2022
+}}
+
+====Matches====
+<ref>{{cite web|title=ΟΦΗ–ΠΑΟΚ 3–1 (8/9/1996)|url=http://www.paokmania.gr/stiles/mme/180750-podariko-me-to-aristero-sto-genti-koule-1996|language=el|work=paokmania.gr|date=8 September 2021|access-date=18 February 2022}}</ref><ref>{{cite web|title=Παναθηναϊκός–ΠΑΟΚ 5–0 (1/12/1996)|url=http://www.paokmania.gr/stiles/mme/184382-apolysi-bengktson-meta-ti-varia-itta-1996|language=el|work=paokmania.gr|date=1 December 2020|access-date=18 February 2022}}</ref><ref>{{cite web|title=ΠΑΟΚ–ΟΦΗ 2–1 (26/1/1997)|url=http://www.paokmania.gr/stiles/mme/186676-o-fratzeskos-ektelese-tin-palia-tou-omada-1997|language=el|work=paokmania.gr|date=26 January 2022|access-date=18 February 2022}}</ref><ref>{{cite web|title=1997: Το αεροπλανάκι των ΠΑΟΚτσήδων στο ντέρμπι με τον Αρη!|trans-title=|url=https://www.gazzetta.gr/stili/h-mixani-tou-xronou/article/1059195/1997-aeroplanaki-ton-paoktsidon-sto-ntermpi-me-ton-ari-picsvids|language=el|work=gazzetta.gr|author=Stavros Sountoulidis|date=16 March 2017|access-date=18 February 2022}}</ref><ref>{{cite web|title=ΠΑΟΚ–Παναθηναϊκός 1–0 (26/3/1997)|url=http://www.paokmania.gr/stiles/mme/189163-lytrosi-me-kosta-fratzesko-sto-87-1997|language=el|work=paokmania.gr|date=26 March 2021|access-date=18 February 2022}}</ref><ref>{{cite web|title=Καβάλα–ΠΑΟΚ 0–3 (18/5/1997)|url=http://www.paokmania.gr/stiles/mme/176022-diplo-stin-kavala-kai-evropi-1997|language=el|work=paokmania.gr|date=18 May 2020|access-date=18 February 2022}}</ref><ref>{{cite web|title=ΠΑΟΚ–Καστοριά 6–0 (25/5/1997)|url=http://www.paokmania.gr/stiles/mme/176282-tsekare-evropaiko-eisitirio-me-eksara-1997|language=el|work=paokmania.gr|date=25 May 2020|access-date=18 February 2022}}</ref><ref>{{cite web|title=Μεθυσμένη πολιτεία...|trans-title=A drunken state...|url=https://www.tanea.gr/1997/05/26/sports/methysmeni-politeia/|language=el|work=tanea.gr|author=Giorgos Minos|date=26 May 1997|access-date=18 February 2022}}</ref>
+
+{{legend2|#CCFFCC|Win|border=1px solid #AAAAAA}}
+{{legend2|#FFFFCC|Draw|border=1px solid #AAAAAA}}
+{{legend2|#FFCCCC|Loss|border=1px solid #AAAAAA}}
+
+{{footballbox collapsible
+|round = 1
+|date = 8 September 1996
+|time = 
+|team1 = [[OFI Crete F.C.|OFI]]
+|score = 3–1
+|report =
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Yannis Anastasiou|Anastasiou]] {{goal|24}} <br> [[Kostas Frantzeskos|Frantzeskos]] {{goal|35}} {{penmiss}} <small>49'</small> <br> [[Dimitrios Moutas|Moutas]] {{goal|68}}
+|goals2 = [[Robert Dymkowski|Dymkowski]] {{goal|90}}
+|stadium = [[Theodoros Vardinogiannis Stadium]]
+|location = [[Heraklion]]
+|attendance = 
+|referee = Begos
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 2
+|date = 14 September 1996
+|time = 
+|team1 = [[PAOK FC|PAOK]] 
+|score = 2–0
+|report = 
+|team2 = [[Iraklis F.C. (Thessaloniki)|Iraklis]]
+|goals1 = [[Giorgos Toursounidis|Toursounidis]] {{goal|27|pen.|71|pen.}}  
+|goals2 =  
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 11,720
+|referee = Papachintzios
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 3
+|date = 29 September 1996
+|time = 
+|team1 = [[Kalamata F.C.|Kalamata]]		
+|score = 0–0
+|report =
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = 
+|goals2 =  
+|stadium = [[Kalamata Municipal Stadium]]
+|location = [[Kalamata]]
+|attendance = 4,722 
+|referee = Papadakos
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 4
+|date = 14 October 1996
+|time = 
+|team1 = [[Apollon Smyrnis F.C.|Apollon Athens]]		
+|score = 0–0
+|report =
+|team2 = [[PAOK FC|PAOK]]
+|goals1 =  
+|goals2 = 
+|stadium = [[Rizoupoli Stadium]]
+|location = [[Athens]]
+|attendance = 1,470
+|referee =Chatzis
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 5
+|date = 20 October 1996
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 1–0
+|report =
+|team2 = [[Athinaikos F.C.|Athinaikos]]
+|goals1 = [[Panagiotis Katsouris|Katsouris]] {{goal|58}}
+|goals2 = Gino {{sent off|0|77}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 8,776 
+|referee = Papatriantafyllou
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 6
+|date = 27 October 1996
+|time = 
+|team1 = [[Panachaiki F.C.|Panachaiki]]		
+|score = 2–0
+|report =
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Ilias Savvidis|Savvidis]] {{goal|8||59}}    
+|goals2 = [[Andrey Chernyshov|Chernyshov]] {{sent off|0|78}}  
+|stadium = [[Kostas Davourlis Stadium]]
+|location = [[Patras]]
+|attendance =
+|referee = 
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 7
+|date = 3 November 1996
+|time = 
+|team1 = [[PAOK FC|PAOK]] 
+|score = 1–1
+|report = 
+|team2 = [[Edessaikos F.C.|Edessaikos]]
+|goals1 = [[Zisis Vryzas|Vryzas]] {{goal|55}} 
+|goals2 = Andreadis {{goal|34}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 5,131
+|referee = Velliodis
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 8
+|date = 18 November 1996
+|time = 
+|team1 = [[Aris Thessaloniki F.C.|Aris]]
+|score = [[Derby of Thessaloniki|0–0]]
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 =  
+|goals2 = [[Dimitrios Kapetanopoulos|Kapetanopoulos]] {{sent off|0|17}}     
+|stadium = [[Kleanthis Vikelidis Stadium]] 
+|location = [[Thessaloniki]]
+|attendance = 11,462
+|referee = Vellios 
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 9
+|date = 24 November 1996
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 2–0
+|report =
+|team2 = [[Ionikos F.C.|Ionikos]]
+|goals1 = [[Giorgos Toursounidis|Toursounidis]] {{goal|43|pen.}} <br> [[Zisis Vryzas|Vryzas]] {{goal|45}} 
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 3,560
+|referee = Varouchas
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 10
+|date = 1 December 1996
+|time = 
+|team1 = [[Panathinaikos F.C.|Panathinaikos]] 
+|score = [[Panathinaikos–PAOK rivalry|5–0]]
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Krzysztof Warzycha|Warzycha]] {{goal|7||62||65}} <br> [[Giannis Goumas|Goumas]] {{goal|37}} <br> [[Giorgos Nasiopoulos|Nasiopoulos]] {{goal|70}} 
+|goals2 = 
+|stadium = [[Athens Olympic Stadium]]
+|location = [[Athens]]
+|attendance = 4,873
+|referee = 
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 11
+|date = 8 December 1996
+|time = 
+|team1 = [[PAOK FC|PAOK]] 
+|score = 0–0
+|report = 
+|team2 = [[Veria F.C.|Veria]]
+|goals1 = 
+|goals2 =  
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 4,112
+|referee = 
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 12
+|date = 15 December 1996
+|time = 
+|team1 = [[PAOK FC|PAOK]]
+|score = 1–1
+|report = 
+|team2 = [[Paniliakos F.C.|Paniliakos]]  
+|goals1 = [[Giorgos Toursounidis|Toursounidis]] {{goal|82|pen.}} <br> Panagiotidis {{sent off|0|90}}
+|goals2 = [[Georgios Strantzalis|Strantzalis]] {{goal|40}} <br> Papadopoulos {{sent off|0|68}} <br> [[Bernard Barnjak|Barnjak]] {{sent off|0|90}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 4,316
+|referee = Kaznaferis
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 13
+|date = 22 December 1996
+|time = 
+|team1 = [[Olympiacos F.C.|Olympiacos]]
+|score = [[Olympiacos–PAOK rivalry|1–0]]
+|report = 
+|team2 = [[PAOK FC|PAOK]]  
+|goals1 = [[Vassilis Karapialis|Karapialis]] {{goal|55}}   
+|goals2 = 
+|stadium = [[Karaiskakis Stadium]]
+|location = [[Piraeus]]
+|attendance = 14,694
+|referee = Chatzis
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 14
+|date = 5 January 1997
+|time = 
+|team1 = [[PAOK FC|PAOK]]
+|score = [[Double-headed eagles derby|0–0]]
+|report = 
+|team2 = [[AEK Athens F.C.|AEK Athens]]  
+|goals1 = 
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 24,056
+|referee = Borovilos
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 15
+|date = 11 January 1997
+|time = 
+|team1 = [[Xanthi F.C.|Xanthi]]
+|score = 1–1
+|report =
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Teggelidis {{goal|11}} {{sent off|0|45}} <br> Samaras {{sent off|0|88}}  
+|goals2 = [[Kostas Frantzeskos|Frantzeskos]] {{penmiss}} <small>53'</small> {{goal|71}} <br> [[Giorgos Hatzizisis|Hatzizisis]] {{sent off|0|83}} 
+|stadium = [[Xanthi Ground]] 
+|location = [[Xanthi]]
+|attendance = 3,475
+|referee = Fasolis
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 16
+|date = 15 January 1997
+|time = 
+|team1 = [[PAOK FC|PAOK]]
+|score = 3–0
+|report =
+|team2 = [[Kavala F.C.|Kavala]]
+|goals1 = [[Zisis Vryzas|Vryzas]] {{goal|16}} <br> [[Kostas Frantzeskos|Frantzeskos]] {{goal|29}} <br> [[Paraschos Zouboulis|Zouboulis]] {{goal|50}} 
+|goals2 =  
+|stadium = [[Toumba Stadium]] 
+|location = [[Thessaloniki]]
+|attendance = 6,412
+|referee = Giannadakis
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 17
+|date = 19 January 1997
+|time = 
+|team1 = [[Kastoria F.C.|Kastoria]]
+|score = 1–2
+|report =
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Duda (footballer, born 1968)|Duda]] {{goal|80}}  
+|goals2 = [[Kostas Frantzeskos|Frantzeskos]] {{goal|50||54}} 
+|stadium = [[Municipal Stadium of Kastoria]] 
+|location = [[Kastoria]]
+|attendance = 5,114
+|referee = Varouchas
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 18
+|date = 26 January 1997
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 2–1
+|report =
+|team2 = [[OFI Crete F.C.|OFI]]
+|goals1 = [[Kostas Frantzeskos|Frantzeskos]] {{goal|30||72}}
+|goals2 = [[Petros Marinakis|Marinakis]] {{goal|89}}  
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = Varouchas
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 19
+|date = 2 February 1997
+|time = 
+|team1 = [[Iraklis F.C. (Thessaloniki)|Iraklis]]
+|score = 2–0
+|report =
+|team2 = [[PAOK FC|PAOK]]	
+|goals1 = [[Savvas Kofidis|Kofidis]] {{goal|7}} <br> [[Takis Gonias|Gonias]] {{goal|67|pen.}}  
+|goals2 = 
+|stadium = [[Kaftanzoglio Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 14,460
+|referee = Vellios
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 20
+|date = 9 February 1997
+|time = 
+|team1 = [[PAOK FC|PAOK]]	
+|score = 2–0
+|report =
+|team2 = [[Kalamata F.C.|Kalamata]]	
+|goals1 = [[Giorgos Toursounidis|Toursounidis]] {{goal|48|pen.}} <br> [[Ionel Pârvu|Pârvu]] {{goal|51}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 10,474
+|referee = Psychomanis
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 21
+|date = 16 February 1997
+|time = 
+|team1 = [[PAOK FC|PAOK]]	
+|score = 3–1
+|report =
+|team2 = [[Apollon Smyrnis F.C.|Apollon Athens]]	
+|goals1 = [[Kostas Frantzeskos|Frantzeskos]] {{goal|7}} <br> [[Tasos Tasiopoulos|Tasiopoulos]] {{goal|72}} <br> Inebolidis {{goal|83}} 
+|goals2 = Damigos {{goal|87}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 4,381
+|referee = Mintiouris
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 22
+|date = 24 February 1997
+|time = 
+|team1 = [[Athinaikos F.C.|Athinaikos]]	
+|score = 2–3
+|report =
+|team2 = [[PAOK FC|PAOK]]	
+|goals1 = [[Marino Sabbadini|Sabbadini]] {{goal|16}} <br> [[Christos Velis|Velis]] {{goal|27}}  
+|goals2 = [[Kostas Frantzeskos|Frantzeskos]] {{goal|45}} <br> Sidiropoulos {{goal|56}} <br> [[Zisis Vryzas|Vryzas]] {{goal|57}}
+|stadium = [[Vyronas National Stadium]]
+|location = [[Athens]]
+|attendance = 
+|referee = Kalathenos 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 23
+|date = 2 March 1997
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 2–0
+|report =
+|team2 = [[Panachaiki F.C.|Panachaiki]]
+|goals1 = [[Spyros Marangos|Marangos]] {{goal|45||84}}     
+|goals2 =   
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 10,576
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 24
+|date = 9 March 1997
+|time = 
+|team1 = [[Edessaikos F.C.|Edessaikos]]		
+|score = 1–4
+|report =
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Samolis {{sent off|0|27}} <br> [[Vangelis Krios|Kryos]] {{goal|79}} 
+|goals2 = [[Kostas Frantzeskos|Frantzeskos]] {{goal|24}} <br> [[Spyros Marangos|Marangos]] {{goal|32}} <br> [[Theodoros Zagorakis|Zagorakis]] {{goal|63}} <br> Kolompourdas {{goal|88}}
+|stadium = [[Municipal Stadium of Edessa]]
+|location = [[Edessa, Greece|Edessa]]
+|attendance = 7,155
+|referee = Douros
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 25
+|date = 16 March 1997
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = [[Derby of Thessaloniki|2–1]]
+|report =
+|team2 = [[Aris Thessaloniki F.C.|Aris]]
+|goals1 = [[Zisis Vryzas|Vryzas]] {{goal|70||75}}
+|goals2 = [[Dimitris Mavrogenidis|Mavrogenidis]] {{goal|82}} 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 28,038
+|referee = Kaznaferis
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 26
+|date = 22 March 1997
+|time = 
+|team1 = [[Ionikos F.C.|Ionikos]]		
+|score = 2–1
+|report =
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Filis {{goal|28}} <br> [[Craig Brewster|Brewster]] {{goal|55}} 
+|goals2 = [[Robert Dymkowski|Dymkowski]] {{goal|63}} 
+|stadium = [[Neapoli Stadium]]
+|location = [[Piraeus]]
+|attendance = 2,021
+|referee = 
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 27
+|date = 26 March 1997
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = [[Panathinaikos–PAOK rivalry|1–0]]
+|report =
+|team2 = [[Panathinaikos F.C.|Panathinaikos]]
+|goals1 = [[Kostas Frantzeskos|Frantzeskos]] {{goal|87}}   
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 13,110
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 28
+|date = 6 April 1997
+|time = 
+|team1 = [[Veria F.C.|Veria]]		
+|score = 1–2
+|report =
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Thomas Troupkos|Troupkos]] {{goal|45}} 
+|goals2 = [[Tasos Tasiopoulos|Tasiopoulos]] {{goal|44}} <br> [[Dimitrios Kapetanopoulos|Kapetanopoulos]] {{goal|72}}
+|stadium = [[Veria Stadium]]
+|location = [[Veria]]
+|attendance = 5,844
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 29
+|date = 13 April 1997
+|time = 
+|team1 = [[Paniliakos F.C.|Paniliakos]]		
+|score = 0–2
+|report =
+|team2 = [[PAOK FC|PAOK]]
+|goals1 =   
+|goals2 = [[Spyros Marangos|Marangos]] {{goal|12}} <br> Gitsis {{goal|28|o.g.}}
+|stadium = [[Pyrgos Stadium]]
+|location = [[Pyrgos, Elis|Pyrgos]]
+|attendance = 
+|referee = Chatzistavridis
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 30
+|date = 20 April 1997
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = [[Olympiacos–PAOK rivalry|0–0]]
+|report =
+|team2 = [[Olympiacos F.C.|Olympiacos]]
+|goals1 = Sidiropoulos {{sent off|0|56}}  
+|goals2 = [[Nikos Dabizas|Dabizas]] {{sent off|0|90}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 35,850
+|referee = Kalathenos 
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 31
+|date = 4 May 1997
+|time = 
+|team1 = [[AEK Athens F.C.|AEK Athens]]		
+|score = [[Double-headed eagles derby|1–2]]
+|report =
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Christos Kostis|Kostis]] {{goal|90}}
+|goals2 = [[Paraschos Zouboulis|Zouboulis]] {{goal|23}} <br> [[Zisis Vryzas|Vryzas]] {{goal|59}}
+|stadium = [[Nikos Goumas Stadium]]
+|location = [[Athens]]
+|attendance = 11,250
+|referee = Douros
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 32
+|date = 11 May 1997
+|time = 
+|team1 = [[PAOK FC|PAOK]]	
+|score = 4–1
+|report =
+|team2 = [[Xanthi F.C.|Xanthi]]	
+|goals1 = [[Paraschos Zouboulis|Zouboulis]] {{goal|12||88}} <br> [[Kostas Frantzeskos|Frantzeskos]] {{goal|63||80}} 
+|goals2 = [[Kelvin Sebwe|Sebwe]] {{goal|89}}   
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 13,143
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 33
+|date = 18 May 1997
+|time = 
+|team1 = [[Kavala F.C.|Kavala]]	
+|score = 0–3
+|report =
+|team2 = [[PAOK FC|PAOK]]	
+|goals1 =  
+|goals2 = [[Giorgos Toursounidis|Toursounidis]] {{goal|48|pen.}} <br> [[Kostas Frantzeskos|Frantzeskos]] {{goal|62}} <br> [[Paraschos Zouboulis|Zouboulis]] {{goal|75}} 
+|stadium = [[Kavala Stadium]]
+|location = [[Kavala]]
+|attendance = 7,527
+|referee = Bikas
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 34
+|date = 25 May 1997
+|time = 
+|team1 = [[PAOK FC|PAOK]]	
+|score = 6–0
+|report =
+|team2 = [[Kastoria F.C.|Kastoria]]	
+|goals1 = [[Kostas Frantzeskos|Frantzeskos]] {{goal|12||36||54}} <br> [[Zisis Vryzas|Vryzas]] {{goal|19||28}} <br> [[Theodoros Zagorakis|Zagorakis]] {{goal|86}}
+|goals2 = Nolis {{penmiss}} <small>70'</small>
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 24,129
+|referee = Papapetrou
+|result = W
+}}
+
+==Greek Cup==
+{{main|1996–97 Greek Football Cup}}
+
+===Third round===
+<ref>{{cite web|title=Πανιώνιος–ΠΑΟΚ 2–3 (Κύπελλο)|url=http://www.paokmania.gr/stiles/arxeio/aspromavres-istories/113774-doumplarise-tis-nikes-kai-prokrithike|language=el|work=paokmania.gr|date=14 November 2016|access-date=18 February 2022}}</ref>
+
+{{footballbox collapsible
+|round      = 1st leg
+|date       = 2 October 1996
+|time       = 19:00 [[Eastern European Time|EET]]
+|team1      = [[PAOK FC|PAOK]]
+|score      = 4–0
+|report     = 
+|team2      = [[Panionios F.C.|Panionios]]
+|goals1     =
+*[[Alexis Alexiou|Alexiou]] {{goal|29}}
+*[[Giorgos Toursounidis|Toursounidis]] {{goal|34|pen.}}
+*[[Leszek Pisz|Pisz]] {{goal|40}}
+*[[Panagiotis Katsouris|Katsouris]] {{goal|79}}
+|goals2     =
+|stadium    = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 
+|referee    = Vellios
+|result     = W
+}}
+{{footballbox collapsible
+|round      = 2nd leg
+|date       = 14 November 1996
+|time       = 14:30 [[Eastern European Time|EET]]
+|team1      = [[Panionios F.C.|Panionios]]
+|score      = 2–3
+|aggregatescore = 2–7 
+|report     = 
+|team2      = [[PAOK FC|PAOK]]
+|goals1     =
+*[[Antonis Sapountzis|Sapountzis]] {{goal|84}}
+*[[Apostolos Mantzios|Mantzios]] {{goal|85}}  
+|goals2     =
+*[[Paraschos Zouboulis|Zouboulis]] {{goal|19||65}}
+*[[Robert Dymkowski|Dymkowski]] {{goal|43}}
+|stadium    = [[Nea Smyrni Stadium]]
+|location   = [[Athens]]
+|attendance = 
+|referee    = 
+|result     = W
+}}
+
+===Round of 16===
+<ref>{{cite web|title=ΠAOK–Ολυμπιακός 1–2 (Κύπελλο)|url=http://www.paokmania.gr/stiles/mme/136028-i-kokkini-karta-pou-ta-allakse-ola|language=el|work=paokmania.gr|date=27 November 2021|access-date=18 February 2022}}</ref>
+
+{{footballbox collapsible
+|round      = 1st leg
+|date       = 27 November 1996
+|time       = 19:30 [[Eastern European Time|EET]]
+|team1      = [[PAOK FC|PAOK]]
+|score      = [[Olympiacos–PAOK rivalry|1–2]]
+|report     = 
+|team2      = [[Olympiacos F.C.|Olympiacos]]
+|goals1     =
+*[[Paraschos Zouboulis|Zouboulis]] {{goal|19}}
+* [[Zisis Vryzas|Vryzas]] {{sent off|2|23|28}}
+|goals2     =
+*[[Alexis Alexandris|Alexandris]] {{goal|52}}
+*[[Predrag Đorđević|Đorđević]] {{goal|73|pen.}}
+|stadium    = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 20,498
+|referee    = Georgios Psychomanis ([[Athens Football Clubs Association|Athens]])
+|result     = L
+}}
+{{footballbox collapsible
+|round = 2nd leg
+|date       = 11 December 1996
+|time       = 18:15 [[Eastern European Time|EET]]
+|team1      = [[Olympiacos F.C.|Olympiacos]]
+|score = [[Olympiacos–PAOK rivalry|2–1]]
+|aggregatescore = 4–2 
+|report     = 
+|team2      = [[PAOK FC|PAOK]]
+|goals1     =
+*[[Alexis Alexandris|Alexandris]] {{goal|40||59}}
+|goals2     =
+*[[Tasos Tasiopoulos|Tasiopoulos]] {{goal|41}}
+|stadium    = [[Karaiskakis Stadium]]
+|location   = [[Piraeus]]
+|attendance = 4,503
+|referee    = Sotiris Vorgias ([[Athens Football Clubs Association|Athens]])
+|result     = L
+}}
+
+==Statistics==
+
+===Squad statistics===
+{{Efs start3 |updated=May 25, 1997 |c1=[[1996–97 Alpha Ethniki|Alpha Ethniki]] |c2=[[1996–97 Greek Football Cup|Greek Cup]]}}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Goalkeepers
+|-
+{{Efs player3|no= |nat=GRE|name=[[Nikolaos Michopoulos]] |34|0|0 |4|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Vangelis Pourliotopoulos]] |0|0|0 |0|0|0 }}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Defenders
+|-
+{{Efs player3|no= |nat=GRE|name=[[Tasos Tasiopoulos]] |31|0|2 |4|0|1 }}
+{{Efs player3|no= |nat=GRE|name=[[Dimitrios Kapetanopoulos]] |29|0|1 |4|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Panagiotis Katsouris]] |21|0|1 |3|0|1 }}
+{{Efs player3|no= |nat=GRE|name=Panagiotis Sidiropoulos |18|0|1 |0|0|0 }}
+{{Efs player3|no= |nat=ROM|name=[[Ionel Pârvu]] |18|0|1 |0|0|0 }}
+{{Efs player3|no= |nat=GRE|name=Nikos Kolompourdas |17|0|1 |0|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Alexis Alexiou]] |11|0|0 |2|0|1 }}
+{{Efs player3|no= |nat=RUS|name=[[Andrey Chernyshov]] |7|0|0 |3|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Makis Chavos]] |7|0|0 |2|0|0 }}
+{{Efs player3|no= |nat=GRE|name=Nikos Panagiotidis |7|0|0 |1|0|0 }}
+{{Efs player3|no= |nat=GRE|name=Giorgos Koumaropoulos |5|0|0 |2|0|0 }}
+{{Efs player3|no= |nat=AUS|name=[[Joe Palatsides]] |4|0|0 |0|0|0 }}
+{{Efs player3|no= |nat=GRE|name=Charalampos Nikolaou |2|0|0 |1|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Vangelis Nastos]] |1|0|0 |0|0|0 }}
+{{Efs player3|no= |nat=GRE|name=Panagiotis Karametaxas |1|0|0 |0|0|0 }}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Midfielders
+|-
+{{Efs player3|no= |nat=GRE|name=[[Theodoros Zagorakis]] |32|0|2 |3|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Giorgos Toursounidis]] |31|0|6 |3|0|1 }}
+{{Efs player3|no= |nat=GRE|name=[[Achilleas Zafiriou]] |25|0|0 |3|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Kostas Frantzeskos]] |20|0|16 |0|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Spyros Marangos]] |20|0|4 |0|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Giorgos Hatzizisis]] |16|0|0 |2|0|0 }}
+{{Efs player3|no= |nat=POL|name=[[Leszek Pisz]] |11|0|0 |4|0|1 }}
+{{Efs player3|no= |nat=GRE|name=[[Pantelis Kafes]] |3|0|0 |0|0|0 }}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Forwards
+|-
+{{Efs player3|no= |nat=GRE|name=[[Zisis Vryzas]] | 31|0|9 |2|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Paraschos Zouboulis]] | 25|0|5 |2|0|3 }}
+{{Efs player3|no= |nat=POL|name=[[Robert Dymkowski]] | 16|0|2 |4|0|1 }}
+{{Efs player3|no= |nat=AUS|name=[[John Anastasiadis]] | 9|0|0 |3|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Antonis Gioukoudis]] | 8|0|0 |2|0|0 }}
+{{Efs player3|no= |nat=GRE|name=Kostas Inebolidis | 6|0|1 |0|0|0 }}
+|}	
+
+Source: Match reports in [[#Competitions|competitive matches]], [https://www.rsssf.org/tablesg/grk97.html RSSSF]
+
+===Goalscorers===
+{| class="wikitable sortable" style="text-align:center" 
+|-
+!width=5|{{Abbr| Rank | Ranking }}
+!width=5|{{Abbr| No. | Squad Number }}
+!width=5|{{Abbr| Pos. | Position }}
+!width=180|Player
+!width=30|[[1996–97 Alpha Ethniki|Alpha Ethniki]]
+!width=30|[[1996–97 Greek Football Cup|Greek Cup]]
+!width=50|Total 
+|-
+|-
+|1||||MF||align=left|{{flagicon|GRE}} [[Kostas Frantzeskos]]||16||0||'''16'''
+|-
+|2||||FW||align=left|{{flagicon|GRE}} [[Zisis Vryzas]]||9||0||'''9'''
+|-
+|3||||FW||align=left|{{flagicon|GRE}} [[Paraschos Zouboulis]]||5||3||'''8'''
+|-
+|4||||MF||align=left|{{flagicon|GRE}} [[Giorgos Toursounidis]]||6||1||'''7'''
+|-
+|5||||MF||align=left|{{flagicon|GRE}} [[Spyros Marangos]]||4||0||'''4'''
+|-
+|rowspan=2|6||||DF||align=left|{{flagicon|GRE}} [[Tasos Tasiopoulos]]||2||1||'''3'''
+|-
+| |||FW||align=left|{{flagicon|POL}} [[Robert Dymkowski]]||2||1||'''3'''
+|-
+|rowspan=2|8||||MF||align=left|{{flagicon|GRE}} [[Theodoros Zagorakis]]||2||0||'''2'''
+|-
+| |||DF||align=left|{{flagicon|GRE}} [[Panagiotis Katsouris]]||1||1||'''2'''
+|-
+|rowspan=7|10||||DF||align=left|{{flagicon|GRE}} [[Dimitrios Kapetanopoulos]]||1||0||'''1'''
+|-
+| |||DF||align=left|{{flagicon|GRE}} Panagiotis Sidiropoulos||1||0||'''1'''
+|-
+| |||DF||align=left|{{flagicon|GRE}} Nikos Kolompourdas||1||0||'''1'''
+|-
+| |||DF||align=left|{{flagicon|ROM}} [[Ionel Pârvu]] ||1||0||'''1'''
+|-
+| |||FW||align=left|{{flagicon|GRE}} Kostas Inebolidis||1||0||'''1'''
+|-
+| |||DF||align=left|{{flagicon|GRE}} [[Alexis Alexiou]]||0||1||'''1'''
+|-
+| |||MF||align=left|{{flagicon|POL}} [[Leszek Pisz]]||0||1||'''1'''
+|-
+
+|colspan="4"|Own goals||1||0||'''1'''
+|- bgcolor="#EFEFEF"
+|colspan=4|'''TOTALS'''
+|'''53'''||'''9'''||'''62'''	
+|}
+
+Source: Match reports in [[#Competitions|competitive matches]], [https://www.rsssf.org/tablesg/grk97.html RSSSF]
+
+==External links==
+* [https://www.rsssf.org/tablesg/grk97.html RSSSF]
+* [http://www.paokfc.gr/ PAOK FC official website]
+
+== References ==
+{{Reflist}}
+
+{{PAOK FC seasons}}
+{{1996–97 in Greek football}}
+
+{{DEFAULTSORT:1996-97 PAOK FC season}}
+[[Category:PAOK FC seasons]]
+[[Category:Greek football clubs 1996–97 season|PAOK]]

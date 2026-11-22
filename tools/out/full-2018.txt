@@ -1,0 +1,1921 @@
+{{Infobox football club season
+| club = [[PAOK FC|PAOK]]
+| image = Paok-spartak (16).jpg
+| image_size = 320px
+| season = 2018–19
+| stadium = [[Toumba Stadium]]
+| manager = [[Răzvan Lucescu]]
+| chrtitle = President
+| chairman = [[Ivan Savvidis]]
+| league = [[2018–19 Super League Greece|Super League]]
+| league result = [[2018–19 Super League Greece#League table|'''1st''']]
+| cup1 = [[2018–19 Greek Football Cup|Greek Cup]]
+| cup1 result = [[2018–19 Greek Football Cup#Final|'''Winners''']]
+| cup2 = [[2018–19 UEFA Champions League|UEFA Champions League]]
+| cup2 result = [[2018–19 UEFA Champions League#Play-off round|Play-off round]]
+| cup3 = [[2018–19 UEFA Europa League|UEFA Europa League]]
+| cup3 result = [[2018–19 UEFA Europa League#Group L|Group stage]]
+| league topscorer = <br>[[Aleksandar Prijović]] (9)
+| season topscorer = <br>Aleksandar Prijović (18)
+| highest attendance = 26,725 vs [[S.L. Benfica|Benfica]] (29 August 2018)
+| lowest attendance = 10,837 vs [[PAS Giannina F.C.|PAS Giannina]] (30 January 2019)
+| average attendance = 20,606
+| pattern_la1 = _paok1819h
+| pattern_b1 = _paok1819h
+| pattern_ra1 = _paok1819h
+| pattern_sh1 = _paok1819h
+| pattern_so1 = _macronfootballgfcajaccio1819a
+| leftarm1 = FFFFFF
+| body1 = FFFFFF
+| rightarm1 = FFFFFF
+| shorts1 = 000000
+| socks1 = FFFFFF
+| pattern_la2 = _paok1819a
+| pattern_b2 = _paok1819a
+| pattern_ra2 = _paok1819a
+| pattern_sh2 = _paok1819a
+| pattern_so2 = _paok1819a
+| leftarm2 = 515460
+| body2 = 515460
+| rightarm2 = 515460
+| shorts2 = 515460
+| socks2 = 7F7F7F
+| pattern_la3 = _paok1819t
+| pattern_b3 = _paok1819t
+| pattern_ra3 = _paok1819t
+| pattern_sh3 = 
+| pattern_so3 = 
+| leftarm3 = f93328
+| body3 = f93328
+| rightarm3 = f93328
+| shorts3 = f93328
+| socks3 = f93328
+| prevseason = [[2017–18 PAOK FC season|2017–18]]
+| nextseason = [[2019–20 PAOK FC season|2019–20]]
+}}
+The '''2018–19 season''' was '''[[PAOK FC|PAOK Football Club's]]''' 93rd in existence and the club's [[Super League Greece#Seasons in Alpha Ethniki and Super League Greece|60th consecutive season]] in the top flight of Greek football. The team won the [[2018–19 Super League Greece|Super League]] [[List of unbeaten football club seasons|unbeaten]], defended their [[Greek Football Cup]] title won in 2018, and also competed in the [[UEFA Champions League]] and [[UEFA Europa League]].
+
+==Coaching staff==
+
+[[File:Răzvan Lucescu.jpg|thumb|This was [[Răzvan Lucescu]]'s second season with PAOK.]]
+{{Fb cs header}}
+{{Fb cs staff |bg= |p=Head coach	 |s={{flagicon|ROM}} [[Răzvan Lucescu]] }}
+{{Fb cs staff |bg=y |p=Assistant manager |s={{flagicon|ITA}} Diego Longo }}
+{{Fb cs staff |bg= |p=Assistant manager |s={{flagicon|ITA}} [[Cristiano Bacci]] }}
+{{Fb cs staff |bg=y |p=Team Manager |s={{flagicon|GRE}} [[Pantelis Konstantinidis]] }}
+{{Fb cs staff |bg= |p=Goalkeeping coach |s={{flagicon|GRE}} Giorgos Skiatitis }}
+{{Fb cs staff |bg=y |p=Head Gymnast Rehabilitation |s={{flagicon|GRE}} Georgios Tsonakas }}
+{{Fb cs staff |bg= |p=Gymnast Rehabilitation |s={{flagicon|GRE}} Vasilios Kanaras }}
+{{Fb cs staff |bg=y |p=Fitness Coach |s={{flagicon|ITA}} Matteo Spatafora }}
+{{Fb cs staff |bg= |p=Data Analyst (Vis-Track) |s={{flagicon|GRE}} Kyriakos Tsitsiridis }}
+{{Fb cs staff |bg=y |p=Opponent Analysis |s={{flagicon|GRE}} Ioannis Thomaidis }}
+{{Fb cs staff |bg= |p=Head of Medical Services |s={{flagicon|GRE}} Emmanouil Papakostas }}
+{{Fb cs staff |bg=y |p=Club's Doctor |s={{flagicon|GRE}} Kostas Tziantzis }}
+{{Fb cs staff |bg= |p=Exercise Physiology |s={{flagicon|GRE}} Giorgos Ziogas }}
+{{Fb cs staff |bg=y |p=Nutritionist |s={{flagicon|GRE}} Ioanna Paspala }}
+{{Fb cs staff |bg= |p=Physiotherapist |s={{flagicon|GRE}} Petros Nikolakoudis }}
+{{Fb cs staff |bg=y |p=Physiotherapist |s={{flagicon|GRE}} Nikolaos Tsirelas }}
+{{Fb cs staff |bg= |p=Physiotherapist |s={{flagicon|GRE}} Athanasios Kapoulas }}
+{{Fb cs staff |bg=y |p=Physiotherapist |s={{flagicon|GRE}} Nikolaos Gagalis }}
+{{Fb cs staff |bg= |p=Physiotherapist |s={{flagicon|GRE}} Nikolaos Mouratidis }}
+{{Fb cs staff |bg=y |p=Academy's Technical Director |s={{flagicon|ESP}} Daniel Bigas Alsina }}
+{{Fb cs footer|u=18 August 2017 |s=[http://www.paokfc.gr/en/a-omada/first-team-2-en/technical-staff-a-team-en/ paokfc.gr] |date=June 2017}}
+
+===Other information===
+[[File:Paok-spartak (2).jpg|thumb|Toumba Stadium]]
+{{fb oi header}}
+{{Fb oi information |bg= |id=Owner |i=[[Ivan Savvidis|Dimera Group Limited]]}}
+{{Fb oi information |bg= |id=Chairman |i={{flagicon|RUS}} {{flagicon|GRE}} [[Ivan Savvidis]]}}
+{{Fb oi information |bg= |id=Vice President & CEO|i={{Flagicon|GRE}} Chrisostomos Gagatsis}}
+{{Fb oi information |bg= |id=Technical Director|i={{flagicon|POR}} Mário Branco<ref>{{cite news|url=https://www.paokfc.gr/en/news/20180823-dieuthintis-anaptuxis-podosfairikou-tmimatos-o-mario-branco/|title=Mario Branco takes over as Head of Football Development|publisher=paokfc.gr|date=23 August 2018|accessdate=13 June 2019}}</ref>}}
+|-
+{{Fb oi information |bg= |id=Members |i={{flagicon|RUS}} {{flagicon|GRE}} Giorgos Savvidis<br />{{flagicon|RUS}} Maria Goncharova<br />{{flagicon|RUS}} Artur Davidyan<br />{{flagicon|GRE}} Dimokratis Papadopoulos<br />{{flagicon|GRE}} Ilias Gerontidis}}
+{{Fb oi information |bg= |id=Consultant of Football|i={{flagicon|GRE}} [[Giorgos Koudas]]}}
+{{fb oi information |bg=y |id={{Fb oi ground}} |i={{Fb oi ground|g=[[Toumba Stadium]]|c=29,000|d=106×71 metres}} }}
+{{fb oi information |bg=y |id=Training Ground |i=[[PAOK FC Sport Center|PAOK Sport Center]]<ref>{{cite web|url=http://www.paokfc.gr/en/the-club/facilities-en/training-center/|title=Nea Mesimvria Sports Center|publisher=paokfc.gr}}</ref>}}
+{{Fb oi footer|s=[http://www.paokfc.gr/en/the-club/administration/ paokfc.gr]|date=June 2017}}
+
+==Players==
+
+===Squad information===
+{{fb si header |age=y}}
+{{fb si player |bg=y |n=1 |pos=GK |nb=ARG |p=[[Rodrigo Rey]] |eu=y |age={{Age|1991|03|08}} |s=2017 |a=18 |g=0 |e=2021 |f={{ntsh|1.5}}€1.5M |vc= |notes=Second nationality: Italy }}
+{{fb si player |bg= |n=3 |pos=RWB |nb=BRA |p=[[Léo Matos]] |eu=n |age={{Age|1986|4|2}} |s=2016 |a=85 |g=15 |e=2021 |f={{ntsh|0}} |vc= |notes= }}
+{{fb si player |bg=y |n=5 |pos=CB |nb=CPV |p=[[Fernando Varela (Cape Verdean footballer)|Fernando Varela]] |eu=y |age={{Age|1987|11|26}} |s=2016 |a=75 |g=2 |e=2019 |f={{ntsh|1.4}}€1.4M |vc= |notes=Second nationality: Portugal }}
+{{fb si player |bg= |n=6 |pos=DF |nb=ROM |p=[[Alin Toșca]] |eu=y |age={{Age|1992|03|14}} |s=2018 |a=0 |g=0 |e=2019 |f={{ntsh|0}} |vc= |notes= }}
+{{fb si player |bg=y |n=7 |pos=AM |nb=MAR |p=[[Omar El Kaddouri]] |eu=y |age={{Age|1990|08|21}} |s=2017 |a=21 |g=2 |e=2021 |f={{ntsh|1.3}}€1.3M |vc= |notes=Second nationality: Belgium }}
+{{fb si player |bg= |n=8 |pos=MF |nb=BRA |p=[[Maurício José da Silveira Júnior|Maurício]] |eu=n |age={{Age|1988|10|21}} |s=2017 |a=27 |g=4 |e=2020 |f={{ntsh|0}} |vc= |notes= }}
+{{fb si player |bg= |n=9 |pos=CF |nb=SER |p=[[Aleksandar Prijović]] |eu=y |age={{Age|1990|04|21}} |s=2017 |a=60 |g=37 |e=2022 |f={{ntsh|1.9}}€1.9M |vc= |notes= }}
+{{fb si player |bg= |n=10 |pos=AM |nb=GRE |p=[[Dimitrios Pelkas]] |eu=y |age={{Age|1993|10|26}} |s=2007 |a=127 |g=29 |e=2021 |f={{ntsh|0}} [[PAOK Academy|PAOK U20]] |vc=3rd captain |notes= }}
+{{fb si player |bg=y |n=11 |pos=FW |nb=GRE |p=[[Nikos Karelis]] |eu=y |age={{Age|1992|02|24}} |s=2018 |a=0 |g=0 |e=2019 |f={{ntsh|0}} |vc= |notes= }}
+{{fb si player |bg= |n=13 |pos=CB |nb=GRE |p=[[Stelios Malezas]] |eu=y |age={{Age|1985|03|11}} |s=2005/2015 |a=237 |g=5 |e=2019 |f={{ntsh|0.10}}€0.10M |vc=Vice-captain |notes= }}
+{{fb si player |bg=y |n=15 |pos=CB |nb=ESP |p=[[José Ángel Crespo]] |eu=y |age={{Age|1987|02|09}} |s=2016 |a=82 |g=3 |e=2019 |f={{ntsh|0}} |vc= |notes= }}
+{{fb si player |bg= |n=18 |pos=RW |nb=GRE |p=[[Dimitrios Limnios]] |eu=y |age={{Age|1998|05|27}} |s=2017 |a=31 |g=1 |e=2021 |f={{ntsh|0}} €0.80M |vc= |notes= }}
+{{fb si player |bg=y |n=19 |pos=MF |nb=SWE |p=[[Pontus Wernbloom]] |eu=y |age={{Age|1986|06|25}} |s=2018 |a=0 |g=0 |e=2021 |f={{ntsh|0}} |vc= |notes= }}
+{{fb si player |bg= |n=20 |pos=DF |nb=POR |p=[[Vieirinha]] |eu=y |age={{Age|1986|1|24}} |s=2008/2017 |a=158 |g=30 |e=2020 |f={{ntsh|1}}€1M |cap=y |notes= }}
+{{fb si player |bg=y |n=21 |pos=FW |nb=SUR |p=[[Diego Biseswar]] |eu=y |age={{Age|1988|3|08}} |s=2016 |a=76 |g=10 |e=2022 |f={{ntsh|0}} |vc= |notes= }}
+{{fb si player |bg= |n=28 |pos=CM |nb=UKR |p=[[Yevhen Shakhov (footballer born 1990)|Yevhen Shakhov]] |eu=n |age={{Age|1990|11|30}} |s=2016 |a=77 |g=16 |e=2019 |f={{ntsh|0}} |vc= |notes= }}
+{{fb si player |bg=y |n=31 |pos=GK |nb=GRE |p=[[Alexandros Paschalakis]] |eu=y |age={{Age|1989|07|28}} |s=2017 |a=24 |g=0 |e=2020 |f={{ntsh|0}} |vc= |notes= }}
+{{fb si player |bg= |n=34 |pos=DF |nb=UKR |p=[[Yevhen Khacheridi]] |eu=y |age={{Age|1987|07|28}} |s=2018 |a=0 |g=0 |e=2021 |f={{ntsh|0}} |vc= |notes= }}
+{{fb si player |bg=y |n=47 |pos=FW |nb=ENG |p=[[Chuba Akpom]] |eu=y |age={{Age|1995|10|9}} |s=2018 |a=0 |g=0 |e=2021 |f={{ntsh|1.5}}€1.0M |vc= |notes= }}
+{{fb si player |bg= |n=60 |pos=GK |nb=GRE |p=[[Symeon Papadopoulos]] |eu=y |age={{Age|2000|04|18}} |s=2017 |a=0 |g=0 |e=2020 |f={{ntsh|0}}  |vc= |notes= }}
+{{fb si player |bg= |n=70 |pos=RB |nb=GRE |p=[[Stelios Kitsiou]] |eu=y |age={{Age|1993|09|28}} |s=2007 |a=148 |g=5 |e=2020 |f={{ntsh|0}} [[PAOK Academy|PAOK U20]] |vc= |notes= }}
+{{fb si player |bg=y |n=71 |pos=GK |nb=GRE |p=[[Panagiotis Glykos]] |eu=y |age={{Age|1986|10|10}} |s=2007 |a=165 |g=0 |e=2019 |f={{ntsh|0}} |vc= |notes= }}
+
+{{fb si player |bg= |n=74 |pos=FW |nb=EGY |p=[[Amr Warda]] |eu=n |age={{Age|1993|09|17}} |s=2017 |a=14 |g=2 |e=2020 |f={{ntsh|0}}€0.35M |vc= |notes= }}
+{{fb si player |bg=y |n=87 |pos=DM |nb=ESP |p=[[José Cañas]] |eu=y |age={{Age|1987|5|27}} |s=2016 |a=64 |g=2 |e=2019 |f={{ntsh|0}} |vc= |notes= }}
+{{fb si player |bg= |n=98 |pos=FW |nb=BRA |p=[[Léo Jabá]] |eu=n |age={{Age|1998|6|2}} |s=2018 |a=0 |g=0 |e=2023 |f={{ntsh|0}}€2.3M |vc= |notes= }}
+{{fb si player |bg=y |n=99 |pos=GK |nb=GRE |p=[[Marios Siampanis]] |eu=y |age={{Age|1999|09|28}} |s=2015 |a=3 |g=0 |e=2019 |f={{ntsh|0}} [[PAOK Academy|PAOK U20]] |vc= |notes=}}
+{{fb si footer |u=Start of season|c=GRE |ss=2016 |o= |s=[http://www.paokfc.gr/a-omada/a-omada/a-team-roster/ paokfc.gr], [http://www.paokfc.gr/a-omada/a-omada/a-team-roster/ 2017/18 numbers], [[#Players in / out|Players in / out]], Wikipedia players' articles, and [http://www.paokfc.gr/profiles/stefanos-athanasiadis/ paokfc.gr] (for appearances and goals) |date=April 2016}}
+
+===Players in===
+{{fb in2 header |age=y}}
+{{fb in2 player |tc=GRE |bg= |p=[[Dimitris Giannoulis]] |type=Loan Return |pos=DF |n=23 |nb=GRE |eu=y |age={{Age|1995|10|17}} |fcl={{flagicon|GRE}} [[Atromitos F.C.|Atromitos]] |w=W |e=2022 |f=Free|os=<ref>{{cite web|url=https://www.paokfc.gr/en/news/20190121-o-giannoulis-epestrepse-sto-spiti-tou/|title=Giannoulis back home|work=paokfc.gr|date=21 January 2019}}</ref>}}
+{{fb in2 player |tc=GRE |bg= |p=[[Pedro Henrique Konzen]] |type=Loan Return |pos=FW |n=11 |nb=BRA |eu=n |age={{Age|1990|06|16}} |fcl={{flagicon|KAZ}} [[FC Astana|Astana]] |w=W |e=2020 |f=Free|os=<ref>{{cite web|url=https://www.paokfc.gr/en/news/20190128-pedro-henrique-i-epistrofi/|title=Pedro Henrique returns|work=paokfc.gr|date=28 January 2019}}</ref>}}
+{{fb in2 player |tc=GRE |bg= |p=[[Sérgio Oliveira]] |type=Loan |eu=y |nb=POR |n=26 |pos=MF |age={{Age|1992|01|02}} |fcl={{flagicon|POR}} [[Porto FC]] |w=W |e=2019 |f=Free |os=<ref>{{cite web|url=https://www.paokfc.gr/nea/20190131-ston-paok-o-sergio-oliveira/ |title=Στον ΠΑΟΚ ο Σέρζιο Ολιβέιρα |work=paokfc.gr|date=31 January 2019}}</ref>}}
+{{fb in2 player |tc=GRE |bg= |p=[[Josip Mišić (footballer, born 1994)|Josip Mišic]] |type=Loan |eu=y |nb=CRO |n=27 |pos=MF |age={{Age|1994|06|28}} |fcl={{flagicon|POR}} [[Sporting CP]] |w=W |e=2020 |f=Free |os=<ref>{{cite web|url=https://www.paokfc.gr/en/news/20190118-ston-paok-o-josip-misic/|title=Josip Mišić joins PAOK|work=paokfc.gr|date=17 January 2019}}</ref>}}
+{{fb in2 player |tc=GRE |bg= |p=[[Sverrir Ingi Ingason]] |type=Transfer |eu=y |nb=ISL |n=4 |pos=DF |age={{Age|1993|08|05}} |fcl={{flagicon|RUS}} [[FK Rostov]] |w=W |e=2022 |f=€4M|os=<ref>{{cite web|url=https://www.paokfc.gr/en/news/20190131-paiktis-tou-dikefalou-o-ingason/|title=PAOK sign Ingason|work=paokfc.gr|date=1 February 2019}}</ref>}}
+{{fb in2 player |tc=GRE |bg= |p=[[Karol Świderski]] |type=Transfer |eu=y |nb=POL |n=9 |pos=FW |age={{Age|1997|01|23}} |fcl={{flagicon|POL}} [[Jagiellonia Białystok]] |w=W |e=2022 |f=€2M |os=<ref>{{cite web|url=https://www.paokfc.gr/en/news/20190120-paiktis-tou-paok-o-karol-swiderski/|title=Karol Świderski joins PAOK|work=paokfc.gr|date=20 January 2019}}</ref>}}
+{{fb in2 player |tc=GRE |bg= |p=[[Léo Jabá]] |type=Transfer |eu=n |nb=BRA |n=98 |pos=FW |age={{Age|1998|06|02}} |fcl={{flagicon|RUS}} [[FC Akhmat Grozny|Akhmat Grozny]] |w=S |e=2023 |f=€2.3M |os=<ref>{{cite web|url=https://www.paokfc.gr/en/news/20180621-ston-paok-o-leo-zampa/|title=Léo Jabá signs for PAOK|work=paokfc.gr|date=22 June 2018}}</ref>}}
+{{fb in2 player |tc=GRE |bg= |p=[[Chuba Akpom]] |type=Transfer |eu=y |nb=ENG |n=47 |pos=FW |age={{Age|1995|10|09}} |fcl={{flagicon|ENG}} [[Arsenal F.C.|Arsenal]] |w=S |e=2021 |f=€1M |os=<ref>{{cite web|url=https://www.paokfc.gr/en/news/20180730-paiktis-tou-paok-o-akpom-en/|title=PAOK FC sign Akpom|work=paokfc.gr|date=3 August 2018}}</ref>}}
+{{fb in2 player |tc=GRE |bg= |p=[[Alin Toșca]] |type=Loan |eu=y |nb=ROM |n=6 |pos=DF |age={{Age|1992|03|14}} |fcl={{flagicon|ESP}} [[Real Betis]] |w=S |e=2019 |f=Free |os=<ref>{{cite web|url=https://www.paokfc.gr/en/news/20180824-paiktis-tou-paok-o-alin-tosca-en/|title=Alin Toșca joins PAOK|work=paokfc.gr|date=24 August 2018}}</ref>}}
+{{fb in2 player |tc=GRE |bg= |p=[[Nikos Karelis]] |type=Loan |eu=y |nb=GRE |n=11 |pos=FW |age={{Age|1992|02|24}} |fcl={{flagicon|BEL}} [[K.R.C. Genk|Genk]] |w=S |e=2019 |f=Free |os=<ref>{{cite web|url=https://www.paokfc.gr/en/news/20180831-paiktis-tou-paok-o-karelis/|title=Karelis joins PAOK|work=paokfc.gr|date=31 August 2018}}</ref>}}
+{{fb in2 player |tc=GRE |bg= |p=[[Pontus Wernbloom]] |type=Free Transfer |eu=y |nb=SWE |n=19 |pos=MF |age={{Age|1986|06|25}} |fcl={{flagicon|RUS}} [[PFC CSKA Moscow|CSKA Moscow]] |w=S |e=2021 |f=Free |os=<ref>{{cite web|url=https://www.paokfc.gr/en/news/20180803-ston-dikefalo-o-pontous-wernbloom/|title=Pontus Wernbloom joins PAOK|work=paokfc.gr|date=16 August 2018}}</ref>}}
+{{fb in2 player |tc=GRE |bg= |p=[[Yevhen Khacheridi]] |type=Free Transfer |eu=y |nb=UKR |n=34 |pos=DF |age={{Age|1987|07|28}} |fcl={{flagicon|UKR}} [[FC Dynamo Kyiv|Dynamo Kyiv]] |w=S |e=2021 |f=Free |os=<ref>{{cite web|url=https://www.paokfc.gr/en/news/20180531-ston-paok-o-evgen-khacheridi/|title=Yevhen Khacheridi joins PAOK|work=paokfc.gr|date=31 May 2018}}</ref>}}
+{{fb in2 player |tc=GRE |bg= |p=[[Amr Warda]] |type=Loan Return |pos=FW |n=74 |nb=EGY |eu=n |age={{Age|1993|09|17}} |fcl={{flagicon|GRE}} [[Atromitos F.C.|Atromitos]] |w=Summer |f=Free}}
+{{fb in2 player |tc=GRE |bg= |p=[[Pedro Henrique Konzen]] |type=Loan Return |pos=FW |n=11 |nb=BRA |eu=n |age={{Age|1990|06|16}} |fcl={{flagicon|AZE}} [[Qarabağ FK|Qarabağ]] |w=Summer |f=Free}}
+{{fb in2 player |tc=GRE |bg= |p=[[Lazaros Lamprou]] |type=Loan Return |pos=FW |n=11 |nb=GRE |eu=y |age={{Age|1997|12|19}} |fcl={{flagicon|GRE}} [[Panionios F.C.|Panionios]] |w=Summer |f=Free}}
+{{fb in2 player |tc=GRE |bg= |p=[[Stelios Kitsiou]] |type=Loan Return |pos=RB |n=70 |nb=GRE |eu=y |age={{Age|1993|09|28}} |fcl={{flagicon|BEL}} [[Sint-Truidense V.V.|Sint-Truidense]] |w=Summer |f=Free |os=-}}
+{{fb in2 player |tc=GRE |bg= |p=[[Charis Charisis]] |type=Loan Return |pos=MF |n=8 |nb=GRE |eu=y |age={{Age|1995|01|12}} |fcl={{flagicon|BEL}} [[Sint-Truidense V.V.|Sint-Truidense]] |w=Summer |f=Free |os=-}}
+{{fb in2 player |tc=GRE |bg= |p=[[Nikos Melissas]] |type=Loan Return |pos=GK |n=30 |nb=GRE |eu=y |age={{Age|1993|02|24}} |fcl={{flagicon|GRE}} [[PAS Lamia 1964|PAS Lamia]] |w=Summer |f=Free}}
+{{fb in2 player |tc=GRE |bg= |p=[[Dimitris Chatziisaias]] |type=Loan Return |pos=DF |n=5 |nb=GRE |eu=y |age={{Age|1992|09|21}} |fcl={{flagicon|GRE}} [[Atromitos F.C.|Atromitos]] |w=Summer |f=Free }}
+{{fb in2 player |tc=GRE |bg= |p=[[Ergys Kaçe]] |type=Loan Return |eu=y |nb=ALB |n=26 |pos=DM |age={{Age|1993|07|08}} |fcl={{flagicon|GRE}} [[Panathinaikos F.C.|Panathinaikos]] |w=S |f=Free |os=}}
+{{fb in2 player |tc=GRE |bg= |p=[[Giannis Mystakidis]] |type=Loan Return |eu=y |nb=GRE |n=27 |pos=FW |age={{Age|1994|12|07}} |fcl={{flagicon|GRE}} [[Panathinaikos F.C.|Panathinaikos]] |w=S |f=Free |os=}}
+{{fb in2 player |tc=GRE |bg= |p=[[Marin Leovac]] |type=Loan Return |eu=y |nb=CRO |n=4 |pos=LB |age={{Age|1988|08|07}} |fcl={{flagicon|CRO}} [[HNK Rijeka|Rijeka]] |w=S |f=Free |os=}}
+{{fb in2 player |tc=GRE |bg= |p=[[Jairo de Macedo da Silva|Jairo]] |type=Loan Return |pos=FW |n=19 |nb=BRA |eu=n |age={{Age|1992|05|06}} |fcl={{flagicon|MDA}} [[FC Sheriff Tiraspol|Sheriff Tiraspol]] |w=Summer |f=Free}}
+
+{{end}}
+Total spending: {{loss}} €9.3M
+
+===Players out===
+{{fb out2 header |age=y}}
+{{fb out2 player |tc=GRE |bg= |p=[[Aleksandar Prijović]] |type=Transfer |pos=CF |n=9 |nb=SER |eu=y |age={{Age|1990|04|21}} |ncl={{flagicon|KSA}} [[Al-Ittihad Club (Jeddah)|Al-Ittihad]] |w=Winter |e=2019 |f=€10M |os=<ref>{{cite web|url=https://www.naftemporiki.gr/story/1433151/paok-forward-prijović-transfers-to-al-ittihad-for-10-million-euro-fee|work=naftemporiki.gr|title=PAOK forward Prijović transfers to Al-Ittihad for 10-million-euro fee|date=10 January 2019}}</ref>}}
+{{fb out2 player |tc=GRE |bg= |p=[[Amr Warda]] |type=Loan |pos=FW |n=74 |nb=EGY |eu=n |age={{Age|1993|09|17}} |ncl={{flagicon|GRE}} [[Atromitos F.C.|Atromitos]] |w=Winter |e=2019 |f=Free|os=<ref>{{cite web|url=https://www.paokfc.gr/en/news/20190124-daneikos-ston-atromito-o-warda/|work=paokfc.gr|title=Warda on loan to Atromitos|date=24 January 2019}}</ref>}}
+{{fb out2 player |tc=GRE |bg= |p=[[Stelios Kitsiou]] |type=Loan |pos=RB |n=70 |nb=GRE |eu=y |age={{Age|1993|09|28}} |ncl={{flagicon|TUR}} [[MKE Ankaragucu|Ankaragucu]] |w=Winter |e=2019 |f=Free|os=<ref>{{cite web|url=https://www.paokfc.gr/en/news/20190202-daneismoi-gia-kitsiou-kai-mystakidi/|work=paokfc.gr|title=Kitsiou and Mystakidis loaned abroad|date=2 February 2019}}</ref>}}
+{{fb out2 player |tc=GRE |bg= |p=[[Djalma Campos]] |type=Transfer |pos=FW |n=10|nb=ANG |eu=y |age={{Age|1987|05|30}} |ncl={{flagicon|TUR}} [[Alanyaspor]] |w=Summer |f=€600K |os=<ref>{{cite web|url=https://www.paokfc.gr/en/news/20180621-stin-alaniaspor-o-djalma-campos/|work=paokfc.gr|title=Djalma Campos to Alanyaspor|date=30 June 2018}}</ref>}}
+{{fb out2 player |tc=GRE |bg= |p=[[Marin Leovac]] |type=Transfer |eu=y |nb=CRO |n=4 |pos=LB |age={{Age|1988|08|07}} |ncl={{flagicon|CRO}} [[GNK Dinamo Zagreb]] |w=S |f=€300K |os=<ref name="p">{{cite web|url=http://www.sport24.gr/football/omades/Paok/epishmo-sthn-ntinamo-zagkremp-o-leovats.5233902.html|work=sport24.gr|title=Επίσημο: Στην Ντινάμο Ζάγκρεμπ ο Λέοβατς|date=18 June 2018|language=el|access-date=19 June 2018|archive-date=30 May 2019|archive-url=https://web.archive.org/web/20190530224507/https://www.sport24.gr/football/omades/Paok/epishmo-sthn-ntinamo-zagkremp-o-leovats.5233902.html|url-status=dead}}</ref>}}
+{{fb out2 player |tc=GRE |bg= |p=[[Jairo de Macedo da Silva|Jairo]] |type=Free Transfer |pos=FW |n=19 |nb=BRA |eu=n |age={{Age|1992|05|06}} |ncl={{flagicon|CRO}} [[HNK Hajduk Split|Hajduk Split]] |w=Summer |f=Free|os=<ref>{{cite web|url=https://www.sdna.gr/podosfairo/superleague/article/490431/kai-episima-stin-xaintoyk-o-zairo-pic|work=sdna.gr|title=Και επίσημα στην Χάιντουκ ο Ζάιρο|date=16 July 2018|language=Greek}}</ref>}}
+{{fb out2 player |tc=GRE |bg= |p=[[Pedro Henrique Konzen]] |type=Loan |pos=FW |n=11 |nb=BRA |eu=n |age={{Age|1990|06|16}} |ncl={{flagicon|KAZ}} [[FC Astana|Astana]] |w=Summer |f=Free |os=<ref>{{cite web|url=https://www.paokfc.gr/en/news/20180716-stin-astana-o-pedro-henrique/|work=paokfc.gr|title=Pedro Henrique at Astana FC|accessdate=16 July 2018}}</ref>}}
+{{fb out2 player |tc=GRE |bg= |p=[[Lazaros Lamprou]] |type=Loan |pos=FW |n=11 |nb=GRE |eu=y |age={{Age|1997|12|19}} |ncl={{flagicon|NED}} [[Fortuna Sittard]] |w=Summer |e=2019 |f=Free |os=<ref>{{cite web|url=https://www.paokfc.gr/en/news/20180831-sti-fortuna-sittard-o-lamprou/|work=paokfc.gr|title=Lamprou loaned to Fortuna Sittard|date=31 August 2018}}</ref>}}
+{{fb out2 player |tc=GRE |bg= |p=[[Dimitris Giannoulis]] |type=Loan |pos=DF |n=90 |nb=GRE |eu=y |age={{Age|1995|10|17}} |ncl={{flagicon|GRE}} [[Atromitos F.C.|Atromitos]] |w=Summer |f=Free |os=<ref>{{cite web|url=https://www.sport24.gr/football/omades/Atromitos/anakoinwse-thn-paramonh-toy-giannoulh-o-atromhtos.5223692.html|work=sport24.gr|title=Ανακοίνωσε την παραμονή του Γιαννούλη ο Ατρόμητος|date=8 June 2018|language=Greek}}</ref>}}
+{{fb out2 player |tc=GRE |bg= |p=[[Efthimis Koulouris|Efthymis Koulouris]] |type=Loan |pos=FW |n=20 |nb=GRE |eu=y |age={{Age|1996|03|06}} |ncl={{flagicon|GRE}} [[Atromitos F.C.|Atromitos]] |w=Summer |f=Free |os=<ref>{{cite web|url=http://www.sport24.gr/football/omades/Atromitos/epishmo-ston-atromhto-o-koylourhs.5250665.html|title=Επίσημο: Στον Ατρόμητο ο Κουλούρης|date=4 July 2018|language=el}}</ref>}}
+{{fb out2 player |tc=GRE |bg= |p=[[Dimitris Chatziisaias]] |type=Loan |pos=DF |n=5 |nb=GRE |eu=y |age={{Age|1992|09|21}} |ncl={{flagicon|GRE}} [[Atromitos F.C.|Atromitos]] |w=Summer |f=Free |os=<ref>{{cite web|url=https://www.paokfc.gr/en/news/20180630-ananeosi-kai-daneismos-gia-ton-chatziisaia/|work=paokfc.gr|title=Contract extension and loan deal for Chatziisaias|date=30 June 2018}}</ref>}}
+{{fb out2 player |tc=GRE |bg= |p=[[Charis Charisis]] |type=Loan |pos=MF |n=6 |nb=GRE |eu=y |age={{Age|1995|01|12}} |ncl={{flagicon|BEL}} [[K.V. Kortrijk|Kortrijk]] |w=Summer |e=2020 |f=Free |os=<ref>{{cite web|url=https://www.paokfc.gr/en/news/20180822-ananeosi-kai-daneismos-gia-charisi/|work=paokfc.gr|title=Charisis: Contract extension and loan|date=22 August 2018}}</ref>}}
+{{fb out2 player |tc=GRE |bg= |p=[[Giannis Mystakidis]] |type=Loan |pos=FW |n=27 |nb=GRE |eu=y |age={{Age|1994|12|07}} |ncl={{flagicon|GRE}} [[PAS Giannina F.C.|PAS Giannina]] |w=Summer |e=2020 |f=Free |os=<ref>{{cite web|url=https://www.paokfc.gr/en/news/20180821-ston-pas-giannina-o-mystakidis/|work=paokfc.gr|title=Mystakidis at PAS Giannina.|date=21 August 2018}}</ref>}}
+{{fb out2 player |tc=GRE |bg= |p=[[Nikos Melissas]] |type=Loan |pos=GK |n=30 |nb=GRE |eu=y |age={{Age|1993|02|24}} |ncl={{flagicon|GRE}} [[PAS Lamia 1964|PAS Lamia]] |w=Summer |e=2021 |f=Free |os=<ref>{{cite web|url=http://www.sport24.gr/football/omades/Lamia/paramenei-lamia-o-melissas.5221408.html|work=sport24.gr|title=Επίσημο: Παραμένει στη Λαμία ο Μελίσσας|date=7 June 2018|language=el}}</ref>}}
+{{fb out2 player |tc=GRE |bg= |p=[[Thibault Moulin]] |type=Loan |pos=MF |n=75 |nb=FRA |eu=y |age={{Age|1990|01|13}} |ncl={{flagicon|TUR}} [[MKE Ankaragucu|Ankaragucu]] |w=Summer |e=2020 |f=Free |os=<ref name=TMMM>{{cite web|url=https://www.paokfc.gr/en/news/20180818-daneikoi-oi-moulin-mihojevic/|work=paokfc.gr|title=Moulin, Mihojevic shipped on loan|date=18 August 2018}}</ref>}}
+{{fb out2 player |tc=GRE |bg= |p=[[Marko Mihojevic]] |type=Loan |pos=DF |n=16 |nb=BIH |eu=y |age={{Age|1996|04|21}} |ncl={{flagicon|GRE}} [[OFI Crete F.C.|OFI]] |w=Summer |e=2020 |f=Free |os=<ref name=TMMM />}}
+{{fb out2 player |tc=GRE |bg= |p=[[Panagiotis Deligiannidis]] |type=Loan |eu=y |nb=GRE |n=26 |pos=LB |age={{Age|1996|08|29}} |ncl={{flagicon|GRE}} [[OFI Crete F.C.|OFI]] |w=S |f=Free |os=<ref>{{cite web|url=https://www.paokfc.gr/en/news/20180622-ston-ofi-o-deligiannidis/|work=paokfc.gr|title=Deligiannidis at OFI Crete|date=22 June 2018}}</ref>}}
+{{fb out2 player |tc=GRE |bg= |p=[[Achilleas Poungouras]] |type=Transfer |eu=y |nb=GRE |n=26 |pos=CB |age={{Age|1995|12|13}} |ncl={{flagicon|GRE}} [[Panathinaikos F.C.|Panathinaikos]] |w=S |f=Free |os=<ref>{{cite web|url=https://www.paokfc.gr/en/news/20180726-ston-panathinaiko-o-pouggouras/|work=paokfc.gr|title=Pouggouras at Panathinaikos|date=26 July 2018}}</ref>}}
+{{fb out2 player |tc=GRE |bg= |p=[[Ergys Kaçe]] |type=Loan |eu=y |nb=ALB |n=26 |pos=DM |age={{Age|1993|07|08}} |ncl={{flagicon|GRE}} [[Panathinaikos F.C.|Panathinaikos]] |w=S |f=Free |os=<ref>{{cite web|url=https://www.gazzetta.gr/football/superleague/article/1245243/synehizei-ston-panathinaiko-o-katse|work=gazzetta.gr|title=Ο Κάτσε συνεχίζει ως δανεικός στον Παναθηναϊκό|date=28 June 2018|language=Greek}}</ref>}}
+
+{{end}}
+
+<small>{{Increase}} Total Income: €10.9M<br />Net income: {{gain}} €1.6M</small>
+
+==Pre-season==
+
+{{legend2|#CCFFCC|Win|border=1px solid #AAAAAA}}
+{{legend2|#FFFFCC|Draw|border=1px solid #AAAAAA}}
+{{legend2|#FFCCCC|Loss|border=1px solid #AAAAAA}}
+
+{{football box collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 26 June 2018
+|time = 19:00 [[Eastern European Time|EET]] [[UTC+03:00]]
+|team1 = [[PAOK FC|PAOK]] 
+|score = 5–0
+|report = 
+|team2 = U23 [[KAA Gent]]
+|goals1 = [[Maurício José da Silveira Júnior|Maurício]] {{goal|44}}<br />[[Lazaros Lamprou|Lamprou]] {{goal|57}}<br />[[Dimitrios Pelkas|Pelkas]] {{goal|72}}<br />[[Giannis Mystakidis|Mystakidis]] {{goal|77}}<br />[[Dimitrios Limnios|Limnios]] {{goal|82}}
+|goals2 = 
+|stadium = Sporting Swolgen Tienray
+|location = [[Horst, Limburg|Horst]], [[Netherlands]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{football box collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 29 June 2018
+|time = 19:00 [[Eastern European Time|EET]] [[UTC+03:00]]
+|team1 = [[PAOK FC|PAOK]] 
+|score = 2–2
+|report = 
+|team2 =  [[RSC Anderlecht]]
+|goals1 = [[Omar El Kaddouri|El Kaddouri]] {{goal|47||53}}
+|goals2 = [[Sebastiaan Bornauw|Bornauw]] {{goal|43}} <br /> [[Pieter Gerkens|Gerkens]] {{goal|45}}
+|stadium = Sporting Swolgen Tienray
+|location = [[Horst, Limburg|Horst]], [[Netherlands]]
+|attendance = 
+|referee = 
+|result = D
+}}
+
+{{football box collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 2 July 2018
+|time = 18:00 [[Eastern European Time|EET]] [[UTC+03:00]]
+|team1 = [[PAOK FC|PAOK]] 
+|score = 1–2
+|report = 
+|team2 =  [[FC Nordsjælland|Nordsjælland]]
+|goals1 = [[Efthimis Koulouris|Koulouris]] {{goal|75}}
+|goals2 = [[Andreas Skov Olsen|Olsen]] {{goal|6}} <br /> [[Godsway Donyoh|Donyoh]] {{goal|31}}
+|stadium = Sporting Swolgen Tienray
+|location = [[Horst, Limburg|Horst]], [[Netherlands]]
+|attendance = 
+|referee = 
+|result = L
+}}
+
+{{football box collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 9 July 2018
+|time = 20:00 [[Eastern European Time|EET]] [[UTC+03:00]]
+|team1 = [[FCSB]] 
+|score = 1–2
+|report = 
+|team2 =  [[PAOK FC|PAOK]]
+|goals1 = [[Dennis Man|Man]] {{goal|47}}
+|goals2 = [[Vieirinha]] {{goal|5}} <br /> [[Omar El Kaddouri|El Kaddouri]] {{goal|10}}
+|stadium = 
+|location = [[Apeldoorn]], [[Netherlands]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{football box collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 12 July 2018
+|time = 19:00 [[Eastern European Time|EET]] [[UTC+03:00]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 1–1
+|report = 
+|team2 =  [[K.A.A. Gent|Gent]]
+|goals1 = [[Léo Jabá|Jabá]] {{goal|75}}
+|goals2 = [[Ihor Plastun|Plastun]] {{goal|90}}
+|stadium = Marasingel, Arnhem
+|location = [[Arnhem]], [[Netherlands]]
+|attendance = 
+|referee = 
+|result = D
+}}
+
+{{football box collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 15 July 2018
+|time = 13:30 [[Eastern European Time|EET]] [[UTC+03:00]]
+|team1 = [[Royal Antwerp F.C.|Royal Antwerp]] 
+|score = 3–1
+|report = 
+|team2 =[[PAOK FC|PAOK]]
+|goals1 = [[Daniel Opare|Opare]] {{goal|16}}<br />[[Jonathan Bolingi|Bolingi]] {{goal|44}}<br />[[William Owusu (footballer, born 1989)|Owusu]] {{goal|59}}
+|goals2 = [[Lazaros Lamprou|Lamprou]] {{goal|31}}
+|stadium = vv Victoria ‘03
+|location = [[Halderberge]], [[Netherlands]]
+|
+|attendance = 
+|referee = 
+|result = L
+}}
+
+{{football box collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 16 July 2018
+|time = 15:30 [[Eastern European Time|EET]] [[UTC+03:00]]
+|team1 = [[PAOK FC|PAOK]] 
+|score = 2–1
+|report = 
+|team2 =  [[De Graafschap]]
+|goals1 = [[Léo Matos|Matos]] {{goal|35}}<br />[[Aleksandar Prijović|Prijović]] {{goal|44}}
+|goals2 = [[Jordy Thomassen|Thomassen]] {{goal|33}}
+|stadium = Sportpark De Munsterman
+|location = [[Silvolde]], [[Netherlands]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+==Competitions==
+===Overview===
+{{Fb overview2
+|c=4
+|c1=[[2018–19 Super League Greece|Super League Greece]] |fm1=25 August 2018 |lm1=5 May 2019 |sr1=[[#Matches|Matchday 1]] |fp1=Winners
+|w1=26 |d1=4 |l1=0 |f1=66 |a1=14
+
+|c2=[[2018–19 Greek Football Cup|Greek Cup]] |fm2=26 September 2018 |lm2=11 May 2019 |sr2=[[2018–19 Greek Football Cup#Group D|Group stage]] |fp2=Winners
+|w2=6 |d2=2 |l2=2 |f2=23 |a2=8
+
+|c3=[[2018–19 UEFA Champions League|UEFA Champion's League]] |fm3=24 July 2018 |lm3=29 August 2018 |sr3=[[2018–19 UEFA Champions League#Second qualifying round|Second qualifying round]] |fp3=[[2018–19 UEFA Champions League#Play-off round|Play-off round]]
+|w3=3 |d3=2 |l3=1 |f3=10 |a3=8
+
+|c4=[[2018–19 UEFA Europa League|UEFA Europa League]] |fm4=20 September 2018 |lm4=13 December 2018 |sr4=[[2018–19 UEFA Europa League#Group L|Group stage]] |fp4=[[2018–19 UEFA Europa League#Group L|Group stage]]
+|w4=1 |d4=0 |l4=5 |f4=5 |a4=12
+
+|u={{Start date|2019|05|11|df=y}}.
+}}
+
+===Managerial statistics===
+
+{| class="wikitable" style="text-align: left"
+|+
+|-
+!rowspan=2|Head coach
+!rowspan=2|From
+!rowspan=2|To
+!colspan=8|Record
+|-
+!{{Tooltip|G|Games managed}}
+!{{Tooltip|W|Games won}}
+!{{Tooltip|D|Games drawn}}
+!{{Tooltip|L|Games lost}}
+!{{Tooltip|GF|Goals for}}
+!{{Tooltip|GA|Goals against}}
+!{{Tooltip|GD|Goal difference}}
+!{{Tooltip|Win %|Winning percentage}}
+|-
+| {{flagicon|ROM}} [[Răzvan Lucescu]]
+| 07.24.2018
+| 06.28.2019
+{{WDL||36|8|8|for=104|against=42|diff=yes}}
+|}
+
+===Super League Greece===
+{{main|2018–19 Super League Greece}}
+
+====League table====
+{{2018–19 Super League Greece table|showteam=PAOK}}
+
+====Results summary====
+{{Fb_rs |hw=14 |hd=1 |hl=0 |hgf=37 |hga=5 |aw=12 |ad=3 |al=0 |agf=29 |aga=9}}
+{{Fb_rs_footer |u={{Start date|2019|05|05|df=y}} |s=[[#Matches|Competitive matches]] |date=}}
+
+====Results by round====
+{{#invoke:sports rbr table|table|legendpos=b|header=Round
+
+|label1= Ground
+| res1=[[Toumba Stadium|H]] /[[Nea Smyrni Stadium|A]] /[[Theodoros Vardinogiannis Stadium|A]] /H /[[Karaiskakis Stadium|A]] /H /[[Kleanthis Vikelidis Stadium|A]] /H /[[Peristeri Stadium|A]] /H /H /[[Lamia Municipal Stadium|A]] /H /[[Levadia Municipal Stadium|A]] /H /[[Theodoros Kolokotronis Stadium|A]] /H /H /[[Olympic Stadium (Athens)|A]] /H /[[Georgios Kamaras Stadium|A]] /H /[[Olympic Stadium (Athens)|A]] /H /[[Panetolikos Stadium|A]] /[[Xanthi FC Arena|A]] /H /[[AEL FC Arena|A]] /H /[[Zosimades Stadium|A]]
+|label2= Result
+| res2=W /W /W /W /W /W /W /W /D /W /W /W /W /W /W /W /W /W /D /W /W /D /W /W /W /W /W /D /W /W
+|label3= Position
+| res3=8 /4 /4 /2 /1 /1 /1 /1/1 /1 /1 /1 /1 /1 /1 /1 /1 /1 /1 /1 /1 /1 /1 /1 /1 /1 /1 /1 /1 /1
+<!-- -->
+|text_H=Home|text_A=Away
+|color_W=green2|text_W=Win
+|color_D=yellow2|text_D=Draw
+|color_L=red2|text_L=Loss
+|color_1=1st|color_2=2nd|color_3=3rd|color_18-=red1
+
+|updated={{Start date|2019|05|05|df=y}}
+|source=[[#Matches|League matches]]
+|date=June 2018
+}}
+
+====Matches====
+{{football box collapsible
+|round = 1
+|date = 25 August 2018
+|time = 19:15 [[Eastern European Time|EET]], [[UTC+03:00]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 1–0
+|report = https://www.paokfc.gr/en/matches/paok-asteras-tripolis-1819-en/#match-report
+|team2 = [[Asteras Tripolis F.C.|Asteras Tripolis]]
+|goals1 = [[Yevhen Khacheridi|Khacheridi]] {{yel|24}}<br />[[Omar El Kaddouri|El Kaddouri]] {{yel|55}}<br />[[Aleksandar Prijović|Prijović]] {{goal|58|pen.}}
+|goals2 = [[Konstantinos Triantafyllopoulos|Triantafyllopoulos]] {{yel|5}} <br /> [[Giannis Kotsiras|Kotsiras]] {{yel|33}} <br /> [[Giorgos Kyriakopoulos|Kyriakopoulos]] {{yel|46}} <br /> [[José Luis Valiente|Valiente]] {{yel|73}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 16,255
+|referee = Aristomenis Koutsiaftis ([[Arta Football Clubs Association|Arta]])
+|result = W
+|motm = [[Amr Warda]]
+}}
+{{football box collapsible
+|round = 2
+|date = 2 September 2018
+|time = 19:15 [[Eastern European Time|EET]], [[UTC+03:00]]
+|team1 = [[Panionios F.C.|Panionios]]
+|score = 0–1
+|report = https://www.paokfc.gr/en/matches/panionios-paok-1819-en/#match-report
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = 
+|goals2 = [[Yevhen Khacheridi|Khacheridi]] {{yel|18}} <br /> [[Omar El Kaddouri|El Kaddouri]] {{goal|68}} <br /> [[Yevhen Shakhov (footballer, born 1990)|Shakhov]] {{yel|82}}
+|stadium = [[Nea Smyrni Stadium]]
+|location = [[Nea Smyrni]]
+|attendance = 3,299
+|referee = Anastasios Papapetrou ([[Athens Football Clubs Association|Athens]])
+|result = W
+|motm = [[Omar El Kaddouri]]
+}}
+{{football box collapsible
+|round = 3
+|date = 15 September 2018
+|time = 18:15 [[Eastern European Time|EET]], [[UTC+03:00]]
+|team1 = [[OFI Crete F.C.|OFI]]
+|score = 1–3
+|report = https://www.paokfc.gr/en/matches/ofi-paok-1819-en/#match-report
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Manolis Papasterianos|Papasterianos]] {{goal|21}} {{yel|52}}<br />[[Ismail Sassi|Sassi]] {{yel|34}}<br />[[Ioannis Potouridis|Potouridis]] {{yel|49}}<br />	[[Vangelis Platellas|Platellas]] {{yel|81}}
+|goals2 = [[Léo Jabá|Jabá]] {{yel|26}} {{goal|53}} <br /> [[Diego Biseswar|Biseswar]] {{goal|37}} <br /> [[Léo Matos|Matos]] {{goal|45+4}} {{yel|62}} <br /> [[Pontus Wernbloom|Wernbloom]] {{yel|86}}
+|stadium = [[Theodoros Vardinogiannis Stadium]]
+|location = [[Heraklion]]
+|attendance = 5,186
+|referee = Aristotelis Diamantopoulos ([[Arcadia Football Clubs Association|Arcadia]])
+|result = W
+|motm = [[Diego Biseswar]]
+}}
+{{football box collapsible
+|round = [[Double-headed eagles derby|4]]
+|date = 23 September 2018
+|time = 20:30 [[Eastern European Time|EET]], [[UTC+03:00]]
+|team1 = [[PAOK FC|PAOK]]
+|score = [[Double-headed eagles derby|2–0]]
+|report = https://www.paokfc.gr/en/matches/paok-aek-1819-en/#match-report
+|team2 = [[AEK Athens F.C.|AEK Athens]]
+|goals1 = [[Maurício José da Silveira Júnior|Maurício]] {{yel|22}}<br />[[Aleksandar Prijović|Prijović]] {{goal|29||59}}<br />[[Léo Jabá|Jabá]] {{yel|78}}
+|goals2 = [[Petros Mantalos|Mantalos]] {{yel|33}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 23,763
+|referee = [[Mattias Gestranius]] ([[Football Association of Finland|Finland]])
+|result = W
+|motm = [[Aleksandar Prijović]]
+}}
+{{football box collapsible
+|round = [[Olympiacos–PAOK rivalry|5]]
+|date = 30 September 2018
+|time = 20:30 [[Eastern European Time|EET]], [[UTC+03:00]]
+|team1 = [[Olympiacos F.C.|Olympiacos]]
+|score = [[Olympiacos–PAOK rivalry|0–1]]
+|report = https://www.paokfc.gr/en/matches/olympiakos-paok-1819-en/#match-report
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Ahmed Hassan Mahgoub|Koka]] {{yel|34}}
+|goals2 = [[Jagoš Vuković|Vuković]] {{goal|49|o.g.}} <br /> [[José Cañas|Cañas]] {{yel|66}} <br /> [[Léo Matos|Matos]] {{yel|90}} <br /> [[Alexandros Paschalakis|Paschalakis]] {{yel|90+8}}
+|stadium = [[Karaiskakis Stadium]]
+|location = [[Piraeus]]
+|attendance = 30,532
+|referee = San Fedayi ([[Swiss Football Association|Switzerland]])
+|result = W
+|motm = [[Alexandros Paschalakis]]
+}}
+{{football box collapsible
+|round = 6
+|date = 7 October 2018
+|time = 18:15 [[Eastern European Time|EET]], [[UTC+03:00]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 2–0
+|report = https://www.paokfc.gr/en/matches/paok-apollon-smyrnis-1819-en/#match-report
+|team2 = [[Apollon Smyrnis F.C.|Apollon Smyrnis]]
+|goals1 = [[Maurício José da Silveira Júnior|Maurício]] {{goal|16}} {{yel|24}}<br />[[Diego Biseswar|Biseswar]] {{yel|78}}<br />[[Boris Garrós|Garrós]] {{goal|90|o.g.}}<br />[[Vieirinha]] {{yel|90+1}}
+|goals2 = [[Giannis Kontoes|Kontoes]] {{yel|36}} <br /> [[Thomás Jaguaribe|Bedinelli]] {{yel|43}} <br /> [[Klodian Gino|Gino]] {{yel|87}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 15,918
+|referee = Georgios Tasis ([[Epirus Football Clubs Association|Epirus]])
+|result = W
+|motm = [[Maurício José da Silveira Júnior|Maurício]]
+}}
+{{football box collapsible
+|round = [[Derby of Thessaloniki|7]]
+|date = 21 October 2018
+|time = 19:00 [[Eastern European Time|EET]], [[UTC+03:00]]
+|team1 = [[Aris Thessaloniki F.C.|Aris]]
+|score = [[Derby of Thessaloniki|1–2]]
+|report = https://www.paokfc.gr/en/matches/aris-paok-1819-en/#match-report
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Mateo García|García]] {{goal|2}}<br />[[Giorgos Valerianos|Valerianos]] {{yel|20}}<br />[[Migjen Basha|Basha]] {{yel|37}}<br />[[Hamza Younés|Younés]] {{penmiss}} <small>66'</small><br />[[Manolis Siopis|Siopis]] {{yel|67}}
+|goals2 = [[Aleksandar Prijović|Prijović]] {{yel|19}} {{goal|36|pen.|84}} <br /> [[José Cañas|Cañas]] {{yel|37}} <br /> [[Léo Matos|Matos]] {{yel|57}} <br /> [[Amr Warda|Warda]] {{yel|57}} <br /> [[Pontus Wernbloom|Wernbloom]] {{yel|70}} <br /> [[Vieirinha]] {{yel|79}} <br /> [[Diego Biseswar|Biseswar]] {{yel|90+3}}
+|stadium = [[Kleanthis Vikelidis Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 16,434
+|referee = [[Daniele Doveri]] ([[Italian Football Federation|Italy]])
+|result = W
+|motm = [[Alexandros Paschalakis]]
+}}
+{{football box collapsible
+|round = [[Panathinaikos-PAOK rivalry|8]]
+|date = 29 October 2018
+|time = 21:30 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[PAOK FC|PAOK]]
+|score = [[Panathinaikos-PAOK rivalry|2–0]]
+|report = https://www.paokfc.gr/en/matches/paok-panathinaikos-1819-en/#match-report
+|team2 = [[Panathinaikos F.C.|Panathinaikos]]
+|goals1 = [[Aleksandar Prijović|Prijović]] {{goal|51}}<br />[[Dimitrios Limnios|Limnios]] {{goal|76}}
+|goals2 = [[Ergys Kaçe|Kaçe]] {{yel|79}} <br /> [[Dimitrios Kourbelis|Kourbelis]] {{yel|87}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 20,389
+|referee = Jens Maae ([[Danish Football Union|Denmark]])
+|result = W
+|motm = [[Léo Jabá]]
+}}
+{{football box collapsible
+|round = 9
+|date = 3 November 2018
+|time = 16:00 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[Atromitos F.C.|Atromitos]]
+|score = 1–1
+|report = https://www.paokfc.gr/en/matches/atromitos-paok-1819-en/#match-report
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Emanuel Sakic|Sakic]] {{yel|38}}<br />[[Roland Ugrai|Ugrai]] {{yel|59}} {{goal|73}}
+|goals2 = [[José Ángel Crespo|Crespo]] {{goal|40}} <br /> [[Léo Matos|Matos]] {{yel|62}} <br /> [[Pontus Wernbloom|Wernbloom]] {{yel|69}}
+|stadium = [[Peristeri Stadium]]
+|location = [[Peristeri]]
+|attendance = 1,635
+|referee = Athanasios Tzilos ([[Larissa Football Clubs Association|Larissa]])
+|result = D
+|motm = [[Fernando Varela (Cape Verdean footballer)|Fernando Varela]]
+}}
+{{football box collapsible
+|round = 10
+|date = 11 November 2018
+|time = 17:15 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 2–1
+|report = https://www.paokfc.gr/en/matches/paok-panetolikos-1819-en/#match-report
+|team2 = [[Panetolikos F.C.|Panetolikos]]
+|goals1 = [[Yevhen Shakhov (footballer, born 1990)|Shakhov]] {{yel|51}}<br />[[Nikos Marinakis|Marinakis]] {{goal|63|o.g.}}<br />[[Chuba Akpom|Akpom]] {{goal|66}}<br />[[Stelios Kitsiou|Kitsiou]] {{yel|83}}<br />[[Dimitrios Pelkas|Pelkas]] {{yel|90}}
+|goals2 = [[Franco Mazurek|Mazurek]] {{yel|52}} <br /> [[Nikos Marinakis|Marinakis]] {{yel|56}} <br /> [[Alhassan Kamara|Kamara]] {{goal|71}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 15,168
+|referee = Alexandros Tsamouris ([[Piraeus Football Clubs Association|Piraeus]])
+|result = W
+|motm = [[Chuba Akpom]]
+}}
+{{football box collapsible
+|round = 11
+|date = 24 November 2018
+|time = 19:30 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 2–0
+|report = https://www.paokfc.gr/en/matches/paok-xanthi-1819-en/#match-report
+|team2 = [[Xanthi F.C.|Xanthi]]
+|goals1 = [[Stelios Kitsiou|Kitsiou]] {{yel|15}}<br />[[Aleksandar Prijović|Prijović]] {{goal|47}}<br />[[Maurício José da Silveira Júnior|Maurício]] {{goal|65}}
+|goals2 = [[Dimos Baxevanidis|Baxevanidis]] {{yel|63}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 14,747
+|referee = Athanasios Sezos ([[Kilkis (regional unit)|Kilkis]])
+|result = W
+|motm = [[Dimitrios Limnios]]
+}}
+{{football box collapsible
+|round = 12
+|date = 3 December 2018
+|time = 19:00 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[PAS Lamia 1964|Lamia]]
+|score = 0–1
+|report = https://www.paokfc.gr/en/matches/lamia-paok-1819-en/#match-report
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Jeronimo Barrales|Barrales]] {{yel|75}}
+|goals2 = [[José Cañas|Cañas]] {{sent off|2|31|63}} <br /> [[Fernando Varela (Cape Verdean footballer)|Varela]] {{yel|38}} {{goal|54}}
+|stadium = [[Lamia Municipal Stadium]]
+|location = [[Lamia (city)|Lamia]]
+|attendance = 1,648
+|referee = Alexandros Tsamouris ([[Piraeus Football Clubs Association|Piraeus]])
+|result = W
+|motm = [[Alexandros Paschalakis]]
+}}
+{{football box collapsible
+|round = 13
+|date = 9 December 2018
+|time = 19:30 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 2–1
+|report = https://www.paokfc.gr/en/matches/paok-ael-1819-en/#match-report
+|team2 = [[Athlitiki Enosi Larissa F.C.|AEL]]
+|goals1 = [[Aleksandar Prijović|Prijović]] {{goal|45+3|pen.}}<br />[[Chuba Akpom|Akpom]] {{goal|69}}
+|goals2 = [[Nikos Karanikas|Karanikas]] {{sent off|2|5|45+1}} <br /> [[Noé Acosta|Acosta]] {{yel|26}} <br /> [[Marko Nunić|Nunić]] {{goal|36}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 15,219
+|referee = Konstantinos Kotsanis ([[Drama Football Clubs Association|Drama]])
+|result = W
+|motm = [[Chuba Akpom]]
+}}
+{{football box collapsible
+|round = 14
+|date = 17 December 2018
+|time = 19:30 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[Levadiakos F.C.|Levadiakos]]
+|score = 1–2
+|report = https://www.paokfc.gr/en/matches/levadiakos-paok-1819-en/#match-report
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Panagiotis Liagas|Liagas]] {{yel|22}}<br />[[Thanasis Panteliadis|Panteliadis]] {{yel|38}}<br />[[Giorgos Zisopoulos|Zisopoulos]] {{goal|75}}<br />[[Savvas Tsabouris|Tsabouris]] {{yel|84}}
+|goals2 = [[Léo Matos|Matos]] {{yel|28}} <br /> [[Aleksandar Prijović|Prijović]] {{goal|41}} <br /> [[Diego Biseswar|Biseswar]] {{goal|46}}
+|stadium = [[Levadia Municipal Stadium]]
+|location = [[Livadeia]]
+|attendance = 1,871
+|referee = Stefanos Koubarakis ([[Western Thrace|Thrace]])
+|result = W
+|motm = [[Diego Biseswar]]
+}}
+{{football box collapsible
+|round = 16
+|date = 13 January 2019
+|time = 19:30 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[Asteras Tripolis F.C.|Asteras Tripolis]]
+|score = 0–3
+|report = https://www.paokfc.gr/en/matches/asteras-tripolis-paok-1819-en/#match-report
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Konstantinos Triantafyllopoulos|Triantafyllopoulos]] {{yel|24}}<br />[[Marc Fernández (footballer)|Fernández]] {{yel|72}}<br />[[Giorgos Kyriakopoulos|Kyriakopoulos]] {{yel|74}}<br />[[José Luis Valiente|Valiente]] {{yel|83}}<br />[[Juan Manuel Munafo Horta|Munafo]] {{yel|87}}
+|goals2 = [[Yevhen Shakhov (footballer, born 1990)|Shakhov]] {{yel|14}} <br /> [[Diego Biseswar|Biseswar]] {{yel|44}} <br /> [[Vieirinha]] {{goal|65}} {{yel|89}} <br /> [[Maurício José da Silveira Júnior|Maurício]] {{goal|69}} <br /> [[Léo Matos|Matos]] {{sent off|2|74|79}} <br /> [[Konstantinos Triantafyllopoulos|Triantafyllopoulos]] {{goal|90+1|o.g.}}
+|stadium = [[Theodoros Kolokotronis Stadium]]
+|location = [[Tripoli, Greece|Tripoli]]
+|attendance = 2,115
+|referee = Manolis Skoulas ([[Thessaly Football Clubs Association|Thessaly]])
+|result = W
+|motm = [[Alexandros Paschalakis]]
+}}
+{{football box collapsible
+|round = 17
+|date = 19 January 2019
+|time = 19:30 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 3–0
+|report = https://www.paokfc.gr/en/matches/paok-panionios-1819-en/#match-report
+|team2 = [[Panionios F.C.|Panionios]]
+|goals1 = [[Diego Biseswar|Biseswar]] {{goal|11}}<br />[[Maurício José da Silveira Júnior|Maurício]] {{yel|16}}<br />[[Dimitrios Limnios|Limnios]] {{yel|33}}<br />[[Vieirinha]] {{goal|45+2}}<br />[[Yevhen Shakhov (footballer, born 1990)|Shakhov]] {{yel|48}} {{goal|69}}<br />[[Omar El Kaddouri|El Kaddouri]] {{yel|52}}
+|goals2 = [[Peter Makrillos|Makrillos]] {{sent off|2|33|41}} <br /> [[Giorgos Saramantas|Saramantas]] {{yel|39}} <br /> [[Fiorin Durmishaj|Durmishaj]] {{yel|48}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 15,961
+|referee = [[Anastasios Sidiropoulos]] ([[Dodecanese Football Clubs Association|Dodecanese]])
+|result = W
+|motm = [[Diego Biseswar]]
+}}
+{{football box collapsible
+|round = 18
+|date = 27 January 2019
+|time = 17:15 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 4–0
+|report = https://www.paokfc.gr/en/matches/paok-ofi-1819-en/#match-report
+|team2 = [[OFI Crete F.C.|OFI]]
+|goals1 = [[Vieirinha]] {{yel|22}}<br />[[Léo Matos|Matos]] {{goal|24}}<br />[[Chuba Akpom|Akpom]] {{goal|35||80}}<br />[[Léo Jabá|Jabá]] {{Goal|65}}<br />[[Fernando Varela (Cape Verdean footballer)|Varela]] {{yel|84}}
+|goals2 = [[Miguel Mellado|Mellado]] {{yel|41}} <br /> [[Anestis Nastos|Nastos]] {{yel|43}} <br /> [[Giorgos Giakoumakis|Giakoumakis]] {{yel|84}} <br /> [[Thanasis Dinas|Dinas]] {{yel|87}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 15,619
+|referee = Evangelos Gratsanis ([[Trikala (regional unit)|Trikala]])
+|result = W
+|motm = [[Chuba Akpom]]
+}}
+{{football box collapsible
+|round = 15
+|date = 30 January 2019
+|time = 17:15 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 2–1
+|report = https://www.paokfc.gr/en/matches/paok-pas-giannina-1819-en/#match-report
+|team2 = [[PAS Giannina F.C.|PAS Giannina]]
+|goals1 = [[Dimitrios Pelkas|Pelkas]] {{goal|38|pen.}} {{yel|45}}<br />[[Chuba Akpom|Akpom]] {{penmiss}} <small>76'</small><br />[[Karol Świderski|Świderski]] {{goal|87}}<br />[[Dimitris Giannoulis|Giannoulis]] {{yel|90}}
+|goals2 = [[Stefanos Evangelou|Evangelou]] {{yel|17}} <br /> [[Apostolos Skondras|Skondras]] {{yel|29}} <br /> [[Sandi Križman|Križman]] {{yel|41}} <br /> [[Dimitrios Manos|Manos]] {{goal|52}} <br /> [[Andi Lila|Lila]] {{yel|55}} <br /> [[Stefanos Siontis|Siontis]] {{yel|77}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 10,837
+|referee = Fotis Fotiadis ([[Kastoria (regional unit)|Kastoria]])
+|result = W
+|motm = [[Karol Świderski]]
+|note = Match was initially scheduled on Sunday, 23 December 2018, but Matchday 15 of Greek Super League was postponed because of a strike declared by Greek referees after the incident with referee Athanasios Tzilos (attacked and beaten up by 4 assailants outside his home in [[Larissa]] on 19 December).
+}}
+{{football box collapsible
+|round = [[Double-headed eagles derby|19]]
+|date = 3 February 2019
+|time = 19:30 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[AEK Athens F.C.|AEK Athens]]
+|score = [[Double-headed eagles derby|1–1]]
+|report = https://www.paokfc.gr/en/matches/aek-paok-1819-en/#match-report
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Michalis Bakakis|Bakakis]] {{yel|22}}<br />[[Nenad Krstičić|Krstičić]] {{yel|46}}<br />[[Ezequiel Ponce|Ponce]] {{goal|74}}<br />[[Viktor Klonaridis|Klonaridis]] {{yel|89}}<br />[[Lucas Boyé|Boyé]] {{yel|90+3}}
+|goals2 = [[Maurício José da Silveira Júnior|Maurício]] {{goal|10}} <br /> [[Yevhen Shakhov (footballer, born 1990)|Shakhov]] {{yel|18}} <br /> [[Léo Jabá|Jabá]] {{sent off|2|22|32}} <br /> [[Vieirinha]] {{yel|33}} <br /> [[Alexandros Paschalakis|Paschalakis]] {{yel|40}}
+|stadium = [[Olympic Stadium (Athens)|Olympic Stadium]]
+|location = [[Marousi]]
+|attendance = 24,291
+|referee = Michael Tykgaard ([[Danish Football Union|Denmark]])
+|result = D
+|motm = [[José Ángel Crespo]]
+}}
+{{football box collapsible
+|round = [[Olympiacos–PAOK rivalry|20]]
+|date = 10 February 2019
+|time = 19:30 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[PAOK FC|PAOK]]
+|score = [[Olympiacos–PAOK rivalry|3–1]]
+|report = https://www.paokfc.gr/en/matches/paok-olympiakos-1819-en/#match-report
+|team2 = [[Olympiacos F.C.|Olympiacos]]
+|goals1 = [[Vieirinha]] {{goal|3}}<br />[[Diego Biseswar|Biseswar]] {{goal|19}}<br />[[Yevhen Shakhov (footballer, born 1990)|Shakhov]] {{yel|42}}<br />[[Omar El Kaddouri|El Kaddouri]] {{yel|77}}<br />[[Chuba Akpom|Akpom]] {{goal|82}}<br />[[José Ángel Crespo|Crespo]] {{yel|90+3}}
+|goals2 = [[Jagoš Vuković|Vuković]] {{yel|31}} <br /> [[Miguel Ángel Guerrero|Guerrero]] {{yel|40}} <br /> [[Vasilis Torosidis|Torosidis]] {{yel|60}} <br /> [[Daniel Podence|Podence]] {{goal|87}} <br /> [[Ahmed Hassan Mahgoub|Koka]] {{yel|90+3}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 25,097
+|referee = [[Jesús Gil Manzano]] ([[Royal Spanish Football Federation|Spain]])
+|result = W
+|motm = [[Chuba Akpom]]
+}}
+{{football box collapsible
+|round = 21
+|date = 18 February 2019
+|time = 19:00 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[Apollon Smyrnis F.C.|Apollon Smyrnis]]
+|score = 1–5
+|report = https://www.paokfc.gr/en/matches/apollon-smurnis-paok-1819-en/#match-report
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Christian D'Urso|D'Urso]] {{goal|64}}
+|goals2 = [[Dimitrios Pelkas|Pelkas]] {{goal|4}} <br /> [[Sérgio Oliveira|Oliveira]] {{goal|9}} <br /> [[Diego Biseswar|Biseswar]] {{goal|33}} <br /> [[Karol Świderski|Świderski]] {{goal|78}} <br /> [[Pedro Henrique Konzen|Pedro Henrique]] {{goal|88}}
+|stadium = [[Georgios Kamaras Stadium]]
+|location = [[Athens]]
+|attendance = 1,228
+|referee = Angelos Evangelou ([[Athens Football Clubs Association|Athens]])
+|result = W
+|motm = [[Dimitrios Pelkas]]
+}}
+{{football box collapsible
+|round = [[Derby of Thessaloniki|22]]
+|date = 24 February 2019
+|time = 19:30 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[PAOK FC|PAOK]]
+|score = [[Derby of Thessaloniki|1–1]]
+|report = https://www.paokfc.gr/en/matches/paok-aris-1819-en/#match-report
+|team2 = [[Aris Thessaloniki F.C.|Aris]]
+|goals1 = [[Fernando Varela (Cape Verdean footballer)|Varela]] {{yel|36}}<br />[[Vieirinha]] {{goal|39}}<br />[[Diego Biseswar|Biseswar]] {{yel|45}}<br />[[Léo Matos|Matos]] {{yel|52}}
+|goals2 = [[Manolis Tzanakakis|Tzanakakis]] {{yel|21}} <br /> [[Fran Vélez|Vélez]] {{yel|65}} {{goal|85}} <br /> [[Mihaly Korhut|Korhut]] {{yel|73}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 22,544
+|referee = [[Tore Hansen]] ([[Norwegian Football Federation|Norway]])
+|result = D
+|motm = [[Vieirinha]]
+}}
+{{football box collapsible
+|round = [[Panathinaikos-PAOK rivalry|23]]
+|date = 3 March 2019
+|time = 19:00 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[Panathinaikos F.C.|Panathinaikos]]
+|score = [[Panathinaikos-PAOK rivalry|0–2]]
+|report = https://www.paokfc.gr/en/matches/panathinaikos-paok-1819-en/#match-report
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Mattias Johansson|Johansson]] {{yel|49}}<br />[[Dimitrios Emmanouilidis|Emmanouilidis]] {{yel|57}}
+|goals2 = [[Maurício José da Silveira Júnior|Maurício]] {{goal|2}} <br /> [[Léo Jabá|Jabá]] {{goal|47}} {{sent off|0|72}}
+|stadium = [[Olympic Stadium (Athens)|Olympic Stadium]]
+|location = [[Marousi]]
+|attendance = 9,453
+|referee = [[Jakob Kehlet]] ([[Danish Football Union|Denmark]])
+|result = W
+|motm = [[Alexandros Paschalakis]]
+}}
+{{football box collapsible
+|round = 24
+|date = 10 March 2019
+|time = 17:15 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 3–0
+|report = https://www.paokfc.gr/en/matches/paok-atromitos-1819-en/#match-report
+|team2 = [[Atromitos F.C.|Atromitos]]
+|goals1 = [[Vieirinha]] {{penmiss}} <small>16'</small><br />[[Pedro Henrique Konzen|Pedro Henrique]] {{yel|32}}<br />[[Sérgio Oliveira|Oliveira]] {{goal|39}}<br />[[Diego Biseswar|Biseswar]] {{goal|45+3|pen.}}<br />[[Karol Świderski|Świderski]] {{goal|81}}
+|goals2 = [[Bruno Felipe Souza Da Silva|Bruno]] {{sent off|2|19|90}} <br /> [[Stefanos Stroungis|Stroungis]] {{yel|34}} <br /> [[Madson (footballer, born 1991)|Madson]] {{yel|65}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 19,941
+|referee = [[Aliyar Aghayev]] ([[Association of Football Federations of Azerbaijan|Azerbaijan]])
+|result = W
+|motm = [[Chuba Akpom]]
+}}
+{{football box collapsible
+|round = 25
+|date = 16 March 2019
+|time = 19:00 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[Panetolikos F.C.|Panetolikos]]
+|score = 1–2
+|report = https://www.paokfc.gr/en/matches/panetolikos-paok-1819-en/#match-report
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Jorge Luis Díaz Gutiérrez|Díaz]] {{yel|20}}<br />[[Admir Bajrovic|Bajrovic]] {{goal|55|pen.}}
+|goals2 = [[Diego Biseswar|Biseswar]] {{yel|25}} <br /> [[Sérgio Oliveira|Oliveira]] {{yel|36}} <br /> [[Vieirinha]] {{yel|57}} {{goal|64}} <br /> [[Léo Matos|Matos]] {{goal|67}} <br /> [[Léo Jabá|Jabá]] {{yel|83}}
+|stadium = [[Panetolikos Stadium]]
+|location = [[Agrinio]]
+|attendance = 3,520
+|referee = Alexandros Tsamouris ([[Piraeus Football Clubs Association|Piraeus]])
+|result = W
+|motm = [[Vieirinha]]
+}}
+{{football box collapsible
+|round = 26
+|date = 31 March 2019
+|time = 19:00 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[Xanthi F.C.|Xanthi]]
+|score = 1–2
+|report = https://www.paokfc.gr/en/matches/xanthi-paok-1819-en/#match-report
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Dinis Almeida|Almeida]] {{yel|6}} {{goal|85}}<br />[[William De Amorim|William]] {{yel|74}}<br />[[Jorge Casado|Casado]] {{yel|90}}
+|goals2 = [[Sérgio Oliveira|Oliveira]] {{goal|33}} {{yel|84}} <br /> [[Pedro Henrique Konzen|Pedro Henrique]] {{goal|67}}
+|stadium = [[Xanthi FC Arena]]
+|location = [[Xanthi]]
+|attendance = 6,558
+|referee = Angelos Evangelou ([[Athens Football Clubs Association|Athens]])
+|result = W
+|motm = [[Yevhen Shakhov (footballer, born 1990)|Yevhen Shakhov]]
+}}
+{{football box collapsible
+|round = 27
+|date = 7 April 2019
+|time = 19:30 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 3–0
+|report = https://www.paokfc.gr/en/matches/paok-lamia-1819-en/#match-report
+|team2 = [[PAS Lamia 1964|Lamia]]
+|goals1 = [[José Ángel Crespo|Crespo]] {{yel|24}}<br />[[Pedro Henrique Konzen|Pedro Henrique]] {{goal|34}}<br />[[Omar El Kaddouri|El Kaddouri]] {{yel|71}}<br />[[Yevhen Shakhov (footballer, born 1990)|Shakhov]] {{goal|78}}<br />[[Diego Biseswar|Biseswar]] {{goal|83}}
+|goals2 = [[Vanderson Scardovelli|Scardovelli]] {{yel|17}} <br /> [[Facundo Bertoglio|Bertoglio]] {{yel|36}} <br /> [[Danny Bejarano|Bejarano]] {{yel|38}} <br /> [[Mark Nyaaba Asigba|Asigba]] {{yel|67}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 22,125
+|referee = Georgios Tasis ([[Epirus Football Clubs Association|Epirus]])
+|result = W
+|motm = [[Diego Biseswar]]
+}}
+{{football box collapsible
+|round = 28
+|date = 14 April 2019
+|time = 19:00 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[Athlitiki Enosi Larissa F.C.|AEL]]
+|score = 1–1
+|report = https://www.paokfc.gr/en/matches/ael-paok-1819-en/#match-report
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Fatjon Andoni|Fatjon]] {{yel|6}}<br />[[Nikola Jakimovski|Jakimovski]] {{goal|64}}<br />[[Slavko Bralić|Bralić]] {{yel|87}}
+|goals2 = [[Dimitrios Limnios|Limnios]] {{yel|51}} <br /> [[Dimitrios Pelkas|Pelkas]] {{goal|55}}
+|stadium = [[AEL FC Arena]]
+|location = [[Larissa]]
+|attendance = 4,082
+|referee = Vasilios Fotias ([[Pella Football Clubs Association|Pella]])
+|result = D
+|motm = [[Dimitrios Pelkas]]
+}}
+{{football box collapsible
+|round = 29
+|date = 21 April 2019
+|time = 19:00 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 5–0
+|report = https://www.paokfc.gr/en/matches/paok-levadiakos-1819-en/#match-report
+|team2 = [[Levadiakos F.C.|Levadiakos]]
+|goals1 = [[Yevhen Shakhov (footballer, born 1990)|Shakhov]] {{goal|2||60}}<br />[[Diego Biseswar|Biseswar]] {{goal|8|pen.}}<br />[[Dimitrios Pelkas|Pelkas]] {{penmiss}} <small>30'</small><br />[[Fernando Varela (Cape Verdean footballer)|Varela]] {{goal|53}}<br />[[Karol Świderski|Świderski]] {{goal|81}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 26,007
+|referee = Athanasios Tzilos ([[Larissa Football Clubs Association|Larissa]])
+|result = W
+|motm = [[Yevhen Shakhov (footballer, born 1990)|Yevhen Shakhov]]
+}}
+{{football box collapsible
+|round = 30
+|date = 5 May 2019
+|time = 19:00 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[PAS Giannina F.C.|PAS Giannina]]
+|score = 0–2
+|report = https://www.paokfc.gr/en/matches/pas-giannina-paok-1819-en/#match-report
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Sandi Križman|Križman]] {{yel|29}}<br />[[Themistoklis Tzimopoulos|Tzimopoulos]] {{yel|56}}<br />[[Giannis Kargas|Kargas]] {{yel|57}}<br />[[Fabry (footballer)|Fabry Castro]] {{yel|62}}<br />[[Dušan Pantelić|Pantelić]] {{yel|66}}<br />[[Neofytos Michael|Michael]] {{yel|78}}
+|goals2 = [[Dimitrios Pelkas|Pelkas]] {{yel|58}} <br /> [[Chuba Akpom|Akpom]] {{goal|60}} <br /> [[Sverrir Ingi Ingason|Ingason]] {{yel|73}} <br /> [[José Cañas|Cañas]] {{yel|74}} <br /> [[Yevhen Shakhov (footballer, born 1990)|Shakhov]] {{goal|79}}
+|stadium = [[Zosimades Stadium]]
+|location = [[Ioannina]]
+|attendance = 2,802
+|referee = [[Anastasios Sidiropoulos]] ([[Dodecanese Football Clubs Association|Dodecanese]])
+|result = W
+|motm = [[Dimitrios Pelkas]]
+}}
+• '''Man of the Match''' as has been voted by PAOK fans on official PAOK website and mobile app.
+
+===Greek Football Cup===
+{{main|2018–19 Greek Football Cup}}
+
+PAOK entered the competition as the two-time defending champions, having won consecutive editions in [[2016–17 Greek Football Cup|2016–17]] and [[2017–18 Greek Football Cup|2017–18]].
+
+====Group stage====
+
+{{main|2018–19 Greek Football Cup#Group stage}}
+{{:2018–19 Greek Football Cup|transcludesection=Group D|showteam=PAOK}}
+{{legend2|#CCFFCC|Win|border=1px solid #AAAAAA}}
+{{legend2|#FFFFCC|Draw|border=1px solid #AAAAAA}}
+{{legend2|#FFCCCC|Loss|border=1px solid #AAAAAA}}
+
+{{football box collapsible
+|round = [[Derby of Thessaloniki|1]]
+|date = 26 September 2018
+|time = 19:00 [[Eastern European Time|EET]], [[UTC+03:00]]
+|team1 = [[PAOK FC|PAOK]]
+|score = [[Derby of Thessaloniki|1–1]]
+|report = https://www.paokfc.gr/en/matches/paok-aris-19-cup-en/#match-report
+|team2 = [[Aris Thessaloniki F.C.|Aris]]
+|goals1 = [[Stelios Kitsiou|Kitsiou]] {{sent off|2|2|59}}<br />[[Dimitrios Pelkas|Pelkas]] {{goal|25|pen.}}<br />[[Omar El Kaddouri|El Kaddouri]] {{yel|45}}<br />[[Pontus Wernbloom|Wernbloom]] {{yel|87}}
+|goals2 = [[Hamza Younés|Younés]] {{yel|14}} <br /> [[Manolis Siopis|Siopis]] {{yel|42}} <br /> [[Mateo García|García]] {{goal|45+3}} <br /> [[Nicolás Colazo|Colazo]] {{yel|81}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = [[Anastasios Sidiropoulos]] ([[Dodecanese Football Clubs Association|Dodecanese]])
+|result = D
+|motm = [[Léo Jabá]]
+}}
+{{football box collapsible
+|round = 2
+|date = 14 November 2018
+|time = 15:00 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[Ergotelis F.C.|Ergotelis]]
+|score = 1–2
+|report = https://www.paokfc.gr/en/matches/ergotelis-paok-19-cup-en/#match-report
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Chrysovalantis Kozoronis|Kozoronis]] {{yel|61}}<br />[[Giannis Iatroudis|Iatroudis]] {{goal|68}}<br />[[Giannis Boutsakis|Boutsakis]] {{yel|90+3}}
+|goals2 = [[Diego Biseswar|Biseswar]] {{goal|11}} <br /> [[Léo Jabá|Jabá]] {{yel|63}} <br /> [[Pontus Wernbloom|Wernbloom]] {{goal|79}}
+|stadium = [[Pankritio Stadium]]
+|location = [[Heraklion]]
+|attendance = 
+|referee = Stefanos Koubarakis ([[Western Thrace|Thrace]])
+|result = W
+|motm = [[Diego Biseswar]]
+}}
+{{football box collapsible
+|round = 3
+|date = 20 December 2018
+|time = 17:15 [[Eastern European Time|EET]], [[UTC+03:00]]
+|team1 = [[P.A.O. Aittitos Spata F.C.|Aittitos Spata]]
+|score = 0–6
+|report = https://www.paokfc.gr/en/matches/aittitos-spaton-paok-19-cup-en/#match-report
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = 
+|goals2 = [[Nikos Karelis|Karelis]] {{goal|16||75}} <br /> [[José Cañas|Cañas]] {{goal|26}} <br /> [[Aleksandar Prijović|Prijović]] {{goal|63||84||85}}
+|stadium = Spata Municipal Stadium
+|location = [[Spata]]
+|attendance = 
+|referee = Angelos Evangelou ([[Athens Football Clubs Association|Athens]])
+|result = W
+|motm = [[Aleksandar Prijović]]
+}}
+
+====Round of 16====
+{{football box collapsible
+|round = [[2018–19 Greek Football Cup#Round of 16|1st leg]]
+|date = 8 January 2019
+|time = 17:00 [[Eastern European Time|EET]], [[UTC+03:00]]
+|team1 = [[Panachaiki F.C.|Panachaiki]]
+|score = 2–1
+|report = https://www.paokfc.gr/en/matches/panachaiki-paok-en/#match-report
+|team2 = PAOK
+|goals1 = [[Kostas Plegas|Plegas]] {{yel|14}}<br />[[Nikos Loumbardeas|Loumbardeas]] {{yel|18}} {{goal|68}}<br />[[Michalis Bastakos|Bastakos]] {{goal|35}}
+|goals2 = [[Nikos Karelis|Karelis]] {{goal|56}} <br /> [[Dimitrios Pelkas|Pelkas]] {{yel|86}}
+|stadium = [[Kostas Davourlis Stadium]]
+|location = [[Patras]]
+|attendance = 
+|referee = Georgios Tzovaras ([[Phthiotis Football Clubs Association|Phthiotis]])
+|result = L
+|motm = [[Alexandros Paschalakis]]
+}}
+{{football box collapsible
+|round = [[2018-19 Greek Football Cup#Round of 16|2nd leg]]
+|date = 22 January 2019
+|time = 19:30 [[Eastern European Time|EET]], [[UTC+03:00]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 5–0
+|aggregatescore = 6–2
+|report = https://www.paokfc.gr/en/matches/paok-panachaiki-en/#match-report
+|team2 = [[Panachaiki F.C.|Panachaiki]]
+|goals1 = [[Léo Matos|Matos]] {{goal|5}}<br />[[Léo Jabá|Jabá]] {{goal|37||54}}<br />[[Dimitrios Limnios|Limnios]] {{goal|46}}<br />[[Josip Mišić (footballer, born 1994)|Mišić]] {{yel|62}} {{goal|67}}
+|goals2 = [[Athanasios Papatolios|Papatolios]] {{yel|8}} <br /> [[Efthymis Argyropoulos|Argyropoulos]] {{yel|43}} <br /> [[Georgios Moustakopoulos|Moustakopoulos]] {{yel|43}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = Angelos Evangelou ([[Athens Football Clubs Association|Athens]])
+|result = W
+|motm = [[Chuba Akpom]]
+}}
+
+====Quarter-finals====
+{{football box collapsible
+|round = [[2018–19 Greek Football Cup#Quarter-Finals|1st leg]]
+|date = 6 February 2019
+|time = 19:00 [[Eastern European Time|EET]], [[UTC+03:00]]
+|team1 = [[Panionios F.C.|Panionios]]
+|score = 2–1
+|report = https://www.paokfc.gr/en/matches/pgss-paok-19-cup-en/#match-report
+|team2 = PAOK
+|goals1 = [[Dimitrios Stavropoulos|Stavropoulos]] {{yel|37}} {{goal|90+1}}<br />[[Thanasis Papageorgiou|Papageorgiou]] {{yel|48}}<br />[[Fiorin Durmishaj|Durmishaj]] {{goal|74}}
+|goals2 = [[Lefteris Lyratzis|Lyratzis]] {{yel|19}} <br /> [[Karol Świderski|Świderski]] {{goal|58}} <br /> [[Pedro Henrique Konzen|Pedro Henrique]] {{yel|62}} <br /> [[Chuba Akpom|Akpom]] {{yel|88}}
+|stadium = [[Nea Smyrni Stadium]]
+|location = [[Nea Smyrni]]
+|attendance = 
+|referee = Aristotelis Diamantopoulos ([[Arcadia Football Clubs Association|Arcadia]])
+|result = L
+|motm = [[Dimitrios Pelkas]]
+}}
+{{football box collapsible
+|round = [[2018-19 Greek Football Cup#Quarter-Finals|2nd leg]]
+|date = 27 February 2019
+|time = 19:30 [[Eastern European Time|EET]], [[UTC+03:00]]
+|team1 = [[PAOK FC|PAOK]]
+|score = 4–2
+|aet= yes
+|aggregatescore = 5–4
+|report = https://www.paokfc.gr/en/matches/paok-pgss-19-cup-en/#match-report
+|team2 = [[Panionios F.C.|Panionios]]
+|goals1 = [[Dimitris Giannoulis|Giannoulis]] {{yel|26}}<br />[[José Ángel Crespo|Crespo]] {{yel|28}}<br />[[Diego Biseswar|Biseswar]] {{goal|32}}<br />[[Dimitrios Limnios|Limnios]] {{yel|38}}<br />[[Sérgio Oliveira|Oliveira]] {{yel|52}}<br />[[Karol Świderski|Świderski]] {{goal|83}}<br />[[Chuba Akpom|Akpom]] {{goal|114}}<br />[[Vieirinha]] {{goal|119|pen.}}
+|goals2 = [[Thanasis Papageorgiou|Papageorgiou]] {{yel|22}} <br /> [[Fiorin Durmishaj|Durmishaj]] {{yel|22}} {{goal|34}} <br /> [[Panagiotis Korbos|Korbos]] {{yel|57}} <br /> [[Matic Kotnik|Kotnik]] {{yel|63}} <br /> [[Giorgos Manthatis|Manthatis]] {{sent off|2|64|118}} <br /> [[Luis Domingues Gustavo|Domingues]] {{yel|67}} <br /> [[Milan Kocic|Kocic]] {{yel|71}} <br /> [[Giannis Maniatis|Maniatis]] {{yel|90}} <br /> [[Oumar Camara (footballer, born 1992)|Camara]] {{goal|94}} {{yel|99}} <br /> [[Yaya Banana|Banana]] {{yel|120}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = Manolis Skoulas ([[Thessaly Football Clubs Association|Thessaly]])
+|result = W
+|motm = [[José Ángel Crespo]]
+}}
+
+====Semi-finals====
+{{football box collapsible
+|round = [[2018–19 Greek Football Cup#Semi-Finals|1st leg]]
+|date = 3 April 2019
+|time = 19:00 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = PAOK
+|score = 2–0
+|report = https://www.paokfc.gr/en/matches/paok-asteras-tripolis-19-cup-en/#match-report
+|team2 = [[Asteras Tripolis F.C.|Asteras Tripolis]]
+|goals1 = [[Léo Matos|Matos]] {{goal|17||90+6}}<br />[[Sverrir Ingi Ingason|Ingason]] {{yel|66}}<br />[[Omar El Kaddouri|El Kaddouri]] {{yel|73}}
+|goals2 = [[Giorgos Athanasiadis|Athanasiadis]] {{yel|18}} <br /> [[Giorgos Kyriakopoulos|Kyriakopoulos]] {{yel|45+1}} <br /> [[Walter Iglesias|Iglesias]] {{sent off|2|60|90+4}} <br /> [[Nikos Kaltsas|Kaltsas]] {{yel|90+4}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = Stefanos Koubarakis ([[Western Thrace|Thrace]])
+|result = W
+|motm = [[Léo Matos]]
+}}
+{{football box collapsible
+|round = [[2018-19 Greek Football Cup#Semi-Finals|2nd leg]]
+|date = 25 April 2019
+|time = 16:00 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[Asteras Tripolis F.C.|Asteras Tripolis]]
+|score = 0–0
+|aggregatescore = 0–2
+|report = https://www.paokfc.gr/en/matches/asteras-tripolis-paok-19-cup-en/#match-report
+|team2 = PAOK
+|goals1 = [[Konstantinos Triantafyllopoulos|Triantafyllopoulos]] {{yel|37}}
+|goals2 = [[Sérgio Oliveira|Oliveira]] {{yel|76}} <br /> [[Sverrir Ingi Ingason|Ingason]] {{yel|85}}
+|stadium = [[Theodoros Kolokotronis Stadium]]
+|location = [[Tripoli, Greece|Tripoli]]
+|attendance = 
+|referee = Angelos Evangelou ([[Athens Football Clubs Association|Athens]])
+|result = D
+|motm = [[Alexandros Paschalakis]]
+}}
+
+====Final====
+{{main|2019 Greek Football Cup final}}
+<ref>{{cite web|title=2019 Greek Cup final AEK–PAOK 0–1 (11/5/2019)|url=http://sdna.gr/podosfairo/kypello-elladas/match-report/596665/paok-aek|language=Greek|work=sdna.gr|author=Eleni Mpountou|date=11 May 2019|accessdate=15 July 2019}}</ref><ref>{{cite web|title=Akpom seals PAOK’s first ever double|url=http://www.ekathimerini.com/240389/article/ekathimerini/sports/akpom-seals-paoks-first-ever-double|work=ekathimerini.com|author=George Georgakopoulos|date=11 May 2019|accessdate=15 July 2019}}</ref><ref>{{cite web|title=Three-peat PAOK|url=http://www.agonasport.com/agonasport-allnews/three-peat-paok|work=agonasport.com|author=Graham Wood|date=11 May 2019|accessdate=23 July 2019|archive-date=23 July 2019|archive-url=https://web.archive.org/web/20190723155830/https://www.agonasport.com/agonasport-allnews/three-peat-paok|url-status=dead}}</ref>
+{{football box collapsible
+|round = [[2018–19 Greek Football Cup#Final|Greek Cup Final]]
+|date = 11 May 2019
+|time = 20:30 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[AEK Athens F.C.|AEK Athens]]
+|score = [[Double-headed eagles derby|0–1]]
+|report = https://www.paokfc.gr/en/matches/paok-aek-19-cup-en/#match-report
+|team2 = PAOK
+|goals1 = [[Marios Oikonomou|Oikonomou]] {{yel|26}}<br />[[Marko Livaja|Livaja]] {{yel|28}}<br />[[Nenad Krstičić|Krstičić]] {{yel|43}}<br />[[Ezequiel Ponce|Ponce]] {{yel|67}}<br />[[Rodrigo Galo Brito|Galo]] {{yel|90+6}}
+|goals2 = [[Chuba Akpom|Akpom]] {{yel|38}} {{goal|45+1}}
+|stadium = [[Olympic Stadium (Athens)|Olympic Stadium]]
+|location = [[Marousi]]
+|attendance = 1,040
+|referee = [[Felix Zwayer]] ([[German Football Association|Germany]])
+|result = W
+|motm = [[Chuba Akpom]]<sup>*</sup>
+|note = Match was played behind closed doors. Deputy Minister for Sports Giorgos Vassiliadis acknowledged in a statement that the authorities were unable to ensure the security of the final, citing recent tension between hardcore fans of the two clubs. The unusual decision followed violent clashes between PAOK and AEK hooligans in the two previous finals of the Cup, in Volos in 2017 and at the Olympic Stadium itself in 2018.<sup>*</sup> [[Dimitrios Pelkas]] was voted Man of the Match by PAOK fans. [[Chuba Akpom]] earned the MVP of the Final award.
+}}
+
+===UEFA Champions League===
+{{main|2018–19 UEFA Champions League}}
+
+====Second qualifying round====
+{{main|2018–19 UEFA Champions League#Second qualifying round|l1=2018–19 UEFA Champions League Second qualifying round}}
+
+{{legend2|#CCFFCC|Win|border=1px solid #AAAAAA}}
+{{legend2|#FFFFCC|Draw|border=1px solid #AAAAAA}}
+{{legend2|#FFCCCC|Loss|border=1px solid #AAAAAA}}
+
+{{football box collapsible
+|round = [[2018–19 UEFA Champions League qualifying phase and play-off round#League Path 2|1st leg]]
+|date = 24 July 2018
+|time = 20:30 [[Eastern European Time|EET]], [[UTC+03:00]]
+|team1 = [[PAOK FC|PAOK]] {{flagicon|Greece}}
+|score = 2–1
+|report = https://www.uefa.com/uefachampionsleague/season=2019/matches/round=2000977/match=2024635/index.html
+|team2 = {{flagicon|SUI}} [[FC Basel|Basel]]
+|goals1 = [[José Cañas|Cañas]] {{goal|32}}<br />[[Aleksandar Prijović|Prijović]] {{goal|80}}
+|goals2 = [[Serey Dié]] {{yel|32}} <br /> [[Valentin Stocker|Stocker]] {{yel|69}} <br /> [[Fabian Frei|Frei]] {{yel|75}} <br /> [[Albian Ajeti|Ajeti]] {{goal|82}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]], [[Greece]]
+|attendance = 24,670
+|referee = [[Bobby Madley]] ([[The Football Association|England]])
+|result = W
+}}
+
+{{football box collapsible
+|round = [[2018–19 UEFA Champions League qualifying phase and play-off round#League Path 2|2nd leg]]
+|date = 1 August 2018
+|time = 21:00 [[Eastern European Time|EET]], [[UTC+03:00]]
+|team1 = [[FC Basel|Basel]] {{flagicon|SUI}}
+|score = 0–3
+|aggregatescore = 1–5
+|report = https://www.uefa.com/uefachampionsleague/season=2019/matches/round=2000977/match=2024647/index.html
+|team2 = {{flagicon|Greece}} PAOK
+|goals1 = [[Luca Zuffi|Zuffi]] {{yel|33}}<br />[[Serey Dié]] {{yel|44}}<br />[[Marek Suchý|Suchý]] {{yel|63}}
+|goals2 = [[Fernando Varela (Cape Verdean footballer)|Varela]] {{goal|7}} <br /> [[Aleksandar Prijović|Prijović]] {{yel|16}} {{goal|52}} <br /> [[Léo Matos|Matos]] {{yel|48}} <br /> [[Omar El Kaddouri|El Kaddouri]] {{goal|60}} <br /> [[Dimitrios Pelkas|Pelkas]] {{yel|77}}
+|stadium = [[St. Jakob-Park]]
+|location = [[Basel]], [[Switzerland]]
+|attendance = 14,328
+|referee = [[Paolo Valeri]] ([[Italian Football Federation|Italy]])
+|result = W
+}}
+
+====Third qualifying round====
+{{main|2018–19 UEFA Champions League#Third qualifying round|l1=2018–19 UEFA Champions League Third qualifying round}}
+
+{{legend2|#CCFFCC|Win|border=1px solid #AAAAAA}}
+{{legend2|#FFFFCC|Draw|border=1px solid #AAAAAA}}
+{{legend2|#FFCCCC|Loss|border=1px solid #AAAAAA}}
+
+{{football box collapsible
+|round = [[2018–19 UEFA Champions League qualifying phase and play-off round#League Path 3|1st leg]]
+|date = 8 August 2018
+|time = 20:00 [[Eastern European Time|EET]], [[UTC+03:00]]
+|team1 = [[PAOK FC|PAOK]] {{flagicon|Greece}}
+|score = 3–2
+|report = https://www.uefa.com/uefachampionsleague/season=2019/matches/round=2000978/match=2025316/index.html
+|team2 = {{flagicon|RUS}} [[FC Spartak Moscow|Spartak Moscow]]
+|goals1 = [[Aleksandar Prijović|Prijović]] {{goal|29|pen.}}<br />[[Dimitrios Limnios|Limnios]] {{goal|37}}<br />[[Dimitrios Pelkas|Pelkas]] {{goal|44}}<br />[[Omar El Kaddouri|El Kaddouri]] {{yel|58}}<br />[[Yevhen Khacheridi|Khacheridi]] {{yel|69}}<br />[[Maurício José da Silveira Júnior|Maurício]] {{yel|77}}
+|goals2 = [[Ivelin Popov|Popov]] {{goal|7}} <br /> [[Quincy Promes|Promes]] {{goal|17}} {{penmiss}} <small>71'</small> <br /> [[Samuel Gigot|Gigot]] {{yel|19}} <br /> [[Roman Zobnin|Zobnin]] {{yel|40}} <br /> [[Aleksandr Lomovitski|Lomovitski]] {{yel|72}} <br /> [[Fernando (Brazilian footballer, born 1992)|Fernando]] {{yel|83}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]], [[Greece]]
+|attendance = 24,463
+|referee = [[Orel Grinfeld]] ([[Israel Football Association|Israel]])
+|result = W
+}}
+
+{{football box collapsible
+|round = [[2018–19 UEFA Champions League qualifying phase and play-off round#League Path 3|2nd leg]]
+|date = 14 August 2018
+|time = 20:30 [[Eastern European Time|EET]], [[UTC+03:00]]
+|team1 = [[FC Spartak Moscow|Spartak Moscow]] {{flagicon|RUS}}
+|score = 0–0
+|aggregatescore = 2–3
+|report = https://www.uefa.com/uefachampionsleague/season=2019/matches/round=2000978/match=2025326/index.html
+|team2 = {{flagicon|Greece}} PAOK
+|goals1 = [[Fernando (Brazilian footballer, born 1992)|Fernando]] {{yel|22}}<br />[[Luiz Adriano]] {{sent off|0|33}}<br />[[Georgi Dzhikiya|Dzhikiya]] {{yel|37}}<br />[[Roman Zobnin|Zobnin]] {{yel|86}}
+|goals2 = [[Léo Matos|Matos]] {{yel|25}} <br /> [[Alexandros Paschalakis|Paschalakis]] {{yel|34}} <br /> [[Omar El Kaddouri|El Kaddouri]] {{yel|37}}
+|stadium = [[Otkritie Arena]]
+|location = [[Moscow]], [[Russia]]
+|attendance = 40,385
+|referee = [[Ruddy Buquet]] ([[French Football Federation|France]])
+|result = D
+}}
+
+====Play-off round====
+{{main|2018–19 UEFA Champions League#Play-off round|l1=2018–19 UEFA Champions League Play-off round}}
+
+{{legend2|#CCFFCC|Win|border=1px solid #AAAAAA}}
+{{legend2|#FFFFCC|Draw|border=1px solid #AAAAAA}}
+{{legend2|#FFCCCC|Loss|border=1px solid #AAAAAA}}
+
+{{football box collapsible
+|round = [[2018–19 UEFA Champions League qualifying phase and play-off round#League Path 4|1st leg]]
+|date = 21 August 2018
+|time = 22:00 [[Eastern European Time|EET]], [[UTC+03:00]]
+|team1 = [[S.L. Benfica|Benfica]] {{flagicon|Portugal}}
+|score = 1–1
+|report = https://www.uefa.com/uefachampionsleague/season=2019/matches/round=2000979/match=2025299/index.html
+|team2 = {{flagicon|Greece}} [[PAOK FC|PAOK]]
+|goals1 = [[Pizzi (Portuguese footballer)|Pizzi]] {{goal|45|pen.}}<br />[[Gedson Fernandes|Fernandes]] {{yel|52}}<br />[[André Almeida (footballer, born 1990)|Almeida]] {{yel|83}}
+|goals2 = [[Vieirinha]] {{yel|71}} <br /> [[Amr Warda|Warda]] {{goal|76}} {{yel|89}} <br /> [[Dimitrios Pelkas|Pelkas]] {{yel|84}}
+|stadium = [[Estádio da Luz]]
+|location = [[Lisbon]], [[Portugal]]
+|attendance = 44,084
+|referee = [[Milorad Mažić]] ([[Football Association of Serbia|Serbia]])
+|result = D
+}}
+
+{{football box collapsible
+|round = [[2018–19 UEFA Champions League qualifying phase and play-off round#League Path 4|2nd leg]]
+|date = 29 August 2018
+|time = 22:00 [[Eastern European Time|EET]], [[UTC+03:00]]
+|team1 = PAOK {{flagicon|Greece}}
+|score = 1–4
+|aggregatescore = 2–5
+|report = https://www.uefa.com/uefachampionsleague/season=2019/matches/round=2000979/match=2025305/index.html
+|team2 = {{flagicon|Portugal}} [[S.L. Benfica|Benfica]]
+|goals1 = [[Léo Matos|Matos]] {{sent off|2|8|76}}<br />[[Aleksandar Prijović|Prijović]] {{goal|13}}<br />[[Maurício José da Silveira Júnior|Maurício]] {{yel|33}}<br />[[Fernando Varela (Cape Verdean footballer)|Varela]] {{yel|49}}<br />[[Dimitrios Pelkas|Pelkas]] {{yel|75}}<br />[[Yevhen Shakhov (footballer, born 1990)|Shakhov]] {{yel|84}}
+|goals2 = [[André Almeida (footballer, born 1990)|Almeida]] {{yel|1}} <br /> [[Jardel (footballer, born 1986)|Jardel]] {{goal|20}} {{yel|34}} <br /> [[Eduardo Salvio|Salvio]] {{goal|26|pen.|49|pen.}} <br /> [[Pizzi (Portuguese footballer)|Pizzi]] {{goal|39}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]], [[Greece]]
+|attendance = 26,725
+|referee = [[Felix Brych]] ([[Germany]])
+|result = L
+}}
+
+===UEFA Europa League===
+{{main|2018–19 UEFA Europa League}}
+
+====Group stage====
+{{main|2018–19 UEFA Europa League group stage#Group L}}
+
+'''Group stage (Group L)'''
+{{:2018–19 UEFA Europa League group stage|transcludesection=Group L|showteam=PAOK|show_matches=yes}}
+{{legend2|#CCFFCC|Win|border=1px solid #AAAAAA}}
+{{legend2|#FFFFCC|Draw|border=1px solid #AAAAAA}}
+{{legend2|#FFCCCC|Loss|border=1px solid #AAAAAA}}
+
+{{football box collapsible
+|round = 1
+|date = {{Start date|2018|9|20|df=y}}
+|time = 19:55 [[Eastern European Summer Time|EEST]]
+|team1 = [[PAOK FC|PAOK]] {{flagicon|GRE}}
+|score = 0–1
+|report = https://www.paokfc.gr/en/matches/paok-chelsea-fc-en/
+|team2 = {{flagicon|ENG}} [[Chelsea F.C.|Chelsea]]
+|goals1 = [[Pontus Wernbloom|Wernbloom]] {{yel|87}}<br />[[Amr Warda|Warda]] {{yel|90+1}}<br />[[Omar El Kaddouri|El Kaddouri]] {{yel|90+3}}
+|goals2 = [[Willian (footballer, born 1988)|Willian]] {{goal|7}} <br /> [[César Azpilicueta|Azpilicueta]] {{yel|90}} <br /> [[Antonio Rüdiger|Rüdiger]] {{yel|90+1}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]], [[Greece]]
+|attendance = 24,310
+|referee = [[Alberto Undiano Mallenco]] ([[Royal Spanish Football Federation|Spain]])
+|result = L
+}}
+
+{{football box collapsible
+|round = 2
+|date = {{Start date|2018|10|4|df=y}}
+|time = 22:00 [[Eastern European Summer Time|EEST]]
+|team1 = [[FC BATE Borisov|BATE Borisov]] {{flagicon|BLR}}
+|score = 1–4
+|report = https://www.paokfc.gr/en/matches/fc-bate-borisov-paok-en/
+|team2 = {{flagicon|GRE}} PAOK
+|goals1 = [[Maksim Valadzko|Valadzko]] {{yel|46}}<br />[[José Ángel Crespo|Crespo]] {{goal|61|o.g.}}
+|goals2 = [[Aleksandar Prijović|Prijović]] {{goal|6}} <br /> [[Léo Jabá|Jabá]] {{goal|11||17}} <br /> [[Dimitrios Pelkas|Pelkas]] {{goal|73}}
+|stadium = [[Borisov Arena]]
+|location = [[Barysaw]], [[Belarus]]
+|attendance = 10,527
+|referee = [[Robert Schörgenhofer]] ([[Austrian Football Association|Austria]])
+|result = W
+}}
+
+{{football box collapsible
+|round = 3
+|date = {{Start date|2018|10|25|df=y}}
+|time = 22:00 [[Eastern European Summer Time|EEST]]
+|team1 = PAOK {{flagicon|GRE}}
+|score = 0–2
+|report = https://www.paokfc.gr/en/matches/paok-mol-vidi-fc-en/
+|team2 = {{flagicon|HUN}} [[MOL Vidi FC|MOL Vidi]]
+|goals1 = 
+|goals2 = [[Szabolcs Huszti|Huszti]] {{goal|12}} <br /> [[Anel Hadžić|Hadžić]] {{yel|23}} <br /> [[Stopira]] {{goal|45}} <br /> [[Loïc Nego|Nego]] {{yel|73}} <br /> [[Attila Fiola|Fiola]] {{yel|75}} <br /> [[Armin Hodžić (footballer, born 1994)|Hodžić]] {{yel|85}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]], [[Greece]]
+|attendance = 15,118
+|referee = [[Yevhen Aranovskiy]] ([[Football Federation of Ukraine|Ukraine]])
+|result = L
+}}
+
+{{football box collapsible
+|round = 4
+|date = {{Start date|2018|11|8|df=y}}
+|time = 19:55 [[Eastern European Time|EST]]
+|team1 = [[MOL Vidi FC|MOL Vidi]] {{flagicon|HUN}}
+|score = 1–0
+|report = https://www.paokfc.gr/en/matches/mol-vidi-fc-paok-en/
+|team2 = {{flagicon|GRE}} PAOK
+|goals1 = [[Attila Fiola|Fiola]] {{yel|20}}<br />[[Anel Hadžić|Hadžić]] {{yel|49}}<br />[[Georgi Milanov (footballer)|Milanov]] {{goal|50}}<br />[[Boban Nikolov|Nikolov]] {{yel|57}}
+|goals2 = [[Léo Jabá|Jabá]] {{yel|29}} <br /> [[Omar El Kaddouri|El Kaddouri]] {{yel|47}} <br /> [[Dimitrios Limnios|Limnios]] {{yel|82}}
+|stadium = [[Groupama Arena]]
+|location = [[Budapest]], [[Hungary]]
+|attendance = 17,208
+|referee = [[Ali Palabıyık]] ([[Turkish Football Federation|Turkey]])
+|result = L
+}}
+
+{{football box collapsible
+|round = 5
+|date = {{Start date|2018|11|29|df=y}}
+|time = 22:00 [[Eastern European Time|EST]]
+|team1 = [[Chelsea F.C.|Chelsea]] {{flagicon|ENG}}
+|score = 4–0
+|report = https://www.uefa.com/uefaeuropaleague/season=2019/matches/round=2000990/match=2025255/index.html
+|team2 = {{flagicon|GRE}} PAOK
+|goals1 = [[Olivier Giroud|Giroud]] {{goal|27||37}}<br />[[Gary Cahill|Cahill]] {{yel|54}}<br />[[Callum Hudson-Odoi|Hudson-Odoi]] {{goal|60}}<br />[[Álvaro Morata|Morata]] {{goal|78}}
+|goals2 = [[Yevhen Khacheridi|Khacheridi]] {{sentoff|0|7}} <br /> [[Pontus Wernbloom|Wernbloom]] {{yel|50}} <br /> [[Dimitrios Pelkas|Pelkas]] {{yel|80}}
+|stadium = [[Stamford Bridge (stadium)|Stamford Bridge]]
+|location = [[London]], England
+|attendance = 33,933
+|referee = [[Kristo Tohver]] ([[Estonian Football Association|Estonia]])
+|result = L
+}}
+
+{{football box collapsible
+|round = 6
+|date = {{Start date|2018|12|13|df=y}}
+|time = 19:55 [[Eastern European Time|EST]]
+|team1 = PAOK {{flagicon|GRE}}
+|score = 1–3
+|report = https://www.uefa.com/uefaeuropaleague/season=2019/matches/round=2000990/match=2025291/index.html
+|team2 = {{flagicon|BLR}} [[FC BATE Borisov|BATE Borisov]]
+|goals1 = [[Vieirinha]] {{yel|36}}<br />[[Léo Matos|Matos]] {{yel|41}}<br />[[Aleksandar Prijović|Prijović]] {{goal|59}}
+|goals2 = [[Maksim Skavysh|Skavysh]] {{goal|18}} <br /> [[Dzmitry Baha|Baha]] {{yel|27}} <br /> [[Mikalay Signevich|Signevich]] {{goal|42|pen.|45+1}} {{sentoff|0|61}} <br /> [[Alyaksey Ryas|Ryas]] {{yel|72}} <br /> [[Yevgeniy Yablonskiy|Yablonskiy]] {{yel|90+5}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]], [[Greece]]
+|attendance = 
+|referee = [[Tobias Welz]] ([[German Football Association|Germany]])
+|result = L
+}}
+
+==Statistics==
+
+===Squad statistics===
+{{Efs start3 |updated=11 May 2019 |c1=[[2018–19 Super League Greece|Super League]] |c2=[[2018–19 Greek Football Cup|Greek Cup]] |c3=[[2018–19 UEFA Champions League|Champions League]] |c4=[[2018–19 UEFA Europa League|Europa League]] }}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Goalkeepers
+|-
+{{Efs player3|no= 1|nat=ARG|name=[[Rodrigo Rey]] |0|0|0 |3|0|0 |0|0|0 |0|0|0}}
+{{Efs player3|no=31|nat=GRE|name=[[Alexandros Paschalakis]] |30|0|0 |7|0|0 |6|0|0 |6|0|0}}
+{{Efs player3|no=60|nat=GRE|name=[[Symeon Papadopoulos]] |0|0|0 |0|0|0 |0|0|0 |0|0|0}}
+{{Efs player3|no=71|nat=GRE|name=[[Panagiotis Glykos]] |0|0|0 |0|0|0 |0|0|0 |0|0|0}}
+{{Efs player3|no=99|nat=GRE|name=[[Marios Siampanis]] |0|0|0 |0|0|0 |0|0|0 |0|0|0}}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Defenders
+|-
+{{Efs player3|no= 3|nat=BRA|name=[[Léo Matos]] |27|0|3 |5|2|3 |6|0|0 |5|0|0}}
+{{Efs player3|no= 4|nat=ISL|name=[[Sverrir Ingason]] |1|0|0 |4|1|0 |0|0|0 |0|0|0}}
+{{Efs player3|no= 5|nat=CPV|name=[[Fernando Varela (Cape Verdean footballer)|Fernando Varela]] |27|0|2 |5|0|0 |6|0|1 |5|1|0}}
+{{Efs player3|no= 6|nat=ROM|name=[[Alin Toșca]] |4|2|0 |4|0|0 |0|0|0 |4|1|0}}
+{{Efs player3|no=13|nat=GRE|name=[[Stelios Malezas]] |0|1|0 |3|0|0 |0|0|0 |0|0|0}}
+{{Efs player3|no=15|nat=ESP|name=[[José Ángel Crespo]] |30|0|1 |6|1|0 |6|0|0 |5|0|0}}
+{{Efs player3|no=20|nat=POR|name=[[Vieirinha]] |24|2|5 |3|0|1 |4|0|0 |3|1|0}}
+{{Efs player3|no=23|nat=GRE|name=[[Dimitris Giannoulis]] |3|5|0 |4|0|0 |0|0|0 |0|0|0}}
+{{Efs player3|no=32|nat=GRE|name=[[Lefteris Lyratzis]] |0|1|0 |1|2|0 |0|0|0 |0|0|0}}
+{{Efs player3|no=34|nat=UKR|name=[[Yevhen Khacheridi]] |2|1|0 |3|0|0 |2|1|0 |2|0|0}}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Midfielders
+|-
+{{Efs player3|no= 7|nat=MAR|name=[[Omar El Kaddouri]] |10|7|1 |4|2|0 |4|1|1 |4|0|0}}
+{{Efs player3|no= 8|nat=BRA|name=[[Maurício José da Silveira Júnior|Maurício]] |19|1|5 |2|0|0 |6|0|0 |4|0|0}}
+{{Efs player3|no=10|nat=GRE|name=[[Dimitrios Pelkas]] |17|5|3 |4|2|1 |6|0|1 |4|1|1}}
+{{Efs player3|no=19|nat=SWE|name=[[Pontus Wernbloom]] |5|6|0 |2|0|1 |0|0|0 |3|0|0}}
+{{Efs player3|no=21|nat=SUR|name=[[Diego Biseswar]] |26|1|8 |6|3|2 |0|0|0 |0|4|0}}
+{{Efs player3|no=26|nat=POR|name=[[Sérgio Oliveira]] |8|3|3 |3|2|0 |0|0|0 |0|0|0}}
+{{Efs player3|no=27|nat=CRO|name=[[Josip Mišić (footballer, born 1994)|Josip Mišić]] |1|4|0 |2|3|1 |0|0|0 |0|0|0}}
+{{Efs player3|no=28|nat=UKR|name=[[Yevhen Shakhov (footballer born 1990)|Yevhen Shakhov]] |16|5|5 |7|2|0 |0|6|0 |4|0|0}}
+{{Efs player3|no=53|nat=GRE|name=[[Konstantinos Balogiannis]] |0|0|0 |0|1|0 |0|0|0 |0|0|0}}
+{{Efs player3|no=87|nat=ESP|name=[[José Cañas]] |11|3|0 |3|1|1 |6|0|1 |3|0|0}}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Forwards
+|-
+{{Efs player3|no= 9|nat=POL|name=[[Karol Świderski]] |3|8|4 |2|2|2 |0|0|0 |0|0|0}}
+{{Efs player3|no=11|nat=GRE|name=[[Nikos Karelis]] |1|4|0 |3|1|3 |0|0|0 |1|0|0}}
+{{Efs player3|no=18|nat=GRE|name=[[Dimitrios Limnios]] |14|6|1 |6|1|1 |6|0|1 |4|0|0}}
+{{Efs player3|no=47|nat=ENG|name=[[Chuba Akpom]] |13|7|6 |6|2|2 |0|2|0 |0|3|0}}
+{{Efs player3|no=90|nat=BRA|name=[[Pedro Henrique Konzen|Pedro Henrique]] |3|4|3 |2|0|0 |0|0|0 |0|0|0}}
+{{Efs player3|no=98|nat=BRA|name=[[Léo Jabá]] |16|8|3 |6|1|2 |2|2|0 |5|0|2}}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Players transferred out during the season
+|-
+{{Efs player3|no= 9|nat=SER|name=[[Aleksandar Prijović]] |13|0|9 |0|2|3 |6|0|4 |4|2|2}}
+{{Efs player3|no=70|nat=GRE|name=[[Stelios Kitsiou]] |2|0|0 |3|0|0 |0|0|0 |0|0|0}}
+{{Efs player3|no=74|nat=EGY|name=[[Amr Warda]] |4|5|0 |2|0|0 |0|6|1 |0|5|0}}
+|}
+
+===Goalscorers===
+
+{| class="wikitable sortable" style="text-align:center"
+|-
+!width=5|{{Abbr| Rank | Ranking }}
+!width=5|{{Abbr| No. | Squad Number }}
+!width=5|{{Abbr| Pos. | Position }}
+!width=150|Player
+!width=30|Super League
+!width=30|Greek Cup
+!width=30px|Champions League
+!width=30px|Europa League
+!width=50|Total
+|-
+|-
+|1||9||CF||align=left|{{flagicon|SER}} [[Aleksandar Prijović]] ||9||3||4||2||'''18'''
+|-
+|2 ||21||MF||align=left|{{flagicon|SUR}} [[Diego Biseswar]] ||8||2||0||0||'''10'''
+|-
+|3 ||47||FW||align=left|{{flagicon|ENG}} [[Chuba Akpom]] ||6||2||0||0||'''8'''
+|-
+|4 ||98||FW||align=left|{{flagicon|BRA}} [[Léo Jabá]] ||3||2||0||2||'''7'''
+|-
+|rowspan=4|5||20||LWB||align=left|{{flagicon|POR}} [[Vieirinha]] ||5||1||0||0||'''6'''
+|-
+| |9||FW||align=left|{{flagicon|POL}} [[Karol Świderski]] ||4||2||0||0||'''6'''
+|-
+| |10||AM||align=left|{{flagicon|GRE}} [[Dimitrios Pelkas]] ||3||1||1||1||'''6'''
+|-
+| |3||RWB||align=left|{{flagicon|BRA}} [[Léo Matos]] ||3||3||0||0||'''6'''
+|-
+|rowspan=2|9||8||MF||align=left|{{flagicon|BRA}} [[Maurício José da Silveira Júnior|Maurício]] ||5||0||0||0||'''5'''
+|-
+| |28||MF||align=left|{{flagicon|UKR}} [[Yevhen Shakhov (footballer, born 1990)|Yevhen Shakhov]] ||5||0||0||0||'''5'''
+|-
+|rowspan=5|11||90||FW||align=left|{{flagicon|BRA}} [[Pedro Henrique Konzen|Pedro Henrique]] ||3||0||0||0||'''3'''
+|-
+| |26||MF||align=left|{{flagicon|POR}} [[Sérgio Oliveira]] ||3||0||0||0||'''3'''
+|-
+| |5||CB||align=left|{{flagicon|CPV}} [[Fernando Varela (Cape Verdean footballer)|Fernando Varela]] ||2||0||1||0||'''3'''
+|-
+| |18||FW||align=left|{{flagicon|GRE}} [[Dimitrios Limnios]] ||1||1||1||0||'''3'''
+|-
+| |11||CF||align=left|{{flagicon|GRE}} [[Nikos Karelis]] ||0||3||0||0||'''3'''
+|-
+|rowspan=2|16||7||MF||align=left|{{flagicon|MAR}} [[Omar El Kaddouri]] ||1||0||1||0||'''2'''
+|-
+| |87||DM||align=left|{{flagicon|ESP}} [[José Cañas]] ||0||1||1||0||'''2'''
+|-
+|rowspan=4|18||15||DF||align=left|{{flagicon|ESP}} [[José Ángel Crespo]] ||1||0||0||0||'''1'''
+|-
+| |74||MF||align=left|{{flagicon|EGY}} [[Amr Warda]] ||0||0||1||0||'''1'''
+|-
+| |19||MF||align=left|{{flagicon|SWE}} [[Pontus Wernbloom]] ||0||1||0||0||'''1'''
+|-
+| |27||MF||align=left|{{flagicon|CRO}} [[Josip Mišić (footballer, born 1994)|Josip Mišić]] ||0||1||0||0||'''1'''
+|-
+|colspan="4"|Own goals||4||0||0||0||'''4'''
+|- bgcolor="#EFEFEF"
+|colspan=4|'''TOTAL'''
+|'''66'''||'''23'''||'''10'''||'''5'''||'''104'''
+|}
+
+===Most assists===
+
+{|class="wikitable" style="text-align:center"
+|-
+!Rank
+!Pos.
+!Player
+!League
+!Cup
+!CL
+!EL
+!Total
+|-
+|1
+|FW
+|align="left"|{{flagicon|BRA}} [[Léo Jabá]]
+|6
+|2
+|0
+|3
+|'''11'''
+|-
+|2
+|MF
+|align="left"|{{flagicon|SUR}} [[Diego Biseswar]]
+|7
+|3
+|0
+|0
+|'''10'''
+|-
+|3
+|AM
+|align="left"|{{flagicon|GRE}} [[Dimitrios Pelkas]]
+|6
+|1
+|2
+|0
+|'''9'''
+|-
+|rowspan=2|4
+|CF
+|align="left"|{{flagicon|ENG}} [[Chuba Akpom]]
+|4
+|1
+|0
+|0
+|'''5'''
+|-
+|FW
+|align="left"|{{flagicon|GRE}} [[Dimitrios Limnios]]
+|1
+|3
+|1
+|0
+|'''5'''
+|-
+|rowspan=3|6
+|DF
+|align="left"|{{flagicon|POR}} [[Vieirinha]]
+|4
+|0
+|0
+|0
+|'''4'''
+|-
+|DF
+|align="left"|{{flagicon|CPV}} [[Fernando Varela (Cape Verdean footballer)|Fernando Varela]]
+|3
+|0
+|1
+|0
+|'''4'''
+|-
+|DF
+|align="left"|{{flagicon|BRA}} [[Léo Matos]]
+|2
+|0
+|2
+|0
+|'''4'''
+|-
+|}
+
+===Clean sheets===
+
+{|class="wikitable" style="text-align: center;"
+|-
+!Player
+!League
+!Cup
+!CL
+!EL
+!Total
+!Games played
+!Percentage
+|-
+|align=left|{{flagicon|GRE}} [[Alexandros Paschalakis]]
+|16
+|4
+|2
+|0
+|22
+|49
+|44.9 %
+|-
+|align=left|{{flagicon|ARG}} [[Rodrigo Rey]]
+|0
+|1
+|0
+|0
+|1
+|3
+|33.3 %
+|-
+!|Total!!16!!5!!2!!0!!23!!52!!44.2 %
+|}
+
+===Disciplinary record===
+{|class="wikitable sortable" style="text-align:center"
+|-
+!rowspan=2|{{Tooltip|S|Squad number}}
+!rowspan=2|{{Tooltip|P|Position}}
+!rowspan=2|{{Tooltip|N|Nationality}}
+!rowspan=2|Name
+!colspan=3|Super League
+!colspan=3|Cup
+!colspan=3|Champions League
+!colspan=3|Europa League
+!colspan=3|Total
+|-
+![[Image:Yellow card.svg|13px]]
+![[Image:Yellow-red card.svg|17px]]
+![[Image:Red card.svg|13px]]
+![[Image:Yellow card.svg|13px]]
+![[Image:Yellow-red card.svg|17px]]
+![[Image:Red card.svg|13px]]
+![[Image:Yellow card.svg|13px]]
+![[Image:Yellow-red card.svg|17px]]
+![[Image:Red card.svg|13px]]
+![[Image:Yellow card.svg|13px]]
+![[Image:Yellow-red card.svg|17px]]
+![[Image:Red card.svg|13px]]
+![[Image:Yellow card.svg|13px]]
+![[Image:Yellow-red card.svg|17px]]
+![[Image:Red card.svg|13px]]
+|-
+|3||DF||{{flagicon|BRA}}||align="left"|[[Léo Matos]]
+|6||1||0||0||0||0||2||1||0||1||0||0||'''9'''||'''2'''||'''0'''
+|-
+|7||AM||{{flagicon|MAR}}||align="left"|[[Omar El Kaddouri]]
+|4||0||0||2||0||0||2||0||0||2||0||0||'''10'''||'''0'''||'''0'''
+|-
+|98||FW||{{flagicon|BRA}}||align="left"|[[Léo Jabá]]
+|3||1||1||1||0||0||0||0||0||1||0||0||'''5'''||'''1'''||'''1'''
+|-
+|20||DF||{{flagicon|POR}}||align="left"|[[Vieirinha]]
+|6||0||0||0||0||0||1||0||0||1||0||0||'''8'''||'''0'''||'''0'''
+|-
+|10||AM||{{flagicon|GRE}}||align="left"|[[Dimitrios Pelkas]]
+|3||0||0||1||0||0||3||0||0||1||0||0||'''8'''||'''0'''||'''0'''
+|-
+|28||MF||{{flagicon|UKR}}||align="left"|[[Yevhen Shakhov (footballer, born 1990)|Yevhen Shakhov]]
+|6||0||0||0||0||0||1||0||0||0||0||0||'''7'''||'''0'''||'''0'''
+|-
+|19||MF||{{flagicon|SWE}}||align="left"|[[Pontus Wernbloom]]
+|3||0||0||1||0||0||0||0||0||2||0||0||'''6'''||'''0'''||'''0'''
+|-
+|8||MF||{{flagicon|BRA}}||align="left"|[[Maurício José da Silveira Júnior|Maurício]]
+|3||0||0||0||0||0||2||0||0||0||0||0||'''5'''||'''0'''||'''0'''
+|-
+|21||MF||{{flagicon|SUR}}||align="left"|[[Diego Biseswar]]
+|5||0||0||0||0||0||0||0||0||0||0||0||'''5'''||'''0'''||'''0'''
+|-
+|34||DF||{{flagicon|UKR}}||align="left"|[[Yevhen Khacheridi]]
+|2||0||0||0||0||0||1||0||0||0||0||1||'''3'''||'''0'''||'''1'''
+|-
+|87||MF||{{flagicon|ESP}}||align="left"|[[José Cañas]]
+|3||1||0||0||0||0||0||0||0||0||0||0||'''3'''||'''1'''||'''0'''
+|-
+|70||RB||{{flagicon|GRE}}||align="left"|[[Stelios Kitsiou]]
+|2||0||0||0||1||0||0||0||0||0||0||0||'''2'''||'''1'''||'''0'''
+|-
+|5||DF||{{flagicon|CPV}}||align="left"|[[Fernando Varela (Cape Verdean footballer)|Fernando Varela]]
+|3||0||0||0||0||0||1||0||0||0||0||0||'''4'''||'''0'''||'''0'''
+|-
+|18||FW||{{flagicon|GRE}}||align="left"|[[Dimitrios Limnios]]
+|2||0||0||1||0||0||0||0||0||1||0||0||'''4'''||'''0'''||'''0'''
+|-
+|26||MF||{{flagicon|POR}}||align="left"|[[Sérgio Oliveira]]
+|2||0||0||2||0||0||0||0||0||0||0||0||'''4'''||'''0'''||'''0'''
+|-
+|31||GK||{{flagicon|GRE}}||align="left"|[[Alexandros Paschalakis]]
+|2||0||0||0||0||0||1||0||0||0||0||0||'''3'''||'''0'''||'''0'''
+|-
+|15||DF||{{flagicon|ESP}}||align="left"|[[José Ángel Crespo]]
+|2||0||0||1||0||0||0||0||0||0||0||0||'''3'''||'''0'''||'''0'''
+|-
+|4||DF||{{flagicon|ISL}}||align="left"|[[Sverrir Ingi Ingason]]
+|1||0||0||2||0||0||0||0||0||0||0||0||'''3'''||'''0'''||'''0'''
+|-
+|74||FW||{{flagicon|EGY}}||align="left"|[[Amr Warda]]
+|1||0||0||0||0||0||1||0||0||1||0||0||'''3'''||'''0'''||'''0'''
+|-
+|47||FW||{{flagicon|ENG}}||align="left"|[[Chuba Akpom]]
+|0||0||0||2||0||0||0||0||0||0||0||0||'''2'''||'''0'''||'''0'''
+|-
+|9||CF||{{flagicon|SER}}||align="left"|[[Aleksandar Prijović]]
+|1||0||0||0||0||0||1||0||0||0||0||0||'''2'''||'''0'''||'''0'''
+|-
+|23||DF||{{flagicon|GRE}}||align="left"|[[Dimitris Giannoulis]]
+|1||0||0||1||0||0||0||0||0||0||0||0||'''2'''||'''0'''||'''0'''
+|-
+|90||FW||{{flagicon|BRA}}||align="left"|[[Pedro Henrique Konzen]]
+|1||0||0||1||0||0||0||0||0||0||0||0||'''2'''||'''0'''||'''0'''
+|-
+|27||MF||{{flagicon|CRO}}||align="left"|[[Josip Mišić (footballer, born 1994)|Josip Mišić]]
+|0||0||0||1||0||0||0||0||0||0||0||0||'''1'''||'''0'''||'''0'''
+|-
+|32||DF||{{flagicon|GRE}}||align="left"|[[Lefteris Lyratzis]]
+|0||0||0||1||0||0||0||0||0||0||0||0||'''1'''||'''0'''||'''0'''
+|}
+
+==Awards==
+{{col-begin}}
+{{col-2}}
+===''Fans' Man of the Match'' award===
+''As has been voted by PAOK fans on official PAOK website and mobile app.''
+{|class="wikitable" style="text-align:center"
+|-
+!Rank
+!Player
+!League
+!Cup
+!CL
+!EL
+!Total
+|-
+|1
+|align="left"|{{flagicon|GRE}} [[Alexandros Paschalakis]]
+|5
+|2
+|0
+|1
+|'''8'''
+|-
+|rowspan=2|2
+|align="left"|{{flagicon|ENG}} [[Chuba Akpom]]
+|5
+|1
+|0
+|0
+|'''6'''
+|-
+|align="left"|{{flagicon|SUR}} [[Diego Biseswar]]
+|4
+|1
+|0
+|1
+|'''6'''
+|-
+|rowspan=2|4
+|align="left"|{{flagicon|GRE}} [[Dimitrios Pelkas]]
+|3
+|2
+|0
+|0
+|'''5'''
+|-
+|align="left"|{{flagicon|BRA}} [[Léo Jabá]]
+|1
+|1
+|0
+|3
+|'''5'''
+|-
+|6
+|align="left"|{{flagicon|SRB}} [[Aleksandar Prijović]]
+|1
+|1
+|1
+|1
+|'''4'''
+|-
+|7
+|align="left"|{{flagicon|ESP}} [[José Ángel Crespo]]
+|1
+|1
+|1
+|0
+|'''3'''
+|-
+|rowspan=5|8
+|align="left"|{{flagicon|POR}} [[Vieirinha]]
+|2
+|0
+|0
+|0
+|'''2'''
+|-
+|align="left"|{{flagicon|UKR}} [[Yevhen Shakhov (footballer, born 1990)|Yevhen Shakhov]]
+|2
+|0
+|0
+|0
+|'''2'''
+|-
+|align="left"|{{flagicon|BRA}} [[Léo Matos]]
+|0
+|1
+|1
+|0
+|'''2'''
+|-
+|align="left"|{{flagicon|BRA}} [[Maurício José da Silveira Júnior|Maurício]]
+|1
+|0
+|1
+|0
+|'''2'''
+|-
+|align="left"|{{flagicon|GRE}} [[Dimitrios Limnios]]
+|1
+|0
+|1
+|0
+|'''2'''
+|-
+|rowspan=5|13
+|align="left"|{{flagicon|CPV}} [[Fernando Varela (Cape Verdean footballer)|Fernando Varela]]
+|1
+|0
+|0
+|0
+|'''1'''
+|-
+|align="left"|{{flagicon|ESP}} [[José Cañas]]
+|0
+|0
+|1
+|0
+|'''1'''
+|-
+|align="left"|{{flagicon|MAR}} [[Omar El Kaddouri]]
+|1
+|0
+|0
+|0
+|'''1'''
+|-
+|align="left"|{{flagicon|POL}} [[Karol Świderski]]
+|1
+|0
+|0
+|0
+|'''1'''
+|-
+|align="left"|{{flagicon|EGY}} [[Amr Warda]]
+|1
+|0
+|0
+|0
+|'''1'''
+|-
+!colspan=2|Total!!30!!10!!6!!6!!52
+|}
+{{col-2}}
+===''Player of the Month'' award===
+
+''Awarded monthly to the player that was chosen by fans voting on [https://www.paokfc.gr/ paokfc.gr]''
+{| class="wikitable" style="text-align:left"
+|-
+!Month
+!Player
+!Source
+|-
+|July–August
+|{{flagicon|ESP}} [[José Ángel Crespo]]
+|<ref>{{cite news|url=https://www.paokfc.gr/en/news/20180916-to-exairetiko-xekinima-tou-crespo/|title=Crespo's brilliant start|publisher=paokfc.gr|date=16 September 2018|accessdate=16 September 2018}}</ref>
+|-
+|September
+|{{flagicon|ESP}} [[José Ángel Crespo]]
+|<ref>{{cite news|url=https://www.paokfc.gr/en/news/20181017-ekane-to-repeat-o-crespo/|title=Crespo lands 11888 MVP award again|publisher=paokfc.gr|date=17 October 2018|accessdate=18 October 2018}}</ref>
+|-
+|October
+|{{flagicon|ESP}} [[José Cañas]]
+|<ref>{{cite news|url=https://www.paokfc.gr/en/news/20181116-o-astamatitos-jose-canas/|title=The unstoppable José Alberto Cañas|publisher=paokfc.gr|date=16 November 2018|accessdate=16 December 2018}}</ref>
+|-
+|November
+|{{flagicon|CPV}} [[Fernando Varela (Cape Verdean footballer)|Fernando Varela]]
+|<ref>{{cite news|url=https://www.paokfc.gr/en/news/20181218-o-anevasmenos-fernando-varela/|title=In-form Fernando Varela|publisher=paokfc.gr|date=19 December 2018|accessdate=3 March 2019}}</ref>
+|-
+|December
+|{{flagicon|SRB}} [[Aleksandar Prijović]]
+|<ref>{{cite news|url=https://www.paokfc.gr/nea/20181228-psifiste-ton-11888-mvp-december-poll/|title=Vote the MVP of December|publisher=paokfc.gr|date=29 December 2018|accessdate=16 March 2019}}</ref>
+|-
+|January
+|{{flagicon|ENG}} [[Chuba Akpom]]
+|<ref>{{cite news|url=https://www.paokfc.gr/en/news/20190215-to-agonistiko-xespasma-tou-akpom/|title=Akpom’s time to shine|publisher=paokfc.gr|date=15 February 2019|accessdate=3 March 2019}}</ref>
+|-
+|February
+|{{flagicon|POR}} [[Vieirinha]]
+|<ref>{{cite news|url=https://www.paokfc.gr/en/news/20190312-the-leader-kai-11888-mvp/|title=The Leader is also 11888 MVP|publisher=paokfc.gr|date=12 March 2019|accessdate=16 March 2019}}</ref>
+|-
+|March
+|{{flagicon|POR}} [[Vieirinha]]
+|<ref>{{cite news|url=https://www.paokfc.gr/en/news/20190427-back-to-back-mvp-o-vieirinha/|title=Vieirinha lands second consecutive MVP award|publisher=paokfc.gr|date=27 April 2019|accessdate=27 April 2019}}</ref>
+|-
+|April
+|{{flagicon|UKR}} [[Yevhen Shakhov (footballer, born 1990)|Yevhen Shakhov]]
+|<ref>{{cite news|url=https://www.paokfc.gr/en/news/20190508-o-polytimos-kyrios-shakhov/|title=The valuable Mr. Shakhov|publisher=paokfc.gr|date=8 May 2019|accessdate=22 May 2019}}</ref>
+|-
+|}
+
+===''Season MVP'' award===
+{| class="wikitable" style="text-align:left"
+|-
+!Player
+!Source
+|-
+|{{flagicon|POR}} [[Vieirinha]]
+|<ref>{{cite news|url=https://www.paokfc.gr/en/news/20190612-11888-mvp-tis-sezon-2018-19-o-andre-vieirinha/|title=André Vieirinha voted 11888 MVP of 2018–19 season|publisher=paokfc.gr|date=12 June 2019|accessdate=13 June 2019}}</ref>
+|-
+|}
+
+===''Best Goal of the season'' award===
+{| class="wikitable" style="text-align:left"
+|-
+!width=10|Player
+!width=10|Date
+!width=20|Venue
+!width=10|Opponent
+!width=10|Score
+!width=10|Result
+!width=10|Source
+|-
+|{{flagicon|POR}} [[Vieirinha]]
+|16 March 2019
+|[[Panetolikos Stadium]], [[Agrinio]]
+|[[Panetolikos F.C.|Panetolikos]]
+|1–1
+|1–2
+|<ref>{{cite news|url=https://www.paokfc.gr/en/news/20190615-regency-best-goal-tis-sezon-i-rouketa-vieirinha/|title=Vieirinha's net-buster lands Regency Best Goal of the Season|publisher=paokfc.gr|date=15 June 2019|accessdate=8 May 2020}}</ref>
+|-
+|}
+{{col-end}}
+
+==See also==
+*[[List of unbeaten football club seasons]]
+
+==References==
+{{reflist}}
+
+==External links==
+* [http://www.paokfc.gr/ PAOK FC official website]
+
+{{PAOK FC}}
+{{PAOK FC seasons}}
+{{2018–19 in Greek football}}
+
+{{DEFAULTSORT:2018-19 PAOK FC season}}
+[[Category:PAOK FC seasons]]
+[[Category:Greek football clubs 2018–19 season|PAOK]]
+[[Category:2018–19 UEFA Champions League participants seasons|PAOK FC]]
+[[Category:2018–19 UEFA Europa League participants seasons|PAOK FC]]
+[[Category:Greek football championship–winning seasons]]

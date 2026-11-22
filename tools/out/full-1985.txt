@@ -1,0 +1,1116 @@
+{{Infobox football club season
+| club = [[PAOK FC|PAOK]]
+| season = 1985–86
+| stadium = [[Toumba Stadium]]
+| manager =  [[Walter Skocik]] <br> [[Michalis Bellis]] 
+| chrtitle = President
+| chairman = Charis Savvidis
+| league = [[1985–86 Alpha Ethniki|Alpha Ethniki]]
+|league result = ''10th''
+| cup1 = [[1985–86 Greek Football Cup|Greek Cup]]
+| cup1 result = ''Additional round''
+| cup2 = [[1985–86 European Cup|European Cup]]
+| cup2 result = ''1st round'' 
+| cup3 = 
+| cup3 result = 
+| league topscorer = <br>[[Georgios Skartados|Skartados]] (11)
+| season topscorer = <br>[[Georgios Skartados|Skartados]] (12)
+| highest attendance = 40,000 vs [[Hellas Verona F.C.|Hellas Verona]]
+| lowest attendance = 
+| average attendance = 
+| prevseason = [[1984–85 PAOK FC season|1984–85]]
+| nextseason = [[1986–87 PAOK FC season|1986–87]]
+}}
+
+The '''1985–86 season''' was '''[[PAOK FC|PAOK Football Club's]]''' 59th in existence and the club's [[Super League Greece#Seasons in Alpha Ethniki and Super League Greece|27th consecutive season]] in the top flight of Greek football. The team entered the [[Greek Football Cup]] in first round and also participated in the [[1985–86 European Cup|European Cup]].
+
+==Players==
+===Squad===
+{{Fs start|bg=000000|color=FFFFFF}}
+{{Fs player|no= |nat=GRE |pos=GK |name=Apostolos Terzis}}
+{{Fs player|no= |nat=GRE |pos=GK |name=[[Lakis Stergioudas]]}}
+{{Fs player|no= |nat=GRE |pos=GK |name=[[Giannis Gitsioudis]]}}
+{{Fs player|no= |nat=GRE |pos=GK |name=[[Takis Pantelis]]}}
+{{Fs break}}
+{{Fs player|no= |nat=SFR Yugoslavia |pos=DF |name=[[Ivan Jurišić]] }}
+{{Fs player|no= |nat=GRE |pos=DF |name=[[Nikos Alavantas]]|other=[[Captain (association football)|captain]] }}
+{{Fs player|no= |nat=GRE |pos=DF |name=[[Apostolos Tsourelas]] }}
+{{Fs player|no= |nat=GRE |pos=DF |name=[[Charis Baniotis]] }}
+{{Fs player|no= |nat=GRE |pos=DF |name=[[Kostas Malioufas]] }}
+{{Fs player|no= |nat=GRE |pos=DF |name=[[Giannis Psarras]] }}
+{{Fs player|no= |nat=GRE |pos=DF |name=Pantelis Sachanidis }}
+{{Fs break}}
+{{Fs player|no= |nat=GRE |pos=MF |name=[[Georgios Skartados]] }}
+{{Fs mid|bg=000000|color=FFFFFF}}
+{{Fs player|no= |nat=GRE |pos=MF |name=[[Vasilios Vasilakos]] }}
+{{Fs player|no= |nat=GRE |pos=MF |name=[[Thomas Singas]] }}
+{{Fs player|no= |nat=GRE |pos=MF |name=[[Dimitris Pittas]] }}
+{{Fs player|no= |nat=GRE |pos=MF |name=[[Kyriakos Alexandridis]] }}
+{{Fs player|no= |nat=GRE |pos=MF |name=[[Sotiris Mavromatis]] }}
+{{Fs player|no= |nat=GRE |pos=MF |name=[[:el:Νίκος Λιάκος|Nikos Liakos]] }}
+{{Fs break}}
+{{Fs player|no= |nat=SFR Yugoslavia |pos=FW |name=[[Rade Paprica]] }}
+{{Fs player|no= |nat=GRE |pos=FW |name=[[Kostas Orfanos]] }}
+{{Fs player|no= |nat=GRE |pos=FW |name=[[Georgios Kostikos (footballer, born 1958)|Georgios Kostikos]] }}
+{{Fs player|no= |nat=GRE |pos=FW |name=[[Aris Karasavvidis]] }}
+{{Fs player|no= |nat=GRE |pos=FW |name=[[Michalis Iordanidis]] }}
+{{Fs player|no= |nat=GRE |pos=FW |name=[[Stefanos Borbokis]] }}
+{{Fs end}}
+
+==Transfers==
+
+;Players transferred in
+{| class="wikitable plainrowheaders"
+!scope="col" style="width:6em;"|Transfer Window
+!scope="col" style="width:3em;"|{{tooltip|Pos.|Playing position}}
+!scope="col" style="width:12em;"|Name
+!scope="col" style="width:9em;"|Club
+!scope="col" style="width:7em;"|Fee
+|-
+|Summer
+|align="center"|GK
+|{{flagicon|GRE}} [[Giannis Gitsioudis]]
+|{{flagicon|GRE}} [[Iraklis F.C. (Thessaloniki)|Iraklis]]
+|Free
+|-
+|Summer
+|align="center"|MF
+|{{flagicon|GRE}} [[Dimitris Pittas]]
+|{{flagicon|GRE}} [[Ethnikos Piraeus F.C.|Ethnikos]]
+|15 million [[Modern drachma|Dr.]]
+|-
+|Summer
+|align="center"|FW
+|{{flagicon|GRE}} [[Kostas Orfanos]]
+|{{flagicon|GRE}} [[Olympiacos F.C.|Olympiacos]]
+|Free
+|}
+
+;Players transferred out
+{| class="wikitable plainrowheaders"
+!scope="col" style="width:6em;"|Transfer Window
+!scope="col" style="width:3em;"|{{tooltip|Pos.|Playing position}}
+!scope="col" style="width:12em;"|Name
+!scope="col" style="width:9em;"|Club
+!scope="col" style="width:7em;"|Fee
+|-
+|Summer
+|align="center"|DF
+|{{flagicon|GRE}} [[Kostas Iosifidis]]
+| 
+|Retired
+|-
+|Summer
+|align="center"|MF
+|{{flagicon|GRE}} [[Ioannis Damanakis]]
+|{{flagicon|GRE}} [[Makedonikos F.C.|Makedonikos]]
+|Free
+|-
+|Summer
+|align="center"|FW
+|{{flagicon|GRE}} [[Christos Dimopoulos]]
+|{{flagicon|GRE}} [[Panathinaikos F.C.|Panathinaikos]]
+|Free
+|}
+
+==Pre-season==
+
+{{legend2|#CCFFCC|Win|border=1px solid #AAAAAA}}
+{{legend2|#FFFFCC|Draw|border=1px solid #AAAAAA}}
+{{legend2|#FFCCCC|Loss|border=1px solid #AAAAAA}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 2 August 1985
+|time = 
+|team1 = SU Vortuna Bad Leonfelden
+|score = 3–12
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 =  
+|goals2 = [[Michalis Iordanidis|Iordanidis]] {{goal}} {{goal}} {{goal}} <br> [[:el:Νίκος Λιάκος|Liakos]] {{goal}} {{goal}} {{goal}} <br> [[Sotiris Mavromatis|Mavromatis]] {{goal}} {{goal}} <br> [[Kostas Orfanos|Orfanos]] {{goal}} {{goal}} <br> [[Kostas Malioufas|Malioufas]] {{goal}} <br> [[Aris Karasavvidis|Karasavvidis]] {{goal}}    
+|stadium = 
+|location = [[Austria]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 3 August 1985
+|time = 
+|team1 = [[Grazer AK]]
+|score = 5–3
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = {{goal|30}} <br> {{goal|38}} <br> {{goal|48}} <br> {{goal|53}} <br> {{goal|55}}  
+|goals2 = [[Rade Paprica|Paprica]] {{goal|23}} <br> [[Aris Karasavvidis|Karasavvidis]] {{goal|63||67}}  
+|stadium = 
+|location = [[Austria]]
+|attendance = 
+|referee = 
+|result = L
+|note = Teams played with 9 players instead of 11 and without the offside rule.
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 5 August 1985
+|time = 
+|team1 = [[SK Rapid Wien|Rapid Wien]]
+|score = 3–4
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = {{goal|1}} <br> [[Hans Krankl|Krankl]] {{goal|30||87}}
+|goals2 = [[Aris Karasavvidis|Karasavvidis]] {{goal|34}} <br> [[Kostas Orfanos|Orfanos]] {{goal|41}} <br> [[Georgios Kostikos (footballer, born 1958)|Kostikos]] {{goal|48}} <br> [[Georgios Skartados|Skartados]] {{goal|64|pen.}}  
+|stadium = 
+|location = [[Austria]]
+|attendance = 
+|referee = 
+|result = W
+|note = Teams played with 9 players instead of 11 and without the offside rule.
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 8 August 1985
+|time = 
+|team1 = [[FC Kufstein]]
+|score = 1–2
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = {{goal|20}} 
+|goals2 = [[Vassilis Vasilakos|Vasilakos]] {{goal|40}} <br> [[Michalis Iordanidis|Iordanidis]] {{goal|80}}    
+|stadium = 
+|location = [[Austria]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 10 August 1985
+|time = 
+|team1 = SK Jenbach
+|score = 0–7
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = {{goal|20}} 
+|goals2 = [[Georgios Skartados|Skartados]] {{goal|10}} <br> [[Vasilios Vasilakos|Vasilakos]] {{goal|21}} <br> [[Kostas Orfanos|Orfanos]] {{goal|41}} <br> [[Aris Karasavvidis|Karasavvidis]] {{goal|42}} <br> [[Michalis Iordanidis|Iordanidis]] {{goal|55}} <br> [[Rade Paprica|Paprica]] {{goal|56||62}}    
+|stadium = 
+|location = [[Austria]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 11 August 1985
+|time = 
+|team1 = SpG Wattens
+|score = 0–3
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = {{goal|20}} 
+|goals2 = [[Kostas Orfanos|Orfanos]] {{goal|42}} <br> [[Vassilis Vasilakos|Vasilakos]] {{goal|44}} <br> [[Georgios Skartados|Skartados]] {{goal|83}}    
+|stadium = 
+|location = [[Austria]]
+|attendance = 
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 18 August 1985
+|time = 
+|team1 = [[Athlitiki Enosi Larissa F.C.|AEL]]
+|score = 1–0
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Michalis Ziogas|Ziogas]] {{goal|31}}    
+|goals2 = 
+|stadium = [[Alcazar Stadium]]
+|location = [[Larissa]]
+|attendance = 
+|referee = 
+|result = L
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 19 August 1985
+|time = 
+|team1 = [[Iraklis F.C. (Thessaloniki)|Iraklis]]
+|score = 1–1
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Vasilis Hatzipanagis|Hatzipanagis]] {{goal|89}}    
+|goals2 = [[Kostas Orfanos|Orfanos]] {{goal|84}}
+|stadium = [[Kaftanzoglio Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = 
+|result = D
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 21 August 1985
+|time = 
+|team1 = [[Kavala F.C.|Kavala]]
+|score = 4–1
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Nikos Karageorgiou|Karageorgiou]] {{goal|11|pen.|59}} <br> Vrynios {{goal|27}} <br> Strantzalis {{goal|56}}    
+|goals2 = [[Michalis Iordanidis|Iordanidis]] {{goal|21}}
+|stadium = [[Kavala Stadium]]
+|location = [[Kavala]]
+|attendance = 
+|referee = Kapetandreou
+|result = L
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 23 August 1985
+|time = 
+|team1 = [[Aris Thessaloniki F.C.|Aris]]
+|score = 1–0
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Anagnostou {{goal|23}}    
+|goals2 = 
+|stadium = [[Kaftanzoglio Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = Zakestidis
+|result = L
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 28 August 1985
+|time = 
+|team1 = [[Panathinaikos F.C.|Panathinaikos]]
+|score = 2–0
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Kostas Mavridis|Mavridis]] {{goal|73}} <br> [[Dimitris Saravakos|Saravakos]] {{goal|82}}    
+|goals2 = 
+|stadium = [[Athens Olympic Stadium]]
+|location = [[Athens]]
+|attendance = 
+|referee = Andreou
+|result = L
+}}
+
+{{footballbox collapsible
+|round = [[Exhibition game|Friendly]]
+|date = 31 August 1985
+|time = 
+|team1 = [[Makedonikos F.C.|Makedonikos]]
+|score = 1–1
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Zarkos {{goal|23}}    
+|goals2 = [[Michalis Iordanidis|Iordanidis]] {{goal|20}}
+|stadium = [[Makedonikos Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = 
+|result = D
+}}
+
+==Competitions==
+
+===Overview===
+{{Fb overview
+|c=3
+|c1=[[1985–86 Alpha Ethniki|Alpha Ethniki]] |w1=10 |d1=7 |l1=13 |f1=33 |a1=38
+|c2=[[1985–86 Greek Football Cup|Greek Cup]] |w2=0 |d2=2 |l2=0 |f2=1 |a2=1
+|c3=[[1985–86 European Cup|European Cup]] |w3=0 |d3=0 |l3=2 |f3=2 |a3=5
+}}
+
+===Managerial statistics===
+
+{| class="wikitable" style="text-align: "
+|+ 
+|-
+!rowspan=2|Head coach
+!rowspan=2|From
+!rowspan=2|To
+!colspan=8|Record
+|-
+!{{Tooltip|G|Games managed}}
+!{{Tooltip|W|Games won}}
+!{{Tooltip|D|Games drawn}}
+!{{Tooltip|L|Games lost}}
+!{{Tooltip|GF|Goals for}}
+!{{Tooltip|GA|Goals against}}
+!{{Tooltip|GD|Goal difference}}
+!{{Tooltip|Win %|Winning percentage}}
+|-
+| {{Flag icon|AUT}} [[Walter Skocik]]
+| Start of season
+| 02.03.1986
+{{WDL|26|6|7|13|for=25|against=36|diff=yes}}
+|-
+| {{Flag icon|GRE}} [[Michalis Bellis]] 
+| 09.03.1986
+| End of season
+{{WDL|8|4|2|2|for=11|against=8|diff=yes}}
+|}
+
+==Alpha Ethniki==
+{{main article|1985–86 Alpha Ethniki}}
+
+===Standings===
+
+{{:1985–86 Alpha Ethniki|showteam=PAOK}}
+
+====Results summary====
+
+{{Fb_rs |hw=10 |hd=3 |hl=2 |hgf=24 |hga=10 |aw=0 |ad=4 |al=11 |agf=9 |aga=28}}
+{{Fb_rs_footer |u={{Start date|1986|04|27|df=y}} |s=[[#Matches|Competitive matches]] |date=April 2021}}
+
+====Results by round====
+{{#invoke:sports rbr table|table|legendpos=b|header=Round
+
+|label1= Ground
+| res1=[[Kaftanzoglio Stadium|H]] /[[Athens Olympic Stadium|A]] /[[Toumba Stadium|H]] /[[Karaiskakis Stadium|A]] /[[Toumba Stadium|H]] /[[Serres Municipal Stadium|A]] /[[Toumba Stadium|H]]  /[[Kleanthis Vikelidis Stadium|A]] /[[Kostas Davourlis Stadium|A]] /[[Toumba Stadium|H]] / [[Athens Olympic Stadium|A]] /[[Toumba Stadium|H]] /[[Theodoros Vardinogiannis Stadium|A]] /[[Toumba Stadium|H]] /[[Zosimades Stadium|A]] / [[Nea Smyrni Stadium|A]] /[[Toumba Stadium|H]] /[[Rizoupoli Stadium|A]] /[[Katerini Stadium|H]] /[[Kaftanzoglio Stadium|A]] /[[Toumba Stadium|H]] /[[Athens Olympic Stadium|A]] /[[Toumba Stadium|H]] /[[Toumba Stadium|H]] /[[Doxa Drama Stadium|A]] /[[Toumba Stadium|H]] /[[Kalamaria Stadium|A]] /[[Toumba Stadium|H]] /[[Alcazar Stadium|A]] /[[Toumba Stadium|H]] 
+|label2= Result
+| res2=L /L /W /D /W /L /L /L /L /W /L /W /L /D /D /L /W /L /W /D /D /L /W /W /L /W /D /D /L /W  
+|label3= Position
+| res3=10 /15 /10 /11 /8 /12 /13 /14 /14 /13 /14 /12 /14 /13 /12 /13 /12 /13 /12 /11 /11 /14 /11 /10 /10 /10 /10 /10 /10 /10  
+<!-- -->
+|text_H=Home|text_A=Away
+|color_W=green2|text_W=Win
+|color_D=yellow2|text_D=Draw
+|color_L=red2|text_L=Loss
+|color_1=1st|color_2=2nd|color_3=3rd|color_18-=red1
+
+|updated=complete
+|source=[[#Matches|League matches]]
+|date=April 2021
+}}
+
+====Matches====
+<ref>{{cite web|title=Ολυμπιακός–ΠΑΟΚ 2–0 (1/12/1985)|trans-title =|url=https://www.fosonline.gr/podosfairo/article/75214/otan-o-paok-pige-stin-edra-toy-olympiakoy-os-protathlitis-vid|language=el|work=fosonline.gr|author=Thodoris Roussos|date=1 December 2019|access-date=6 April 2021}}</ref><ref>{{cite web|title=Παναθηναϊκός–ΠΑΟΚ 5–0 (2/3/1986)|trans-title =|url=https://www.paokmania.gr/stiles/mme/173434-varia-itta-sto-oaka-kai-apolysi-skotsik-1986|language=el|work=paokmania.gr|author=|date=2 March 2020|access-date=6 April 2021}}</ref><ref>{{cite web|title=ΠΑΟΚ–Ολυμπιακός 1–0 (30/3/1986)|trans-title =|url=https://www.paokmania.gr/stiles/arxeio/aspromavres-istories/101699-otan-miloyse-o-nomos-tis-toympas-vid|language=el|work=paokmania.gr|author=|date=30 March 2021|access-date=6 April 2021}}</ref>
+
+{{legend2|#CCFFCC|Win|border=1px solid #AAAAAA}}
+{{legend2|#FFFFCC|Draw|border=1px solid #AAAAAA}}
+{{legend2|#FFCCCC|Loss|border=1px solid #AAAAAA}}
+
+{{footballbox collapsible
+|round = 1
+|date = 7 September 1985
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 1–2
+|report =
+|team2 = [[Panionios F.C.|Panionios]]
+|goals1 = [[Dimitris Pittas|Pittas]] {{goal|10}} 
+|goals2 = Mavrikis {{goal|70}} <br> [[Todor Barzov|Barzov]] {{goal|82}} 
+|stadium = [[Kaftanzoglio Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 22,201
+|referee = 
+|result = L
+|note = Game held at Kaftanzoglio Stadium because Toumba Stadium was closed for football pitch maintenance.
+}}
+
+{{footballbox collapsible
+|round = 2
+|date = 14 September 1985
+|time = 
+|team1 = [[AEK Athens F.C.|AEK Athens]] 
+|score = [[Double-headed eagles derby|1–0]]
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Stelios Manolas|Manolas]] {{goal|25}}
+|goals2 = 
+|stadium = [[Athens Olympic Stadium]]
+|location = [[Athens]]
+|attendance = 54,800
+|referee = Adamopoulos
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 3
+|date = 22 September 1985
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 5–0
+|report =
+|team2 = [[Apollon Smyrnis F.C.|Apollon Athens]]
+|goals1 = [[Rade Paprica|Paprica]] {{goal|27}} <br> [[Georgios Kostikos (footballer, born 1958)|Kostikos]] {{goal|46||65}} <br> [[Georgios Skartados|Skartados]] {{goal|62||88}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 10,489
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 4
+|date = 29 September 1985
+|time = 
+|team1 = [[Ethnikos Piraeus F.C.|Ethnikos Piraeus]]
+|score = 0–0
+|report = 
+|team2 = [[PAOK FC|PAOK]] 
+|goals1 = 
+|goals2 = 
+|stadium = [[Karaiskakis Stadium]]
+|location = [[Piraeus]]
+|attendance = 6,346
+|referee = Koutris
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 5
+|date = 6 October 1985
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 1–0
+|report =
+|team2 = [[Iraklis F.C. (Thessaloniki)|Iraklis]]
+|goals1 = [[Sotiris Mavromatis|Mavromatis]] {{goal|83}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 16,153
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 6
+|date = 13 October 1985
+|time = 
+|team1 = [[Panserraikos F.C.|Panserraikos]]		
+|score = 4–1
+|report =
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Karel Jarůšek|Jarůšek]] {{goal|30||63}} <br> [[Sakis Anastasiadis|Anastasiadis]] {{goal|46|pen.}} <br> Dimitriou {{goal|54}} 
+|goals2 = [[Georgios Skartados|Skartados]] {{goal|45}}
+|stadium = [[Serres Municipal Stadium]]
+|location = [[Serres]]
+|attendance = 
+|referee = Georgiadis
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 7
+|date = 20 October 1985
+|time = 
+|team1 = [[PAOK FC|PAOK]]
+|score = [[Panathinaikos–PAOK rivalry|0–1]]
+|report = 
+|team2 = [[Panathinaikos F.C.|Panathinaikos]] 
+|goals1 =
+|goals2 = [[Dimosthenis Kavouras|Kavouras]] {{goal|81}} 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 21,448
+|referee = 
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 8
+|date = 3 November 1985
+|time = 
+|team1 = [[Aris Thessaloniki F.C.|Aris]]	
+|score = [[Derby of Thessaloniki|3–1]] 
+|report =
+|team2 = [[PAOK FC|PAOK]]	
+|goals1 = [[Nikola Nikić|Nikić]] {{goal|73}} <br> [[Edin Bahtić|Bahtić]] {{goal|82}} <br> Bibisidis {{goal|85}}
+|goals2 = [[Thomas Singas|Singas]] {{goal|58}} 
+|stadium = [[Kleanthis Vikelidis Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 16,444
+|referee = Kapetanakis
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 9
+|date = 10 November 1985
+|time = 
+|team1 = [[Panachaiki F.C.|Panachaiki]]	
+|score = 2–1
+|report =
+|team2 = [[PAOK FC|PAOK]]	
+|goals1 = Chardalias {{goal|57|pen.}} <br> [[Rajko Vujadinović|Vujadinović]] {{goal|59}} 
+|goals2 = [[Aris Karasavvidis|Karasavvidis]] {{goal|20}} 
+|stadium = [[Kostas Davourlis Stadium]]
+|location = [[Patras]]
+|attendance = 7,022
+|referee = Ntontos
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 10
+|date = 24 November 1985
+|time = 
+|team1 = [[PAOK FC|PAOK]]
+|score = 1–0
+|report = 
+|team2 = [[Doxa Drama F.C.|Doxa Drama]] 
+|goals1 = [[Georgios Skartados|Skartados]] {{goal|24|pen.}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 3,155
+|referee = Germanakos
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 11
+|date = 1 December 1985
+|time = 
+|team1 = [[Olympiacos F.C.|Olympiacos]]	
+|score = [[Olympiacos–PAOK rivalry|2–0]] 
+|report =
+|team2 = [[PAOK FC|PAOK]]	
+|goals1 = [[Nikos Anastopoulos|Anastopoulos]] {{goal|2||81}} 
+|goals2 =  
+|stadium = [[Athens Olympic Stadium]]
+|location = [[Athens]]
+|attendance = 37,604
+|referee = Triantafyllou
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 12
+|date = 8 December 1985
+|time = 
+|team1 = [[PAOK FC|PAOK]]
+|score = 4–1
+|report = 
+|team2 = [[Apollon Kalamarias F.C.|Apollon Kalamarias]] 
+|goals1 = [[Georgios Skartados|Skartados]] {{goal|25}} <br> [[Haris Baniotis|Baniotis]] {{goal|31}} <br> [[Vassilis Vasilakos|Vasilakos]] {{goal|62||65}}
+|goals2 = Katrakylakis {{goal|47}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 9,066
+|referee = 
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 13
+|date = 15 December 1985
+|time = 
+|team1 = [[OFI Crete F.C.|OFI]]
+|score = 2–0 
+|report =
+|team2 = [[PAOK FC|PAOK]]	
+|goals1 = [[Georgios Vlastos|Vlastos]] {{goal|23||61}} 
+|goals2 =  
+|stadium = [[Theodoros Vardinogiannis Stadium]]
+|location = [[Heraklion]]
+|attendance = 5,941
+|referee = 
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 14
+|date = 22 December 1985
+|time = 
+|team1 = [[PAOK FC|PAOK]]
+|score = 1–1
+|report = 
+|team2 = [[Athlitiki Enosi Larissa F.C.|AEL]]
+|goals1 = [[Aris Karasavvidis|Karasavvidis]] {{goal|35}} 
+|goals2 =  [[Giannis Galitsios|Galitsios]] {{goal|87}}  
+|stadium = [[Toumba Stadium]] 
+|location = [[Thessaloniki]]
+|attendance = 11,798
+|referee = Kalpakidis
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 15
+|date = 5 January 1986
+|time = 
+|team1 = [[PAS Giannina F.C.|PAS Giannina]]		
+|score = 1–1 
+|report =
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Manevski {{goal|40}}  
+|goals2 = [[Georgios Kostikos (footballer, born 1958)|Kostikos]] {{goal|87}} 
+|stadium = [[Zosimades Stadium]]
+|location = [[Ioannina]]
+|attendance = 
+|referee = Andreou
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 16
+|date = 12 January 1986
+|time = 
+|team1 = [[Panionios F.C.|Panionios]]		
+|score = 2–1 
+|report =
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Todor Barzov|Barzov]] {{goal|23|pen.}} <br> Mavrikis {{goal|73}}  
+|goals2 = [[Georgios Kostikos (footballer, born 1958)|Kostikos]] {{goal|36}} 
+|stadium = [[Nea Smyrni Stadium]]
+|location = [[Athens]]
+|attendance = 
+|referee = Kolokythas
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 17
+|date = 26 January 1986
+|time = 
+|team1 = [[PAOK FC|PAOK]]	
+|score = [[Double-headed eagles derby|2–1]] 
+|report =
+|team2 = [[AEK Athens F.C.|AEK Athens]]	
+|goals1 = [[Thomas Singas|Singas]] {{goal|18}} <br> [[Vassilis Vasilakos|Vasilakos]] {{goal|59}} 
+|goals2 = [[Thomas Mavros|Mavros]] {{goal|43}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 24,113
+|referee = Matsoukas
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 18
+|date = 2 February 1986
+|time = 
+|team1 = [[Apollon Smyrnis F.C.|Apollon Athens]]		
+|score = 1–0 
+|report =
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Kastanos {{goal|84}}  
+|goals2 =  
+|stadium = [[Rizoupoli Stadium]]
+|location = [[Athens]]
+|attendance = 
+|referee = 
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 19
+|date = 9 February 1986
+|time = 
+|team1 = [[PAOK FC|PAOK]]	
+|score = 2–1 
+|report =
+|team2 = [[Ethnikos Piraeus F.C.|Ethnikos Piraeus]]	
+|goals1 = [[Georgios Kostikos (footballer, born 1958)|Kostikos]] {{goal|2}} <br> [[Giannis Psarras|Psarras]] {{goal|88}} 
+|goals2 = Tsouxtos {{goal|83}}
+|stadium = [[Katerini Stadium]]
+|location = [[Katerini]]
+|attendance = 
+|referee = 
+|result = W
+|note = Game held at Katerini because PAOK had a stadium ban.
+}}
+
+{{footballbox collapsible
+|round = 20
+|date = 16 February 1986
+|time = 
+|team1 = [[Iraklis F.C. (Thessaloniki)|Iraklis]]
+|score = 0–0 
+|report =
+|team2 = [[PAOK FC|PAOK]]
+|goals1 =   
+|goals2 =  
+|stadium = [[Kaftanzoglio Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 6,209
+|referee = Amygdalis
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 21
+|date = 23 February 1986
+|time = 
+|team1 = [[PAOK FC|PAOK]]
+|score = 0–0
+|report = 
+|team2 = [[Panserraikos F.C.|Panserraikos]]
+|goals1 =  
+|goals2 = Thatharopoulos {{sent off|0|76}}   
+|stadium = [[Toumba Stadium]] 
+|location = [[Thessaloniki]]
+|attendance = 9,871
+|referee = Zakestidis
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 22
+|date = 2 March 1986
+|time = 
+|team1 = [[Panathinaikos F.C.|Panathinaikos]]		
+|score = [[Panathinaikos–PAOK rivalry|5–0]] 
+|report =
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Grigoris Charalambidis|Charalambidis]] {{goal|25}} <br> [[Kostas Mavridis|Mavridis]] {{goal|46}} <br> [[Velimir Zajec|Zajec]] {{goal|47}} <br> [[Juan Ramón Rocha|Rocha]] {{goal|62}} <br> [[Dimitris Saravakos|Saravakos]] {{goal|90}}   
+|goals2 =  
+|stadium = [[Athens Olympic Stadium]]
+|location = [[Athens]]
+|attendance = 46,961
+|referee = 
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 23
+|date = 9 March 1986
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = [[Derby of Thessaloniki|1–0]]
+|report =
+|team2 = [[Aris Thessaloniki F.C.|Aris]]
+|goals1 = [[Georgios Skartados|Skartados]] {{goal|18}} 
+|goals2 =  
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 24,179
+|referee = Brentas
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 24
+|date = 16 March 1986
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 2–1
+|report =
+|team2 = [[Panachaiki F.C.|Panachaiki]]
+|goals1 = [[Georgios Skartados|Skartados]] {{goal|51||87}} 
+|goals2 = Chardalias {{goal|9}} 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 6,266
+|referee = Michailidis
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 25
+|date = 23 March 1986
+|time = 
+|team1 = [[Doxa Drama F.C.|Doxa Drama]]		
+|score = 2–1 
+|report =
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Theodoros Pachatouridis|Pachatouridis]] {{goal|32}} <br> [[Christos Yfantidis|Yfantidis]] {{goal|45}}  
+|goals2 = [[:el:Νίκος Λιάκος|Liakos]] {{goal|64}} 
+|stadium = Doxa Drama Stadium
+|location = [[Drama, Greece|Drama]]
+|attendance = 
+|referee = Dimitriadis
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 26
+|date = 30 March 1986
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = [[Olympiacos–PAOK rivalry|1–0]]
+|report =
+|team2 = [[Olympiacos F.C.|Olympiacos]]
+|goals1 = [[Kostas Orfanos|Orfanos]] {{goal|27}} 
+|goals2 =  
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 24,970
+|referee = Triantafyllou
+|result = W
+}}
+
+{{footballbox collapsible
+|round = 27
+|date = 6 April 1986
+|time = 
+|team1 = [[Apollon Kalamarias F.C.|Apollon Kalamaria]]		
+|score = 1–1 
+|report =
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Tsalkitzis {{goal|39}} <br> Tsoleridis {{sent off|0|55}}  
+|goals2 = [[Georgios Skartados|Skartados]] {{goal|68}} 
+|stadium = [[Kalamaria Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 10,058
+|referee = Chrysanis
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 28
+|date = 13 April 1986
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 0–0
+|report =
+|team2 = [[OFI Crete F.C.|OFI]]
+|goals1 = 
+|goals2 =    
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 12,958
+|referee = Dimitriadis 
+|result = D
+}}
+
+{{footballbox collapsible
+|round = 29
+|date = 20 April 1986
+|time = 
+|team1 = [[Athlitiki Enosi Larissa F.C.|AEL]] 
+|score = 2–1
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = [[Georgios Agorogiannis|Agorogiannis]] {{goal|1}} <br> [[Michalis Ziogas|Ziogas]] {{goal|32}}
+|goals2 = [[Georgios Skartados|Skartados]] {{goal|37}}
+|stadium = [[Alcazar Stadium]]
+|location = [[Larissa]]
+|attendance = 4,120
+|referee = 
+|result = L
+}}
+
+{{footballbox collapsible
+|round = 30
+|date = 27 April 1986
+|time = 
+|team1 = [[PAOK FC|PAOK]]		
+|score = 4–2
+|report =
+|team2 = [[PAS Giannina F.C.|PAS Giannina]]
+|goals1 = [[Georgios Skartados|Skartados]] {{goal|21|pen.|29}} <br> [[Sotiris Mavromatis|Mavromatis]] {{goal|42}} <br> [[Michalis Iordanidis|Iordanidis]] {{goal|66}}
+|goals2 = Mantzoukis {{goal|12}} <br> Papadimitriou {{goal|84}} 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 5,303
+|referee = 
+|result = W
+}}
+
+==Greek Cup==
+{{main|1985–86 Greek Football Cup}}
+
+===First round===
+<ref>{{cite web|title=Αναγέννηση Γιαννιτσών–ΠΑΟΚ 1–1 (15–16 πεν.) (9/10/1985)|trans-title=|url=http://www.oldfootball.gr/k2/user-page/item/47-36.html|language=el|work=oldfootball.gr|author=Kostas Pallis|date=12 February 2016|access-date=6 April 2021|archive-date=29 January 2021|archive-url=https://web.archive.org/web/20210129023412/http://www.oldfootball.gr/k2/user-page/item/47-36.html|url-status=dead}}</ref>
+
+{{footballbox collapsible
+|date = 9 October 1985
+|time = 
+|team1 = [[Anagennisi Giannitsa F.C.|Anagennisi Giannitsa]]
+|score = 1–1
+|aet = yes
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 = Penos {{goal|39}}  
+|goals2 = [[Aris Karasavvidis|Karasavvidis]] {{goal|70}}
+|stadium = Ioannis Tserkezidis Municipal Stadium 
+|location = [[Krya Vrysi, Pella|Krya Vrysi]]
+|attendance = 
+|referee =
+|penalties1= Dimoglou {{pengoal}} <br> Savoglou {{pengoal}} <br> Tsibinis {{pengoal}} <br> Ronis {{pengoal}} <br> Kalaitzidis {{penmiss}} <br> Papourtzis {{pengoal}} <br> Dimitriadis {{pengoal}} <br> Skourias {{pengoal}} <br> Tsirogiannis {{pengoal}} <br> Gavranidis {{pengoal}} <br> Penos {{pengoal}} <br> Dimoglou {{pengoal}} <br> Savoglou {{pengoal}} <br> Tsibinis {{pengoal}} <br> Tsirogiannis {{pengoal}} <br> Skourias {{penmiss}} <br> Kalaitzidis {{pengoal}} <br> Dimitriadis {{penmiss}} 
+|penalties2= {{penmiss}} [[Vassilis Vasilakos|Vasilakos]] <br> {{pengoal}} [[Georgios Kostikos (footballer, born 1958)|Kostikos]] <br> {{pengoal}} [[Thomas Singas|Singas]] <br> {{pengoal}} [[Haris Baniotis|Baniotis]] <br> {{pengoal}} [[Georgios Skartados|Skartados]] <br> {{pengoal}} [[Aris Karasavvidis|Karasavvidis]] <br> {{pengoal}} [[Dimitris Pittas|Pittas]] <br> {{pengoal}} [[Kostas Orfanos|Orfanos]] <br> {{pengoal}} [[Sotiris Mavromatis|Mavromatis]] <br> {{pengoal}} [[Nikos Alavantas|Alavantas]] <br> {{pengoal}} Terzis <br> {{pengoal}} [[Georgios Skartados|Skartados]] <br> {{pengoal}} [[Georgios Kostikos (footballer, born 1958)|Kostikos]] <br> {{pengoal}} [[Thomas Singas|Singas]] <br> {{pengoal}} [[Dimitris Pittas|Pittas]] <br> {{penmiss}} [[Nikos Alavantas|Alavantas]] <br> {{pengoal}} [[Sotiris Mavromatis|Mavromatis]] <br> {{pengoal}} [[Vassilis Vasilakos|Vasilakos]]  
+|penaltyscore= 15–16 
+|result = D
+}}
+
+===Additional round===
+
+{{footballbox collapsible
+|date = 20 November 1985
+|time = 
+|team1 = [[Olympiacos F.C.|Olympiacos]] 
+|score = [[Olympiacos–PAOK rivalry|0–0]]
+|aet = yes
+|report = 
+|team2 = [[PAOK FC|PAOK]]
+|goals1 =  
+|goals2 = 
+|stadium = [[Athens Olympic Stadium]]
+|location = [[Athens]]
+|attendance = 25,955
+|referee = Markou
+|penalties1= [[Jorge Barrios (footballer)|Barrios]] {{pengoal}} <br> [[:el:Γιώργος Τόγιας|Togias]] {{penmiss}} <br> [[Giorgos Kokolakis|Kokolakis]] {{pengoal}} <br> [[Petros Michos|Michos]] {{pengoal}} <br> [[Nikos Anastopoulos|Anastopoulos]] {{pengoal}}
+|penalties2= {{pengoal}} [[Thomas Singas|Singas]] <br> {{pengoal}} [[Rade Paprica|Paprica]] <br> {{pengoal}} [[Aris Karasavvidis|Karasavvidis]] <br> {{penmiss}} [[Nikos Alavantas|Alavantas]] <br> {{penmiss}} [[Georgios Skartados|Skartados]]
+|penaltyscore= 4–3 
+|result = D
+}}
+
+==European Cup==
+{{main article|1985–86 European Cup}}
+
+===First round===
+{{main article|1985–86 European Cup#First round|l1=First round}}
+
+<ref>{{cite web|title=PAOK–Hellas Verona 1–2 (2/10/1985)|url=https://www.paokmania.gr/stiles/mme/166018-apokleismos-apo-ton-prempen-elkier-1985|language=el|work=paokmania.gr|author=|date=2 October 2019|access-date=6 April 2021}}</ref>
+
+{{football box collapsible
+|round = [[1985–86 European Cup#First round|1st leg]]
+|date= 18 September 1985
+|time=
+|team1= [[Hellas Verona F.C.|Hellas Verona]] {{flagicon|ITA}}
+|score= 3–1
+|report=https://www.worldfootball.net/report/champions-league-1985-1986-1-runde-hellas-verona-paok-saloniki/
+|team2= {{flagicon|GRE}} [[PAOK FC|PAOK]]
+|goals1= [[Preben Elkjær|Elkjær]] {{goal|15||85}} <br> [[Domenico Volpati|Volpati]] {{goal|87}} 
+|goals2= 
+* {{yel|39}}, {{goal|70}} [[Georgios Skartados|Skartados]] 
+* {{yel|86}} [[Haris Baniotis|Baniotis]]
+|stadium= [[Stadio Marc'Antonio Bentegodi|Stadio Marcantonio Bentegodi]] 
+|location= [[Verona]], [[Italy]]
+|attendance= 40,000
+|referee= [[Horst Brummeier]] ([[Austrian Football Association|Austria]])
+|result = L
+}}
+
+{{football box collapsible
+|round = [[1985–86 European Cup#First round|2nd leg]]
+|date= 2 October 1985
+|time=
+|team1= [[PAOK FC|PAOK]] {{flagicon|GRE}}
+|score= 1–2
+|aggregatescore = 2–5 
+|report=https://www.worldfootball.net/report/champions-league-1985-1986-1-runde-paok-saloniki-hellas-verona/
+|team2= {{flagicon|ITA}} [[Hellas Verona F.C.|Hellas Verona]] 
+|goals1= 
+* [[Vassilis Vasilakos|Vasilakos]] {{goal|4}}
+* [[Dimitris Pittas|Pittas]] {{yel|45}} 
+* [[Nikos Alavantas|Alavantas]] {{yel|65}} 
+|goals2= [[Preben Elkjær|Elkjær]] {{goal|29||73}}
+|stadium= [[Toumba Stadium]]
+|location= [[Thessaloniki]], [[Greece]]
+|attendance= 40,000 
+|referee= [[Augusto Lamo Castillo]] ([[Spanish Football Association|Spain]])
+|result = L
+}}
+
+==Statistics==
+
+===Squad statistics===
+{{Efs start3 |updated=April 27, 1986 |c1=[[1985–86 Alpha Ethniki|Alpha Ethniki]] |c2=[[1985–86 Greek Football Cup|Greek Cup]]|c3=[[1985–86 European Cup|European Cup]]}}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Goalkeepers
+|-
+{{Efs player3|no= |nat=GRE|name=Apostolos Terzis |15|0|0 |2|0|0 |0|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Lakis Stergioudas]] |7|0|0 |0|0|0 |2|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Giannis Gitsioudis]] |7|0|0 |0|0|0 |0|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Takis Pantelis]] |1|0|0 |0|0|0 |0|0|0 }}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Defenders
+|-
+{{Efs player3|no= |nat=GRE|name=[[Nikos Alavantas]] |28|0|0 |2|0|0 |2|0|0 }}
+{{Efs player3|no= |nat=SFR Yugoslavia|name=[[Ivan Jurišić]] |22|0|0 |1|0|0 |2|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Apostolos Tsourelas]] |22|0|0 |0|0|0 |2|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Charis Baniotis]] |17|0|1 |2|0|0 |1|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Giannis Psarras]] | 17|0|1 |1|0|0 |0|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Kostas Malioufas]] |9|0|0 |1|0|0 |0|0|0 }}
+{{Efs player3|no= |nat=GRE|name=Pantelis Sachanidis | 1|0|0 |0|0|0 |0|0|0 }}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Midfielders
+|-
+{{Efs player3|no= |nat=GRE|name=[[Thomas Singas]] |29|0|2 |2|0|0 |2|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Georgios Skartados]] |27|0|11 |2|0|0 |2|0|1 }}
+{{Efs player3|no= |nat=GRE|name=[[Dimitris Pittas]] |27|0|1 |1|0|0 |2|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Vasilios Vasilakos]] |26|0|3 |1|0|0 |2|0|1 }}
+{{Efs player3|no= |nat=GRE|name=[[Kyriakos Alexandridis]] |22|0|1 |2|0|0 |1|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[:el:Νίκος Λιάκος|Nikos Liakos]] |16|0|1 |1|0|0 |0|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Sotiris Mavromatis]] | 12|0|0 |1|0|0 |0|0|0 }}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Forwards
+|-
+{{Efs player3|no= |nat=GRE|name=[[Aris Karasavvidis]] | 24|0|2 |2|0|1 |1|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Kostas Orfanos]] | 23|0|1 |2|0|0 |2|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Georgios Kostikos (footballer, born 1958)|Giorgos Kostikos]] | 14|0|5 |2|0|0 |1|0|0 }}
+{{Efs player3|no= |nat=SFR Yugoslavia|name=[[Rade Paprica]] |9|0|1 |1|0|0 |2|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Michalis Iordanidis]] | 7|0|1 |0|0|0 |0|0|0 }}
+{{Efs player3|no= |nat=GRE|name=[[Stefanos Borbokis]] | 1|0|0 |0|0|0 |0|0|0 }}
+|}	
+
+Source: Match reports in [[#Competitions|competitive matches]], [https://www.rsssf.org/tablesg/grk86.html RSSSF]
+
+===Goalscorers===
+{| class="wikitable sortable" style="text-align:center" 
+|-
+!width=5|{{Abbr| Rank | Ranking }}
+!width=5|{{Abbr| No. | Squad Number }}
+!width=5|{{Abbr| Pos. | Position }}
+!width=180|Player
+!width=30|[[1985–86 Alpha Ethniki|Alpha Ethniki]]
+!width=30|[[1985–86 Greek Football Cup|Greek Cup]]
+!width=30|[[1985–86 European Cup|European Cup]]
+!width=50|Total 
+|-
+|-
+|1||||MF||align=left|{{flagicon|GRE}} [[Georgios Skartados]]||11||0||1||'''12'''
+|-
+|2||||FW||align=left|{{flagicon|GRE}} [[Georgios Kostikos (footballer, born 1958)|Georgios Kostikos]]||5||0||0||'''5'''
+|-
+|3||||MF||align=left|{{flagicon|GRE}} [[Vasilios Vasilakos]]||3||0||1||'''4'''
+|-
+|4||||FW||align=left|{{flagicon|GRE}} [[Aris Karasavvidis]]||2||1||0||'''3'''
+|-
+|rowspan=2|5||||MF||align=left|{{flagicon|GRE}} [[Thomas Singas]]||2||0||0||'''2'''
+|-
+| |||MF||align=left|{{flagicon|GRE}} [[Sotiris Mavromatis]]||2||0||0||'''2'''
+|-
+|rowspan=8|7||||FW||align=left|{{flagicon|GRE}} [[Kostas Orfanos]]||1||0||0||'''1'''
+|-
+| |||MF||align=left|{{flagicon|GRE}} [[Kyriakos Alexandridis]]||1||0||0||'''1'''
+|-
+| |||MF||align=left|{{flagicon|GRE}} [[Dimitris Pittas]]||1||0||0||'''1'''
+|-
+| |||MF||align=left|{{flagicon|GRE}} [[:el:Νίκος Λιάκος|Nikos Liakos]]||1||0||0||'''1'''
+|-
+| |||DF||align=left|{{flagicon|GRE}} [[Giannis Psarras]]||1||0||0||'''1'''
+|-
+| |||DF||align=left|{{flagicon|GRE}} [[Charis Baniotis]]||1||0||0||'''1'''
+|-
+| |||FW||align=left|{{flagicon|SFR Yugoslavia}} [[Rade Paprica]]||1||0||0||'''1'''
+|-
+| |||FW||align=left|{{flagicon|GRE}} [[Michalis Iordanidis]]||1||0||0||'''1'''
+|-
+|- bgcolor="#EFEFEF"
+|colspan=4|'''TOTALS'''
+|'''33'''||'''1'''||'''2'''||'''36'''	
+|}
+
+Source: Match reports in [[#Competitions|competitive matches]], [https://www.rsssf.org/tablesg/grk86.html RSSSF]
+
+==External links==
+* [https://www.rsssf.org/tablesg/grk86.html RSSSF]
+* [http://www.paokfc.gr/ PAOK FC official website]
+
+== References ==
+{{Reflist}}
+
+{{PAOK FC seasons}}
+{{1985–86 in Greek football}}
+
+{{DEFAULTSORT:1985-86 PAOK FC season}}
+[[Category:PAOK FC seasons]]
+[[Category:Greek football clubs 1985–86 season|PAOK]]

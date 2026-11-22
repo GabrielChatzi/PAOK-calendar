@@ -1,0 +1,2103 @@
+{{More citations needed|date=June 2024}}
+{{Use dmy dates|date=June 2024}}
+{{Infobox football club season
+| club = [[PAOK FC|PAOK]]
+| season = 2024–25
+| alt = 
+| caption = 
+| chrtitle = President
+| chairman = [[Ivan Savvidis]]
+| mgrtitle = 
+| manager = [[Răzvan Lucescu]]
+| stdtitle = 
+| stadium = [[Toumba Stadium]]
+| league = [[2024–25 Super League Greece|Super League 1]]
+| league result = [[2024–25 Super League Greece|3rd]]
+| cup1 = [[Greek Football Cup|Greek Cup]]
+| cup1 result = [[2024–25 Greek Football Cup|Quarter-finals]]
+| cup2 = [[UEFA Champions League]]
+| cup2 result = [[2024–25 UEFA Champions League|Third qualifying round]]
+| cup3 = [[UEFA Europa League]]
+| cup3 result = [[2024–25 UEFA Europa League|Knockout phase play-offs]]
+| league topscorer = [[Mady Camara]] (9)
+| season topscorer = [[Andrija Zivkovic]] (12)
+| highest attendance = 22,711 vs [[AEK Athens F.C.|AEK]]<br />(11 May 2025)
+| lowest attendance = 4,819 vs [[Volos F.C.|Volos]]<br />(12 January 2025)
+| average attendance = 14,273<ref>https://www.slgr.gr/en/schedule/23/</ref>
+| largest win = 
+| largest loss = 
+| pattern_la1 = _paok2425h
+| pattern_b1 = _paok2425h
+| pattern_ra1 = _paok2425h
+| pattern_sh1 = _paok2425h
+| pattern_so1 = _paok2425hl
+| leftarm1 = 000000
+| body1 = FFFFFF
+| rightarm1 = 000000
+| shorts1 = 000000
+| socks1 = FFFFFF
+| pattern_la2 = _paok2425a
+| pattern_b2 = _paok2425a
+| pattern_ra2 = _paok2425a
+| pattern_sh2 = _paok2425a
+| pattern_so2 = _paok2425al
+| leftarm2 = FFFFFF
+| body2 = FFFFFF
+| rightarm2 = FFFFFF
+| shorts2 = FFFFFF
+| socks2 = FFFFFF
+| pattern_la3 = _paok2425t
+| pattern_b3 = _paok2425t
+| pattern_ra3 = _paok2425t
+| pattern_sh3 = _paok2425t
+| pattern_so3 = _paok2425tl
+| leftarm3 = aba7b2
+| body3 = aba7b2
+| rightarm3 = aba7b2
+| shorts3 = aba7b2
+| socks3 = aba7b2
+| updated = 11 May 2025
+| prevseason = [[2023–24 PAOK FC season|2023–24]]
+| nextseason = [[2025–26 PAOK FC season|2025–26]]
+}}
+The '''2024–25 PAOK FC season''' was the club's 99th season in existence and the club's [[Super League Greece#Seasons in Alpha Ethniki and Super League Greece|66th consecutive season]] in the top flight of [[Football in Greece|Greek football]]. In addition to the [[2024–25 Super League Greece|domestic league]], [[PAOK FC|PAOK]] participated in this season's editions of the [[2024–25 Greek Football Cup|Greek Cup]], the [[2024–25 UEFA Champions League|Champions League]], and the [[2024–25 UEFA Europa League|Europa League]]. The season covers the period from 23 July 2024 to 30 June 2025.
+
+==Coaching staff==
+{{Fb cs header}}
+{{Fb cs staff |bg= |p=Head coach	 |s={{flagicon|ROM}} [[Răzvan Lucescu]] }}
+{{Fb cs staff |bg= |p=Assistant Coach	 |s= }}
+{{Fb cs staff |bg= |p=Goalkeeping Coach |s={{flagicon|POR}} [[Jose Moreira]] }}
+{{Fb cs staff |bg= |p=Head Fitness Coach |s={{flagicon|ITA}} [[Matteo Spatafora]] }}
+{{Fb cs staff |bg= |p=Fitness coach |s={{flagicon|ITA}} [[Paolo Castorina]] }}
+{{Fb cs staff |bg= |p=Rehabilitation Coach |s={{flagicon|GRE}} [[Georgios Tsonakas]] 
+}}
+{{Fb cs footer|u=26 May 2021 ||date=June 2022}}
+
+
+==Players==
+===Squad===
+{{updated|2 February 2025}}<ref>{{cite web |title=First Team |url=https://www.paokfc.gr/en/a-omada/first-team-2-en/a-team-roster-en/|website=Paokfc.gr}}</ref>
+{{fs start|bg=000000|color=FFFFFF}}
+{{Fs player|no= 1|pos=GK|nat=CZE|name=[[Jiří Pavlenka]]}}
+{{Fs player|no=2|pos=MF|nat=GUI|name=[[Mady Camara]]}}
+{{Fs player|no=4|pos=MF|nat=PER|name=[[Sergio Peña (Peruvian footballer)|Sergio Peña]]}}
+{{Fs player|no=5|pos=DF|nat=GRE|name=[[Giannis Michailidis]]}}
+{{Fs player|no=6|pos=DF|nat=CRO|name=[[Dejan Lovren]]}}
+{{Fs player|no=7|pos=MF|nat=GRE|name=[[Giannis Konstantelias]]}}
+{{Fs player|no=8|pos=MF|nat=FRA|name=[[Tiemoué Bakayoko]]}}
+{{Fs player|no=9|pos=FW|nat=RUS|name=[[Fyodor Chalov]]}}
+{{Fs player|no=11|other=[[Captain (association football)|vice-captain]]|pos=FW|nat=BRA|name=[[Taison]]}}
+{{fs player|no=14|other=[[Captain (association football)|vice-captain]]|pos=MF|nat=SRB|name=[[Andrija Živković]]}}
+{{Fs player|no=15|pos=DF|nat=GAM|name=[[Omar Colley]]}}
+{{fs player|no=16|pos=DF|nat=POL|name=[[Tomasz Kędziora]]}}
+{{Fs player|no=18|pos=DF|nat=MEX|name=[[Jonathan Gómez (footballer, born 2003)|Jonathan Gómez]]}}
+{{Fs player|no=19|pos=DF|nat=ESP|name=[[Jonny Otto]]}}
+{{Fs player|no=20|pos=DF|nat=POR|name=[[Vieirinha]]|other=<small>[[Captain (association football)|captain]]</small>}}
+{{Fs mid|bg=000000|color=FFFFFF}}
+{{Fs player|no=21|pos=DF|nat=GHA|name=[[Baba Rahman]]}}
+{{Fs player|no=22|other=[[Captain (association football)|vice-captain]]|pos=MF|nat=AUT|name=[[Stefan Schwab]]}}
+{{Fs player|no=23|pos=DF|nat=ESP|name=[[Joan Sastre (footballer)|Joan Sastre]]}}
+{{Fs player|no=25|pos=DF|nat=GRE|name=[[Konstantinos Thymianis]]}}
+{{fs player|no=27|pos=MF|nat=RUS|name=[[Magomed Ozdoyev]]}}
+{{fs player|no=28|pos=DF|nat=POL|name=[[Mateusz Wieteska]]}}
+{{fs player|no=42|pos=GK|nat=CRO|name=[[Dominik Kotarski]]}}
+{{Fs player|no=47|pos=FW|nat=ENG|name=[[Shola Shoretire]]}}
+{{Fs player|no=54|pos=GK|nat=GRE|name=[[Konstantinos Balomenos]]}}
+{{Fs player|no=70|pos=FW|nat=TAN|name=[[Mbwana Samatta]]}}
+{{Fs player|no=71|pos=FW|nat=SPA|name=[[Brandon Thomas (footballer)|Brandon Thomas]]}}
+{{Fs player|no=77|pos=MF|nat=BUL|name=[[Kiril Despodov]]}}
+{{Fs player|no=80|pos=MF|nat=GRE|name=[[Dimitrios Pelkas]]}}
+{{Fs player|no=82|pos=MF|nat=FRA|name=[[Soualiho Meïté]]}}
+{{Fs player|no=99|pos=GK|nat=GRE|name=[[Antonis Tsiftsis]]}}
+{{fs end}}
+
+==Transfers==
+===In===
+{| class="wikitable plainrowheaders sortable"
+|-
+! style="background:black; color:#FFFFFF; {{box-shadow border|a|#C32148|1px}}" |No.
+! style="background:black; color:#FFFFFF; {{box-shadow border|a|#C32148|1px}}" |Pos
+! style="background:black; color:#FFFFFF; {{box-shadow border|a|#C32148|1px}}" |Player
+! style="background:black; color:#FFFFFF; {{box-shadow border|a|#C32148|1px}}" |Transferred from
+! style="background:black; color:#FFFFFF; {{box-shadow border|a|#C32148|1px}}" |Fee
+! style="background:black; color:#FFFFFF; {{box-shadow border|a|#C32148|1px}}" |Date
+! style="background:black; color:#FFFFFF; {{box-shadow border|a|#C32148|1px}}" |Source
+|-
+|align=center|
+|align=center|{{sort|-|MF}}
+|{{sort|Tzimas, Panagiotis|{{flagicon|GRE}} [[Panagiotis Tzimas]]}}
+|{{fbaicon|GRE}} [[PAS Giannina F.C.|PAS Giannina]]
+|Loan return
+|1 July 2024
+|
+|-
+|align=center|24
+|align=center|{{sort|-|MF}}
+|{{sort|Tsaousis, Marios|{{flagicon|GRE}} [[Marios Tsaousis]]}}
+|{{fbaicon|GRE}} [[PAS Giannina F.C.|PAS Giannina]]
+|Loan return
+|1 July 2024
+|
+|-
+|align=center|88
+|align=center|{{sort|-|DF}}
+|{{sort|Lyratzis, Lefteris|{{flagicon|GRE}} [[Lefteris Lyratzis]]}}
+|{{fbaicon|GRE}} [[Asteras Tripolis F.C.|Asteras Tripolis]]
+|Loan return
+|1 July 2024
+|
+|-
+|align=center|50
+|align=center|{{sort|-|MF}}
+|{{sort|Soares, Filipe|{{flagicon|POR}} [[Filipe Soares (footballer, born 1999)|Filipe Soares]]}}
+|{{fbaicon|POR}} [[F.C. Famalicão|Famalicão]]
+|Loan return
+|1 July 2024
+|
+|-
+|align=center|25
+|align=center|{{sort|-|DF}}
+|{{sort|Thymianis, Konstantinos|{{flagicon|GRE}} [[Konstantinos Thymianis]]}}
+|{{fbaicon|GRE}} [[Panserraikos F.C.|Panserraikos]]
+|Free transfer
+|17 June 2024
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20240617-ston-paok-o-konstantinos-thymianis/| title=Konstantinos Thymianis joins PAOK | date=17 June 2024 }}</ref>
+|-
+|align=center|2
+|align=center|{{sort|-|MF}}
+|{{sort|Camara, Mady|{{flagicon|GUI}} [[Mady Camara]]}}
+|{{fbaicon|ITA}} [[A.S. Roma|Roma]]
+|Free transfer
+|20 June 2024
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20240620-paiktis-tou-paok-o-mady-camara/| title=Mady Camara joins PAOK | date=20 June 2024 }}</ref>
+|-
+|align=center|99
+|align=center|{{sort|-|GK}}
+|{{sort|Tsiftsis, Antonis |{{flagicon|GRE}} [[Antonis Tsiftsis]]}}
+|{{fbaicon|GRE}} [[Asteras Tripolis F.C.|Asteras Tripolis]]
+|€400,000 + 20% resale
+|23 June 2024
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20240623-ston-paok-o-tsiftsis/| title=Tsiftsis joins PAOK | date=23 June 2024 }}</ref>
+|-
+|align=center|16
+|align=center|{{sort|-|DF}}
+|{{sort|Kędziora, Tomasz|{{flagicon|POL}} [[Tomasz Kędziora]]}}
+|{{fbaicon|UKR}} [[FC Dynamo Kyiv|Dynamo Kyiv]]
+|Free transfer
+|13 July 2024
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20240713-kedziora-is-back/| title=Kedziora is back | date=13 July 2024 }}</ref>
+|-
+|align=center|34
+|align=center|{{sort|-|FW}}
+|{{sort|Tissoudali, Tarik|{{flagicon|MAR}} [[Tarik Tissoudali]]}}
+|{{fbaicon|BEL}} [[K.A.A. Gent|Gent]]
+|€2.2M
+|28 July 2024
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20240728-paiktis-tou-paok-o-tarik-tissoudali/| title=Tarik Tissoudali joins PAOK | date=28 July 2024 }}</ref>
+|-
+|align=center|47
+|align=center|{{sort|-|FW}}
+|{{sort|Shoretire, Shola|{{flagicon|ENG}} [[Shola Shoretire]]}}
+|{{fbaicon|ENG}} [[Manchester United F.C.|Manchester United]]
+|Free transfer
+|30 July 2024
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20240730-paiktis-tou-paok-o-shola-shoretire/| title=Shola Shoretire joins PAOK | date=30 July 2024 }}</ref>
+|-
+|align=center|9
+|align=center|{{sort|-|FW}}
+|{{sort|Chalov, Fyodor|{{flagicon|RUS}} [[Fyodor Chalov]]}}
+|{{fbaicon|RUS}} [[PFC CSKA Moscow|CSKA Moscow]]
+|€3M
+|1 August 2024
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20240801-paiktis-tou-paok-o-fedor-chalov/| title=Fedor Chalov joins PAOK | date=1 August 2024 }}</ref>
+|-
+|align=center|18
+|align=center|{{sort|-|DF}}
+|{{sort|Gómez, Jonathan|{{flagicon|MEX}} [[Jonathan Gómez (footballer, born 2003)|Jonathan Gómez]]}}
+|{{fbaicon|ESP}} [[Real Sociedad]]
+|€400,000
+|23 August 2024
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20240823-paiktis-tou-paok-o-jonathan-gomez/| title=Jonathan Gomez joins PAOK | date=23 August 2024 }}</ref>
+|-
+|align=center|8
+|align=center|{{sort|-|MF}}
+|{{sort|Bakayoko, Tiémoué|{{flagicon|FRA}} [[Tiémoué Bakayoko]]}}
+|{{fbaicon|FRA}} [[FC Lorient|Lorient]]
+|Transfer
+|31 August 2024
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20240831-ston-paok-o-tiemoue-bakayoko/| title=Tiémoué Bakayoko joins PAOK | date= 31 August 2024 }}</ref>
+|-
+|align=center|15
+|align=center|{{sort|-|DF}}
+|{{sort|Colley, Omar|{{flagicon|GAM}} [[Omar Colley]]}}
+|{{fbaicon|TUR}} [[Beşiktaş J.K.|Beşiktaş]]
+|Transfer
+|31 August 2024
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20240831-paiktis-tou-paok-o-omar-colley/| title=Omar Colley is a PAOK player| date= 31 August 2024 }}</ref>
+|-
+|align=center|6
+|align=center|{{sort|-|DF}}
+|{{sort|Lovren, Dejan|{{flagicon|CRO}} [[Dejan Lovren]]}}
+|{{fbaicon|FRA}} [[Olympique Lyonnais|Lyon]]
+|Free transfer/Free Agent
+|16 September 2024
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20240916-paiktis-tou-paok-o-dejan-lovren/| title=Dejan Lovren joins PAOK | date=16 September 2024 }}</ref>
+|-
+|align=center|1
+|align=center|{{sort|-|GK}}
+|{{sort|Pavlenka, Jiří|{{flagicon|CZE}} [[Jiří Pavlenka]]}}
+|{{fbaicon|GER}} [[SV Werder Bremen|Werder Bremen]]
+|Free transfer/Free Agent
+|30 September 2024
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20240930-ston-paok-o-pavlenka/| title=Pavlenka joins PAOK | date=30 September 2024 }}</ref>
+|-
+|align=center|4
+|align=center|{{sort|-|MF}}
+|{{sort|Peña, Sergio|{{flagicon|PER}} [[Sergio Peña (Peruvian footballer)|Sergio Peña]]}}
+|{{fbaicon|SWE}} [[Malmö FF]]
+|€350,000
+|11 January 2025
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20250111-ston-paok-o-sergio-pena/| title=Sergio Peña joins PAOK| date= 31 August 2024 }}</ref>
+|-
+|align=center|28
+|align=center|{{sort|-|DF}}
+|{{sort|Wieteska, Mateusz|{{flagicon|POL}} [[Mateusz Wieteska]]}}
+|{{fbaicon|ITA}} [[Cagliari Calcio|Cagliari]]
+|Loan
+|22 January 2025
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20250122-ston-paok-o-mateusz-wieteska/ | title=Mateusz Wieteska joins PAOK | date=22 January 2025 }}</ref>
+|-
+|align=center|80
+|align=center|{{sort|-|MF}}
+|{{sort|Pelkas, Dimitrios|{{flagicon|GRE}} [[Dimitrios Pelkas]]}}
+|{{fbaicon|TUR}} [[İstanbul Başakşehir F.K.|İstanbul Başakşehir]]
+|Free Transfer
+|24 January 2025
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20250124-o-dimitris-pelkas-epestrepse-sto-spiti-tou/| title=Dimitris Pelkas comes home| date= 24 January 2025 }}</ref>
+|-
+|align=center|82
+|align=center|{{sort|-|MF}}
+|{{sort|Meïté, Soualiho |{{flagicon|FRA}} [[Soualiho Meïté]]}}
+|{{fbaicon|POR}} [[S.L. Benfica|Benfica]]
+|Loan
+|24 January 2025
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20250124-soualiho-meite-i-epistrofi/ | title=Soualiho Meïté - The return | date=24 January 2025 }}</ref>
+|-
+! colspan="6" | Total 
+! colspan="2" |  {{ntsh|0.0}} € 6,350,000.00
+|}
+
+===Out===
+{| class="wikitable plainrowheaders sortable"
+|-
+! style="background:black; color:#FFFFFF; {{box-shadow border|a|#C32148|1px}}" |No.
+! style="background:black; color:#FFFFFF; {{box-shadow border|a|#C32148|1px}}" |Pos
+! style="background:black; color:#FFFFFF; {{box-shadow border|a|#C32148|1px}}" |Player
+! style="background:black; color:#FFFFFF; {{box-shadow border|a|#C32148|1px}}" |Transferred to
+! style="background:black; color:#FFFFFF; {{box-shadow border|a|#C32148|1px}}" |Fee
+! style="background:black; color:#FFFFFF; {{box-shadow border|a|#C32148|1px}}" |Date
+! style="background:black; color:#FFFFFF; {{box-shadow border|a|#C32148|1px}}" |Source
+|-
+|align=center|18
+|align=center|{{sort|5|GK}}
+|{{sort|Živković, Živko|{{flagicon|SRB}} [[Živko Živković]]}}
+|
+|End of contract
+|{{dts|30 June 2024}}
+|
+|-
+|align=center|88
+|align=center|{{sort|-|MF}}
+|{{sort|Marcos Antônio|{{flagicon|BRA}} [[Marcos Antônio (footballer, born 2000)|Marcos Antônio]]}}
+|{{fbaicon|ITA}} [[S.S. Lazio|Lazio]]
+|End of loan
+|{{dts|30 June 2024}}
+|
+|-
+|align=center|16
+|align=center|{{sort|-|DF}}
+|{{sort|Kędziora, Tomasz|{{flagicon|POL}} [[Tomasz Kędziora]]}}
+|{{fbaicon|UKR}} [[FC Dynamo Kyiv|Dynamo Kyiv]]
+|End of loan
+|{{dts|30 June 2024}}
+|
+|-
+|align=center|8
+|align=center|{{sort|5|MF}}
+|{{sort|Meïté, Soualiho|{{flagicon|FRA}} [[Soualiho Meïté]]}}
+|{{fbaicon|POR}} [[S.L. Benfica|Benfica]]
+|End of loan
+|{{dts|30 June 2024}}
+|
+|-
+|align=center|95
+|align=center|{{sort|5|FW}}
+|{{sort|Tzimas, Stefanos|{{flagicon|GRE}} [[Stefanos Tzimas]]}}
+|{{fbaicon|GER}} [[1. FC Nürnberg|Nürnberg]]
+|Loan
+|{{dts|27 June 2024}}
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20240625-daneikos-sti-niremvergi-o-tzimas/| title=Tzimas joins Nürnberg on loan| date=27 June 2024 }}</ref>
+|-
+|align=center|
+|align=center|{{sort|5|MF}}
+|{{sort|Tzimas, Panagiotis|{{flagicon|GRE}} [[Panagiotis Tzimas]]}}
+|{{fbaicon|GRE}} [[Asteras Tripolis F.C.|Asteras Tripolis]]
+|Free transfer
+|{{dts|29 June 2024}}
+|<ref>{{cite web | url=https://www.paokfc.gr/nea/20240629-ston-astera-tripolis-o-panagiotis-tzimas/ | title=Στον Αστέρα Τρίπολης ο Παναγιώτης Τζίμας (translation: Panagiotis Tzimas to Asteras Tripolis) | date=29 June 2024 }}</ref>
+|-
+|align=center|50
+|align=center|{{sort|-|MF}}
+|{{sort|Soares, Filipe|{{flagicon|POR}} [[Filipe Soares (footballer, born 1999)|Filipe Soares]]}}
+|{{fbaicon|POR}} [[S.C. Farense|Farense]]
+|Loan
+|9 July 2024
+|<ref>{{cite web | url=https://www.paokfc.gr/nea/20240709-sti-farsense-o-filipe-soares/ | title=Στη Φαρένσε ο Φιλίπε Σοάρες (translation: Filipe Soares to Farense) | date=9 July 2024 }}</ref>
+|-
+|align=center|15
+|align=center|{{sort|-|DF}}
+|{{sort|Troost-Ekong, William|{{flagicon|NGA}} [[William Troost-Ekong]]}}
+|{{fbaicon|KSA}} [[Al-Kholood Club|Al-Kholood]]
+|€1.2M
+|23 August 2024
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20240823-thank-you-willy/ | title=Thank you, Willy | date=23 August 2023 }}</ref>
+|-
+|align=center|6
+|align=center|{{sort|5|MF}}
+|{{sort|Theocharis, Tsingaras|{{flagicon|GRE}} [[Theocharis Tsingaras]]}}
+|{{fbaicon|GRE}} [[Atromitos F.C.|Atromitos]]
+|Undisclosed fee + ?% resale
+|{{dts|26 August 2024}}
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20240826-thank-you-theequalizer/| title=Thank you, #TheEqualizer| date=26 August 2024 }}</ref>
+|-
+|align=center|64
+|align=center|{{sort|5|GK}}
+|{{sort|Talichmanidis, Christos|{{flagicon|GRE}} [[Christos Talichmanidis]]}}
+|{{fbaicon|GRE}} [[Makedonikos F.C.|Makedonikos]]
+|Loan
+|{{dts|26 August 2024}}
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20240826-ston-makedoniko-o-talichmanidis/ | title=Talichmanidis joins Makedonikos | date=26 August 2024 }}</ref>
+|-
+|align=center|4
+|align="center" |{{sort|5|DF}}
+|{{sort|Koulierakis, Konstantinos|{{flagicon|GRE}} [[Konstantinos Koulierakis]]}}
+|{{fbaicon|GER}} [[VfL Wolfsburg|Wolfsburg]]
+|€11.75M
+|{{dts|29 August 2024}}
+|<ref>{{cite news|publisher=Vfl Wolfsburg|url=https://www.vfl-wolfsburg.de/en/newsdetails/news-detail/detail/news/wolves-seal-koulierakis-signing|title=Wolves seal Koulierakis signing|date=20 August 2024|access-date=30 August 2024}}</ref>
+|-
+|align=center|
+|align=center|{{sort|5|DF}}
+|{{sort|Lyratzis, Lefteris|{{flagicon|GRE}} [[Lefteris Lyratzis]]}}
+|{{fbaicon|NED}} [[NEC Nijmegen|NEC]]
+|Loan
+|{{dts|2 September 2024}}
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20240902-sti-nijmegen-o-lyratzis/ | title=Lyratzis moves to Nijmegen | date=2 September 2024 }}</ref>
+|-
+|align=center|55
+|align=center|{{sort|-|DF}}
+|{{sort|Soares, Rafa|{{flagicon|POR}} [[Rafa Soares]]}}
+|{{fbaicon|POR}} [[F.C. Famalicão|Famalicão]]
+|Transfer
+|{{dts|2 September 2024}}
+||<ref>{{cite web | url=https://www.paokfc.gr/en/news/20240902-thank-you-rafa/ | title=Thank you, Rafa| date=2 September 2024 }}</ref>
+|-
+|align=center|3
+|align=center|{{sort|-|DF}}
+|{{sort|Näsberg, Ivan|{{flagicon|NOR}} [[Ivan Näsberg]]}}
+|{{fbaicon|DEN}} [[Viborg FF|Viborg]]
+|Transfer
+|{{dts|2 September 2024}}
+||<ref>{{cite web | url=https://www.paokfc.gr/en/news/20240902-thank-you-ivan/ | title=Thank you, Ivan| date=2 September 2024 }}</ref>
+|-
+|align=center|31
+|align=center|{{sort|-|MF}}
+|{{sort|Ricardo, André|{{flagicon|POR}} [[André Ricardo]]}}
+|{{fbaicon|POR}} [[G.D. Chaves|Chaves]]
+|Loan
+|{{dts|2 September 2024}}
+||<ref>{{cite web | url=https://www.paokfc.gr/en/news/20240830-stin-chaves-o-andre-ricardo/ | title=André Ricardo joins Chaves| date=2 September 2024 }}</ref>
+|-
+|align=center|10
+|align=center|{{sort|5|MF}}
+|{{sort|Murg, Thomas|{{flagicon|AUT}} [[Thomas Murg]]}}
+|{{fbaicon|KSA}} [[Al-Khaleej FC|Al-Khaleej]]
+|Loan
+|{{dts|30 January 2025}}
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20250130-daneikos-stin-al-khaleej-o-murg/| title=Murg joins Al-Khaleej on loan| date=30 January 2025 }}</ref>
+|-
+|align=center|34
+|align=center|{{sort|5|FW}}
+|{{sort|Tissoudali, Tarik|{{flagicon|MAR}} [[Tarik Tissoudali]]}}
+|{{fbaicon|UAE}} [[Khor Fakkan Club|Khor Fakkan]]
+|Loan
+|{{dts|2 February 2025}}
+|
+|-
+|align=center|95
+|align=center|{{sort|5|FW}}
+|{{sort|Tzimas, Stefanos|{{flagicon|GRE}} [[Stefanos Tzimas]]}}
+|{{fbaicon|GER}} [[1. FC Nürnberg|Nürnberg]]
+|€18M + 15% resale
+|{{dts|3 February 2025}}
+|<ref>{{cite web | url=https://www.paokfc.gr/en/news/20250203-euxaristoume-stefane/| title=Thank you Stefanos!| date=3 February 2025 }}</ref>
+|-
+
+! colspan="6" | Total
+! colspan="2" | {{ntsh|0.0}} € 30,950,000.00
+|}
+{{notelist-ua}}
+
+==Pre-season and other friendlies==
+
+{{legend2|#CCFFCC|Win|border=1px solid #AAAAAA}}
+{{legend2|#FFFFCC|Draw|border=1px solid #AAAAAA}}
+{{legend2|#FFCCCC|Loss|border=1px solid #AAAAAA}}
+
+{{Football box collapsible
+|round = [[Exhibition game#Association football|Friendly]]
+|date = Wednesday, 3 July 2024
+|time = 19:00 [[Eastern European Summer Time|EEST]], [[UTC+03:00]]
+|team1 = PAOK
+|score = 2–1
+|report = 
+|team2 = [[AEK Larnaca FC|AEK Larnaca]]
+|goals1 =
+* [[Stefan Schwab|Schwab]] {{goal|28}}
+* [[Thomas Murg|Murg]] {{goal|39}} 
+|goals2 =
+* {{goal|54}}
+|stadium = Multifunctionale accomodatie "De Kerkebos"
+|location = [[Horst aan de Maas|Swolgen]] 
+|attendance = 
+|referee = 
+|result = W
+}}
+{{Footballbox collapsible
+|round = [[Exhibition game#Association football|Friendly]]
+|date = Saturday, 6 July 2024
+|time = 17:00 [[Eastern European Summer Time|EEST]], [[UTC+03:00]]
+|team1 = PAOK
+|score = 0–1
+|report = 
+|team2 = [[Hibernian F.C.|Hibernian]]
+|goals1 = 
+|goals2 = {{goal|5}}
+|stadium = Multifunctionale accomodatie "De Kerkebos"
+|location = [[Horst aan de Maas|Swolgen]] 
+|attendance =
+|referee = 
+|result = L
+}}
+{{Football box collapsible
+|round = [[Exhibition game#Association football|Friendly]]
+|date = Wednesday, 10 July 2024
+|time = 19:00 [[Eastern European Summer Time|EEST]], [[UTC+03:00]]
+|team1 = PAOK 
+|score = 1–3
+|report = 
+|team2 = [[K.R.C. Genk|Genk]]
+|goals1 = [[Abdul Rahman Baba|Baba]] {{goal|49}}
+|goals2 = {{goal|6}}, {{goal|10}}, {{goal|85}}
+|stadium = Sportpark Ter Horst
+|location = [[Horst aan de Maas|Horst]]
+|attendance = 
+|referee =
+|result = L
+|note = Two-hour game consisting of four 30 minute quarters
+}}
+{{Footballbox collapsible
+|round = [[Exhibition game#Association football|Friendly]]
+|date = Saturday, 13 July 2024
+|time = 15:00 [[Eastern European Summer Time|EEST]], [[UTC+03:00]]
+|team1 = PAOK 
+|score = 1–2
+|report = 
+|team2 = [[Royale Union Saint-Gilloise|Union Saint-Gilloise]]
+|goals1 = [[Stefan Schwab|Schwab]] {{goal|27|pen.}}
+|goals2 = {{goal|50}}, {{goal|66}}
+|stadium = Sportpark Ter Horst
+|location = [[Horst aan de Maas|Horst]]
+|attendance =
+|referee = 
+|result = L
+}}
+{{Footballbox collapsible
+|round = [[Exhibition game#Association football|Friendly]]
+|date = Saturday, 13 July 2024
+|time = 20:00 [[Eastern European Summer Time|EEST]], [[UTC+03:00]]
+|team1 = PAOK 
+|score = 1–2
+|report = 
+|team2 = [[SBV Vitesse|Vitesse]]
+|goals1 = [[Mbwana Samatta|Samatta]] {{goal|11}}
+|goals2 = {{goal|51}}, {{goal|54}}
+|stadium = Sportpark RKSV Driel 
+|location = Driel
+|attendance =
+|referee = 
+|result = L
+}}
+
+==Competitions==
+===Overview===
+
+{{Fb overview2
+|c=4
+|c1=[[2024–25 Super League Greece|Super League Greece]] |fm1= 17 August 2024 |lm1=  11 May 2025 |sr1=Matchday 1 |fp1= |w1=18 |d1=4 |l1=10 |f1=62 |a1=37
+|c2=[[2024–25 Greek Football Cup|Greek Football Cup]]   |fm2= 30 October 2024 |lm2= 9 January 2025 |sr2= Round of 16 |fp2= |w2=2 |d2=1 |l2=1 |f2=11 |a2=3
+|c3=[[2024–25 UEFA Champions League|Champions League]] |fm3= 24 July 2024 |lm3= 13 August 2024 |sr3=Second qualifying round |fp3= |w3=2 |d3=1 |l3=1 |f3=9 |a3=8
+|c4=[[2024–25 UEFA Europa League|Europa League]] |fm4= 22 August 2024 |lm4= 20 February 2025 |sr4=Play-off round |fp4= |w4=5 |d4=1 |l4=6 |f4=19 |a4=14
+|u=
+|s=[https://www.soccerway.com/team/paok/Kry6HxA9/ Soccerway]
+|d=|ga1=|ga4=|ga=|Ga4=|gd4=}}
+
+===Managerial statistics===
+
+{| class="wikitable" style="text-align: left"
+|+ 
+|-
+!rowspan=2|Head coach
+!rowspan=2|From
+!rowspan=2|To
+!colspan=8|Record
+|-
+!{{Tooltip|G|Games managed}}
+!{{Tooltip|W|Games won}}
+!{{Tooltip|D|Games drawn}}
+!{{Tooltip|L|Games lost}}
+!{{Tooltip|GF|Goals for}}
+!{{Tooltip|GA|Goals against}}
+!{{Tooltip|GD|Goal difference}}
+!{{Tooltip|Win %|Winning percentage}}
+|-
+| {{flagicon|ROM}} [[Răzvan Lucescu]]
+| 1 July 2024
+| Present
+{{WDL||27|7|18|for=101|against=62|diff=yes}}
+|}
+Last updated: 11 May 2025
+
+===Super League Greece===
+{{main|2024–25 Super League Greece}}
+
+====League table====
+{{2024–25 Super League Greece table|showteam=PAOK}}
+
+====Matches====
+
+{{footballbox collapsible
+|round = 1
+|date = Saturday, 17 August 2024
+|time = 20:00 [[Eastern European Time|EEST]], [[UTC+03:00]]
+|team1 = [[PAOK FC|PAOK]] 
+|score = 3–2
+|report = https://www.slgr.gr/el/game/2425007/
+|team2 = [[Panserraikos F.C.|Panserraikos]]
+|goals1 = 
+* [[Stefan Schwab|Schwab]] {{goal|35|pen.}},  {{goal|60|pen.}}
+* [[Magomed Ozdoyev|Ozdoyev]] {{yel|45}}, {{goal|45+3}}
+|goals2 = {{goal|31|pen.}}, {{goal|49}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 7,668
+|referee = Vasilis Fotias ([[Pella Football Clubs Association|Pella]])
+|result = W
+|motm = 
+}}
+{{footballbox collapsible
+|round = 2
+|date = Sunday, 25 August 2025
+|time = 20:30 [[Eastern European Time|EEST]], [[UTC+03:00]] 
+|team1 = PAOK
+|score = 2–0
+|report = https://www.slgr.gr/el/game/2425014/
+|team2 =  [[Panetolikos F.C.|Panetolikos]]
+|goals1 = 
+* [[Giannis Michailidis|Michailidis]] {{yel|38}}
+* [[Joan Sastre (footballer)|Sastre]] {{goal|51}}
+* [[Mady Camara|Camara]] {{yel|63}}
+* [[Tarik Tissoudali|Tissoudali]] {{goal|79}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 10,171
+|referee = Christos Vergetis ([[Arcadia Football Clubs Association|Arcardia]])
+|result = W
+|motm = 
+}}
+{{footballbox collapsible
+|round = 3
+|date = Sunday, 1 September 2024
+|time = 20:30 [[Eastern European Time|EEST]], [[UTC+03:00]] 
+|team1 = [[Atromitos F.C.|Atromitos]] 
+|score = 1–2
+|report = https://www.slgr.gr/el/game/2425017/
+|team2 = PAOK
+|goals1 = {{goal|85|pen.}}
+|goals2 = 
+* {{goal|45}}, {{yel|85}} [[Andrija Živković|A. Živković]]
+* {{yel|69}} [[Baba Rahman|Baba]]
+* {{goal|90}} [[Mady Camara|Camara]] 
+* {{yel|90+5}} [[Tarik Tissoudali|Tissoudali]] 
+|stadium = [[Peristeri Stadium]]
+|location = [[Peristeri]]
+|attendance = 2,573
+|referee = Spiridon Zabalas ([[Epirus Football Clubs Association|Epirus]])
+|result = W
+|motm =
+}}
+{{footballbox collapsible
+|round = [[Panathinaikos-PAOK rivalry|4]]
+|date = Sunday, 15 September 2024
+|time = 20:30 [[Eastern European Time|EEST]], [[UTC+03:00]] 
+|team1 = PAOK
+|score = [[Panathinaikos-PAOK rivalry|0–0]]
+|report = https://www.slgr.gr/el/game/2425027/
+|team2 =  [[Panathinaikos F.C.|Panathinaikos]]
+|goals1 = 
+* [[Andrija Živković|A. Živković]] {{yel|36}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 18,511
+|referee = [[Slavko Vinčić]] ([[Football Association of Slovenia|Slovenia]])
+|result = D
+|motm = 
+}}
+{{footballbox collapsible
+|round = 5
+|date = Saturday, 21 September 2024
+|time = 17:00 [[Eastern European Time|EEST]], [[UTC+03:00]] 
+|team1 = [[Volos F.C.|Volos]]
+|score = 1–4
+|report = https://www.slgr.gr/el/game/2425032/
+|team2 = PAOK
+|goals1 = 
+* {{penmiss}} <small>3'</small>
+* {{sentoff|2|23|34}} 
+* {{goal|56}} 
+|goals2 = 
+* {{yel|20}} [[Baba Rahman|Baba]]
+* {{goal|24|pen.}} [[Stefan Schwab|Schwab]] 
+* {{goal|54}} [[Thomas Murg|Murg]]
+* {{goal|60}} [[Taison]]
+* {{goal|89}} [[Fyodor Chalov|Chalov]]
+|stadium = [[Panthessaliko Stadium]]
+|location = [[Volos]]
+|attendance = 3,186
+|referee = Petros Tsagarakis ([[Chania]])
+|result = W
+|motm =
+}}
+{{footballbox collapsible
+|round = [[Derby of Thessaloniki|6]]
+|date = Sunday, 29 September 2024
+|time = 20:30 [[Eastern European Time|EEST]], [[UTC+03:00]] 
+|team1 = PAOK
+|score =  [[Derby of Thessaloniki|0–1]]
+|report = https://www.slgr.gr/el/game/2425041/
+|team2 = [[Aris Thessaloniki F.C.|Aris]]
+|goals1 = 
+* [[Giannis Michailidis|Michailidis]] {{yel|20}}
+* [[Baba Rahman|Baba]] {{yel|55}} 
+|goals2 = {{goal|63}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 19,282
+|referee = [[Harm Osmers]] ([[German Football Association|Germany]]) 
+|result = L
+|motm = 
+}}
+{{footballbox collapsible
+|round = 7
+|date = Sunday, 6 October 2024
+|time = 19:00 [[Eastern European Time|EEST]], [[UTC+03:00]] 
+|team1 = [[Levadiakos F.C.|Levadiakos]] 
+|score = 0–2
+|report = https://www.slgr.gr/el/game/2425046/
+|team2 = PAOK
+|goals1 = * {{penmiss}} <small>70'</small>
+|goals2 = 
+* {{yel|29}} [[Jonny Otto|Jonny]] 
+* {{yel|41}} [[Jonathan Gómez (footballer, born 2003)|Gómez]] 
+* {{yel|63}} [[Dejan Lovren|Lovren]] 
+* {{yel|67}}, {{goal|90+2|pen.}} [[Stefan Schwab|Schwab]] 
+* {{goal|86}} [[Mady Camara|Camara]] 
+* {{yel|88}} [[Vieirinha]] 
+|stadium = [[Levadia Municipal Stadium]]
+|location = [[Livadeia]]
+|attendance = 1,012
+|referee = Christos Vergetis ([[Arcadia Football Clubs Association|Arcardia]])
+|result = W
+|motm =
+}}
+{{footballbox collapsible
+|round = [[Double-headed eagles derby|8]]
+|date = Sunday, 20 October 2024
+|time = 20:30 [[Eastern European Time|EEST]], [[UTC+03:00]] 
+|team1 = [[AEK Athens F.C.|AEK]] 
+|score = [[Double-headed eagles derby|1–1]]
+|report = https://www.slgr.gr/el/game/2425050/
+|team2 = PAOK
+|goals1 = {{goal|25}}
+|goals2 =
+* {{goal|15}} [[Baba Rahman|Baba]]
+* {{yel|54}} [[Magomed Ozdoyev|Ozdoyev]]
+|stadium = [[Agia Sophia Stadium]]
+|location = [[Nea Filadelfeia]]
+|attendance = 30,950
+|referee = [[Rade Obrenović]] ([[Football Association of Slovenia|Slovenia]])
+|result = D
+|motm =
+}}
+{{footballbox collapsible
+|round = 9
+|date = Sunday, 27 October 2024
+|time = 21:00 [[Eastern European Time|EET]], [[UTC+02:00]] 
+|team1 = PAOK
+|score = 1–2
+|report = https://www.slgr.gr/el/game/2425063/
+|team2 = [[OFI Crete F.C.|OFI]]
+|goals1 = 
+* [[Kiril Despodov|Despodov]] {{goal|35}}
+* [[Giannis Konstantelias|Konstantelias]] {{yel|42}}
+* [[Jonny Otto|Jonny]] {{yel|58}}
+* [[Jonathan Gómez (footballer, born 2003)|Gómez]] {{yel|78}}
+* [[Mady Camara|Camara]] {{yel|88}}
+|goals2 = {{goal|77}}, {{goal|79}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 12,419
+|referee = Alexandros Tsakalidis ([[Chalkidiki Football Clubs Association|Chalkidiki]])
+|result = L
+|motm = 
+}}
+{{footballbox collapsible
+|round = 10
+|date = Sunday, 3 November 2024
+|time = 20:30 [[Eastern European Time|EET]], [[UTC+02:00]] 
+|team1 = [[PAS Lamia 1964|Lamia]] 
+|score = 1–2
+|report = https://www.slgr.gr/el/game/2425070/
+|team2 = PAOK
+|goals1 = {{goal|33}}
+|goals2 = 
+* {{goal|59}} [[Andrija Živković|A. Živković]]
+* {{goal|75}}[[Tarik Tissoudali|Tissoudali]] 
+* {{yel|90+1}} [[Mady Camara|Camara]] 
+|stadium = [[Lamia Municipal Stadium]]
+|location = [[Lamia (city)|Lamia]]
+|attendance = 1,412
+|referee = Stavros Tsimenteridis ([[Kozani Football Clubs Association|Kozani]])
+|result = W
+|motm =
+}}
+{{footballbox collapsible
+|round =  [[Olympiacos–PAOK rivalry|11]]
+|date = Sunday, 10 November 2024
+|time = 20:30 [[Eastern European Time|EET]], [[UTC+02:00]] 
+|team1 = PAOK
+|score = [[Olympiacos–PAOK rivalry|2–3]]
+|report = https://www.slgr.gr/el/game/2425077/
+|team2 = [[Olympiacos F.C.|Olympiacos]]
+|goals1 = 
+* [[Timoué Bakayoko|Bakayoko]] {{yel|35}}
+* [[Baba Rahman|Baba]] {{goal|59}}
+* [[Mady Camara|Camara]] {{yel|61}}
+* {{goal|81|o.g.}}
+|goals2 = {{goal|32}}, {{goal|50}}, {{goal|69}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 21,684
+|referee = [[Sven Jablonski]] ([[German Football Association|Germany]])
+|result = L
+|motm = 
+}}
+{{footballbox collapsible
+|round = 12
+|date = Sunday, 24 November 2024
+|time = 19:30 [[Eastern European Time|EET]], [[UTC+02:00]] 
+|team1 = [[Asteras Tripolis F.C.|Asteras Tripolis]]
+|score = 1–2
+|report = https://www.slgr.gr/el/game/2425078/
+|team2 = PAOK
+|goals1 = {{goal|50}}
+|goals2 =
+* {{yel|31}} [[Andrija Živković|A. Živković]]
+* {{goal|68|o.g.}}
+* {{goal|85}} [[Baba Rahman|Baba]]
+|stadium = [[Theodoros Kolokotronis Stadium]]
+|location = [[Tripoli, Greece|Tripoli]]
+|attendance = 1,855
+|referee = Konstantinos Katoikos ([[Athens Football Clubs Association|Athens]])
+|result = W
+|motm =
+}}
+{{footballbox collapsible
+|round = 13
+|date = Sunday, 1 December 2024
+|time = 19:00 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = PAOK
+|score = 2–2
+|report = https://www.slgr.gr/el/game/2425091/
+|team2 = [[Athens Kallithea F.C.|Athens Kallithea]]
+|goals1 =
+* [[Giannis Konstantelias|Konstantelias]] {{goal|21}}
+* [[Omar Colley|Colley]] {{yel|51}} 
+* [[Kiril Despodov|Despodov]] {{goal|82}}
+|goals2 = {{goal|59}}, {{goal|90+1}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 4,742
+|referee = Athanasios Tzilos ([[Larissa Football Clubs Association|Larissa]])
+|result = D
+|motm = 
+}}
+{{footballbox collapsible
+|round = 14
+|date = Sunday, 8 December 2024
+|time = 15:30 [[Eastern European Time|EET]], [[UTC+02:00]] 
+|team1 = [[Panserraikos F.C.|Panserraikos]]
+|score = 1–4
+|report = https://www.slgr.gr/el/game/2425097/
+|team2 = PAOK
+|goals1 = 
+* {{sentoff|2|18|19}}
+* {{goal|76}}
+|goals2 =
+* {{goal|4|o.g.}}
+* {{yel|32}}, {{goal|36}} [[Kiril Despodov|Despodov]]
+* {{goal|66}} [[Baba Rahman|Baba]]
+* {{goal|87}} [[Shola Shoretire|Shoretire]]
+|stadium = [[Serres Municipal Stadium]]
+|location = [[Serres]]
+|attendance = 4,971
+|referee = Christos Vergetis ([[Arcadia Football Clubs Association|Arcadia]])
+|result = W
+|motm =
+}}
+{{footballbox collapsible
+|round = 15
+|date = Sunday, 15 December 2024
+|time = 17:00 [[Eastern European Time|EET]], [[UTC+02:00]] 
+|team1 = [[Panetolikos F.C.|Panetolikos]] 
+|score = 0–1
+|report = https://www.slgr.gr/el/game/2425104/
+|team2 = PAOK
+|goals1 = 
+* {{penmiss}} <small>23'</small>
+|goals2 = 
+*  {{yel|36}} [[Tomasz Kędziora|Kędziora]]
+*  {{yel|76}} [[Giannis Konstantelias|Konstantelias ]]
+*  {{goal|87}}, {{yel|90+1}} [[Mady Camara|Camara]]
+|stadium = [[Panetolikos Stadium]]
+|location = [[Agrinio]]
+|attendance = 2,087
+|referee = Alexandros Tsakalidis ([[Chalkidiki Football Clubs Association|Chalkidiki]])
+|result = W
+|motm = 
+}}
+{{footballbox collapsible
+|round = 16
+|date = Sunday, 22 December 2024
+|time = 19:30 [[Eastern European Time|EET]], [[UTC+02:00]] 
+|team1 = PAOK
+|score = 3–0
+|report = https://www.slgr.gr/el/game/2425112/
+|team2 = [[Atromitos F.C.|Atromitos]]
+|goals1 =  
+* [[Kiril Despodov|Despodov]] {{yel|28}}
+* [[Baba Rahman|Baba]] {{goal|45+2}} 
+* [[Andrija Živković|A. Živković]] {{goal|49}}
+* [[Giannis Michailidis|Michailidis]] {{yel|57}}
+* [[Mady Camara|Camara]] {{goal|89}} 
+|goals2 = 
+* {{sentoff|0|21}} 
+* {{penmiss}} <small>59'</small>
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 17,275
+|referee = Vasilis Fotias ([[Pella Football Clubs Association|Pella]])
+|result = W
+|motm = 
+}}
+{{footballbox collapsible
+|round = [[Panathinaikos-PAOK rivalry|17]]
+|date = Sunday, 5 January 2025
+|time = 20:30 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[Panathinaikos F.C.|Panathinaikos]] 
+|score =  [[Panathinaikos-PAOK rivalry|2–1]]
+|report = https://www.slgr.gr/el/game/2425118/
+|team2 = PAOK
+|goals1 = {{goal|12}}, {{goal|90}}
+|goals2 = 
+* {{goal|2}} [[Andrija Živković|Živković]]
+* {{sentoff|2|45+3|60}} [[Baba Rahman|Baba]]
+* {{yel|83}} [[Stefan Schwab|Schwab]]
+* {{yel|83}} [[Dejan Lovren|Lovren]]
+* {{yel|90+5}} [[Shola Shoretire|Shoretire]]
+|stadium = [[Olympic Stadium (Athens)|Athens Olympic Stadium]]
+|location = [[Marousi]]
+|attendance = [[Behind closed doors (football)|Behind closed doors]]
+|referee = [[Morten Krogh (referee)|Morten Krogh]] ([[Danish Football Association|Denmark]]) 
+|result = L
+|motm =
+}}
+{{footballbox collapsible
+|round = 18
+|date = Sunday, 12 January 2025
+|time = 19:30 [[Eastern European Time|EET]], [[UTC+02:00]] 
+|team1 = PAOK
+|score = 1–2 
+|report = https://www.slgr.gr/el/game/2425125/
+|team2 =  [[Volos F.C.|Volos]]
+|goals1 =
+* [[Vieirinha]] {{yel|5}}
+* [[Mady Camara|Camara]] {{goal|69}}, {{yel|85}} 
+|goals2 = {{goal|90+2}}, {{goal|90+4}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 4,819
+|referee = Fotis Polichronis ([[Pieria Football Clubs Association|Pieria]])
+|result = L
+|motm = 
+}}
+{{footballbox collapsible
+|round = [[Derby of Thessaloniki|19]]
+|date = Sunday, 19 January 2025
+|time = 19:00 [[Eastern European Time|EET]], [[UTC+02:00]] 
+|team1 = [[Aris Thessaloniki F.C.|Aris]] 
+|score = [[Derby of Thessaloniki|0–0]]
+|report = https://www.slgr.gr/el/game/2425128/
+|team2 = PAOK
+|goals1 =
+|goals2 = 
+*  {{yel|90+1}} [[Tomasz Kędziora|Kędziora]]
+|stadium = [[Kleanthis Vikelidis Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 10,558
+|referee = [[Sascha Stegeman]] ([[German Football Association|Germany]])
+|result = D
+|motm =
+}}
+{{footballbox collapsible
+|round = 20
+|date = Sunday, 26 January 2025
+|time = 19:30 [[Eastern European Time|EET]], [[UTC+02:00]] 
+|team1 = PAOK
+|score = 1–0
+|report = https://www.slgr.gr/el/game/2425139/
+|team2 = [[Levadiakos F.C.|Levadiakos]]
+|goals1 =
+* [[Mady Camara|Camara]] {{goal|82}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 11,559
+|referee = Alexandros Katsikogiannis ([[Epirus Football Clubs Association|Epirus]])
+|result = W
+|motm =
+}}
+{{footballbox collapsible
+|round =  [[Double-headed eagles derby|21]]
+|date = Sunday, 2 February 2025
+|time = 19:30 [[Eastern European Time|EET]], [[UTC+02:00]] 
+|team1 = [[PAOK FC|PAOK]]
+|score = [[Double-headed eagles derby|1–2]]
+|report = https://www.slgr.gr/el/game/2425147/
+|team2 = [[AEK Athens F.C.|AEK]]
+|goals1    = 
+*[[Jonny Otto|Jonny]] {{yel|35}}
+*[[Mady Camara|Camara]] {{yel|45+2}}
+*[[Baba Rahman|Baba]] {{goal|52}}
+*[[Dimitrios Pelkas|Pelkas]] {{yel|90+6}}
+|goals2     = {{goal|37||48}}
+|stadium    = [[Toumba Stadium]]
+|location   = [[Thessaloniki]]
+|attendance = 22,150
+|referee    = [[Felix Zwayer]] ([[German Football Association|Germany]])
+|result = L
+|motm = 
+}}
+{{footballbox collapsible
+|round = 22
+|date = Saturday, 8 February 2025
+|time = 20:00 [[Eastern European Time|EET]], [[UTC+02:00]] 
+|team1 = [[OFI Crete F.C.|OFI]] 
+|score = 0–5
+|report = https://www.slgr.gr/el/game/2425153/
+|team2 = PAOK
+|goals1 = * {{sentoff|0|12}}
+|goals2 =  
+* {{goal|2||67}} [[Mbwana Samatta|Samatta]] 
+* {{yel|5}} [[Shola Shoretire|Shoretire]]
+* {{goal|8}} [[Dimitrios Pelkas|Pelkas]]
+* {{goal|30|pen.}} [[Stefan Schwab|Schwab]] 
+* {{yel|43}}, {{goal|58}} [[Giannis Michailidis|Michailidis]]
+* {{yel|88}} [[Mateusz Wieteska|Wieteska]]
+|stadium = [[Theodoros Vardinogiannis Stadium]]
+|location = [[Heraklion]]
+|attendance = 4,684
+|referee = Fotis Polychronis ([[Pieria Football Clubs Association|Pieria]])
+|result = W
+|motm =
+}}
+{{footballbox collapsible
+|round = 23
+|date = Sunday, 16 February 2025
+|time = 20:00 [[Eastern European Time|EET]], [[UTC+02:00]] 
+|team1 = PAOK
+|score = 7–0
+|report = https://www.slgr.gr/el/game/2425161/
+|team2 = [[PAS Lamia 1964|Lamia]]
+|goals1 = 
+* [[Magomed Ozdoyev|Ozdoyev]] {{yel|16}}
+* [[Mbwana Samatta|Samatta]] {{goal|25}}
+* [[Giannis Konstantelias|Konstantelias]] {{goal|37||51||58}}
+* [[Fyodor Chalov|Chalov]] {{goal|72}} 
+* [[Andrija Živković|A. Živković]] {{goal|86}}  
+* [[Shola Shoretire|Shoretire]] {{goal|90+2}} 
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 7,672
+|referee = Konstantinos Katoikos ([[Athens Football Clubs Association|Athens]])
+|result = W
+|motm = 
+}}
+{{footballbox collapsible
+|round = [[Olympiacos–PAOK rivalry|24]]
+|date = Sunday, 23 February 2025
+|time = 20:30 [[Eastern European Time|EET]], [[UTC+02:00]] 
+|team1 = [[Olympiacos F.C.|Olympiacos]] 
+|score = [[Olympiacos–PAOK rivalry|2–1]]
+|report = https://www.slgr.gr/el/game/2425167/
+|team2 = PAOK
+|goals1 = 
+* {{goal|6}}
+* {{goal|31}}
+|goals2 = 
+*[[Mady Camara|Camara]] {{goal|24}}
+*[[Giannis Konstantelias|Konstantelias]] {{yel|33}}
+*[[Joan Sastre (footballer)|Sastre]] {{yel|45+3}}
+|stadium = [[Karaiskakis Stadium]]
+|location = [[Piraeus]]
+|attendance = 32,431
+|referee = [[Tobias Stieler]] ([[German Football Association|Germany]])
+|result = L
+|motm =
+
+}}
+{{footballbox collapsible
+|round = 25
+|date = Sunday, 2 March 2025
+|time = 19:30 [[Eastern European Time|EET]], [[UTC+02:00]] 
+|team1 = PAOK
+|score = 2–0
+|report = https://www.slgr.gr/el/game/2425175/
+|team2 = [[Asteras Tripolis F.C.|Asteras Tripolis]]
+|goals1 = 
+* [[Taison]] {{goal|24}}
+* [[Mbwana Samatta|Samatta]] {{goal|51}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 9,121
+|referee = [[Anastasios Sidiropoulos]] ([[Dodecanese Football Clubs Association|Dodecanese]])
+|result = W
+|motm =
+}}
+{{footballbox collapsible
+|round = 26
+|date = Sunday, 9 March 2025
+|time = 19:00 [[Eastern European Time|EET]], [[UTC+02:00]] 
+|team1 = [[Athens Kallithea F.C.|Athens Kallithea]]
+|score = 2–1
+|report = https://www.slgr.gr/el/game/2425177/
+|team2 = PAOK
+|goals1 = 
+* {{goal|14}}
+* {{penmiss}} <small>45+1'</small>
+* {{goal|90}}
+|goals2 =
+* {{goal|2}} [[Kiril Despodov|Despodov]]
+|stadium = [[Leoforos Alexandras Stadium]]
+|location = [[Ampelokipoi, Athens|Ampelokipoi]]
+|attendance = 401
+|referee = Konstantinos Katoikos ([[Athens Football Clubs Association|Athens]])
+|result = L
+|motm =
+}}
+
+====Results by round====
+{{#invoke:sports rbr table|table|legendpos=b
+| updated=
+| header=Round
+| label1=Ground
+| res1= H/H/A/H/A/H/A/A/H/A/H/A/H/A/A/H/A/H/A/H/H/A/H/A/H/A
+| label2=Result
+| res2= W/W/W/D/W/L/W/D/L/W/L/W/D/W/W/W/L/L/D/W/L/W/W/L/W/L
+| label3=Position
+| pos3= 3/1/2/3/1/3/1/2/2/2/4/2/3/3/3/2/4/4/4/4/4/4/4/4/4/4
+| color_W=green2|text_W=Win
+| color_D=yellow2|text_D=Draw
+| color_L=red2|text_L=Loss
+| text_H=Home|text_A = Away
+|color_1=1st|color_2=2nd|color_3=3rd|color_18-=red1
+| source=
+}}
+
+====Results summary====
+{{Fb_rs |hw=6 |hd=2 |hl=5 |hgf=25 |hga=14 |aw=8 |ad=2 |al=3 |agf=26 |aga=12 }}
+{{Fb_rs footer|u=|s= |date=March 2025}}
+
+==Play-off round==
+The top four teams from Regular season will meet twice (6 matches per team) for places in [[2025–26 UEFA Champions League]], [[2025–26 UEFA Europa Conference League]] and potentially [[2025–26 UEFA Europa League]] (depending on [[2024–25 Greek Football Cup|this season's Greek Cup]]), as well as deciding the league champion.
+
+{{:2024–25 Super League Greece|transcludesection=Championship play-offs|show_matches=n|showteam=PAOK}}
+
+===Results summary===
+{{Fb_rs |hw= 3 |hd=0 |hl=0 |hgf=5 |hga=2 |aw=1 |ad=0 |al=2 |agf=6 |aga=9 }}
+{{Fb_rs footer|u=|s= |date=July 2022}}
+
+===Results by round===
+{{#invoke:sports rbr table|table|legendpos=b|header=Round
+
+|label1= Ground
+| res1=A/H/A/H/A/H
+|label2= Result
+| res2= W/W/L/W/L/W
+|label3= Position
+| res3= 4/4/4/3/3/3
+<!-- -->
+|text_H=Home|text_A=Away
+|color_W=green2|text_W=Win
+|color_D=yellow2|text_D=Draw
+|color_L=red2|text_L=Loss
+|color_1=1st|color_2=2nd|color_3=3rd|color_18-=red1
+
+|updated={{Start date|2025|05|11|df=y}} 
+|source=[[#Matches|League matches]]
+|date=March 2025
+}}
+
+=== Matches ===
+
+{{footballbox collapsible
+|round = [[Double-headed eagles derby|1]]
+|date = Sunday, 30 March 2025
+|time =  19:00 [[Eastern European Summer Time|EEST]], [[UTC+03:00]] 
+|team1 = [[AEK Athens F.C.|AEK]]
+|score = [[Double-headed eagles derby|2–3]]
+|report = https://www.slgr.gr/en/game/2425101001/
+|team2 = [[PAOK FC|PAOK]] 
+|goals1 = {{goal|22|pen.}}, {{goal|47}}
+|goals2 = 
+* {{yel|9}} [[Giannis Michailidis|Michailidis]]
+* {{yel|20}} [[Dominik Kotarski|Kotarski]]
+* {{yel|25}} [[Tomasz Kędziora|Kędziora]]
+* {{goal|58}} [[Giannis Konstantelias|Konstantelias]]
+* {{goal|66}} [[Andrija Živković|A. Živković]]
+* {{yel|81}} [[Baba Rahman|Baba]]
+* {{goal|85}} [[Dimitrios Pelkas|Pelkas]]
+* {{yel|88}} [[Magomed Ozdoyev|Ozdoyev]]
+|stadium = [[Agia Sophia Stadium]]
+|location = [[Nea Filadelfeia]]
+|attendance = 25,433
+|referee = [[Felix Brych]] ([[German Football Association|Germany]])
+|result = W
+|motm = 
+}}
+
+{{footballbox collapsible
+|round = [[Olympiacos–PAOK rivalry|2]]
+|date = Sunday, 6 April 2025
+|time = 19:30 [[Eastern European Summer Time|EEST]], [[UTC+03:00]] 
+|team1 = [[PAOK FC|PAOK]] 
+|score = [[Olympiacos–PAOK rivalry|2–1]]
+|report = https://www.slgr.gr/el/game/2425102004/
+|team2 = [[Olympiacos F.C.|Olympiacos]]
+|goals1 = 
+*[[Giannis Konstantelias|Konstantelias]] {{goal|5}}
+*[[Magomed Ozdoyev|Ozdoyev]] {{yel|8}}
+*[[Mady Camara|Camara]] {{goal|11}}, {{sentoff|0|74}}
+*[[Dimitrios Pelkas|Pelkas]] {{yel|42}}
+*[[Andrija Živković|A. Živković]] {{yel|71}}
+|goals2 = {{goal|52}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]] 
+|attendance = 20,312
+|referee = [[Sascha Stegemann]] ([[German Football Association|Germany]])
+|result = W
+|motm = 
+}}
+{{footballbox collapsible
+|round = [[Panathinaikos-PAOK rivalry|3]]
+|date = Sunday, 13 April 2025
+|time = 19:00 [[Eastern European Summer Time|EEST]], [[UTC+03:00]] 
+|team1 = [[Panathinaikos F.C.|Panathinaikos]]
+|score = [[Panathinaikos-PAOK rivalry|3–1]]
+|report = https://www.slgr.gr/el/game/2425103006/
+|team2 = [[PAOK FC|PAOK]] 
+|goals1 = {{goal|33}}, {{goal|42}}, {{goal|50}}
+|goals2 = 
+* {{yel|21}} [[Fyodor Chalov|Chalov]]
+* {{yel|28}} [[Dimitrios Pelkas|Pelkas]]
+* {{goal|78}} [[Giannis Konstantelias|Konstantelias]]
+* {{yel|84}} [[Stefan Schwab|Schwab]]
+* {{yel|87}} [[Mbwana Samatta|Samatta]]
+* {{yel|90+4}} [[Magomed Ozdoye|Ozdoyev]]
+|stadium = [[Olympic Stadium (Athens)|Athens Olympic Stadium]]
+|location = [[Marousi]]
+|attendance = 14,350
+|referee = [[Felix Zwayer]] ([[German Football Association|Germany]])
+|result = L
+|motm = 
+}}
+{{footballbox collapsible
+|round = [[Panathinaikos-PAOK rivalry|4]]
+|date = Sunday, 27 April 2025
+|time = 20:00 [[Eastern European Summer Time|EEST]], [[UTC+03:00]]
+|team1 = [[PAOK FC|PAOK]] 
+|score = [[Panathinaikos-PAOK rivalry|2–1]]
+|report = https://www.slgr.gr/el/game/2425104008/
+|team2 = [[Panathinaikos F.C.|Panathinaikos]]
+|goals1 = 
+*[[Giannis Michailidis|Michailidis]] {{goal|35}}
+*[[Mady Camara|Camara]] {{goal|59}}
+*[[Jonny Otto|Jonny]] {{yel|71}}
+*[[Stefan Schwab|Schwab]] {{yel|88}}
+|goals2 = {{goal|3}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]] 
+|attendance = 18,275
+|referee = [[Harm Osmers]] ([[German Football Association|Germany]]) 
+|result = W
+|motm = 
+}}
+
+{{footballbox collapsible
+|round = [[Olympiacos–PAOK rivalry|5]]
+|date = Sunday, 4 May 2025
+|time = 20:00 [[Eastern European Summer Time|EEST]], [[UTC+03:00]]  
+|team1 = [[Olympiacos F.C.|Olympiacos]]
+|score = [[Olympiacos–PAOK rivalry|4–2]]
+|report = https://www.slgr.gr/el/game/2425105010/
+|team2 = [[PAOK FC|PAOK]] 
+|goals1 = {{goal|14}}, {{goal|30}}, {{goal|81}}, {{goal|87}}
+|goals2 =  
+* {{goal|1||32}} [[Andrija Živković|A. Živković]]
+|stadium = [[Karaiskakis Stadium]]
+|location = [[Piraeus]] 
+|attendance = 32,550
+|referee = [[Deniz Aytekin]] ([[German Football Association|Germany]])
+|result = L
+|motm = 
+}}
+
+{{footballbox collapsible
+|round = [[Double-headed eagles derby|6]]
+|date = Sunday, 11 May 2025
+|time = 20:00 [[Eastern European Summer Time|EEST]], [[UTC+03:00]] 
+|team1 = [[PAOK FC|PAOK]] 
+|score = [[Double-headed eagles derby|1–0]]
+|report = https://www.slgr.gr/en/game/2425106012/
+|team2 = [[AEK Athens F.C.|AEK]]
+|goals1 = 
+*[[Giannis Michailidis|Michailidis]] {{goal|45}}
+*[[Andrija Živković|A. Živković]] {{yel|69}}
+*[[Giannis Konstantelias|Konstantelias]] {{yel|84}}
+*[[Dominik Kotarski|Kotarski]] {{yel|90+6}}
+|goals2 = 
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]] 
+|attendance = 22,711
+|referee =  [[Sören Storks]] ([[German Football Association|Germany]])
+|result = W
+|motm = 
+}}
+
+===Greek Cup===
+{{main|2024–25 Greek Football Cup}}
+
+==== Round of 16 ====
+
+
+{{footballbox collapsible
+|round = [[2024–25 Greek Football Cup#Round of 16|1st leg]]
+|date = Wednesday, 30 October 2024
+|time = 15:30 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[Egaleo F.C.|Egaleo]]
+|score = 0–3
+|report = https://www.epo.gr/Competition.aspx?a_id=22582&NewsType=24&Competition=2689&Season=2000000273&Country=82&Team=16705&Round=2000000692
+|team2 = PAOK
+|goals1 =
+|goals2 =
+* {{goal|14}} [[Mady Camara|Camara]]
+* {{goal|39}} [[Shola Shoretire|Shoretire]] 
+* {{yel|47}} [[Tomasz Kędziora|Kędziora]] 
+* {{goal|54}} [[Thomas Murg|Murg]] 
+* {{sentoff|0|61}} [[Giannis Michailidis|Michailidis]] 
+|stadium = [[Stavros Mavrothalassitis Stadium]]
+|location = [[Aigaleo]]
+|attendance = 
+|referee = Panagiotis Tsiaras ([[Kavala Football Clubs Association|Kavala]])
+|result = W
+|motm =
+}}
+{{footballbox collapsible
+|round = [[2024–25 Greek Football Cup#Round of 16|2nd leg]]
+|date = Wednesday, 4 December 2024 
+|time = 15:30 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = PAOK
+|score = 7–1
+|aggregatescore = 10–1
+|report = https://www.epo.gr/Competition.aspx?a_id=22582&NewsType=24&Competition=2689&Season=2000000273&Country=82&Team=16705&Round=2000000692
+|team2 = [[Egaleo F.C.|Egaleo]]
+|goals1 =
+*[[Shola Shoretire|Shoretire]] {{goal|6}}
+*[[Tarik Tissoudali|Tissoudali]] {{goal|12||47||51}}
+*[[Andrija Živković|Živković]] {{goal|36}}
+*[[Taison]] {{goal|80}}
+*[[Brandon Thomas (footballer)|Brandon]] {{goal|81}}
+|goals2 = {{goal|23}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 
+|referee = Alexandros Katsikogiannis ([[Epirus Football Clubs Association|Epirus]])
+|result = W
+|motm =
+}}
+
+==== Quarter-finals ====
+
+{{footballbox collapsible
+|round = [[2024–25 Greek Football Cup#Quarter-finals|1st leg]]
+|date = Wednesday, 18 December 2024
+|time = 21:00 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = [[AEK Athens F.C.|AEK]]
+|score = [[Double-headed eagles derby|1–0]]
+|report = https://www.epo.gr/Competition.aspx?a_id=22582&NewsType=24&Competition=2689&Season=2000000273&Country=82&Team=16705&Round=2000000700
+|team2 = PAOK
+|goals1 = 
+* {{penmiss}} <small>22'</small>
+* {{goal|53}}
+|goals2 =
+* {{yel|21}} [[Dominik Kotarski|Kotarski]]
+* {{yel|79}}, {{sentoff|0|90+2}} [[Dejan Lovren|Lovren]]
+* {{yel|82}} [[Magomed Ozdoyed|Ozdoyev]]
+|stadium = [[Agia Sophia Stadium]]
+|location = [[Nea Filadelfeia]]
+|attendance = 27,612
+|referee = Simone Sozza ([[Italian Football Federation|Italy]])
+|result = L
+|motm =
+}}
+{{footballbox collapsible
+|round = [[2024-25 Greek Football Cup#Quarter-finals|2nd leg]]
+|date = Thursday, 9 January 2025
+|time = 19:30 [[Eastern European Time|EET]], [[UTC+02:00]]
+|team1 = PAOK
+|score = [[Double-headed eagles derby|1–1]]
+|aggregatescore = [[Double-headed eagles derby|1–2]]
+|report = https://www.epo.gr/Competition.aspx?a_id=22582&NewsType=24&Competition=2689&Season=2000000273&Country=82&Team=16705&Round=2000000700
+|team2 = [[AEK Athens F.C.|AEK]]
+|goals1 = 
+* [[Tomasz Kędziora|Kędziora]] {{yel|25}}
+* [[Andrija Živković|A. Živković]] {{goal|90+1}}, {{yel|90+3}}
+* [[Joan Sastre (footballer)|Sastre]] {{yel|94}}
+* [[Shola Shoretire|Shoretire]] {{yel|99}}
+|goals2 = {{goal|107}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]]
+|attendance = 22,837
+|referee    = Igor Pajač ([[Croatian Football Federation|Croatia]])
+|result = D
+|motm =
+|stack =
+}}
+
+===UEFA Champions League===
+{{main|2024–25 UEFA Champions League}}
+
+====Second qualifying round====
+{{main|1=2024–25 UEFA Champions League qualifying phase and play-off round}}
+
+{{Football box collapsible
+|round = [[2024–25 UEFA Champions League#Second qualifying round|First leg]] 
+|date       = {{Start date|2024|7|24|df=y}}
+|time       = 20:30 [[Eastern European Summer Time|EEST]]
+|team1      = PAOK {{flagicon|GRE}}
+|score      =3–2 
+|report = Report<ref>{{cite web |url=https://www.uefa.com/uefachampionsleague/match/2041060/ |title=PAOK vs Borac |website=[[UEFA]] |publisher=Union of European Football Associations |access-date=18 July 2024}}</ref>
+|team2      = {{flagicon|BIH}} [[FK Borac Banja Luka|Borac Banja Luka]]
+|goals1 = 
+*[[Konstantinos Koulierakis|Koulierakis]] {{goal|17||39}}
+*[[Stefan Schwab|Schwab]] {{yel|21}}
+*[[William Troost-Ekong|Troost-Ekong]] {{goal|51}}
+|goals2 = {{goal|22|pen.}}, {{goal|45+3}}
+|stadium =  [[Toumba Stadium]]
+|location = [[Thessaloniki]], [[Greece]]
+|attendance = 16,135<ref>{{UEFA match attendance|2041060|PAOK vs. Borac|date=24 July 2024|access-date=24 July 2024}}</ref>
+|referee = David Šmajc ([[Football Association of Slovenia|Slovenia]])
+|result = W
+|motm = 
+}}
+{{Football box collapsible
+|round = [[2024–25 UEFA Champions League#Second qualifying round|Second leg]] 
+|date =  {{Start date|2024|7|31|df=y}}
+|time = 22:00 [[Eastern European Summer Time|EEST]]
+|team1 = [[FK Borac Banja Luka|Borac Banja Luka]] {{flagicon|BIH}}
+|score = 0–1
+|aggregatescore = 2–4
+|report = Report<ref>{{cite web |url=https://www.uefa.com/uefachampionsleague/match/2041074/ |title=Borac vs PAOK |website=[[UEFA]] |publisher=Union of European Football Associations |access-date=18 July 2024}}</ref>
+|team2 = {{flagicon|GRE}} PAOK
+|goals1 =  
+|goals2 = 
+* [[Thomas Murg|Murg]] {{goal|25}}
+* [[Stefan Schwab|Schwab]] {{yel|39}}
+|stadium = [[Banja Luka City Stadium]]
+|location = [[Banja Luka]], [[Bosnia and Herzegovina]]
+|attendance = 9,500<ref>{{UEFA match attendance|2041074|Borac vs. PAOK|date=31 July 2024|access-date=31 July 2024}}</ref>
+|referee = Sander van der Eijk ([[Royal Dutch Football Association|Netherlands]])
+|result = W
+|motm = 
+}}
+
+====Third qualifying round====
+{{main|1=2024–25 UEFA Champions League qualifying phase and play-off round}}
+
+{{Football box collapsible
+|round = [[2024–25 UEFA Champions League#Third qualifying round|First leg]] 
+|date       = {{Start date|2024|8|6|df=y}}
+|time       = 20:00 [[Eastern European Summer Time|EEST]]
+|team1      = [[Malmö FF]] {{flagicon|SWE}}
+|score      = 2–2
+|report = Report<ref>{{cite web |url=https://www.uefa.com/uefachampionsleague/match/2041682/ |title=Malmö vs PAOK |website=[[UEFA]] |publisher=Union of European Football Associations |access-date=1 August 2024}}</ref>
+|team2      = {{flagicon|GRE}} PAOK
+|goals1 = {{goal|28}}, {{goal|67}}
+|goals2 =
+*[[Taison]] {{goal|42}}
+*[[Baba Rahman|Baba]] {{yel|70}}, {{goal|75}}
+*[[Joan Sastre (footballer)|Sastre]] {{yel|72}}
+*[[Mady Camara|Camara]] {{yel|84}}
+*[[Magomed Ozdoyev|Ozdoyev]] {{yel|90+2}}
+|stadium =  [[Stadion, Malmö|Eleda Stadion]]
+|location = [[Malmö]], [[Sweden]]
+|attendance = 18,658<ref>{{UEFA match attendance|2041682|Malmö vs. PAOK|date=6 August 2024|access-date=6 August 2024}}</ref>
+|referee = [[John Beaton]] ([[Scottish Football Association|Scotland]])
+|result = D
+|motm = 
+}}
+{{Football box collapsible
+|round = [[2024–25 UEFA Champions League#Second qualifying round|Second leg]] 
+|date =  {{Start date|2024|8|13|df=y}}
+|time = 20:30 [[Eastern European Summer Time|EEST]]
+|team1 = PAOK {{flagicon|GRE}}
+|score = 3–4
+|aet       =yes
+|aggregatescore = 5–6
+|report = Report<ref>{{cite web |url=https://www.uefa.com/uefachampionsleague/match/2041692/ |title=PAOK vs Malmö |website=[[UEFA]] |publisher=Union of European Football Associations |access-date=1 August 2024}}</ref>
+|team2 = {{flagicon|SWE}} [[Malmö FF]]
+|goals1 = 
+*[[Taison]] {{goal|21}}
+*[[Joan Sastre (footballer)|Sastre]] {{yel|37}}
+*[[Konstantinos Koulierakis|Koulierakis]] {{goal|43}}, {{yel|120}}
+*[[Andrija Živković|Živković]] {{goal|45+3}}
+*[[Baba Rahman|Baba]] {{yel|65}}
+*[[Thomas Murg|Murg]] {{yel|100}}
+|goals2 = {{goal|10||45}}, {{goal|90+6}}, {{goal|99}}
+|stadium = [[Toumba Stadium]]
+|location = [[Thessaloniki]], [[Greece]]
+|attendance = 17,678<ref>{{UEFA match attendance|2041692|PAOK vs. Malmö|date=13 August 2024|access-date=13 August 2024}}</ref>
+|referee = [[Marco Di Bello]] ([[Italian Football Federation|Italy]])
+|result = L
+|motm = 
+}}
+
+===UEFA Europa League===
+{{main|2024–25 UEFA Europa League}}
+
+====Play-off round====
+{{main|1=2024–25 UEFA Europa League qualifying phase and play-off round}}
+
+{{Football box collapsible
+|round = [[2024–25 UEFA Europa League#Play-off round|First leg]] 
+|date       = {{Start date|2024|8|22|df=y}}
+|time       = 20:30 [[Eastern European Summer Time|EEST]]
+|team1      = PAOK {{flagicon|GRE}}
+|score      = 4–0
+|report = https://www.uefa.com/uefaeuropaleague/match/2041851--paok-vs-shamrock-rovers/
+|team2      = {{flagicon|IRL}} [[Shamrock Rovers F.C.|Shamrock Rovers]]
+|goals1 = *[[Daniel Cleary (footballer)|Cleary]] {{goal|45+5|o.g.}} 
+*[[Taison]] {{goal|47}} 
+*[[Giannis Konstantelias| Konstantelias]] {{goal|67}}
+*[[Fyodor Chalov|Chalov]] {{penmiss}} <small>90+3'</small>
+*[[Baba Rahman|Baba]] {{goal|90+5}}
+|goals2 = {{sentoff|2|22|52}}
+|stadium =  [[Toumba Stadium]]
+|location = [[Thessaloniki]], [[Greece]]
+|attendance = 13,871<ref>{{UEFA match attendance|2041851|PAOK vs. Shamrock Rovers|date=22 August 2024|access-date=22 August 2024}}</ref>
+|referee = Enea Jorgji ([[Albanian Football Association|Albania]])
+|result = W
+|motm = 
+}}
+{{Football box collapsible
+|round = [[2024–25 UEFA Europa League#Play-off round|Second leg]] 
+|date =  {{Start date|2024|8|29|df=y}}
+|time = 22:00 [[Eastern European Summer Time|EEST]]
+|team1 = [[Shamrock Rovers F.C.|Shamrock Rovers]] {{flagicon|IRL}}
+|score = 0–2
+|aggregatescore = 0–6
+|report =Report<ref>{{cite web |url=https://www.uefa.com/uefaeuropaleague/match/2041863/ |title=Shamrock Rovers vs PAOK |website=[[UEFA]] |publisher=Union of European Football Associations |access-date=16 August 2024}}</ref>
+|team2 = {{flagicon|GRE}} PAOK
+|goals1 =  
+|goals2 = 
+*{{yel|52}} [[Giannis Michailidis|Michailidis]]
+*{{goal|64}}[[Magomed Ozdoyev|Ozdoyev]] 
+*{{goal|75}}[[Kiril Despodov|Despodov]] 
+|stadium = [[Tallaght Stadium]] 
+|location = [[Dublin]], [[Ireland]]
+|attendance = 5,079<ref>{{UEFA match attendance|2041863|Shamrock Rovers vs. PAOK|date=29 August 2024|access-date=29 August 2024}}</ref>
+|referee = Donatas Rumšas ([[Lithuanian Football Federation|Lithuania]])
+|result = W
+|motm = 
+}}
+
+====League phase====
+{{main|2024–25 UEFA Europa League league phase}}
+
+The match schedule was released on 31 August 2024, the day after the draw.<ref>{{cite web |url=https://editorial.uefa.com/resources/0290-1bbea0181c18-c9285f327c80-1000/draw_results_-_uefa_-_uel_-_league_phase_draw_fixtures_by_matchday.pdf |title=2024/25 UEFA Europa League: League phase match calendar (by matchday) |website=[[UEFA]] |publisher=Union of European Football Associations |date=31 August 2024 |access-date=31 August 2024}}</ref><ref>{{cite web |url=https://editorial.uefa.com/resources/0290-1bbea0d1308b-09657a23ba30-1000/draw_results_-_uefa_-_uel_-_league_phase_draw_fixtures_by_pot.pdf |title=2024/25 UEFA Europa League: League phase match calendar (by pot) |website=[[UEFA]] |publisher=Union of European Football Associations |date=31 August 2024 |access-date=31 August 2024}}</ref><ref>{{cite web |url=https://www.uefa.com/uefaeuropaleague/news/0290-1bbed698826a-30134da51557-1000/ |title=Europa League: All the 2024/25 fixtures and results |website=[[UEFA]] |publisher=Union of European Football Associations |date=31 August 2024 |access-date=31 August 2024}}</ref>
+
+====Europa League table====
+{{:2024–25 UEFA Europa League league phase|transcludesection=Table|showteam=PAOK}}
+
+
+{{Football box collapsible
+|round = [[2024–25 UEFA Europa League league phase|1]] 
+|date =  {{Start date|2024|9|25|df=y}}
+|time = 22:00 [[Eastern European Summer Time|EEST]]
+|team1 = [[Galatasaray S.K. (football)|Galatasaray]] {{flagicon|TUR}}
+|score = 3–1
+|report = https://www.uefa.com/uefaeuropaleague/match/2042081--galatasaray-vs-paok/
+|team2 = {{flagicon|GRE}} PAOK
+|goals1 = 
+*[[Baba Rahman|Baba]] {{goal|48}} 
+*[[Yunus Akgün|Akgün]] {{goal|75}} 
+*[[Mauro Icardi|Icardi]] {{goal|90+5}}
+|goals2 =
+*{{yel|28}}[[Magomed Ozdoyev|Ozdoyev]]
+*{{goal|67}} [[Giannis Konstantelias|Konstantelias]]
+|stadium = [[Rams Park]] 
+|location = [[Istanbul]], [[Turkey]]
+|attendance = 50,700<ref>{{cite web |url=https://www.uefa.com/newsfiles/uefacup/2025/2042081_FR.pdf |title=Full Time Summary Matchday 1 – Galatasaray v PAOK |work=[[UEFA]] |publisher=Union of European Football Associations |date=25 September 2024 |access-date=25 September 2024}}</ref>
+|referee = [[Alejandro Hernández Hernández]]  ([[Royal Spanish Football Federation|Spain]])
+|result = L
+|motm = 
+}}
+{{Football box collapsible
+|round = [[2024–25 UEFA Europa League league phase|2]] 
+|date       = {{Start date|2024|10|3|df=y}}
+|time       = 22:00 [[Eastern European Summer Time|EEST]]
+|team1      = PAOK {{flagicon|GRE}}
+|score      = 0–1
+|report     = https://www.uefa.com/uefaeuropaleague/match/2042103
+|team2      = {{flagicon|ROM}} [[FCSB]]
+|goals1     =
+*[[Mady Camara|Camara]] {{yel|4}}
+*[[Joan Sastre (footballer)|Sastre]] {{yel|45+2}}
+|goals2     = 
+*[[Florin Tănase|Tănase]] {{yel|16}}
+*[[Mihai Popescu (footballer)|Popescu]] {{yel|43}}
+*[[Darius Olaru|Olaru]] {{sentoff|2|45+4|55}}
+*[[Daniel Bîrligea|Bîrligea]] {{goal|45+8}}, {{yel|71}}
+*[[Ștefan Târnovanu|Târnovanu]] {{yel|86}}
+|stadium =  [[Toumba Stadium]]
+|location = [[Thessaloniki]], [[Greece]]
+|attendance = 14,340<ref>{{cite web |url=https://www.uefa.com/newsfiles/uefacup/2025/2042103_FR.pdf |title=Full Time Summary Matchday 2 – PAOK v FCSB |work=[[UEFA]] |publisher=Union of European Football Associations |date=3 October 2024 |access-date=3 October 2024}}</ref>
+|referee = [[Sascha Stegemann]] ([[German Football Association|Germany]])
+|result = L
+|motm = 
+}}
+{{Football box collapsible
+|round = [[2024–25 UEFA Europa League league phase|3]] 
+|date       = {{Start date|2024|10|24|df=y}}
+|time       = 19:45 [[Eastern European Summer Time|EEST]]
+|team1      = PAOK {{flagicon|GRE}}
+|score      = 2–2
+|report     = https://www.uefa.com/uefaeuropaleague/match/2042123--paok-vs-viktoria-plzen/
+|team2      = {{flagicon|CZE}} [[FC Viktoria Plzeň|Viktoria Plzeň]]
+|goals1     =
+*[[Tarik Tissoudali|Tissoudali]] {{yel|82}}, {{goal|84}}
+*[[Baba Rahman|Baba]] {{goal|90+3}}
+|goals2     = 
+*[[Sampson Dweh|Dweh]] {{sent off|2|11|70}}
+*[[Milan Havel|Havel]] {{goal|31}}
+*[[Matěj Vydra|Vydra]] {{goal|39}}
+*[[Svetozar Marković (footballer)|Marković]] {{yel|41}}
+*[[Prince Kwabena Adu|Adu]] {{yel|70}}
+*[[Martin Jedlička|Jedlička]] {{yel|90}}
+|stadium    =  [[Toumba Stadium]]
+|location   = [[Thessaloniki]], [[Greece]]
+|attendance = 16,144<ref>{{cite web |url=https://www.uefa.com/newsfiles/uefacup/2025/2042123_FR.pdf |title=Full Time Summary Matchday 3 – PAOK v Viktoria Plzeň |work=[[UEFA]] |publisher=Union of European Football Associations |date=24 October 2024 |access-date=24 October 2024}}</ref>
+|referee    = Urs Schnyder ([[Swiss Football Association|Switzerland]])
+|result     = D
+|motm       = 
+}}
+{{Football box collapsible
+|round = [[2024–25 UEFA Europa League league phase|4]] 
+|date =  {{Start date|2024|11|7|df=y}}
+|time = 22:00 [[Eastern European Time|EET]]
+|team1 = [[Manchester United F.C.|Manchester United]] {{flagicon|ENG}}
+|score = 2–0
+|report = https://www.uefa.com/uefaeuropaleague/match/2042134--man-utd-vs-paok/
+|team2 = {{flagicon|GRE}} PAOK
+|goals1 =  
+*[[Amad Diallo|Diallo]] {{goal|50||77}}
+*[[Manuel Ugarte (footballer)|Ugarte]] {{yel|55}}
+*[[Casemiro]] {{yel|85}}
+|goals2 = 
+*[[Tarik Tissoudali|Tissoudali]] {{yel|56}}
+|stadium = [[Old Trafford]] 
+|location = [[Manchester]], [[England]]
+|attendance = 73,174<ref>{{UEFA match attendance|2042134|Manchester United vs. PAOK|date=7 November 2024|access-date=7 November 2024}}</ref>
+|referee = Daniele Chiffi ([[Italian Football Federation|Italy]])
+|result = L
+|motm = [[Amad Diallo]]
+}}
+{{Football box collapsible
+|round = [[2024–25 UEFA Europa League league phase|5]] 
+|date =  {{Start date|2024|11|28|df=y}}
+|time = 19:45 [[Eastern European Time|EET]]
+|team1 = [[FK RFS|RFS]] {{flagicon|LAT}}
+|score = 0–2
+|report = Report<ref>{{cite web |url=https://www.uefa.com/uefaeuropaleague/match/2042168/ |title=RFS vs. PAOK |website=[[UEFA]] |publisher=Union of European Football Associations |access-date=31 August 2024}}</ref>
+|team2 = {{flagicon|GRE}} PAOK
+|goals1 =  
+|goals2 = 
+* {{goal|2}} [[Kiril Despodov|Despodov]]
+* {{yel|47}} [[Mady Camara|Camara]]
+* {{goal|59}} [[Fyodor Chalov|Chalov]]
+|stadium = [[Daugava Stadium (Riga)|Daugava Stadium]] 
+|location = [[Riga]], [[Latvia]]
+|attendance = 5,346<ref>{{cite web |url=https://www.uefa.com/newsfiles/uefacup/2025/2042168_FR.pdf |title=Full Time Summary Matchday 5 – RFS v PAOK |work=[[UEFA]] |publisher=Union of European Football Associations |date=28 November 2024 |access-date=28 November 2024}}</ref>
+|referee = [[Julian Weinberger]] ([[Austrian Football Association|Austria]])
+|result = W
+|motm = 
+}}
+{{Football box collapsible
+|round = [[2024–25 UEFA Europa League league phase|6]] 
+|date       = {{Start date|2024|12|12|df=y}}
+|time       = 22:00 [[Eastern European Time|EET]]
+|team1      = PAOK {{flagicon|GRE}}
+|score      = 5–0
+|report = Report<ref>{{cite web |url=https://www.uefa.com/uefaeuropaleague/match/2042178/ |title=PAOK vs. Ferencváros |website=[[UEFA]] |publisher=Union of European Football Associations |access-date=31 August 2024}}</ref>
+|team2      = {{flagicon|HUN}} [[Ferencvárosi TC|Ferencváros]]
+|goals1 =
+*[[Taison]] {{goal|10}}, {{yel|45+2}}
+*[[Brandon Thomas (footballer)|Brandon]] {{goal|29}}
+*[[Mady Camara|Camara]] {{yel|50}}
+*[[Fyodor Chalov|Chalov]] {{goal|76}}
+*[[Andrija Živković|Živković]] {{goal|80|pen.}}
+*[[Kiril Despodov|Despodov]] {{goal|89}}
+|goals2 = 
+|stadium =  [[Toumba Stadium]]
+|location = [[Thessaloniki]], [[Greece]]
+|attendance = 18,121<ref>{{cite web |url=https://www.uefa.com/newsfiles/uefacup/2025/2042178_FR.pdf |title=Full Time Summary Matchday 6 – PAOK v Ferencváros |work=[[UEFA]] |publisher=Union of European Football Associations |date=12 December 2024 |access-date=12 December 2024}}</ref>
+|referee =  [[Guillermo Cuadra Fernández]] ([[Royal Spanish Football Federation|Spain]])
+|result = W
+|motm = 
+}}
+{{Football box collapsible
+|round = [[2024–25 UEFA Europa League league phase|7]] 
+|date       = {{Start date|2025|1|23|df=y}}
+|time       = 22:00 [[Eastern European Time|EET]]
+|team1      = PAOK {{flagicon|GRE}}
+|score      = 2–0
+|report = Report<ref>{{cite web |url=https://www.uefa.com/uefaeuropaleague/match/2042194/ |title=PAOK vs. Slavia Prague |website=[[UEFA]] |publisher=Union of European Football Associations |access-date=31 August 2024}}</ref>
+|team2      = {{flagicon|CZE}} [[SK Slavia Prague|Slavia]]
+|goals1 =
+* [[Stefan Schwab|Schwab]] {{goal|26|pen.}}
+* [[Jonny Otto]] {{yel|41}} 
+* [[Giannis Konstantelias|Konstantelias]] {{goal|56}}
+* [[Kiril Despodov|Despodov]] {{yel|59}}
+|goals2 =
+|stadium =  [[Toumba Stadium]]
+|location = [[Thessaloniki]], [[Greece]]
+|attendance = 17,507<ref>{{cite web |url=https://www.uefa.com/newsfiles/uefacup/2025/2042194_FR.pdf |title=Full Time Summary Matchday 7 – PAOK v Slavia Prague |work=[[UEFA]] |publisher=Union of European Football Associations |date=23 January 2025 |access-date=23 January 2025}}</ref>
+|referee = [[Matej Jug]] ([[Football Association of Slovenia|Slovenia]])
+|result = W
+|motm = 
+}}
+{{Football box collapsible
+|round = [[2024–25 UEFA Europa League league phase|8]] 
+|date =  {{Start date|2025|1|30|df=y}}
+|time = 22:00 [[Eastern European Time|EET]]
+|team1 = [[Real Sociedad]] {{flagicon|SPA}}
+|score = 2–0
+|report = Report<ref>{{cite web |url=https://www.uefa.com/uefaeuropaleague/match/2042210/ |title=Real Sociedad vs. PAOK |website=[[UEFA]] |publisher=Union of European Football Associations |access-date=31 August 2024}}</ref>
+|team2 = {{flagicon|GRE}} PAOK
+|goals1 =   {{goal|43||48}}
+|goals2 = 
+* {{yel|6}} [[Magomed Ozdoyev|Ozdoyev]]
+* {{yel|49}} [[Brandon Thomas (footballer)|Brandon]] 
+|stadium = [[Anoeta Stadium]] 
+|location = [[San Sebastián|Donostia-San Sebastián]], [[Spain]]
+|attendance = 23,872<ref>{{cite web |url=https://www.uefa.com/newsfiles/uefacup/2025/2042210_FR.pdf |title=Full Time Summary Matchday 8 – Real Sociedad v PAOK |work=[[UEFA]] |publisher=Union of European Football Associations |date=30 January 2025 |access-date=30 January 2025}}</ref>
+|referee = [[John Beaton]] ([[Scottish Football Association|Scotland]])
+|result = L
+|motm = 
+}}
+
+==== Knockout phase ====
+{{Main|2024–25 UEFA Europa League knockout phase}}
+The draw for the League phase was held on 31 January 2025.<ref>{{cite web|url=https://www.uefa.com/uefaeuropaleague/news/0294-1c8996ebd36d-dc6d82780a9c-1000/ |title=Europa League, knockout phase draw – UEFA |website=[[UEFA]] |publisher=Union of European Football Associations |date=31 January 2025}}</ref>
+
+====Knockout phase play-offs====
+
+{{Football box collapsible
+|round = First leg
+|result = L
+|date       = {{Start date|2025|2|13|df=y}}
+|time       = 21:00 {{small|(22:00 [[UTC+02:00|UTC+2]])}}
+|team1      = PAOK {{fbaicon|GRE}}
+|score      = 1–2
+|team2      = {{fbaicon|ROU}} [[FCSB]]
+|goals1     = 
+* [[Dimitrios Pelkas|Pelkas]] {{yel|14}}
+* [[Mbwana Samatta|Samatta]] {{goal|21}} 
+* [[Taison]] {{sentoff|2|32|45+4}}
+* [[Antonis Tsiftsis|Tsiftsis]] {{yel|?}}
+|goals2     =
+* {{goal|50}}
+* {{goal|60}}
+|stadium    = [[Toumba Stadium]]
+|location   = [[Thessaloniki]], [[Greece]]
+|attendance = 18,343<ref>{{cite web |url=https://www.uefa.com/newsfiles/uefacup/2025/2044493_FR.pdf |title=Full Time Summary Knockout phase play-offs 1st Leg – PAOK v FCSB |work=[[UEFA]] |publisher=Union of European Football Associations |date=13 February 2025 |access-date=13 February 2025}}</ref>
+|referee    = [[Lawrence Visser]] ([[Royal Belgian Football Association|Belgium]])
+|report     = https://www.uefa.com/uefaeuropaleague/match/2044493/
+}}
+{{Football box collapsible
+|round = Second leg
+|result = L
+|date       = {{Start date|2025|2|20|df=y}}
+|time       = 18:45 {{small|(19:45 [[UTC+02:00|UTC+2]])}}
+|team1      = FCSB {{fbaicon|ROU}}
+|score      = 2–0
+|aggregatescore = 4–1
+|team2      = {{fbaicon|GRE}} PAOK
+|goals1     =
+* {{goal|30}}
+* {{goal|81}}
+|goals2     =
+* {{yel|44}} [[Andrija Živković|A. Živković]] 
+* {{yel|49}} [[Jonny Otto|Jonny]] 
+* {{yel|54}} [[Giannis Michailidis|Michailidis]]
+* {{yel|64}} [[Kiril Despodov|Despodov]] 
+* {{yel|83}} [[Dominik Kotarski|Kotarski]] 
+|stadium    = [[Arena Națională]]
+|location   = [[Bucharest]], [[Romania]]
+|attendance = 50,248<ref>{{cite web |url=https://www.uefa.com/newsfiles/uefacup/2025/2044501_FR.pdf |title=Full Time Summary Knockout phase play-offs 2nd Leg – FCSB v PAOK |work=[[UEFA]] |publisher=Union of European Football Associations |date=20 February 2025 |access-date=20 February 2025}}</ref>
+|referee    = [[Matej Jug]] ([[Football Association of Slovenia|Slovenia]])
+|report     = https://www.uefa.com/uefaeuropaleague/match/2044501/
+}}
+
+==Statistics==
+
+===Squad statistics===
+ 
+The squad was informed and the official page of '''PAOK FC'''.{{citation needed|date=June 2024}}
+
+{{Efs start3 |updated= 11 May 2025 |c1=[[2024-25 Super League Greece|Super League]] |c2=[[2024-25 Greek Football Cup|Greek Cup]] |c3=[[2024–25 UEFA Champions League|Champions League]] |c4=[[2024–25 UEFA Europa League|Europa League]]  }}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Goalkeepers
+|-
+{{Efs player3|no=42|nat=CRO|name=[[Dominik Kotarski]] |28|0|0 |2|0|0 |4|0|0 |12|0|0}}
+{{Efs player3|no=99|nat=GRE|name=[[Antonis Tsiftsis]] |2|0|0 |0|0|0 |0|0|0 |0|0|0}}
+{{Efs player3|no=1|nat=CZE|name=[[Jiří Pavlenka]] |2|0|0 |2|0|0 |0|0|0 |0|0|0}}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Defenders
+|-
+{{Efs player3|no= 16|nat=POL|name=[[Tomasz Kędziora]] |25|0|0 |3|0|0 |2|0|0 |12|0|0}}
+{{Efs player3|no=21|nat=GHA|name=[[Baba Rahman]] |24|5|5 |1|0|0 |4|0|1 |11|1|2}}
+{{Efs player3|no=23|nat=ESP|name=[[Joan Sastre (footballer)|Joan Sastre]] |14|5|1 |3|0|0 |3|0|0 |2|2|0}}
+{{Efs player3|no=5|nat=GRE|name=[[Giannis Michailidis]] |16|1|3 |3|0|0 |0|0|0 |8|0|0}}
+{{Efs player3|no=23|nat=ESP|name=[[Jonny (footballer)|Jonny]] |19|3|0 |1|0|0 |1|0|0 |11|0|0}}
+{{Efs player3|no=25|nat=GRE|name=[[Konstantinos Thymianis]] |0|3|0 |1|1|0 |0|0|0 |0|1|0}}
+{{Efs player3|no=15|nat=GAM|name=[[Omar Colley]] |6|2|0 |0|0|0 |0|0|0 |3|2|0}}
+{{Efs player3|no=18|nat=MEX|name=[[Jonathan Gómez (footballer, born 2003)|Jonathan Gómez]] |2|0|0 |2|0|0 |0|0|0 |0|0|0}}
+{{Efs player3|no=6|nat=CRO|name=[[Dejan Lovren]] |7|0|0 |2|0|0 |0|0|0 |0|0|0}}
+{{Efs player3|no=90|nat=GRE|name=[[Dimitrios Kottas]] |0|0|0 |0|1|0 |0|0|0 |0|0|0}}
+{{Efs player3|no= 28|nat=POL|name=[[Mateusz Wieteska]] |10|0|0 |0|0|0 |0|0|0 |0|0|0}}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Midfielders
+|-
+{{Efs player3|no=22|nat=AUT|name=[[Stefan Schwab]] |16|11|5 |0|4|0 |3|1|0 |5|6|1}}
+{{Efs player3|no=20|nat=POR|name=[[Vieirinha]] |2|8|0 |1|1|0 |0|2|0 |0|0|0}}
+{{Efs player3|no=7|nat=GRE|name=[[Giannis Konstantelias]] |23|6|7 |2|1|0 |2|2|0 |9|2|3}}
+{{Efs player3|no=27|nat=RUS|name=[[Magomed Ozdoyev]] |19|6|1 |2|0|0 |4|0|0 |10|1|1}}
+{{Efs player3|no=2|nat=GUI|name=[[Mady Camara]] |19|10|9 |4|0|1 |1|3|0 |8|3|0}}
+{{Efs player3|no=8|nat=FRA|name=[[Tiemoué Bakayoko]] |3|1|0 |1|0|0 |0|0|0 |1|2|1}}
+{{Efs player3|no=4|nat=PER|name=[[Sergio Peña (Peruvian footballer)|Sergio Peña]] |2|3|0 |0|0|0 |0|0|0 |0|0|0}}
+{{Efs player3|no=80|nat=GRE|name=[[Dimitrios Pelkas]] |5|8|2 |0|0|0 |0|0|0 |2|0|0}}
+{{Efs player3|no=82|nat=FRA|name=[[Soualiho Meïté]] |6|4|0 |0|0|0 |0|0|0 |2|0|0}}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Forwards
+|-
+{{Efs player3|no=14|nat=SRB|name=[[Andrija Živković]] |19|6|8 |4|0|1 |2|2|1 |8|1|1}}
+{{Efs player3|no=71|nat=SPA|name=[[Brandon Thomas (footballer)|Brandon Thomas]] |9|3|0 |1|1|1 |4|0|0 |4|3|1}}
+{{Efs player3|no=77|nat=BUL|name=[[Kiril Despodov]] |14|11|4 |0|3|0 |2|2|0 |5|7|3}}
+{{Efs player3|no=70|nat=TAN|name=[[Mbwana Samatta]] |5|7|4 |1|3|0 |0|2|0 |2|0|1}}
+{{Efs player3|no=11|nat=BRA|name=[[Taison]] |18|7|2 |2|1|1 |4|0|2 |9|1|2}}
+{{Efs player3|no=47|nat=ENG|name=[[Shola Shoretire]] |5|13|2 |2|1|2 |0|0|0 |0|6|0}}
+{{Efs player3|no=9|nat=RUS|name=[[Fyodor Chalov]] |10|16|3 |2|0|0 |0|1|0 |4|7|2}}
+! colspan="13" style="background:#DCDCDC; text-align:center" | Players transferred out during the season
+|-
+{{Efs player3|no=15|nat=NGA|name=[[William Troost-Ekong]] |0|0|0 |0|0|0 |2|0|1 |0|0|0}}
+{{Efs player3|no=6|nat=GRE|name=[[Theocharis Tsingaras]] |0|0|0 |0|0|0 |0|1|0 |0|0|0}}
+{{Efs player3|no=4|nat=GRE|name=[[Konstantinos Koulierakis]] |0|0|0 |0|0|0 |4|0|3 |1|0|0}}
+{{Efs player3|no=55|nat=POR|name=[[Rafa Soares]] |2|0|0 |0|0|0 |0|0|0 |0|1|0}}
+{{Efs player3|no= 3|nat=NOR|name=[[Ivan Näsberg]] |1|0|0 |0|0|0 |0|0|0 |0|0|0}}
+{{Efs player3|no=10|nat=AUT|name=[[Thomas Murg]] |12|2|1 |1|1|1 |2|2|1 |1|1|0}}
+{{Efs player3|no=34|nat=MAR|name=[[Tarik Tissoudali]] |8|8|2 |1|2|3 |0|3|0 |2|4|1}}
+|-
+|}
+
+===Goalscorers===
+
+''As of 11 May 2025''
+
+{| class="wikitable sortable" style="text-align:center" 
+|-
+!width=5|{{Abbr| Rank | Ranking }}
+!width=5|{{Abbr| No. | Squad Number }}
+!width=5|{{Abbr| Pos. | Position }}
+!width=170|Player
+!width=30|Super League
+!width=30|Greek Cup
+!width=30px|Champions League
+!width=30px|Europa League
+!width=50|Total 
+|-
+|1||14||FW||align=left|{{flagicon|SRB}} [[Andrija Živković|Živković]]|||8||2||1||1||'''12'''
+|-
+|2||7||MF||align=left|{{flagicon|GRE}} [[Giannis Konstantelias|Konstantelias]]|||7||0||0||3||'''10'''
+|-
+| ||2||MF||align=left|{{flagicon|GUI}} [[Mady Camara|Camara]]|||9||1||0||0||'''10'''
+|-
+|4||21||DF||align=left|{{flagicon|GHA}} [[Baba Rahman|Baba]]|||5||0||1||2||'''8'''
+|-
+|5||11||FW||align=left|{{flagicon|BRA}} [[Taison]]|||2||1||2||2||'''7'''
+|-
+| ||77||FW||align=left|{{flagicon|BUL}} [[Kiril Despodov|Despodov]]|||4||0||0||3||'''7'''
+|-
+|7||34||FW||align=left|{{flagicon|MAR}} [[Tarik Tissoudali|Tissoudali]]|||2||3||0||1||'''6'''
+|-
+| ||22||MF||align=left|{{flagicon|AUT}} [[Stefan Schwab|Schwab]]|||5||0||0||1||'''6'''
+|-
+|9||9||FW||align=left|{{flagicon|RUS}} [[Fyodor Chalov|Chalov]]|||3||0||0||2||'''5'''
+|-
+|||70||FW||align=left|{{flagicon|TAN}} [[Mbwana Samatta|Samatta]]|||4||0||0||1||'''5'''
+|-
+|11||47||FW||align=left|{{flagicon|ENG}} [[Shola Shoretire|Shoretire]]|||2||2||0||0||'''4'''
+|-
+|12||4||DF||align=left|{{flagicon|GRE}} [[Konstantinos Koulierakis|Koulierakis]]|||0||0||3||0||'''3'''
+|-
+| ||10||MF||align=left|{{flagicon|AUT}} [[Thomas Murg|Murg]]|||1||1||1||0||'''3'''
+|-
+| ||5||DF||align=left|{{flagicon|GRE}} [[Giannis Michailidis|Michailidis]]|||3||0||0||0||'''3'''
+|-
+|15||27||MF||align=left|{{flagicon|RUS}} [[Magomed Ozdoyev|Ozdoyev]]|||1||0||0||1||'''2'''
+|-
+| ||71||FW||align=left|{{flagicon|SPA}} [[Brandon Thomas (footballer)|Brandon]]|||0||1||0||1||'''2'''
+|-
+| ||80||MF||align=left|{{flagicon|GRE}} [[Dimitrios Pelkas|Pelkas]]|||2||0||0||0||'''2'''
+|-
+|18||15||DF||align=left|{{flagicon|NGA}} [[William Troost-Ekong |Troost-Ekong]]|||0||0||1||0||'''1'''
+|-
+| ||23||DF||align=left|{{flagicon|ESP}} [[Joan Sastre (footballer)|Sastre]]|||1||0||0||0||'''1'''
+|-
+|-
+|colspan="3"|Own goals||||3||0||0||1||'''4'''
+|- bgcolor="#EFEFEF"
+|colspan=3|'''TOTAL'''
+| ||'''62'''||'''11'''||'''9'''||'''19'''|||'''101'''
+|}
+
+===Clean sheets===
+''As of 11 May 2025''
+{|class="wikitable" style="text-align: center;"
+|-
+!Player
+!League
+!Cup
+!CL
+!EL
+!Total
+!Games played
+!Percentage
+|-
+|align=left|{{flagicon|CRO}} [[Dominik Kotarski]]
+|9
+|
+|1
+|5
+|15
+|46
+|32,61%
+|-
+|align=left|{{flagicon|GRE}} [[Antonis Tsiftsis]]
+|1
+|
+|
+|
+|1
+|2
+|50,00%
+|-
+|align=left|{{flagicon|CZE}} [[Jiří Pavlenka]]
+|1
+|1
+|
+|
+|2
+|4
+|50,00%
+|-
+!|Total!!11!!1!!1!!5!!18!!52!!34,62%
+|}
+
+===Disciplinary record===
+''As of 11 May 2025''
+{|class="wikitable sortable" style="text-align:center"
+|-
+!rowspan=2|{{Tooltip|S|Squad number}}
+!rowspan=2|{{Tooltip|P|Position}}
+!rowspan=2|{{Tooltip|N|Nationality}}
+!rowspan=2|Name
+!colspan=3|Super 
+League
+!colspan=3|Greek 
+Cup
+!colspan=3|Champions 
+League
+!colspan=3|Europa 
+League
+!colspan=3|Total
+|-
+![[Image:Yellow card.svg|13px]]
+![[Image:Yellow-red card.svg|17px]]
+![[Image:Red card.svg|13px]]
+![[Image:Yellow card.svg|13px]]
+![[Image:Yellow-red card.svg|17px]]
+![[Image:Red card.svg|13px]]
+![[Image:Yellow card.svg|13px]]
+![[Image:Yellow-red card.svg|17px]]
+![[Image:Red card.svg|13px]]
+![[Image:Yellow card.svg|13px]]
+![[Image:Yellow-red card.svg|17px]]
+![[Image:Red card.svg|13px]]
+![[Image:Yellow card.svg|13px]]
+![[Image:Yellow-red card.svg|17px]]
+![[Image:Red card.svg|13px]]
+
+|-
+|22||MF||{{flagicon|AUT}}||align="left"|[[Stefan Schwab|Schwab]]
+|4||0||0||0||0||0||2||0||0||0||0||0||'''6'''||'''0'''||'''0'''
+|-
+|21||MF||{{flagicon|GHA}}||align="left"|[[Baba Rahman|Baba]]
+|4||1||0||0||0||0||2||0||0||0||0||0||'''6'''||'''1'''||'''0'''
+|-
+|23||DF||{{flagicon|ESP}}||align="left"|[[Joan Sastre (footballer)|Sastre]]
+|1||0||0||1||0||0||2||0||0||1||0||0||'''5'''||'''0'''||'''0'''
+|-
+|2||MF||{{flagicon|GUI}}||align="left"|[[Mady Camara|Camara]]
+|7||0||1||1||0||0||1||0||0||3||0||0||'''12'''||'''0'''||'''1'''
+|-
+|27||MF||{{flagicon|RUS}}||align="left"|[[Magomed Ozdoyev|Ozdoyev]]
+|6||0||0||1||0||0||1||0||0||2||0||0||'''10'''||'''0'''||'''0'''
+|-
+|5||DF||{{flagicon|GRE}}||align="left"|[[Giannis Michailidis|Michailidis]]
+|5||0||0||0||0||1||0||0||0||2||0||0||'''7'''||'''0'''||'''1'''
+|-
+|14||FW||{{flagicon|SRB}}||align="left"|[[Andrija Živković|Živković]]
+|5||0||0||1||0||0||0||0||0||1||0||0||'''7'''||'''0'''||'''0'''
+|-
+|19||DF||{{flagicon|SPA}}||align="left"|[[Jonny Otto|Jonny]]
+|4||0||0||0||0||0||0||0||0||2||0||0||'''6'''||'''0'''||'''0'''
+|-
+|18||DF||{{flagicon|MEX}}||align="left"|[[Jonathan Gómez (footballer, born 2003)|Gómez]]
+|2||0||0||0||0||0||0||0||0||0||0||0||'''2'''||'''0'''||'''0'''
+|-
+|6||DF||{{flagicon|SPA}}||align="left"|[[Dejan Lovren|Lovren]]
+|2||0||0||1||0||1||0||0||0||0||0||0||'''3'''||'''0'''||'''1'''
+|-
+|20||DF||{{flagicon|POR}}||align="left"|[[Vieirinha]]
+|2||0||0||0||0||0||0||0||0||0||0||0||'''2'''||'''0'''||'''0'''
+|-
+|7||MF||{{flagicon|GRE}}||align="left"|[[Giannis Konstantelias|Konstantelias]]
+|4||0||0||0||0||0||0||0||0||0||0||0||'''4'''||'''0'''||'''0'''
+|-
+|8||MF||{{flagicon|FRA}}||align="left"|[[Tiemoué Bakayoko|Bakayoko]]
+|1||0||0||0||0||0||0||0||0||0||0||0||'''1'''||'''0'''||'''0'''
+|-
+|15||DF||{{flagicon|GAM}}||align="left"|[[Omar Colley|Colley]]
+|1||0||0||0||0||0||0||0||0||0||0||0||'''1'''||'''0'''||'''0'''
+|-
+|77||FW||{{flagicon|BUL}}||align="left"|[[Kiril Despodov|Despodov]]
+|2||0||0||0||0||0||0||0||0||2||0||0||'''4'''||'''0'''||'''0'''
+|-
+|11||FW||{{flagicon|BRA}}||align="left"|[[Taison]]
+|0||0||0||0||0||0||0||0||0||1||1||0||'''1'''||'''1'''||'''0'''
+|-
+|16||DF||{{flagicon|POL}}||align="left"|[[Tomasz Kędziora|Kędziora]]
+|3||0||0||1||0||0||0||0||0||0||0||0||'''4'''||'''0'''||'''0'''
+|-
+|42||GK||{{flagicon|CRO}}||align="left"|[[Dominik Kotarski|Kotarski]]
+|2||0||0||1||0||0||0||0||0||1||0||0||'''4'''||'''0'''||'''0'''
+|-
+|47||FW||{{flagicon|ENG}}||align="left"|[[Shola Shoretire|Shoretire]]
+|2||0||0||1||0||0||0||0||0||0||0||0||'''3'''||'''0'''||'''0'''
+|-
+|71||FW||{{flagicon|SPA}}||align="left"|[[Brandon Thomas (footballer)|Brandon]]
+|0||0||0||0||0||0||0||0||0||1||0||0||'''1'''||'''0'''||'''0'''
+|-
+|80||MF||{{flagicon|GRE}}||align="left"|[[Dimitrios Pelkas|Pelkas]]
+|3||0||0||0||0||0||0||0||0||1||0||0||'''4'''||'''0'''||'''0'''
+|-
+|99||GK||{{flagicon|GRE}}||align="left"|[[Antonis Tsiftsis|Tsiftsis]]
+|0||0||0||0||0||0||0||0||0||1||0||0||'''1'''||'''0'''||'''0'''
+|-
+|28||DF||{{flagicon|POL}}||align="left"|[[Mateusz Wieteska|Wieteska]]
+|1||0||0||0||0||0||0||0||0||0||0||0||'''1'''||'''0'''||'''0'''
+|-
+|9||FW||{{flagicon|RUS}}||align="left"|[[Fyodor Chalov|Chalov]]
+|1||0||0||0||0||0||0||0||0||0||0||0||'''1'''||'''0'''||'''0'''
+|-
+|70||FW||{{flagicon|TAN}}||align="left"|[[Mbwana Samatta|Samatta]]
+|1||0||0||0||0||0||0||0||0||0||0||0||'''1'''||'''0'''||'''0'''
+|-
+! colspan="19" style="background:#DCDCDC; text-align:center" | Players transferred out during the season
+|-
+|4||DF||{{flagicon|GRE}}||align="left"|[[Konstantinos Koulierakis|Koulierakis]]
+|0||0||0||0||0||0||1||0||0||0||0||0||'''1'''||'''0'''||'''0'''
+|-
+|10||MF||{{flagicon|AUT}}||align="left"|[[Thomas Murg|Murg]]
+|0||0||0||0||0||0||1||0||0||0||0||0||'''1'''||'''0'''||'''0'''
+|-
+|34||FW||{{flagicon|MAR}}||align="left"|[[Tarik Tissoudali|Tissoudali]]
+|1||0||0||0||0||0||0||0||0||2||0||0||'''3'''||'''0'''||'''0'''
+|-
+|}
+
+== References ==
+{{Reflist}}
+== External links ==
+* {{Official website|http://www.paok.org/}}
+
+{{PAOK FC}}
+{{PAOK FC seasons}}
+{{2024–25 in Greek football}}
+
+{{DEFAULTSORT:2024-25 PAOK FC Season}}
+[[Category:PAOK FC seasons]]
+[[Category:Greek football clubs 2024–25 season|PAOK]]
+[[Category:2024–25 UEFA Champions League participants seasons|PAOK]]
+[[Category:2024–25 UEFA Europa League participants seasons|PAOK]]

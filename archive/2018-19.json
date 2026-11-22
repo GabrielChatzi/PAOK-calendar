@@ -186,6 +186,36 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/887.png"
     },
     {
+     "uid": "football-wiki-6fa6c7f750bc",
+     "section": "football",
+     "start": "2018-09-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/2018%E2%80%9319_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Pelkas",
+        "min": "25",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "García",
+        "min": "45+3"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-524310",
      "nt": "0459580345",
      "section": "football",
@@ -330,6 +360,39 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/11431.png"
     },
     {
+     "uid": "football-wiki-a1d329386cbf",
+     "section": "football",
+     "start": "2018-11-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ergotelis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Pankritio Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/2018%E2%80%9319_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Iatroudis",
+        "min": "68"
+       }
+      ],
+      "away": [
+       {
+        "name": "Biseswar",
+        "min": "11"
+       },
+       {
+        "name": "Wernbloom",
+        "min": "79"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-524266",
      "nt": "28001a461b",
      "section": "football",
@@ -426,6 +489,83 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-668826c147ad",
+     "section": "football",
+     "start": "2018-12-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aittitos Spata",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Spata Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "3η αγωνιστική",
+     "score": "0-6",
+     "url": "https://en.wikipedia.org/wiki/2018%E2%80%9319_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Karelis",
+        "min": "16"
+       },
+       {
+        "name": "Karelis",
+        "min": "75"
+       },
+       {
+        "name": "Cañas",
+        "min": "26"
+       },
+       {
+        "name": "Prijović",
+        "min": "63"
+       },
+       {
+        "name": "Prijović",
+        "min": "84"
+       },
+       {
+        "name": "Prijović",
+        "min": "85"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2b3999c958ee",
+     "section": "football",
+     "start": "2019-01-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panachaiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kostas Davourlis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2018%E2%80%9319_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Loumbardeas",
+        "min": "68"
+       },
+       {
+        "name": "Bastakos",
+        "min": "35"
+       }
+      ],
+      "away": [
+       {
+        "name": "Karelis",
+        "min": "56"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-524223",
      "nt": "37a11556e4",
      "section": "football",
@@ -456,6 +596,46 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/524218",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/2789.png"
+    },
+    {
+     "uid": "football-wiki-8788eb0d5c2f",
+     "section": "football",
+     "start": "2019-01-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panachaiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "5-0",
+     "url": "https://en.wikipedia.org/wiki/2018%E2%80%9319_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Matos",
+        "min": "5"
+       },
+       {
+        "name": "Jabá",
+        "min": "37"
+       },
+       {
+        "name": "Jabá",
+        "min": "54"
+       },
+       {
+        "name": "Limnios",
+        "min": "46"
+       },
+       {
+        "name": "Mišić",
+        "min": "67"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-524208",
@@ -506,6 +686,39 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-9b25d917319c",
+     "section": "football",
+     "start": "2019-02-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2018%E2%80%9319_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Stavropoulos",
+        "min": "90+1"
+       },
+       {
+        "name": "Durmishaj",
+        "min": "74"
+       }
+      ],
+      "away": [
+       {
+        "name": "Świderski",
+        "min": "58"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-524193",
      "nt": "0f9e36e6be",
      "section": "football",
@@ -552,6 +765,52 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/524172",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/11553.png"
+    },
+    {
+     "uid": "football-wiki-c20633db131d",
+     "section": "football",
+     "start": "2019-02-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "4-2",
+     "url": "https://en.wikipedia.org/wiki/2018%E2%80%9319_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Biseswar",
+        "min": "32"
+       },
+       {
+        "name": "Świderski",
+        "min": "83"
+       },
+       {
+        "name": "Akpom",
+        "min": "114"
+       },
+       {
+        "name": "Vieirinha",
+        "min": "119",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Durmishaj",
+        "min": "34"
+       },
+       {
+        "name": "Camara",
+        "min": "94"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-524167",
@@ -618,6 +877,34 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-5c342373fee3",
+     "section": "football",
+     "start": "2019-04-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Asteras Tripolis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/2018%E2%80%9319_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Matos",
+        "min": "17"
+       },
+       {
+        "name": "Matos",
+        "min": "90+6"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-524134",
      "nt": "3d1cb9254e",
      "section": "football",
@@ -666,6 +953,21 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/5276.png"
     },
     {
+     "uid": "football-wiki-aa3b33b5cce4",
+     "section": "football",
+     "start": "2019-04-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Asteras Tripolis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Kolokotronis Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/2018%E2%80%9319_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-524111",
      "nt": "69fd3bbd8c",
      "section": "football",
@@ -680,9 +982,52 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/524111",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/6848.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-0801d5970516",
+     "section": "football",
+     "start": "2019-05-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Olympic Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Greek Cup Final",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/2018%E2%80%9319_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Akpom",
+        "min": "45+1"
+       }
+      ]
+     },
+     "source": "wikipedia"
     }
    ],
-   "backfilled": true
+   "backfilled": true,
+   "summary": {
+    "league": "Πρωταθλητής",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Κατάκτηση"
+     },
+     {
+      "name": "UEFA Champions League",
+      "result": "Πλέι οφ"
+     },
+     {
+      "name": "UEFA Europa League",
+      "result": "Όμιλοι"
+     }
+    ],
+    "topscorer": "Aleksandar Prijović (9)",
+    "source": "https://en.wikipedia.org/wiki/2018%E2%80%9319_PAOK_FC_season"
+   }
   },
   "basketball": {
    "matches": [
@@ -2479,5 +2824,5 @@
    "backfilled": true
   }
  },
- "updated": "2026-11-22T18:22+02:00"
+ "updated": "2026-11-22T21:48+02:00"
 }

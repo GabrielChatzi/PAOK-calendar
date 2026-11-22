@@ -792,6 +792,11 @@
      "matches": 33,
      "standings": true,
      "summary": false
+    },
+    "football": {
+     "matches": 47,
+     "standings": false,
+     "summary": true
     }
    }
   },

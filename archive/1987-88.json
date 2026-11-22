@@ -1,0 +1,1085 @@
+{
+ "season": "1987-88",
+ "sections": {
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-3a343a4f8542",
+     "section": "football",
+     "start": "1987-09-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Bannon",
+        "min": "12"
+       },
+       {
+        "name": "Karasavvidis",
+        "min": "74"
+       }
+      ],
+      "away": [
+       {
+        "name": "Vasilakos",
+        "min": "5"
+       },
+       {
+        "name": "Nielsen",
+        "min": "83"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2975c20bb061",
+     "section": "football",
+     "start": "1987-09-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Mavros",
+        "min": "66"
+       }
+      ],
+      "away": [
+       {
+        "name": "Malioufas",
+        "min": "34"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-747d3f88fd0b",
+     "section": "football",
+     "start": "1987-09-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Veria",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "5-1",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Bannon",
+        "min": "19"
+       },
+       {
+        "name": "Bannon",
+        "min": "88"
+       },
+       {
+        "name": "Karasavvidis",
+        "min": "21"
+       },
+       {
+        "name": "Skartados",
+        "min": "56",
+        "pen": true
+       },
+       {
+        "name": "Papaioannou",
+        "min": "82"
+       }
+      ],
+      "away": [
+       {
+        "name": "Alexandris",
+        "min": "14"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e75b4c70d7c9",
+     "section": "football",
+     "start": "1987-10-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Levadiakos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Levadia Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "4-2",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lemonis",
+        "min": "1",
+        "pen": true
+       },
+       {
+        "name": "Lemonis",
+        "min": "78",
+        "pen": true
+       },
+       {
+        "name": "Kavouras",
+        "min": "28"
+       },
+       {
+        "name": "Kasdovasilis",
+        "min": "57"
+       }
+      ],
+      "away": [
+       {
+        "name": "Alexandridis",
+        "min": "6"
+       },
+       {
+        "name": "Karasavvidis",
+        "min": "34"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-abfa085d3792",
+     "section": "football",
+     "start": "1987-10-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Kalamaria",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Psarras",
+        "min": "22"
+       },
+       {
+        "name": "Karasavvidis",
+        "min": "68"
+       },
+       {
+        "name": "Karageorgiou",
+        "min": "81"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a987f02a6528",
+     "section": "football",
+     "start": "1987-10-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Anagennisi Arta",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Arta",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Alexandridis",
+        "min": "20"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f158fb19fd53",
+     "section": "football",
+     "start": "1987-11-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Athens Olympic Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Antoniou",
+        "min": "35"
+       },
+       {
+        "name": "Vlachos",
+        "min": "44"
+       }
+      ],
+      "away": [
+       {
+        "name": "Alexandridis",
+        "min": "88"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1d25859964bb",
+     "section": "football",
+     "start": "1987-11-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ethnikos Piraeus",
+     "paokHome": true,
+     "venue": "Trikala Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Baniotis",
+        "min": "30"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b1892665b6c3",
+     "section": "football",
+     "start": "1987-11-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vellios",
+        "min": "54"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-967547f22c5f",
+     "section": "football",
+     "start": "1987-11-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panserraikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Serres Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Bannon",
+        "min": "83"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-311202b093f6",
+     "section": "football",
+     "start": "1987-12-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Serres Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "6-1",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Bannon",
+        "min": "7"
+       },
+       {
+        "name": "Mavromatis",
+        "min": "14"
+       },
+       {
+        "name": "Siggas",
+        "min": "18"
+       },
+       {
+        "name": "Baniotis",
+        "min": "41"
+       },
+       {
+        "name": "Borbokis",
+        "min": "74"
+       },
+       {
+        "name": "Borbokis",
+        "min": "89"
+       }
+      ],
+      "away": [
+       {
+        "name": "Tsalouchidis",
+        "min": "49"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8392cec0b811",
+     "section": "football",
+     "start": "1987-12-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panachaiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kostas Davourlis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Papaioannou",
+        "min": "72",
+        "pen": true
+       },
+       {
+        "name": "Alexandridis",
+        "min": "85"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b0eaf1096d0f",
+     "section": "football",
+     "start": "1987-12-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Bannon",
+        "min": "9"
+       },
+       {
+        "name": "Borbokis",
+        "min": "37"
+       },
+       {
+        "name": "Iordanidis",
+        "min": "83"
+       }
+      ],
+      "away": [
+       {
+        "name": "González",
+        "min": "67",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-39b818b4cdb2",
+     "section": "football",
+     "start": "1987-12-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kastoria",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "20",
+        "pen": true
+       },
+       {
+        "name": "Georgakas",
+        "min": "30",
+        "og": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Evangelou",
+        "min": "84"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-aa5bc0dddc26",
+     "section": "football",
+     "start": "1988-01-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Diagoras",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Diagoras Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "0-3",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Borbokis",
+        "min": "47"
+       },
+       {
+        "name": "Lagonidis",
+        "min": "65"
+       },
+       {
+        "name": "Leontiadis",
+        "min": "81"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0137aeed4d0c",
+     "section": "football",
+     "start": "1988-01-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lagonidis",
+        "min": "7"
+       },
+       {
+        "name": "Leontiadis",
+        "min": "45"
+       },
+       {
+        "name": "Skartados",
+        "min": "76"
+       },
+       {
+        "name": "Skartados",
+        "min": "85"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e59b9799a8e8",
+     "section": "football",
+     "start": "1988-01-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kastoria",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kastoria",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Karatzas",
+        "min": "12"
+       },
+       {
+        "name": "Nolis",
+        "min": "56"
+       },
+       {
+        "name": "Paraskevopoulos",
+        "min": "85"
+       }
+      ],
+      "away": [
+       {
+        "name": "Iordanidis",
+        "min": "61"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-38cd6e619f74",
+     "section": "football",
+     "start": "1988-01-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEL",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Alcazar Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Mitsibonas",
+        "min": "90"
+       }
+      ],
+      "away": [
+       {
+        "name": "Borbokis",
+        "min": "17"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c31694531422",
+     "section": "football",
+     "start": "1988-01-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikos Goumas Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Pittas",
+        "min": "30"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f1f83025ab13",
+     "section": "football",
+     "start": "1988-01-31T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Mavromatis",
+        "min": "22"
+       },
+       {
+        "name": "Borbokis",
+        "min": "44"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-74751de96974",
+     "section": "football",
+     "start": "1988-02-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Veria",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Veria Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Alexandris",
+        "min": "20"
+       },
+       {
+        "name": "Pittos",
+        "min": "85"
+       }
+      ],
+      "away": [
+       {
+        "name": "Alexandridis",
+        "min": "10"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3ba73e00caa4",
+     "section": "football",
+     "start": "1988-02-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Levadiakos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Bannon",
+        "min": "20"
+       },
+       {
+        "name": "Bannon",
+        "min": "23"
+       },
+       {
+        "name": "Bannon",
+        "min": "67"
+       },
+       {
+        "name": "Borbokis",
+        "min": "80"
+       }
+      ],
+      "away": [
+       {
+        "name": "Kavouras",
+        "min": "84",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ea204a434ddd",
+     "section": "football",
+     "start": "1988-02-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Kalamarias",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kalamaria Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "50",
+        "pen": true
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-528b1532b9cf",
+     "section": "football",
+     "start": "1988-02-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Borbokis",
+        "min": "9"
+       },
+       {
+        "name": "Alexandridis",
+        "min": "13"
+       },
+       {
+        "name": "Skartados",
+        "min": "35"
+       },
+       {
+        "name": "Skartados",
+        "min": "74"
+       }
+      ],
+      "away": [
+       {
+        "name": "Zajec",
+        "min": "8"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0165fd76d3b6",
+     "section": "football",
+     "start": "1988-03-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Piraeus",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kotidis",
+        "min": "38"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8700ee7cf335",
+     "section": "football",
+     "start": "1988-03-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Iliadis",
+        "min": "60"
+       },
+       {
+        "name": "Adamou",
+        "min": "65"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b877f4685ff3",
+     "section": "football",
+     "start": "1988-03-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panserraikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "5-0",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Mitoglou",
+        "min": "10"
+       },
+       {
+        "name": "Borbokis",
+        "min": "36"
+       },
+       {
+        "name": "Alexandridis",
+        "min": "54"
+       },
+       {
+        "name": "Leontiadis",
+        "min": "58"
+       },
+       {
+        "name": "Iordanidis",
+        "min": "79"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b1644e50b6b9",
+     "section": "football",
+     "start": "1988-03-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Athens Olympic Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Funes",
+        "min": "15",
+        "pen": true
+       },
+       {
+        "name": "Sofianopoulos",
+        "min": "54"
+       }
+      ],
+      "away": [
+       {
+        "name": "Lagonidis",
+        "min": "45"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3e1141c02699",
+     "section": "football",
+     "start": "1988-04-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panachaiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lagonidis",
+        "min": "10"
+       },
+       {
+        "name": "Mavromatis",
+        "min": "78"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2bb29d3f8ba2",
+     "section": "football",
+     "start": "1988-04-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimitriadis",
+        "min": "56"
+       }
+      ],
+      "away": [
+       {
+        "name": "Skartados",
+        "min": "58"
+       },
+       {
+        "name": "Mavromatis",
+        "min": "84"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8dcd77db9962",
+     "section": "football",
+     "start": "1988-04-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Diagoras",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kastanos",
+        "min": "24",
+        "og": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-18fb4931f62a",
+     "section": "football",
+     "start": "1988-05-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Vardinogiannis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vera",
+        "min": "33"
+       },
+       {
+        "name": "Papavasiliou",
+        "min": "39",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Mavromatis",
+        "min": "50",
+        "pen": true
+       },
+       {
+        "name": "Mavreas",
+        "min": "87"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-e60622601749",
+     "section": "football",
+     "start": "1988-05-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEL",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season",
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "3η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "2ος γύρος"
+     }
+    ],
+    "topscorer": "Bannon, Borbokis (9)",
+    "source": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season"
+   },
+   "backfilled": true
+  }
+ },
+ "updated": "2026-11-22T21:52+02:00"
+}

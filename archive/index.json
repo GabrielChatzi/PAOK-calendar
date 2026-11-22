@@ -979,6 +979,16 @@
      "summary": true
     }
    }
+  },
+  {
+   "season": "1987-88",
+   "sections": {
+    "football": {
+     "matches": 33,
+     "standings": false,
+     "summary": true
+    }
+   }
   }
  ]
 }

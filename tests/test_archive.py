@@ -135,8 +135,19 @@ class Trophies(unittest.TestCase):
         self.assertIsNone(tr.trophy_block("<p>τίποτα</p>"))
 
     def test_static_sections_exist(self):
-        for key in tr.STATIC:
-            self.assertIn(key, bc.SECTIONS)
+        for key in list(tr.OFFICIAL) + list(tr.EXTRA):
+            if ":" not in key:
+                self.assertIn(key, bc.SECTIONS)
+            else:
+                self.assertTrue(key.startswith(("event:", "academy:")))
+
+    def test_official_totals_match_articles(self):
+        # Τα σύνολα των άρθρων: 81 ομαδικά, 39 στα άλλα αθλήματα, 58 στις ακαδημίες (όπως τα μετρά το άρθρο: 59).
+        count = lambda keys: sum(len(t["years"]) for k in keys for t in tr.OFFICIAL[k])  # noqa: E731
+        team = ["football", "football-women", "basketball", "volley", "volley-women", "handball", "handball-women"]
+        self.assertEqual(count(team), 81)
+        self.assertEqual(count([k for k in tr.OFFICIAL if k.startswith("event:")]), 39)
+        self.assertEqual(count([k for k in tr.OFFICIAL if k not in team and not k.startswith("event:")]), 59)
         for key in tr.ACPAOK_PAGES.values():
             if not key.startswith("event:"):
                 self.assertIn(key, bc.SECTIONS)

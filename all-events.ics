@@ -1,0 +1,136 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ – Ατομικά αθλήματα
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:event-d053b08fcc31@paok-calendar
+DTSTAMP:20261122T091956Z
+DTSTART;VALUE=DATE:20261011
+DTEND;VALUE=DATE:20261012
+SUMMARY:🥋 Οκτώ μετάλλια για το Judo του ΠΑΟΚ σ
+ τη Λάρισα
+DESCRIPTION:ΠΑΟΚ Τζούντο
+URL:https://acpaok.gr/%ce%bf%ce%ba%cf%84%cf%8e-%ce%bc%ce%b5%cf%84%ce%ac%ce%
+ bb%ce%bb%ce%b9%ce%b1-%ce%b3%ce%b9%ce%b1-%cf%84%ce%bf-judo-%cf%84%ce%bf%cf%
+ 85-%cf%80%ce%b1%ce%bf%ce%ba-%cf%83%cf%84%ce%b7-%ce%bb%ce%ac%cf%81%ce%b9/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-24da59efd1a1@paok-calendar
+DTSTAMP:20261122T091956Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:🥊 Στο Πανευρωπαϊκό Πρωτάθλημα U17 οι 
+ πυγμάχοι του ΠΑΟΚ
+DESCRIPTION:ΠΑΟΚ Πυγμαχία
+URL:https://acpaok.gr/%cf%83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%ce%b5%cf%85%cf%
+ 81%cf%89%cf%80%ce%b1%cf%8a%ce%ba%cf%8c-%cf%80%cf%81%cf%89%cf%84%ce%ac%ce%b
+ 8%ce%bb%ce%b7%ce%bc%ce%b1-u17-%ce%bf%ce%b9-%cf%80%cf%85%ce%b3%ce%bc%ce%ac/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-53a101a966a0@paok-calendar
+DTSTAMP:20261122T091956Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261027
+SUMMARY:🥊 Στο Πανευρωπαϊκό Πρωτάθλημα U15 οι 
+ πυγμάχοι του ΠΑΟΚ
+DESCRIPTION:ΠΑΟΚ Πυγμαχία
+URL:https://acpaok.gr/%cf%83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%ce%b5%cf%85%cf%
+ 81%cf%89%cf%80%ce%b1%cf%8a%ce%ba%cf%8c-%cf%80%cf%81%cf%89%cf%84%ce%ac%ce%b
+ 8%ce%bb%ce%b7%ce%bc%ce%b1-u15-%ce%bf%ce%b9-%cf%80%cf%85%ce%b3%ce%bc%ce%ac/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-d5b8b78d45d1@paok-calendar
+DTSTAMP:20261122T091956Z
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261102
+SUMMARY:🤼 Με οκτώ αθλητές στο METEORA WRESTLING TOURNAME
+ NT ο ΠΑΟΚ
+DESCRIPTION:ΠΑΟΚ Πάλη
+URL:https://acpaok.gr/%ce%bc%ce%b5-%ce%bf%ce%ba%cf%84%cf%8e-%ce%b1%ce%b8%ce
+ %bb%ce%b7%cf%84%ce%ad%cf%82-%cf%83%cf%84%ce%bf-meteora-wrestling-tournamen
+ t-%ce%bf-%cf%80%ce%b1%ce%bf%ce%ba/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-322e1c1810b9@paok-calendar
+DTSTAMP:20261122T091956Z
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20261117
+SUMMARY:🥊 Με δύο μετάλλια και σημαντικές δι
+ ακρίσεις ολοκλήρωσε την παρουσία του ο Π
+ ΑΟΚ
+DESCRIPTION:ΠΑΟΚ Πυγμαχία
+URL:https://acpaok.gr/%cf%80%cf%85%ce%b3%ce%bc%ce%b1%cf%87%ce%af%ce%b1-%ce%
+ bc%ce%b5-%ce%b4%cf%8d%ce%bf-%ce%bc%ce%b5%cf%84%ce%ac%ce%bb%ce%bb%ce%b9%ce%
+ b1-%ce%ba%ce%b1%ce%b9-%cf%83%ce%b7%ce%bc%ce%b1%ce%bd%cf%84%ce%b9%ce%ba/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-cc9839465bba@paok-calendar
+DTSTAMP:20261122T091956Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261116
+SUMMARY:🥊 ΜΜΑ: «Φορτωμένος» μετάλλια επέστρ
+ εψε ο Παναγιώτης Κούσογλου
+DESCRIPTION:ΠΑΟΚ Kick Boxing
+URL:https://acpaok.gr/%ce%bc%ce%bc%ce%b1-%cf%86%ce%bf%cf%81%cf%84%cf%89%ce%
+ bc%ce%ad%ce%bd%ce%bf%cf%82-%ce%bc%ce%b5%cf%84%ce%ac%ce%bb%ce%bb%ce%b9%ce%b
+ 1-%ce%b5%cf%80%ce%ad%cf%83%cf%84%cf%81%ce%b5%cf%88%ce%b5/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-b8cbd0b654f8@paok-calendar
+DTSTAMP:20261122T091956Z
+DTSTART;VALUE=DATE:20261115
+DTEND;VALUE=DATE:20261116
+SUMMARY:🏃 PAOK RUNNING TEAM: Αγωνιστικό Τμήμα Ημιαν
+ τοχής & Αντοχής για ηλικίες από 17 και άνω
+DESCRIPTION:ΠΑΟΚ Στίβος
+URL:https://acpaok.gr/paok-running-team-%ce%b1%ce%b3%cf%89%ce%bd%ce%b9%cf%8
+ 3%cf%84%ce%b9%ce%ba%cf%8c-%cf%84%ce%bc%ce%ae%ce%bc%ce%b1-%ce%b7%ce%bc%ce%b
+ 9%ce%b1%ce%bd%cf%84%ce%bf%cf%87%ce%ae%cf%82-%ce%b1%ce%bd%cf%84/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e1c36556700c@paok-calendar
+DTSTAMP:20261122T091956Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261123
+SUMMARY:🏋️ Με στόχο τις διακρίσεις στο Πανε
+ λλήνιο Πρωτάθλημα ο ΠΑΟΚ στην Άρση Βαρών
+DESCRIPTION:ΠΑΟΚ Άρση Βαρών
+URL:https://acpaok.gr/%ce%bc%ce%b5-%cf%83%cf%84%cf%8c%cf%87%ce%bf-%cf%84%ce
+ %b9%cf%82-%ce%b4%ce%b9%ce%b1%ce%ba%cf%81%ce%af%cf%83%ce%b5%ce%b9%cf%82-%cf
+ %83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%ce%b5%ce%bb%ce%bb%ce%ae%ce%bd%ce%b9/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-9b709431bbf6@paok-calendar
+DTSTAMP:20261122T091956Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261130
+SUMMARY:🏊 Έρχονται τα «Αλεξάνδρεια Junior 2026» 
+ στο Ποσειδώνιο
+DESCRIPTION:ΠΑΟΚ Κολύμβηση
+URL:https://acpaok.gr/%ce%ba%ce%bf%ce%bb%cf%8d%ce%bc%ce%b2%ce%b7%cf%83%ce%b
+ 7-%ce%ad%cf%81%cf%87%ce%bf%ce%bd%cf%84%ce%b1%ce%b9-%cf%84%ce%b1-%ce%b1%ce%
+ bb%ce%b5%ce%be%ce%ac%ce%bd%ce%b4%cf%81%ce%b5%ce%b9%ce%b1-junior-20/
+END:VEVENT
+END:VCALENDAR

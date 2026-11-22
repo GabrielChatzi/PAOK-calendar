@@ -1,0 +1,316 @@
+{
+ "sports": [
+  {
+   "key": "athletics",
+   "emoji": "🏃",
+   "name": "Στίβος"
+  },
+  {
+   "key": "swimming",
+   "emoji": "🏊",
+   "name": "Κολύμβηση"
+  },
+  {
+   "key": "finswimming",
+   "emoji": "🤿",
+   "name": "Τεχνική Κολύμβηση"
+  },
+  {
+   "key": "weightlifting",
+   "emoji": "🏋️",
+   "name": "Άρση Βαρών"
+  },
+  {
+   "key": "wrestling",
+   "emoji": "🤼",
+   "name": "Πάλη"
+  },
+  {
+   "key": "boxing",
+   "emoji": "🥊",
+   "name": "Πυγμαχία"
+  },
+  {
+   "key": "judo",
+   "emoji": "🥋",
+   "name": "Τζούντο"
+  },
+  {
+   "key": "taekwondo",
+   "emoji": "🥋",
+   "name": "Ταεκβοντό"
+  },
+  {
+   "key": "kickboxing",
+   "emoji": "🥊",
+   "name": "Kick Boxing"
+  },
+  {
+   "key": "sambo",
+   "emoji": "🤼",
+   "name": "Σάμπο"
+  },
+  {
+   "key": "cycling",
+   "emoji": "🚴",
+   "name": "Ποδηλασία"
+  },
+  {
+   "key": "chess",
+   "emoji": "♟️",
+   "name": "Σκάκι"
+  }
+ ],
+ "events": [
+  {
+   "id": "d053b08fcc31",
+   "sport": "judo",
+   "title": "Οκτώ μετάλλια για το Judo του ΠΑΟΚ στη Λάρισα",
+   "start": "2026-10-11",
+   "end": "2026-10-11",
+   "time": "",
+   "venue": "",
+   "athletes": "",
+   "results": "",
+   "para": false,
+   "url": "https://acpaok.gr/%ce%bf%ce%ba%cf%84%cf%8e-%ce%bc%ce%b5%cf%84%ce%ac%ce%bb%ce%bb%ce%b9%ce%b1-%ce%b3%ce%b9%ce%b1-%cf%84%ce%bf-judo-%cf%84%ce%bf%cf%85-%cf%80%ce%b1%ce%bf%ce%ba-%cf%83%cf%84%ce%b7-%ce%bb%ce%ac%cf%81%ce%b9/",
+   "posts": [
+    {
+     "title": "Οκτώ μετάλλια για το Judo του ΠΑΟΚ στη Λάρισα!",
+     "url": "https://acpaok.gr/%ce%bf%ce%ba%cf%84%cf%8e-%ce%bc%ce%b5%cf%84%ce%ac%ce%bb%ce%bb%ce%b9%ce%b1-%ce%b3%ce%b9%ce%b1-%cf%84%ce%bf-judo-%cf%84%ce%bf%cf%85-%cf%80%ce%b1%ce%bf%ce%ba-%cf%83%cf%84%ce%b7-%ce%bb%ce%ac%cf%81%ce%b9/",
+     "date": "2026-10-12"
+    }
+   ],
+   "source": "acpaok"
+  },
+  {
+   "id": "24da59efd1a1",
+   "sport": "boxing",
+   "title": "Στο Πανευρωπαϊκό Πρωτάθλημα U17 οι πυγμάχοι του ΠΑΟΚ",
+   "start": "2026-10-12",
+   "end": "2026-10-12",
+   "time": "",
+   "venue": "",
+   "athletes": "",
+   "results": "",
+   "para": false,
+   "url": "https://acpaok.gr/%cf%83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%ce%b5%cf%85%cf%81%cf%89%cf%80%ce%b1%cf%8a%ce%ba%cf%8c-%cf%80%cf%81%cf%89%cf%84%ce%ac%ce%b8%ce%bb%ce%b7%ce%bc%ce%b1-u17-%ce%bf%ce%b9-%cf%80%cf%85%ce%b3%ce%bc%ce%ac/",
+   "posts": [
+    {
+     "title": "Στο Πανευρωπαϊκό Πρωτάθλημα U17 οι πυγμάχοι του ΠΑΟΚ",
+     "url": "https://acpaok.gr/%cf%83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%ce%b5%cf%85%cf%81%cf%89%cf%80%ce%b1%cf%8a%ce%ba%cf%8c-%cf%80%cf%81%cf%89%cf%84%ce%ac%ce%b8%ce%bb%ce%b7%ce%bc%ce%b1-u17-%ce%bf%ce%b9-%cf%80%cf%85%ce%b3%ce%bc%ce%ac/",
+     "date": "2026-10-01"
+    }
+   ],
+   "source": "acpaok"
+  },
+  {
+   "id": "53a101a966a0",
+   "sport": "boxing",
+   "title": "Στο Πανευρωπαϊκό Πρωτάθλημα U15 οι πυγμάχοι του ΠΑΟΚ",
+   "start": "2026-10-16",
+   "end": "2026-10-26",
+   "time": "",
+   "venue": "",
+   "athletes": "",
+   "results": "",
+   "para": false,
+   "url": "https://acpaok.gr/%cf%83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%ce%b5%cf%85%cf%81%cf%89%cf%80%ce%b1%cf%8a%ce%ba%cf%8c-%cf%80%cf%81%cf%89%cf%84%ce%ac%ce%b8%ce%bb%ce%b7%ce%bc%ce%b1-u15-%ce%bf%ce%b9-%cf%80%cf%85%ce%b3%ce%bc%ce%ac/",
+   "posts": [
+    {
+     "title": "Στο Πανευρωπαϊκό Πρωτάθλημα U15 οι πυγμάχοι του ΠΑΟΚ!",
+     "url": "https://acpaok.gr/%cf%83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%ce%b5%cf%85%cf%81%cf%89%cf%80%ce%b1%cf%8a%ce%ba%cf%8c-%cf%80%cf%81%cf%89%cf%84%ce%ac%ce%b8%ce%bb%ce%b7%ce%bc%ce%b1-u15-%ce%bf%ce%b9-%cf%80%cf%85%ce%b3%ce%bc%ce%ac/",
+     "date": "2026-10-16"
+    }
+   ],
+   "source": "acpaok"
+  },
+  {
+   "id": "d5b8b78d45d1",
+   "sport": "wrestling",
+   "title": "Με οκτώ αθλητές στο METEORA WRESTLING TOURNAMENT ο ΠΑΟΚ",
+   "start": "2026-10-31",
+   "end": "2026-11-01",
+   "time": "",
+   "venue": "",
+   "athletes": "",
+   "results": "",
+   "para": false,
+   "url": "https://acpaok.gr/%ce%bc%ce%b5-%ce%bf%ce%ba%cf%84%cf%8e-%ce%b1%ce%b8%ce%bb%ce%b7%cf%84%ce%ad%cf%82-%cf%83%cf%84%ce%bf-meteora-wrestling-tournament-%ce%bf-%cf%80%ce%b1%ce%bf%ce%ba/",
+   "posts": [
+    {
+     "title": "Με οκτώ αθλητές στο METEORA WRESTLING TOURNAMENT ο ΠΑΟΚ",
+     "url": "https://acpaok.gr/%ce%bc%ce%b5-%ce%bf%ce%ba%cf%84%cf%8e-%ce%b1%ce%b8%ce%bb%ce%b7%cf%84%ce%ad%cf%82-%cf%83%cf%84%ce%bf-meteora-wrestling-tournament-%ce%bf-%cf%80%ce%b1%ce%bf%ce%ba/",
+     "date": "2026-10-31"
+    }
+   ],
+   "source": "acpaok"
+  },
+  {
+   "id": "322e1c1810b9",
+   "sport": "boxing",
+   "title": "Με δύο μετάλλια και σημαντικές διακρίσεις ολοκλήρωσε την παρουσία του ο ΠΑΟΚ",
+   "start": "2026-11-11",
+   "end": "2026-11-16",
+   "time": "",
+   "venue": "",
+   "athletes": "",
+   "results": "",
+   "para": false,
+   "url": "https://acpaok.gr/%cf%80%cf%85%ce%b3%ce%bc%ce%b1%cf%87%ce%af%ce%b1-%ce%bc%ce%b5-%ce%b4%cf%8d%ce%bf-%ce%bc%ce%b5%cf%84%ce%ac%ce%bb%ce%bb%ce%b9%ce%b1-%ce%ba%ce%b1%ce%b9-%cf%83%ce%b7%ce%bc%ce%b1%ce%bd%cf%84%ce%b9%ce%ba/",
+   "posts": [
+    {
+     "title": "Πυγμαχία: Με δύο μετάλλια και σημαντικές διακρίσεις ολοκλήρωσε την παρουσία του ο ΠΑΟΚ!",
+     "url": "https://acpaok.gr/%cf%80%cf%85%ce%b3%ce%bc%ce%b1%cf%87%ce%af%ce%b1-%ce%bc%ce%b5-%ce%b4%cf%8d%ce%bf-%ce%bc%ce%b5%cf%84%ce%ac%ce%bb%ce%bb%ce%b9%ce%b1-%ce%ba%ce%b1%ce%b9-%cf%83%ce%b7%ce%bc%ce%b1%ce%bd%cf%84%ce%b9%ce%ba/",
+     "date": "2026-11-16"
+    }
+   ],
+   "source": "acpaok"
+  },
+  {
+   "id": "cc9839465bba",
+   "sport": "kickboxing",
+   "title": "ΜΜΑ: «Φορτωμένος» μετάλλια επέστρεψε ο Παναγιώτης Κούσογλου",
+   "start": "2026-11-13",
+   "end": "2026-11-15",
+   "time": "",
+   "venue": "",
+   "athletes": "",
+   "results": "",
+   "para": false,
+   "url": "https://acpaok.gr/%ce%bc%ce%bc%ce%b1-%cf%86%ce%bf%cf%81%cf%84%cf%89%ce%bc%ce%ad%ce%bd%ce%bf%cf%82-%ce%bc%ce%b5%cf%84%ce%ac%ce%bb%ce%bb%ce%b9%ce%b1-%ce%b5%cf%80%ce%ad%cf%83%cf%84%cf%81%ce%b5%cf%88%ce%b5/",
+   "posts": [
+    {
+     "title": "ΜΜΑ: «Φορτωμένος» μετάλλια επέστρεψε ο Παναγιώτης Κούσογλου!",
+     "url": "https://acpaok.gr/%ce%bc%ce%bc%ce%b1-%cf%86%ce%bf%cf%81%cf%84%cf%89%ce%bc%ce%ad%ce%bd%ce%bf%cf%82-%ce%bc%ce%b5%cf%84%ce%ac%ce%bb%ce%bb%ce%b9%ce%b1-%ce%b5%cf%80%ce%ad%cf%83%cf%84%cf%81%ce%b5%cf%88%ce%b5/",
+     "date": "2026-11-16"
+    }
+   ],
+   "source": "acpaok"
+  },
+  {
+   "id": "b8cbd0b654f8",
+   "sport": "athletics",
+   "title": "PAOK RUNNING TEAM: Αγωνιστικό Τμήμα Ημιαντοχής & Αντοχής για ηλικίες από 17 και άνω",
+   "start": "2026-11-15",
+   "end": "2026-11-15",
+   "time": "",
+   "venue": "",
+   "athletes": "",
+   "results": "",
+   "para": false,
+   "url": "https://acpaok.gr/paok-running-team-%ce%b1%ce%b3%cf%89%ce%bd%ce%b9%cf%83%cf%84%ce%b9%ce%ba%cf%8c-%cf%84%ce%bc%ce%ae%ce%bc%ce%b1-%ce%b7%ce%bc%ce%b9%ce%b1%ce%bd%cf%84%ce%bf%cf%87%ce%ae%cf%82-%ce%b1%ce%bd%cf%84/",
+   "posts": [
+    {
+     "title": "PAOK RUNNING TEAM: Αγωνιστικό Τμήμα Ημιαντοχής & Αντοχής για ηλικίες από 17 και άνω",
+     "url": "https://acpaok.gr/paok-running-team-%ce%b1%ce%b3%cf%89%ce%bd%ce%b9%cf%83%cf%84%ce%b9%ce%ba%cf%8c-%cf%84%ce%bc%ce%ae%ce%bc%ce%b1-%ce%b7%ce%bc%ce%b9%ce%b1%ce%bd%cf%84%ce%bf%cf%87%ce%ae%cf%82-%ce%b1%ce%bd%cf%84/",
+     "date": "2026-10-23"
+    }
+   ],
+   "source": "acpaok"
+  },
+  {
+   "id": "e1c36556700c",
+   "sport": "weightlifting",
+   "title": "Με στόχο τις διακρίσεις στο Πανελλήνιο Πρωτάθλημα ο ΠΑΟΚ στην Άρση Βαρών",
+   "start": "2026-11-19",
+   "end": "2026-11-22",
+   "time": "",
+   "venue": "",
+   "athletes": "",
+   "results": "",
+   "para": false,
+   "url": "https://acpaok.gr/%ce%bc%ce%b5-%cf%83%cf%84%cf%8c%cf%87%ce%bf-%cf%84%ce%b9%cf%82-%ce%b4%ce%b9%ce%b1%ce%ba%cf%81%ce%af%cf%83%ce%b5%ce%b9%cf%82-%cf%83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%ce%b5%ce%bb%ce%bb%ce%ae%ce%bd%ce%b9/",
+   "posts": [
+    {
+     "title": "Με στόχο τις διακρίσεις στο Πανελλήνιο Πρωτάθλημα ο ΠΑΟΚ στην Άρση Βαρών!",
+     "url": "https://acpaok.gr/%ce%bc%ce%b5-%cf%83%cf%84%cf%8c%cf%87%ce%bf-%cf%84%ce%b9%cf%82-%ce%b4%ce%b9%ce%b1%ce%ba%cf%81%ce%af%cf%83%ce%b5%ce%b9%cf%82-%cf%83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%ce%b5%ce%bb%ce%bb%ce%ae%ce%bd%ce%b9/",
+     "date": "2026-11-20"
+    }
+   ],
+   "source": "acpaok"
+  },
+  {
+   "id": "9b709431bbf6",
+   "sport": "swimming",
+   "title": "Έρχονται τα «Αλεξάνδρεια Junior 2026» στο Ποσειδώνιο",
+   "start": "2026-11-28",
+   "end": "2026-11-29",
+   "time": "",
+   "venue": "",
+   "athletes": "",
+   "results": "",
+   "para": false,
+   "url": "https://acpaok.gr/%ce%ba%ce%bf%ce%bb%cf%8d%ce%bc%ce%b2%ce%b7%cf%83%ce%b7-%ce%ad%cf%81%cf%87%ce%bf%ce%bd%cf%84%ce%b1%ce%b9-%cf%84%ce%b1-%ce%b1%ce%bb%ce%b5%ce%be%ce%ac%ce%bd%ce%b4%cf%81%ce%b5%ce%b9%ce%b1-junior-20/",
+   "posts": [
+    {
+     "title": "Κολύμβηση: Έρχονται τα «Αλεξάνδρεια Junior 2026» στο Ποσειδώνιο!",
+     "url": "https://acpaok.gr/%ce%ba%ce%bf%ce%bb%cf%8d%ce%bc%ce%b2%ce%b7%cf%83%ce%b7-%ce%ad%cf%81%cf%87%ce%bf%ce%bd%cf%84%ce%b1%ce%b9-%cf%84%ce%b1-%ce%b1%ce%bb%ce%b5%ce%be%ce%ac%ce%bd%ce%b4%cf%81%ce%b5%ce%b9%ce%b1-junior-20/",
+     "date": "2026-11-17"
+    }
+   ],
+   "source": "acpaok"
+  }
+ ],
+ "notices": [
+  {
+   "fed": "segas",
+   "name": "ΣΕΓΑΣ",
+   "sport": "athletics",
+   "title": "Ημερομηνίες στα Πανελλήνια Πρωταθλήματα ηλικιακών κατηγοριών και στα κορυφαία ελληνικά μίτινγκ",
+   "url": "https://www.segas.gr/imerominies-sta-panellinia-protathlimata-ilikiakon-katigorion-kai-sta-koryfaia-ellinika-mitingk/",
+   "date": "2026-11-20"
+  },
+  {
+   "fed": "segas",
+   "name": "ΣΕΓΑΣ",
+   "sport": "athletics",
+   "title": "Η Κεντρική Προκήρυξη των Περιφερειακών Αγώνων Δρόμου σε Ανώμαλο Έδαφος",
+   "url": "https://www.segas.gr/i-kentriki-prokiryxi-ton-perifereiakon-agonon-dromou-se-anomalo-edafos/",
+   "date": "2026-11-13"
+  }
+ ],
+ "seenNotices": [
+  "https://weightlifting.gr/%ce%b2%cf%81%ce%bf%cf%87%ce%ae-%ce%b1%cf%80%cf%8c-%cf%81%ce%b5%ce%ba%cf%8c%cf%81-%cf%83%cf%84%ce%b7%ce%bd-1%ce%b7-%ce%bc%ce%ad%cf%81%ce%b1-%cf%84%ce%bf%cf%85-%cf%80%ce%b1%ce%bd%ce%b5%ce%bb/",
+  "https://weightlifting.gr/%ce%b7-%ce%bc%ce%b1%cf%81%ce%af%ce%b1-%cf%83%cf%84%cf%81%ce%b1%cf%84%ce%bf%cf%85%ce%b4%ce%ac%ce%ba%ce%b7-%cf%83%cf%84%ce%bf-%cf%80%ce%b1%ce%b3%ce%ba%cf%8c%cf%83%ce%bc%ce%b9%ce%bf-%cf%80%cf%81%cf%89/",
+  "https://weightlifting.gr/%ce%b7-dream-team-%ce%ba%ce%b1%ce%b9-%ce%bf%ce%b9-%ce%b8%cf%81%cf%8d%ce%bb%ce%bf%ce%b9-%cf%84%ce%b7%cf%82-%ce%ac%cf%81%cf%83%ce%b7%cf%82-%ce%b2%ce%b1%cf%81%cf%8e%ce%bd-%ce%b8%ce%b1-%ce%b2%cf%81%ce%b1/",
+  "https://weightlifting.gr/%ce%bf-%cf%83%cf%80%cf%8d%cf%81%ce%bf%cf%85-8%ce%bf%cf%82-%cf%83%cf%84%ce%b7%ce%bd-%ce%b5%cf%85%cf%81%cf%8e%cf%80%ce%b7-%ce%bc%ce%b5-9-%cf%80%ce%b1%ce%bd%ce%b5%ce%bb%ce%bb%ce%ae%ce%bd%ce%b9%ce%b1/",
+  "https://weightlifting.gr/%cf%80%ce%b1%cf%81%ce%bf%cf%85%cf%83%ce%af%ce%b1%cf%83%ce%b7-%cf%84%ce%b7%cf%82-%ce%ac%cf%81%cf%83%ce%b7%cf%82-%ce%b2%ce%b1%cf%81%cf%8e%ce%bd-%cf%83%cf%84%ce%bf-21%ce%bf-%ce%b4%ce%b7%ce%bc%ce%bf%cf%84/",
+  "https://weightlifting.gr/%cf%83%cf%84%cf%81%ce%b1%cf%84%ce%b9%cf%89%cf%84%ce%b9%ce%ba%ce%bf%ce%af-%ce%b1%ce%b8%ce%bb%ce%b7%cf%84%ce%b9%ce%ba%ce%bf%ce%af-%ce%b1%ce%b3%cf%8e%ce%bd%ce%b5%cf%82-%ce%b2%ce%b1%cf%81%cf%8e%ce%bd/",
+  "https://weightlifting.gr/%cf%84%ce%b1-%ce%b1%cf%80%ce%bf%cf%84%ce%b5%ce%bb%ce%ad%cf%83%ce%bc%ce%b1%cf%84%ce%b1-%cf%84%ce%b7%cf%82-%ce%b1%ce%84-%cf%86%ce%ac%cf%83%ce%b7%cf%82-%cf%84%ce%bf%cf%85-%cf%80%ce%b1%ce%bd%ce%b5%ce%bb/",
+  "https://weightlifting.gr/%cf%84%cf%81%ce%bf%ce%bc%ce%b5%cf%81%ce%ae-%ce%bc%ce%ac%cf%87%ce%b7-%cf%83%cf%84%ce%b1-85-%ce%ba%ce%b9%ce%bb%ce%ac-%cf%84%ce%bf%cf%85-%cf%80%ce%b1%ce%bd%ce%b5%ce%bb%ce%bb%ce%b7%ce%bd%ce%af%ce%bf%cf%85/",
+  "https://weightlifting.gr/%cf%87%cf%81%cf%85%cf%83%cf%8c-%ce%ba%ce%b1%ce%b9-%cf%87%ce%ac%ce%bb%ce%ba%ce%b9%ce%bd%ce%bf-%ce%bf-%ce%ba%cf%89%ce%bd%cf%83%cf%84%ce%b1%ce%bd%cf%84%ce%af%ce%bd%ce%bf%cf%82-%ce%bb%ce%b1%ce%bc%cf%80/",
+  "https://weightlifting.gr/agiasmos-sthn-aithousa-arshs-varon-sto-oaka/",
+  "https://weightlifting.gr/anakoinosh-ths-ellhnikhs-omospondias-arsis-varon-2/",
+  "https://weightlifting.gr/e%ce%bd%ce%b1-%ce%bc%ce%b5%ce%b3%ce%ac%ce%bb%ce%bf-%ce%b5%cf%85%cf%87%ce%b1%cf%81%ce%b9%cf%83%cf%84%cf%8e-%cf%83%cf%84%ce%b7%ce%bd-%cf%80%ce%b5%cf%81%ce%b9%cf%86%ce%ad%cf%81%ce%b5%ce%b9%ce%b1-%ce%b1/",
+  "https://weightlifting.gr/e%ce%be%ce%b1%ce%b9%cf%81%ce%b5%cf%84%ce%b9%ce%ba%ce%ad%cf%82-%ce%b5%ce%bc%cf%86%ce%b1%ce%bd%ce%af%cf%83%ce%b5%ce%b9%cf%82-%cf%83%cf%84%ce%bf-%ce%b4%ce%b9%ce%b5%ce%b8%ce%bd%ce%ad%cf%82-%cf%84%ce%bf/",
+  "https://weightlifting.gr/me-vathia-thlipsh-kai-odynh-h-oikogeneia-ths-arshs-varon/",
+  "https://weightlifting.gr/spoudaia-emfanish-apo-thn-maria-stratoudakh-sto-pagkosmio-ths-kinas/",
+  "https://weightlifting.gr/sygkinhsh-kai-anamnhseis-sth-brabeysh/",
+  "https://weightlifting.gr/t%ce%b1-%ce%b1%cf%80%ce%bf%cf%84%ce%b5%ce%bb%ce%ad%cf%83%ce%bc%ce%b1%cf%84%ce%b1-%cf%84%ce%b7%cf%82-%ce%b5%ce%bb%ce%bb%ce%ac%ce%b4%ce%b1%cf%82-%cf%83%cf%84%ce%bf-%ce%b5%cf%85%cf%81%cf%89%cf%80%ce%b1/",
+  "https://weightlifting.gr/to-%cf%80%cf%81%cf%8c%ce%b3%cf%81%ce%b1%ce%bc%ce%bc%ce%b1-%cf%84%cf%89%ce%bd-%ce%b1%ce%b3%cf%8e%ce%bd%cf%89%ce%bd-%cf%83%ce%b5-%ce%b4%cf%81%ce%ac%ce%bc%ce%b1-%ce%b9%cf%89%ce%ac%ce%bd%ce%bd%ce%b9/",
+  "https://weightlifting.gr/to-%cf%84%ce%b5%ce%bb%ce%b9%ce%ba%cf%8c-%cf%80%cf%81%cf%8c%ce%b3%cf%81%ce%b1%ce%bc%ce%bc%ce%b1-%ce%ba%ce%b1%ce%b9-%ce%b7-start-list-%cf%84%ce%bf%cf%85-%cf%80%ce%b1%ce%bd%ce%b5%ce%bb%ce%bb%ce%b7%ce%bd/",
+  "https://weightlifting.gr/xairetismos-tou-proedrou-ths-ellhnikhs-omospondias-arshs-varon/",
+  "https://www.segas.gr/ama-2026-espase-to-fragma-ton-20-000-termatismon-nea-megali-anodos-se-oles-tis-apostaseis-tou-diimerou/",
+  "https://www.segas.gr/dynati-omada-stin-pagkosmia-gymnasiada-sto-rio-nte-tzaneiro/",
+  "https://www.segas.gr/dyo-asimenia-metallia-gia-tin-ellada-sto-valkaniko-protathlima-anomalou-dromou/",
+  "https://www.segas.gr/epimorfotika-seminaria-gia-tin-apoktisi-diplomatos-kriti/",
+  "https://www.segas.gr/i-anepisimi-archiki-axiologisi-katataxi-ton-somateion-gia-to-2026/",
+  "https://www.segas.gr/i-kentriki-prokiryxi-ton-perifereiakon-agonon-dromou-se-anomalo-edafos/",
+  "https://www.segas.gr/i-polyniki-emmanouilidou-proetoimazetai-me-megalo-stocho-to-evropaiko-protathlima-kleistou-sti-valenthia/",
+  "https://www.segas.gr/idrysi-scholis-proponiton-a-epipedou-diakrithenton-athliton-kai-proponiton-apo-ti-nga/",
+  "https://www.segas.gr/imerides-kleistou-kai-anaptyxiakoi-thematikoi-agones/",
+  "https://www.segas.gr/imerominies-sta-panellinia-protathlimata-ilikiakon-katigorion-kai-sta-koryfaia-ellinika-mitingk/",
+  "https://www.segas.gr/kales-emfaniseis-apo-tous-mikrous-sta-28a-konstantinideia-ntebouto-gia-tin-markouli/",
+  "https://www.segas.gr/kales-parousies-gia-moumouri-kai-salivero-sto-ntakar/",
+  "https://www.segas.gr/me-gianni-koutsogiannopoulo-kai-to-vlemma-ston-kleisto-synechizei-o-antonis-merlos/",
+  "https://www.segas.gr/ntebouto-karali-stis-23-1-sto-ntortmount-kai-synecheia-me-dynates-anametriseis/",
+  "https://www.segas.gr/o-emmanouil-karalis-etoimos-na-allaxei-ta-dedomena-sto-alma-epi-konto/",
+  "https://www.segas.gr/pano-apo-186-ekatommyria-provoles-sta-social-media-tou-marathoniou-athinas-tou-afthentikou/",
+  "https://www.segas.gr/peny-tsinopoulou-stochos-i-prokrisi-sto-pagkosmio-tou-pekinou-kai-sta-dyo-agonismata-tou-vadin/",
+  "https://www.segas.gr/ta-oria-tis-world-athletics-gia-tous-olybiakous-agones-tou-2028/",
+  "https://www.segas.gr/to-programma-tou-pagkosmiou-protathlimatos-anoichtou-stivou-sto-pekino/",
+  "https://www.segas.gr/vima-vima-i-apokatastasi-tou-dromea-meta-to-marathonio/"
+ ],
+ "hiddenSeen": []
+}

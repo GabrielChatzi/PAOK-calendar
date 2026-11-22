@@ -1,0 +1,64 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Πυγμαχία
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:event-24da59efd1a1@paok-calendar
+DTSTAMP:20261122T091956Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:🥊 Στο Πανευρωπαϊκό Πρωτάθλημα U17 οι 
+ πυγμάχοι του ΠΑΟΚ
+DESCRIPTION:ΠΑΟΚ Πυγμαχία
+URL:https://acpaok.gr/%cf%83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%ce%b5%cf%85%cf%
+ 81%cf%89%cf%80%ce%b1%cf%8a%ce%ba%cf%8c-%cf%80%cf%81%cf%89%cf%84%ce%ac%ce%b
+ 8%ce%bb%ce%b7%ce%bc%ce%b1-u17-%ce%bf%ce%b9-%cf%80%cf%85%ce%b3%ce%bc%ce%ac/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-53a101a966a0@paok-calendar
+DTSTAMP:20261122T091956Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261027
+SUMMARY:🥊 Στο Πανευρωπαϊκό Πρωτάθλημα U15 οι 
+ πυγμάχοι του ΠΑΟΚ
+DESCRIPTION:ΠΑΟΚ Πυγμαχία
+URL:https://acpaok.gr/%cf%83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%ce%b5%cf%85%cf%
+ 81%cf%89%cf%80%ce%b1%cf%8a%ce%ba%cf%8c-%cf%80%cf%81%cf%89%cf%84%ce%ac%ce%b
+ 8%ce%bb%ce%b7%ce%bc%ce%b1-u15-%ce%bf%ce%b9-%cf%80%cf%85%ce%b3%ce%bc%ce%ac/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-322e1c1810b9@paok-calendar
+DTSTAMP:20261122T091956Z
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20261117
+SUMMARY:🥊 Με δύο μετάλλια και σημαντικές δι
+ ακρίσεις ολοκλήρωσε την παρουσία του ο Π
+ ΑΟΚ
+DESCRIPTION:ΠΑΟΚ Πυγμαχία
+URL:https://acpaok.gr/%cf%80%cf%85%ce%b3%ce%bc%ce%b1%cf%87%ce%af%ce%b1-%ce%
+ bc%ce%b5-%ce%b4%cf%8d%ce%bf-%ce%bc%ce%b5%cf%84%ce%ac%ce%bb%ce%bb%ce%b9%ce%
+ b1-%ce%ba%ce%b1%ce%b9-%cf%83%ce%b7%ce%bc%ce%b1%ce%bd%cf%84%ce%b9%ce%ba/
+END:VEVENT
+END:VCALENDAR

@@ -229,7 +229,1493 @@
     }
    ],
    "backfilled": true
+  },
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-062f18a4317b",
+     "section": "football",
+     "start": "1999-08-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Agersani",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Zisis Vryzas[Vryzas",
+        "min": "40"
+       },
+       {
+        "name": "Frousos",
+        "min": "60"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3b0ee92a05ff",
+     "section": "football",
+     "start": "1999-08-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos Volos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Volos Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Dollberg",
+        "min": "47"
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "81"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-24a4797ed2c4",
+     "section": "football",
+     "start": "1999-08-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panachaiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "3η αγωνιστική",
+     "score": "5-0",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Marangos",
+        "min": "11"
+       },
+       {
+        "name": "Frousos",
+        "min": "12"
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "50"
+       },
+       {
+        "name": "Valencia",
+        "min": "75"
+       },
+       {
+        "name": "Valencia",
+        "min": "90+3"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-781e723ae159",
+     "section": "football",
+     "start": "1999-08-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Poseidon Michaniona",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Thessaloniki",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "4η αγωνιστική",
+     "score": "0-3",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Georgiadis",
+        "min": "70"
+       },
+       {
+        "name": "Georgiadis",
+        "min": "88"
+       },
+       {
+        "name": "Frousos",
+        "min": "90"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-902cfce5f8ee",
+     "section": "football",
+     "start": "1999-09-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Locomotive Tbilisi",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Dinamo Arena",
+     "competition": "Κύπελλο UEFA",
+     "round": "1ος αγώνας",
+     "score": "0-7",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Georgiadis",
+        "min": "16"
+       },
+       {
+        "name": "Georgiadis",
+        "min": "24"
+       },
+       {
+        "name": "Sabry",
+        "min": "43"
+       },
+       {
+        "name": "Frousos",
+        "min": "56"
+       },
+       {
+        "name": "Frousos",
+        "min": "63"
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "68"
+       },
+       {
+        "name": "Vryzas",
+        "min": "69"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-91b6143f044c",
+     "section": "football",
+     "start": "1999-09-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "4-4",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Marangos",
+        "min": "15"
+       },
+       {
+        "name": "Dollberg",
+        "min": "35"
+       },
+       {
+        "name": "Georgiadis",
+        "min": "65"
+       },
+       {
+        "name": "Valencia",
+        "min": "89"
+       }
+      ],
+      "away": [
+       {
+        "name": "Ćirić",
+        "min": "1",
+        "pen": true
+       },
+       {
+        "name": "Nikolaidis",
+        "min": "20"
+       },
+       {
+        "name": "Dollberg",
+        "min": "23",
+        "og": true
+       },
+       {
+        "name": "Dellas",
+        "min": "46"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b1480c523ac5",
+     "section": "football",
+     "start": "1999-09-26T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kalamata",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "4-2",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frantzeskos",
+        "min": "14"
+       },
+       {
+        "name": "Valencia",
+        "min": "18"
+       },
+       {
+        "name": "Sabry",
+        "min": "47"
+       },
+       {
+        "name": "Vryzas",
+        "min": "76"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dacroce",
+        "min": "45"
+       },
+       {
+        "name": "Soares",
+        "min": "64"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4512388ba87b",
+     "section": "football",
+     "start": "1999-09-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Locomotive Tbilisi",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "2ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Valencia",
+        "min": "53",
+        "pen": true
+       },
+       {
+        "name": "Salpingidis",
+        "min": "81"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-88ca33a8a711",
+     "section": "football",
+     "start": "1999-10-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Olympic Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Goumas",
+        "min": "56"
+       }
+      ],
+      "away": [
+       {
+        "name": "Nagbe",
+        "min": "79"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0a18eafef9b0",
+     "section": "football",
+     "start": "1999-10-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Veria",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "5η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frousos",
+        "min": "37"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0b3bd03c39a1",
+     "section": "football",
+     "start": "1999-10-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ethnikos Asteras",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dollberg",
+        "min": "45+2"
+       },
+       {
+        "name": "Frousos",
+        "min": "49"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8c178d8900ad",
+     "section": "football",
+     "start": "1999-10-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Benfica",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "1ος αγώνας",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frantzeskos",
+        "min": "90"
+       }
+      ],
+      "away": [
+       {
+        "name": "Nuno Gomes",
+        "min": "68"
+       },
+       {
+        "name": "Ronaldo Guiaro",
+        "min": "90"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-4564e7470f84",
+     "section": "football",
+     "start": "1999-10-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Velis",
+        "min": "24"
+       },
+       {
+        "name": "Konstantinou",
+        "min": "43"
+       },
+       {
+        "name": "Konstantinou",
+        "min": "60"
+       }
+      ],
+      "away": [
+       {
+        "name": "Frantzeskos",
+        "min": "90+6"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-99d6a4ec0853",
+     "section": "football",
+     "start": "1999-10-31T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Paniliakos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Gonias",
+        "min": "21"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0ecb8d28b7f0",
+     "section": "football",
+     "start": "1999-11-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Benfica",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Estádio da Luz",
+     "competition": "Κύπελλο UEFA",
+     "round": "2ος αγώνας",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kandaurov",
+        "min": "25"
+       }
+      ],
+      "away": [
+       {
+        "name": "Marangos",
+        "min": "28"
+       },
+       {
+        "name": "Sabry",
+        "min": "44"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-75fc2dc07cfe",
+     "section": "football",
+     "start": "1999-11-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Olympic Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Giannakopoulos",
+        "min": "7"
+       },
+       {
+        "name": "Niniadis",
+        "min": "25"
+       },
+       {
+        "name": "Amanatidis",
+        "min": "31"
+       },
+       {
+        "name": "Giovanni",
+        "min": "45+1"
+       }
+      ],
+      "away": [
+       {
+        "name": "Frantzeskos",
+        "min": "76"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-9fb3714a13d8",
+     "section": "football",
+     "start": "1999-11-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ionikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Valencia",
+        "min": "17"
+       },
+       {
+        "name": "Valencia",
+        "min": "61"
+       },
+       {
+        "name": "Sabry",
+        "min": "58",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-cd231bb7c15e",
+     "section": "football",
+     "start": "1999-11-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c33daee8833e",
+     "section": "football",
+     "start": "1999-12-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Vardinogiannis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Pavlopoulos",
+        "min": "8"
+       },
+       {
+        "name": "Nioplias",
+        "min": "30"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-348f126f2953",
+     "section": "football",
+     "start": "1999-12-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Xanthi",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "5-0",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frousos",
+        "min": "11"
+       },
+       {
+        "name": "Frousos",
+        "min": "84"
+       },
+       {
+        "name": "Sabry",
+        "min": "27"
+       },
+       {
+        "name": "Sabry",
+        "min": "43",
+        "pen": true
+       },
+       {
+        "name": "Frantzeskos",
+        "min": "41"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-433328220179",
+     "section": "football",
+     "start": "1999-12-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panachaiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kostas Davourlis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Jero Miñarro",
+        "min": "7"
+       }
+      ],
+      "away": [
+       {
+        "name": "Georgiadis",
+        "min": "65"
+       },
+       {
+        "name": "Frousos",
+        "min": "77"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-93e09cd40745",
+     "section": "football",
+     "start": "1999-12-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Proodeftiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Routzieris",
+        "min": "88",
+        "og": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-33c219b02fee",
+     "section": "football",
+     "start": "2000-01-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panionios",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nea Smyrni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Nalitzis",
+        "min": "76"
+       }
+      ],
+      "away": [
+       {
+        "name": "Frousos",
+        "min": "68"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3aca5fbc574b",
+     "section": "football",
+     "start": "2000-01-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Olympic Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Alexandris",
+        "min": "2"
+       },
+       {
+        "name": "Giannakopoulos",
+        "min": "54"
+       }
+      ],
+      "away": [
+       {
+        "name": "Frousos",
+        "min": "19"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0f86eea5ee1a",
+     "section": "football",
+     "start": "2000-01-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Smyrnis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vryzas",
+        "min": "59"
+       }
+      ],
+      "away": [
+       {
+        "name": "Fortuzi",
+        "min": "90+2"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3fdd3ff4ef73",
+     "section": "football",
+     "start": "2000-01-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kavala",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Anthi Karagianni Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Koubis",
+        "min": "47"
+       }
+      ],
+      "away": [
+       {
+        "name": "Valencia",
+        "min": "85"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-122c3114bae4",
+     "section": "football",
+     "start": "2000-01-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Trikala",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vryzas",
+        "min": "10"
+       },
+       {
+        "name": "Frousos",
+        "min": "52"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-bc3c6a68ff88",
+     "section": "football",
+     "start": "2000-02-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikos Goumas Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Nikolaidis",
+        "min": "49"
+       },
+       {
+        "name": "Nikolaidis",
+        "min": "84"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-043c354b889d",
+     "section": "football",
+     "start": "2000-02-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Kalamata",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kalamata Metropolitan Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Soares",
+        "min": "49"
+       }
+      ],
+      "away": [
+       {
+        "name": "Bratić",
+        "min": "16"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-77f3b568e945",
+     "section": "football",
+     "start": "2000-02-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "1-3",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Bratić",
+        "min": "74"
+       }
+      ],
+      "away": [
+       {
+        "name": "Basinas",
+        "min": "30",
+        "pen": true
+       },
+       {
+        "name": "Karagounis",
+        "min": "33"
+       },
+       {
+        "name": "Warzycha",
+        "min": "69"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-15a0436bd443",
+     "section": "football",
+     "start": "2000-02-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ethnikos Asteras",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Michalis Kritikopoulos Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Milovanović",
+        "min": "86"
+       }
+      ],
+      "away": [
+       {
+        "name": "Nalitzis",
+        "min": "49"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2e2e2c45ad2e",
+     "section": "football",
+     "start": "2000-03-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Borbokis",
+        "min": "27"
+       },
+       {
+        "name": "Borbokis",
+        "min": "48"
+       },
+       {
+        "name": "Konstantinidis",
+        "min": "42"
+       },
+       {
+        "name": "Nalitzis",
+        "min": "61"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7ad29015509b",
+     "section": "football",
+     "start": "2000-03-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Paniliakos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Pyrgos Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "0-4",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Nalitzis",
+        "min": "18",
+        "pen": true
+       },
+       {
+        "name": "Borbokis",
+        "min": "30"
+       },
+       {
+        "name": "Borbokis",
+        "min": "37"
+       },
+       {
+        "name": "Konstantinidis",
+        "min": "53"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-df4722709283",
+     "section": "football",
+     "start": "2000-03-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "0-2",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Choutos",
+        "min": "49"
+       },
+       {
+        "name": "Choutos",
+        "min": "57"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3ed8686e852d",
+     "section": "football",
+     "start": "2000-03-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ionikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Neapoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Afentoulidis",
+        "min": "45"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-214eb01604ca",
+     "section": "football",
+     "start": "2000-04-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "3-2",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Nalitzis",
+        "min": "45",
+        "pen": true
+       },
+       {
+        "name": "Konstantinidis",
+        "min": "58"
+       },
+       {
+        "name": "Kafes",
+        "min": "80"
+       }
+      ],
+      "away": [
+       {
+        "name": "Amponsah",
+        "min": "71",
+        "og": true
+       },
+       {
+        "name": "Kyzeridis",
+        "min": "90+4"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-5f213fbe2185",
+     "section": "football",
+     "start": "2000-04-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "2-2",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Nalitzis",
+        "min": "45"
+       },
+       {
+        "name": "Pavlopoulos",
+        "min": "89",
+        "og": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Mauro Silva",
+        "min": "21"
+       },
+       {
+        "name": "Mauro Silva",
+        "min": "59"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-06ae979d157e",
+     "section": "football",
+     "start": "2000-04-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Xanthi",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Xanthi Ground",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Patsatzoglou",
+        "min": "74"
+       }
+      ],
+      "away": [
+       {
+        "name": "Nalitzis",
+        "min": "40",
+        "pen": true
+       },
+       {
+        "name": "Georgiadis",
+        "min": "53"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-706566f325ce",
+     "section": "football",
+     "start": "2000-04-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panachaiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Georgiadis",
+        "min": "40"
+       }
+      ],
+      "away": [
+       {
+        "name": "Solakis",
+        "min": "11"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-cf803a234fcf",
+     "section": "football",
+     "start": "2000-05-04T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Proodeftiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikaia Municipal Gymnasium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vilanakis",
+        "min": "63"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-12ff6c8453f0",
+     "section": "football",
+     "start": "2000-05-08T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panionios",
+     "paokHome": true,
+     "venue": "Rhodes stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "31η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Borbokis",
+        "min": "43"
+       },
+       {
+        "name": "Frousos",
+        "min": "56"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3c96345b0e30",
+     "section": "football",
+     "start": "2000-05-13T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Smyrnis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Georgios Kamaras Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "32η αγωνιστική",
+     "score": "3-4",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Vourexakis",
+        "min": "6"
+       },
+       {
+        "name": "Labriakos",
+        "min": "62"
+       },
+       {
+        "name": "Papadimitriou",
+        "min": "72"
+       }
+      ],
+      "away": [
+       {
+        "name": "Frousos",
+        "min": "22"
+       },
+       {
+        "name": "Kafes",
+        "min": "45+1"
+       },
+       {
+        "name": "Nalitzis",
+        "min": "82"
+       },
+       {
+        "name": "Nalitzis",
+        "min": "90+2"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b65269e19b3e",
+     "section": "football",
+     "start": "2000-05-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Kavala",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "33η αγωνιστική",
+     "score": "5-0",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Konstantinidis",
+        "min": "11"
+       },
+       {
+        "name": "Nalitzis",
+        "min": "32"
+       },
+       {
+        "name": "Nalitzis",
+        "min": "41",
+        "pen": true
+       },
+       {
+        "name": "Kafes",
+        "min": "34"
+       },
+       {
+        "name": "Frousos",
+        "min": "45"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2df6f49d393d",
+     "section": "football",
+     "start": "2000-05-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Trikala",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Trikala Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "34η αγωνιστική",
+     "score": "3-5",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Jovanović",
+        "min": "6"
+       },
+       {
+        "name": "Jovanović",
+        "min": "56",
+        "pen": true
+       },
+       {
+        "name": "Amponsah",
+        "min": "43",
+        "og": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Nalitzis 58'",
+        "min": "3"
+       },
+       {
+        "name": "Georgiadis",
+        "min": "4"
+       },
+       {
+        "name": "Kafes",
+        "min": "36"
+       },
+       {
+        "name": "Frousos",
+        "min": "74"
+       },
+       {
+        "name": "Frousos",
+        "min": "79"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "5η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "2ος γύρος"
+     },
+     {
+      "name": "Κύπελλο UEFA",
+      "result": "2ος γύρος"
+     }
+    ],
+    "topscorer": "Nikolaos Frousos (11) Dimitris Nalitzis (11)",
+    "source": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season"
+   },
+   "backfilled": true
   }
  },
- "updated": "2026-11-22T19:13+02:00"
+ "updated": "2026-11-22T21:51+02:00"
 }

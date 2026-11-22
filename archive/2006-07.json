@@ -146,6 +146,29 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/3874.png"
     },
     {
+     "uid": "football-wiki-3b8c8766281d",
+     "section": "football",
+     "start": "2006-11-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panserraikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Serres Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/2006%E2%80%9307_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Nikos Arabatzis",
+        "min": "31"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-218114",
      "nt": "ec7c3d2f5a",
      "section": "football",
@@ -240,6 +263,29 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-e28538abce6a",
+     "section": "football",
+     "start": "2006-12-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ergotelis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/2006%E2%80%9307_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Athanasios Tsigas",
+        "min": "55"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-218163",
      "nt": "bcfdc53ef0",
      "section": "football",
@@ -272,6 +318,39 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
     },
     {
+     "uid": "football-wiki-8881fe266d84",
+     "section": "football",
+     "start": "2007-01-17T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/2006%E2%80%9307_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Pantelis Konstantinidis",
+        "min": "31"
+       },
+       {
+        "name": "Marcin Mięciel",
+        "min": "42"
+       }
+      ],
+      "away": [
+       {
+        "name": "Vangelis Mantzios",
+        "min": "62"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
      "uid": "football-espn-218185",
      "nt": "62dda8f107",
      "section": "football",
@@ -302,6 +381,43 @@
      "url": "https://www.espn.com/soccer/match/_/gameId/218190",
      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/3881.png",
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+    },
+    {
+     "uid": "football-wiki-1abac19d5ca2",
+     "section": "football",
+     "start": "2007-01-31T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Olympic Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/2006%E2%80%9307_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Andreas Ivanschitz",
+        "min": "40"
+       },
+       {
+        "name": "Vangelis Mantzios",
+        "min": "63"
+       },
+       {
+        "name": "Vangelis Mantzios",
+        "min": "95"
+       }
+      ],
+      "away": [
+       {
+        "name": "Georgios Georgiadis",
+        "min": "90"
+       }
+      ]
+     },
+     "source": "wikipedia"
     },
     {
      "uid": "football-espn-218195",
@@ -476,7 +592,18 @@
      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/1010.png"
     }
    ],
-   "backfilled": true
+   "backfilled": true,
+   "summary": {
+    "league": "6η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "Προημιτελικά"
+     }
+    ],
+    "topscorer": "Marcin Mięciel (14)",
+    "source": "https://en.wikipedia.org/wiki/2006%E2%80%9307_PAOK_FC_season"
+   }
   },
   "basketball": {
    "matches": [
@@ -1844,5 +1971,5 @@
    "backfilled": true
   }
  },
- "updated": "2026-11-22T18:55+02:00"
+ "updated": "2026-11-22T21:50+02:00"
 }

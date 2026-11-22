@@ -704,9 +704,9 @@
    "season": "2006-07",
    "sections": {
     "football": {
-     "matches": 30,
+     "matches": 34,
      "standings": false,
-     "summary": false
+     "summary": true
     },
     "basketball": {
      "matches": 41,

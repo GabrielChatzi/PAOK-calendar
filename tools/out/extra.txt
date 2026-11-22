@@ -1,0 +1,30 @@
+ESPN 2024 gre.1: 32 2025-05-11T17:00Z … 2024-08-17T17:00Z
+ESPN 2024 gre.cup: HTTP Error 400: Bad Request
+ESPN 2024 uefa.europa: 10 2025-02-20T17:45Z … 2024-09-25T19:00Z
+ESPN 2024 uefa.europa.conf: 0  … 
+ESPN 2024 uefa.champions: 0  … 
+ESPN 2020 gre.1: 36 2021-05-16T16:30Z … 2020-09-11T17:30Z
+ESPN 2020 gre.cup: HTTP Error 400: Bad Request
+ESPN 2020 uefa.europa: 6 2020-12-10T17:55Z … 2020-10-22T16:55Z
+ESPN 2020 uefa.europa.conf: 0  … 
+ESPN 2020 uefa.champions: 0  … 
+ESPN 2015 gre.1: 35 2016-05-31T17:15Z … 2015-08-23T16:15Z
+ESPN 2015 gre.cup: HTTP Error 400: Bad Request
+ESPN 2015 uefa.europa: 12 2015-12-10T18:00Z … 2015-07-16T18:00Z
+ESPN 2015 uefa.europa.conf: 0  … 
+ESPN 2015 uefa.champions: 0  … 
+## https://www.esake.gr/el/action/EsaketeamView?idteam=0000000C&mode=3
+links: []
+options: [('', 'Επιλογή αγωνιστικής'), ('184645B9', 'Stoiximan GBL 2026-2027'), ('44B80BEB', 'Stoiximan GBL 2025-2026'), ('4820C134', ' Stoiximan GBL 2024-2025'), ('C1AF5EF5', 'Stoiximan Basket League 2023-2024'), ('DC917125', 'Basket League 2022-2023'), ('8C367D67', 'STOIXIMAN BASKET LEAGUE 2021-22'), ('03FFA3AC', 'Basket League 2020-2021'), ('49EEB365', 'Basket League 2019-2020'), ('A12E05CD', 'BETSHOP BASKET LEAGUE 2018-19'), ('42C43378', 'STOIXIMAN.GR Basket League 2017-18'), ('44323D2A', 'STOIXIMAN.GR Basket League 2016-17'), ('38100B0B', 'Basket League ΣΚΡΑΤΣ 2015-16'), ('3E05D578', 'Basket League ΣΚΡΑΤΣ 2014-15'), ('46F7BA21', 'Basket League ΟΠΑΠ 2013-14'), ('00000001', 'Basket League ΟΠΑΠ 2012-13'), ('00000002', '2011-2012'), ('00000003', '2010-2011'), ('00000004', '2009-2010'), ('00000005', '2008-2009'), ('00000006', '2007-2008'), ('00000007', '2006-2007'), ('00000008', '2005-2006'), ('00000009', '2004-2005'), ('0000000A', '2003-2004'), ('0000000B', '2002-2003'), ('0000000C', '2001-2002'), ('0000000D', '2000-2001'), ('0000000E', '1999-2000'), ('0000000F', '1998-1999'), ('00000010', '1997-1998'), ('00000011', '1996-1997'), ('00000012', '1995-1996'), ('00000013', '1994-1995'), ('00000014', '1993-1994'), ('00000015', '1992-1993')]
+## https://www.paokbc.gr/el/omada/titloi
+links: ['/el/istoria/tropaia', '/el/istoria/xronologio']
+options: []
+## https://www.paokbc.gr/el/istoria
+links: ['/el/istoria/tropaia', '/el/istoria/xronologio']
+options: []
+## https://www.paokfc.gr/
+links: ['https://www.paokfc.gr/category/nea/news-istoria/', 'https://www.paokfc.gr/istoria/', 'https://www.paokfc.gr/istoria/chronologio/afieroma/', 'https://www.paokfc.gr/istoria/i-edra/', 'https://www.paokfc.gr/istoria/i-edra/istoria/', 'https://www.paokfc.gr/istoria/milestones/', 'https://www.paokfc.gr/istoria/o-paok-stin-europi-nchc/', 'https://www.paokfc.gr/istoria/o-paok-stin-europi-nchc/geniko/', 'https://www.paokfc.gr/istoria/oi-diethneis-tou-paok/afieroma/', 'https://www.paokfc.gr/istoria/oi-proponites/afieroma/', 'https://www.paokfc.gr/istoria/oi-titloi/', 'https://www.paokfc.gr/istoria/oi-titloi/kupello-1972-nchc/afieroma-1972/', 'https://www.paokfc.gr/istoria/oi-xenoi-tou-paok/afieroma/']
+options: []
+## https://www.paokbc.gr/el/
+links: ['/el/istoria/tropaia', '/el/istoria/xronologio', '/el/nea/omadas/3656-new-season-new-look-2026-27']
+options: []

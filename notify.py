@@ -50,6 +50,7 @@ EMOJI = {
     **{k: "🏐" for k in ("volley-u21", "volley-u18", "volley-women-u20", "volley-women-u18", "volley-women-u18es1",
                          "volley-women-u18es2")},
     **{k: "🏀" for k in ("basketball-u18", "basketball-u16", "basketball-u16b", "basketball-women-u18", "basketball-women-u16", "basketball-women-u16b")},
+    "basketball-amea": "🏀",
 }
 # Β' ομάδα και ακαδημίες: η πηγή (paokfc.gr) ανεβάζει τα αποτελέσματα αργά, οπότε δεν ζητάμε
 # συχνότερες ενημερώσεις μετά τους αγώνες τους· τα φέρνει η κανονική ενημέρωση κάθε 2 ώρες.

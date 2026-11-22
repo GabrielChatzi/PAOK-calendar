@@ -37,31 +37,24 @@ for site in ["https://acpaok.gr", "https://www.paokbc.gr", "https://www.paokfc.g
         if len(got) < 100: break
 (OUT / "trophies.txt").write_text("\n".join(lines), encoding="utf-8")
 
-# ---- B: παλιές σεζόν
-orig = bc.season_start_year
-rows = []
-for year in [2025, 2024, 2023, 2022, 2021, 2019, 2016]:
-    bc.season_start_year = lambda today=None, y=year: y
-    st.season_start_year = bc.season_start_year
-    bc._FETCHED.clear()
-    for key, getters in bc.SOURCES.items():
-        for name, get in getters:
-            try:
-                ms = run(get) or []
-                ms = [m for m in ms if m]
-                dates = sorted(m.day.isoformat() for m in ms if getattr(m, "day", None))
-                scored = sum(1 for m in ms if getattr(m, "score", ""))
-                ok = f"{len(ms)} αγώνες, {scored} με σκορ, {dates[0] if dates else '-'} … {dates[-1] if dates else '-'}"
-            except Exception as e:
-                ok = f"ΣΦΑΛΜΑ {type(e).__name__}: {str(e)[:120]}"
-            rows.append(f"{year}\t{key}\t{name}\t{ok}")
-            print(rows[-1], flush=True)
-    for key, get in st.STANDINGS.items():
+# ---- B: ESPN με season, σελίδες ESAKE και τίτλων
+extra = []
+for y in (2024, 2020, 2015):
+    for league in ("gre.1", "gre.cup", "uefa.europa", "uefa.europa.conf", "uefa.champions"):
         try:
-            t = run(get)
-            ok = "; ".join(f"{x['title']} ({len(x['rows'])})" for x in t)[:200]
+            d = json.loads(bc.fetch(f"https://site.api.espn.com/apis/site/v2/sports/soccer/{league}/teams/{bc.ESPN_TEAM_ID}/schedule?season={y}"))
+            ev = d.get("events", [])
+            extra.append(f"ESPN {y} {league}: {len(ev)} {ev[0]['date'] if ev else ''} … {ev[-1]['date'] if ev else ''}")
         except Exception as e:
-            ok = f"ΣΦΑΛΜΑ {type(e).__name__}: {str(e)[:120]}"
-        rows.append(f"{year}\t{key}\tΒΑΘΜΟΛΟΓΙΑ\t{ok}")
-        print(rows[-1], flush=True)
-(OUT / "seasons.tsv").write_text("\n".join(rows), encoding="utf-8")
+            extra.append(f"ESPN {y} {league}: {e}")
+for url in ["https://www.esake.gr/el/action/EsaketeamView?idteam=0000000C&mode=3",
+            "https://www.paokbc.gr/el/omada/titloi", "https://www.paokbc.gr/el/istoria", "https://www.paokfc.gr/",
+            "https://www.paokbc.gr/el/"]:
+    try:
+        page = bc.fetch(url)
+        links = sorted(set(re.findall(r'href="([^"]*(?:season|seira|idseason|archive|arxeio|titl|troph|istori|palmar|history)[^"]*)"', page, re.I)))
+        opts = re.findall(r'<option[^>]*value="([^"]*)"[^>]*>([^<]*)</option>', page)[:60]
+        extra.append(f"## {url}\nlinks: {links[:80]}\noptions: {opts}")
+    except Exception as e:
+        extra.append(f"## {url}: {e}")
+(OUT / "extra.txt").write_text("\n".join(extra), encoding="utf-8")

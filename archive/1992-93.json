@@ -357,7 +357,1308 @@
     }
    ],
    "backfilled": true
+  },
+  "football": {
+   "matches": [
+    {
+     "uid": "football-wiki-ca170918fc1c",
+     "section": "football",
+     "start": "1992-08-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Eordaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "5-0",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Th.Dimopoulos",
+        "min": "13"
+       },
+       {
+        "name": "Th.Dimopoulos",
+        "min": "53"
+       },
+       {
+        "name": "Alexiou",
+        "min": "18"
+       },
+       {
+        "name": "Oikonomidis",
+        "min": "47"
+       },
+       {
+        "name": "Đurđević",
+        "min": "86"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-182c6b3ffe56",
+     "section": "football",
+     "start": "1992-08-19T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Proodeftiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikaia Municipal Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-80b0ff005e95",
+     "section": "football",
+     "start": "1992-08-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Pandramaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Municipal Stadium of Drama",
+     "competition": "Κύπελλο Ελλάδας",
+     "score": "2-4",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tentzos",
+        "min": "40",
+        "pen": true
+       },
+       {
+        "name": "Yfantidis",
+        "min": "77"
+       }
+      ],
+      "away": [
+       {
+        "name": "Toursounidis",
+        "min": "20"
+       },
+       {
+        "name": "Borbokis",
+        "min": "31"
+       },
+       {
+        "name": "Đurđević",
+        "min": "37"
+       },
+       {
+        "name": "Iliadis",
+        "min": "45"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8a29330a2274",
+     "section": "football",
+     "start": "1992-09-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panachaiki",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "1η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Đurđević",
+        "min": "27"
+       },
+       {
+        "name": "Đurđević",
+        "min": "62"
+       },
+       {
+        "name": "Toursounidis",
+        "min": "90"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-b4dddca491cf",
+     "section": "football",
+     "start": "1992-09-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "OFI",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Theodoros Vardinogiannis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "2η αγωνιστική",
+     "score": "4-0",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Leontiadis",
+        "min": "45+2",
+        "og": true
+       },
+       {
+        "name": "Machlas",
+        "min": "51"
+       },
+       {
+        "name": "Machlas",
+        "min": "59"
+       },
+       {
+        "name": "Patemtzis",
+        "min": "89"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-47e151854d94",
+     "section": "football",
+     "start": "1992-09-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Paris Saint-Germain",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Parc des Princes",
+     "competition": "Κύπελλο UEFA",
+     "round": "1ος αγώνας",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Weah",
+        "min": "14"
+       },
+       {
+        "name": "Weah",
+        "min": "24"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2fb44e60075f",
+     "section": "football",
+     "start": "1992-09-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Pierikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "3η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Đurđević",
+        "min": "37"
+       },
+       {
+        "name": "Lagonidis",
+        "min": "61"
+       },
+       {
+        "name": "Toursounidis",
+        "min": "88"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2009c43da8c1",
+     "section": "football",
+     "start": "1992-09-27T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEL",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Alcazar Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "4η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Issa",
+        "min": "31"
+       },
+       {
+        "name": "Issa",
+        "min": "79"
+       }
+      ],
+      "away": [
+       {
+        "name": "Đurđević",
+        "min": "3"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8f680a72401e",
+     "section": "football",
+     "start": "1992-10-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Paris Saint-Germain",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο UEFA",
+     "round": "2ος αγώνας",
+     "score": "0-3",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Weah",
+        "min": "14"
+       },
+       {
+        "name": "Sassus",
+        "min": "32"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f09cd1f0f213",
+     "section": "football",
+     "start": "1992-10-11T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Xanthi",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "5η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kalogeropoulos",
+        "min": "1"
+       },
+       {
+        "name": "Kalogeropoulos",
+        "min": "67"
+       },
+       {
+        "name": "Alexiou",
+        "min": "24"
+       },
+       {
+        "name": "Chionas",
+        "min": "88"
+       }
+      ],
+      "away": [
+       {
+        "name": "Marcelo",
+        "min": "82"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1318539624d8",
+     "section": "football",
+     "start": "1992-10-18T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Ionikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Neapoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "6η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Chionas",
+        "min": "88"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-bc0b57cd4c87",
+     "section": "football",
+     "start": "1992-10-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Panathinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "7η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Alexiou",
+        "min": "66"
+       }
+      ],
+      "away": [
+       {
+        "name": "Christodoulou",
+        "min": "36"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-97a067561227",
+     "section": "football",
+     "start": "1992-11-01T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Kalamaria",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "8η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Đurđević",
+        "min": "6"
+       },
+       {
+        "name": "Đurđević",
+        "min": "82",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-cbcd514d4f2e",
+     "section": "football",
+     "start": "1992-11-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Rizoupoli Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "9η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Th.Karasavvidis",
+        "min": "26"
+       },
+       {
+        "name": "Velentzas",
+        "min": "67"
+       }
+      ],
+      "away": [
+       {
+        "name": "Đurđević",
+        "min": "57"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-bec34700d63d",
+     "section": "football",
+     "start": "1992-11-22T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Korinthos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "10η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Đurđević",
+        "min": "3"
+       },
+       {
+        "name": "Đurđević",
+        "min": "12",
+        "pen": true
+       },
+       {
+        "name": "Anastasiadis",
+        "min": "43"
+       }
+      ],
+      "away": [
+       {
+        "name": "Madonis",
+        "min": "60"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-c04cca018531",
+     "section": "football",
+     "start": "1992-11-29T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "AEK Athens",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Nikos Goumas Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "11η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dimitriadis",
+        "min": "1",
+        "pen": true
+       },
+       {
+        "name": "Dimitriadis",
+        "min": "25"
+       },
+       {
+        "name": "Dimitriadis",
+        "min": "41"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dermitzakis",
+        "min": "63"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-1692512ebaca",
+     "section": "football",
+     "start": "1992-12-05T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Iraklis",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "12η αγωνιστική",
+     "score": "0-1",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [],
+      "away": [
+       {
+        "name": "Toutziaris",
+        "min": "64"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8681d25ad99a",
+     "section": "football",
+     "start": "1992-12-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Doxa Drama",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "1ος αγώνας",
+     "score": "3-3",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Dermitzakis",
+        "min": "22"
+       },
+       {
+        "name": "Dermitzakis",
+        "min": "58"
+       },
+       {
+        "name": "Borbokis",
+        "min": "36"
+       }
+      ],
+      "away": [
+       {
+        "name": "Plitsis",
+        "min": "67",
+        "og": true
+       },
+       {
+        "name": "Alexandridis",
+        "min": "70"
+       },
+       {
+        "name": "Aleksić",
+        "min": "90"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-d574c2f9538d",
+     "section": "football",
+     "start": "1992-12-12T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Edessaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Municipal Stadium of Edessa",
+     "competition": "Πρωτάθλημα",
+     "round": "13η αγωνιστική",
+     "score": "3-1",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Tsoleridis",
+        "min": "59",
+        "pen": true
+       },
+       {
+        "name": "Papadopoulos",
+        "min": "68"
+       },
+       {
+        "name": "Zouboulis",
+        "min": "85"
+       }
+      ],
+      "away": [
+       {
+        "name": "Tolba",
+        "min": "27"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8d591382c64d",
+     "section": "football",
+     "start": "1992-12-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Doxa Drama",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Doxa Drama Stadium",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "2ος αγώνας",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Georgiadis",
+        "min": "68"
+       }
+      ],
+      "away": [
+       {
+        "name": "Lagonidis",
+        "min": "87"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-f7bd117f4ea6",
+     "section": "football",
+     "start": "1992-12-20T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Olympiacos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "14η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-0f2b98b38648",
+     "section": "football",
+     "start": "1992-12-23T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Aris",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kleanthis Vikelidis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "15η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Gioukoudis",
+        "min": "86",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Lagonidis",
+        "min": "12",
+        "pen": true
+       },
+       {
+        "name": "Borbokis",
+        "min": "59"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-525586bd9b89",
+     "section": "football",
+     "start": "1993-01-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Athinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Vyronas National Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "16η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Ch.Dimopoulos",
+        "min": "56"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-316c53fd966e",
+     "section": "football",
+     "start": "1993-01-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Doxa Drama",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "17η αγωνιστική",
+     "score": "5-0",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Kapetanopoulos",
+        "min": "16"
+       },
+       {
+        "name": "Zagorakis",
+        "min": "21"
+       },
+       {
+        "name": "Lagonidis",
+        "min": "55"
+       },
+       {
+        "name": "Th.Dimopoulos",
+        "min": "60"
+       },
+       {
+        "name": "Anastasiadis",
+        "min": "87"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6282cc5a5974",
+     "section": "football",
+     "start": "1993-01-16T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panachaiki",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kostas Davourlis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "18η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-47d57308dff3",
+     "section": "football",
+     "start": "1993-01-24T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "OFI",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "19η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lagonidis",
+        "min": "25"
+       }
+      ],
+      "away": [
+       {
+        "name": "Machlas",
+        "min": "64"
+       },
+       {
+        "name": "Georgamlis",
+        "min": "84"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-cb0129aca59e",
+     "section": "football",
+     "start": "1993-01-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Pierikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Katerini Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "20η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Konstantinidis",
+        "min": "76"
+       }
+      ],
+      "away": [
+       {
+        "name": "Deligiannis",
+        "min": "7",
+        "og": true
+       },
+       {
+        "name": "Plitsis",
+        "min": "68"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-956575cba9e1",
+     "section": "football",
+     "start": "1993-02-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEL",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "21η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lagonidis",
+        "min": "32",
+        "pen": true
+       }
+      ],
+      "away": [
+       {
+        "name": "Stoica",
+        "min": "14"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-661f08f3777c",
+     "section": "football",
+     "start": "1993-02-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Xanthi",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Xanthi Ground",
+     "competition": "Πρωτάθλημα",
+     "round": "22η αγωνιστική",
+     "score": "2-3",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Karageorgiou",
+        "min": "48"
+       },
+       {
+        "name": "Marcelo",
+        "min": "85"
+       }
+      ],
+      "away": [
+       {
+        "name": "Alexiou",
+        "min": "74"
+       },
+       {
+        "name": "Toursounidis",
+        "min": "77"
+       },
+       {
+        "name": "Toursounidis",
+        "min": "80"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6694a244d642",
+     "section": "football",
+     "start": "1993-02-28T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ionikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "23η αγωνιστική",
+     "score": "4-1",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lagonidis",
+        "min": "47",
+        "pen": true
+       },
+       {
+        "name": "Alexiou",
+        "min": "61"
+       },
+       {
+        "name": "Đurđević",
+        "min": "84"
+       },
+       {
+        "name": "Đurđević",
+        "min": "87"
+       }
+      ],
+      "away": [
+       {
+        "name": "Anastopoulos",
+        "min": "17"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-7661345fa1d6",
+     "section": "football",
+     "start": "1993-03-07T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Panathinaikos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Athens Olympic Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "24η αγωνιστική",
+     "score": "5-0",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Frantzeskos",
+        "min": "15"
+       },
+       {
+        "name": "Warzycha",
+        "min": "19"
+       },
+       {
+        "name": "Warzycha",
+        "min": "31"
+       },
+       {
+        "name": "Warzycha",
+        "min": "65"
+       },
+       {
+        "name": "Kapouranis",
+        "min": "30"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-65eeb0b6f6ab",
+     "section": "football",
+     "start": "1993-03-14T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Apollon Kalamaria",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kalamaria Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "25η αγωνιστική",
+     "score": "0-0",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-8fc7092690ee",
+     "section": "football",
+     "start": "1993-03-21T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Apollon Athens",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "26η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Alexiou",
+        "min": "37"
+       },
+       {
+        "name": "Oikonomidis",
+        "min": "61"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ae0bd7355f07",
+     "section": "football",
+     "start": "1993-04-03T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Korinthos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Argos Municipal Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "27η αγωνιστική",
+     "score": "1-2",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Papanikolaou",
+        "min": "59"
+       }
+      ],
+      "away": [
+       {
+        "name": "Dermitzakis",
+        "min": "36"
+       },
+       {
+        "name": "Oikonomidis",
+        "min": "69"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-6c9281adcf14",
+     "section": "football",
+     "start": "1993-04-10T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "AEK",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "28η αγωνιστική",
+     "score": "2-1",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Lagonidis",
+        "min": "54"
+       },
+       {
+        "name": "Lagonidis",
+        "min": "77"
+       }
+      ],
+      "away": [
+       {
+        "name": "Alexandris",
+        "min": "52"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a1918460817d",
+     "section": "football",
+     "start": "1993-04-25T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Iraklis",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Kaftanzoglio Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "29η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Skartados",
+        "min": "43",
+        "pen": true
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-3a0c4db9e6bf",
+     "section": "football",
+     "start": "1993-05-02T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Edessaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "30η αγωνιστική",
+     "score": "3-0",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Anastasiadis",
+        "min": "16"
+       },
+       {
+        "name": "Anastasiadis",
+        "min": "44"
+       },
+       {
+        "name": "Th.Dimopoulos",
+        "min": "25"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-ec5cc0133424",
+     "section": "football",
+     "start": "1993-05-09T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Olympiacos",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Karaiskakis Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "31η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Protasov",
+        "min": "55"
+       },
+       {
+        "name": "Mavromatis",
+        "min": "61"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-2008a9bbf11c",
+     "section": "football",
+     "start": "1993-05-15T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Aris",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "32η αγωνιστική",
+     "score": "2-0",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Plitsis",
+        "min": "87"
+       },
+       {
+        "name": "Th.Dimopoulos",
+        "min": "90"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-a2e2186a305b",
+     "section": "football",
+     "start": "1993-05-30T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Athinaikos",
+     "paokHome": true,
+     "venue": "Toumba Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "33η αγωνιστική",
+     "score": "1-0",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Th.Dimopoulos",
+        "min": "26"
+       }
+      ],
+      "away": []
+     },
+     "source": "wikipedia"
+    },
+    {
+     "uid": "football-wiki-77ef3be1fe83",
+     "section": "football",
+     "start": "1993-06-06T12:00:00+02:00",
+     "timeKnown": false,
+     "home": "Doxa Drama",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Doxa Drama Stadium",
+     "competition": "Πρωτάθλημα",
+     "round": "34η αγωνιστική",
+     "score": "1-1",
+     "url": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season",
+     "goals": {
+      "home": [
+       {
+        "name": "Iordanidis",
+        "min": "73"
+       }
+      ],
+      "away": [
+       {
+        "name": "Zagorakis",
+        "min": "54"
+       }
+      ]
+     },
+     "source": "wikipedia"
+    }
+   ],
+   "summary": {
+    "league": "5η θέση",
+    "cups": [
+     {
+      "name": "Κύπελλο Ελλάδας",
+      "result": "2ος γύρος"
+     },
+     {
+      "name": "Κύπελλο UEFA",
+      "result": "1ος γύρος"
+     }
+    ],
+    "topscorer": "Milan Đurđević (11)",
+    "source": "https://en.wikipedia.org/wiki/1992%E2%80%9393_PAOK_FC_season"
+   },
+   "backfilled": true
   }
  },
- "updated": "2026-11-22T19:32+02:00"
+ "updated": "2026-11-22T21:52+02:00"
 }

@@ -1134,6 +1134,19 @@
     },
     {
      "pos": 4,
+     "team": "Α.Ο.Φοίνικας Σύρου",
+     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl151506935980.gif",
+     "paok": false,
+     "cells": [
+      "5",
+      "4",
+      "1",
+      "13-7",
+      "11"
+     ]
+    },
+    {
+     "pos": 5,
      "team": "Ολυμπιακός Σ.Φ.Π. ONEX",
      "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl166625673654.gif",
      "paok": false,
@@ -1146,28 +1159,15 @@
      ]
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "Ο.Φ.Η.",
      "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl1568216313930.gif",
      "paok": false,
      "cells": [
-      "4",
+      "5",
       "3",
-      "1",
-      "9-3",
-      "9"
-     ]
-    },
-    {
-     "pos": 6,
-     "team": "Α.Ο.Φοίνικας Σύρου",
-     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl151506935980.gif",
-     "paok": false,
-     "cells": [
-      "4",
-      "3",
-      "1",
-      "10-5",
+      "2",
+      "10-6",
       "9"
      ]
     },
@@ -1199,6 +1199,19 @@
     },
     {
      "pos": 9,
+     "team": "Α.Ο.Καλαμάτα 80 Affidea",
+     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl16909759871795.gif",
+     "paok": false,
+     "cells": [
+      "5",
+      "1",
+      "4",
+      "5-13",
+      "3"
+     ]
+    },
+    {
+     "pos": 10,
      "team": "Ν.Ο.Π.Ε. Ρεθύμνου",
      "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl17901894601105.gif",
      "paok": false,
@@ -1211,7 +1224,7 @@
      ]
     },
     {
-     "pos": 10,
+     "pos": 11,
      "team": "Α.Ο.Ν.Σ Μίλων",
      "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl1599421873423.gif",
      "paok": false,
@@ -1224,29 +1237,16 @@
      ]
     },
     {
-     "pos": 11,
-     "team": "Α.Ο.Καλαμάτα 80 Affidea",
-     "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl16909759871795.gif",
-     "paok": false,
-     "cells": [
-      "4",
-      "0",
-      "4",
-      "2-12",
-      "0"
-     ]
-    },
-    {
      "pos": 12,
      "team": "Α.Σ. Άρης",
      "logo": "https://www.volleyleague.gr/media/bearleague/logos/bl13607973882903.gif",
      "paok": false,
      "cells": [
-      "4",
+      "5",
       "0",
-      "4",
-      "1-12",
-      "0"
+      "5",
+      "3-15",
+      "1"
      ]
     }
    ]

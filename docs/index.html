@@ -266,6 +266,7 @@
   .game.event .teams { font-size: 19px; }
   .ev-medals { font: 600 15px/1.3 var(--body); white-space: normal; max-width: 90px; }
   .ev-chips { margin: 4px 0 14px; }
+  .ev-tally { font: 700 26px/1.2 var(--display); margin: 8px 0 4px; letter-spacing: .02em; }
   .ev-notices { list-style: none; padding: 0; margin: 0 0 8px; }
   .ev-notices li { padding: 10px 0; border-bottom: 1px solid var(--rule); }
   .ev-notices small { display: block; color: var(--muted); font-size: 14px; margin-top: 2px; }
@@ -1817,6 +1818,11 @@
     var t = evToday();
     return t < e.start ? "pre" : t > (e.end || e.start) ? "post" : "on";
   }
+  // Κοινοποίηση: το μενού του κινητού, αλλιώς αντιγραφή του συνδέσμου.
+  function shareBtn() {
+    return navigator.share ? '<button type="button" class="btn" data-act="share">Κοινοποίηση</button>'
+      : '<button type="button" class="btn" data-copy="' + esc(location.href) + '" data-msg="Ο σύνδεσμος αντιγράφηκε.">Κοινοποίηση</button>';
+  }
   function paraTag() { return '<span class="para-tag" title="Αθλητές με αναπηρία">ΑμεΑ</span>'; }
   function evMedals(e) {
     var t = e.results || "", n = function (re) { return (t.match(re) || []).length; };
@@ -1826,12 +1832,12 @@
   function evRowHtml(e) {
     var sp = evSport(e.sport), ph = evPhase(e);
     var meta = [sp.emoji + " " + sp.name, e.venue].filter(Boolean).map(esc).join(" · ") + (e.para ? " " + paraTag() : "");
-    if (e.posts && e.posts.length) meta += " · " + e.posts.length + (e.posts.length === 1 ? " ανάρτηση" : " αναρτήσεις");
+    if (canEditEvents() && e.posts && e.posts.length) meta += " · " + e.posts.length + (e.posts.length === 1 ? " ανάρτηση" : " αναρτήσεις");
     return '<li class="game event' + (ph === "on" ? " home" : "") + '"><div class="time">' + esc(evWhen(e)) +
       (ph === "on" ? '<span class="ongoing">Σε εξέλιξη</span>' : "") + (e.time ? '<span class="ongoing">' + esc(e.time) + "</span>" : "") + "</div>" +
       '<div><a class="game-link" href="' + evHref(e) + '"><span class="teams">' + esc(e.title) + "</span></a>" +
       '<div class="meta">' + meta + "</div></div>" +
-      '<div class="score ev-medals">' + esc(evMedals(e)) + "</div></li>";
+      '<div class="score ev-medals">' + evMedals(e).split(" ").map(esc).join("<br>") + "</div></li>";
   }
   function evListHtml(list, past) {
     if (past) list = list.slice().reverse();
@@ -1873,7 +1879,7 @@
     return '<div class="section-head"><h2>Ατομικά αθλήματα</h2></div>' +
       '<p class="tz-note">Οι διοργανώσεις των ατομικών τμημάτων της ΑΣ ΠΑΟΚ. Το σημάδι «ΑμεΑ» δείχνει ότι συμμετέχουν αθλητές με αναπηρία.</p>' +
       '<p class="actions">' + (canEditEvents() ? '<a class="btn solid" href="#/atomika/new' + (evUi.sport ? "/" + esc(evUi.sport) : "") + '">+ Νέα διοργάνωση</a>' : "") +
-      calLink(cal, "Ημερολόγιο", canEditEvents() ? "" : "solid") + "</p>" +
+      calLink(cal, "Ημερολόγιο", canEditEvents() ? "" : "solid") + shareBtn() + "</p>" +
       chips + tabs + evListHtml(list, past) +
       (notices.length && canEditEvents() ? '<h2 class="section-title">Ανακοινώσεις ομοσπονδιών</h2><p class="help">Προκηρύξεις και ημερομηνίες (συνήθως σε PDF): αν αφορούν τον ΠΑΟΚ, πρόσθεσε τη διοργάνωση.</p>' +
         '<ul class="ev-notices">' + notices.map(function (n) {
@@ -1899,14 +1905,16 @@
         (ph === "on" ? " · <strong>σε εξέλιξη</strong>" : "") + "</dd>" +
         (e.venue ? "<dt>Πού</dt><dd>" + esc(e.venue) + "</dd>" : "") + "</dl>" +
       (e.athletes ? '<h3 class="area-sport">Αθλητές</h3><ul class="ev-lines">' + textLines(e.athletes) + "</ul>" : "") +
-      (e.results ? '<h3 class="area-sport">Αποτελέσματα</h3><ul class="ev-lines">' + textLines(e.results) + "</ul>" : "") +
-      (e.posts && e.posts.length ? '<h3 class="area-sport">Νέα από την ΑΣ ΠΑΟΚ</h3><ul class="ev-notices">' + e.posts.slice().reverse().map(function (p) {
+      (evMedals(e) ? '<p class="ev-tally" aria-label="Μετάλλια">' + esc(evMedals(e)) + "</p>" : "") +
+      (e.results ? '<h3 class="area-sport">' + (/[🥇🥈🥉🏆]/.test(e.results) ? "Μετάλλια" : "Αποτελέσματα") + '</h3><ul class="ev-lines">' + textLines(e.results) + "</ul>" : "") +
+      (canEditEvents() && e.posts && e.posts.length ? '<h3 class="area-sport">Αναρτήσεις της ΑΣ ΠΑΟΚ</h3><ul class="ev-notices">' + e.posts.slice().reverse().map(function (p) {
         return '<li><a href="' + esc(p.url) + '" rel="noopener" target="_blank">' + esc(p.title) + "</a><small>" + esc((p.date || "").split("-").reverse().join("/")) + "</small></li>";
       }).join("") + "</ul>" : "") +
       '<p class="actions">' + (e.url ? '<a class="btn" href="' + esc(e.url) + '" rel="noopener" target="_blank">Πηγή</a>' : "") +
         calLink(e.sport + "-events.ics", "Ημερολόγιο " + sp.name, "") +
+        shareBtn() +
         (canEditEvents() ? '<a class="btn solid" href="#/atomika/edit/' + esc(e.id) + '">Αλλαγή ή διαγραφή</a>' : "") + "</p>" +
-      (canEditEvents() ? '<p class="help">' + (e.source === "admin" ? "Από τη φόρμα του διαχειριστή." : "Αυτόματα από ανάρτηση της ΑΣ ΠΑΟΚ" + (e.edited ? ", με αλλαγές του διαχειριστή." : ": έλεγξε τίτλο, μέρες και τόπο.")) + "</p>" : "") +
+      (canEditEvents() ? '<p class="help">' + (e.source === "admin" ? "Από τη φόρμα του διαχειριστή." : "Αυτόματα από ανάρτηση της ΑΣ ΠΑΟΚ" + (e.edited ? ", με αλλαγές του διαχειριστή." : ": έλεγξε τίτλο, μέρες, τόπο και μετάλλια (τα ονόματα βγαίνουν από το κείμενο).")) + "</p>" : "") +
       footerHtml();
   }
   var evConfirm = false;

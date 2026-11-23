@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:football-b-sl2-2627006@paok-calendar
-DTSTAMP:20261118T134752Z
+DTSTAMP:20261123T160057Z
 DTSTART;TZID=Europe/Athens:20260909T160000
 DTEND;TZID=Europe/Athens:20260909T180000
 SUMMARY:⚽ ΠΑΟΚ 1-1 Ολυμπιακός Β
@@ -36,7 +36,7 @@ DESCRIPTION:Super League 2 – 1η Αγωνιστική\nΤελικό σκ
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-sl2-2627024@paok-calendar
-DTSTAMP:20261118T134752Z
+DTSTAMP:20261123T160057Z
 DTSTART;TZID=Europe/Athens:20260921T170000
 DTEND;TZID=Europe/Athens:20260921T190000
 SUMMARY:⚽ ΠΑΟΚ 2-1 Νέστος Χρυσούπολης
@@ -46,7 +46,7 @@ DESCRIPTION:Super League 2 – 3η Αγωνιστική\nΤελικό σκ
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-sl2-2627039@paok-calendar
-DTSTAMP:20261118T134752Z
+DTSTAMP:20261123T160057Z
 DTSTART;TZID=Europe/Athens:20261005T144500
 DTEND;TZID=Europe/Athens:20261005T164500
 SUMMARY:⚽ ΠΑΟΚ 0-0 Ελλάς Σύρου
@@ -56,7 +56,7 @@ DESCRIPTION:Super League 2 – 5η Αγωνιστική\nΤελικό σκ
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-sl2-2627053@paok-calendar
-DTSTAMP:20261118T134752Z
+DTSTAMP:20261123T160057Z
 DTSTART;TZID=Europe/Athens:20261019T150000
 DTEND;TZID=Europe/Athens:20261019T170000
 SUMMARY:⚽ ΠΑΟΚ 2-1 Απόλλων Καλαμαριάς
@@ -66,7 +66,7 @@ DESCRIPTION:Super League 2 – 7η Αγωνιστική\nΤελικό σκ
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-sl2-2627067@paok-calendar
-DTSTAMP:20261118T134752Z
+DTSTAMP:20261123T160057Z
 DTSTART;TZID=Europe/Athens:20261101T150000
 DTEND;TZID=Europe/Athens:20261101T170000
 SUMMARY:⚽ ΠΑΟΚ 1-1 Ζάκυνθος
@@ -76,16 +76,17 @@ DESCRIPTION:Super League 2 – 9η Αγωνιστική\nΤελικό σκ
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-sl2-2627090@paok-calendar
-DTSTAMP:20261118T134752Z
+DTSTAMP:20261123T160057Z
 DTSTART;TZID=Europe/Athens:20261123T150000
 DTEND;TZID=Europe/Athens:20261123T170000
-SUMMARY:⚽ ΠΑΟΚ – Νίκη Βόλου
+SUMMARY:⚽ ΠΑΟΚ 0-1 Νίκη Βόλου
 LOCATION:ΓΗΠΕΔΟ Μ.Γ.Σ. ΑΠΟΛΛΩΝ ΚΑΛΑΜΑΡΙΑΣ
-DESCRIPTION:Super League 2 – 12η Αγωνιστική\nTV: Superbet TV
+DESCRIPTION:Super League 2 – 12η Αγωνιστική\nΤελικό σκ
+ ορ: ΠΑΟΚ 0-1 Νίκη Βόλου\nTV: Superbet TV
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-sl2-2627108@paok-calendar
-DTSTAMP:20261118T134752Z
+DTSTAMP:20261123T160057Z
 DTSTART;TZID=Europe/Athens:20261206T180000
 DTEND;TZID=Europe/Athens:20261206T200000
 SUMMARY:⚽ ΠΑΟΚ – Πανσερραϊκός (ώρα αναμένετ
@@ -96,7 +97,7 @@ DESCRIPTION:Super League 2 – 14η Αγωνιστική\nΗ ώρα δεν
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-sl2-2627135@paok-calendar
-DTSTAMP:20261118T134752Z
+DTSTAMP:20261123T160057Z
 DTSTART;TZID=Europe/Athens:20270110T180000
 DTEND;TZID=Europe/Athens:20270110T200000
 SUMMARY:⚽ ΠΑΟΚ – Πανθρακικός (ώρα αναμένετα
@@ -107,7 +108,7 @@ DESCRIPTION:Super League 2 – 17η Αγωνιστική\nΗ ώρα δεν
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-sl2-2627152@paok-calendar
-DTSTAMP:20261118T134752Z
+DTSTAMP:20261123T160057Z
 DTSTART;TZID=Europe/Athens:20270124T180000
 DTEND;TZID=Europe/Athens:20270124T200000
 SUMMARY:⚽ ΠΑΟΚ – ΑΕΛ (ώρα αναμένεται)
@@ -117,7 +118,7 @@ DESCRIPTION:Super League 2 – 19η Αγωνιστική\nΗ ώρα δεν
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-sl2-2627166@paok-calendar
-DTSTAMP:20261118T134752Z
+DTSTAMP:20261123T160057Z
 DTSTART;TZID=Europe/Athens:20270207T180000
 DTEND;TZID=Europe/Athens:20270207T200000
 SUMMARY:⚽ ΠΑΟΚ – Πανιώνιος (ώρα αναμένεται)
@@ -127,7 +128,7 @@ DESCRIPTION:Super League 2 – 21η Αγωνιστική\nΗ ώρα δεν
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-sl2-2627180@paok-calendar
-DTSTAMP:20261118T134752Z
+DTSTAMP:20261123T160057Z
 DTSTART;TZID=Europe/Athens:20270221T180000
 DTEND;TZID=Europe/Athens:20270221T200000
 SUMMARY:⚽ ΠΑΟΚ – Αναγέννηση Καρδίτσας (ώρα α
@@ -138,7 +139,7 @@ DESCRIPTION:Super League 2 – 23η Αγωνιστική\nΗ ώρα δεν
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-sl2-2627194@paok-calendar
-DTSTAMP:20261118T134752Z
+DTSTAMP:20261123T160057Z
 DTSTART;TZID=Europe/Athens:20270307T180000
 DTEND;TZID=Europe/Athens:20270307T200000
 SUMMARY:⚽ ΠΑΟΚ – ΠΑΣ Πύργος (ώρα αναμένεται)
@@ -148,7 +149,7 @@ DESCRIPTION:Super League 2 – 25η Αγωνιστική\nΗ ώρα δεν
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-sl2-2627201@paok-calendar
-DTSTAMP:20261118T134752Z
+DTSTAMP:20261123T160057Z
 DTSTART;TZID=Europe/Athens:20270314T180000
 DTEND;TZID=Europe/Athens:20270314T200000
 SUMMARY:⚽ ΠΑΟΚ – Αστέρας Τρίπολης Β (ώρα ανα
@@ -159,7 +160,7 @@ DESCRIPTION:Super League 2 – 26η Αγωνιστική\nΗ ώρα δεν
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-sl2-2627219@paok-calendar
-DTSTAMP:20261118T134752Z
+DTSTAMP:20261123T160057Z
 DTSTART;TZID=Europe/Athens:20270328T180000
 DTEND;TZID=Europe/Athens:20270328T200000
 SUMMARY:⚽ ΠΑΟΚ – Μαρκό (ώρα αναμένεται)
@@ -169,7 +170,7 @@ DESCRIPTION:Super League 2 – 28η Αγωνιστική\nΗ ώρα δεν
 END:VEVENT
 BEGIN:VEVENT
 UID:football-b-sl2-2627237@paok-calendar
-DTSTAMP:20261118T134752Z
+DTSTAMP:20261123T160057Z
 DTSTART;TZID=Europe/Athens:20270411T180000
 DTEND;TZID=Europe/Athens:20270411T200000
 SUMMARY:⚽ ΠΑΟΚ – Καλλιθέα (ώρα αναμένεται)

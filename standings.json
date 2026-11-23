@@ -972,6 +972,18 @@
     },
     {
      "pos": 4,
+     "team": "ΠΑΣ ΓΙΑΝΝΙΝΑ",
+     "logo": "https://apps.basket.gr/clubs/349/logo",
+     "paok": false,
+     "cells": [
+      "7",
+      "5-2",
+      "11",
+      "12"
+     ]
+    },
+    {
+     "pos": 5,
      "team": "ΑΕΟ ΠΡΩΤΕΑΣ ΒΟΥΛΑΣ",
      "logo": "https://apps.basket.gr/clubs/659/logo",
      "paok": false,
@@ -983,7 +995,7 @@
      ]
     },
     {
-     "pos": 5,
+     "pos": 6,
      "team": "ΑΚ ΚΑΒΑΛΑΣ ΟΙ ΠΑΝΘΗΡΕΣ",
      "logo": "https://apps.basket.gr/clubs/1776/logo",
      "paok": false,
@@ -995,7 +1007,7 @@
      ]
     },
     {
-     "pos": 6,
+     "pos": 7,
      "team": "ΠΑΝΣΕΡΡΑΙΚΟΣ FIBRAN",
      "logo": "https://apps.basket.gr/clubs/82/logo",
      "paok": false,
@@ -1003,18 +1015,6 @@
       "7",
       "3-4",
       "-82",
-      "10"
-     ]
-    },
-    {
-     "pos": 7,
-     "team": "ΠΑΣ ΓΙΑΝΝΙΝΑ",
-     "logo": "https://apps.basket.gr/clubs/349/logo",
-     "paok": false,
-     "cells": [
-      "6",
-      "4-2",
-      "-6",
       "10"
      ]
     },
@@ -1048,10 +1048,10 @@
      "logo": "https://apps.basket.gr/clubs/2/logo",
      "paok": true,
      "cells": [
-      "6",
-      "2-4",
-      "-82",
-      "8"
+      "7",
+      "2-5",
+      "-99",
+      "9"
      ]
     },
     {

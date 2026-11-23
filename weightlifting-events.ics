@@ -26,12 +26,16 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:event-e1c36556700c@paok-calendar
-DTSTAMP:20261122T092501Z
+DTSTAMP:20261123T215032Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261123
 SUMMARY:🏋️ Πανελλήνιο Πρωτάθλημα Άρσης Βαρ
  ών
-DESCRIPTION:ΠΑΟΚ Άρση Βαρών
+DESCRIPTION:ΠΑΟΚ Άρση Βαρών\n🏆 1η θέση\, κατηγο
+ ρία Νέων Ανδρών (426 βαθμοί)\n🥇🥇🥇 Αντώνη
+ ς Παπαδόπουλος (πανελλήνιο ρεκόρ)\n🥇🥇
+ 🥈 Κυριάκος Ονουφριάδης\n🥈🥈🥉 Λευτέρη
+ ς Τσάκωνας\n🥉 Γκαμπριέλ Ντορίν Ποπαρλάν
 URL:https://acpaok.gr/%ce%bc%ce%b5-%cf%83%cf%84%cf%8c%cf%87%ce%bf-%cf%84%ce
  %b9%cf%82-%ce%b4%ce%b9%ce%b1%ce%ba%cf%81%ce%af%cf%83%ce%b5%ce%b9%cf%82-%cf
  %83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%ce%b5%ce%bb%ce%bb%ce%ae%ce%bd%ce%b9/

@@ -71,7 +71,7 @@
    "time": "",
    "venue": "",
    "athletes": "",
-   "results": "🥇🥇🥈🥈🥈🥉🥉🥉 Πολυμήχανος Οδυσσέας\n🥇 Χαρίτου Πηνελόπη\n🥇 Χρυσοστομίδη Έκτορα\n🥈 Μάρκου Νικόλας\n🥉 Καλανοβ Γιώργος",
+   "results": "🥇 Ελευθεριάδου Ελένη (-57kg, U12)\n🥇 Χαρίτου Πηνελόπη (-57kg, U16)\n🥈 Μάρκου Αστέρης (-66kg, Εφήβων)\n🥈 Μάρκου Νικόλας (-66kg, U16)\n🥈 Σωτηρούδη Μαρία (-27kg, Juniors Β)\n🥉 Βασιλικός Νικηφόρος (-60kg, U14)\n🥉 Ζαχαρίδου Χριστίνα (-48kg, U12)\n🥉 Καλανοβ Γιώργος (-60kg, Εφήβων)",
    "para": false,
    "url": "https://acpaok.gr/%ce%bf%ce%ba%cf%84%cf%8e-%ce%bc%ce%b5%cf%84%ce%ac%ce%bb%ce%bb%ce%b9%ce%b1-%ce%b3%ce%b9%ce%b1-%cf%84%ce%bf-judo-%cf%84%ce%bf%cf%85-%cf%80%ce%b1%ce%bf%ce%ba-%cf%83%cf%84%ce%b7-%ce%bb%ce%ac%cf%81%ce%b9/",
    "posts": [
@@ -84,42 +84,64 @@
    "source": "acpaok",
    "medals": [
     {
-     "name": "Πολυμήχανος Οδυσσέας",
-     "g": 2,
-     "s": 3,
-     "b": 3,
-     "note": ""
+     "name": "Ελευθεριάδου Ελένη",
+     "g": 1,
+     "s": 0,
+     "b": 0,
+     "note": "-57kg, U12"
     },
     {
      "name": "Χαρίτου Πηνελόπη",
      "g": 1,
      "s": 0,
      "b": 0,
-     "note": ""
+     "note": "-57kg, U16"
     },
     {
-     "name": "Χρυσοστομίδη Έκτορα",
-     "g": 1,
-     "s": 0,
+     "name": "Μάρκου Αστέρης",
+     "g": 0,
+     "s": 1,
      "b": 0,
-     "note": ""
+     "note": "-66kg, Εφήβων"
     },
     {
      "name": "Μάρκου Νικόλας",
      "g": 0,
      "s": 1,
      "b": 0,
-     "note": ""
+     "note": "-66kg, U16"
+    },
+    {
+     "name": "Σωτηρούδη Μαρία",
+     "g": 0,
+     "s": 1,
+     "b": 0,
+     "note": "-27kg, Juniors Β"
+    },
+    {
+     "name": "Βασιλικός Νικηφόρος",
+     "g": 0,
+     "s": 0,
+     "b": 1,
+     "note": "-60kg, U14"
+    },
+    {
+     "name": "Ζαχαρίδου Χριστίνα",
+     "g": 0,
+     "s": 0,
+     "b": 1,
+     "note": "-48kg, U12"
     },
     {
      "name": "Καλανοβ Γιώργος",
      "g": 0,
      "s": 0,
      "b": 1,
-     "note": ""
+     "note": "-60kg, Εφήβων"
     }
    ],
-   "team": []
+   "team": [],
+   "medalsV": 2
   },
   {
    "id": "24da59efd1a1",
@@ -142,7 +164,8 @@
    ],
    "source": "acpaok",
    "medals": [],
-   "team": []
+   "team": [],
+   "medalsV": 2
   },
   {
    "id": "53a101a966a0",
@@ -165,7 +188,8 @@
    ],
    "source": "acpaok",
    "medals": [],
-   "team": []
+   "team": [],
+   "medalsV": 2
   },
   {
    "id": "d5b8b78d45d1",
@@ -188,7 +212,8 @@
    ],
    "source": "acpaok",
    "medals": [],
-   "team": []
+   "team": [],
+   "medalsV": 2
   },
   {
    "id": "322e1c1810b9",
@@ -199,7 +224,7 @@
    "time": "",
    "venue": "",
    "athletes": "",
-   "results": "🥇 Βλαδίμηρου Ποπόβ\n🥇 Δήμητρα Καρπόζηλου\n🥉 Λέρι Λομίντζε",
+   "results": "🥇 Βλαδίμηρος Ποπόβ\n🥉 Λέρι Λομίντζε",
    "para": false,
    "url": "https://acpaok.gr/%cf%80%cf%85%ce%b3%ce%bc%ce%b1%cf%87%ce%af%ce%b1-%ce%bc%ce%b5-%ce%b4%cf%8d%ce%bf-%ce%bc%ce%b5%cf%84%ce%ac%ce%bb%ce%bb%ce%b9%ce%b1-%ce%ba%ce%b1%ce%b9-%cf%83%ce%b7%ce%bc%ce%b1%ce%bd%cf%84%ce%b9%ce%ba/",
    "posts": [
@@ -212,14 +237,7 @@
    "source": "acpaok",
    "medals": [
     {
-     "name": "Βλαδίμηρου Ποπόβ",
-     "g": 1,
-     "s": 0,
-     "b": 0,
-     "note": ""
-    },
-    {
-     "name": "Δήμητρα Καρπόζηλου",
+     "name": "Βλαδίμηρος Ποπόβ",
      "g": 1,
      "s": 0,
      "b": 0,
@@ -233,7 +251,8 @@
      "note": ""
     }
    ],
-   "team": []
+   "team": [],
+   "medalsV": 2
   },
   {
    "id": "cc9839465bba",
@@ -244,7 +263,7 @@
    "time": "",
    "venue": "",
    "athletes": "",
-   "results": "🥇🥈🥉 Ελληνικής Ομοσπονδίας Μικτών",
+   "results": "🥇🥈🥉 Παναγιώτης Κούσογλου",
    "para": false,
    "url": "https://acpaok.gr/%ce%bc%ce%bc%ce%b1-%cf%86%ce%bf%cf%81%cf%84%cf%89%ce%bc%ce%ad%ce%bd%ce%bf%cf%82-%ce%bc%ce%b5%cf%84%ce%ac%ce%bb%ce%bb%ce%b9%ce%b1-%ce%b5%cf%80%ce%ad%cf%83%cf%84%cf%81%ce%b5%cf%88%ce%b5/",
    "posts": [
@@ -257,14 +276,15 @@
    "source": "acpaok",
    "medals": [
     {
-     "name": "Ελληνικής Ομοσπονδίας Μικτών",
+     "name": "Παναγιώτης Κούσογλου",
      "g": 1,
      "s": 1,
      "b": 1,
      "note": ""
     }
    ],
-   "team": []
+   "team": [],
+   "medalsV": 2
   },
   {
    "id": "b8cbd0b654f8",
@@ -287,7 +307,8 @@
    ],
    "source": "acpaok",
    "medals": [],
-   "team": []
+   "team": [],
+   "medalsV": 2
   },
   {
    "id": "e1c36556700c",
@@ -298,7 +319,7 @@
    "time": "",
    "venue": "",
    "athletes": "",
-   "results": "",
+   "results": "🏆 1η θέση, κατηγορία Νέων Ανδρών (426 βαθμοί)\n🥇🥇🥇 Αντώνης Παπαδόπουλος (πανελλήνιο ρεκόρ)\n🥇🥇🥈 Κυριάκος Ονουφριάδης\n🥈🥈🥉 Λευτέρης Τσάκωνας\n🥉 Γκαμπριέλ Ντορίν Ποπαρλάν",
    "para": false,
    "url": "https://acpaok.gr/%ce%bc%ce%b5-%cf%83%cf%84%cf%8c%cf%87%ce%bf-%cf%84%ce%b9%cf%82-%ce%b4%ce%b9%ce%b1%ce%ba%cf%81%ce%af%cf%83%ce%b5%ce%b9%cf%82-%cf%83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%ce%b5%ce%bb%ce%bb%ce%ae%ce%bd%ce%b9/",
    "posts": [
@@ -347,6 +368,7 @@
    "team": [
     "🏆 1η θέση, κατηγορία Νέων Ανδρών (426 βαθμοί)"
    ],
+   "medalsV": 2,
    "edited": true
   },
   {
@@ -371,6 +393,7 @@
    "source": "acpaok",
    "medals": [],
    "team": [],
+   "medalsV": 2,
    "edited": true
   }
  ],

@@ -26,22 +26,25 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:event-d053b08fcc31@paok-calendar
-DTSTAMP:20261123T213125Z
+DTSTAMP:20261123T215032Z
 DTSTART;VALUE=DATE:20261011
 DTEND;VALUE=DATE:20261012
 SUMMARY:🥋 Οκτώ μετάλλια για το Judo του ΠΑΟΚ σ
  τη Λάρισα
-DESCRIPTION:ΠΑΟΚ Τζούντο\n🥇🥇🥈🥈🥈🥉🥉🥉 Πο
- λυμήχανος Οδυσσέας\n🥇 Χαρίτου Πηνελόπη\
- n🥇 Χρυσοστομίδη Έκτορα\n🥈 Μάρκου Νικόλ
- ας\n🥉 Καλανοβ Γιώργος
+DESCRIPTION:ΠΑΟΚ Τζούντο\n🥇 Ελευθεριάδου Ελέν
+ η (-57kg\, U12)\n🥇 Χαρίτου Πηνελόπη (-57kg\, U16)\n🥈
+  Μάρκου Αστέρης (-66kg\, Εφήβων)\n🥈 Μάρκου Ν
+ ικόλας (-66kg\, U16)\n🥈 Σωτηρούδη Μαρία (-27kg\, Ju
+ niors Β)\n🥉 Βασιλικός Νικηφόρος (-60kg\, U14)\n🥉 
+ Ζαχαρίδου Χριστίνα (-48kg\, U12)\n🥉 Καλανοβ Γ
+ ιώργος (-60kg\, Εφήβων)
 URL:https://acpaok.gr/%ce%bf%ce%ba%cf%84%cf%8e-%ce%bc%ce%b5%cf%84%ce%ac%ce%
  bb%ce%bb%ce%b9%ce%b1-%ce%b3%ce%b9%ce%b1-%cf%84%ce%bf-judo-%cf%84%ce%bf%cf%
  85-%cf%80%ce%b1%ce%bf%ce%ba-%cf%83%cf%84%ce%b7-%ce%bb%ce%ac%cf%81%ce%b9/
 END:VEVENT
 BEGIN:VEVENT
 UID:event-24da59efd1a1@paok-calendar
-DTSTAMP:20261123T213125Z
+DTSTAMP:20261123T215032Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:🥊 Στο Πανευρωπαϊκό Πρωτάθλημα U17 οι 
@@ -53,7 +56,7 @@ URL:https://acpaok.gr/%cf%83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%ce%b5%cf%85%cf%
 END:VEVENT
 BEGIN:VEVENT
 UID:event-53a101a966a0@paok-calendar
-DTSTAMP:20261123T213125Z
+DTSTAMP:20261123T215032Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261027
 SUMMARY:🥊 Στο Πανευρωπαϊκό Πρωτάθλημα U15 οι 
@@ -65,7 +68,7 @@ URL:https://acpaok.gr/%cf%83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%ce%b5%cf%85%cf%
 END:VEVENT
 BEGIN:VEVENT
 UID:event-d5b8b78d45d1@paok-calendar
-DTSTAMP:20261123T213125Z
+DTSTAMP:20261123T215032Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261102
 SUMMARY:🤼 Με οκτώ αθλητές στο METEORA WRESTLING TOURNAME
@@ -77,34 +80,34 @@ URL:https://acpaok.gr/%ce%bc%ce%b5-%ce%bf%ce%ba%cf%84%cf%8e-%ce%b1%ce%b8%ce
 END:VEVENT
 BEGIN:VEVENT
 UID:event-322e1c1810b9@paok-calendar
-DTSTAMP:20261123T213125Z
+DTSTAMP:20261123T215032Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261117
 SUMMARY:🥊 Με δύο μετάλλια και σημαντικές δι
  ακρίσεις ολοκλήρωσε την παρουσία του ο Π
  ΑΟΚ
-DESCRIPTION:ΠΑΟΚ Πυγμαχία\n🥇 Βλαδίμηρου Ποπόβ
- \n🥇 Δήμητρα Καρπόζηλου\n🥉 Λέρι Λομίντζε
+DESCRIPTION:ΠΑΟΚ Πυγμαχία\n🥇 Βλαδίμηρος Ποπόβ
+ \n🥉 Λέρι Λομίντζε
 URL:https://acpaok.gr/%cf%80%cf%85%ce%b3%ce%bc%ce%b1%cf%87%ce%af%ce%b1-%ce%
  bc%ce%b5-%ce%b4%cf%8d%ce%bf-%ce%bc%ce%b5%cf%84%ce%ac%ce%bb%ce%bb%ce%b9%ce%
  b1-%ce%ba%ce%b1%ce%b9-%cf%83%ce%b7%ce%bc%ce%b1%ce%bd%cf%84%ce%b9%ce%ba/
 END:VEVENT
 BEGIN:VEVENT
 UID:event-cc9839465bba@paok-calendar
-DTSTAMP:20261123T213125Z
+DTSTAMP:20261123T215032Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261116
 SUMMARY:🥊 ΜΜΑ: «Φορτωμένος» μετάλλια επέστρ
  εψε ο Παναγιώτης Κούσογλου
-DESCRIPTION:ΠΑΟΚ Kick Boxing\n🥇🥈🥉 Ελληνικής Ομοσ
- πονδίας Μικτών
+DESCRIPTION:ΠΑΟΚ Kick Boxing\n🥇🥈🥉 Παναγιώτης Κού
+ σογλου
 URL:https://acpaok.gr/%ce%bc%ce%bc%ce%b1-%cf%86%ce%bf%cf%81%cf%84%cf%89%ce%
  bc%ce%ad%ce%bd%ce%bf%cf%82-%ce%bc%ce%b5%cf%84%ce%ac%ce%bb%ce%bb%ce%b9%ce%b
  1-%ce%b5%cf%80%ce%ad%cf%83%cf%84%cf%81%ce%b5%cf%88%ce%b5/
 END:VEVENT
 BEGIN:VEVENT
 UID:event-b8cbd0b654f8@paok-calendar
-DTSTAMP:20261123T213125Z
+DTSTAMP:20261123T215032Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261116
 SUMMARY:🏃 PAOK RUNNING TEAM: Αγωνιστικό Τμήμα Ημιαν
@@ -116,19 +119,23 @@ URL:https://acpaok.gr/paok-running-team-%ce%b1%ce%b3%cf%89%ce%bd%ce%b9%cf%8
 END:VEVENT
 BEGIN:VEVENT
 UID:event-e1c36556700c@paok-calendar
-DTSTAMP:20261123T213125Z
+DTSTAMP:20261123T215032Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261123
 SUMMARY:🏋️ Πανελλήνιο Πρωτάθλημα Άρσης Βαρ
  ών
-DESCRIPTION:ΠΑΟΚ Άρση Βαρών
+DESCRIPTION:ΠΑΟΚ Άρση Βαρών\n🏆 1η θέση\, κατηγο
+ ρία Νέων Ανδρών (426 βαθμοί)\n🥇🥇🥇 Αντώνη
+ ς Παπαδόπουλος (πανελλήνιο ρεκόρ)\n🥇🥇
+ 🥈 Κυριάκος Ονουφριάδης\n🥈🥈🥉 Λευτέρη
+ ς Τσάκωνας\n🥉 Γκαμπριέλ Ντορίν Ποπαρλάν
 URL:https://acpaok.gr/%ce%bc%ce%b5-%cf%83%cf%84%cf%8c%cf%87%ce%bf-%cf%84%ce
  %b9%cf%82-%ce%b4%ce%b9%ce%b1%ce%ba%cf%81%ce%af%cf%83%ce%b5%ce%b9%cf%82-%cf
  %83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%ce%b5%ce%bb%ce%bb%ce%ae%ce%bd%ce%b9/
 END:VEVENT
 BEGIN:VEVENT
 UID:event-9b709431bbf6@paok-calendar
-DTSTAMP:20261123T213125Z
+DTSTAMP:20261123T215032Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261130
 SUMMARY:🏊 Αλεξάνδρεια Junior 2026

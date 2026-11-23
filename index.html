@@ -1798,7 +1798,8 @@
       var base = by[o.id] || { id: o.id, posts: [], source: "admin" }, merged = {};
       Object.keys(base).forEach(function (k) { merged[k] = base[k]; });
       ["sport", "title", "start", "end", "time", "venue", "athletes", "results", "para", "url"].forEach(function (k) {
-        if (o[k] !== undefined && o[k] !== null) merged[k] = o[k];
+        // Κενά «Αποτελέσματα» του διαχειριστή δεν σβήνουν τα μετάλλια των αναρτήσεων.
+        if (o[k] !== undefined && o[k] !== null && !(k === "results" && !String(o[k]).trim() && merged.results)) merged[k] = o[k];
       });
       merged.edited = true;
       by[o.id] = merged;

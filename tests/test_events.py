@@ -96,6 +96,33 @@ class Events(unittest.TestCase):
                             [{"name": "Νίκος Παπαδάκης", "g": 1, "s": 1, "b": 0, "note": ""}])
         self.assertEqual((a[0]["g"], a[0]["s"]), (1, 1))
 
+    def test_medals_lists_and_real_world_prose(self):
+        def read(html):
+            m, t = ev.medals_from_text(ev.html_lines(html))
+            return ev.results_text(ev.merge_medals([], m), t).split("\n")
+        # Λίστα με επικεφαλίδες· το όνομα του τουρνουά (σε «») και οι θέσεις χωρίς μετάλλιο δεν μετρούν.
+        self.assertEqual(read("<p>Οκτώ μετάλλια στο «Διεθνές Τουρνουά Πολυμήχανος Οδυσσέας» στη Λάρισα.</p>"
+                              "<p>Χρυσά μετάλλια<br>Χαρίτου Πηνελόπη (-57kg, U16)</p>"
+                              "<p>Χάλκινα μετάλλια<br>Καλανοβ Γιώργος (-60kg, Εφήβων)</p><p>5η θέση<br>Παπάς Νίκος (-50kg)</p>"),
+                         ["🥇 Χαρίτου Πηνελόπη (-57kg, U16)", "🥉 Καλανοβ Γιώργος (-60kg, Εφήβων)"])
+        # Το όνομα σε προηγούμενη πρόταση· η ομοσπονδία δεν είναι αθλητής.
+        self.assertEqual(read("<p>Με τρία μετάλλια, ο αθλητής του ΠΑΟΚ, Παναγιώτης Κούσογλου, επέστρεψε από το Πανελλήνιο.</p>"
+                              "<p>Ανεβαίνει στο βάθρο της Ελληνικής Ομοσπονδίας Μικτών Πολεμικών Τεχνών.</p>"
+                              "<p>Ο απολογισμός του: ένα χρυσό, ένα ασημένιο και ένα χάλκινο μετάλλιο.</p>"),
+                         ["🥇🥈🥉 Παναγιώτης Κούσογλου"])
+        # Γενική («του Βλαδίμηρου Ποπόβ») και «χρυσή πρωταθλήτρια» (επίθετο, όχι μετάλλιο).
+        self.assertEqual(read("<p>Στην κατηγορία των 65 κιλών ξεχώρισε η παρουσία του Βλαδίμηρου Ποπόβ, όπου κατέκτησε το χρυσό μετάλλιο.</p>"
+                              "<p>Τιμήθηκε η χρυσή πρωταθλήτρια Δήμητρα Καρπόζηλου για την επιτυχία της.</p>"),
+                         ["🥇 Βλαδίμηρος Ποπόβ"])
+
+    def test_merge_drops_medals_of_older_parser(self):
+        auto = [{"id": "aaaaaaaaaaaa", "sport": "judo", "title": "Τ", "start": "2026-10-11", "end": "2026-10-11", "para": False,
+                 "posts": [], "source": "acpaok", "medals": [{"name": "Νίκος Παπάς", "g": 1, "s": 0, "b": 0, "note": ""}],
+                 "team": [], "medalsV": ev.MEDALS_VERSION}]
+        previous = [{**auto[0], "medals": [{"name": "Πολυμήχανος Οδυσσέας", "g": 8, "s": 0, "b": 0, "note": ""}], "medalsV": None}]
+        out = ev.merge(auto, previous, [{"id": "aaaaaaaaaaaa", "results": ""}])
+        self.assertEqual(out[0]["results"], "🥇 Νίκος Παπάς")  # ούτε τα παλιά λάθος, ούτε σβήσιμο από κενή φόρμα
+
     def test_merge_admin_wins_and_hides(self):
         auto = [{"id": "aaaaaaaaaaaa", "sport": "judo", "title": "Αυτόματο", "start": "2026-11-28", "end": "2026-11-29",
                  "para": False, "posts": [{"url": "u2", "date": "2026-11-22"}], "source": "acpaok"},

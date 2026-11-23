@@ -77,9 +77,17 @@ PARA_RE = re.compile(r"ΑΜΕΑ|ΑΜΕ\.Α|ΠΑΡΑΟΛΥΜΠ|ΠΑΡΑΛΥΜΠ|\
 # Οι αναρτήσεις γράφουν τα μετάλλια με λέξεις («Δύο χρυσά και ένα ασημένιο μετάλλιο κατέκτησε ο …»).
 # Από εκεί βγαίνουν γραμμές «🥇🥇🥈 Όνομα» για τη σελίδα, αντί για τη λίστα με τα άρθρα. Ό,τι γράψει
 # ο διαχειριστής στα «Αποτελέσματα» μετρά πάνω από αυτά.
+# Αλλάζει όταν αλλάζει ο τρόπος ανάγνωσης: τα μετάλλια της προηγούμενης έκδοσης δεν κρατιούνται.
+MEDALS_VERSION = 2
 _NUM = {"ΕΝΑ": 1, "ΕΝΑΝ": 1, "ΜΙΑ": 1, "ΔΥΟ": 2, "ΤΡΙΑ": 3, "ΤΡΕΙΣ": 3, "ΤΕΣΣΕΡΑ": 4, "ΤΕΣΣΕΡΙΣ": 4, "ΠΕΝΤΕ": 5,
         "ΕΞΙ": 6, "ΕΠΤΑ": 7, "ΟΚΤΩ": 8}
-_MEDAL = re.compile(r"(?:\b(\d{1,2}|" + "|".join(_NUM) + r")\s+)?(?:(?:ΑΚΟΜΗ|ΑΚΟΜΑ)\s+)?(ΧΡΥΣ|ΑΣΗΜΕΝΙ|ΧΑΛΚΙΝ)[Α-Ω]*")
+# Το χρώμα μετρά ως μετάλλιο μόνο σε ουδέτερο («χρυσό», «δύο ασημένια») ή πριν από «μετάλλιο»,
+# όχι ως επίθετο («η χρυσή πρωταθλήτρια»).
+_MEDAL = re.compile(r"(?:\b(\d{1,2}|" + "|".join(_NUM) + r")\s+)?(?:(?:ΑΚΟΜΗ|ΑΚΟΜΑ)\s+)?\b(ΧΡΥΣ|ΑΣΗΜΕΝΙ|ΧΑΛΚΙΝ)"
+                    r"(?:(?:Ο|Α)\b|[Α-Ω]*\s+ΜΕΤΑΛΛ)")
+# Γραμμή-επικεφαλίδα λίστας («Χρυσά μετάλλια», «Χάλκινο:», «5η θέση»): οι επόμενες γραμμές είναι ονόματα.
+_HEADER = re.compile(r"^\W*(?:(ΧΡΥΣ|ΑΣΗΜΕΝΙ|ΧΑΛΚΙΝ)[Α-Ω]*(?:\s+ΜΕΤΑΛΛ[Α-Ω]*)?|(\d+)Η\s+ΘΕΣΗ)\W*$")
+_EMOJI_KIND = {"🥇": "g", "🥈": "s", "🥉": "b"}
 _PLACE = re.compile(r"\b(1Η|2Η|3Η|ΠΡΩΤΗ|ΔΕΥΤΕΡΗ|ΤΡΙΤΗ)\s+ΘΕΣΗ")
 _PLACE_KIND = {"1Η": "g", "ΠΡΩΤΗ": "g", "2Η": "s", "ΔΕΥΤΕΡΗ": "s", "3Η": "b", "ΤΡΙΤΗ": "b"}
 _KIND = {"ΧΡΥΣ": "g", "ΑΣΗΜΕΝΙ": "s", "ΧΑΛΚΙΝ": "b"}
@@ -97,6 +105,16 @@ _NOT_NAME = set("""ΠΑΝΕΛΛΗΝΙΟ ΠΑΝΕΛΛΗΝΙΟΥ ΠΑΝΕΥΡΩΠ�
 ΠΡΟΠΟΝΗΤΗΣ ΠΡΟΠΟΝΗΤΡΙΑ ΕΥΡΩΠΗΣ ΚΟΣΜΟΥ ΒΑΛΚΑΝΙΚΟ ΒΑΛΚΑΝΙΚΟΥ ΒΟΡΕΙΑΣ ΜΑΚΕΔΟΝΙΑΣ ΜΑΚΕΔΟΝΙΑ ΚΕΝΤΡΙΚΗΣ""".split())
 
 
+_NOT_NAME_STEM = ("ΟΜΟΣΠΟΝΔ", "ΕΛΛΗΝΙΚ", "ΣΥΛΛΟΓ", "ΕΝΩΣ", "ΔΙΚΕΦΑΛ", "ΠΡΩΤΑΘΛ", "ΤΟΥΡΝΟΥ", "ΔΙΕΘΝ", "ΠΑΝΕΛΛ",
+                  "ΠΑΓΚΟΣΜ", "ΠΑΝΕΥΡ", "ΚΥΠΕΛ", "ΑΓΩΝ", "ΜΙΚΤ", "ΠΟΛΕΜΙΚ", "ΤΕΧΝ", "ΑΘΛΗΤ", "ΠΡΟΠΟΝΗΤ", "ΚΑΤΗΓΟΡ",
+                  "ΠΡΩΤΑΘΛΗΤ", "ΠΡΩΤΑΘΛΗΤΡ", "ΣΩΜΑΤΕΙ", "ΜΙΤΙΝΓΚ", "ΓΥΜΝΑΣΤ", "ΣΤΑΔΙ", "ΚΛΕΙΣΤ", "ΑΝΟΙΧΤ")
+
+
+def _not_name(word: str) -> bool:
+    w = plain(word)
+    return w in _NOT_NAME or w in _MONTHS or w.startswith(_NOT_NAME_STEM)
+
+
 def _medals(clause: str) -> dict:
     got = {"g": 0, "s": 0, "b": 0}
     up = plain(clause)
@@ -112,18 +130,29 @@ _MONTHS = set("""ΙΑΝΟΥΑΡΙΟΣ ΙΑΝΟΥΑΡΙΟΥ ΦΕΒΡΟΥΑΡΙΟ�
 
 
 def _nominative(name: str, before: str) -> str:
-    """«για τον Λευτέρη Τσάκωνα» → «Λευτέρης Τσάκωνας» (μόνο αρσενικά, μετά από «τον»/«του»)."""
+    """«για τον Λευτέρη Τσάκωνα» → «Λευτέρης Τσάκωνας», «του Βλαδίμηρου Ποπόβ» → «Βλαδίμηρος Ποπόβ»
+    (μόνο αρσενικά, μετά από «τον»/«του»). Το -ου γίνεται -ος στο μικρό όνομα και στα -πουλου· τα άλλα
+    επώνυμα σε -ου (Ιωάννου) μένουν."""
     if not re.search(r"\b(?:τον|του|στον|Τον|Του)\s*$", before):
         return name
     ends = {"η": "ης", "ή": "ής", "α": "ας", "ά": "άς", "ο": "ος", "ό": "ός"}
-    return " ".join(w[:-1] + ends[w[-1]] if len(w) > 2 and w[-1] in ends else w for w in name.split(" "))
+    out = []
+    for i, w in enumerate(name.split(" ")):
+        if len(w) > 3 and w.endswith(("ου", "ού")) and (i == 0 or plain(w).endswith("ΠΟΥΛΟΥ")):
+            w = w[:-2] + ("ος" if w.endswith("ου") else "ός")
+        elif len(w) > 2 and w[-1] in ends:
+            w = w[:-1] + ends[w[-1]]
+        out.append(w)
+    return " ".join(out)
 
 
 def _names_at(clause: str) -> list[str]:
+    # Ό,τι είναι σε εισαγωγικά ή παρενθέσεις (ονόματα διοργανώσεων, κατηγορίες) δεν είναι όνομα αθλητή.
+    clause = re.sub(r"«[^»]*»|\([^)]*\)|\"[^\"]*\"", lambda m: " " * len(m.group(0)), clause)
     out = []
     for m in _NAME.finditer(clause):
         words = re.split(r"[ -]", m.group(1))
-        if any(plain(w) in _NOT_NAME or plain(w) in _MONTHS for w in words):
+        if any(_not_name(w) for w in words):
             continue
         out.append(_nominative(m.group(1), clause[:m.start()]))
     return out
@@ -142,8 +171,32 @@ def medals_from_text(text: str) -> tuple[list[dict], list[str]]:
         if record and not a["note"]:
             a["note"] = "πανελλήνιο ρεκόρ" if "ΠΑΝΕΛΛΗΝΙΟ ΡΕΚΟΡ" in up else "ρεκόρ"
 
+    # Λίστες: «Χρυσά μετάλλια» και από κάτω ένα όνομα ανά γραμμή («Χαρίτου Πηνελόπη (-57kg, U16)»).
+    sentences: list[str] = []
+    header = None  # "g"/"s"/"b", "" για θέση χωρίς μετάλλιο (π.χ. 5η), None εκτός λίστας
+    for line in text.split("\n"):
+        line = line.strip()
+        if not line:
+            continue
+        up = plain(line)
+        h = _HEADER.match(up)
+        if h or line[:1] in _EMOJI_KIND and len(line) <= 3:
+            header = _KIND[h.group(1)] if h and h.group(1) else \
+                ({1: "g", 2: "s", 3: "b"}.get(int(h.group(2)), "") if h else _EMOJI_KIND[line[:1]])
+            continue
+        if header is not None and len(line.split()) <= 10 and not line.endswith((".", "!")):
+            if line[:1] in _EMOJI_KIND:
+                line = line[1:].strip()
+            name = re.sub(r"\s*\(.*$", "", line).strip(" -–:")
+            detail = (re.search(r"\(([^)]*)\)", line) or [None, ""])[1]
+            if header and _NAME.fullmatch(name) and not any(_not_name(w) for w in re.split(r"[ -]", name)):
+                a = athletes.setdefault(name, {"name": name, "g": 0, "s": 0, "b": 0, "note": detail})
+                a[header] += 1
+            continue
+        header = None
+        sentences += re.split(r"(?<!\b[Α-Ω]\.)(?<=[.!;])\s+", line)
     # Τέλος πρότασης, όχι αρχικό ονόματος («Μαρία Κ. στα -52»).
-    for sentence in re.split(r"(?<!\b[Α-Ω]\.)(?<=[.!;])\s+|\n+", text):
+    for sentence in sentences:
         up = plain(sentence)
         if _FUTURE.search(up):
             last = _names_at(sentence) or last
@@ -190,6 +243,12 @@ def medals_from_text(text: str) -> tuple[list[dict], list[str]]:
                 last = who[:1]
             pending = []
     return list(athletes.values()), team
+
+
+def html_lines(html_text: str) -> str:
+    """Το κείμενο με τις αλλαγές γραμμής του HTML (παράγραφοι, <br>, λίστες), για τις λίστες μεταλλίων."""
+    t = re.sub(r"(?i)<br\s*/?>|</(?:p|li|h\d|div|tr)>", "\n", html_text or "")
+    return "\n".join(clean(x) for x in t.split("\n"))
 
 
 def merge_medals(old: list[dict], new: list[dict]) -> list[dict]:
@@ -367,7 +426,7 @@ def events_from_posts(posts: list[dict]) -> list[dict]:
                 host = e
             elif not dates and s <= posted <= en + dt.timedelta(days=3):
                 host = e
-        medals, team = medals_from_text(body)
+        medals, team = medals_from_text(html_lines((post.get("content") or {}).get("rendered", "")))
         if host:
             if link["url"] not in {p["url"] for p in host["posts"]}:
                 host["posts"].append(link)
@@ -383,7 +442,7 @@ def events_from_posts(posts: list[dict]) -> list[dict]:
             "id": eid, "sport": sport, "title": tidy_title(title, sport), "start": dates[0].isoformat(),
             "end": dates[1].isoformat(), "time": "", "venue": "", "athletes": "", "results": "",
             "para": is_para(title + " " + body), "url": link["url"], "posts": [link], "source": "acpaok",
-            "medals": medals, "team": team, "results": results_text(medals, team),
+            "medals": medals, "team": team, "results": results_text(medals, team), "medalsV": MEDALS_VERSION,
         }
     return list(out.values())
 
@@ -410,7 +469,10 @@ def merge(auto: list[dict], previous: list[dict], admin: list[dict]) -> list[dic
     by: dict[str, dict] = {}
     for e in previous:
         if e.get("source") == "acpaok":
-            by[e["id"]] = dict(e)
+            e = dict(e)
+            if e.get("medalsV") != MEDALS_VERSION:  # μετάλλια παλιάς ανάγνωσης: έξω, όχι λάθος στη σελίδα
+                e.update(medals=[], team=[], results="", medalsV=MEDALS_VERSION)
+            by[e["id"]] = e
     for e in auto:
         old = by.get(e["id"])
         if old:  # κρατά τις αναρτήσεις που έφυγαν από τις τελευταίες 50
@@ -420,8 +482,10 @@ def merge(auto: list[dict], previous: list[dict], admin: list[dict]) -> list[dic
             e["title"] = old.get("title") or e["title"]  # ο τίτλος της πρώτης ανάρτησης
             e["para"] = e["para"] or old.get("para", False)
             # Τα μετάλλια αναρτήσεων που έφυγαν από τις τελευταίες 50 μένουν.
-            e["medals"] = merge_medals(old.get("medals", []), e.get("medals", []))
-            e["team"] = old.get("team", []) + [t for t in e.get("team", []) if t not in old.get("team", [])]
+            kept = old.get("medals", []) if old.get("medalsV") == MEDALS_VERSION else []
+            e["medals"] = merge_medals(kept, e.get("medals", []))
+            kept_team = old.get("team", []) if old.get("medalsV") == MEDALS_VERSION else []
+            e["team"] = kept_team + [t for t in e.get("team", []) if t not in kept_team]
             e["results"] = results_text(e["medals"], e["team"])
         by[e["id"]] = e
     for a in admin:
@@ -429,7 +493,9 @@ def merge(auto: list[dict], previous: list[dict], admin: list[dict]) -> list[dic
         if a.get("hidden"):
             by.pop(a["id"], None)
             continue
-        merged = {**base, **{k: a[k] for k in FIELDS if k in a and a[k] is not None}}
+        # Κενά «Αποτελέσματα» στη φόρμα δεν σβήνουν τα μετάλλια που βγήκαν από τις αναρτήσεις.
+        merged = {**base, **{k: a[k] for k in FIELDS if k in a and a[k] is not None
+                             and not (k == "results" and not str(a[k]).strip() and base.get("results"))}}
         merged["edited"] = True
         by[a["id"]] = merged
     out = [e for e in by.values() if e.get("sport") in SPORTS and e.get("start")]

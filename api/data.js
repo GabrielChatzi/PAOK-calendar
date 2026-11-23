@@ -4,7 +4,7 @@
 // (/matches.json, /football-home.ics κ.λπ., βλ. rewrites στο vercel.json). Το CDN κρατά την απάντηση
 // 1 λεπτό· αν το GitHub δεν απαντήσει, συνεχίζει να δίνει την τελευταία για 1 ώρα.
 const RAW = "https://raw.githubusercontent.com/GabrielChatzi/PAOK-calendar/data/";
-const FILE = /^(?:(?:matches|standings|status|events|trophies)\.json|[a-z]+(?:-women)?-(?:home|away)\.ics|[a-z]+-events\.ics|archive\/(?:index|\d{4}-\d{2})\.json|crests\/[0-9a-f]{16}\.(?:png|jpg|gif|webp|svg))$/;
+const FILE = /^(?:(?:matches|standings|status|events|trophies)\.json|[a-z]+(?:-women|-amea)?-(?:home|away)\.ics|[a-z]+-events\.ics|archive\/(?:index|\d{4}-\d{2})\.json|crests\/[0-9a-f]{16}\.(?:png|jpg|gif|webp|svg))$/;
 // Σήματα αντιπάλων των ακαδημιών (crests.py): το όνομα βγαίνει από την αρχική διεύθυνση, άρα δεν αλλάζει ποτέ.
 const IMAGE = { png: "image/png", jpg: "image/jpeg", gif: "image/gif", webp: "image/webp", svg: "image/svg+xml" };
 

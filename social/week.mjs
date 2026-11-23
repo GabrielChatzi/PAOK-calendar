@@ -34,7 +34,7 @@ export const LABEL = {
   volley: "Βόλεϊ Ανδρών", "volley-women": "Βόλεϊ Γυναικών",
   handball: "Χάντμπολ Ανδρών", "handball-women": "Χάντμπολ Γυναικών",
   waterpolo: "Πόλο Ανδρών", "waterpolo-women": "Πόλο Γυναικών",
-  futsal: "Φούτσαλ Ανδρών",
+  futsal: "Φούτσαλ Ανδρών", "basketball-amea": "Μπάσκετ με αμαξίδιο",
 };
 // Περίπου πόσο κρατά ένας αγώνας (λεπτά), για να ξέρουμε πότε έχει τελειώσει η μέρα.
 const DURATION = { football: 115, basketball: 120, volley: 130, handball: 95, waterpolo: 90, futsal: 100 };
@@ -559,9 +559,6 @@ async function main() {
   const names = JSON.parse(fs.readFileSync(path.join(HERE, "names.json"), "utf8"));
   // Β' ομάδα και ακαδημίες: δικά τους post (academyPlan), όχι μέσα στο κανονικό πρόγραμμα.
   const academy = new Set((data.sections || []).filter((s) => s.academy).map((s) => s.key));
-  // ΑμεΑ (ομαδικά): ακόμα μόνο για τον διαχειριστή, όχι στα social.
-  const amea = new Set((data.sections || []).filter((s) => s.amea).map((s) => s.key));
-  data.matches = data.matches.filter((m) => !amea.has(m.section));
   names.labels = academyLabels(data.sections);
   const p = plan(data.matches.filter((m) => !academy.has(m.section)), today, { names });
   const main = data.matches.filter((m) => !academy.has(m.section)), acad = data.matches.filter((m) => academy.has(m.section));

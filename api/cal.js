@@ -19,6 +19,7 @@ export const SECTIONS = [
   ["waterpolo", "Πόλο", "Πόλο"],
   ["waterpolo-women", "Πόλο Γυναικών", "Πόλο"],
   ["futsal", "Ποδόσφαιρο Σάλας", "Ποδόσφαιρο Σάλας"],
+  ["basketball-amea", "Μπάσκετ με αμαξίδιο", "Μπάσκετ"],
 ];
 const KEYS = SECTIONS.map((s) => s[0]);
 const SIDES = { home: ["home"], away: ["away"], all: ["home", "away"] };
@@ -37,8 +38,10 @@ export function calName(keys, v) {
     const parts = [];
     for (const [key, name, sport] of SECTIONS) {
       if (!keys.includes(key)) continue;
-      const both = SECTIONS.filter((s) => s[2] === sport).every((s) => keys.includes(s[0]));
-      const pair = SECTIONS.filter((s) => s[2] === sport).length > 1;
+      // Ανδρών & Γυναικών: μόνο τα δύο κανονικά τμήματα του αθλήματος (όχι π.χ. το αμαξίδιο).
+      const peers = SECTIONS.filter((s) => s[2] === sport && !s[0].endsWith("-amea"));
+      const both = !key.endsWith("-amea") && peers.every((s) => keys.includes(s[0]));
+      const pair = peers.length > 1;
       if (both && pair) { if (!key.endsWith("-women")) parts.push(`${sport} Ανδρών & Γυναικών`); }
       else parts.push(name);
     }

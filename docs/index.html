@@ -203,6 +203,14 @@
   }
   .menu-gender a[aria-current="page"], .menu-gender a:active { background: var(--ink); color: var(--paper); }
   .menu-academy { grid-template-columns: repeat(3, 1fr); }
+  .menu-acad details { border-bottom: 1px solid var(--rule); }
+  .menu-acad summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 8px; padding: 12px 0; font: 600 20px/1.15 var(--display); }
+  .menu-acad summary::-webkit-details-marker { display: none; }
+  .menu-acad summary > span:first-child { flex: none; width: 24px; font-size: 19px; }
+  .menu-acad summary::after { content: "+"; margin-left: auto; font: 400 24px/1 var(--body); }
+  .menu-acad details[open] summary::after { content: "−"; }
+  .menu-acad .menu-gender { padding-bottom: 12px; }
+  .menu-acad .menu-acad-all { grid-column: 1 / -1; font-weight: 600; }
   .menu-gender.has-amea { grid-template-columns: repeat(3, 1fr); }
   .menu-gender.has-amea a { white-space: nowrap; font-size: 14px; padding-left: 2px; padding-right: 2px; }
   .menu-ind { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
@@ -1221,7 +1229,7 @@
   }
 
   // ---- Μενού: τα τμήματα ομαδοποιημένα ανά άθλημα (Ανδρών / Γυναικών)
-  function sectionLabel(s) { return s.amea ? s.short || "ΑμεΑ" : s.women ? "Γυναικών" : "Ανδρών"; }
+  function sectionLabel(s) { return s.amea ? (s.short && s.short !== s.sport ? s.short : "Special Team") : s.women ? "Γυναικών" : "Ανδρών"; }
   function groupList(g) { return [g.men, g.women, g.amea].filter(Boolean); }
   function sportGroups() {
     var groups = [], by = {};
@@ -1265,8 +1273,13 @@
         }).join("") +
       "</div></nav>" +
       (canSeeAcademy() && data.academy.length
-        ? '<nav aria-label="Ακαδημίες"><h3>Ακαδημίες</h3><ul class="menu-links">' +
-          '<li><a href="#/academies">Ακαδημίες ›<small>Β\' ομάδα και τμήματα υποδομής, με δικό τους μενού</small></a></li></ul></nav>'
+        ? '<nav aria-label="Ακαδημίες" class="menu-acad"><h3>Ακαδημίες</h3><ul class="menu-links">' +
+          '<li><a href="' + acadGroupHref(null) + '">Όλες οι ακαδημίες ›<small>Β\' ομάδα και τμήματα υποδομής όλων των αθλημάτων</small></a></li></ul>' +
+          academyGroups().map(function (g) {
+            return "<details><summary><span aria-hidden=\"true\">" + g.emoji + "</span><span>" + esc(g.sport) + "</span></summary>" +
+              '<div class="menu-gender menu-academy">' + (g.teams.length > 1 ? '<a class="menu-acad-all" href="' + acadGroupHref(g) + '">Όλες οι ομάδες</a>' : "") +
+              g.teams.map(function (s) { return '<a href="#/' + s.key + '">' + esc(s.short || s.name) + "</a>"; }).join("") + "</div></details>";
+          }).join("") + "</nav>"
         : "") +
       '<nav aria-label="Σελίδες"><h3>Σελίδες</h3><ul class="menu-links">' + PAGES.map(function (p) {
         var here = p[0] ? r.page === p[0] : !r.key && !r.page;
@@ -1434,6 +1447,14 @@
     });
     return groups;
   }
+  // #/academies/s/<άθλημα|all>: διαλέγει τις ομάδες στην αρχική των ακαδημιών (από το μενού).
+  function acadGroupHref(g) { return "#/academies/s/" + (g ? encodeURIComponent(g.sport) : "all"); }
+  function acadGroupHere(r, g) {
+    if (r.page !== "academies" || r.tab) return false;
+    var keys = acadTeams();
+    if (!g) return !keys.length;
+    return keys.length === g.teams.length && g.teams.every(function (s) { return keys.indexOf(s.key) >= 0; });
+  }
   function teamTitle(s) { return s.name.indexOf("ΠΑΟΚ") === 0 ? s.name : "ΠΑΟΚ " + s.name; }
   var ACADEMY_PAGES = [
     ["academies", "Αρχική ακαδημιών", "Όλοι οι αγώνες των ομάδων"],
@@ -1449,7 +1470,8 @@
       '<button type="button" class="menu-close" data-close aria-label="Κλείσιμο μενού">✕</button></div>' +
       '<nav aria-label="Ομάδες"><h3>Ομάδες</h3><ul class="menu-sports">' + academyGroups().map(function (g) {
         return '<li class="menu-sport"><span class="menu-sport-name"><span aria-hidden="true">' + g.emoji + "</span>" + esc(g.sport) + "</span>" +
-          '<span class="menu-gender menu-academy">' + g.teams.map(function (s) {
+          '<span class="menu-gender menu-academy">' + (g.teams.length > 1 ? '<a href="' + acadGroupHref(g) + '"' + (acadGroupHere(r, g) ? ' aria-current="page"' : "") + ">Όλες</a>" : "") +
+          g.teams.map(function (s) {
             return '<a href="#/' + s.key + '"' + (current === s.key ? ' aria-current="page"' : "") + ">" + esc(s.short || s.name) + "</a>";
           }).join("") + "</span></li>";
       }).join("") + "</ul></nav>" +
@@ -2442,6 +2464,14 @@
       return { key: null, tab: "", page: "academies", sub: "" };
     }
     if (key === "academies" && canSeeAcademy()) {
+      if (tab === "s") {
+        var gname = decodeURIComponent(parts[2] || "all");
+        var grp = academyGroups().filter(function (g) { return g.sport === gname; })[0];
+        acad.teams = grp ? grp.teams.map(function (s) { return s.key; }) : [];
+        saveAcad();
+        history.replaceState(null, "", "#/academies");
+        return { key: null, tab: "", page: "academies", sub: "" };
+      }
       // Η φόρμα μόνο για τον διαχειριστή.
       if ((tab === "new" || tab === "edit" || tab === "crests") && !isAdmin()) return { key: null, tab: "", page: "academies", sub: "" };
       return { key: null, tab: tab, page: "academies", sub: parts[2] || "" };

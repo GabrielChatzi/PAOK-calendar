@@ -19,7 +19,7 @@ export const SECTIONS = [
   ["waterpolo", "Πόλο", "Πόλο"],
   ["waterpolo-women", "Πόλο Γυναικών", "Πόλο"],
   ["futsal", "Ποδόσφαιρο Σάλας", "Ποδόσφαιρο Σάλας"],
-  ["basketball-amea", "Μπάσκετ Special Team", "Μπάσκετ"],
+  ["basketball-amea", "Special Team", "Μπάσκετ"],
 ];
 const KEYS = SECTIONS.map((s) => s[0]);
 const SIDES = { home: ["home"], away: ["away"], all: ["home", "away"] };

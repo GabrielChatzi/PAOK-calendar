@@ -5905,7 +5905,6 @@
      "home": "ΔΟΥΚΑ ΑΣΕ",
      "away": "ΠΑΟΚ",
      "paokHome": false,
-     "venue": "Κλειστό Γυμναστήριο Δαΐς",
      "competition": "Futsal Super League",
      "round": "10η αγωνιστική",
      "url": "https://epssalas.gr/sport-event/24053/",
@@ -5915,11 +5914,12 @@
      "uid": "futsal-eps-24063",
      "nt": "62418d0680",
      "section": "futsal",
-     "start": "2026-11-29T18:00:00+02:00",
-     "timeKnown": false,
+     "start": "2026-11-29T12:30:00+02:00",
+     "timeKnown": true,
      "home": "ΠΑΟΚ",
      "away": "ΠΥΡΓΟΣ FUTSAL",
      "paokHome": true,
+     "venue": "Μίκρα 3",
      "competition": "Futsal Super League",
      "round": "11η αγωνιστική",
      "url": "https://epssalas.gr/sport-event/24063/",
@@ -6830,7 +6830,7 @@
      "uid": "waterpolo-women-ethnikos-ofpf-paok-domus-ergo-2026-11-28",
      "nt": "35a1eab371",
      "section": "waterpolo-women",
-     "start": "2026-11-24T14:00:00+02:00",
+     "start": "2026-11-24T13:30:00+02:00",
      "timeKnown": true,
      "home": "ΕΘΝΙΚΟΣ ΟΦΠΦ",
      "away": "ΠΑΟΚ",
@@ -7447,6 +7447,7 @@
      "home": "ΠΑΟΚ",
      "away": "ΗΛΥΣΙΑΚΟΣ ΑΟ",
      "paokHome": true,
+     "venue": "Ποσειδώνιο Κολυμβητήριο",
      "competition": "Water Polo League",
      "url": "https://waterpololeague.gr/fixture/paok-domus-ergo-hly-2026-11-28",
      "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
@@ -10448,6 +10449,18 @@
       },
       {
        "pos": 4,
+       "team": "ΠΑΣ ΓΙΑΝΝΙΝΑ",
+       "logo": "https://apps.basket.gr/clubs/349/logo",
+       "paok": false,
+       "cells": [
+        "7",
+        "5-2",
+        "11",
+        "12"
+       ]
+      },
+      {
+       "pos": 5,
        "team": "ΑΕΟ ΠΡΩΤΕΑΣ ΒΟΥΛΑΣ",
        "logo": "https://apps.basket.gr/clubs/659/logo",
        "paok": false,
@@ -10459,7 +10472,7 @@
        ]
       },
       {
-       "pos": 5,
+       "pos": 6,
        "team": "ΑΚ ΚΑΒΑΛΑΣ ΟΙ ΠΑΝΘΗΡΕΣ",
        "logo": "https://apps.basket.gr/clubs/1776/logo",
        "paok": false,
@@ -10471,7 +10484,7 @@
        ]
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "ΠΑΝΣΕΡΡΑΙΚΟΣ FIBRAN",
        "logo": "https://apps.basket.gr/clubs/82/logo",
        "paok": false,
@@ -10479,18 +10492,6 @@
         "7",
         "3-4",
         "-82",
-        "10"
-       ]
-      },
-      {
-       "pos": 7,
-       "team": "ΠΑΣ ΓΙΑΝΝΙΝΑ",
-       "logo": "https://apps.basket.gr/clubs/349/logo",
-       "paok": false,
-       "cells": [
-        "6",
-        "4-2",
-        "-6",
         "10"
        ]
       },
@@ -10524,10 +10525,10 @@
        "logo": "https://apps.basket.gr/clubs/2/logo",
        "paok": true,
        "cells": [
-        "6",
-        "2-4",
-        "-82",
-        "8"
+        "7",
+        "2-5",
+        "-99",
+        "9"
        ]
       },
       {
@@ -14916,6 +14917,20 @@
      "url": "https://eope-web.dataproject.com/MatchStatistics.aspx?mID=778&ID=19",
      "homeLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_113.jpg",
      "awayLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_118.jpg"
+    },
+    {
+     "uid": "volley-women-acpaok-cf956ceaf98f",
+     "nt": "8e8c26ef96",
+     "section": "volley-women",
+     "start": "2026-11-29T17:00:00+02:00",
+     "timeKnown": true,
+     "home": "ΠΑΟΚ",
+     "away": "Θέτις Βούλας",
+     "paokHome": true,
+     "venue": "Ε.Γ. Μίκρας 1",
+     "competition": "Volley League γυναικών",
+     "round": "8η αγωνιστική",
+     "url": "https://acpaok.gr/%cf%8c%cf%80%ce%bf%cf%85-%ce%ba%ce%b1%ce%b9-%ce%b1%ce%bd-%cf%80%ce%b1%ce%af%ce%b6%ce%b5%ce%b9%cf%82-%cf%83-%ce%b1%ce%ba%ce%bf%ce%bb%ce%bf%cf%85%ce%b8%ce%ac%ce%bc%ce%b5-31-03-05-04/"
     }
    ],
    "standings": [
@@ -17704,5 +17719,5 @@
    ]
   }
  },
- "updated": "2026-11-23T19:06+02:00"
+ "updated": "2026-11-23T22:07+02:00"
 }

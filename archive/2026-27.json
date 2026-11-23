@@ -6841,6 +6841,21 @@
      "awayLogo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png"
     },
     {
+     "uid": "waterpolo-women-acpaok-0bbe404f6986",
+     "nt": "2d0ee40945",
+     "section": "waterpolo-women",
+     "start": "2026-11-28T16:30:00+02:00",
+     "timeKnown": true,
+     "home": "ΠΑΟΚ",
+     "away": "Ηλυσιακός",
+     "paokHome": true,
+     "venue": "Ποσειδώνιο Κολυμβητήριο",
+     "competition": "WPLW",
+     "round": "10η αγωνιστική",
+     "url": "https://acpaok.gr/%cf%8c%cf%80%ce%bf%cf%85-%ce%ba%ce%b1%ce%b9-%ce%b1%ce%bd-%cf%80%ce%b1%ce%af%ce%b6%ce%b5%ce%b9%cf%82-%cf%83-%ce%b1%ce%ba%ce%bf%ce%bb%ce%bf%cf%85%ce%b8%ce%ac%ce%bc%ce%b5-31-03-05-04/",
+     "awayLogo": "https://koecdn.twic.pics/media/ilisiakos-1789898091-f0lvya6R.jpg"
+    },
+    {
      "uid": "waterpolo-women-panionios-gss-paok-domus-ergo-2026-11-04",
      "nt": "c65960a302",
      "section": "waterpolo-women",
@@ -17687,5 +17702,5 @@
    ]
   }
  },
- "updated": "2026-11-23T14:04+02:00"
+ "updated": "2026-11-23T16:05+02:00"
 }

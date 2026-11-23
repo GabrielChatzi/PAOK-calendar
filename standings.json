@@ -7012,16 +7012,30 @@
      "logo": "https://paokalendar.gr/crests/aa8743d78bd1abe6.png",
      "paok": false,
      "cells": [
-      "1",
-      "1",
+      "2",
+      "2",
       "0",
       "0",
-      "3-0",
-      "3"
+      "7-2",
+      "6"
      ]
     },
     {
      "pos": 3,
+     "team": "ΑΣ ΘΕΣΣ/ΝΙΚΗ Ο ΑΡΗΣ",
+     "logo": "https://paokalendar.gr/crests/d9444ca55c6608d9.png",
+     "paok": false,
+     "cells": [
+      "2",
+      "1",
+      "0",
+      "1",
+      "1-3",
+      "3"
+     ]
+    },
+    {
+     "pos": 4,
      "team": "ΣΕΙΡΗΝΕΣ ΓΡΕΒΕΝΩΝ",
      "logo": "https://paokalendar.gr/crests/16e5636ed53cdc1d.png",
      "paok": false,
@@ -7035,30 +7049,16 @@
      ]
     },
     {
-     "pos": 4,
-     "team": "ΑΣ ΘΕΣΣ/ΝΙΚΗ Ο ΑΡΗΣ",
-     "logo": "https://paokalendar.gr/crests/d9444ca55c6608d9.png",
-     "paok": false,
-     "cells": [
-      "1",
-      "0",
-      "0",
-      "1",
-      "0-3",
-      "0"
-     ]
-    },
-    {
-     "pos": 4,
+     "pos": 5,
      "team": "Α.Ο. ΛΕΟΝΤΕΣ",
      "logo": "https://paokalendar.gr/crests/ade9114d00474638.png",
      "paok": false,
      "cells": [
-      "1",
+      "2",
       "0",
       "0",
-      "1",
-      "0-3",
+      "2",
+      "2-7",
       "0"
      ]
     },
@@ -7068,11 +7068,11 @@
      "logo": "https://paokalendar.gr/crests/1c3087412ed896e1.png",
      "paok": false,
      "cells": [
-      "1",
+      "2",
       "0",
       "0",
-      "1",
-      "0-8",
+      "2",
+      "0-9",
       "0"
      ]
     }

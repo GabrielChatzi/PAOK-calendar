@@ -34,7 +34,7 @@ export const LABEL = {
   volley: "Βόλεϊ Ανδρών", "volley-women": "Βόλεϊ Γυναικών",
   handball: "Χάντμπολ Ανδρών", "handball-women": "Χάντμπολ Γυναικών",
   waterpolo: "Πόλο Ανδρών", "waterpolo-women": "Πόλο Γυναικών",
-  futsal: "Φούτσαλ Ανδρών", "basketball-amea": "Μπάσκετ Special Team",
+  futsal: "Φούτσαλ Ανδρών", "basketball-amea": "Special Team",
 };
 // Περίπου πόσο κρατά ένας αγώνας (λεπτά), για να ξέρουμε πότε έχει τελειώσει η μέρα.
 const DURATION = { football: 115, basketball: 120, volley: 130, handball: 95, waterpolo: 90, futsal: 100 };

@@ -79,7 +79,7 @@ SECTIONS = {
     # PAOK Special Team (μπάσκετ, ΑμεΑ): κανονικό τμήμα, παντού όπως τα άλλα. Χωρίς πηγή που διαβάζεται
     # (ανακοινώνονται στο Instagram @acpaok_amea): οι αγώνες από τη φόρμα «Νέος αγώνας» και το manual.json.
     # Το κλειδί μένει (αρχεία .ics, αγώνες στη βάση): μην το αλλάξεις.
-    "basketball-amea": {"emoji": "🏀", "name": "Μπάσκετ Special Team", "sport": "Μπάσκετ", "women": False, "amea": True,
+    "basketball-amea": {"emoji": "🏀", "name": "Special Team", "sport": "Μπάσκετ", "women": False, "amea": True,
                         "short": "Special Team"},
 }
 

@@ -204,6 +204,7 @@
   .menu-gender a[aria-current="page"], .menu-gender a:active { background: var(--ink); color: var(--paper); }
   .menu-academy { grid-template-columns: repeat(3, 1fr); }
   .menu-gender.has-amea { grid-template-columns: repeat(3, 1fr); }
+  .menu-gender.has-amea a { white-space: nowrap; font-size: 14px; padding-left: 2px; padding-right: 2px; }
   .menu-ind { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
   .menu-ind a { display: flex; align-items: center; gap: 6px; padding: 8px; border: 1.5px solid var(--ink); text-decoration: none; font-weight: 500; font-size: 15px; line-height: 1.2; }
   .menu-ind a[aria-current="page"], .menu-ind a:active { background: var(--ink); color: var(--paper); }
@@ -1406,7 +1407,7 @@
     var g = sportGroups().filter(function (x) { return x.sport === s.sport; })[0];
     var list = g ? groupList(g) : [];
     if (list.length < 2) return "";
-    return '<nav class="gender-switch' + (list.length > 2 ? " team-switch" : "") + '" aria-label="' + esc(s.sport) + '">' + list.map(function (o) {
+    return '<nav class="gender-switch" aria-label="' + esc(s.sport) + '">' + list.map(function (o) {
       return '<a href="#/' + o.key + '"' + (o.key === s.key ? ' aria-current="page"' : "") + ">" + esc(sectionLabel(o)) + "</a>";
     }).join("") + "</nav>";
   }

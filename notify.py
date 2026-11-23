@@ -62,7 +62,7 @@ NO_REFRESH = {"football-u14", "football-u13", "football-u13b", "football-u12", "
 DURATION = {
     "football": 115, "football-women": 115, "basketball": 120, "basketball-women": 115,
     "volley": 130, "volley-women": 130, "handball": 95, "handball-women": 95,
-    "waterpolo": 80, "waterpolo-women": 80, "futsal": 95,
+    "waterpolo": 80, "waterpolo-women": 80, "futsal": 95, "basketball-amea": 100,
     "football-b": 115, "football-u19": 115, "football-u17": 100, "football-u16": 100, "football-u15": 90,
     **{k: 80 for k in ("football-u14", "football-u13", "football-u13b", "football-u12", "football-women-u17", "football-women-u15", "football-women-u15b", "football-women-u12")},
     **{k: 120 for k in ("volley-u21", "volley-u18", "volley-women-u20", "volley-women-u18", "volley-women-u18es1",

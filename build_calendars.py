@@ -76,6 +76,11 @@ SECTIONS = {
     "waterpolo-women": {"emoji": "🤽", "name": "Πόλο Γυναικών", "sport": "Πόλο", "women": True, "live": True,
                         "liveNote": "Έναρξη, τέλος κάθε περιόδου και τελικό"},
     "futsal": {"emoji": "🥅", "name": "Ποδόσφαιρο Σάλας", "sport": "Ποδόσφαιρο Σάλας", "women": False},
+    # PAOK Special Team (μπάσκετ, ΑμεΑ): κανονικό τμήμα, παντού όπως τα άλλα. Χωρίς πηγή που διαβάζεται
+    # (ανακοινώνονται στο Instagram @acpaok_amea): οι αγώνες από τη φόρμα «Νέος αγώνας» και το manual.json.
+    # Το κλειδί μένει (αρχεία .ics, αγώνες στη βάση): μην το αλλάξεις.
+    "basketball-amea": {"emoji": "🏀", "name": "Μπάσκετ Special Team", "sport": "Μπάσκετ", "women": False, "amea": True,
+                        "short": "Special Team"},
 }
 
 # Β' ομάδα και ακαδημίες ποδοσφαίρου (paokfc.gr). Στη σελίδα φαίνονται μόνο σε λειτουργία διαχειριστή
@@ -139,15 +144,8 @@ ACADEMY = {
 }
 SECTIONS.update(ACADEMY)
 
-# ΑμεΑ σε ομαδικά αθλήματα (ΑΣ ΠΑΟΚ ΑμεΑ). Δεν έχουν πηγή που διαβάζεται (ανακοινώνονται στο Instagram
-# @acpaok_amea): οι αγώνες μπαίνουν από τη φόρμα «Νέος αγώνας» και το manual.json. Στη σελίδα μόνο για τον
-# διαχειριστή (#/atomika, μαζί με τα ατομικά)· δεν μπαίνουν στην αρχική, στα social ή στα συνδυαστικά ημερολόγια.
-# Νέα ομάδα = μία γραμμή εδώ· εμφανίζεται μόνη της στη σελίδα και στη φόρμα.
-AMEA = {
-    "basketball-amea": {"emoji": "🏀", "name": "Μπάσκετ ΑμεΑ", "sport": "Μπάσκετ", "women": False, "amea": True,
-                        "short": "Μπάσκετ"},
-}
-SECTIONS.update(AMEA)
+# Ομάδες ΑμεΑ (στο SECTIONS πιο πάνω, με "amea": True): μόνο από τη φόρμα και το manual.json.
+AMEA = {k: v for k, v in SECTIONS.items() if v.get("amea")}
 
 
 @dataclass

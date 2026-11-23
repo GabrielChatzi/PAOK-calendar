@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:event-24da59efd1a1@paok-calendar
-DTSTAMP:20261122T091956Z
+DTSTAMP:20261123T213125Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:🥊 Στο Πανευρωπαϊκό Πρωτάθλημα U17 οι 
@@ -38,7 +38,7 @@ URL:https://acpaok.gr/%cf%83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%ce%b5%cf%85%cf%
 END:VEVENT
 BEGIN:VEVENT
 UID:event-53a101a966a0@paok-calendar
-DTSTAMP:20261122T091956Z
+DTSTAMP:20261123T213125Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261027
 SUMMARY:🥊 Στο Πανευρωπαϊκό Πρωτάθλημα U15 οι 
@@ -50,13 +50,14 @@ URL:https://acpaok.gr/%cf%83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%ce%b5%cf%85%cf%
 END:VEVENT
 BEGIN:VEVENT
 UID:event-322e1c1810b9@paok-calendar
-DTSTAMP:20261122T091956Z
+DTSTAMP:20261123T213125Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261117
 SUMMARY:🥊 Με δύο μετάλλια και σημαντικές δι
  ακρίσεις ολοκλήρωσε την παρουσία του ο Π
  ΑΟΚ
-DESCRIPTION:ΠΑΟΚ Πυγμαχία
+DESCRIPTION:ΠΑΟΚ Πυγμαχία\n🥇 Βλαδίμηρου Ποπόβ
+ \n🥇 Δήμητρα Καρπόζηλου\n🥉 Λέρι Λομίντζε
 URL:https://acpaok.gr/%cf%80%cf%85%ce%b3%ce%bc%ce%b1%cf%87%ce%af%ce%b1-%ce%
  bc%ce%b5-%ce%b4%cf%8d%ce%bf-%ce%bc%ce%b5%cf%84%ce%ac%ce%bb%ce%bb%ce%b9%ce%
  b1-%ce%ba%ce%b1%ce%b9-%cf%83%ce%b7%ce%bc%ce%b1%ce%bd%cf%84%ce%b9%ce%ba/

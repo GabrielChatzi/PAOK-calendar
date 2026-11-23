@@ -26,12 +26,15 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:event-d053b08fcc31@paok-calendar
-DTSTAMP:20261122T091956Z
+DTSTAMP:20261123T213125Z
 DTSTART;VALUE=DATE:20261011
 DTEND;VALUE=DATE:20261012
 SUMMARY:🥋 Οκτώ μετάλλια για το Judo του ΠΑΟΚ σ
  τη Λάρισα
-DESCRIPTION:ΠΑΟΚ Τζούντο
+DESCRIPTION:ΠΑΟΚ Τζούντο\n🥇🥇🥈🥈🥈🥉🥉🥉 Πο
+ λυμήχανος Οδυσσέας\n🥇 Χαρίτου Πηνελόπη\
+ n🥇 Χρυσοστομίδη Έκτορα\n🥈 Μάρκου Νικόλ
+ ας\n🥉 Καλανοβ Γιώργος
 URL:https://acpaok.gr/%ce%bf%ce%ba%cf%84%cf%8e-%ce%bc%ce%b5%cf%84%ce%ac%ce%
  bb%ce%bb%ce%b9%ce%b1-%ce%b3%ce%b9%ce%b1-%cf%84%ce%bf-judo-%cf%84%ce%bf%cf%
  85-%cf%80%ce%b1%ce%bf%ce%ba-%cf%83%cf%84%ce%b7-%ce%bb%ce%ac%cf%81%ce%b9/

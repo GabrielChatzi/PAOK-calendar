@@ -71,7 +71,7 @@
    "time": "",
    "venue": "",
    "athletes": "",
-   "results": "",
+   "results": "🥇🥇🥈🥈🥈🥉🥉🥉 Πολυμήχανος Οδυσσέας\n🥇 Χαρίτου Πηνελόπη\n🥇 Χρυσοστομίδη Έκτορα\n🥈 Μάρκου Νικόλας\n🥉 Καλανοβ Γιώργος",
    "para": false,
    "url": "https://acpaok.gr/%ce%bf%ce%ba%cf%84%cf%8e-%ce%bc%ce%b5%cf%84%ce%ac%ce%bb%ce%bb%ce%b9%ce%b1-%ce%b3%ce%b9%ce%b1-%cf%84%ce%bf-judo-%cf%84%ce%bf%cf%85-%cf%80%ce%b1%ce%bf%ce%ba-%cf%83%cf%84%ce%b7-%ce%bb%ce%ac%cf%81%ce%b9/",
    "posts": [
@@ -81,7 +81,45 @@
      "date": "2026-10-12"
     }
    ],
-   "source": "acpaok"
+   "source": "acpaok",
+   "medals": [
+    {
+     "name": "Πολυμήχανος Οδυσσέας",
+     "g": 2,
+     "s": 3,
+     "b": 3,
+     "note": ""
+    },
+    {
+     "name": "Χαρίτου Πηνελόπη",
+     "g": 1,
+     "s": 0,
+     "b": 0,
+     "note": ""
+    },
+    {
+     "name": "Χρυσοστομίδη Έκτορα",
+     "g": 1,
+     "s": 0,
+     "b": 0,
+     "note": ""
+    },
+    {
+     "name": "Μάρκου Νικόλας",
+     "g": 0,
+     "s": 1,
+     "b": 0,
+     "note": ""
+    },
+    {
+     "name": "Καλανοβ Γιώργος",
+     "g": 0,
+     "s": 0,
+     "b": 1,
+     "note": ""
+    }
+   ],
+   "team": []
   },
   {
    "id": "24da59efd1a1",
@@ -102,7 +140,9 @@
      "date": "2026-10-01"
     }
    ],
-   "source": "acpaok"
+   "source": "acpaok",
+   "medals": [],
+   "team": []
   },
   {
    "id": "53a101a966a0",
@@ -123,7 +163,9 @@
      "date": "2026-10-16"
     }
    ],
-   "source": "acpaok"
+   "source": "acpaok",
+   "medals": [],
+   "team": []
   },
   {
    "id": "d5b8b78d45d1",
@@ -144,7 +186,9 @@
      "date": "2026-10-31"
     }
    ],
-   "source": "acpaok"
+   "source": "acpaok",
+   "medals": [],
+   "team": []
   },
   {
    "id": "322e1c1810b9",
@@ -155,7 +199,7 @@
    "time": "",
    "venue": "",
    "athletes": "",
-   "results": "",
+   "results": "🥇 Βλαδίμηρου Ποπόβ\n🥇 Δήμητρα Καρπόζηλου\n🥉 Λέρι Λομίντζε",
    "para": false,
    "url": "https://acpaok.gr/%cf%80%cf%85%ce%b3%ce%bc%ce%b1%cf%87%ce%af%ce%b1-%ce%bc%ce%b5-%ce%b4%cf%8d%ce%bf-%ce%bc%ce%b5%cf%84%ce%ac%ce%bb%ce%bb%ce%b9%ce%b1-%ce%ba%ce%b1%ce%b9-%cf%83%ce%b7%ce%bc%ce%b1%ce%bd%cf%84%ce%b9%ce%ba/",
    "posts": [
@@ -165,7 +209,31 @@
      "date": "2026-11-16"
     }
    ],
-   "source": "acpaok"
+   "source": "acpaok",
+   "medals": [
+    {
+     "name": "Βλαδίμηρου Ποπόβ",
+     "g": 1,
+     "s": 0,
+     "b": 0,
+     "note": ""
+    },
+    {
+     "name": "Δήμητρα Καρπόζηλου",
+     "g": 1,
+     "s": 0,
+     "b": 0,
+     "note": ""
+    },
+    {
+     "name": "Λέρι Λομίντζε",
+     "g": 0,
+     "s": 0,
+     "b": 1,
+     "note": ""
+    }
+   ],
+   "team": []
   },
   {
    "id": "cc9839465bba",
@@ -176,7 +244,7 @@
    "time": "",
    "venue": "",
    "athletes": "",
-   "results": "",
+   "results": "🥇🥈🥉 Ελληνικής Ομοσπονδίας Μικτών",
    "para": false,
    "url": "https://acpaok.gr/%ce%bc%ce%bc%ce%b1-%cf%86%ce%bf%cf%81%cf%84%cf%89%ce%bc%ce%ad%ce%bd%ce%bf%cf%82-%ce%bc%ce%b5%cf%84%ce%ac%ce%bb%ce%bb%ce%b9%ce%b1-%ce%b5%cf%80%ce%ad%cf%83%cf%84%cf%81%ce%b5%cf%88%ce%b5/",
    "posts": [
@@ -186,7 +254,17 @@
      "date": "2026-11-16"
     }
    ],
-   "source": "acpaok"
+   "source": "acpaok",
+   "medals": [
+    {
+     "name": "Ελληνικής Ομοσπονδίας Μικτών",
+     "g": 1,
+     "s": 1,
+     "b": 1,
+     "note": ""
+    }
+   ],
+   "team": []
   },
   {
    "id": "b8cbd0b654f8",
@@ -207,7 +285,9 @@
      "date": "2026-10-23"
     }
    ],
-   "source": "acpaok"
+   "source": "acpaok",
+   "medals": [],
+   "team": []
   },
   {
    "id": "e1c36556700c",
@@ -234,6 +314,39 @@
     }
    ],
    "source": "acpaok",
+   "medals": [
+    {
+     "name": "Αντώνης Παπαδόπουλος",
+     "g": 3,
+     "s": 0,
+     "b": 0,
+     "note": "πανελλήνιο ρεκόρ"
+    },
+    {
+     "name": "Κυριάκος Ονουφριάδης",
+     "g": 2,
+     "s": 1,
+     "b": 0,
+     "note": ""
+    },
+    {
+     "name": "Λευτέρης Τσάκωνας",
+     "g": 0,
+     "s": 2,
+     "b": 1,
+     "note": ""
+    },
+    {
+     "name": "Γκαμπριέλ Ντορίν Ποπαρλάν",
+     "g": 0,
+     "s": 0,
+     "b": 1,
+     "note": ""
+    }
+   ],
+   "team": [
+    "🏆 1η θέση, κατηγορία Νέων Ανδρών (426 βαθμοί)"
+   ],
    "edited": true
   },
   {
@@ -256,6 +369,8 @@
     }
    ],
    "source": "acpaok",
+   "medals": [],
+   "team": [],
    "edited": true
   }
  ],

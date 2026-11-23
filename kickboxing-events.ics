@@ -26,12 +26,13 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:event-cc9839465bba@paok-calendar
-DTSTAMP:20261122T091956Z
+DTSTAMP:20261123T213125Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261116
 SUMMARY:🥊 ΜΜΑ: «Φορτωμένος» μετάλλια επέστρ
  εψε ο Παναγιώτης Κούσογλου
-DESCRIPTION:ΠΑΟΚ Kick Boxing
+DESCRIPTION:ΠΑΟΚ Kick Boxing\n🥇🥈🥉 Ελληνικής Ομοσ
+ πονδίας Μικτών
 URL:https://acpaok.gr/%ce%bc%ce%bc%ce%b1-%cf%86%ce%bf%cf%81%cf%84%cf%89%ce%
  bc%ce%ad%ce%bd%ce%bf%cf%82-%ce%bc%ce%b5%cf%84%ce%ac%ce%bb%ce%bb%ce%b9%ce%b
  1-%ce%b5%cf%80%ce%ad%cf%83%cf%84%cf%81%ce%b5%cf%88%ce%b5/

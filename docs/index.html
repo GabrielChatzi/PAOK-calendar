@@ -1220,7 +1220,7 @@
   }
 
   // ---- Μενού: τα τμήματα ομαδοποιημένα ανά άθλημα (Ανδρών / Γυναικών)
-  function sectionLabel(s) { return s.amea ? s.short || "Αμαξίδιο" : s.women ? "Γυναικών" : "Ανδρών"; }
+  function sectionLabel(s) { return s.amea ? s.short || "ΑμεΑ" : s.women ? "Γυναικών" : "Ανδρών"; }
   function groupList(g) { return [g.men, g.women, g.amea].filter(Boolean); }
   function sportGroups() {
     var groups = [], by = {};
@@ -3076,7 +3076,7 @@
   }
   function allMatches() { return data.matches.concat(data.academyMatches || []); }
   function isAcademy(key) { return !!(data.sectionMap[key] || {}).academy; }
-  // Ομάδες ΑμεΑ (μπάσκετ με αμαξίδιο): κανονικά τμήματα· ο αγώνας τους μπαίνει από τη φόρμα των ακαδημιών.
+  // Ομάδες ΑμεΑ (PAOK Special Team): κανονικά τμήματα· ο αγώνας τους μπαίνει από τη φόρμα των ακαδημιών.
   function isAmea(key) { return !!(data.sectionMap[key] || {}).amea; }
   var fmtLong = new Intl.DateTimeFormat("el-GR", { timeZone: TZ, weekday: "long", day: "numeric", month: "long", year: "numeric" });
   var MATCH_KINDS = [
@@ -4121,7 +4121,7 @@
     // Δεν μπαίνουν στην αρχική, στα φίλτρα, στις ειδοποιήσεις ανά άθλημα ή στα ημερολόγια.
     data.academy = data.sections.filter(function (s) { return s.academy; });
     data.sections = data.sections.filter(function (s) { return !s.academy; });
-    // Ομάδες ΑμεΑ (μπάσκετ με αμαξίδιο): κανονικά τμήματα, παντού όπως τα άλλα.
+    // Ομάδες ΑμεΑ (PAOK Special Team): κανονικά τμήματα, παντού όπως τα άλλα.
     data.amea = data.sections.filter(function (s) { return s.amea; });
     data.academyMatches = data.matches.filter(function (m) { return (data.sectionMap[m.section] || {}).academy; });
     data.matches = data.matches.filter(function (m) { return !(data.sectionMap[m.section] || {}).academy; });

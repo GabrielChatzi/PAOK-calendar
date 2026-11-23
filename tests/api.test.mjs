@@ -355,9 +355,9 @@ test("api/cal: ενώνει τα αρχεία με σειρά ώρας και δ
 test("api/cal: όνομα και γραμμές ως 75 bytes", () => {
   assert.equal(cal.calName(["football", "football-women", "basketball-women"], "away"),
     "ΠΑΟΚ – Ποδόσφαιρο Ανδρών & Γυναικών · Μπάσκετ Γυναικών – Εκτός έδρας");
-  // Το αμαξίδιο είναι δικό του τμήμα: δεν μπλέκεται με το «Ανδρών & Γυναικών» του μπάσκετ.
+  // Το Special Team είναι δικό του τμήμα: δεν μπλέκεται με το «Ανδρών & Γυναικών» του μπάσκετ.
   assert.equal(cal.calName(["basketball", "basketball-women", "basketball-amea"], "all"),
-    "ΠΑΟΚ – Μπάσκετ Ανδρών & Γυναικών · Μπάσκετ με αμαξίδιο");
+    "ΠΑΟΚ – Μπάσκετ Ανδρών & Γυναικών · Μπάσκετ Special Team");
   const long = cal.fold("X-WR-CALNAME:" + "Ποδόσφαιρο ".repeat(12));
   assert.ok(long.split("\r\n").every((l) => Buffer.byteLength(l) <= 75));
   assert.equal(long.replace(/\r\n /g, ""), "X-WR-CALNAME:" + "Ποδόσφαιρο ".repeat(12));

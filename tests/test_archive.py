@@ -117,8 +117,8 @@ class Trophies(unittest.TestCase):
                 "και 1 Πανελλήνιο πρωτάθλημα παίδων (2012) Πανελλήνιες Θέσεις 2η θέση Άνδρες (2004, 2005)")
         t, p, _ = tr.parse_trophy_text(text)
         self.assertEqual({x["name"]: x["years"] for x in t}, {
-            "Πρωτάθλημα Ελλάδας Ανδρών": ["2006", "2017", "2019"], "Πανελλήνιο Πρωτάθλημα εφήβων": ["2004", "2005"],
-            "Πανελλήνιο Πρωτάθλημα παίδων": ["2012"]})
+            "Πρωτάθλημα Ελλάδας Ανδρών": ["2006", "2017", "2019"], "Πανελλήνιο Πρωτάθλημα Εφήβων": ["2004", "2005"],
+            "Πανελλήνιο Πρωτάθλημα Παίδων": ["2012"]})
         self.assertEqual(p, [{"name": "2η θέση Άνδρες", "years": ["2004", "2005"]}])
 
     def test_winners_wording_notes_and_glued_years(self):
@@ -128,6 +128,39 @@ class Trophies(unittest.TestCase):
         self.assertEqual(t, [{"name": "Πρωτάθλημα Ελλάδας Παίδων", "years": ["2016", "2024"]}])
         self.assertEqual(p, [{"name": "2η θέση Εφήβων", "years": ["2025"]}, {"name": "3η θέση Παμπαίδων", "years": ["2025"]}])
         self.assertEqual(n, ["Συμμετοχή στο Παγκόσμιο Κύπελλο Συλλόγων στο ISFAHAN – IRAN το 2017"])
+
+    def test_titles_from_event_results(self):
+        ev = lambda title, results, end="2026-11-22", **kw: {"sport": "weightlifting", "title": title,  # noqa: E731
+                                                            "end": end, "results": results, **kw}
+        events = [
+            ev("Πανελλήνιο Πρωτάθλημα Άρσης Βαρών", "🏆 1η θέση, κατηγορία Νέων Ανδρών (426 βαθμοί)\n🥇 Α Β"),
+            ev("Πανελλήνιο Πρωτάθλημα Εφήβων", "🏆 1η θέση ομαδικά"),
+            ev("Πανελλήνιο Πρωτάθλημα Γυναικών", "🏆 2η θέση, κατηγορία Γυναικών"),
+            ev("Βαλκανικό Πρωτάθλημα", "🏆 1η θέση, κατηγορία Ανδρών"),
+            ev("Πανελλήνιο Πρωτάθλημα ΑμεΑ", "🏆 1η θέση, κατηγορία Ανδρών", para=True),
+        ]
+        self.assertEqual(tr.titles_from_events(events), [
+            ("event:weightlifting", "ΝΕΩΝ ΑΝΔΡΩΝ", "Νέων Ανδρών", "2026"),
+            ("event:weightlifting", "ΕΦΗΒΩΝ", "Εφήβων", "2026")])
+        sections = {"event:weightlifting": [
+            {"name": "Πρωτάθλημα Ελλάδας Ανδρών", "years": ["2025"]},
+            {"name": "Πανελλήνιο Πρωτάθλημα Νέων Ανδρών", "years": ["2024", "2025"]},
+            {"name": "Πρωτάθλημα Ελλάδας Εφήβων", "years": ["2026"]}]}  # το έγραψε ήδη η ΑΣ ΠΑΟΚ (άλλο όνομα)
+        pending = tr.add_event_titles(sections, events)
+        self.assertEqual(pending, {"event:weightlifting": [{"name": "Πανελλήνιο Πρωτάθλημα Νέων Ανδρών", "year": "2026"}]})
+        got = {t["name"]: t["years"] for t in sections["event:weightlifting"]}
+        self.assertEqual(got["Πανελλήνιο Πρωτάθλημα Νέων Ανδρών"], ["2024", "2025", "2026"])
+        self.assertEqual(got["Πρωτάθλημα Ελλάδας Εφήβων"], ["2026"])
+        # Η ΑΣ ΠΑΟΚ το γράφει: καμία αναμονή, καμία διπλή χρονιά.
+        sections["event:weightlifting"][1]["years"] = ["2024", "2025", "2026"]
+        self.assertEqual(tr.add_event_titles(sections, events), {})
+        self.assertEqual(sections["event:weightlifting"][1]["years"], ["2024", "2025", "2026"])
+        # Νέα κατηγορία: νέος τίτλος· όχι ο «Ανώμαλος Δρόμος Γυναικών» για τις «Γυναίκες».
+        s2 = {"event:weightlifting": [{"name": "Πρωτάθλημα Ελλάδας Ανώμαλου Δρόμου Γυναικών", "years": ["1974"]}]}
+        tr.add_event_titles(s2, [ev("Πανελλήνιο Πρωτάθλημα", "🏆 1η θέση, κατηγορία Γυναικών")])
+        self.assertEqual(s2["event:weightlifting"][1], {"name": "Πρωτάθλημα Ελλάδας Γυναικών", "years": ["2026"]})
+        # Σελίδα που δεν διαβάστηκε: δεν αγγίζεται.
+        self.assertEqual(tr.add_event_titles({}, events, skip={"event:weightlifting"}), {})
 
     def test_trophy_block(self):
         html = "<h2>ΤΡΟΠΑΙΟΘΗΚΗ</h2><p>Futsal League 2023-2024</p><h2>ΡΟΗ ΕΙΔΗΣΕΩΝ</h2><p>Νέα 2026</p>"

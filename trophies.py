@@ -6,6 +6,9 @@
     σάλας, πάλη, άρση βαρών, κολύμβηση…). Διαβάζεται σε κάθε ενημέρωση, άρα ένας νέος τίτλος μπαίνει μόνος του
     όταν τον γράψει ο σύλλογος.
   - Τα επίσημα άρθρα τίτλων της ΑΣ ΠΑΟΚ (OFFICIAL): ομαδικά, ατομικά, ακαδημίες. Μετρούν πρώτα.
+  - Τα αποτελέσματα των ατομικών αθλημάτων (docs/events.json, events.py): «🏆 1η θέση, κατηγορία Νέων Ανδρών»
+    σε Πανελλήνιο Πρωτάθλημα = τίτλος εκείνης της χρονιάς, αμέσως. Μέχρι να τον γράψει και η ΑΣ ΠΑΟΚ στην
+    τροπαιοθήκη μένει «σε αναμονή» (pending στο json)· όταν εμφανιστεί εκεί, ο διαχειριστής παίρνει ειδοποίηση.
 
 Οι διακρίσεις (2η/3η θέση) κρατιούνται χωριστά («places»). Αν μια σελίδα δεν απαντήσει, μένει ό,τι υπήρχε.
 
@@ -19,7 +22,7 @@ import os
 import re
 import sys
 
-from build_calendars import OUT_DIR, clean, fetch, write_if_changed
+from build_calendars import OUT_DIR, clean, fetch, plain, write_if_changed
 
 PATH = OUT_DIR / "trophies.json"
 DRY = os.environ.get("DRY") == "1"
@@ -131,6 +134,9 @@ def tidy(name: str) -> str:
     n = re.sub(r"^Πρωταθλήματα\s+Ελλάδο?ς", "Πρωτάθλημα Ελλάδας", n)
     n = re.sub(r"^Πανελλήνια πρωταθλήματα", "Πανελλήνιο πρωτάθλημα", n)
     n = re.sub(r"^Πανελλήνιο πρωτάθλημα", "Πανελλήνιο Πρωτάθλημα", n)
+    # «Πανελλήνιο Πρωτάθλημα νέων ανδρών» → «… Νέων Ανδρών» (όπως οι υπόλοιποι τίτλοι).
+    n = re.sub(r"^(Πανελλήνιο Πρωτάθλημα|Πρωτάθλημα Ελλάδας) (.+)$",
+               lambda m: m[1] + " " + " ".join(w[:1].upper() + w[1:] for w in m[2].split()), n)
     n = re.sub(r"\bΕλλάδος\b", "Ελλάδας", n)
     return n[:1].upper() + n[1:]
 
@@ -186,6 +192,103 @@ def sort_key(t: dict) -> tuple:
     return (youth, rank, name)
 
 
+# Κατηγορίες ηλικίας/φύλου των πρωταθλημάτων (οι μεγαλύτερες πρώτα, για το ταίριασμα).
+CATEGORIES = ["Νέων Ανδρών", "Νέων Γυναικών", "Παμπαίδων", "Παγκορασίδων", "Εφήβων", "Νεανίδων", "Παίδων",
+              "Κορασίδων", "Ανδρών", "Γυναικών"]
+_NATIONAL = re.compile(r"ΠΑΝΕΛΛΗΝΙ\w* ΠΡΩΤΑΘΛΗΜΑ|ΠΡΩΤΑΘΛΗΜΑ\w* ΕΛΛΑΔ")
+_NOT_NATIONAL = re.compile(r"ΒΑΛΚΑΝ|ΕΥΡΩΠ|ΠΑΓΚΟΣΜ|ΜΕΣΟΓΕΙ|ΚΥΠΕΛΛ|ΔΙΕΘΝ|ΣΧΟΛΙΚ|ΠΕΡΙΦΕΡΕΙΑΚ|ΒΕΤΕΡΑΝ|MASTERS", re.I)
+_WIN = re.compile(r"^🏆\s*1η θέση(?:,\s*κατηγορία\s+([^(]+?))?(?:\s+ομαδικά)?\s*(?:\(|$)")
+
+
+def category(text: str) -> str | None:
+    """Η κατηγορία (ως plain) στο τέλος ενός ονόματος/κειμένου: «… Νέων Ανδρών» → «ΝΕΩΝ ΑΝΔΡΩΝ»."""
+    up = plain(text)
+    for c in CATEGORIES:
+        if re.search(r"(?:^|\s)" + plain(c) + r"(?:\s|$)", up):
+            return plain(c)
+    return None
+
+
+def name_category(name: str) -> str | None:
+    """Η κατηγορία ενός τίτλου πρωταθλήματος Ελλάδας («Πανελλήνιο Πρωτάθλημα Εφήβων» → «ΕΦΗΒΩΝ»).
+
+    Μόνο όταν ό,τι μένει μετά το «Πρωτάθλημα Ελλάδας»/«Πανελλήνιο Πρωτάθλημα» είναι σκέτη κατηγορία
+    («Πρωτάθλημα Ελλάδας Ανώμαλου Δρόμου Γυναικών» δεν είναι το ίδιο με το «… Γυναικών»)."""
+    up = plain(name)
+    m = re.fullmatch(r"(?:ΠΡΩΤΑΘΛΗΜΑ ΕΛΛΑΔΑΣ|ΠΑΝΕΛΛΗΝΙΟ ΠΡΩΤΑΘΛΗΜΑ) (.+)", up)
+    return m[1] if m and m[1] in {plain(c) for c in CATEGORIES} else None
+
+
+def titles_from_events(events: list[dict]) -> list[tuple[str, str, str, str]]:
+    """(τμήμα, κατηγορία plain, κατηγορία όπως γράφεται, χρονιά) για κάθε 1η θέση σε Πανελλήνιο Πρωτάθλημα."""
+    out = []
+    for e in events:
+        if e.get("para") or not e.get("sport") or not e.get("end"):
+            continue
+        title = plain(e.get("title", ""))
+        if not _NATIONAL.search(title) or _NOT_NATIONAL.search(title):
+            continue
+        for line in (e.get("results") or "").splitlines():
+            m = _WIN.match(line.strip())
+            if not m:
+                continue
+            cat = category(m[1] or "") or category(e.get("title", ""))
+            if not cat:
+                continue
+            shown = next(c for c in CATEGORIES if plain(c) == cat)
+            item = (f"event:{e['sport']}", cat, shown, e["end"][:4])
+            if item not in out:
+                out.append(item)
+    return out
+
+
+def add_event_titles(sections: dict[str, list[dict]], events: list[dict], skip: set[str] = frozenset()) -> dict:
+    """Βάζει στα τρόπαια τους τίτλους από τα αποτελέσματα. Επιστρέφει τις χρονιές σε αναμονή
+    {τμήμα: [{"name", "year"}]}: όσες δεν τις έχει (ακόμα) η τροπαιοθήκη/η σταθερή λίστα.
+
+    Ένας τίτλος της τροπαιοθήκης με την ίδια κατηγορία και χρονιά μετρά ως ο ίδιος, όποιο κι αν είναι το
+    όνομά του («Πρωτάθλημα Ελλάδας Παίδων» = «Πανελλήνιο Πρωτάθλημα Παίδων»). skip: τμήματα που δεν
+    διαβάστηκαν τώρα (κρατούν ό,τι είχαν, και την αναμονή τους)."""
+    pending: dict[str, list[dict]] = {}
+    for key, cat, shown, year in titles_from_events(events):
+        if key in skip:
+            continue
+        lst = sections.setdefault(key, [])
+        same = [t for t in lst if name_category(t["name"]) == cat]
+        if any(year in t["years"] for t in same):
+            continue  # το έχει ήδη η ΑΣ ΠΑΟΚ (ή η σταθερή λίστα)
+        if same:
+            target = same[0]
+        else:
+            name = ("Πρωτάθλημα Ελλάδας " if cat in ("ΑΝΔΡΩΝ", "ΓΥΝΑΙΚΩΝ") else "Πανελλήνιο Πρωτάθλημα ") + shown
+            target = {"name": name, "years": []}
+            lst.append(target)
+        target["years"] = sorted(target["years"] + [year])
+        pending.setdefault(key, []).append({"name": target["name"], "year": year})
+    return pending
+
+
+def notify_pending(old: dict, new: dict, labels: dict) -> None:
+    """Ειδοποίηση στον διαχειριστή: νέος τίτλος από αποτέλεσμα, και όταν τον γράψει και η ΑΣ ΠΑΟΚ."""
+    if DRY:
+        return
+    def flat(d):
+        return {(k, x["name"], x["year"]) for k, v in d.items() for x in v}
+    added, confirmed = flat(new) - flat(old), flat(old) - flat(new)
+    if not added and not confirmed:
+        return
+    import notify
+    import watchdog
+    for key, name, year in sorted(added):
+        notify._push([watchdog.TOPIC], f"🏆 Νέος τίτλος: {labels.get(key, key)}",
+                     f"{name} {year}: μπήκε στα τρόπαια από το αποτέλεσμα. Αναμένεται και στην τροπαιοθήκη της ΑΣ ΠΑΟΚ.",
+                     f"/#/trophies", tag=f"trophy-{key}-{year}")
+    for key, name, year in sorted(confirmed):
+        notify._push([watchdog.TOPIC], f"✅ Τίτλος επιβεβαιώθηκε: {labels.get(key, key)}",
+                     f"{name} {year}: τον έγραψε και η ΑΣ ΠΑΟΚ στην τροπαιοθήκη.", f"/#/trophies",
+                     tag=f"trophy-{key}-{year}")
+
+
 def trophy_block(page_html: str) -> str | None:
     text = clean(page_html)
     i = text.find("ΤΡΟΠΑΙΟΘΗΚΗ")
@@ -203,6 +306,7 @@ def main() -> int:
     places: dict[str, list[dict]] = {}
     notes: dict[str, str] = {}
     failures = []
+    unread: set[str] = set()
     for pid, key in ACPAOK_PAGES.items():
         try:
             page = json.loads(fetch(ACPAOK_URL.format(id=pid)))
@@ -210,6 +314,7 @@ def main() -> int:
         except Exception as e:
             failures.append(f"{key}: {e}")
             print(f"! τρόπαια {key}: {e}", file=sys.stderr)
+            unread.add(key)
             if key in previous.get("sections", {}):
                 sections[key] = previous["sections"][key]
                 if key in previous.get("places", {}):
@@ -227,13 +332,24 @@ def main() -> int:
             places[key] = p
         if n:
             notes[key] = " · ".join(n)
+    events_path = OUT_DIR / "events.json"
+    events = json.loads(events_path.read_text(encoding="utf-8")).get("events", []) if events_path.exists() else []
+    pending = add_event_titles(sections, events, skip=unread)
+    for key in unread:  # δεν διαβάστηκε η σελίδα: η αναμονή μένει όπως ήταν
+        if key in previous.get("pending", {}):
+            pending[key] = previous["pending"][key]
+    for key, lst in pending.items():
+        print(f"  σε αναμονή (ΑΣ ΠΑΟΚ) {key}: " + "; ".join(f"{x['name']} {x['year']}" for x in lst))
     for key in sections:
         sections[key].sort(key=sort_key)
     for key, lst in sections.items():
         print(f"{key}: " + "; ".join(f"{t['name']} {len(t['years'])}" for t in lst))
     from events import SPORTS
     labels = {f"event:{k}": f"{v['emoji']} {v['name']}" for k, v in SPORTS.items()} | LABELS
-    data = {"sections": sections, "places": places, "notes": notes, "labels": labels, "sources": SOURCES}
+    data = {"sections": sections, "places": places, "notes": notes, "labels": labels, "sources": SOURCES,
+            "pending": pending}
+    if "pending" in previous:  # την πρώτη φορά (χωρίς προηγούμενη αναμονή) καμία ειδοποίηση για τα παλιά
+        notify_pending(previous.get("pending", {}), pending, labels)
     if not DRY:
         write_if_changed(PATH, json.dumps(data, ensure_ascii=False, indent=1) + "\n")
     return 1 if failures and len(failures) == len(ACPAOK_PAGES) else 0

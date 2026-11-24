@@ -2004,6 +2004,20 @@
     },
     {
      "pos": 2,
+     "team": "ΕΘΝΙΚΟΣ ΟΦΠΦ",
+     "logo": "https://koecdn.twic.pics/media/shma-4-2-1-1-1-1758207317-I4sKrotf.png",
+     "paok": false,
+     "cells": [
+      "11",
+      "8",
+      "1",
+      "2",
+      "170-106",
+      "25"
+     ]
+    },
+    {
+     "pos": 3,
      "team": "ΝΟ ΒΟΥΛΙΑΓΜΕΝΗΣ",
      "logo": "https://koecdn.twic.pics/media/nov-logo-gr-1758978938-hWBXWQRE.png",
      "paok": false,
@@ -2017,31 +2031,17 @@
      ]
     },
     {
-     "pos": 3,
-     "team": "ΕΘΝΙΚΟΣ ΟΦΠΦ",
-     "logo": "https://koecdn.twic.pics/media/shma-4-2-1-1-1-1758207317-I4sKrotf.png",
-     "paok": false,
-     "cells": [
-      "10",
-      "8",
-      "0",
-      "2",
-      "158-94",
-      "24"
-     ]
-    },
-    {
      "pos": 4,
      "team": "ΠΑΟΚ",
      "logo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
      "paok": true,
      "cells": [
-      "9",
+      "10",
       "7",
-      "0",
+      "1",
       "2",
-      "143-109",
-      "21"
+      "155-121",
+      "22"
      ]
     },
     {

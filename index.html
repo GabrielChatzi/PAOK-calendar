@@ -1990,6 +1990,10 @@
   function loadTrophies() { histLoad("trophies", "trophies.json", function (d) { trophies = d || { sections: {} }; }); }
   function trophyList(key) { return ((trophies || {}).sections || {})[key] || []; }
   function trophyCount(t) { return (t.years || []).length; }
+  // Τίτλοι που μπήκαν από αποτέλεσμα (trophies.py) και δεν τους έχει γράψει ακόμα η ΑΣ ΠΑΟΚ: ⏳ μόνο για τον διαχειριστή.
+  function trophyPending(key, name, year) {
+    return (((trophies || {}).pending || {})[key] || []).some(function (x) { return x.name === name && x.year === year; });
+  }
   function trophiesBlock(key, withTitle) {
     var list = trophyList(key), s = data.sectionMap[key];
     if (!list.length) return "";
@@ -1998,7 +2002,9 @@
     return (withTitle ? '<h3 class="area-sport">' + title + "</h3>" : "") +
       '<ul class="trophies">' + list.map(function (t) {
         return '<li><span class="tr-count">' + trophyCount(t) + '</span><div><strong>' + esc(t.name) + "</strong>" +
-          (t.years && t.years.length ? '<span class="tr-years">' + t.years.map(esc).join(" · ") + "</span>" : "") +
+          (t.years && t.years.length ? '<span class="tr-years">' + t.years.map(function (y) {
+            return esc(y) + (isAdmin() && trophyPending(key, t.name, y) ? ' <span title="Από το αποτέλεσμα· δεν το έχει γράψει ακόμα η ΑΣ ΠΑΟΚ">⏳</span>' : "");
+          }).join(" · ") + "</span>" : "") +
           (t.note ? "<small>" + esc(t.note) + "</small>" : "") + "</div></li>";
       }).join("") + "</ul>" +
       (places.length ? '<details class="tr-places"><summary>Διακρίσεις (' + places.length + ")</summary><ul>" + places.map(function (p) {

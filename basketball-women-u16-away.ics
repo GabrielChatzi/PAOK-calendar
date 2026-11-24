@@ -25,8 +25,21 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+UID:basketball-women-u16-ek-_VAHo5waaKXBuFgQ1ZnYZw@paok-calendar
+DTSTAMP:20261124T054459Z
+DTSTART;TZID=Europe/Athens:20260927T163000
+DTEND;TZID=Europe/Athens:20260927T183000
+SUMMARY:🏀 ΝΕΑΠΟΛΗ ΑΚΠΚ 23-82 ΠΑΟΚ
+LOCATION:ΕΑΚ ΝΕΑΠΟΛΗΣ
+DESCRIPTION:W Rising Stars U16 (ΕΚΑΣΘ) – Φάση των 3\, 2η α
+ γωνιστική\nΤελικό σκορ: ΝΕΑΠΟΛΗ ΑΚΠΚ 23-82 
+ ΠΑΟΚ
+URL:https://ekasth.gr/champs/matchcenter8/game.html?id=_VAHo5waaKXBuFgQ1ZnY
+ Zw
+END:VEVENT
+BEGIN:VEVENT
 UID:basketball-women-u16-ek-ty-hejIzsFwOPrfTT0TolA@paok-calendar
-DTSTAMP:20261124T040054Z
+DTSTAMP:20261124T054459Z
 DTSTART;TZID=Europe/Athens:20261010T110000
 DTEND;TZID=Europe/Athens:20261010T130000
 SUMMARY:🏀 ΜΓΣ ΑΠΟΛΛΩΝ ΚΑΛΑΜΑΡΙΑΣ 44-72 ΠΑΟΚ
@@ -39,7 +52,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=ty-hejIzsFwOPrfTT0To
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-u16-ek-yjqmNJSERVyYtrAqWx5dhA@paok-calendar
-DTSTAMP:20261124T040054Z
+DTSTAMP:20261124T054459Z
 DTSTART;TZID=Europe/Athens:20261031T190000
 DTEND;TZID=Europe/Athens:20261031T210000
 SUMMARY:🏀 ΣΥΚΕΩΝ ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ 2 18-86 ΠΑΟΚ
@@ -52,7 +65,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=yjqmNJSERVyYtrAqWx5d
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-u16-ek-TsCB_uN3479XxQeIkCON-A@paok-calendar
-DTSTAMP:20261124T040054Z
+DTSTAMP:20261124T054459Z
 DTSTART;TZID=Europe/Athens:20261203T180000
 DTEND;TZID=Europe/Athens:20261203T200000
 SUMMARY:🏀 ΧΑΝΘ – ΠΑΟΚ (ώρα αναμένεται)
@@ -67,7 +80,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=TsCB_uN3479XxQeIkCON
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-u16-ek-Ovyy2N59x23EHzHWlz34Mw@paok-calendar
-DTSTAMP:20261124T040054Z
+DTSTAMP:20261124T054459Z
 DTSTART;TZID=Europe/Athens:20261212T170000
 DTEND;TZID=Europe/Athens:20261212T190000
 SUMMARY:🏀 ΑΡΗΣ Α.Σ. – ΠΑΟΚ
@@ -78,7 +91,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=Ovyy2N59x23EHzHWlz34
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-u16-ek-ZeEYtaSt7mBkfJ4_ClvOaA@paok-calendar
-DTSTAMP:20261124T040054Z
+DTSTAMP:20261124T054459Z
 DTSTART;TZID=Europe/Athens:20270109T180000
 DTEND;TZID=Europe/Athens:20270109T200000
 SUMMARY:🏀 ΧΟΡΤΙΑΤΗΣ Α.Σ. – ΠΑΟΚ
@@ -89,7 +102,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=ZeEYtaSt7mBkfJ4_ClvO
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-u16-ek-zUxeQjDPBCdfrPy17smz_Q@paok-calendar
-DTSTAMP:20261124T040054Z
+DTSTAMP:20261124T054459Z
 DTSTART;TZID=Europe/Athens:20270123T170000
 DTEND;TZID=Europe/Athens:20270123T190000
 SUMMARY:🏀 ΑΝΑΓΕΝΝΗΣΗ Ν.ΡΥΣΙΟΥ ΑΜΣ – ΠΑΟΚ

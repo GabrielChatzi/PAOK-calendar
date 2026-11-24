@@ -5900,11 +5900,12 @@
      "uid": "futsal-eps-24053",
      "nt": "8a132e3b44",
      "section": "futsal",
-     "start": "2026-11-22T18:00:00+02:00",
-     "timeKnown": false,
+     "start": "2026-11-24T20:00:00+02:00",
+     "timeKnown": true,
      "home": "ΔΟΥΚΑ ΑΣΕ",
      "away": "ΠΑΟΚ",
      "paokHome": false,
+     "venue": "Κλειστό Γυμναστήριο Δαΐς",
      "competition": "Futsal Super League",
      "round": "10η αγωνιστική",
      "url": "https://epssalas.gr/sport-event/24053/",
@@ -5914,11 +5915,12 @@
      "uid": "futsal-eps-24063",
      "nt": "62418d0680",
      "section": "futsal",
-     "start": "2026-11-29T18:00:00+02:00",
-     "timeKnown": false,
+     "start": "2026-11-29T12:30:00+02:00",
+     "timeKnown": true,
      "home": "ΠΑΟΚ",
      "away": "ΠΥΡΓΟΣ FUTSAL",
      "paokHome": true,
+     "venue": "Μίκρα 3",
      "competition": "Futsal Super League",
      "round": "11η αγωνιστική",
      "url": "https://epssalas.gr/sport-event/24063/",
@@ -6834,6 +6836,7 @@
      "home": "ΕΘΝΙΚΟΣ ΟΦΠΦ",
      "away": "ΠΑΟΚ",
      "paokHome": false,
+     "venue": "Παπαστράτειο Κολυμβητήριο Πειραιά",
      "competition": "Water Polo League Γυναικών",
      "url": "https://waterpololeague.gr/fixture/ethnikos-ofpf-paok-domus-ergo-2026-11-28",
      "homeLogo": "https://koecdn.twic.pics/media/shma-4-2-1-1-1-1758207317-I4sKrotf.png",
@@ -7445,6 +7448,7 @@
      "home": "ΠΑΟΚ",
      "away": "ΗΛΥΣΙΑΚΟΣ ΑΟ",
      "paokHome": true,
+     "venue": "Ποσειδώνιο Κολυμβητήριο",
      "competition": "Water Polo League",
      "url": "https://waterpololeague.gr/fixture/paok-domus-ergo-hly-2026-11-28",
      "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
@@ -17716,5 +17720,5 @@
    ]
   }
  },
- "updated": "2026-11-24T07:44+02:00"
+ "updated": "2026-11-24T07:48+02:00"
 }

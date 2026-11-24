@@ -3960,11 +3960,11 @@
      "logo": "https://paokalendar.gr/crests/2200b2a00577dd9a.png",
      "paok": false,
      "cells": [
-      "5",
-      "5",
+      "6",
+      "6",
       "0",
-      "+161",
-      "10"
+      "+212",
+      "12"
      ]
     },
     {
@@ -3995,6 +3995,19 @@
     },
     {
      "pos": 4,
+     "team": "ΕΛΛΗΝΙΚΗ ΑΚΑΔΗΜΙΑ ΚΑΛΑΘΟΣΦΑΙΡΙΣΗΣ",
+     "logo": "https://paokalendar.gr/crests/a8cf966a51a9fe2c.png",
+     "paok": false,
+     "cells": [
+      "7",
+      "2",
+      "5",
+      "-100",
+      "9"
+     ]
+    },
+    {
+     "pos": 5,
      "team": "ΒΟΡΕΙΟΣ ΑΣΤΕΡΑΣ",
      "logo": "https://paokalendar.gr/crests/eaed84f681c3fdd7.png",
      "paok": false,
@@ -4003,19 +4016,6 @@
       "3",
       "2",
       "+20",
-      "8"
-     ]
-    },
-    {
-     "pos": 5,
-     "team": "ΕΛΛΗΝΙΚΗ ΑΚΑΔΗΜΙΑ ΚΑΛΑΘΟΣΦΑΙΡΙΣΗΣ",
-     "logo": "https://paokalendar.gr/crests/a8cf966a51a9fe2c.png",
-     "paok": false,
-     "cells": [
-      "6",
-      "2",
-      "4",
-      "-49",
       "8"
      ]
     },
@@ -4069,19 +4069,6 @@
       "6",
       "-176",
       "6"
-     ]
-    },
-    {
-     "pos": 10,
-     "team": "ΕΞΩΤΕΡΙΚΟ ΔΟΚ. ΟΜΑΔΑ3",
-     "logo": "https://paokalendar.gr/crests/5ae872a725283cdb.png",
-     "paok": false,
-     "cells": [
-      "0",
-      "0",
-      "0",
-      "0",
-      "0"
      ]
     }
    ]

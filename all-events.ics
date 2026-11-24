@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:event-d053b08fcc31@paok-calendar
-DTSTAMP:20261123T215032Z
+DTSTAMP:20261124T140427Z
 DTSTART;VALUE=DATE:20261011
 DTEND;VALUE=DATE:20261012
 SUMMARY:🥋 Οκτώ μετάλλια για το Judo του ΠΑΟΚ σ
@@ -44,7 +44,7 @@ URL:https://acpaok.gr/%ce%bf%ce%ba%cf%84%cf%8e-%ce%bc%ce%b5%cf%84%ce%ac%ce%
 END:VEVENT
 BEGIN:VEVENT
 UID:event-24da59efd1a1@paok-calendar
-DTSTAMP:20261123T215032Z
+DTSTAMP:20261124T140427Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
 SUMMARY:🥊 Στο Πανευρωπαϊκό Πρωτάθλημα U17 οι 
@@ -56,7 +56,7 @@ URL:https://acpaok.gr/%cf%83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%ce%b5%cf%85%cf%
 END:VEVENT
 BEGIN:VEVENT
 UID:event-53a101a966a0@paok-calendar
-DTSTAMP:20261123T215032Z
+DTSTAMP:20261124T140427Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261027
 SUMMARY:🥊 Στο Πανευρωπαϊκό Πρωτάθλημα U15 οι 
@@ -68,7 +68,7 @@ URL:https://acpaok.gr/%cf%83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%ce%b5%cf%85%cf%
 END:VEVENT
 BEGIN:VEVENT
 UID:event-d5b8b78d45d1@paok-calendar
-DTSTAMP:20261123T215032Z
+DTSTAMP:20261124T140427Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261102
 SUMMARY:🤼 Με οκτώ αθλητές στο METEORA WRESTLING TOURNAME
@@ -80,7 +80,7 @@ URL:https://acpaok.gr/%ce%bc%ce%b5-%ce%bf%ce%ba%cf%84%cf%8e-%ce%b1%ce%b8%ce
 END:VEVENT
 BEGIN:VEVENT
 UID:event-322e1c1810b9@paok-calendar
-DTSTAMP:20261123T215032Z
+DTSTAMP:20261124T140427Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261117
 SUMMARY:🥊 Με δύο μετάλλια και σημαντικές δι
@@ -94,7 +94,7 @@ URL:https://acpaok.gr/%cf%80%cf%85%ce%b3%ce%bc%ce%b1%cf%87%ce%af%ce%b1-%ce%
 END:VEVENT
 BEGIN:VEVENT
 UID:event-cc9839465bba@paok-calendar
-DTSTAMP:20261123T215032Z
+DTSTAMP:20261124T140427Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261116
 SUMMARY:🥊 ΜΜΑ: «Φορτωμένος» μετάλλια επέστρ
@@ -107,7 +107,7 @@ URL:https://acpaok.gr/%ce%bc%ce%bc%ce%b1-%cf%86%ce%bf%cf%81%cf%84%cf%89%ce%
 END:VEVENT
 BEGIN:VEVENT
 UID:event-b8cbd0b654f8@paok-calendar
-DTSTAMP:20261123T215032Z
+DTSTAMP:20261124T140427Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261116
 SUMMARY:🏃 PAOK RUNNING TEAM: Αγωνιστικό Τμήμα Ημιαν
@@ -119,23 +119,27 @@ URL:https://acpaok.gr/paok-running-team-%ce%b1%ce%b3%cf%89%ce%bd%ce%b9%cf%8
 END:VEVENT
 BEGIN:VEVENT
 UID:event-e1c36556700c@paok-calendar
-DTSTAMP:20261123T215032Z
+DTSTAMP:20261124T140427Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261123
 SUMMARY:🏋️ Πανελλήνιο Πρωτάθλημα Άρσης Βαρ
  ών
 DESCRIPTION:ΠΑΟΚ Άρση Βαρών\n🏆 1η θέση\, κατηγο
- ρία Νέων Ανδρών (426 βαθμοί)\n🥇🥇🥇 Αντώνη
- ς Παπαδόπουλος (πανελλήνιο ρεκόρ)\n🥇🥇
- 🥈 Κυριάκος Ονουφριάδης\n🥈🥈🥉 Λευτέρη
- ς Τσάκωνας\n🥉 Γκαμπριέλ Ντορίν Ποπαρλάν
+ ρία Νέων Ανδρών (426 βαθμοί)\n🥇🥇🥇🥈 Κατε
+ ρίνα Δημητριάδου\n🥇🥇🥇 Αναστασία Ανασ
+ τασιάδου\n🥇🥇🥇 Αντώνης Παπαδόπουλος (π
+ ανελλήνιο ρεκόρ)\n🥇🥇🥇 Κατερίνα Παπαδο
+ πούλου (πανελλήνιο ρεκόρ)\n🥇🥇🥈 Κυριάκ
+ ος Ονουφριάδης\n🥈🥈🥉 Λευτέρης Τσάκωνα
+ ς\n🥈🥉🥉 Κωνσταντίνα Τράντα\n🥉 Γκαμπρι
+ έλ Ντορίν Ποπαρλάν
 URL:https://acpaok.gr/%ce%bc%ce%b5-%cf%83%cf%84%cf%8c%cf%87%ce%bf-%cf%84%ce
  %b9%cf%82-%ce%b4%ce%b9%ce%b1%ce%ba%cf%81%ce%af%cf%83%ce%b5%ce%b9%cf%82-%cf
  %83%cf%84%ce%bf-%cf%80%ce%b1%ce%bd%ce%b5%ce%bb%ce%bb%ce%ae%ce%bd%ce%b9/
 END:VEVENT
 BEGIN:VEVENT
 UID:event-9b709431bbf6@paok-calendar
-DTSTAMP:20261123T215032Z
+DTSTAMP:20261124T140427Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261130
 SUMMARY:🏊 Αλεξάνδρεια Junior 2026

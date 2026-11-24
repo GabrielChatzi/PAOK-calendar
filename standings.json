@@ -658,6 +658,18 @@
     },
     {
      "pos": 2,
+     "team": "Παναθηναϊκός",
+     "logo": "https://www.esake.gr/dat/esaketeam/00000001/photo_new_160CD854.png",
+     "paok": false,
+     "cells": [
+      "8",
+      "7-1",
+      "105",
+      "15"
+     ]
+    },
+    {
+     "pos": 3,
      "team": "Άρης",
      "logo": "https://www.esake.gr/dat/esaketeam/00000005/photo_new_6A11CE7A.png",
      "paok": false,
@@ -669,7 +681,7 @@
      ]
     },
     {
-     "pos": 3,
+     "pos": 4,
      "team": "Ολυμπιακός",
      "logo": "https://www.esake.gr/dat/esaketeam/00000002/photo_new_7F6C9D90.png",
      "paok": false,
@@ -677,18 +689,6 @@
       "8",
       "7-1",
       "92",
-      "13"
-     ]
-    },
-    {
-     "pos": 4,
-     "team": "Παναθηναϊκός",
-     "logo": "https://www.esake.gr/dat/esaketeam/00000001/photo_new_160CD854.png",
-     "paok": false,
-     "cells": [
-      "8",
-      "7-1",
-      "105",
       "13"
      ]
     },

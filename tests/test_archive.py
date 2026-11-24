@@ -162,6 +162,17 @@ class Trophies(unittest.TestCase):
         # Σελίδα που δεν διαβάστηκε: δεν αγγίζεται.
         self.assertEqual(tr.add_event_titles({}, events, skip={"event:weightlifting"}), {})
 
+    def test_main_keeps_youth_titles_of_page(self):
+        import unittest.mock as um
+        page = {"content": {"rendered": "<h2>ΤΡΟΠΑΙΟΘΗΚΗ</h2><p>7 Πρωταθλήματα Ελλάδος Ανδρών (2006, 2017) "
+                                        "7 Πανελλήνια πρωταθλήματα νέων ανδρών (2003, 2025)</p>"}}
+        with um.patch.object(tr, "fetch", return_value=json.dumps(page)), um.patch.object(tr, "DRY", True), \
+                um.patch.object(tr, "ACPAOK_PAGES", {2042: "event:weightlifting"}), \
+                um.patch("builtins.print") as out:
+            tr.main()
+        text = " ".join(str(c.args[0]) for c in out.call_args_list if c.args)
+        self.assertIn("Πανελλήνιο Πρωτάθλημα Νέων Ανδρών 2", text)
+
     def test_trophy_block(self):
         html = "<h2>ΤΡΟΠΑΙΟΘΗΚΗ</h2><p>Futsal League 2023-2024</p><h2>ΡΟΗ ΕΙΔΗΣΕΩΝ</h2><p>Νέα 2026</p>"
         self.assertEqual(tr.trophy_block(html), "Futsal League 2023-2024")

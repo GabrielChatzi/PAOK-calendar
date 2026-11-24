@@ -327,7 +327,10 @@ def main() -> int:
             sections[key] = t
         elif t and key.startswith("event:"):  # ατομικά: και οι τίτλοι μικρών ηλικιών της σελίδας
             have = {x["name"] for x in sections[key]}
-            sections[key] += [x for x in t if x["name"] not in have and not re.search(r"Ανδρών$|Γυναικών$", x["name"])]
+            # Οι τίτλοι Ανδρών/Γυναικών είναι ήδη στη σταθερή λίστα· όχι όμως οι «Νέων Ανδρών» κ.λπ.
+            sections[key] += [x for x in t if x["name"] not in have
+                              and name_category(x["name"]) not in ("ΑΝΔΡΩΝ", "ΓΥΝΑΙΚΩΝ")
+                              and not re.search(r"(?<!Νέων )Ανδρών$|(?<!Νέων )Γυναικών$", x["name"])]
         if p:
             places[key] = p
         if n:

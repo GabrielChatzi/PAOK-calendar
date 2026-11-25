@@ -88,8 +88,8 @@ OFFICIAL = {
     "volley-u18": [_t("Πρωτάθλημα Ελλάδας Εφήβων", 1983)],
     "academy:volley": [_t("Πρωτάθλημα Ελλάδας Παίδων", 2025)],
     "volley-women-u20": [_t("Πρωτάθλημα Ελλάδας Νεανίδων", 2019, 2020, 2022)],
-    "academy:waterpolo": [_t("Πρωτάθλημα Ελλάδας Νέων Ανδρών", 2015, 2022), _t("Πρωτάθλημα Ελλάδας Εφήβων", 2019, 2022, 2023),
-                          _t("Πρωτάθλημα Ελλάδας Παίδων", 2017)],
+    "waterpolo-u18": [_t("Πρωτάθλημα Ελλάδας Εφήβων", 2019, 2022, 2023)],
+    "academy:waterpolo": [_t("Πρωτάθλημα Ελλάδας Νέων Ανδρών", 2015, 2022), _t("Πρωτάθλημα Ελλάδας Παίδων", 2017)],
     "academy:waterpolo-women": [_t("Πρωτάθλημα Ελλάδας Νεανίδων", 2004), _t("Πρωτάθλημα Ελλάδας Κορασίδων", 2022)],
     "academy:beach-handball": [_t("Πρωτάθλημα Ελλάδας Παίδων", 2018)],
 }
@@ -98,6 +98,10 @@ EXTRA = {
     "football": [_t("Πρωτάθλημα ΕΠΣ Μακεδονίας", "1936-37", "1947-48", "1949-50", "1953-54", "1954-55", "1955-56", "1956-57",
                     note="Τοπικό, πριν από την Α' Εθνική"),
                  _t("Πρωτάθλημα ΕΠΣ Μακεδονίας-Θράκης", "1939-40", note="Τοπικό")],
+}
+# Διακρίσεις που δεν είναι επίσημοι τίτλοι (φιλικά τουρνουά): στις «Διακρίσεις» του τμήματος, όχι στο μέτρημα.
+EXTRA_PLACES = {
+    "waterpolo-u18": [{"name": "1η θέση, 23ο Splash Waterpolo Tournament (Βόλος)", "years": ["2026"]}],
 }
 LABELS = {
     "event:hockey": "🏒 Χόκεϊ", "event:artistic-swimming": "🤽 Καλλιτεχνική κολύμβηση",
@@ -335,6 +339,9 @@ def main() -> int:
             places[key] = p
         if n:
             notes[key] = " · ".join(n)
+    for k, v in EXTRA_PLACES.items():
+        have = {x["name"] for x in places.get(k, [])}
+        places.setdefault(k, []).extend(dict(x) for x in v if x["name"] not in have)
     events_path = OUT_DIR / "events.json"
     events = json.loads(events_path.read_text(encoding="utf-8")).get("events", []) if events_path.exists() else []
     pending = add_event_titles(sections, events, skip=unread)

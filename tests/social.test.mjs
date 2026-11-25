@@ -183,3 +183,33 @@ test("Αλλαγή: όσο το πρόγραμμα περιμένει τα απ�
   assert.equal(changeStories(items, prev, "2026-11-20T23:20").length, 0);   // ανεβαίνει τώρα, με τις νέες γραμμές
   assert.deepEqual(items[1].sentLines, ["Β: Ρέθυμνο – ΠΑΟΚ, Μελίνα Μερκούρη"]);
 });
+
+test("Σκακιέρα με Reel: εξώφυλλο στο σωστό χρώμα και ξεχωριστό πρόγραμμα ακαδημιών όταν χρειάζεται", async () => {
+  const { arrangeGrid } = await import("../social/week.mjs");
+  // Τελευταίο post: ⬛ πρόγραμμα Τρίτης. Reel Τετάρτη 20:00. Παρασκευή: αποτελέσματα μεσοβδόμαδου και
+  // πρόγραμμα Σαββατοκύριακου· Δευτέρα: αποτελέσματα Σαββατοκύριακου.
+  const items = [
+    { type: "reel", day: "2026-11-25", time: "20:00", title: "Reel", cards: [] },
+    { type: "post", what: "schedule", block: "2026-11-28", day: "2026-11-27", time: "20:00", first: "2026-11-28T11:00",
+      cards: [1], lines: ["a"], until: "2026-11-29T18:00", caption: "x\n\nΏρες" },
+    { type: "post", what: "results", block: "2026-11-24", day: "2026-11-28", time: "09:00", ends: "2026-11-27T19:35",
+      cards: [2], caption: "y\n\nΌλα τα σκορ" },
+    { type: "post", what: "results", block: "2026-11-28", day: "2026-11-30", time: "09:00", ends: "2026-11-29T20:00",
+      cards: [3], caption: "z\n\nΌλα τα σκορ" },
+  ];
+  const acad = [
+    { what: "academySchedule", block: "2026-11-28", day: "2026-11-27", time: "13:00", cards: [4], lines: ["b"], until: "2026-11-29T15:00", caption: "" },
+  ];
+  const out = arrangeGrid(items, acad, { day: "2026-11-24", time: "19:30", what: "schedule" }, { from: "2026-11-25", to: "2026-11-25" });
+  const at = (i) => `${i.day}T${i.time}`;
+  const seq = out.filter((i) => i.type !== "story").sort((a, b) => at(a).localeCompare(at(b)))
+    .map((i) => `${at(i)} ${i.grid} ${i.academy ? "ακαδημίες" : i.type}`);
+  assert.deepEqual(seq, [
+    "2026-11-25T20:00 ⬜ reel",
+    "2026-11-27T13:00 ⬛ ακαδημίες",
+    "2026-11-27T20:00 ⬜ post",      // αποτελέσματα μεσοβδόμαδου αμέσως μόλις τελειώσει
+    "2026-11-27T20:30 ⬛ post",      // και μετά το πρόγραμμα του Σαββατοκύριακου
+    "2026-11-30T09:00 ⬜ post",
+  ]);
+  assert.match(out.find((i) => i.type === "reel").note, /Εξώφυλλο ⬜ ανοιχτό/);
+});

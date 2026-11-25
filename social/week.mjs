@@ -15,7 +15,9 @@
 //          εκείνης της μέρας). Carousel με μία κάρτα ανά μέρα.
 //   Post «Αποτελέσματα»: το πρωί μετά τον τελευταίο αγώνα του μπλοκ (09:00). Ποτέ μαζί με πρόγραμμα.
 //   Story «Σήμερα»: κάθε πρωί με αγώνα. Story «Αποτελέσματα ημέρας»: μετά τον τελευταίο αγώνα.
-//   Reel: στη μέρα χωρίς άλλο post που απέχει περισσότερο από τα υπόλοιπα.
+//   Reel: στη μέρα χωρίς άλλο post που απέχει περισσότερο από τα υπόλοιπα (20:00–22:00).
+//   Grid (σκακιέρα): ⬛ πρόγραμμα / ⬜ αποτελέσματα εναλλάσσονται, και το Reel μετρά με το χρώμα του
+//          εξωφύλλου του (βλ. arrangeGrid). Τα αποτελέσματα ενός μπλοκ πάντα πριν από το πρόγραμμα του επόμενου.
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
@@ -263,7 +265,7 @@ export function plan(matches, today, { names = { teams: {}, venues: {}, tv: {} }
     const week = Math.floor((new Date(`${best}T12:00:00Z`) - new Date("2026-11-09T12:00:00Z")) / (7 * 864e5));
     const [title, how, caption] = REELS[((week % REELS.length) + REELS.length) % REELS.length];
     const end = dayEnd(best);
-    items.push({ type: "reel", what: "reel", day: best, time: hhmm(Math.max(20 * 60, end ? roundUp(end + 20) : 0)),
+    items.push({ type: "reel", day: best, time: hhmm(Math.min(22 * 60, Math.max(20 * 60, end ? roundUp(end + 20) : 0))),
       title, how, caption: `${caption}\n\nΔωρεάν στο ${SITE} (link στο bio)\n\n${TAGS}`, cards: [] });
   }
   const order = { post: 0, reel: 1, story: 2 };
@@ -392,15 +394,16 @@ const plus = (day, time, m) => { const t = minutes(time) + m; return t >= 24 * 6
 export function gridOrder(items, before = null) {
   // before: το τελευταίο post που έχει ήδη ανέβει ({day, time, what}), για να συνεχίσει η εναλλαγή.
   const lead = before && { ...before, type: "post", lead: true };
-  const posts = () => [...(lead ? [lead] : []), ...items.filter((i) => i.type === "post" && !i.posted)]
+  // Το Reel μετρά στο grid με το χρώμα του εξωφύλλου του (what), αλλά δεν μετακινείται.
+  const posts = () => [...(lead ? [lead] : []), ...items.filter((i) => (i.type === "post" || i.type === "reel") && !i.posted)]
     .sort((a, b) => at(a).localeCompare(at(b)));
   for (let guard = 0; guard < 10; guard++) {
     const ps = posts();
     const i = ps.findIndex((p, k) => k > 0 && p.what === ps[k - 1].what);
     if (i < 0) break;
     const cur = ps[i], prev = ps[i - 1];
-    if (cur.lead) break;
-    const j = ps.findIndex((p, k) => k > i && p.what !== cur.what);
+    if (cur.lead || cur.type === "reel" || cur.pin) { if (!cur.lead) cur.note = [cur.note, "⚠️ Δύο ίδια χρώματα στη σειρά στο grid"].filter(Boolean).join(" · "); break; }
+    const j = ps.findIndex((p, k) => k > i && p.what !== cur.what && p.type !== "reel" && !p.pin);
     const other = j > 0 ? ps[j] : null;
     let fixed = false;
     if (other && cur.what === "schedule" && other.ends && other.ends <= at(cur)) {
@@ -418,8 +421,61 @@ export function gridOrder(items, before = null) {
     }
     if (!fixed) { cur.note = [cur.note, "⚠️ Δύο ίδια χρώματα στη σειρά στο grid"].filter(Boolean).join(" · "); break; }
   }
-  for (const p of items) if (p.type === "post") p.grid = p.what === "schedule" ? "⬛" : "⬜";
+  for (const p of items) if (p.type === "post" || (p.type === "reel" && p.what)) p.grid = p.what === "schedule" ? "⬛" : "⬜";
   return items;
+}
+
+// Σκακιέρα με το Reel: το Reel μπαίνει στο grid σαν post, με το χρώμα του εξωφύλλου του. Ένα στοιχείο
+// παραπάνω σε σειρά που εναλλάσσεται χαλάει πάντα την εναλλαγή, οπότε το Reel θέλει έναν «σύντροφο»: ένα
+// post ακαδημιών που βγαίνει ξεχωριστά αντί για κάρτες στο carousel (⬛ πρόγραμμα ακαδημιών ή ⬜ αποτελέσματα
+// ακαδημιών). Δοκιμάζουμε με τη σειρά: τη μέρα του Reel και μετά τις κοντινότερες, και για καθεμία χωρίς
+// ξεχωριστό post ακαδημιών, με το πρόγραμμα, με τα αποτελέσματα, με τα δύο. Κρατάμε τον πρώτο συνδυασμό
+// όπου όλο το grid εναλλάσσεται· το εξώφυλλο του Reel είναι το αντίθετο χρώμα από το post πριν από αυτό.
+// Αν δεν βρεθεί κανένας, το Reel ανεβαίνει μόνο στα Reels (χωρίς «Also share to Feed»).
+export function arrangeGrid(items, acad, before = null, { from, to } = {}) {
+  const reel = items.find((i) => i.type === "reel");
+  const base = items.filter((i) => i !== reel);
+  const grid = (list) => list.filter((i) => (i.type === "post" || i.type === "reel") && !i.posted);
+  const alternates = (list) => {
+    const seq = [...(before ? [{ ...before, lead: true }] : []), ...grid(list)].sort((a, b) => at(a).localeCompare(at(b)));
+    if (!seq.every((p, k) => k === 0 || p.what !== seq[k - 1].what)) return false;
+    // Και η χρονολογία: τα αποτελέσματα ενός μπλοκ ανεβαίνουν πριν από το πρόγραμμα του επόμενου (όχι τα
+    // ξεχωριστά post των ακαδημιών, που είναι δική τους σειρά).
+    const main = seq.filter((p) => p.type === "post" && !p.academy && !p.lead);
+    return main.every((r) => r.what !== "results" ||
+      main.every((x) => x.what !== "schedule" || x.block <= r.block || at(x) > at(r)));
+  };
+  const build = (split, r) => {
+    const its = structuredClone(base), ac = structuredClone(acad);
+    const own = ac.filter((a) => split.includes(a.what))
+      .map((a) => ({ ...a, type: "post", what: a.what === "academySchedule" ? "schedule" : "results", academy: true, pin: true }));
+    return gridOrder([...mergeAcademy(its, ac.filter((a) => !split.includes(a.what))), ...own, ...(r ? [r] : [])], before);
+  };
+  if (!reel) return build([], null);
+  reel.what ||= "reel";
+  const splits = [[], ["academySchedule"], ["academyResults"], ["academySchedule", "academyResults"]]
+    .filter((s) => s.every((w) => acad.some((a) => a.what === w && !a.posted)));
+  const days = [];
+  for (let d = from || reel.day; d <= (to || reel.day); d = addDays(d, 1)) days.push(d);
+  const dist = (d) => Math.abs(new Date(d) - new Date(reel.day));
+  days.sort((a, b) => dist(a) - dist(b) || a.localeCompare(b));
+  for (const day of days.length ? days : [reel.day]) {
+    for (const split of splits) for (const what of ["results", "schedule"]) {
+      const r = { ...reel, day, time: day === reel.day ? reel.time : "20:00", what };
+      const out = build(split, r);
+      if (!alternates(out)) continue;
+      const rr = out.find((i) => i.type === "reel");
+      const cover = rr.what === "schedule" ? "⬛ σκούρο" : "⬜ ανοιχτό";
+      const sep = split.map((w) => w === "academySchedule" ? "«Πρόγραμμα ακαδημιών»" : "«Αποτελέσματα ακαδημιών»").join(" και ");
+      rr.note = [rr.note, `Εξώφυλλο ${cover}, για να κρατήσει η σκακιέρα στο grid.` +
+        (sep ? ` Γι' αυτό αυτή την εβδομάδα ${split.length > 1 ? "ανεβαίνουν ως ξεχωριστά post τα" : "ανεβαίνει ως ξεχωριστό post το"} ${sep}.` : "")].filter(Boolean).join(" ");
+      return out;
+    }
+  }
+  const out = build([], null);
+  out.push({ ...reel, what: "reel", note: [reel.note, "Αυτή την εβδομάδα το Reel δεν χωράει στη σκακιέρα: ανέβασέ το μόνο στα Reels " +
+    "(κλειστό το «Also share to Feed»)."].filter(Boolean).join(" ") });
+  return out;
 }
 
 // Αλλαγές μετά την ανάρτηση του προγράμματος: νέος αγώνας (π.χ. αναβληθείς που ανακοινώθηκε την
@@ -546,6 +602,38 @@ export function readme(p) {
   return lines.join("\n");
 }
 
+// Όλο το πλάνο της εβδομάδας με τη σκακιέρα του grid. Το τελευταίο post που ανέβηκε (από όπου συνεχίζει
+// η εναλλαγή): --last, αλλιώς το τελευταίο post ή Reel του προηγούμενου πλάνου που έχει περάσει η ώρα του,
+// αλλιώς το πλάνο της προηγούμενης εβδομάδας. Ό,τι έχει περάσει η ώρα του θεωρείται ότι ανέβηκε.
+export function weekGrid(main, acad, today, now, { names, prevItems = [], last = null, reel = null } = {}) {
+  const p = plan(main, today, { names });
+  const grid = (i) => (i.type === "post" || i.type === "reel") && i.day && i.time;
+  const ac = academyPlan(acad, today, { names });
+  // Από πού συνεχίζει η σκακιέρα: το πιο πρόσφατο από το --last (ή social/grid.json), το τελευταίο post ή Reel
+  // του προηγούμενου πλάνου που έχει περάσει η ώρα του, και ό,τι του τωρινού πλάνου έχει περάσει η ώρα του.
+  const asPost = (a) => ({ ...a, type: "post", what: a.what === "academySchedule" ? "schedule" : "results" });
+  const cands = [last,
+    ...prevItems.filter((i) => grid(i) && (i.what === "schedule" || i.what === "results") && at(i) <= now),
+    ...[...p.items.filter((i) => i.type === "post"), ...ac.map(asPost)].filter((i) => at(i) <= now)].filter(Boolean);
+  let lead = cands.sort((x, y) => at(x).localeCompare(at(y))).at(-1);
+  lead &&= { day: lead.day, time: lead.time, what: lead.what };
+  if (!lead) {
+    const past = mergeAcademy(plan(main, addDays(today, -7), { names }).items, academyPlan(acad, addDays(today, -7), { names }))
+      .filter((i) => i.type === "post" && i.day < p.from).sort((a, b) => at(a).localeCompare(at(b))).at(-1);
+    if (past) lead = { day: past.day, time: past.time, what: past.what };
+  }
+  const gone = (i) => grid(i) && lead && at(i) <= at(lead);
+  for (const i of p.items) if (i.type === "post" && gone(i)) i.posted = true;
+  for (const a of ac) if (gone(a)) a.posted = true;
+  if (reel && !(reel.day >= today && reel.day <= p.to)) reel = null;   // παλιό --reel/grid.json: αγνοείται
+  if (reel) for (const i of p.items) if (i.type === "reel") Object.assign(i, reel);
+  p.items = arrangeGrid(p.items, ac.filter((a) => !a.posted || a.what === "academySchedule"), lead,
+    { from: reel ? reel.day : today, to: reel ? reel.day : p.to });
+  p.items = p.items.filter((i) => !(i.type === "post" && i.posted && i.what === "results"));
+  p.lead = lead;
+  return p;
+}
+
 async function main() {
   const args = Object.fromEntries(process.argv.slice(2).join(" ").split("--").filter(Boolean)
     .map((a) => a.trim().split(/\s+/)).map(([k, v]) => [k, v]));
@@ -560,14 +648,20 @@ async function main() {
   // Β' ομάδα και ακαδημίες: δικά τους post (academyPlan), όχι μέσα στο κανονικό πρόγραμμα.
   const academy = new Set((data.sections || []).filter((s) => s.academy).map((s) => s.key));
   names.labels = academyLabels(data.sections);
-  const p = plan(data.matches.filter((m) => !academy.has(m.section)), today, { names });
   const main = data.matches.filter((m) => !academy.has(m.section)), acad = data.matches.filter((m) => academy.has(m.section));
-  // Το τελευταίο post πριν από το πλάνο (από το πλάνο της προηγούμενης εβδομάδας), για να συνεχίσει η σκακιέρα.
-  const past = mergeAcademy(plan(main, addDays(today, -7), { names }).items, academyPlan(acad, addDays(today, -7), { names }))
-    .filter((i) => i.type === "post" && i.day < p.from).sort((a, b) => at(a).localeCompare(at(b))).at(-1);
-  p.items = gridOrder(mergeAcademy(p.items, academyPlan(acad, today, { names })), past && { day: past.day, time: past.time, what: past.what });
   const n = local(new Date());
   const now = args.date && args.date !== n.day ? `${today}T12:00` : `${n.day}T${n.time}`;
+  // --last «2026-11-24T19:30 schedule»: το τελευταίο post που ανέβηκε στο grid, όταν διαφέρει από το πλάνο.
+  // --reel «2026-11-25T20:00»: μέρα και ώρα του Reel, αν την έχεις ήδη αποφασίσει.
+  const pick = (v) => v && { day: v.slice(0, 10), time: v.slice(11, 16) };
+  // social/grid.json: {"last": "2026-11-24T19:30 schedule", "reel": "2026-11-25T20:00", "reelTitle": "…"}, για όταν τα post στο
+  // Instagram ανέβηκαν αλλιώς από το πλάνο ή η μέρα του Reel έχει ήδη αποφασιστεί (τα --last/--reel υπερισχύουν).
+  const conf = (() => { try { return JSON.parse(fs.readFileSync(path.join(HERE, "grid.json"), "utf8")); } catch { return {}; } })();
+  if (!args.last && conf.last) { args.last = conf.last.split(" ")[0]; process.argv.push("--last", ...conf.last.split(" ")); }
+  if (!args.reel && conf.reel) args.reel = conf.reel;
+  const last = args.last && { ...pick(args.last), what: process.argv.join(" ").match(/--last\s+\S+\s+(schedule|results)/)?.[1] || "schedule" };
+  const reel = pick(args.reel) && { ...pick(args.reel), ...(conf.reelTitle && { title: conf.reelTitle, how: "Έτοιμο βίντεο (όχι εγγραφή οθόνης)." }) };
+  const p = weekGrid(main, acad, today, now, { names, prevItems, last, reel });
   p.items.push(...changeStories(p.items, prevItems, now, data.matches, names));
   for (const it of p.items) if (it.posted) it.cards = [];   // έχει ήδη ανέβει: μόνο για τις αλλαγές
   const order = { post: 0, reel: 1, story: 2 };

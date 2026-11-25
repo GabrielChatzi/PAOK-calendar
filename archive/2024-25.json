@@ -1939,6 +1939,23 @@
      "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14424751662839.gif"
     },
     {
+     "uid": "volley-dp14-520",
+     "nt": "5217ecb272",
+     "section": "volley",
+     "start": "2025-03-05T18:00:00+02:00",
+     "timeKnown": true,
+     "home": "ΠΑΟΚ",
+     "away": "A.O.N.S. MILON",
+     "paokHome": true,
+     "venue": "PAOK Sports Arena",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Men'S Greek Cup - Quarter Finals",
+     "score": "3-1",
+     "url": "https://eope-web.dataproject.com/MatchStatistics.aspx?mID=520&ID=14",
+     "homeLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_82.jpg",
+     "awayLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_79.jpg"
+    },
+    {
      "uid": "volley-2024-25-3a9da401d7ef",
      "nt": "2095bb85ed",
      "section": "volley",
@@ -1969,6 +1986,40 @@
      "url": "https://www.volleyleague.gr/index.php/season/2024-25/regular-season-results-statistics",
      "homeLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14724677852741.gif",
      "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl14110420042832.gif"
+    },
+    {
+     "uid": "volley-dp14-535",
+     "nt": "95d5eba07d",
+     "section": "volley",
+     "start": "2025-03-28T20:00:00+02:00",
+     "timeKnown": true,
+     "home": "PANATHINAIKOS A.O.",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Mets Sports Hall",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Men'S Greek Cup - Semi Finals",
+     "score": "2-3",
+     "url": "https://eope-web.dataproject.com/MatchStatistics.aspx?mID=535&ID=14",
+     "homeLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_83.jpg",
+     "awayLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_82.jpg"
+    },
+    {
+     "uid": "volley-dp14-538",
+     "nt": "f5e9828dd9",
+     "section": "volley",
+     "start": "2025-03-29T19:00:00+02:00",
+     "timeKnown": true,
+     "home": "OLYMPIACOS S.F.P.",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Κλειστό γυμναστήριο Τ9 Άρτας",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Men'S Greek Cup - Final",
+     "score": "3-1",
+     "url": "https://eope-web.dataproject.com/MatchStatistics.aspx?mID=538&ID=14",
+     "homeLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_81.jpg",
+     "awayLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_82.jpg"
     }
    ],
    "standings": [
@@ -4864,8 +4915,8 @@
    },
    "standings": [
     {
-     "title": "Πρωτάθλημα πετοσφαίρισης γυναικών VolleyLeague",
-     "url": "https://el.wikipedia.org/wiki/%CE%A0%CF%81%CF%89%CF%84%CE%AC%CE%B8%CE%BB%CE%B7%CE%BC%CE%B1_%CF%80%CE%B5%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%B3%CF%85%CE%BD%CE%B1%CE%B9%CE%BA%CF%8E%CE%BD_VolleyLeague_2024-2025",
+     "title": "Volley League Γυναικών",
+     "url": "https://eope-web.dataproject.com/CompetitionStandings.aspx?ID=11&PID=12",
      "columns": [
       "Αγ",
       "Ν",
@@ -4873,90 +4924,89 @@
       "Σετ",
       "Β"
      ],
-     "source": "wikipedia",
      "rows": [
       {
        "pos": 1,
-       "team": "Ολυμπιακός Σ.Φ.Π.",
-       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/f/fc/Olympiakos_SFP_logo.png/120px-Olympiakos_SFP_logo.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+       "team": "OLYMPIACOS S.F.P.",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_67.jpg",
        "paok": false,
        "cells": [
         "22",
         "21",
         "1",
         "64-14",
-        "60"
+        "43"
        ]
       },
       {
        "pos": 2,
        "team": "ΠΑΟΚ",
-       "logo": "",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_68.jpg",
        "paok": true,
        "cells": [
         "22",
         "18",
         "4",
         "60-21",
-        "55"
+        "40"
        ]
       },
       {
        "pos": 3,
-       "team": "Α.Ο. Θήρας",
-       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/2/2e/AO_Theras_logo.png/120px-AO_Theras_logo.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+       "team": "A.O. THIRAS",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_64.jpg",
        "paok": false,
        "cells": [
         "22",
         "17",
         "5",
         "53-22",
-        "50"
+        "39"
        ]
       },
       {
        "pos": 4,
-       "team": "Παναθηναϊκός Α.Ο.",
-       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/4/4f/Panathinaikos_A.O._logo.svg/120px-Panathinaikos_A.O._logo.svg.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+       "team": "PANATHINAIKOS A.O.",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_69.jpg",
        "paok": false,
        "cells": [
         "22",
         "17",
         "5",
         "54-26",
-        "48"
+        "39"
        ]
       },
       {
        "pos": 5,
-       "team": "Α.Ε.Κ.",
-       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/c/c0/A.E.K._athletic_club_official_logo.png/120px-A.E.K._athletic_club_official_logo.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+       "team": "A.E.K.",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_61.jpg",
        "paok": false,
        "cells": [
         "22",
         "13",
         "9",
         "46-40",
-        "37"
+        "35"
        ]
       },
       {
        "pos": 6,
-       "team": "Α.Σ.ΠΕ. Θέτις Βούλας",
-       "logo": "",
+       "team": "A.S.P. THETIS",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_66.jpg",
        "paok": false,
        "cells": [
         "22",
         "11",
         "11",
         "43-37",
-        "35"
+        "33"
        ]
       },
       {
        "pos": 7,
-       "team": "Πανιώνιος",
-       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/6/61/Panionios_logo.svg/120px-Panionios_logo.svg.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+       "team": "G.S. PANIONIOS",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_72.jpg",
        "paok": false,
        "cells": [
         "22",
@@ -4968,67 +5018,67 @@
       },
       {
        "pos": 8,
-       "team": "Α.Σ. Άρης Θεσσαλονίκης",
-       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/9/90/AS_Aris_logo.png/120px-AS_Aris_logo.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+       "team": "A.S. ARIS",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_65.jpg",
        "paok": false,
        "cells": [
         "22",
         "8",
         "14",
         "30-48",
-        "24"
+        "30"
        ]
       },
       {
        "pos": 9,
-       "team": "Α.Ο. Μαρκοπούλου",
-       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/1/1b/%CE%91%CE%B8%CE%BB%CE%B7%CF%84%CE%B9%CE%BA%CF%8C%CF%82_%CE%8C%CE%BC%CE%B9%CE%BB%CE%BF%CF%82_%CE%9C%CE%B1%CF%81%CE%BA%CE%BF%CF%80%CE%BF%CF%8D%CE%BB%CE%BF%CF%85_%28logo%29.svg/120px-%CE%91%CE%B8%CE%BB%CE%B7%CF%84%CE%B9%CE%BA%CF%8C%CF%82_%CE%8C%CE%BC%CE%B9%CE%BB%CE%BF%CF%82_%CE%9C%CE%B1%CF%81%CE%BA%CE%BF%CF%80%CE%BF%CF%8D%CE%BB%CE%BF%CF%85_%28logo%29.svg.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+       "team": "A.O. MARKOPOULOU REVOIL",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_63.jpg",
        "paok": false,
        "cells": [
         "22",
         "8",
         "14",
         "30-50",
-        "23"
+        "30"
        ]
       },
       {
        "pos": 10,
-       "team": "Α.Ο.Ν.Σ. Μίλων",
-       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/1/11/A.O._Milon_Neas_Smirnis_Logo.jpg/120px-A.O._Milon_Neas_Smirnis_Logo.jpg?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+       "team": "A.O.N.S. MILON",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_71.jpg",
        "paok": false,
        "cells": [
         "22",
         "5",
         "17",
         "27-55",
-        "17"
+        "27"
        ]
       },
       {
        "pos": 11,
-       "team": "Α.Ο. Λαμίας 2013",
-       "logo": "",
+       "team": "A.O. LAMIAS 2013",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_62.jpg",
        "paok": false,
        "cells": [
         "22",
         "2",
         "20",
         "16-62",
-        "9"
+        "24"
        ]
       },
       {
        "pos": 12,
-       "team": "Αμαζόνες",
-       "logo": "",
+       "team": "A.O.N. AMAZONES",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_70.jpg",
        "paok": false,
        "cells": [
         "22",
         "2",
         "20",
         "17-64",
-        "6"
+        "24"
        ]
       }
      ]
@@ -5665,5 +5715,5 @@
    ]
   }
  },
- "updated": "2026-11-25T13:17+02:00"
+ "updated": "2026-11-25T14:33+02:00"
 }

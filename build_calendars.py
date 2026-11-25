@@ -251,11 +251,12 @@ def apply_goals(matches: list[dict], path: Path = GOALS_PATH, admin: dict[str, d
     for m in matches:
         a = (admin or {}).get(m.get("nt") or match_topic_id(m["uid"]))
         e = table.get(m["uid"])
+        options = []  # πρώτα η φόρμα· αν δεν ταιριάζει με το σκορ, το goals.json
         if a:
-            goals = {side: [{k: g[k] for k in ("min", "name", "n", "pen", "og") if g.get(k)} for g in a.get(side) or []
-                            if isinstance(g, dict) and g.get("name")] for side in ("home", "away")}
-            label = f"{m['home']} – {m['away']}"
-        elif isinstance(e, dict):
+            options.append((f"{m.get('home')} – {m.get('away')}", {
+                side: [{k: g[k] for k in ("min", "name", "n", "pen", "og") if g.get(k)} for g in a.get(side) or []
+                       if isinstance(g, dict) and g.get("name")] for side in ("home", "away")}))
+        if isinstance(e, dict):
             goals = {}
             for side in ("home", "away"):
                 goals[side] = []
@@ -265,16 +266,17 @@ def apply_goals(matches: list[dict], path: Path = GOALS_PATH, admin: dict[str, d
                         if t in GOAL_TAGS:
                             d[GOAL_TAGS[t]] = True
                     goals[side].append(d)
-            label = e.get("m") or m["uid"]
-        else:
+            options.append((e.get("m") or m["uid"], goals))
+        if not options:
             continue
         if is_points_section(m.get("section", "")):
-            m["goals"] = {**goals, "points": True}
+            m["goals"] = {**options[0][1], "points": True}
             continue
-        if not goals_fit(goals, m.get("score") or ""):
+        for label, goals in options:
+            if goals_fit(goals, m.get("score") or ""):
+                m["goals"] = goals
+                break
             print(f"! σκόρερ: {label}: τα γκολ δεν ταιριάζουν με το σκορ «{m.get('score')}»", file=sys.stderr)
-            continue
-        m["goals"] = goals
 
 
 def match_topic_id(uid: str) -> str:

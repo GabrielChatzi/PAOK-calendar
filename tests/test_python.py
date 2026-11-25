@@ -747,6 +747,11 @@ class Goals(unittest.TestCase):
         self.assertFalse(b.goals_fit({"home": [], "away": []}, "1-2"))
         self.assertFalse(b.goals_fit({"home": [], "away": [{"name": "Χ"}]}, ""))
 
+    def test_goals_json_when_admin_does_not_fit(self):
+        ms = [{"uid": "a", "nt": "n1", "section": "football-u19", "home": "Χ", "away": "ΠΑΟΚ", "score": "2-1"}]
+        b.apply_goals(ms, self.path, admin={"n1": {"home": [{"name": "Λ"}], "away": []}})
+        self.assertEqual(len(ms[0]["goals"]["home"]), 2)  # 1 γκολ στη φόρμα για 2: μένει το goals.json
+
     def test_not_before_the_result(self):
         ms = [{"uid": "b", "score": ""}]
         b.apply_goals(ms, self.path)

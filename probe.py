@@ -22,63 +22,56 @@ def search(lang, q, name):
     u = f"https://{lang}.wikipedia.org/w/api.php?format=json&action=query&list=search&srlimit=50&srsearch=" + urllib.parse.quote(q)
     get(name, u); time.sleep(1)
 
-# Wikipedia: ποδόσφαιρο (σελίδες σεζόν ΠΑΟΚ + πρωταθλήματος), δείγμα
-for y in (1975, 1985, 1998, 2010, 2020):
-    end = f"{y+1}" if y == 1999 else f"{(y+1)%100:02d}"
-    wiki("en", f"{y}–{end} PAOK FC season", f"wk_fb_paok_{y}.json")
-for t in ("1985–86 Alpha Ethniki", "1975–76 Alpha Ethniki", "1998–99 Alpha Ethniki", "2010–11 Super League Greece", "1968–69 Alpha Ethniki"):
-    wiki("en", t, "wk_fb_league_" + t[:7] + ".json")
-# Μπάσκετ
-search("en", "A1 Ethniki basketball season", "wk_s_basket_en.json")
-for t in ("1998–99 A1 Ethniki", "1998–99 Greek A1 Basketball League", "2010–11 Greek Basket League", "1992–93 A1 Ethniki"):
-    wiki("en", t, "wk_bk_" + t.replace(" ", "_")[:30] + ".json")
-search("el", "Α1 Εθνική καλαθοσφαίρισης περίοδος", "wk_s_basket_el.json")
-# Αθλήματα χωρίς περιλήψεις: ελληνικά άρθρα τμημάτων
-for t in ("Π.Α.Ο.Κ. (υδατοσφαίριση ανδρών)", "Π.Α.Ο.Κ. (υδατοσφαίριση γυναικών)", "Π.Α.Ο.Κ. (καλαθοσφαίριση γυναικών)",
-          "Π.Α.Ο.Κ. (χειροσφαίριση γυναικών)", "Π.Α.Ο.Κ. (ποδόσφαιρο γυναικών)", "Π.Α.Ο.Κ. (ποδόσφαιρο σάλας)",
-          "Π.Α.Ο.Κ. (πετοσφαίριση γυναικών)"):
-    wiki("el", t, "wk_el_" + re.sub(r"\W+", "_", t)[-28:] + ".json")
-for t in ("PAOK (water polo)", "PAOK women's water polo", "PAOK BC (women)", "PAOK women's basketball", "PAOK (women's handball)"):
-    wiki("en", t, "wk_en_" + re.sub(r"\W+", "_", t)[:28] + ".json")
-search("el", "Πρωτάθλημα υδατοσφαίρισης ανδρών Ελλάδας περίοδος", "wk_s_wp_el.json")
-search("en", "Greek Water Polo League season", "wk_s_wp_en.json")
-search("en", "A1 Ethniki Women water polo", "wk_s_wpw_en.json")
-search("en", "Greek Women's Basketball League season", "wk_s_bkw_en.json")
-search("en", "Greek A Division women football season", "wk_s_fbw_en.json")
-search("en", "Greek Volley League Women season", "wk_s_vw_en.json")
 
-# Πόλο: waterpololeague.gr
-p = get("wpl_cur_fixtures.html", "https://waterpololeague.gr/championship/wpl-26-27/fixtures")
-get("wpl_home.html", "https://waterpololeague.gr/")
-links = sorted(set(re.findall(r'https://waterpololeague\.gr/championship/[a-z0-9-]+', p + open(f"{OUT}/wpl_home.html", errors="ignore").read() if os.path.exists(f"{OUT}/wpl_home.html") else p)))
-log.write("WPL links: " + " ".join(links) + "\n")
-for s in ("wpl-25-26", "wpl-women-25-26", "wpl-2025-26", "wpl-24-25", "wpl-21-22", "wpl-19-20"):
-    get(f"wpl_{s}.html", f"https://waterpololeague.gr/championship/{s}/fixtures")
-get("wpl_championships.html", "https://waterpololeague.gr/championships")
-# ΚΟΕ
-get("koe_wp.html", "https://koe.org.gr/sports/water-polo")
-get("koe_home.html", "https://koe.org.gr/")
-# ΕΠΟ γυναικών
-get("epo_6.html", "https://www.epo.gr/el/competition/6/matches")
-# basket.gr WBL1
-get("wbl1_schedule.html", "https://www.basket.gr/wbl1/schedule/")
-get("wbl1_home.html", "https://www.basket.gr/wbl1/")
-# Data Project ΕΟΠΕ
-h = get("dp_home.html", "https://eope-web.dataproject.com/MainHome.aspx")
-get("dp_archive.html", "https://eope-web.dataproject.com/MainArchive.aspx")
-get("dp_compsearch.html", "https://eope-web.dataproject.com/CompetitionsList.aspx")
-# ESAKE
-get("esake_ranking.html", "https://www.esake.gr/el/action/EsakeRanking")
-tp = get("esake_team.html", "https://www.esake.gr/el/action/EsaketeamView?idteam=0000000C&mode=3")
-opts = re.findall(r'<option value="([0-9A-F]{8})"[^>]*>([^<]*)</option>', tp)
-log.write("ESAKE opts: " + repr(opts[:80]) + "\n")
-for v, label in opts:
-    if re.search(r"2010|1999|1996|1997|1998", label):
-        get(f"esake_rank_{v}.html", f"https://www.esake.gr/el/action/EsakeRanking?idchampionship={v}")
-        get(f"esake_team_{v}.html", f"https://www.esake.gr/el/action/EsaketeamView?idteam=0000000C&mode=3&idchampionship={v}")
-# ESPN standings με σεζόν
-get("espn_st_2015.json", "https://site.api.espn.com/apis/v2/sports/soccer/gre.1/standings?season=2015")
-get("espn_st_2005.json", "https://site.api.espn.com/apis/v2/sports/soccer/gre.1/standings?season=2005")
-# ΟΧΕ χάντμπολ 2014-15
-get("oxe_home.html", "http://statistics.handball.org.gr/gr/")
+# 2ος γύρος
+for g in ("male","female"):
+    get(f"wpl_champs_{g}.html", f"https://waterpololeague.gr/championships?gender={g}")
+import glob
+slugs=set()
+for f in glob.glob(f"{OUT}/wpl_champs_*.html"):
+    slugs |= set(re.findall(r'waterpololeague\.gr/championship/([a-z0-9-]+)', open(f, errors="ignore").read()))
+log.write("WPL slugs: " + " ".join(sorted(slugs)) + "\n")
+for sl in sorted(slugs)[:3]:
+    get(f"wplold_{sl[:40]}.html", f"https://waterpololeague.gr/championship/{sl}/fixtures")
+    get(f"wplold_st_{sl[:40]}.html", f"https://waterpololeague.gr/championship/{sl}/standings")
+for i in range(3, 19):
+    get(f"dp_comp_{i}.html", f"https://eope-web.dataproject.com/CompetitionHome.aspx?ID={i}")
+get("dp_matches_8.html", "https://eope-web.dataproject.com/CompetitionMatches.aspx?ID=8")
+get("bgr_champs_2018.html", "https://www.basket.gr/champs-2018-2019/")
+get("bgr_periodoy_2023.html", "https://www.basket.gr/protathlimata-agon-periodoy-2023-2024/")
+for d in ("26", "30", "1"):
+    get(f"esake_rank_03_day{d}.html", f"https://www.esake.gr/el/action/EsakeRanking?idchampionship=00000003&day={d}")
+for t in ("Πρωτάθλημα καλαθοσφαίρισης Α1 εθνικής κατηγορίας ανδρών 1993-1994",
+          "Πρωτάθλημα καλαθοσφαίρισης ανδρών Basket League 2013-2014",
+          "Πρωτάθλημα καλαθοσφαίρισης Α1 εθνικής κατηγορίας γυναικών 2018-2019",
+          "Α1 Κατηγορία υδατοσφαίρισης ανδρών 2009-2010", "Α1 Εθνική υδατοσφαίρισης ανδρών 2013–14",
+          "Α΄ Κατηγορία υδατοσφαίρισης γυναικών 2020-21", "Πρωτάθλημα Ελλάδας υδατοσφαίρισης ανδρών",
+          "Πρωτάθλημα Ελλάδας υδατοσφαίρισης γυναικών", "Πρωτάθλημα Ελλάδας καλαθοσφαίρισης γυναικών"):
+    wiki("el", t, "wk2_el_" + re.sub(r"\W+", "_", t)[-40:] + ".json")
+for t in ("2022–23 Greek A Division (women's football)", "2015–16 A1 Ethniki (men's water polo)", "A1 Ethniki Water Polo",
+          "A1 Ethniki Women's Water Polo", "P.A.O.K. Women's Volleyball", "2024–25 Greek Women's Basketball League"):
+    wiki("en", t, "wk2_en_" + re.sub(r"\W+", "_", t)[:40] + ".json")
+def allsearch(lang, q, name):
+    res=[]; off=0
+    while off < 1500:
+        u=f"https://{lang}.wikipedia.org/w/api.php?format=json&action=query&list=search&srlimit=500&sroffset={off}&srsearch="+urllib.parse.quote(q)
+        try:
+            d=json.loads(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA}), timeout=60).read())
+        except Exception as e:
+            log.write(f"ERR search {q} {e}\n"); break
+        res += [x["title"] for x in d["query"]["search"]]
+        if "continue" not in d: break
+        off = d["continue"]["sroffset"]; time.sleep(1)
+    open(f"{OUT}/{name}", "w").write(json.dumps(res, ensure_ascii=False, indent=0))
+    log.write(f"SEARCH {name}: {len(res)}\n")
+allsearch("el", 'intitle:"καλαθοσφαίρισης" intitle:"ανδρών"', "ttl_el_bk_men.json")
+allsearch("el", 'intitle:"καλαθοσφαίρισης" intitle:"γυναικών"', "ttl_el_bk_women.json")
+allsearch("el", 'intitle:"υδατοσφαίρισης" intitle:"ανδρών"', "ttl_el_wp_men.json")
+allsearch("el", 'intitle:"υδατοσφαίρισης" intitle:"γυναικών"', "ttl_el_wp_women.json")
+allsearch("el", 'intitle:"πετοσφαίρισης" intitle:"γυναικών"', "ttl_el_vb_women.json")
+allsearch("el", 'intitle:"χειροσφαίρισης"', "ttl_el_hb.json")
+allsearch("el", 'intitle:"ποδοσφαίρου γυναικών"', "ttl_el_fbw.json")
+allsearch("en", 'intitle:"water polo" intitle:"A1 Ethniki"', "ttl_en_wp.json")
+allsearch("en", "intitle:\"Greek A Division (women's football)\"", "ttl_en_fbw.json")
+allsearch("el", 'ΠΑΟΚ υδατοσφαίριση ανδρών', "ttl_el_paok_wp.json")
 log.close()

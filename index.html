@@ -3214,13 +3214,16 @@
   }
 
   // ---- Σκόρερ από τη φόρμα του διαχειριστή (api/admin.js, «goals-save»): φαίνονται αμέσως, όπως θα τα βάλει
-  // και το build_calendars.py (apply_goals): στα αθλήματα με γκολ μόνο όταν ταιριάζουν με το σκορ.
+  // και το build_calendars.py (apply_goals): στα αθλήματα με γκολ μόνο όταν ταιριάζουν με το σκορ (ή η μία ομάδα χωρίς σκόρερ).
   var adminGoals = {};
   function isPointsSection(key) { return /^(basketball|volley)/.test(key); }
   function goalsFit(g, score) {
     var p = /^(\d+)-(\d+)$/.exec(score || "");
     var c = function (side) { return (g[side] || []).reduce(function (n, x) { return n + (x.n || 1); }, 0); };
-    return !!p && c("home") === +p[1] && c("away") === +p[2];
+    // Κάθε ομάδα: ή ακριβώς τα γκολ του σκορ ή καθόλου σκόρερ (π.χ. μόνο του ΠΑΟΚ· του αντιπάλου μπαίνουν όταν έρθουν).
+    if (!p) return false;
+    var h = c("home"), a = c("away");
+    return (h > 0 || a > 0) && (h === 0 || h === +p[1]) && (a === 0 || a === +p[2]);
   }
   function applyAdminGoals(list) {
     (list || []).forEach(function (g) { adminGoals[g.nt] = g; });
@@ -3245,7 +3248,7 @@
     var points = isPointsSection(m.section), g = adminGoals[m.nt] || m.goals || {};
     var warn = "";
     if (!points && adminGoals[m.nt] && !goalsFit(adminGoals[m.nt], m.score)) {
-      warn = '<p class="help warn">' + (m.score ? "Τα γκολ δεν ταιριάζουν ακόμα με το σκορ " + esc(m.score) + ": δεν φαίνονται μέχρι να ταιριάξουν."
+      warn = '<p class="help warn">' + (m.score ? "Τα γκολ δεν ταιριάζουν ακόμα με το σκορ " + esc(m.score) + ": δεν φαίνονται μέχρι να ταιριάξουν (κάθε ομάδα ή όλα τα γκολ της ή κανένα)."
         : "Φαίνονται όταν μπει το τελικό σκορ.") + "</p>";
     }
     var ph = points ? "π.χ.\nΠαπαδόπουλος 18\nΓεωργίου 12" : "π.χ.\n23 Παπαδόπουλος\n45+1 Γεωργίου πεν\nΝικολάου 3  (3 γκολ, χωρίς λεπτά)";

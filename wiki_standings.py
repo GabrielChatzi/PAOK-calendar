@@ -164,24 +164,25 @@ def article_url(lang: str, title: str) -> str:
 # ---------------------------------------------------------------- πίνακες
 
 def _tables(page: str) -> list[str]:
-    """Οι πίνακες της σελίδας, χωρίς να μπερδεύονται οι εμφωλευμένοι."""
-    out, depth, start = [], 0, 0
+    """Όλοι οι πίνακες της σελίδας, και οι εμφωλευμένοι χωριστά (η βαθμολογία είναι συχνά μέσα σε πίνακα διάταξης)."""
+    out, stack = [], []
     for m in re.finditer(r"<table\b[^>]*>|</table>", page):
         if m.group(0).startswith("<table"):
-            if depth == 0:
-                start = m.start()
-            depth += 1
-        elif depth:
-            depth -= 1
-            if depth == 0:
-                out.append(page[start:m.end()])
-    return out
+            stack.append(m.start())
+        elif stack:
+            out.append((stack.pop(), page[:m.end()]))
+    return [full[start:] for start, full in sorted(out, key=lambda x: x[0])]
 
 
 def _rows(table: str) -> list[list[tuple[str, int]]]:
     """Γραμμές: (κείμενο κελιού, colspan). Χωρίς υποσημειώσεις [1], [α]."""
     inner = re.sub(r"^<table[^>]*>|</table>$", "", table)
-    inner = re.sub(r"<table\b.*?</table>", "", inner, flags=re.S)  # εμφωλευμένα (σημαίες κ.λπ.)
+    # Εμφωλευμένοι πίνακες έξω (μετρούν χωριστά)
+    while re.search(r"<table\b", inner):
+        new = re.sub(r"<table\b(?:(?!<table\b).)*?</table>", "", inner, flags=re.S)
+        if new == inner:
+            break
+        inner = new
     inner = re.sub(r'<sup[^>]*class="[^"]*reference[^"]*"[^>]*>.*?</sup>', "", inner, flags=re.S)
     inner = re.sub(r"<style\b.*?</style>", "", inner, flags=re.S)
     rows = []
@@ -199,15 +200,15 @@ def _rows(table: str) -> list[list[tuple[str, int]]]:
 _LABELS = [
     ("pos", r"^(θεση|θ|pos|#|α/α|κατ)$"),
     ("team", r"^(ομαδα|ομαδες|team|club|συλλογος|σωματειο)$"),
-    ("gp", r"^(αγ|αγωνες|αγων|pld|p|gp|α|g|ag)$"),
-    ("w", r"^(ν|νικες|w|νικ)$"),
-    ("d", r"^(ι|ισοπαλιες|d|ισ)$"),
-    ("l", r"^(η|ηττες|l|ητ)$"),
+    ("gp", r"^(αγ|αγωνες|αγων|αγ ?\(?α\)?|pld|p|gp|α|g|ag|αγωνιες)$"),
+    ("w", r"^(ν|νικες|w|νικ|n)$"),
+    ("d", r"^(ι|ισοπαλιες|d|ισ|i)$"),
+    ("l", r"^(η|ηττες|l|ητ|ηττ|h)$"),
     ("wl", r"^(ν-η|ν - η|w-l)$"),
-    ("gf", r"^(γυ|γκολ υπερ|gf|pf|f|πυ|υπ|υπερ|πoντοι υπερ|ποντοι υπερ|συ|σετ υπερ|sw|γυ\+)$"),
-    ("ga", r"^(γκ|γκολ κατα|ga|pa|a|πκ|κατα|ποντοι κατα|σκ|σετ κατα|sl)$"),
+    ("gf", r"^(γυ|γκολ υπερ|gf|pf|f|πυ|υπ|υπερ|πoντοι υπερ|ποντοι υπερ|συ|σετ υπερ|sw|γυ\+|επιθ|επιθεση)$"),
+    ("ga", r"^(γκ|γκολ κατα|ga|pa|a|πκ|κατα|ποντοι κατα|σκ|σετ κατα|sl|αμυν|αμυνα)$"),
     ("gfa", r"^(γκολ|τερματα|ποντοι|σετ|γ|goals|sets|points|τερμ|σκορ|δ\.?τ|γκολ υπερ-κατα)$"),
-    ("pts", r"^(β|βαθ|βαθμοι|βαθμ|pts|points|πτ|βθ|β\.)$"),
+    ("pts", r"^(β|βαθ|βαθμοι|βαθμ|pts|points|πτ|βθ|b|βαθμολογια)$"),
 ]
 
 
@@ -245,25 +246,43 @@ def standings_from_html(page: str) -> tuple[list[str], list[dict]] | None:
         rows = _rows(t)
         if len(rows) < 5:
             continue
-        # Κεφαλίδα: η πρώτη γραμμή με ομάδα και βαθμούς (ανάπτυξη colspan σε θέσεις).
-        for hi, head in enumerate(rows[:3]):
+        # Κεφαλίδα: η πρώτη γραμμή με ομάδα και βαθμούς. Σε κεφαλίδα δύο γραμμών («Σύνολο» με colspan από πάνω,
+        # «Β Ν Ι Η» από κάτω) οι θέσεις του colspan παίρνουν τις ετικέτες της δεύτερης γραμμής.
+        found = None
+        for hi, head in enumerate(rows[:4]):
             labels = []
             for text, span in head:
                 labels += [text] + [""] * (span - 1)
+            if any(span > 1 for _, span in head) and hi + 1 < len(rows):
+                sub = [t for t, sp in rows[hi + 1] for _ in range(sp)]
+                if len(sub) >= len(labels):  # η δεύτερη γραμμή έχει και τις κενές θέσεις
+                    labels = [b or a for a, b in zip(labels + [""] * (len(sub) - len(labels)), sub)]
+                else:
+                    it = iter(sub)
+                    merged = []
+                    for text, span in head:
+                        merged += [text] if span == 1 else [next(it, "") for _ in range(span)]
+                    labels = merged
+                kinds = [_kind(x) for x in labels]
+                if "pts" in kinds and ("team" in kinds or "pos" in kinds):
+                    found = hi + 1
+                    break
             kinds = [_kind(x) for x in labels]
-            if "pts" in kinds and ("w" in kinds or "wl" in kinds) and ("team" in kinds or "pos" in kinds):
+            if "pts" in kinds and ("team" in kinds or "pos" in kinds):
+                found = hi
                 break
-        else:
+        if found is None:
             continue
+        hi = found
         width = len(kinds)
         out, last_pos = [], 0
         for r in rows[hi + 1:]:
             cells = []
             for text, span in r:
                 cells += [text] * span
-            if len(cells) == width - 1 and kinds[0] == "pos" and _num(cells[0]) is None:
+            if len(cells) < width and kinds[0] == "pos" and _num(cells[0]) is None and cells and re.search(r"[A-Za-zΑ-Ωα-ω]", cells[0]):
                 cells = [str(last_pos)] + cells  # rowspan στη θέση (ισοβαθμία)
-            if len(cells) < width - 1:
+            if len(cells) < min(width - 1, max(i for i, k in enumerate(kinds) if k) + 1):
                 continue
             col = {}
             for i, k in enumerate(kinds):

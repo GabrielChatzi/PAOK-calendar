@@ -1,0 +1,43 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Έφηβοι – Εντός έδρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:waterpolo-u18-manual-1801510f0348@paok-calendar
+DTSTAMP:20261125T084147Z
+DTSTART;TZID=Europe/Athens:20261123T180000
+DTEND;TZID=Europe/Athens:20261123T200000
+SUMMARY:🤽 ΠΑΟΚ 18-10 Ηλυσιακός (ώρα αναμένεται
+ )
+LOCATION:Βόλος
+DESCRIPTION:23ο Splash Waterpolo Tournament – Τελικός\nΤελικ
+ ό σκορ: ΠΑΟΚ 18-10 Ηλυσιακός\nΗ ώρα δεν έχει 
+ οριστεί ακόμα (προσωρινά 18:00). Θα ενημερω
+ θεί αυτόματα όταν ανακοινωθεί.
+URL:https://acpaok.gr/%cf%87%cf%81%cf%85%cf%83%ce%bf%ce%af-%ce%bf%ce%b9-%ce
+ %ad%cf%86%ce%b7%ce%b2%ce%bf%ce%b9-%cf%84%ce%bf%cf%85-%cf%80%ce%b1%ce%bf%ce
+ %ba-%cf%83%cf%84%ce%bf-23%ce%bf-splash-waterpolo-tournament/
+END:VEVENT
+END:VCALENDAR

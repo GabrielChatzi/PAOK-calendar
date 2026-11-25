@@ -182,6 +182,11 @@
      "matches": 14,
      "standings": true,
      "summary": false
+    },
+    "waterpolo-u18": {
+     "matches": 1,
+     "standings": false,
+     "summary": false
     }
    }
   },

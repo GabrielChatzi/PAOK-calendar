@@ -17728,7 +17728,27 @@
      ]
     }
    ]
+  },
+  "waterpolo-u18": {
+   "matches": [
+    {
+     "uid": "waterpolo-u18-manual-1801510f0348",
+     "nt": "ff661d9356",
+     "section": "waterpolo-u18",
+     "start": "2026-11-23T18:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΠΑΟΚ",
+     "away": "Ηλυσιακός",
+     "paokHome": true,
+     "venue": "Βόλος",
+     "competition": "23ο Splash Waterpolo Tournament",
+     "round": "Τελικός",
+     "score": "18-10",
+     "url": "https://acpaok.gr/%cf%87%cf%81%cf%85%cf%83%ce%bf%ce%af-%ce%bf%ce%b9-%ce%ad%cf%86%ce%b7%ce%b2%ce%bf%ce%b9-%cf%84%ce%bf%cf%85-%cf%80%ce%b1%ce%bf%ce%ba-%cf%83%cf%84%ce%bf-23%ce%bf-splash-waterpolo-tournament/",
+     "awayLogo": "https://paokalendar.gr/crests/351c0d8309e1802e.jpg"
+    }
+   ]
   }
  },
- "updated": "2026-11-25T10:04+02:00"
+ "updated": "2026-11-25T10:46+02:00"
 }

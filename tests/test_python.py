@@ -739,6 +739,14 @@ class Goals(unittest.TestCase):
         self.assertNotIn("goals", ms[1])  # 1 γκολ για σκορ 2-0: δεν μπαίνει
         self.assertNotIn("goals", ms[2])
 
+    def test_only_one_team(self):
+        # Μόνο οι σκόρερ του ΠΑΟΚ: μπαίνουν, και του αντιπάλου όταν έρθουν· μισά γκολ μιας ομάδας όχι.
+        self.assertTrue(b.goals_fit({"home": [], "away": [{"name": "Χ"}, {"name": "Ψ"}]}, "1-2"))
+        self.assertTrue(b.goals_fit({"home": [{"name": "Ω"}], "away": [{"name": "Χ", "n": 2}]}, "1-2"))
+        self.assertFalse(b.goals_fit({"home": [], "away": [{"name": "Χ"}]}, "1-2"))
+        self.assertFalse(b.goals_fit({"home": [], "away": []}, "1-2"))
+        self.assertFalse(b.goals_fit({"home": [], "away": [{"name": "Χ"}]}, ""))
+
     def test_not_before_the_result(self):
         ms = [{"uid": "b", "score": ""}]
         b.apply_goals(ms, self.path)

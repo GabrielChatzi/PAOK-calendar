@@ -215,10 +215,15 @@ def is_points_section(section: str) -> bool:
 
 
 def goals_fit(goals: dict, score: str) -> bool:
-    """Τα γκολ κάθε ομάδας ταιριάζουν με το σκορ (με «n» = πολλά γκολ σε μία γραμμή); μόνο σε αθλήματα με γκολ."""
+    """Τα γκολ ταιριάζουν με το σκορ (με «n» = πολλά γκολ σε μία γραμμή); μόνο σε αθλήματα με γκολ.
+
+    Κάθε ομάδα: ή ακριβώς τα γκολ του σκορ ή καθόλου σκόρερ (π.χ. μόνο του ΠΑΟΚ· του αντιπάλου μπαίνουν όταν έρθουν)."""
     parts = re.fullmatch(r"(\d+)-(\d+)", score or "")
+    if not parts:
+        return False
     count = lambda side: sum(int(g.get("n") or 1) for g in goals.get(side) or [])  # noqa: E731
-    return bool(parts) and [count("home"), count("away")] == [int(parts[1]), int(parts[2])]
+    sides = [(count(side), int(parts[i + 1])) for i, side in enumerate(("home", "away"))]
+    return any(c for c, _ in sides) and all(c in (0, want) for c, want in sides)
 
 
 def admin_goals() -> dict[str, dict]:

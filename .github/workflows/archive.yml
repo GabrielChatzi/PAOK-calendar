@@ -7,12 +7,16 @@ on:
     inputs:
       years:
         description: "Σεζόν (έτος έναρξης), με κενά: 2024 2023 …"
-        required: true
+        required: false
         default: "2025 2024 2023 2022 2021 2020 2019"
       only:
         description: "Μόνο αυτά τα τμήματα (κόμμα), κενό για όλα"
         required: false
         default: ""
+      standings:
+        description: "Και βαθμολογίες παλιών σεζόν από τη Wikipedia"
+        type: boolean
+        default: true
 
 permissions:
   contents: write
@@ -42,6 +46,7 @@ jobs:
         env:
           ONLY: ${{ inputs.only }}
           YEARS: ${{ inputs.years }}
+          STANDINGS: ${{ inputs.standings }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -60,6 +65,10 @@ jobs:
           }
           python3 archive.py summaries || echo "! περιλήψεις σεζόν: σφάλμα"
           (save summaries) || (sleep 5; save summaries) || true
+          if [ "$STANDINGS" = "true" ]; then
+            python3 archive.py standings || echo "! βαθμολογίες Wikipedia: σφάλμα"
+            (save "βαθμολογίες Wikipedia") || (sleep 5; save "βαθμολογίες Wikipedia") || true
+          fi
           for y in $YEARS; do
             python3 archive.py backfill "$y" || echo "! σεζόν $y: σφάλμα"
             (save "$y") || (sleep 5; save "$y") || echo "! σεζόν $y: δεν αποθηκεύτηκε"

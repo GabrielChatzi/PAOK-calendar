@@ -15,7 +15,7 @@ import re
 from pathlib import Path
 
 from build_calendars import (
-    ACADEMY, EPSM_TEAMS, epsm_name, epsm_table_url, EKASTH, EKASTH_TEAMS, ekasth_channel, ekasth_logo, ekasth_phase, EPESTH, EPESTH_TEAMS, epesth_crest, epesth_season, epesth_tables, PAOKFC, PAOKFC_TEAMS, sl2_competitions, sl2_json, sl2_name, paokfc_fetch, paokfc_links, paokfc_team, paokfc_matches, paokfc_name, DATAPROJECT, EPO, ea_data, ea_team, oxe_logo, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
+    ACADEMY, EPSM_TEAMS, wpl_slug, dataproject_competitions, epsm_name, epsm_table_url, EKASTH, EKASTH_TEAMS, ekasth_channel, ekasth_logo, ekasth_phase, EPESTH, EPESTH_TEAMS, epesth_crest, epesth_season, epesth_tables, PAOKFC, PAOKFC_TEAMS, sl2_competitions, sl2_json, sl2_name, paokfc_fetch, paokfc_links, paokfc_team, paokfc_matches, paokfc_name, DATAPROJECT, EPO, ea_data, ea_team, oxe_logo, FOOTBALL_NAMES, HANDBALL, _parse_dataproject, absolute, basket_name, clean, fetch,
     fetch_until,
     is_paok, latin_title, plain, season_start_year, tidy_name, volley_rows,
 )
@@ -225,11 +225,10 @@ def volley_women_order(teams: list[dict], results: list[tuple[str, str, int, int
 def volley_women() -> list[dict]:
     y = season_start_year()
     season = f"{y}-{str(y + 1)[-2:]}"
-    home_page = fetch(DATAPROJECT + "MainHome.aspx")
     out = []
-    for cid, label in re.findall(r'href="CompetitionHome\.aspx\?ID=(\d+)"[^>]*>(.*?)</a>', home_page, re.S):
-        name = plain(clean(label))
-        if season not in name or "WOMEN" not in name or "CUP" in name:
+    for cid, label, comp_season in dataproject_competitions():
+        name = plain(label)
+        if comp_season != season or "WOMEN" not in name or "CUP" in name:
             continue
         matches = fetch(f"{DATAPROJECT}CompetitionMatches.aspx?ID={cid}")
         pids = sorted(set(re.findall(rf"CompetitionMatches\.aspx\?ID={cid}&amp;PID=(\d+)", matches)))
@@ -330,8 +329,7 @@ def handball(women: bool) -> list[dict]:
 # ---------------------------------------------------------------- πόλο
 
 def waterpolo(women: bool) -> list[dict]:
-    yy = season_start_year() % 100
-    slug = f"wpl-{'women-' if women else ''}{yy:02d}-{(yy + 1) % 100:02d}"
+    slug = wpl_slug(women)
     url = f"https://waterpololeague.gr/championship/{slug}/standings"
     tables = html_tables(fetch(url), url)
     rows = []

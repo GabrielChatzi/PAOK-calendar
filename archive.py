@@ -6,6 +6,7 @@
     python3 archive.py                  κάθε ενημέρωση: ό,τι έχει τώρα το matches.json/standings.json μπαίνει
                                         στη σεζόν του (οι αγώνες με το uid, οι βαθμολογίες ολόκληρες)
     python3 archive.py summaries        τελική θέση/κύπελλα ανά σεζόν από τη Wikipedia (wiki_sections.py)
+    python3 archive.py standings        βαθμολογίες παλιών σεζόν από τη Wikipedia (wiki_standings.py), όπου λείπουν
     python3 archive.py backfill 2024    μια παλιά σεζόν (2024-25) από τις ίδιες πηγές με το build_calendars
                                         (όσες δίνουν παλιές σεζόν)· τα δεδομένα της σεζόν που υπάρχουν ήδη μένουν
     ONLY=football,basketball python3 archive.py backfill 2024   μόνο κάποια τμήματα
@@ -119,7 +120,7 @@ def snapshot() -> None:
 
 # Βαθμολογίες που ακολουθούν τη σεζόν (δοκιμασμένες με archive.py backfill). Οι υπόλοιπες πηγές δίνουν πάντα
 # την τρέχουσα βαθμολογία, που δεν πρέπει να γραφτεί σε παλιά σεζόν.
-SEASON_STANDINGS = {"volley", "handball", "handball-women", "futsal"}
+SEASON_STANDINGS = {"volley", "handball", "handball-women", "futsal", "volley-women", "waterpolo", "waterpolo-women"}
 
 
 class _Timeout(Exception):
@@ -250,6 +251,44 @@ def summaries(data: dict[str, dict[str, dict]] | None = None) -> None:
     write_index()
 
 
+def wiki_standings(keys: list[str] | None = None) -> list[str]:
+    """Βαθμολογίες παλιών σεζόν από τη Wikipedia (wiki_standings.py), όπου η σεζόν δεν έχει ήδη βαθμολογία
+    από την επίσημη πηγή. Η τρέχουσα σεζόν δεν αγγίζεται."""
+    import wiki_standings as ws
+    current = bc.season_start_year()
+    report = []
+    for key in keys or list(ws.SPECS):
+        try:
+            articles = ws.season_articles(key)
+        except Exception as e:
+            report.append(f"{key}: αναζήτηση: {e}")
+            continue
+        got = []
+        for year in sorted(articles):
+            if year >= current:
+                continue
+            arch = load(season_label(year))
+            sec = arch["sections"].get(key) or {}
+            if sec.get("standings") and not all(t.get("source") == "wikipedia" for t in sec["standings"]):
+                continue
+            try:
+                t = ws.season_table(key, year, articles)
+            except Exception as e:
+                print(f"! {key} {season_label(year)}: {e}", file=sys.stderr)
+                continue
+            if not t:
+                continue
+            sec = arch["sections"].setdefault(key, {"matches": []})
+            sec["standings"] = [t]
+            save(arch)
+            got.append(season_label(year))
+        line = f"{key}: βαθμολογία από Wikipedia σε {len(got)} σεζόν" + (f" ({got[-1]} → {got[0]})" if got else "")
+        print(line, flush=True)
+        report.append(line)
+    write_index()
+    return report
+
+
 def write_index() -> None:
     seasons = []
     for p in sorted(ARCHIVE.glob("*.json"), reverse=True):
@@ -267,6 +306,9 @@ def write_index() -> None:
 def main(argv: list[str]) -> int:
     if argv[:1] == ["summaries"]:
         summaries()
+        return 0
+    if argv[:1] == ["standings"]:
+        wiki_standings(argv[1:] or None)
         return 0
     if argv[:1] == ["backfill"]:
         only = set(filter(None, os.environ.get("ONLY", "").split(","))) or None

@@ -482,17 +482,32 @@ def volley_matches() -> list[Match]:
 DATAPROJECT = "https://eope-web.dataproject.com/"
 
 
+def dataproject_competitions() -> list[tuple[str, str, str]]:
+    """(ID, όνομα, σεζόν «2024-25») των διοργανώσεων του Data Project. Η τρέχουσα σεζόν έχει τη σεζόν στο όνομα·
+    οι παλιές όχι («VOLLEY LEAGUE WOMEN»), οπότε τη βρίσκουμε στη σελίδα της διοργάνωσης («2024/25»)."""
+    home_page = fetch(DATAPROJECT + "MainHome.aspx")
+    out = []
+    for cid, label in re.findall(r'href="CompetitionHome\.aspx\?ID=(\d+)"[^>]*>(.*?)</a>', home_page, re.S):
+        name = clean(label)
+        if any(c == cid for c, _, _ in out):
+            continue
+        m = re.search(r"(20\d\d)-(\d\d)", name)
+        if not m and ARCHIVE_YEAR:
+            page = fetch(f"{DATAPROJECT}CompetitionHome.aspx?ID={cid}")
+            m = re.search(r"(20\d\d)\s*/\s*(?:20)?(\d\d)\b", page)
+        out.append((cid, re.sub(r"\s*20\d\d-\d\d\s*", " ", name).strip(), f"{m.group(1)}-{m.group(2)}" if m else ""))
+    return out
+
+
 def dataproject_matches(section: str) -> list[Match]:
     """Διοργανώσεις της ΕΟΠΕ (βόλεϊ γυναικών, Κύπελλα) από το Data Project."""
     women = SECTIONS[section]["women"]
     y = season_start_year()
     season = f"{y}-{str(y + 1)[-2:]}"
-    home_page = fetch(DATAPROJECT + "MainHome.aspx")
     wanted = []
-    for cid, label in re.findall(r'href="CompetitionHome\.aspx\?ID=(\d+)"[^>]*>(.*?)</a>', home_page, re.S):
-        name = clean(label)
+    for cid, name, comp_season in dataproject_competitions():
         up = plain(name)
-        if season not in name or ("WOMEN" in up) != women:
+        if comp_season != season or ("WOMEN" in up) != women:
             continue
         if not women and not re.search(r"\bMEN\b", up):
             continue  # π.χ. «SUPER CUP» χωρίς φύλο
@@ -507,8 +522,8 @@ def dataproject_matches(section: str) -> list[Match]:
         pids = sorted(set(re.findall(rf"CompetitionMatches\.aspx\?ID={cid}&amp;PID=(\d+)", first)))
         pages = [first] + [fetch(f"{DATAPROJECT}CompetitionMatches.aspx?ID={cid}&PID={p}")
                            for p in pids[1:]]
-        comp = re.sub(rf"\s*{season}\s*", " ", comp_name).strip()
-        comp = {"VOLLEY LEAGUE WOMEN": "Volley League Γυναικών"}.get(comp.upper(), comp.title())
+        comp = comp_name
+        comp = {"VOLLEY LEAGUE WOMEN": "Volley League Γυναικών", "WOMEN COMPETITION": "Volley League Γυναικών"}.get(comp.upper(), comp.title())
         if "CUP" in comp.upper():
             comp = "Κύπελλο Ελλάδας"
         for page in pages:
@@ -1246,10 +1261,23 @@ def koe_live(url: str) -> dict | None:
     return dict(zip(("cat", "gara", "tur", "gru", "a", "b"), m.groups()), src="koe")
 
 
+def wpl_slug(women: bool) -> str:
+    """Η διοργάνωση της σεζόν στο waterpololeague.gr: «wpl-26-27», αλλά παλιότερα
+    «40o-protathlima-a1-ethnikis-andron-2025-2026» (βρίσκεται στη λίστα πρωταθλημάτων)."""
+    y = season_start_year()
+    yy = y % 100
+    slug = f"wpl-{'women-' if women else ''}{yy:02d}-{(yy + 1) % 100:02d}"
+    if ARCHIVE_YEAR:
+        page = fetch(f"https://waterpololeague.gr/championships?gender={'female' if women else 'male'}")
+        old = next((s for s in re.findall(r"waterpololeague\.gr/championship/([a-z0-9-]+)", page)
+                    if s.endswith(f"-{y}-{y + 1}")), None)
+        slug = old or slug
+    return slug
+
+
 def waterpolo_matches(section: str) -> list[Match]:
     women = SECTIONS[section]["women"]
-    yy = season_start_year() % 100
-    slug = f"wpl-{'women-' if women else ''}{yy:02d}-{(yy + 1) % 100:02d}"
+    slug = wpl_slug(women)
     url = f"https://waterpololeague.gr/championship/{slug}/fixtures"
     page = fetch(url)
     out = []

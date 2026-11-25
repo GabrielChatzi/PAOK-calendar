@@ -141,6 +141,11 @@ ACADEMY = {
                              "short": "Κορασίδες", "group": "Μπάσκετ Κοριτσιών", "league": "Κορασίδων (ΕΚΑΣΘ)"},
     "basketball-women-u16b": {"emoji": "🏀", "name": "Κορασίδες 2", "sport": "Μπάσκετ", "women": True, "academy": True,
                               "short": "Κορασίδες 2", "group": "Μπάσκετ Κοριτσιών", "league": "Κορασίδων (ΕΚΑΣΘ)"},
+    # Πόλο: τα πρωταθλήματα υποδομής της ΚΟΕ ξεκινούν τον Δεκέμβριο (βλ. koe_watch.py). Μέχρι τότε οι αγώνες
+    # (π.χ. φιλικά τουρνουά) από το manual.json και τη φόρμα «Νέος αγώνας». Όταν μπει πηγή της ΚΟΕ, κράτα
+    # αυτό το κλειδί για τους Εφήβους και βγάλε το "table": False.
+    "waterpolo-u18": {"emoji": "🤽", "name": "Έφηβοι", "sport": "Πόλο", "women": False, "academy": True,
+                      "short": "Έφηβοι", "group": "Πόλο Αγοριών", "table": False},
 }
 SECTIONS.update(ACADEMY)
 
@@ -274,15 +279,42 @@ def match_topic_id(uid: str) -> str:
 _FETCHED: dict[tuple, str] = {}
 
 
-def fetch(url: str, data: list[tuple[str, str]] | None = None, encoding: str = "utf-8") -> str:
+def fetch(url: str, data: list[tuple[str, str]] | None = None, encoding: str = "utf-8",
+          retry: bool = True) -> str:
     """Κατεβάζει μια σελίδα· την ίδια σελίδα την κατεβάζει μία φορά ανά εκτέλεση."""
     key = (url, tuple(data) if data is not None else None, encoding)
     if key not in _FETCHED:
         body = urllib.parse.urlencode(data).encode() if data is not None else None
         req = urllib.request.Request(url, data=body, headers={"User-Agent": UA, "Accept-Language": "el,en"})
-        with urllib.request.urlopen(req, timeout=60) as r:
-            _FETCHED[key] = r.read().decode(encoding, errors="replace")
+        _FETCHED[key] = _open_retry(req, retry).decode(encoding, errors="replace")
     return _FETCHED[key]
+
+
+# Προσωρινά σφάλματα του διακομιστή της πηγής (π.χ. 502 της EHF στις 24/11): ξαναδοκιμάζουμε πριν
+# μετρήσει ως αποτυχία, ώστε να μην «κοκκινίζει» η ενημέρωση για ένα στιγμιαίο πρόβλημα. Τα 403/404
+# (μπλοκάρισμα, σελίδα που δεν υπάρχει) δεν ξαναδοκιμάζονται.
+RETRY_STATUS = {429, 500, 502, 503, 504}
+RETRY_WAIT = (5, 20)
+
+
+def _open_retry(req: urllib.request.Request, retry: bool = True) -> bytes:
+    import time
+    for wait in ((*RETRY_WAIT, None) if retry else (None,)):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                return r.read()
+        except urllib.error.HTTPError as e:
+            if wait is None or e.code not in RETRY_STATUS:
+                raise
+            print(f"  … {req.full_url}: HTTP {e.code}, νέα προσπάθεια σε {wait}s", file=sys.stderr)
+        except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
+            # Μόνο διακοπή/λήξη χρόνου σύνδεσης· όχι π.χ. άγνωστο όνομα ή απόρριψη από proxy.
+            reason = getattr(e, "reason", e)
+            if wait is None or not isinstance(reason, (TimeoutError, ConnectionError)):
+                raise
+            print(f"  … {req.full_url}: {e}, νέα προσπάθεια σε {wait}s", file=sys.stderr)
+        time.sleep(wait)
+    raise AssertionError("unreachable")
 
 
 def fetch_until(url: str, ok: Callable[[str], bool], tries: int = 3) -> str:
@@ -1398,7 +1430,8 @@ def ehf_matches(section: str) -> list[Match]:
                 anchor = (batch[0] if future else batch[-1])["matchID"]
                 try:
                     batch = json.loads(fetch(f"{api}/GetMatches?{q}&matchId={anchor}"
-                                             f"&futureMatches={'true' if future else 'false'}"))["matches"]
+                                             f"&futureMatches={'true' if future else 'false'}",
+                                             retry=False))["matches"]  # το σφάλμα εδώ σημαίνει «τέλος λίστας»
                 except urllib.error.HTTPError:
                     break  # τέλος της λίστας
                 batch = [m for m in batch if m["matchID"] not in found]
@@ -2764,6 +2797,8 @@ SOURCES: dict[str, list[tuple[str, Callable[[], list[Match]]]]] = {
     "football-women-u17": [("ΕΠΟ Υποδομών Κ17", lambda: strip_age(epo_matches(56, "football-women-u17", required=True), "Κ17"))],
     # ΑμεΑ: μόνο οι αγώνες της φόρμας και του manual.json.
     **{key: [] for key in AMEA},
+    # Πόλο υποδομής: μέχρι να βγει το πρόγραμμα της ΚΟΕ, μόνο η φόρμα και το manual.json.
+    "waterpolo-u18": [],
 }
 
 

@@ -651,5 +651,6 @@ STANDINGS = {
     "waterpolo-women": with_cups(lambda: waterpolo(True), lambda: ea_groups(True)),
     "futsal": futsal,
     # Οι ομάδες βόλεϊ «εκτός συναγωνισμού» δεν έχουν βαθμολογία.
-    **{key: (lambda key=key: academy_table(key)) for key in ACADEMY if "es" not in key.rsplit("-", 1)[-1]},
+    **{key: (lambda key=key: academy_table(key)) for key in ACADEMY
+       if "es" not in key.rsplit("-", 1)[-1] and ACADEMY[key].get("table", True)},
 }

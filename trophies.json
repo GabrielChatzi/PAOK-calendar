@@ -550,7 +550,7 @@
     ]
    }
   ],
-  "academy:waterpolo": [
+  "waterpolo-u18": [
    {
     "name": "Πρωτάθλημα Ελλάδας Εφήβων",
     "years": [
@@ -558,7 +558,9 @@
      "2022",
      "2023"
     ]
-   },
+   }
+  ],
+  "academy:waterpolo": [
    {
     "name": "Πρωτάθλημα Ελλάδας Νέων Ανδρών",
     "years": [
@@ -757,6 +759,14 @@
     "years": [
      "2003",
      "2011"
+    ]
+   }
+  ],
+  "waterpolo-u18": [
+   {
+    "name": "1η θέση, 23ο Splash Waterpolo Tournament (Βόλος)",
+    "years": [
+     "2026"
     ]
    }
   ]

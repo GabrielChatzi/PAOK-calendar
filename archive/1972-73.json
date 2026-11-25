@@ -1343,14 +1343,481 @@
     "topscorer": "Stavros Sarafis (19)",
     "source": "https://en.wikipedia.org/wiki/1972%E2%80%9373_PAOK_FC_season"
    },
-   "backfilled": true
+   "backfilled": true,
+   "standings": [
+    {
+     "title": "Alpha Ethniki",
+     "url": "https://en.wikipedia.org/wiki/1972%E2%80%9373_Alpha_Ethniki",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Ι",
+      "Η",
+      "Γκολ",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Olympiacos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "27",
+        "6",
+        "1",
+        "72-13",
+        "94"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "34",
+        "27",
+        "4",
+        "3",
+        "75-24",
+        "92"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Panathinaikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "22",
+        "7",
+        "5",
+        "89-29",
+        "82"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Panachaiki",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "16",
+        "12",
+        "6",
+        "42-27",
+        "78"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "AEK Athens",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "13",
+        "11",
+        "10",
+        "39-36",
+        "71"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Ethnikos Piraeus",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "10",
+        "15",
+        "9",
+        "35-32",
+        "69"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Panionios",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "13",
+        "9",
+        "12",
+        "41-39",
+        "69"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Iraklis",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "11",
+        "13",
+        "10",
+        "42-39",
+        "69"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Aris",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "13",
+        "9",
+        "12",
+        "38-36",
+        "69"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Kavala",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "8",
+        "14",
+        "12",
+        "32-38",
+        "64"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Egaleo",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "11",
+        "8",
+        "15",
+        "30-47",
+        "64"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Olympiacos Volos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "10",
+        "9",
+        "15",
+        "25-42",
+        "63"
+       ]
+      },
+      {
+       "pos": 13,
+       "team": "Fostiras",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "10",
+        "8",
+        "16",
+        "23-39",
+        "62"
+       ]
+      },
+      {
+       "pos": 14,
+       "team": "Panserraikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "6",
+        "15",
+        "13",
+        "27-47",
+        "61"
+       ]
+      },
+      {
+       "pos": 15,
+       "team": "Kalamata",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "8",
+        "10",
+        "16",
+        "30-45",
+        "60"
+       ]
+      },
+      {
+       "pos": 16,
+       "team": "Atromitos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "7",
+        "10",
+        "17",
+        "17-49",
+        "58"
+       ]
+      },
+      {
+       "pos": 17,
+       "team": "Trikala",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "5",
+        "9",
+        "20",
+        "26-52",
+        "53"
+       ]
+      },
+      {
+       "pos": 18,
+       "team": "Omonia",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "1",
+        "7",
+        "26",
+        "22-71",
+        "42"
+       ]
+      }
+     ]
+    }
+   ]
   },
   "basketball": {
    "matches": [],
    "summary": {
     "league": "5η θέση",
     "source": "https://el.wikipedia.org/wiki/%CE%A0.%CE%91.%CE%9F.%CE%9A._%28%CE%BA%CE%B1%CE%BB%CE%B1%CE%B8%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD%29"
-   }
+   },
+   "standings": [
+    {
+     "title": "Πρωτάθλημα καλαθοσφαίρισης Α΄ εθνικής κατηγορίας ανδρών",
+     "url": "https://el.wikipedia.org/wiki/%CE%A0%CF%81%CF%89%CF%84%CE%AC%CE%B8%CE%BB%CE%B7%CE%BC%CE%B1_%CE%BA%CE%B1%CE%BB%CE%B1%CE%B8%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%91%CE%84_%CE%B5%CE%B8%CE%BD%CE%B9%CE%BA%CE%AE%CF%82_%CE%BA%CE%B1%CF%84%CE%B7%CE%B3%CE%BF%CF%81%CE%AF%CE%B1%CF%82_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD_1972-1973",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Η",
+      "Πόντοι",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Παναθηναϊκός Α.Ο.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "24",
+        "2",
+        "2096-1752",
+        "50"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Ολυμπιακός Σ.Φ.Π.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "23",
+        "3",
+        "2085-1709",
+        "49"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Α.Ε.Κ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "21",
+        "5",
+        "2053-1749",
+        "47"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Χ.Α.Ν.Θ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "15",
+        "11",
+        "1807-1692",
+        "41"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "26",
+        "15",
+        "11",
+        "1882-1724",
+        "41"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Γ.Σ. Ηρακλής",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "13",
+        "13",
+        "1917-1893",
+        "39"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Πανελλήνιος Γ.Σ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "12",
+        "14",
+        "1825-1855",
+        "38"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Α.Ο. Σπόρτιγκ",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "11",
+        "15",
+        "1749-1781",
+        "37"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Α.Σ. Άρης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "11",
+        "15",
+        "1979-1933",
+        "37"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Γ.Σ. Αμαρουσίου",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "11",
+        "15",
+        "1729-1804",
+        "37"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Α.Ο. Παγκρατίου",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "11",
+        "15",
+        "1777-1788",
+        "37"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Μ.Γ.Σ. Απόλλων Καλαμαριάς",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "8",
+        "18",
+        "1680-1859",
+        "34"
+       ]
+      },
+      {
+       "pos": 13,
+       "team": "Π.Ο.Κ. Έσπερος",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "7",
+        "19",
+        "1803-1961",
+        "33"
+       ]
+      },
+      {
+       "pos": 14,
+       "team": "Γ.Σ. Νίκη Βόλου",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "0",
+        "26",
+        "1329-2211",
+        "26"
+       ]
+      }
+     ]
+    }
+   ]
   }
  },
  "updated": "2026-11-22T21:54+02:00"

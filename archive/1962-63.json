@@ -1,0 +1,249 @@
+{
+ "season": "1962-63",
+ "sections": {
+  "football": {
+   "matches": [],
+   "standings": [
+    {
+     "title": "Alpha Ethniki",
+     "url": "https://en.wikipedia.org/wiki/1962%E2%80%9363_Alpha_Ethniki",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Ι",
+      "Η",
+      "Γκολ",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "AEK Athens",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "20",
+        "7",
+        "3",
+        "66-21",
+        "77"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Panathinaikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "19",
+        "9",
+        "2",
+        "75-28",
+        "77"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Olympiacos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "19",
+        "7",
+        "4",
+        "62-39",
+        "75"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "30",
+        "13",
+        "8",
+        "9",
+        "44-34",
+        "64"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Ethnikos Piraeus",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "12",
+        "9",
+        "9",
+        "47-41",
+        "63"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Iraklis",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "11",
+        "10",
+        "9",
+        "35-38",
+        "62"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Panionios",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "10",
+        "11",
+        "9",
+        "33-38",
+        "61"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Apollon Athens",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "8",
+        "12",
+        "10",
+        "35-34",
+        "58"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Pierikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "9",
+        "7",
+        "14",
+        "36-37",
+        "55"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Egaleo",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "10",
+        "6",
+        "14",
+        "27-44",
+        "55"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Niki Volos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "8",
+        "8",
+        "14",
+        "24-39",
+        "54"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Apollon Kalamarias",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "6",
+        "11",
+        "13",
+        "18-32",
+        "53"
+       ]
+      },
+      {
+       "pos": 13,
+       "team": "Panegialios",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "8",
+        "7",
+        "15",
+        "25-37",
+        "53"
+       ]
+      },
+      {
+       "pos": 14,
+       "team": "Aris",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "9",
+        "5",
+        "16",
+        "22-44",
+        "53"
+       ]
+      },
+      {
+       "pos": 15,
+       "team": "Proodeftiki",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "7",
+        "9",
+        "14",
+        "26-43",
+        "53"
+       ]
+      },
+      {
+       "pos": 16,
+       "team": "Fostiras",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "6",
+        "4",
+        "20",
+        "27-53",
+        "46"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

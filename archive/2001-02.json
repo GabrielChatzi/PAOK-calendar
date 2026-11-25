@@ -530,7 +530,205 @@
      }
     ],
     "source": "https://en.wikipedia.org/wiki/PAOK_BC"
-   }
+   },
+   "standings": [
+    {
+     "title": "Πρωτάθλημα καλαθοσφαίρισης Α1 εθνικής κατηγορίας ανδρών",
+     "url": "https://el.wikipedia.org/wiki/%CE%A0%CF%81%CF%89%CF%84%CE%AC%CE%B8%CE%BB%CE%B7%CE%BC%CE%B1_%CE%BA%CE%B1%CE%BB%CE%B1%CE%B8%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%911_%CE%B5%CE%B8%CE%BD%CE%B9%CE%BA%CE%AE%CF%82_%CE%BA%CE%B1%CF%84%CE%B7%CE%B3%CE%BF%CF%81%CE%AF%CE%B1%CF%82_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD_2001-2002",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Η",
+      "Πόντοι",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Α.Ε.Κ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "23",
+        "3",
+        "2302-1948",
+        "49"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Παναθηναϊκός Α.Ο.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "21",
+        "5",
+        "2181-1986",
+        "47"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Ολυμπιακός Σ.Φ.Π.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "20",
+        "5",
+        "2247-1961",
+        "45"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Γ.Σ. Ηρακλής",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "17",
+        "9",
+        "1974-1856",
+        "43"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Πανιώνιος Γ.Σ.Σ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "14",
+        "12",
+        "2075-2005",
+        "40"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Γ.Σ. Περιστερίου",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "14",
+        "12",
+        "1987-2008",
+        "40"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Γ.Σ. Αμαρουσίου",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "13",
+        "13",
+        "2140-2127",
+        "39"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "26",
+        "12",
+        "14",
+        "2120-2115",
+        "38"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Ο.Α.Α. Ηράκλειο",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "11",
+        "15",
+        "2131-2159",
+        "37"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Α.Σ. Άρης Θεσσαλονίκης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "9",
+        "17",
+        "2098-2206",
+        "35"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Α.Σ. Ιωνικός Νέας Φιλαδέλφειας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "8",
+        "18",
+        "2097-2328",
+        "34"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Α.Ο. Νήαρ Ηστ Καισαριανής",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "7",
+        "19",
+        "1983-2164",
+        "33"
+       ]
+      },
+      {
+       "pos": 13,
+       "team": "Κ.Α.Ο. Δράμας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "7",
+        "19",
+        "2084-2350",
+        "33"
+       ]
+      },
+      {
+       "pos": 14,
+       "team": "Α.Ο. Δάφνης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "6",
+        "20",
+        "1980-2186",
+        "32"
+       ]
+      }
+     ]
+    }
+   ]
   },
   "handball": {
    "matches": [
@@ -2673,7 +2871,220 @@
     "topscorer": "Georgios Georgiadis (15)",
     "source": "https://en.wikipedia.org/wiki/2001%E2%80%9302_PAOK_FC_season"
    },
-   "backfilled": true
+   "backfilled": true,
+   "standings": [
+    {
+     "title": "Alpha Ethniki",
+     "url": "https://en.wikipedia.org/wiki/2001%E2%80%9302_Alpha_Ethniki",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Ι",
+      "Η",
+      "Γκολ",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Olympiacos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "17",
+        "7",
+        "2",
+        "69-30",
+        "58"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "AEK Athens",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "19",
+        "1",
+        "6",
+        "65-28",
+        "58"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Panathinaikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "16",
+        "7",
+        "3",
+        "53-25",
+        "55"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "26",
+        "14",
+        "6",
+        "6",
+        "55-45",
+        "48"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Skoda Xanthi",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "12",
+        "6",
+        "8",
+        "34-26",
+        "42"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Iraklis",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "9",
+        "9",
+        "8",
+        "32-35",
+        "36"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Panionios",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "8",
+        "11",
+        "7",
+        "37-33",
+        "35"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "OFI",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "9",
+        "6",
+        "11",
+        "32-35",
+        "33"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Aris",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "7",
+        "8",
+        "11",
+        "25-34",
+        "29"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Egaleo",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "7",
+        "5",
+        "14",
+        "27-46",
+        "26"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Akratitos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "6",
+        "5",
+        "15",
+        "29-41",
+        "23"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Ionikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "5",
+        "7",
+        "14",
+        "21-47",
+        "22"
+       ]
+      },
+      {
+       "pos": 13,
+       "team": "Panachaiki",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "3",
+        "9",
+        "14",
+        "26-55",
+        "18"
+       ]
+      },
+      {
+       "pos": 14,
+       "team": "Ethnikos Asteras",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "4",
+        "5",
+        "17",
+        "19-44",
+        "17"
+       ]
+      }
+     ]
+    }
+   ]
   },
   "volley": {
    "matches": [],
@@ -2681,7 +3092,179 @@
     "league": "5η θέση",
     "record": "14–10 (Ν–Η)",
     "source": "https://el.wikipedia.org/wiki/%CE%A0.%CE%91.%CE%9F.%CE%9A._%28%CF%80%CE%B5%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD%29"
-   }
+   },
+   "standings": [
+    {
+     "title": "Πρωτάθλημα πετοσφαίρισης Α1 εθνικής κατηγορίας ανδρών",
+     "url": "https://el.wikipedia.org/wiki/%CE%A0%CF%81%CF%89%CF%84%CE%AC%CE%B8%CE%BB%CE%B7%CE%BC%CE%B1_%CF%80%CE%B5%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%911_%CE%B5%CE%B8%CE%BD%CE%B9%CE%BA%CE%AE%CF%82_%CE%BA%CE%B1%CF%84%CE%B7%CE%B3%CE%BF%CF%81%CE%AF%CE%B1%CF%82_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD_2001-2002",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Η",
+      "Σετ",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Ολυμπιακός",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "19",
+        "3",
+        "61-16",
+        "57"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Παναθηναϊκός Α.Ο.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "19",
+        "3",
+        "61-23",
+        "56"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Γ.Σ. Ηρακλής Θεσσαλονίκης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "19",
+        "3",
+        "61-22",
+        "55"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Α.Ο. Ορεστιάδας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "14",
+        "8",
+        "54-34",
+        "45"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "22",
+        "14",
+        "8",
+        "51-34",
+        "42"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Πανελλήνιος Γ.Σ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "11",
+        "11",
+        "41-41",
+        "33"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Α.Σ. Άρης Θεσσαλονίκης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "11",
+        "11",
+        "39-43",
+        "29"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Α.Ε.Π. Ολυμπιάς Πατρών",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "8",
+        "14",
+        "34-50",
+        "24"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Α.Ε. Νίκαιας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "8",
+        "14",
+        "32-47",
+        "24"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Ο.ΠΕ. Ρεθύμνου",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "4",
+        "18",
+        "23-57",
+        "15"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Α.Ε.Κ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "2",
+        "20",
+        "19-63",
+        "8"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Α.Σ. Ιωνικός Νέας Φιλαδέλφειας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "3",
+        "19",
+        "16-62",
+        "8"
+       ]
+      }
+     ]
+    }
+   ]
   },
   "football-women": {
    "matches": [],
@@ -2690,6 +3273,181 @@
     "record": "15–1–1 (Ν–Ι–Η)",
     "source": "https://en.wikipedia.org/wiki/PAOK_FC_%28women%29"
    }
+  },
+  "waterpolo": {
+   "matches": [],
+   "standings": [
+    {
+     "title": "Α1 Κατηγορία υδατοσφαίρισης ανδρών",
+     "url": "https://el.wikipedia.org/wiki/%CE%911_%CE%9A%CE%B1%CF%84%CE%B7%CE%B3%CE%BF%CF%81%CE%AF%CE%B1_%CF%85%CE%B4%CE%B1%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD_2001-2002",
+     "columns": [
+      "Ν",
+      "Ι",
+      "Η",
+      "Γκολ",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Ολυμπιακός",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "0",
+        "0",
+        "320−144-",
+        "44"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Βουλιαγμένη",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "19",
+        "1",
+        "2",
+        "263−144-",
+        "39"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Εθνικός Πειρ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "14",
+        "3",
+        "5",
+        "199−176-",
+        "31"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Παναθηναϊκός",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "10",
+        "4",
+        "8",
+        "245−209-",
+        "24"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Ν.Ο. Χανίων",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "10",
+        "2",
+        "10",
+        "188−200-",
+        "22"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Γλυφάδα",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "10",
+        "1",
+        "11",
+        "205−204-",
+        "21"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Ν.Ο. Χίου",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "9",
+        "3",
+        "10",
+        "206−220-",
+        "21"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "9",
+        "2",
+        "11",
+        "219−205-",
+        "20"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Παλαιό Φάληρο",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "9",
+        "2",
+        "11",
+        "225−259-",
+        "20"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Ν.Ο. Πατρών",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "8",
+        "0",
+        "14",
+        "203−207-",
+        "16"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Νηρέας Χαλ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "2",
+        "1",
+        "19",
+        "167−294-",
+        "5"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Άρης Θεσ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "0",
+        "1",
+        "21",
+        "175−347-",
+        "1"
+       ]
+      }
+     ]
+    }
+   ]
   }
  },
  "updated": "2026-11-22T21:51+02:00"

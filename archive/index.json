@@ -195,7 +195,7 @@
    "sections": {
     "football": {
      "matches": 56,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
@@ -230,13 +230,23 @@
     },
     "volley-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -245,7 +255,7 @@
    "sections": {
     "football": {
      "matches": 52,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
@@ -280,13 +290,28 @@
     },
     "volley-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "basketball-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -295,12 +320,12 @@
    "sections": {
     "football": {
      "matches": 58,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 29,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
@@ -320,13 +345,28 @@
     },
     "volley-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "basketball-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -335,12 +375,12 @@
    "sections": {
     "football": {
      "matches": 45,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 31,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
@@ -360,13 +400,23 @@
     },
     "volley-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -375,12 +425,12 @@
    "sections": {
     "football": {
      "matches": 61,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 24,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
@@ -400,13 +450,23 @@
     },
     "volley-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -415,12 +475,12 @@
    "sections": {
     "football": {
      "matches": 53,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 25,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
@@ -445,8 +505,13 @@
     },
     "football-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -455,12 +520,12 @@
    "sections": {
     "football": {
      "matches": 40,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 26,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
@@ -480,13 +545,18 @@
     },
     "volley-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -495,12 +565,12 @@
    "sections": {
     "football": {
      "matches": 52,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 28,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "handball": {
@@ -515,7 +585,7 @@
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley-women": {
@@ -525,8 +595,18 @@
     },
     "football-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "basketball-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -535,12 +615,12 @@
    "sections": {
     "football": {
      "matches": 44,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 34,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "handball": {
@@ -555,7 +635,7 @@
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley-women": {
@@ -565,8 +645,18 @@
     },
     "football-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "basketball-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -575,12 +665,12 @@
    "sections": {
     "football": {
      "matches": 58,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 30,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "handball": {
@@ -595,7 +685,7 @@
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley-women": {
@@ -605,8 +695,18 @@
     },
     "football-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "basketball-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -615,12 +715,12 @@
    "sections": {
     "football": {
      "matches": 57,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 45,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "handball": {
@@ -635,7 +735,7 @@
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley-women": {
@@ -645,8 +745,18 @@
     },
     "football-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "basketball-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -655,12 +765,12 @@
    "sections": {
     "football": {
      "matches": 50,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 52,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "handball-women": {
@@ -670,7 +780,7 @@
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley-women": {
@@ -680,13 +790,23 @@
     },
     "handball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "basketball-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -695,12 +815,12 @@
    "sections": {
     "football": {
      "matches": 62,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 45,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "handball": {
@@ -715,7 +835,7 @@
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley-women": {
@@ -725,8 +845,18 @@
     },
     "football-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "basketball-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -735,7 +865,7 @@
    "sections": {
     "football": {
      "matches": 48,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
@@ -755,7 +885,7 @@
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley-women": {
@@ -765,8 +895,13 @@
     },
     "football-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -775,7 +910,7 @@
    "sections": {
     "football": {
      "matches": 51,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
@@ -795,7 +930,7 @@
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley-women": {
@@ -805,8 +940,18 @@
     },
     "football-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "basketball-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -815,12 +960,12 @@
    "sections": {
     "football": {
      "matches": 54,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 42,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "handball": {
@@ -835,7 +980,7 @@
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley-women": {
@@ -845,8 +990,18 @@
     },
     "football-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "basketball-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -855,12 +1010,12 @@
    "sections": {
     "football": {
      "matches": 43,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 28,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "handball": {
@@ -875,13 +1030,18 @@
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -890,12 +1050,12 @@
    "sections": {
     "football": {
      "matches": 42,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 28,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "handball": {
@@ -910,13 +1070,23 @@
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -925,12 +1095,12 @@
    "sections": {
     "football": {
      "matches": 31,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 26,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "handball": {
@@ -940,13 +1110,23 @@
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -955,12 +1135,12 @@
    "sections": {
     "football": {
      "matches": 34,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 41,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "handball": {
@@ -970,13 +1150,23 @@
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football-women": {
      "matches": 0,
      "standings": false,
      "summary": true
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -985,7 +1175,7 @@
    "sections": {
     "basketball": {
      "matches": 29,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "handball": {
@@ -995,18 +1185,28 @@
     },
     "football": {
      "matches": 37,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -1015,7 +1215,7 @@
    "sections": {
     "basketball": {
      "matches": 42,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "handball": {
@@ -1025,18 +1225,28 @@
     },
     "football": {
      "matches": 38,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football-women": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -1045,7 +1255,7 @@
    "sections": {
     "basketball": {
      "matches": 29,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "handball": {
@@ -1055,18 +1265,33 @@
     },
     "football": {
      "matches": 40,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football-women": {
      "matches": 0,
      "standings": false,
      "summary": true
+    },
+    "volley-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "waterpolo-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -1075,7 +1300,7 @@
    "sections": {
     "basketball": {
      "matches": 28,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "handball": {
@@ -1085,18 +1310,23 @@
     },
     "football": {
      "matches": 47,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football-women": {
      "matches": 0,
      "standings": false,
      "summary": true
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -1105,7 +1335,7 @@
    "sections": {
     "basketball": {
      "matches": 32,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "handball": {
@@ -1115,18 +1345,23 @@
     },
     "football": {
      "matches": 42,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football-women": {
      "matches": 0,
      "standings": false,
      "summary": true
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -1135,23 +1370,28 @@
    "sections": {
     "basketball": {
      "matches": 31,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football": {
      "matches": 53,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "handball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -1160,17 +1400,17 @@
    "sections": {
     "basketball": {
      "matches": 14,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football": {
      "matches": 44,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     }
    }
@@ -1180,17 +1420,17 @@
    "sections": {
     "football": {
      "matches": 39,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     }
    }
@@ -1200,18 +1440,23 @@
    "sections": {
     "football": {
      "matches": 48,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "waterpolo-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -1220,17 +1465,17 @@
    "sections": {
     "football": {
      "matches": 38,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     }
    }
@@ -1240,17 +1485,17 @@
    "sections": {
     "basketball": {
      "matches": 8,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football": {
      "matches": 46,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     }
    }
@@ -1260,17 +1505,17 @@
    "sections": {
     "basketball": {
      "matches": 35,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football": {
      "matches": 39,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     }
    }
@@ -1280,18 +1525,23 @@
    "sections": {
     "basketball": {
      "matches": 38,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football": {
      "matches": 42,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "waterpolo": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -1300,12 +1550,12 @@
    "sections": {
     "basketball": {
      "matches": 22,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "football": {
      "matches": 41,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
@@ -1317,6 +1567,11 @@
      "matches": 0,
      "standings": false,
      "summary": true
+    },
+    "waterpolo-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -1325,17 +1580,17 @@
    "sections": {
     "football": {
      "matches": 52,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley-women": {
@@ -1350,17 +1605,17 @@
    "sections": {
     "football": {
      "matches": 47,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley-women": {
@@ -1375,17 +1630,17 @@
    "sections": {
     "football": {
      "matches": 43,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley-women": {
@@ -1400,17 +1655,17 @@
    "sections": {
     "football": {
      "matches": 40,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     }
    }
@@ -1420,17 +1675,17 @@
    "sections": {
     "football": {
      "matches": 33,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley-women": {
@@ -1445,17 +1700,17 @@
    "sections": {
     "football": {
      "matches": 33,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley-women": {
@@ -1470,17 +1725,17 @@
    "sections": {
     "football": {
      "matches": 34,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley-women": {
@@ -1495,17 +1750,17 @@
    "sections": {
     "football": {
      "matches": 40,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     }
    }
@@ -1515,17 +1770,17 @@
    "sections": {
     "football": {
      "matches": 39,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     }
    }
@@ -1535,17 +1790,17 @@
    "sections": {
     "football": {
      "matches": 48,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     }
    }
@@ -1555,17 +1810,17 @@
    "sections": {
     "football": {
      "matches": 43,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     }
    }
@@ -1575,17 +1830,17 @@
    "sections": {
     "football": {
      "matches": 43,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     }
    }
@@ -1595,13 +1850,18 @@
    "sections": {
     "football": {
      "matches": 41,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "volley": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -1610,17 +1870,17 @@
    "sections": {
     "football": {
      "matches": 39,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     }
    }
@@ -1630,12 +1890,12 @@
    "sections": {
     "football": {
      "matches": 44,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     }
    }
@@ -1645,12 +1905,12 @@
    "sections": {
     "football": {
      "matches": 43,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     }
    }
@@ -1660,12 +1920,12 @@
    "sections": {
     "football": {
      "matches": 35,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     }
    }
@@ -1675,12 +1935,12 @@
    "sections": {
     "football": {
      "matches": 39,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     }
    }
@@ -1690,12 +1950,12 @@
    "sections": {
     "football": {
      "matches": 46,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     }
    }
@@ -1705,12 +1965,12 @@
    "sections": {
     "football": {
      "matches": 42,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     }
    }
@@ -1720,12 +1980,12 @@
    "sections": {
     "football": {
      "matches": 39,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     }
    }
@@ -1735,17 +1995,17 @@
    "sections": {
     "football": {
      "matches": 41,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "volley": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
     }
    }
@@ -1755,13 +2015,18 @@
    "sections": {
     "football": {
      "matches": 39,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "basketball-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -1770,13 +2035,18 @@
    "sections": {
     "football": {
      "matches": 36,
-     "standings": false,
+     "standings": true,
      "summary": true
     },
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "basketball-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -1785,8 +2055,18 @@
    "sections": {
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "football": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "basketball-women": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -1795,8 +2075,13 @@
    "sections": {
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "football": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -1805,8 +2090,13 @@
    "sections": {
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "football": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -1815,8 +2105,63 @@
    "sections": {
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "football": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    }
+   }
+  },
+  {
+   "season": "1963-64",
+   "sections": {
+    "football": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    }
+   }
+  },
+  {
+   "season": "1962-63",
+   "sections": {
+    "football": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    }
+   }
+  },
+  {
+   "season": "1961-62",
+   "sections": {
+    "football": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "basketball": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    }
+   }
+  },
+  {
+   "season": "1960-61",
+   "sections": {
+    "football": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    },
+    "basketball": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -1825,8 +2170,13 @@
    "sections": {
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    },
+    "football": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   },
@@ -1835,8 +2185,38 @@
    "sections": {
     "basketball": {
      "matches": 0,
-     "standings": false,
+     "standings": true,
      "summary": true
+    }
+   }
+  },
+  {
+   "season": "1957-58",
+   "sections": {
+    "basketball": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    }
+   }
+  },
+  {
+   "season": "1956-57",
+   "sections": {
+    "basketball": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
+    }
+   }
+  },
+  {
+   "season": "1953-54",
+   "sections": {
+    "basketball": {
+     "matches": 0,
+     "standings": true,
+     "summary": false
     }
    }
   }

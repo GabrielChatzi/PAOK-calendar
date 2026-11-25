@@ -1643,7 +1643,276 @@
     "topscorer": "Frantzeskos (17)",
     "source": "https://en.wikipedia.org/wiki/1997%E2%80%9398_PAOK_FC_season"
    },
-   "backfilled": true
+   "backfilled": true,
+   "standings": [
+    {
+     "title": "Alpha Ethniki",
+     "url": "https://en.wikipedia.org/wiki/1997%E2%80%9398_Alpha_Ethniki",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Ι",
+      "Η",
+      "Γκολ",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Olympiacos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "29",
+        "1",
+        "4",
+        "88-27",
+        "88"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Panathinaikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "28",
+        "1",
+        "5",
+        "90-24",
+        "85"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "AEK Athens",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "22",
+        "8",
+        "4",
+        "61-30",
+        "74"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "34",
+        "21",
+        "7",
+        "6",
+        "74-41",
+        "70"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Ionikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "18",
+        "8",
+        "8",
+        "46-31",
+        "62"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Iraklis",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "14",
+        "9",
+        "11",
+        "49-45",
+        "51"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "OFI",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "15",
+        "4",
+        "15",
+        "45-53",
+        "49"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Skoda Xanthi",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "13",
+        "6",
+        "15",
+        "52-52",
+        "45"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Veria",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "12",
+        "6",
+        "16",
+        "38-48",
+        "42"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Apollon Athens",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "10",
+        "6",
+        "18",
+        "37-51",
+        "36"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Panionios",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "10",
+        "6",
+        "18",
+        "41-54",
+        "36"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Paniliakos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "9",
+        "9",
+        "16",
+        "41-54",
+        "36"
+       ]
+      },
+      {
+       "pos": 13,
+       "team": "Kavala",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "10",
+        "5",
+        "19",
+        "40-58",
+        "35"
+       ]
+      },
+      {
+       "pos": 14,
+       "team": "Proodeftiki",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "9",
+        "7",
+        "18",
+        "35-57",
+        "34"
+       ]
+      },
+      {
+       "pos": 15,
+       "team": "Ethnikos Piraeus",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "10",
+        "3",
+        "21",
+        "27-51",
+        "33"
+       ]
+      },
+      {
+       "pos": 16,
+       "team": "Panachaiki",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "9",
+        "5",
+        "20",
+        "29-62",
+        "32"
+       ]
+      },
+      {
+       "pos": 17,
+       "team": "Kalamata",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "7",
+        "8",
+        "19",
+        "27-50",
+        "29"
+       ]
+      },
+      {
+       "pos": 18,
+       "team": "Athinaikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "6",
+        "9",
+        "19",
+        "23-55",
+        "27"
+       ]
+      }
+     ]
+    }
+   ]
   },
   "basketball": {
    "matches": [],
@@ -1660,7 +1929,205 @@
      }
     ],
     "source": "https://en.wikipedia.org/wiki/PAOK_BC"
-   }
+   },
+   "standings": [
+    {
+     "title": "Πρωτάθλημα καλαθοσφαίρισης Α1 εθνικής κατηγορίας ανδρών",
+     "url": "https://el.wikipedia.org/wiki/%CE%A0%CF%81%CF%89%CF%84%CE%AC%CE%B8%CE%BB%CE%B7%CE%BC%CE%B1_%CE%BA%CE%B1%CE%BB%CE%B1%CE%B8%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%911_%CE%B5%CE%B8%CE%BD%CE%B9%CE%BA%CE%AE%CF%82_%CE%BA%CE%B1%CF%84%CE%B7%CE%B3%CE%BF%CF%81%CE%AF%CE%B1%CF%82_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD_1997-1998",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Η",
+      "Πόντοι",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Παναθηναϊκός",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "21",
+        "5",
+        "2004-1658",
+        "47"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Ολυμπιακός",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "21",
+        "5",
+        "1918-1657",
+        "47"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "26",
+        "20",
+        "6",
+        "1968-1703",
+        "46"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "ΑΕΚ",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "19",
+        "7",
+        "1825-1631",
+        "45"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Πανιώνιος",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "16",
+        "10",
+        "2019-1982",
+        "42"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Περιστέρι",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "13",
+        "13",
+        "1790-1744",
+        "39"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Απόλλων Πατρών",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "13",
+        "13",
+        "2098-2091",
+        "39"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Ηράκλειο",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "13",
+        "13",
+        "1928-1950",
+        "39"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Άρης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "13",
+        "13",
+        "1842-1860",
+        "39"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Ηρακλής",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "10",
+        "16",
+        "1813-1899",
+        "36"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Παπάγου",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "7",
+        "19",
+        "1711-1904",
+        "33"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Σπόρτιγκ",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "7",
+        "19",
+        "1661-1934",
+        "33"
+       ]
+      },
+      {
+       "pos": 13,
+       "team": "Δάφνη",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "6",
+        "20",
+        "1738-1943",
+        "32"
+       ]
+      },
+      {
+       "pos": 14,
+       "team": "Λάρισα",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "3",
+        "23",
+        "1621-1980",
+        "29"
+       ]
+      }
+     ]
+    }
+   ]
   },
   "volley": {
    "matches": [],
@@ -1668,7 +2135,255 @@
     "league": "9η θέση",
     "record": "7–15 (Ν–Η)",
     "source": "https://el.wikipedia.org/wiki/%CE%A0.%CE%91.%CE%9F.%CE%9A._%28%CF%80%CE%B5%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD%29"
-   }
+   },
+   "standings": [
+    {
+     "title": "Πρωτάθλημα πετοσφαίρισης Α1 εθνικής κατηγορίας ανδρών",
+     "url": "https://el.wikipedia.org/wiki/%CE%A0%CF%81%CF%89%CF%84%CE%AC%CE%B8%CE%BB%CE%B7%CE%BC%CE%B1_%CF%80%CE%B5%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%911_%CE%B5%CE%B8%CE%BD%CE%B9%CE%BA%CE%AE%CF%82_%CE%BA%CE%B1%CF%84%CE%B7%CE%B3%CE%BF%CF%81%CE%AF%CE%B1%CF%82_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD_1997-1998",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Η",
+      "Σετ",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Α.Ο. Ορεστιάδας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "19",
+        "3",
+        "59-15",
+        "41"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Ολυμπιακός Σ.Φ.Π.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "19",
+        "3",
+        "61-15",
+        "41"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Άρης Θεσσαλονίκης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "19",
+        "3",
+        "57-18",
+        "41"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Παναθηναϊκός Α.Ο.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "15",
+        "7",
+        "47-27",
+        "37"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Α.Ε.Κ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "14",
+        "8",
+        "49-27",
+        "36"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Ηρακλής Θεσσαλονίκης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "14",
+        "8",
+        "47-35",
+        "36"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Κτησιφών Παιανίας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "9",
+        "13",
+        "35-42",
+        "31"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Φιλία Ηλιούπολης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "9",
+        "13",
+        "33-50",
+        "30"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "22",
+        "7",
+        "15",
+        "29-51",
+        "29"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Μ.Γ.Σ. Α.Ε. Κομοτηνής",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "4",
+        "18",
+        "25-59",
+        "26"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Πανελλήνιος Γ.Σ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "2",
+        "20",
+        "16-63",
+        "24"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Μ.Γ.Σ. Εθνικός Αλεξανδρούπολης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "1",
+        "21",
+        "8-64",
+        "23"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "waterpolo-women": {
+   "matches": [],
+   "standings": [
+    {
+     "title": "Α΄ Κατηγορία υδατοσφαίρισης γυναικών",
+     "url": "https://el.wikipedia.org/wiki/%CE%91%CE%84_%CE%9A%CE%B1%CF%84%CE%B7%CE%B3%CE%BF%CF%81%CE%AF%CE%B1_%CF%85%CE%B4%CE%B1%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%B3%CF%85%CE%BD%CE%B1%CE%B9%CE%BA%CF%8E%CE%BD_1997-98",
+     "columns": [
+      "Γκολ",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "ΑΝΟ Γλυφάδας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "",
+        "18"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "ΝΟ Βουλιαγμένης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "",
+        "16"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Ολυμπιακός",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "",
+        "14"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Εθνικός Πειραιώς",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "",
+        "8"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "ΝΟ Χίου",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "",
+        "4"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "",
+        "0"
+       ]
+      }
+     ]
+    }
+   ]
   }
  },
  "updated": "2026-11-22T21:51+02:00"

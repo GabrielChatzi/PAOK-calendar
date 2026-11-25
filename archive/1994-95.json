@@ -613,7 +613,205 @@
      }
     ],
     "source": "https://en.wikipedia.org/wiki/PAOK_BC"
-   }
+   },
+   "standings": [
+    {
+     "title": "Πρωτάθλημα καλαθοσφαίρισης Α1 εθνικής κατηγορίας ανδρών",
+     "url": "https://el.wikipedia.org/wiki/%CE%A0%CF%81%CF%89%CF%84%CE%AC%CE%B8%CE%BB%CE%B7%CE%BC%CE%B1_%CE%BA%CE%B1%CE%BB%CE%B1%CE%B8%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%911_%CE%B5%CE%B8%CE%BD%CE%B9%CE%BA%CE%AE%CF%82_%CE%BA%CE%B1%CF%84%CE%B7%CE%B3%CE%BF%CF%81%CE%AF%CE%B1%CF%82_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD_1994-1995",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Η",
+      "Πόντοι",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Ολυμπιακός",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "24",
+        "2",
+        "2196-1669",
+        "50"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Παναθηναϊκός",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "24",
+        "2",
+        "2246-1846",
+        "50"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "26",
+        "21",
+        "5",
+        "1983-1793",
+        "47"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Ηρακλής Ασπίς",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "20",
+        "6",
+        "2005-1796",
+        "46"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Πανιώνιος Chipita",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "15",
+        "11",
+        "1928-1910",
+        "41"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Άρης Intersalonica",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "11",
+        "15",
+        "2065-2015",
+        "37"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Σπόρτιγκ Soulis",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "11",
+        "15",
+        "2045-2160",
+        "37"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Α.Ε.Κ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "10",
+        "16",
+        "1962-2067",
+        "36"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Περιστέρι Nikas",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "9",
+        "17",
+        "1940-2022",
+        "35"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Γ.Σ. Λάρισας Αγροτική",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "9",
+        "17",
+        "1915-2037",
+        "35"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Απόλλων Πατρών Dur",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "9",
+        "17",
+        "1936-2081",
+        "35"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Αμπελόκηποι Afisorama",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "9",
+        "17",
+        "2173-2387",
+        "35"
+       ]
+      },
+      {
+       "pos": 13,
+       "team": "Παγκράτι Robbe di Kappa",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "6",
+        "20",
+        "1784-2047",
+        "32"
+       ]
+      },
+      {
+       "pos": 14,
+       "team": "Δάφνη",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "4",
+        "22",
+        "1790-2138",
+        "30"
+       ]
+      }
+     ]
+    }
+   ]
   },
   "football": {
    "matches": [
@@ -1798,7 +1996,276 @@
     "topscorer": "Zouboulis (9)",
     "source": "https://en.wikipedia.org/wiki/1994%E2%80%9395_PAOK_FC_season"
    },
-   "backfilled": true
+   "backfilled": true,
+   "standings": [
+    {
+     "title": "Alpha Ethniki",
+     "url": "https://en.wikipedia.org/wiki/1994%E2%80%9395_Alpha_Ethniki",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Ι",
+      "Η",
+      "Γκολ",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Panathinaikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "26",
+        "5",
+        "3",
+        "83-21",
+        "83"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Olympiacos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "20",
+        "7",
+        "7",
+        "69-31",
+        "67"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "34",
+        "20",
+        "5",
+        "9",
+        "55-29",
+        "65"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Apollon Athens",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "20",
+        "3",
+        "11",
+        "61-37",
+        "63"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "AEK Athens",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "17",
+        "11",
+        "6",
+        "61-33",
+        "62"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Iraklis",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "18",
+        "8",
+        "8",
+        "55-36",
+        "62"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Aris",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "19",
+        "5",
+        "10",
+        "46-34",
+        "62"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Skoda Xanthi",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "14",
+        "8",
+        "12",
+        "52-55",
+        "50"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "OFI",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "15",
+        "4",
+        "15",
+        "40-38",
+        "49"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Edessaikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "13",
+        "3",
+        "18",
+        "45-54",
+        "42"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "AEL",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "11",
+        "7",
+        "16",
+        "41-46",
+        "40"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Athinaikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "10",
+        "10",
+        "14",
+        "29-35",
+        "40"
+       ]
+      },
+      {
+       "pos": 13,
+       "team": "Ethnikos Piraeus",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "10",
+        "9",
+        "15",
+        "38-48",
+        "39"
+       ]
+      },
+      {
+       "pos": 14,
+       "team": "Panionios",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "10",
+        "6",
+        "18",
+        "35-56",
+        "36"
+       ]
+      },
+      {
+       "pos": 15,
+       "team": "Ionikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "9",
+        "7",
+        "18",
+        "26-48",
+        "34"
+       ]
+      },
+      {
+       "pos": 16,
+       "team": "Doxa Drama",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "8",
+        "5",
+        "21",
+        "28-71",
+        "29"
+       ]
+      },
+      {
+       "pos": 17,
+       "team": "Levadiakos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "5",
+        "5",
+        "24",
+        "23-67",
+        "20"
+       ]
+      },
+      {
+       "pos": 18,
+       "team": "Kavala",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "5",
+        "4",
+        "25",
+        "27-75",
+        "19"
+       ]
+      }
+     ]
+    }
+   ]
   },
   "volley": {
    "matches": [],
@@ -1806,7 +2273,179 @@
     "league": "8η θέση",
     "record": "12–12 (Ν–Η)",
     "source": "https://el.wikipedia.org/wiki/%CE%A0.%CE%91.%CE%9F.%CE%9A._%28%CF%80%CE%B5%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD%29"
-   }
+   },
+   "standings": [
+    {
+     "title": "Πρωτάθλημα πετοσφαίρισης Α1 εθνικής κατηγορίας ανδρών",
+     "url": "https://el.wikipedia.org/wiki/%CE%A0%CF%81%CF%89%CF%84%CE%AC%CE%B8%CE%BB%CE%B7%CE%BC%CE%B1_%CF%80%CE%B5%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%911_%CE%B5%CE%B8%CE%BD%CE%B9%CE%BA%CE%AE%CF%82_%CE%BA%CE%B1%CF%84%CE%B7%CE%B3%CE%BF%CF%81%CE%AF%CE%B1%CF%82_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD_1994-1995",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Η",
+      "Σετ",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Παναθηναϊκός Α.Ο.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "19",
+        "3",
+        "60-18",
+        "41"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Α.Ο. Ορεστιάδας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "19",
+        "3",
+        "61-21",
+        "41"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Ολυμπιακός Σ.Φ.Π.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "18",
+        "4",
+        "59-23",
+        "40"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Α.Σ. Άρης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "15",
+        "7",
+        "52-31",
+        "37"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Α.Σ. Κτησιφών Παιανίας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "13",
+        "9",
+        "48-34",
+        "35"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "22",
+        "12",
+        "10",
+        "47-40",
+        "34"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Γ.Σ. Ηρακλής",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "10",
+        "12",
+        "42-46",
+        "32"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Α.Γ.Σ. Ιωαννίνων",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "9",
+        "13",
+        "34-45",
+        "31"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Μ.Γ.Σ. Εθνικός Αλεξανδρούπολης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "7",
+        "15",
+        "25-51",
+        "29"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Κ.Α.Σ.Θ. Έσπερος Βυζαντίου",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "6",
+        "16",
+        "31-55",
+        "28"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Α.Ε.Κ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "3",
+        "19",
+        "15-58",
+        "25"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Α.Σ. Ιωνικός Νέας Φιλαδέλφειας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "1",
+        "21",
+        "12-64",
+        "23"
+       ]
+      }
+     ]
+    }
+   ]
   }
  },
  "updated": "2026-11-22T21:51+02:00"

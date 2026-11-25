@@ -1,0 +1,89 @@
+{
+ "season": "1953-54",
+ "sections": {
+  "basketball": {
+   "matches": [],
+   "standings": [
+    {
+     "title": "Πανελλήνιο πρωτάθλημα καλαθοσφαίρισης ανδρών",
+     "url": "https://el.wikipedia.org/wiki/%CE%A0%CE%B1%CE%BD%CE%B5%CE%BB%CE%BB%CE%AE%CE%BD%CE%B9%CE%BF_%CF%80%CF%81%CF%89%CF%84%CE%AC%CE%B8%CE%BB%CE%B7%CE%BC%CE%B1_%CE%BA%CE%B1%CE%BB%CE%B1%CE%B8%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD_1953-1954",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Η",
+      "Πόντοι",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Παναθηναϊκός",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "4",
+        "4",
+        "0",
+        "316−184-",
+        "12"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Πανελλήνιος",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "4",
+        "3",
+        "1",
+        "303−232-",
+        "10"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "4",
+        "2",
+        "2",
+        "240−267-",
+        "8"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "ΕΑ Πατρών",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "4",
+        "1",
+        "3",
+        "239−276-",
+        "6"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Διαγόρας Ρόδου",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "4",
+        "0",
+        "4",
+        "154−293-",
+        "4"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

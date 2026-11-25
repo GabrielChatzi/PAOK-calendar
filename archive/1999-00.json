@@ -242,7 +242,205 @@
      }
     ],
     "source": "https://en.wikipedia.org/wiki/PAOK_BC"
-   }
+   },
+   "standings": [
+    {
+     "title": "Πρωτάθλημα καλαθοσφαίρισης Α1 εθνικής κατηγορίας ανδρών",
+     "url": "https://el.wikipedia.org/wiki/%CE%A0%CF%81%CF%89%CF%84%CE%AC%CE%B8%CE%BB%CE%B7%CE%BC%CE%B1_%CE%BA%CE%B1%CE%BB%CE%B1%CE%B8%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%911_%CE%B5%CE%B8%CE%BD%CE%B9%CE%BA%CE%AE%CF%82_%CE%BA%CE%B1%CF%84%CE%B7%CE%B3%CE%BF%CF%81%CE%AF%CE%B1%CF%82_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD_1999-2000",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Η",
+      "Πόντοι",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Ολυμπιακός",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "21",
+        "5",
+        "1869-1642",
+        "47"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Παναθηναϊκός",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "21",
+        "5",
+        "1990-1681",
+        "47"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Α.Ε.Κ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "19",
+        "7",
+        "1938-1740",
+        "45"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "26",
+        "16",
+        "10",
+        "1916-1813",
+        "42"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Περιστέρι Ράδιο Κορασίδη",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "15",
+        "11",
+        "1935-1880",
+        "41"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Πανιώνιος Sprider",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "14",
+        "12",
+        "1920-1891",
+        "40"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Ηρακλής Rubicon",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "14",
+        "12",
+        "1882-1789",
+        "40"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Άρης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "13",
+        "13",
+        "1847-1850",
+        "39"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Νήαρ Ηστ Klimatair",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "11",
+        "15",
+        "1992-2009",
+        "37"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Μαρούσι",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "11",
+        "15",
+        "1823-1873",
+        "37"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Ηράκλειο MinoanLines",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "11",
+        "15",
+        "2008-1986",
+        "37"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Δάφνη",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "8",
+        "18",
+        "1829-2014",
+        "34"
+       ]
+      },
+      {
+       "pos": 13,
+       "team": "Έσπερος Extral",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "5",
+        "21",
+        "1783-2110",
+        "31"
+       ]
+      },
+      {
+       "pos": 14,
+       "team": "Σπόρτιγκ",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "3",
+        "23",
+        "1719-2083",
+        "29"
+       ]
+      }
+     ]
+    }
+   ]
   },
   "football": {
    "matches": [
@@ -1728,7 +1926,276 @@
     "topscorer": "Nikolaos Frousos (11) Dimitris Nalitzis (11)",
     "source": "https://en.wikipedia.org/wiki/1999%E2%80%932000_PAOK_FC_season"
    },
-   "backfilled": true
+   "backfilled": true,
+   "standings": [
+    {
+     "title": "Alpha Ethniki",
+     "url": "https://en.wikipedia.org/wiki/1999%E2%80%932000_Alpha_Ethniki",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Ι",
+      "Η",
+      "Γκολ",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Olympiacos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "30",
+        "2",
+        "2",
+        "86-18",
+        "92"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Panathinaikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "28",
+        "4",
+        "2",
+        "92-24",
+        "88"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "AEK Athens",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "20",
+        "6",
+        "8",
+        "69-39",
+        "66"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "OFI",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "18",
+        "9",
+        "7",
+        "60-44",
+        "63"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "34",
+        "15",
+        "10",
+        "9",
+        "64-44",
+        "55"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Iraklis",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "15",
+        "5",
+        "14",
+        "58-58",
+        "50"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Aris",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "14",
+        "8",
+        "12",
+        "50-46",
+        "50"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Panionios",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "14",
+        "3",
+        "17",
+        "50-63",
+        "45"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Kalamata",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "12",
+        "8",
+        "14",
+        "41-57",
+        "44"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Ionikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "10",
+        "11",
+        "13",
+        "40-50",
+        "41"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Skoda Xanthi",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "11",
+        "8",
+        "15",
+        "36-43",
+        "41"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Ethnikos Asteras",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "12",
+        "5",
+        "17",
+        "33-50",
+        "41"
+       ]
+      },
+      {
+       "pos": 13,
+       "team": "Paniliakos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "12",
+        "4",
+        "18",
+        "44-48",
+        "40"
+       ]
+      },
+      {
+       "pos": 14,
+       "team": "Panachaiki",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "9",
+        "12",
+        "13",
+        "37-47",
+        "39"
+       ]
+      },
+      {
+       "pos": 15,
+       "team": "Kavala",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "8",
+        "6",
+        "20",
+        "33-66",
+        "30"
+       ]
+      },
+      {
+       "pos": 16,
+       "team": "Proodeftiki",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "7",
+        "7",
+        "20",
+        "27-55",
+        "28"
+       ]
+      },
+      {
+       "pos": 17,
+       "team": "Apollon Athens",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "6",
+        "6",
+        "22",
+        "30-59",
+        "24"
+       ]
+      },
+      {
+       "pos": 18,
+       "team": "Trikala",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "5",
+        "6",
+        "23",
+        "35-74",
+        "21"
+       ]
+      }
+     ]
+    }
+   ]
   },
   "volley": {
    "matches": [],
@@ -1736,7 +2203,179 @@
     "league": "4η θέση",
     "record": "13–13 (Ν–Η)",
     "source": "https://el.wikipedia.org/wiki/%CE%A0.%CE%91.%CE%9F.%CE%9A._%28%CF%80%CE%B5%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD%29"
-   }
+   },
+   "standings": [
+    {
+     "title": "Πρωτάθλημα πετοσφαίρισης Α1 εθνικής κατηγορίας ανδρών",
+     "url": "https://el.wikipedia.org/wiki/%CE%A0%CF%81%CF%89%CF%84%CE%AC%CE%B8%CE%BB%CE%B7%CE%BC%CE%B1_%CF%80%CE%B5%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%911_%CE%B5%CE%B8%CE%BD%CE%B9%CE%BA%CE%AE%CF%82_%CE%BA%CE%B1%CF%84%CE%B7%CE%B3%CE%BF%CF%81%CE%AF%CE%B1%CF%82_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD_1999-2000",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Η",
+      "Σετ",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Ολυμπιακός Σ.Φ.Π.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "20",
+        "2",
+        "60-14",
+        "42"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Γ.Σ Ηρακλής Θεσσαλονίκης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "17",
+        "5",
+        "54-23",
+        "39"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Πανελλήνιος Γ.Σ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "16",
+        "6",
+        "52-31",
+        "38"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Α.Ο. Ορεστιάδας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "15",
+        "7",
+        "52-28",
+        "37"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Α.Ε.Κ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "15",
+        "7",
+        "50-31",
+        "37"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "22",
+        "11",
+        "11",
+        "44-40",
+        "33"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Παναθηναϊκός Α.Ο.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "9",
+        "13",
+        "40-46",
+        "31"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Ε.Α. Πατρών",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "9",
+        "13",
+        "35-47",
+        "31"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Α.Σ. Άρης Θεσσαλονίκης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "8",
+        "14",
+        "37-51",
+        "30"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Ιωνικός Νίκαιας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "7",
+        "15",
+        "33-56",
+        "29"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Κτησιφών Παιανίας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "5",
+        "17",
+        "24-57",
+        "25"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Φιλία Ηλιούπολης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "0",
+        "22",
+        "9-66",
+        "21"
+       ]
+      }
+     ]
+    }
+   ]
   }
  },
  "updated": "2026-11-22T21:51+02:00"

@@ -1047,7 +1047,220 @@
     ],
     "topscorer": "Kiril Despodov (11 goals)",
     "source": "https://en.wikipedia.org/wiki/2023%E2%80%9324_PAOK_FC_season"
-   }
+   },
+   "standings": [
+    {
+     "title": "Super League Greece",
+     "url": "https://en.wikipedia.org/wiki/2023%E2%80%9324_Super_League_Greece",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Ι",
+      "Η",
+      "Γκολ",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "26",
+        "19",
+        "3",
+        "4",
+        "66-21",
+        "60"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "AEK Athens",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "17",
+        "8",
+        "1",
+        "60-25",
+        "59"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Olympiacos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "18",
+        "3",
+        "5",
+        "58-24",
+        "57"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Panathinaikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "17",
+        "5",
+        "4",
+        "62-21",
+        "56"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Aris",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "12",
+        "6",
+        "8",
+        "39-29",
+        "42"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Lamia",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "9",
+        "7",
+        "10",
+        "35-44",
+        "34"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Asteras Tripolis",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "9",
+        "4",
+        "13",
+        "36-46",
+        "31"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Atromitos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "6",
+        "10",
+        "10",
+        "29-44",
+        "28"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Panserraikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "6",
+        "9",
+        "11",
+        "28-45",
+        "27"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "OFI",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "5",
+        "10",
+        "11",
+        "26-44",
+        "25"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "A.E. Kifisia",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "4",
+        "9",
+        "13",
+        "31-56",
+        "21"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Panetolikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "4",
+        "8",
+        "14",
+        "26-46",
+        "20"
+       ]
+      },
+      {
+       "pos": 13,
+       "team": "Volos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "4",
+        "7",
+        "15",
+        "24-52",
+        "19"
+       ]
+      },
+      {
+       "pos": 14,
+       "team": "PAS Giannina",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "3",
+        "9",
+        "14",
+        "25-48",
+        "18"
+       ]
+      }
+     ]
+    }
+   ]
   },
   "basketball": {
    "matches": [
@@ -1559,7 +1772,166 @@
      }
     ],
     "source": "https://en.wikipedia.org/wiki/PAOK_BC"
-   }
+   },
+   "standings": [
+    {
+     "title": "Πρωτάθλημα καλαθοσφαίρισης ανδρών Basket League",
+     "url": "https://el.wikipedia.org/wiki/%CE%A0%CF%81%CF%89%CF%84%CE%AC%CE%B8%CE%BB%CE%B7%CE%BC%CE%B1_%CE%BA%CE%B1%CE%BB%CE%B1%CE%B8%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD_Basket_League_2023-2024",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Η",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Παναθηναϊκός AKTOR",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "21",
+        "1",
+        "43"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Ολυμπιακός",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "20",
+        "2",
+        "42"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Περιστέρι bwin",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "15",
+        "7",
+        "37"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Προμηθέας Πάτρας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "13",
+        "9",
+        "34"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Άρης Midea",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "12",
+        "10",
+        "34"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Κολοσσός H Hotels Collection",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "9",
+        "13",
+        "31"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "ΑΕΚ Betsson",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "9",
+        "13",
+        "31"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Λαύριο Megabolt",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "8",
+        "14",
+        "30"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "22",
+        "8",
+        "14",
+        "30"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Μαρούσι",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "7",
+        "15",
+        "29"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Καρδίτσα Ιαπωνική",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "7",
+        "15",
+        "29"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Απόλλων Πάτρας Carna",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "3",
+        "19",
+        "25"
+       ]
+      }
+     ]
+    }
+   ]
   },
   "volley": {
    "matches": [
@@ -3394,7 +3766,179 @@
    "summary": {
     "league": "Βόλεϊ Λιγκ, 6η θέση",
     "source": "https://el.wikipedia.org/wiki/%CE%A0.%CE%91.%CE%9F.%CE%9A._%28%CF%80%CE%B5%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7_%CE%B3%CF%85%CE%BD%CE%B1%CE%B9%CE%BA%CF%8E%CE%BD%29"
-   }
+   },
+   "standings": [
+    {
+     "title": "Πρωτάθλημα πετοσφαίρισης γυναικών VolleyLeague",
+     "url": "https://el.wikipedia.org/wiki/%CE%A0%CF%81%CF%89%CF%84%CE%AC%CE%B8%CE%BB%CE%B7%CE%BC%CE%B1_%CF%80%CE%B5%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%B3%CF%85%CE%BD%CE%B1%CE%B9%CE%BA%CF%8E%CE%BD_VolleyLeague_2023-2024",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Η",
+      "Σετ",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Ολυμπιακός Σ.Φ. Πειραιώς",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "20",
+        "2",
+        "63-12",
+        "59"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Παναθηναϊκός Α.Ο.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "18",
+        "4",
+        "57-29",
+        "50"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Α.Ε.Κ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "16",
+        "6",
+        "52-29",
+        "46"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Α.Ο. Θήρας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "14",
+        "8",
+        "53-31",
+        "44"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Α.Σ.ΠΕ. Θέτις Βούλσς",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "8",
+        "14",
+        "39-47",
+        "29"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "22",
+        "10",
+        "12",
+        "35-45",
+        "28"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Ακαδημίες Πρωταθλητών Πεύκων",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "9",
+        "13",
+        "33-43",
+        "28"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Α.Ο. Μαρκοπούλου",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "8",
+        "14",
+        "36-47",
+        "28"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Α.Σ. Άρης Θεσσαλονίης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "9",
+        "13",
+        "38-48",
+        "26"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Ηλυσιακός Α.Ο. Αθηνών",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "9",
+        "13",
+        "34-50",
+        "25"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Α.Ο. Λαμίας 2013",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "7",
+        "15",
+        "28-53",
+        "18"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Απολλώνιος Κερατσινίου",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "4",
+        "18",
+        "26-60",
+        "15"
+       ]
+      }
+     ]
+    }
+   ]
   },
   "football-women": {
    "matches": [],
@@ -3402,7 +3946,668 @@
     "league": "1η θέση",
     "record": "24–2–0 (Ν–Ι–Η)",
     "source": "https://en.wikipedia.org/wiki/PAOK_FC_%28women%29"
-   }
+   },
+   "standings": [
+    {
+     "title": "Greek A Division (women's football)",
+     "url": "https://en.wikipedia.org/wiki/2023%E2%80%9324_Greek_A_Division_%28women%27s_football%29",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Ι",
+      "Η",
+      "Γκολ",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "26",
+        "24",
+        "2",
+        "0",
+        "78-8",
+        "74"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "OFI",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "20",
+        "2",
+        "4",
+        "53-17",
+        "62"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Panathinaikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "19",
+        "3",
+        "4",
+        "77-17",
+        "60"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Asteras Tripolis",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "13",
+        "8",
+        "5",
+        "52-21",
+        "47"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "REA",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "12",
+        "8",
+        "6",
+        "54-23",
+        "44"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "AEK",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "9",
+        "9",
+        "8",
+        "28-17",
+        "36"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "AO Trikala 2011",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "9",
+        "7",
+        "10",
+        "35-31",
+        "34"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Kastoria GPO",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "9",
+        "6",
+        "11",
+        "33-37",
+        "33"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Nees Atromitou",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "9",
+        "6",
+        "11",
+        "37-43",
+        "33"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "AEL",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "7",
+        "7",
+        "12",
+        "24-45",
+        "28"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Olympiada Imittou",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "6",
+        "4",
+        "16",
+        "27-57",
+        "22"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Seirines Grevenon",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "5",
+        "4",
+        "17",
+        "18-58",
+        "19"
+       ]
+      },
+      {
+       "pos": 13,
+       "team": "Volos 2004",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "4",
+        "4",
+        "18",
+        "24-73",
+        "16"
+       ]
+      },
+      {
+       "pos": 14,
+       "team": "Elpides Karditsas",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "26",
+        "0",
+        "2",
+        "24",
+        "6-99",
+        "2"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "basketball-women": {
+   "matches": [],
+   "standings": [
+    {
+     "title": "Πρωτάθλημα καλαθοσφαίρισης Α1 εθνικής κατηγορίας γυναικών",
+     "url": "https://el.wikipedia.org/wiki/%CE%A0%CF%81%CF%89%CF%84%CE%AC%CE%B8%CE%BB%CE%B7%CE%BC%CE%B1_%CE%BA%CE%B1%CE%BB%CE%B1%CE%B8%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%911_%CE%B5%CE%B8%CE%BD%CE%B9%CE%BA%CE%AE%CF%82_%CE%BA%CE%B1%CF%84%CE%B7%CE%B3%CE%BF%CF%81%CE%AF%CE%B1%CF%82_%CE%B3%CF%85%CE%BD%CE%B1%CE%B9%CE%BA%CF%8E%CE%BD_2023-2024",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Η",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Ολυμπιακός Σ.Φ.Π.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "20",
+        "19",
+        "1",
+        "39"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Παναθηναϊκός Α.Ο.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "20",
+        "19",
+        "1",
+        "39"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Γ.Σ. Εσπερίδες Καλλιθέας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "20",
+        "13",
+        "7",
+        "33"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Α.Ε.Ο. Πρωτέας Βούλας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "20",
+        "12",
+        "8",
+        "32"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Α.Ο. Ελευθερία Μοσχάτου",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "20",
+        "10",
+        "10",
+        "30"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Π.Α.Σ. Γιάννινα",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "20",
+        "8",
+        "12",
+        "28"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "20",
+        "8",
+        "12",
+        "28"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Ν.Γ.Σ.Θ. Ηρακλής 1908",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "20",
+        "8",
+        "12",
+        "28"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Γ.Α.Σ. Εύνικος",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "20",
+        "8",
+        "12",
+        "28"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Α.Σ. Νίκη Λευκάδας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "20",
+        "5",
+        "15",
+        "25"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Αθηναϊκός Α.Σ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "20",
+        "0",
+        "20",
+        "20"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "waterpolo": {
+   "matches": [],
+   "standings": [
+    {
+     "title": "Α1 Κατηγορία υδατοσφαίρισης ανδρών",
+     "url": "https://el.wikipedia.org/wiki/%CE%911_%CE%9A%CE%B1%CF%84%CE%B7%CE%B3%CE%BF%CF%81%CE%AF%CE%B1_%CF%85%CE%B4%CE%B1%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD_2023-2024",
+     "columns": [
+      "Ν",
+      "Ι",
+      "Η",
+      "Γκολ",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Ν.Ο. Βουλιαγμένης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "13",
+        "0",
+        "1",
+        "230-118",
+        "39"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Πανιώνιος Γ.Σ.Σ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "12",
+        "0",
+        "2",
+        "213-133",
+        "36"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "9",
+        "0",
+        "5",
+        "166-134",
+        "27"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Υδραϊκός Ν.Ο.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "7",
+        "1",
+        "6",
+        "144-145",
+        "22"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Α.Ο. Παλαιού Φαλήρου",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "5",
+        "3",
+        "6",
+        "131-169",
+        "18"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Εθνικός Ο.Φ. Πειραιώς Φαλήρου",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "4",
+        "2",
+        "8",
+        "129-149",
+        "14"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Α.Ε.Κ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "2",
+        "1",
+        "11",
+        "105-146",
+        "7"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Ο.Φ. Θαλάσσης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "0",
+        "1",
+        "13",
+        "93-217",
+        "1"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "waterpolo-women": {
+   "matches": [],
+   "standings": [
+    {
+     "title": "Α1 Κατηγορία υδατοσφαίρισης γυναικών",
+     "url": "https://el.wikipedia.org/wiki/%CE%911_%CE%9A%CE%B1%CF%84%CE%B7%CE%B3%CE%BF%CF%81%CE%AF%CE%B1_%CF%85%CE%B4%CE%B1%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%B3%CF%85%CE%BD%CE%B1%CE%B9%CE%BA%CF%8E%CE%BD_2023-24",
+     "columns": [
+      "Ν",
+      "Ι",
+      "Η",
+      "Γκολ",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Ολυμπιακός Πειραιώς",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "0",
+        "0",
+        "427-120",
+        "66"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Ν.Ο. Βουλιαγμένης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "19",
+        "1",
+        "2",
+        "312-168",
+        "58"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Άλιμος Ν.Α.Σ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "17",
+        "1",
+        "4",
+        "347-185",
+        "52"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Εθνικός Πειραιώς",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "17",
+        "0",
+        "5",
+        "318-173",
+        "51"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Α.Ν.Ο. Γλυφάδας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "12",
+        "1",
+        "9",
+        "237-219",
+        "37"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Πανιώνιος Γ.Σ.Σ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "12",
+        "0",
+        "10",
+        "215-216",
+        "36"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "7",
+        "1",
+        "14",
+        "189-299",
+        "22"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Γ.Σ. Περιστερίου",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "7",
+        "1",
+        "14",
+        "209-283",
+        "22"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Α.Ε.Κ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "6",
+        "3",
+        "13",
+        "191-253",
+        "21"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Ν.Ο. Χανίων",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "4",
+        "3",
+        "15",
+        "219-327",
+        "15"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Ν.Ε. Πατρών",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "2",
+        "3",
+        "17",
+        "162-352",
+        "9"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Ηλυσιακός",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "0",
+        "0",
+        "22",
+        "141-372",
+        "0"
+       ]
+      }
+     ]
+    }
+   ]
   }
  },
  "updated": "2026-11-22T21:48+02:00"

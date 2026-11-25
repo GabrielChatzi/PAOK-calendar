@@ -1,0 +1,115 @@
+{
+ "season": "1957-58",
+ "sections": {
+  "basketball": {
+   "matches": [],
+   "standings": [
+    {
+     "title": "Πανελλήνιο πρωτάθλημα καλαθοσφαίρισης ανδρών",
+     "url": "https://el.wikipedia.org/wiki/%CE%A0%CE%B1%CE%BD%CE%B5%CE%BB%CE%BB%CE%AE%CE%BD%CE%B9%CE%BF_%CF%80%CF%81%CF%89%CF%84%CE%AC%CE%B8%CE%BB%CE%B7%CE%BC%CE%B1_%CE%BA%CE%B1%CE%BB%CE%B1%CE%B8%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD_1957-58",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Η",
+      "Πόντοι",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "ΑΕΚ",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "6",
+        "5",
+        "1",
+        "357-314",
+        "11"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Άρης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "6",
+        "4",
+        "2",
+        "314-314",
+        "10"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Πανελλήνιος",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "6",
+        "4",
+        "2",
+        "421-357",
+        "10"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "6",
+        "3",
+        "3",
+        "325-344",
+        "9"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Παναθηναϊκός",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "6",
+        "3",
+        "3",
+        "348-341",
+        "9"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Ολυμπιακός",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "6",
+        "2",
+        "4",
+        "387-420",
+        "8"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "ΧΑΝΘ",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "6",
+        "0",
+        "6",
+        "307-369",
+        "6"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

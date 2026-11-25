@@ -1523,14 +1523,455 @@
     "topscorer": "Achilleas Aslanidis (16)",
     "source": "https://en.wikipedia.org/wiki/1973%E2%80%9374_PAOK_FC_season"
    },
-   "backfilled": true
+   "backfilled": true,
+   "standings": [
+    {
+     "title": "Alpha Ethniki",
+     "url": "https://en.wikipedia.org/wiki/1973%E2%80%9374_Alpha_Ethniki",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Ι",
+      "Η",
+      "Γκολ",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Olympiacos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "26",
+        "7",
+        "1",
+        "102-14",
+        "59"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Panathinaikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "24",
+        "6",
+        "4",
+        "76-27",
+        "54"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Aris",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "21",
+        "6",
+        "7",
+        "49-29",
+        "48"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "34",
+        "16",
+        "11",
+        "7",
+        "62-32",
+        "43"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "AEK Athens",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "16",
+        "8",
+        "10",
+        "53-36",
+        "40"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Panachaiki",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "13",
+        "12",
+        "9",
+        "42-37",
+        "38"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Iraklis",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "10",
+        "13",
+        "11",
+        "40-37",
+        "33"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Panionios",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "13",
+        "7",
+        "14",
+        "41-44",
+        "33"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "AEL",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "11",
+        "10",
+        "13",
+        "31-40",
+        "32"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Ethnikos Piraeus",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "11",
+        "9",
+        "14",
+        "38-42",
+        "31"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Egaleo",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "11",
+        "7",
+        "16",
+        "28-44",
+        "29"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Kavala",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "11",
+        "6",
+        "17",
+        "32-44",
+        "28"
+       ]
+      },
+      {
+       "pos": 13,
+       "team": "APOEL",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "11",
+        "5",
+        "18",
+        "39-48",
+        "27"
+       ]
+      },
+      {
+       "pos": 14,
+       "team": "Panserraikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "11",
+        "5",
+        "18",
+        "28-54",
+        "27"
+       ]
+      },
+      {
+       "pos": 15,
+       "team": "Olympiacos Volos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "9",
+        "9",
+        "16",
+        "28-44",
+        "27"
+       ]
+      },
+      {
+       "pos": 16,
+       "team": "Fostiras",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "7",
+        "9",
+        "18",
+        "24-63",
+        "23"
+       ]
+      },
+      {
+       "pos": 17,
+       "team": "Apollon Athens",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "7",
+        "8",
+        "19",
+        "30-66",
+        "22"
+       ]
+      },
+      {
+       "pos": 18,
+       "team": "Apollon Kalamarias",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "34",
+        "5",
+        "8",
+        "21",
+        "17-59",
+        "18"
+       ]
+      }
+     ]
+    }
+   ]
   },
   "basketball": {
    "matches": [],
    "summary": {
     "league": "4η θέση",
     "source": "https://el.wikipedia.org/wiki/%CE%A0.%CE%91.%CE%9F.%CE%9A._%28%CE%BA%CE%B1%CE%BB%CE%B1%CE%B8%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD%29"
-   }
+   },
+   "standings": [
+    {
+     "title": "Πρωτάθλημα καλαθοσφαίρισης Α΄ εθνικής κατηγορίας ανδρών",
+     "url": "https://el.wikipedia.org/wiki/%CE%A0%CF%81%CF%89%CF%84%CE%AC%CE%B8%CE%BB%CE%B7%CE%BC%CE%B1_%CE%BA%CE%B1%CE%BB%CE%B1%CE%B8%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%91%CE%84_%CE%B5%CE%B8%CE%BD%CE%B9%CE%BA%CE%AE%CF%82_%CE%BA%CE%B1%CF%84%CE%B7%CE%B3%CE%BF%CF%81%CE%AF%CE%B1%CF%82_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD_1973-1974",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Η",
+      "Πόντοι",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Παναθηναϊκός Α.Ο.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "19",
+        "3",
+        "1687-1441",
+        "41"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Α.Ε.Κ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "18",
+        "4",
+        "1670-1520",
+        "40"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Α.Σ. Άρης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "14",
+        "8",
+        "1566-1488",
+        "36"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "22",
+        "14",
+        "8",
+        "1723-1648",
+        "36"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Χ.Α.Ν.Θ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "12",
+        "10",
+        "1601-1479",
+        "34"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Ολυμπιακός Σ.Φ.Π.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "12",
+        "10",
+        "1716-1539",
+        "34"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Α.Ο. Παγκρατίου",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "11",
+        "11",
+        "1518-1513",
+        "33"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Α.Ο. Σπόρτιγκ",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "11",
+        "11",
+        "1664-1655",
+        "33"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Πανελλήνιος Γ.Σ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "8",
+        "14",
+        "1588-1620",
+        "30"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Γ.Σ. Αμαρουσίου",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "7",
+        "15",
+        "1487-1625",
+        "29"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Γ.Σ. Ηρακλής",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "6",
+        "16",
+        "1594-1698",
+        "28"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Μ.Γ.Σ. Απόλλων Καλαμαριάς",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "0",
+        "22",
+        "1237-1825",
+        "22"
+       ]
+      }
+     ]
+    }
+   ]
   }
  },
  "updated": "2026-11-22T21:54+02:00"

@@ -1078,7 +1078,248 @@
     "topscorer": "Bannon, Borbokis (9)",
     "source": "https://en.wikipedia.org/wiki/1987%E2%80%9388_PAOK_FC_season"
    },
-   "backfilled": true
+   "backfilled": true,
+   "standings": [
+    {
+     "title": "Alpha Ethniki",
+     "url": "https://en.wikipedia.org/wiki/1987%E2%80%9388_Alpha_Ethniki",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Ι",
+      "Η",
+      "Γκολ",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "AEL",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "18",
+        "7",
+        "5",
+        "51-22",
+        "43"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "AEK Athens",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "15",
+        "10",
+        "5",
+        "51-31",
+        "40"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "30",
+        "17",
+        "5",
+        "8",
+        "60-27",
+        "39"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "OFI",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "17",
+        "3",
+        "10",
+        "54-41",
+        "37"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Panathinaikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "15",
+        "6",
+        "9",
+        "47-34",
+        "36"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Iraklis",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "13",
+        "8",
+        "9",
+        "42-32",
+        "34"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Ethnikos Piraeus",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "12",
+        "8",
+        "10",
+        "27-28",
+        "32"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Olympiacos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "9",
+        "13",
+        "8",
+        "39-41",
+        "31"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Aris",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "11",
+        "5",
+        "14",
+        "39-41",
+        "27"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Panionios",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "8",
+        "10",
+        "12",
+        "32-34",
+        "26"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Apollon Kalamarias",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "7",
+        "10",
+        "13",
+        "23-39",
+        "24"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Diagoras",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "7",
+        "9",
+        "14",
+        "25-38",
+        "23"
+       ]
+      },
+      {
+       "pos": 13,
+       "team": "Levadiakos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "7",
+        "9",
+        "14",
+        "32-46",
+        "23"
+       ]
+      },
+      {
+       "pos": 14,
+       "team": "Veria",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "7",
+        "9",
+        "14",
+        "24-53",
+        "23"
+       ]
+      },
+      {
+       "pos": 15,
+       "team": "Panserraikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "8",
+        "5",
+        "17",
+        "24-42",
+        "21"
+       ]
+      },
+      {
+       "pos": 16,
+       "team": "Panachaiki",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "7",
+        "7",
+        "16",
+        "32-53",
+        "20"
+       ]
+      }
+     ]
+    }
+   ]
   },
   "basketball": {
    "matches": [],
@@ -1095,7 +1336,153 @@
      }
     ],
     "source": "https://en.wikipedia.org/wiki/PAOK_BC"
-   }
+   },
+   "standings": [
+    {
+     "title": "Πρωτάθλημα καλαθοσφαίρισης Α1 εθνικής κατηγορίας ανδρών",
+     "url": "https://el.wikipedia.org/wiki/%CE%A0%CF%81%CF%89%CF%84%CE%AC%CE%B8%CE%BB%CE%B7%CE%BC%CE%B1_%CE%BA%CE%B1%CE%BB%CE%B1%CE%B8%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%911_%CE%B5%CE%B8%CE%BD%CE%B9%CE%BA%CE%AE%CF%82_%CE%BA%CE%B1%CF%84%CE%B7%CE%B3%CE%BF%CF%81%CE%AF%CE%B1%CF%82_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD_1987-1988",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Η",
+      "Πόντοι",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Α.Σ. Άρης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "18",
+        "18",
+        "0",
+        "1870-1452",
+        "36"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "18",
+        "14",
+        "4",
+        "1399-1252",
+        "32"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Πανιώνιος Γ.Σ.Σ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "18",
+        "12",
+        "6",
+        "1527-1336",
+        "30"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Α.Ε.Κ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "18",
+        "10",
+        "8",
+        "1412-1394",
+        "28"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Παναθηναϊκός Α.Ο.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "18",
+        "10",
+        "8",
+        "1374-1303",
+        "28"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Ολυμπιακός Σ.Φ.Π.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "18",
+        "9",
+        "9",
+        "1462-1491",
+        "27"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Γ.Σ. Ηρακλής",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "18",
+        "6",
+        "12",
+        "1303-1381",
+        "24"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Α.Σ. Απόλλων Πατρών",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "18",
+        "4",
+        "14",
+        "1339-1589",
+        "22"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Πανελλήνιος Γ.Σ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "18",
+        "4",
+        "14",
+        "1341-1599",
+        "22"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Ηλυσιακός Α.Ο.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "18",
+        "3",
+        "15",
+        "1302-1532",
+        "21"
+       ]
+      }
+     ]
+    }
+   ]
   },
   "volley": {
    "matches": [],
@@ -1103,7 +1490,179 @@
     "league": "5η θέση",
     "record": "14–11 (Ν–Η)",
     "source": "https://el.wikipedia.org/wiki/%CE%A0.%CE%91.%CE%9F.%CE%9A._%28%CF%80%CE%B5%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD%29"
-   }
+   },
+   "standings": [
+    {
+     "title": "Πρωτάθλημα πετοσφαίρισης Α' εθνικής κατηγορίας ανδρών",
+     "url": "https://el.wikipedia.org/wiki/%CE%A0%CF%81%CF%89%CF%84%CE%AC%CE%B8%CE%BB%CE%B7%CE%BC%CE%B1_%CF%80%CE%B5%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%91%27_%CE%B5%CE%B8%CE%BD%CE%B9%CE%BA%CE%AE%CF%82_%CE%BA%CE%B1%CF%84%CE%B7%CE%B3%CE%BF%CF%81%CE%AF%CE%B1%CF%82_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD_1987-1988",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Η",
+      "Σετ",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Ολυμπιακός Σ.Φ.Π.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "22",
+        "0",
+        "66-09",
+        "44"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "Παναθηναϊκός Α.Ο.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "20",
+        "2",
+        "64-10",
+        "42"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Α.Σ. Άρης Θεσσαλονίκης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "16",
+        "6",
+        "54-27",
+        "38"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Γ.Σ. Ηρακλής Θεσσαλονίκης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "14",
+        "8",
+        "49-40",
+        "36"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "22",
+        "11",
+        "11",
+        "43-44",
+        "33"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Πανελλήνιος Γ.Σ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "10",
+        "12",
+        "40-42",
+        "32"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Α.Σ. Ιωνικός Νέας Φιλαδέλφειας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "9",
+        "13",
+        "34-50",
+        "31"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Μεσσηνιακός Γ.Σ.",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "8",
+        "14",
+        "32-50",
+        "30"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Α.Ο. Ορεστιάδας",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "7",
+        "15",
+        "35-53",
+        "29"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Α.Ο. Παράδεισος Αμαρουσίου",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "6",
+        "16",
+        "31-55",
+        "28"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Φ.Σ. Εθνικός Κοζάνης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "5",
+        "17",
+        "23-57",
+        "27"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Α.Ο. Ελληνικών Ναυπηγείων",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "22",
+        "3",
+        "19",
+        "26-61",
+        "22"
+       ]
+      }
+     ]
+    }
+   ]
   },
   "volley-women": {
    "matches": [],

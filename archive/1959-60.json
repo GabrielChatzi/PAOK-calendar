@@ -12,7 +12,362 @@
      }
     ],
     "source": "https://en.wikipedia.org/wiki/PAOK_BC"
-   }
+   },
+   "standings": [
+    {
+     "title": "Πανελλήνιο πρωτάθλημα καλαθοσφαίρισης ανδρών",
+     "url": "https://el.wikipedia.org/wiki/%CE%A0%CE%B1%CE%BD%CE%B5%CE%BB%CE%BB%CE%AE%CE%BD%CE%B9%CE%BF_%CF%80%CF%81%CF%89%CF%84%CE%AC%CE%B8%CE%BB%CE%B7%CE%BC%CE%B1_%CE%BA%CE%B1%CE%BB%CE%B1%CE%B8%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD_1959-1960",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Η",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Ολυμπιακός Πειραιώς",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "7",
+        "7",
+        "0",
+        "21"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "7",
+        "6",
+        "1",
+        "19"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Πανελλήνιος",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "7",
+        "4",
+        "3",
+        "15"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Άρης",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "7",
+        "4",
+        "3",
+        "15"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "ΑΕΚ",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "7",
+        "3",
+        "4",
+        "13"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Σπόρτιγκ",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "7",
+        "2",
+        "5",
+        "11"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "Ηρακλής",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "7",
+        "2",
+        "5",
+        "11"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Ολυμπιακός Αντίς Αμπέμπα",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "7",
+        "0",
+        "7",
+        "7"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "football": {
+   "matches": [],
+   "standings": [
+    {
+     "title": "Alpha Ethniki",
+     "url": "https://en.wikipedia.org/wiki/1959%E2%80%9360_Alpha_Ethniki",
+     "columns": [
+      "Αγ",
+      "Ν",
+      "Ι",
+      "Η",
+      "Γκολ",
+      "Β"
+     ],
+     "source": "wikipedia",
+     "rows": [
+      {
+       "pos": 1,
+       "team": "Panathinaikos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "22",
+        "5",
+        "3",
+        "59-20",
+        "79"
+       ]
+      },
+      {
+       "pos": 2,
+       "team": "AEK Athens",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "21",
+        "7",
+        "2",
+        "72-27",
+        "79"
+       ]
+      },
+      {
+       "pos": 3,
+       "team": "Olympiacos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "16",
+        "8",
+        "6",
+        "52-24",
+        "70"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Apollon Athens",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "13",
+        "10",
+        "7",
+        "52-33",
+        "66"
+       ]
+      },
+      {
+       "pos": 5,
+       "team": "Panionios",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "14",
+        "6",
+        "10",
+        "46-31",
+        "64"
+       ]
+      },
+      {
+       "pos": 6,
+       "team": "Doxa Drama",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "11",
+        "8",
+        "11",
+        "47-41",
+        "60"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "ΠΑΟΚ",
+       "logo": "",
+       "paok": true,
+       "cells": [
+        "30",
+        "10",
+        "9",
+        "11",
+        "32-32",
+        "59"
+       ]
+      },
+      {
+       "pos": 8,
+       "team": "Aris",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "10",
+        "9",
+        "11",
+        "31-35",
+        "59"
+       ]
+      },
+      {
+       "pos": 9,
+       "team": "Iraklis",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "9",
+        "10",
+        "11",
+        "29-34",
+        "58"
+       ]
+      },
+      {
+       "pos": 10,
+       "team": "Proodeftiki",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "10",
+        "8",
+        "12",
+        "34-36",
+        "58"
+       ]
+      },
+      {
+       "pos": 11,
+       "team": "Apollon Kalamarias",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "7",
+        "12",
+        "11",
+        "31-39",
+        "56"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "Ethnikos Piraeus",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "8",
+        "10",
+        "12",
+        "34-46",
+        "56"
+       ]
+      },
+      {
+       "pos": 13,
+       "team": "Panegialios",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "9",
+        "7",
+        "14",
+        "26-43",
+        "55"
+       ]
+      },
+      {
+       "pos": 14,
+       "team": "Pankorinthiakos",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "9",
+        "7",
+        "14",
+        "27-45",
+        "55"
+       ]
+      },
+      {
+       "pos": 15,
+       "team": "Megas Alexandros Katerinis",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "4",
+        "9",
+        "17",
+        "27-60",
+        "47"
+       ]
+      },
+      {
+       "pos": 16,
+       "team": "AE Nikaia",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "30",
+        "2",
+        "5",
+        "23",
+        "20-73",
+        "39"
+       ]
+      }
+     ]
+    }
+   ]
   }
  }
 }

@@ -173,7 +173,8 @@ def backfill(year: int, only: set[str] | None = None) -> list[str]:
             if mine:
                 sec = arch["sections"].setdefault(key, {"matches": []})
                 added = merge_matches(sec, mine, replace=False)
-                if tables and not sec.get("standings"):
+                # Η επίσημη βαθμολογία προτιμάται από αυτή της Wikipedia (archive.py standings).
+                if tables and (not sec.get("standings") or all(t.get("source") == "wikipedia" for t in sec["standings"])):
                     sec["standings"] = tables
                 sec["backfilled"] = True
             else:

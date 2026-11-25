@@ -368,7 +368,7 @@ def clubs(lang: str, names: list[str]) -> tuple[dict[str, str], dict[str, str]]:
 def to_table(key: str, title: str, url: str, kinds: list[str], rows: list[dict],
              logos: dict[str, str] | None = None, names: dict[str, str] | None = None) -> dict:
     """Στη μορφή του standings.table (columns + rows με cells)."""
-    names = {"gp": "Αγ", "w": "Ν", "d": "Ι", "l": "Η", "gf": SPECS[key]["score"], "pts": "Β"}
+    labels = {"gp": "Αγ", "w": "Ν", "d": "Ι", "l": "Η", "gf": SPECS[key]["score"], "pts": "Β"}
     cols = [k for k in kinds if k != "d" or any(x.get("d") not in (None, "", "0") for x in rows)]
     def cell(x, k):
         if k == "gf":
@@ -378,7 +378,7 @@ def to_table(key: str, title: str, url: str, kinds: list[str], rows: list[dict],
     league = {"Alpha Ethniki": "Α' Εθνική", "Super League Greece": "Super League",
               "Greek A Division (women's football)": "Α' Εθνική Γυναικών",
               "Greek Women's Basketball League": "Α1 Γυναικών"}.get(league, league)
-    return {"title": league, "url": url, "columns": [names[k] for k in cols], "source": "wikipedia",
+    return {"title": league, "url": url, "columns": [labels[k] for k in cols], "source": "wikipedia",
             "rows": [{"pos": x["pos"], "team": "ΠΑΟΚ" if is_paok(x["team"]) else (names or {}).get(x["raw"]) or x["team"],
                       **({"en": x["team"]} if (names or {}).get(x["raw"]) and not is_paok(x["team"]) else {}),
                       "logo": "" if _paok(x["team"]) else (logos or {}).get(x["raw"], ""),

@@ -72,6 +72,16 @@ class LinkTest(unittest.TestCase):
         self.assertEqual(t["rows"][0]["logo"], "https://img/1.png")
         self.assertEqual(t["rows"][1]["logo"], "")  # ΠΑΟΚ: το δικό μας σήμα
 
+    def test_greek_names(self):
+        rows = [{"pos": 1, "team": "Olympiacos", "raw": "Olympiacos (C)", "w": "1", "pts": "3"},
+                {"pos": 2, "team": "PAOK", "raw": "PAOK", "w": "1", "pts": "3"}]
+        t = ws.to_table("football", "1997–98 Alpha Ethniki", "u", ["w", "pts"], rows,
+                        names={"Olympiacos (C)": "Ολυμπιακός", "PAOK": "Π.Α.Ο.Κ."})
+        self.assertEqual([r["team"] for r in t["rows"]], ["Ολυμπιακός", "ΠΑΟΚ"])
+        self.assertEqual(t["rows"][0]["en"], "Olympiacos")
+        self.assertEqual(t["columns"], ["Ν", "Β"])
+        self.assertEqual(t["title"], "Α' Εθνική")
+
 
 if __name__ == "__main__":
     unittest.main()

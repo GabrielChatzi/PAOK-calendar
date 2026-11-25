@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       years:
-        description: "Σεζόν (έτος έναρξης), με κενά: 2024 2023 …"
+        description: "Σεζόν (έτος έναρξης), με κενά: 2024 2023 … («-»: καμία, π.χ. μόνο βαθμολογίες)"
         required: false
         default: "2025 2024 2023 2022 2021 2020 2019"
       only:
@@ -69,6 +69,7 @@ jobs:
             python3 archive.py standings || echo "! βαθμολογίες Wikipedia: σφάλμα"
             (save "βαθμολογίες Wikipedia") || (sleep 5; save "βαθμολογίες Wikipedia") || true
           fi
+          [ "$YEARS" = "-" ] && YEARS=""
           for y in $YEARS; do
             python3 archive.py backfill "$y" || echo "! σεζόν $y: σφάλμα"
             (save "$y") || (sleep 5; save "$y") || echo "! σεζόν $y: δεν αποθηκεύτηκε"

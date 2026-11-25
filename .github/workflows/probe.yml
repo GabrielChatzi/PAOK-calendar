@@ -2,7 +2,7 @@ name: probe
 on:
   push:
     branches: [probe-archive]
-    paths: [probe.py, .github/workflows/probe.yml]
+    paths: [probe.py, wiki_standings.py, .github/workflows/probe.yml]
 permissions:
   contents: write
 jobs:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: python3 probe.py; cat probe_out/_log.txt
+      - run: python3 probe.py || true
       - run: |
           git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout --orphan probe-out; git rm -rqf --cached .; git add -f probe_out; git commit -qm probe

@@ -5902,12 +5902,11 @@
      "uid": "futsal-eps-24053",
      "nt": "8a132e3b44",
      "section": "futsal",
-     "start": "2026-11-24T20:00:00+02:00",
-     "timeKnown": true,
+     "start": "2026-11-22T18:00:00+02:00",
+     "timeKnown": false,
      "home": "ΔΟΥΚΑ ΑΣΕ",
      "away": "ΠΑΟΚ",
      "paokHome": false,
-     "venue": "Κλειστό Γυμναστήριο Δαΐς",
      "competition": "Futsal Super League",
      "round": "10η αγωνιστική",
      "score": "5-8",
@@ -6839,7 +6838,6 @@
      "home": "ΕΘΝΙΚΟΣ ΟΦΠΦ",
      "away": "ΠΑΟΚ",
      "paokHome": false,
-     "venue": "Παπαστράτειο Κολυμβητήριο Πειραιά",
      "competition": "Water Polo League Γυναικών",
      "score": "12-12",
      "periods": [
@@ -17745,5 +17743,5 @@
    ]
   }
  },
- "updated": "2026-11-25T00:05+02:00"
+ "updated": "2026-11-25T02:04+02:00"
 }

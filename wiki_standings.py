@@ -174,6 +174,9 @@ def _tables(page: str) -> list[str]:
     return [full[start:] for start, full in sorted(out, key=lambda x: x[0])]
 
 
+_LINKS: dict[str, str] = {}  # κείμενο κελιού → σελίδα Wikipedia (από την τελευταία ανάγνωση)
+
+
 def _rows(table: str) -> list[list[tuple[str, int]]]:
     """Γραμμές: (κείμενο κελιού, colspan). Χωρίς υποσημειώσεις [1], [α]."""
     inner = re.sub(r"^<table[^>]*>|</table>$", "", table)
@@ -190,6 +193,10 @@ def _rows(table: str) -> list[list[tuple[str, int]]]:
         cells = []
         for attrs, body in re.findall(r"<t[hd]([^>]*)>(.*?)</t[hd]>", tr, re.S):
             span = re.search(r'colspan="?(\d+)', attrs)
+            # Ο σύνδεσμος του κελιού (σελίδα του συλλόγου, για το σήμα). Όχι εικόνες/σημαίες ή κόκκινοι σύνδεσμοι.
+            link = next((html.unescape(h) for h in re.findall(r'<a[^>]+href="/wiki/([^"#?]+)"', body)
+                         if not re.match(r"(?:File|Αρχείο|Εικόνα|Image):", urllib.parse.unquote(h))), "")
+            _LINKS[clean(body)] = urllib.parse.unquote(link).replace("_", " ") if link else _LINKS.get(clean(body), "")
             cells.append((clean(body), int(span.group(1)) if span else 1))
         if cells:
             rows.append(cells)
@@ -298,7 +305,7 @@ def standings_from_html(page: str) -> tuple[list[str], list[dict]] | None:
             team = col.get("team")
             if team is None:  # χωρίς ετικέτα «Ομάδα»: το πρώτο κελί με γράμματα
                 team = next((c for c in cells if len(re.findall(r"[A-Za-zΑ-Ωα-ωά-ώΆ-Ώ]", c)) >= 3), "")
-            team = _team(team)
+            raw, team = team, _team(team)
             pts = _num(col.get("pts", ""))
             if not team or pts is None:
                 continue
@@ -310,7 +317,7 @@ def standings_from_html(page: str) -> tuple[list[str], list[dict]] | None:
             if "gfa" in col and "gf" not in col:
                 f, _, a = re.sub(r"\s", "", col["gfa"]).replace("–", "-").partition("-")
                 col["gf"], col["ga"] = f, a
-            out.append({"pos": pos, "team": team, **{k: col[k] for k in ("gp", "w", "d", "l", "gf", "ga") if k in col},
+            out.append({"pos": pos, "team": team, "raw": raw, **{k: col[k] for k in ("gp", "w", "d", "l", "gf", "ga") if k in col},
                         "pts": str(pts)})
         if len(out) >= 4 and any(_paok(x["team"]) for x in out):
             return [k for k in ("gp", "w", "d", "l", "gf", "pts") if any(k in x for x in out)], out
@@ -322,7 +329,41 @@ def _paok(name: str) -> bool:
     return is_paok(name) or bool(re.search(r"(?<![Α-Ωα-ω])Π\.?Α\.?Ο\.?Κ\.?(?![Α-Ωα-ω])|\bPAOK\b", name))
 
 
-def to_table(key: str, title: str, url: str, kinds: list[str], rows: list[dict]) -> dict:
+def greek_title(title: str) -> str:
+    """«Παναθηναϊκός (ποδόσφαιρο)» → «Παναθηναϊκός», «Π.Α.Ε. Άρης» → «Άρης»."""
+    t = re.sub(r"\s*\([^)]*\)\s*$", "", title).strip()
+    return re.sub(r"^(?:Π\.?Α\.?Ε\.?|Π\.?Α\.?Σ\.?Ε\.?)\s+", "", t)
+
+
+def clubs(lang: str, names: list[str]) -> tuple[dict[str, str], dict[str, str]]:
+    """Για τα ονόματα του πίνακα, από τη σελίδα κάθε συλλόγου στη Wikipedia: (όνομα → σήμα, όνομα → ελληνικό
+    όνομα). Το σήμα είναι μικρογραφία της κύριας εικόνας της σελίδας· το ελληνικό όνομα ο τίτλος του ελληνικού
+    άρθρου (μόνο για την αγγλική Wikipedia)."""
+    titles = {n: _LINKS.get(n, "") for n in names}
+    want = sorted({t for t in titles.values() if t})
+    image: dict[str, str] = {}
+    greek: dict[str, str] = {}
+    for i in range(0, len(want), 40):
+        params = {"action": "query", "prop": "pageimages|langlinks", "piprop": "thumbnail", "pithumbsize": 96,
+                  "pilicense": "any", "redirects": 1, "lllang": "el", "lllimit": "max", "titles": "|".join(want[i:i + 40])}
+        d = _get(lang, params)
+        q = d.get("query", {})
+        alias = {x["from"]: x["to"] for x in q.get("normalized", []) + q.get("redirects", [])}
+        pages = {pg["title"]: pg for pg in q.get("pages", {}).values()}
+        for t in want[i:i + 40]:
+            pg = pages.get(alias.get(alias.get(t, t), alias.get(t, t)), {})
+            src = pg.get("thumbnail", {}).get("source", "")
+            if src and not re.search(r"(?i)flag|σημαία|map|χάρτης|location|locator", src):
+                image[t] = src
+            el = next((x.get("*") or x.get("title") for x in pg.get("langlinks", []) if x.get("lang") == "el"), "")
+            if el:
+                greek[t] = greek_title(el)
+    return ({n: image[t] for n, t in titles.items() if t in image},
+            {n: greek[t] for n, t in titles.items() if t in greek})
+
+
+def to_table(key: str, title: str, url: str, kinds: list[str], rows: list[dict],
+             logos: dict[str, str] | None = None, names: dict[str, str] | None = None) -> dict:
     """Στη μορφή του standings.table (columns + rows με cells)."""
     names = {"gp": "Αγ", "w": "Ν", "d": "Ι", "l": "Η", "gf": SPECS[key]["score"], "pts": "Β"}
     cols = [k for k in kinds if k != "d" or any(x.get("d") not in (None, "", "0") for x in rows)]
@@ -331,8 +372,13 @@ def to_table(key: str, title: str, url: str, kinds: list[str], rows: list[dict])
             return f"{x.get('gf', '')}-{x.get('ga', '')}" if x.get("gf") else ""
         return x.get(k, "")
     league = re.sub(r"\s*\(?(?:19|20)\d\d\s*[-–−/]\s*(?:19|20)?\d\d\)?\s*", " ", title).strip()
+    league = {"Alpha Ethniki": "Α' Εθνική", "Super League Greece": "Super League",
+              "Greek A Division (women's football)": "Α' Εθνική Γυναικών",
+              "Greek Women's Basketball League": "Α1 Γυναικών"}.get(league, league)
     return {"title": league, "url": url, "columns": [names[k] for k in cols], "source": "wikipedia",
-            "rows": [{"pos": x["pos"], "team": "ΠΑΟΚ" if is_paok(x["team"]) else x["team"], "logo": "",
+            "rows": [{"pos": x["pos"], "team": "ΠΑΟΚ" if is_paok(x["team"]) else (names or {}).get(x["raw"]) or x["team"],
+                      **({"en": x["team"]} if (names or {}).get(x["raw"]) and not is_paok(x["team"]) else {}),
+                      "logo": "" if _paok(x["team"]) else (logos or {}).get(x["raw"], ""),
                       "paok": _paok(x["team"]), "cells": [cell(x, k) for k in cols]} for x in rows]}
 
 
@@ -341,9 +387,16 @@ def season_table(key: str, year: int, articles: dict[int, list[tuple[str, str]]]
         page, real = article_html(lang, title)
         if not page:
             continue
+        _LINKS.clear()
         got = standings_from_html(page)
         if got:
-            return to_table(key, real, article_url(lang, real), *got)
+            try:
+                logos, names = clubs(lang, [x["raw"] for x in got[1]])
+            except Exception as e:
+                print(f"  ! σήματα {real}: {e}", file=sys.stderr)
+                logos, names = {}, {}
+            return to_table(key, real, article_url(lang, real), *got, logos=logos,
+                            names=names if lang == "en" else None)
     return None
 
 

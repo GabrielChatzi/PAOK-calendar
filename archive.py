@@ -281,6 +281,16 @@ def wiki_standings(keys: list[str] | None = None) -> list[str]:
                 continue
             sec = arch["sections"].setdefault(key, {"matches": []})
             sec["standings"] = [t]
+            # Οι παλιοί αγώνες από την αγγλική Wikipedia (wiki.py) έχουν τα ίδια αγγλικά ονόματα με τον πίνακα:
+            # ελληνικά ονόματα και σήματα από τον πίνακα της ίδιας σεζόν.
+            by_en = {r["en"]: r for r in t["rows"] if r.get("en")}
+            for m in sec.get("matches", []):
+                for side in ("home", "away"):
+                    r = by_en.get(m.get(side, ""))
+                    if r:
+                        m[side] = r["team"]
+                        if r.get("logo") and not m.get(side + "Logo"):
+                            m[side + "Logo"] = r["logo"]
             save(arch)
             got.append(season_label(year))
         line = f"{key}: βαθμολογία από Wikipedia σε {len(got)} σεζόν" + (f" ({got[-1]} → {got[0]})" if got else "")

@@ -19,7 +19,7 @@ class ParseTest(unittest.TestCase):
                        for i, t in enumerate(TEAMS, 1))
         kinds, rows = ws.standings_from_html("<div><table><tr><td><table>" + head + body + "</table></td></tr></table></div>")
         self.assertEqual(kinds, ["w", "d", "l", "pts"])
-        self.assertEqual(rows[1], {"pos": 2, "team": "Π.Α.Ο.Κ.", "w": "7", "d": "1", "l": "2", "pts": "28"})
+        self.assertEqual(rows[1], {"pos": 2, "team": "Π.Α.Ο.Κ.", "raw": "Π.Α.Ο.Κ.", "w": "7", "d": "1", "l": "2", "pts": "28"})
 
     def test_group_title_and_unlabelled_team(self):
         head = ("<tr><th colspan=7>Βαθμολογία Κανονικής</th></tr><tr><th></th><th>Α1 Εθνική Κατηγορία</th><th>Βαθμ</th>"
@@ -49,6 +49,20 @@ class ParseTest(unittest.TestCase):
     def test_merged_team_is_paok(self):
         self.assertTrue(ws._paok("Φιλαθλητικός / ΠΑΟΚ"))
         self.assertFalse(ws._paok("Παναθηναϊκός"))
+
+
+
+class LinkTest(unittest.TestCase):
+    def test_team_link_kept(self):
+        head = "<tr><th>Θέση</th><th>Ομάδα</th><th>Β</th><th>Ν</th></tr>"
+        body = "".join(f'<tr><td>{i}</td><td><span><a href="/wiki/File:Flag.svg">x</a></span><a href="/wiki/Club_{i}">{t}</a></td>'
+                       f"<td>{20 - i}</td><td>1</td></tr>" for i, t in enumerate(TEAMS, 1))
+        ws._LINKS.clear()
+        kinds, rows = ws.standings_from_html("<table>" + head + body + "</table>")
+        self.assertEqual(ws._LINKS[rows[0]["raw"]], "Club 1")
+        t = ws.to_table("waterpolo", "x 2009-2010", "u", kinds, rows, logos={rows[0]["raw"]: "https://img/1.png", rows[1]["raw"]: "z"})
+        self.assertEqual(t["rows"][0]["logo"], "https://img/1.png")
+        self.assertEqual(t["rows"][1]["logo"], "")  # ΠΑΟΚ: το δικό μας σήμα
 
 
 if __name__ == "__main__":

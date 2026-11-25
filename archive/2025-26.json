@@ -4538,6 +4538,23 @@
      "awayLogo": "https://www.volleyleague.gr/media/bearleague/logos/bl1568216313930.gif"
     },
     {
+     "uid": "volley-dp18-683",
+     "nt": "37a6969b86",
+     "section": "volley",
+     "start": "2026-02-26T17:30:00+02:00",
+     "timeKnown": true,
+     "home": "PANATHINAIKOS A.O.",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Mets Sports Hall",
+     "competition": "Κύπελλο Ελλάδας",
+     "round": "Greek Cup Men - Quarter Finals",
+     "score": "3-1",
+     "url": "https://eope-web.dataproject.com/MatchStatistics.aspx?mID=683&ID=18",
+     "homeLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_109.jpg",
+     "awayLogo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_108.jpg"
+    },
+    {
      "uid": "volley-2025-26-0e84faa02d7a",
      "nt": "ca9b071b18",
      "section": "volley",
@@ -6796,5 +6813,5 @@
    "backfilled": true
   }
  },
- "updated": "2026-11-25T13:39+02:00"
+ "updated": "2026-11-25T14:27+02:00"
 }

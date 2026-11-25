@@ -1111,7 +1111,7 @@
    },
    "standings": [
     {
-     "title": "Super League Greece",
+     "title": "Super League",
      "url": "https://en.wikipedia.org/wiki/2016%E2%80%9317_Super_League_Greece",
      "columns": [
       "Αγ",
@@ -1126,7 +1126,7 @@
       {
        "pos": 1,
        "team": "Olympiacos",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a2/Olympiacos_FC_crest.svg/120px-Olympiacos_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "30",
@@ -1154,7 +1154,7 @@
       {
        "pos": 3,
        "team": "Panathinaikos",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/84/Panathinaikos_F.C._logo.svg/120px-Panathinaikos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "30",
@@ -1168,7 +1168,7 @@
       {
        "pos": 4,
        "team": "AEK Athens",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/04/AEK_Athens_FC_logo.svg/120px-AEK_Athens_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "30",
@@ -1182,7 +1182,7 @@
       {
        "pos": 5,
        "team": "Panionios",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Panionios_FC.png/120px-Panionios_FC.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "30",
@@ -1196,7 +1196,7 @@
       {
        "pos": 6,
        "team": "Xanthi",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Xanthi_F.C._Logo.svg/120px-Xanthi_F.C._Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "30",
@@ -1210,7 +1210,7 @@
       {
        "pos": 7,
        "team": "Platanias",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/40/Platanias_FC_logo.png/120px-Platanias_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "30",
@@ -1224,7 +1224,7 @@
       {
        "pos": 8,
        "team": "Atromitos",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6e/Atromitos_F.C._logo.svg/120px-Atromitos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "30",
@@ -1238,7 +1238,7 @@
       {
        "pos": 9,
        "team": "PAS Giannina",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/45/PAS_Giannina_emblem_2017.png/120px-PAS_Giannina_emblem_2017.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "30",
@@ -1252,7 +1252,7 @@
       {
        "pos": 10,
        "team": "Kerkyra",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/d7/AOK_KERKYRA.png/120px-AOK_KERKYRA.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "30",
@@ -1266,7 +1266,7 @@
       {
        "pos": 11,
        "team": "Panetolikos",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6a/Panetolikos_F.C._logo.svg/120px-Panetolikos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "30",
@@ -1280,7 +1280,7 @@
       {
        "pos": 12,
        "team": "Asteras Tripolis",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4c/Asteras_Tripolis_FC_logo.svg/120px-Asteras_Tripolis_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "30",
@@ -1294,7 +1294,7 @@
       {
        "pos": 13,
        "team": "AEL",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/25/Athlitiki_Enosi_Larissa_F.C._logo.svg/120px-Athlitiki_Enosi_Larissa_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "30",
@@ -1308,7 +1308,7 @@
       {
        "pos": 14,
        "team": "Levadiakos",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/APO_Levadiakos_%28logo%29.svg/120px-APO_Levadiakos_%28logo%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "30",
@@ -1322,7 +1322,7 @@
       {
        "pos": 15,
        "team": "Iraklis",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1a/Iraklis_F.C._%28Thessaloniki%29_logo.svg/120px-Iraklis_F.C._%28Thessaloniki%29_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "30",
@@ -1336,7 +1336,7 @@
       {
        "pos": 16,
        "team": "Veria",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/5c/Veria_F.C._logo.png/120px-Veria_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "30",
@@ -1895,7 +1895,7 @@
       {
        "pos": 1,
        "team": "Ολυμπιακός",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/7/7f/Olympiacos_BC_logo.svg/120px-Olympiacos_BC_logo.svg.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "26",
@@ -1908,7 +1908,7 @@
       {
        "pos": 2,
        "team": "Παναθηναϊκός Superfoods",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/4/46/%CE%9A%CE%91%CE%95_%CE%A0%CE%B1%CE%BD%CE%B1%CE%B8%CE%B7%CE%BD%CE%B1%CF%8A%CE%BA%CF%8C%CF%82_%CE%91%CE%9F_2024.svg/120px-%CE%9A%CE%91%CE%95_%CE%A0%CE%B1%CE%BD%CE%B1%CE%B8%CE%B7%CE%BD%CE%B1%CF%8A%CE%BA%CF%8C%CF%82_%CE%91%CE%9F_2024.svg.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "26",
@@ -1921,7 +1921,7 @@
       {
        "pos": 3,
        "team": "ΑΕΚ",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/2/22/AEK_NEW_LOGO_3_STARS.png/120px-AEK_NEW_LOGO_3_STARS.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "26",
@@ -1934,7 +1934,7 @@
       {
        "pos": 4,
        "team": "Άρης",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/0/06/Aris_BC_official_logo.png/120px-Aris_BC_official_logo.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "26",
@@ -1960,7 +1960,7 @@
       {
        "pos": 6,
        "team": "Ρέθυμνο Cretan Kings",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/9/9f/Rethymno_Cretan_Kings_BC_logo.png/120px-Rethymno_Cretan_Kings_BC_logo.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "26",
@@ -1973,7 +1973,7 @@
       {
        "pos": 7,
        "team": "Κολοσσός H Hotels",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/8/84/Kolossos_H_Hotels_logo.png/120px-Kolossos_H_Hotels_logo.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "26",
@@ -1986,7 +1986,7 @@
       {
        "pos": 8,
        "team": "Λαύριο DHI",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/e/e8/%CE%93%CE%A3_%CE%9B%CE%B1%CF%85%CF%81%CE%AF%CE%BF%CF%85.svg/120px-%CE%93%CE%A3_%CE%9B%CE%B1%CF%85%CF%81%CE%AF%CE%BF%CF%85.svg.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "26",
@@ -1999,7 +1999,7 @@
       {
        "pos": 9,
        "team": "Προμηθέας Πάτρας",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/4/48/Promitheas_BC_logo.svg/120px-Promitheas_BC_logo.svg.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "26",
@@ -2012,7 +2012,7 @@
       {
        "pos": 10,
        "team": "Τρίκαλα Aries",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/9/94/Aiolos_Trikalon_BC_%28logo%29.png/120px-Aiolos_Trikalon_BC_%28logo%29.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "26",
@@ -2025,7 +2025,7 @@
       {
        "pos": 11,
        "team": "Κόροιβος Αμαλιάδας",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/f/fb/AS_Koroivos_Amaliadas_Logo.jpg/120px-AS_Koroivos_Amaliadas_Logo.jpg?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "26",
@@ -2038,7 +2038,7 @@
       {
        "pos": 12,
        "team": "Κύμη Seajets",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/a/ac/G.S._Kimis_Logo.jpg/120px-G.S._Kimis_Logo.jpg?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "26",
@@ -2051,7 +2051,7 @@
       {
        "pos": 13,
        "team": "Απόλλων Πατρών Carna",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/1/11/Apollon_Patras_BC_logo.png/120px-Apollon_Patras_BC_logo.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "26",
@@ -3227,7 +3227,7 @@
       {
        "pos": 1,
        "team": "Ολυμπιακός Πειραιώς",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/f/fc/Olympiakos_SFP_logo.png/120px-Olympiakos_SFP_logo.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "22",
@@ -3253,7 +3253,7 @@
       {
        "pos": 3,
        "team": "Παναθηναϊκός Α.Ο.",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/4/4f/Panathinaikos_A.O._logo.svg/120px-Panathinaikos_A.O._logo.svg.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "22",
@@ -3279,7 +3279,7 @@
       {
        "pos": 5,
        "team": "Α.Ο.Π. Κηφισιάς",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/9/92/AOP_Kifissia_Volleyball_%28logo%29.png/120px-AOP_Kifissia_Volleyball_%28logo%29.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "22",
@@ -3292,7 +3292,7 @@
       {
        "pos": 6,
        "team": "Φοίνικας Σύρου",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/d/d8/Foinikas_Syros_V.C._logo.jpg/120px-Foinikas_Syros_V.C._logo.jpg?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "22",
@@ -3318,7 +3318,7 @@
       {
        "pos": 8,
        "team": "Ηρακλής Θεσσαλονίκης",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/c/c3/IraklisVolleyballNewLogo.jpg/120px-IraklisVolleyballNewLogo.jpg?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "22",
@@ -3331,7 +3331,7 @@
       {
        "pos": 9,
        "team": "Ηρακλής Χαλκίδας",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/e/ef/APFS_Iraklis_Chalkidas_Volleyball_%28logo%29.jpg/120px-APFS_Iraklis_Chalkidas_Volleyball_%28logo%29.jpg?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "22",
@@ -3344,7 +3344,7 @@
       {
        "pos": 10,
        "team": "Παναχαϊκή Πατρών",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/0/05/Panahaiki_VC_%28logo%29.png/120px-Panahaiki_VC_%28logo%29.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "22",
@@ -3370,7 +3370,7 @@
       {
        "pos": 12,
        "team": "Α.Ο. Ορεστιάδας",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/e/e5/A.C._Orestias_%28logo%29.png/120px-A.C._Orestias_%28logo%29.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "22",
@@ -3427,7 +3427,7 @@
       {
        "pos": 2,
        "team": "Ελπίδες Καρδίτσας 1994",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/5/50/%CE%95%CE%BB%CF%80%CE%AF%CE%B4%CE%B5%CF%82_%CE%9A%CE%B1%CF%81%CE%B4%CE%AF%CF%84%CF%83%CE%B1%CF%82.jpg/120px-%CE%95%CE%BB%CF%80%CE%AF%CE%B4%CE%B5%CF%82_%CE%9A%CE%B1%CF%81%CE%B4%CE%AF%CF%84%CF%83%CE%B1%CF%82.jpg?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "14",
@@ -3440,7 +3440,7 @@
       {
        "pos": 3,
        "team": "Αμαζόνες Δράμας",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/b/bd/Amazones_Dramas_AS_%28logo%29.png/120px-Amazones_Dramas_AS_%28logo%29.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "9",
@@ -3453,7 +3453,7 @@
       {
        "pos": 4,
        "team": "Λάρισα",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/b/b1/AEL_Logo.svg/120px-AEL_Logo.svg.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "8",
@@ -3466,7 +3466,7 @@
       {
        "pos": 5,
        "team": "Άρης Θεσσαλονίκης",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/9/90/AS_Aris_logo.png/120px-AS_Aris_logo.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "7",
@@ -3479,7 +3479,7 @@
       {
        "pos": 6,
        "team": "Ατρόμητος",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/5/5a/Atromitos_logo.svg/120px-Atromitos_logo.svg.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "4",
@@ -3550,7 +3550,7 @@
       {
        "pos": 1,
        "team": "Ολυμπιακός Σ.Φ. Πειραιώς",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/f/fc/Olympiakos_SFP_logo.png/120px-Olympiakos_SFP_logo.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "22",
@@ -3563,7 +3563,7 @@
       {
        "pos": 2,
        "team": "Αθηναϊκός Α.Σ. Βύρωνα",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/c/c6/Athina_BC_logo.png/120px-Athina_BC_logo.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "22",
@@ -3576,7 +3576,7 @@
       {
        "pos": 3,
        "team": "Παναθηναϊκός Α.Ο.",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/4/4f/Panathinaikos_A.O._logo.svg/120px-Panathinaikos_A.O._logo.svg.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "22",
@@ -3589,7 +3589,7 @@
       {
        "pos": 4,
        "team": "Α.Ο. Δάφνη Αγίου Δημητρίου",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/7/76/A.O._Dafni_Aghiou_Dimitriou_Logo.jpg/120px-A.O._Dafni_Aghiou_Dimitriou_Logo.jpg?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "22",
@@ -3602,7 +3602,7 @@
       {
        "pos": 5,
        "team": "Α.Σ. Νίκη Λευκάδας",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/3/3b/A.S._Niki_Lefkadas_Logo_%282015%29.png/120px-A.S._Niki_Lefkadas_Logo_%282015%29.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "22",
@@ -3615,7 +3615,7 @@
       {
        "pos": 6,
        "team": "Παναθλητικός Πειραματικό Συκεών",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/b/b2/Panathlitikos_Sikeon_Basketball_Logo.png/120px-Panathlitikos_Sikeon_Basketball_Logo.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "22",
@@ -3641,7 +3641,7 @@
       {
        "pos": 8,
        "team": "Α.Ε.Ο. Πρωτέας Βούλας",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Athlitik%C3%B3s_Ekpolitistik%C3%B3s_%C3%93milos_Prot%C3%A9as_Vo%C3%BAlas_%28logo%29.png/120px-Athlitik%C3%B3s_Ekpolitistik%C3%B3s_%C3%93milos_Prot%C3%A9as_Vo%C3%BAlas_%28logo%29.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "22",
@@ -3654,7 +3654,7 @@
       {
        "pos": 9,
        "team": "Πανιώνιος Γ.Σ. Σμύρνης",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/6/61/Panionios_logo.svg/120px-Panionios_logo.svg.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "22",
@@ -3667,7 +3667,7 @@
       {
        "pos": 10,
        "team": "Α.Σ. Άρης Θεσσαλονίκης",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/9/90/AS_Aris_logo.png/120px-AS_Aris_logo.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "22",
@@ -3680,7 +3680,7 @@
       {
        "pos": 11,
        "team": "Γ.Σ. Κρόνος Αγίου Δημητρίου",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/a/a9/Kronosbc.png/120px-Kronosbc.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "22",
@@ -3693,7 +3693,7 @@
       {
        "pos": 12,
        "team": "Α.Ο. Τερψιθέα Γλυφάδας",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/1/1b/A.O._Terpshithea_Glyfadas_Logo.JPG/120px-A.O._Terpshithea_Glyfadas_Logo.JPG?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "22",
@@ -3725,7 +3725,7 @@
       {
        "pos": 1,
        "team": "Ολυμπιακός Πειραιώς",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/f/fc/Olympiakos_SFP_logo.png/120px-Olympiakos_SFP_logo.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "22",
@@ -3738,7 +3738,7 @@
       {
        "pos": 2,
        "team": "Ν.Ο. Βουλιαγμένης",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/9/94/Smllogo22.GIF/120px-Smllogo22.GIF?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "19",
@@ -3751,7 +3751,7 @@
       {
        "pos": 3,
        "team": "Α.Ν.Ο. Γλυφάδας",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/f/f1/ANOG_%28logo%29.png/120px-ANOG_%28logo%29.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "14",
@@ -3764,7 +3764,7 @@
       {
        "pos": 4,
        "team": "Παναθηναϊκός",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/4/4f/Panathinaikos_A.O._logo.svg/120px-Panathinaikos_A.O._logo.svg.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "14",
@@ -3790,7 +3790,7 @@
       {
        "pos": 6,
        "team": "Α.Ο. Παλαιού Φαλήρου",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Athlitik%C3%B3s_%C3%93milos_Palaio%C3%BA_Fal%C3%ADrou_%28logo%29.png/120px-Athlitik%C3%B3s_%C3%93milos_Palaio%C3%BA_Fal%C3%ADrou_%28logo%29.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "12",
@@ -3803,7 +3803,7 @@
       {
        "pos": 7,
        "team": "Υδραϊκός Ν.Ο.",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/f/fb/%CE%88%CE%BC%CE%B2%CE%BB%CE%B7%CE%BC%CE%B1_%CE%A5%CE%B4%CF%81%CE%B1%CF%8A%CE%BA%CE%BF%CF%8D_%CE%9D%CE%B1%CF%85%CF%84%CE%B9%CE%BA%CE%BF%CF%8D_%CE%9F%CE%BC%CE%AF%CE%BB%CE%BF%CF%85.jpg/120px-%CE%88%CE%BC%CE%B2%CE%BB%CE%B7%CE%BC%CE%B1_%CE%A5%CE%B4%CF%81%CE%B1%CF%8A%CE%BA%CE%BF%CF%8D_%CE%9D%CE%B1%CF%85%CF%84%CE%B9%CE%BA%CE%BF%CF%8D_%CE%9F%CE%BC%CE%AF%CE%BB%CE%BF%CF%85.jpg?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "11",
@@ -3816,7 +3816,7 @@
       {
        "pos": 8,
        "team": "Εθνικός Ο.Φ.Π.Φ.",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/b/b7/%CE%A3%CE%97%CE%9C%CE%91_%CE%95%CE%98%CE%9D%CE%99%CE%9A%CE%9F%CE%A5.png/120px-%CE%A3%CE%97%CE%9C%CE%91_%CE%95%CE%98%CE%9D%CE%99%CE%9A%CE%9F%CE%A5.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "9",
@@ -3842,7 +3842,7 @@
       {
        "pos": 10,
        "team": "Πανιώνιος Γ.Σ.Σ.",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/6/61/Panionios_logo.svg/120px-Panionios_logo.svg.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "4",
@@ -3855,7 +3855,7 @@
       {
        "pos": 11,
        "team": "Ν.Ο. Πατρών",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/c/c7/NO_Patras_logo.png/120px-NO_Patras_logo.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "0",

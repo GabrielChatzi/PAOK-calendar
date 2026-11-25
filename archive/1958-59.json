@@ -34,7 +34,7 @@
       {
        "pos": 2,
        "team": "Άρης",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/0/06/Aris_BC_official_logo.png/120px-Aris_BC_official_logo.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "6",
@@ -46,7 +46,7 @@
       {
        "pos": 3,
        "team": "Σπόρτιγκ",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/4/48/Sporting_BC_new_logo.png/120px-Sporting_BC_new_logo.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "6",
@@ -58,7 +58,7 @@
       {
        "pos": 4,
        "team": "Ολυμπιακός",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/7/7f/Olympiacos_BC_logo.svg/120px-Olympiacos_BC_logo.svg.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "6",
@@ -70,7 +70,7 @@
       {
        "pos": 5,
        "team": "ΑΕΚ",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/2/22/AEK_NEW_LOGO_3_STARS.png/120px-AEK_NEW_LOGO_3_STARS.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "6",
@@ -82,7 +82,7 @@
       {
        "pos": 6,
        "team": "Ηρακλής",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/4/46/%CE%9A%CE%91%CE%95_%CE%97%CF%81%CE%B1%CE%BA%CE%BB%CE%AE%CF%82_%28logo%2C_2022%29.png/120px-%CE%9A%CE%91%CE%95_%CE%97%CF%81%CE%B1%CE%BA%CE%BB%CE%AE%CF%82_%28logo%2C_2022%29.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "6",
@@ -94,7 +94,7 @@
       {
        "pos": 7,
        "team": "Εθνικός Αθηνών",
-       "logo": "",
+       "logo": "https://thumb.wikimedia.org/wikipedia/el/thumb/1/14/%CE%95%CE%B8%CE%BD%CE%B9%CE%BA%CF%8C%CF%82_%CE%91%CE%B8%CE%B7%CE%BD%CF%8E%CE%BD.png/120px-%CE%95%CE%B8%CE%BD%CE%B9%CE%BA%CF%8C%CF%82_%CE%91%CE%B8%CE%B7%CE%BD%CF%8E%CE%BD.png?utm_source=el.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
         "6",

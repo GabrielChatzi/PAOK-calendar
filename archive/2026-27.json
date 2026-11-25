@@ -17748,7 +17748,54 @@
      "awayLogo": "https://paokalendar.gr/crests/351c0d8309e1802e.jpg"
     }
    ]
+  },
+  "waterpolo-u16": {
+   "matches": [
+    {
+     "uid": "waterpolo-u16-manual-49ca4b4b8040",
+     "nt": "fb83dd0ef3",
+     "section": "waterpolo-u16",
+     "start": "2027-01-15T18:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΝΕ Πατρών",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Πάτρα",
+     "competition": "Πανελλήνιο Πρωτάθλημα Παίδων Κ16",
+     "round": "Α' φάση, 2ος όμιλος (15–17/1)",
+     "url": "https://koe.org.gr/article/i-klirosi-tis-a-fasis-tou-protathlimatos-paidon-k16-se-oles-tis-katigories",
+     "homeLogo": "https://paokalendar.gr/crests/4edc97109d1de250.jpg"
+    },
+    {
+     "uid": "waterpolo-u16-manual-b1ec29100c21",
+     "nt": "90169079c3",
+     "section": "waterpolo-u16",
+     "start": "2027-01-15T18:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΝΟ Λάρισας",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Πάτρα",
+     "competition": "Πανελλήνιο Πρωτάθλημα Παίδων Κ16",
+     "round": "Α' φάση, 2ος όμιλος (15–17/1)",
+     "url": "https://koe.org.gr/article/i-klirosi-tis-a-fasis-tou-protathlimatos-paidon-k16-se-oles-tis-katigories"
+    },
+    {
+     "uid": "waterpolo-u16-manual-b45c54b0d5a8",
+     "nt": "60029574a8",
+     "section": "waterpolo-u16",
+     "start": "2027-01-15T18:00:00+02:00",
+     "timeKnown": false,
+     "home": "ΝΟ Πατρών",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Πάτρα",
+     "competition": "Πανελλήνιο Πρωτάθλημα Παίδων Κ16",
+     "round": "Α' φάση, 2ος όμιλος (15–17/1)",
+     "url": "https://koe.org.gr/article/i-klirosi-tis-a-fasis-tou-protathlimatos-paidon-k16-se-oles-tis-katigories"
+    }
+   ]
   }
  },
- "updated": "2026-11-25T16:27+02:00"
+ "updated": "2026-11-25T16:50+02:00"
 }

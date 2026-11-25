@@ -1,0 +1,69 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PAOK-calendar//EL
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ΠΑΟΚ Παίδες – Εκτός έδρας
+X-WR-TIMEZONE:Europe/Athens
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Athens
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T030000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T040000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:waterpolo-u16-manual-49ca4b4b8040@paok-calendar
+DTSTAMP:20261125T144510Z
+DTSTART;TZID=Europe/Athens:20270115T180000
+DTEND;TZID=Europe/Athens:20270115T200000
+SUMMARY:🤽 ΝΕ Πατρών – ΠΑΟΚ (ώρα αναμένεται)
+LOCATION:Πάτρα
+DESCRIPTION:Πανελλήνιο Πρωτάθλημα Παίδων Κ16 –
+  Α' φάση\, 2ος όμιλος (15–17/1)\nΗ ώρα δεν έχει 
+ οριστεί ακόμα (προσωρινά 18:00). Θα ενημερω
+ θεί αυτόματα όταν ανακοινωθεί.
+URL:https://koe.org.gr/article/i-klirosi-tis-a-fasis-tou-protathlimatos-pai
+ don-k16-se-oles-tis-katigories
+END:VEVENT
+BEGIN:VEVENT
+UID:waterpolo-u16-manual-b1ec29100c21@paok-calendar
+DTSTAMP:20261125T144510Z
+DTSTART;TZID=Europe/Athens:20270115T180000
+DTEND;TZID=Europe/Athens:20270115T200000
+SUMMARY:🤽 ΝΟ Λάρισας – ΠΑΟΚ (ώρα αναμένεται)
+LOCATION:Πάτρα
+DESCRIPTION:Πανελλήνιο Πρωτάθλημα Παίδων Κ16 –
+  Α' φάση\, 2ος όμιλος (15–17/1)\nΗ ώρα δεν έχει 
+ οριστεί ακόμα (προσωρινά 18:00). Θα ενημερω
+ θεί αυτόματα όταν ανακοινωθεί.
+URL:https://koe.org.gr/article/i-klirosi-tis-a-fasis-tou-protathlimatos-pai
+ don-k16-se-oles-tis-katigories
+END:VEVENT
+BEGIN:VEVENT
+UID:waterpolo-u16-manual-b45c54b0d5a8@paok-calendar
+DTSTAMP:20261125T144510Z
+DTSTART;TZID=Europe/Athens:20270115T180000
+DTEND;TZID=Europe/Athens:20270115T200000
+SUMMARY:🤽 ΝΟ Πατρών – ΠΑΟΚ (ώρα αναμένεται)
+LOCATION:Πάτρα
+DESCRIPTION:Πανελλήνιο Πρωτάθλημα Παίδων Κ16 –
+  Α' φάση\, 2ος όμιλος (15–17/1)\nΗ ώρα δεν έχει 
+ οριστεί ακόμα (προσωρινά 18:00). Θα ενημερω
+ θεί αυτόματα όταν ανακοινωθεί.
+URL:https://koe.org.gr/article/i-klirosi-tis-a-fasis-tou-protathlimatos-pai
+ don-k16-se-oles-tis-katigories
+END:VEVENT
+END:VCALENDAR

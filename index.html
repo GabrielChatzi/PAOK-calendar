@@ -2103,7 +2103,7 @@
       (won.length ? '<p class="arch-won">🏆 ' + won.map(function (t) { return esc(t.name); }).join(" · ") + "</p>" : "") + sumHtml +
       (played ? '<p class="lede">' + played + " αγώνες με αποτέλεσμα: " + n.win + " νίκες" + (n.draw ? ", " + n.draw + " ισοπαλίες" : "") + ", " + n.loss + " ήττες." +
         (sec.backfilled ? " Από τις πηγές που κρατούν παλιές σεζόν: μπορεί να λείπουν διοργανώσεις." : "") + "</p>"
-        : '<p class="help">Δεν υπάρχουν αγώνες αυτής της σεζόν στο αρχείο, μόνο η περίληψη.</p>') +
+        : '<p class="help">Δεν υπάρχουν αγώνες αυτής της σεζόν στο αρχείο' + (sec.standings && sec.standings.length ? (sum ? ", μόνο η περίληψη και η βαθμολογία." : ", μόνο η βαθμολογία.") : ", μόνο η περίληψη.") + "</p>") +
       (notPlayed ? '<p class="help">' + notPlayed + (notPlayed === 1 ? " αγώνας του προγράμματος δεν έγινε" : " αγώνες του προγράμματος δεν έγιναν") +
         (season === "2019-20" ? " (διακοπή λόγω πανδημίας)." : " (π.χ. «αν χρειαστεί» στα πλέι οφ).") + "</p>" : "") +
       (sec.standings && sec.standings.length ? '<h3 class="area-sport">Βαθμολογία</h3>' + tablesHtml(sec.standings, key) : "") +

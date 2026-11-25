@@ -140,7 +140,7 @@
      "section": "football",
      "start": "2025-09-17T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Levadiakos",
+     "home": "Λεβαδειακός",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Levadia Municipal Stadium",
@@ -177,7 +177,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/APO_Levadiakos_%28logo%29.svg/120px-APO_Levadiakos_%28logo%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-752297",
@@ -313,7 +314,7 @@
      "start": "2025-10-29T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "AEL",
+     "away": "Α.Ε.Λ.",
      "paokHome": true,
      "venue": "Toumba",
      "competition": "Πρωτάθλημα",
@@ -347,7 +348,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/25/Athlitiki_Enosi_Larissa_F.C._logo.svg/120px-Athlitiki_Enosi_Larissa_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-752332",
@@ -450,7 +452,7 @@
      "section": "football",
      "start": "2025-12-03T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Aris",
+     "home": "Άρης Θεσσαλονίκης",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Kleanthis Vikelidis",
@@ -472,7 +474,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e4/Aris_Thessaloniki_F.C._logo.svg/120px-Aris_Thessaloniki_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-752362",
@@ -585,7 +588,7 @@
      "start": "2026-01-06T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Atromitos",
+     "away": "Ατρόμητος Αθηνών",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Κύπελλο Ελλάδας",
@@ -605,7 +608,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6e/Atromitos_F.C._logo.svg/120px-Atromitos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-752384",
@@ -628,7 +632,7 @@
      "section": "football",
      "start": "2026-01-14T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Olympiacos",
+     "home": "Ολυμπιακός",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Karaiskakis Stadium",
@@ -648,7 +652,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a2/Olympiacos_FC_crest.svg/120px-Olympiacos_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-752389",
@@ -719,7 +724,7 @@
      "section": "football",
      "start": "2026-02-04T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Panathinaikos",
+     "home": "Παναθηναϊκός",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Leoforos Alexandras Stadium",
@@ -737,7 +742,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/84/Panathinaikos_F.C._logo.svg/120px-Panathinaikos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-752408",
@@ -761,7 +767,7 @@
      "start": "2026-02-11T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Panathinaikos",
+     "away": "Παναθηναϊκός",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Κύπελλο Ελλάδας",
@@ -781,7 +787,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/84/Panathinaikos_F.C._logo.svg/120px-Panathinaikos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-752417",
@@ -967,7 +974,7 @@
      "start": "2026-04-25T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "OFI",
+     "away": "Ο.Φ.Η.",
      "paokHome": true,
      "venue": "Panthessaliko Stadium",
      "competition": "Κύπελλο Ελλάδας",
@@ -1001,7 +1008,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f8/OFI_Crete_F.C._logo.svg/120px-OFI_Crete_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-401866556",
@@ -1100,7 +1108,8 @@
      "rows": [
       {
        "pos": 1,
-       "team": "AEK Athens",
+       "team": "Α.Ε.Κ.",
+       "en": "AEK Athens",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/04/AEK_Athens_FC_logo.svg/120px-AEK_Athens_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1114,7 +1123,8 @@
       },
       {
        "pos": 2,
-       "team": "Olympiacos",
+       "team": "Ολυμπιακός",
+       "en": "Olympiacos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a2/Olympiacos_FC_crest.svg/120px-Olympiacos_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1142,7 +1152,8 @@
       },
       {
        "pos": 4,
-       "team": "Panathinaikos",
+       "team": "Παναθηναϊκός",
+       "en": "Panathinaikos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/84/Panathinaikos_F.C._logo.svg/120px-Panathinaikos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1156,7 +1167,8 @@
       },
       {
        "pos": 5,
-       "team": "Levadiakos",
+       "team": "Λεβαδειακός",
+       "en": "Levadiakos",
        "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/APO_Levadiakos_%28logo%29.svg/120px-APO_Levadiakos_%28logo%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1170,7 +1182,8 @@
       },
       {
        "pos": 6,
-       "team": "OFI",
+       "team": "Ο.Φ.Η.",
+       "en": "OFI",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f8/OFI_Crete_F.C._logo.svg/120px-OFI_Crete_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1184,7 +1197,8 @@
       },
       {
        "pos": 7,
-       "team": "Volos",
+       "team": "Βόλος Νέος Ποδοσφαιρικός Σύλλογος",
+       "en": "Volos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e8/Volos_F.C._logo.svg/120px-Volos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1198,7 +1212,8 @@
       },
       {
        "pos": 8,
-       "team": "Aris",
+       "team": "Άρης Θεσσαλονίκης",
+       "en": "Aris",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e4/Aris_Thessaloniki_F.C._logo.svg/120px-Aris_Thessaloniki_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1212,7 +1227,8 @@
       },
       {
        "pos": 9,
-       "team": "Atromitos",
+       "team": "Ατρόμητος Αθηνών",
+       "en": "Atromitos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6e/Atromitos_F.C._logo.svg/120px-Atromitos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1226,7 +1242,8 @@
       },
       {
        "pos": 10,
-       "team": "A.E. Kifisia",
+       "team": "Αθλητική Ένωση Κηφισιάς",
+       "en": "A.E. Kifisia",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e2/A.E._Kifisia_F.C._logo.svg/120px-A.E._Kifisia_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1240,7 +1257,8 @@
       },
       {
        "pos": 11,
-       "team": "Panetolikos",
+       "team": "Παναιτωλικός",
+       "en": "Panetolikos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6a/Panetolikos_F.C._logo.svg/120px-Panetolikos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1254,7 +1272,8 @@
       },
       {
        "pos": 12,
-       "team": "AEL",
+       "team": "Α.Ε.Λ.",
+       "en": "AEL",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/25/Athlitiki_Enosi_Larissa_F.C._logo.svg/120px-Athlitiki_Enosi_Larissa_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1268,7 +1287,8 @@
       },
       {
        "pos": 13,
-       "team": "Panserraikos",
+       "team": "Πανσερραϊκός",
+       "en": "Panserraikos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/b/b0/Panseraikos_new_emblem.png/120px-Panseraikos_new_emblem.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1282,7 +1302,8 @@
       },
       {
        "pos": 14,
-       "team": "Asteras Tripolis",
+       "team": "Αθλητικός Γυμναστικός Σύλλογος Αστέρας Τρίπολης",
+       "en": "Asteras Tripolis",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4c/Asteras_Tripolis_FC_logo.svg/120px-Asteras_Tripolis_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [

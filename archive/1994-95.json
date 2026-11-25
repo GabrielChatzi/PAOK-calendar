@@ -852,7 +852,7 @@
      "start": "1994-08-27T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Kavala",
+     "away": "Καβάλα",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -881,7 +881,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ef/A.O._Kavala_2026_logo.png/120px-A.O._Kavala_2026_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-269b00b9dca8",
@@ -987,7 +988,7 @@
      "section": "football",
      "start": "1994-09-18T12:00:00+02:00",
      "timeKnown": false,
-     "home": "AEK Athens",
+     "home": "Α.Ε.Κ.",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Nikos Goumas Stadium",
@@ -1031,7 +1032,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/04/AEK_Athens_FC_logo.svg/120px-AEK_Athens_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-cbd792762ef5",
@@ -1039,7 +1041,7 @@
      "start": "1994-09-25T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Ethnikos Piraeus",
+     "away": "Εθνικός Πειραιώς",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1067,14 +1069,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4f/Ethnikos_Piraeus_FC_logo.png/120px-Ethnikos_Piraeus_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-c1c73f6ec207",
      "section": "football",
      "start": "1994-10-02T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Iraklis",
+     "home": "Ηρακλής Θεσσαλονίκης",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Kaftanzoglio Stadium",
@@ -1101,7 +1104,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1a/Iraklis_F.C._%28Thessaloniki%29_logo.svg/120px-Iraklis_F.C._%28Thessaloniki%29_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-7c02e18a1dd9",
@@ -1109,21 +1113,22 @@
      "start": "1994-10-26T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Levadiakos",
+     "away": "Λεβαδειακός",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
      "round": "6η αγωνιστική",
      "score": "0-0",
      "url": "https://en.wikipedia.org/wiki/1994%E2%80%9395_PAOK_FC_season",
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/APO_Levadiakos_%28logo%29.svg/120px-APO_Levadiakos_%28logo%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-75905c536414",
      "section": "football",
      "start": "1994-10-30T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Panathinaikos",
+     "home": "Παναθηναϊκός",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Athens Olympic Stadium",
@@ -1149,7 +1154,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/84/Panathinaikos_F.C._logo.svg/120px-Panathinaikos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-14259aac3866",
@@ -1157,7 +1163,7 @@
      "start": "1994-11-06T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Olympiacos",
+     "away": "Ολυμπιακός",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1181,7 +1187,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a2/Olympiacos_FC_crest.svg/120px-Olympiacos_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-40711d17065e",
@@ -1217,7 +1224,7 @@
      "section": "football",
      "start": "1994-11-27T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Panionios",
+     "home": "Πανιώνιος",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Nea Smyrni Stadium",
@@ -1247,7 +1254,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Panionios_FC.png/120px-Panionios_FC.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-e8574073ff09",
@@ -1270,7 +1278,7 @@
      "start": "1994-12-04T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "AEL",
+     "away": "Α.Ε.Λ.",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1303,14 +1311,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/25/Athlitiki_Enosi_Larissa_F.C._logo.svg/120px-Athlitiki_Enosi_Larissa_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-cf52899d2b05",
      "section": "football",
      "start": "1994-12-07T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Aris",
+     "home": "Άρης Θεσσαλονίκης",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Kleanthis Vikelidis Stadium",
@@ -1339,14 +1348,15 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e4/Aris_Thessaloniki_F.C._logo.svg/120px-Aris_Thessaloniki_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-84240418a897",
      "section": "football",
      "start": "1994-12-11T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Doxa Drama",
+     "home": "Δόξα Δράμας",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Doxa Drama Stadium",
@@ -1354,7 +1364,8 @@
      "round": "12η αγωνιστική",
      "score": "0-0",
      "url": "https://en.wikipedia.org/wiki/1994%E2%80%9395_PAOK_FC_season",
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ee/Doxa_Drama_F.C._emblem.png/120px-Doxa_Drama_F.C._emblem.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-daa0845d0984",
@@ -1362,7 +1373,7 @@
      "start": "1994-12-28T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Apollon Athens",
+     "away": "Απόλλων Σμύρνης",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1384,14 +1395,15 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/77/Apollon_Smyrnis_F.C._logo.svg/120px-Apollon_Smyrnis_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-e41cd0084dea",
      "section": "football",
      "start": "1995-01-08T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Edessaikos",
+     "home": "Εδεσσαϊκός",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Municipal Stadium of Edessa",
@@ -1412,14 +1424,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/45/Edessaikos_FC.png/120px-Edessaikos_FC.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-2c7022535f0b",
      "section": "football",
      "start": "1995-01-22T12:00:00+02:00",
      "timeKnown": false,
-     "home": "OFI",
+     "home": "Ο.Φ.Η.",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Theodoros Vardinogiannis Stadium",
@@ -1445,7 +1458,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f8/OFI_Crete_F.C._logo.svg/120px-OFI_Crete_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-4e608f965b58",
@@ -1453,7 +1467,7 @@
      "start": "1995-01-29T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Athinaikos",
+     "away": "Αθηναϊκός Α.Σ. Βύρωνα",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1474,7 +1488,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/36/Athinaikos_F.C._logo.png/120px-Athinaikos_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-10e1dbdefd99",
@@ -1482,7 +1497,7 @@
      "start": "1995-02-01T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Ionikos",
+     "away": "Ιωνικός Νίκαιας",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1503,14 +1518,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/AO_Ionikos_Nikeas.png/120px-AO_Ionikos_Nikeas.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-91b8b31419cc",
      "section": "football",
      "start": "1995-02-05T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Kavala",
+     "home": "Καβάλα",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Anthi Karagianni Stadium",
@@ -1527,7 +1543,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ef/A.O._Kavala_2026_logo.png/120px-A.O._Kavala_2026_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-dbc96f51c844",
@@ -1567,7 +1584,7 @@
      "start": "1995-02-19T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "AEK Athens",
+     "away": "Α.Ε.Κ.",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1588,14 +1605,15 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/04/AEK_Athens_FC_logo.svg/120px-AEK_Athens_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-a5ccda08f207",
      "section": "football",
      "start": "1995-02-26T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Ethnikos Piraeus",
+     "home": "Εθνικός Πειραιώς",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Karaiskakis Stadium",
@@ -1625,7 +1643,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4f/Ethnikos_Piraeus_FC_logo.png/120px-Ethnikos_Piraeus_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-de129def7071",
@@ -1633,21 +1652,22 @@
      "start": "1995-03-05T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Iraklis",
+     "away": "Ηρακλής Θεσσαλονίκης",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
      "round": "22η αγωνιστική",
      "score": "0-0",
      "url": "https://en.wikipedia.org/wiki/1994%E2%80%9395_PAOK_FC_season",
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1a/Iraklis_F.C._%28Thessaloniki%29_logo.svg/120px-Iraklis_F.C._%28Thessaloniki%29_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-b75f944587f9",
      "section": "football",
      "start": "1995-03-12T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Levadiakos",
+     "home": "Λεβαδειακός",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Levadia Municipal Stadium",
@@ -1664,7 +1684,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/APO_Levadiakos_%28logo%29.svg/120px-APO_Levadiakos_%28logo%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-6d43d04541f8",
@@ -1672,7 +1693,7 @@
      "start": "1995-03-19T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Panathinaikos",
+     "away": "Παναθηναϊκός",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1692,14 +1713,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/84/Panathinaikos_F.C._logo.svg/120px-Panathinaikos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-bb2ae4ea0a55",
      "section": "football",
      "start": "1995-03-26T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Olympiacos",
+     "home": "Ολυμπιακός",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Karaiskakis Stadium",
@@ -1720,7 +1742,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a2/Olympiacos_FC_crest.svg/120px-Olympiacos_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-f8557aad1304",
@@ -1728,7 +1751,7 @@
      "start": "1995-04-02T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Aris",
+     "away": "Άρης Θεσσαλονίκης",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1748,7 +1771,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e4/Aris_Thessaloniki_F.C._logo.svg/120px-Aris_Thessaloniki_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-285a4a1f5a83",
@@ -1756,7 +1780,7 @@
      "start": "1995-04-09T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Panionios",
+     "away": "Πανιώνιος",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1776,14 +1800,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Panionios_FC.png/120px-Panionios_FC.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-d99b17d447df",
      "section": "football",
      "start": "1995-04-16T12:00:00+02:00",
      "timeKnown": false,
-     "home": "AEL",
+     "home": "Α.Ε.Λ.",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Alcazar Stadium",
@@ -1804,7 +1829,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/25/Athlitiki_Enosi_Larissa_F.C._logo.svg/120px-Athlitiki_Enosi_Larissa_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-ef190f7f3647",
@@ -1812,7 +1838,7 @@
      "start": "1995-04-30T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Doxa Drama",
+     "away": "Δόξα Δράμας",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1828,14 +1854,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ee/Doxa_Drama_F.C._emblem.png/120px-Doxa_Drama_F.C._emblem.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-428f8363a3d3",
      "section": "football",
      "start": "1995-05-10T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Apollon Athens",
+     "home": "Απόλλων Σμύρνης",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Rizoupoli Stadium",
@@ -1862,7 +1889,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/77/Apollon_Smyrnis_F.C._logo.svg/120px-Apollon_Smyrnis_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-befa45b20769",
@@ -1870,7 +1898,7 @@
      "start": "1995-05-14T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Edessaikos",
+     "away": "Εδεσσαϊκός",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1896,14 +1924,15 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/45/Edessaikos_FC.png/120px-Edessaikos_FC.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-b7e56c6c1ab7",
      "section": "football",
      "start": "1995-05-21T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Ionikos",
+     "home": "Ιωνικός Νίκαιας",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Neapoli Stadium",
@@ -1924,7 +1953,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/AO_Ionikos_Nikeas.png/120px-AO_Ionikos_Nikeas.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-4838549cf402",
@@ -1932,7 +1962,7 @@
      "start": "1995-05-28T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "OFI",
+     "away": "Ο.Φ.Η.",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1949,14 +1979,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f8/OFI_Crete_F.C._logo.svg/120px-OFI_Crete_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-d44d37c9e329",
      "section": "football",
      "start": "1995-06-04T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Athinaikos",
+     "home": "Αθηναϊκός Α.Σ. Βύρωνα",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Vyronas National Stadium",
@@ -1982,7 +2013,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/36/Athinaikos_F.C._logo.png/120px-Athinaikos_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     }
    ],
    "summary": {
@@ -2013,7 +2045,8 @@
      "rows": [
       {
        "pos": 1,
-       "team": "Panathinaikos",
+       "team": "Παναθηναϊκός",
+       "en": "Panathinaikos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/84/Panathinaikos_F.C._logo.svg/120px-Panathinaikos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -2027,7 +2060,8 @@
       },
       {
        "pos": 2,
-       "team": "Olympiacos",
+       "team": "Ολυμπιακός",
+       "en": "Olympiacos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a2/Olympiacos_FC_crest.svg/120px-Olympiacos_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -2055,7 +2089,8 @@
       },
       {
        "pos": 4,
-       "team": "Apollon Athens",
+       "team": "Απόλλων Σμύρνης",
+       "en": "Apollon Athens",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/77/Apollon_Smyrnis_F.C._logo.svg/120px-Apollon_Smyrnis_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -2069,7 +2104,8 @@
       },
       {
        "pos": 5,
-       "team": "AEK Athens",
+       "team": "Α.Ε.Κ.",
+       "en": "AEK Athens",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/04/AEK_Athens_FC_logo.svg/120px-AEK_Athens_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -2083,7 +2119,8 @@
       },
       {
        "pos": 6,
-       "team": "Iraklis",
+       "team": "Ηρακλής Θεσσαλονίκης",
+       "en": "Iraklis",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1a/Iraklis_F.C._%28Thessaloniki%29_logo.svg/120px-Iraklis_F.C._%28Thessaloniki%29_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -2097,7 +2134,8 @@
       },
       {
        "pos": 7,
-       "team": "Aris",
+       "team": "Άρης Θεσσαλονίκης",
+       "en": "Aris",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e4/Aris_Thessaloniki_F.C._logo.svg/120px-Aris_Thessaloniki_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -2111,7 +2149,8 @@
       },
       {
        "pos": 8,
-       "team": "Skoda Xanthi",
+       "team": "Ξάνθη",
+       "en": "Skoda Xanthi",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Xanthi_F.C._Logo.svg/120px-Xanthi_F.C._Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -2125,7 +2164,8 @@
       },
       {
        "pos": 9,
-       "team": "OFI",
+       "team": "Ο.Φ.Η.",
+       "en": "OFI",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f8/OFI_Crete_F.C._logo.svg/120px-OFI_Crete_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -2139,7 +2179,8 @@
       },
       {
        "pos": 10,
-       "team": "Edessaikos",
+       "team": "Εδεσσαϊκός",
+       "en": "Edessaikos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/45/Edessaikos_FC.png/120px-Edessaikos_FC.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -2153,7 +2194,8 @@
       },
       {
        "pos": 11,
-       "team": "AEL",
+       "team": "Α.Ε.Λ.",
+       "en": "AEL",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/25/Athlitiki_Enosi_Larissa_F.C._logo.svg/120px-Athlitiki_Enosi_Larissa_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -2167,7 +2209,8 @@
       },
       {
        "pos": 12,
-       "team": "Athinaikos",
+       "team": "Αθηναϊκός Α.Σ. Βύρωνα",
+       "en": "Athinaikos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/36/Athinaikos_F.C._logo.png/120px-Athinaikos_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -2181,7 +2224,8 @@
       },
       {
        "pos": 13,
-       "team": "Ethnikos Piraeus",
+       "team": "Εθνικός Πειραιώς",
+       "en": "Ethnikos Piraeus",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4f/Ethnikos_Piraeus_FC_logo.png/120px-Ethnikos_Piraeus_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -2195,7 +2239,8 @@
       },
       {
        "pos": 14,
-       "team": "Panionios",
+       "team": "Πανιώνιος",
+       "en": "Panionios",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Panionios_FC.png/120px-Panionios_FC.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -2209,7 +2254,8 @@
       },
       {
        "pos": 15,
-       "team": "Ionikos",
+       "team": "Ιωνικός Νίκαιας",
+       "en": "Ionikos",
        "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/AO_Ionikos_Nikeas.png/120px-AO_Ionikos_Nikeas.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -2223,7 +2269,8 @@
       },
       {
        "pos": 16,
-       "team": "Doxa Drama",
+       "team": "Δόξα Δράμας",
+       "en": "Doxa Drama",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ee/Doxa_Drama_F.C._emblem.png/120px-Doxa_Drama_F.C._emblem.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -2237,7 +2284,8 @@
       },
       {
        "pos": 17,
-       "team": "Levadiakos",
+       "team": "Λεβαδειακός",
+       "en": "Levadiakos",
        "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/APO_Levadiakos_%28logo%29.svg/120px-APO_Levadiakos_%28logo%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -2251,7 +2299,8 @@
       },
       {
        "pos": 18,
-       "team": "Kavala",
+       "team": "Καβάλα",
+       "en": "Kavala",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ef/A.O._Kavala_2026_logo.png/120px-A.O._Kavala_2026_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [

@@ -58,7 +58,7 @@
      "start": "2006-09-16T21:00:00+03:00",
      "timeKnown": true,
      "home": "ΠΑΟΚ",
-     "away": "Ergotelis",
+     "away": "Εργοτέλης Ηρακλείου",
      "paokHome": true,
      "venue": "Toumbas Stadium",
      "competition": "Super League",
@@ -90,13 +90,14 @@
      "start": "2006-10-01T19:00:00+03:00",
      "timeKnown": true,
      "home": "ΠΑΟΚ",
-     "away": "Apollon Kalamarias",
+     "away": "Απόλλων Καλαμαριάς",
      "paokHome": true,
      "venue": "Toumbas Stadium",
      "competition": "Super League",
      "score": "1-1",
      "url": "https://www.espn.com/soccer/match/_/gameId/218088",
-     "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+     "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/45/Apollon_Kalamarias.png/120px-Apollon_Kalamarias.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-218091",
@@ -136,7 +137,7 @@
      "start": "2006-11-04T19:00:00+02:00",
      "timeKnown": true,
      "home": "ΠΑΟΚ",
-     "away": "Kerkyra",
+     "away": "Κέρκυρα",
      "paokHome": true,
      "venue": "Toumbas Stadium",
      "competition": "Super League",
@@ -190,13 +191,14 @@
      "start": "2006-11-19T19:00:00+02:00",
      "timeKnown": true,
      "home": "ΠΑΟΚ",
-     "away": "Ionikos",
+     "away": "Ιωνικός Νίκαιας",
      "paokHome": true,
      "venue": "Toumbas Stadium",
      "competition": "Super League",
      "score": "3-0",
      "url": "https://www.espn.com/soccer/match/_/gameId/218129",
-     "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+     "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/AO_Ionikos_Nikeas.png/120px-AO_Ionikos_Nikeas.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-218134",
@@ -221,7 +223,7 @@
      "start": "2006-12-03T19:00:00+02:00",
      "timeKnown": true,
      "home": "ΠΑΟΚ",
-     "away": "Panionios",
+     "away": "Πανιώνιος",
      "paokHome": true,
      "venue": "Toumbas Stadium",
      "competition": "Super League",
@@ -268,7 +270,7 @@
      "start": "2006-12-21T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Ergotelis",
+     "away": "Εργοτέλης Ηρακλείου",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Κύπελλο Ελλάδας",
@@ -283,7 +285,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/2b/ErgotelisFC2020Logo.png/120px-ErgotelisFC2020Logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-218163",
@@ -323,7 +326,7 @@
      "start": "2007-01-17T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Panathinaikos",
+     "away": "Παναθηναϊκός",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Κύπελλο Ελλάδας",
@@ -348,7 +351,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/84/Panathinaikos_F.C._logo.svg/120px-Panathinaikos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-218185",
@@ -372,7 +376,7 @@
      "section": "football",
      "start": "2007-01-28T16:45:00+02:00",
      "timeKnown": true,
-     "home": "Ergotelis",
+     "home": "Εργοτέλης Ηρακλείου",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Ergotelis Stadium",
@@ -387,7 +391,7 @@
      "section": "football",
      "start": "2007-01-31T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Panathinaikos",
+     "home": "Παναθηναϊκός",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Olympic Stadium",
@@ -417,7 +421,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/84/Panathinaikos_F.C._logo.svg/120px-Panathinaikos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-218195",
@@ -441,14 +446,15 @@
      "section": "football",
      "start": "2007-02-11T16:45:00+02:00",
      "timeKnown": true,
-     "home": "Apollon Kalamarias",
+     "home": "Απόλλων Καλαμαριάς",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Kalamaria Stadium",
      "competition": "Super League",
      "score": "3-1",
      "url": "https://www.espn.com/soccer/match/_/gameId/218206",
-     "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+     "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/45/Apollon_Kalamarias.png/120px-Apollon_Kalamarias.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-218211",
@@ -487,7 +493,7 @@
      "section": "football",
      "start": "2007-03-04T16:45:00+02:00",
      "timeKnown": true,
-     "home": "Kerkyra",
+     "home": "Κέρκυρα",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Kerkyras National Stadium",
@@ -518,14 +524,15 @@
      "section": "football",
      "start": "2007-03-17T19:00:00+02:00",
      "timeKnown": true,
-     "home": "Ionikos",
+     "home": "Ιωνικός Νίκαιας",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Nikea  Stadium ",
      "competition": "Super League",
      "score": "0-2",
      "url": "https://www.espn.com/soccer/match/_/gameId/218243",
-     "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+     "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/AO_Ionikos_Nikeas.png/120px-AO_Ionikos_Nikeas.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-218255",
@@ -549,7 +556,7 @@
      "section": "football",
      "start": "2007-04-22T19:00:00+03:00",
      "timeKnown": true,
-     "home": "Panionios",
+     "home": "Πανιώνιος",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Panionios Stadium",
@@ -620,7 +627,8 @@
      "rows": [
       {
        "pos": 1,
-       "team": "Olympiacos",
+       "team": "Ολυμπιακός",
+       "en": "Olympiacos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a2/Olympiacos_FC_crest.svg/120px-Olympiacos_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -634,7 +642,8 @@
       },
       {
        "pos": 2,
-       "team": "AEK Athens",
+       "team": "Α.Ε.Κ.",
+       "en": "AEK Athens",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/04/AEK_Athens_FC_logo.svg/120px-AEK_Athens_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -648,7 +657,8 @@
       },
       {
        "pos": 3,
-       "team": "Panathinaikos",
+       "team": "Παναθηναϊκός",
+       "en": "Panathinaikos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/84/Panathinaikos_F.C._logo.svg/120px-Panathinaikos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -662,7 +672,8 @@
       },
       {
        "pos": 4,
-       "team": "Aris",
+       "team": "Άρης Θεσσαλονίκης",
+       "en": "Aris",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e4/Aris_Thessaloniki_F.C._logo.svg/120px-Aris_Thessaloniki_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -676,7 +687,8 @@
       },
       {
        "pos": 5,
-       "team": "Panionios",
+       "team": "Πανιώνιος",
+       "en": "Panionios",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Panionios_FC.png/120px-Panionios_FC.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -704,7 +716,8 @@
       },
       {
        "pos": 7,
-       "team": "OFI",
+       "team": "Ο.Φ.Η.",
+       "en": "OFI",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f8/OFI_Crete_F.C._logo.svg/120px-OFI_Crete_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -718,7 +731,8 @@
       },
       {
        "pos": 8,
-       "team": "Atromitos",
+       "team": "Ατρόμητος Αθηνών",
+       "en": "Atromitos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6e/Atromitos_F.C._logo.svg/120px-Atromitos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -732,7 +746,8 @@
       },
       {
        "pos": 9,
-       "team": "Ergotelis",
+       "team": "Εργοτέλης Ηρακλείου",
+       "en": "Ergotelis",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/2b/ErgotelisFC2020Logo.png/120px-ErgotelisFC2020Logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -746,7 +761,8 @@
       },
       {
        "pos": 10,
-       "team": "AEL",
+       "team": "Α.Ε.Λ.",
+       "en": "AEL",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/25/Athlitiki_Enosi_Larissa_F.C._logo.svg/120px-Athlitiki_Enosi_Larissa_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -760,7 +776,8 @@
       },
       {
        "pos": 11,
-       "team": "Skoda Xanthi",
+       "team": "Ξάνθη",
+       "en": "Skoda Xanthi",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Xanthi_F.C._Logo.svg/120px-Xanthi_F.C._Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -774,7 +791,8 @@
       },
       {
        "pos": 12,
-       "team": "Apollon Kalamarias",
+       "team": "Απόλλων Καλαμαριάς",
+       "en": "Apollon Kalamarias",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/45/Apollon_Kalamarias.png/120px-Apollon_Kalamarias.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -788,7 +806,8 @@
       },
       {
        "pos": 13,
-       "team": "Iraklis",
+       "team": "Ηρακλής Θεσσαλονίκης",
+       "en": "Iraklis",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1a/Iraklis_F.C._%28Thessaloniki%29_logo.svg/120px-Iraklis_F.C._%28Thessaloniki%29_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -802,7 +821,8 @@
       },
       {
        "pos": 14,
-       "team": "Kerkyra",
+       "team": "Κέρκυρα",
+       "en": "Kerkyra",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a9/A.O._Kerkyra_logo.svg/120px-A.O._Kerkyra_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -816,7 +836,8 @@
       },
       {
        "pos": 15,
-       "team": "Egaleo",
+       "team": "Αιγάλεω",
+       "en": "Egaleo",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/47/Aigaleo_FC_Logo.png/120px-Aigaleo_FC_Logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -830,7 +851,8 @@
       },
       {
        "pos": 16,
-       "team": "Ionikos",
+       "team": "Ιωνικός Νίκαιας",
+       "en": "Ionikos",
        "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/AO_Ionikos_Nikeas.png/120px-AO_Ionikos_Nikeas.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [

@@ -160,7 +160,7 @@
      "start": "1991-09-01T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Aris",
+     "away": "Άρης Θεσσαλονίκης",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -181,14 +181,15 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e4/Aris_Thessaloniki_F.C._logo.svg/120px-Aris_Thessaloniki_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-d6fcf113a39f",
      "section": "football",
      "start": "1991-09-08T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Ethnikos Piraeus",
+     "home": "Εθνικός Πειραιώς",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Karaiskakis Stadium",
@@ -211,7 +212,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4f/Ethnikos_Piraeus_FC_logo.png/120px-Ethnikos_Piraeus_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-911997dbe471",
@@ -219,7 +221,7 @@
      "start": "1991-09-15T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Athinaikos",
+     "away": "Αθηναϊκός Α.Σ. Βύρωνα",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -244,7 +246,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/36/Athinaikos_F.C._logo.png/120px-Athinaikos_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-99599aeb4bb8",
@@ -280,7 +283,7 @@
      "section": "football",
      "start": "1991-09-22T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Pierikos",
+     "home": "Πιερικός",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Katerini Stadium",
@@ -306,14 +309,15 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1f/Pierikos_FC_official_logo.png/120px-Pierikos_FC_official_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-f6c69ee67d77",
      "section": "football",
      "start": "1991-09-29T12:00:00+02:00",
      "timeKnown": false,
-     "home": "AEL",
+     "home": "Α.Ε.Λ.",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Alcazar Stadium",
@@ -321,7 +325,8 @@
      "round": "5η αγωνιστική",
      "score": "0-0",
      "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/25/Athlitiki_Enosi_Larissa_F.C._logo.svg/120px-Athlitiki_Enosi_Larissa_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-9947dbf3f747",
@@ -353,7 +358,7 @@
      "start": "1991-10-13T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Iraklis",
+     "away": "Ηρακλής Θεσσαλονίκης",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -377,14 +382,15 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1a/Iraklis_F.C._%28Thessaloniki%29_logo.svg/120px-Iraklis_F.C._%28Thessaloniki%29_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-81925796bc96",
      "section": "football",
      "start": "1991-10-20T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Panachaiki",
+     "home": "Παναχαϊκή",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Kostas Davourlis Stadium",
@@ -424,7 +430,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/5e/Panachaiki_2022_Logo.png/120px-Panachaiki_2022_Logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-2cfe7a13e40c",
@@ -460,7 +467,7 @@
      "start": "1991-11-03T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "OFI",
+     "away": "Ο.Φ.Η.",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -476,7 +483,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f8/OFI_Crete_F.C._logo.svg/120px-OFI_Crete_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-43091ed78a48",
@@ -511,7 +519,7 @@
      "section": "football",
      "start": "1991-11-10T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Panionios",
+     "home": "Πανιώνιος",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Nea Smyrni Stadium",
@@ -533,7 +541,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Panionios_FC.png/120px-Panionios_FC.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-8267a8ee8cdb",
@@ -541,7 +550,7 @@
      "start": "1991-11-24T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Doxa Drama",
+     "away": "Δόξα Δράμας",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -574,7 +583,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ee/Doxa_Drama_F.C._emblem.png/120px-Doxa_Drama_F.C._emblem.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-e16a00209fdf",
@@ -615,7 +625,7 @@
      "section": "football",
      "start": "1991-12-23T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Panserraikos",
+     "home": "Πανσερραϊκός",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Serres Municipal Stadium",
@@ -623,7 +633,8 @@
      "round": "12η αγωνιστική",
      "score": "0-0",
      "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/b/b0/Panseraikos_new_emblem.png/120px-Panseraikos_new_emblem.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-92e4e551b4ef",
@@ -631,7 +642,7 @@
      "start": "1991-12-29T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Apollon Athens",
+     "away": "Απόλλων Σμύρνης",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -656,7 +667,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/77/Apollon_Smyrnis_F.C._logo.svg/120px-Apollon_Smyrnis_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-f358e997ec42",
@@ -664,7 +676,7 @@
      "start": "1992-01-05T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Korinthos",
+     "away": "Κόρινθος",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -689,7 +701,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/06/PAS_Korinthos_%28logo%29.png/120px-PAS_Korinthos_%28logo%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-5e5ecd90e1a8",
@@ -720,7 +733,7 @@
      "section": "football",
      "start": "1992-01-12T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Olympiacos",
+     "home": "Ολυμπιακός",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Karaiskakis Stadium",
@@ -754,7 +767,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a2/Olympiacos_FC_crest.svg/120px-Olympiacos_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-658752f54a01",
@@ -762,7 +776,7 @@
      "start": "1992-01-19T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Panathinaikos",
+     "away": "Παναθηναϊκός",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -778,7 +792,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/84/Panathinaikos_F.C._logo.svg/120px-Panathinaikos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-ea402dae6395",
@@ -822,7 +837,7 @@
      "section": "football",
      "start": "1992-01-25T12:00:00+02:00",
      "timeKnown": false,
-     "home": "AEK Athens",
+     "home": "Α.Ε.Κ.",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Nikos Goumas Stadium",
@@ -852,14 +867,15 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/04/AEK_Athens_FC_logo.svg/120px-AEK_Athens_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-1567387d2961",
      "section": "football",
      "start": "1992-02-02T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Aris",
+     "home": "Άρης Θεσσαλονίκης",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Kleanthis Vikelidis Stadium",
@@ -881,7 +897,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e4/Aris_Thessaloniki_F.C._logo.svg/120px-Aris_Thessaloniki_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-7079924eead4",
@@ -889,7 +906,7 @@
      "start": "1992-02-05T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Korinthos",
+     "away": "Κόρινθος",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Κύπελλο Ελλάδας",
@@ -922,7 +939,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/06/PAS_Korinthos_%28logo%29.png/120px-PAS_Korinthos_%28logo%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-cd14bae4b6bf",
@@ -930,7 +948,7 @@
      "start": "1992-02-09T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Ethnikos Piraeus",
+     "away": "Εθνικός Πειραιώς",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -946,14 +964,15 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4f/Ethnikos_Piraeus_FC_logo.png/120px-Ethnikos_Piraeus_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-a12a3c394072",
      "section": "football",
      "start": "1992-02-16T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Athinaikos",
+     "home": "Αθηναϊκός Α.Σ. Βύρωνα",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Vyronas National Stadium",
@@ -977,7 +996,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/36/Athinaikos_F.C._logo.png/120px-Athinaikos_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-df8ab4d84bd3",
@@ -985,7 +1005,7 @@
      "start": "1992-02-23T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Pierikos",
+     "away": "Πιερικός",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1010,14 +1030,15 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1f/Pierikos_FC_official_logo.png/120px-Pierikos_FC_official_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-c580e9d6b8c1",
      "section": "football",
      "start": "1992-02-26T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Korinthos",
+     "home": "Κόρινθος",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Corinth Stadium",
@@ -1025,7 +1046,8 @@
      "round": "2ος αγώνας",
      "score": "0-0",
      "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/06/PAS_Korinthos_%28logo%29.png/120px-PAS_Korinthos_%28logo%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-8ae291803b53",
@@ -1033,7 +1055,7 @@
      "start": "1992-03-01T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "AEL",
+     "away": "Α.Ε.Λ.",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1058,14 +1080,15 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/25/Athlitiki_Enosi_Larissa_F.C._logo.svg/120px-Athlitiki_Enosi_Larissa_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-4870f48c2428",
      "section": "football",
      "start": "1992-03-08T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Iraklis",
+     "home": "Ηρακλής Θεσσαλονίκης",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Kaftanzoglio Stadium",
@@ -1095,14 +1118,15 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1a/Iraklis_F.C._%28Thessaloniki%29_logo.svg/120px-Iraklis_F.C._%28Thessaloniki%29_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-94731396290d",
      "section": "football",
      "start": "1992-03-11T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Doxa Drama",
+     "home": "Δόξα Δράμας",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Doxa Drama Stadium",
@@ -1123,7 +1147,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ee/Doxa_Drama_F.C._emblem.png/120px-Doxa_Drama_F.C._emblem.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-cf70ec77fd1b",
@@ -1131,7 +1156,7 @@
      "start": "1992-03-15T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Panachaiki",
+     "away": "Παναχαϊκή",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1148,14 +1173,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/5e/Panachaiki_2022_Logo.png/120px-Panachaiki_2022_Logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-aad4d7d12166",
      "section": "football",
      "start": "1992-03-22T12:00:00+02:00",
      "timeKnown": false,
-     "home": "OFI",
+     "home": "Ο.Φ.Η.",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Theodoros Vardinogiannis Stadium",
@@ -1177,7 +1203,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f8/OFI_Crete_F.C._logo.svg/120px-OFI_Crete_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-4696c10d60f0",
@@ -1185,7 +1212,7 @@
      "start": "1992-03-29T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Panionios",
+     "away": "Πανιώνιος",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1201,7 +1228,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Panionios_FC.png/120px-Panionios_FC.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-5b5b460e1c2c",
@@ -1209,7 +1237,7 @@
      "start": "1992-04-01T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Doxa Drama",
+     "away": "Δόξα Δράμας",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Κύπελλο Ελλάδας",
@@ -1238,14 +1266,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ee/Doxa_Drama_F.C._emblem.png/120px-Doxa_Drama_F.C._emblem.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-7f488d73b4b5",
      "section": "football",
      "start": "1992-04-11T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Doxa Drama",
+     "home": "Δόξα Δράμας",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Doxa Drama Stadium",
@@ -1253,14 +1282,15 @@
      "round": "27η αγωνιστική",
      "score": "0-0",
      "url": "https://en.wikipedia.org/wiki/1991%E2%80%9392_PAOK_FC_season",
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ee/Doxa_Drama_F.C._emblem.png/120px-Doxa_Drama_F.C._emblem.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-f76391fc17c7",
      "section": "football",
      "start": "1992-04-15T12:00:00+02:00",
      "timeKnown": false,
-     "home": "AEK Athens",
+     "home": "Α.Ε.Κ.",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Nikos Goumas Stadium",
@@ -1281,7 +1311,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/04/AEK_Athens_FC_logo.svg/120px-AEK_Athens_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-52fec903df3f",
@@ -1322,7 +1353,7 @@
      "start": "1992-04-29T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "AEK Athens",
+     "away": "Α.Ε.Κ.",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Κύπελλο Ελλάδας",
@@ -1346,7 +1377,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/04/AEK_Athens_FC_logo.svg/120px-AEK_Athens_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-a90433a15aa6",
@@ -1354,7 +1386,7 @@
      "start": "1992-05-03T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Panserraikos",
+     "away": "Πανσερραϊκός",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1378,14 +1410,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/b/b0/Panseraikos_new_emblem.png/120px-Panseraikos_new_emblem.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-13e1363d9ddf",
      "section": "football",
      "start": "1992-05-09T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Apollon Athens",
+     "home": "Απόλλων Σμύρνης",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Rizoupoli Stadium",
@@ -1407,14 +1440,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/77/Apollon_Smyrnis_F.C._logo.svg/120px-Apollon_Smyrnis_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-d40f7c419df7",
      "section": "football",
      "start": "1992-05-16T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Korinthos",
+     "home": "Κόρινθος",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Corinth Stadium",
@@ -1438,7 +1472,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/06/PAS_Korinthos_%28logo%29.png/120px-PAS_Korinthos_%28logo%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-f378fac22c59",
@@ -1446,7 +1481,7 @@
      "start": "1992-05-20T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Olympiacos",
+     "away": "Ολυμπιακός",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Κύπελλο Ελλάδας",
@@ -1467,7 +1502,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a2/Olympiacos_FC_crest.svg/120px-Olympiacos_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-3c3cdbce4cac",
@@ -1475,7 +1511,7 @@
      "start": "1992-05-24T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Olympiacos",
+     "away": "Ολυμπιακός",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1500,14 +1536,15 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a2/Olympiacos_FC_crest.svg/120px-Olympiacos_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-2386e252602d",
      "section": "football",
      "start": "1992-05-27T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Olympiacos",
+     "home": "Ολυμπιακός",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Karaiskakis Stadium",
@@ -1528,14 +1565,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a2/Olympiacos_FC_crest.svg/120px-Olympiacos_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-7f58060ee0bd",
      "section": "football",
      "start": "1992-05-31T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Panathinaikos",
+     "home": "Παναθηναϊκός",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Athens Olympic Stadium",
@@ -1575,7 +1613,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/84/Panathinaikos_F.C._logo.svg/120px-Panathinaikos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-c374e5ea8d16",
@@ -1583,7 +1622,7 @@
      "start": "1992-06-07T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "AEK Athens",
+     "away": "Α.Ε.Κ.",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1612,7 +1651,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/04/AEK_Athens_FC_logo.svg/120px-AEK_Athens_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     }
    ],
    "summary": {
@@ -1647,7 +1687,8 @@
      "rows": [
       {
        "pos": 1,
-       "team": "AEK Athens",
+       "team": "Α.Ε.Κ.",
+       "en": "AEK Athens",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/04/AEK_Athens_FC_logo.svg/120px-AEK_Athens_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1661,7 +1702,8 @@
       },
       {
        "pos": 2,
-       "team": "Olympiacos",
+       "team": "Ολυμπιακός",
+       "en": "Olympiacos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a2/Olympiacos_FC_crest.svg/120px-Olympiacos_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1675,7 +1717,8 @@
       },
       {
        "pos": 3,
-       "team": "Panathinaikos",
+       "team": "Παναθηναϊκός",
+       "en": "Panathinaikos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/84/Panathinaikos_F.C._logo.svg/120px-Panathinaikos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1703,7 +1746,8 @@
       },
       {
        "pos": 5,
-       "team": "Apollon Athens",
+       "team": "Απόλλων Σμύρνης",
+       "en": "Apollon Athens",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/77/Apollon_Smyrnis_F.C._logo.svg/120px-Apollon_Smyrnis_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1717,7 +1761,8 @@
       },
       {
        "pos": 6,
-       "team": "OFI",
+       "team": "Ο.Φ.Η.",
+       "en": "OFI",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f8/OFI_Crete_F.C._logo.svg/120px-OFI_Crete_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1731,7 +1776,8 @@
       },
       {
        "pos": 7,
-       "team": "Aris",
+       "team": "Άρης Θεσσαλονίκης",
+       "en": "Aris",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e4/Aris_Thessaloniki_F.C._logo.svg/120px-Aris_Thessaloniki_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1745,7 +1791,8 @@
       },
       {
        "pos": 8,
-       "team": "AEL",
+       "team": "Α.Ε.Λ.",
+       "en": "AEL",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/25/Athlitiki_Enosi_Larissa_F.C._logo.svg/120px-Athlitiki_Enosi_Larissa_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1759,7 +1806,8 @@
       },
       {
        "pos": 9,
-       "team": "Iraklis",
+       "team": "Ηρακλής Θεσσαλονίκης",
+       "en": "Iraklis",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1a/Iraklis_F.C._%28Thessaloniki%29_logo.svg/120px-Iraklis_F.C._%28Thessaloniki%29_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1773,7 +1821,8 @@
       },
       {
        "pos": 10,
-       "team": "Korinthos",
+       "team": "Κόρινθος",
+       "en": "Korinthos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/06/PAS_Korinthos_%28logo%29.png/120px-PAS_Korinthos_%28logo%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1787,7 +1836,8 @@
       },
       {
        "pos": 11,
-       "team": "Pierikos",
+       "team": "Πιερικός",
+       "en": "Pierikos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1f/Pierikos_FC_official_logo.png/120px-Pierikos_FC_official_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1801,7 +1851,8 @@
       },
       {
        "pos": 12,
-       "team": "Athinaikos",
+       "team": "Αθηναϊκός Α.Σ. Βύρωνα",
+       "en": "Athinaikos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/36/Athinaikos_F.C._logo.png/120px-Athinaikos_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1815,7 +1866,8 @@
       },
       {
        "pos": 13,
-       "team": "Doxa Drama",
+       "team": "Δόξα Δράμας",
+       "en": "Doxa Drama",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ee/Doxa_Drama_F.C._emblem.png/120px-Doxa_Drama_F.C._emblem.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1829,7 +1881,8 @@
       },
       {
        "pos": 14,
-       "team": "Skoda Xanthi",
+       "team": "Ξάνθη",
+       "en": "Skoda Xanthi",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Xanthi_F.C._Logo.svg/120px-Xanthi_F.C._Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1843,7 +1896,8 @@
       },
       {
        "pos": 15,
-       "team": "Panachaiki",
+       "team": "Παναχαϊκή",
+       "en": "Panachaiki",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/5e/Panachaiki_2022_Logo.png/120px-Panachaiki_2022_Logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1857,7 +1911,8 @@
       },
       {
        "pos": 16,
-       "team": "Panionios",
+       "team": "Πανιώνιος",
+       "en": "Panionios",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Panionios_FC.png/120px-Panionios_FC.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1871,7 +1926,8 @@
       },
       {
        "pos": 17,
-       "team": "Panserraikos",
+       "team": "Πανσερραϊκός",
+       "en": "Panserraikos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/b/b0/Panseraikos_new_emblem.png/120px-Panseraikos_new_emblem.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1885,7 +1941,8 @@
       },
       {
        "pos": 18,
-       "team": "Ethnikos Piraeus",
+       "team": "Εθνικός Πειραιώς",
+       "en": "Ethnikos Piraeus",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4f/Ethnikos_Piraeus_FC_logo.png/120px-Ethnikos_Piraeus_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [

@@ -9,7 +9,7 @@
      "start": "1978-09-03T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Kavala",
+     "away": "Καβάλα",
      "paokHome": true,
      "venue": "Kleanthis Vikelidis Stadium",
      "competition": "Πρωτάθλημα",
@@ -42,14 +42,15 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ef/A.O._Kavala_2026_logo.png/120px-A.O._Kavala_2026_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-0d1e9f7ec226",
      "section": "football",
      "start": "1978-09-10T12:00:00+02:00",
      "timeKnown": false,
-     "home": "AEK Athens",
+     "home": "Α.Ε.Κ.",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Nikos Goumas Stadium",
@@ -84,7 +85,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/04/AEK_Athens_FC_logo.svg/120px-AEK_Athens_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-63a35e61cf3f",
@@ -120,7 +122,7 @@
      "start": "1978-09-24T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Egaleo",
+     "away": "Αιγάλεω",
      "paokHome": true,
      "venue": "Kleanthis Vikelidis Stadium",
      "competition": "Πρωτάθλημα",
@@ -148,7 +150,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/47/Aigaleo_FC_Logo.png/120px-Aigaleo_FC_Logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-07abcb23ab6d",
@@ -192,7 +195,7 @@
      "start": "1978-10-01T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "PAS Giannina",
+     "away": "Γιάννινα",
      "paokHome": true,
      "venue": "Kleanthis Vikelidis Stadium",
      "competition": "Πρωτάθλημα",
@@ -224,14 +227,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/45/PAS_Giannina_emblem_2017.png/120px-PAS_Giannina_emblem_2017.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-7ccb990e595a",
      "section": "football",
      "start": "1978-10-14T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Olympiacos",
+     "home": "Ολυμπιακός",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Karaiskakis Stadium",
@@ -248,7 +252,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a2/Olympiacos_FC_crest.svg/120px-Olympiacos_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-0b8ae5a4be23",
@@ -256,7 +261,7 @@
      "start": "1978-10-21T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Iraklis",
+     "away": "Ηρακλής Θεσσαλονίκης",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -277,14 +282,15 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1a/Iraklis_F.C._%28Thessaloniki%29_logo.svg/120px-Iraklis_F.C._%28Thessaloniki%29_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-207a5bf43b48",
      "section": "football",
      "start": "1978-11-05T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Panionios",
+     "home": "Πανιώνιος",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Nea Smyrni Stadium",
@@ -311,7 +317,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Panionios_FC.png/120px-Panionios_FC.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-e3ef4777fadf",
@@ -351,7 +358,7 @@
      "start": "1978-11-12T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Aris",
+     "away": "Άρης Θεσσαλονίκης",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -367,14 +374,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e4/Aris_Thessaloniki_F.C._logo.svg/120px-Aris_Thessaloniki_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-fea48cc53ac6",
      "section": "football",
      "start": "1978-11-19T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Ethnikos Piraeus",
+     "home": "Εθνικός Πειραιώς",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Karaiskakis Stadium",
@@ -404,7 +412,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4f/Ethnikos_Piraeus_FC_logo.png/120px-Ethnikos_Piraeus_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-cc8a77b97198",
@@ -412,7 +421,7 @@
      "start": "1978-12-10T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Panachaiki",
+     "away": "Παναχαϊκή",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -436,14 +445,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/5e/Panachaiki_2022_Logo.png/120px-Panachaiki_2022_Logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-a63d09882b97",
      "section": "football",
      "start": "1978-12-17T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Apollon Athens",
+     "home": "Απόλλων Σμύρνης",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Rizoupoli Stadium",
@@ -451,14 +461,15 @@
      "round": "11η αγωνιστική",
      "score": "0-0",
      "url": "https://en.wikipedia.org/wiki/1978%E2%80%9379_PAOK_FC_season",
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/77/Apollon_Smyrnis_F.C._logo.svg/120px-Apollon_Smyrnis_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-bae7d142cda4",
      "section": "football",
      "start": "1978-12-24T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Panathinaikos",
+     "home": "Παναθηναϊκός",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Leoforos Stadium",
@@ -488,7 +499,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/84/Panathinaikos_F.C._logo.svg/120px-Panathinaikos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-4ca6ce7b25ff",
@@ -496,7 +508,7 @@
      "start": "1978-12-31T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Kastoria",
+     "away": "Καστοριά 1980",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -535,14 +547,15 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/eb/Kastoria_1980.png/120px-Kastoria_1980.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-f2f46e93acd7",
      "section": "football",
      "start": "1979-01-07T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Rodos",
+     "home": "Ρόδος",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Diagoras Stadium",
@@ -559,7 +572,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/25/Rodos_FC_2026_logo.png/120px-Rodos_FC_2026_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-3a61d40ae131",
@@ -567,7 +581,7 @@
      "start": "1979-01-14T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Panserraikos",
+     "away": "Πανσερραϊκός",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -600,14 +614,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/b/b0/Panseraikos_new_emblem.png/120px-Panseraikos_new_emblem.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-80a9fba67b36",
      "section": "football",
      "start": "1979-01-21T12:00:00+02:00",
      "timeKnown": false,
-     "home": "OFI",
+     "home": "Ο.Φ.Η.",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Theodoros Vardinogiannis Stadium",
@@ -631,7 +646,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f8/OFI_Crete_F.C._logo.svg/120px-OFI_Crete_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-1ca102d6b0e6",
@@ -639,7 +655,7 @@
      "start": "1979-01-28T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "AEL",
+     "away": "Α.Ε.Λ.",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -667,14 +683,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/25/Athlitiki_Enosi_Larissa_F.C._logo.svg/120px-Athlitiki_Enosi_Larissa_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-b220f0ee8e53",
      "section": "football",
      "start": "1979-02-04T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Kavala",
+     "home": "Καβάλα",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Kavala Stadium",
@@ -699,7 +716,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ef/A.O._Kavala_2026_logo.png/120px-A.O._Kavala_2026_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-e2135bfd257d",
@@ -707,7 +725,7 @@
      "start": "1979-02-11T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "AEK Athens",
+     "away": "Α.Ε.Κ.",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -733,14 +751,15 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/04/AEK_Athens_FC_logo.svg/120px-AEK_Athens_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-a88f77265354",
      "section": "football",
      "start": "1979-02-18T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Egaleo",
+     "home": "Αιγάλεω",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Stavros Mavrothalassitis Stadium",
@@ -758,14 +777,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/47/Aigaleo_FC_Logo.png/120px-Aigaleo_FC_Logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-a46fc752493f",
      "section": "football",
      "start": "1979-02-21T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Olympiacos",
+     "home": "Ολυμπιακός",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Karaiskakis Stadium",
@@ -795,14 +815,15 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a2/Olympiacos_FC_crest.svg/120px-Olympiacos_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-960342dd51c9",
      "section": "football",
      "start": "1979-02-25T12:00:00+02:00",
      "timeKnown": false,
-     "home": "PAS Giannina",
+     "home": "Γιάννινα",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Zosimades Stadium",
@@ -824,7 +845,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/45/PAS_Giannina_emblem_2017.png/120px-PAS_Giannina_emblem_2017.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-2465bca98f46",
@@ -832,7 +854,7 @@
      "start": "1979-03-04T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Olympiacos",
+     "away": "Ολυμπιακός",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -852,14 +874,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a2/Olympiacos_FC_crest.svg/120px-Olympiacos_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-dc0fbba99b4b",
      "section": "football",
      "start": "1979-03-07T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Ethnikos Piraeus",
+     "home": "Εθνικός Πειραιώς",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Karaiskakis Stadium",
@@ -882,14 +905,15 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4f/Ethnikos_Piraeus_FC_logo.png/120px-Ethnikos_Piraeus_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-6cabefa38494",
      "section": "football",
      "start": "1979-03-11T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Iraklis",
+     "home": "Ηρακλής Θεσσαλονίκης",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Kaftanzoglio Stadium",
@@ -897,7 +921,8 @@
      "round": "23η αγωνιστική",
      "score": "0-0",
      "url": "https://en.wikipedia.org/wiki/1978%E2%80%9379_PAOK_FC_season",
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1a/Iraklis_F.C._%28Thessaloniki%29_logo.svg/120px-Iraklis_F.C._%28Thessaloniki%29_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-eb1555510b5f",
@@ -905,7 +930,7 @@
      "start": "1979-03-18T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Panionios",
+     "away": "Πανιώνιος",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -937,14 +962,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Panionios_FC.png/120px-Panionios_FC.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-c62782f614b7",
      "section": "football",
      "start": "1979-03-25T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Aris",
+     "home": "Άρης Θεσσαλονίκης",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Kleanthis Vikelidis Stadium",
@@ -962,7 +988,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e4/Aris_Thessaloniki_F.C._logo.svg/120px-Aris_Thessaloniki_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-aaf034dcb7b6",
@@ -970,7 +997,7 @@
      "start": "1979-04-01T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Ethnikos Piraeus",
+     "away": "Εθνικός Πειραιώς",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1003,14 +1030,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4f/Ethnikos_Piraeus_FC_logo.png/120px-Ethnikos_Piraeus_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-c2ec76f4c3b9",
      "section": "football",
      "start": "1979-04-08T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Panachaiki",
+     "home": "Παναχαϊκή",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Kostas Davourlis Stadium",
@@ -1018,7 +1046,8 @@
      "round": "27η αγωνιστική",
      "score": "0-0",
      "url": "https://en.wikipedia.org/wiki/1978%E2%80%9379_PAOK_FC_season",
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/5e/Panachaiki_2022_Logo.png/120px-Panachaiki_2022_Logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-384e69fb2d76",
@@ -1026,7 +1055,7 @@
      "start": "1979-04-15T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Apollon Athens",
+     "away": "Απόλλων Σμύρνης",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1050,7 +1079,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/77/Apollon_Smyrnis_F.C._logo.svg/120px-Apollon_Smyrnis_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-7955121c5459",
@@ -1058,7 +1088,7 @@
      "start": "1979-04-25T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Panathinaikos",
+     "away": "Παναθηναϊκός",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1082,14 +1112,15 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/84/Panathinaikos_F.C._logo.svg/120px-Panathinaikos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-89e793e05d7b",
      "section": "football",
      "start": "1979-05-06T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Kastoria",
+     "home": "Καστοριά 1980",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Kastoria Stadium",
@@ -1106,7 +1137,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/eb/Kastoria_1980.png/120px-Kastoria_1980.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-a9fe258114dd",
@@ -1114,7 +1146,7 @@
      "start": "1979-05-13T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Rodos",
+     "away": "Ρόδος",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1155,14 +1187,15 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/25/Rodos_FC_2026_logo.png/120px-Rodos_FC_2026_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-c130ec939835",
      "section": "football",
      "start": "1979-05-20T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Panserraikos",
+     "home": "Πανσερραϊκός",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Serres Municipal Stadium",
@@ -1179,7 +1212,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/b/b0/Panseraikos_new_emblem.png/120px-Panseraikos_new_emblem.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-c2579e341656",
@@ -1187,7 +1221,7 @@
      "start": "1979-05-27T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "OFI",
+     "away": "Ο.Φ.Η.",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Πρωτάθλημα",
@@ -1217,14 +1251,15 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f8/OFI_Crete_F.C._logo.svg/120px-OFI_Crete_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-55db7d4f3b74",
      "section": "football",
      "start": "1979-06-03T12:00:00+02:00",
      "timeKnown": false,
-     "home": "AEL",
+     "home": "Α.Ε.Λ.",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Alcazar Stadium",
@@ -1248,7 +1283,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/25/Athlitiki_Enosi_Larissa_F.C._logo.svg/120px-Athlitiki_Enosi_Larissa_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     }
    ],
    "summary": {
@@ -1283,7 +1319,8 @@
      "rows": [
       {
        "pos": 1,
-       "team": "AEK Athens",
+       "team": "Α.Ε.Κ.",
+       "en": "AEK Athens",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/04/AEK_Athens_FC_logo.svg/120px-AEK_Athens_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1297,7 +1334,8 @@
       },
       {
        "pos": 2,
-       "team": "Olympiacos",
+       "team": "Ολυμπιακός",
+       "en": "Olympiacos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a2/Olympiacos_FC_crest.svg/120px-Olympiacos_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1311,7 +1349,8 @@
       },
       {
        "pos": 3,
-       "team": "Aris",
+       "team": "Άρης Θεσσαλονίκης",
+       "en": "Aris",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e4/Aris_Thessaloniki_F.C._logo.svg/120px-Aris_Thessaloniki_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1339,7 +1378,8 @@
       },
       {
        "pos": 5,
-       "team": "Panathinaikos",
+       "team": "Παναθηναϊκός",
+       "en": "Panathinaikos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/84/Panathinaikos_F.C._logo.svg/120px-Panathinaikos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1353,7 +1393,8 @@
       },
       {
        "pos": 6,
-       "team": "Iraklis",
+       "team": "Ηρακλής Θεσσαλονίκης",
+       "en": "Iraklis",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1a/Iraklis_F.C._%28Thessaloniki%29_logo.svg/120px-Iraklis_F.C._%28Thessaloniki%29_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1367,7 +1408,8 @@
       },
       {
        "pos": 7,
-       "team": "OFI",
+       "team": "Ο.Φ.Η.",
+       "en": "OFI",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f8/OFI_Crete_F.C._logo.svg/120px-OFI_Crete_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1381,7 +1423,8 @@
       },
       {
        "pos": 8,
-       "team": "Ethnikos Piraeus",
+       "team": "Εθνικός Πειραιώς",
+       "en": "Ethnikos Piraeus",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4f/Ethnikos_Piraeus_FC_logo.png/120px-Ethnikos_Piraeus_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1395,7 +1438,8 @@
       },
       {
        "pos": 9,
-       "team": "Kastoria",
+       "team": "Καστοριά 1980",
+       "en": "Kastoria",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/eb/Kastoria_1980.png/120px-Kastoria_1980.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1409,7 +1453,8 @@
       },
       {
        "pos": 10,
-       "team": "Apollon Athens",
+       "team": "Απόλλων Σμύρνης",
+       "en": "Apollon Athens",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/77/Apollon_Smyrnis_F.C._logo.svg/120px-Apollon_Smyrnis_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1423,7 +1468,8 @@
       },
       {
        "pos": 11,
-       "team": "Rodos",
+       "team": "Ρόδος",
+       "en": "Rodos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/25/Rodos_FC_2026_logo.png/120px-Rodos_FC_2026_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1437,7 +1483,8 @@
       },
       {
        "pos": 12,
-       "team": "AEL",
+       "team": "Α.Ε.Λ.",
+       "en": "AEL",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/25/Athlitiki_Enosi_Larissa_F.C._logo.svg/120px-Athlitiki_Enosi_Larissa_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1451,7 +1498,8 @@
       },
       {
        "pos": 13,
-       "team": "Panionios",
+       "team": "Πανιώνιος",
+       "en": "Panionios",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Panionios_FC.png/120px-Panionios_FC.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1465,7 +1513,8 @@
       },
       {
        "pos": 14,
-       "team": "PAS Giannina",
+       "team": "Γιάννινα",
+       "en": "PAS Giannina",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/45/PAS_Giannina_emblem_2017.png/120px-PAS_Giannina_emblem_2017.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1479,7 +1528,8 @@
       },
       {
        "pos": 15,
-       "team": "Panachaiki",
+       "team": "Παναχαϊκή",
+       "en": "Panachaiki",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/5e/Panachaiki_2022_Logo.png/120px-Panachaiki_2022_Logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1493,7 +1543,8 @@
       },
       {
        "pos": 16,
-       "team": "Kavala",
+       "team": "Καβάλα",
+       "en": "Kavala",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ef/A.O._Kavala_2026_logo.png/120px-A.O._Kavala_2026_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1507,7 +1558,8 @@
       },
       {
        "pos": 17,
-       "team": "Egaleo",
+       "team": "Αιγάλεω",
+       "en": "Egaleo",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/47/Aigaleo_FC_Logo.png/120px-Aigaleo_FC_Logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1521,7 +1573,8 @@
       },
       {
        "pos": 18,
-       "team": "Panserraikos",
+       "team": "Πανσερραϊκός",
+       "en": "Panserraikos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/b/b0/Panseraikos_new_emblem.png/120px-Panseraikos_new_emblem.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [

@@ -61,13 +61,14 @@
      "start": "2012-08-26T19:15:00+03:00",
      "timeKnown": true,
      "home": "ΠΑΟΚ",
-     "away": "Panthrakikos",
+     "away": "Πανθρακικός",
      "paokHome": true,
      "venue": "Toumbas Stadium",
      "competition": "Super League",
      "score": "1-0",
      "url": "https://www.espn.com/soccer/match/_/gameId/355582",
-     "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+     "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6a/Panthrakikos.png/120px-Panthrakikos.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-354381",
@@ -188,7 +189,7 @@
      "section": "football",
      "start": "2012-10-27T19:30:00+03:00",
      "timeKnown": true,
-     "home": "Kerkyra",
+     "home": "Κέρκυρα",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Kerkyras National Stadium",
@@ -204,7 +205,7 @@
      "section": "football",
      "start": "2012-11-04T17:15:00+02:00",
      "timeKnown": true,
-     "home": "Panionios",
+     "home": "Πανιώνιος",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Panionios Stadium",
@@ -221,13 +222,14 @@
      "start": "2012-11-11T17:15:00+02:00",
      "timeKnown": true,
      "home": "ΠΑΟΚ",
-     "away": "Platanias",
+     "away": "Πλατανιά",
      "paokHome": true,
      "venue": "Toumbas Stadium",
      "competition": "Super League",
      "score": "2-0",
      "url": "https://www.espn.com/soccer/match/_/gameId/357344",
-     "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+     "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/40/Platanias_FC_logo.png/120px-Platanias_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-357593",
@@ -267,14 +269,15 @@
      "section": "football",
      "start": "2012-12-02T17:15:00+02:00",
      "timeKnown": true,
-     "home": "Veria",
+     "home": "Βέροια",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Stadio Verias",
      "competition": "Super League",
      "score": "0-0",
      "url": "https://www.espn.com/soccer/match/_/gameId/357862",
-     "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+     "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/5c/Veria_F.C._logo.png/120px-Veria_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-357973",
@@ -385,14 +388,15 @@
      "section": "football",
      "start": "2013-01-06T17:15:00+02:00",
      "timeKnown": true,
-     "home": "Panthrakikos",
+     "home": "Πανθρακικός",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Panthrakikos Stadium",
      "competition": "Super League",
      "score": "1-4",
      "url": "https://www.espn.com/soccer/match/_/gameId/358711",
-     "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+     "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6a/Panthrakikos.png/120px-Panthrakikos.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-c46af82ab44a",
@@ -571,7 +575,7 @@
      "start": "2013-02-23T17:15:00+02:00",
      "timeKnown": true,
      "home": "ΠΑΟΚ",
-     "away": "Kerkyra",
+     "away": "Κέρκυρα",
      "paokHome": true,
      "venue": "Toumbas Stadium",
      "competition": "Super League",
@@ -586,7 +590,7 @@
      "start": "2013-02-28T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Levadiakos",
+     "away": "Λεβαδειακός",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Κύπελλο Ελλάδας",
@@ -606,7 +610,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/APO_Levadiakos_%28logo%29.svg/120px-APO_Levadiakos_%28logo%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-362259",
@@ -615,7 +620,7 @@
      "start": "2013-03-03T17:15:00+02:00",
      "timeKnown": true,
      "home": "ΠΑΟΚ",
-     "away": "Panionios",
+     "away": "Πανιώνιος",
      "paokHome": true,
      "venue": "Toumbas Stadium",
      "competition": "Super League",
@@ -629,7 +634,7 @@
      "section": "football",
      "start": "2013-03-06T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Levadiakos",
+     "home": "Λεβαδειακός",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Levadia Municipal Stadium",
@@ -637,7 +642,8 @@
      "round": "2ος αγώνας",
      "score": "0-0",
      "url": "https://en.wikipedia.org/wiki/2012%E2%80%9313_PAOK_FC_season",
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/APO_Levadiakos_%28logo%29.svg/120px-APO_Levadiakos_%28logo%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-362560",
@@ -645,14 +651,15 @@
      "section": "football",
      "start": "2013-03-09T19:30:00+02:00",
      "timeKnown": true,
-     "home": "Platanias",
+     "home": "Πλατανιά",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Maleme",
      "competition": "Super League",
      "score": "1-2",
      "url": "https://www.espn.com/soccer/match/_/gameId/362560",
-     "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+     "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/40/Platanias_FC_logo.png/120px-Platanias_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-363446",
@@ -693,13 +700,14 @@
      "start": "2013-04-06T17:15:00+03:00",
      "timeKnown": true,
      "home": "ΠΑΟΚ",
-     "away": "Veria",
+     "away": "Βέροια",
      "paokHome": true,
      "venue": "Toumbas Stadium",
      "competition": "Super League",
      "score": "2-0",
      "url": "https://www.espn.com/soccer/match/_/gameId/364014",
-     "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+     "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/5c/Veria_F.C._logo.png/120px-Veria_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-364205",
@@ -723,7 +731,7 @@
      "start": "2013-04-17T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Asteras Tripolis",
+     "away": "Αθλητικός Γυμναστικός Σύλλογος Αστέρας Τρίπολης",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Κύπελλο Ελλάδας",
@@ -748,7 +756,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4c/Asteras_Tripolis_FC_logo.svg/120px-Asteras_Tripolis_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-364552",
@@ -771,7 +780,7 @@
      "section": "football",
      "start": "2013-04-27T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Asteras Tripolis",
+     "home": "Αθλητικός Γυμναστικός Σύλλογος Αστέρας Τρίπολης",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Asteras Tripolis Stadium",
@@ -792,7 +801,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4c/Asteras_Tripolis_FC_logo.svg/120px-Asteras_Tripolis_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-365137",
@@ -923,7 +933,8 @@
      "rows": [
       {
        "pos": 1,
-       "team": "Olympiacos",
+       "team": "Ολυμπιακός",
+       "en": "Olympiacos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a2/Olympiacos_FC_crest.svg/120px-Olympiacos_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -951,7 +962,8 @@
       },
       {
        "pos": 3,
-       "team": "Asteras Tripolis",
+       "team": "Αθλητικός Γυμναστικός Σύλλογος Αστέρας Τρίπολης",
+       "en": "Asteras Tripolis",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4c/Asteras_Tripolis_FC_logo.svg/120px-Asteras_Tripolis_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -965,7 +977,8 @@
       },
       {
        "pos": 4,
-       "team": "Atromitos",
+       "team": "Ατρόμητος Αθηνών",
+       "en": "Atromitos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6e/Atromitos_F.C._logo.svg/120px-Atromitos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -979,7 +992,8 @@
       },
       {
        "pos": 5,
-       "team": "PAS Giannina",
+       "team": "Γιάννινα",
+       "en": "PAS Giannina",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/45/PAS_Giannina_emblem_2017.png/120px-PAS_Giannina_emblem_2017.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -993,7 +1007,8 @@
       },
       {
        "pos": 6,
-       "team": "Panathinaikos",
+       "team": "Παναθηναϊκός",
+       "en": "Panathinaikos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/84/Panathinaikos_F.C._logo.svg/120px-Panathinaikos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1007,7 +1022,8 @@
       },
       {
        "pos": 7,
-       "team": "Skoda Xanthi",
+       "team": "Ξάνθη",
+       "en": "Skoda Xanthi",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Xanthi_F.C._Logo.svg/120px-Xanthi_F.C._Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1021,7 +1037,8 @@
       },
       {
        "pos": 8,
-       "team": "Panionios",
+       "team": "Πανιώνιος",
+       "en": "Panionios",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Panionios_FC.png/120px-Panionios_FC.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1035,7 +1052,8 @@
       },
       {
        "pos": 9,
-       "team": "Platanias",
+       "team": "Πλατανιά",
+       "en": "Platanias",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/40/Platanias_FC_logo.png/120px-Platanias_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1049,7 +1067,8 @@
       },
       {
        "pos": 10,
-       "team": "Panthrakikos",
+       "team": "Πανθρακικός",
+       "en": "Panthrakikos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6a/Panthrakikos.png/120px-Panthrakikos.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1063,7 +1082,8 @@
       },
       {
        "pos": 11,
-       "team": "Levadiakos",
+       "team": "Λεβαδειακός",
+       "en": "Levadiakos",
        "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/APO_Levadiakos_%28logo%29.svg/120px-APO_Levadiakos_%28logo%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1077,7 +1097,8 @@
       },
       {
        "pos": 12,
-       "team": "Veria",
+       "team": "Βέροια",
+       "en": "Veria",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/5c/Veria_F.C._logo.png/120px-Veria_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1091,7 +1112,8 @@
       },
       {
        "pos": 13,
-       "team": "Aris",
+       "team": "Άρης Θεσσαλονίκης",
+       "en": "Aris",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e4/Aris_Thessaloniki_F.C._logo.svg/120px-Aris_Thessaloniki_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1105,7 +1127,8 @@
       },
       {
        "pos": 14,
-       "team": "OFI",
+       "team": "Ο.Φ.Η.",
+       "en": "OFI",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f8/OFI_Crete_F.C._logo.svg/120px-OFI_Crete_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1119,7 +1142,8 @@
       },
       {
        "pos": 15,
-       "team": "AEK Athens",
+       "team": "Α.Ε.Κ.",
+       "en": "AEK Athens",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/04/AEK_Athens_FC_logo.svg/120px-AEK_Athens_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1133,7 +1157,8 @@
       },
       {
        "pos": 16,
-       "team": "Kerkyra",
+       "team": "Κέρκυρα",
+       "en": "Kerkyra",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a9/A.O._Kerkyra_logo.svg/120px-A.O._Kerkyra_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [

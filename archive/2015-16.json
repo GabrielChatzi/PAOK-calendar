@@ -141,14 +141,15 @@
      "section": "football",
      "start": "2015-09-12T18:15:00+03:00",
      "timeKnown": true,
-     "home": "Veria",
+     "home": "Βέροια",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Stadio Verias",
      "competition": "Super League",
      "score": "0-3",
      "url": "https://www.espn.com/soccer/match/_/gameId/435501",
-     "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+     "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/5c/Veria_F.C._logo.png/120px-Veria_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-434419",
@@ -283,7 +284,7 @@
      "start": "2015-10-28T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Panthrakikos",
+     "away": "Πανθρακικός",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Κύπελλο Ελλάδας",
@@ -303,7 +304,8 @@
       ],
       "away": []
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6a/Panthrakikos.png/120px-Panthrakikos.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-437177",
@@ -344,13 +346,14 @@
      "start": "2015-11-08T17:15:00+02:00",
      "timeKnown": true,
      "home": "ΠΑΟΚ",
-     "away": "Panthrakikos",
+     "away": "Πανθρακικός",
      "paokHome": true,
      "venue": "Τούμπα",
      "competition": "Super League",
      "score": "3-3",
      "url": "https://www.espn.com/soccer/match/_/gameId/437408",
-     "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+     "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6a/Panthrakikos.png/120px-Panthrakikos.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-437530",
@@ -458,7 +461,7 @@
      "start": "2015-12-06T15:00:00+02:00",
      "timeKnown": true,
      "home": "ΠΑΟΚ",
-     "away": "Panionios",
+     "away": "Πανιώνιος",
      "paokHome": true,
      "venue": "Τούμπα",
      "competition": "Super League",
@@ -535,13 +538,14 @@
      "start": "2015-12-20T15:00:00+02:00",
      "timeKnown": true,
      "home": "ΠΑΟΚ",
-     "away": "Platanias",
+     "away": "Πλατανιά",
      "paokHome": true,
      "venue": "Τούμπα",
      "competition": "Super League",
      "score": "1-0",
      "url": "https://www.espn.com/soccer/match/_/gameId/437562",
-     "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+     "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/40/Platanias_FC_logo.png/120px-Platanias_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-c3d6fd8775af",
@@ -631,13 +635,14 @@
      "start": "2016-01-17T17:15:00+02:00",
      "timeKnown": true,
      "home": "ΠΑΟΚ",
-     "away": "Veria",
+     "away": "Βέροια",
      "paokHome": true,
      "venue": "Τούμπα",
      "competition": "Super League",
      "score": "2-1",
      "url": "https://www.espn.com/soccer/match/_/gameId/440981",
-     "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+     "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/5c/Veria_F.C._logo.png/120px-Veria_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-441658",
@@ -676,7 +681,7 @@
      "section": "football",
      "start": "2016-01-27T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Panionios",
+     "home": "Πανιώνιος",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Nea Smyrni Stadium",
@@ -698,7 +703,8 @@
        }
       ]
      },
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Panionios_FC.png/120px-Panionios_FC.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-439913",
@@ -738,14 +744,15 @@
      "start": "2016-02-11T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Panionios",
+     "away": "Πανιώνιος",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Κύπελλο Ελλάδας",
      "round": "2ος αγώνας",
      "score": "0-0",
      "url": "https://en.wikipedia.org/wiki/2015%E2%80%9316_PAOK_FC_season",
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Panionios_FC.png/120px-Panionios_FC.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-439931",
@@ -801,14 +808,15 @@
      "start": "2016-03-02T12:00:00+02:00",
      "timeKnown": false,
      "home": "ΠΑΟΚ",
-     "away": "Olympiacos",
+     "away": "Ολυμπιακός",
      "paokHome": true,
      "venue": "Toumba Stadium",
      "competition": "Κύπελλο Ελλάδας",
      "round": "1ος αγώνας",
      "score": "0-3",
      "url": "https://en.wikipedia.org/wiki/2015%E2%80%9316_PAOK_FC_season",
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "awayLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a2/Olympiacos_FC_crest.svg/120px-Olympiacos_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-445326",
@@ -816,14 +824,15 @@
      "section": "football",
      "start": "2016-03-06T15:00:00+02:00",
      "timeKnown": true,
-     "home": "Panthrakikos",
+     "home": "Πανθρακικός",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Komotini Municipal Stadium",
      "competition": "Super League",
      "score": "2-1",
      "url": "https://www.espn.com/soccer/match/_/gameId/445326",
-     "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png"
+     "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/605.png",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6a/Panthrakikos.png/120px-Panthrakikos.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-439966",
@@ -862,7 +871,7 @@
      "section": "football",
      "start": "2016-04-03T19:00:00+03:00",
      "timeKnown": true,
-     "home": "Panionios",
+     "home": "Πανιώνιος",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Nea Smyrni Stadium",
@@ -893,7 +902,7 @@
      "section": "football",
      "start": "2016-04-17T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Platanias",
+     "home": "Πλατανιά",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Perivolia Municipal Stadium",
@@ -901,21 +910,23 @@
      "round": "30η αγωνιστική",
      "score": "0-0",
      "url": "https://en.wikipedia.org/wiki/2015%E2%80%9316_PAOK_FC_season",
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/40/Platanias_FC_logo.png/120px-Platanias_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-wiki-aa72408ba4ad",
      "section": "football",
      "start": "2016-04-27T12:00:00+02:00",
      "timeKnown": false,
-     "home": "Olympiacos",
+     "home": "Ολυμπιακός",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "competition": "Κύπελλο Ελλάδας",
      "round": "2ος αγώνας",
      "score": "3-0",
      "url": "https://en.wikipedia.org/wiki/2015%E2%80%9316_PAOK_FC_season",
-     "source": "wikipedia"
+     "source": "wikipedia",
+     "homeLogo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a2/Olympiacos_FC_crest.svg/120px-Olympiacos_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     {
      "uid": "football-espn-448464",
@@ -955,7 +966,7 @@
      "section": "football",
      "start": "2016-05-23T18:15:00+03:00",
      "timeKnown": true,
-     "home": "Panionios",
+     "home": "Πανιώνιος",
      "away": "ΠΑΟΚ",
      "paokHome": false,
      "venue": "Nea Smyrni Stadium",
@@ -972,7 +983,7 @@
      "start": "2016-05-26T18:15:00+03:00",
      "timeKnown": true,
      "home": "ΠΑΟΚ",
-     "away": "Panionios",
+     "away": "Πανιώνιος",
      "paokHome": true,
      "venue": "Τούμπα",
      "competition": "Super League",
@@ -1046,7 +1057,8 @@
      "rows": [
       {
        "pos": 1,
-       "team": "Olympiacos",
+       "team": "Ολυμπιακός",
+       "en": "Olympiacos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a2/Olympiacos_FC_crest.svg/120px-Olympiacos_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1060,7 +1072,8 @@
       },
       {
        "pos": 2,
-       "team": "Panathinaikos",
+       "team": "Παναθηναϊκός",
+       "en": "Panathinaikos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/84/Panathinaikos_F.C._logo.svg/120px-Panathinaikos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1074,7 +1087,8 @@
       },
       {
        "pos": 3,
-       "team": "AEK Athens",
+       "team": "Α.Ε.Κ.",
+       "en": "AEK Athens",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/04/AEK_Athens_FC_logo.svg/120px-AEK_Athens_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1102,7 +1116,8 @@
       },
       {
        "pos": 5,
-       "team": "Panionios",
+       "team": "Πανιώνιος",
+       "en": "Panionios",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Panionios_FC.png/120px-Panionios_FC.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1116,7 +1131,8 @@
       },
       {
        "pos": 6,
-       "team": "PAS Giannina",
+       "team": "Γιάννινα",
+       "en": "PAS Giannina",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/45/PAS_Giannina_emblem_2017.png/120px-PAS_Giannina_emblem_2017.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1130,7 +1146,8 @@
       },
       {
        "pos": 7,
-       "team": "Asteras Tripolis",
+       "team": "Αθλητικός Γυμναστικός Σύλλογος Αστέρας Τρίπολης",
+       "en": "Asteras Tripolis",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4c/Asteras_Tripolis_FC_logo.svg/120px-Asteras_Tripolis_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1144,7 +1161,8 @@
       },
       {
        "pos": 8,
-       "team": "Atromitos",
+       "team": "Ατρόμητος Αθηνών",
+       "en": "Atromitos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6e/Atromitos_F.C._logo.svg/120px-Atromitos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1158,7 +1176,8 @@
       },
       {
        "pos": 9,
-       "team": "Platanias",
+       "team": "Πλατανιά",
+       "en": "Platanias",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/40/Platanias_FC_logo.png/120px-Platanias_FC_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1172,7 +1191,8 @@
       },
       {
        "pos": 10,
-       "team": "Levadiakos",
+       "team": "Λεβαδειακός",
+       "en": "Levadiakos",
        "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/APO_Levadiakos_%28logo%29.svg/120px-APO_Levadiakos_%28logo%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1186,7 +1206,8 @@
       },
       {
        "pos": 11,
-       "team": "Panetolikos",
+       "team": "Παναιτωλικός",
+       "en": "Panetolikos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6a/Panetolikos_F.C._logo.svg/120px-Panetolikos_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1200,7 +1221,8 @@
       },
       {
        "pos": 12,
-       "team": "Iraklis",
+       "team": "Ηρακλής Θεσσαλονίκης",
+       "en": "Iraklis",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1a/Iraklis_F.C._%28Thessaloniki%29_logo.svg/120px-Iraklis_F.C._%28Thessaloniki%29_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1214,7 +1236,8 @@
       },
       {
        "pos": 13,
-       "team": "Skoda Xanthi",
+       "team": "Ξάνθη",
+       "en": "Skoda Xanthi",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Xanthi_F.C._Logo.svg/120px-Xanthi_F.C._Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1228,7 +1251,8 @@
       },
       {
        "pos": 14,
-       "team": "Veria",
+       "team": "Βέροια",
+       "en": "Veria",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/5c/Veria_F.C._logo.png/120px-Veria_F.C._logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1242,7 +1266,8 @@
       },
       {
        "pos": 15,
-       "team": "Panthrakikos",
+       "team": "Πανθρακικός",
+       "en": "Panthrakikos",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6a/Panthrakikos.png/120px-Panthrakikos.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [
@@ -1256,7 +1281,8 @@
       },
       {
        "pos": 16,
-       "team": "AEL Kalloni",
+       "team": "Α.Π.Γ.Μ.Σ. Καλλονής",
+       "en": "AEL Kalloni",
        "logo": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/00/AEL_Kalloni_logo.png/120px-AEL_Kalloni_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
        "paok": false,
        "cells": [

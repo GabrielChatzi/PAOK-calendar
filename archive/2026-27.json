@@ -7455,7 +7455,6 @@
      "home": "ΠΑΟΚ",
      "away": "ΗΛΥΣΙΑΚΟΣ ΑΟ",
      "paokHome": true,
-     "venue": "Κολυμβητήριο Νεάπολης",
      "competition": "Water Polo League",
      "url": "https://waterpololeague.gr/fixture/paok-domus-ergo-hly-2026-11-28",
      "homeLogo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
@@ -13130,6 +13129,20 @@
       },
       {
        "pos": 10,
+       "team": "ΠΑΝΑΘΗΝΑΪΚΟΣ ΘΕΣΣΑΛΟΝΙΚΗΣ (1)",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "5",
+        "3",
+        "2",
+        "0",
+        "18-4",
+        "11"
+       ]
+      },
+      {
+       "pos": 11,
        "team": "ΑΛΕΞΑΝΔΡΟΣ ΚΙΛΚΙΣ (1)",
        "logo": "https://paokalendar.gr/crests/9aad27db940cf2b7.svg",
        "paok": false,
@@ -13143,7 +13156,7 @@
        ]
       },
       {
-       "pos": 11,
+       "pos": 12,
        "team": "ΗΡΑΚΛΗΣ ΑΜΠΕΛΟΚΗΠΩΝ",
        "logo": "https://paokalendar.gr/crests/e12600e7d637395b.svg",
        "paok": false,
@@ -13153,20 +13166,6 @@
         "1",
         "0",
         "25-5",
-        "10"
-       ]
-      },
-      {
-       "pos": 12,
-       "team": "ΠΑΝΑΘΗΝΑΪΚΟΣ ΘΕΣΣΑΛΟΝΙΚΗΣ (1)",
-       "logo": "",
-       "paok": false,
-       "cells": [
-        "4",
-        "3",
-        "1",
-        "0",
-        "16-2",
         "10"
        ]
       },
@@ -13200,6 +13199,20 @@
       },
       {
        "pos": 15,
+       "team": "ΜΑΚΕΔΟΝΙΚΟΣ (1)",
+       "logo": "https://paokalendar.gr/crests/efadf5b8da59bd89.jpg",
+       "paok": false,
+       "cells": [
+        "5",
+        "3",
+        "1",
+        "1",
+        "16-9",
+        "10"
+       ]
+      },
+      {
+       "pos": 16,
        "team": "ΑΕ ΝΕΩΝ ΣΙΝΔΟΥ",
        "logo": "",
        "paok": false,
@@ -13213,7 +13226,7 @@
        ]
       },
       {
-       "pos": 16,
+       "pos": 17,
        "team": "ΠΑΝΣΕΡΡΑΪΚΟΣ",
        "logo": "https://paokalendar.gr/crests/cb6f27cd2b720060.png",
        "paok": false,
@@ -13227,7 +13240,7 @@
        ]
       },
       {
-       "pos": 17,
+       "pos": 18,
        "team": "ΑΜΣ ΝΙΚΟΠΟΛΗ",
        "logo": "",
        "paok": false,
@@ -13241,7 +13254,7 @@
        ]
       },
       {
-       "pos": 18,
+       "pos": 19,
        "team": "ΠΙΕΡΙΚΟΣ 1961",
        "logo": "",
        "paok": false,
@@ -13255,7 +13268,7 @@
        ]
       },
       {
-       "pos": 19,
+       "pos": 20,
        "team": "Μ.ΑΛΕΞΑΝΔΡΟΣ ΜΕΛΙΣΣΟΧΩΡΙΟΥ",
        "logo": "",
        "paok": false,
@@ -13265,20 +13278,6 @@
         "3",
         "0",
         "17-9",
-        "9"
-       ]
-      },
-      {
-       "pos": 20,
-       "team": "ΜΑΚΕΔΟΝΙΚΟΣ (1)",
-       "logo": "https://paokalendar.gr/crests/efadf5b8da59bd89.jpg",
-       "paok": false,
-       "cells": [
-        "4",
-        "3",
-        "0",
-        "1",
-        "14-7",
         "9"
        ]
       },
@@ -17797,5 +17796,5 @@
    ]
   }
  },
- "updated": "2026-11-25T18:06+02:00"
+ "updated": "2026-11-25T20:04+02:00"
 }

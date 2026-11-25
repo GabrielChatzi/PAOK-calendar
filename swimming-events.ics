@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:event-9b709431bbf6@paok-calendar
-DTSTAMP:20261122T092501Z
+DTSTAMP:20261125T140752Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261130
 SUMMARY:🏊 Αλεξάνδρεια Junior 2026
@@ -36,5 +36,18 @@ DESCRIPTION:ΠΑΟΚ Κολύμβηση
 URL:https://acpaok.gr/%ce%ba%ce%bf%ce%bb%cf%8d%ce%bc%ce%b2%ce%b7%cf%83%ce%b
  7-%ce%ad%cf%81%cf%87%ce%bf%ce%bd%cf%84%ce%b1%ce%b9-%cf%84%ce%b1-%ce%b1%ce%
  bb%ce%b5%ce%be%ce%ac%ce%bd%ce%b4%cf%81%ce%b5%ce%b9%ce%b1-junior-20/
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e8c3d5a79a86@paok-calendar
+DTSTAMP:20261125T140752Z
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20261207
+SUMMARY:🏊 33α ΑΛΕΞΑΝΔΡΕΙΑ 2026: Ο ΠΑΟΚ Infotrust διο
+ ργανώνει την κορυφαία κολυμβητική συνάν
+ τηση της Βόρειας Ελλάδας
+DESCRIPTION:ΠΑΟΚ Κολύμβηση
+URL:https://acpaok.gr/33%ce%b1-%ce%b1%ce%bb%ce%b5%ce%be%ce%b1%ce%bd%ce%b4%c
+ f%81%ce%b5%ce%b9%ce%b1-2026-%ce%bf-%cf%80%ce%b1%ce%bf%ce%ba-infotrust-%ce%
+ b4%ce%b9%ce%bf%cf%81%ce%b3%ce%b1%ce%bd%cf%8e%ce%bd%ce%b5%ce%b9-%cf%84/
 END:VEVENT
 END:VCALENDAR

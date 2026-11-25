@@ -346,10 +346,24 @@ def clubs(lang: str, names: list[str]) -> tuple[dict[str, str], dict[str, str]]:
     for i in range(0, len(want), 40):
         params = {"action": "query", "prop": "pageimages|langlinks", "piprop": "thumbnail", "pithumbsize": 96,
                   "pilicense": "any", "redirects": 1, "lllang": "el", "lllimit": "max", "titles": "|".join(want[i:i + 40])}
-        d = _get(lang, params)
-        q = d.get("query", {})
-        alias = {x["from"]: x["to"] for x in q.get("normalized", []) + q.get("redirects", [])}
-        pages = {pg["title"]: pg for pg in q.get("pages", {}).values()}
+        # Η απάντηση έρχεται σε κομμάτια («continue»): οι εικόνες και οι σύνδεσμοι γλώσσας κάθε σελίδας μαζεύονται.
+        alias: dict[str, str] = {}
+        pages: dict[str, dict] = {}
+        cont: dict = {}
+        for _ in range(20):
+            d = _get(lang, {**params, **cont})
+            q = d.get("query", {})
+            alias.update({x["from"]: x["to"] for x in q.get("normalized", []) + q.get("redirects", [])})
+            for pg in q.get("pages", {}).values():
+                have = pages.setdefault(pg["title"], {})
+                for k, v in pg.items():
+                    if k == "langlinks":
+                        have.setdefault(k, []).extend(v)
+                    elif k not in have:
+                        have[k] = v
+            cont = d.get("continue") or {}
+            if not cont:
+                break
         for t in want[i:i + 40]:
             pg = pages.get(alias.get(alias.get(t, t), alias.get(t, t)), {})
             src = pg.get("thumbnail", {}).get("source", "")

@@ -146,6 +146,9 @@ ACADEMY = {
     # αυτό το κλειδί για τους Εφήβους και βγάλε το "table": False.
     "waterpolo-u18": {"emoji": "🤽", "name": "Έφηβοι", "sport": "Πόλο", "women": False, "academy": True,
                       "short": "Έφηβοι", "group": "Πόλο Αγοριών", "table": False},
+    # Παίδες Κ16: Α' φάση της ΚΟΕ 15-17/1/2027 στην Πάτρα (κλήρωση 25/11). Μέχρι το πρόγραμμα, manual.json.
+    "waterpolo-u16": {"emoji": "🤽", "name": "Παίδες", "sport": "Πόλο", "women": False, "academy": True,
+                      "short": "Παίδες Κ16", "group": "Πόλο Αγοριών", "table": False},
 }
 SECTIONS.update(ACADEMY)
 
@@ -2827,6 +2830,7 @@ SOURCES: dict[str, list[tuple[str, Callable[[], list[Match]]]]] = {
     **{key: [] for key in AMEA},
     # Πόλο υποδομής: μέχρι να βγει το πρόγραμμα της ΚΟΕ, μόνο η φόρμα και το manual.json.
     "waterpolo-u18": [],
+    "waterpolo-u16": [],
 }
 
 

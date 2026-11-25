@@ -5316,8 +5316,8 @@
    },
    "standings": [
     {
-     "title": "Πρωτάθλημα πετοσφαίρισης γυναικών VolleyLeague",
-     "url": "https://el.wikipedia.org/wiki/%CE%A0%CF%81%CF%89%CF%84%CE%AC%CE%B8%CE%BB%CE%B7%CE%BC%CE%B1_%CF%80%CE%B5%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%B3%CF%85%CE%BD%CE%B1%CE%B9%CE%BA%CF%8E%CE%BD_VolleyLeague_2025-2026",
+     "title": "Volley League Γυναικών",
+     "url": "https://eope-web.dataproject.com/CompetitionStandings.aspx?ID=15&PID=16",
      "columns": [
       "Αγ",
       "Ν",
@@ -5325,162 +5325,161 @@
       "Σετ",
       "Β"
      ],
-     "source": "wikipedia",
      "rows": [
       {
        "pos": 1,
-       "team": "Παναθηναϊκός Α.Ο.",
-       "logo": "",
+       "team": "PANATHINAIKOS A.O.",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_94.jpg",
        "paok": false,
        "cells": [
         "22",
         "21",
         "1",
         "65-19",
-        "60"
+        "43"
        ]
       },
       {
        "pos": 2,
-       "team": "Ολυμπιακός Σ.Φ.Π.",
-       "logo": "",
+       "team": "OLYMPIACOS S.F.P.",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_92.jpg",
        "paok": false,
        "cells": [
         "22",
         "19",
         "3",
         "61-22",
-        "55"
+        "41"
        ]
       },
       {
        "pos": 3,
-       "team": "Πανιώνιος",
-       "logo": "",
+       "team": "G.S. PANIONIOS",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_90.jpg",
        "paok": false,
        "cells": [
         "22",
         "17",
         "5",
         "57-28",
-        "49"
+        "39"
        ]
       },
       {
        "pos": 4,
-       "team": "Α.Ο. Θήρας",
-       "logo": "",
+       "team": "A.O. THIRAS",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_86.jpg",
        "paok": false,
        "cells": [
         "22",
         "14",
         "8",
         "53-31",
-        "43"
+        "36"
        ]
       },
       {
        "pos": 5,
        "team": "ΠΑΟΚ",
-       "logo": "",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_93.jpg",
        "paok": true,
        "cells": [
         "22",
         "12",
         "10",
         "46-35",
-        "35"
+        "34"
        ]
       },
       {
        "pos": 6,
-       "team": "Α.Ε.Κ.",
-       "logo": "",
+       "team": "A.E.K.",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_84.jpg",
        "paok": false,
        "cells": [
         "22",
         "10",
         "12",
         "43-38",
-        "34"
+        "32"
        ]
       },
       {
        "pos": 7,
-       "team": "Ζ.Α.Ο.Ν.",
-       "logo": "",
+       "team": "Z.A.O.N.",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_95.jpg",
        "paok": false,
        "cells": [
         "22",
         "10",
         "12",
         "39-45",
-        "31"
+        "32"
        ]
       },
       {
        "pos": 8,
-       "team": "Α.Σ.ΠΕ. Θέτις Βούλας",
-       "logo": "",
+       "team": "A.S.P. THETIS",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_89.jpg",
        "paok": false,
        "cells": [
         "22",
         "7",
         "15",
         "39-52",
-        "25"
+        "29"
        ]
       },
       {
        "pos": 9,
-       "team": "Α.Ο.Ν.Σ. Μίλων",
-       "logo": "",
+       "team": "A.O.N.S. MILON",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_87.jpg",
        "paok": false,
        "cells": [
         "22",
         "7",
         "15",
         "26-54",
-        "20"
+        "29"
        ]
       },
       {
        "pos": 10,
-       "team": "Α.Σ. Άρης Θεσσαλονίκης",
-       "logo": "",
+       "team": "A.S. ARIS",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_88.jpg",
        "paok": false,
        "cells": [
         "22",
         "6",
         "16",
         "26-54",
-        "19"
+        "28"
        ]
       },
       {
        "pos": 11,
-       "team": "Α.Ο. Μαρκοπούλου",
-       "logo": "",
+       "team": "A.O. MARKOPOULOU REVOIL",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_85.jpg",
        "paok": false,
        "cells": [
         "22",
         "6",
-        "18",
+        "16",
         "25-59",
-        "14"
+        "28"
        ]
       },
       {
        "pos": 12,
-       "team": "Ηλυσιακός Α.Ο.",
-       "logo": "",
+       "team": "ILISIAKOS A.O.",
+       "logo": "https://images.dataproject.com/eope/TeamLogo/40/30/TeamLogo_91.jpg",
        "paok": false,
        "cells": [
         "22",
         "3",
         "19",
         "16-59",
-        "9"
+        "25"
        ]
       }
      ]
@@ -6089,110 +6088,127 @@
    ],
    "standings": [
     {
-     "title": "Water Polo League ανδρών",
-     "url": "https://el.wikipedia.org/wiki/Water_Polo_League_%CE%B1%CE%BD%CE%B4%CF%81%CF%8E%CE%BD_2025-2026",
+     "title": "Water Polo League",
+     "url": "https://waterpololeague.gr/championship/40o-protathlima-a1-ethnikis-andron-2025-2026/standings",
      "columns": [
+      "Αγ",
       "Ν",
+      "Ι",
       "Η",
       "Γκολ",
       "Β"
      ],
-     "source": "wikipedia",
      "rows": [
       {
        "pos": 1,
-       "team": "Ολυμπιακός Σ.Φ.Π.",
-       "logo": "",
+       "team": "ΟΛΥΜΠΙΑΚΟΣ ΣΦΠ",
+       "logo": "https://koecdn.twic.pics/media/olimpiakos-1757496846-Q42PoPie.png",
        "paok": false,
        "cells": [
-        "14",
+        "22",
+        "22",
         "0",
-        "331-106",
-        "42"
+        "0",
+        "479-180",
+        "66"
        ]
       },
       {
        "pos": 2,
-       "team": "Γ.Σ. Απόλλων Σμύρνης",
-       "logo": "",
+       "team": "ΠΑΝΑΘΗΝΑΪΚΟΣ ΑΟ",
+       "logo": "https://koecdn.twic.pics/media/panathinaikos-1757496876-53QTIGxK.jpg",
        "paok": false,
        "cells": [
-        "12",
-        "2",
-        "315-149",
-        "36"
+        "22",
+        "19",
+        "0",
+        "3",
+        "377-193",
+        "57"
        ]
       },
       {
        "pos": 3,
-       "team": "ΠΑΟΚ",
-       "logo": "",
-       "paok": true,
+       "team": "ΓΣ ΑΠΟΛΛΩΝ ΣΜ.",
+       "logo": "https://koecdn.twic.pics/media/apollon-1757488473-Yl0JuEC9.jpg",
+       "paok": false,
        "cells": [
-        "8",
-        "5",
-        "195-164",
-        "24"
+        "22",
+        "18",
+        "0",
+        "4",
+        "433-232",
+        "54"
        ]
       },
       {
        "pos": 4,
-       "team": "Γ.Σ. Περιστερίου",
-       "logo": "",
+       "team": "ΝΟ ΒΟΥΛΙΑΓΜΕΝΗΣ",
+       "logo": "https://koecdn.twic.pics/media/nov-logo-gr-1758965899-UA7wQDNs.png",
        "paok": false,
        "cells": [
-        "6",
-        "8",
-        "168-196",
-        "18"
+        "22",
+        "17",
+        "0",
+        "5",
+        "358-224",
+        "51"
        ]
       },
       {
        "pos": 5,
-       "team": "Υδραϊκός Ν.Ο.",
-       "logo": "",
-       "paok": false,
+       "team": "ΠΑΟΚ",
+       "logo": "https://koecdn.twic.pics/media/paok-1757496942-PvyEbv6R.png",
+       "paok": true,
        "cells": [
-        "6",
-        "8",
-        "170-178",
-        "18"
+        "22",
+        "13",
+        "0",
+        "9",
+        "339-282",
+        "39"
        ]
       },
       {
        "pos": 6,
-       "team": "Α.Ν.Ο. Γλυφάδας",
-       "logo": "",
+       "team": "ΠΑΝΙΩΝΙΟΣ ΓΣΣ",
+       "logo": "https://koecdn.twic.pics/media/panionios-1757496931-xkJBSsvo.png",
        "paok": false,
        "cells": [
-        "6",
-        "8",
-        "174-219",
-        "18"
+        "23",
+        "13",
+        "0",
+        "10",
+        "363-318",
+        "39"
        ]
       },
       {
        "pos": 7,
-       "team": "Ο.Φ.Θ.",
-       "logo": "",
+       "team": "ΠΑΛΑΙΟ ΦΑΛΗΡΟ",
+       "logo": "https://koecdn.twic.pics/media/faliro-1757496864-n863Il8C.jpg",
        "paok": false,
        "cells": [
-        "3",
-        "11",
-        "141-258",
-        "9"
+        "22",
+        "7",
+        "1",
+        "14",
+        "212-334",
+        "22"
        ]
       },
       {
        "pos": 8,
-       "team": "Ν.Ο. Λάρισας",
-       "logo": "",
+       "team": "ΓΣ ΠΕΡΙΣΤΕΡΙΟΥ MEDITERRANEAN COLLEGE",
+       "logo": "https://koecdn.twic.pics/media/peristeri3-1771358253-dRhtXJk1.png",
        "paok": false,
        "cells": [
+        "22",
+        "7",
         "0",
-        "13",
-        "105-329",
-        "0"
+        "15",
+        "239-309",
+        "21"
        ]
       }
      ]
@@ -6595,23 +6611,24 @@
    ],
    "standings": [
     {
-     "title": "Α1 Κατηγορία υδατοσφαίρισης γυναικών",
-     "url": "https://el.wikipedia.org/wiki/%CE%911_%CE%9A%CE%B1%CF%84%CE%B7%CE%B3%CE%BF%CF%81%CE%AF%CE%B1_%CF%85%CE%B4%CE%B1%CF%84%CE%BF%CF%83%CF%86%CE%B1%CE%AF%CF%81%CE%B9%CF%83%CE%B7%CF%82_%CE%B3%CF%85%CE%BD%CE%B1%CE%B9%CE%BA%CF%8E%CE%BD_2025-26",
+     "title": "Water Polo League Γυναικών",
+     "url": "https://waterpololeague.gr/championship/26o-protathlhma-a1-ethnikhs-gynaikon-2025-2026/standings",
      "columns": [
+      "Αγ",
       "Ν",
       "Ι",
       "Η",
       "Γκολ",
       "Β"
      ],
-     "source": "wikipedia",
      "rows": [
       {
        "pos": 1,
-       "team": "Ολυμπιακός",
-       "logo": "",
+       "team": "ΟΛΥΜΠΙΑΚΟΣ ΣΦΠ",
+       "logo": "https://koecdn.twic.pics/media/olimpiakos-1757496832-ZYWvvSWe.png",
        "paok": false,
        "cells": [
+        "22",
         "22",
         "0",
         "0",
@@ -6621,10 +6638,11 @@
       },
       {
        "pos": 2,
-       "team": "Ν.Ο. Βουλιαγμένης",
-       "logo": "",
+       "team": "ΝΟ ΒΟΥΛΙΑΓΜΕΝΗΣ",
+       "logo": "https://koecdn.twic.pics/media/nov-logo-gr-1758978938-hWBXWQRE.png",
        "paok": false,
        "cells": [
+        "22",
         "20",
         "0",
         "2",
@@ -6634,62 +6652,67 @@
       },
       {
        "pos": 3,
-       "team": "Α.Ν.Ο. Γλυφάδας",
-       "logo": "",
+       "team": "ΑΝΟ ΓΛΥΦΑΔΑΣ",
+       "logo": "https://koecdn.twic.pics/media/anog-logo-1759229979-jK83ObmL.png",
        "paok": false,
        "cells": [
-        "17",
+        "22",
+        "15",
         "1",
-        "7",
-        "325-254",
-        "52"
+        "6",
+        "291-228",
+        "46"
        ]
       },
       {
        "pos": 4,
-       "team": "Άλιμος Ν.Α.Σ.",
-       "logo": "",
+       "team": "ΑΛΙΜΟΣ ΝΑΣ",
+       "logo": "https://koecdn.twic.pics/media/alimos-1757618338-HykYQxju.jpg",
        "paok": false,
        "cells": [
+        "22",
         "15",
         "1",
-        "8",
-        "309-259",
+        "6",
+        "291-237",
         "46"
        ]
       },
       {
        "pos": 5,
-       "team": "Εθνικός Πειραιώς",
-       "logo": "",
+       "team": "ΕΘΝΙΚΟΣ ΟΦΠΦ",
+       "logo": "https://koecdn.twic.pics/media/shma-4-2-1-1-1-1758207317-I4sKrotf.png",
        "paok": false,
        "cells": [
-        "15",
+        "22",
+        "13",
         "0",
         "9",
-        "348-242",
-        "45"
+        "326-224",
+        "39"
        ]
       },
       {
        "pos": 6,
        "team": "ΠΑΟΚ",
-       "logo": "",
+       "logo": "https://koecdn.twic.pics/media/paok-1757496962-8dCOYNiE.png",
        "paok": true,
        "cells": [
-        "14",
+        "22",
+        "13",
         "0",
-        "11",
-        "375-334",
-        "42"
+        "9",
+        "349-300",
+        "39"
        ]
       },
       {
        "pos": 7,
-       "team": "Πανιώνιος Γ.Σ.Σ.",
-       "logo": "",
+       "team": "ΠΑΝΙΩΝΙΟΣ ΓΣΣ",
+       "logo": "https://koecdn.twic.pics/media/panionios-1757496971-8NsrgxDo.png",
        "paok": false,
        "cells": [
+        "22",
         "12",
         "1",
         "9",
@@ -6699,10 +6722,11 @@
       },
       {
        "pos": 8,
-       "team": "Ν.Ο. Χανίων",
-       "logo": "",
+       "team": "ΝΟ ΧΑΝΙΩΝ",
+       "logo": "https://koecdn.twic.pics/media/xanion-1757497102-pCIxwRHQ.jpg",
        "paok": false,
        "cells": [
+        "22",
         "8",
         "0",
         "14",
@@ -6712,53 +6736,57 @@
       },
       {
        "pos": 9,
-       "team": "Ν.Ε. Πατρών",
-       "logo": "",
+       "team": "ΝΕ ΠΑΤΡΩΝ",
+       "logo": "https://koecdn.twic.pics/media/327204416-876598936727395-7539238121809845951-n-1759145224-TwVlRdRx.jpg",
        "paok": false,
        "cells": [
-        "7",
+        "22",
+        "5",
         "1",
         "16",
-        "240-346",
-        "22"
+        "212-329",
+        "16"
        ]
       },
       {
        "pos": 10,
-       "team": "Ηλιούπολη",
-       "logo": "",
+       "team": "ΓΣ ΗΛΙΟΥΠΟΛΗΣ",
+       "logo": "https://koecdn.twic.pics/media/ilioupoli-1757497079-gCdg0afz.png",
        "paok": false,
        "cells": [
-        "4",
-        "1",
-        "19",
-        "205-360",
-        "13"
-       ]
-      },
-      {
-       "pos": 11,
-       "team": "Ν.Ο. Πατρών",
-       "logo": "",
-       "paok": false,
-       "cells": [
+        "22",
         "3",
         "1",
-        "20",
-        "210-395",
+        "18",
+        "179-335",
         "10"
        ]
       },
       {
-       "pos": 12,
-       "team": "Ν.Ο. Ρεθύμνου",
-       "logo": "",
+       "pos": 11,
+       "team": "ΝΟ ΠΑΤΡΩΝ",
+       "logo": "https://koecdn.twic.pics/media/nop-1758696303-0aGMkQ2S.png",
        "paok": false,
        "cells": [
+        "22",
+        "2",
+        "1",
+        "19",
+        "185-369",
+        "7"
+       ]
+      },
+      {
+       "pos": 12,
+       "team": "ΝΟ ΡΕΘΥΜΝΟΥ",
+       "logo": "https://koecdn.twic.pics/media/rethimno-1757497090-xrUva5XP.png",
+       "paok": false,
+       "cells": [
+        "22",
         "1",
         "0",
-        "23",
-        "213-457",
+        "21",
+        "196-429",
         "3"
        ]
       }
@@ -6768,5 +6796,5 @@
    "backfilled": true
   }
  },
- "updated": "2026-11-25T13:14+02:00"
+ "updated": "2026-11-25T13:39+02:00"
 }

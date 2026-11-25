@@ -46,6 +46,14 @@ class ParseTest(unittest.TestCase):
         self.assertEqual(ws.season_start("1999–2000 Alpha Ethniki"), 1999)
         self.assertIsNone(ws.season_start("Πανελλήνιο πρωτάθλημα 1959"))
 
+    def test_greek_title(self):
+        self.assertEqual(ws.greek_title("Παναθηναϊκός (ποδόσφαιρο)"), "Παναθηναϊκός")
+        self.assertEqual(ws.greek_title("Ολυμπιακός Σ.Φ.Π."), "Ολυμπιακός")
+        self.assertEqual(ws.greek_title("Α.Ο. Ξάνθη"), "Ξάνθη")
+        self.assertEqual(ws.greek_title("Γ.Α.Σ. Βέροια"), "Βέροια")
+        self.assertEqual(ws.greek_title("Α.Ε.Κ."), "Α.Ε.Κ.")
+        self.assertEqual(ws.greek_title("Ο.Φ.Η."), "Ο.Φ.Η.")
+
     def test_merged_team_is_paok(self):
         self.assertTrue(ws._paok("Φιλαθλητικός / ΠΑΟΚ"))
         self.assertFalse(ws._paok("Παναθηναϊκός"))

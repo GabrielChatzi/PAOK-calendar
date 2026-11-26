@@ -310,7 +310,8 @@ export function scoreKey(nt, home, away) {
 export const EVENTS = ["start", "goal", "disallowed", "red", "half", "second", "et", "pens", "pstart", "period",
   "score", "final", "custom"];
 
-const sport = (section) => String(section || "").replace(/-women$/, "");
+// Το άθλημα του τμήματος, και για Γυναικών, ακαδημίες και ΑμεΑ (volley-women-u18 → volley).
+const sport = (section) => String(section || "").split("-")[0];
 
 // Ο τίτλος για το τέλος της περιόδου n, όπως στο live.py.
 export function periodLabel(section, n) {
@@ -339,7 +340,7 @@ function minuteText(x) {
 }
 
 export function message(m, e) {
-  const emoji = EMOJI[m.section] || "";
+  const emoji = EMOJI[m.section] || EMOJI[sport(m.section)] || "";
   const score = `${m.home} ${e.home}–${e.away} ${m.away}`;
   const note = e.note ? ` (${e.note})` : "";
   const comp = m.competition || "";

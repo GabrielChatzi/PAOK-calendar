@@ -774,6 +774,29 @@
   .adm-fails code { font-size: 12.5px; word-break: break-word; }
   .adm-log li.undone b { text-decoration: line-through; color: var(--muted); }
   .adm-tools a.chip { text-decoration: none; }
+  .lc { max-width: 560px; }
+  .lc-comp { color: var(--muted); font-size: 14px; margin: 4px 0; }
+  .lc-status { font-weight: 700; margin: 4px 0 12px; display: flex; gap: 8px; align-items: center; }
+  .lc-board { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .lc-side { border: 2px solid var(--ink); padding: 10px; display: flex; flex-direction: column; gap: 8px; text-align: center; }
+  .lc-name { font-weight: 700; min-height: 2.6em; display: flex; align-items: center; justify-content: center; }
+  .lc-score { font: 800 64px/1 var(--display); }
+  .lc-score small { display: block; font: 600 15px var(--body); color: var(--muted); margin-top: 4px; }
+  .lc-plus { display: flex; gap: 6px; }
+  .lc-btn { flex: 1; min-height: 64px; border: 2px solid var(--ink); background: var(--ink); color: var(--paper); font: 800 20px var(--body); cursor: pointer; }
+  .lc-btn.sm { min-height: 58px; font-size: 18px; }
+  .lc-btn.minus { min-height: 40px; background: var(--paper); color: var(--ink); font-size: 16px; }
+  .lc-btn.wide { width: 100%; background: var(--paper); color: var(--ink); margin-top: 12px; }
+  .lc-btn.final { width: 100%; min-height: 52px; background: #b3261e; border-color: #b3261e; }
+  .lc-btn:disabled { opacity: .5; }
+  .lc-scorer { display: block; margin-top: 12px; }
+  .lc-scorer span { display: block; font-size: 14px; color: var(--muted); }
+  .lc-scorer input { width: 100%; padding: 10px; font: inherit; border: 1.5px solid var(--ink); background: var(--paper); color: var(--ink); border-radius: 0; }
+  .paste-row { display: flex; gap: 10px; align-items: center; width: 100%; }
+  .paste-row input { width: 22px; height: 22px; }
+  .paste-list li.bad b { color: #b3261e; }
+  .paste-list li.skip { opacity: .55; }
+  #paste-text { width: 100%; font: 15px/1.4 var(--body); padding: 10px; border: 1.5px solid var(--ink); background: var(--paper); color: var(--ink); }
   .prof-item em { font-style: normal; font-weight: 600; font-size: 14px; flex: none; }
 </style>
 </head>
@@ -2559,7 +2582,7 @@
     if (key === "admin-app" && isAdmin()) return { key: null, tab: "", page: "admin-app" };
     if (key === "admin") {
       // #/admin: σύνδεση με τον κωδικό· μετά, το κέντρο ελέγχου (#/admin/bulk, #/admin/log).
-      return isAdmin() ? { key: null, tab: /^(bulk|log)$/.test(tab) ? tab : "", page: "admin" } : { key: null, tab: "", page: "admin-login" };
+      return isAdmin() ? { key: null, tab: /^(bulk|log|live|paste)$/.test(tab) ? tab : "", page: "admin", sub: parts[2] || "" } : { key: null, tab: "", page: "admin-login" };
     }
     if (key === "m") return { key: null, tab: parts[2] || "", page: "match", nt: parts[1] || "" };
     // Ατομικά αθλήματα: #/atomika(/results), #/atomika/e/<id>, #/atomika/new(/<άθλημα>), #/atomika/edit/<id>.
@@ -3371,10 +3394,14 @@
           return '<li><a href="' + esc(i.html_url) + '" target="_blank" rel="noopener">#' + i.number + " " + esc(i.title) + "</a><small>" + esc(cap(relative(new Date(i.updated_at)) || fmtShort.format(new Date(i.updated_at)))) + "</small></li>";
         }).join("") + "</ul>"
       : '<p class="help">Κανένα ανοιχτό ✓</p>';
-    var tools = [["#/academies/new", "Νέος αγώνας"], ["#/atomika/new", "Νέα διοργάνωση"], ["#/academies/crests", "Σήματα" + (crestMissing ? " (" + crestMissing + ")" : "")],
+    var tools = [["#/admin/paste", "Επικόλληση προγράμματος"], ["#/academies/new", "Νέος αγώνας"], ["#/atomika/new", "Νέα διοργάνωση"], ["#/academies/crests", "Σήματα" + (crestMissing ? " (" + crestMissing + ")" : "")],
       ["#/stats", "Στατιστικά"], ["/social/", "📸 Social"], ["#/admin-app", "Εικονίδιο"]];
+    var lives = liveCandidates();
     return '<div class="section-head"><h2>Διαχείριση</h2></div>' +
       admRunHtml() +
+      (lives.length ? '<h2 class="section-title">Live κονσόλα</h2><ul class="adm-list">' + lives.map(function (m) {
+        return '<li><span class="adm-what">' + admTeamsLine(m) + '</span><a class="btn solid" href="#/admin/live/' + m.nt + '">Live ›</a></li>';
+      }).join("") + '</ul><p class="help">Αγώνες χωρίς αυτόματο live, από μία ώρα πριν ως τρεις ώρες μετά την έναρξη.</p>' : "") +
       '<h2 class="section-title">Χωρίς τελικό σκορ' + (missing.length ? ' <span class="adm-count">' + missing.length + "</span>" : "") + "</h2>" +
       (missing.length ? '<ul class="adm-items">' + quick + "</ul>" +
         '<p class="help">Το «Τελικό» στέλνει και ειδοποίηση σε όσους ακολουθούν. ' + (missing.length > 8 ? "Δείχνονται οι 8 πιο πρόσφατοι. " : "") +
@@ -3431,7 +3458,8 @@
   }
   function adminPageHtml(tab) {
     if (!isAdmin()) return adminLoginHtml();
-    return tab === "bulk" ? adminBulkHtml() : tab === "log" ? adminLogHtml() : adminHomeHtml();
+    var r = route();
+    return tab === "bulk" ? adminBulkHtml() : tab === "log" ? adminLogHtml() : tab === "live" ? liveConsoleHtml(r.sub) : tab === "paste" ? pasteHtml() : adminHomeHtml();
   }
   function admSaveScore(nt, h, a, silent) {
     return adminPost({ password: adminPass(), action: "score", nt: nt, home: +h, away: +a, final: true, silent: !!silent }).then(function (x) {
@@ -3508,6 +3536,244 @@
     }
   });
 
+  // ---- Live κονσόλα (#/admin/live/<nt>): μεγάλα κουμπιά για live σκορ από την κερκίδα, για αγώνες χωρίς πηγή.
+  // Στέλνει τα ίδια γεγονότα με τη φόρμα του αγώνα (api/admin.js: start, goal, half, second, pstart, period, final).
+  var LIVE_PERIODS = { basketball: 4, waterpolo: 4, handball: 2, volley: 5 };
+  function liveCons(nt) {
+    var st;
+    try { st = JSON.parse(localStorage.getItem("paok-console-" + nt) || "null"); } catch (e) {}
+    return st || { started: false, period: 1, inPeriod: false, sets: { home: 0, away: 0 }, silent: false, scorer: "" };
+  }
+  function saveLiveCons(nt, st) { try { localStorage.setItem("paok-console-" + nt, JSON.stringify(st)); } catch (e) {} }
+  function liveConsoleHtml(nt) {
+    var m = matchByNt(nt);
+    if (!m) return '<a class="back" href="#/admin">‹ Διαχείριση</a><p class="empty">Ο αγώνας δεν βρέθηκε.</p>';
+    var e = adminEntries[nt], st = liveCons(nt), sp = admSport(m);
+    var volley = sp === "volley", bask = sp === "basketball", periods = LIVE_PERIODS[sp] || 0;
+    var h = e ? e.home : 0, a = e ? e.away : 0, final = !!(e && e.final) || !!m.score;
+    var setPts = volley ? (e && e.set) || { home: 0, away: 0 } : null;
+    function big(label, attrs, cls) { return '<button type="button" class="lc-btn' + (cls ? " " + cls : "") + '" ' + attrs + ">" + label + "</button>"; }
+    function side(s, name, score) {
+      var plus = volley ? big("+1 πόντος", 'data-lc="pt" data-side="' + s + '"')
+        : bask ? big("+1", 'data-lc="goal" data-side="' + s + '" data-pts="1"', "sm") + big("+2", 'data-lc="goal" data-side="' + s + '" data-pts="2"', "sm") + big("+3", 'data-lc="goal" data-side="' + s + '" data-pts="3"', "sm")
+        : big("+ ΓΚΟΛ", 'data-lc="goal" data-side="' + s + '"');
+      return '<div class="lc-side"><div class="lc-name">' + esc(name) + '</div><div class="lc-score">' + score +
+        (volley ? '<small>' + setPts[s] + " πόντοι</small>" : "") + '</div><div class="lc-plus">' + plus + "</div>" +
+        big("−1", 'data-lc="minus" data-side="' + s + '"', "minus") + "</div>";
+    }
+    var phase = "";
+    if (final) phase = '<p class="lc-status">Τελικό ✓</p>';
+    else if (!st.started) phase = big("▶ Έναρξη", 'data-lc="start"', "wide");
+    else if (volley) phase = big("Τέλος " + (h + a + 1) + "ου σετ", 'data-lc="set"', "wide");
+    else if (periods && !st.inPeriod && st.period > 1) phase = big("▶ Ξεκίνα " + (sp === "handball" ? "2ο ημίχρονο" : st.period + "η περίοδο"), 'data-lc="pstart"', "wide");
+    else if (periods && st.period < periods) phase = big(sp === "handball" ? "Ημίχρονο" : "Τέλος " + st.period + "ης περιόδου", 'data-lc="period"', "wide");
+    else if (!periods && st.period === 1) phase = big("Ημίχρονο", 'data-lc="half"', "wide");
+    else if (!periods && st.period === 2 && !st.inPeriod) phase = big("▶ 2ο ημίχρονο", 'data-lc="second"', "wide");
+    var label = e && e.label ? e.label : st.started ? "Σε εξέλιξη" : "Δεν έχει ξεκινήσει";
+    return '<a class="back" href="#/admin">‹ Διαχείριση</a>' +
+      '<div class="lc"><p class="lc-comp">' + esc(sectionOf(m).emoji + " " + (sectionOf(m).academy ? (sectionOf(m).group || "") + " " + (sectionOf(m).short || "") : sectionOf(m).name) + " · " + (m.competition || "")) + "</p>" +
+      '<p class="lc-status">' + (final || !st.started ? "" : '<span class="live-badge">LIVE</span> ') + esc(label) + (adm.busy ? " · αποστολή…" : "") + "</p>" +
+      '<div class="lc-board">' + side("home", m.home, h) + side("away", m.away, a) + "</div>" +
+      (!volley && !final ? '<label class="lc-scorer"><span>Σκόρερ (προαιρετικά, για το επόμενο γκολ)</span><input id="lc-scorer" value="' + esc(st.scorer || "") + '" autocomplete="off"></label>' : "") +
+      '<div class="lc-phase">' + phase + "</div>" +
+      (!final && st.started ? '<div class="actions">' + big("■ Τέλος αγώνα", 'data-lc="final"', "final") + "</div>" : "") +
+      '<div class="actions">' + seg("lcSilent", [["0", "Με ειδοποιήσεις"], ["1", "Χωρίς ειδοποιήσεις"]], st.silent ? "1" : "0") + "</div>" +
+      '<p class="help">' + (volley ? "Οι πόντοι στέλνονται χωρίς ειδοποίηση· ειδοποίηση στο τέλος κάθε σετ και στο τελικό. "
+        : "Κάθε γκολ στέλνει ειδοποίηση σε όσους ακολουθούν (Live ή Πριν). ") +
+      'Το −1 διορθώνει το σκορ χωρίς ειδοποίηση. Όλα φαίνονται και στο <a href="#/admin/log">ιστορικό</a>.</p></div>';
+  }
+  function liveConsoleClick(b) {
+    var group = b.closest("[data-seg]");
+    var r = route();
+    if (r.page !== "admin" || r.tab !== "live") return false;
+    var nt = r.sub, m = matchByNt(nt);
+    if (!m) return false;
+    var st = liveCons(nt);
+    if (group && group.dataset.seg === "lcSilent" && b.dataset.v) { st.silent = b.dataset.v === "1"; saveLiveCons(nt, st); render(); return true; }
+    var what = b.dataset.lc;
+    if (!what || adm.busy) return !!what;
+    var e = adminEntries[nt] || {}, h = e.home || 0, a = e.away || 0, sp = admSport(m), volley = sp === "volley";
+    var setPts = volley ? JSON.parse(JSON.stringify(e.set || { home: 0, away: 0 })) : null;
+    var body = { password: adminPass(), action: "score", nt: nt, home: h, away: a, silent: st.silent };
+    var scorerEl = $("lc-scorer");
+    if (scorerEl) st.scorer = scorerEl.value.trim();
+    if (what === "start") { body.event = "start"; body.home = 0; body.away = 0; if (volley) body.set = { home: 0, away: 0 }; st.started = true; st.inPeriod = true; st.period = 1; }
+    else if (what === "goal") {
+      var pts = +(b.dataset.pts || 1);
+      body.event = "goal"; body.side = b.dataset.side; body.points = pts;
+      if (b.dataset.side === "home") body.home = h + pts; else body.away = a + pts;
+      if (st.scorer) { body.scorer = st.scorer; st.scorer = ""; }
+    } else if (what === "minus") {
+      body.silent = true;  // διόρθωση: χωρίς ειδοποίηση
+      if (volley) { setPts[b.dataset.side] = Math.max(0, setPts[b.dataset.side] - 1); body.set = setPts; }
+      else if (b.dataset.side === "home") body.home = Math.max(0, h - 1); else body.away = Math.max(0, a - 1);
+    } else if (what === "pt") {
+      setPts[b.dataset.side]++; body.set = setPts; body.silent = true;
+    } else if (what === "set") {
+      if (setPts.home === setPts.away) { toast("Οι πόντοι του σετ είναι ισόπαλοι."); return true; }
+      var n = h + a + 1;
+      if (setPts.home > setPts.away) body.home = h + 1; else body.away = a + 1;
+      body.event = "period"; body.period = Math.min(n, 5); body.set = setPts;
+      if (Math.max(body.home, body.away) >= 3) { body.event = "final"; body.final = true; }
+    } else if (what === "half") { body.event = "half"; st.period = 2; st.inPeriod = false; }
+    else if (what === "second") { body.event = "second"; st.inPeriod = true; }
+    else if (what === "period") { body.event = "period"; body.period = st.period; st.period++; st.inPeriod = false; }
+    else if (what === "pstart") { body.event = "pstart"; body.period = st.period; st.inPeriod = true; }
+    else if (what === "final") {
+      if (!confirm("Τελικό " + h + "-" + a + ";")) return true;
+      body.event = "final"; body.final = true;
+    }
+    adm.busy = true; render();
+    adminPost(body).then(function (x) {
+      adm.busy = false;
+      if (!x.r.ok) { toast(x.d.error || "Δεν στάλθηκε."); render(); return; }
+      if (what === "set") body.set = { home: 0, away: 0 };
+      saveLiveCons(nt, st);
+      if (x.d.entry) {
+        if (what === "set" && !body.final) x.d.entry.set = { home: 0, away: 0 };
+        applyAdmin([x.d.entry]);
+      }
+      if (body.event && body.event !== "score" && !body.silent) toast("Στάλθηκε: " + (x.d.entry && x.d.entry.label || body.event));
+      adm.log = null; adm.logState = "";
+      render();
+    }).catch(function () { adm.busy = false; toast("Χωρίς σύνδεση. Ξαναπάτα."); render(); });
+    return true;
+  }
+  // Αγώνες για τη live κονσόλα: από 1 ώρα πριν ως 3 ώρες μετά, χωρίς αυτόματο live.
+  function liveCandidates() {
+    var now = Date.now();
+    return allMatches().filter(function (m) {
+      var t = new Date(m.start).getTime();
+      return !m.live && !m.score && !m.status && t - 3600 * 1000 < now && now < t + 3 * 3600 * 1000;
+    });
+  }
+
+  // ---- Επικόλληση προγράμματος (#/admin/paste): γραμμές «15/1 18:00 ΝΟ Πατρών – ΠΑΟΚ, Πάτρα» → αγώνες της φόρμας.
+  var paste = { text: "", section: "", competition: "", venue: "", rows: null, busy: false, progress: "" };
+  var MONTHS_GR = { ιαν: 1, φεβ: 2, μαρ: 3, απρ: 4, μαι: 5, ιουν: 6, ιουλ: 7, αυγ: 8, σεπ: 9, οκτ: 10, νοε: 11, δεκ: 12 };
+  function pasteYear(month, day) {
+    // Χωρίς χρονιά: η κοντινότερη ημερομηνία από σήμερα (π.χ. Ιανουάριος → του χρόνου, αν τώρα είναι φθινόπωρο).
+    var now = new Date(), y = now.getFullYear(), best = y, diff = Infinity;
+    [y - 1, y, y + 1].forEach(function (yy) {
+      var d = Math.abs(Date.UTC(yy, month - 1, day) - now.getTime());
+      if (d < diff) { diff = d; best = yy; }
+    });
+    return best;
+  }
+  function parseScheduleLine(line, carryDate) {
+    var raw = line.replace(/\s+/g, " ").trim();
+    if (!raw) return null;
+    var t = norm(raw), date = carryDate, time = "", m;
+    if ((m = /(\d{1,2})\s*[\/.]\s*(\d{1,2})(?:\s*[\/.]\s*(\d{2,4}))?(?![\d:])/.exec(raw)) && +m[2] >= 1 && +m[2] <= 12) {
+      var d = +m[1], mo = +m[2], y = m[3] ? (+m[3] < 100 ? 2000 + +m[3] : +m[3]) : pasteYear(+m[2], +m[1]);
+      if (mo >= 1 && mo <= 12 && d >= 1 && d <= 31) { date = y + "-" + pad(mo) + "-" + pad(d); raw = raw.replace(m[0], " "); }
+    } else if ((m = /(\d{1,2})\s+(ιαν|φεβ|μαρ|απρ|μαι|ιουν|ιουλ|αυγ|σεπ|οκτ|νοε|δεκ)[α-ω]*/.exec(t))) {
+      var mo2 = MONTHS_GR[m[2]], d2 = +m[1];
+      date = pasteYear(mo2, d2) + "-" + pad(mo2) + "-" + pad(d2);
+      raw = raw.replace(new RegExp(m[1] + "\\s+\\S+"), " ");
+    }
+    if ((m = /\b([01]?\d|2[0-3])[:.]([0-5]\d)\b/.exec(raw))) { time = pad(+m[1]) + ":" + m[2]; raw = raw.replace(m[0], " "); }
+    // Σκορ στο τέλος (αγώνας που έγινε): «… 3-1» ή «… 3:1».
+    var us = "", them = "", sc = /(\d{1,3})\s*[-:]\s*(\d{1,3})\s*$/.exec(raw);
+    var toks = raw.trim().split(" ");
+    while (toks.length && /^(κυριακ|δευτερ|τριτ|τεταρτ|πεμπτ|παρασκευ|σαββατ|[,.:;-]*$)/.test(norm(toks[0]))) toks.shift();
+    var rest = toks.join(" ");
+    // Αντίπαλοι: «Α – Β», «Α - Β», «Α vs Β».
+    var parts = rest.split(/\s+[–—-]\s+|\s+vs\.?\s+|\s+v\s+/i);
+    if (parts.length < 2) return { raw: line.trim(), error: "Δεν βρέθηκαν δύο ομάδες", date: date !== carryDate ? date : "" };
+    var left = parts[0], right = parts.slice(1).join(" - ");
+    if (sc && right.trim().endsWith(sc[0].trim())) { right = right.slice(0, right.lastIndexOf(sc[0].trim())); }
+    var venue = "", cm = /^(.*?)(?:,|\s+@\s+|\s+\(|\s+γηπεδο:?\s+)(.*)$/i.exec(right);
+    if (cm) { right = cm[1]; venue = cm[2].replace(/\)\s*$/, "").trim(); }
+    left = left.replace(/^[\s,.:;-]+|[\s,.:;-]+$/g, ""); right = right.replace(/^[\s,.:;-]+|[\s,.:;-]+$/g, "");
+    var paokL = /(^|\s)(ΠΑΟΚ|Π\.Α\.Ο\.Κ\.?|PAOK)(\s|$)/i.test(left), paokR = /(^|\s)(ΠΑΟΚ|Π\.Α\.Ο\.Κ\.?|PAOK)(\s|$)/i.test(right);
+    if (!paokL && !paokR) return { raw: line.trim(), skip: true, error: "Χωρίς ΠΑΟΚ (παραλείπεται)" };
+    if (!date) return { raw: line.trim(), error: "Λείπει ημερομηνία" };
+    var paokHome = paokL && !(paokR && /^ΑΣ\s+ΠΑΟΚ|^ΠΑΟΚ\s*\(\d\)/i.test(left));
+    if (sc) { us = paokHome ? sc[1] : sc[2]; them = paokHome ? sc[2] : sc[1]; }
+    return { raw: line.trim(), date: date, time: time, paokHome: paokHome, opponent: paokHome ? right : left, venue: venue, us: us, them: them, on: true };
+  }
+  function parseSchedule(text) {
+    var out = [], carry = "";
+    text.split(/\n+/).forEach(function (line) {
+      var r = parseScheduleLine(line, carry);
+      if (!r) return;
+      // Γραμμή μόνο με ημερομηνία (επικεφαλίδα μέρας): ισχύει για τις επόμενες. Άλλες γραμμές χωρίς
+      // αγώνα (τίτλοι, αγωνιστικές) παραλείπονται σιωπηλά, εκτός αν αναφέρουν τον ΠΑΟΚ.
+      if (r.error === "Δεν βρέθηκαν δύο ομάδες") {
+        if (r.date) { carry = r.date; return; }
+        if (!/ΠΑΟΚ|PAOK/i.test(line)) return;
+      }
+      if (r.date) carry = r.date;
+      out.push(r);
+    });
+    return out;
+  }
+  function pasteHtml() {
+    var opts = data.sections.concat(data.academy).map(function (s) {
+      return '<option value="' + s.key + '"' + (s.key === paste.section ? " selected" : "") + ">" + esc(progTeamName(s)) + "</option>";
+    }).join("");
+    var rows = paste.rows, ok = rows ? rows.filter(function (r) { return r.on && !r.error; }) : [];
+    var preview = !rows ? "" : rows.length ? '<h2 class="section-title">Προεπισκόπηση</h2><ul class="adm-list paste-list">' + rows.map(function (r, i) {
+      if (r.error) return '<li class="' + (r.skip ? "skip" : "bad") + '"><span class="adm-what"><b>' + esc(r.raw) + "</b><small>" + esc(r.error) + "</small></span></li>";
+      var d = new Date(r.date + "T12:00:00");
+      return '<li><label class="paste-row"><input type="checkbox" data-paste="' + i + '"' + (r.on ? " checked" : "") + '><span class="adm-what"><b>' +
+        esc(r.paokHome ? "ΠΑΟΚ – " + r.opponent : r.opponent + " – ΠΑΟΚ") + (r.us !== "" ? " " + esc(r.paokHome ? r.us + "-" + r.them : r.them + "-" + r.us) : "") +
+        "</b><small>" + esc(cap(fmtShort.format(d)) + " " + (r.time || "χωρίς ώρα") + (r.venue || paste.venue ? " · " + (r.venue || paste.venue) : "")) + "</small></span></label></li>";
+    }).join("") + "</ul>" +
+      '<div class="actions sticky-actions"><button type="button" class="btn solid" data-act="paste-save"' + (ok.length && paste.section && !paste.busy ? "" : " disabled") + ">" +
+      (paste.busy ? esc(paste.progress) : "Αποθήκευση " + ok.length + (ok.length === 1 ? " αγώνα" : " αγώνων")) + "</button></div>" +
+      (!paste.section ? '<p class="help">Διάλεξε πρώτα ομάδα.</p>' : "")
+      : '<p class="empty">Δεν βρέθηκαν αγώνες.</p>';
+    return '<a class="back" href="#/admin">‹ Διαχείριση</a><div class="section-head"><h2>Επικόλληση προγράμματος</h2></div>' +
+      '<p class="help">Επικόλλησε το πρόγραμμα από ανακοίνωση, PDF ή ανάρτηση. Μία γραμμή ανά αγώνα, π.χ. <code>15/1 18:00 ΝΟ Πατρών – ΠΑΟΚ, Πάτρα</code>. ' +
+      "Μια γραμμή μόνο με ημερομηνία ισχύει για τις επόμενες· σκορ στο τέλος (<code>3-1</code>) περνά ως αποτέλεσμα· γραμμές χωρίς ΠΑΟΚ παραλείπονται.</p>" +
+      '<label class="adm-field wide"><span>Ομάδα</span><select id="paste-section"><option value="">Διάλεξε…</option>' + opts + "</select></label>" +
+      '<label class="adm-field wide"><span>Διοργάνωση (για όλους)</span><input id="paste-comp" value="' + esc(paste.competition) + '" placeholder="π.χ. Πανελλήνιο Πρωτάθλημα Παίδων Κ16"></label>' +
+      '<label class="adm-field wide"><span>Γήπεδο (όταν δεν το γράφει η γραμμή)</span><input id="paste-venue" value="' + esc(paste.venue) + '"></label>' +
+      '<label class="adm-field wide"><span>Πρόγραμμα</span><textarea id="paste-text" rows="8">' + esc(paste.text) + "</textarea></label>" +
+      '<div class="actions"><button type="button" class="btn" data-act="paste-parse">Ανάγνωση</button></div>' + preview + footerHtml();
+  }
+  function pasteSync() {
+    if ($("paste-text")) paste.text = $("paste-text").value;
+    if ($("paste-section")) paste.section = $("paste-section").value;
+    if ($("paste-comp")) paste.competition = $("paste-comp").value.trim();
+    if ($("paste-venue")) paste.venue = $("paste-venue").value.trim();
+  }
+  function pasteClick(b) {
+    var act = b.dataset.act;
+    if (act === "paste-parse") { pasteSync(); paste.rows = parseSchedule(paste.text); render(); return true; }
+    if (act === "paste-save") {
+      pasteSync();
+      var todo = paste.rows.filter(function (r) { return r.on && !r.error; }).slice();
+      if (!todo.length || !paste.section) return true;
+      paste.busy = true;
+      var done = 0, errors = [];
+      var step = function () {
+        if (!todo.length) {
+          paste.busy = false;
+          toast(done + " αγώνες αποθηκεύτηκαν" + (errors.length ? ", " + errors.length + " όχι: " + errors[0] : "."));
+          if (!errors.length) { paste.rows = null; paste.text = ""; }
+          return load().catch(function () {}).then(render);
+        }
+        var r = todo.shift();
+        paste.progress = "Αποθήκευση " + (done + errors.length + 1) + "…"; render();
+        return adminPost({ password: adminPass(), action: "match-save", match: { section: paste.section, date: r.date, time: r.time, paokHome: r.paokHome,
+          opponent: r.opponent, venue: r.venue || paste.venue, competition: paste.competition, round: "", us: r.us, them: r.them } })
+          .then(function (x) { if (x.r.ok) done++; else errors.push(r.opponent + ": " + (x.d.error || x.r.status)); },
+            function () { errors.push(r.opponent + ": χωρίς σύνδεση"); }).then(step);
+      };
+      step();
+      return true;
+    }
+    return false;
+  }
+  document.addEventListener("change", function (e) {
+    var t = e.target;
+    if (t && t.dataset && t.dataset.paste !== undefined && paste.rows) { paste.rows[+t.dataset.paste].on = t.checked; pasteSync(); render(); }
+    if (t && t.id === "paste-section") { paste.section = t.value; pasteSync(); render(); }
+  });
+
   // ---- Ενέργειες
   var toastTimer;
   function toast(msg) {
@@ -3539,7 +3805,7 @@
   $("app").addEventListener("click", function (e) {
     var b = e.target.closest("button");
     if (!b) return;
-    if (progClick(b) || followClick(b) || profileClick(b) || admClick(b)) return;
+    if (liveConsoleClick(b) || pasteClick(b) || progClick(b) || followClick(b) || profileClick(b) || admClick(b)) return;
     if (b.dataset.act === "cal-follow") {
       calSel.keys = followedKeys().filter(function (k) { return data.sections.some(function (s) { return s.key === k; }); });
       saveCalSel(); render(); return;
@@ -4503,7 +4769,7 @@
 
     return '<div class="match"><a class="back" href="#/' + m.section + '">‹ ' + esc(s.name) + "</a>" + head +
       (actions.length ? '<div class="match-actions">' + actions.join("") + "</div>" : "") + tzNoteHtml() +
-      body + (isAdmin() ? customEditHtml(m) + adminMatchHtml(m) + (isUpcoming(m) ? "" : goalsAdminHtml(m)) + infoAdminHtml(m) : "") + (isUpcoming(m) && !finalLive ? matchNotifyHtml(m) : "") + infoHtml + "</div>" + footerHtml();
+      body + (isAdmin() ? (!m.live && !m.score ? '<div class="actions"><a class="btn solid" href="#/admin/live/' + m.nt + '">🎛 Live κονσόλα</a></div>' : "") + customEditHtml(m) + adminMatchHtml(m) + (isUpcoming(m) ? "" : goalsAdminHtml(m)) + infoAdminHtml(m) : "") + (isUpcoming(m) && !finalLive ? matchNotifyHtml(m) : "") + infoHtml + "</div>" + footerHtml();
   }
 
   function athensSuffix(date) {
@@ -4514,7 +4780,7 @@
   // Η φόρμα κρατά την κατάστασή της εδώ (ανά αγώνα), ώστε να μη χάνεται όταν ξαναζωγραφίζεται η σελίδα.
   var admForm = {};
   function adminPass() { try { return localStorage.getItem("paok-admin-pass") || ""; } catch (e) { return ""; } }
-  function admSport(m) { return m.section.replace(/-women$/, ""); }
+  function admSport(m) { return m.section.split("-")[0]; }  // και ακαδημίες: volley-women-u18 → volley
   // Τα γεγονότα ανά άθλημα: [κωδικός, κουμπί]. Όσα έχουν περιόδους ή σετ ρωτούν και ποια.
   function admEvents(m) {
     var s = admSport(m);

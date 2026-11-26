@@ -497,3 +497,10 @@ test("Ιστορικό: στόχος και περιγραφή κάθε αλλα
   assert.equal(admin.auditLabel("match-save", null, { opponent: "Βόλος", date: "2026-12-05", us: 3, them: 1 }), "Νέος αγώνας: Βόλος 2026-12-05 (3-1)");
   assert.equal(admin.auditLabel("event-delete", { title: "Πάλη" }, { title: "Πάλη", hidden: true }), "Κρύψιμο διοργάνωσης: Πάλη");
 });
+
+test("Ακαδημίες: το άθλημα βγαίνει σωστά στις ειδοποιήσεις (καλάθι, σετ)", () => {
+  const m = { nt: "0123456789", section: "basketball-u18", home: "ΠΑΟΚ", away: "Άρης", competition: "Εφήβων" };
+  assert.match(admin.message(m, { event: "goal", side: "home", home: 3, away: 0, points: 3 }).payload.title, /^🏀 ΤΡΙΠΟΝΤΟ ΤΟΥ ΠΑΟΚ/);
+  const v = { ...m, section: "volley-women-u18" };
+  assert.match(admin.message(v, { event: "period", period: 1, home: 1, away: 0, set: { home: 25, away: 20 } }).payload.title, /\(25–20\)/);
+});

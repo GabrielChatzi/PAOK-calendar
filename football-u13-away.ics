@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:football-u13-epsm-059075065be4@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261126T160106Z
 DTSTART;TZID=Europe/Athens:20261017T141500
 DTEND;TZID=Europe/Athens:20261017T161500
 SUMMARY:⚽ ΑΙΑΣ ΕΥΟΣΜΟΥ 0-12 ΠΑΟΚ
@@ -38,7 +38,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u13-epsm-7b3f035fcc00@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261126T160106Z
 DTSTART;TZID=Europe/Athens:20261115T090000
 DTEND;TZID=Europe/Athens:20261115T110000
 SUMMARY:⚽ ΜΠΕΜΠΗΔΕΣ 2000 (1) 1-1 ΠΑΟΚ
@@ -50,22 +50,21 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u13-epsm-75796f9b9865@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261126T160106Z
 DTSTART;TZID=Europe/Athens:20261128T180000
 DTEND;TZID=Europe/Athens:20261128T200000
-SUMMARY:ΜΑΤΑΙΩΘΗΚΕ: ⚽ ΑΓΡΟΤΙΚΟΣ ΑΣΤΕΡΑΣ – Π
- ΑΟΚ (ώρα αναμένεται)
-STATUS:CANCELLED
-DESCRIPTION:Κ14 League 1 (ΕΠΣΜ) – 6η αγωνιστική\nΜατα
- ιώθηκε\nΗ ώρα δεν έχει οριστεί ακόμα (προ
- σωρινά 18:00). Θα ενημερωθεί αυτόματα όταν 
- ανακοινωθεί.
+SUMMARY:⚽ ΑΓΡΟΤΙΚΟΣ ΑΣΤΕΡΑΣ 0-3 ΠΑΟΚ (ώρα αναμ
+ ένεται)
+DESCRIPTION:Κ14 League 1 (ΕΠΣΜ) – 6η αγωνιστική\nΤελι
+ κό σκορ: ΑΓΡΟΤΙΚΟΣ ΑΣΤΕΡΑΣ 0-3 ΠΑΟΚ\nΗ ώρα 
+ δεν έχει οριστεί ακόμα (προσωρινά 18:00). Θα
+  ενημερωθεί αυτόματα όταν ανακοινωθεί.
 URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
  AGUE+1
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u13-epsm-8308987f1f88@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261126T160106Z
 DTSTART;TZID=Europe/Athens:20261212T180000
 DTEND;TZID=Europe/Athens:20261212T200000
 SUMMARY:⚽ ΑΚΑΔ. ΠΟΔ. ΝΕΑΠΟΛΗΣ – ΠΑΟΚ (ώρα ανα
@@ -79,7 +78,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u13-epsm-d797dc48384b@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261126T160106Z
 DTSTART;TZID=Europe/Athens:20261226T180000
 DTEND;TZID=Europe/Athens:20261226T200000
 SUMMARY:⚽ ΑΕ ΕΥΟΣΜΟΥ – ΠΑΟΚ (ώρα αναμένεται)
@@ -92,7 +91,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u13-epsm-6b9ff11ae168@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261126T160106Z
 DTSTART;TZID=Europe/Athens:20270102T180000
 DTEND;TZID=Europe/Athens:20270102T200000
 SUMMARY:⚽ ΑΟ ΠΟΛΥΚΑΣΤΡΟΥ ΠΑΙΟΝΙΑΣ – ΠΑΟΚ (ώρ
@@ -106,7 +105,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u13-epsm-17e0a224b8f0@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261126T160106Z
 DTSTART;TZID=Europe/Athens:20270116T180000
 DTEND;TZID=Europe/Athens:20270116T200000
 SUMMARY:⚽ ΔΟΞΑ ΠΕΡΙΒΟΛΑΚΙΟΥ – ΠΑΟΚ (ώρα αναμ
@@ -120,7 +119,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u13-epsm-d6f8dd6e0845@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261126T160106Z
 DTSTART;TZID=Europe/Athens:20270130T180000
 DTEND;TZID=Europe/Athens:20270130T200000
 SUMMARY:⚽ ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020 (1) – ΠΑΟ
@@ -134,7 +133,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LE
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u13-epsm-c3b860649c8e@paok-calendar
-DTSTAMP:20261120T200055Z
+DTSTAMP:20261126T160106Z
 DTSTART;TZID=Europe/Athens:20270213T180000
 DTEND;TZID=Europe/Athens:20270213T200000
 SUMMARY:⚽ ΠΟΤ ΗΡΑΚΛΗΣ – ΠΑΟΚ (ώρα αναμένεται

@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:basketball-women-u16b-ek-AxbpfeGtLvfF72rZOOM8Yg@paok-calendar
-DTSTAMP:20261120T183110Z
+DTSTAMP:20261126T160106Z
 DTSTART;TZID=Europe/Athens:20261010T193000
 DTEND;TZID=Europe/Athens:20261010T213000
 SUMMARY:🏀 ΠΑΟΚ 93-22 ΠΡΩΤΕΥΣ ΘΕΣΣΑΛΟΝΙΚΗΣ ΑΣ
@@ -39,7 +39,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=AxbpfeGtLvfF72rZOOM8
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-u16b-ek-pPF9bedPlaIfjnFXywd7Pw@paok-calendar
-DTSTAMP:20261120T183110Z
+DTSTAMP:20261126T160106Z
 DTSTART;TZID=Europe/Athens:20261120T190000
 DTEND;TZID=Europe/Athens:20261120T210000
 SUMMARY:🏀 ΠΑΟΚ 28-86 ΣΥΚΕΩΝ ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ 1
@@ -52,18 +52,18 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=pPF9bedPlaIfjnFXywd7
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-u16b-ek-pYWFqV978e7QlcMUogujOw@paok-calendar
-DTSTAMP:20261120T183110Z
-DTSTART;TZID=Europe/Athens:20261128T200000
-DTEND;TZID=Europe/Athens:20261128T220000
+DTSTAMP:20261126T160106Z
+DTSTART;TZID=Europe/Athens:20261128T141500
+DTEND;TZID=Europe/Athens:20261128T161500
 SUMMARY:🏀 ΠΑΟΚ – ΦΡΥΓΑΝΙΩΤΗ ΜΑΣ
-LOCATION:PAOK Sports Arena
+LOCATION:AIRDOME SKG BASKETBALL
 DESCRIPTION:Κορασίδων (ΕΚΑΣΘ) – 8η αγωνιστική
 URL:https://ekasth.gr/champs/matchcenter8/game.html?id=pYWFqV978e7QlcMUoguj
  Ow
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-u16b-ek-YNnEP00ZrwrK3qKxPyZiZA@paok-calendar
-DTSTAMP:20261120T183110Z
+DTSTAMP:20261126T160106Z
 DTSTART;TZID=Europe/Athens:20261212T200000
 DTEND;TZID=Europe/Athens:20261212T220000
 SUMMARY:🏀 ΠΑΟΚ – ΑΡΙΣΤΟΤΕΛΗΣ ΣΤΑΥΡΟΥ ΕΑΣ
@@ -74,7 +74,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=YNnEP00ZrwrK3qKxPyZi
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-u16b-ek-J-t7vBsWW7ZfVKyvSJLSAA@paok-calendar
-DTSTAMP:20261120T183110Z
+DTSTAMP:20261126T160106Z
 DTSTART;TZID=Europe/Athens:20270109T200000
 DTEND;TZID=Europe/Athens:20270109T220000
 SUMMARY:🏀 ΠΑΟΚ – ΝΕΑΠΟΛΗ ΑΚΠΚ
@@ -85,7 +85,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=J-t7vBsWW7ZfVKyvSJLS
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-women-u16b-ek-9Z5_pOiroTYvFjhySWhwfw@paok-calendar
-DTSTAMP:20261120T183110Z
+DTSTAMP:20261126T160106Z
 DTSTART;TZID=Europe/Athens:20270123T200000
 DTEND;TZID=Europe/Athens:20270123T220000
 SUMMARY:🏀 ΠΑΟΚ – ΣΤΑΥΡΟΥΠΟΛΗ ΕΚ

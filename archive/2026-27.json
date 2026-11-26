@@ -9472,12 +9472,12 @@
      "uid": "basketball-women-u16b-ek-pYWFqV978e7QlcMUogujOw",
      "nt": "4bf2b3b0b3",
      "section": "basketball-women-u16b",
-     "start": "2026-11-28T20:00:00+02:00",
+     "start": "2026-11-28T14:15:00+02:00",
      "timeKnown": true,
      "home": "ΠΑΟΚ",
      "away": "ΦΡΥΓΑΝΙΩΤΗ ΜΑΣ",
      "paokHome": true,
-     "venue": "PAOK Sports Arena",
+     "venue": "AIRDOME SKG BASKETBALL",
      "competition": "Κορασίδων (ΕΚΑΣΘ)",
      "round": "8η αγωνιστική",
      "url": "https://ekasth.gr/champs/matchcenter8/game.html?id=pYWFqV978e7QlcMUogujOw",
@@ -13924,6 +13924,7 @@
      "paokHome": false,
      "competition": "Κ14 League 1 (ΕΠΣΜ)",
      "round": "6η αγωνιστική",
+     "score": "0-3",
      "url": "https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A14+LEAGUE+1",
      "homeLogo": "https://paokalendar.gr/crests/59418c87cf3fbd31.svg"
     },
@@ -17799,5 +17800,5 @@
    ]
   }
  },
- "updated": "2026-11-26T16:05+02:00"
+ "updated": "2026-11-26T18:05+02:00"
 }

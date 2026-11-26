@@ -25,6 +25,17 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
+<script src="/seo.js"></script>
+<script>
+  // Καθαρές διευθύνσεις (/podosfairo, /paok-aris-<nt>, βλ. seo.js): η εφαρμογή δουλεύει με #/..., οπότε
+  // η διεύθυνση γίνεται η αντίστοιχη /#/... πριν ξεκινήσει. Τίτλος, canonical κ.λπ. μένουν όπως τα έδωσε ο server.
+  (function () {
+    var p = location.pathname;
+    if (p === "/" || p === "/index.html") return;
+    var h = location.hash || (window.PKSEO && PKSEO.hashFor(p)) || "";
+    try { history.replaceState(null, "", "/" + location.search + h); } catch (e) {}
+  })();
+</script>
 <script>
   // Εικονίδιο διαχειριστή: η διεύθυνση ?app=admin δίνει άλλο manifest, εικονίδιο και όνομα («PAOK Admin»),
   // ώστε το «Προσθήκη στην αρχική οθόνη» να φτιάξει δεύτερη εφαρμογή που ανοίγει πάντα ως διαχειριστής.
@@ -1934,7 +1945,17 @@
   // Κοινοποίηση: το μενού του κινητού, αλλιώς αντιγραφή του συνδέσμου.
   function shareBtn() {
     return navigator.share ? '<button type="button" class="btn" data-act="share">Κοινοποίηση</button>'
-      : '<button type="button" class="btn" data-copy="' + esc(location.href) + '" data-msg="Ο σύνδεσμος αντιγράφηκε.">Κοινοποίηση</button>';
+      : '<button type="button" class="btn" data-copy="' + esc(shareUrl()) + '" data-msg="Ο σύνδεσμος αντιγράφηκε.">Κοινοποίηση</button>';
+  }
+  // Ο σύνδεσμος κοινοποίησης: η καθαρή διεύθυνση (π.χ. /paok-aris-<nt>), που δείχνει σωστή προεπισκόπηση
+  // στα social και μετράει στη Google. Όπου δεν υπάρχει (π.χ. καρτέλα βαθμολογίας), η διεύθυνση της σελίδας.
+  function shareUrl() {
+    try {
+      var r = route(), m = r.page === "match" ? matchByNt(r.nt) : null;
+      var p = window.PKSEO && PKSEO.pathFor(location.hash, m, function (k) { return !!data.sectionMap[k]; });
+      if (p) return "https://paokalendar.gr" + p;
+    } catch (e) {}
+    return location.href;
   }
   function paraTag() { return '<span class="para-tag" title="Αθλητές με αναπηρία">ΑμεΑ</span>'; }
   function evMedals(e) {
@@ -2631,7 +2652,7 @@
     $("masthead").classList.toggle("compact", !!(r.key || r.page));
     var match = r.page === "match" ? matchByNt(r.nt) : null;
     document.title = r.page === "admin" ? "Διαχείριση – PAOKalendar"
-      : r.page === "program" ? "Πρόγραμμα – PAOKalendar"
+      : r.page === "program" ? "Πρόγραμμα αγώνων ΠΑΟΚ σε όλα τα τμήματα – PAOKalendar"
       : r.page === "sports" ? "Αθλήματα – PAOKalendar"
       : r.page === "history" ? "Ιστορία – PAOKalendar"
       : r.page === "profile" ? "Προφίλ – PAOKalendar"
@@ -2645,10 +2666,11 @@
       : r.page === "admin-app" ? "Εικονίδιο διαχειριστή – PAOKalendar"
       : r.page === "admin-login" ? "Διαχειριστής – PAOKalendar"
       : r.page === "trophies" ? "Τρόπαια – PAOKalendar"
-      : r.page === "atomika" ? (r.tab === "new" ? "Νέα διοργάνωση" : r.tab === "edit" ? "Αλλαγή διοργάνωσης" : r.tab === "e" && evById(r.sub) ? evById(r.sub).title : "Ατομικά αθλήματα") + " – PAOKalendar"
-      : r.page === "academies" ? (r.tab === "new" ? "Νέος αγώνας" : r.tab === "edit" ? "Αλλαγή αγώνα" : r.tab === "crests" ? "Σήματα" : "Ακαδημίες") + " – PAOKalendar"
-      : match ? match.home + " – " + match.away + " – PAOKalendar"
-      : r.key ? data.sectionMap[r.key].name + " – PAOKalendar" : "PAOKalendar";
+      : r.page === "atomika" ? (r.tab === "new" ? "Νέα διοργάνωση" : r.tab === "edit" ? "Αλλαγή διοργάνωσης" : r.tab === "e" && evById(r.sub) ? evById(r.sub).title : "ΠΑΟΚ ατομικά αθλήματα: διοργανώσεις και μετάλλια") + " – PAOKalendar"
+      : r.page === "academies" ? (r.tab === "new" ? "Νέος αγώνας" : r.tab === "edit" ? "Αλλαγή αγώνα" : r.tab === "crests" ? "Σήματα" : "Ακαδημίες ΠΑΟΚ: πρόγραμμα αγώνων και αποτελέσματα") + " – PAOKalendar"
+      : match ? (window.PKSEO ? PKSEO.matchTitle(match) : match.home + " – " + match.away + " – PAOKalendar")
+      : r.key ? (window.PKSEO ? PKSEO.sectionTitle(data.sectionMap[r.key]) : data.sectionMap[r.key].name + " – PAOKalendar")
+      : "PAOKalendar – Πρόγραμμα αγώνων ΠΑΟΚ σε όλα τα τμήματα";
     $("masthead").classList.toggle("academy-area", inAcademyArea(r));
     $("app").innerHTML = movedHtml() + (inAcademyArea(r) ? academyBandHtml() : "") +
       (r.page === "admin" ? adminPageHtml(r.tab) : r.page === "program" ? programHtml() : r.page === "sports" ? sportsHtml(r.tab) : r.page === "history" ? historyHtml(r.tab)
@@ -3839,7 +3861,7 @@
     if (b.dataset.act === "push-restore") { restorePush(); return; }
     if (b.dataset.act === "push-retry") { syncPush().then(function () { toast("Αποθηκεύτηκαν."); }, function () { toast("Πάλι δεν έγινε. Θα ξαναδοκιμάσει μόνη της."); }); return; }
     if (b.dataset.act === "share") {
-      navigator.share({ title: document.title, url: location.href }).catch(function () {});
+      navigator.share({ title: document.title, url: shareUrl() }).catch(function () {});
       return;
     }
     if (b.dataset.sport) {

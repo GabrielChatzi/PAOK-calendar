@@ -2,6 +2,14 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "outputDirectory": "docs",
+  "functions": {
+    "api/page.js": {
+      "includeFiles": "docs/{index.html,seo.js}"
+    },
+    "api/sitemap.js": {
+      "includeFiles": "docs/seo.js"
+    }
+  },
   "headers": [
     {
       "source": "/sw.js",
@@ -42,6 +50,10 @@
   ],
   "rewrites": [
     {
+      "source": "/sitemap.xml",
+      "destination": "/api/sitemap"
+    },
+    {
       "source": "/archive/:f",
       "destination": "/api/data?f=archive/:f"
     },
@@ -64,6 +76,10 @@
     {
       "source": "/:name.ics",
       "destination": "/api/data?f=:name.ics"
+    },
+    {
+      "source": "/:slug([a-z0-9][a-z0-9-]*)",
+      "destination": "/api/page?p=:slug"
     }
   ]
 }

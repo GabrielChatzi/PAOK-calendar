@@ -393,3 +393,24 @@ class EpsmStandings(unittest.TestCase):
         self.assertEqual([(r["pos"], r["team"], r["paok"]) for r in t],
                          [(1, "ΑΟ ΛΕΟΝΤΕΣ", False), (2, "ΠΑΟΚ", True), (3, "ΑΣ ΠΑΟΚ (2)", False),
                           (4, "ΑΙΑΝΤΑΣ ΠΥΛΑΙΑΣ", False), (4, "ΖΗΤΑ ΕΠΤΑ", False)])
+
+
+class CrestMatching(unittest.TestCase):
+    def test_sounds_match(self):
+        import crests as c
+        cases = [("ΑΕ ΕΥΟΣΜΟΥ", "AE Evosmou", True), ("ΑΕ ΕΥΟΣΜΟΥ", "Ethnikos Evosmou", False),
+                 ("ΚΙΣΣΟΣ ΧΟΡΤΙΑΤΗ", "Κισσός Χορτιάτη - Αρχική | Facebook", True),
+                 ("ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020", "Ακαδημία Ποδοσφαίρου Θεσσαλονίκης 2020 | Facebook", True),
+                 ("ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020", "Ηρακλής Θεσσαλονίκης", False),
+                 ("ΜΠΕΜΠΗΔΕΣ 2000 (1)", "Ακαδημία Ποδοσφαίρου Μπέμπηδες 2000", True),
+                 ("ΑΕ ΝΕΩΝ ΣΙΝΔΟΥ", "Omonia Sindou", False), ("ΠΡΩΤΕΑΣ", "Πρωτέας Θεσσαλονίκης", True),
+                 ("Μ.ΑΛΕΞΑΝΔΡΟΣ ΜΕΛΙΣΣΟΧΩΡΙΟΥ", "Μέγας Αλέξανδρος Μελισσοχωρίου", True)]
+        for ours, theirs, want in cases:
+            self.assertEqual(c.sounds_match(c.sounds(ours), theirs), want, (ours, theirs))
+
+    def test_facebook_pages(self):
+        import crests as c
+        page = ('<a class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.facebook.com%2Fkissoschortiati%2F&amp;rut=x">'
+                'Κισσός <b>Χορτιάτη</b> | Facebook</a>'
+                '<a class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fm.facebook.com%2Fgroups%2F123">Ομάδα</a>')
+        self.assertEqual(c.facebook_pages(page), [("kissoschortiati", "Κισσός Χορτιάτη | Facebook")])

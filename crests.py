@@ -77,10 +77,12 @@ def local(url: str, have: dict[str, str]) -> str:
 
 # ---------------------------------------------------------------- σήματα που λείπουν
 # Για αντιπάλους χωρίς σήμα στην πηγή (π.χ. ΕΠΣ Μακεδονίας): (1) ίδιο όνομα σε άλλο τμήμα του site (π.χ. ΧΑΝΘ από
-# το μπάσκετ), (2) οι διοργανώσεις της ΕΠΟ, (3) η ελληνική Wikipedia (εικόνα της σελίδας του συλλόγου). Μόνο όταν
+# το μπάσκετ), (2) οι διοργανώσεις της ΕΠΟ, (3) η ελληνική Wikipedia (εικόνα της σελίδας του συλλόγου), (4) το
+# SofaScore (έχει και τις τοπικές κατηγορίες της ΕΠΣΜ), (5) η σελίδα του συλλόγου στο Facebook (η φωτογραφία
+# προφίλ, που στους συλλόγους είναι σχεδόν πάντα το σήμα), μέσω αναζήτησης στο DuckDuckGo. Μόνο όταν
 # ταιριάζουν όλες οι λέξεις του ονόματος. Τα ευρήματα (και όσα δεν βρέθηκαν, για 30 μέρες) στο docs/crest_lookup.json.
 LOOKUP = DOCS / "crest_lookup.json"
-LOOKUP_VERSION = 4
+LOOKUP_VERSION = 5
 GENERIC = {"ΑΟ", "ΑΕ", "ΑΣ", "ΠΑΕ", "ΓΣ", "ΠΟ", "ΑΜΣ", "ΑΟΚ", "ΑΚΑΔ", "ΑΚΑΔΗΜΙΑ", "ΠΟΔ", "ΜΑΣ", "ΓΑΣ", "ΠΑΣ", "ΑΠΣ",
            "ΑΠΟ", "ΑΜΟ", "ΠΑΟ", "ΑΠΟΕ", "ΑΕΠΣ", "ΑΓΠΣ", "ΦΣ", "ΜΓΣ", "ΝΓΣΘ", "ΑΝΔΡΩΝ", "ΓΥΝΑΙΚΩΝ", "ΠΟΔΟΣΦΑΙΡΟ", "ΠΟΔΟΣΦΑΙΡΙΚΟΣ",
            "ΟΜΙΛΟΣ", "ΑΘΛΗΤΙΚΟΣ", "ΣΥΛΛΟΓΟΣ", "ΝΕΩΝ", "ΝΕΑΝΙΔΩΝ", "ΚΟΡΑΣΙΔΩΝ", "ΠΑΙΔΩΝ", "ΜΦΑΟΦ", "ΑΠΟΕ"}
@@ -104,8 +106,9 @@ def words(name: str) -> frozenset[str]:
     return frozenset(w[:6] for w in re.findall(r"[Α-ΩA-Z0-9]+", t) if len(w) > 1 and w not in GENERIC)
 
 
-def http(url: str) -> str:
-    r = subprocess.run(["curl", "-sSL", "--fail", "--max-time", "30", "-A", "PAOKalendar/1.0 (+https://paokalendar.gr)", url],
+def http(url: str, browser: bool = False) -> str:
+    r = subprocess.run(["curl", "-sSL", "--fail", "--max-time", "30", "-A", UA if browser else "PAOKalendar/1.0 (+https://paokalendar.gr)",
+                        "-H", "Accept-Language: el-GR,el;q=0.9,en;q=0.8", url],
                        capture_output=True, timeout=60)
     if r.returncode:
         raise RuntimeError(f"curl {r.returncode}")
@@ -157,6 +160,127 @@ def wiki(name: str) -> str:
     return src.split("?")[0]
 
 
+# ---- ελληνικά ↔ λατινικά (SofaScore, Facebook): σύγκριση «όπως ακούγεται»
+_DIGRAPHS = [("ΟΥ", "u"), ("ΑΥ", "av"), ("ΕΥ", "ev"), ("ΜΠ", "b"), ("ΝΤ", "d"), ("ΓΚ", "g"), ("ΓΓ", "g"), ("ΤΣ", "ts"),
+             ("ΤΖ", "tz"), ("ΑΙ", "e"), ("ΕΙ", "i"), ("ΟΙ", "i"), ("ΥΙ", "i"), ("Θ", "th"), ("Ψ", "ps"), ("Ξ", "x"),
+             ("Χ", "h"), ("Φ", "f")]
+_GREEK = str.maketrans("ΑΒΓΔΕΖΗΙΚΛΜΝΟΠΡΣΤΥΩ", "avgdeziiklmnoprstio")
+_LATIN = [("ou", "u"), ("ph", "f"), ("ck", "k"), ("ch", "h"), ("kh", "h"), ("c", "k"), ("w", "v"), ("y", "i"),
+          ("j", "i"), ("q", "k"), ("ai", "e"), ("ei", "i"), ("oi", "i"), ("eu", "ev"), ("au", "av"), ("mp", "b"),
+          ("nt", "d"), ("gk", "g"), ("ss", "s"), ("ll", "l"), ("tt", "t"), ("nn", "n"), ("ee", "i"), ("oo", "u")]
+_ELOT = [("ΟΥ", "ou"), ("ΑΥ", "av"), ("ΕΥ", "ev"), ("ΑΙ", "ai"), ("ΕΙ", "ei"), ("ΟΙ", "oi"), ("ΜΠ", "mp"), ("ΝΤ", "nt"),
+         ("ΓΚ", "gk"), ("Θ", "th"), ("Ψ", "ps"), ("Ξ", "x"), ("Χ", "ch"), ("Φ", "f")]
+_ELOT1 = str.maketrans("ΑΒΓΔΕΖΗΙΚΛΜΝΟΠΡΣΤΥΩ", "avgdeziiklmnoprstio")
+
+
+def sound(word: str) -> str:
+    """Μια λέξη (ελληνικά ή λατινικά) «όπως ακούγεται»: ΕΥΟΣΜΟΥ / Evosmou → evosmu."""
+    w = plain(word) if re.search(r"[Α-Ωα-ωά-ώ]", word) else word.upper()
+    if re.search(r"[Α-Ω]", w):
+        for a, b in _DIGRAPHS:
+            w = w.replace(a, b)
+        w = w.translate(_GREEK).lower()
+    else:
+        w = w.lower()
+    for a, b in _LATIN:
+        w = w.replace(a, b)
+    return re.sub(r"[^a-z0-9]", "", w)
+
+
+def latin(text: str) -> str:
+    """Λατινικά για αναζήτηση (ΕΛΟΤ, περίπου): «ΑΕ ΕΥΟΣΜΟΥ» → «ae evosmou»."""
+    t = plain(text)
+    for a, b in _ELOT:
+        t = t.replace(a, b)
+    return t.translate(_ELOT1).lower()
+
+
+# Λέξεις που δεν ξεχωρίζουν σύλλογο (ως ήχος): αρχικά, «Ακαδημία», «Ποδοσφαίρου», και ό,τι προσθέτει ο τίτλος
+# μιας σελίδας στο Facebook («Αρχική», «Facebook», «Επίσημη σελίδα»).
+JUNK = {"fc", "fs", "ac", "as", "ao", "ae", "gs", "pas", "aps", "fk", "pae", "aok", "ams", "pao", "ape", "gas", "mas",
+        "club", "akad", "akat", "acad", "podo", "foot", "socc", "face", "fake", "arhi", "home", "seli", "page", "epis", "offi",
+        "omil", "athl", "sill", "sila", "ndro", "andr", "ined", "gine", "neon", "pedo", "paid", "kora", "nean", "the"}
+
+
+def sounds(name: str) -> frozenset[str]:
+    """Οι λέξεις που ξεχωρίζουν, ως ήχος (4 πρώτοι χαρακτήρες)· χωρίς αριθμούς και γενικές λέξεις."""
+    t = re.sub(r"(?<=\w)\.(?=\w)", " ", name)
+    out = set()
+    for w in re.findall(r"[^\W_]+", t):
+        k = sound(w)[:4]
+        if len(k) >= 3 and not k[0].isdigit() and k not in JUNK and plain(w) not in GENERIC:
+            out.add(k)
+    return frozenset(out)
+
+
+def sounds_match(ours: frozenset, text: str) -> bool:
+    """Ίδιες λέξεις (ως ήχος), ή για ονόματα με 2+ λέξεις όλες οι δικές μας στο κείμενο (όνομα ομάδας, τίτλος σελίδας)."""
+    theirs = sounds(text)
+    if "thes" not in ours:  # «Πρωτέας Θεσσαλονίκης»: η πόλη στον τίτλο δεν κάνει άλλο σύλλογο
+        theirs -= {"thes"}
+    return same_club(ours, theirs)
+
+
+def sofascore(name: str) -> str:
+    """Το σήμα της ομάδας στο SofaScore (ελληνική ομάδα ποδοσφαίρου με τις ίδιες λέξεις)."""
+    ours = sounds(re.sub(r"\(\d\)", "", name))
+    if not ours:
+        return ""
+    q = " ".join(w for w in latin(re.sub(r"\(\d\)|\d{4}", "", name)).split() if sounds(w) & ours)
+    page = http("https://api.sofascore.com/api/v1/search/all?" + urllib.parse.urlencode({"q": q, "page": 0}), browser=True)
+    ids = []
+    for r in json.loads(page).get("results", []):
+        e = r.get("entity") or {}
+        if r.get("type") != "team" or (e.get("sport") or {}).get("slug") != "football":
+            continue
+        if (e.get("country") or {}).get("alpha2") not in (None, "GR"):
+            continue
+        names = [e.get("name", ""), e.get("shortName", ""), e.get("nameCode", "")]
+        if any(sounds_match(ours, n) for n in names if n):
+            ids.append(e["id"])
+    ids = list(dict.fromkeys(ids))
+    return f"https://img.sofascore.com/api/v1/team/{ids[0]}/image" if len(ids) == 1 else ""
+
+
+FB_SKIP = {"groups", "events", "people", "public", "watch", "hashtag", "pages", "photo", "photos", "story.php", "share",
+           "sharer", "login", "marketplace", "reel", "videos", "posts", "permalink.php", "dialog", "plugins", "media"}
+
+
+def facebook_pages(page: str) -> list[tuple[str, str]]:
+    """(διεύθυνση σελίδας Facebook, τίτλος) από τα αποτελέσματα του DuckDuckGo (html.duckduckgo.com)."""
+    out = []
+    for href, title in re.findall(r'class="result__a"[^>]*href="([^"]+)"[^>]*>(.*?)</a>', page, re.S):
+        href = html.unescape(href)
+        if "uddg=" in href:
+            href = urllib.parse.unquote(urllib.parse.parse_qs(urllib.parse.urlparse(href).query).get("uddg", [""])[0])
+        m = re.match(r"https?://(?:[a-z]+\.)?facebook\.com/(profile\.php\?id=\d+|[A-Za-z0-9.\-]+)/?(?:[?#].*)?$", href)
+        if not m or m.group(1).split("?")[0].lower() in FB_SKIP:
+            continue
+        out.append((m.group(1), html.unescape(re.sub(r"<[^>]+>", "", title))))
+    return out
+
+
+def facebook(name: str) -> str:
+    """Η φωτογραφία προφίλ της σελίδας του συλλόγου στο Facebook, αν ο τίτλος της έχει όλες τις λέξεις του ονόματος."""
+    clean = re.sub(r"\(\d\)", "", name).replace("ΑΚΑΔ.", "ΑΚΑΔΗΜΙΑ").replace("ΠΟΔ.", "ΠΟΔΟΣΦΑΙΡΟΥ")
+    ours, want = sounds(clean), words(clean)
+    if not ours:
+        return ""
+    page = http("https://html.duckduckgo.com/html/?" + urllib.parse.urlencode({"q": clean + " facebook"}), browser=True)
+    for slug, title in facebook_pages(page):
+        if not (same_club(want, words(title)) or sounds_match(ours, title)) or OTHER_SPORT.search(plain(title).lower()):
+            continue
+        ref = slug.split("id=")[1] if slug.startswith("profile.php") else slug
+        url = f"https://graph.facebook.com/{ref}/picture?type=large&width=400&height=400"
+        # Χωρίς σελίδα (π.χ. προσωπικό προφίλ) το Facebook δίνει τη γενική φιγούρα (rsrc.php): όχι αυτό.
+        r = subprocess.run(["curl", "-sSL", "-o", "/dev/null", "-w", "%{http_code} %{url_effective}", "--max-time", "30",
+                            "-A", UA, url], capture_output=True, timeout=60)
+        code, _, final = r.stdout.decode().partition(" ")
+        if code == "200" and "rsrc.php" not in final and "static.xx.fbcdn" not in final:
+            return url
+    return ""
+
+
 def same_club(ours: frozenset, theirs: frozenset) -> bool:
     """Ίδιες λέξεις, ή (για ονόματα με 2+ λέξεις) όλες οι δικές μας στο άλλο όνομα («Αγροτικός Αστέρας» → «… Ευόσμου»)."""
     return bool(ours) and (ours == theirs or (len(ours) >= 2 and ours <= theirs))
@@ -206,6 +330,13 @@ def find_missing(names: dict[str, str], known: dict[str, dict[frozenset, collect
                 url, src = wiki(n), "wikipedia"
             except Exception as e:
                 print(f"  ! Wikipedia {n}: {e}", file=sys.stderr)
+        for label, fn in (("sofascore", sofascore), ("facebook", facebook)):
+            if url:
+                break
+            try:
+                url, src = fn(n), label
+            except Exception as e:
+                print(f"  ! {label} {n}: {e}", file=sys.stderr)
         cache[n] = {"url": url, "source": src if url else "", "at": today.isoformat()}
         print(f"  {n}: {src + ' ' + url if url else '—'}")
     if todo:

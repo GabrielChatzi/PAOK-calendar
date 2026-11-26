@@ -115,10 +115,15 @@ export function summarizeSubs(docs, service) {
       if (kind === "s") {
         const sec = (out.sections[id] = out.sections[id] || { devices: 0, pre: 0, time: 0, live: 0, result: 0 });
         sec[what] = (sec[what] || 0) + 1;
+      } else if (kind === "e") {
+        // Ατομικά αθλήματα: ως «ev:<άθλημα>» στον ίδιο πίνακα.
+        const sec = (out.sections["ev:" + id] = out.sections["ev:" + id] || { devices: 0, pre: 0, time: 0, live: 0, result: 0 });
+        sec[what] = (sec[what] || 0) + 1;
       } else if (kind === "m") { out.matchTopics++; followsMatch = true; }
     });
     // Συσκευές ανά τμήμα (με οποιοδήποτε είδος ειδοποίησης).
     new Set(topics.filter((t) => t.startsWith("s:")).map((t) => t.split(":")[1])).forEach((id) => out.sections[id].devices++);
+    new Set(topics.filter((t) => t.startsWith("e:")).map((t) => "ev:" + t.split(":")[1])).forEach((id) => out.sections[id].devices++);
     if (followsMatch) out.matchFollowers++;
   });
   return out;

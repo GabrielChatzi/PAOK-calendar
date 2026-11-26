@@ -10,7 +10,8 @@ import webpush from "web-push";
 export const SITE = "https://paokalendar.gr";
 
 // Θέματα: s:<τμήμα>:<είδος> ή m:<αγώνας>:<είδος>
-export const TOPIC_RE = /^(s:[a-z-]{2,30}|m:[0-9a-f]{10}):(pre|time|live|result)$/;
+// s:<τμήμα> (και ακαδημίες, π.χ. football-u19), e:<ατομικό άθλημα> (π.χ. e:judo), m:<αγώνας>.
+export const TOPIC_RE = /^(s:[a-z0-9-]{2,30}|e:[a-z0-9-]{2,30}|m:[0-9a-f]{10}):(pre|time|live|result)$/;
 const PUSH_HOSTS = [
   "fcm.googleapis.com", "web.push.apple.com", "push.services.mozilla.com",
   "notify.windows.com", "push.apple.com",

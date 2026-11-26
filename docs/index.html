@@ -2750,6 +2750,13 @@
       '<h3 class="fp-h">Ακαδημίες <span class="help">' + acadCount + " από " + data.academy.length + "</span></h3>" + acadRows +
       '<h3 class="fp-h">Ατομικά αθλήματα</h3><div class="chips">' + ind + "</div></div>";
   }
+  // Τα θέματα ειδοποιήσεων για ό,τι ακολουθείς: πριν, αλλαγές, τελικό· στα ατομικά νέες, την ημέρα, μετάλλια.
+  function followTopics() {
+    var t = [];
+    followedKeys().forEach(function (k) { ["pre", "time", "result"].forEach(function (w) { t.push("s:" + k + ":" + w); }); });
+    follow.ev.forEach(function (k) { ["time", "pre", "result"].forEach(function (w) { t.push("e:" + k + ":" + w); }); });
+    return t;
+  }
   function followClick(b) {
     if (b.dataset.fk) {
       var i = fdraft.keys.indexOf(b.dataset.fk);
@@ -2778,9 +2785,7 @@
       return true;
     }
     if (act === "follow-notify") {
-      var topics = [];
-      // Οι ακαδημίες δεν έχουν ακόμα ειδοποιήσεις ανά τμήμα (μόνο ανά αγώνα).
-      followedKeys().filter(function (k) { return !isAcademy(k); }).forEach(function (k) { ["pre", "time", "result"].forEach(function (w) { topics.push("s:" + k + ":" + w); }); });
+      var topics = followTopics();
       if (topics.length) toggleTopics(topics, true);
       return true;
     }
@@ -3540,7 +3545,7 @@
     if (state === "ok") push.serverAt = Date.now();
     if (data && (route().page === "notifications" || state === "error" || $("mast-bell").classList.contains("warn"))) render();
   }
-  var TOPIC_OK = /^(s:[a-z-]{2,30}|m:[0-9a-f]{10}):(pre|time|live|result)$/;
+  var TOPIC_OK = /^(s:[a-z0-9-]{2,30}|e:[a-z0-9-]{2,30}|m:[0-9a-f]{10}):(pre|time|live|result)$/;  // ίδιο με το TOPIC_RE (api/_lib.js)
   function sameTopics(a, b) {
     var x = a.filter(function (t) { return TOPIC_OK.test(t); }).slice().sort().join(" ");
     return x === b.slice().sort().join(" ");
@@ -3794,10 +3799,8 @@
     }
     var overall = '<div class="nsec nsec-top"><span class="nsec-name">Όλα τα τμήματα</span>' + kindChips(data.sections, "Όλα τα τμήματα") + "</div>";
     // Με ένα πάτημα: πριν τον αγώνα, αλλαγές και τελικό για ό,τι ακολουθείς (και ακαδημίες).
-    var fkeys = followedKeys().filter(function (k) { return !isAcademy(k); });
-    if (follow.set && fkeys.length) {
-      var ftopics = [];
-      fkeys.forEach(function (k) { ["pre", "time", "result"].forEach(function (w) { ftopics.push("s:" + k + ":" + w); }); });
+    var ftopics = followTopics();
+    if (follow.set && ftopics.length) {
       var allOn = ftopics.every(hasTopic);
       overall = '<div class="follow-line"><span><b>Ό,τι ακολουθώ:</b> ' + esc(followSummary(4)) + "</span>" +
         (allOn ? '<span class="help">Ενεργές ✓</span>' : '<button type="button" class="linkbtn" data-act="follow-notify"' + (usable ? "" : " disabled") + ">Ενεργοποίηση</button>") +
@@ -3812,7 +3815,26 @@
       return '<div class="nsport"><a class="nsec-name nsport-name" href="#/' + list[0].key + '/follow">' + g.emoji + " " + esc(g.sport) +
         (list.length > 1 ? " <small>" + list.map(function (s) { return sectionLabel(s).toLowerCase(); }).join(", ") + "</small>" : "") + "</a>" + kindChips(list, g.sport) + rows + "</div>";
     }).join("");
-    var followed = data.matches.filter(matchFollowed);
+    var acadBlock = academyGroups().map(function (g) {
+      var on = g.teams.filter(function (s) { return push.topics.some(function (t) { return t.indexOf("s:" + s.key + ":") === 0; }); }).length;
+      return "<details class=\"nsport\"" + (on ? " open" : "") + '><summary class="nsec-name nsport-name">' + g.emoji + " " + esc(g.sport) +
+        " <small>" + g.teams.length + (g.teams.length === 1 ? " ομάδα" : " ομάδες") + (on ? ", " + on + " με ειδοποιήσεις" : "") + "</small></summary>" +
+        (g.teams.length > 1 ? '<div class="nsec nsec-sub"><span class="nsec-name">Όλες</span>' + kindChips(g.teams, g.sport) + "</div>" : "") +
+        g.teams.map(function (s) {
+          return '<div class="nsec nsec-sub"><a class="nsec-name" href="#/' + s.key + '">' + esc(s.short || s.name) + "</a>" + kindChips([s], teamTitle(s)) + "</div>";
+        }).join("") + "</details>";
+    }).join("");
+    var EV_KINDS = [["time", "Νέες"], ["pre", "Την ημέρα"], ["result", "Μετάλλια"]];
+    function evChips(keys, name) {
+      var topicsFor = function (kind) { var o = []; keys.forEach(function (k) { EV_KINDS.forEach(function (x) { if (!kind || x[0] === kind) o.push("e:" + k + ":" + x[0]); }); }); return o; };
+      return '<div class="nchips" role="group" aria-label="' + esc(name) + '">' + chip(topicsFor(), "Όλα", true, name + ": όλα") +
+        EV_KINDS.map(function (x) { return chip(topicsFor(x[0]), x[1], false, name + ": " + x[1]); }).join("") + "</div>";
+    }
+    var indBlock = evData ? '<div class="nsec nsec-top"><span class="nsec-name">Όλα τα ατομικά</span>' + evChips(evData.sports.map(function (sp) { return sp.key; }), "Όλα τα ατομικά") + "</div>" +
+      evData.sports.map(function (sp) {
+        return '<div class="nsport"><a class="nsec-name nsport-name" href="#/atomika/s/' + esc(sp.key) + '">' + sp.emoji + " " + esc(sp.name) + "</a>" + evChips([sp.key], sp.name) + "</div>";
+      }).join("") : (loadEvents(), '<p class="help">Φόρτωση…</p>');
+    var followed = allMatches().filter(matchFollowed);
     var matches = followed.length
       ? followed.map(function (m) {
           var s = sectionOf(m), d = new Date(m.start);
@@ -3823,7 +3845,7 @@
             '<button type="button" class="btn" data-topics="' + esc(topics.join(" ")) + '" aria-pressed="true">Αφαίρεση</button></div>';
         }).join("")
       : '<p class="help">Κανένας ακόμα. Πάτα το καμπανάκι δίπλα σε έναν αγώνα για ειδοποιήσεις μόνο για αυτόν.</p>';
-    return '<a class="back" href="#/">‹ Αρχική</a>' +
+    return '<a class="back" href="#/profile">‹ Προφίλ</a>' +
       '<div class="section-head"><h2>Ειδοποιήσεις</h2></div>' +
       '<div class="follow">' +
       "<p>Διάλεξε για ποια τμήματα και τι θέλεις να μαθαίνεις. Οι ειδοποιήσεις έρχονται σε αυτή τη συσκευή, χωρίς λογαριασμό, και τις αλλάζεις όποτε θέλεις.</p>" +
@@ -3840,6 +3862,8 @@
       }).join("") + "</ul>" +
       "<h3>Όλα μαζί</h3>" + overall +
       "<h3>Ανά άθλημα</h3>" + sections +
+      "<h3>Ακαδημίες</h3>" + '<p class="help">Πριν τον αγώνα, αλλαγές και τελικό για κάθε ομάδα υποδομής. Τα σκορ τα περνάμε μόλις ανακοινωθούν.</p>' + acadBlock +
+      "<h3>Ατομικά αθλήματα</h3>" + '<p class="help"><b>Νέες:</b> νέα διοργάνωση ή αλλαγή ημερομηνιών. <b>Την ημέρα:</b> το πρωί της πρώτης μέρας. <b>Μετάλλια:</b> μόλις ανακοινωθούν.</p>' + indBlock +
       "<h3>Αγώνες που ακολουθείς</h3>" + matches +
       (st === "on"
         ? "<h3>Αυτή η συσκευή</h3>" +
@@ -5042,7 +5066,9 @@
     var sectionRows = Object.keys(p.sections).map(function (k) {
       var s = data.sectionMap[k];
       // «ops»: οι δικές σου ειδοποιήσεις διαχειριστή (live = λειτουργίας, πριν = υπενθυμίσεις social).
-      return { name: k === "ops" ? "🛠️ Διαχειριστής (λειτουργία, social)" : s ? (s.academy ? teamTitle(s) : s.emoji + " " + s.name) : k, v: p.sections[k] };
+      var ev = k.indexOf("ev:") === 0 ? evSport(k.slice(3)) : null;
+      return { name: k === "ops" ? "🛠️ Διαχειριστής (λειτουργία, social)" : ev ? ev.emoji + " " + ev.name + " (ατομικό)"
+        : s ? (s.academy ? (s.group || s.sport) + " " + (s.short || s.name) : s.emoji + " " + s.name) : k, v: p.sections[k] };
     }).sort(function (a, b) { return b.v.devices - a.v.devices; });
     var sections = tableH(["Τμήμα", "Συσκ."].concat(KIND_NAMES.map(function (k) { return k[1]; })), sectionRows.map(function (x) {
       return row([esc(x.name), x.v.devices].concat(KIND_NAMES.map(function (k) { return n(x.v, k[0]); })));

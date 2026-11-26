@@ -586,6 +586,74 @@ def notify_admin(new_events: list[dict], new_notices: list[dict]) -> None:
                      n["url"], tag="fed-" + hashlib.sha1(n["url"].encode()).hexdigest()[:10])
 
 
+# ---------------------------------------------------------------- ειδοποιήσεις σε όσους ακολουθούν ένα άθλημα
+# Θέματα «e:<άθλημα>:<είδος>» (βλ. notify.py): time = νέα διοργάνωση ή αλλαγή ημερομηνιών, pre = το πρωί της
+# πρώτης μέρας, result = νέα μετάλλια. Τι στάλθηκε κρατιέται στο events.json («sent»), για να μη στέλνεται
+# δεύτερη φορά: {id: {"time": "<έναρξη>-<λήξη>", "pre": "<έναρξη>", "result": "<μετάλλια>"}}.
+PRE_HOUR = 9  # η υπενθύμιση της μέρας, από τις 9 το πρωί (ώρα Ελλάδας)
+MAX_EVENT_PUSH = 6  # προστασία: αν αλλάξει μορφή η πηγή, όχι δεκάδες ειδοποιήσεις μαζί
+
+
+def medal_count(e: dict) -> str:
+    t = e.get("results") or ""
+    g, sv, b = t.count("🥇"), t.count("🥈"), t.count("🥉")
+    return " ".join(f"{m}{n}" for m, n in (("🥇", g), ("🥈", sv), ("🥉", b)) if n)
+
+
+def event_pushes(events: list[dict], sent: dict, now: dt.datetime, known: set[str]) -> list[tuple]:
+    """(θέμα, τίτλος, κείμενο, url, tag, id, είδος, τιμή) για ό,τι δεν έχει σταλεί ακόμα.
+
+    known: οι διοργανώσεις που υπήρχαν ήδη στο προηγούμενο τρέξιμο (οι καινούργιες παίρνουν «Νέα»)."""
+    today = now.astimezone(ATHENS).date()
+    out = []
+    for e in events:
+        try:
+            start, end = dt.date.fromisoformat(e["start"]), dt.date.fromisoformat(e["end"] or e["start"])
+        except (KeyError, ValueError):
+            continue
+        if end < today - dt.timedelta(days=3):
+            continue  # παλιά: τίποτα (π.χ. μετάλλια που προστέθηκαν εκ των υστέρων σε διοργάνωση μηνών)
+        sp = SPORTS.get(e["sport"], {"emoji": "", "name": e["sport"]})
+        mine = sent.get(e["id"], {})
+        url = f"/#/atomika/e/{e['id']}"
+        span = f"{e['start']}-{e['end']}"
+        title_where = e["title"] + (f", {e['venue']}" if e.get("venue") else "")
+        if end >= today and mine.get("time") != span:
+            if e["id"] not in known:
+                out.append((f"e:{e['sport']}:time", f"{sp['emoji']} Νέα διοργάνωση: {sp['name']}",
+                            f"{title_where} ({when(e)})", url, f"ev-{e['id']}", e["id"], "time", span))
+            elif mine.get("time"):
+                out.append((f"e:{e['sport']}:time", f"{sp['emoji']} Αλλαγή ημερομηνιών: {sp['name']}",
+                            f"{e['title']}: τώρα {when(e)}", url, f"ev-{e['id']}", e["id"], "time", span))
+            else:  # υπήρχε πριν από τις ειδοποιήσεις: μόνο σημείωση, χωρίς αποστολή
+                mine["time"] = span
+                sent[e["id"]] = mine
+        if start == today and now.astimezone(ATHENS).hour >= PRE_HOUR and mine.get("pre") != e["start"]:
+            out.append((f"e:{e['sport']}:pre", f"{sp['emoji']} Σήμερα: {sp['name']}",
+                        title_where + (f". {e['athletes']}" if e.get("athletes") else ""), url, f"ev-{e['id']}", e["id"], "pre", e["start"]))
+        medals = medal_count(e)
+        if medals and mine.get("result") != medals and start <= today:
+            out.append((f"e:{e['sport']}:result", f"{sp['emoji']} {medals} · {sp['name']}",
+                        e["title"][:120], url, f"ev-{e['id']}-r", e["id"], "result", medals))
+    return out
+
+
+def notify_followers(events: list[dict], sent: dict, known: set[str], now: dt.datetime | None = None) -> dict:
+    """Στέλνει τις ειδοποιήσεις των ατομικών και επιστρέφει το ενημερωμένο «sent»."""
+    now = now or dt.datetime.now(dt.timezone.utc)
+    pushes = event_pushes(events, sent, now, known)
+    if len(pushes) > MAX_EVENT_PUSH:
+        print(f"  ! ατομικά: {len(pushes)} ειδοποιήσεις μαζί, στέλνονται οι {MAX_EVENT_PUSH} πρώτες", file=sys.stderr)
+    import notify
+    for topic, title, body, url, tag, eid, kind, value in pushes[:MAX_EVENT_PUSH]:
+        notify._push([topic], title, body, url, tag=tag, quiet=kind == "result")
+        sent.setdefault(eid, {})[kind] = value
+    for topic, title, body, url, tag, eid, kind, value in pushes[MAX_EVENT_PUSH:]:
+        sent.setdefault(eid, {})[kind] = value  # οι υπόλοιπες σημειώνονται, για να μη σταλούν αργότερα όλες μαζί
+    ids = {e["id"] for e in events}
+    return {k: v for k, v in sent.items() if k in ids}
+
+
 def when(e: dict) -> str:
     s, en = dt.date.fromisoformat(e["start"]), dt.date.fromisoformat(e["end"])
     if s == en:
@@ -629,7 +697,14 @@ def main() -> int:
         "seenNotices": previous.get("seenNotices", []),
         # Αυτόματες που έκρυψε ο διαχειριστής: να μη στέλνουν ξανά «Νέα διοργάνωση».
         "hiddenSeen": sorted(set(previous.get("hiddenSeen", [])) | {a["id"] for a in admin if a.get("hidden")}),
+        "sent": previous.get("sent", {}),
     }
+    if not first_run:
+        known = {e["id"] for e in previous.get("events", [])}
+        if "sent" not in previous:
+            # Πρώτη φορά με ειδοποιήσεις για όλους: ό,τι υπάρχει ήδη μετράει ως γνωστό (όχι «Νέα» για όλα).
+            data["sent"] = {e["id"]: {"time": f"{e['start']}-{e['end']}", "result": medal_count(e)} for e in events}
+        data["sent"] = notify_followers(events, data["sent"], known)
     write_if_changed(DATA_PATH, json.dumps(data, ensure_ascii=False, indent=1) + "\n",
                      ignore=lambda s: json.dumps(json.loads(s), sort_keys=True))
     stamp = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")

@@ -12351,6 +12351,19 @@
      "rows": [
       {
        "pos": 1,
+       "team": "ΧΑΝΘ",
+       "logo": "https://paokalendar.gr/crests/ea7f77b7613d9057.gif",
+       "paok": false,
+       "cells": [
+        "6",
+        "5",
+        "1",
+        "17-4",
+        "11"
+       ]
+      },
+      {
+       "pos": 2,
        "team": "ΠΑΟΚ",
        "logo": "",
        "paok": true,
@@ -12358,21 +12371,8 @@
         "5",
         "5",
         "0",
-        "15-3",
+        "14-2",
         "10"
-       ]
-      },
-      {
-       "pos": 2,
-       "team": "ΧΑΝΘ",
-       "logo": "https://paokalendar.gr/crests/ea7f77b7613d9057.gif",
-       "paok": false,
-       "cells": [
-        "5",
-        "4",
-        "1",
-        "14-3",
-        "9"
        ]
       },
       {
@@ -12381,11 +12381,11 @@
        "logo": "https://paokalendar.gr/crests/c712331b07c14a6d.gif",
        "paok": false,
        "cells": [
-        "5",
+        "6",
         "4",
-        "1",
-        "13-5",
-        "9"
+        "2",
+        "13-8",
+        "10"
        ]
       },
       {
@@ -12416,19 +12416,6 @@
       },
       {
        "pos": 6,
-       "team": "ΕΝΩΣΗ ΤΟΥΜΠΑΣ",
-       "logo": "https://paokalendar.gr/crests/95ecf0b818f2912d.gif",
-       "paok": false,
-       "cells": [
-        "5",
-        "2",
-        "3",
-        "7-9",
-        "7"
-       ]
-      },
-      {
-       "pos": 7,
        "team": "ΑΡΗΣ",
        "logo": "https://paokalendar.gr/crests/a6cf7459614a4108.gif",
        "paok": false,
@@ -12436,25 +12423,25 @@
         "5",
         "2",
         "3",
-        "6-9",
+        "3-7",
+        "7"
+       ]
+      },
+      {
+       "pos": 7,
+       "team": "ΠΕΡΣΕΑΣ",
+       "logo": "https://paokalendar.gr/crests/1838d2be1f8aa90d.gif",
+       "paok": false,
+       "cells": [
+        "6",
+        "1",
+        "5",
+        "3-15",
         "7"
        ]
       },
       {
        "pos": 8,
-       "team": "ΠΕΡΣΕΑΣ",
-       "logo": "https://paokalendar.gr/crests/1838d2be1f8aa90d.gif",
-       "paok": false,
-       "cells": [
-        "5",
-        "1",
-        "4",
-        "3-12",
-        "6"
-       ]
-      },
-      {
-       "pos": 9,
        "team": "ΑΕΝ ΠΑΝΟΡΑΜΑΤΟΣ",
        "logo": "https://paokalendar.gr/crests/4365a4ed96c7e519.gif",
        "paok": false,
@@ -12467,7 +12454,7 @@
        ]
       },
       {
-       "pos": 10,
+       "pos": 9,
        "team": "ΠΗΓΑΣΟΣ ΠΟΛΙΧΝΗΣ",
        "logo": "https://paokalendar.gr/crests/130b4d39e358485d.gif",
        "paok": false,
@@ -12644,6 +12631,19 @@
      "rows": [
       {
        "pos": 1,
+       "team": "ΠΗΓΑΣΟΣ ΠΟΛΙΧΝΗΣ",
+       "logo": "https://paokalendar.gr/crests/130b4d39e358485d.gif",
+       "paok": false,
+       "cells": [
+        "5",
+        "5",
+        "0",
+        "15-0",
+        "10"
+       ]
+      },
+      {
+       "pos": 2,
        "team": "ΠΑΟΚ",
        "logo": "",
        "paok": true,
@@ -12656,20 +12656,20 @@
        ]
       },
       {
-       "pos": 2,
-       "team": "ΠΗΓΑΣΟΣ ΠΟΛΙΧΝΗΣ",
-       "logo": "https://paokalendar.gr/crests/130b4d39e358485d.gif",
+       "pos": 3,
+       "team": "ΔΕΚΑ",
+       "logo": "https://paokalendar.gr/crests/cd37e2be09885246.jpg",
        "paok": false,
        "cells": [
-        "4",
-        "4",
-        "0",
-        "12-0",
+        "5",
+        "3",
+        "2",
+        "11-7",
         "8"
        ]
       },
       {
-       "pos": 3,
+       "pos": 4,
        "team": "ΜΑΚΕΔΟΝΙΚΟΣ",
        "logo": "https://paokalendar.gr/crests/efadf5b8da59bd89.jpg",
        "paok": false,
@@ -12682,29 +12682,16 @@
        ]
       },
       {
-       "pos": 4,
-       "team": "ΔΕΚΑ",
-       "logo": "https://paokalendar.gr/crests/cd37e2be09885246.jpg",
-       "paok": false,
-       "cells": [
-        "4",
-        "2",
-        "2",
-        "8-7",
-        "6"
-       ]
-      },
-      {
        "pos": 5,
        "team": "ΗΡΑΚΛΗΣ",
        "logo": "https://paokalendar.gr/crests/dfe52c5f35b6e400.jpg",
        "paok": false,
        "cells": [
-        "4",
+        "5",
         "1",
-        "3",
-        "3-9",
-        "5"
+        "4",
+        "3-12",
+        "6"
        ]
       },
       {
@@ -12726,11 +12713,11 @@
        "logo": "https://paokalendar.gr/crests/7cbdd29c28a19fa5.jpg",
        "paok": false,
        "cells": [
-        "4",
+        "5",
         "0",
-        "4",
-        "3-12",
-        "4"
+        "5",
+        "3-15",
+        "5"
        ]
       }
      ]
@@ -17812,5 +17799,5 @@
    ]
   }
  },
- "updated": "2026-11-26T14:11+02:00"
+ "updated": "2026-11-26T16:05+02:00"
 }

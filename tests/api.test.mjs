@@ -482,3 +482,18 @@ test("σήμα: σελίδα (π.χ. Facebook) δεν περνά για εικό
   assert.equal(await a.looksLikeImage("https://down/y.png", async () => { throw new Error("x"); }), true);
 });
 
+
+test("Ιστορικό: στόχος και περιγραφή κάθε αλλαγής του διαχειριστή", () => {
+  assert.deepEqual(admin.auditTarget({ action: "score", nt: "0123456789" }), { coll: "admin", id: "0123456789" });
+  assert.equal(admin.auditTarget({ action: "score", nt: "0123456789", dry: true }), null);
+  assert.equal(admin.auditTarget({ action: "stats" }), null);
+  const b = { action: "match-save", match: { section: "football-u19", opponent: "Βόλος" } };
+  const t = admin.auditTarget(b);
+  assert.equal(t.coll, "custom");
+  assert.match(t.id, /^[0-9a-f]{12}$/);
+  assert.equal(b.match.id, t.id);  // το νέο κλειδί περνά στη φόρμα, ώστε να βρεθεί μετά
+  assert.deepEqual(admin.auditTarget({ action: "crest-delete", crest: { sport: "Πόλο", name: "Ηλυσιακός" } }), { coll: "crests", id: "Πόλο|Ηλυσιακός" });
+  assert.equal(admin.auditLabel("score", { home: 1, away: 0 }, { home: 2, away: 0, final: true }), "Σκορ 2-0 (τελικό) · ήταν 1-0");
+  assert.equal(admin.auditLabel("match-save", null, { opponent: "Βόλος", date: "2026-12-05", us: 3, them: 1 }), "Νέος αγώνας: Βόλος 2026-12-05 (3-1)");
+  assert.equal(admin.auditLabel("event-delete", { title: "Πάλη" }, { title: "Πάλη", hidden: true }), "Κρύψιμο διοργάνωσης: Πάλη");
+});

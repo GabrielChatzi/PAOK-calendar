@@ -752,6 +752,28 @@
   .vs-what small { display: block; font-size: 13px; color: var(--muted); }
   .vs-score { font-weight: 700; white-space: nowrap; }
   .mh-opp { color: inherit; text-decoration: none; border-bottom: 1.5px dotted currentColor; }
+  .tabbar.six { grid-template-columns: repeat(6, 1fr); }
+  .tabbar.six a { font-size: 10.5px; }
+  .adm-card { border: 1.5px solid var(--ink); padding: 12px; margin-bottom: 8px; }
+  .adm-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .adm-row b, .adm-what b { display: block; }
+  .adm-row small, .adm-what small { display: block; color: var(--muted); font-size: 13.5px; }
+  .adm-what a { color: var(--ink); text-decoration: none; }
+  .adm-late { color: #b3261e !important; font-weight: 600; }
+  .adm-count { display: inline-block; min-width: 26px; padding: 2px 7px; background: var(--ink); color: var(--paper); font: 700 16px/1.3 var(--body); text-align: center; vertical-align: middle; }
+  .adm-items { list-style: none; margin: 0; padding: 0; }
+  .adm-item { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line, #ddd); }
+  div.adm-item { grid-template-columns: 1fr auto; }
+  .adm-sc { display: inline-flex; align-items: center; gap: 4px; }
+  .adm-sc input { width: 46px; padding: 8px 4px; text-align: center; font: 600 18px var(--body); border: 1.5px solid var(--ink); background: var(--paper); color: var(--ink); border-radius: 0; }
+  .adm-list { list-style: none; margin: 0; padding: 0; }
+  .adm-list li { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--line, #ddd); }
+  .adm-list li > a { color: var(--ink); }
+  .adm-list li small { color: var(--muted); font-size: 13px; white-space: nowrap; }
+  .adm-miss { font-size: 13.5px; font-weight: 600; white-space: nowrap; }
+  .adm-fails code { font-size: 12.5px; word-break: break-word; }
+  .adm-log li.undone b { text-decoration: line-through; color: var(--muted); }
+  .adm-tools a.chip { text-decoration: none; }
   .prof-item em { font-style: normal; font-weight: 600; font-size: 14px; flex: none; }
 </style>
 </head>
@@ -2536,8 +2558,8 @@
     if (key === "trophies" && canSeeTrophies()) return { key: null, tab: "", page: "trophies" };
     if (key === "admin-app" && isAdmin()) return { key: null, tab: "", page: "admin-app" };
     if (key === "admin") {
-      // #/admin: σύνδεση με τον κωδικό· μετά, οι ειδοποιήσεις λειτουργίας στη σελίδα Ειδοποιήσεις.
-      return isAdmin() ? { key: null, tab: "", page: "notifications" } : { key: null, tab: "", page: "admin-login" };
+      // #/admin: σύνδεση με τον κωδικό· μετά, το κέντρο ελέγχου (#/admin/bulk, #/admin/log).
+      return isAdmin() ? { key: null, tab: /^(bulk|log)$/.test(tab) ? tab : "", page: "admin" } : { key: null, tab: "", page: "admin-login" };
     }
     if (key === "m") return { key: null, tab: parts[2] || "", page: "match", nt: parts[1] || "" };
     // Ατομικά αθλήματα: #/atomika(/results), #/atomika/e/<id>, #/atomika/new(/<άθλημα>), #/atomika/edit/<id>.
@@ -2585,7 +2607,8 @@
     }
     $("masthead").classList.toggle("compact", !!(r.key || r.page));
     var match = r.page === "match" ? matchByNt(r.nt) : null;
-    document.title = r.page === "program" ? "Πρόγραμμα – PAOKalendar"
+    document.title = r.page === "admin" ? "Διαχείριση – PAOKalendar"
+      : r.page === "program" ? "Πρόγραμμα – PAOKalendar"
       : r.page === "sports" ? "Αθλήματα – PAOKalendar"
       : r.page === "history" ? "Ιστορία – PAOKalendar"
       : r.page === "profile" ? "Προφίλ – PAOKalendar"
@@ -2605,7 +2628,7 @@
       : r.key ? data.sectionMap[r.key].name + " – PAOKalendar" : "PAOKalendar";
     $("masthead").classList.toggle("academy-area", inAcademyArea(r));
     $("app").innerHTML = movedHtml() + (inAcademyArea(r) ? academyBandHtml() : "") +
-      (r.page === "program" ? programHtml() : r.page === "sports" ? sportsHtml(r.tab) : r.page === "history" ? historyHtml(r.tab)
+      (r.page === "admin" ? adminPageHtml(r.tab) : r.page === "program" ? programHtml() : r.page === "sports" ? sportsHtml(r.tab) : r.page === "history" ? historyHtml(r.tab)
         : r.page === "profile" ? profileHtml() : r.page === "follow" ? followPageHtml() :
         r.page === "vs" ? vsHtml(r.tab) : r.page === "app" ? appHtml() : r.page === "notifications" ? notificationsHtml() : r.page === "calendars" ? calendarsHtml()
         : r.page === "privacy" ? privacyHtml() : r.page === "stats" ? statsPageHtml() : r.page === "admin-app" ? adminAppHtml() : r.page === "admin-login" ? adminLoginHtml() : r.page === "trophies" ? allTrophiesHtml() : r.page === "atomika" ? (r.tab === "new" || r.tab === "edit" ? eventFormHtml(r) : r.tab === "e" ? eventPageHtml(r.sub) : eventsHtml(r.tab)) : r.page === "academies" ? (r.tab === "new" || r.tab === "edit" ? academyFormHtml(r) : r.tab === "crests" ? academyCrestsHtml() : academiesHtml(r.tab)) : r.page === "match" ? matchHtml(match) : r.key ? sectionHtml(r.key, r.tab) : newHomeHtml());
@@ -2707,7 +2730,11 @@
     ["history", "#/history", "Ιστορία", '<path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8 20h8M9 17h6"/>'],
     ["profile", "#/profile", "Προφίλ", '<circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"/>']
   ];
+  var ADMIN_TAB = ["admin", "#/admin", "Admin", '<path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/>'];
   function tabOf(r) {
+    if (r.page === "admin" || r.page === "stats" || r.page === "admin-app" || r.page === "admin-login") return isAdmin() || r.page === "admin-login" ? "admin" : "profile";
+    if (r.page === "academies" && /^(new|edit|crests)$/.test(r.tab)) return "admin";
+    if (r.page === "atomika" && /^(new|edit)$/.test(r.tab)) return "admin";
     if (r.page === "program") return "program";
     if (r.page === "history" || r.page === "trophies" || (r.key && r.tab === "archive") || (r.key && r.tab === "trophies")) return "history";
     if (r.page === "sports" || r.page === "academies" || r.page === "atomika" || r.page === "match" || r.page === "vs" || r.key) return "sports";
@@ -2715,8 +2742,9 @@
     return "home";
   }
   function tabbarHtml(r) {
-    var cur = tabOf(r);
-    return TABS.map(function (t) {
+    var cur = tabOf(r), tabs = isAdmin() ? TABS.concat([ADMIN_TAB]) : TABS;
+    $("tabbar").classList.toggle("six", tabs.length === 6);
+    return tabs.map(function (t) {
       return '<a href="' + t[1] + '"' + (t[0] === cur ? ' aria-current="page"' : "") + '><svg viewBox="0 0 24 24" aria-hidden="true">' +
         t[3] + "</svg><span>" + t[2] + "</span></a>";
     }).join("");
@@ -3249,6 +3277,237 @@
       footerHtml();
   }
 
+  // ==== Διαχείριση (#/admin): κέντρο ελέγχου, μαζική καταχώριση αποτελεσμάτων, ιστορικό αλλαγών με αναίρεση
+  var adm = { run: null, runState: "", issues: null, issuesState: "", log: null, logState: "", bulk: {}, quick: {},
+    bulkDays: 7, bulkSilent: false, busy: false, progress: "" };
+  function admDuration(m) { return (DURATION[m.section] || DURATION[m.section.replace(/-(u\d+b?|b|amea|women-u\d+b?|u\d+es\d)$/, "")] || 110) * 60 * 1000; }
+  // Αγώνες που τελείωσαν (λογικά) και δεν έχουν σκορ: για το κέντρο ελέγχου και τη μαζική καταχώριση.
+  function admMissing(days) {
+    var now = Date.now();
+    return allMatches().filter(function (m) {
+      if (m.score || m.status) return false;
+      var ls = liveState[m.uid];
+      if (ls && ls.state === "in") return false;
+      var t = new Date(m.start).getTime();
+      return t + admDuration(m) < now && t > now - days * 86400 * 1000;
+    }).sort(function (a, b) { return a.start < b.start ? 1 : -1; });
+  }
+  function admAgo(m) {
+    var mins = Math.round((Date.now() - new Date(m.start).getTime() - admDuration(m)) / 60000);
+    return mins < 60 ? "τελείωσε πριν " + Math.max(mins, 1) + "′" : mins < 48 * 60 ? "πριν " + Math.round(mins / 60) + " ώρες" : "πριν " + Math.round(mins / 1440) + " μέρες";
+  }
+  function admTeamsLine(m) {
+    var s = sectionOf(m);
+    return '<a href="' + matchHref(m) + '"><b>' + esc(m.home + " – " + m.away) + "</b></a><small>" +
+      esc((s.academy ? (s.group || s.sport) + " " + (s.short || s.name) : s.emoji + " " + s.name) + " · " +
+        cap(fmtShort.format(new Date(m.start))) + (m.timeKnown ? " " + fmtTime.format(new Date(m.start)) : "")) + "</small>";
+  }
+  function admScoreInputs(m, store, prefix) {
+    var v = store[m.nt] || {};
+    return '<span class="adm-sc"><input class="' + prefix + '" data-nt="' + m.nt + '" data-side="h" inputmode="numeric" maxlength="3" aria-label="Σκορ ' + esc(m.home) +
+      '" value="' + esc(v.h || "") + '"><span>-</span><input class="' + prefix + '" data-nt="' + m.nt + '" data-side="a" inputmode="numeric" maxlength="3" aria-label="Σκορ ' +
+      esc(m.away) + '" value="' + esc(v.a || "") + '"></span>';
+  }
+  // Ελλείψεις στους αγώνες των επόμενων 36 ωρών: ώρα, κανάλι (μόνο μεγάλα τμήματα), γήπεδο.
+  function admGaps() {
+    var now = Date.now(), until = now + 36 * 3600 * 1000;
+    return allMatches().filter(function (m) {
+      var t = new Date(m.start).getTime();
+      return t > now && t < until && !m.status;
+    }).map(function (m) {
+      var miss = [];
+      if (!m.timeKnown) miss.push("ώρα");
+      if (!isAcademy(m.section) && !m.tv && !m.tvUrl) miss.push("κανάλι");
+      if (!m.venue) miss.push("γήπεδο");
+      return { m: m, miss: miss };
+    }).filter(function (x) { return x.miss.length; });
+  }
+  function admLoadRun() {
+    if (adm.runState) return;
+    adm.runState = "loading";
+    adminPost({ password: adminPass(), action: "run-status" }).then(function (x) {
+      adm.run = x.r.ok ? x.d : { error: x.d.error || "Δεν φορτώθηκε." }; adm.runState = "done"; if (route().page === "admin") render();
+    }).catch(function () { adm.run = { error: "Χωρίς σύνδεση." }; adm.runState = "done"; render(); });
+  }
+  function admLoadIssues() {
+    if (adm.issuesState) return;
+    adm.issuesState = "loading";
+    fetch("https://api.github.com/repos/GabrielChatzi/PAOK-calendar/issues?state=open&per_page=20", { headers: { Accept: "application/vnd.github+json" } })
+      .then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; })
+      .then(function (d) { adm.issues = (d || []).filter(function (i) { return !i.pull_request; }); adm.issuesState = "done"; if (route().page === "admin") render(); });
+  }
+  function admLoadLog(force) {
+    if (adm.logState === "loading" || (adm.logState && !force)) return;
+    adm.logState = "loading";
+    adminPost({ password: adminPass(), action: "audit" }).then(function (x) {
+      adm.log = x.r.ok ? x.d.items : null; adm.logState = x.r.ok ? "done" : "error"; render();
+    }).catch(function () { adm.logState = "error"; render(); });
+  }
+  function admRunHtml() {
+    admLoadRun();
+    var r = adm.run, last = r && r.runs && r.runs[0];
+    var text = !r ? "Φόρτωση…" : r.error ? r.error : last
+      ? "Τελευταία: " + cap(relative(new Date(last.at)) || "") + " " + fmtTime.format(new Date(last.at)) + " · " +
+        (last.status !== "completed" ? "τρέχει τώρα…" : last.conclusion === "success" ? "✓ ολοκληρώθηκε" : "✗ " + (last.conclusion || "σφάλμα"))
+      : "Καμία εκτέλεση";
+    return '<div class="adm-card"><div class="adm-row"><span><b>Ενημέρωση προγράμματος</b><small>' + esc(text) +
+      (last ? ' · <a href="' + esc(last.url) + '" target="_blank" rel="noopener">GitHub</a>' : "") + "</small></span>" +
+      '<button type="button" class="btn solid" data-act="adm-run"' + (r && r.canRun === false ? " disabled" : "") + ">Τρέξε τώρα</button></div>" +
+      (r && r.canRun === false ? '<p class="help">Για το κουμπί χρειάζεται το <code>GITHUB_DISPATCH_TOKEN</code> στη Vercel (fine-grained token, μόνο για το PAOK-calendar, με Actions: read & write).</p>' : "") +
+      "</div>";
+  }
+  function adminHomeHtml() {
+    if (!isAdmin()) return adminLoginHtml();
+    admLoadIssues();
+    var missing = admMissing(3), gaps = admGaps();
+    var fails = data.failures || [];
+    var crestMissing = academyOpponents().filter(function (o) { return !o.url; }).length;
+    var quick = missing.slice(0, 8).map(function (m) {
+      return '<li class="adm-item"><span class="adm-what">' + admTeamsLine(m) + '<small class="adm-late">' + esc(admAgo(m)) + "</small></span>" +
+        admScoreInputs(m, adm.quick, "qk") + '<button type="button" class="btn solid" data-act="adm-quick" data-nt="' + m.nt + '">Τελικό</button></li>';
+    }).join("");
+    var issues = adm.issues == null ? '<p class="help">Φόρτωση…</p>' : adm.issues.length
+      ? '<ul class="adm-list">' + adm.issues.map(function (i) {
+          return '<li><a href="' + esc(i.html_url) + '" target="_blank" rel="noopener">#' + i.number + " " + esc(i.title) + "</a><small>" + esc(cap(relative(new Date(i.updated_at)) || fmtShort.format(new Date(i.updated_at)))) + "</small></li>";
+        }).join("") + "</ul>"
+      : '<p class="help">Κανένα ανοιχτό ✓</p>';
+    var tools = [["#/academies/new", "Νέος αγώνας"], ["#/atomika/new", "Νέα διοργάνωση"], ["#/academies/crests", "Σήματα" + (crestMissing ? " (" + crestMissing + ")" : "")],
+      ["#/stats", "Στατιστικά"], ["/social/", "📸 Social"], ["#/admin-app", "Εικονίδιο"]];
+    return '<div class="section-head"><h2>Διαχείριση</h2></div>' +
+      admRunHtml() +
+      '<h2 class="section-title">Χωρίς τελικό σκορ' + (missing.length ? ' <span class="adm-count">' + missing.length + "</span>" : "") + "</h2>" +
+      (missing.length ? '<ul class="adm-items">' + quick + "</ul>" +
+        '<p class="help">Το «Τελικό» στέλνει και ειδοποίηση σε όσους ακολουθούν. ' + (missing.length > 8 ? "Δείχνονται οι 8 πιο πρόσφατοι. " : "") +
+        '<a href="#/admin/bulk">Μαζική καταχώριση ›</a></p>'
+        : '<p class="help">Όλοι οι αγώνες των τελευταίων 3 ημερών έχουν σκορ ✓ <a href="#/admin/bulk">Μαζική καταχώριση ›</a></p>') +
+      '<h2 class="section-title">Επόμενες 36 ώρες: λείπουν' + (gaps.length ? ' <span class="adm-count">' + gaps.length + "</span>" : "") + "</h2>" +
+      (gaps.length ? '<ul class="adm-list">' + gaps.map(function (x) {
+        return '<li><span class="adm-what">' + admTeamsLine(x.m) + '</span><span class="adm-miss">' + esc(x.miss.join(", ")) + "</span></li>";
+      }).join("") + '</ul><p class="help">Πάτα τον αγώνα και συμπλήρωσε από τη φόρμα «Πληροφορίες».</p>' : '<p class="help">Τίποτα ✓</p>') +
+      '<h2 class="section-title">Πηγές' + (fails.length ? ' <span class="adm-count">' + fails.length + "</span>" : "") + "</h2>" +
+      (fails.length ? '<ul class="adm-list adm-fails">' + fails.map(function (f) { return "<li><code>" + esc(f) + "</code></li>"; }).join("") + "</ul>" +
+        '<p class="help">Από την τελευταία ενημέρωση. Προσωρινά σφάλματα (π.χ. 502) συνήθως φεύγουν μόνα τους στην επόμενη.</p>'
+        : '<p class="help">Όλες οι πηγές διαβάστηκαν στην τελευταία ενημέρωση ✓</p>') +
+      '<h2 class="section-title">Ανοιχτά θέματα (GitHub)</h2>' + issues +
+      '<h2 class="section-title">Εργαλεία</h2><div class="chips adm-tools">' + tools.map(function (t) {
+        return '<a class="chip" href="' + t[0] + '">' + esc(t[1]) + "</a>";
+      }).join("") + '<a class="chip" href="#/admin/log">Ιστορικό αλλαγών</a></div>' +
+      (/[?&]app=admin(&|$)/.test(location.search) ? "" : '<div class="actions"><button type="button" class="btn" data-act="admin-off">Έξοδος από διαχειριστή</button></div>') +
+      footerHtml();
+  }
+  function adminBulkHtml() {
+    var list = admMissing(adm.bulkDays);
+    var filled = list.filter(function (m) { var v = adm.bulk[m.nt]; return v && /^\d+$/.test(v.h || "") && /^\d+$/.test(v.a || ""); });
+    var out = [], last = "";
+    list.forEach(function (m) {
+      var k = fmtKey.format(new Date(m.start));
+      if (k !== last) { out.push('<h3 class="day">' + esc(cap(fmtDay.format(new Date(m.start)))) + "</h3>"); last = k; }
+      out.push('<div class="adm-item"><span class="adm-what">' + admTeamsLine(m) + "</span>" + admScoreInputs(m, adm.bulk, "bq") + "</div>");
+    });
+    return '<a class="back" href="#/admin">‹ Διαχείριση</a><div class="section-head"><h2>Μαζική καταχώριση</h2></div>' +
+      '<p class="help">Αγώνες που έχουν τελειώσει χωρίς σκορ. Γράψε όσα ξέρεις και πάτα μία φορά «Αποθήκευση».</p>' +
+      seg("admDays", [["3", "3 μέρες"], ["7", "7 μέρες"], ["14", "14 μέρες"]], String(adm.bulkDays)) +
+      seg("admSilent", [["0", "Με ειδοποίηση"], ["1", "Χωρίς ειδοποίηση"]], adm.bulkSilent ? "1" : "0") +
+      (list.length ? out.join("") : '<p class="empty">Όλοι οι αγώνες έχουν σκορ ✓</p>') +
+      (list.length ? '<div class="actions sticky-actions"><button type="button" class="btn solid" data-act="adm-bulk"' + (filled.length && !adm.busy ? "" : " disabled") + ">" +
+        (adm.busy ? esc(adm.progress) : "Αποθήκευση" + (filled.length ? " (" + filled.length + ")" : "")) + "</button></div>" : "") +
+      footerHtml();
+  }
+  function adminLogHtml() {
+    if (!adm.log && adm.logState !== "loading" && adm.logState !== "error") admLoadLog();
+    var head = '<a class="back" href="#/admin">‹ Διαχείριση</a><div class="section-head"><h2>Ιστορικό αλλαγών</h2></div>' +
+      '<p class="help">Ό,τι πέρασες από τις φόρμες τις τελευταίες 60 μέρες. Η αναίρεση επαναφέρει την προηγούμενη μορφή· μια ειδοποίηση που έφυγε δεν ανακαλείται.</p>';
+    if (adm.logState === "error") return head + '<p class="empty">Δεν φορτώθηκε.</p><div class="actions"><button type="button" class="btn" data-act="adm-log-reload">Ξανά</button></div>' + footerHtml();
+    if (!adm.log) return head + '<p class="empty">Φόρτωση…</p>' + footerHtml();
+    if (!adm.log.length) return head + '<p class="empty">Καμία αλλαγή ακόμα. Το ιστορικό ξεκινά από σήμερα.</p>' + footerHtml();
+    return head + '<ul class="adm-list adm-log">' + adm.log.map(function (a) {
+      var m = a.nt ? matchByNt(a.nt) : null, s = a.section && data.sectionMap[a.section];
+      var where = m ? m.home + " – " + m.away : s ? (s.academy ? (s.group || s.sport) + " " + (s.short || s.name) : s.name) : "";
+      var d = new Date(a.at);
+      return "<li" + (a.undone ? ' class="undone"' : "") + '><span class="adm-what"><b>' + esc(a.label) + "</b><small>" +
+        esc((where ? where + " · " : "") + cap(fmtShort.format(d)) + " " + fmtTime.format(d)) + (a.undone ? " · αναιρέθηκε" : "") + "</small></span>" +
+        (a.canUndo ? '<button type="button" class="btn" data-undo="' + esc(a.id) + '">Αναίρεση</button>' : "") + "</li>";
+    }).join("") + "</ul>" + footerHtml();
+  }
+  function adminPageHtml(tab) {
+    if (!isAdmin()) return adminLoginHtml();
+    return tab === "bulk" ? adminBulkHtml() : tab === "log" ? adminLogHtml() : adminHomeHtml();
+  }
+  function admSaveScore(nt, h, a, silent) {
+    return adminPost({ password: adminPass(), action: "score", nt: nt, home: +h, away: +a, final: true, silent: !!silent }).then(function (x) {
+      if (!x.r.ok) throw new Error(x.d.error || "Σφάλμα " + x.r.status);
+      return x.d;
+    });
+  }
+  function admClick(b) {
+    var act = b.dataset.act;
+    var group = b.closest("[data-seg]");
+    if (group && b.dataset.v && group.dataset.seg === "admDays") { adm.bulkDays = +b.dataset.v; render(); return true; }
+    if (group && b.dataset.v && group.dataset.seg === "admSilent") { adm.bulkSilent = b.dataset.v === "1"; render(); return true; }
+    if (act === "adm-run") {
+      b.disabled = true;
+      adminPost({ password: adminPass(), action: "run-update" }).then(function (x) {
+        toast(x.r.ok ? "Η ενημέρωση ξεκίνησε. Σε 2-4 λεπτά θα δεις τα νέα δεδομένα." : x.d.error || "Δεν ξεκίνησε.");
+        setTimeout(function () { adm.runState = ""; render(); }, 6000);
+        if (x.r.ok) setTimeout(function () { load().catch(function () {}); }, 4 * 60 * 1000);
+      }).catch(function () { toast("Χωρίς σύνδεση."); b.disabled = false; });
+      return true;
+    }
+    if (act === "adm-quick") {
+      var v = adm.quick[b.dataset.nt] || {};
+      if (!/^\d+$/.test(v.h || "") || !/^\d+$/.test(v.a || "")) { toast("Γράψε και τα δύο σκορ."); return true; }
+      b.disabled = true;
+      admSaveScore(b.dataset.nt, v.h, v.a, false).then(function () {
+        delete adm.quick[b.dataset.nt]; toast("Αποθηκεύτηκε και στάλθηκε."); adm.logState = ""; adm.log = null;
+        return load();
+      }).catch(function (e) { toast(e.message); b.disabled = false; });
+      return true;
+    }
+    if (act === "adm-bulk") {
+      var todo = admMissing(adm.bulkDays).filter(function (m) { var v = adm.bulk[m.nt]; return v && /^\d+$/.test(v.h || "") && /^\d+$/.test(v.a || ""); });
+      if (!todo.length) return true;
+      adm.busy = true;
+      var done = 0, errors = [];
+      var step = function () {
+        if (!todo.length) {
+          adm.busy = false; adm.log = null; adm.logState = "";
+          toast(done + " αποτελέσματα αποθηκεύτηκαν" + (errors.length ? ", " + errors.length + " όχι: " + errors[0] : "."));
+          return load().catch(function () {});
+        }
+        var m = todo.shift(), v = adm.bulk[m.nt];
+        adm.progress = "Αποθήκευση " + (done + errors.length + 1) + "…"; render();
+        return admSaveScore(m.nt, v.h, v.a, adm.bulkSilent).then(function () { done++; delete adm.bulk[m.nt]; },
+          function (e) { errors.push(m.home + " – " + m.away + ": " + e.message); }).then(step);
+      };
+      step();
+      return true;
+    }
+    if (act === "adm-log-reload") { admLoadLog(true); return true; }
+    if (b.dataset.undo) {
+      if (!confirm("Αναίρεση αυτής της αλλαγής;")) return true;
+      b.disabled = true;
+      adminPost({ password: adminPass(), action: "undo", id: b.dataset.undo }).then(function (x) {
+        toast(x.r.ok ? "Αναιρέθηκε." : x.d.error || "Δεν έγινε.");
+        admLoadLog(true); if (x.r.ok) load().catch(function () {});
+      }).catch(function () { toast("Χωρίς σύνδεση."); b.disabled = false; });
+      return true;
+    }
+    return false;
+  }
+  // Τα πεδία σκορ κρατούν την τιμή τους ανάμεσα στις ανανεώσεις της σελίδας.
+  document.addEventListener("input", function (e) {
+    var t = e.target;
+    if (!t || !t.classList || !(t.classList.contains("qk") || t.classList.contains("bq"))) return;
+    var store = t.classList.contains("qk") ? adm.quick : adm.bulk, k = t.dataset.nt;
+    store[k] = store[k] || {};
+    store[k][t.dataset.side] = t.value.replace(/\D/g, "").slice(0, 3);
+    if (t.classList.contains("bq")) {
+      var btn = document.querySelector('[data-act="adm-bulk"]');
+      var n = admMissing(adm.bulkDays).filter(function (m) { var v = adm.bulk[m.nt]; return v && /^\d+$/.test(v.h || "") && /^\d+$/.test(v.a || ""); }).length;
+      if (btn && !adm.busy) { btn.disabled = !n; btn.textContent = "Αποθήκευση" + (n ? " (" + n + ")" : ""); }
+    }
+  });
+
   // ---- Ενέργειες
   var toastTimer;
   function toast(msg) {
@@ -3280,7 +3539,7 @@
   $("app").addEventListener("click", function (e) {
     var b = e.target.closest("button");
     if (!b) return;
-    if (progClick(b) || followClick(b) || profileClick(b)) return;
+    if (progClick(b) || followClick(b) || profileClick(b) || admClick(b)) return;
     if (b.dataset.act === "cal-follow") {
       calSel.keys = followedKeys().filter(function (k) { return data.sections.some(function (s) { return s.key === k; }); });
       saveCalSel(); render(); return;
@@ -4998,7 +5257,7 @@
       if (!x.r.ok) { msg.textContent = x.r.status === 401 ? "Λάθος κωδικός." : (x.d.error || "Δεν έγινε. Δοκίμασε ξανά."); return; }
       try { localStorage.setItem("paok-admin-pass", pass); localStorage.setItem("paok-admin", "1"); } catch (e) {}
       toast("Λειτουργία διαχειριστή: ανοιχτή.");
-      render();
+      if (location.hash === "#/admin") render(); else location.hash = "#/admin";
     }).catch(function () { msg.textContent = "Δεν υπάρχει σύνδεση. Δοκίμασε ξανά."; });
   }
 

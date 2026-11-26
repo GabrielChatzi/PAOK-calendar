@@ -28,6 +28,13 @@
 //                                                   venue, athletes, results, para, url}
 //   POST {password, action: "goals-save", nt, homeText, awayText}  σκόρερ αγώνα (κενά: σβήσιμο)
 //   POST {password, action: "event-delete", id, auto}  σβήσιμο (auto: κρύψιμο αυτόματης διοργάνωσης)
+//   POST {password, action: "audit"}                 ιστορικό: οι τελευταίες αλλαγές του διαχειριστή (συλλογή «audit»,
+//                                                   60 μέρες), με την προηγούμενη και τη νέα μορφή
+//   POST {password, action: "undo", id}              αναίρεση μιας αλλαγής του ιστορικού (επαναφορά της προηγούμενης μορφής·
+//                                                   μια ειδοποίηση που έφυγε δεν ανακαλείται)
+//   POST {password, action: "run-update"}            ξεκινά τώρα την ενημέρωση (update.yml) στο GitHub· θέλει το
+//                                                   GITHUB_DISPATCH_TOKEN στη Vercel (fine-grained, Actions: read & write)
+//   POST {password, action: "run-status"}            η τελευταία εκτέλεση της ενημέρωσης (πότε, αποτέλεσμα)
 //
 // Οι πληροφορίες (συλλογή «info») επιστρέφονται στο GET ως info: η σελίδα τις δείχνει αμέσως και το
 // build_calendars.py τις περνά στο πρόγραμμα, στα ημερολόγια και στις υπενθυμίσεις.
@@ -41,6 +48,7 @@
 // ενημέρωση προγράμματος), οπότε όποια συσκευή το πήρε από εδώ δεν το ξαναπαίρνει, και το ίδιο
 // για ένα σκορ σε εξέλιξη (π.χ. ένα γκολ) που θα έφερνε μετά το live.
 import crypto from "node:crypto";
+import { waitUntil } from "@vercel/functions";
 import { configured, deliver, getDb, readBody, send } from "./_lib.js";
 
 const EMOJI = {
@@ -459,7 +467,124 @@ export function parseGoals(body, section) {
   return { home, away, points };
 }
 
+// ---- Ιστορικό αλλαγών (συλλογή «audit»): κάθε αλλαγή του διαχειριστή με την προηγούμενη μορφή του εγγράφου,
+// ώστε να αναιρείται με ένα πάτημα. Η αλλαγή γίνεται κανονικά από το handle(). εδώ μόνο φωτογραφίζεται πριν και μετά.
+const AUDIT_COLL = {
+  score: "admin", clear: "admin", "info-save": "info", "info-clear": "info", "goals-save": "goals",
+  "match-save": "custom", "match-delete": "custom", "crest-save": "crests", "crest-delete": "crests",
+  "event-save": "events", "event-delete": "events",
+};
+export function auditTarget(body) {
+  const coll = AUDIT_COLL[body?.action];
+  if (!coll || body.dry) return null;
+  let id = "";
+  if (coll === "admin" || coll === "info" || coll === "goals") id = String(body.nt || "");
+  else if (body.action === "match-save" || body.action === "event-save") {
+    const x = body.action === "match-save" ? body.match : body.event;
+    if (!x || typeof x !== "object") return null;
+    // Νέο: το κλειδί δίνεται από εδώ, για να ξέρουμε ποιο έγγραφο να φωτογραφίσουμε.
+    if (x.id == null || x.id === "") x.id = crypto.randomBytes(6).toString("hex");
+    id = String(x.id);
+  } else if (coll === "crests") {
+    const c = parseCrest(body.crest, false);
+    if (c.error) return null;
+    id = c.id;
+  } else id = String(body.id || "");
+  return id ? { coll, id } : null;
+}
+// Σύντομη περιγραφή για τη λίστα του ιστορικού.
+export function auditLabel(action, before, after) {
+  const d = after || before || {};
+  const sc = (x) => (x && x.home != null ? `${x.home}-${x.away}` : "");
+  switch (action) {
+    case "score": return `Σκορ ${sc(after)}${after?.final ? " (τελικό)" : ""}${before ? ` · ήταν ${sc(before)}${before.final ? " τελικό" : ""}` : ""}`;
+    case "clear": return `Σβήσιμο σκορ ${sc(before)}`;
+    case "info-save": return "Πληροφορίες: " + ["time", "tv", "venue"].filter((k) => after?.[k]).map((k) => after[k]).join(", ");
+    case "info-clear": return "Σβήσιμο πληροφοριών";
+    case "goals-save": return after ? `Σκόρερ: ${(after.home || []).length + (after.away || []).length} γραμμές` : "Σβήσιμο σκόρερ";
+    case "match-save": return `${before ? "Αλλαγή" : "Νέος"} αγώνας: ${d.opponent || ""} ${d.date || ""}${d.us != null && d.us !== "" ? ` (${d.us}-${d.them})` : ""}`.trim();
+    case "match-delete": return `Διαγραφή αγώνα: ${d.opponent || ""} ${d.date || ""}`.trim();
+    case "crest-save": return `Σήμα: ${d.name || ""}`;
+    case "crest-delete": return `Διαγραφή σήματος: ${d.name || ""}`;
+    case "event-save": return `${before ? "Αλλαγή" : "Νέα"} διοργάνωση: ${d.title || ""}`;
+    case "event-delete": return `${after?.hidden ? "Κρύψιμο" : "Διαγραφή"} διοργάνωσης: ${d.title || ""}`;
+    default: return action;
+  }
+}
+const strip = (doc) => {
+  if (!doc) return null;
+  const { _id, ...rest } = doc;
+  if (typeof rest.url === "string" && rest.url.startsWith("data:")) rest.url = rest.url.slice(0, 40) + "…";  // όχι εικόνες στο ιστορικό
+  return rest;
+};
+let auditIndexed = false;
+async function auditList(db) {
+  const docs = await db.collection("audit").find({}).sort({ at: -1 }).limit(80).toArray();
+  return docs.map((d) => ({ id: String(d._id), at: d.at, action: d.action, coll: d.coll, target: d.target, label: d.label,
+    nt: d.nt || null, section: d.section || null, undone: !!d.undone, canUndo: !d.undone && d.restorable !== false }));
+}
+async function undo(db, id) {
+  const { ObjectId } = await import("mongodb");
+  let _id;
+  try { _id = new ObjectId(String(id)); } catch { return { status: 400, body: { error: "Άγνωστη αλλαγή." } }; }
+  const a = await db.collection("audit").findOne({ _id });
+  if (!a) return { status: 404, body: { error: "Η αλλαγή δεν βρέθηκε." } };
+  if (a.undone) return { status: 400, body: { error: "Έχει ήδη αναιρεθεί." } };
+  if (a.restorable === false) return { status: 400, body: { error: "Αυτή η αλλαγή δεν αναιρείται (εικόνα σήματος)." } };
+  const col = db.collection(a.coll);
+  if (a.before) await col.replaceOne({ _id: a.target }, { ...a.before, at: new Date() }, { upsert: true });
+  else await col.deleteOne({ _id: a.target });
+  await db.collection("audit").updateOne({ _id }, { $set: { undone: true, undoneAt: new Date() } });
+  return { status: 200, body: { ok: true } };
+}
+const REPO_API = "https://api.github.com/repos/GabrielChatzi/PAOK-calendar/actions/workflows/update.yml";
+async function runUpdate() {
+  const token = process.env.GITHUB_DISPATCH_TOKEN;
+  if (!token) return { status: 503, body: { error: "Λείπει το GITHUB_DISPATCH_TOKEN στη Vercel (fine-grained token με Actions: read & write για το PAOK-calendar)." } };
+  const r = await fetch(REPO_API + "/dispatches", { method: "POST", headers: { Authorization: `Bearer ${token}`,
+    Accept: "application/vnd.github+json", "User-Agent": "paokalendar" }, body: JSON.stringify({ ref: "main" }) });
+  if (r.status === 204) return { status: 200, body: { ok: true } };
+  return { status: 502, body: { error: `Το GitHub απάντησε ${r.status}.` } };
+}
+async function runStatus() {
+  const token = process.env.GITHUB_DISPATCH_TOKEN;
+  const r = await fetch(REPO_API + "/runs?per_page=3", { headers: { Accept: "application/vnd.github+json", "User-Agent": "paokalendar",
+    ...(token ? { Authorization: `Bearer ${token}` } : {}) } });
+  if (!r.ok) return { status: 502, body: { error: `Το GitHub απάντησε ${r.status}.` } };
+  const d = await r.json();
+  return { status: 200, body: { ok: true, canRun: !!token, runs: (d.workflow_runs || []).map((x) => ({ at: x.created_at, status: x.status,
+    conclusion: x.conclusion, event: x.event, url: x.html_url })) } };
+}
+
 export default async function handler(req, res) {
+  if (!configured() || req.method !== "POST") return handle(req, res);
+  const body = await readBody(req);
+  if (!passwordOk(body.password)) return handle(req, res);
+  const db = await getDb();
+  if (body.action === "audit") return send(res, 200, { ok: true, items: await auditList(db) });
+  if (body.action === "undo") { const u = await undo(db, body.id); return send(res, u.status, u.body); }
+  if (body.action === "run-update") { const u = await runUpdate(); return send(res, u.status, u.body); }
+  if (body.action === "run-status") { const u = await runStatus().catch((e) => ({ status: 502, body: { error: e.message } })); return send(res, u.status, u.body); }
+  const target = auditTarget(body);
+  if (!target) return handle(req, res);
+  const col = db.collection(target.coll);
+  const before = await col.findOne({ _id: target.id }).catch(() => null);
+  await handle(req, res);
+  if (res.statusCode !== 200) return;
+  // Η απάντηση έχει φύγει: το ιστορικό γράφεται μετά, χωρίς να καθυστερεί τη φόρμα.
+  waitUntil((async () => {
+    const after = await col.findOne({ _id: target.id }).catch(() => null);
+    const audit = db.collection("audit");
+    if (!auditIndexed) { await audit.createIndex({ at: 1 }, { expireAfterSeconds: 60 * 86400 }).catch(() => {}); auditIndexed = true; }
+    const b = strip(before), a = strip(after);
+    await audit.insertOne({ at: new Date(), action: body.action, coll: target.coll, target: target.id, label: auditLabel(body.action, b, a),
+      nt: /^[0-9a-f]{10}$/.test(target.id) ? target.id : null, section: (a || b || {}).section || null,
+      before: before && target.coll === "crests" && String(before.url || "").startsWith("data:") ? null : before,
+      restorable: !(target.coll === "crests" && before && String(before.url || "").startsWith("data:")) });
+  })().catch((e) => console.error("audit", e)));
+}
+
+async function handle(req, res) {
   if (!configured()) return send(res, 503, { error: "Η βάση δεν έχει ρυθμιστεί." });
   const col = (await getDb()).collection("admin");
 

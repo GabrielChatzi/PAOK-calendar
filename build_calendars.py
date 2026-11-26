@@ -2949,6 +2949,8 @@ def main(only: list[str] | None = None) -> int:
         "sections": [{"key": k, **v} for k, v in SECTIONS.items()],
         "matches": all_matches,
         "updated": updated,
+        # Πηγές που απέτυχαν σε αυτή την ενημέρωση (για το κέντρο ελέγχου του διαχειριστή).
+        "failures": [f[:200] for f in failures[:30]],
     }
 
     def without_updated(text: str) -> str:

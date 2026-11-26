@@ -427,6 +427,19 @@ test("api: μέτρηση εγκαταστάσεων και στατιστικά
   assert.deepEqual(h.parsePing({ device: "0123456789abcdef0123456789abcdef", platform: "ios" }), { device: "0123456789abcdef0123456789abcdef", platform: "ios" });
   assert.equal(h.parsePing({ device: "x", platform: "ios" }), null);
   assert.equal(h.parsePing({ device: "0123456789abcdef", platform: "toaster" }).platform, "other");
+  // Χρήση καρτελών: μόνο γνωστές καρτέλες, θετικοί ακέραιοι ως 999· «Τι ακολουθώ» ως πλήθος.
+  const u = h.parsePing({ device: "0123456789abcdef", platform: "ios", usage: { home: 3, program: "2", evil: 5, sports: -1, history: 5000 },
+    follow: { set: true, n: 7 } });
+  assert.deepEqual(u.usage, { home: 3, program: 2, history: 999 });
+  assert.deepEqual(u.follow, { set: true, n: 7 });
+  assert.equal(h.parsePing({ device: "0123456789abcdef", platform: "ios", usage: { evil: 1 } }).usage, undefined);
+  const us = a.summarizeUsage(
+    [{ _id: "2026-11-25", tabs: { home: 4, program: 1 } }, { _id: "2026-11-01", tabs: { home: 10 } }],
+    [{ last: "2026-11-25", followSet: true, follows: 4 }, { last: "2026-11-24", followSet: false }, { last: "2026-10-01", followSet: true, follows: 9 }],
+    new Date("2026-11-26T10:00:00Z"));
+  assert.deepEqual(us.last7, { home: 4, program: 1 });
+  assert.deepEqual(us.last30, { home: 14, program: 1 });
+  assert.equal(us.active7, 2); assert.equal(us.followSet, 1); assert.equal(us.avgFollows, 4);
   const now = new Date("2026-11-30T12:00:00Z"), d = (n) => new Date(now - n * 86400000);
   const s = a.summarizeDevices([
     { platform: "ios", first: d(2), last: d(1) }, { platform: "ios", first: d(40), last: d(20) },

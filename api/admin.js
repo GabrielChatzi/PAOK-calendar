@@ -124,13 +124,36 @@ export function summarizeSubs(docs, service) {
   return out;
 }
 
+// Χρήση των καρτελών: άθροισμα των ημερήσιων εγγραφών («usage») για 7 και 30 μέρες, και πόσες συσκευές
+// (που άνοιξαν την εφαρμογή τις τελευταίες 7 μέρες) έχουν διαλέξει «Τι ακολουθώ».
+export function summarizeUsage(days, devices, now = new Date()) {
+  const day = 86400 * 1000, out = { last7: {}, last30: {}, followSet: 0, active7: 0, avgFollows: 0 };
+  days.forEach((d) => {
+    const age = now - new Date(d._id + "T12:00:00Z");
+    for (const [t, n] of Object.entries(d.tabs || {})) {
+      if (age <= 7.5 * day) out.last7[t] = (out.last7[t] || 0) + n;
+      if (age <= 30.5 * day) out.last30[t] = (out.last30[t] || 0) + n;
+    }
+  });
+  let sum = 0;
+  devices.forEach((d) => {
+    if (now - new Date(d.last) > 7 * day) return;
+    out.active7++;
+    if (d.followSet) { out.followSet++; sum += d.follows || 0; }
+  });
+  out.avgFollows = out.followSet ? Math.round((sum / out.followSet) * 10) / 10 : 0;
+  return out;
+}
+
 async function stats(db) {
   const { service } = await import("./health.js");
   const [devices, subsDocs] = await Promise.all([
-    db.collection("devices").find({}, { projection: { platform: 1, first: 1, last: 1 } }).toArray(),
+    db.collection("devices").find({}, { projection: { platform: 1, first: 1, last: 1, followSet: 1, follows: 1 } }).toArray(),
     db.collection("subs").find({}, { projection: { endpoint: 1, topics: 1, gone: 1 } }).toArray(),
   ]);
-  return { installs: summarizeDevices(devices), push: summarizeSubs(subsDocs, service), at: new Date() };
+  const since = new Date(Date.now() - 31 * 86400 * 1000).toISOString().slice(0, 10);
+  const days = await db.collection("usage").find({ _id: { $gte: since } }).toArray().catch(() => []);
+  return { installs: summarizeDevices(devices), push: summarizeSubs(subsDocs, service), usage: summarizeUsage(days, devices), at: new Date() };
 }
 
 // ---- Αγώνες της φόρμας «Νέος αγώνας»

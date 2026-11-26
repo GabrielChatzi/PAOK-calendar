@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import re
 import os
 import signal
 import sys
@@ -303,7 +304,7 @@ def wiki_standings(keys: list[str] | None = None) -> list[str]:
 def write_index() -> None:
     seasons = []
     for p in sorted(ARCHIVE.glob("*.json"), reverse=True):
-        if p.name == "index.json":
+        if p.name in ("index.json", "opponents.json"):
             continue
         d = json.loads(p.read_text(encoding="utf-8"))
         secs = {k: {"matches": len(v.get("matches", [])), "standings": bool(v.get("standings")), "summary": bool(v.get("summary"))}
@@ -312,6 +313,60 @@ def write_index() -> None:
             seasons.append({"season": d["season"], "sections": secs})
     ARCHIVE.mkdir(parents=True, exist_ok=True)
     bc.write_if_changed(ARCHIVE / "index.json", json.dumps({"seasons": seasons}, ensure_ascii=False, indent=1) + "\n")
+    write_opponents()
+
+
+# ---- Αντίπαλοι: όλοι οι αγώνες του αρχείου ανά αντίπαλο, για τη σελίδα «ΠΑΟΚ – <αντίπαλος>» (#/vs/<κλειδί>).
+# Το κλειδί (opp_key) είναι ίδιο με το oppKey της σελίδας (docs/index.html): χωρίς τόνους, τελείες και
+# νομική μορφή, ώστε «Α.Ε.Κ.», «ΑΕΚ» και «AEK Athens» να είναι ο ίδιος αντίπαλος.
+OPP_DROP = {"παε", "καε", "πας", "γσ", "αο", "ας", "σφπ", "οφπφ", "πσ", "γε", "αε", "αοκ", "ποκ", "ομιλοσ",
+            "fc", "bc", "sc", "ac", "cf", "pae", "kae", "gs", "ao", "as", "vc", "hc", "wc", "nc", "no", "νο", "νοκ",
+            "γσσ", "ομ", "ξυνη", "onex"}  # και χορηγοί που μπαίνουν στο όνομα (π.χ. «Ολυμπιακός ΟΜ Ξυνή»)
+OPP_CITY = {"θεσσαλονικησ", "αθηνων", "πειραια", "πειραιωσ", "athens", "thessaloniki", "piraeus"}
+OPP_ALIAS = {"aek": "αεκ", "olympiacos": "ολυμπιακοσ", "olympiakos": "ολυμπιακοσ", "panathinaikos": "παναθηναικοσ",
+             "aris": "αρησ", "iraklis": "ηρακλησ", "panionios": "πανιωνιοσ", "ofi": "οφη", "ofi crete": "οφη",
+             "pas giannina": "γιαννενα", "πασ γιαννινα": "γιαννενα", "giannina": "γιαννενα", "larissa": "λαρισα",
+             "ael": "λαρισα", "αελ": "λαρισα", "atromitos": "ατρομητοσ", "asteras tripolis": "αστερασ τριπολησ",
+             "xanthi": "ξανθη", "skoda xanthi": "ξανθη", "volos": "βολοσ", "lamia": "λαμια", "levadiakos": "λεβαδειακοσ",
+             "panetolikos": "παναιτωλικοσ", "apollon smyrnis": "απολλων σμυρνησ", "kallithea": "καλλιθεα",
+             "promitheas patras": "προμηθεασ πατρασ", "peristeri": "περιστερι", "kolossos rhodes": "κολοσσοσ ροδου"}
+
+
+def opp_key(name: str) -> str:
+    import unicodedata
+    t = unicodedata.normalize("NFD", name or "").lower().replace("ς", "σ")
+    t = "".join(c for c in t if not unicodedata.combining(c)).replace(".", "")
+    toks = [w for w in re.split(r"[^0-9a-zα-ω]+", t) if w and w not in OPP_DROP]
+    while len(toks) > 1 and toks[-1] in OPP_CITY:
+        toks.pop()
+    key = " ".join(toks)
+    return OPP_ALIAS.get(key, key)
+
+
+def write_opponents() -> None:
+    """archive/opponents.json: {κλειδί: {"n": όνομα, "m": [[σεζόν, τμήμα, μέρα, ΠΑΟΚ εντός 1/0, σκορ, διοργάνωση], …]}}."""
+    out: dict[str, dict] = {}
+    names: dict[str, dict[str, int]] = {}
+    for p in sorted(ARCHIVE.glob("*.json")):
+        if not re.match(r"\d{4}-\d{2}\.json$", p.name):
+            continue
+        d = json.loads(p.read_text(encoding="utf-8"))
+        for key, sec in d["sections"].items():
+            for m in sec.get("matches", []):
+                if not m.get("score"):
+                    continue
+                opp = m["away"] if m.get("paokHome") else m["home"]
+                k = opp_key(opp)
+                if not k or k == "παοκ":
+                    continue
+                o = out.setdefault(k, {"n": opp, "m": []})
+                o["m"].append([d["season"], key, m["start"][:10], 1 if m.get("paokHome") else 0, m["score"], m.get("competition", "")])
+                names.setdefault(k, {})[opp] = names.setdefault(k, {}).get(opp, 0) + 1
+    for k, o in out.items():
+        # Το συχνότερο όνομα, με προτίμηση στα ελληνικά.
+        o["n"] = max(names[k].items(), key=lambda x: (bool(re.search("[Α-Ωα-ω]", x[0])), x[1]))[0]
+        o["m"].sort(key=lambda x: x[2])
+    bc.write_if_changed(ARCHIVE / "opponents.json", json.dumps(out, ensure_ascii=False, separators=(",", ":")) + "\n")
 
 
 def main(argv: list[str]) -> int:

@@ -6,17 +6,32 @@
 // πολύ μία φορά τη μέρα. device: τυχαίο ανώνυμο αναγνωριστικό της συσκευής (local storage), platform:
 // ios | android | desktop | other. Συλλογή «devices» {_id: device, platform, first, last}· σβήνεται
 // μόνη της 180 ημέρες μετά το τελευταίο άνοιγμα. Μετρά εγκαταστάσεις, τίποτα άλλο (βλ. Απόρρητο).
+// Προαιρετικά: usage {καρτέλα: φορές} από την προηγούμενη μέρα και follow {set, n}: πόσα ακολουθεί η συσκευή.
+// Η χρήση μπαίνει μόνο ως άθροισμα ανά μέρα (συλλογή «usage», _id ημερομηνία), όχι ανά συσκευή.
 import webpush from "web-push";
 import { TOPIC_RE, configured, getDb, readBody, send, subId, subs, validSubscription, vapidKeys } from "./_lib.js";
 
 const PLATFORMS = ["ios", "android", "desktop", "other"];
+export const USAGE_TABS = ["home", "program", "sports", "history", "profile"];
 let devicesIndexed = false;
 
 export function parsePing(body) {
   const device = String(body?.device || "");
   if (!/^[0-9a-f]{16,32}$/.test(device)) return null;
   const platform = PLATFORMS.includes(body?.platform) ? body.platform : "other";
-  return { device, platform };
+  const out = { device, platform };
+  if (body?.usage && typeof body.usage === "object") {
+    const usage = {};
+    for (const t of USAGE_TABS) {
+      const n = Math.floor(Number(body.usage[t]));
+      if (n > 0) usage[t] = Math.min(n, 999);
+    }
+    if (Object.keys(usage).length) out.usage = usage;
+  }
+  if (body?.follow && typeof body.follow === "object") {
+    out.follow = { set: body.follow.set === true, n: Math.max(0, Math.min(200, Math.floor(Number(body.follow.n) || 0))) };
+  }
+  return out;
 }
 
 async function ping(req, res) {
@@ -30,7 +45,15 @@ async function ping(req, res) {
     devicesIndexed = true;
   }
   const now = new Date();
-  await col.updateOne({ _id: p.device }, { $set: { platform: p.platform, last: now }, $setOnInsert: { first: now } }, { upsert: true });
+  const set = { platform: p.platform, last: now };
+  if (p.follow) { set.followSet = p.follow.set; set.follows = p.follow.n; }
+  await col.updateOne({ _id: p.device }, { $set: set, $setOnInsert: { first: now } }, { upsert: true });
+  if (p.usage) {
+    const inc = { devices: 1 };
+    for (const [t, n] of Object.entries(p.usage)) inc["tabs." + t] = n;
+    await (await getDb()).collection("usage").updateOne({ _id: now.toISOString().slice(0, 10) },
+      { $inc: inc, $set: { at: now } }, { upsert: true }).catch(() => {});
+  }
   return send(res, 200, { ok: true });
 }
 

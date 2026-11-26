@@ -39,6 +39,8 @@ for (const r of routes) {
 await page.goto(base + "#/football");
 await page.waitForTimeout(400);
 const tabs = await page.locator("#tabbar a").count();
+const secTabs = (await page.textContent("main nav.tabs")) || "";
+if (!/Αποτελέσματα/.test(secTabs) || /#\//.test(secTabs)) { failed++; console.log("FAIL καρτέλες τμήματος: " + secTabs); }
 await page.click('#tabbar a[href="#/program"]');
 await page.waitForTimeout(400);
 const onProgram = (await page.evaluate(() => location.hash)).startsWith("#/program");

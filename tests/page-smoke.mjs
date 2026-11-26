@@ -17,7 +17,7 @@ const server = http.createServer((req, res) => {
 const base = `http://localhost:${server.address().port}/`;
 
 const routes = ["#/", "#/privacy", "#/football", "#/basketball/standings", "#/volley/results", "#/waterpolo-women/follow",
-  "#/notifications", "#/calendars", "#/app"];
+  "#/notifications", "#/calendars", "#/app", "#/program", "#/sports", "#/history", "#/profile"];
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
 const errors = [];
@@ -35,12 +35,15 @@ for (const r of routes) {
   if (!ok) failed++;
   console.log(`${ok ? "ok  " : "FAIL"} ${r} (${text.length} χαρακτήρες)`);
 }
-// Το μενού ανοίγει και κλείνει.
-await page.goto(base + "#/");
-await page.click("#menu-btn");
-const menuOpen = await page.isVisible("#menu-panel");
-await page.keyboard.press("Escape");
-if (!menuOpen) { failed++; console.log("FAIL μενού"); }
+// Η κάτω μπάρα έχει τις 5 καρτέλες και πάει στο Πρόγραμμα.
+await page.goto(base + "#/football");
+await page.waitForTimeout(400);
+const tabs = await page.locator("#tabbar a").count();
+await page.click('#tabbar a[href="#/program"]');
+await page.waitForTimeout(400);
+const onProgram = (await page.evaluate(() => location.hash)).startsWith("#/program");
+if (tabs !== 5 || !onProgram) { failed++; console.log(`FAIL κάτω μπάρα (${tabs} καρτέλες, πρόγραμμα: ${onProgram})`); }
+else console.log("ok   κάτω μπάρα");
 await browser.close();
 server.close();
 if (errors.length) console.log("Σφάλματα JavaScript:\n  " + errors.join("\n  "));

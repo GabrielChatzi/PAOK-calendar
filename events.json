@@ -303,30 +303,6 @@
    "medalsV": 2
   },
   {
-   "id": "b8cbd0b654f8",
-   "sport": "athletics",
-   "title": "PAOK RUNNING TEAM: Αγωνιστικό Τμήμα Ημιαντοχής & Αντοχής για ηλικίες από 17 και άνω",
-   "start": "2026-11-15",
-   "end": "2026-11-15",
-   "time": "",
-   "venue": "",
-   "athletes": "",
-   "results": "",
-   "para": false,
-   "url": "https://acpaok.gr/paok-running-team-%ce%b1%ce%b3%cf%89%ce%bd%ce%b9%cf%83%cf%84%ce%b9%ce%ba%cf%8c-%cf%84%ce%bc%ce%ae%ce%bc%ce%b1-%ce%b7%ce%bc%ce%b9%ce%b1%ce%bd%cf%84%ce%bf%cf%87%ce%ae%cf%82-%ce%b1%ce%bd%cf%84/",
-   "posts": [
-    {
-     "title": "PAOK RUNNING TEAM: Αγωνιστικό Τμήμα Ημιαντοχής & Αντοχής για ηλικίες από 17 και άνω",
-     "url": "https://acpaok.gr/paok-running-team-%ce%b1%ce%b3%cf%89%ce%bd%ce%b9%cf%83%cf%84%ce%b9%ce%ba%cf%8c-%cf%84%ce%bc%ce%ae%ce%bc%ce%b1-%ce%b7%ce%bc%ce%b9%ce%b1%ce%bd%cf%84%ce%bf%cf%87%ce%ae%cf%82-%ce%b1%ce%bd%cf%84/",
-     "date": "2026-10-23"
-    }
-   ],
-   "source": "acpaok",
-   "medals": [],
-   "team": [],
-   "medalsV": 2
-  },
-  {
    "id": "e1c36556700c",
    "sport": "weightlifting",
    "title": "Πανελλήνιο Πρωτάθλημα Άρσης Βαρών",
@@ -540,5 +516,7 @@
   "https://www.segas.gr/to-programma-tou-pagkosmiou-protathlimatos-anoichtou-stivou-sto-pekino/",
   "https://www.segas.gr/vima-vima-i-apokatastasi-tou-dromea-meta-to-marathonio/"
  ],
- "hiddenSeen": []
+ "hiddenSeen": [
+  "b8cbd0b654f8"
+ ]
 }

@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:event-4f68f755b660@paok-calendar
-DTSTAMP:20261124T220513Z
+DTSTAMP:20261126T080515Z
 DTSTART;VALUE=DATE:20260628
 DTEND;VALUE=DATE:20260629
 SUMMARY:🏃 4η Ημερίδα Παρα Στίβου «ΕΛΠΙΔΑ 2026»
@@ -35,17 +35,5 @@ LOCATION:Δημοτικό Στάδιο Σερρών
 DESCRIPTION:ΠΑΟΚ Στίβος\n🥇 Δημήτρης Μαργαρίτη
  ς (Σφαίρα F52)\n🥈 Δημήτρης Παπαδημητρίου (1
  00μ. T36)\n🥉 Κωνσταντίνος Μόκκας (200μ. T20)
-END:VEVENT
-BEGIN:VEVENT
-UID:event-b8cbd0b654f8@paok-calendar
-DTSTAMP:20261124T220513Z
-DTSTART;VALUE=DATE:20261115
-DTEND;VALUE=DATE:20261116
-SUMMARY:🏃 PAOK RUNNING TEAM: Αγωνιστικό Τμήμα Ημιαν
- τοχής & Αντοχής για ηλικίες από 17 και άνω
-DESCRIPTION:ΠΑΟΚ Στίβος
-URL:https://acpaok.gr/paok-running-team-%ce%b1%ce%b3%cf%89%ce%bd%ce%b9%cf%8
- 3%cf%84%ce%b9%ce%ba%cf%8c-%cf%84%ce%bc%ce%ae%ce%bc%ce%b1-%ce%b7%ce%bc%ce%b
- 9%ce%b1%ce%bd%cf%84%ce%bf%cf%87%ce%ae%cf%82-%ce%b1%ce%bd%cf%84/
 END:VEVENT
 END:VCALENDAR

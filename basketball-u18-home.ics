@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:basketball-u18-ek-_iBxsafb5DlxmUk7P1ZE8A@paok-calendar
-DTSTAMP:20261124T113258Z
+DTSTAMP:20261126T213126Z
 DTSTART;TZID=Europe/Athens:20260911T200000
 DTEND;TZID=Europe/Athens:20260911T220000
 SUMMARY:🏀 ΠΑΟΚ 74-60 G.B.A.
@@ -38,7 +38,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=_iBxsafb5DlxmUk7P1ZE
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u18-ek-JXvM6UwlfmSXSpP-AMH00A@paok-calendar
-DTSTAMP:20261124T113258Z
+DTSTAMP:20261126T213126Z
 DTSTART;TZID=Europe/Athens:20260918T200000
 DTEND;TZID=Europe/Athens:20260918T220000
 SUMMARY:🏀 ΠΑΟΚ 79-70 ΗΡΑΚΛΗΣ 1908
@@ -51,7 +51,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=JXvM6UwlfmSXSpP-AMH0
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u18-ek-Ca4yW8fpHn4Vaceok377nQ@paok-calendar
-DTSTAMP:20261124T113258Z
+DTSTAMP:20261126T213126Z
 DTSTART;TZID=Europe/Athens:20261006T200000
 DTEND;TZID=Europe/Athens:20261006T220000
 SUMMARY:🏀 ΠΑΟΚ 75-85 Α.Σ. ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ
@@ -63,7 +63,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=Ca4yW8fpHn4Vaceok377
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u18-ek-Xs-VXN5EV16mf9zVeFIBLA@paok-calendar
-DTSTAMP:20261124T113258Z
+DTSTAMP:20261126T213126Z
 DTSTART;TZID=Europe/Athens:20261020T210000
 DTEND;TZID=Europe/Athens:20261020T230000
 SUMMARY:🏀 ΠΑΟΚ 76-33 ΕΛΛΗΝΙΚΗ ΑΚΑΔΗΜΙΑ ΚΑΛΑΘΟ
@@ -77,7 +77,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=Xs-VXN5EV16mf9zVeFIB
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u18-rs-f9ed53e255cf@paok-calendar
-DTSTAMP:20261124T113258Z
+DTSTAMP:20261126T213126Z
 DTSTART;TZID=Europe/Athens:20261025T140000
 DTEND;TZID=Europe/Athens:20261025T160000
 SUMMARY:🏀 ΠΑΟΚ 44-78 ΟΛΥΜΠΙΑΚΟΣ Σ.Φ.Π.
@@ -89,7 +89,7 @@ URL:https://risingstars.basket.gr/u18/schedule/
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u18-rs-0a835ae2afb7@paok-calendar
-DTSTAMP:20261124T113258Z
+DTSTAMP:20261126T213126Z
 DTSTART;TZID=Europe/Athens:20261115T140000
 DTEND;TZID=Europe/Athens:20261115T160000
 SUMMARY:🏀 ΠΑΟΚ 80-85 ΓΣ ΠΕΡΙΣΤΕΡΙΟΥ
@@ -101,19 +101,21 @@ URL:https://risingstars.basket.gr/u18/schedule/
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u18-ek-mBLBxaGerQhmqvFjuDp9EQ@paok-calendar
-DTSTAMP:20261124T113258Z
+DTSTAMP:20261126T213126Z
 DTSTART;TZID=Europe/Athens:20261126T210000
 DTEND;TZID=Europe/Athens:20261126T230000
-SUMMARY:🏀 ΠΑΟΚ – ΑΘΛΗΤΙΚΗ ΕΝΩΣΗ ΠΕΥΚΩΝ ΣΥΚΕ
- ΩΝ ΜΑΧΗΤΕΣ ΠΕΙΡΑΜΑΤΙΚΟ
+SUMMARY:🏀 ΠΑΟΚ 75-44 ΑΘΛΗΤΙΚΗ ΕΝΩΣΗ ΠΕΥΚΩΝ ΣΥΚ
+ ΕΩΝ ΜΑΧΗΤΕΣ ΠΕΙΡΑΜΑΤΙΚΟ
 LOCATION:AIRDOME SKG BASKETBALL
-DESCRIPTION:Εφήβων (ΕΚΑΣΘ) – 6η αγωνιστική
+DESCRIPTION:Εφήβων (ΕΚΑΣΘ) – 6η αγωνιστική\nΤελ
+ ικό σκορ: ΠΑΟΚ 75-44 ΑΘΛΗΤΙΚΗ ΕΝΩΣΗ ΠΕΥΚΩΝ 
+ ΣΥΚΕΩΝ ΜΑΧΗΤΕΣ ΠΕΙΡΑΜΑΤΙΚΟ
 URL:https://ekasth.gr/champs/matchcenter8/game.html?id=mBLBxaGerQhmqvFjuDp9
  EQ
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u18-ek-46TVwkyXi8pAZyglT60a9Q@paok-calendar
-DTSTAMP:20261124T113258Z
+DTSTAMP:20261126T213126Z
 DTSTART;TZID=Europe/Athens:20261201T200000
 DTEND;TZID=Europe/Athens:20261201T220000
 SUMMARY:🏀 ΠΑΟΚ – ΒΟΡΕΙΟΣ ΑΣΤΕΡΑΣ
@@ -124,7 +126,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=46TVwkyXi8pAZyglT60a
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u18-ek-UU3b4Q00rzXoZfU3w3eSNA@paok-calendar
-DTSTAMP:20261124T113258Z
+DTSTAMP:20261126T213126Z
 DTSTART;TZID=Europe/Athens:20270119T200000
 DTEND;TZID=Europe/Athens:20270119T220000
 SUMMARY:🏀 ΠΑΟΚ – ΑΘΛΗΤΙΚΟΣ ΣΥΛΛΟΓΟΣ ΑΣΤΕΡΑ
@@ -136,7 +138,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=UU3b4Q00rzXoZfU3w3eS
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u18-ek-4z08cMBnoImU98gftTvUZQ@paok-calendar
-DTSTAMP:20261124T113258Z
+DTSTAMP:20261126T213126Z
 DTSTART;TZID=Europe/Athens:20270126T203000
 DTEND;TZID=Europe/Athens:20270126T223000
 SUMMARY:🏀 ΠΑΟΚ – ΧΑΝΘ
@@ -147,7 +149,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=4z08cMBnoImU98gftTvU
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u18-ek-Vk71NAAkfJiQl10YZy75yw@paok-calendar
-DTSTAMP:20261124T113258Z
+DTSTAMP:20261126T213126Z
 DTSTART;TZID=Europe/Athens:20270209T200000
 DTEND;TZID=Europe/Athens:20270209T220000
 SUMMARY:🏀 ΠΑΟΚ – ΠΑΝΑΘΛΗΤΙΚΟΣ ΑΕ ΣΥΚΕΩΝ
@@ -158,7 +160,7 @@ URL:https://ekasth.gr/champs/matchcenter8/game.html?id=Vk71NAAkfJiQl10YZy75
 END:VEVENT
 BEGIN:VEVENT
 UID:basketball-u18-ek-6a-HKYeNg-XrFMH_GDlwuA@paok-calendar
-DTSTAMP:20261124T113258Z
+DTSTAMP:20261126T213126Z
 DTSTART;TZID=Europe/Athens:20270223T200000
 DTEND;TZID=Europe/Athens:20270223T220000
 SUMMARY:🏀 ΠΑΟΚ – ΗΡΑΚΛΗΣ 1

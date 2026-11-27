@@ -2335,21 +2335,6 @@
      "homeLogo": "https://paokalendar.gr/crests/ef09db47680f1bdf.png"
     },
     {
-     "uid": "basketball-u16-ek-h4kdmQiSTV6ZyVMLycEGsA",
-     "nt": "761c362e88",
-     "section": "basketball-u16",
-     "start": "2026-12-02T20:00:00+02:00",
-     "timeKnown": true,
-     "home": "ΠΑΟΚ",
-     "away": "Α.Σ. ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ",
-     "paokHome": true,
-     "venue": "PAOK Sports Arena",
-     "competition": "Παίδων (ΕΚΑΣΘ)",
-     "round": "8η αγωνιστική",
-     "url": "https://ekasth.gr/champs/matchcenter8/game.html?id=h4kdmQiSTV6ZyVMLycEGsA",
-     "awayLogo": "https://paokalendar.gr/crests/c35ea78a2c95ae69.png"
-    },
-    {
      "uid": "basketball-u16-ek-dC-np1Bs0w1hC9zxJQizcg",
      "nt": "f9a4a4c072",
      "section": "basketball-u16",
@@ -2363,6 +2348,21 @@
      "round": "9η αγωνιστική",
      "url": "https://ekasth.gr/champs/matchcenter8/game.html?id=dC-np1Bs0w1hC9zxJQizcg",
      "homeLogo": "https://paokalendar.gr/crests/5ae872a725283cdb.png"
+    },
+    {
+     "uid": "basketball-u16-ek-h4kdmQiSTV6ZyVMLycEGsA",
+     "nt": "761c362e88",
+     "section": "basketball-u16",
+     "start": "2026-12-11T00:10:00+02:00",
+     "timeKnown": true,
+     "home": "ΠΑΟΚ",
+     "away": "Α.Σ. ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ",
+     "paokHome": true,
+     "venue": "PAOK Sports Arena",
+     "competition": "Παίδων (ΕΚΑΣΘ)",
+     "round": "8η αγωνιστική",
+     "url": "https://ekasth.gr/champs/matchcenter8/game.html?id=h4kdmQiSTV6ZyVMLycEGsA",
+     "awayLogo": "https://paokalendar.gr/crests/c35ea78a2c95ae69.png"
     },
     {
      "uid": "basketball-u16-ek-qGAVR3V4VEK6vecB0QMIaw",
@@ -17801,5 +17801,5 @@
    ]
   }
  },
- "updated": "2026-11-27T06:20+02:00"
+ "updated": "2026-11-27T10:06+02:00"
 }

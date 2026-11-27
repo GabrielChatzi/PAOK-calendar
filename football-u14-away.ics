@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:football-u14-epsm-5918a0a5f997@paok-calendar
-DTSTAMP:20261121T120052Z
+DTSTAMP:20261127T200052Z
 DTSTART;TZID=Europe/Athens:20261027T170000
 DTEND;TZID=Europe/Athens:20261027T190000
 SUMMARY:⚽ ΑΘΛΗΤΙΚΗ ΑΚΑΔΗΜΙΑ ΓΙΑΝΝΙΤΣΩΝ 1-5 ΠΑ
@@ -40,7 +40,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+LE
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u14-epsm-f01b6db2e120@paok-calendar
-DTSTAMP:20261121T120052Z
+DTSTAMP:20261127T200052Z
 DTSTART;TZID=Europe/Athens:20261121T090000
 DTEND;TZID=Europe/Athens:20261121T110000
 SUMMARY:⚽ ΣΚΙΟΥΡΟΙ (1) 0-5 ΠΑΟΚ
@@ -52,21 +52,18 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+LE
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u14-epsm-3e3c69261ed3@paok-calendar
-DTSTAMP:20261121T120052Z
-DTSTART;TZID=Europe/Athens:20261205T180000
-DTEND;TZID=Europe/Athens:20261205T200000
-SUMMARY:⚽ ΑΠΟΛΛΩΝ ΚΑΛΑΜΑΡΙΑΣ (1) – ΠΑΟΚ (ώρα α
- ναμένεται)
-DESCRIPTION:Κ15 League 1 (ΕΠΣΜ) – 7η αγωνιστική\nΗ ώρ
- α δεν έχει οριστεί ακόμα (προσωρινά 18:00). 
- Θα ενημερωθεί αυτόματα όταν ανακοινωθεί
- .
+DTSTAMP:20261127T200052Z
+DTSTART;TZID=Europe/Athens:20261205T141500
+DTEND;TZID=Europe/Athens:20261205T161500
+SUMMARY:⚽ ΑΠΟΛΛΩΝ ΚΑΛΑΜΑΡΙΑΣ (1) – ΠΑΟΚ
+LOCATION:ΤΣΑΚ ΜΠΑΜ ΑΡΕΝΑ
+DESCRIPTION:Κ15 League 1 (ΕΠΣΜ) – 7η αγωνιστική
 URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+LE
  AGUE+1
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u14-epsm-3c902ef7633f@paok-calendar
-DTSTAMP:20261121T120052Z
+DTSTAMP:20261127T200052Z
 DTSTART;TZID=Europe/Athens:20261219T180000
 DTEND;TZID=Europe/Athens:20261219T200000
 SUMMARY:⚽ ΑΛΕΞΑΝΔΡΟΣ ΚΙΛΚΙΣ (1) – ΠΑΟΚ (ώρα αν
@@ -80,7 +77,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+LE
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u14-epsm-7535061d0b2e@paok-calendar
-DTSTAMP:20261121T120052Z
+DTSTAMP:20261127T200052Z
 DTSTART;TZID=Europe/Athens:20270102T180000
 DTEND;TZID=Europe/Athens:20270102T200000
 SUMMARY:⚽ ΚΕΝΤΑΥΡΟΣ ΛΑΓΚΑΔΑ – ΠΑΟΚ (ώρα αναμ
@@ -94,7 +91,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+LE
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u14-epsm-295d7f81eed8@paok-calendar
-DTSTAMP:20261121T120052Z
+DTSTAMP:20261127T200052Z
 DTSTART;TZID=Europe/Athens:20270116T180000
 DTEND;TZID=Europe/Athens:20270116T200000
 SUMMARY:⚽ ΔΙΑΠΛΑΣΙΣ – ΠΑΟΚ (ώρα αναμένεται)
@@ -107,7 +104,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+LE
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u14-epsm-a117fcb2ab36@paok-calendar
-DTSTAMP:20261121T120052Z
+DTSTAMP:20261127T200052Z
 DTSTART;TZID=Europe/Athens:20270123T180000
 DTEND;TZID=Europe/Athens:20270123T200000
 SUMMARY:⚽ ΠΑΝΑΘΗΝΑΪΚΟΣ ΘΕΣΣΑΛΟΝΙΚΗΣ (1) – ΠΑ
@@ -121,7 +118,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+LE
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u14-epsm-b3b8c8096065@paok-calendar
-DTSTAMP:20261121T120052Z
+DTSTAMP:20261127T200052Z
 DTSTART;TZID=Europe/Athens:20270206T180000
 DTEND;TZID=Europe/Athens:20270206T200000
 SUMMARY:⚽ ΠΟΤ ΗΡΑΚΛΗΣ (1) – ΠΑΟΚ (ώρα αναμένετ
@@ -135,7 +132,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A15+LE
 END:VEVENT
 BEGIN:VEVENT
 UID:football-u14-epsm-d81aec2cc4dc@paok-calendar
-DTSTAMP:20261121T120052Z
+DTSTAMP:20261127T200052Z
 DTSTART;TZID=Europe/Athens:20270220T180000
 DTEND;TZID=Europe/Athens:20270220T200000
 SUMMARY:⚽ ΠΡΩΤΑΘΛΗΤΕΣ ΠΕΥΚΩΝ (1) – ΠΑΟΚ (ώρα α

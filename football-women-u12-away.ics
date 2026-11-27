@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:football-women-u12-epsm-d1ca3892d74a@paok-calendar
-DTSTAMP:20261119T110349Z
+DTSTAMP:20261127T200052Z
 DTSTART;TZID=Europe/Athens:20261031T120000
 DTEND;TZID=Europe/Athens:20261031T140000
 SUMMARY:⚽ ΑΟ ΛΕΟΝΤΕΣ (1) – ΠΑΟΚ
@@ -37,7 +37,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A12+%C
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-u12-epsm-1669ef40bd88@paok-calendar
-DTSTAMP:20261119T110349Z
+DTSTAMP:20261127T200052Z
 DTSTART;TZID=Europe/Athens:20261114T180000
 DTEND;TZID=Europe/Athens:20261114T200000
 SUMMARY:ΑΝΑΒΛΗΘΗΚΕ: ⚽ ΑΣ ΠΟΔ. ΤΟΥΜΠΑΣ – ΠΑΟΚ 
@@ -51,7 +51,7 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A12+%C
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-u12-epsm-3129af91f3c0@paok-calendar
-DTSTAMP:20261119T110349Z
+DTSTAMP:20261127T200052Z
 DTSTART;TZID=Europe/Athens:20261121T123000
 DTEND;TZID=Europe/Athens:20261121T143000
 SUMMARY:⚽ ΣΚΙΟΥΡΟΙ – ΠΑΟΚ
@@ -62,9 +62,9 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A12+%C
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-u12-epsm-d48637f77eec@paok-calendar
-DTSTAMP:20261119T110349Z
-DTSTART;TZID=Europe/Athens:20261205T180000
-DTEND;TZID=Europe/Athens:20261205T200000
+DTSTAMP:20261127T200052Z
+DTSTART;TZID=Europe/Athens:20261212T180000
+DTEND;TZID=Europe/Athens:20261212T200000
 SUMMARY:⚽ ΜΑΚΕΔΟΝΙΚΟΣ – ΠΑΟΚ (ώρα αναμένετα
  ι)
 DESCRIPTION:Κ12 Κορασίδων (ΕΠΣΜ) – 6η αγωνιστική
@@ -76,9 +76,9 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A12+%C
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-u12-epsm-c3d5ff7bd3d2@paok-calendar
-DTSTAMP:20261119T110349Z
-DTSTART;TZID=Europe/Athens:20261226T180000
-DTEND;TZID=Europe/Athens:20261226T200000
+DTSTAMP:20261127T200052Z
+DTSTART;TZID=Europe/Athens:20270102T180000
+DTEND;TZID=Europe/Athens:20270102T200000
 SUMMARY:⚽ ΑΙΑΝΤΑΣ ΠΥΛΑΙΑΣ – ΠΑΟΚ (ώρα αναμέν
  εται)
 DESCRIPTION:Κ12 Κορασίδων (ΕΠΣΜ) – 9η αγωνιστική
@@ -90,9 +90,9 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A12+%C
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-u12-epsm-42a1ba852981@paok-calendar
-DTSTAMP:20261119T110349Z
-DTSTART;TZID=Europe/Athens:20270116T180000
-DTEND;TZID=Europe/Athens:20270116T200000
+DTSTAMP:20261127T200052Z
+DTSTART;TZID=Europe/Athens:20270123T180000
+DTEND;TZID=Europe/Athens:20270123T200000
 SUMMARY:⚽ ΑΟ ΛΕΟΝΤΕΣ (2) – ΠΑΟΚ (ώρα αναμένετα
  ι)
 DESCRIPTION:Κ12 Κορασίδων (ΕΠΣΜ) – 12η αγωνιστικ
@@ -104,9 +104,9 @@ URL:https://www.epsm.gr/table_ypodomon_analytika.asp?diorganosi=%CE%9A12+%C
 END:VEVENT
 BEGIN:VEVENT
 UID:football-women-u12-epsm-0573d011ae91@paok-calendar
-DTSTAMP:20261119T110349Z
-DTSTART;TZID=Europe/Athens:20270130T180000
-DTEND;TZID=Europe/Athens:20270130T200000
+DTSTAMP:20261127T200052Z
+DTSTART;TZID=Europe/Athens:20270206T180000
+DTEND;TZID=Europe/Athens:20270206T200000
 SUMMARY:⚽ ΑΜΣ ΠΑΝΟΡΑΜΑ – ΠΑΟΚ (ώρα αναμένετα
  ι)
 DESCRIPTION:Κ12 Κορασίδων (ΕΠΣΜ) – 14η αγωνιστικ

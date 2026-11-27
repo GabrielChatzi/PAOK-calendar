@@ -4616,12 +4616,12 @@
        "logo": "https://www.handball.org.gr/media/yootheme/cache/8c/aek-2025-8c1dd556.jpg",
        "paok": false,
        "cells": [
+        "10",
         "9",
-        "8",
         "0",
         "1",
-        "302-235",
-        "16"
+        "335-264",
+        "18"
        ]
       },
       {
@@ -4700,11 +4700,11 @@
        "logo": "https://www.handball.org.gr/media/yootheme/cache/55/doukas-logo-01-2026-557a8e2a.jpg",
        "paok": false,
        "cells": [
-        "9",
+        "10",
         "3",
         "1",
-        "5",
-        "273-287",
+        "6",
+        "302-320",
         "7"
        ]
       },
@@ -8083,8 +8083,8 @@
      "uid": "handball-women-oxe-34775",
      "nt": "89312c584e",
      "section": "handball-women",
-     "start": "2026-12-19T18:00:00+02:00",
-     "timeKnown": false,
+     "start": "2026-12-21T17:00:00+02:00",
+     "timeKnown": true,
      "home": "ΠΑΟΚ",
      "away": "Ο.Φ. Ν. ΙΩΝΙΑΣ",
      "paokHome": true,
@@ -17801,5 +17801,5 @@
    ]
   }
  },
- "updated": "2026-11-27T02:05+02:00"
+ "updated": "2026-11-27T04:04+02:00"
 }

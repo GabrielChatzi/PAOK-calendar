@@ -1474,7 +1474,7 @@
    ],
    "standings": [
     {
-     "title": "Super League Κ19",
+     "title": "Super League Κ19 (ενημέρωση 2026-11-17)",
      "url": "https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/k20-nchc/vathmologia-u20/",
      "columns": [
       "Αγ",
@@ -1487,22 +1487,8 @@
      "rows": [
       {
        "pos": 1,
-       "team": "ΑΕΚ",
-       "logo": "https://paokalendar.gr/crests/6e396cb6df92a9bf.png",
-       "paok": false,
-       "cells": [
-        "9",
-        "8",
-        "0",
-        "1",
-        "31-4",
-        "24"
-       ]
-      },
-      {
-       "pos": 2,
        "team": "Παναθηναϊκός",
-       "logo": "https://paokalendar.gr/crests/2ab072c44000dfaf.png",
+       "logo": "https://paokalendar.gr/crests/e43a14b59afb6504.png",
        "paok": false,
        "cells": [
         "9",
@@ -1514,49 +1500,49 @@
        ]
       },
       {
-       "pos": 3,
-       "team": "Ολυμπιακός",
-       "logo": "https://paokalendar.gr/crests/eef3b46039a9b613.png",
+       "pos": 2,
+       "team": "ΑΕΚ",
+       "logo": "https://paokalendar.gr/crests/6e396cb6df92a9bf.png",
        "paok": false,
        "cells": [
-        "9",
+        "8",
         "7",
         "0",
-        "2",
-        "23-10",
+        "1",
+        "26-4",
         "21"
        ]
       },
       {
-       "pos": 4,
+       "pos": 3,
        "team": "Βόλος",
        "logo": "https://paokalendar.gr/crests/f10aab31ee2cf288.png",
        "paok": false,
        "cells": [
-        "10",
+        "9",
         "6",
         "1",
-        "3",
-        "18-7",
+        "2",
+        "17-5",
         "19"
+       ]
+      },
+      {
+       "pos": 4,
+       "team": "Ολυμπιακός",
+       "logo": "https://paokalendar.gr/crests/3336d8d5b5f80ac9.png",
+       "paok": false,
+       "cells": [
+        "8",
+        "6",
+        "0",
+        "2",
+        "21-9",
+        "18"
        ]
       },
       {
        "pos": 5,
-       "team": "Ατρόμητος",
-       "logo": "https://paokalendar.gr/crests/a0fe6c71e098e046.png",
-       "paok": false,
-       "cells": [
-        "9",
-        "5",
-        "4",
-        "0",
-        "15-6",
-        "19"
-       ]
-      },
-      {
-       "pos": 6,
        "team": "ΠΑΟΚ",
        "logo": "",
        "paok": true,
@@ -1570,17 +1556,31 @@
        ]
       },
       {
+       "pos": 6,
+       "team": "Ατρόμητος",
+       "logo": "https://paokalendar.gr/crests/a0fe6c71e098e046.png",
+       "paok": false,
+       "cells": [
+        "8",
+        "4",
+        "4",
+        "0",
+        "10-4",
+        "16"
+       ]
+      },
+      {
        "pos": 7,
        "team": "Άρης",
        "logo": "https://paokalendar.gr/crests/ec280d3a8cac721a.png",
        "paok": false,
        "cells": [
-        "10",
+        "9",
         "4",
-        "2",
+        "1",
         "4",
-        "18-18",
-        "14"
+        "17-17",
+        "13"
        ]
       },
       {
@@ -1589,18 +1589,18 @@
        "logo": "https://paokalendar.gr/crests/c2c8e8e821dbe01b.png",
        "paok": false,
        "cells": [
-        "10",
+        "9",
         "3",
         "2",
-        "5",
-        "13-28",
+        "4",
+        "12-26",
         "11"
        ]
       },
       {
        "pos": 9,
        "team": "Κηφισιά",
-       "logo": "https://paokalendar.gr/crests/70df0998acfccb64.png",
+       "logo": "https://paokalendar.gr/crests/720e661ff65a6ac8.png",
        "paok": false,
        "cells": [
         "9",
@@ -1631,40 +1631,40 @@
        "logo": "https://paokalendar.gr/crests/574d5b94c9c8bf8e.png",
        "paok": false,
        "cells": [
-        "10",
-        "2",
-        "2",
-        "6",
-        "11-16",
-        "8"
-       ]
-      },
-      {
-       "pos": 12,
-       "team": "Παναιτωλικός",
-       "logo": "https://paokalendar.gr/crests/d66e60116a4b532f.png",
-       "paok": false,
-       "cells": [
-        "10",
+        "9",
         "2",
         "1",
-        "7",
-        "12-20",
+        "6",
+        "10-15",
         "7"
        ]
       },
       {
-       "pos": 13,
+       "pos": 12,
        "team": "Λεβαδειακός",
-       "logo": "https://paokalendar.gr/crests/f4772de737cbed84.png",
+       "logo": "https://paokalendar.gr/crests/47cd4cfe33120758.png",
        "paok": false,
        "cells": [
-        "10",
+        "9",
         "2",
         "0",
-        "8",
-        "10-35",
+        "7",
+        "8-30",
         "6"
+       ]
+      },
+      {
+       "pos": 13,
+       "team": "Παναιτωλικός",
+       "logo": "https://paokalendar.gr/crests/d66e60116a4b532f.png",
+       "paok": false,
+       "cells": [
+        "9",
+        "1",
+        "1",
+        "7",
+        "10-19",
+        "4"
        ]
       },
       {
@@ -1673,11 +1673,11 @@
        "logo": "https://paokalendar.gr/crests/6da2a2199d43d351.png",
        "paok": false,
        "cells": [
-        "10",
+        "9",
         "0",
         "1",
-        "9",
-        "3-31",
+        "8",
+        "3-26",
         "1"
        ]
       }
@@ -1877,7 +1877,7 @@
    ],
    "standings": [
     {
-     "title": "Super League Κ17",
+     "title": "Super League Κ17 (ενημέρωση 2026-11-17)",
      "url": "https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/k17-nchc/vathmologia-u17/",
      "columns": [
       "Αγ",
@@ -1891,7 +1891,7 @@
       {
        "pos": 1,
        "team": "Ολυμπιακός",
-       "logo": "https://paokalendar.gr/crests/eef3b46039a9b613.png",
+       "logo": "https://paokalendar.gr/crests/3336d8d5b5f80ac9.png",
        "paok": false,
        "cells": [
         "7",
@@ -1989,7 +1989,7 @@
       {
        "pos": 8,
        "team": "Παναθηναϊκός",
-       "logo": "https://paokalendar.gr/crests/2ab072c44000dfaf.png",
+       "logo": "https://paokalendar.gr/crests/e43a14b59afb6504.png",
        "paok": false,
        "cells": [
         "7",
@@ -2045,7 +2045,7 @@
       {
        "pos": 12,
        "team": "Λεβαδειακός",
-       "logo": "https://paokalendar.gr/crests/f4772de737cbed84.png",
+       "logo": "https://paokalendar.gr/crests/47cd4cfe33120758.png",
        "paok": false,
        "cells": [
         "7",
@@ -2059,7 +2059,7 @@
       {
        "pos": 13,
        "team": "Κηφισιά",
-       "logo": "https://paokalendar.gr/crests/b26dc10b7c38707d.png",
+       "logo": "https://paokalendar.gr/crests/720e661ff65a6ac8.png",
        "paok": false,
        "cells": [
         "6",
@@ -4961,7 +4961,7 @@
    ],
    "standings": [
     {
-     "title": "Super League Κ15",
+     "title": "Super League Κ15 (ενημέρωση 2026-11-17)",
      "url": "https://www.paokfc.gr/programma-kai-apotelesmata/2026-2027/k15-nchc/vathmologia-u15/",
      "columns": [
       "Αγ",
@@ -4975,7 +4975,7 @@
       {
        "pos": 1,
        "team": "Ολυμπιακός",
-       "logo": "https://paokalendar.gr/crests/eef3b46039a9b613.png",
+       "logo": "https://paokalendar.gr/crests/3336d8d5b5f80ac9.png",
        "paok": false,
        "cells": [
         "7",
@@ -5017,7 +5017,7 @@
       {
        "pos": 4,
        "team": "Παναθηναϊκός",
-       "logo": "https://paokalendar.gr/crests/2ab072c44000dfaf.png",
+       "logo": "https://paokalendar.gr/crests/e43a14b59afb6504.png",
        "paok": false,
        "cells": [
         "7",
@@ -5059,7 +5059,7 @@
       {
        "pos": 7,
        "team": "ΟΦΗ",
-       "logo": "https://paokalendar.gr/crests/c07859b7a83b8a9a.png",
+       "logo": "https://paokalendar.gr/crests/7fb776a421e17cb0.png",
        "paok": false,
        "cells": [
         "7",
@@ -5073,7 +5073,7 @@
       {
        "pos": 8,
        "team": "Κηφισιά",
-       "logo": "https://paokalendar.gr/crests/70df0998acfccb64.png",
+       "logo": "https://paokalendar.gr/crests/720e661ff65a6ac8.png",
        "paok": false,
        "cells": [
         "6",
@@ -5143,7 +5143,7 @@
       {
        "pos": 13,
        "team": "Λεβαδειακός",
-       "logo": "https://paokalendar.gr/crests/f4772de737cbed84.png",
+       "logo": "https://paokalendar.gr/crests/47cd4cfe33120758.png",
        "paok": false,
        "cells": [
         "7",
@@ -12137,8 +12137,8 @@
      "venue": "ΜΕΝΤ",
      "competition": "Κ21 Αγοριών (ΕΠΕΣΘ)",
      "round": "3η αγωνιστική",
-     "score": "1-3",
-     "homeLogo": "https://paokalendar.gr/crests/95ecf0b818f2912d.gif"
+     "homeLogo": "https://paokalendar.gr/crests/95ecf0b818f2912d.gif",
+     "score": "1-3"
     },
     {
      "uid": "volley-u21-2026-1e12d0e54f25",
@@ -17802,5 +17802,5 @@
    ]
   }
  },
- "updated": "2026-11-27T19:42+02:00"
+ "updated": "2026-11-27T20:06+02:00"
 }

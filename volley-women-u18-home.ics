@@ -24,4 +24,54 @@ DTSTART:19701025T040000
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
+BEGIN:VEVENT
+UID:volley-women-u18-2026-736d3e33e0d6@paok-calendar
+DTSTAMP:20261127T180053Z
+DTSTART;TZID=Europe/Athens:20261007T200000
+DTEND;TZID=Europe/Athens:20261007T220000
+SUMMARY:🏐 ΠΑΟΚ 3-0 ΠΑΝΕΛΛΗΝΙΟΣ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Κ18 Κοριτσιών (ΕΠΕΣΘ) – 1η αγωνιστικ
+ ή\nΤελικό σκορ: ΠΑΟΚ 3-0 ΠΑΝΕΛΛΗΝΙΟΣ
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-women-u18-2026-486e33c969c5@paok-calendar
+DTSTAMP:20261127T180053Z
+DTSTART;TZID=Europe/Athens:20261031T160000
+DTEND;TZID=Europe/Athens:20261031T180000
+SUMMARY:🏐 ΠΑΟΚ 3-0 ΕΣΠΕΡΟΣ ΘΕΡΜΗΣ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Κ18 Κοριτσιών (ΕΠΕΣΘ) – 4η αγωνιστικ
+ ή\nΤελικό σκορ: ΠΑΟΚ 3-0 ΕΣΠΕΡΟΣ ΘΕΡΜΗΣ
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-women-u18-2026-c99fcb9e8f16@paok-calendar
+DTSTAMP:20261127T180053Z
+DTSTART;TZID=Europe/Athens:20261114T160000
+DTEND;TZID=Europe/Athens:20261114T180000
+SUMMARY:🏐 ΠΑΟΚ 3-0 ΓΣ Μ. ΑΛΕΞΑΝΔΡΟΣ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Κ18 Κοριτσιών (ΕΠΕΣΘ) – 6η αγωνιστικ
+ ή\nΤελικό σκορ: ΠΑΟΚ 3-0 ΓΣ Μ. ΑΛΕΞΑΝΔΡΟΣ
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-women-u18-2026-799637c4bcef@paok-calendar
+DTSTAMP:20261127T180053Z
+DTSTART;TZID=Europe/Athens:20261128T160000
+DTEND;TZID=Europe/Athens:20261128T180000
+SUMMARY:🏐 ΠΑΟΚ – ΠΟ ΜΟΥΔΑΝΙΩΝ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Κ18 Κοριτσιών (ΕΠΕΣΘ) – 8η αγωνιστικ
+ ή
+END:VEVENT
+BEGIN:VEVENT
+UID:volley-women-u18-2026-dccac7c75526@paok-calendar
+DTSTAMP:20261127T180053Z
+DTSTART;TZID=Europe/Athens:20261212T160000
+DTEND;TZID=Europe/Athens:20261212T180000
+SUMMARY:🏐 ΠΑΟΚ – ΙΩΝΙΚΟΣ
+LOCATION:PAOK Sports Arena
+DESCRIPTION:Κ18 Κοριτσιών (ΕΠΕΣΘ) – 10η αγωνιστι
+ κή
+END:VEVENT
 END:VCALENDAR

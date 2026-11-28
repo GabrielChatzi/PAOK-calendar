@@ -13151,6 +13151,20 @@
       },
       {
        "pos": 11,
+       "team": "ΑΛΕΞΑΝΔΡΟΣ ΚΙΛΚΙΣ (1)",
+       "logo": "https://paokalendar.gr/crests/9aad27db940cf2b7.svg",
+       "paok": false,
+       "cells": [
+        "6",
+        "3",
+        "3",
+        "0",
+        "12-8",
+        "12"
+       ]
+      },
+      {
+       "pos": 12,
        "team": "ΠΑΝΑΘΗΝΑΪΚΟΣ ΘΕΣΣΑΛΟΝΙΚΗΣ (1)",
        "logo": "",
        "paok": false,
@@ -13160,20 +13174,6 @@
         "2",
         "0",
         "18-4",
-        "11"
-       ]
-      },
-      {
-       "pos": 12,
-       "team": "ΑΛΕΞΑΝΔΡΟΣ ΚΙΛΚΙΣ (1)",
-       "logo": "https://paokalendar.gr/crests/9aad27db940cf2b7.svg",
-       "paok": false,
-       "cells": [
-        "5",
-        "3",
-        "2",
-        "0",
-        "9-5",
         "11"
        ]
       },
@@ -13263,6 +13263,20 @@
       },
       {
        "pos": 19,
+       "team": "ΖΗΤΑ ΕΠΤΑ (1)",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "6",
+        "3",
+        "1",
+        "2",
+        "14-12",
+        "10"
+       ]
+      },
+      {
+       "pos": 20,
        "team": "ΑΝΑΓΕΝΝΗΣΗ ΑΓ. ΙΩΑΝΝΗ",
        "logo": "",
        "paok": false,
@@ -13276,7 +13290,7 @@
        ]
       },
       {
-       "pos": 20,
+       "pos": 21,
        "team": "ΠΙΕΡΙΚΟΣ 1961",
        "logo": "",
        "paok": false,
@@ -13290,7 +13304,7 @@
        ]
       },
       {
-       "pos": 21,
+       "pos": 22,
        "team": "Μ.ΑΛΕΞΑΝΔΡΟΣ ΜΕΛΙΣΣΟΧΩΡΙΟΥ",
        "logo": "",
        "paok": false,
@@ -13304,7 +13318,7 @@
        ]
       },
       {
-       "pos": 22,
+       "pos": 23,
        "team": "ΠΡΩΤΕΑΣ (1)",
        "logo": "",
        "paok": false,
@@ -13318,7 +13332,7 @@
        ]
       },
       {
-       "pos": 23,
+       "pos": 24,
        "team": "ΝΙΚΗ ΕΥΚΑΡΠΙΑΣ",
        "logo": "",
        "paok": false,
@@ -13332,7 +13346,7 @@
        ]
       },
       {
-       "pos": 24,
+       "pos": 25,
        "team": "ΠΑΝΟΡΑΜΑ",
        "logo": "https://paokalendar.gr/crests/44e72a40b38b3daf.png",
        "paok": false,
@@ -13342,20 +13356,6 @@
         "0",
         "2",
         "11-8",
-        "9"
-       ]
-      },
-      {
-       "pos": 25,
-       "team": "ΖΗΤΑ ΕΠΤΑ (1)",
-       "logo": "",
-       "paok": false,
-       "cells": [
-        "5",
-        "3",
-        "0",
-        "2",
-        "11-9",
         "9"
        ]
       },
@@ -13389,6 +13389,20 @@
       },
       {
        "pos": 28,
+       "team": "ΠΡΩΤΑΘΛΗΤΕΣ ΠΕΥΚΩΝ (1)",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "6",
+        "2",
+        "2",
+        "2",
+        "17-13",
+        "8"
+       ]
+      },
+      {
+       "pos": 29,
        "team": "ΦΟΙΝΙΚΑΣ ΠΟΛΙΧΝΗΣ",
        "logo": "https://paokalendar.gr/crests/ab51bab042c507d3.jpg",
        "paok": false,
@@ -13402,7 +13416,7 @@
        ]
       },
       {
-       "pos": 29,
+       "pos": 30,
        "team": "ΠΟΤ ΗΡΑΚΛΗΣ (1)",
        "logo": "https://paokalendar.gr/crests/2f67e87e9b46c1cd.png",
        "paok": false,
@@ -13416,7 +13430,7 @@
        ]
       },
       {
-       "pos": 30,
+       "pos": 31,
        "team": "ΝΤΙΝΟΣ ΚΟΥΗΣ",
        "logo": "",
        "paok": false,
@@ -13430,7 +13444,7 @@
        ]
       },
       {
-       "pos": 31,
+       "pos": 32,
        "team": "ΔΙΑΠΛΑΣΙΣ",
        "logo": "",
        "paok": false,
@@ -13444,7 +13458,7 @@
        ]
       },
       {
-       "pos": 32,
+       "pos": 33,
        "team": "ΟΛΥΜΠΟΣ ΔΕΝΔΡΟΠΟΤΑΜΟΥ",
        "logo": "",
        "paok": false,
@@ -13458,7 +13472,7 @@
        ]
       },
       {
-       "pos": 33,
+       "pos": 34,
        "team": "ΟΛΥΜΠΙΑΚΟΣ ΘΕΣΣΑΛΟΝΙΚΗΣ",
        "logo": "",
        "paok": false,
@@ -13472,7 +13486,7 @@
        ]
       },
       {
-       "pos": 34,
+       "pos": 35,
        "team": "ΛΙΜΑΝΙ ΠΟΣΕΙΔΩΝΑ",
        "logo": "",
        "paok": false,
@@ -13486,7 +13500,7 @@
        ]
       },
       {
-       "pos": 35,
+       "pos": 36,
        "team": "ΠΑΟ ΚΟΥΦΑΛΙΩΝ",
        "logo": "",
        "paok": false,
@@ -13496,20 +13510,6 @@
         "2",
         "1",
         "11-7",
-        "5"
-       ]
-      },
-      {
-       "pos": 36,
-       "team": "ΠΡΩΤΑΘΛΗΤΕΣ ΠΕΥΚΩΝ (1)",
-       "logo": "",
-       "paok": false,
-       "cells": [
-        "5",
-        "1",
-        "2",
-        "2",
-        "9-12",
         "5"
        ]
       },
@@ -13827,11 +13827,11 @@
        "logo": "",
        "paok": false,
        "cells": [
-        "5",
+        "6",
         "0",
         "0",
-        "5",
-        "0-51",
+        "6",
+        "1-59",
         "0"
        ]
       }
@@ -14098,6 +14098,20 @@
       },
       {
        "pos": 2,
+       "team": "ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020 (1)",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "5",
+        "5",
+        "0",
+        "0",
+        "32-2",
+        "15"
+       ]
+      },
+      {
+       "pos": 3,
        "team": "ΑΛΕΞΑΝΔΡΟΣ ΚΙΛΚΙΣ",
        "logo": "https://paokalendar.gr/crests/9aad27db940cf2b7.svg",
        "paok": false,
@@ -14111,7 +14125,21 @@
        ]
       },
       {
-       "pos": 3,
+       "pos": 4,
+       "team": "ΜΠΕΜΠΗΔΕΣ 2000 (1)",
+       "logo": "",
+       "paok": false,
+       "cells": [
+        "6",
+        "4",
+        "1",
+        "1",
+        "26-5",
+        "13"
+       ]
+      },
+      {
+       "pos": 5,
        "team": "ΜΑΚΕΔΟΝΙΚΟΣ (1)",
        "logo": "https://paokalendar.gr/crests/efadf5b8da59bd89.jpg",
        "paok": false,
@@ -14125,21 +14153,7 @@
        ]
       },
       {
-       "pos": 4,
-       "team": "ΑΚΑΔ. ΠΟΔ. ΘΕΣΣΑΛΟΝΙΚΗΣ 2020 (1)",
-       "logo": "",
-       "paok": false,
-       "cells": [
-        "4",
-        "4",
-        "0",
-        "0",
-        "31-2",
-        "12"
-       ]
-      },
-      {
-       "pos": 5,
+       "pos": 6,
        "team": "ΑΚΡΙΤΕΣ ΣΥΚΕΩΝ (1)",
        "logo": "https://paokalendar.gr/crests/",
        "paok": false,
@@ -14153,7 +14167,7 @@
        ]
       },
       {
-       "pos": 6,
+       "pos": 7,
        "team": "ΑΓΙΟΣ ΝΙΚΟΛΑΟΣ",
        "logo": "",
        "paok": false,
@@ -14167,7 +14181,7 @@
        ]
       },
       {
-       "pos": 7,
+       "pos": 8,
        "team": "ΑΚΑΔ. ΑΙΟΛΟΣ 2014",
        "logo": "",
        "paok": false,
@@ -14181,7 +14195,7 @@
        ]
       },
       {
-       "pos": 8,
+       "pos": 9,
        "team": "ΖΗΤΑ ΕΠΤΑ (1)",
        "logo": "",
        "paok": false,
@@ -14195,7 +14209,7 @@
        ]
       },
       {
-       "pos": 9,
+       "pos": 10,
        "team": "ΑΕ ΝΕΩΝ ΣΙΝΔΟΥ",
        "logo": "",
        "paok": false,
@@ -14209,7 +14223,21 @@
        ]
       },
       {
-       "pos": 10,
+       "pos": 11,
+       "team": "ΚΑΜΠΑΝΙΑΚΟΣ",
+       "logo": "https://paokalendar.gr/crests/d7ad81ac6dc3c37f.png",
+       "paok": false,
+       "cells": [
+        "6",
+        "4",
+        "0",
+        "2",
+        "30-18",
+        "12"
+       ]
+      },
+      {
+       "pos": 12,
        "team": "ΟΛΥΜΠΙΑΚΟΣ ΘΕΣΣΑΛΟΝΙΚΗΣ",
        "logo": "",
        "paok": false,
@@ -14223,7 +14251,7 @@
        ]
       },
       {
-       "pos": 11,
+       "pos": 13,
        "team": "ΕΘΝΙΚΟΣ ΕΥΟΣΜΟΥ",
        "logo": "",
        "paok": false,
@@ -14237,7 +14265,7 @@
        ]
       },
       {
-       "pos": 12,
+       "pos": 14,
        "team": "ΟΜΟΝΟΙΑ ΣΤΑΥΡΟΥΠΟΛΗΣ",
        "logo": "",
        "paok": false,
@@ -14251,49 +14279,35 @@
        ]
       },
       {
-       "pos": 13,
-       "team": "ΜΠΕΜΠΗΔΕΣ 2000 (1)",
-       "logo": "",
-       "paok": false,
-       "cells": [
-        "5",
-        "3",
-        "1",
-        "1",
-        "20-5",
-        "10"
-       ]
-      },
-      {
-       "pos": 14,
+       "pos": 15,
        "team": "ΔΟΞΑ ΠΕΝΤΑΛΟΦΟΥ",
        "logo": "https://paokalendar.gr/crests/0712481f728ae639.png",
        "paok": false,
        "cells": [
-        "5",
+        "6",
         "3",
         "1",
-        "1",
-        "13-8",
+        "2",
+        "13-14",
         "10"
        ]
       },
       {
-       "pos": 15,
+       "pos": 16,
        "team": "ΑΡΗΣ ΘΕΣΣΑΛΟΝΙΚΗΣ (1)",
        "logo": "https://paokalendar.gr/crests/2200b2a00577dd9a.png",
        "paok": false,
        "cells": [
-        "4",
+        "5",
         "3",
         "0",
-        "1",
-        "24-7",
+        "2",
+        "24-8",
         "9"
        ]
       },
       {
-       "pos": 16,
+       "pos": 17,
        "team": "ΑΚΑΔ. ΠΟΔ. ΠΡΟ",
        "logo": "",
        "paok": false,
@@ -14307,7 +14321,7 @@
        ]
       },
       {
-       "pos": 17,
+       "pos": 18,
        "team": "ΣΚΙΟΥΡΟΙ (1)",
        "logo": "https://paokalendar.gr/crests/79c866141c19bde5.png",
        "paok": false,
@@ -14321,7 +14335,7 @@
        ]
       },
       {
-       "pos": 18,
+       "pos": 19,
        "team": "ΑΟ ΝΕΑΣ ΕΥΚΑΡΠΙΑΣ",
        "logo": "",
        "paok": false,
@@ -14335,7 +14349,7 @@
        ]
       },
       {
-       "pos": 19,
+       "pos": 20,
        "team": "ΑΣΤΕΡΙΑ",
        "logo": "",
        "paok": false,
@@ -14345,20 +14359,6 @@
         "0",
         "2",
         "20-12",
-        "9"
-       ]
-      },
-      {
-       "pos": 20,
-       "team": "ΚΑΜΠΑΝΙΑΚΟΣ",
-       "logo": "https://paokalendar.gr/crests/d7ad81ac6dc3c37f.png",
-       "paok": false,
-       "cells": [
-        "5",
-        "3",
-        "0",
-        "2",
-        "24-18",
         "9"
        ]
       },
@@ -14424,11 +14424,11 @@
        "logo": "",
        "paok": false,
        "cells": [
-        "5",
+        "6",
         "2",
         "1",
-        "2",
-        "15-11",
+        "3",
+        "15-17",
         "7"
        ]
       },
@@ -15256,6 +15256,132 @@
      "competition": "Κ18 Αγοριών (ΕΠΕΣΘ)",
      "round": "9η αγωνιστική",
      "awayLogo": "https://paokalendar.gr/crests/4365a4ed96c7e519.gif"
+    },
+    {
+     "uid": "volley-u18-2026-391305737e50",
+     "nt": "efc0231bc5",
+     "section": "volley-u18",
+     "start": "2027-01-09T18:00:00+02:00",
+     "timeKnown": true,
+     "home": "ΠΑΟΚ",
+     "away": "ΑΡΗΣ",
+     "paokHome": true,
+     "venue": "PAOK Sports Arena",
+     "competition": "Κ18 Αγοριών (ΕΠΕΣΘ)",
+     "round": "10η αγωνιστική",
+     "awayLogo": "https://paokalendar.gr/crests/a6cf7459614a4108.gif"
+    },
+    {
+     "uid": "volley-u18-2026-e3844f2da7a1",
+     "nt": "2331d2f97a",
+     "section": "volley-u18",
+     "start": "2027-01-16T20:00:00+02:00",
+     "timeKnown": true,
+     "home": "ΕΛΠΙΣ",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "Ι. Λεμονίδης",
+     "competition": "Κ18 Αγοριών (ΕΠΕΣΘ)",
+     "round": "11η αγωνιστική",
+     "homeLogo": "https://paokalendar.gr/crests/c712331b07c14a6d.gif"
+    },
+    {
+     "uid": "volley-u18-2026-6dcb673765fc",
+     "nt": "0e8930de5f",
+     "section": "volley-u18",
+     "start": "2027-01-23T18:00:00+02:00",
+     "timeKnown": true,
+     "home": "ΠΑΟΚ",
+     "away": "ΠΕΡΣΕΑΣ",
+     "paokHome": true,
+     "venue": "PAOK Sports Arena",
+     "competition": "Κ18 Αγοριών (ΕΠΕΣΘ)",
+     "round": "12η αγωνιστική",
+     "awayLogo": "https://paokalendar.gr/crests/1838d2be1f8aa90d.gif"
+    },
+    {
+     "uid": "volley-u18-2026-f6c3609ce870",
+     "nt": "a4ecc6513a",
+     "section": "volley-u18",
+     "start": "2027-01-30T18:00:00+02:00",
+     "timeKnown": true,
+     "home": "ΠΗΓΑΣΟΣ ΠΟΛΙΧΝΗΣ",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "PAOK Sports Arena",
+     "competition": "Κ18 Αγοριών (ΕΠΕΣΘ)",
+     "round": "13η αγωνιστική",
+     "homeLogo": "https://paokalendar.gr/crests/130b4d39e358485d.gif"
+    },
+    {
+     "uid": "volley-u18-2026-14ffe4bb2932",
+     "nt": "c2b60d9599",
+     "section": "volley-u18",
+     "start": "2027-02-06T18:00:00+02:00",
+     "timeKnown": true,
+     "home": "ΠΑΟΚ",
+     "away": "ΗΡΑΚΛΗΣ 1908",
+     "paokHome": true,
+     "venue": "PAOK Sports Arena",
+     "competition": "Κ18 Αγοριών (ΕΠΕΣΘ)",
+     "round": "14η αγωνιστική",
+     "awayLogo": "https://paokalendar.gr/crests/dfe52c5f35b6e400.jpg"
+    },
+    {
+     "uid": "volley-u18-2026-56b634614bce",
+     "nt": "6f3f662090",
+     "section": "volley-u18",
+     "start": "2027-02-13T11:30:00+02:00",
+     "timeKnown": true,
+     "home": "ΠΟ ΜΟΥΔΑΝΙΩΝ",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "ΔΑΚ Μουδανιών",
+     "competition": "Κ18 Αγοριών (ΕΠΕΣΘ)",
+     "round": "15η αγωνιστική",
+     "homeLogo": "https://paokalendar.gr/crests/157aab7aec347343.gif"
+    },
+    {
+     "uid": "volley-u18-2026-0350ae3a9c04",
+     "nt": "a1d85efac4",
+     "section": "volley-u18",
+     "start": "2027-02-20T18:00:00+02:00",
+     "timeKnown": true,
+     "home": "ΠΑΟΚ",
+     "away": "ΑΙΑΣ ΕΥΟΣΜΟΥ",
+     "paokHome": true,
+     "venue": "PAOK Sports Arena",
+     "competition": "Κ18 Αγοριών (ΕΠΕΣΘ)",
+     "round": "16η αγωνιστική",
+     "awayLogo": "https://paokalendar.gr/crests/217de571443cb8c2.gif"
+    },
+    {
+     "uid": "volley-u18-2026-cac89652de09",
+     "nt": "d1462c2ce3",
+     "section": "volley-u18",
+     "start": "2027-02-27T18:00:00+02:00",
+     "timeKnown": true,
+     "home": "ΠΑΟΚ",
+     "away": "ΙΩΝΙΚΟΣ",
+     "paokHome": true,
+     "venue": "PAOK Sports Arena",
+     "competition": "Κ18 Αγοριών (ΕΠΕΣΘ)",
+     "round": "17η αγωνιστική",
+     "awayLogo": "https://paokalendar.gr/crests/650b5739185c662d.jpg"
+    },
+    {
+     "uid": "volley-u18-2026-52db58e9fca9",
+     "nt": "585926a0db",
+     "section": "volley-u18",
+     "start": "2027-03-06T18:30:00+02:00",
+     "timeKnown": true,
+     "home": "ΑΕΝ ΠΑΝΟΡΑΜΑΤΟΣ",
+     "away": "ΠΑΟΚ",
+     "paokHome": false,
+     "venue": "ΔΑΚ Πανοράματος",
+     "competition": "Κ18 Αγοριών (ΕΠΕΣΘ)",
+     "round": "18η αγωνιστική",
+     "homeLogo": "https://paokalendar.gr/crests/4365a4ed96c7e519.gif"
     }
    ],
    "standings": [
@@ -17808,5 +17934,5 @@
    ]
   }
  },
- "updated": "2026-11-28T10:05+02:00"
+ "updated": "2026-11-28T12:05+02:00"
 }

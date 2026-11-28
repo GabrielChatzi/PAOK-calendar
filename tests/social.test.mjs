@@ -17,7 +17,7 @@ test("Μπλοκ: η Δευτέρα πάει με το Σαββατοκύρια�
   assert.deepEqual(blockKey("2026-11-13"), { key: "2026-11-10", kind: "midweek" });
 });
 
-test("Πρόγραμμα το βράδυ πριν, αποτελέσματα το πρωί μετά, ποτέ στο ίδιο post", () => {
+test("Αποτελέσματα το ίδιο βράδυ ως τις 21:00 (αλλιώς 08:30), πρόγραμμα το πρωί μετά από αυτά", () => {
   const ms = [
     M("basketball", "2026-11-07T17:30:00+02:00", "ΠΑΟΚ", "Vikos Falcons"),
     M("football", "2026-11-08T21:00:00+02:00", "Ολυμπιακός", "ΠΑΟΚ"),
@@ -26,15 +26,15 @@ test("Πρόγραμμα το βράδυ πριν, αποτελέσματα το
     M("volley", "2026-11-13T18:30:00+02:00", "ΠΑΟΚ", "Άρης"),
   ];
   const p = plan(ms, "2026-11-06", { names: NAMES });
-  // Σαββατοκύριακο (Σάββατο–Δευτέρα): πρόγραμμα Παρασκευή 19:00, αποτελέσματα Τρίτη 09:00.
-  const sched = find(p, "schedule", "2026-11-06");
-  assert.equal(sched.time, "19:00");
+  // Σαββατοκύριακο (Σάββατο–Δευτέρα): πρόγραμμα Σάββατο 09:00.
+  const sched = find(p, "schedule", "2026-11-07");
+  assert.equal(sched.time, "09:00");
   assert.deepEqual(sched.cards.map((c) => c.file), ["2026-11-07_2026-11-09"]);  // 3 αγώνες: μία κάρτα
   assert.match(sched.caption, /3 αγώνες σε 3 αθλήματα, από Σάββατο ως Δευτέρα, με το Ολυμπιακός–ΠΑΟΚ την Κυριακή στις 21:00/);
-  assert.equal(find(p, "results", "2026-11-10").time, "09:00");
-  // Μεσοβδόμαδο: πρόγραμμα Δευτέρα βράδυ, μετά το βόλεϊ της Δευτέρας (19:30 + ~2 ώρες).
-  const mid = find(p, "schedule", "2026-11-09");
-  assert.equal(mid.time, "22:00");
+  // Το βόλεϊ της Δευτέρας (19:30) τελειώνει μετά τις 21:00: αποτελέσματα Τρίτη 08:30, πρόγραμμα εβδομάδας 09:00.
+  assert.equal(find(p, "results", "2026-11-10").time, "08:30");
+  const mid = find(p, "schedule", "2026-11-10");
+  assert.equal(mid.time, "09:00");
   assert.deepEqual(mid.cards.map((c) => c.file), ["2026-11-10_2026-11-13"]);  // 2 αγώνες: μία κάρτα
   assert.deepEqual(mid.cards[0].sections.map((x) => `${x.day} ${x.date}`), ["Τρίτη 10.11", "Παρασκευή 13.11"]);
   // Κάθε post έχει μόνο ένα είδος καρτών.
@@ -45,9 +45,18 @@ test("Πρόγραμμα το βράδυ πριν, αποτελέσματα το
   assert.equal(find(p, "today", "2026-11-08").time, "09:00");
   assert.equal(find(p, "dayResults", "2026-11-08").time, "23:30");
   assert.equal(find(p, "dayResults", "2026-11-08").cards.length, 0);  // δεν έχει ακόμα σκορ
-  // Reel: μέρα χωρίς post και χωρίς αγώνα (Τετάρτη ή Πέμπτη).
-  const reel = p.items.find((i) => i.type === "reel");
-  assert.ok(["2026-11-11", "2026-11-12"].includes(reel.day), reel.day);
+  // Το Reel δεν το βάζει πια το plan() (βλ. addPairs).
+  assert.equal(p.items.some((i) => i.type === "reel"), false);
+});
+
+test("Αποτελέσματα εβδομάδας Παρασκευή βράδυ: το Σαββατοκύριακο ανεβαίνει 30' μετά, όχι Σάββατο πρωί", () => {
+  const ms = [
+    M("handball", "2026-11-27T18:00:00+02:00", "ΠΑΟΚ", "Ramhat Hashron"),   // τελειώνει ~19:35
+    M("volley", "2026-11-28T19:00:00+02:00", "ΠΑΟΚ", "Ολυμπιακός"),
+  ];
+  const p = plan(ms, "2026-11-26", { names: NAMES });
+  assert.equal(`${find(p, "results", "2026-11-27").time}`, "20:30");
+  assert.equal(`${find(p, "schedule", "2026-11-27").time}`, "21:00");
 });
 
 test("Αποτελέσματα: μόνο όσοι αγώνες έχουν σκορ, και αναφέρονται όσοι λείπουν", () => {
@@ -56,7 +65,9 @@ test("Αποτελέσματα: μόνο όσοι αγώνες έχουν σκο
     M("volley", "2026-10-31T18:00:00+02:00", "ΠΑΟΚ", "Κηφισιά", { score: "3-1" }),
     M("futsal", "2026-11-01T18:00:00+02:00", "ΠΑΟΚ", "Κορυδαλλός"),
   ];
-  const r = find(plan(ms, "2026-11-02", { names: NAMES }), "results", "2026-11-02");
+  // Ο τελευταίος αγώνας τελειώνει πριν από τις 21:00: αποτελέσματα το ίδιο βράδυ.
+  const r = find(plan(ms, "2026-11-02", { names: NAMES }), "results", "2026-11-01");
+  assert.equal(r.time, "20:30");
   assert.deepEqual(r.cards.map((c) => c.file), ["2026-10-31"]);
   assert.deepEqual(r.missing, ["ΠΑΟΚ – Κορυδαλλός"]);
   assert.match(r.caption, /2 νίκες σε 2 αγώνες/);
@@ -79,7 +90,7 @@ test("Καθάρισμα ονομάτων", () => {
   assert.equal(cleanTeam("Balkan"), "Balkan");
 });
 
-test("Ακαδημίες: πρόγραμμα Παρασκευή 13:00, αποτελέσματα μετά τον τελευταίο αγώνα, δικές τους κάρτες", async () => {
+test("Ακαδημίες: πρόγραμμα Σάββατο 09:00, αποτελέσματα όπως τα κανονικά, δικές τους κάρτες", async () => {
   const { academyPlan, academyLabels } = await import("../social/week.mjs");
   const names = { ...NAMES, labels: academyLabels([
     { key: "football-u19", sport: "Ποδόσφαιρο", name: "Κ19", academy: true },
@@ -93,7 +104,7 @@ test("Ακαδημίες: πρόγραμμα Παρασκευή 13:00, αποτ�
   ];
   const items = academyPlan(ms, "2026-11-19", { names });
   const s = items.find((i) => i.what === "academySchedule");
-  assert.equal(s.day, "2026-11-20"); assert.equal(s.time, "13:00");
+  assert.equal(s.day, "2026-11-21"); assert.equal(s.time, "09:00");
   // Μία κάρτα ανά άθλημα (ποδόσφαιρο πρώτα), με τις μέρες από κάτω.
   assert.deepEqual(s.cards.map((c) => c.file), ["akadimies-2026-11-21-football", "akadimies-2026-11-21-basketball"]);
   assert.equal(s.cards[0].kick, "ΑΚΑΔΗΜΙΕΣ · ΠΡΟΓΡΑΜΜΑ");
@@ -107,7 +118,8 @@ test("Ακαδημίες: πρόγραμμα Παρασκευή 13:00, αποτ�
   assert.equal(s.lines[0], "Ποδόσφαιρο Κ19: Άρης – ΠΑΟΚ, Σάβ 21.11 13:00");
   assert.match(s.caption, /3 αγώνες σε 2 αθλήματα/);
   const r = items.find((i) => i.what === "academyResults");
-  assert.equal(r.day, "2026-11-24"); assert.equal(r.missing.length, 3);
+  // Ο τελευταίος αγώνας (Δευτέρα 15:00) τελειώνει πριν από τις 21:00: αποτελέσματα το ίδιο βράδυ.
+  assert.equal(`${r.day} ${r.time}`, "2026-11-23 17:30"); assert.equal(r.missing.length, 3);
 });
 
 test("Σκακιέρα: ακαδημίες μέσα στο carousel, τα αποτελέσματα πριν από δεύτερο πρόγραμμα στη σειρά", async () => {
@@ -184,32 +196,28 @@ test("Αλλαγή: όσο το πρόγραμμα περιμένει τα απ�
   assert.deepEqual(items[1].sentLines, ["Β: Ρέθυμνο – ΠΑΟΚ, Μελίνα Μερκούρη"]);
 });
 
-test("Σκακιέρα με Reel: εξώφυλλο στο σωστό χρώμα και ξεχωριστό πρόγραμμα ακαδημιών όταν χρειάζεται", async () => {
-  const { arrangeGrid } = await import("../social/week.mjs");
-  // Τελευταίο post: ⬛ πρόγραμμα Τρίτης. Reel Τετάρτη 20:00. Παρασκευή: αποτελέσματα μεσοβδόμαδου και
-  // πρόγραμμα Σαββατοκύριακου· Δευτέρα: αποτελέσματα Σαββατοκύριακου.
-  const items = [
-    { type: "reel", day: "2026-11-25", time: "20:00", title: "Reel", cards: [] },
-    { type: "post", what: "schedule", block: "2026-11-28", day: "2026-11-27", time: "20:00", first: "2026-11-28T11:00",
-      cards: [1], lines: ["a"], until: "2026-11-29T18:00", caption: "x\n\nΏρες" },
-    { type: "post", what: "results", block: "2026-11-24", day: "2026-11-28", time: "09:00", ends: "2026-11-27T19:35",
-      cards: [2], caption: "y\n\nΌλα τα σκορ" },
-    { type: "post", what: "results", block: "2026-11-28", day: "2026-11-30", time: "09:00", ends: "2026-11-29T20:00",
-      cards: [3], caption: "z\n\nΌλα τα σκορ" },
-  ];
-  const acad = [
-    { what: "academySchedule", block: "2026-11-28", day: "2026-11-27", time: "13:00", cards: [4], lines: ["b"], until: "2026-11-29T15:00", caption: "" },
-  ];
-  const out = arrangeGrid(items, acad, { day: "2026-11-24", time: "19:30", what: "schedule" }, { from: "2026-11-25", to: "2026-11-25" });
-  const at = (i) => `${i.day}T${i.time}`;
-  const seq = out.filter((i) => i.type !== "story").sort((a, b) => at(a).localeCompare(at(b)))
-    .map((i) => `${at(i)} ${i.grid} ${i.academy ? "ακαδημίες" : i.type}`);
-  assert.deepEqual(seq, [
-    "2026-11-25T20:00 ⬜ reel",
-    "2026-11-27T13:00 ⬛ ακαδημίες",
-    "2026-11-27T20:00 ⬜ post",      // αποτελέσματα μεσοβδόμαδου αμέσως μόλις τελειώσει
-    "2026-11-27T20:30 ⬛ post",      // και μετά το πρόγραμμα του Σαββατοκύριακου
-    "2026-11-30T09:00 ⬜ post",
-  ]);
-  assert.match(out.find((i) => i.type === "reel").note, /Εξώφυλλο ⬜ ανοιχτό/);
+test("Ενδιάμεσα: Τετάρτη ⬜ / Πέμπτη ⬛ ανάμεσα σε πρόγραμμα και αποτελέσματα, Reel εναλλάξ κάθε εβδομάδα", async () => {
+  const { addPairs } = await import("../social/week.mjs");
+  const P = (day, time, grid) => ({ type: "post", day, time, grid, what: grid === "⬛" ? "schedule" : "results" });
+  // Εβδομάδα 07.12 (μονή: Reel ⬛). Πρόγραμμα Τρίτη, αποτελέσματα Παρασκευή βράδυ.
+  const items = [P("2026-12-07", "08:30", "⬜"), P("2026-12-08", "09:00", "⬛"), P("2026-12-11", "20:30", "⬜"), P("2026-12-12", "09:00", "⬛")];
+  const out = addPairs(items, null, { today: "2026-12-06", to: "2026-12-12", now: "2026-12-06T10:00", gameDays: new Set(["2026-12-10"]) });
+  assert.deepEqual(out.map((e) => `${e.day} ${e.time} ${e.grid} ${e.type}`),
+    ["2026-12-09 19:00 ⬜ post", "2026-12-10 13:00 ⬛ reel"]);
+  assert.equal(out[0].title, "Ο μήνας του ΠΑΟΚ");   // πρώτη εβδομάδα του μήνα
+  // Η εβδομάδα κλείνει Τετάρτη βράδυ: μετά τα αποτελέσματα, Πέμπτη ⬛ και Παρασκευή ⬜. Εβδομάδα 14.12 (ζυγή: Reel ⬜).
+  const early = [P("2026-12-15", "09:00", "⬛"), P("2026-12-16", "21:30", "⬜"), P("2026-12-19", "09:00", "⬛")];
+  const o2 = addPairs(early, null, { today: "2026-12-13", to: "2026-12-19", now: "2026-12-13T10:00" });
+  assert.deepEqual(o2.map((e) => `${e.day} ${e.grid} ${e.type}`), ["2026-12-17 ⬛ post", "2026-12-18 ⬜ reel"]);
+  assert.equal(o2[0].title, "Πού θα τους δεις");   // η σειρά συνεχίζει μετά τον απολογισμό
+  // Χωρίς αγώνες μέσα στην εβδομάδα: μετά τα ⬜ αποτελέσματα του Σαββατοκύριακου, Τετάρτη ⬛ και Πέμπτη ⬜.
+  const none = [P("2026-12-14", "08:30", "⬜"), P("2026-12-19", "09:00", "⬛")];
+  assert.deepEqual(addPairs(none, null, { today: "2026-12-13", to: "2026-12-19", now: "2026-12-13T10:00" })
+    .map((e) => `${e.day} ${e.grid}`), ["2026-12-16 ⬛", "2026-12-17 ⬜"]);
+  // Εβδομάδα που δεν χωράει ολόκληρη στο πλάνο: αποφασίζεται αργότερα.
+  assert.equal(addPairs(items, null, { today: "2026-12-03", to: "2026-12-09", now: "2026-12-03T10:00" })
+    .filter((e) => e.week === "2026-12-07").length, 0);
+  // Ό,τι αποφασίστηκε μένει, και όσα πέρασε η ώρα τους σημειώνονται ως ανεβασμένα.
+  const kept = addPairs([], null, { today: "2026-12-10", to: "2026-12-16", now: "2026-12-10T12:00", prev: out });
+  assert.deepEqual(kept.map((e) => `${e.day} ${e.grid} ${e.posted || false}`), ["2026-12-09 ⬜ true", "2026-12-10 ⬛ false"]);
 });

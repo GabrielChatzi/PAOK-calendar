@@ -38,7 +38,8 @@ def key(it: dict) -> str:
 
 
 def ready(it: dict) -> bool:
-    return it["type"] == "reel" or (bool(it.get("images")) and not it.get("missing"))
+    # Reel και ενδιάμεσα post με θέμα: χωρίς έτοιμες εικόνες, η υπενθύμιση λέει τι να ανέβει.
+    return it["type"] == "reel" or bool(it.get("extra")) or (bool(it.get("images")) and not it.get("missing"))
 
 
 def message(it: dict) -> tuple[str, str]:

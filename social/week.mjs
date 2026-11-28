@@ -11,13 +11,13 @@
 // Οι κανόνες:
 //   Μπλοκ: Σαββατοκύριακο = Σάββατο, Κυριακή και η Δευτέρα όταν έχει αγώνες (συνήθως η ίδια
 //          αγωνιστική)· μεσοβδόμαδο = Τρίτη ως Παρασκευή. Μπλοκ χωρίς αγώνες δεν έχει post.
-//   Post «Πρόγραμμα»: το βράδυ πριν από τον πρώτο αγώνα του μπλοκ (19:00, ή μετά τον τελευταίο αγώνα
-//          εκείνης της μέρας). Carousel με μία κάρτα ανά μέρα.
-//   Post «Αποτελέσματα»: το πρωί μετά τον τελευταίο αγώνα του μπλοκ (09:00). Ποτέ μαζί με πρόγραμμα.
+//   Post «Αποτελέσματα»: το ίδιο βράδυ (30' μετά τον τελευταίο αγώνα) αν το μπλοκ τελειώνει ως τις 21:00,
+//          αλλιώς το επόμενο πρωί 08:30. Ποτέ μαζί με πρόγραμμα.
+//   Post «Πρόγραμμα»: 09:00 την πρώτη μέρα του μπλοκ (Τρίτη / Σάββατο), μετά τα αποτελέσματα του
+//          προηγούμενου· το Σαββατοκύριακο Παρασκευή βράδυ όταν τα αποτελέσματα βγαίνουν τότε. Carousel.
 //   Story «Σήμερα»: κάθε πρωί με αγώνα. Story «Αποτελέσματα ημέρας»: μετά τον τελευταίο αγώνα.
-//   Reel: στη μέρα χωρίς άλλο post που απέχει περισσότερο από τα υπόλοιπα (20:00–22:00).
-//   Grid (σκακιέρα): ⬛ πρόγραμμα / ⬜ αποτελέσματα εναλλάσσονται, και το Reel μετρά με το χρώμα του
-//          εξωφύλλου του (βλ. arrangeGrid). Τα αποτελέσματα ενός μπλοκ πάντα πριν από το πρόγραμμα του επόμενου.
+//   Ενδιάμεσα: Reel + post με θέμα, ένα ζευγάρι την εβδομάδα σε διαφορετικές μέρες (βλ. addPairs).
+//   Grid (σκακιέρα): ⬛ / ⬜ εναλλάσσονται. Τα αποτελέσματα ενός μπλοκ πάντα πριν από το πρόγραμμα του επόμενου.
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
@@ -45,6 +45,7 @@ const HOME_VENUE = { football: "Τούμπα", basketball: "PAOK Sports Arena", 
 const DAYS = ["Κυριακή", "Δευτέρα", "Τρίτη", "Τετάρτη", "Πέμπτη", "Παρασκευή", "Σάββατο"];
 const DAYS_ACC = ["την Κυριακή", "τη Δευτέρα", "την Τρίτη", "την Τετάρτη", "την Πέμπτη", "την Παρασκευή", "το Σάββατο"];
 const MAX_PER_CARD = 6;
+const RESULTS_SAME_DAY = 21 * 60;   // ως τότε τελειωμένο μπλοκ: αποτελέσματα το ίδιο βράδυ
 const TAGS = "#ΠΑΟΚ #PAOK #PAOKalendar";
 const SITE = "paokalendar.gr";
 export const REELS = [
@@ -204,31 +205,45 @@ export function plan(matches, today, { names = { teams: {}, venues: {}, tv: {} }
       matches: sections.flatMap((x) => x.matches) }];
   };
 
+  // Αποτελέσματα: το ίδιο βράδυ, 30' μετά τον τελευταίο αγώνα, αν αυτός τελειώνει ως τις 21:00· αλλιώς
+  // το επόμενο πρωί στις 08:30. Πρόγραμμα: το πρωί στις 09:00 της πρώτης μέρας του μπλοκ (Τρίτη /
+  // Σάββατο), μετά τα αποτελέσματα του προηγούμενου. Το Σαββατοκύριακο ανεβαίνει από την Παρασκευή το
+  // βράδυ, 30' μετά τα αποτελέσματα της εβδομάδας, όταν αυτά βγαίνουν Παρασκευή βράδυ.
+  const resultsAt = (b) => {
+    const last = b.days.at(-1), end = dayEnd(last);
+    return end <= RESULTS_SAME_DAY ? [last, hhmm(roundUp(end + 30))] : [addDays(last, 1), "08:30"];
+  };
+  const scheduleAt = (b) => {
+    const prev = [...blocks.values()].filter((x) => x.key < b.key).at(-1);
+    if (b.kind === "weekend" && prev) {
+      const [d, t] = resultsAt(prev);
+      if (d === addDays(b.key, -1) && minutes(t) >= 12 * 60) return [d, hhmm(minutes(t) + 30)];
+    }
+    return [b.key, "09:00"];
+  };
+
   for (const b of blocks.values()) {
     const first = b.days[0], last = b.days.at(-1);
     const all = b.days.flatMap((d) => byDay.get(d));
     const label = b.kind === "weekend" ? "του Σαββατοκύριακου" : "της εβδομάδας";
-    // Πρόγραμμα: το βράδυ πριν.
-    const pday = addDays(first, -1);
+    const [pday, ptime] = scheduleAt(b);
     // Πρόγραμμα που έχει ήδη ανέβει (πριν από το πλάνο) αλλά το μπλοκ δεν έχει τελειώσει: μένει στο πλάνο ως
     // «posted», χωρίς εικόνες, για να φαίνονται οι αλλαγές (νέος αγώνας, άλλη ώρα) ως τον τελευταίο αγώνα.
     const posted = pday < from && pday >= addDays(today, -8) && last >= today;
     if ((pday >= from && pday <= to) || posted) {
-      const end = dayEnd(pday);
       items.push({ type: "post", what: "schedule", block: b.key, track: `${b.kind}-${b.key}`, day: pday,
         ...(posted && { posted: true }),
         first: all[0].start,
-        time: hhmm(Math.max(19 * 60, end ? roundUp(end + 20) : 0)),
+        time: ptime,
         title: `Πρόγραμμα ${label}`, cards: blockCards("fixtures", b, (l) => l),
         until: all.at(-1).start, lines: all.map((m) => matchLine(m, names)),
         caption: scheduleCaption(b, all, byDay, names) });
     }
-    // Αποτελέσματα: το πρωί μετά.
-    const rday = addDays(last, 1);
+    const [rday, rtime] = resultsAt(b);
     if (rday >= from && rday <= to) {
       const done = all.filter((m) => /^\d+-\d+$/.test(m.score || ""));
       const missing = all.filter((m) => !done.includes(m));
-      items.push({ type: "post", what: "results", block: b.key, day: rday, time: "09:00", title: `Αποτελέσματα ${label}`,
+      items.push({ type: "post", what: "results", block: b.key, day: rday, time: rtime, title: `Αποτελέσματα ${label}`,
         ends: `${last}T${hhmm(Math.min(dayEnd(last), 23 * 60 + 59))}`,
         cards: blockCards("results", b, (l) => l.filter((m) => done.includes(m))),
         caption: done.length ? resultsCaption(b, done, names) : "",
@@ -249,25 +264,6 @@ export function plan(matches, today, { names = { teams: {}, venues: {}, tv: {} }
       missing: list.filter((m) => !done.includes(m)).map((m) => `${m.home} – ${m.away}`) });
   }
 
-  // Reel: η μέρα χωρίς post που απέχει περισσότερο από τα άλλα post (μετράνε και όσα πέφτουν λίγο
-  // μετά την εβδομάδα, π.χ. το πρόγραμμα της επόμενης Παρασκευής).
-  const postDays = [...blocks.values()].flatMap((b) => [addDays(b.days[0], -1), addDays(b.days.at(-1), 1)])
-    .filter((d) => d >= addDays(from, -3) && d <= addDays(to, 3));
-  let best = null, bestGap = -1;
-  for (let d = today; d <= to; d = addDays(d, 1)) {
-    if (postDays.includes(d)) continue;
-    // Καλύτερα μέρα χωρίς αγώνα: τις μέρες αγώνων έχει ήδη stories.
-    const gap = (postDays.length ? Math.min(...postDays.map((p) => Math.abs(new Date(p) - new Date(d)) / 864e5)) : 3) -
-      (byDay.has(d) ? 1.5 : 0);
-    if (gap > bestGap) { best = d; bestGap = gap; }
-  }
-  if (best) {
-    const week = Math.floor((new Date(`${best}T12:00:00Z`) - new Date("2026-11-09T12:00:00Z")) / (7 * 864e5));
-    const [title, how, caption] = REELS[((week % REELS.length) + REELS.length) % REELS.length];
-    const end = dayEnd(best);
-    items.push({ type: "reel", day: best, time: hhmm(Math.min(22 * 60, Math.max(20 * 60, end ? roundUp(end + 20) : 0))),
-      title, how, caption: `${caption}\n\nΔωρεάν στο ${SITE} (link στο bio)\n\n${TAGS}`, cards: [] });
-  }
   const order = { post: 0, reel: 1, story: 2 };
   items.sort((a, b) => a.day.localeCompare(b.day) || a.time.localeCompare(b.time) || order[a.type] - order[b.type]);
   return { today, from, to, items };
@@ -275,10 +271,9 @@ export function plan(matches, today, { names = { teams: {}, venues: {}, tv: {} }
 
 // ---------------------------------------------------------------- ακαδημίες
 
-// Ακαδημίες: μόνο το Σαββατοκύριακο (εκεί παίζουν σχεδόν όλες). Το πρόγραμμα βγαίνει συνήθως Τετάρτη ή
-// Πέμπτη, οπότε το post «Πρόγραμμα ακαδημιών» μπαίνει την Παρασκευή στις 13:00 (ή τη μέρα πριν από τον
-// πρώτο αγώνα, αν είναι νωρίτερα), όχι πάνω στο κανονικό πρόγραμμα των 19:00. Τα «Αποτελέσματα
-// ακαδημιών» την επόμενη μέρα από τον τελευταίο αγώνα στις 13:00, μετά τα κανονικά των 09:00.
+// Ακαδημίες: μόνο το Σαββατοκύριακο (εκεί παίζουν σχεδόν όλες). Μπαίνουν ως κάρτες στο carousel του
+// κανονικού προγράμματος/αποτελεσμάτων (mergeAcademy)· οι ώρες εδώ μετράνε μόνο όταν δεν υπάρχει κανονικό
+// post: πρόγραμμα Σάββατο 09:00, αποτελέσματα όπως τα κανονικά (ίδιο βράδυ ως τις 21:00, αλλιώς 08:30).
 // Αν αλλάξει κάτι αφού ανέβει το πρόγραμμα, το social_remind.py στέλνει ειδοποίηση (βλ. «lines»).
 const SPORT_NAME = { football: "Ποδόσφαιρο", basketball: "Μπάσκετ", volley: "Βόλεϊ" };
 const sportOf = (m) => m.section.split("-")[0];
@@ -335,21 +330,22 @@ export function academyPlan(matches, today, { names = { teams: {}, venues: {}, t
   for (const [key, days] of blocks) {
     const first = days[0], last = days.at(-1);
     const all = days.flatMap((d) => byDay.get(d));
-    const pday = addDays(key, -1);  // Παρασκευή
+    // Όπως το κανονικό πρόγραμμα: Σάββατο 09:00 (μέσα στο carousel του κανονικού, όταν υπάρχει).
+    const pday = key;
     const posted = pday < from && last >= today;   // όπως στο plan(): ανέβηκε, παρακολουθούμε τις αλλαγές
     if ((pday >= from && pday <= to) || posted) {
-      items.push({ type: "post", what: "academySchedule", block: key, track: `academy-${key}`, day: pday, time: "13:00",
+      items.push({ type: "post", what: "academySchedule", block: key, track: `academy-${key}`, day: pday, time: "09:00",
         ...(posted && { posted: true }),
         first: all.map((m) => m.start).sort()[0],
         title: "Πρόγραμμα ακαδημιών", cards: cards("fixtures", days, (l) => l),
         until: all.map((m) => m.start).sort().at(-1), lines: all.map((m) => matchLine(m, names)),
         caption: academyCaption("schedule", all) });
     }
-    const rday = addDays(last, 1);
+    const endMin = Math.max(...byDay.get(last).map((m) => minutes(local(new Date(m.start)).time) + (DURATION[m.section.split("-")[0]] || 110)));
+    const [rday, rtime] = endMin <= RESULTS_SAME_DAY ? [last, hhmm(roundUp(endMin + 30))] : [addDays(last, 1), "08:30"];
     if (rday >= from && rday <= to) {
       const done = all.filter((m) => /^\d+-\d+$/.test(m.score || ""));
-      const endMin = Math.max(...byDay.get(last).map((m) => minutes(local(new Date(m.start)).time) + (DURATION[m.section.split("-")[0]] || 110)));
-      items.push({ type: "post", what: "academyResults", block: key, day: rday, time: "13:00", title: "Αποτελέσματα ακαδημιών",
+      items.push({ type: "post", what: "academyResults", block: key, day: rday, time: rtime, title: "Αποτελέσματα ακαδημιών",
         ends: `${last}T${hhmm(Math.min(endMin, 23 * 60 + 59))}`,
         cards: cards("results", days, (l) => l.filter((m) => done.includes(m))),
         caption: done.length ? academyCaption("results", done, names) : "",
@@ -394,6 +390,8 @@ const plus = (day, time, m) => { const t = minutes(time) + m; return t >= 24 * 6
 export function gridOrder(items, before = null) {
   // before: το τελευταίο post που έχει ήδη ανέβει ({day, time, what}), για να συνεχίσει η εναλλαγή.
   const lead = before && { ...before, type: "post", lead: true };
+  // Τα ενδιάμεσα (addPairs) μετρούν με το χρώμα τους και δεν μετακινούνται.
+  for (const i of items) if (i.extra) { i.what = i.grid === "⬛" ? "schedule" : "results"; i.pin = true; }
   // Το Reel μετρά στο grid με το χρώμα του εξωφύλλου του (what), αλλά δεν μετακινείται.
   const posts = () => [...(lead ? [lead] : []), ...items.filter((i) => (i.type === "post" || i.type === "reel") && !i.posted)]
     .sort((a, b) => at(a).localeCompare(at(b)));
@@ -421,60 +419,86 @@ export function gridOrder(items, before = null) {
     }
     if (!fixed) { cur.note = [cur.note, "⚠️ Δύο ίδια χρώματα στη σειρά στο grid"].filter(Boolean).join(" · "); break; }
   }
-  for (const p of items) if (p.type === "post" || (p.type === "reel" && p.what)) p.grid = p.what === "schedule" ? "⬛" : "⬜";
+  for (const p of items) {
+    if (p.extra) { p.what = "extra"; delete p.pin; continue; }
+    if (p.type === "post" || (p.type === "reel" && p.what)) p.grid = p.what === "schedule" ? "⬛" : "⬜";
+  }
   return items;
 }
 
-// Σκακιέρα με το Reel: το Reel μπαίνει στο grid σαν post, με το χρώμα του εξωφύλλου του. Ένα στοιχείο
-// παραπάνω σε σειρά που εναλλάσσεται χαλάει πάντα την εναλλαγή, οπότε το Reel θέλει έναν «σύντροφο»: ένα
-// post ακαδημιών που βγαίνει ξεχωριστά αντί για κάρτες στο carousel (⬛ πρόγραμμα ακαδημιών ή ⬜ αποτελέσματα
-// ακαδημιών). Δοκιμάζουμε με τη σειρά: τη μέρα του Reel και μετά τις κοντινότερες, και για καθεμία χωρίς
-// ξεχωριστό post ακαδημιών, με το πρόγραμμα, με τα αποτελέσματα, με τα δύο. Κρατάμε τον πρώτο συνδυασμό
-// όπου όλο το grid εναλλάσσεται· το εξώφυλλο του Reel είναι το αντίθετο χρώμα από το post πριν από αυτό.
-// Αν δεν βρεθεί κανένας, το Reel ανεβαίνει μόνο στα Reels (χωρίς «Also share to Feed»).
-export function arrangeGrid(items, acad, before = null, { from, to } = {}) {
-  const reel = items.find((i) => i.type === "reel");
-  const base = items.filter((i) => i !== reel);
-  const grid = (list) => list.filter((i) => (i.type === "post" || i.type === "reel") && !i.posted);
-  const alternates = (list) => {
-    const seq = [...(before ? [{ ...before, lead: true }] : []), ...grid(list)].sort((a, b) => at(a).localeCompare(at(b)));
-    if (!seq.every((p, k) => k === 0 || p.what !== seq[k - 1].what)) return false;
-    // Και η χρονολογία: τα αποτελέσματα ενός μπλοκ ανεβαίνουν πριν από το πρόγραμμα του επόμενου (όχι τα
-    // ξεχωριστά post των ακαδημιών, που είναι δική τους σειρά).
-    const main = seq.filter((p) => p.type === "post" && !p.academy && !p.lead);
-    return main.every((r) => r.what !== "results" ||
-      main.every((x) => x.what !== "schedule" || x.block <= r.block || at(x) > at(r)));
-  };
-  const build = (split, r) => {
-    const its = structuredClone(base), ac = structuredClone(acad);
-    const own = ac.filter((a) => split.includes(a.what))
-      .map((a) => ({ ...a, type: "post", what: a.what === "academySchedule" ? "schedule" : "results", academy: true, pin: true }));
-    return gridOrder([...mergeAcademy(its, ac.filter((a) => !split.includes(a.what))), ...own, ...(r ? [r] : [])], before);
-  };
-  if (!reel) return build([], null);
-  reel.what ||= "reel";
-  const splits = [[], ["academySchedule"], ["academyResults"], ["academySchedule", "academyResults"]]
-    .filter((s) => s.every((w) => acad.some((a) => a.what === w && !a.posted)));
-  const days = [];
-  for (let d = from || reel.day; d <= (to || reel.day); d = addDays(d, 1)) days.push(d);
-  const dist = (d) => Math.abs(new Date(d) - new Date(reel.day));
-  days.sort((a, b) => dist(a) - dist(b) || a.localeCompare(b));
-  for (const day of days.length ? days : [reel.day]) {
-    for (const split of splits) for (const what of ["results", "schedule"]) {
-      const r = { ...reel, day, time: day === reel.day ? reel.time : "20:00", what };
-      const out = build(split, r);
-      if (!alternates(out)) continue;
-      const rr = out.find((i) => i.type === "reel");
-      const cover = rr.what === "schedule" ? "⬛ σκούρο" : "⬜ ανοιχτό";
-      const sep = split.map((w) => w === "academySchedule" ? "«Πρόγραμμα ακαδημιών»" : "«Αποτελέσματα ακαδημιών»").join(" και ");
-      rr.note = [rr.note, `Εξώφυλλο ${cover}, για να κρατήσει η σκακιέρα στο grid.` +
-        (sep ? ` Γι' αυτό αυτή την εβδομάδα ${split.length > 1 ? "ανεβαίνουν ως ξεχωριστά post τα" : "ανεβαίνει ως ξεχωριστό post το"} ${sep}.` : "")].filter(Boolean).join(" ");
-      return out;
+// Ενδιάμεσα: κάθε εβδομάδα ένα ζευγάρι Reel + post με θέμα, σε διαφορετικές μέρες, στο κενό ανάμεσα σε
+// δύο post διαφορετικού χρώματος, ώστε να κρατά η σκακιέρα (μετά από ⬛ πρώτα ⬜ και μετά ⬛, μετά από ⬜
+// ανάποδα). Κανονικά Τετάρτη–Πέμπτη, ανάμεσα στο ⬛ πρόγραμμα και τα ⬜ αποτελέσματα της εβδομάδας· όταν η
+// εβδομάδα κλείνει νωρίς, Πέμπτη–Παρασκευή μετά τα αποτελέσματα. Το Reel είναι ⬜ τις ζυγές εβδομάδες
+// (από 30.11) και ⬛ τις μονές, ανεξάρτητα από το θέμα του post.
+export const THEMES = [
+  ["Βαθμολογίες", "Οι βαθμολογίες όλων των τμημάτων που παίζουν σε πρωτάθλημα, μία κάρτα ανά τμήμα.",
+    "Πού βρίσκεται ο ΠΑΟΚ σε κάθε άθλημα; 📊"],
+  ["Πού θα τους δεις", "Τα κανάλια όλων των αγώνων του Σαββατοκύριακου.",
+    "Όλα τα ματς του Σαββατοκύριακου και πού θα τα δεις 📺"],
+  ["Φόρμα", "Τα τελευταία 5 αποτελέσματα κάθε τμήματος (Ν-Ι-Η).",
+    "Η φόρμα του ΠΑΟΚ σε όλα τα τμήματα 📈"],
+  ["Το ματς της εβδομάδας", "Ο μεγάλος αγώνας της εβδομάδας: αντίπαλος, ώρα, κανάλι, γήπεδο.",
+    "Το ματς της εβδομάδας 🔥"],
+  ["Σκόρερ", "Οι πρώτοι σκόρερ κάθε τμήματος.",
+    "Οι σκόρερ του ΠΑΟΚ σε όλα τα τμήματα ⚽🏀🤾"],
+  ["Σαν σήμερα", "Ένας τίτλος ή ένας αγώνας από το αρχείο των σεζόν.",
+    "Σαν σήμερα στην ιστορία του ΠΑΟΚ 🏆"],
+];
+const MONTHLY = ["Ο μήνας του ΠΑΟΚ", "Απολογισμός του μήνα που πέρασε: νίκες, ισοπαλίες, ήττες σε όλα τα τμήματα.",
+  "Ο μήνας του ΠΑΟΚ σε όλα τα τμήματα 🗓️"];
+const PAIR_EPOCH = "2026-11-30";   // Δευτέρα· εβδομάδα 0
+const weekOf = (day) => Math.floor((new Date(`${day}T12:00:00Z`) - new Date(`${PAIR_EPOCH}T12:00:00Z`)) / (7 * 864e5));
+const monday = (day) => addDays(day, -((weekday(day) + 6) % 7));
+// Η πρώτη εβδομάδα του μήνα (η Δευτέρα της πέφτει 1–7) έχει απολογισμό· το θέμα της πάει στην επόμενη.
+const isMonthly = (mon) => +mon.slice(8, 10) <= 7;
+export function themeOf(mon) {
+  if (isMonthly(mon)) return MONTHLY;
+  let n = 0;
+  for (let d = PAIR_EPOCH; d < mon; d = addDays(d, 7)) if (!isMonthly(d)) n++;
+  return THEMES[((n % THEMES.length) + THEMES.length) % THEMES.length];
+}
+
+export function addPairs(items, lead, { today, to, now, gameDays = new Set(), prev = [], keptOnly = false } = {}) {
+  const color = (i) => i.grid || (i.what === "schedule" ? "⬛" : "⬜");
+  const other = (c) => c === "⬛" ? "⬜" : "⬛";
+  const slot = (d) => [d, gameDays.has(d) ? "13:00" : "19:00"];
+  const out = [];
+  for (let mon = monday(today); mon <= to; mon = addDays(mon, 7)) {
+    const wk = weekOf(mon);
+    const reelColor = wk % 2 === 0 ? "⬜" : "⬛";
+    const [title, how, line] = themeOf(mon);
+    const [rTitle, rHow, rCap] = REELS[((wk % REELS.length) + REELS.length) % REELS.length];
+    const make = (day, time, c) => c === reelColor
+      ? { type: "reel", what: "extra", extra: true, week: mon, day, time, grid: c, title: rTitle, how: rHow,
+        caption: `${rCap}\n\nΔωρεάν στο ${SITE} (link στο bio)\n\n${TAGS}`, cards: [] }
+      : { type: "post", what: "extra", extra: true, week: mon, day, time, grid: c, title, how,
+        caption: `${line}\n\nΌλα σε μία εφαρμογή: ${SITE} (link στο bio)\n\n${TAGS}`, cards: [] };
+    // Ό,τι αποφασίστηκε σε προηγούμενο τρέξιμο μένει ίδιο (για να μην αλλάξει μέρα ή χρώμα στη μέση).
+    const old = prev.filter((i) => i.extra && i.week === mon);
+    if (old.length === 2) {
+      for (const o of old) out.push({ ...make(o.day, o.time, o.grid), ...(`${o.day}T${o.time}` <= now && { posted: true }) });
+      continue;
+    }
+    // Αποφασίζουμε μόνο όταν όλη η εβδομάδα (ως την Παρασκευή) είναι μέσα στο πλάνο, για να φαίνονται τα
+    // αποτελέσματα της εβδομάδας πριν διαλέξουμε μέρες.
+    if (keptOnly || addDays(mon, 4) > to) continue;
+    const seq = [...(lead ? [lead] : []), ...items.filter((i) => (i.type === "post" || i.type === "reel") && !i.posted)]
+      .map((i) => ({ at: at(i), c: color(i) })).sort((a, b) => a.at.localeCompare(b.at));
+    const cands = [[2, 3], [3, 4], [2, 4], [1, 3], [1, 2]].map(([a, b]) => [slot(addDays(mon, a)), slot(addDays(mon, b))]);
+    for (const [[d1, t1], [d2, t2]] of cands) {
+      const s1 = `${d1}T${t1}`, s2 = `${d2}T${t2}`;
+      if (d1 < today || s1 <= now || d2 > to) continue;
+      if (seq.some((x) => x.at > s1 && x.at < s2)) continue;
+      const P = seq.filter((x) => x.at <= s1).at(-1), N = seq.find((x) => x.at >= s2);
+      if (P && N && P.c === N.c) continue;
+      const c1 = P ? other(P.c) : N ? N.c : "⬛";
+      out.push(make(d1, t1, c1), make(d2, t2, other(c1)));
+      break;
     }
   }
-  const out = build([], null);
-  out.push({ ...reel, what: "reel", note: [reel.note, "Αυτή την εβδομάδα το Reel δεν χωράει στη σκακιέρα: ανέβασέ το μόνο στα Reels " +
-    "(κλειστό το «Also share to Feed»)."].filter(Boolean).join(" ") });
+  for (const e of out) if (e.type === "reel") e.note = `Εξώφυλλο ${e.grid === "⬛" ? "⬛ σκούρο" : "⬜ ανοιχτό"}, για να κρατήσει η σκακιέρα στο grid.`;
+    else e.note = `${e.grid === "⬛" ? "⬛ Σκούρο" : "⬜ Ανοιχτό"} σχέδιο. Η εικόνα δεν βγαίνει ακόμα αυτόματα.`;
   return out;
 }
 
@@ -583,7 +607,7 @@ export function readme(p) {
     "Φτιάχνεται μόνο του μετά από κάθε ενημέρωση του προγράμματος (social.yml), οπότε δείχνει πάντα τις τελευταίες ώρες και αλλαγές. " +
     "Στο iPhone (Safari): πάτα μια εικόνα, κράτα το δάχτυλο πάνω της → «Προσθήκη στις Φωτογραφίες».", ""];
   let cur = "";
-  for (const it of p.items.filter((i) => !i.posted)) {
+  for (const it of p.items.filter((i) => !i.posted || (i.day === p.today && i.images?.length))) {
     if (it.day !== cur) {
       cur = it.day;
       lines.push(`## ${DAYS[weekday(it.day)]} ${ddmm(it.day)}${it.day === p.today ? " (σήμερα)" : ""}`, "");
@@ -605,7 +629,8 @@ export function readme(p) {
 // Όλο το πλάνο της εβδομάδας με τη σκακιέρα του grid. Το τελευταίο post που ανέβηκε (από όπου συνεχίζει
 // η εναλλαγή): --last, αλλιώς το τελευταίο post ή Reel του προηγούμενου πλάνου που έχει περάσει η ώρα του,
 // αλλιώς το πλάνο της προηγούμενης εβδομάδας. Ό,τι έχει περάσει η ώρα του θεωρείται ότι ανέβηκε.
-export function weekGrid(main, acad, today, now, { names, prevItems = [], last = null, reel = null } = {}) {
+export function weekGrid(main, acad, today, now, { names, prevItems = [], last = null } = {}) {
+  const gameDays = new Set(main.map((m) => local(new Date(m.start)).day));
   const p = plan(main, today, { names });
   const grid = (i) => (i.type === "post" || i.type === "reel") && i.day && i.time;
   const ac = academyPlan(acad, today, { names });
@@ -614,6 +639,8 @@ export function weekGrid(main, acad, today, now, { names, prevItems = [], last =
   const asPost = (a) => ({ ...a, type: "post", what: a.what === "academySchedule" ? "schedule" : "results" });
   const cands = [last,
     ...prevItems.filter((i) => grid(i) && (i.what === "schedule" || i.what === "results") && at(i) <= now),
+    // Τα ενδιάμεσα (Reel + post) μετρούν με το χρώμα τους.
+    ...prevItems.filter((i) => i.extra && at(i) <= now).map((i) => ({ ...i, what: i.grid === "⬛" ? "schedule" : "results" })),
     ...[...p.items.filter((i) => i.type === "post"), ...ac.map(asPost)].filter((i) => at(i) <= now)].filter(Boolean);
   let lead = cands.sort((x, y) => at(x).localeCompare(at(y))).at(-1);
   lead &&= { day: lead.day, time: lead.time, what: lead.what };
@@ -625,10 +652,11 @@ export function weekGrid(main, acad, today, now, { names, prevItems = [], last =
   const gone = (i) => grid(i) && lead && at(i) <= at(lead);
   for (const i of p.items) if (i.type === "post" && gone(i)) i.posted = true;
   for (const a of ac) if (gone(a)) a.posted = true;
-  if (reel && !(reel.day >= today && reel.day <= p.to)) reel = null;   // παλιό --reel/grid.json: αγνοείται
-  if (reel) for (const i of p.items) if (i.type === "reel") Object.assign(i, reel);
-  p.items = arrangeGrid(p.items, ac.filter((a) => !a.posted || a.what === "academySchedule"), lead,
-    { from: reel ? reel.day : today, to: reel ? reel.day : p.to });
+  const opts = { today, to: p.to, now, gameDays, prev: prevItems };
+  const merged = mergeAcademy(p.items, ac.filter((a) => !a.posted || a.what === "academySchedule"));
+  const kept = addPairs(merged, lead, { ...opts, keptOnly: true });   // ζευγάρια που έχουν ήδη αποφασιστεί
+  p.items = gridOrder([...merged, ...kept], lead);
+  p.items.push(...addPairs(p.items, lead, { ...opts, prev: [] }).filter((e) => !kept.some((k) => k.week === e.week)));
   p.items = p.items.filter((i) => !(i.type === "post" && i.posted && i.what === "results"));
   p.lead = lead;
   return p;
@@ -652,18 +680,17 @@ async function main() {
   const n = local(new Date());
   const now = args.date && args.date !== n.day ? `${today}T12:00` : `${n.day}T${n.time}`;
   // --last «2026-11-24T19:30 schedule»: το τελευταίο post που ανέβηκε στο grid, όταν διαφέρει από το πλάνο.
-  // --reel «2026-11-25T20:00»: μέρα και ώρα του Reel, αν την έχεις ήδη αποφασίσει.
   const pick = (v) => v && { day: v.slice(0, 10), time: v.slice(11, 16) };
-  // social/grid.json: {"last": "2026-11-24T19:30 schedule", "reel": "2026-11-25T20:00", "reelTitle": "…"}, για όταν τα post στο
-  // Instagram ανέβηκαν αλλιώς από το πλάνο ή η μέρα του Reel έχει ήδη αποφασιστεί (τα --last/--reel υπερισχύουν).
+  // social/grid.json: {"last": "2026-11-24T19:30 schedule"}, για όταν τα post στο Instagram ανέβηκαν αλλιώς
+  // από το πλάνο (το --last υπερισχύει).
   const conf = (() => { try { return JSON.parse(fs.readFileSync(path.join(HERE, "grid.json"), "utf8")); } catch { return {}; } })();
   if (!args.last && conf.last) { args.last = conf.last.split(" ")[0]; process.argv.push("--last", ...conf.last.split(" ")); }
-  if (!args.reel && conf.reel) args.reel = conf.reel;
   const last = args.last && { ...pick(args.last), what: process.argv.join(" ").match(/--last\s+\S+\s+(schedule|results)/)?.[1] || "schedule" };
-  const reel = pick(args.reel) && { ...pick(args.reel), ...(conf.reelTitle && { title: conf.reelTitle, how: "Έτοιμο βίντεο (όχι εγγραφή οθόνης)." }) };
-  const p = weekGrid(main, acad, today, now, { names, prevItems, last, reel });
+  const p = weekGrid(main, acad, today, now, { names, prevItems, last });
   p.items.push(...changeStories(p.items, prevItems, now, data.matches, names));
-  for (const it of p.items) if (it.posted) it.cards = [];   // έχει ήδη ανέβει: μόνο για τις αλλαγές
+  // Έχει ήδη ανέβει: μόνο για τις αλλαγές. Όσα πέρασε η ώρα τους σήμερα κρατούν τις εικόνες τους, γιατί το
+  // «πέρασε η ώρα» δεν σημαίνει ότι ανέβηκαν (π.χ. ενημέρωση στις 20:07 για post των 20:00).
+  for (const it of p.items) if (it.posted && it.day !== today) it.cards = [];
   const order = { post: 0, reel: 1, story: 2 };
   p.items.sort((a, b) => a.day.localeCompare(b.day) || a.time.localeCompare(b.time) || order[a.type] - order[b.type]);
 
